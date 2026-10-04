@@ -8,7 +8,7 @@ import "./fonts";
  */
 type Projekt = {
   meta: { id: string; durationInFrames: number };
-  Video: React.FC<{ voice?: boolean; sfx?: boolean }>;
+  Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean }>;
 };
 const ctx = require.context("./projekte", true, /^\.\/[^_/][^/]*\/Video\.tsx$/);
 
@@ -46,7 +46,7 @@ export const RemotionRoot: React.FC = () => (
           fps={30}
           width={1080}
           height={1920}
-          defaultProps={{ voice: true, sfx: true }}
+          defaultProps={{ voice: true, sfx: true, raster: false }}
         />
       );
     })}

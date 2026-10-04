@@ -4,10 +4,11 @@
   npm run raster -- <bild.png> <raster.jpg>
 
 Jedes Bild bekommt ein 60-px-Raster (beschriftet alle 120 px), die sichere Fläche (grün), das Untertitel-Band (gelb),
-den Kopf (rot: erkanntes Gesicht, erweitert auf Kappe, Haare, Kinn) mit Pixelwerten und die freien Standard-Felder
+die Bereiche, die TikTok (türkis) und Instagram (pink) mit Knöpfen und Text überdecken (src/lib/zonen.json), den Kopf (rot: erkanntes Gesicht, erweitert auf Kappe, Haare, Kinn) mit Pixelwerten und die freien Standard-Felder
 A-F (blau). Pro Bild steht im Terminal der Kopf und welche Felder frei sind, damit Grafiken nach Zahlen platziert
 werden und nicht geschätzt. Braucht das YuNet-Modell (npm run setup lädt es nach .tools/yunet.onnx).
 """
+import json
 import os
 import sys
 
@@ -16,8 +17,11 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1080, 1920
-SAFE = (60, 250, 950, 1500)
-CAPTION = (60, 1320, 950, 1480)
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ZONEN = json.load(open(os.path.join(ROOT, "src", "lib", "zonen.json"), encoding="utf-8"))
+SAFE = tuple(ZONEN["sicher"])
+CAPTION = tuple(ZONEN["untertitel"])
+APPS = {"TikTok": ((37, 244, 238), ZONEN["tiktok"]), "Instagram": ((255, 60, 142), ZONEN["instagram"])}
 # standard overlay slots (x0, y0, x1, y1), checked against the head box per frame
 SLOTS = {
     "A top band": (60, 250, 950, 470),
@@ -27,7 +31,7 @@ SLOTS = {
     "E chest right": (500, 980, 950, 1300),
     "F chest wide": (60, 1000, 950, 1300),
 }
-MODEL = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".tools", "yunet.onnx")  # OpenCV YuNet (Apache 2.0), von npm run setup geladen
+MODEL = os.path.join(ROOT, ".tools", "yunet.onnx")  # OpenCV YuNet (Apache 2.0), von npm run setup geladen
 
 
 def font(size):
@@ -67,6 +71,12 @@ def draw(img, label):
         d.line([(0, y), (W, y)], fill=(255, 255, 255, 110 if y % 120 == 0 else 45), width=1)
         if y % 120 == 0:
             d.text((4, y + 3), str(y), fill=(255, 255, 0, 255), font=f)
+    for app, (rgb, zones) in APPS.items():
+        for name, r in zones.items():
+            d.rectangle(tuple(r), outline=rgb + (230,), width=3, fill=rgb + (38,))
+        r = zones["rechts"]
+        d.text((r[0] + 4, r[1] + 10) if app == "TikTok" else (zones["unten"][0] + 70, zones["unten"][1] + 20), app[:3] if app == "TikTok" else app,
+               fill=rgb + (255,), font=fb)
     d.rectangle(SAFE, outline=(60, 220, 120, 255), width=4)
     d.rectangle(CAPTION, outline=(255, 222, 40, 255), width=3, fill=(255, 222, 40, 40))
     free = []

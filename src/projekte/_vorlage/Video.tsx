@@ -19,6 +19,7 @@ import {
   Stage,
   Takes,
 } from "../../lib/bausteine";
+import { Raster } from "../../lib/raster";
 import { createCut, typedSync } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
 import cut from "./cut.json";
@@ -37,7 +38,12 @@ const T = (() => {
 const SPLITS: [number, number][] = [[T.split - 4, T.split + 150]];
 const PUNCH: [number, number][] = [[0, 1]];
 
-export const Video: React.FC<{ voice?: boolean; sfx?: boolean }> = ({ voice = true, sfx = true }) => {
+/** raster: Platzierungsraster mit sicherer Fläche und den Zonen von TikTok/Instagram (nur für Standbilder) */
+export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean }> = ({
+  voice = true,
+  sfx = true,
+  raster = false,
+}) => {
   const fr = useCurrentFrame();
   const split = splitAt(SPLITS, fr);
   const typed = C.spoken(C.WORDS.slice(8, 14).map((w) => w.text).join(" "), T.split);
@@ -73,6 +79,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean }> = ({ voice = tr
           <Sfx file="whoosh.mp3" at={SPLITS[0][1]} />
         </>
       )}
+      {raster && <Raster />}
     </AbsoluteFill>
   );
 };

@@ -3,6 +3,10 @@
  * ändere ihn, bis es deiner ist (oder sag Claude, was anders sein soll, dann trägt es den Wunsch hier und in
  * .claude/skills/faber-cut/stil.md ein).
  */
+import zonen from "./zonen.json";
+
+const [sx0, sy0, sx1, sy1] = zonen.sicher;
+
 export const STIL = {
   /** Schrift (Geist liegt in public/fonts, Lizenz: SIL OFL) */
   font: "Geist, system-ui, sans-serif",
@@ -17,8 +21,9 @@ export const STIL = {
   muted: "#6B675F",
   /** ein Grade für alle Takes (CSS-Filter); kein Angleichen pro Schnitt */
   grade: "contrast(1.05) saturate(1.08) brightness(1.02)",
-  /** sichere Fläche (1080x1920): alles, was etwas bedeutet, liegt hier; oben ~250 px und rechts die App-Knöpfe frei */
-  safe: { left: 60, top: 250, width: 890, bottom: 1500 },
+  /** sichere Fläche (1080x1920): alles, was etwas bedeutet, liegt hier, frei von den Knöpfen von TikTok und Instagram
+   * (die Zonen stehen in zonen.json; npm run raster und <Raster /> zeichnen sie ein) */
+  safe: { left: sx0, top: sy0, width: sx1 - sx0, bottom: sy1 },
   /** Untertitel: y im Vollbild, Größe */
   captionY: 1340,
   captionSize: 76,

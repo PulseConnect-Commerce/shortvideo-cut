@@ -1,12 +1,14 @@
 /**
  * Das Beispiel-Video des Probelaufs (npm run probelauf kopiert es nach src/projekte/probelauf/Video.tsx). Es zeigt, was
  * faber-cut kann, ohne Gesicht: der Rohclip wird kürzer, Füllwörter und Pausen fliegen raus, Untertitel laufen Wort für
- * Wort, ein Terminal tippt mit der Stimme, Grafiken landen auf dem Wort, am Ende die Prüfungen. Jede Zahl im Bild kommt
+ * Wort, ein Terminal tippt mit der Stimme, Grafiken landen auf dem Wort, das Raster zeigt die sichere Fläche und die
+ * Zonen von TikTok und Instagram, am Ende die Prüfungen. Jede Zahl im Bild kommt
  * aus dem echten Schnitt (cut.json), jede Grafik sitzt mit C.cue() auf ihrem Wort.
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { Captions, clamp, HookTitle, popS, punchAt, ramp, Sfx, Takes } from "../../lib/bausteine";
+import { Raster } from "../../lib/raster";
 import { createCut, typedSync } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
 import cut from "./cut.json";
@@ -33,9 +35,12 @@ const T = (() => {
   const grafik = q("grafik", untertitel, 0.62);
   const genau = q("genau", grafik, 0.68);
   const wortEnd = q("wort", genau, 0.74);
-  const wenn = q("wenn", wortEnd, 0.8);
-  const bereit = q("bereit", wenn, 0.9);
-  return { handy, claude, schneidet, fuell, pausen, raus, untertitel, grafik, genau, wortEnd, wenn, bereit };
+  const nichts = q("nichts", wortEnd, 0.7);
+  const tiktok = q("tiktok", nichts, 0.74);
+  const instagram = q("instagram", tiktok, 0.77);
+  const wenn = q("wenn", instagram, 0.82);
+  const bereit = q("bereit", wenn, 0.92);
+  return { handy, claude, schneidet, fuell, pausen, raus, untertitel, grafik, genau, wortEnd, nichts, tiktok, instagram, wenn, bereit };
 })();
 
 /** echte Zahlen aus dem Schnitt */
@@ -112,7 +117,7 @@ const Phone: React.FC<{ fr: number }> = ({ fr }) => {
 
 /** 2. Der Rohclip als Streifen: auf "schneidet" klappen die Lücken (Pausen, Ähms) zu, die Länge zählt herunter */
 const Strip: React.FC<{ fr: number }> = ({ fr }) => {
-  const l = life(fr, T.claude, T.untertitel);
+  const l = life(fr, T.claude, T.untertitel - 7);
   if (l.gone) return null;
   const k = ramp(fr, T.schneidet, 14, Easing.inOut(Easing.cubic));
   const sec = RAW - (RAW - CUT) * k;
@@ -171,7 +176,7 @@ const Strip: React.FC<{ fr: number }> = ({ fr }) => {
 
 /** 3. Füllwörter und Pausen: zwei Begriffe, durchgestrichen auf ihrem Wort, fliegen auf "raus" weg */
 const Struck: React.FC<{ fr: number; at: number; label: string; y: number }> = ({ fr, at, label, y }) => {
-  const l = life(fr, at, T.untertitel);
+  const l = life(fr, at, T.untertitel - 7);
   if (l.gone) return null;
   const strike = ramp(fr, at + 5, 7);
   const fly = ramp(fr, T.raus, 10, Easing.in(Easing.cubic));
@@ -267,7 +272,7 @@ const BigWord: React.FC<{ fr: number }> = ({ fr }) => {
 
 /** 5. Terminal, das mit der Stimme tippt, und eine Tonspur mit der Grafik auf dem Laut */
 const Terminal: React.FC<{ fr: number }> = ({ fr }) => {
-  const l = life(fr, T.grafik, T.wenn - 2);
+  const l = life(fr, T.grafik, T.nichts - 2);
   if (l.gone) return null;
   const typed = typedSync(C.spoken("jede Grafik kommt genau auf dem Wort", T.grafik - 12), fr);
   return (
@@ -302,7 +307,7 @@ const Terminal: React.FC<{ fr: number }> = ({ fr }) => {
 };
 
 const Wave: React.FC<{ fr: number }> = ({ fr }) => {
-  const l = life(fr, T.grafik + 6, T.wenn - 2);
+  const l = life(fr, T.grafik + 6, T.nichts - 2);
   if (l.gone) return null;
   const w = C.WORDS.find((x) => x.a >= T.genau);
   const onset = w ? w.a : T.genau + 2;
@@ -362,21 +367,62 @@ const Wave: React.FC<{ fr: number }> = ({ fr }) => {
   );
 };
 
-/** 6. Die Prüfungen, eine nach der anderen, dann "Bereit." */
+/** 6. Das Raster: sichere Fläche, Untertitel-Band, und auf ihrem Wort die Zonen von TikTok und Instagram */
+const Zones: React.FC<{ fr: number }> = ({ fr }) => {
+  const l = life(fr, T.nichts, T.wenn + 16);
+  if (l.gone) return null;
+  const ok = ramp(fr, T.instagram + 10, 4);
+  return (
+    <AbsoluteFill style={{ opacity: l.opacity }}>
+      <Raster p={ramp(fr, T.nichts, 12)} tiktok={ramp(fr, T.tiktok, 5)} instagram={ramp(fr, T.instagram, 5)} />
+      <div
+        style={{
+          position: "absolute",
+          left: X + 60,
+          top: 640,
+          width: W - 120,
+          padding: "34px 40px",
+          borderRadius: 32,
+          background: "#fff",
+          color: STIL.ink,
+          ...sans,
+          fontWeight: 800,
+          fontSize: 60,
+          lineHeight: 1.15,
+          textAlign: "center",
+          boxShadow: "0 30px 60px rgb(0 0 0 / 0.45)",
+          transform: `scale(${popS(fr, T.nichts + 6)})`,
+          opacity: ramp(fr, T.nichts + 6, 3),
+        }}
+      >
+        Alles in der
+        <br />
+        sicheren Fläche
+        <div style={{ marginTop: 18, fontSize: 46, fontWeight: 700, color: STIL.green, opacity: ok }}>
+          ✓ nichts unter den Knöpfen
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+/** 7. Die Prüfungen, eine nach der anderen, dann "Bereit." */
 const Checks: React.FC<{ fr: number }> = ({ fr }) => {
-  if (fr < T.wenn) return null;
+  const start = T.wenn + 20;
+  if (fr < start) return null;
   const rows = [
     ["Geschnitten", `−${de(RAW - CUT)} s`],
     ["Untertitel", `${C.WORDS.length} Wörter`],
     ["Grafiken", "auf dem Wort"],
+    ["Safe Area", "TikTok + Insta"],
     ["Lautheit", "−14 LUFS"],
   ];
-  const step = Math.max(5, Math.floor((T.bereit - T.wenn) / 4));
+  const step = Math.max(3, Math.floor((T.bereit - start) / rows.length));
   const done = ramp(fr, T.bereit, 4);
   return (
-    <div style={{ position: "absolute", left: X, top: 450, width: W, ...sans }}>
+    <div style={{ position: "absolute", left: X, top: 400, width: W, ...sans }}>
       {rows.map(([a, b], i) => {
-        const at = T.wenn + i * step;
+        const at = start + i * step;
         if (fr < at) return null;
         return (
           <div
@@ -385,8 +431,8 @@ const Checks: React.FC<{ fr: number }> = ({ fr }) => {
               display: "flex",
               alignItems: "center",
               gap: 24,
-              padding: "30px 34px",
-              marginBottom: 20,
+              padding: "24px 34px",
+              marginBottom: 16,
               borderRadius: 28,
               background: panel,
               border: `2px solid ${edge}`,
@@ -415,7 +461,7 @@ const Checks: React.FC<{ fr: number }> = ({ fr }) => {
       })}
       <div
         style={{
-          marginTop: 34,
+          marginTop: 20,
           textAlign: "center",
           fontWeight: 800,
           fontSize: 150,
@@ -430,7 +476,11 @@ const Checks: React.FC<{ fr: number }> = ({ fr }) => {
   );
 };
 
-export const Video: React.FC<{ voice?: boolean; sfx?: boolean }> = ({ voice = true, sfx = true }) => {
+export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean }> = ({
+  voice = true,
+  sfx = true,
+  raster = false,
+}) => {
   const fr = useCurrentFrame();
   const zoom = punchAt([[0, 1], [T.genau, 1.05], [T.wortEnd + 8, 1]], fr);
   return (
@@ -453,6 +503,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean }> = ({ voice = tr
         <Wave fr={fr} />
         <Checks fr={fr} />
       </AbsoluteFill>
+      <Zones fr={fr} />
       <HookTitle fr={fr} line1="Claude schneidet" line2="deine Videos." outAt={T.claude - 2} />
       <div
         style={{
@@ -466,7 +517,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean }> = ({ voice = tr
           fontSize: 42,
           letterSpacing: "0.14em",
           color: "rgb(255 255 255 / 0.55)",
-          opacity: ramp(fr, T.claude + 4, 8),
+          opacity: ramp(fr, T.claude + 4, 8) * (1 - ramp(fr, T.nichts - 4, 4) + ramp(fr, T.wenn + 18, 6)),
         }}
       >
         FABER-CUT · PROBELAUF
@@ -483,10 +534,14 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean }> = ({ voice = tr
           <Sfx file="tick.mp3" at={T.untertitel} />
           <Sfx file="pop.mp3" at={T.grafik} />
           <Sfx file="stamp.mp3" at={T.genau} />
-          <Sfx file="tick.mp3" at={T.wenn} />
+          <Sfx file="whoosh.mp3" at={T.nichts} />
+          <Sfx file="tick.mp3" at={T.tiktok} />
+          <Sfx file="tick.mp3" at={T.instagram} />
+          <Sfx file="tick.mp3" at={T.wenn + 20} />
           <Sfx file="success.mp3" at={T.bereit} />
         </>
       )}
+      {raster && <Raster />}
     </AbsoluteFill>
   );
 };

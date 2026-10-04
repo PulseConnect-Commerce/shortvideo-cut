@@ -93,6 +93,7 @@ schnitt.json ──npm run schnitt──► cut.json   Sätze als Text: was im T
                        └─ fillerscan      findet "ähs", die Whisper nicht aufgeschrieben hat
 Video.tsx (Remotion) ──► npm run vorschau    10-s-Stücke mit Cache, nur Geändertes neu
                        ├─ npm run sync    kommt jede Grafik wirklich auf ihrem Wort? (gemessen am Video)
+                       ├─ npm run raster  liegt alles in der sicheren Fläche, frei von den Knöpfen von TikTok/Instagram?
                        └─ npm run pacing  wo passiert länger als 2 s nichts?
 npm run final ──► Master, Post- und Chat-Version, -14 LUFS
                        └─ npm run checks  Ausreißer-Frames, Lautheit, Effekte unter der Stimme

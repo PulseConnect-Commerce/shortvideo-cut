@@ -1,0 +1,23 @@
+{
+  "_info": "Wo auf 1080x1920 die Knöpfe und Texte von TikTok und Instagram liegen (Rechtecke [x0, y0, x1, y1]). Dort darf nichts hin, was etwas bedeutet. Die Apps veröffentlichen dafür keine Maße für normale Posts; die Werte sind vorsichtig gewählt, so dass sie die Angaben aller Quellen abdecken, und gelten für beide Apps zusammen als 'sicher'. Gelesen von src/lib/stil.ts, src/lib/raster.tsx und tools/grid.py.",
+  "stand": "2026-10-04",
+  "quellen": [
+    "https://www.upload-post.com/tools/safe-zone-checker/",
+    "https://adkit.so/tools/safe-zones/tiktok",
+    "https://www.hopperhq.com/blog/instagram-reel-size/",
+    "https://www.trymypost.com/blog/instagram-reels-safe-zones-text-placement-2026",
+    "https://reap.video/blog/short-form-video-safe-zones"
+  ],
+  "sicher": [60, 250, 950, 1500],
+  "untertitel": [60, 1320, 950, 1480],
+  "tiktok": {
+    "oben": [0, 0, 1080, 130],
+    "rechts": [960, 620, 1080, 1580],
+    "unten": [0, 1580, 1080, 1920]
+  },
+  "instagram": {
+    "oben": [0, 0, 1080, 220],
+    "rechts": [950, 1000, 1080, 1720],
+    "unten": [0, 1500, 1080, 1920]
+  }
+}

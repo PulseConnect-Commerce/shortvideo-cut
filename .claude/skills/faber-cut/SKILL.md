@@ -82,8 +82,8 @@ Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx
 - Für Tool-Erklärungen: **Splitscreen** (Grafiken oben, er unten; `splitAt`, `Stage`, `SplitPerson`), für seine Meinung und den Aufruf zurück ins Vollbild.
 
 **Platz:**
-- Sichere Fläche x 60-950, y 250-1500 (oben und rechts liegen die App-Knöpfe). Untertitel im Vollbild bei y 1340, im Split auf der Naht (y 872).
-- Nichts auf dem Gesicht: vor dem Platzieren `npm run raster -- public/projekte/<projekt>/takes/t1.mp4 out/raster.jpg 2,10,20` und nach den Zahlen platzieren (Kopf-Box, freie Felder A-F).
+- **Sichere Fläche x 60-950, y 250-1500.** Außerhalb liegen die Knöpfe und Texte von TikTok und Instagram (Leiste oben, Knöpfe rechts, Name und Beschreibung unten); die Maße stehen in `src/lib/zonen.json`. Dort kommt nie etwas hin, was etwas bedeutet. Untertitel im Vollbild bei y 1340, im Split auf der Naht (y 872).
+- **Vor dem Platzieren das Raster:** `npm run raster -- public/projekte/<projekt>/takes/t1.mp4 out/raster.jpg 2,10,20`. Es zeichnet ein 60-px-Raster mit Pixelwerten, die sichere Fläche (grün), das Untertitel-Band (gelb), die Zonen von TikTok (türkis) und Instagram (pink) und seinen Kopf (rot), und nennt pro Zeitpunkt die freien Felder A-F. Platziere nach diesen Zahlen, nicht nach Gefühl, und nichts auf das Gesicht.
 - Text in Grafiken mindestens 42 px, Listen 46 px, Zeilenhöhe 1,3. Darunter ist es auf dem Handy nicht lesbar.
 
 ### 6. Vorschau und eigene Prüfung
@@ -92,7 +92,8 @@ Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx
 2. **Sync messen:** `npm run sync -- out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json wort[:s|c] …` mit jedem Stichwort einer Grafik (`s` = Bühne oben im Split, `c` = Brustzone im Vollbild). Ziel -4..+1 Frames. Eine CHECK-Zeile ist oft eine andere Bewegung im Bereich: den 8-Frame-Streifen um das Wort ansehen, bevor du etwas änderst.
 3. **Pacing messen:** `npm run pacing -- out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json`. Jede Strecke über 2 s ohne Bildänderung bekommt eine Grafik, die die Zeile trägt. Stille am Ton nachmessen (Wortenden liegen eher früh).
 4. **Standbilder** an jeder Grafik (Anfang und Ende, `npm run still -- <id> out/x.jpg --frame=N --scale=0.4`): nichts überlappt, nichts bleibt zu lange stehen, Text bricht nicht ungewollt um, das Ende zeigt ihn noch im Bild.
-5. **Gemini** (nur wenn `"gemini": true` in `faber-cut.json`; der Schlüssel steht in `.env` oder in der Umgebung): `npm run gemini -- out/vorschau/<id>.mp4 prompts/review.md`, **zweimal**. Gemini irrt oft (erfundene Tippfehler, "Text zu tief", "keine Soundeffekte"): prüfe jede Behauptung an Standbild, Ton oder Code. Übernimm nur, was stimmt.
+5. **Raster auf dem Ergebnis:** dieselben Standbilder mit `--props='{"raster":true}'` (die Vorlage blendet dann das Raster mit allen Zonen ein) oder `npm run raster -- out/vorschau/<id>.mp4 out/raster-vorschau.jpg <Sekunden jeder Grafik>`. Jede Grafik liegt ganz in der grünen Fläche, nichts in einer türkisen oder pinken Zone, nichts auf dem Kopf. Liegt etwas falsch: verschieben, nicht kleiner machen.
+6. **Gemini** (nur wenn `"gemini": true` in `faber-cut.json`; der Schlüssel steht in `.env` oder in der Umgebung): `npm run gemini -- out/vorschau/<id>.mp4 prompts/review.md`, **zweimal**. Gemini irrt oft (erfundene Tippfehler, "Text zu tief", "keine Soundeffekte"): prüfe jede Behauptung an Standbild, Ton oder Code. Übernimm nur, was stimmt.
 
 ### 7. Runde mit dem Nutzer
 
