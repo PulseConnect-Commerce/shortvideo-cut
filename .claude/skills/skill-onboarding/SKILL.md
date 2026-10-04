@@ -7,7 +7,7 @@ description: Richtet faber-cut beim ersten Mal Schritt für Schritt ein, als gef
 
 Du führst den Nutzer durch die Einrichtung von faber-cut, bis sein erstes Video geschnitten werden kann. Rechne damit, dass er noch nie ein Terminal benutzt, nie einen API-Schlüssel erstellt und nie eine Cloud-Umgebung eingestellt hat. Darum:
 
-- **Ein Schritt nach dem anderen.** Nie eine lange Liste auf einmal. Erst weiter, wenn der Schritt geklappt hat.
+- **Ein Schritt nach dem anderen.** Eine Nachricht = ein Mini-Schritt mit **höchstens drei Handgriffen**, dann die Bestätigungsfrage. Nie zwei Schritte in einer Nachricht, nie eine lange Liste. Bei mehreren Klick-Schritten oben "Schritt 2 von 7", damit er sieht, wie weit er ist.
 - **Jeder Schritt sagt drei Dinge:** was er tun soll, wo genau er klickt oder was er eintippt, und woran er erkennt, dass es geklappt hat.
 - **Fachwörter nur mit Erklärung** in einem Halbsatz ("das Terminal, also das Fenster, in das man Befehle tippt").
 - **Alles, was du selbst machen kannst, machst du selbst** (Befehle ausführen, Dateien schreiben, prüfen). Er klickt nur dort, wo du nicht hinkommst: Google, GitHub, die Einstellungen von Claude, Passwörter.
@@ -65,15 +65,11 @@ Reihenfolge so, dass er **nur einmal** eine neue Sitzung starten muss:
    - "Nein, frag mich jedes Mal".
    Merk dir die Antwort für `faber-cut.json` (`"speichern": "main"` oder `"fragen"`).
 3. **Stil (Schritt 5) und Gemini-Wahl (Schritt 4, nur die Frage)** jetzt, solange die Sitzung läuft.
-4. **Google-Drive-Ordner** anlegen und freigeben (`anleitungen.md`, "Google-Drive-Ordner"). Erklär, warum "Jeder mit dem Link":
-   - Der Drive-Connector kann nur kleine Dateien lesen; ein Video lädst du in voller Größe über den Freigabe-Link.
-   - Sicher ist es trotzdem, solange er den Link niemandem gibt. Die Clips kann er löschen, wenn das Video fertig ist.
-5. **Cloud-Umgebung und Connector:** `anleitungen.md`, "Cloud-Umgebung" und "Google Drive verbinden": Netzwerk-Freigaben, Setup-Skript, bei Gemini der Schlüssel als Umgebungsvariable, dann der Connector.
-   - Bevor er die neue Sitzung startet, schreib `faber-cut.json` mit `"onboarding": "weiter"` und speichere es (committen und pushen, wie erlaubt).
-   - Sag ihm: "Starte jetzt eine neue Sitzung mit deinem Repo und dieser Umgebung und schreib: Weiter mit dem Onboarding."
+4. **Die Klick-Etappe.** Jetzt klickt er draußen: Drive-Ordner, Gemini-Schlüssel, Cloud-Umgebung, Drive-Verbindung. Kündige sie in einem Satz an ("Jetzt kommen 7 kurze Klick-Schritte, je etwa eine Minute"), dann gib die Mini-Schritte aus `anleitungen.md`, "Klick-Etappe online", **einzeln** weiter: eine Nachricht pro Schritt, danach AskUserQuestion mit "Erledigt", "Hat nicht geklappt" und, wo es passt, "Überspringen". Bei "Hat nicht geklappt" frag, was er sieht, und hilf genau dort.
+5. **Vor der neuen Sitzung:** Schreib `faber-cut.json` mit `"onboarding": "weiter"` und speichere es (committen und pushen, wie erlaubt). Dann der letzte Mini-Schritt "neue Sitzung starten" aus `anleitungen.md`.
 6. **In der neuen Sitzung:**
    - `npm run setup` (im Hintergrund, ein paar Minuten), dann `npm run doktor`.
-   - Den Drive-Ordner mit dem Connector suchen (Name aus Schritt 4), seine ID in `faber-cut.json` unter `drive` eintragen.
+   - Den Drive-Ordner mit dem Connector suchen (`faber-cut Rohclips`), seine ID in `faber-cut.json` unter `drive` eintragen. Gibt es ihn unter dem Namen nicht, such nach ähnlichen Ordnern und frag, welchen er meint ("Erledigt" heißt nicht immer, dass es genau so geklappt hat: prüf selbst, was du prüfen kannst).
    - Liegt schon eine Datei drin: mit `curl` testweise laden und prüfen, dass sie größer als ein paar KB ist (sonst ist die Freigabe falsch).
    - In `.gitignore` die zwei Zeilen unter "deine Projekte" (`src/projekte/*` und `!src/projekte/_vorlage/`) entfernen, damit seine Projekte gespeichert werden.
 
@@ -84,9 +80,9 @@ AskUserQuestion: "Soll Gemini jede Vorschau zusätzlich ansehen und anhören und
 - **"Ja, mit kostenlosem Schlüssel (Empfohlen)":** eine zweite Meinung zu Hook, Tempo und Sync. Claude prüft jede Behauptung nach, weil Gemini sich oft irrt. Achtung: Beim kostenlosen Schlüssel darf Google die hochgeladene Vorschau zur Verbesserung seiner Dienste nutzen.
 - **"Nein, ohne Gemini":** Claude prüft selbst mit Messungen. Gemini kann er später jederzeit nachrüsten.
 
-Bei Ja: Schlüssel erstellen (`anleitungen.md`, "Gemini-Schlüssel"). Dann:
-- **Lokal:** Leg die Datei `.env` mit der Zeile `GEMINI_API_KEY=` an und öffne sie ihm im Texteditor. Er fügt den Schlüssel hinter dem `=` ein und speichert. `.env` ist git-ignoriert und bleibt auf seinem Rechner.
-- **Online:** Der Schlüssel kommt als Umgebungsvariable in die Cloud-Umgebung (Teil von 3O.5).
+Bei Ja:
+- **Lokal:** die zwei Mini-Schritte aus `anleitungen.md`, "Gemini-Schlüssel lokal" (Schlüssel erstellen, dann in die Datei `.env` legen), je eine Nachricht.
+- **Online:** Der Schlüssel ist Teil der Klick-Etappe (3O.4).
 
 Prüfen mit `npm run doktor` ("Gemini-Schlüssel gültig").
 

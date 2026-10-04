@@ -1,6 +1,6 @@
 # Anleitungen zum Onboarding
 
-Klickpfade und Befehle, die du dem Nutzer Schritt für Schritt weitergibst. Gib immer nur den Teil weiter, der gerade dran ist, und sag dazu, woran er erkennt, dass es geklappt hat. Die Oberflächen von Google, GitHub und Claude ändern sich manchmal: Sieht etwas bei ihm anders aus, frag, was er sieht, und hilf von dort aus weiter.
+Klickpfade und Befehle, die du dem Nutzer Schritt für Schritt weitergibst. Gib immer nur einen Mini-Schritt weiter (höchstens drei Handgriffe), sag dazu, woran er erkennt, dass es geklappt hat, und warte auf sein "Erledigt". Die Oberflächen von Google, GitHub und Claude ändern sich manchmal: Sieht etwas bei ihm anders aus, frag, was er sieht, und hilf von dort aus weiter.
 
 ## Programme installieren (lokal)
 
@@ -57,14 +57,40 @@ faber-cut braucht **Node.js 20 oder neuer** und **ffmpeg**. Python braucht er ni
    - einen Namen geben,
    - **Private** wählen.
 
-## Cloud-Umgebung (online)
+## Klick-Etappe online
 
-Eine Cloud-Umgebung legt fest, was eine Claude-Sitzung im Internet erreichen darf und was beim Start installiert wird. Am besten eine eigene Umgebung nur für faber-cut, damit seine anderen Projekte unberührt bleiben.
+Jeder Mini-Schritt ist **eine eigene Nachricht**: oben "Schritt X von N", dann höchstens drei Handgriffe, dann "Geklappt, wenn …", dann die Bestätigungsfrage. Den nächsten Schritt zeigst du erst nach "Erledigt". N ist 7 mit Gemini, 6 ohne (dann fällt Schritt 3 weg und in Schritt 6 der Schlüssel).
 
+**Schritt 1: Ordner anlegen**
+1. https://drive.google.com öffnen (oder die Google-Drive-App am Handy).
+2. **Neu** → **Neuer Ordner**.
+3. Name `faber-cut Rohclips` → **Erstellen**.
+- Geklappt, wenn: der Ordner in der Liste steht.
+
+**Schritt 2: Ordner freigeben**
+1. Rechtsklick auf den Ordner → **Teilen** → **Teilen** (App: drei Punkte am Ordner → **Teilen**).
+2. Unten bei **Allgemeiner Zugriff**: **Eingeschränkt** umstellen auf **Jeder, der über den Link verfügt** (englisch: **General access** → **Anyone with the link**). Die Rolle bleibt **Betrachter**.
+3. **Fertig**.
+- Geklappt, wenn: beim Ordner "Jeder, der über den Link verfügt, kann ansehen" steht.
+- Ein Satz zum Warum: Die Drive-Verbindung schafft nur kleine Dateien; Videos lädst du in voller Größe über den Link. Niemand kennt den Link, solange er ihn nicht weitergibt.
+
+**Schritt 3: Gemini-Schlüssel erstellen** (nur mit Gemini)
+1. https://aistudio.google.com/apikey öffnen, mit dem Google-Konto anmelden, beim ersten Mal die Bedingungen bestätigen.
+2. **API-Schlüssel erstellen** (**Create API key**); fragt es nach einem Projekt, das vorgeschlagene nehmen.
+3. Den Schlüssel kopieren (beginnt meist mit `AIza`) und den Tab offen lassen. **Nicht in den Chat schicken.**
+- Geklappt, wenn: der Schlüssel kopiert ist (er braucht ihn in Schritt 6).
+- Kostenlos heißt: ein Tageslimit (für ein paar Videos am Tag reicht es), kein Zahlungsmittel nötig.
+
+**Schritt 4: Neue Cloud-Umgebung öffnen**
 1. Auf https://claude.ai/code über dem Eingabefeld auf das **Wolken-Symbol mit dem Namen der Umgebung** klicken (z. B. "Default").
-2. **Cloud** wählen, dann **Add cloud environment**. Eine bestehende Umgebung ändert er mit dem Zahnrad, das beim Drüberfahren rechts erscheint.
-3. **Name:** `faber-cut`
-4. **Network access:** **Custom** wählen. Unter **Allowed domains** diese Zeilen eintragen (jede in eine eigene Zeile):
+2. **Cloud** wählen, dann **Add cloud environment**.
+3. Bei **Name** `faber-cut` eintragen. Das Fenster offen lassen.
+- Geklappt, wenn: das Fenster "New cloud environment" offen ist und oben `faber-cut` steht.
+- Ein Satz zum Warum: Hier steht, was Claude im Internet erreichen darf und was beim Start installiert wird; eine eigene Umgebung lässt seine anderen Projekte in Ruhe.
+
+**Schritt 5: Internet freigeben** (im selben Fenster)
+1. Bei **Network access** **Custom** wählen.
+2. In **Allowed domains** diese Zeilen einfügen:
    ```
    huggingface.co
    *.huggingface.co
@@ -73,12 +99,13 @@ Eine Cloud-Umgebung legt fest, was eine Claude-Sitzung im Internet erreichen dar
    drive.google.com
    drive.usercontent.google.com
    ```
-   Den Haken bei **Also include default list of common package managers** setzen.
-   - Warum: Die Modelle für die Transkription kommen von Hugging Face, PyTorch von pytorch.org, die Clips aus Google Drive.
-   - Einfacher, aber offener: **Full** (alles erlaubt).
-5. **Environment variables** (nur wenn er Gemini will): eine Zeile `GEMINI_API_KEY=` und direkt dahinter seinen Schlüssel, ohne Leerzeichen.
-   - Hinweis für ihn: Werte hier kann jeder sehen, der diese Umgebung benutzt. In seiner eigenen Umgebung ist das nur er.
-6. **Setup script:** diesen Text einfügen:
+3. Den Haken bei **Also include default list of common package managers** setzen.
+- Geklappt, wenn: die sechs Zeilen drinstehen und der Haken gesetzt ist.
+- Ein Satz zum Warum: Von dort kommen die Sprachmodelle, PyTorch und seine Clips. (Einfacher, aber offener: **Full**.)
+
+**Schritt 6: Schlüssel und Setup eintragen, speichern** (im selben Fenster)
+1. Nur mit Gemini: bei **Environment variables** `GEMINI_API_KEY=` schreiben und direkt dahinter den Schlüssel einfügen, ohne Leerzeichen.
+2. Bei **Setup script** diesen Text einfügen:
    ```bash
    #!/bin/bash
    apt-get update -qq && apt-get install -y -qq ffmpeg
@@ -87,40 +114,31 @@ Eine Cloud-Umgebung legt fest, was eine Claude-Sitzung im Internet erreichen dar
    done
    exit 0
    ```
-   - Das installiert ffmpeg und, wenn das Repo schon da ist, die Python-Umgebung.
-   - Die Umgebung merkt sich das Ergebnis etwa eine Woche lang, dann starten neue Sitzungen schneller.
-   - Die Modelle lädt die Sitzung selbst (`npm run setup`).
-7. **Create environment** (oder **Save changes**) klicken.
-8. Für neue Sitzungen diese Umgebung auswählen (Wolken-Symbol, dann `faber-cut`). Änderungen an Umgebung und Connectors gelten erst in einer **neuen** Sitzung.
+3. **Create environment** klicken.
+- Geklappt, wenn: das Fenster zu ist und `faber-cut` in der Liste der Umgebungen steht.
+- Hinweis: Werte unter Environment variables sieht jeder, der diese Umgebung benutzt; in seiner eigenen ist das nur er.
 
-## Google Drive verbinden (online)
-
+**Schritt 7: Google Drive mit Claude verbinden**
 1. https://claude.ai/customize/connectors öffnen.
 2. **Google Drive** suchen, **Connect** klicken.
-3. Sein Google-Konto wählen und den Zugriff erlauben.
-4. **Geklappt, wenn** Google Drive als verbunden angezeigt wird.
-5. Erst eine **neue** Sitzung sieht den Connector.
+3. Sein Google-Konto wählen und **Zulassen**.
+- Geklappt, wenn: Google Drive als verbunden angezeigt wird.
 
-## Google-Drive-Ordner (online)
+**Danach (ohne Nummer): neue Sitzung starten**
+1. Auf claude.ai/code beim Wolken-Symbol die Umgebung `faber-cut` wählen.
+2. Eine neue Sitzung mit seinem Repo `faber-cut` starten.
+3. Schreiben: "Weiter mit dem Onboarding".
+- Ein Satz zum Warum: Umgebung und Verbindungen gelten erst in einer neuen Sitzung.
 
-1. https://drive.google.com öffnen (oder die Google-Drive-App am Handy).
-2. **Neu** → **Neuer Ordner**, Name: `faber-cut Rohclips` → **Erstellen**.
-3. Rechtsklick auf den Ordner → **Teilen** → **Teilen**. In der App: die drei Punkte am Ordner → **Teilen** bzw. **Zugriff verwalten**.
-4. Unten bei **Allgemeiner Zugriff** von **Eingeschränkt** auf **Jeder, der über den Link verfügt** umstellen. Die Rolle rechts bleibt **Betrachter**. Dann **Fertig**.
-   - Auf Englisch heißt das: **General access** → **Anyone with the link**, **Viewer**, **Done**.
-5. **Geklappt, wenn** beim Ordner "Jeder, der über den Link verfügt, kann ansehen" steht.
-6. Warum: Der Drive-Connector kann nur kleine Dateien lesen. Videos lädt Claude in voller Größe über den Freigabe-Link. Ohne diese Freigabe kommt statt des Videos nur eine kleine Fehlerseite an.
-7. Sicherheit: Wer den Link kennt, kann die Clips ansehen. Den Link gibt er niemandem, und fertige Clips kann er löschen.
-8. **Hochladen vom Handy:** Drive-App → Ordner öffnen → **+** → **Hochladen** → Video wählen. Kurz warten, bis es fertig ist (am besten im WLAN).
+## Gemini-Schlüssel lokal
 
-## Gemini-Schlüssel
+Zwei Mini-Schritte, je eine Nachricht.
 
-1. https://aistudio.google.com/apikey öffnen und mit seinem Google-Konto anmelden.
-2. Beim ersten Mal die Nutzungsbedingungen bestätigen.
-3. **API-Schlüssel erstellen** bzw. **Create API key** klicken. Fragt AI Studio nach einem Projekt: das vorgeschlagene nehmen oder ein neues anlegen.
-4. Den Schlüssel kopieren: eine lange Zeichenfolge, meist beginnend mit `AIza`. **Nicht in den Chat schicken.**
-5. Wohin damit:
-   - **Lokal:** Claude legt die Datei `.env` an und öffnet sie (Windows `notepad .env`, Mac `open -e .env`, Linux `xdg-open .env`). Er fügt den Schlüssel direkt hinter `GEMINI_API_KEY=` ein, ohne Leerzeichen, speichert (Strg+S bzw. Cmd+S) und schließt das Fenster.
-   - **Online:** in der Cloud-Umgebung unter **Environment variables** als `GEMINI_API_KEY=<schlüssel>` (siehe Cloud-Umgebung, Schritt 5), dann eine neue Sitzung.
-6. Kostenlos heißt: ein Tageslimit an Anfragen (für ein paar Videos am Tag reicht es), und Google darf die Inhalte zur Verbesserung seiner Dienste nutzen. Ein Zahlungsmittel muss er dafür nicht hinterlegen.
-7. **Geklappt, wenn** `npm run doktor` "Gemini-Schlüssel gültig" zeigt.
+**Schritt A: Schlüssel erstellen.** Wie Schritt 3 der Klick-Etappe online.
+
+**Schritt B: Schlüssel in die Datei legen**
+1. Du legst die Datei `.env` mit der Zeile `GEMINI_API_KEY=` an und öffnest sie ihm (Windows `notepad .env`, Mac `open -e .env`, Linux `xdg-open .env`).
+2. Er fügt den Schlüssel direkt hinter `=` ein, ohne Leerzeichen.
+3. Speichern (Strg+S bzw. Cmd+S) und das Fenster schließen.
+- Geklappt, wenn: `npm run doktor` "Gemini-Schlüssel gültig" zeigt (das prüfst du selbst).
+- `.env` ist git-ignoriert und bleibt auf seinem Rechner.
