@@ -22,7 +22,11 @@ export const takeFile = (src: string) => {
   return staticFile(`projekte/${projekt}/takes/${take}.mp4`);
 };
 
-/** Ton (pro Schnittstück, 2-Frame-Blenden gegen Klicks; das letzte Stück blendet 0,4 s aus) und Bild (J-Cuts). */
+/** Überblendung an jedem Tonschnitt (Frames je Seite): die Stücke überlappen sich und blenden mit gleicher Leistung
+ * ineinander über, so fällt an keinem Schnitt der Raumklang weg (ein Loch aus digitaler Stille hört man als Sprung) */
+export const XFADE = 3;
+
+/** Ton (pro Schnittstück, mit Überblendung zum Nachbarn; das letzte Stück blendet 0,4 s aus) und Bild (J-Cuts). */
 export const Takes: React.FC<{
   C: Cut;
   voice?: boolean;
@@ -46,14 +50,24 @@ export const Takes: React.FC<{
     </AbsoluteFill>
     {voice &&
       C.KEEPS.map((k, i) => {
-        const fadeOut = i === C.KEEPS.length - 1 ? 12 : 2;
+        const last = i === C.KEEPS.length - 1;
+        // Überhang in den Nachbarn: bis XFADE Frames, aber nur so weit dort freier Raumklang ist (kein Wort anspielen)
+        const pre = i === 0 ? 0 : Math.min(XFADE, C.f(k.from), Math.floor((k.vor ?? 0.1) * C.FPS));
+        const post = last ? 0 : Math.min(XFADE, Math.floor((k.nach ?? 0.1) * C.FPS));
+        const len = k.len + pre + post;
+        const up = (n: number) => Math.sin((Math.PI / 2) * Math.min(1, Math.max(0, n)));
         return (
-          <Sequence key={i} from={k.at} durationInFrames={k.len} layout="none" name={`Ton ${k.src} ${k.from}`}>
+          <Sequence key={i} from={k.at - pre} durationInFrames={len} layout="none" name={`Ton ${k.src} ${k.from}`}>
             <Audio
               src={takeFile(k.src)}
-              trimBefore={C.f(k.from)}
-              trimAfter={C.f(k.to)}
-              volume={(x) => Math.min(1, x / 2, (k.len - 1 - x) / fadeOut)}
+              trimBefore={C.f(k.from) - pre}
+              trimAfter={C.f(k.to) + post}
+              volume={(x) =>
+                Math.min(
+                  pre ? up((x + 0.5) / (2 * pre)) : up((x + 0.5) / 2),
+                  last ? Math.min(1, (len - 1 - x) / 12) : post ? up((len - x - 0.5) / (2 * post)) : up((len - x - 0.5) / 2),
+                )
+              }
             />
           </Sequence>
         );

@@ -24,6 +24,8 @@ import json
 import os
 import sys
 
+import numpy as np
+
 from fclib import ROOT, Take, build_pages, is_filler, norm, ranges_for, tight
 
 spec_path = sys.argv[1]
@@ -36,10 +38,11 @@ tid = lambda take: f"{P}/{take}"
 f = lambda s: round(s * FPS)
 
 # 1. Sätze -> Schnittstücke
-keeps = []
+keeps, chosen = [], set()     # chosen: die Wörter aus dem Text (ein Schnitt in eine Lücke kann ein Nachbarwort streifen)
 for si, s in enumerate(spec["saetze"]):
     t = tid(s["take"])
-    for a, b, _ in ranges_for(t, s["text"], LANG, start=s.get("ab", 0.0)):
+    for a, b, ws in ranges_for(t, s["text"], LANG, start=s.get("ab", 0.0)):
+        chosen.update((t, w["start"]) for w in ws)
         for u, v in tight(t, a, b, LANG, **gap):
             keeps.append({"src": t, "from": u, "to": v, "satz": si})
 if "start" in spec:
@@ -52,6 +55,27 @@ if "ende" in spec:
 for a, b in zip(keeps, keeps[1:]):            # derselbe Take, wenige ms Überlappung: nie einen Laut doppelt spielen
     if a["src"] == b["src"] and b["from"] < a["to"] <= b["to"]:
         b["from"] = a["to"]
+# Freier Raumklang an jedem Schnitt (Sekunden, höchstens 0,1): so weit darf der Ton für die Überblendung über das
+# Stück hinaus laufen, ohne einen Laut anzuspielen ("vor" = vor dem Anfang, "nach" = nach dem Ende). Gemessen am Pegel
+# (Whisper lässt Wörter oft länger enden als den Laut), begrenzt durch das nächste Wort im Transkript.
+def quiet_run(tk, t, step):
+    db = tk.db()
+    thr = float(np.percentile(db, 90)) - 24
+    n = 0
+    while n < 10:
+        i = int(round(t * 100)) + (n if step > 0 else -n - 1)
+        if i < 0 or i >= len(db) or db[i] >= thr:
+            break
+        n += 1
+    return max(0.0, n * 0.01 - 0.01)
+
+
+for k in keeps:
+    tk = Take.get(k["src"])
+    nxt = min((w["start"] for w in tk.words if w["start"] > k["to"] + 0.01), default=k["to"] + 1)
+    prv = max((w["end"] for w in tk.words if w["end"] < k["from"] - 0.01), default=k["from"] - 1)
+    k["nach"] = round(min(quiet_run(tk, k["to"], 1), max(0.0, nxt - k["to"] - 0.03)), 3)
+    k["vor"] = round(min(quiet_run(tk, k["from"], -1), max(0.0, k["from"] - prv - 0.03)), 3)
 for i in spec.get("jcut", {}).get("aus", []):
     keeps[i]["jcut"] = False
 for i in spec.get("jcut", {}).get("an", []):
@@ -62,7 +86,7 @@ words, at, used = [], 0, set()
 for ki, k in enumerate(keeps):
     tk = Take.get(k["src"])
     for wi, w in enumerate(tk.words):
-        if (k["src"], wi) in used or is_filler(w["text"], LANG):
+        if (k["src"], wi) in used or is_filler(w["text"], LANG) or (k["src"], w["start"]) not in chosen:
             continue
         if k["from"] - 0.03 <= w["start"] <= k["to"] - 0.02:
             used.add((k["src"], wi))

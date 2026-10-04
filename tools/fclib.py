@@ -113,6 +113,17 @@ def _snap(take, t, lo, hi, win=0.15):
     return round((i0 + int(np.argmin(seg))) / 100 + 0.005, 3)
 
 
+def _snap_wide(take, t, lo, hi, reach):
+    """Wie _snap, darf aber bis `reach` Sekunden ins weggelassene Nachbarwort, wenn dort eine echte Lücke liegt
+    (mindestens 6 dB leiser). Whisper setzt Wortgrenzen oft 50-80 ms daneben; dann kappte der Schnitt das Ende des
+    letzten Lauts (Tag 6: das "n" von "personalisieren")."""
+    db = take.db()
+    at = lambda x: db[min(len(db) - 1, int(x * 100))]
+    s0 = _snap(take, t, lo, hi)
+    s1 = _snap(take, t, lo + min(0.0, reach), hi + max(0.0, reach))
+    return s1 if at(s1) <= at(s0) - 6 else s0
+
+
 def ranges_for(tid, text, lang, start=0.0, pre=0.08, post=0.12):
     """Schnitt nach Text: richtet den gewählten Text Wort für Wort am Transkript aus und gibt die Quellbereiche zurück.
     Wörter, die im Text fehlen (Füllwörter, Versprecher, ein weggelassenes "Dann,"), werden zu Schnitten. Ein Wort,
@@ -145,8 +156,8 @@ def ranges_for(tid, text, lang, start=0.0, pre=0.08, post=0.12):
         hi_b = ws[r[-1] + 1]["start"] if r[-1] + 1 < len(ws) else b + 0.3   # und nie in das danach
         a = max(a, (lo_a + w0["start"]) / 2) if r[0] > 0 else max(0.0, a)
         b = min(b, (w1["end"] + hi_b) / 2) if r[-1] + 1 < len(ws) else b
-        sa = _snap(tk, a, lo_a, w0["start"] + 0.03)
-        sb = _snap(tk, b, w1["end"] - 0.03, hi_b)
+        sa = _snap_wide(tk, a, lo_a, w0["start"] + 0.03, -0.08)
+        sb = _snap_wide(tk, b, w1["end"] - 0.03, hi_b, 0.08)
         out.append((sa, sb, [ws[k] for k in r]))
     return out
 

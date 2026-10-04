@@ -11,7 +11,8 @@
  */
 import { pictureSpans, type PictureSpan } from "./jcut";
 
-export type Keep = { src: string; from: number; to: number; jcut?: boolean };
+/** vor/nach: freier Raumklang (s) vor dem Anfang und nach dem Ende, für die Überblendung (tools/schnitt.py) */
+export type Keep = { src: string; from: number; to: number; jcut?: boolean; vor?: number; nach?: number };
 export type CutJson = {
   projekt: string;
   fps: number;
