@@ -62,13 +62,14 @@ run("ffmpeg", [
   "-maxrate", `${kbps}k`, "-bufsize", `${2 * kbps}k`, "-pix_fmt", "yuv420p",
   "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", `out/final/${id}-post.mp4`,
 ]);
-// Chat-Version: unter 29 MB. Passt die Post-Version schon, wird sie übernommen; sonst zwei Durchgänge auf ~28,5 MB
+// Chat-Version: unter 29 MB. Passt die Post-Version schon, wird sie übernommen; sonst zwei Durchgänge auf ~27,5 MB
+// (in MB = 10^6 Byte wie die Grenze; mit MiB gerechnet kam Tag 6 auf 30,2 MB)
 const post = `out/final/${id}-post.mp4`;
 const chat = `out/final/${id}-chat.mp4`;
 if (statSync(post).size < 29e6) {
   copyFileSync(post, chat);
 } else {
-  const vb = Math.floor((28.5 * 8 * 1024 * 1024) / seconds / 1000) - 130;
+  const vb = Math.floor((27.5e6 * 8) / seconds / 1000) - 130;
   const log = `out/final/${id}-2pass`;
   run("ffmpeg", ["-v", "error", "-y", "-i", master, "-c:v", "libx264", "-preset", "slow", "-b:v", `${vb}k`,
     "-pass", "1", "-passlogfile", log, "-an", "-f", "null", "-"]);
