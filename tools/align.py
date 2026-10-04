@@ -34,7 +34,7 @@ words = json.load(open(os.path.join(tdir, f"{o.take}.json"), encoding="utf-8"))[
 t0 = time.time()
 
 SR = 16000
-pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", src, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
+pcm = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", src, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
                      capture_output=True, check=True).stdout
 audio = np.frombuffer(pcm, dtype=np.float32)
 proc = Wav2Vec2Processor.from_pretrained(model_id)

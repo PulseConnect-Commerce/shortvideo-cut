@@ -36,7 +36,7 @@ probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-sh
                         "-of", "csv=p=0", mp4], capture_output=True, text=True).stdout.strip().split(",")
 W, H = int(probe[0]), int(probe[1])
 w, h = W // 4, H // 4   # small greyscale frames are enough to see a card appear
-raw = subprocess.run(["ffmpeg", "-v", "error", "-i", mp4, "-vf", f"scale={w}:{h},format=gray", "-f", "rawvideo", "-"],
+raw = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", mp4, "-vf", f"scale={w}:{h},format=gray", "-f", "rawvideo", "-"],
                      capture_output=True, check=True).stdout
 frames = np.frombuffer(raw, np.uint8).reshape(-1, h, w).astype(np.int16)
 # regions without the captions (y 868-960 in the split, 1340+ in full screen) and without the step bar (y < 400):
@@ -50,7 +50,7 @@ def blockdiff(a, b):
     return f   # per frame, per block
 blocks = {r: blockdiff(a, b) for r, (a, b) in REG.items()}
 
-pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", mp4, "-ac", "1", "-ar", "48000", "-f", "f32le", "-"],
+pcm = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", mp4, "-ac", "1", "-ar", "48000", "-f", "f32le", "-"],
                      capture_output=True, check=True).stdout
 x = np.frombuffer(pcm, np.float32)
 spf = 48000 // FPS

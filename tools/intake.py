@@ -31,7 +31,7 @@ if not os.path.exists(o.rohclip):
 
 
 def ff(*args):
-    subprocess.run(["ffmpeg", "-v", "error", "-y", *args], check=True)
+    subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", *args], check=True, stdin=subprocess.DEVNULL)
 
 
 def probe(entry):

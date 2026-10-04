@@ -78,7 +78,7 @@ class Take:
 
     def audio(self):
         if self._audio is None:
-            raw = subprocess.run(["ffmpeg", "-v", "error", "-i", self.path, "-vn", "-ac", "1", "-ar", str(SR),
+            raw = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", self.path, "-vn", "-ac", "1", "-ar", str(SR),
                                   "-f", "f32le", "-"], capture_output=True, check=True).stdout
             self._audio = np.frombuffer(raw, np.float32)
         return self._audio

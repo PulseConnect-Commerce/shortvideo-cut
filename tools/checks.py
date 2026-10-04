@@ -26,7 +26,7 @@ o = ap.parse_args()
 problems = []
 
 # 1. Ausreißer-Frames
-raw = subprocess.run(["ffmpeg", "-v", "error", "-i", o.video, "-vf", "scale=135:240,format=gray", "-f", "rawvideo", "-"],
+raw = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", o.video, "-vf", "scale=135:240,format=gray", "-f", "rawvideo", "-"],
                      capture_output=True, check=True).stdout
 f = np.frombuffer(raw, np.uint8).reshape(-1, 240, 135).astype(np.int16)
 d = np.abs(np.diff(f, axis=0)).mean(axis=(1, 2))
@@ -37,7 +37,7 @@ if spikes:
     problems.append(f"Ausreißer-Frames bei {spikes} (Frame / 30 = Sekunde): ansehen")
 
 # 2. Lautheit
-r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", o.video, "-af", "ebur128=peak=true", "-f", "null", "-"],
+r = subprocess.run(["ffmpeg", "-nostdin", "-hide_banner", "-nostats", "-i", o.video, "-af", "ebur128=peak=true", "-f", "null", "-"],
                    capture_output=True, text=True).stderr
 lufs = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", r)[-1])
 peak = float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", r)[-1])
@@ -50,7 +50,7 @@ if peak > -0.9:
 
 # 3. Effekte unter der Stimme
 def load(path):
-    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-ac", "1", "-ar", "48000", "-f", "f32le", "-"],
+    pcm = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", path, "-ac", "1", "-ar", "48000", "-f", "f32le", "-"],
                          capture_output=True, check=True).stdout
     return np.frombuffer(pcm, np.float32)
 

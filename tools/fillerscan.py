@@ -31,7 +31,7 @@ def words_of(src):
 at = 0
 for k in cut["keeps"]:
     slug, take = k["src"].split("/")
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", str(k["from"]), "-to", str(k["to"]), "-i",
+    raw = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-ss", str(k["from"]), "-to", str(k["to"]), "-i",
                           f"{ROOT}/public/projekte/{slug}/takes/{take}.mp4", "-vn", "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"],
                          capture_output=True).stdout
     x = np.frombuffer(raw, np.int16).astype(float) / 32768

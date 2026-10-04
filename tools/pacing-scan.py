@@ -30,7 +30,7 @@ probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-sh
                         "-of", "csv=p=0", mp4], capture_output=True, text=True).stdout.strip().split(",")
 W, H = int(probe[0]), int(probe[1])
 w, h = W // 4, H // 4
-raw = subprocess.run(["ffmpeg", "-v", "error", "-i", mp4, "-vf", f"scale={w}:{h},format=gray", "-f", "rawvideo", "-"],
+raw = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", mp4, "-vf", f"scale={w}:{h},format=gray", "-f", "rawvideo", "-"],
                      capture_output=True, check=True).stdout
 fr = np.frombuffer(raw, np.uint8).reshape(-1, h, w).astype(np.int16)
 y = lambda px: int(h * px / 1920)
