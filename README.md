@@ -1,17 +1,31 @@
 # faber-cut
 
+[![Test auf Windows, macOS und Linux](https://github.com/TobiB1505/faber-cut/actions/workflows/test.yml/badge.svg)](https://github.com/TobiB1505/faber-cut/actions/workflows/test.yml)
+
 **Claude schneidet deine Videos.** Du filmst dich mit dem Handy, gibst Claude Code die Rohclips und sagst "schneide mir
 dieses Video". Raus kommt ein fertiges Reel für Instagram und TikTok (1080x1920):
 
 - Füllwörter, Versprecher und Pausen raus, ohne Mini-Jump-Cuts,
 - Untertitel Wort für Wort,
-- Motion Graphics, die genau auf dem gesprochenen Wort kommen,
+- Motion Graphics, die genau auf dem gesprochenen Wort kommen (2 Frames vor dem ersten Laut, gemessen),
+- alles in der sicheren Fläche, nichts unter den Knöpfen von TikTok und Instagram (mit Raster geprüft),
 - Splitscreen für Tool-Erklärungen, J-Cuts, Soundeffekte leise unter der Stimme,
 - Lautheit auf -14 LUFS, fertig zum Hochladen.
 
+![Der Probelauf: aus einem Rohclip mit Ähm und Pausen wird ein fertiges Reel](beispiel/vorschau.jpg)
+
+*Der Probelauf, den jeder nach dem Einrichten bekommt: 20,3 s Rohclip mit "Ähm" und Pausen werden zu 15,7 s. Alle
+Zahlen im Bild kommen aus dem echten Schnitt.*
+
 Das ist der Skill, mit dem ich jedes Video von **Marketing Faber** schneiden lasse, mit allen Skripten, die über die
-Tage dazugekommen sind. **Er kostet nichts:** faber-cut ist frei (MIT), Transkription, Schnitt und Render laufen ohne
-bezahlte Dienste, und die optionale Gemini-Prüfung geht mit einem kostenlosen Schlüssel. Du brauchst nur Claude Code.
+Tage dazugekommen sind.
+
+**Er kostet nichts:**
+- faber-cut ist frei (MIT).
+- Transkription, Schnitt und Render laufen ohne bezahlte Dienste.
+- Die optionale Gemini-Prüfung geht mit einem kostenlosen Schlüssel.
+
+Du brauchst nur Claude Code.
 
 > **Wichtig:** Mein Skill schneidet am Anfang in **meinem** Stil. Beim Einrichten fragt Claude dich nach deinem
 > (Untertitel, Grafiken, Tempo, Farbe), und nach jedem Video sagst du, was du anders willst: Claude schreibt es in
@@ -19,14 +33,20 @@ bezahlte Dienste, und die optionale Gemini-Prüfung geht mit einem kostenlosen S
 
 ## Los geht's: lokal oder online
 
-Du hast zwei Möglichkeiten. Beide richtet Claude mit dir zusammen ein, Schritt für Schritt mit Auswahlfragen.
+Du hast zwei Möglichkeiten. Beide richtet Claude mit dir zusammen ein. Dafür startet das **Onboarding**, ein Skill,
+der dich Schritt für Schritt mit Auswahlfragen durchführt:
+- Jeder Schritt hat höchstens drei Handgriffe.
+- Jeder Schritt sagt dir, woran du siehst, dass er geklappt hat.
+- Erst nach deinem "Erledigt" geht es weiter.
+
+Du musst nichts über Terminal, Python oder API-Schlüssel wissen.
 
 | | **Lokal** (auf deinem Computer) | **Online** (Claude Code im Browser oder in der App) |
 | --- | --- | --- |
-| Für wen | Windows, Mac (Apple-Chip) oder Linux, ~8 GB frei | Claude-Plan mit Cloud-Sitzungen (Pro, Max, Team) |
+| Für wen | Windows, Mac mit Apple-Chip oder Linux, ~8 GB frei | Claude-Plan mit Cloud-Sitzungen (Pro, Max, Team) |
 | Clips | legst du in den Ordner `eingang/` | lädst du vom Handy in einen Google-Drive-Ordner |
 | Fertiges Video | liegt in `out/final/` | kommt in den Chat |
-| Installieren | Node.js und ffmpeg (Claude hilft) | nichts, nur ein paar Einstellungen |
+| Installieren | Node.js und ffmpeg (Claude hilft) | nichts, nur ein paar Klicks in den Einstellungen |
 
 ### Lokal
 
@@ -45,9 +65,8 @@ Claude prüft, ob Node.js und ffmpeg da sind, und hilft beim Installieren:
 - Mac: per Homebrew
 - Linux: per Paketmanager
 
-Dann startet Claude `npm run setup`. Das holt ein eigenes Python und die Modelle, ~4 GB. In der Zeit fragt dich Claude
-nach deinem Stil. Zum Schluss schneidet ein **Probelauf** einen Beispielclip einmal komplett durch, damit du weißt,
-dass alles läuft.
+Dann läuft `npm run setup`. Es holt sich ein eigenes Python, die Pakete und die Sprachmodelle, ~4 GB. In der Zeit
+fragt dich Claude nach deinem Stil und ob du die Gemini-Prüfung willst.
 
 ### Online
 
@@ -57,13 +76,45 @@ dass alles läuft.
 2. Öffne [claude.ai/code](https://claude.ai/code), starte eine Sitzung mit deinem Repo `faber-cut`.
 3. Schreib: **"Richte faber-cut für mich ein."**
 
-Claude führt dich durch die Einstellungen:
-- eine Cloud-Umgebung mit den nötigen Freigaben
-- den Google-Drive-Connector
-- einen Drive-Ordner für deine Clips, freigegeben für "Jeder mit dem Link", weil Claude Videos in voller Größe nur
-  über den Link laden kann
+Claude fragt dich nach deinem Stil, dann kommen sieben kurze Klick-Schritte von je etwa einer Minute:
+1. Drive-Ordner anlegen.
+2. Den Ordner freigeben.
+3. Gemini-Schlüssel holen (fällt weg, wenn du Gemini nicht willst).
+4. Cloud-Umgebung anlegen.
+5. Internet-Freigaben eintragen.
+6. Setup-Skript einfügen.
+7. Google Drive verbinden.
 
 Danach startest du einmal eine neue Sitzung, und Claude macht den Rest.
+
+Warum der Ordner für "Jeder mit dem Link" freigegeben wird: Über die Drive-Verbindung kann Claude nur kleine Dateien
+lesen. Videos lädt es in voller Größe über den Link.
+
+### Was das Onboarding dich fragt
+
+- **Sprache** deiner Videos (Deutsch, Englisch oder beides)
+- **Untertitel:** Wort für Wort oder keine
+- **Grafiken:** viele, wenige oder keine
+- **Tempo:** ab welcher Pause geschnitten wird
+- **Akzentfarbe**, **Soundeffekte**, **Zooms**, **Hook-Titel** mit oder ohne Serienname, typische **Videolänge**
+
+Daraus schreibt Claude deinen Stil (`.claude/skills/faber-cut/stil.md`) und stellt die Vorlage darauf ein.
+
+### Der Probelauf
+
+Zum Schluss schneidet `npm run probelauf` einen 20-Sekunden-Beispielclip einmal komplett durch, mit genau den
+Schritten, die auch dein Video durchläuft:
+1. vorbereiten
+2. transkribieren
+3. ausrichten
+4. nach Text schneiden
+5. Vorschau
+6. Vollversion
+7. Raster
+8. Prüfungen
+
+Das Video oben ist dieses Ergebnis. Läuft der Probelauf durch, ist alles eingerichtet. `npm run doktor` sagt dir
+jederzeit, ob alles bereit ist, und bei jedem Problem, wie du es behebst.
 
 ## Dein erstes Video
 
@@ -73,12 +124,14 @@ Danach startest du einmal eine neue Sitzung, und Claude macht den Rest.
 Dann:
 1. Claude bereitet den Clip vor, transkribiert ihn und schlägt dir **drei Fassungen als Text** vor: komplett,
    gestrafft, knackig. Du wählst eine.
-2. Claude schneidet, baut die Grafiken und schickt dir eine **Vorschau**, mit eigenen Messungen und, wenn du willst,
-   zwei Gemini-Kritiken.
+2. Claude schneidet, baut die Grafiken und schickt dir eine **Vorschau**. Dazu kommen die eigenen Messungen (Sync,
+   Tempo, Raster) und, wenn du willst, zwei Gemini-Kritiken.
 3. Du sagst, was dir nicht gefällt ("Pacing straffer", "der Aufruf ans Ende"). Claude setzt es um und merkt sich
    Geschmacksfragen in deinem Stil.
-4. Du sagst "passt", Claude rendert die **Vollversion** und prüft sie: Master, `-post.mp4` für Instagram/TikTok und
-   `-chat.mp4` (unter 29 MB).
+4. Du sagst "passt", Claude rendert die **Vollversion** und prüft sie. Du bekommst drei Dateien:
+   - das Master
+   - `-post.mp4` für Instagram/TikTok
+   - `-chat.mp4` unter 29 MB
 
 Tipp: Gib Claude schon beim Filmen Anweisungen. Sag im Clip "Claude, füg hier oben rechts das GitHub-Logo ein" und
 rede weiter: Claude setzt es um und schneidet die Anweisung raus.
@@ -99,29 +152,53 @@ npm run final ──► Master, Post- und Chat-Version, -14 LUFS
                        └─ npm run checks  Ausreißer-Frames, Lautheit, Effekte unter der Stimme
 ```
 
-**Warum nach Text schneiden?** Weil Claude so nie ein Wort verliert und nie mitten in einem Wort schneidet. Die
-Fassung, die du wählst, ist ein Text; `schnitt.py` richtet ihn am Transkript aus. Alles, was im Text fehlt (ein "äh",
-ein Versprecher, ein "Dann,"), wird zu einem Schnitt. Danach prüft es, ob die Untertitel Wort für Wort deinem Text
-entsprechen.
+**Warum nach Text schneiden?** Weil Claude so nie ein Wort verliert und nie mitten in einem Wort schneidet:
+- Die Fassung, die du wählst, ist ein Text, und `schnitt.py` richtet ihn am Transkript aus.
+- Alles, was im Text fehlt (ein "äh", ein Versprecher, ein "Dann,"), wird zu einem Schnitt.
+- Danach prüft es, ob die Untertitel Wort für Wort deinem Text entsprechen.
 
 **Warum Wort-Ausrichtung?** Whisper schätzt Wortzeiten und liegt 0,1-0,3 s daneben. Eine Grafik, die darauf gesetzt
 wird, wirkt asynchron. `align.py` legt jedes Wort auf seinen echten ersten Laut, und jede Grafik kommt 2 Frames
 davor. Das ist der Unterschied zwischen "irgendwie passend" und "auf den Punkt".
+
+### Das Raster: wohin eine Grafik darf
+
+![Das Raster auf dem fertigen Probelauf](beispiel/raster.jpg)
+
+TikTok und Instagram legen ihre Knöpfe und Texte über dein Video:
+- oben die Leiste,
+- rechts Like, Kommentar und Teilen,
+- unten Name, Beschreibung und Ton.
+
+Was dort liegt, sieht niemand. `npm run raster` zeichnet auf jedes Bild:
+- ein 60-px-Raster mit Pixelwerten,
+- die **sichere Fläche** (grün),
+- das Untertitel-Band (gelb),
+- die Zonen von **TikTok** (türkis) und **Instagram** (pink),
+- deinen Kopf (rot).
+
+Für jeden Zeitpunkt nennt es außerdem die freien Felder. Claude nutzt das zweimal:
+1. Vor dem Platzieren, auf deinem Rohclip, damit es nach Zahlen platziert und nicht nach Gefühl.
+2. Nach dem Rendern, auf der Vorschau, als Prüfung: Jede Grafik muss ganz in der grünen Fläche liegen, nichts auf
+   deinem Kopf.
+
+Die Maße stehen in `src/lib/zonen.json`. Die Apps veröffentlichen keine offiziellen Maße für normale Posts, darum sind
+die Werte vorsichtig gewählt und decken die Angaben aller Quellen ab (Datum und Quellen stehen in der Datei).
 
 ## Ordner
 
 | Ordner / Datei | Inhalt |
 | --- | --- |
 | `.claude/skills/faber-cut/` | der Skill: `SKILL.md` (der Ablauf) und `stil.md` (**dein Geschmack**, wächst mit) |
-| `.claude/skills/skill-onboarding/` | das Onboarding beim ersten Start |
+| `.claude/skills/skill-onboarding/` | das Onboarding beim ersten Start, mit allen Klickpfaden (`anleitungen.md`) |
 | `faber-cut.json` | deine Einstellungen aus dem Onboarding (lokal/online, Sprache, Gemini, Drive-Ordner) |
 | `tools/` | die Werkzeuge (Python und Node), jedes mit Erklärung im Kopf der Datei |
-| `src/lib/` | Remotion-Bausteine: Zeitachse (`schnitt.ts`), Untertitel, Titel, Splitscreen, J-Cuts, `stil.ts` |
+| `src/lib/` | Remotion-Bausteine: Zeitachse (`schnitt.ts`), Untertitel, Titel, Splitscreen, J-Cuts, `stil.ts`, Raster (`raster.tsx`, `zonen.json`) |
 | `src/projekte/_vorlage/` | Vorlage für jedes neue Video |
 | `src/projekte/<projekt>/` | deine Videos: `schnitt.json`, `cut.json`, `Video.tsx` |
 | `public/projekte/` | deine Takes und Transkripte (bleiben privat, nicht im Git) |
 | `eingang/` | hier legst du Rohclips ab (nicht im Git) |
-| `beispiel/` | der Probelauf: Rohclip `probe.mp4` (Stimme synthetisch, mit „Ähm“ und Pausen) und `Probelauf.tsx`, das Beispiel-Video, das zeigt, was faber-cut kann |
+| `beispiel/` | der Probelauf: der Rohclip `probe.mp4` (Stimme synthetisch, mit "Ähm" und Pausen) und `Probelauf.tsx` |
 | `out/` | Vorschauen und fertige Videos |
 
 ## Befehle (macht normalerweise Claude für dich)
@@ -133,12 +210,15 @@ npm run setup                                   # einrichten (einmal; wiederholb
 npm run doktor                                  # prüfen, ob alles bereit ist
 npm run probelauf                               # Beispielclip einmal komplett schneiden
 npm run intake -- eingang/clip.mov video1 t1    # Clip vorbereiten, transkribieren, ausrichten
+npm run raster -- public/projekte/video1/takes/t1.mp4 out/raster.jpg 2,10,20   # wohin Grafiken dürfen
 npm run schnitt -- src/projekte/video1/schnitt.json
 npm run fillerscan -- src/projekte/video1/cut.json
 npm run studio                                  # Remotion Studio zum Durchklicken
 npm run vorschau -- Video1                      # Vorschau (halbe Größe, mit Cache)
 npm run sync -- out/vorschau/Video1.mp4 src/projekte/video1/cut.json github remotion
 npm run pacing -- out/vorschau/Video1.mp4 src/projekte/video1/cut.json
+npm run still -- Video1 out/still.jpg --frame=120 --props='{"raster":true}'    # Standbild mit Raster
+npm run gemini -- out/vorschau/Video1.mp4 prompts/review.md                    # optional
 npm run final -- Video1                         # Vollversion
 npm run checks -- out/final/Video1.mp4 --stems Video1
 ```
@@ -149,8 +229,11 @@ Mit einem kostenlosen Schlüssel von [Google AI Studio](https://aistudio.google.
 Gemini ansehen und anhören (`npm run gemini`, Prompt in `prompts/review.md`). Das läuft immer zweimal, weil Gemini sich
 oft irrt, und Claude prüft jede Behauptung nach, bevor es etwas ändert.
 
-Der Schlüssel kommt lokal in die Datei `.env` (`GEMINI_API_KEY=…`, nicht im Git) und online in die
-Umgebungsvariablen der Cloud-Umgebung. Das Onboarding zeigt dir beides.
+Wohin der Schlüssel kommt:
+- **Lokal:** in die Datei `.env` (`GEMINI_API_KEY=…`, nicht im Git).
+- **Online:** in die Umgebungsvariablen der Cloud-Umgebung.
+
+Er kommt nie in den Chat. Das Onboarding zeigt dir beides.
 
 Achtung: Dafür geht die Vorschau an Google, und beim kostenlosen Schlüssel darf Google sie zur Verbesserung seiner
 Dienste nutzen.
@@ -159,16 +242,19 @@ Dienste nutzen.
 
 - **Dauer** (gemessen auf einem normalen Server):
   - Einrichten: 5-15 Minuten, je nach Internet.
-  - Probelauf: ~3 Minuten.
+  - Probelauf: ~4 Minuten.
   - 4K-Clip von 40 s: Vorbereiten ~6 Minuten, Vorschau ~40 s für 15 s Video, Vollversion ~2,5 Minuten.
   - Video von 1:45: Vorschau ~4 Minuten, Vollversion ~8 Minuten.
-- **Getestet** wird jede Änderung automatisch auf Windows, macOS und Linux: Einrichtung, Doktor und Probelauf
-  (GitHub Actions, siehe `.github/workflows/test.yml`).
+- **Getestet** wird jede Änderung automatisch auf Windows, macOS und Linux: Einrichtung, Typecheck, Doktor und der
+  komplette Probelauf (GitHub Actions, `.github/workflows/test.yml`, Status oben im Badge).
+- **Nicht unterstützt:** Macs mit Intel-Chip und Windows auf ARM. Für sie gibt es die nötigen KI-Pakete nicht mehr.
+  Nimm dort den Online-Modus.
 - **Remotion** ist für Einzelpersonen und kleine Firmen (bis 3 Personen) kostenlos; größere Firmen brauchen eine
   [Remotion-Lizenz](https://www.remotion.dev/license).
 - **Sprachen:** Deutsch und Englisch sind eingerichtet. Für andere Sprachen nimmt `npm run ausrichten -- … --modell`
   jedes wav2vec2-CTC-Modell von Hugging Face.
 - Schrift: [Geist](https://vercel.com/font) (SIL Open Font License). Die Soundeffekte sind selbst synthetisiert und frei.
+  Die Stimme im Beispielclip ist synthetisch (Gemini TTS).
 
 ## Lizenz
 
