@@ -103,7 +103,7 @@ Schick ihm die Vorschau mit: was du gemacht hast, die Gemini-Noten, welche Punkt
 
 Erst wenn er "passt" sagt:
 1. `npm run final -- <Komposition>`: voller Render, -14 LUFS, Post-Version (≤ 47 MB) und Chat-Kopie (< 29 MB).
-2. `npm run checks -- out/final/<id>.mp4 --stems <id>`: keine Ausreißer-Frames, Lautheit, jeder Effekt ≥ 6 dB unter der Stimme. Erst bei OK übergeben.
+2. `npm run checks -- out/final/<id>.mp4 --stems <id>`: keine Ausreißer-Frames, Lautheit, keine Tonlöcher (digitale Stille mitten im Video hört man als Sprung), jeder Effekt ≥ 6 dB unter der Stimme. Erst bei OK übergeben.
 3. Cover: ein Frame mit Titel und Gesicht (`ffmpeg -ss 1.4 -i out/final/<id>.mp4 -frames:v 1 out/final/<id>-cover.jpg`).
 4. **Übergeben:** lokal nennst du ihm den Ordner `out/final/` (`<id>-post.mp4` zum Hochladen auf Instagram/TikTok). Online kann er nicht in deinen Rechner schauen: schick ihm `out/final/<id>-chat.mp4` (unter 29 MB) als Datei in den Chat, falls du ein Werkzeug zum Senden von Dateien hast; sonst lade sie mit dem Drive-Connector in seinen Ordner, wenn das klappt, oder sag ihm ehrlich, dass es nicht geht.
 5. **Online speichern:** die Sitzung ist nach einer Weile weg. Committe `src/projekte/<projekt>/`, `stil.md` und `faber-cut.json` und pushe sie so, wie es in `faber-cut.json` unter `speichern` steht (`main` = er hat erlaubt, direkt auf seinen Hauptzweig zu pushen).

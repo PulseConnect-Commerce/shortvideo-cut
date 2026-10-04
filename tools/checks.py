@@ -5,7 +5,9 @@
   1. Ausreißer-Frames: ein einzelner Frame, der sich von beiden Nachbarn unterscheidet, während die sich gleichen
      (weiße Blitze, ein falscher Frame an einem Schnitt);
   2. Lautheit: -14 LUFS (±0,5) und True Peak höchstens -1 dB;
-  3. mit --stems: rendert Stimme und Effekte getrennt (nur Ton, schnell) und prüft, dass jeder Effekt in seinen
+  3. Tonlöcher: digitale Stille (unter -90 dB) mitten im Video hört man als Sprung, auch wenn sie nur 10 ms dauert
+     (ein Schnitt ohne Überblendung, ein Stück mit AAC-Vorlauf); nur die letzte halbe Sekunde darf still sein;
+  4. mit --stems: rendert Stimme und Effekte getrennt (nur Ton, schnell) und prüft, dass jeder Effekt in seinen
      lautesten 100 ms mindestens 6 dB unter dem Sprech-Pegel bleibt.
 Gibt am Ende OK oder die Liste der Probleme aus (Exit-Code 1).
 """
@@ -47,8 +49,19 @@ if abs(lufs + 14) > 0.5:
 if peak > -0.9:
     problems.append(f"True Peak {peak:.1f} dB über -1 dB")
 
+# 3. Tonlöcher (5-ms-Fenster)
+pcm = np.frombuffer(subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", o.video, "-ac", "1", "-ar", "48000", "-f", "f32le", "-"],
+                                   capture_output=True, check=True).stdout, np.float32)
+n = len(pcm) // 240
+db = 20 * np.log10(np.sqrt((pcm[: n * 240].reshape(n, 240).astype(np.float64) ** 2).mean(1)) + 1e-10)
+holes = sorted({round(float(i) * 0.005, 2) for i in np.where(db[: max(0, n - 100)] < -90)[0]})
+runs = [t for i, t in enumerate(holes) if i == 0 or t - holes[i - 1] > 0.02]
+print(f"Tonlöcher: {runs or 'keine'}")
+if runs:
+    problems.append(f"Tonlöcher (digitale Stille) bei {runs} s: Schnitt ohne Überblendung? anhören")
 
-# 3. Effekte unter der Stimme
+
+# 4. Effekte unter der Stimme
 def load(path):
     pcm = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", path, "-ac", "1", "-ar", "48000", "-f", "f32le", "-"],
                          capture_output=True, check=True).stdout

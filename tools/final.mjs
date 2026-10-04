@@ -9,10 +9,10 @@
  *   <id>-post.mp4    für Instagram/TikTok: bis 5 Mbit/s, bei langen Videos weniger, damit es unter 47 MB bleibt
  *                    (das behält Instagram nach der eigenen Kompression ohnehin ungefähr)
  *   <id>-chat.mp4    unter 29 MB (zwei Durchgänge), zum Verschicken im Chat
- * Danach: npm run checks -- out/final/<id>.mp4 (Ausreißer-Frames, Lautheit, Effekte unter der Stimme).
+ * Danach: npm run checks -- out/final/<id>.mp4 (Ausreißer-Frames, Lautheit, Tonlöcher, Effekte unter der Stimme).
  */
 import { execFileSync, spawnSync } from "node:child_process";
-import { copyFileSync, mkdirSync, renameSync, rmSync, statSync } from "node:fs";
+import { copyFileSync, mkdirSync, rmSync, statSync } from "node:fs";
 import { cpus } from "node:os";
 
 const id = process.argv[2];
@@ -22,30 +22,32 @@ if (!id) {
 }
 mkdirSync("out/final", { recursive: true });
 const master = `out/final/${id}.mp4`;
+// erst Matroska mit PCM-Ton: Remotions AAC legt ~43 ms Stille an den Anfang, die Lautheits-Stufe trug sie mit, der Ton
+// lag 1,3 Frames hinter dem Bild. AAC entsteht so nur einmal, in der Lautheits-Stufe.
+const raw = `out/final/${id}.roh.mkv`;
 const run = (cmd, args) => {
   const r = spawnSync(cmd, args, { stdio: "inherit" });
   if (r.status !== 0) throw new Error(`${cmd} fehlgeschlagen`);
 };
 
 const t0 = Date.now();
-run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", id, master, `--concurrency=${Math.max(1, Math.min(4, cpus().length))}`, "--crf=18", "--log=error"]);
+run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", id, raw, "--codec=h264-mkv", `--concurrency=${Math.max(1, Math.min(4, cpus().length))}`, "--crf=18", "--log=error"]);
 console.log(`gerendert in ${Math.round((Date.now() - t0) / 1000)} s`);
 
 // Lautheit: zwei Durchgänge (messen, dann linear anpassen), Bild wird nur kopiert
 const probe = spawnSync(
   "ffmpeg",
-  ["-hide_banner", "-nostats", "-i", master, "-af", "loudnorm=I=-14:TP=-1:LRA=11:print_format=json", "-f", "null", "-"],
+  ["-hide_banner", "-nostats", "-i", raw, "-af", "loudnorm=I=-14:TP=-1:LRA=11:print_format=json", "-f", "null", "-"],
   { encoding: "utf8" },
 );
 // der Messwert ist der letzte {...}-Block mit "input_i"; neuere ffmpeg schreiben danach noch Zeilen
 const m = JSON.parse(probe.stderr.match(/\{[^{}]*"input_i"[^{}]*\}/g).pop());
-const tmp = master.replace(/\.mp4$/, ".ln.mp4");
 run("ffmpeg", [
-  "-v", "error", "-y", "-i", master, "-c:v", "copy",
+  "-v", "error", "-y", "-i", raw, "-c:v", "copy",
   "-af", `loudnorm=I=-14:TP=-1:LRA=11:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`,
-  "-ar", "48000", "-c:a", "aac", "-b:a", "320k", tmp,
+  "-ar", "48000", "-c:a", "aac", "-b:a", "320k", "-movflags", "+faststart", master,
 ]);
-renameSync(tmp, master);
+rmSync(raw, { force: true });
 console.log(`Lautheit: ${m.input_i} LUFS -> -14 LUFS`);
 
 const seconds = Number(

@@ -45,7 +45,7 @@ if (!line) {
 }
 const meta = { durationInFrames: Number(line.trim().split(/\s+/)[3]) };
 const total = meta.durationInFrames;
-const key = JSON.stringify({ total, chunkFrames, scale });
+const key = JSON.stringify({ total, chunkFrames, scale, ton: "pcm" });
 const keyFile = `${dir}/key.json`;
 if (
   rest.includes("--all") ||
@@ -60,7 +60,9 @@ if (
 const chunks = [];
 for (let a = 0; a < total; a += chunkFrames)
   chunks.push([a, Math.min(total, a + chunkFrames) - 1]);
-const file = (i) => `${dir}/chunk-${String(i).padStart(3, "0")}.mp4`;
+// Stücke als Matroska mit PCM-Ton: AAC legt an den Anfang jedes Stücks ~43 ms Vorlauf-Stille; ohne Neukodieren
+// zusammengesetzt war das alle 10 s ein Tonloch und der Ton lag 1,3 Frames hinter dem Bild. AAC erst ganz am Ende.
+const file = (i) => `${dir}/chunk-${String(i).padStart(3, "0")}.mkv`;
 const dirty = new Set();
 for (const r of (opt("--changed", "") || "").split(",").filter(Boolean)) {
   const [a, b] = r.split("-").map(Number);
@@ -82,6 +84,7 @@ const render = (i) =>
         "render",
         id,
         file(i),
+        "--codec=h264-mkv",
         `--scale=${scale}`,
         "--crf=28",
         `--concurrency=${Math.max(1, Math.min(2, Math.floor(cpus().length / 2)))}`,
@@ -103,8 +106,8 @@ const worker = async () => {
   while (queue.length) await render(queue.shift());
 };
 await Promise.all([worker(), worker()]); // zwei gleichzeitig
-// der AAC-Ton jedes Stücks läuft ~48 ms über sein Bild hinaus; "outpoint" schneidet jedes Stück auf seine Bildlänge,
-// damit der Ton von Stück zu Stück nicht gegen das Bild wandert. Pfade relativ zur Liste (gilt auch auf Windows)
+// "outpoint" schneidet jedes Stück auf seine Bildlänge, damit der Ton von Stück zu Stück nicht gegen das Bild wandert.
+// Pfade relativ zur Liste (gilt auch auf Windows)
 const list = chunks
   .map(
     ([a, b], i) =>
@@ -122,8 +125,14 @@ execFileSync("ffmpeg", [
   "0",
   "-i",
   `${dir}/list.txt`,
-  "-c",
+  "-c:v",
   "copy",
+  "-c:a",
+  "aac",
+  "-b:a",
+  "192k",
+  "-movflags",
+  "+faststart",
   `out/vorschau/${id}.mp4`,
 ]);
 console.log(

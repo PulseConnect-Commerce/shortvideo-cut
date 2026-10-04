@@ -79,6 +79,6 @@ step("Schnitt nach Text", ...py("schnitt.py", "src/projekte/probelauf/schnitt.js
 step("Vorschau (halbe Größe)", ...node("tools/preview.mjs", "Probelauf", "--all"));
 step("Vollversion (-14 LUFS, Post- und Chat-Kopie)", ...node("tools/final.mjs", "Probelauf"));
 step("Raster (sichere Fläche, Zonen von TikTok und Instagram)", ...py("grid.py", "out/final/Probelauf.mp4", "out/final/Probelauf-raster.jpg", "1.5,5,9,13", "--scale", "0.35"));
-step("Prüfungen (Ausreißer, Lautheit, Effekte unter der Stimme)", ...py("checks.py", "out/final/Probelauf.mp4", "--stems", "Probelauf"));
+step("Prüfungen (Ausreißer, Lautheit, Tonlöcher, Effekte unter der Stimme)", ...py("checks.py", "out/final/Probelauf.mp4", "--stems", "Probelauf"));
 
 console.log(`\n${steps.join("\n")}\n\nProbelauf bestanden. Das fertige Video: out/final/Probelauf.mp4 (Raster: out/final/Probelauf-raster.jpg)`);

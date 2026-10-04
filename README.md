@@ -159,7 +159,7 @@ Video.tsx (Remotion) ──► npm run vorschau    10-s-Stücke mit Cache, nur G
                        ├─ npm run raster  liegt alles in der sicheren Fläche, frei von den Knöpfen von TikTok/Instagram?
                        └─ npm run pacing  wo passiert länger als 2 s nichts?
 npm run final ──► Master, Post- und Chat-Version, -14 LUFS
-                       └─ npm run checks  Ausreißer-Frames, Lautheit, Effekte unter der Stimme
+                       └─ npm run checks  Ausreißer-Frames, Lautheit, Tonlöcher, Effekte unter der Stimme
 ```
 
 **Warum nach Text schneiden?** Weil Claude so nie ein Wort verliert und nie mitten in einem Wort schneidet:
