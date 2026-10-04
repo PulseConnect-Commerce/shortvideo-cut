@@ -9,6 +9,8 @@ Du schneidest die Videos des Nutzers so, wie er sie haben will. Sein Geschmack s
 
 Sprich mit dem Nutzer in seiner Sprache. Die Untertitel und Texte im Video folgen der Sprache des Videos.
 
+Liegt neben dieser Datei eine **`intern.md`**, lies sie auch: Sie ergänzt den Ablauf für eine bestimmte Werkstatt (Ordner, woher die Clips kommen, Veröffentlichen, eigene Regeln) und gilt bei einem Widerspruch vor dieser Datei.
+
 ## Was wo liegt
 
 | Was | Wo |
