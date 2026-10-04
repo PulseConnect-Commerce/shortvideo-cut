@@ -63,12 +63,16 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 
 <!-- Claude: trag hier jede Geschmacksregel ein, die der Nutzer beim Schnitt sagt, mit seinem Satz und Datum. -->
 
-- **Hook-Titel 1:1 wie gesprochen** und lang genug zum Lesen (~3 s): "In der Texthook steht 'Ich schenke dir meinen
-  Skill', ich sage 'meinen Schnittskill' … ich würde gerne wirklich eins zu eins meinen gesprochenen Satz in der
-  Texthook stehen haben … damit man ihn auch wirklich lesen kann." (Tag 6, 2026-10-04)
-- **Kein Satz bricht ab:** das Video endet nach einem geschlossenen Satz; ein angefangener Satz danach fliegt raus,
-  auch wenn er Information trägt (die kommt dann in die Grafik). "Es gibt einen geschlossenen Satz … und dann
-  springt das in die Mitte in einen anderen Satz." (Tag 6)
+- **Hook-Titel 1:1 wie gesprochen, groß, kurz:** der gesprochene Satz wörtlich, so groß wie möglich (Tag 6: drei
+  Zeilen bis 124 px unten über dem Shirt, die Serie klein oben, solange er steht keine Untertitel), und nur so lange,
+  bis der Satz gesagt ist (~2,3 s; 3,4 s war "zu lange da"). "Ich würde gerne wirklich eins zu eins meinen
+  gesprochenen Satz in der Texthook stehen haben … der Hooktext könnte viel, viel größer sein und noch
+  leserlicher." (Tag 6, 2026-10-04)
+- **Der Aufruf am Ende bleibt am Stück, mit seiner Begründung**, so wie ich ihn gesagt habe: keine Pausen- oder
+  Äh-Schnitte darin (ein "äh" wird nur leise, `"stumm"`), nichts davon weglassen. "Schau dir das Original an, das
+  macht viel mehr Sinn, als wie du es geschnitten hast … das Ende macht kontextmäßig null Sinn." (Tag 6, v4)
+- **Nicht zweimal dasselbe Bindewort hintereinander** ("…kannst dann losschneiden. Dann schneidet …"): lieber eine
+  andere Fassung aus einem anderen Take, die in einem Zug gesprochen ist. (Tag 6)
 - **Sichtbare Sprünge im Vollbild verstecken oder vermeiden:** lieber den Satz ungeschnitten lassen; sonst ein
   Zoomwechsel genau auf dem Schnitt. "Da ist ein harter Cut drin, den man sieht … verstecken mit einem Zoom." (Tag 6)
 - **Grafik bis zum Schluss:** der Vollbild-Teil am Ende (Kommentare, Folgen) bekommt genauso viel Motion Graphics

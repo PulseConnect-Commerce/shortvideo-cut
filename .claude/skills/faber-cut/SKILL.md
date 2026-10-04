@@ -60,6 +60,8 @@ Schreib `src/projekte/<projekt>/schnitt.json` (Format: siehe Kopf von `tools/sch
 - **Umstellen:** Satz in der Liste verschieben (z. B. den Follow-Aufruf ans Ende).
 - **`start.ab`:** beginnt das Video mit einer Bewegung (er stellt das Handy hin), dann ab dem Moment, ab dem man sie versteht, nicht Sekunden davor.
 - **`ende.bis`:** ~0,6 s nach dem letzten Wort, bevor sein nächster Laut kommt. So bleibt er unter der Endgrafik im Bild (keine Frames ohne Bild anhängen).
+- **`"ganz": true`** an einem Satz: keine Pausen herausschneiden. Für jeden Gedanken, den ein Schnitt zerreißen würde, vor allem den Aufruf am Ende samt Begründung: ein Pausen- oder Äh-Schnitt mitten darin klingt wie zwei Sätze. Ein "äh" darin wird mit **`"stumm": [[von, bis]]`** (Quell-Sekunden) leise statt geschnitten, das Bild läuft weiter.
+- **`ende.halt`:** ein stilles Stück aus dem Take als Halt nach dem letzten Wort, nur wenn nach dem letzten Wort noch etwas gesagt wird, das nicht ins Video gehört. Nie einen Satz weglassen, der den Aufruf begründet.
 - **`korrekturen`:** Verhörer in den Untertiteln (`[take, sekunde, "falsch", "richtig"]`), `""` nimmt ein Wort raus, das nicht im Ton ist.
 
 Dann `npm run schnitt -- src/projekte/<projekt>/schnitt.json`. Es muss **ohne "PRÜFEN"** durchlaufen: Untertitel = gewählter Text Wort für Wort, Reihenfolge stimmt, keine Mini-Schnitte. Danach `npm run fillerscan -- src/projekte/<projekt>/cut.json`: Stimme ohne Wort ist meist ein "äh", das Whisper nicht aufgeschrieben hat. Hör dir die Stelle über den Pegel an und schneide sie (Satz in zwei Einträge teilen).
