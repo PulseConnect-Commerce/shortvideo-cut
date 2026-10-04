@@ -48,6 +48,16 @@ Du musst nichts über Terminal, Python oder API-Schlüssel wissen.
 | Fertiges Video | liegt in `out/final/` | kommt in den Chat |
 | Installieren | Node.js und ffmpeg (Claude hilft) | nichts, nur ein paar Klicks in den Einstellungen |
 
+### Der schnellste Weg: ein Prompt
+
+Kopiere diesen Satz in Claude Code (lokal, im Ordner, in dem faber-cut landen soll):
+
+```
+Installiere faber-cut von github.com/TobiB1505/faber-cut und richte es für mich ein.
+```
+
+Claude klont das Repo und startet das Onboarding. Die Schritte dahinter stehen hier:
+
 ### Lokal
 
 1. Installiere [Claude Code](https://claude.com/claude-code), falls noch nicht geschehen.

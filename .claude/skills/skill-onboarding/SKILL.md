@@ -19,6 +19,7 @@ Die genauen Klickpfade und Befehle für jedes System stehen in **`anleitungen.md
 
 ## 0. Lage prüfen (ohne ihn zu fragen)
 
+- **Per Prompt geklont?** Hat er dich mit "Installiere faber-cut von github.com/TobiB1505/faber-cut und richte es für mich ein" gestartet, läufst du noch im Ordner darüber. Klone das Repo (`git clone https://github.com/TobiB1505/faber-cut.git`, ohne git: als ZIP laden und entpacken), arbeite ab dann im Ordner `faber-cut` (alle `npm run …` dort) und lies seine `CLAUDE.md`. Sag ihm am Ende des Onboardings, dass er Claude Code künftig in diesem Ordner startet (`cd faber-cut`, dann `claude`), damit die Skills automatisch geladen werden.
 - **System:** `node -p "process.platform + ' ' + process.arch"` (`win32`, `darwin` = Mac, `linux`). Fehlt Node, sagt die Shell es dir; dann `uname -s` (Mac/Linux) oder die Windows-Hinweise im Fehler.
 - **Cloud oder lokal:** die Umgebungsvariable `CLAUDE_CODE_REMOTE` ist in einer Cloud-Sitzung `true`.
 - **Schon eingerichtet?** Gibt es `faber-cut.json`, lies sie und frag, was er ändern will (Gemini nachrüsten, Modus wechseln, Stil neu, nur prüfen). Mach dann nur diesen Teil. Steht darin `"onboarding": "weiter"`, ist ihr erster Teil schon erledigt (Online-Modus nach dem Neustart): spring zu Schritt 3O.6.
