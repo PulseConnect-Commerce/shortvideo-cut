@@ -31,15 +31,25 @@ Du brauchst nur Claude Code.
 > (Untertitel, Grafiken, Tempo, Farbe), und nach jedem Video sagst du, was du anders willst: Claude schreibt es in
 > deinen Stil. Nach ein paar Videos ist es dein Schnitt.
 
-## Los geht's: lokal oder online
+## Los geht's: ein Prompt
 
-Du hast zwei Möglichkeiten. Beide richtet Claude mit dir zusammen ein. Dafür startet das **Onboarding**, ein Skill,
-der dich Schritt für Schritt mit Auswahlfragen durchführt:
+Kopiere diesen Satz in Claude Code und schick ihn ab:
+
+```
+Installiere faber-cut von github.com/TobiB1505/faber-cut und richte es für mich ein.
+```
+
+- **Lokal:** Starte Claude Code in dem Ordner, in dem faber-cut landen soll (Terminal oder Desktop-App). Noch kein
+  Claude Code? [Hier installieren](https://claude.com/claude-code).
+- **Online:** Öffne [claude.ai/code](https://claude.ai/code) oder die Claude-App und starte eine Sitzung.
+
+Mehr musst du nicht tun. Claude lädt faber-cut und startet das **Onboarding**, einen Skill, der dich Schritt für
+Schritt mit Auswahlfragen durchführt:
 - Jeder Schritt hat höchstens drei Handgriffe.
 - Jeder Schritt sagt dir, woran du siehst, dass er geklappt hat.
 - Erst nach deinem "Erledigt" geht es weiter.
 
-Du musst nichts über Terminal, Python oder API-Schlüssel wissen.
+Du musst nichts über Terminal, Python oder API-Schlüssel wissen. Als Erstes fragt Claude, wo faber-cut laufen soll:
 
 | | **Lokal** (auf deinem Computer) | **Online** (Claude Code im Browser oder in der App) |
 | --- | --- | --- |
@@ -48,52 +58,31 @@ Du musst nichts über Terminal, Python oder API-Schlüssel wissen.
 | Fertiges Video | liegt in `out/final/` | kommt in den Chat |
 | Installieren | Node.js und ffmpeg (Claude hilft) | nichts, nur ein paar Klicks in den Einstellungen |
 
-### Der schnellste Weg: ein Prompt
+### Was danach lokal passiert
 
-Kopiere diesen Satz in Claude Code (lokal, im Ordner, in dem faber-cut landen soll):
-
-```
-Installiere faber-cut von github.com/TobiB1505/faber-cut und richte es für mich ein.
-```
-
-Claude klont das Repo und startet das Onboarding. Die Schritte dahinter stehen hier:
-
-### Lokal
-
-1. Installiere [Claude Code](https://claude.com/claude-code), falls noch nicht geschehen.
-2. Hol dir das Repo und starte Claude darin:
-   ```bash
-   git clone https://github.com/TobiB1505/faber-cut.git
-   cd faber-cut
-   claude
-   ```
-   (Ohne git: auf GitHub **Code → Download ZIP**, entpacken, im Terminal in den Ordner wechseln, `claude`.)
-3. Schreib: **"Richte faber-cut für mich ein."**
-
-Claude prüft, ob Node.js und ffmpeg da sind, und hilft beim Installieren:
+Claude prüft, ob Node.js und ffmpeg da sind, und installiert, was fehlt (du bestätigst nur die Rückfrage):
 - Windows: per `winget`
 - Mac: per Homebrew
 - Linux: per Paketmanager
 
 Dann läuft `npm run setup`. Es holt sich ein eigenes Python, die Pakete und die Sprachmodelle, ~4 GB. In der Zeit
-fragt dich Claude nach deinem Stil und ob du die Gemini-Prüfung willst.
+fragt dich Claude nach deinem Stil und ob du die Gemini-Prüfung willst. Am Ende sagt es dir, dass du Claude Code
+künftig im Ordner `faber-cut` startest.
 
-### Online
+### Was danach online passiert
 
-1. Mach dir auf GitHub eine eigene Kopie: [dieses Repo](https://github.com/TobiB1505/faber-cut) öffnen, oben rechts
-   **Fork** klicken. Für eine private Kopie: [github.com/new/import](https://github.com/new/import) mit dieser
-   Adresse.
-2. Öffne [claude.ai/code](https://claude.ai/code), starte eine Sitzung mit deinem Repo `faber-cut`.
-3. Schreib: **"Richte faber-cut für mich ein."**
-
-Claude fragt dich nach deinem Stil, dann kommen sieben kurze Klick-Schritte von je etwa einer Minute:
-1. Drive-Ordner anlegen.
-2. Den Ordner freigeben.
-3. Gemini-Schlüssel holen (fällt weg, wenn du Gemini nicht willst).
-4. Cloud-Umgebung anlegen.
-5. Internet-Freigaben eintragen.
-6. Setup-Skript einfügen.
-7. Google Drive verbinden.
+Claude führt dich durch alles, was nur du draußen klicken kannst:
+1. **Eine eigene Kopie** von faber-cut auf GitHub (ein Fork), damit dein Stil und deine Projekte gespeichert werden.
+   Danach startest du eine Sitzung mit deiner Kopie.
+2. Die Fragen zu deinem **Stil** und zur Gemini-Prüfung.
+3. **Sieben kurze Klick-Schritte** von je etwa einer Minute:
+   1. Drive-Ordner anlegen.
+   2. Den Ordner freigeben.
+   3. Gemini-Schlüssel holen (fällt weg, wenn du Gemini nicht willst).
+   4. Cloud-Umgebung anlegen.
+   5. Internet-Freigaben eintragen.
+   6. Setup-Skript einfügen.
+   7. Google Drive verbinden.
 
 Danach startest du einmal eine neue Sitzung, und Claude macht den Rest.
 
@@ -125,6 +114,27 @@ Schritten, die auch dein Video durchläuft:
 
 Das Video oben ist dieses Ergebnis. Läuft der Probelauf durch, ist alles eingerichtet. `npm run doktor` sagt dir
 jederzeit, ob alles bereit ist, und bei jedem Problem, wie du es behebst.
+
+<details>
+<summary><b>Ohne Prompt, von Hand</b> (wenn du das Repo lieber selbst holst)</summary>
+
+**Lokal:**
+```bash
+git clone https://github.com/TobiB1505/faber-cut.git
+cd faber-cut
+claude
+```
+(Ohne git: auf GitHub **Code → Download ZIP**, entpacken, im Terminal in den Ordner wechseln, `claude`.) Dann
+schreib **"Richte faber-cut für mich ein."**
+
+**Online:** Mach auf GitHub eine eigene Kopie ([dieses Repo](https://github.com/TobiB1505/faber-cut) öffnen, oben
+rechts **Fork**; privat geht es über [github.com/new/import](https://github.com/new/import) mit dieser Adresse).
+Starte auf [claude.ai/code](https://claude.ai/code) eine Sitzung mit deiner Kopie und schreib **"Richte faber-cut für
+mich ein."**
+
+Ab da läuft dasselbe Onboarding wie mit dem Prompt.
+
+</details>
 
 ## Dein erstes Video
 

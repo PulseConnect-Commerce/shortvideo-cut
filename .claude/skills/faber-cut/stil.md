@@ -62,3 +62,15 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 ## Meine Notizen (neue Regeln kommen hier dazu)
 
 <!-- Claude: trag hier jede Geschmacksregel ein, die der Nutzer beim Schnitt sagt, mit seinem Satz und Datum. -->
+
+- **Hook-Titel 1:1 wie gesprochen** und lang genug zum Lesen (~3 s): "In der Texthook steht 'Ich schenke dir meinen
+  Skill', ich sage 'meinen Schnittskill' … ich würde gerne wirklich eins zu eins meinen gesprochenen Satz in der
+  Texthook stehen haben … damit man ihn auch wirklich lesen kann." (Tag 6, 2026-10-04)
+- **Kein Satz bricht ab:** das Video endet nach einem geschlossenen Satz; ein angefangener Satz danach fliegt raus,
+  auch wenn er Information trägt (die kommt dann in die Grafik). "Es gibt einen geschlossenen Satz … und dann
+  springt das in die Mitte in einen anderen Satz." (Tag 6)
+- **Sichtbare Sprünge im Vollbild verstecken oder vermeiden:** lieber den Satz ungeschnitten lassen; sonst ein
+  Zoomwechsel genau auf dem Schnitt. "Da ist ein harter Cut drin, den man sieht … verstecken mit einem Zoom." (Tag 6)
+- **Grafik bis zum Schluss:** der Vollbild-Teil am Ende (Kommentare, Folgen) bekommt genauso viel Motion Graphics
+  wie die Erklärung, nicht nur Pillen. "Am Ende … nur noch ich spreche und man verliert so ein bisschen das
+  Pacing." (Tag 6)

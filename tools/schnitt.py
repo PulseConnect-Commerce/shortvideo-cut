@@ -14,6 +14,9 @@ Schnitt-Datei (JSON):
   "start": {"ab": 9.3},                    optional: das Video beginnt früher (z. B. das Handy wird hingestellt)
   "saetze": [ {"take": "t1", "ab": 10.4, "text": "So lässt du jedes Video von Claude schneiden."}, ... ],
   "ende": {"bis": 86.95},                  optional: der letzte Satz läuft weiter (das Bild bleibt unter der Endgrafik)
+  "ende": {"halt": {"take": "t3", "ab": 125.95, "bis": 126.75}}   optional statt "bis": ein stilles Stück als Halt
+                                           nach dem letzten Wort (z. B. das Lächeln nach dem Satz, wenn danach
+                                           noch etwas gesagt wird, das nicht ins Video soll)
   "korrekturen": [["t1", 47.2, "Drive.", "Drive.“"], ["t1", 40.56, "dass", ""]],   Untertitel: "" nimmt ein Wort raus
   "jcut": {"aus": [3], "an": []}           optional: J-Cut auf Schnittstück i erzwingen oder verbieten
 }
@@ -50,8 +53,11 @@ if "start" in spec:
     if spec["start"]["ab"] >= k0["from"]:
         raise SystemExit(f"start.ab ({spec['start']['ab']}) muss vor dem ersten Wort liegen ({k0['from']:.2f} s)")
     k0["from"] = spec["start"]["ab"]
-if "ende" in spec:
+if "bis" in spec.get("ende", {}):
     keeps[-1]["to"] = spec["ende"]["bis"]
+if "halt" in spec.get("ende", {}):
+    h = spec["ende"]["halt"]
+    keeps.append({"src": tid(h["take"]), "from": h["ab"], "to": h["bis"], "satz": len(spec["saetze"]), "jcut": False})
 for a, b in zip(keeps, keeps[1:]):            # derselbe Take, wenige ms Überlappung: nie einen Laut doppelt spielen
     if a["src"] == b["src"] and b["from"] < a["to"] <= b["to"]:
         b["from"] = a["to"]
