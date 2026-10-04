@@ -160,27 +160,39 @@ export const HookTitle: React.FC<{
 }> = ({ fr, kicker, line1, line2, outAt }) => {
   const o = ramp(fr, outAt, 6, Easing.in(Easing.cubic));
   if (o >= 1) return null;
+  // so groß, wie die Zeile in die Breite passt (Geist 900: ~0,56 em pro Zeichen), höchstens 104 px. Oben (y 250-600)
+  // verdecken TikTok und Instagram nichts, darum darf der Hook 1000 px breit sein statt der sicheren 890.
+  const width = 1000;
+  const fit = (text: string, max: number) => Math.min(max, Math.floor(width / (text.length * 0.56)));
   return (
     <div
       style={{
         ...onVideo,
         position: "absolute",
-        left: STIL.safe.left,
+        left: (1080 - width) / 2,
         top: STIL.safe.top,
-        width: STIL.safe.width,
+        width,
         textAlign: "center",
         opacity: 1 - o,
         transform: `translateY(${-40 * o}px)`,
       }}
     >
       {kicker && (
-        <div style={{ fontWeight: 700, fontSize: 34, letterSpacing: "0.12em", WebkitTextStroke: "4px rgb(20 22 26 / 0.9)" }}>
+        <div style={{ fontWeight: 800, fontSize: 38, letterSpacing: "0.12em", WebkitTextStroke: "5px rgb(20 22 26 / 0.9)" }}>
           {kicker}
         </div>
       )}
-      <div style={{ marginTop: 18, fontWeight: 800, letterSpacing: "-0.035em", lineHeight: 1.02 }}>
-        <div style={{ fontSize: 76, whiteSpace: "nowrap" }}>{line1}</div>
-        {line2 && <div style={{ fontSize: 80, color: STIL.yellow, whiteSpace: "nowrap" }}>{line2}</div>}
+      <div
+        style={{
+          marginTop: 14,
+          fontWeight: 900,
+          letterSpacing: "-0.035em",
+          lineHeight: 1.0,
+          WebkitTextStroke: "9px rgb(20 22 26 / 0.92)",
+        }}
+      >
+        <div style={{ fontSize: fit(line1, 104), whiteSpace: "nowrap" }}>{line1}</div>
+        {line2 && <div style={{ fontSize: fit(line2, 104), color: STIL.yellow, whiteSpace: "nowrap" }}>{line2}</div>}
       </div>
     </div>
   );

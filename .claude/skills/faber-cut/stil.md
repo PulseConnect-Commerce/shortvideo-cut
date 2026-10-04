@@ -63,16 +63,17 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 
 <!-- Claude: trag hier jede Geschmacksregel ein, die der Nutzer beim Schnitt sagt, mit seinem Satz und Datum. -->
 
-- **Hook-Titel 1:1 wie gesprochen, groß, kurz:** der gesprochene Satz wörtlich, so groß wie möglich (Tag 6: drei
-  Zeilen bis 124 px unten über dem Shirt, die Serie klein oben, solange er steht keine Untertitel), und nur so lange,
-  bis der Satz gesagt ist (~2,3 s; 3,4 s war "zu lange da"). "Ich würde gerne wirklich eins zu eins meinen
-  gesprochenen Satz in der Texthook stehen haben … der Hooktext könnte viel, viel größer sein und noch
-  leserlicher." (Tag 6, 2026-10-04)
+- **Hook-Titel 1:1 wie gesprochen, oben, groß und fett:** der gesprochene Satz wörtlich, oben wie immer, so groß
+  wie die Zeile in die Breite passt (bis 104 px, Schrift 900), steht bis kurz vor dem nächsten Satz (~1,8 s), die
+  Untertitel laufen darunter weiter. Nicht nach unten verlegen, nicht länger stehen lassen: "es soll so bleiben, es
+  soll immer nur größer sein … ein wenig größer machen, fetter machen." (Tag 6, 2026-10-04)
 - **Der Aufruf am Ende bleibt am Stück, mit seiner Begründung**, so wie ich ihn gesagt habe: keine Pausen- oder
   Äh-Schnitte darin (ein "äh" wird nur leise, `"stumm"`), nichts davon weglassen. "Schau dir das Original an, das
   macht viel mehr Sinn, als wie du es geschnitten hast … das Ende macht kontextmäßig null Sinn." (Tag 6, v4)
-- **Nicht zweimal dasselbe Bindewort hintereinander** ("…kannst dann losschneiden. Dann schneidet …"): lieber eine
-  andere Fassung aus einem anderen Take, die in einem Zug gesprochen ist. (Tag 6)
+- **Fluss vor Wortwiederholung:** ein doppeltes "dann" bleibt drin, wenn eine andere Fassung den Fluss zerstört.
+  "Dann ist zweimal doppelt dann drin, ist okay … weil das zerstört den ganzen Flow." (Tag 6)
+- **Doppelte Anläufe raus:** fängt er einen Satz zweimal an ("Wenn du … wenn du noch viel mehr"), fliegt der erste
+  Anlauf raus, der zweite bleibt am Stück. (Tag 6)
 - **Sichtbare Sprünge im Vollbild verstecken oder vermeiden:** lieber den Satz ungeschnitten lassen; sonst ein
   Zoomwechsel genau auf dem Schnitt. "Da ist ein harter Cut drin, den man sieht … verstecken mit einem Zoom." (Tag 6)
 - **Grafik bis zum Schluss:** der Vollbild-Teil am Ende (Kommentare, Folgen) bekommt genauso viel Motion Graphics
