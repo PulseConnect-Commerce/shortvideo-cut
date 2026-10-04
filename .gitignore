@@ -1,0 +1,12 @@
+node_modules
+.venv
+out/
+# deine Rohclips, Takes und Transkripte bleiben lokal
+public/projekte/
+eingang/
+# deine Projekte (Schnitt, Grafiken) sind deine Sache: nimm diese Zeile raus, wenn du sie versionieren willst
+src/projekte/*
+!src/projekte/_vorlage/
+__pycache__/
+*.pyc
+.DS_Store

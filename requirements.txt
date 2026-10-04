@@ -1,0 +1,6 @@
+# Python-Werkzeuge (tools/). torch wird von setup.sh vorher installiert (auf Linux die CPU-Variante).
+faster-whisper>=1.1
+transformers>=4.45
+numpy
+opencv-python-headless
+pillow

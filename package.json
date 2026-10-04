@@ -1,0 +1,26 @@
+{
+  "name": "faber-cut",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Claude schneidet deine Talking-Head-Videos: ein Claude-Code-Skill mit Remotion, lokaler Transkription und Wort-genauen Grafiken.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio",
+    "vorschau": "node tools/preview.mjs",
+    "final": "node tools/final.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.527",
+    "@remotion/fonts": "4.0.527",
+    "@remotion/media": "4.0.527",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.527"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "typescript": "5.9.3"
+  }
+}

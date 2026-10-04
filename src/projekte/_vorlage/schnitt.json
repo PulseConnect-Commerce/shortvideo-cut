@@ -1,0 +1,14 @@
+{
+ "projekt": "meinvideo",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {"min_gap": 0.3, "pre": 0.04, "post": 0.06},
+ "start": {"ab": 9.3},
+ "saetze": [
+  {"take": "t1", "ab": 10.2, "text": "So lässt du jedes Video von Claude schneiden."},
+  {"take": "t1", "ab": 12.8, "text": "Step Nummer eins. Du brauchst ein GitHub-Repo oder einen lokalen Ordner auf deinen Laptop."},
+  {"take": "t1", "ab": 19.3, "text": "Schritt Nummer zwei, gibst du den Prompt an Claude Code und sagst, installiere mir Remotion oder Hyperframes."}
+ ],
+ "ende": {"bis": 25.75},
+ "korrekturen": [["t1", 30.2, "Online", "online"]]
+}
