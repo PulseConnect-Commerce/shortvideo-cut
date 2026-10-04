@@ -14,6 +14,9 @@
 import { execFileSync, spawn } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 
+// Remotion direkt über Node starten (npx gibt es auf Windows nur als .cmd, das spawn nicht ohne Shell startet)
+const remotion = ["node_modules/@remotion/cli/remotion-cli.js"];
+
 const [id, ...rest] = process.argv.slice(2);
 if (!id) {
   console.error(
@@ -32,8 +35,8 @@ const dir = `out/vorschau/${id}`;
 mkdirSync(dir, { recursive: true });
 
 // "Tag5   30   1080x1920   3135 (104.50 sec)" aus `remotion compositions`
-const line = execFileSync("npx", ["remotion", "compositions"], { encoding: "utf8" })
-  .split("\n")
+const line = execFileSync(process.execPath, [...remotion, "compositions"], { encoding: "utf8" })
+  .split(/\r?\n/)
   .find((l) => l.trim().split(/\s+/)[0] === id);
 if (!line) {
   console.error(`Komposition ${id} nicht gefunden`);
@@ -72,9 +75,9 @@ const render = (i) =>
   new Promise((resolve, reject) => {
     const [a, b] = chunks[i];
     const p = spawn(
-      "npx",
+      process.execPath,
       [
-        "remotion",
+        ...remotion,
         "render",
         id,
         file(i),
@@ -100,11 +103,11 @@ const worker = async () => {
 };
 await Promise.all([worker(), worker()]); // zwei gleichzeitig
 // der AAC-Ton jedes Stücks läuft ~48 ms über sein Bild hinaus; "outpoint" schneidet jedes Stück auf seine Bildlänge,
-// damit der Ton von Stück zu Stück nicht gegen das Bild wandert
+// damit der Ton von Stück zu Stück nicht gegen das Bild wandert. Pfade relativ zur Liste (gilt auch auf Windows)
 const list = chunks
   .map(
     ([a, b], i) =>
-      `file '${process.cwd()}/${file(i)}'\noutpoint ${((b - a + 1) / FPS).toFixed(6)}`,
+      `file '${file(i).split("/").pop()}'\noutpoint ${((b - a + 1) / FPS).toFixed(6)}`,
   )
   .join("\n");
 writeFileSync(`${dir}/list.txt`, list);

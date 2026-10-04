@@ -9,7 +9,7 @@
  *   <id>-post.mp4    für Instagram/TikTok: bis 5 Mbit/s, bei langen Videos weniger, damit es unter 47 MB bleibt
  *                    (das behält Instagram nach der eigenen Kompression ohnehin ungefähr)
  *   <id>-chat.mp4    unter 29 MB (zwei Durchgänge), zum Verschicken im Chat
- * Danach: python tools/checks.py out/final/<id>.mp4 (Ausreißer-Frames, Lautheit, Effekte unter der Stimme).
+ * Danach: npm run checks -- out/final/<id>.mp4 (Ausreißer-Frames, Lautheit, Effekte unter der Stimme).
  */
 import { execFileSync, spawnSync } from "node:child_process";
 import { copyFileSync, mkdirSync, renameSync, rmSync, statSync } from "node:fs";
@@ -27,7 +27,7 @@ const run = (cmd, args) => {
 };
 
 const t0 = Date.now();
-run("npx", ["remotion", "render", id, master, "--concurrency=4", "--crf=18", "--log=error"]);
+run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", id, master, "--concurrency=4", "--crf=18", "--log=error"]);
 console.log(`gerendert in ${Math.round((Date.now() - t0) / 1000)} s`);
 
 // Lautheit: zwei Durchgänge (messen, dann linear anpassen), Bild wird nur kopiert
@@ -67,7 +67,7 @@ if (statSync(post).size < 29e6) {
   const vb = Math.floor((28.5 * 8 * 1024 * 1024) / seconds / 1000) - 130;
   const log = `out/final/${id}-2pass`;
   run("ffmpeg", ["-v", "error", "-y", "-i", master, "-c:v", "libx264", "-preset", "slow", "-b:v", `${vb}k`,
-    "-pass", "1", "-passlogfile", log, "-an", "-f", "mp4", "/dev/null"]);
+    "-pass", "1", "-passlogfile", log, "-an", "-f", "null", "-"]);
   run("ffmpeg", ["-v", "error", "-y", "-i", master, "-c:v", "libx264", "-preset", "slow", "-b:v", `${vb}k`,
     "-pass", "2", "-passlogfile", log, "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k",
     "-movflags", "+faststart", chat]);
@@ -76,4 +76,4 @@ if (statSync(post).size < 29e6) {
 
 for (const f of [master, post, chat])
   console.log(`${f}: ${(statSync(f).size / 1e6).toFixed(1)} MB`);
-console.log(`Länge ${seconds.toFixed(1)} s. Jetzt: python tools/checks.py ${master}`);
+console.log(`Länge ${seconds.toFixed(1)} s. Jetzt: npm run checks -- ${master} --stems ${id}`);

@@ -1,6 +1,6 @@
 """Abschlussprüfung der Vollversion, gemessen statt gefühlt.
 
-    python tools/checks.py out/final/<id>.mp4 [--stems <Komposition>]
+    npm run checks -- out/final/<id>.mp4 [--stems <Komposition>]
 
   1. Ausreißer-Frames: ein einzelner Frame, der sich von beiden Nachbarn unterscheidet, während die sich gleichen
      (weiße Blitze, ein falscher Frame an einem Schnitt);
@@ -16,6 +16,8 @@ import subprocess
 import tempfile
 
 import numpy as np
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ap = argparse.ArgumentParser()
 ap.add_argument("video")
@@ -56,7 +58,7 @@ def load(path):
 if o.stems:
     tmp = tempfile.mkdtemp()
     for name, props in [("stimme", '{"sfx":false}'), ("effekte", '{"voice":false}')]:
-        subprocess.run(["npx", "remotion", "render", o.stems, os.path.join(tmp, f"{name}.wav"), "--codec=wav",
+        subprocess.run(["node", os.path.join(ROOT, "node_modules", "@remotion", "cli", "remotion-cli.js"), "render", o.stems, os.path.join(tmp, f"{name}.wav"), "--codec=wav",
                         f"--props={props}", "--log=error"], check=True)
     v, s = load(os.path.join(tmp, "stimme.wav")), load(os.path.join(tmp, "effekte.wav"))
     win = 4800

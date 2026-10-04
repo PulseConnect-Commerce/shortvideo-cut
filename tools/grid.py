@@ -1,12 +1,12 @@
 """Platzierungsraster für 1080x1920: wohin eine Grafik darf, ohne das Gesicht zu verdecken.
 
-  python tools/grid.py <video.mp4> <raster.jpg> t1,t2,...     (Sekunden im Video)
-  python tools/grid.py <bild.png> <raster.jpg>
+  npm run raster -- <video.mp4> <raster.jpg> t1,t2,...     (Sekunden im Video)
+  npm run raster -- <bild.png> <raster.jpg>
 
 Jedes Bild bekommt ein 60-px-Raster (beschriftet alle 120 px), die sichere Fläche (grün), das Untertitel-Band (gelb),
 den Kopf (rot: erkanntes Gesicht, erweitert auf Kappe, Haare, Kinn) mit Pixelwerten und die freien Standard-Felder
 A-F (blau). Pro Bild steht im Terminal der Kopf und welche Felder frei sind, damit Grafiken nach Zahlen platziert
-werden und nicht geschätzt. Braucht das YuNet-Modell (setup.sh lädt es nach ~/.cache/faber-cut/yunet.onnx).
+werden und nicht geschätzt. Braucht das YuNet-Modell (npm run setup lädt es nach .tools/yunet.onnx).
 """
 import os
 import sys
@@ -27,7 +27,7 @@ SLOTS = {
     "E chest right": (500, 980, 950, 1300),
     "F chest wide": (60, 1000, 950, 1300),
 }
-MODEL = os.path.expanduser("~/.cache/faber-cut/yunet.onnx")  # OpenCV YuNet (Apache 2.0), von setup.sh geladen
+MODEL = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".tools", "yunet.onnx")  # OpenCV YuNet (Apache 2.0), von npm run setup geladen
 
 
 def font(size):

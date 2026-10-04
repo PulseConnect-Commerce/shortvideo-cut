@@ -1,6 +1,12 @@
-# Python-Werkzeuge (tools/). torch wird von setup.sh vorher installiert (auf Linux die CPU-Variante).
-faster-whisper>=1.1
-transformers>=4.45
-numpy
-opencv-python-headless
-pillow
+# Python-Werkzeuge (tools/). Feste Versionen, mit denen faber-cut getestet ist (Windows, macOS, Linux; Python 3.12).
+# torch installiert npm run setup vorher (auf Windows und Linux die CPU-Variante, auf dem Mac die normale).
+faster-whisper==1.2.1
+ctranslate2==4.8.2
+av==18.1.0
+transformers==5.17.0
+tokenizers==0.23.2
+huggingface-hub==1.32.0
+numpy==2.4.6
+opencv-python-headless==5.0.0.93
+pillow==12.3.0
+onnxruntime==1.30.0

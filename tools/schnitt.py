@@ -1,6 +1,6 @@
 """Baut aus einer Schnitt-Datei (die Sätze als Text, in der gewünschten Reihenfolge) die cut.json für Remotion.
 
-    python tools/schnitt.py src/projekte/<projekt>/schnitt.json
+    npm run schnitt -- src/projekte/<projekt>/schnitt.json
 
 Ablauf: jeder Satz wird am Transkript ausgerichtet (Wörter, die im Text fehlen, fliegen raus: Füllwörter, Versprecher,
 ein "Dann,"), dann werden Pausen ab "min_gap" herausgeschnitten. Die Wörter für Untertitel und Grafiken kommen direkt
@@ -27,7 +27,7 @@ import sys
 from fclib import ROOT, Take, build_pages, is_filler, norm, ranges_for, tight
 
 spec_path = sys.argv[1]
-spec = json.load(open(spec_path))
+spec = json.load(open(spec_path, encoding="utf-8"))
 P = spec["projekt"]
 LANG = spec.get("sprache", "de")
 FPS = spec.get("fps", 30)
@@ -102,7 +102,7 @@ out = {
     "pages": [len(p) for p in pages],
 }
 dst = os.path.join(os.path.dirname(os.path.abspath(spec_path)), "cut.json")
-json.dump(out, open(dst, "w"), ensure_ascii=False, indent=1)
+json.dump(out, open(dst, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 aligned = all(Take.get(tid(t)).aligned for t in {s["take"] for s in spec["saetze"]})
 print(f"{len(keeps)} Schnittstücke, {len(words)} Wörter, {len(pages)} Untertitel-Seiten, {at / FPS:.2f} s -> "
       f"{os.path.relpath(dst, ROOT)}")

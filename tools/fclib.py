@@ -51,7 +51,7 @@ class Take:
         src = aj if self.aligned else tj
         if not os.path.exists(src):
             raise SystemExit(f"Kein Transkript für {tid}: erst tools/transcribe.py (und tools/align.py) laufen lassen")
-        ws = [w for w in json.load(open(src))["words"] if w.get("type", "word") == "word"]
+        ws = [w for w in json.load(open(src, encoding="utf-8"))["words"] if w.get("type", "word") == "word"]
         self.words = []
         for i, w in enumerate(ws):
             t = w["text"].strip()

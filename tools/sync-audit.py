@@ -3,7 +3,7 @@ Gemessen wird das Video, nicht der Code: pro Stichwort der erste Frame, in dem i
 (Bühne "s" ohne Untertitel und Schrittleiste, Brustzone "c" im Vollbild), im Fenster -12..+12 Frames um das Wort; dazu
 ob der Ton dort wirklich einsetzt. Ziel: -4..+1 Frames (die Grafik kommt bis zu 0,1 s vor dem Laut).
 
-  python tools/sync-audit.py out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json wort[:s|c] [wort ...]
+  npm run sync -- out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json wort[:s|c] [wort ...]
 
 Eine CHECK-Zeile ist oft eine andere Bewegung im Bereich (Hände, blinkender Cursor, die vorige Pille): vor jeder
 Änderung den 8-Frame-Streifen um das Wort ansehen:
@@ -15,7 +15,7 @@ import numpy as np
 
 mp4, cut_path, specs = sys.argv[1], sys.argv[2], sys.argv[3:]
 FPS = 30
-d = json.load(open(cut_path))
+d = json.load(open(cut_path, encoding="utf-8"))
 K, at = [], 0
 for k in d["keeps"]:
     n = round(k["to"] * FPS) - round(k["from"] * FPS)

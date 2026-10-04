@@ -1,8 +1,8 @@
 """Gemini schaut und hört sich das Video an und beantwortet einen Kritiker-Prompt (Probleme mit Timecodes, Noten).
 
-  python tools/gemini-review.py <video.mp4> <prompt.md>
+  npm run gemini -- <video.mp4> <prompt.md>
 
-Braucht GEMINI_API_KEY (https://aistudio.google.com/apikey). Das Video geht über die Files-API zu Google und wird
+Braucht GEMINI_API_KEY (https://aistudio.google.com/apikey), als Umgebungsvariable oder in der Datei .env. Das Video geht über die Files-API zu Google und wird
 direkt nach der Antwort gelöscht. Achtung: beim kostenlosen Schlüssel darf Google die Inhalte zur Verbesserung seiner
 Produkte nutzen; für echte Gesichter und Stimmen ist ein bezahlter Schlüssel die sauberere Wahl.
 Gemini ist launisch: immer zweimal laufen lassen und nur glauben, was beide sagen oder was du nachprüfen kannst.
@@ -21,7 +21,23 @@ args = [a for a in sys.argv[1:] if not a.startswith("--")]
 if len(args) < 2:
     sys.exit(__doc__)
 video, prompt_file, clips = args[0], args[1], args[2:]
-key = os.environ.get("GEMINI_API_KEY") or sys.exit("GEMINI_API_KEY fehlt (siehe README)")
+
+
+def env_key():
+    """GEMINI_API_KEY aus der Umgebung oder aus der Datei .env im Repo (die legt das Onboarding an)."""
+    if os.environ.get("GEMINI_API_KEY"):
+        return os.environ["GEMINI_API_KEY"].strip()
+    env = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env")
+    if os.path.exists(env):
+        for line in open(env, encoding="utf-8-sig"):
+            k, _, v = line.strip().partition("=")
+            if k.strip() == "GEMINI_API_KEY" and v.strip().strip('"').strip("'"):
+                return v.strip().strip('"').strip("'")
+    return None
+
+
+key = env_key() or sys.exit("GEMINI_API_KEY fehlt: in die Datei .env eintragen (GEMINI_API_KEY=...) oder als "
+                            "Umgebungsvariable setzen (siehe README)")
 
 
 def call(method, url, body=None, headers=None, raw=False):
@@ -53,7 +69,7 @@ try:
         parts.append({"text": f"Audio clip {chr(88 + i)}:"})
         parts.append({"inline_data": {"mime_type": mimetypes.guess_type(clip)[0] or "audio/mpeg",
                                       "data": base64.b64encode(open(clip, "rb").read()).decode()}})
-    parts.append({"text": open(prompt_file).read()})
+    parts.append({"text": open(prompt_file, encoding="utf-8").read()})
     for attempt in range(6):
         try:
             out = call("POST", f"{BASE}/v1beta/models/{MODEL}:generateContent", {"contents": [{"parts": parts}]})

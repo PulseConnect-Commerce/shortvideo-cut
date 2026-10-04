@@ -1,7 +1,7 @@
 """Findet Stimme, die kein Wort des Transkripts abdeckt: Whisper lässt "äh", "ähm", "mh" und Atmer oft einfach weg,
 dann kann der Text-Schnitt sie nicht entfernen und sie bleiben im Video ("es sind noch ein paar Füllwörter drin").
 
-  python tools/fillerscan.py src/projekte/<projekt>/cut.json [--db -32] [--min 0.10]
+  npm run fillerscan -- src/projekte/<projekt>/cut.json [--db -32] [--min 0.10]
 
 Misst pro Schnittstück den Ton in 20-ms-Fenstern und listet jede Stelle mit Stimme (lauter als --db, länger als
 --min s), die kein Wort abdeckt, mit Quell- und Ausgabezeit; dazu Wörter, die viel länger dauern, als ihre Buchstaben
@@ -14,7 +14,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("cut"); ap.add_argument("--db", type=float, default=-32)
 ap.add_argument("--min", type=float, default=0.10)
 o = ap.parse_args()
-cut = json.load(open(o.cut))
+cut = json.load(open(o.cut, encoding="utf-8"))
 FPS, SR, WIN = 30, 16000, 0.02
 
 import os
@@ -23,7 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def words_of(src):
     slug, take = src.split("/")
-    d = json.load(open(f"{ROOT}/public/projekte/{slug}/edit/transcripts/{take}.json"))
+    d = json.load(open(f"{ROOT}/public/projekte/{slug}/edit/transcripts/{take}.json", encoding="utf-8"))
     ws = d["words"] if "words" in d else [w for s in d["segments"] for w in s["words"]]
     return [(w["start"], w["end"], (w.get("text") or w.get("word") or "").strip()) for w in ws
             if (w.get("text") or w.get("word") or "").strip()]

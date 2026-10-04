@@ -1,6 +1,6 @@
 """Wortzeiten auf den Frame genau: richtet die Wörter des Transkripts per CTC-Forced-Alignment (wav2vec2) am Ton aus.
 
-    python tools/align.py <projekt> <take> [--sprache de] [--modell <huggingface-id>]
+    npm run ausrichten -- <projekt> <take> [--sprache de] [--modell <huggingface-id>]
 
 Warum: faster-whisper schätzt Wortzeiten aus der Attention und liegt 0,1-0,3 s daneben (zwei Wörter können sogar
 denselben Start haben). Grafiken, die auf so eine Zeit gesetzt werden, kommen zu früh oder zu spät. Der Text bleibt
@@ -30,7 +30,7 @@ root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 base = os.path.join(root, "public", "projekte", o.projekt)
 src = os.path.join(base, "takes", f"{o.take}.mp4")
 tdir = os.path.join(base, "edit", "transcripts")
-words = json.load(open(os.path.join(tdir, f"{o.take}.json")))["words"]
+words = json.load(open(os.path.join(tdir, f"{o.take}.json"), encoding="utf-8"))["words"]
 t0 = time.time()
 
 SR = 16000
@@ -118,7 +118,7 @@ for p, n in zip(out, out[1:]):
     if n["start"] < p["start"]:
         n["start"], n["end"] = n["w_start"], max(n["end"], n["w_start"] + 0.04)
 
-json.dump({"words": out, "aligned": model_id}, open(os.path.join(tdir, f"{o.take}.aligned.json"), "w"),
+json.dump({"words": out, "aligned": model_id}, open(os.path.join(tdir, f"{o.take}.aligned.json"), "w", encoding="utf-8"),
           ensure_ascii=False, indent=1)
 m = np.abs(np.array(moved)) if moved else np.zeros(1)
 print(f"{o.take}: {len(out)} Wörter ausgerichtet in {time.time() - t0:.0f} s; Verschiebung Median "

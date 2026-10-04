@@ -4,7 +4,7 @@
   - Sprache: Pausen ab 0,25 s zwischen Wörtern (aus der cut.json). Achtung: CTC-Wortenden liegen eher früh, echte
     Stille am Ton des Renders nachmessen.
 
-  python tools/pacing-scan.py out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json [--max 2.0]
+  npm run pacing -- out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json [--max 2.0]
 """
 import json, subprocess, sys
 
@@ -14,7 +14,7 @@ mp4, cut_path = sys.argv[1], sys.argv[2]
 MAX = float(sys.argv[sys.argv.index("--max") + 1]) if "--max" in sys.argv else 2.0
 FPS = 30
 
-d = json.load(open(cut_path))
+d = json.load(open(cut_path, encoding="utf-8"))
 K, at = [], 0
 for k in d["keeps"]:
     K.append((k, at)); at += round(k["to"] * FPS) - round(k["from"] * FPS)

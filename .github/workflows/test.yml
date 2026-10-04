@@ -1,0 +1,46 @@
+# Prüft bei jeder Änderung auf Windows, macOS und Linux, was ein neuer Nutzer tut: einrichten, Doktor, Probelauf.
+name: test
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  probelauf:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: ffmpeg (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: ffmpeg (macOS)
+        if: runner.os == 'macOS'
+        run: brew install ffmpeg
+      - name: ffmpeg (Windows)
+        if: runner.os == 'Windows'
+        run: choco install ffmpeg -y --no-progress
+      - name: npm run setup
+        run: npm run setup
+      - name: npm run typecheck
+        run: npm run typecheck
+      - name: npm run doktor
+        run: npm run doktor
+      - name: npm run probelauf
+        run: npm run probelauf
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: probelauf-${{ matrix.os }}
+          path: |
+            out/final/Probelauf-chat.mp4
+            src/projekte/probelauf/
+          if-no-files-found: ignore

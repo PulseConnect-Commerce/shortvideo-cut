@@ -6,9 +6,24 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "studio": "remotion studio",
+    "setup": "node tools/setup.mjs",
+    "doktor": "node tools/doktor.mjs",
+    "probelauf": "node tools/probelauf.mjs",
+    "intake": "node tools/py.mjs intake.py",
+    "transkribieren": "node tools/py.mjs transcribe.py",
+    "ausrichten": "node tools/py.mjs align.py",
+    "schnitt": "node tools/py.mjs schnitt.py",
+    "fillerscan": "node tools/py.mjs fillerscan.py",
+    "raster": "node tools/py.mjs grid.py",
     "vorschau": "node tools/preview.mjs",
+    "sync": "node tools/py.mjs sync-audit.py",
+    "pacing": "node tools/py.mjs pacing-scan.py",
+    "gemini": "node tools/py.mjs gemini-review.py",
     "final": "node tools/final.mjs",
+    "checks": "node tools/py.mjs checks.py",
+    "studio": "remotion studio",
+    "still": "remotion still",
+    "kompositionen": "remotion compositions",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -22,5 +37,8 @@
   "devDependencies": {
     "@types/react": "19.2.7",
     "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

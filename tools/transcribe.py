@@ -1,6 +1,6 @@
 """Transkribiert einen Take lokal mit faster-whisper (gebündelt mit VAD: ein 4-Minuten-Take in ~2:40 statt ~12 min).
 
-    python tools/transcribe.py <audio oder video> <projekt> <take> [--sprache de] [--modell medium] [--namen "Claude, Remotion"]
+    npm run transkribieren -- <audio oder video> <projekt> <take> [--sprache de] [--modell medium] [--namen "Claude, Remotion"]
 
 --namen: Produkt- und Eigennamen, die Whisper sonst verhört (z. B. "Remotion", "Claude", "Hyperframes").
 Schreibt public/projekte/<projekt>/edit/transcripts/<take>.json ({"words": [{text, start, end, prob}]}).
@@ -29,7 +29,7 @@ segs, info = pipe.transcribe(o.src, language=o.sprache, word_timestamps=True, ba
                              initial_prompt=o.namen or None)
 words = [{"text": w.word.strip(), "start": round(w.start, 3), "end": round(w.end, 3), "prob": round(w.probability, 3)}
          for s in segs for w in (s.words or [])]
-json.dump({"words": words}, open(os.path.join(dst, f"{o.take}.json"), "w"), ensure_ascii=False, indent=1)
+json.dump({"words": words}, open(os.path.join(dst, f"{o.take}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 last = words[-1]["end"] if words else 0
 print(f"{o.take}: {len(words)} Wörter in {time.time() - t0:.0f} s; letztes Wort endet bei {last:.1f} s "
       f"von {info.duration:.1f} s Audio")

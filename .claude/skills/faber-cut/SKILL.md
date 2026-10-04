@@ -23,15 +23,16 @@ Liegt neben dieser Datei eine **`intern.md`**, lies sie auch: Sie ergänzt den A
 | Stil in Zahlen (Farben, Schrift, Maße) | `src/lib/stil.ts` |
 | Vorschau / Vollversion | `out/vorschau/<Komposition>.mp4`, `out/final/` |
 
-Python immer mit `.venv/bin/python`. Ist `.venv` oder `node_modules` nicht da: zuerst `bash setup.sh`.
+Alle Werkzeuge laufen über **`npm run …`**, auf Windows, macOS und Linux gleich (Python nie direkt aufrufen). Die Einstellungen aus dem Onboarding stehen in **`faber-cut.json`** (lokal oder online, Sprache, Gemini, Drive-Ordner): lies sie zuerst. Fehlt die Datei, führe zuerst den Skill **skill-onboarding** aus. Meldet ein Werkzeug, dass `.venv` oder `node_modules` fehlt: `npm run setup`, dann `npm run doktor`.
 
 ## Ablauf (jeder Schritt, jedes Mal)
 
 ### 1. Clips vorbereiten
 
 - Projektname kurz und ohne Leerzeichen (`tag6`, `api-keys`), Takes `t1`, `t2`, … in der Reihenfolge, in der er sie gedreht hat.
-- Pro Take, nacheinander (nie parallel): `bash tools/intake.sh <rohclip> <projekt> <take> [--sprache de|en]`. Das entrauscht die Stimme, kopiert das Bild (4K wird zu einer 1080er-Arbeitskopie), transkribiert lokal und richtet die Wortzeiten aus.
-- Kommen Produktnamen vor, die Whisper verhört (Claude, Remotion, sein Firmenname), transkribiere mit `--namen "…"` neu (`tools/transcribe.py`, danach `tools/align.py`).
+- **Online-Modus** (`"modus": "online"` in `faber-cut.json`): er lädt seine Clips in seinen Google-Drive-Ordner (`drive.id`) und sagt Bescheid. Such sie mit dem Google-Drive-Connector selbst (die neuesten Videos im Ordner) und sag ihm, welche du nimmst. Lade jede Datei nacheinander in voller Größe über den Freigabe-Link (der Connector schafft nur kleine Dateien): `curl -sSL --fail -o eingang/<projekt>/<take>.mov "https://drive.usercontent.google.com/download?id=<datei-id>&export=download&confirm=t"`. Ist die Datei nur ein paar KB groß, ist der Ordner nicht "Jeder mit dem Link" freigegeben: sag ihm, wie er das ändert (siehe skill-onboarding).
+- Pro Take, nacheinander (nie parallel): `npm run intake -- <rohclip> <projekt> <take> [--sprache de|en] [--namen "…"]`. Das entrauscht die Stimme, kopiert das Bild (4K wird zu einer 1080er-Arbeitskopie), transkribiert lokal und richtet die Wortzeiten aus.
+- Kommen Produkt- und Eigennamen vor, die Whisper verhört (Claude, Remotion, sein Name, sein Firmenname), gib sie mit `--namen "…"` mit oder transkribiere neu: `npm run transkribieren -- public/projekte/<projekt>/takes/<take>.mp4 <projekt> <take> --namen "…"`, danach `npm run ausrichten -- <projekt> <take>`.
 - Prüfe, dass das letzte Wort des Transkripts kurz vor dem Ende des Tons liegt: Whisper verschluckt manchmal den letzten Satz.
 
 ### 2. Verstehen, bevor du schneidest
@@ -61,11 +62,11 @@ Schreib `src/projekte/<projekt>/schnitt.json` (Format: siehe Kopf von `tools/sch
 - **`ende.bis`:** ~0,6 s nach dem letzten Wort, bevor sein nächster Laut kommt. So bleibt er unter der Endgrafik im Bild (keine Frames ohne Bild anhängen).
 - **`korrekturen`:** Verhörer in den Untertiteln (`[take, sekunde, "falsch", "richtig"]`), `""` nimmt ein Wort raus, das nicht im Ton ist.
 
-Dann `.venv/bin/python tools/schnitt.py src/projekte/<projekt>/schnitt.json`. Es muss **ohne "PRÜFEN"** durchlaufen: Untertitel = gewählter Text Wort für Wort, Reihenfolge stimmt, keine Mini-Schnitte. Danach `.venv/bin/python tools/fillerscan.py src/projekte/<projekt>/cut.json`: Stimme ohne Wort ist meist ein "äh", das Whisper nicht aufgeschrieben hat. Hör dir die Stelle über den Pegel an und schneide sie (Satz in zwei Einträge teilen).
+Dann `npm run schnitt -- src/projekte/<projekt>/schnitt.json`. Es muss **ohne "PRÜFEN"** durchlaufen: Untertitel = gewählter Text Wort für Wort, Reihenfolge stimmt, keine Mini-Schnitte. Danach `npm run fillerscan -- src/projekte/<projekt>/cut.json`: Stimme ohne Wort ist meist ein "äh", das Whisper nicht aufgeschrieben hat. Hör dir die Stelle über den Pegel an und schneide sie (Satz in zwei Einträge teilen).
 
 ### 5. Grafiken
 
-Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx`, setz `meta.id` (z. B. `"Tag6"`), dann bau die Grafiken. Die Komposition meldet sich von selbst an (`npx remotion compositions`).
+Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx`, setz `meta.id` (z. B. `"Tag6"`), dann bau die Grafiken. Die Komposition meldet sich von selbst an (`npm run kompositionen`).
 
 **Timing (das wichtigste):**
 - Jede Grafik landet mit `C.cue("wort")` auf ihrem Wort, also **2 Frames vor dem ersten Laut** (Wortzeiten sind auf den Frame ausgerichtet). Nie geschätzte Frames, nie "+10", nie "alle 22 Frames": Zähler, Schritte, Runden wechseln auf dem Wort, das sie sagt. Das nächste gleiche Wort: `C.cue("schritt", C.W("github"))`.
@@ -82,16 +83,16 @@ Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx
 
 **Platz:**
 - Sichere Fläche x 60-950, y 250-1500 (oben und rechts liegen die App-Knöpfe). Untertitel im Vollbild bei y 1340, im Split auf der Naht (y 872).
-- Nichts auf dem Gesicht: vor dem Platzieren `.venv/bin/python tools/grid.py public/projekte/<projekt>/takes/t1.mp4 out/raster.jpg 2,10,20` und nach den Zahlen platzieren (Kopf-Box, freie Felder A-F).
+- Nichts auf dem Gesicht: vor dem Platzieren `npm run raster -- public/projekte/<projekt>/takes/t1.mp4 out/raster.jpg 2,10,20` und nach den Zahlen platzieren (Kopf-Box, freie Felder A-F).
 - Text in Grafiken mindestens 42 px, Listen 46 px, Zeilenhöhe 1,3. Darunter ist es auf dem Handy nicht lesbar.
 
 ### 6. Vorschau und eigene Prüfung
 
 1. `npm run vorschau -- <Komposition>` (halbe Größe, 10-s-Stücke mit Cache). Nach Änderungen an Ort und Stelle `--changed a-b` (Frames), nach Änderungen am Schnitt `--from N`.
-2. **Sync messen:** `.venv/bin/python tools/sync-audit.py out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json wort[:s|c] …` mit jedem Stichwort einer Grafik (`s` = Bühne oben im Split, `c` = Brustzone im Vollbild). Ziel -4..+1 Frames. Eine CHECK-Zeile ist oft eine andere Bewegung im Bereich: den 8-Frame-Streifen um das Wort ansehen, bevor du etwas änderst.
-3. **Pacing messen:** `.venv/bin/python tools/pacing-scan.py out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json`. Jede Strecke über 2 s ohne Bildänderung bekommt eine Grafik, die die Zeile trägt. Stille am Ton nachmessen (Wortenden liegen eher früh).
-4. **Standbilder** an jeder Grafik (Anfang und Ende, `npx remotion still <id> out/x.jpg --frame=N --scale=0.4`): nichts überlappt, nichts bleibt zu lange stehen, Text bricht nicht ungewollt um, das Ende zeigt ihn noch im Bild.
-5. **Gemini** (optional, `GEMINI_API_KEY`): `.venv/bin/python tools/gemini-review.py out/vorschau/<id>.mp4 prompts/review.md`, **zweimal**. Gemini irrt oft (erfundene Tippfehler, "Text zu tief", "keine Soundeffekte"): prüfe jede Behauptung an Standbild, Ton oder Code. Übernimm nur, was stimmt.
+2. **Sync messen:** `npm run sync -- out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json wort[:s|c] …` mit jedem Stichwort einer Grafik (`s` = Bühne oben im Split, `c` = Brustzone im Vollbild). Ziel -4..+1 Frames. Eine CHECK-Zeile ist oft eine andere Bewegung im Bereich: den 8-Frame-Streifen um das Wort ansehen, bevor du etwas änderst.
+3. **Pacing messen:** `npm run pacing -- out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json`. Jede Strecke über 2 s ohne Bildänderung bekommt eine Grafik, die die Zeile trägt. Stille am Ton nachmessen (Wortenden liegen eher früh).
+4. **Standbilder** an jeder Grafik (Anfang und Ende, `npm run still -- <id> out/x.jpg --frame=N --scale=0.4`): nichts überlappt, nichts bleibt zu lange stehen, Text bricht nicht ungewollt um, das Ende zeigt ihn noch im Bild.
+5. **Gemini** (nur wenn `"gemini": true` in `faber-cut.json`; der Schlüssel steht in `.env` oder in der Umgebung): `npm run gemini -- out/vorschau/<id>.mp4 prompts/review.md`, **zweimal**. Gemini irrt oft (erfundene Tippfehler, "Text zu tief", "keine Soundeffekte"): prüfe jede Behauptung an Standbild, Ton oder Code. Übernimm nur, was stimmt.
 
 ### 7. Runde mit dem Nutzer
 
@@ -101,8 +102,10 @@ Schick ihm die Vorschau mit: was du gemacht hast, die Gemini-Noten, welche Punkt
 
 Erst wenn er "passt" sagt:
 1. `npm run final -- <Komposition>`: voller Render, -14 LUFS, Post-Version (≤ 47 MB) und Chat-Kopie (< 29 MB).
-2. `.venv/bin/python tools/checks.py out/final/<id>.mp4 --stems <id>`: keine Ausreißer-Frames, Lautheit, jeder Effekt ≥ 6 dB unter der Stimme. Erst bei OK übergeben.
+2. `npm run checks -- out/final/<id>.mp4 --stems <id>`: keine Ausreißer-Frames, Lautheit, jeder Effekt ≥ 6 dB unter der Stimme. Erst bei OK übergeben.
 3. Cover: ein Frame mit Titel und Gesicht (`ffmpeg -ss 1.4 -i out/final/<id>.mp4 -frames:v 1 out/final/<id>-cover.jpg`).
+4. **Übergeben:** lokal nennst du ihm den Ordner `out/final/` (`<id>-post.mp4` zum Hochladen auf Instagram/TikTok). Online kann er nicht in deinen Rechner schauen: schick ihm `out/final/<id>-chat.mp4` (unter 29 MB) als Datei in den Chat, falls du ein Werkzeug zum Senden von Dateien hast; sonst lade sie mit dem Drive-Connector in seinen Ordner, wenn das klappt, oder sag ihm ehrlich, dass es nicht geht.
+5. **Online speichern:** die Sitzung ist nach einer Weile weg. Committe `src/projekte/<projekt>/`, `stil.md` und `faber-cut.json` und pushe sie so, wie es in `faber-cut.json` unter `speichern` steht (`main` = er hat erlaubt, direkt auf seinen Hauptzweig zu pushen).
 
 ## Regeln, die immer gelten
 
@@ -116,10 +119,10 @@ Erst wenn er "passt" sagt:
 
 ## Bekannte Stolperfallen
 
-- **Whisper-Wortzeiten** liegen 0,1-0,3 s daneben, manchmal zwei Wörter auf derselben Zeit. Darum immer `tools/align.py` (macht `intake.sh` selbst); `schnitt.py` warnt, wenn ein Take nicht ausgerichtet ist.
-- **4K-Takes** in zwei parallelen Vorschau-Renders haben den Browser abstürzen lassen: `intake.sh` macht eine 1080er-Arbeitskopie (Zooms bis 110 % bleiben scharf).
+- **Whisper-Wortzeiten** liegen 0,1-0,3 s daneben, manchmal zwei Wörter auf derselben Zeit. Darum immer ausrichten (macht `npm run intake` selbst); `schnitt.py` warnt, wenn ein Take nicht ausgerichtet ist.
+- **4K-Takes** in zwei parallelen Vorschau-Renders haben den Browser abstürzen lassen: `npm run intake` macht eine 1080er-Arbeitskopie (Zooms bis 110 % bleiben scharf).
 - **Nie mehr als zwei Renders gleichzeitig**, und halte ~2 GB Platz frei (ein 4K-Take hat ~340 MB pro Minute). Alte Takes fertiger Projekte löschen (die Originale hat er).
 - **Symlinks** unter `public/` lädt Remotion nicht: Takes immer als Datei ablegen.
 - **Ein "Wort nicht gefunden"** in `schnitt.py`: `ab` liegt nach dem ersten Wort des Satzes, oder der Text weicht vom Transkript ab (Verhörer: Text wie im Transkript schreiben und über `korrekturen` richtigstellen).
-- **Ein leises "äh" ohne Wort** im Transkript bleibt sonst drin: `tools/fillerscan.py` nach jedem Schnitt.
+- **Ein leises "äh" ohne Wort** im Transkript bleibt sonst drin: `npm run fillerscan` nach jedem Schnitt.
 - **Ein langes Video verliert am Anfang:** der erste Frame braucht ein scharfes Gesicht und den Hook-Satz; ein Aufruf ganz am Ende erreicht nur, wer bis zum Ende schaut.
