@@ -31,7 +31,7 @@ export const STIL = {
   captionYSplit: 872,
   captionSizeSplit: 64,
   /** Lautstärke der Soundeffekte (immer deutlich unter der Stimme) */
-  sfx: 0.1,
+  sfx: 0.16,
   /** kleinste Schrift in Grafiken (px): darunter ist es auf dem Handy nicht lesbar */
   minText: 42,
 };

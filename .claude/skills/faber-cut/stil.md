@@ -45,7 +45,8 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 - Füllwörter immer raus, Pausen ab 0,3 s raus, aber keine Mini-Jump-Cuts.
 - Kontext vor Tempo: der Grund hinter einer Aussage und jeder Teil des Aufrufs bleiben.
 - J-Cuts an Satzanfängen: der nächste Satz ist 0,1 s zu hören, bevor er zu sehen ist.
-- Soundeffekte (Pop, Whoosh, Stempel) leise unter der Stimme, ≥ 6 dB Abstand. -14 LUFS.
+- Soundeffekte (Pop, Whoosh, Stempel) unter der Stimme, ≥ 6 dB Abstand, aber hörbar (Lautstärke 0,16, die lautesten
+  ~7 dB unter der Stimme; bei 0,10 hat man sie kaum gehört, Tag 6). -14 LUFS.
 
 ## Aufruf und Ende
 
