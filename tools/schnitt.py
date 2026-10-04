@@ -13,6 +13,9 @@ Schnitt-Datei (JSON):
   "pausen": {"min_gap": 0.3, "pre": 0.04, "post": 0.06},
   "start": {"ab": 9.3},                    optional: das Video beginnt früher (z. B. das Handy wird hingestellt)
   "saetze": [ {"take": "t1", "ab": 10.4, "text": "So lässt du jedes Video von Claude schneiden."}, ... ],
+     pro Satz optional: "ganz": true   keine Pausen herausschneiden (der Satz bleibt, wie er gesprochen ist)
+                        "stumm": [[114.42, 114.65]]   Quell-Sekunden leise machen statt schneiden (ein "äh" in
+                                       einem ganzen Satz: das Bild läuft weiter, kein Sprung)
   "ende": {"bis": 86.95},                  optional: der letzte Satz läuft weiter (das Bild bleibt unter der Endgrafik)
   "ende": {"halt": {"take": "t3", "ab": 125.95, "bis": 126.75}}   optional statt "bis": ein stilles Stück als Halt
                                            nach dem letzten Wort (z. B. das Lächeln nach dem Satz, wenn danach
@@ -46,8 +49,12 @@ for si, s in enumerate(spec["saetze"]):
     t = tid(s["take"])
     for a, b, ws in ranges_for(t, s["text"], LANG, start=s.get("ab", 0.0)):
         chosen.update((t, w["start"]) for w in ws)
-        for u, v in tight(t, a, b, LANG, **gap):
-            keeps.append({"src": t, "from": u, "to": v, "satz": si})
+        for u, v in ([(a, b)] if s.get("ganz") else tight(t, a, b, LANG, **gap)):
+            k = {"src": t, "from": u, "to": v, "satz": si}
+            stumm = [r for r in s.get("stumm", []) if u <= r[0] < v]
+            if stumm:
+                k["stumm"] = stumm
+            keeps.append(k)
 if "start" in spec:
     k0 = keeps[0]
     if spec["start"]["ab"] >= k0["from"]:

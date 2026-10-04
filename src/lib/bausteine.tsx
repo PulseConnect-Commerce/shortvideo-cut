@@ -56,6 +56,14 @@ export const Takes: React.FC<{
         const post = last ? 0 : Math.min(XFADE, Math.floor((k.nach ?? 0.1) * C.FPS));
         const len = k.len + pre + post;
         const up = (n: number) => Math.sin((Math.PI / 2) * Math.min(1, Math.max(0, n)));
+        // "stumm": leise statt geschnitten (-34 dB, Raumklang bleibt, kein Loch), 2 Frames Blende an jeder Seite
+        const quiet = (x: number) => {
+          const t = k.from + (x - pre) / C.FPS;
+          return (k.stumm ?? []).reduce((g, [a, b]) => {
+            const d = Math.max(a - t, t - b, 0) * C.FPS;
+            return Math.min(g, 0.02 + 0.98 * Math.min(1, d / 2));
+          }, 1);
+        };
         return (
           <Sequence key={i} from={k.at - pre} durationInFrames={len} layout="none" name={`Ton ${k.src} ${k.from}`}>
             <Audio
@@ -63,6 +71,7 @@ export const Takes: React.FC<{
               trimBefore={C.f(k.from) - pre}
               trimAfter={C.f(k.to) + post}
               volume={(x) =>
+                quiet(x) *
                 Math.min(
                   pre ? up((x + 0.5) / (2 * pre)) : up((x + 0.5) / 2),
                   last ? Math.min(1, (len - 1 - x) / 12) : post ? up((len - x - 0.5) / (2 * post)) : up((len - x - 0.5) / 2),
