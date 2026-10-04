@@ -120,7 +120,7 @@ davor. Das ist der Unterschied zwischen "irgendwie passend" und "auf den Punkt".
 | `src/projekte/<projekt>/` | deine Videos: `schnitt.json`, `cut.json`, `Video.tsx` |
 | `public/projekte/` | deine Takes und Transkripte (bleiben privat, nicht im Git) |
 | `eingang/` | hier legst du Rohclips ab (nicht im Git) |
-| `beispiel/probe.mp4` | der Beispielclip für den Probelauf (Stimme synthetisch) |
+| `beispiel/` | der Probelauf: Rohclip `probe.mp4` (Stimme synthetisch, mit „Ähm“ und Pausen) und `Probelauf.tsx`, das Beispiel-Video, das zeigt, was faber-cut kann |
 | `out/` | Vorschauen und fertige Videos |
 
 ## Befehle (macht normalerweise Claude für dich)

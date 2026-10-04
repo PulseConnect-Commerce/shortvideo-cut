@@ -30,33 +30,29 @@ const step = (name, cmd, args) => {
 const node = (script, ...a) => [process.execPath, [script, ...a]];
 const py = (tool, ...a) => node("tools/py.mjs", tool, ...a);
 
-step("Clip vorbereiten, transkribieren, ausrichten", ...py("intake.py", "beispiel/probe.mp4", "probelauf", "t1", "--namen", "faber-cut, Clip"));
+step("Clip vorbereiten, transkribieren, ausrichten", ...py("intake.py", "beispiel/probe.mp4", "probelauf", "t1", "--namen", "faber-cut, Claude, Clip"));
 
-// Schnitt aus dem Transkript: jeder Satz ohne Füllwörter (genau so schreibt Claude sonst die gewählte Variante)
-// Wörter so zusammenfassen wie tools/fclib.py (Take): "-Cut", "%" und reine Satzzeichen hängen am Wort davor
-const tr = [];
-for (const w of JSON.parse(readFileSync("public/projekte/probelauf/edit/transcripts/t1.aligned.json", "utf8")).words) {
-  const t = w.text.trim();
-  const prev = tr[tr.length - 1];
-  if (prev && (!/[\p{L}\p{N}%]/u.test(t) || /^%[.,]?$/.test(t) || (t.startsWith("-") && t.length > 1)))
-    Object.assign(prev, { text: prev.text + t, end: w.end });
-  else if (t) tr.push({ ...w, text: t });
-}
-const filler = /^(äh+m?|öh+m?|hm+|uh+m?|um+)[,.!?]*$/i;
-const saetze = [];
-let cur = null;
-for (const w of tr) {
-  if (filler.test(w.text.trim())) continue;
-  if (!cur) cur = { take: "t1", ab: Math.max(0, +(w.start - 0.15).toFixed(2)), text: "" };
-  cur.text = `${cur.text} ${w.text.trim()}`.trim();
-  if (/[.!?]$/.test(w.text.trim())) {
-    saetze.push(cur);
-    cur = null;
-  }
-}
-if (cur) saetze.push(cur);
-const fehlt = ["probelauf", "funktioniert"].filter((x) => !JSON.stringify(tr).toLowerCase().includes(x));
-if (fehlt.length) console.log(`Hinweis: im Transkript fehlt ${fehlt.join(", ")}; die Transkription klingt ungewöhnlich.`);
+// Die gewählte Fassung als Text, so wie Claude sie sonst nach deiner Wahl schreibt. Was fehlt, fliegt raus: das "Ähm"
+// (Whisper hängt es an das "und" davor, darum fängt Satz 2 bei "Claude" an) und die Pausen.
+const FASSUNG = [
+  "Du filmst dich mit dem Handy.",
+  "Claude schneidet das Video.",
+  "Füllwörter und Pausen fliegen raus.",
+  "Die Untertitel laufen Wort für Wort mit.",
+  "Und jede Grafik kommt genau auf dem Wort.",
+  "Wenn du das hier siehst, ist alles bereit für dein erstes Video.",
+];
+const norm = (s) => s.toLowerCase().replace(/[^a-zäöüß0-9]/g, "");
+const tr = JSON.parse(readFileSync("public/projekte/probelauf/edit/transcripts/t1.aligned.json", "utf8")).words;
+let pos = 0;
+const saetze = FASSUNG.map((text) => {
+  // "ab" = kurz vor dem ersten Wort des Satzes im Transkript (gesucht nach dem vorigen Satz)
+  const first = norm(text.split(" ")[0]);
+  const k = tr.findIndex((w, i) => i >= pos && norm(w.text) === first);
+  const at = k >= 0 ? tr[k].start : tr[Math.min(pos, tr.length - 1)].start;
+  if (k >= 0) pos = k + 1;
+  return { take: "t1", ab: Math.max(0, +(at - 0.12).toFixed(2)), text };
+});
 mkdirSync("src/projekte/probelauf", { recursive: true });
 writeFileSync(
   "src/projekte/probelauf/schnitt.json",
@@ -67,20 +63,16 @@ writeFileSync(
       fps: 30,
       pausen: { min_gap: 0.3, pre: 0.04, post: 0.06 },
       saetze,
-      ende: { bis: +(tr[tr.length - 1].end + 0.5).toFixed(2) },
+      ende: { bis: +(tr[tr.length - 1].end + 0.6).toFixed(2) },
       korrekturen: [],
     },
     null,
     1,
   ),
 );
-const vorlage = readFileSync("src/projekte/_vorlage/Video.tsx", "utf8")
-  .replace('id: "Vorlage"', 'id: "Probelauf"')
-  .replace('kicker="MEINE SERIE · TAG 1"', 'kicker="FABER-CUT · PROBELAUF"')
-  .replace('line1="Dein Hook in einer Zeile"', 'line1="Wenn du das siehst,"')
-  .replace('line2="mit dem Kern in Gelb."', 'line2="läuft alles."');
-writeFileSync("src/projekte/probelauf/Video.tsx", vorlage);
-console.log(`\nSchnitt: ${saetze.length} Sätze, ohne Füllwörter`);
+// eigene Komposition für das Beispiel (zeigt, was faber-cut kann); deine Videos starten von src/projekte/_vorlage/
+writeFileSync("src/projekte/probelauf/Video.tsx", readFileSync("beispiel/Probelauf.tsx", "utf8"));
+console.log(`\nSchnitt: ${saetze.length} Sätze, ohne Füllwörter und Pausen`);
 
 step("Schnitt nach Text", ...py("schnitt.py", "src/projekte/probelauf/schnitt.json"));
 step("Vorschau (halbe Größe)", ...node("tools/preview.mjs", "Probelauf", "--all"));
