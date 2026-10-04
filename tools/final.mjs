@@ -13,6 +13,7 @@
  */
 import { execFileSync, spawnSync } from "node:child_process";
 import { copyFileSync, mkdirSync, renameSync, rmSync, statSync } from "node:fs";
+import { cpus } from "node:os";
 
 const id = process.argv[2];
 if (!id) {
@@ -27,7 +28,7 @@ const run = (cmd, args) => {
 };
 
 const t0 = Date.now();
-run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", id, master, "--concurrency=4", "--crf=18", "--log=error"]);
+run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", id, master, `--concurrency=${Math.max(1, Math.min(4, cpus().length))}`, "--crf=18", "--log=error"]);
 console.log(`gerendert in ${Math.round((Date.now() - t0) / 1000)} s`);
 
 // Lautheit: zwei Durchgänge (messen, dann linear anpassen), Bild wird nur kopiert
@@ -36,7 +37,8 @@ const probe = spawnSync(
   ["-hide_banner", "-nostats", "-i", master, "-af", "loudnorm=I=-14:TP=-1:LRA=11:print_format=json", "-f", "null", "-"],
   { encoding: "utf8" },
 );
-const m = JSON.parse(probe.stderr.slice(probe.stderr.lastIndexOf("{")));
+// der Messwert ist der letzte {...}-Block mit "input_i"; neuere ffmpeg schreiben danach noch Zeilen
+const m = JSON.parse(probe.stderr.match(/\{[^{}]*"input_i"[^{}]*\}/g).pop());
 const tmp = master.replace(/\.mp4$/, ".ln.mp4");
 run("ffmpeg", [
   "-v", "error", "-y", "-i", master, "-c:v", "copy",

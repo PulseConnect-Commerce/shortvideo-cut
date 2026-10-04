@@ -13,6 +13,7 @@
  */
 import { execFileSync, spawn } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { cpus } from "node:os";
 
 // Remotion direkt über Node starten (npx gibt es auf Windows nur als .cmd, das spawn nicht ohne Shell startet)
 const remotion = ["node_modules/@remotion/cli/remotion-cli.js"];
@@ -83,7 +84,7 @@ const render = (i) =>
         file(i),
         `--scale=${scale}`,
         "--crf=28",
-        "--concurrency=2",
+        `--concurrency=${Math.max(1, Math.min(2, Math.floor(cpus().length / 2)))}`,
         "--x264-preset=ultrafast",
         `--frames=${a}-${b}`,
         "--log=error",
