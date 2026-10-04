@@ -33,7 +33,15 @@ const py = (tool, ...a) => node("tools/py.mjs", tool, ...a);
 step("Clip vorbereiten, transkribieren, ausrichten", ...py("intake.py", "beispiel/probe.mp4", "probelauf", "t1", "--namen", "faber-cut, Clip"));
 
 // Schnitt aus dem Transkript: jeder Satz ohne Füllwörter (genau so schreibt Claude sonst die gewählte Variante)
-const tr = JSON.parse(readFileSync("public/projekte/probelauf/edit/transcripts/t1.aligned.json", "utf8")).words;
+// Wörter so zusammenfassen wie tools/fclib.py (Take): "-Cut", "%" und reine Satzzeichen hängen am Wort davor
+const tr = [];
+for (const w of JSON.parse(readFileSync("public/projekte/probelauf/edit/transcripts/t1.aligned.json", "utf8")).words) {
+  const t = w.text.trim();
+  const prev = tr[tr.length - 1];
+  if (prev && (!/[\p{L}\p{N}%]/u.test(t) || /^%[.,]?$/.test(t) || (t.startsWith("-") && t.length > 1)))
+    Object.assign(prev, { text: prev.text + t, end: w.end });
+  else if (t) tr.push({ ...w, text: t });
+}
 const filler = /^(äh+m?|öh+m?|hm+|uh+m?|um+)[,.!?]*$/i;
 const saetze = [];
 let cur = null;
