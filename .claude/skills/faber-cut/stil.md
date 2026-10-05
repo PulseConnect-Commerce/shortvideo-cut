@@ -77,6 +77,14 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
   Anlauf raus, der zweite bleibt am Stück. (Tag 6)
 - **Sichtbare Sprünge im Vollbild verstecken oder vermeiden:** lieber den Satz ungeschnitten lassen; sonst ein
   Zoomwechsel genau auf dem Schnitt. "Da ist ein harter Cut drin, den man sieht … verstecken mit einem Zoom." (Tag 6)
+- **Das Hinstellen des Handys bleibt immer drin:** es ist mein bewusster visueller Hook, ein psychologischer Trick,
+  der Leute beim Scrollen aufhält. Das Video beginnt ~0,5 s bevor ich rede, mit dem Moment, in dem das Handy
+  landet, dann rede ich. Nie wegschneiden, auch nicht, wenn ein späterer Anlauf des Hook-Satzes sauberer ist: dann
+  das Hinstellen vom Anfang des Takes vor den gewählten Satz setzen. "Dieses Hinstellen ist eine visuelle Hook …
+  ich will, dass es drin bleibt." (Tag 7, 2026-10-05)
+- **Der Beweis gehört sofort in den Hook:** nenne ich eine Zahl oder ein Ergebnis (z. B. Downloads), steht der Beleg
+  (Screenshot, Grafik) schon im Hook im Bild, nicht erst danach. "Wir müssen diese Downloads sofort in die Hook mit
+  einbauen." (Tag 7, 2026-10-05)
 - **Grafik bis zum Schluss:** der Vollbild-Teil am Ende (Kommentare, Folgen) bekommt genauso viel Motion Graphics
   wie die Erklärung, nicht nur Pillen. "Am Ende … nur noch ich spreche und man verliert so ein bisschen das
   Pacing." (Tag 6)
