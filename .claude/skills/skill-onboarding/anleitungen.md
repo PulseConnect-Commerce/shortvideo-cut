@@ -1,6 +1,6 @@
 # Anleitungen zum Onboarding
 
-Klickpfade und Befehle, die du dem Nutzer Schritt für Schritt weitergibst. Gib immer nur einen Mini-Schritt weiter (höchstens drei Handgriffe), vollständig ausgeschrieben als letzte Nachricht deiner Antwort, ohne Werkzeug danach, und warte auf sein "erledigt" (SKILL.md, "So sieht jeder Klick-Schritt aus"). Die Oberflächen von Google, GitHub und Claude ändern sich manchmal: Sieht etwas bei ihm anders aus, frag, was er sieht, und hilf von dort aus weiter.
+Klickpfade und Befehle, die du dem Nutzer Schritt für Schritt weitergibst. Gib immer nur einen Mini-Schritt weiter (höchstens drei Handgriffe; einzige Ausnahme ist die Cloud-Umgebung, weil der Chat gesperrt ist, solange ihr Fenster offen ist), vollständig ausgeschrieben als letzte Nachricht deiner Antwort, ohne Werkzeug danach, und warte auf sein "erledigt" (SKILL.md, "So sieht jeder Klick-Schritt aus"). Die Oberflächen von Google, GitHub und Claude ändern sich manchmal: Sieht etwas bei ihm anders aus, frag, was er sieht, und hilf von dort aus weiter.
 
 ## Programme installieren (lokal)
 
@@ -78,7 +78,7 @@ Warum: Nur in einer Sitzung mit deinem eigenen Repo kann ich deinen Stil und dei
 
 ## Klick-Etappe online
 
-Jeder Block unten ist **eine** Antwort an ihn: wörtlich abschreiben, "von N" durch die echte Zahl ersetzen (6 mit Gemini, 5 ohne; ohne Gemini fällt der Gemini-Block weg und die Zeile mit dem Schlüssel in "Speichern"), als **letzte Nachricht**, ohne Werkzeug danach (SKILL.md, "So sieht jeder Klick-Schritt aus"). Alles passiert in der laufenden Sitzung, ohne Neustart.
+Jeder Block unten ist **eine** Antwort an ihn: wörtlich abschreiben, "von N" durch die echte Zahl ersetzen (4 mit Gemini, 3 ohne; ohne Gemini fällt der Gemini-Block weg, die Zeile mit dem Schlüssel in Schritt 4 auch, und "Schritt 4" wird "Schritt 3"), als **letzte Nachricht**, ohne Werkzeug danach (SKILL.md, "So sieht jeder Klick-Schritt aus"). Alles passiert in der laufenden Sitzung, ohne Neustart.
 
 ---
 
@@ -112,7 +112,7 @@ Schick mir den Link, oder schreib, was du siehst, wenn es hängt.
 
 1. Öffne https://aistudio.google.com/apikey und melde dich mit deinem Google-Konto an (beim ersten Mal die Bedingungen bestätigen).
 2. Klick auf **API-Schlüssel erstellen** (englisch: **Create API key**). Fragt es nach einem Projekt: das vorgeschlagene nehmen.
-3. Kopier den Schlüssel (er beginnt meist mit `AIza`) und lass den Tab offen. **Schick ihn nicht hier in den Chat**, du trägst ihn gleich in Schritt N ein.
+3. Kopier den Schlüssel (er beginnt meist mit `AIza`) und lass den Tab offen. **Schick ihn nicht hier in den Chat**, du trägst ihn gleich im nächsten Schritt ein.
 
 ✅ Geklappt, wenn: der Schlüssel kopiert ist.
 Warum: Mit dem Schlüssel schaut sich Gemini jede Vorschau an und gibt dir eine zweite Meinung. Kostenlos heißt: ein Tageslimit (für ein paar Videos am Tag reicht es), kein Zahlungsmittel nötig.
@@ -121,55 +121,14 @@ Schreib **erledigt**, wenn du fertig bist, oder was du siehst, wenn es hängt.
 
 ---
 
-**Schritt 4 von N: Die Einstellungen dieser Sitzung öffnen**
+**Schritt 4 von N: Die Cloud-Umgebung einstellen** (alles in einem Fenster)
 
-1. Klick ganz oben in dieser Sitzung auf das **Wolken-Symbol** neben dem Namen der Sitzung (oder auf den kleinen Pfeil **⌄** daneben).
-2. Im Menü steht die Umgebung, in der diese Sitzung läuft (oft **Default**). Klick dort auf **Edit** bzw. das **Zahnrad ⚙**.
-3. Lass das Fenster offen.
+Lies den Schritt einmal ganz durch, bevor du anfängst: Solange das Fenster offen ist, kannst du hier im Chat nicht schreiben. Mach darum alles auf einmal, speichere, und schreib danach **erledigt**.
 
-✅ Geklappt, wenn: ein Fenster mit **Name**, **Network access**, **Environment variables** und **Setup script** offen ist.
-Warum: Hier steht, was ich im Internet erreichen darf. Änderungen gelten nach etwa einer Minute auch für diese Sitzung, du musst nichts neu starten. Sie gelten für alle Sitzungen in dieser Umgebung.
-
-Schreib **erledigt**, wenn das Fenster offen ist, oder was du siehst, wenn es hängt.
-
----
-
-**Schritt 5 von N: Internet freigeben** (im selben Fenster). Zwei Fassungen, er hat vorher gewählt:
-
-*Fassung Full (empfohlen):*
-
-1. Stell bei **Network access** auf **Full**.
-
-✅ Geklappt, wenn: bei Network access **Full** steht.
-Warum: Die normale Cloud-Umgebung sperrt die Seiten, von denen faber-cut die Sprachmodelle, PyTorch und deine Clips holt. Full öffnet alles mit einem Klick; ich darf in dieser Umgebung dann jede Seite aufrufen.
-
-Lass das Fenster offen und schreib **erledigt**.
-
-*Fassung Custom (nur die nötigen Seiten):*
-
-1. Stell bei **Network access** auf **Custom**.
-2. Füg bei **Allowed domains** diese Zeilen ein:
-   ```
-   huggingface.co
-   *.huggingface.co
-   *.hf.co
-   download.pytorch.org
-   drive.google.com
-   drive.usercontent.google.com
-   ```
-3. Setz den Haken bei **Also include default list of common package managers**.
-
-✅ Geklappt, wenn: die sechs Zeilen drinstehen und der Haken gesetzt ist.
-Warum: Genau diese Seiten sperrt die normale Cloud-Umgebung, und von dort kommen die Sprachmodelle, PyTorch und deine Clips.
-
-Lass das Fenster offen und schreib **erledigt**.
-
----
-
-**Schritt 6 von N: Schlüssel und Setup-Skript eintragen, speichern** (im selben Fenster)
-
-1. Nur mit Gemini: Schreib bei **Environment variables** `GEMINI_API_KEY=` und füg direkt dahinter deinen Schlüssel ein, ohne Leerzeichen.
-2. Füg bei **Setup script** diesen Text ein (steht schon etwas drin: darunter anhängen):
+1. Klick oben links auf den kleinen Pfeil **⌄** neben dem Namen dieser Sitzung und dann auf **Cloud-Umgebung bearbeiten**.
+2. Stell bei **Network access** (Netzwerkzugriff) auf **Full**.
+3. Nur mit Gemini: Schreib bei **Environment variables** (Umgebungsvariablen) `GEMINI_API_KEY=` und füg direkt dahinter deinen Schlüssel aus Schritt 3 ein, ohne Leerzeichen.
+4. Füg bei **Setup script** (Setup-Skript) diesen Text ein (steht schon etwas drin: darunter anhängen):
    ```bash
    #!/bin/bash
    apt-get update -qq && apt-get install -y -qq ffmpeg
@@ -179,12 +138,22 @@ Lass das Fenster offen und schreib **erledigt**.
    done
    exit 0
    ```
-3. Klick auf **Save** (bzw. **Speichern**).
+5. Klick auf **Speichern** (Save). Das Fenster geht zu.
 
-✅ Geklappt, wenn: das Fenster zu ist.
-Warum: In etwa einer Minute gilt die Freigabe, dann installiere ich alles hier. Das Setup-Skript macht künftige Sitzungen schneller. Den Schlüssel bekomme ich erst beim nächsten Start der Sitzung; bis dahin prüfe ich ohne Gemini. Was unter Environment variables steht, sieht jeder, der diese Umgebung benutzt; in deiner eigenen bist das nur du.
+Lieber nicht das ganze Internet freigeben? Dann stell in Punkt 2 statt Full auf **Custom**, füg bei **Allowed domains** diese Zeilen ein und lass den Haken bei **Also include default list of common package managers** gesetzt:
+```
+huggingface.co
+*.huggingface.co
+*.hf.co
+download.pytorch.org
+drive.google.com
+drive.usercontent.google.com
+```
 
-Schreib **erledigt**, dann prüfe ich die Verbindung und installiere.
+✅ Geklappt, wenn: das Fenster nach dem Speichern zu ist und du wieder hier im Chat schreiben kannst.
+Warum: Die normale Cloud-Umgebung sperrt die Seiten, von denen faber-cut die Sprachmodelle, PyTorch und deine Clips holt. Full öffnet sie mit einem Klick (ich darf in dieser Umgebung dann jede Seite aufrufen), Custom nur genau diese. Die Freigabe gilt nach etwa einer Minute auch für diese Sitzung, ohne Neustart. Das Setup-Skript macht künftige Sitzungen schneller. Den Gemini-Schlüssel bekomme ich erst beim nächsten Start der Sitzung; bis dahin prüfe ich ohne Gemini. Was unter Environment variables steht, sieht jeder, der diese Umgebung benutzt; in deiner eigenen bist das nur du.
+
+Schreib **erledigt**, wenn du gespeichert hast, dann prüfe ich die Verbindung und installiere. Hängt es irgendwo, schreib, was du siehst.
 
 ## Gemini-Schlüssel lokal
 

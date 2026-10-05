@@ -58,7 +58,7 @@ Du musst nichts über Terminal, Python oder API-Schlüssel wissen. Als Erstes fr
 | Für wen | Windows, Mac mit Apple-Chip oder Linux, ~8 GB frei | Claude-Plan mit Cloud-Sitzungen (Pro, Max, Team) |
 | Clips | legst du in den Ordner `eingang/` | lädst du vom Handy in einen Google-Drive-Ordner |
 | Fertiges Video | liegt in `out/final/` | kommt in den Chat |
-| Installieren | Node.js und ffmpeg (Claude hilft) | nichts; dafür 6 kurze Klick-Schritte in Drive und den Einstellungen |
+| Installieren | Node.js und ffmpeg (Claude hilft) | nichts; dafür 4 kurze Klick-Schritte in Drive und den Einstellungen |
 
 ### Was danach lokal passiert
 
@@ -85,20 +85,20 @@ Claude führt dich durch alles, was nur du draußen klicken kannst, Schritt für
    - Sonst, oder wenn du es getrennt willst, legt Claude dir nach deinem OK ein eigenes Repo an (als Fork oder
      privat, mit dem Namen deiner Wahl).
 2. Die Fragen zu deinem **Stil** und zur Gemini-Prüfung.
-3. **Sechs kurze Klick-Schritte** von je etwa einer Minute:
+3. **Vier kurze Klick-Schritte** von je etwa einer Minute:
    1. Drive-Ordner anlegen.
    2. Den Ordner freigeben und den Link in den Chat kopieren.
    3. Gemini-Schlüssel holen (fällt weg, wenn du Gemini nicht willst).
-   4. Die Einstellungen dieser Sitzung öffnen (Wolken-Symbol oben).
-   5. Internet freigeben: am einfachsten **Full** (ein Klick), oder nur die nötigen Seiten (**Custom**).
-   6. Schlüssel und Setup-Skript eintragen, speichern.
+   4. Die Cloud-Umgebung einstellen, alles in einem Fenster (Pfeil **⌄** neben dem Sitzungsnamen oben links →
+      **Cloud-Umgebung bearbeiten**): Internet freigeben, Schlüssel und Setup-Skript eintragen, speichern. Solange das
+      Fenster offen ist, kannst du im Chat nicht schreiben; Claude gibt dir darum alles auf einmal.
 
 Danach installiert Claude alles und macht den Probelauf. Eine Drive-Verbindung (Connector) brauchst du nicht: Claude
 lädt deine Clips über den Ordner-Link in voller Größe.
 
-Zu Schritt 5: **Full** ist der einfachste Weg (ein Klick), Claude darf dann in dieser Umgebung jede Seite aufrufen.
-**Custom** erlaubt nur die sechs Seiten, die faber-cut braucht; das ist enger, aber mehr Eintragen. Claude fragt dich,
-was du willst.
+Zum Internet: **Full** ist der einfachste Weg (ein Klick), Claude darf dann in dieser Umgebung jede Seite aufrufen.
+**Custom** erlaubt nur die sechs Seiten, die faber-cut braucht; das ist enger, aber mehr Eintragen. Der Schritt nennt
+beides, du wählst im Fenster.
 
 ### Was das Onboarding dich fragt
 

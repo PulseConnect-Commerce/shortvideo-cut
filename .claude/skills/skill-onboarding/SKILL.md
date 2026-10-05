@@ -7,12 +7,12 @@ description: Richtet faber-cut beim ersten Mal Schritt für Schritt ein, als gef
 
 Du führst den Nutzer durch die Einrichtung von faber-cut, bis sein erstes Video geschnitten werden kann. Rechne damit, dass er noch nie ein Terminal benutzt, nie einen API-Schlüssel erstellt und nie eine Cloud-Umgebung eingestellt hat. Darum:
 
-- **Ein Schritt nach dem anderen.** Eine Nachricht = ein Mini-Schritt mit **höchstens drei Handgriffen**. Nie zwei Schritte in einer Nachricht, nie eine lange Liste. Bei mehreren Klick-Schritten oben "Schritt 2 von 6", damit er sieht, wie weit er ist.
+- **Ein Schritt nach dem anderen.** Eine Nachricht = ein Mini-Schritt mit **höchstens drei Handgriffen** (einzige Ausnahme: die Cloud-Umgebung, siehe 3O.4). Nie zwei Schritte in einer Nachricht, nie eine lange Liste. Bei mehreren Klick-Schritten oben "Schritt 2 von 4", damit er sieht, wie weit er ist.
 - **Was er lesen soll, steht am Ende deiner Antwort.** Die Claude-App klappt Text, der zwischen zwei Befehlen steht, in die graue Zeile "Ausgeführt …" ein: er sieht ihn nicht. Zwischen Befehlen darum nur kurze Statuszeilen; Hinweise, Ergebnisse und jeden Schritt schreibst du in die **letzte** Nachricht, nach dem letzten Befehl.
 - **Jeder Schritt sagt drei Dinge:** was er tun soll, wo genau er klickt oder was er eintippt, und woran er erkennt, dass es geklappt hat.
 - **Fachwörter nur mit Erklärung** in einem Halbsatz ("das Terminal, also das Fenster, in das man Befehle tippt").
 - **Alles, was du selbst machen kannst, machst du selbst** (Befehle ausführen, Dateien schreiben, prüfen). Er klickt nur dort, wo du nicht hinkommst: Google, GitHub, die Einstellungen von Claude, Passwörter.
-- **Entscheidungen** (lokal/online, Stil, Gemini ja/nein, Full/Custom) mit dem Werkzeug **AskUserQuestion**: 2-4 Optionen, deine Empfehlung zuerst mit "(Empfohlen)", in der Beschreibung, was die Wahl bedeutet.
+- **Entscheidungen** (lokal/online, Stil, Gemini ja/nein) mit dem Werkzeug **AskUserQuestion**: 2-4 Optionen, deine Empfehlung zuerst mit "(Empfohlen)", in der Beschreibung, was die Wahl bedeutet.
 - **Klick-Schritte draußen** (Ordner anlegen, Schlüssel holen, Einstellungen ändern) **nie** mit AskUserQuestion: Der Schritt ist die letzte Nachricht deiner Antwort, dann hörst du auf und wartest. Er antwortet frei ("erledigt", oder was er sieht). Siehe "So sieht jeder Klick-Schritt aus".
 - **Nie nach Passwörtern oder Schlüsseln im Chat fragen.** Der Gemini-Schlüssel kommt in eine Datei oder in die Cloud-Einstellungen (siehe unten), nicht in den Chat. Schickt er ihn trotzdem, trag ihn ein und sag ihm freundlich, dass er ihn in Google AI Studio löschen und neu erstellen sollte, weil er jetzt im Chatverlauf steht.
 - Sprich in seiner Sprache, freundlich und knapp. Zeig zu Beginn einmal kurz die Etappen (z. B. "1. Wo es läuft · 2. Programme · 3. Gemini · 4. Dein Stil · 5. Probelauf"), damit er weiß, wo er steht.
@@ -31,9 +31,9 @@ Er sieht nur, was in deiner letzten Nachricht steht. Darum:
 So sieht eine richtige Nachricht aus:
 
 ```
-Dein Stil ist gespeichert. Jetzt 6 kurze Klick-Schritte, je etwa eine Minute; danach installiere ich alles hier.
+Dein Stil ist gespeichert. Jetzt 4 kurze Klick-Schritte, je etwa eine Minute; danach installiere ich alles hier.
 
-**Schritt 1 von 6: Ordner für deine Clips anlegen**
+**Schritt 1 von 4: Ordner für deine Clips anlegen**
 
 1. Öffne https://drive.google.com (oder die Google-Drive-App am Handy).
 2. Klick auf **Neu** → **Neuer Ordner** (englisch: **New** → **New folder**).
@@ -45,7 +45,7 @@ Warum: Hier lädst du später deine Clips vom Handy hoch, und ich hole sie mir v
 Schreib **erledigt**, wenn du fertig bist, oder was du siehst, wenn es hängt.
 ```
 
-**Verboten** (so ist es in Tests passiert): "Jetzt leite ich dich durch 6 kurze Klick-Schritte – als erstes das Anlegen eines Drive-Ordners." und dann eine Frage "Schritt 1 erledigt?". Oder: "Ich erkläre dir jetzt Schritt 3: wie du einen Gemini-Schlüssel erstellst." und dann "Hast du den Schlüssel kopiert?". Das ist eine Ankündigung, keine Anleitung: Er weiß nicht, wo er klicken soll. Jede Nachricht, die einen Klick-Schritt nennt, enthält dessen nummerierte Handgriffe.
+**Verboten** (so ist es in Tests passiert): "Jetzt leite ich dich durch 4 kurze Klick-Schritte – als erstes das Anlegen eines Drive-Ordners." und dann eine Frage "Schritt 1 erledigt?". Oder: "Ich erkläre dir jetzt Schritt 3: wie du einen Gemini-Schlüssel erstellst." und dann "Hast du den Schlüssel kopiert?". Das ist eine Ankündigung, keine Anleitung: Er weiß nicht, wo er klicken soll. Jede Nachricht, die einen Klick-Schritt nennt, enthält dessen nummerierte Handgriffe.
 
 ## 0. Lage prüfen (ohne ihn zu fragen)
 
@@ -112,14 +112,11 @@ Alles passiert in **dieser** Sitzung: Ändert er die Netzwerk-Freigabe der Cloud
    - "Nein, frag mich jedes Mal".
    Merk dir die Antwort für `faber-cut.json` (`"speichern": "main"` oder `"fragen"`).
 3. **Stil (Schritt 5) und Gemini-Wahl (Schritt 4, nur die Frage).**
-4. **Die Klick-Etappe** (`anleitungen.md`, "Klick-Etappe online"): 6 Mini-Schritte mit Gemini, 5 ohne. Kündige sie in einem Satz an ("Jetzt kommen 6 kurze Klick-Schritte, je etwa eine Minute. Danach installiere ich alles hier, ohne neue Sitzung."), dann **einen Schritt pro Antwort, wörtlich aus `anleitungen.md` als letzte Nachricht, ohne Werkzeug danach** (siehe "So sieht jeder Klick-Schritt aus"). Die Ankündigung steht in derselben Nachricht wie Schritt 1, nicht allein.
-   - Schickt er in Schritt 2 den Ordner-Link: die ID daraus (`…/folders/<id>`) in `faber-cut.json` unter `drive` merken. Den Link darf er in den Chat schicken, er ist kein Passwort.
-   - **Vor Schritt 5** AskUserQuestion: "Wie viel Internet darf Claude in dieser Umgebung?"
-     - "Alles, Full (Empfohlen)": am einfachsten, ein Klick, nichts einzutragen. Claude darf dann jede Seite aufrufen.
-     - "Nur die nötigen Seiten, Custom": sechs Zeilen einfügen und einen Haken setzen; sicherer, aber mehr Arbeit.
-     Dann Schritt 5 in der gewählten Fassung (`anleitungen.md`).
-   - War das Netz schon offen (Schritt 0), entfällt Schritt 5; das Setup-Skript in Schritt 6 lohnt sich trotzdem (künftige Sitzungen starten schneller).
-5. **Nach dem Speichern: Netz prüfen.** Alle 20 s `curl -s -o /dev/null -m 10 -w "%{http_code}" https://huggingface.co`, bis zu 2 Minuten. Kommt eine HTTP-Zahl: `npm run setup` im Hintergrund (ein paar Minuten), dann `npm run doktor`, jedes ✗ beheben. Kommt nach 2 Minuten noch `000`: frag, ob er die Umgebung bearbeitet hat, in der **diese** Sitzung läuft (ihr Name steht im Wolken-Menü oben), und ob er gespeichert hat.
+4. **Die Klick-Etappe** (`anleitungen.md`, "Klick-Etappe online"): 4 Mini-Schritte mit Gemini, 3 ohne. Kündige sie in einem Satz an ("Jetzt kommen 4 kurze Klick-Schritte, je etwa eine Minute. Danach installiere ich alles hier, ohne neue Sitzung."), dann **einen Schritt pro Antwort, wörtlich aus `anleitungen.md` als letzte Nachricht, ohne Werkzeug danach** (siehe "So sieht jeder Klick-Schritt aus"). Die Ankündigung steht in derselben Nachricht wie Schritt 1, nicht allein.
+   - Der letzte Schritt (Cloud-Umgebung) ist **ein** Schritt mit allen Handgriffen: Solange das Fenster "Cloud-Umgebung bearbeiten" offen ist, kann er im Chat nicht schreiben, also kein "erledigt" zwischendurch. Netzwerk, Schlüssel, Setup-Skript, Speichern: alles in diesem einen Block.
+   - **Keine eigene Frage nach Full oder Custom.** Der Block schlägt Full vor und nennt Custom als Alternative darunter; er wählt im Fenster selbst. Hat er schon vorher etwas dazu gesagt, nimm nur seine Fassung in den Block.
+   - War das Netz schon offen (Schritt 0), lass den Netzwerk-Punkt und die Custom-Alternative weg; Schlüssel und Setup-Skript lohnen sich trotzdem (künftige Sitzungen starten schneller).
+5. **Nach dem Speichern: Netz prüfen.** Alle 20 s `curl -s -o /dev/null -m 10 -w "%{http_code}" https://huggingface.co`, bis zu 2 Minuten. Kommt eine HTTP-Zahl: `npm run setup` im Hintergrund (ein paar Minuten), dann `npm run doktor`, jedes ✗ beheben. Kommt nach 2 Minuten noch `000`: frag, ob er die Umgebung bearbeitet hat, in der **diese** Sitzung läuft (Pfeil ⌄ neben dem Sitzungsnamen oben links → Cloud-Umgebung bearbeiten), und ob er gespeichert hat.
 6. **Drive prüfen:** `npm run drive -- liste`. Liegt schon eine Datei drin, lad sie testweise (`npm run drive -- laden <name> eingang/test`, das Werkzeug prüft die Größe) und lösch sie danach wieder. Meldet es "nicht erreichbar" oder bleibt die Liste leer, obwohl Clips drin sind: Schritt 2 (Freigabe) noch einmal mit ihm durchgehen.
 7. **Gemini:** Ein Schlüssel aus den Umgebungs-Einstellungen kommt erst an, wenn die Sitzung neu startet oder nach einer Pause wieder aufwacht (`printenv GEMINI_API_KEY` ist bis dahin leer). Sag ihm das in einem Satz: Er muss nichts tun, ab der nächsten Sitzung ist Gemini dabei; bis dahin prüfst du mit den eigenen Messungen. Nie nach dem Schlüssel im Chat fragen.
 8. In `.gitignore` die zwei Zeilen unter "deine Projekte" (`src/projekte/*` und `!src/projekte/_vorlage/`) entfernen, damit seine Projekte gespeichert werden.
