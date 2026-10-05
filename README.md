@@ -96,9 +96,9 @@ Claude führt dich durch alles, was nur du draußen klicken kannst, Schritt für
 Danach installiert Claude alles und macht den Probelauf. Eine Drive-Verbindung (Connector) brauchst du nicht: Claude
 lädt deine Clips über den Ordner-Link in voller Größe.
 
-Zum Internet: **Full** ist der einfachste Weg (ein Klick), Claude darf dann in dieser Umgebung jede Seite aufrufen.
-**Custom** erlaubt nur die sechs Seiten, die faber-cut braucht; das ist enger, aber mehr Eintragen. Der Schritt nennt
-beides, du wählst im Fenster.
+Zum Internet: **Voll** (englisch: Full) ist der einfachste Weg (ein Klick), Claude darf dann in dieser Umgebung jede
+Seite aufrufen. **Benutzerdefiniert** (Custom) erlaubt nur die sechs Seiten, die faber-cut braucht; das ist enger, aber
+mehr Eintragen. Der Schritt nennt beides, du wählst im Fenster.
 
 ### Was das Onboarding dich fragt
 
