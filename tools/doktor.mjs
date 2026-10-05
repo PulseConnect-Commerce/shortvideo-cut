@@ -102,7 +102,7 @@ if (cfg?.modus === "online") {
   const r = quiet("curl", ["-s", "-o", win ? "NUL" : "/dev/null", "-w", "%{http_code}", "https://drive.usercontent.google.com/download?id=0"]);
   ["200", "303", "400", "404"].includes(r.stdout)
     ? ok("drive.usercontent.google.com erreichbar")
-    : no(`drive.usercontent.google.com nicht erreichbar (HTTP ${r.stdout || "?"})`, "in der Cloud-Umgebung unter Network access die Domain erlauben (siehe Onboarding)");
+    : no(`drive.usercontent.google.com nicht erreichbar (HTTP ${r.stdout || "?"})`, "in der Cloud-Umgebung unter Netzwerkzugriff die Domain erlauben (siehe Onboarding)");
 }
 
 console.log(bad ? `\n${bad} Problem(e): bitte beheben und npm run doktor noch einmal starten.` : "\nAlles bereit.");

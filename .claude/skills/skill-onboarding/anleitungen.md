@@ -126,9 +126,9 @@ Schreib **erledigt**, wenn du fertig bist, oder was du siehst, wenn es hängt.
 Lies den Schritt einmal ganz durch, bevor du anfängst: Solange das Fenster offen ist, kannst du hier im Chat nicht schreiben. Mach darum alles auf einmal, speichere, und schreib danach **erledigt**.
 
 1. Klick oben links auf den kleinen Pfeil **⌄** neben dem Namen dieser Sitzung und dann auf **Cloud-Umgebung bearbeiten**.
-2. Stell bei **Network access** (Netzwerkzugriff) auf **Full**.
-3. Nur mit Gemini: Schreib bei **Environment variables** (Umgebungsvariablen) `GEMINI_API_KEY=` und füg direkt dahinter deinen Schlüssel aus Schritt 3 ein, ohne Leerzeichen.
-4. Füg bei **Setup script** (Setup-Skript) diesen Text ein (steht schon etwas drin: darunter anhängen):
+2. Stell bei **Netzwerkzugriff** auf **Full**.
+3. Nur mit Gemini: Schreib bei **Umgebungsvariablen** (englisch: Environment variables) `GEMINI_API_KEY=` und füg direkt dahinter deinen Schlüssel aus Schritt 3 ein, ohne Leerzeichen.
+4. Füg bei **Setup-Skript** (englisch: Setup script) diesen Text ein (steht schon etwas drin: darunter anhängen):
    ```bash
    #!/bin/bash
    apt-get update -qq && apt-get install -y -qq ffmpeg
@@ -140,7 +140,7 @@ Lies den Schritt einmal ganz durch, bevor du anfängst: Solange das Fenster offe
    ```
 5. Klick auf **Speichern** (Save). Das Fenster geht zu.
 
-Lieber nicht das ganze Internet freigeben? Dann stell in Punkt 2 statt Full auf **Custom**, füg bei **Allowed domains** diese Zeilen ein und lass den Haken bei **Also include default list of common package managers** gesetzt:
+Lieber nicht das ganze Internet freigeben? Dann stell in Punkt 2 statt Full auf **Custom**, füg bei den erlaubten Domains (englisch: **Allowed domains**) diese Zeilen ein und lass den Haken bei der Standardliste für Paketmanager (englisch: **Also include default list of common package managers**) gesetzt:
 ```
 huggingface.co
 *.huggingface.co
@@ -151,7 +151,7 @@ drive.usercontent.google.com
 ```
 
 ✅ Geklappt, wenn: das Fenster nach dem Speichern zu ist und du wieder hier im Chat schreiben kannst.
-Warum: Die normale Cloud-Umgebung sperrt die Seiten, von denen faber-cut die Sprachmodelle, PyTorch und deine Clips holt. Full öffnet sie mit einem Klick (ich darf in dieser Umgebung dann jede Seite aufrufen), Custom nur genau diese. Die Freigabe gilt nach etwa einer Minute auch für diese Sitzung, ohne Neustart. Das Setup-Skript macht künftige Sitzungen schneller. Den Gemini-Schlüssel bekomme ich erst beim nächsten Start der Sitzung; bis dahin prüfe ich ohne Gemini. Was unter Environment variables steht, sieht jeder, der diese Umgebung benutzt; in deiner eigenen bist das nur du.
+Warum: Die normale Cloud-Umgebung sperrt die Seiten, von denen faber-cut die Sprachmodelle, PyTorch und deine Clips holt. Full öffnet sie mit einem Klick (ich darf in dieser Umgebung dann jede Seite aufrufen), Custom nur genau diese. Die Freigabe gilt nach etwa einer Minute auch für diese Sitzung, ohne Neustart. Das Setup-Skript macht künftige Sitzungen schneller. Den Gemini-Schlüssel bekomme ich erst beim nächsten Start der Sitzung; bis dahin prüfe ich ohne Gemini. Was unter Umgebungsvariablen steht, sieht jeder, der diese Umgebung benutzt; in deiner eigenen bist das nur du.
 
 Schreib **erledigt**, wenn du gespeichert hast, dann prüfe ich die Verbindung und installiere. Hängt es irgendwo, schreib, was du siehst.
 

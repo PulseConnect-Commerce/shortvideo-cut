@@ -51,7 +51,7 @@ const list = (id) => {
   } catch {
     fail(
       "Der Ordner ist nicht erreichbar. Entweder ist er nicht \"Jeder, der über den Link verfügt\" freigegeben, " +
-        "oder das Netz dieser Sitzung sperrt drive.google.com (Cloud-Umgebung: Network access).",
+        "oder das Netz dieser Sitzung sperrt drive.google.com (Cloud-Umgebung: Netzwerkzugriff).",
     );
   }
   const files = [];
