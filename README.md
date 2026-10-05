@@ -1,4 +1,4 @@
-# faber-cut
+# Faber-cut
 
 [![Test auf Windows, macOS und Linux](https://github.com/TobiB1505/faber-cut/actions/workflows/test.yml/badge.svg)](https://github.com/TobiB1505/faber-cut/actions/workflows/test.yml)
 
