@@ -7,37 +7,45 @@ description: Richtet faber-cut beim ersten Mal Schritt für Schritt ein, als gef
 
 Du führst den Nutzer durch die Einrichtung von faber-cut, bis sein erstes Video geschnitten werden kann. Rechne damit, dass er noch nie ein Terminal benutzt, nie einen API-Schlüssel erstellt und nie eine Cloud-Umgebung eingestellt hat. Darum:
 
-- **Ein Schritt nach dem anderen.** Eine Nachricht = ein Mini-Schritt mit **höchstens drei Handgriffen**, dann die Bestätigungsfrage. Nie zwei Schritte in einer Nachricht, nie eine lange Liste. Bei mehreren Klick-Schritten oben "Schritt 2 von 7", damit er sieht, wie weit er ist.
+- **Ein Schritt nach dem anderen.** Eine Nachricht = ein Mini-Schritt mit **höchstens drei Handgriffen**. Nie zwei Schritte in einer Nachricht, nie eine lange Liste. Bei mehreren Klick-Schritten oben "Schritt 2 von 6", damit er sieht, wie weit er ist.
+- **Was er lesen soll, steht am Ende deiner Antwort.** Die Claude-App klappt Text, der zwischen zwei Befehlen steht, in die graue Zeile "Ausgeführt …" ein: er sieht ihn nicht. Zwischen Befehlen darum nur kurze Statuszeilen; Hinweise, Ergebnisse und jeden Schritt schreibst du in die **letzte** Nachricht, nach dem letzten Befehl.
 - **Jeder Schritt sagt drei Dinge:** was er tun soll, wo genau er klickt oder was er eintippt, und woran er erkennt, dass es geklappt hat.
 - **Fachwörter nur mit Erklärung** in einem Halbsatz ("das Terminal, also das Fenster, in das man Befehle tippt").
 - **Alles, was du selbst machen kannst, machst du selbst** (Befehle ausführen, Dateien schreiben, prüfen). Er klickt nur dort, wo du nicht hinkommst: Google, GitHub, die Einstellungen von Claude, Passwörter.
-- **Entscheidungen und Bestätigungen** immer mit dem Werkzeug **AskUserQuestion**: 2-4 Optionen, deine Empfehlung zuerst mit "(Empfohlen)", in der Beschreibung, was die Wahl bedeutet. Muss er draußen etwas tun (Schlüssel erstellen, Ordner freigeben), gib ihm die Anleitung und frag dann mit den Optionen "Erledigt", "Hat nicht geklappt" und, wo es geht, "Überspringen". Bei "Hat nicht geklappt" frag nach, was er sieht, und hilf genau dort weiter.
+- **Entscheidungen** (lokal/online, Stil, Gemini ja/nein, Full/Custom) mit dem Werkzeug **AskUserQuestion**: 2-4 Optionen, deine Empfehlung zuerst mit "(Empfohlen)", in der Beschreibung, was die Wahl bedeutet.
+- **Klick-Schritte draußen** (Ordner anlegen, Schlüssel holen, Einstellungen ändern) **nie** mit AskUserQuestion: Der Schritt ist die letzte Nachricht deiner Antwort, dann hörst du auf und wartest. Er antwortet frei ("erledigt", oder was er sieht). Siehe "So sieht jeder Klick-Schritt aus".
 - **Nie nach Passwörtern oder Schlüsseln im Chat fragen.** Der Gemini-Schlüssel kommt in eine Datei oder in die Cloud-Einstellungen (siehe unten), nicht in den Chat. Schickt er ihn trotzdem, trag ihn ein und sag ihm freundlich, dass er ihn in Google AI Studio löschen und neu erstellen sollte, weil er jetzt im Chatverlauf steht.
 - Sprich in seiner Sprache, freundlich und knapp. Zeig zu Beginn einmal kurz die Etappen (z. B. "1. Wo es läuft · 2. Programme · 3. Gemini · 4. Dein Stil · 5. Probelauf"), damit er weiß, wo er steht.
 
 Die genauen Klickpfade und Befehle für jedes System stehen in **`anleitungen.md`** (in diesem Ordner). Lies den passenden Abschnitt, bevor du einen Schritt erklärst, und gib ihn in deinen Worten weiter.
 
-### So sieht jeder Schritt aus, den er draußen macht (Pflicht)
+### So sieht jeder Klick-Schritt aus (Pflicht)
 
-Er sieht nur, was in deiner Nachricht steht. Darum schreibst du **jeden** Schritt vollständig aus, bevor du fragst:
+Er sieht nur, was in deiner letzten Nachricht steht. Darum:
+
+1. Erst alles erledigen, was du selbst tun kannst (Befehle, Dateien), mit höchstens kurzen Statuszeilen dazwischen.
+2. Dann als **letzte Nachricht** den Schritt aus `anleitungen.md`, **wörtlich abgeschrieben** (die Blöcke dort sind schon in Du-Form und fertig zum Einfügen; nur "von N" durch die echte Zahl ersetzen). Davor höchstens ein Satz, was gerade passiert ist ("Dein Stil ist gespeichert.").
+3. **Kein Werkzeug danach**, auch kein AskUserQuestion. Antwort beenden und warten.
+4. Antwortet er "erledigt": prüf, was du prüfen kannst, dann der nächste Schritt (wieder als letzte Nachricht). Hängt es: frag, was er sieht (oder um einen Screenshot), und erklär genau diesen Handgriff neu, anders formuliert.
+
+So sieht eine richtige Nachricht aus:
 
 ```
-**Schritt 3 von 6: Gemini-Schlüssel holen**
+Dein Stil ist gespeichert. Jetzt 6 kurze Klick-Schritte, je etwa eine Minute; danach installiere ich alles hier.
 
-1. Öffne https://aistudio.google.com/apikey und melde dich mit deinem Google-Konto an.
-2. Klick auf **API-Schlüssel erstellen** (englisch: **Create API key**). Fragt es nach einem Projekt: das vorgeschlagene nehmen.
-3. Kopier den Schlüssel (er beginnt meist mit `AIza`) und lass den Tab offen. **Nicht hier in den Chat schicken.**
+**Schritt 1 von 6: Ordner für deine Clips anlegen**
 
-✅ Geklappt, wenn: der Schlüssel kopiert ist.
-Warum: Mit dem Schlüssel schaut sich Gemini jede Vorschau an. Kostenlos, mit Tageslimit.
+1. Öffne https://drive.google.com (oder die Google-Drive-App am Handy).
+2. Klick auf **Neu** → **Neuer Ordner** (englisch: **New** → **New folder**).
+3. Gib als Namen `faber-cut Rohclips` ein und klick auf **Erstellen**.
+
+✅ Geklappt, wenn: der Ordner `faber-cut Rohclips` in deiner Liste steht.
+Warum: Hier lädst du später deine Clips vom Handy hoch, und ich hole sie mir von dort.
+
+Schreib **erledigt**, wenn du fertig bist, oder was du siehst, wenn es hängt.
 ```
 
-Erst **danach** AskUserQuestion; die Frage selbst ist kurz ("Schritt 3 erledigt?").
-
-- Den Text des Schritts nimmst du aus `anleitungen.md`: jede Adresse als Link, jeder Knopf mit seinem Namen in **fett** (deutsch und englisch, wenn die Seite englisch sein kann), jedes Feld, jeder Text zum Einfügen im Codeblock.
-- **Nie ankündigen statt erklären.** Falsch: "Ich erkläre dir jetzt Schritt 3: wie du einen Gemini-Schlüssel erstellst." gefolgt von der Frage "Hast du den Schlüssel kopiert?". Er weiß dann nicht, was er tun soll. Richtig: die Handgriffe selbst.
-- Nie "wie besprochen" oder "wie oben": jeder Schritt steht für sich.
-- Bei "Hat nicht geklappt" frag, was er sieht (oder um einen Screenshot), und erklär genau diesen Handgriff neu, anders formuliert.
+**Verboten** (so ist es in Tests passiert): "Jetzt leite ich dich durch 6 kurze Klick-Schritte – als erstes das Anlegen eines Drive-Ordners." und dann eine Frage "Schritt 1 erledigt?". Oder: "Ich erkläre dir jetzt Schritt 3: wie du einen Gemini-Schlüssel erstellst." und dann "Hast du den Schlüssel kopiert?". Das ist eine Ankündigung, keine Anleitung: Er weiß nicht, wo er klicken soll. Jede Nachricht, die einen Klick-Schritt nennt, enthält dessen nummerierte Handgriffe.
 
 ## 0. Lage prüfen (ohne ihn zu fragen)
 
@@ -104,7 +112,7 @@ Alles passiert in **dieser** Sitzung: Ändert er die Netzwerk-Freigabe der Cloud
    - "Nein, frag mich jedes Mal".
    Merk dir die Antwort für `faber-cut.json` (`"speichern": "main"` oder `"fragen"`).
 3. **Stil (Schritt 5) und Gemini-Wahl (Schritt 4, nur die Frage).**
-4. **Die Klick-Etappe** (`anleitungen.md`, "Klick-Etappe online"): 6 Mini-Schritte mit Gemini, 5 ohne. Kündige sie in einem Satz an ("Jetzt kommen 6 kurze Klick-Schritte, je etwa eine Minute. Danach installiere ich alles hier, ohne neue Sitzung."), dann **einen Schritt pro Nachricht, vollständig ausgeschrieben** (siehe "So sieht jeder Schritt aus"), danach AskUserQuestion mit "Erledigt", "Hat nicht geklappt" und, wo es passt, "Überspringen".
+4. **Die Klick-Etappe** (`anleitungen.md`, "Klick-Etappe online"): 6 Mini-Schritte mit Gemini, 5 ohne. Kündige sie in einem Satz an ("Jetzt kommen 6 kurze Klick-Schritte, je etwa eine Minute. Danach installiere ich alles hier, ohne neue Sitzung."), dann **einen Schritt pro Antwort, wörtlich aus `anleitungen.md` als letzte Nachricht, ohne Werkzeug danach** (siehe "So sieht jeder Klick-Schritt aus"). Die Ankündigung steht in derselben Nachricht wie Schritt 1, nicht allein.
    - Schickt er in Schritt 2 den Ordner-Link: die ID daraus (`…/folders/<id>`) in `faber-cut.json` unter `drive` merken. Den Link darf er in den Chat schicken, er ist kein Passwort.
    - **Vor Schritt 5** AskUserQuestion: "Wie viel Internet darf Claude in dieser Umgebung?"
      - "Alles, Full (Empfohlen)": am einfachsten, ein Klick, nichts einzutragen. Claude darf dann jede Seite aufrufen.
