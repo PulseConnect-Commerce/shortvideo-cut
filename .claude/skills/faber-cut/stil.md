@@ -46,7 +46,7 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 - Kontext vor Tempo: der Grund hinter einer Aussage und jeder Teil des Aufrufs bleiben.
 - J-Cuts an Satzanfängen: der nächste Satz ist 0,1 s zu hören, bevor er zu sehen ist.
 - Soundeffekte (Pop, Whoosh, Stempel) unter der Stimme, ≥ 6 dB Abstand, aber hörbar (Lautstärke 0,16, die lautesten
-  ~7 dB unter der Stimme; bei 0,10 hat man sie kaum gehört, Tag 6). -14 LUFS.
+  ~7 dB unter der Stimme). -14 LUFS.
 
 ## Aufruf und Ende
 
@@ -63,28 +63,3 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 ## Meine Notizen (neue Regeln kommen hier dazu)
 
 <!-- Claude: trag hier jede Geschmacksregel ein, die der Nutzer beim Schnitt sagt, mit seinem Satz und Datum. -->
-
-- **Hook-Titel 1:1 wie gesprochen, oben, groß und fett:** der gesprochene Satz wörtlich, oben wie immer, so groß
-  wie die Zeile in die Breite passt (bis 104 px, Schrift 900), steht bis kurz vor dem nächsten Satz (~1,8 s), die
-  Untertitel laufen darunter weiter. Nicht nach unten verlegen, nicht länger stehen lassen: "es soll so bleiben, es
-  soll immer nur größer sein … ein wenig größer machen, fetter machen." (Tag 6, 2026-10-04)
-- **Der Aufruf am Ende bleibt am Stück, mit seiner Begründung**, so wie ich ihn gesagt habe: keine Pausen- oder
-  Äh-Schnitte darin (ein "äh" wird nur leise, `"stumm"`), nichts davon weglassen. "Schau dir das Original an, das
-  macht viel mehr Sinn, als wie du es geschnitten hast … das Ende macht kontextmäßig null Sinn." (Tag 6, v4)
-- **Fluss vor Wortwiederholung:** ein doppeltes "dann" bleibt drin, wenn eine andere Fassung den Fluss zerstört.
-  "Dann ist zweimal doppelt dann drin, ist okay … weil das zerstört den ganzen Flow." (Tag 6)
-- **Doppelte Anläufe raus:** fängt er einen Satz zweimal an ("Wenn du … wenn du noch viel mehr"), fliegt der erste
-  Anlauf raus, der zweite bleibt am Stück. (Tag 6)
-- **Sichtbare Sprünge im Vollbild verstecken oder vermeiden:** lieber den Satz ungeschnitten lassen; sonst ein
-  Zoomwechsel genau auf dem Schnitt. "Da ist ein harter Cut drin, den man sieht … verstecken mit einem Zoom." (Tag 6)
-- **Das Hinstellen des Handys bleibt immer drin:** es ist mein bewusster visueller Hook, ein psychologischer Trick,
-  der Leute beim Scrollen aufhält. Das Video beginnt ~0,5 s bevor ich rede, mit dem Moment, in dem das Handy
-  landet, dann rede ich. Nie wegschneiden, auch nicht, wenn ein späterer Anlauf des Hook-Satzes sauberer ist: dann
-  das Hinstellen vom Anfang des Takes vor den gewählten Satz setzen. "Dieses Hinstellen ist eine visuelle Hook …
-  ich will, dass es drin bleibt." (Tag 7, 2026-10-05)
-- **Der Beweis gehört sofort in den Hook:** nenne ich eine Zahl oder ein Ergebnis (z. B. Downloads), steht der Beleg
-  (Screenshot, Grafik) schon im Hook im Bild, nicht erst danach. "Wir müssen diese Downloads sofort in die Hook mit
-  einbauen." (Tag 7, 2026-10-05)
-- **Grafik bis zum Schluss:** der Vollbild-Teil am Ende (Kommentare, Folgen) bekommt genauso viel Motion Graphics
-  wie die Erklärung, nicht nur Pillen. "Am Ende … nur noch ich spreche und man verliert so ein bisschen das
-  Pacing." (Tag 6)
