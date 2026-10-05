@@ -79,9 +79,11 @@ sie in den Einstellungen der laufenden Sitzung frei, nach etwa einer Minute gilt
 ohne Neustart.
 
 Claude führt dich durch alles, was nur du draußen klicken kannst, Schritt für Schritt:
-1. **Eine eigene Kopie** von faber-cut auf GitHub, damit dein Stil und deine Projekte gespeichert werden. Die legt
-   Claude nach deinem OK selbst an (als Fork oder privat). Startest du die Sitzung schon mit deiner Kopie, fällt das
-   weg.
+1. **Wo faber-cut liegt**, damit dein Stil und deine Projekte gespeichert werden:
+   - Läuft deine Sitzung schon mit einem eigenen Repo (zum Beispiel deiner App), kommt faber-cut einfach als Ordner
+     `faber-cut/` dort hinein. Kein neues Repo, ein privates Repo bleibt privat. Das ist der empfohlene Weg.
+   - Sonst, oder wenn du es getrennt willst, legt Claude dir nach deinem OK ein eigenes Repo an (als Fork oder
+     privat, mit dem Namen deiner Wahl).
 2. Die Fragen zu deinem **Stil** und zur Gemini-Prüfung.
 3. **Sechs kurze Klick-Schritte** von je etwa einer Minute:
    1. Drive-Ordner anlegen.

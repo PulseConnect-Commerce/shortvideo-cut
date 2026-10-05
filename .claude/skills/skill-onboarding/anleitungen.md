@@ -127,8 +127,9 @@ Jeder Mini-Schritt ist **eine eigene Nachricht** und wird **vollständig ausgesc
    ```bash
    #!/bin/bash
    apt-get update -qq && apt-get install -y -qq ffmpeg
-   for d in /home/user/*/; do
-     if [ -f "$d/tools/setup.mjs" ]; then (cd "$d" && npm run setup -- --ohne-modelle) || true; fi
+   for f in /home/user/*/tools/setup.mjs /home/user/*/faber-cut/tools/setup.mjs; do
+     d="${f%/tools/setup.mjs}"
+     if [ -f "$f" ] && grep -q '"name": "faber-cut"' "$d/package.json"; then (cd "$d" && npm run setup -- --ohne-modelle) || true; fi
    done
    exit 0
    ```

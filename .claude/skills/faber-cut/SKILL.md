@@ -23,7 +23,7 @@ Liegt neben dieser Datei eine **`intern.md`**, lies sie auch: Sie ergänzt den A
 | Stil in Zahlen (Farben, Schrift, Maße) | `src/lib/stil.ts` |
 | Vorschau / Vollversion | `out/vorschau/<Komposition>.mp4`, `out/final/` |
 
-Alle Werkzeuge laufen über **`npm run …`**, auf Windows, macOS und Linux gleich (Python nie direkt aufrufen). Die Einstellungen aus dem Onboarding stehen in **`faber-cut.json`** (lokal oder online, Sprache, Gemini, Drive-Ordner): lies sie zuerst. Fehlt die Datei, führe zuerst den Skill **skill-onboarding** aus. Meldet ein Werkzeug, dass `.venv` oder `node_modules` fehlt: `npm run setup`, dann `npm run doktor`.
+Alle Werkzeuge laufen über **`npm run …`**, auf Windows, macOS und Linux gleich (Python nie direkt aufrufen). Liegt faber-cut als Ordner `faber-cut/` in einem anderen Repo (z. B. seiner App), sind alle Pfade hier relativ zu diesem Ordner: arbeite dort. Die Einstellungen aus dem Onboarding stehen in **`faber-cut.json`** (lokal oder online, Sprache, Gemini, Drive-Ordner): lies sie zuerst. Fehlt die Datei, führe zuerst den Skill **skill-onboarding** aus. Meldet ein Werkzeug, dass `.venv` oder `node_modules` fehlt: `npm run setup`, dann `npm run doktor`.
 
 ## Ablauf (jeder Schritt, jedes Mal)
 
