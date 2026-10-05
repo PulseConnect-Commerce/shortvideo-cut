@@ -57,36 +57,44 @@ faber-cut braucht **Node.js 20 oder neuer** und **ffmpeg**. Python braucht er ni
    - einen Namen geben,
    - **Private** wählen.
 
+**Sitzung mit deiner Kopie starten** (nur, wenn Claude die Kopie nicht selbst zu dieser Sitzung hinzufügen kann)
+1. Auf https://claude.ai/code links oben **Neu** (bzw. **New session**) klicken.
+2. Über dem Eingabefeld bei der Repo-Auswahl sein Repo `<sein-name>/faber-cut` wählen.
+3. Schreiben: **"Richte faber-cut für mich ein."**
+- Geklappt, wenn: die neue Sitzung läuft und oben sein Repo `faber-cut` steht.
+- Warum: Nur in einer Sitzung mit seinem eigenen Repo kann Claude seinen Stil und seine Projekte speichern. Weil noch nichts eingerichtet ist, geht nichts verloren.
+
 ## Klick-Etappe online
 
-Jeder Mini-Schritt ist **eine eigene Nachricht**: oben "Schritt X von N", dann höchstens drei Handgriffe, dann "Geklappt, wenn …", dann die Bestätigungsfrage. Den nächsten Schritt zeigst du erst nach "Erledigt". N ist 7 mit Gemini, 6 ohne (dann fällt Schritt 3 weg und in Schritt 6 der Schlüssel).
+Jeder Mini-Schritt ist **eine eigene Nachricht** und wird **vollständig ausgeschrieben** (siehe SKILL.md, "So sieht jeder Schritt aus"): oben "Schritt X von N", dann die Handgriffe, dann "Geklappt, wenn …" und "Warum", dann die Bestätigungsfrage. Den nächsten Schritt zeigst du erst nach "Erledigt". N ist 6 mit Gemini, 5 ohne (dann fällt Schritt 3 weg und in Schritt 6 der Schlüssel). Alles passiert in der laufenden Sitzung, ohne Neustart.
 
 **Schritt 1: Ordner anlegen**
 1. https://drive.google.com öffnen (oder die Google-Drive-App am Handy).
-2. **Neu** → **Neuer Ordner**.
+2. **Neu** → **Neuer Ordner** (englisch: **New** → **New folder**).
 3. Name `faber-cut Rohclips` → **Erstellen**.
 - Geklappt, wenn: der Ordner in der Liste steht.
+- Warum: Hier lädt er später seine Clips vom Handy hoch, und Claude holt sie sich von dort.
 
-**Schritt 2: Ordner freigeben**
+**Schritt 2: Ordner freigeben und den Link schicken**
 1. Rechtsklick auf den Ordner → **Teilen** → **Teilen** (App: drei Punkte am Ordner → **Teilen**).
 2. Unten bei **Allgemeiner Zugriff**: **Eingeschränkt** umstellen auf **Jeder, der über den Link verfügt** (englisch: **General access** → **Anyone with the link**). Die Rolle bleibt **Betrachter**.
-3. **Fertig**.
-- Geklappt, wenn: beim Ordner "Jeder, der über den Link verfügt, kann ansehen" steht.
-- Ein Satz zum Warum: Die Drive-Verbindung schafft nur kleine Dateien; Videos lädst du in voller Größe über den Link. Niemand kennt den Link, solange er ihn nicht weitergibt.
+3. **Link kopieren** klicken, dann **Fertig**, und den Link hier in den Chat einfügen.
+- Geklappt, wenn: beim Ordner "Jeder, der über den Link verfügt, kann ansehen" steht und der Link im Chat ist.
+- Warum: Über diesen Link findet und lädt Claude die Clips in voller Größe, ganz ohne Drive-Verbindung. Der Link ist kein Passwort; sehen kann die Clips nur, wer den Link hat.
 
 **Schritt 3: Gemini-Schlüssel erstellen** (nur mit Gemini)
 1. https://aistudio.google.com/apikey öffnen, mit dem Google-Konto anmelden, beim ersten Mal die Bedingungen bestätigen.
 2. **API-Schlüssel erstellen** (**Create API key**); fragt es nach einem Projekt, das vorgeschlagene nehmen.
 3. Den Schlüssel kopieren (beginnt meist mit `AIza`) und den Tab offen lassen. **Nicht in den Chat schicken.**
 - Geklappt, wenn: der Schlüssel kopiert ist (er braucht ihn in Schritt 6).
-- Kostenlos heißt: ein Tageslimit (für ein paar Videos am Tag reicht es), kein Zahlungsmittel nötig.
+- Warum: Mit dem Schlüssel schaut sich Gemini jede Vorschau an und gibt eine zweite Meinung. Kostenlos heißt: ein Tageslimit (für ein paar Videos am Tag reicht es), kein Zahlungsmittel nötig.
 
-**Schritt 4: Neue Cloud-Umgebung öffnen**
-1. Auf https://claude.ai/code über dem Eingabefeld auf das **Wolken-Symbol mit dem Namen der Umgebung** klicken (z. B. "Default").
-2. **Cloud** wählen, dann **Add cloud environment**.
-3. Bei **Name** `faber-cut` eintragen. Das Fenster offen lassen.
-- Geklappt, wenn: das Fenster "New cloud environment" offen ist und oben `faber-cut` steht.
-- Ein Satz zum Warum: Hier steht, was Claude im Internet erreichen darf und was beim Start installiert wird; eine eigene Umgebung lässt seine anderen Projekte in Ruhe.
+**Schritt 4: Die Einstellungen dieser Sitzung öffnen**
+1. Ganz oben in dieser Sitzung auf das **Wolken-Symbol** neben dem Namen der Sitzung klicken (bzw. auf den kleinen Pfeil **⌄** daneben).
+2. Im Menü steht die Umgebung, in der diese Sitzung läuft (oft **Default**). Dort auf **Edit** bzw. das **Zahnrad ⚙** klicken.
+3. Das Fenster offen lassen.
+- Geklappt, wenn: ein Fenster mit **Name**, **Network access**, **Environment variables** und **Setup script** offen ist.
+- Warum: Hier steht, was Claude im Internet erreichen darf. Änderungen gelten nach etwa einer Minute auch für diese laufende Sitzung. Sie gelten für alle Sitzungen in dieser Umgebung; will er die nicht ändern, legt er stattdessen mit **Add cloud environment** eine eigene an (dann braucht es eine neue Sitzung in ihr).
 
 **Schritt 5: Internet freigeben** (im selben Fenster)
 1. Bei **Network access** **Custom** wählen.
@@ -101,12 +109,12 @@ Jeder Mini-Schritt ist **eine eigene Nachricht**: oben "Schritt X von N", dann h
    ```
 3. Den Haken bei **Also include default list of common package managers** setzen.
 - Geklappt, wenn: die sechs Zeilen drinstehen und der Haken gesetzt ist.
-- Ein Satz zum Warum: Die normale Cloud-Umgebung sperrt genau diese Seiten, und von dort kommen die Sprachmodelle, PyTorch und seine Clips. Ohne die Freigabe bricht `npm run setup` ab.
+- Warum: Die normale Cloud-Umgebung sperrt genau diese Seiten, und von dort kommen die Sprachmodelle, PyTorch und seine Clips. Ohne die Freigabe bricht `npm run setup` ab.
 - Abkürzung: Statt Custom **Full** wählen, dann fällt das Eintragen weg. Einfacher, aber offener: Claude darf in dieser Umgebung dann jede Seite aufrufen.
 
-**Schritt 6: Schlüssel und Setup eintragen, speichern** (im selben Fenster)
+**Schritt 6: Schlüssel und Setup-Skript eintragen, speichern** (im selben Fenster)
 1. Nur mit Gemini: bei **Environment variables** `GEMINI_API_KEY=` schreiben und direkt dahinter den Schlüssel einfügen, ohne Leerzeichen.
-2. Bei **Setup script** diesen Text einfügen:
+2. Bei **Setup script** diesen Text einfügen (steht schon etwas drin, darunter anhängen):
    ```bash
    #!/bin/bash
    apt-get update -qq && apt-get install -y -qq ffmpeg
@@ -115,21 +123,9 @@ Jeder Mini-Schritt ist **eine eigene Nachricht**: oben "Schritt X von N", dann h
    done
    exit 0
    ```
-3. **Create environment** klicken.
-- Geklappt, wenn: das Fenster zu ist und `faber-cut` in der Liste der Umgebungen steht.
-- Hinweis: Werte unter Environment variables sieht jeder, der diese Umgebung benutzt; in seiner eigenen ist das nur er.
-
-**Schritt 7: Google Drive mit Claude verbinden**
-1. https://claude.ai/customize/connectors öffnen.
-2. **Google Drive** suchen, **Connect** klicken.
-3. Sein Google-Konto wählen und **Zulassen**.
-- Geklappt, wenn: Google Drive als verbunden angezeigt wird.
-
-**Danach (ohne Nummer): neue Sitzung starten**
-1. Auf claude.ai/code beim Wolken-Symbol die Umgebung `faber-cut` wählen.
-2. Eine neue Sitzung mit seinem Repo `faber-cut` starten.
-3. Schreiben: "Weiter mit dem Onboarding".
-- Ein Satz zum Warum: Umgebung und Verbindungen gelten erst in einer neuen Sitzung.
+3. **Save** (bzw. **Speichern**) klicken.
+- Geklappt, wenn: das Fenster zu ist.
+- Warum: Die Netz-Freigabe gilt nach etwa einer Minute, dann installiert Claude hier alles. Das Setup-Skript macht künftige Sitzungen schneller. Der Schlüssel kommt erst beim nächsten Start der Sitzung an; bis dahin prüft Claude ohne Gemini. Werte unter Environment variables sieht jeder, der diese Umgebung benutzt; in seiner eigenen ist das nur er.
 
 ## Gemini-Schlüssel lokal
 

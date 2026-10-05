@@ -32,6 +32,8 @@ jobs:
         run: npm run setup
       - name: npm run typecheck
         run: npm run typecheck
+      - name: Node-Werkzeuge (Syntax)
+        run: node --check tools/drive.mjs
       - name: npm run doktor
         run: npm run doktor
       - name: npm run probelauf

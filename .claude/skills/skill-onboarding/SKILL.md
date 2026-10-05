@@ -17,14 +17,36 @@ Du führst den Nutzer durch die Einrichtung von faber-cut, bis sein erstes Video
 
 Die genauen Klickpfade und Befehle für jedes System stehen in **`anleitungen.md`** (in diesem Ordner). Lies den passenden Abschnitt, bevor du einen Schritt erklärst, und gib ihn in deinen Worten weiter.
 
+### So sieht jeder Schritt aus, den er draußen macht (Pflicht)
+
+Er sieht nur, was in deiner Nachricht steht. Darum schreibst du **jeden** Schritt vollständig aus, bevor du fragst:
+
+```
+**Schritt 3 von 6: Gemini-Schlüssel holen**
+
+1. Öffne https://aistudio.google.com/apikey und melde dich mit deinem Google-Konto an.
+2. Klick auf **API-Schlüssel erstellen** (englisch: **Create API key**). Fragt es nach einem Projekt: das vorgeschlagene nehmen.
+3. Kopier den Schlüssel (er beginnt meist mit `AIza`) und lass den Tab offen. **Nicht hier in den Chat schicken.**
+
+✅ Geklappt, wenn: der Schlüssel kopiert ist.
+Warum: Mit dem Schlüssel schaut sich Gemini jede Vorschau an. Kostenlos, mit Tageslimit.
+```
+
+Erst **danach** AskUserQuestion; die Frage selbst ist kurz ("Schritt 3 erledigt?").
+
+- Den Text des Schritts nimmst du aus `anleitungen.md`: jede Adresse als Link, jeder Knopf mit seinem Namen in **fett** (deutsch und englisch, wenn die Seite englisch sein kann), jedes Feld, jeder Text zum Einfügen im Codeblock.
+- **Nie ankündigen statt erklären.** Falsch: "Ich erkläre dir jetzt Schritt 3: wie du einen Gemini-Schlüssel erstellst." gefolgt von der Frage "Hast du den Schlüssel kopiert?". Er weiß dann nicht, was er tun soll. Richtig: die Handgriffe selbst.
+- Nie "wie besprochen" oder "wie oben": jeder Schritt steht für sich.
+- Bei "Hat nicht geklappt" frag, was er sieht (oder um einen Screenshot), und erklär genau diesen Handgriff neu, anders formuliert.
+
 ## 0. Lage prüfen (ohne ihn zu fragen)
 
 - **Per Prompt geklont?** Hat er dich mit "Installiere faber-cut von github.com/TobiB1505/faber-cut und richte es für mich ein" gestartet, läufst du noch im Ordner darüber. Klone das Repo (`git clone https://github.com/TobiB1505/faber-cut.git`, ohne git: als ZIP laden und entpacken), arbeite ab dann im Ordner `faber-cut` (alle `npm run …` dort) und lies seine `CLAUDE.md`. Sag ihm am Ende des Onboardings, dass er Claude Code künftig in diesem Ordner startet (`cd faber-cut`, dann `claude`), damit die Skills automatisch geladen werden.
 - **System:** `node -p "process.platform + ' ' + process.arch"` (`win32`, `darwin` = Mac, `linux`). Fehlt Node, sagt die Shell es dir; dann `uname -s` (Mac/Linux) oder die Windows-Hinweise im Fehler.
 - **Cloud oder lokal:** die Umgebungsvariable `CLAUDE_CODE_REMOTE` ist in einer Cloud-Sitzung `true`.
-- **In der Cloud: ist die Umgebung schon bereit?** `curl -s -o /dev/null -m 10 -w "%{http_code}" https://huggingface.co`. Kommt `000` (oder der Proxy meldet "connect_rejected"), läuft die Sitzung in einer Umgebung, deren Netzwerk Modelle, PyTorch und Drive sperrt; das ist bei einer normalen Cloud-Sitzung der Fall. Dann kann `npm run setup` hier nicht durchlaufen: Versuch es nicht, sondern folge 3O (zwei Sitzungen). Kommt eine HTTP-Zahl, ist die Umgebung schon freigeschaltet.
+- **In der Cloud: ist die Umgebung schon bereit?** `curl -s -o /dev/null -m 10 -w "%{http_code}" https://huggingface.co`. Kommt `000` (oder der Proxy meldet "connect_rejected"), läuft die Sitzung in einer Umgebung, deren Netzwerk Modelle, PyTorch und Drive sperrt; das ist bei einer normalen Cloud-Sitzung der Fall. Dann kann `npm run setup` noch nicht durchlaufen: Versuch es nicht. Er schaltet das Netz in 3O selbst frei, in **dieser** Sitzung (die Freigabe gilt nach etwa einer Minute auch für die laufende Sitzung), danach installierst du hier. Kommt eine HTTP-Zahl, ist die Umgebung schon freigeschaltet.
 - **In der Cloud: läuft die Sitzung schon mit faber-cut?** Hast du faber-cut erst per Prompt geklont, ist das Repo der Sitzung ein anderes: Die Skills von faber-cut lädt sie dann nicht von selbst (lies sie aus dem Klon), und speichern kann sie dort nichts. Das klärt 3O.1.
-- **Schon eingerichtet?** Gibt es `faber-cut.json`, lies sie und frag, was er ändern will (Gemini nachrüsten, Modus wechseln, Stil neu, nur prüfen). Mach dann nur diesen Teil. Steht darin `"onboarding": "weiter"`, ist ihr erster Teil schon erledigt (Online-Modus nach dem Neustart): spring zu Schritt 3O.6.
+- **Schon eingerichtet?** Gibt es `faber-cut.json`, lies sie und frag, was er ändern will (Gemini nachrüsten, Modus wechseln, Stil neu, nur prüfen). Mach dann nur diesen Teil. Steht darin `"onboarding": "weiter"`, hat er für seine eigene Kopie neu gestartet: lies, was schon eingerichtet ist, und mach in 3O dort weiter, wo es fehlt.
 - Läuft Node schon: `npm run doktor` zeigt dir, was fehlt.
 
 ## 1. Begrüßung (Text, keine Frage)
@@ -48,7 +70,7 @@ AskUserQuestion, Empfehlung nach Lage (Cloud-Sitzung: Online; sonst Lokal):
 
 Passt die Wahl nicht zu dieser Sitzung (er will online, du läufst aber lokal, oder umgekehrt), erklär ihm den Umzug (`anleitungen.md`, "Umzug") und hör hier auf: das Onboarding startet er dort noch einmal.
 
-Wählt er **Online** und die Umgebung ist noch nicht bereit (Schritt 0), sag es ihm sofort und ehrlich, in zwei, drei Sätzen: In dieser Sitzung kann faber-cut noch nicht installiert werden, weil ihr Netzwerk die Seiten für Sprachmodelle, PyTorch und Drive sperrt. Das ist bei jeder normalen Cloud-Sitzung so, nicht sein Fehler. Darum geht es in zwei Sitzungen: hier ein paar Klicks, darunter eine eigene Cloud-Umgebung (und, wenn die Sitzung schon mit seinem Repo läuft, Stil und Einstellungen), dann einmal neu starten, und dort installierst du alles und machst den Probelauf. So erwartet er nicht, dass am Ende dieser Sitzung schon alles läuft.
+Wählt er **Online** und die Umgebung ist noch nicht bereit (Schritt 0), sag es ihm sofort, in zwei Sätzen: Die normale Cloud-Umgebung sperrt die Seiten für Sprachmodelle, PyTorch und Drive; das ist bei jeder normalen Cloud-Sitzung so, nicht sein Fehler. Er schaltet sie gleich mit ein paar Klicks frei, und danach installierst du alles hier in dieser Sitzung, ohne Neustart.
 
 ## 3L. Lokal einrichten
 
@@ -60,25 +82,26 @@ Wählt er **Online** und die Umgebung ist noch nicht bereit (Schritt 0), sag es 
 2. **Einrichten:** `npm run setup` im Hintergrund starten. Es dauert 5-15 Minuten und lädt ~4 GB (Python, PyTorch, die Modelle für Transkription und Ausrichtung). Sag ihm das. **Stell ihm währenddessen die Fragen aus Schritt 4 (Gemini) und 5 (Stil)**, damit er nicht nur wartet.
 3. Wenn `npm run setup` fertig ist: `npm run doktor`. Jedes ✗ beheben (der Doktor nennt die Lösung), bis "Alles bereit." dasteht.
 
-## 3O. Online einrichten
+## 3O. Online einrichten (in dieser Sitzung)
 
-Reihenfolge so, dass er **nur einmal** eine neue Sitzung starten muss:
+Alles passiert in **dieser** Sitzung: Ändert er die Netzwerk-Freigabe der Cloud-Umgebung, gilt sie nach etwa einer Minute auch für die laufende Sitzung. Eine neue Sitzung braucht es nur, wenn diese nicht mit seiner eigenen Kopie des Repos läuft und du sie nicht nachträglich hinzufügen kannst (Punkt 1), und dann ganz am Anfang, bevor etwas eingerichtet ist.
 
-1. **Eigene Kopie:** `git remote -v`. Zeigt es auf `TobiB1505/faber-cut`, arbeitet er auf dem Original und kann nichts speichern: Er braucht einen Fork (`anleitungen.md`, "Eigene Kopie auf GitHub"), dann eine neue Sitzung mit seinem Fork, dann das Onboarding neu.
-   - **Per Prompt in einer fremden Sitzung geklont** (die Sitzung gehört zu einem anderen Repo): Hier lässt sich nichts speichern. Frag darum hier noch keinen Stil, sondern lass ihn den Fork anlegen und gleich die Klick-Etappe (Schritt 4) machen. Dann startet er nur **einmal** neu, mit seinem Fork **und** der Umgebung `faber-cut`, und dort fragst du Stil und Gemini, richtest ein und machst den Probelauf.
+1. **Eigene Kopie zuerst.** Ohne sie kann nichts gespeichert werden (Stil, Einstellungen, Projekte), und eine Cloud-Sitzung ist nach einer Weile weg. Prüf `git remote -v` im Ordner `faber-cut` und das Repo, mit dem die Sitzung läuft.
+   - Läuft sie mit seiner Kopie (Fork oder Import, nicht `TobiB1505/faber-cut`): weiter mit 2.
+   - Sonst (auf dem Original gestartet, oder per Prompt in einer Sitzung eines anderen Repos): Mini-Schritt "Eigene Kopie auf GitHub" (`anleitungen.md`). Hast du danach ein Werkzeug, mit dem du ein GitHub-Repo mit Schreibrecht zu dieser Sitzung hinzufügst (z. B. `add_repo`), füg seine Kopie hinzu, klone sie, arbeite ab dann darin, und es geht ohne Neustart weiter. Hast du keins: Mini-Schritt "Sitzung mit deiner Kopie starten" (`anleitungen.md`), jetzt sofort; dort fängt das Onboarding von vorn an und läuft ohne weiteren Neustart durch.
    - **Ist er selbst der Besitzer von `TobiB1505/faber-cut`**: Kein Fork, aber trotzdem eine eigene Kopie (privat über https://github.com/new/import), denn sein Stil, `faber-cut.json` und seine Projekte gehören nicht ins öffentliche Original: Wer es danach klont, bekäme seinen Stil und überspränge das Onboarding.
-2. **Speichern erlauben:** Eine Cloud-Sitzung ist nach einer Weile weg. Was bleiben soll (Einstellungen, Stil, Projekte), muss in sein GitHub-Repo. Frag: "Darf ich deine Einstellungen, deinen Stil und deine Projekte direkt in dein Repo speichern (Hauptzweig main)?"
+2. **Speichern erlauben:** Was bleiben soll (Einstellungen, Stil, Projekte), muss in sein GitHub-Repo. Frag: "Darf ich deine Einstellungen, deinen Stil und deine Projekte direkt in dein Repo speichern (Hauptzweig main)?"
    - "Ja, direkt auf main (Empfohlen)": sonst fehlen sie in der nächsten Sitzung.
    - "Nein, frag mich jedes Mal".
    Merk dir die Antwort für `faber-cut.json` (`"speichern": "main"` oder `"fragen"`).
-3. **Stil (Schritt 5) und Gemini-Wahl (Schritt 4, nur die Frage)** jetzt, solange die Sitzung läuft.
-4. **Die Klick-Etappe.** Jetzt klickt er draußen: Drive-Ordner, Gemini-Schlüssel, Cloud-Umgebung, Drive-Verbindung. Kündige sie in einem Satz an ("Jetzt kommen 7 kurze Klick-Schritte, je etwa eine Minute. Ohne sie kann faber-cut online nicht laufen, weil die normale Cloud-Umgebung die nötigen Seiten sperrt"), dann gib die Mini-Schritte aus `anleitungen.md`, "Klick-Etappe online", **einzeln** weiter: eine Nachricht pro Schritt, danach AskUserQuestion mit "Erledigt", "Hat nicht geklappt" und, wo es passt, "Überspringen". Bei "Hat nicht geklappt" frag, was er sieht, und hilf genau dort.
-5. **Vor der neuen Sitzung:** Schreib `faber-cut.json` mit `"onboarding": "weiter"` und speichere es (committen und pushen, wie erlaubt). Dann der letzte Mini-Schritt "neue Sitzung starten" aus `anleitungen.md`.
-6. **In der neuen Sitzung:**
-   - `npm run setup` (im Hintergrund, ein paar Minuten), dann `npm run doktor`.
-   - Den Drive-Ordner mit dem Connector suchen (`faber-cut Rohclips`), seine ID in `faber-cut.json` unter `drive` eintragen. Gibt es ihn unter dem Namen nicht, such nach ähnlichen Ordnern und frag, welchen er meint ("Erledigt" heißt nicht immer, dass es genau so geklappt hat: prüf selbst, was du prüfen kannst).
-   - Liegt schon eine Datei drin: mit `curl` testweise laden und prüfen, dass sie größer als ein paar KB ist (sonst ist die Freigabe falsch).
-   - In `.gitignore` die zwei Zeilen unter "deine Projekte" (`src/projekte/*` und `!src/projekte/_vorlage/`) entfernen, damit seine Projekte gespeichert werden.
+3. **Stil (Schritt 5) und Gemini-Wahl (Schritt 4, nur die Frage).**
+4. **Die Klick-Etappe** (`anleitungen.md`, "Klick-Etappe online"): 6 Mini-Schritte mit Gemini, 5 ohne. Kündige sie in einem Satz an ("Jetzt kommen 6 kurze Klick-Schritte, je etwa eine Minute. Danach installiere ich alles hier, ohne neue Sitzung."), dann **einen Schritt pro Nachricht, vollständig ausgeschrieben** (siehe "So sieht jeder Schritt aus"), danach AskUserQuestion mit "Erledigt", "Hat nicht geklappt" und, wo es passt, "Überspringen".
+   - Schickt er in Schritt 2 den Ordner-Link: die ID daraus (`…/folders/<id>`) in `faber-cut.json` unter `drive` merken. Den Link darf er in den Chat schicken, er ist kein Passwort.
+   - War das Netz schon offen (Schritt 0), sag bei Schritt 5, dass er nur prüft, ob die Seiten drinstehen; das Setup-Skript in Schritt 6 lohnt sich trotzdem (künftige Sitzungen starten schneller).
+5. **Nach dem Speichern: Netz prüfen.** Alle 20 s `curl -s -o /dev/null -m 10 -w "%{http_code}" https://huggingface.co`, bis zu 2 Minuten. Kommt eine HTTP-Zahl: `npm run setup` im Hintergrund (ein paar Minuten), dann `npm run doktor`, jedes ✗ beheben. Kommt nach 2 Minuten noch `000`: frag, ob er die Umgebung bearbeitet hat, in der **diese** Sitzung läuft (ihr Name steht im Wolken-Menü oben), und ob er gespeichert hat.
+6. **Drive prüfen:** `npm run drive -- liste`. Liegt schon eine Datei drin, lad sie testweise (`npm run drive -- laden <name> eingang/test`, das Werkzeug prüft die Größe) und lösch sie danach wieder. Meldet es "nicht erreichbar" oder bleibt die Liste leer, obwohl Clips drin sind: Schritt 2 (Freigabe) noch einmal mit ihm durchgehen.
+7. **Gemini:** Ein Schlüssel aus den Umgebungs-Einstellungen kommt erst an, wenn die Sitzung neu startet oder nach einer Pause wieder aufwacht (`printenv GEMINI_API_KEY` ist bis dahin leer). Sag ihm das in einem Satz: Er muss nichts tun, ab der nächsten Sitzung ist Gemini dabei; bis dahin prüfst du mit den eigenen Messungen. Nie nach dem Schlüssel im Chat fragen.
+8. In `.gitignore` die zwei Zeilen unter "deine Projekte" (`src/projekte/*` und `!src/projekte/_vorlage/`) entfernen, damit seine Projekte gespeichert werden.
 
 ## 4. Gemini-Prüfung (freiwillig)
 
@@ -176,9 +199,9 @@ Schreib `faber-cut.json` ins Repo:
 }
 ```
 
-- Online steht unter `"drive"` `{"ordner": "faber-cut Rohclips", "id": "<ordner-id>"}` und unter `"speichern"` `"main"` oder `"fragen"`.
+- Online steht unter `"drive"` `{"ordner": "faber-cut Rohclips", "id": "<ordner-id>", "link": "<sein Ordner-Link>"}` und unter `"speichern"` `"main"` oder `"fragen"`.
 - `"sprache"`: `"de"`, `"en"` oder `"beide"`.
-- `"onboarding": "weiter"` nur zwischen den zwei Online-Sitzungen, danach weg.
+- `"onboarding": "weiter"` nur, wenn er für seine eigene Kopie doch eine neue Sitzung starten musste und schon etwas eingerichtet war; danach weg.
 - Online: committen und pushen, wie erlaubt. Lokal reicht die Datei.
 
 ## 7. Probelauf
@@ -195,7 +218,7 @@ Bleibt er hängen: die Meldung lesen, `npm run doktor`, beheben, nochmal. Danach
 Eine kurze Zusammenfassung: was eingerichtet ist (Modus, Gemini ja/nein, sein Stil in drei Stichworten) und **wie er sein erstes Video bekommt**:
 
 - **Lokal:** Clip in den Ordner `eingang/` legen und schreiben: "Schneide mir das Video in eingang/<datei>. Projekt: video1".
-- **Online:** Clip vom Handy in seinen Drive-Ordner hochladen, eine Sitzung mit seinem Repo öffnen und schreiben: "Clips sind drin, schneide mir das Video."
+- **Online:** Clip vom Handy in seinen Drive-Ordner hochladen, eine Sitzung mit seinem Repo öffnen (in derselben Cloud-Umgebung wie heute) und schreiben: "Clips sind drin, schneide mir das Video."
 
 Dazu drei Tipps fürs Filmen:
 - Hochkant, Licht von vorne, das Handy nah genug für guten Ton.

@@ -41,10 +41,9 @@ Installiere faber-cut von github.com/TobiB1505/faber-cut und richte es für mich
 
 - **Lokal:** Starte Claude Code in dem Ordner, in dem faber-cut landen soll (Terminal oder Desktop-App). Noch kein
   Claude Code? [Hier installieren](https://claude.com/claude-code).
-- **Online:** Öffne [claude.ai/code](https://claude.ai/code) oder die Claude-App und starte eine Sitzung. Rechne
-  dort mit **zwei Sitzungen**: In einer normalen Cloud-Sitzung sperrt das Netzwerk die Seiten, von denen faber-cut
-  seine Sprachmodelle, PyTorch und deine Clips holt. Die erste Sitzung richtet darum eine eigene Cloud-Umgebung mit
-  dir ein, erst in der zweiten wird installiert (siehe [Was danach online passiert](#was-danach-online-passiert)).
+- **Online:** Öffne [claude.ai/code](https://claude.ai/code) oder die Claude-App und starte eine Sitzung. Am
+  einfachsten startest du sie schon mit deiner eigenen Kopie des Repos (siehe
+  [Was danach online passiert](#was-danach-online-passiert)); sonst hilft dir Claude dabei.
 
 Mehr musst du nicht tun. Claude lädt faber-cut und startet das **Onboarding**, einen Skill, der dich Schritt für
 Schritt mit Auswahlfragen durchführt:
@@ -59,7 +58,7 @@ Du musst nichts über Terminal, Python oder API-Schlüssel wissen. Als Erstes fr
 | Für wen | Windows, Mac mit Apple-Chip oder Linux, ~8 GB frei | Claude-Plan mit Cloud-Sitzungen (Pro, Max, Team) |
 | Clips | legst du in den Ordner `eingang/` | lädst du vom Handy in einen Google-Drive-Ordner |
 | Fertiges Video | liegt in `out/final/` | kommt in den Chat |
-| Installieren | Node.js und ffmpeg (Claude hilft) | nichts; dafür eine eigene Cloud-Umgebung (7 Klicks) und einmal neu starten |
+| Installieren | Node.js und ffmpeg (Claude hilft) | nichts; dafür 6 kurze Klick-Schritte in Drive und den Einstellungen |
 
 ### Was danach lokal passiert
 
@@ -74,33 +73,28 @@ künftig im Ordner `faber-cut` startest.
 
 ### Was danach online passiert
 
-**Wichtig:** In einer normalen Cloud-Sitzung läuft faber-cut noch nicht. Ihr Netzwerk lässt nur die üblichen
-Paketquellen durch, aber nicht `huggingface.co` (Sprachmodelle), `download.pytorch.org` (PyTorch) und Google Drive
-(deine Clips). Darum geht es online in zwei Sitzungen:
-- **Sitzung 1** (die, in der du den Prompt schickst): Stil, Einstellungen und die Klick-Schritte unten, darunter eine
-  eigene Cloud-Umgebung `faber-cut`, die diese Seiten erlaubt. Hier wird noch nichts installiert.
-- **Sitzung 2** (neu gestartet, in der Umgebung `faber-cut`): Claude installiert alles und macht den Probelauf.
+Alles läuft in **einer** Sitzung. Eine normale Cloud-Sitzung sperrt die Seiten, von denen faber-cut seine
+Sprachmodelle (`huggingface.co`), PyTorch (`download.pytorch.org`) und deine Clips (Google Drive) holt. Du schaltest
+sie in den Einstellungen der laufenden Sitzung frei, nach etwa einer Minute gilt das, und Claude installiert alles,
+ohne Neustart.
 
-Claude führt dich durch alles, was nur du draußen klicken kannst:
+Claude führt dich durch alles, was nur du draußen klicken kannst, Schritt für Schritt:
 1. **Eine eigene Kopie** von faber-cut auf GitHub (ein Fork), damit dein Stil und deine Projekte gespeichert werden.
-   Danach startest du eine Sitzung mit deiner Kopie.
+   Startest du die Sitzung schon mit deiner Kopie, fällt das weg.
 2. Die Fragen zu deinem **Stil** und zur Gemini-Prüfung.
-3. **Sieben kurze Klick-Schritte** von je etwa einer Minute:
+3. **Sechs kurze Klick-Schritte** von je etwa einer Minute:
    1. Drive-Ordner anlegen.
-   2. Den Ordner freigeben.
+   2. Den Ordner freigeben und den Link in den Chat kopieren.
    3. Gemini-Schlüssel holen (fällt weg, wenn du Gemini nicht willst).
-   4. Cloud-Umgebung anlegen.
-   5. Internet-Freigaben eintragen.
-   6. Setup-Skript einfügen.
-   7. Google Drive verbinden.
+   4. Die Einstellungen dieser Sitzung öffnen (Wolken-Symbol oben).
+   5. Internet freigeben.
+   6. Schlüssel und Setup-Skript eintragen, speichern.
 
-Danach startest du einmal eine neue Sitzung in der Umgebung `faber-cut`, und Claude macht den Rest.
+Danach installiert Claude alles und macht den Probelauf. Eine Drive-Verbindung (Connector) brauchst du nicht: Claude
+lädt deine Clips über den Ordner-Link in voller Größe.
 
-Abkürzung: Stellst du in deiner Cloud-Umgebung **Network access** auf **Full**, ist alles erreichbar und die
-Internet-Freigaben (Schritt 5) fallen weg. Das ist einfacher, aber offener: Claude darf dann jede Seite aufrufen.
-
-Warum der Ordner für "Jeder mit dem Link" freigegeben wird: Über die Drive-Verbindung kann Claude nur kleine Dateien
-lesen. Videos lädt es in voller Größe über den Link.
+Abkürzung: Stellst du bei **Network access** **Full** ein, ist alles erreichbar und das Eintragen in Schritt 5 fällt
+weg. Das ist einfacher, aber offener: Claude darf dann jede Seite aufrufen.
 
 ### Was das Onboarding dich fragt
 
@@ -242,6 +236,8 @@ Alle Befehle sind gleich auf Windows, macOS und Linux:
 npm run setup                                   # einrichten (einmal; wiederholbar)
 npm run doktor                                  # prüfen, ob alles bereit ist
 npm run probelauf                               # Beispielclip einmal komplett schneiden
+npm run drive -- liste                          # online: Clips im Drive-Ordner (ohne Drive-Verbindung)
+npm run drive -- laden IMG_0871.MOV eingang/video1   # online: einen Clip in voller Größe laden
 npm run intake -- eingang/clip.mov video1 t1    # Clip vorbereiten, transkribieren, ausrichten
 npm run raster -- public/projekte/video1/takes/t1.mp4 out/raster.jpg 2,10,20   # wohin Grafiken dürfen
 npm run schnitt -- src/projekte/video1/schnitt.json
