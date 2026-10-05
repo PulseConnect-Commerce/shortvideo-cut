@@ -101,7 +101,8 @@ Jeder Mini-Schritt ist **eine eigene Nachricht**: oben "Schritt X von N", dann h
    ```
 3. Den Haken bei **Also include default list of common package managers** setzen.
 - Geklappt, wenn: die sechs Zeilen drinstehen und der Haken gesetzt ist.
-- Ein Satz zum Warum: Von dort kommen die Sprachmodelle, PyTorch und seine Clips. (Einfacher, aber offener: **Full**.)
+- Ein Satz zum Warum: Die normale Cloud-Umgebung sperrt genau diese Seiten, und von dort kommen die Sprachmodelle, PyTorch und seine Clips. Ohne die Freigabe bricht `npm run setup` ab.
+- Abkürzung: Statt Custom **Full** wählen, dann fällt das Eintragen weg. Einfacher, aber offener: Claude darf in dieser Umgebung dann jede Seite aufrufen.
 
 **Schritt 6: Schlüssel und Setup eintragen, speichern** (im selben Fenster)
 1. Nur mit Gemini: bei **Environment variables** `GEMINI_API_KEY=` schreiben und direkt dahinter den Schlüssel einfügen, ohne Leerzeichen.

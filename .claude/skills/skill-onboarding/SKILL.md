@@ -22,6 +22,8 @@ Die genauen Klickpfade und Befehle für jedes System stehen in **`anleitungen.md
 - **Per Prompt geklont?** Hat er dich mit "Installiere faber-cut von github.com/TobiB1505/faber-cut und richte es für mich ein" gestartet, läufst du noch im Ordner darüber. Klone das Repo (`git clone https://github.com/TobiB1505/faber-cut.git`, ohne git: als ZIP laden und entpacken), arbeite ab dann im Ordner `faber-cut` (alle `npm run …` dort) und lies seine `CLAUDE.md`. Sag ihm am Ende des Onboardings, dass er Claude Code künftig in diesem Ordner startet (`cd faber-cut`, dann `claude`), damit die Skills automatisch geladen werden.
 - **System:** `node -p "process.platform + ' ' + process.arch"` (`win32`, `darwin` = Mac, `linux`). Fehlt Node, sagt die Shell es dir; dann `uname -s` (Mac/Linux) oder die Windows-Hinweise im Fehler.
 - **Cloud oder lokal:** die Umgebungsvariable `CLAUDE_CODE_REMOTE` ist in einer Cloud-Sitzung `true`.
+- **In der Cloud: ist die Umgebung schon bereit?** `curl -s -o /dev/null -m 10 -w "%{http_code}" https://huggingface.co`. Kommt `000` (oder der Proxy meldet "connect_rejected"), läuft die Sitzung in einer Umgebung, deren Netzwerk Modelle, PyTorch und Drive sperrt; das ist bei einer normalen Cloud-Sitzung der Fall. Dann kann `npm run setup` hier nicht durchlaufen: Versuch es nicht, sondern folge 3O (zwei Sitzungen). Kommt eine HTTP-Zahl, ist die Umgebung schon freigeschaltet.
+- **In der Cloud: läuft die Sitzung schon mit faber-cut?** Hast du faber-cut erst per Prompt geklont, ist das Repo der Sitzung ein anderes: Die Skills von faber-cut lädt sie dann nicht von selbst (lies sie aus dem Klon), und speichern kann sie dort nichts. Das klärt 3O.1.
 - **Schon eingerichtet?** Gibt es `faber-cut.json`, lies sie und frag, was er ändern will (Gemini nachrüsten, Modus wechseln, Stil neu, nur prüfen). Mach dann nur diesen Teil. Steht darin `"onboarding": "weiter"`, ist ihr erster Teil schon erledigt (Online-Modus nach dem Neustart): spring zu Schritt 3O.6.
 - Läuft Node schon: `npm run doktor` zeigt dir, was fehlt.
 
@@ -46,6 +48,8 @@ AskUserQuestion, Empfehlung nach Lage (Cloud-Sitzung: Online; sonst Lokal):
 
 Passt die Wahl nicht zu dieser Sitzung (er will online, du läufst aber lokal, oder umgekehrt), erklär ihm den Umzug (`anleitungen.md`, "Umzug") und hör hier auf: das Onboarding startet er dort noch einmal.
 
+Wählt er **Online** und die Umgebung ist noch nicht bereit (Schritt 0), sag es ihm sofort und ehrlich, in zwei, drei Sätzen: In dieser Sitzung kann faber-cut noch nicht installiert werden, weil ihr Netzwerk die Seiten für Sprachmodelle, PyTorch und Drive sperrt. Das ist bei jeder normalen Cloud-Sitzung so, nicht sein Fehler. Darum geht es in zwei Sitzungen: hier ein paar Klicks, darunter eine eigene Cloud-Umgebung (und, wenn die Sitzung schon mit seinem Repo läuft, Stil und Einstellungen), dann einmal neu starten, und dort installierst du alles und machst den Probelauf. So erwartet er nicht, dass am Ende dieser Sitzung schon alles läuft.
+
 ## 3L. Lokal einrichten
 
 1. **Programme prüfen:** Node.js ab 20 (`node --version`) und ffmpeg (`ffmpeg -version`). Fehlt etwas, frag: "Soll ich es installieren? Du bestätigst nur die Rückfrage." oder "Ich mache es selbst". Die Befehle pro System stehen in `anleitungen.md`.
@@ -61,12 +65,14 @@ Passt die Wahl nicht zu dieser Sitzung (er will online, du läufst aber lokal, o
 Reihenfolge so, dass er **nur einmal** eine neue Sitzung starten muss:
 
 1. **Eigene Kopie:** `git remote -v`. Zeigt es auf `TobiB1505/faber-cut`, arbeitet er auf dem Original und kann nichts speichern: Er braucht einen Fork (`anleitungen.md`, "Eigene Kopie auf GitHub"), dann eine neue Sitzung mit seinem Fork, dann das Onboarding neu.
+   - **Per Prompt in einer fremden Sitzung geklont** (die Sitzung gehört zu einem anderen Repo): Hier lässt sich nichts speichern. Frag darum hier noch keinen Stil, sondern lass ihn den Fork anlegen und gleich die Klick-Etappe (Schritt 4) machen. Dann startet er nur **einmal** neu, mit seinem Fork **und** der Umgebung `faber-cut`, und dort fragst du Stil und Gemini, richtest ein und machst den Probelauf.
+   - **Ist er selbst der Besitzer von `TobiB1505/faber-cut`**: Kein Fork, aber trotzdem eine eigene Kopie (privat über https://github.com/new/import), denn sein Stil, `faber-cut.json` und seine Projekte gehören nicht ins öffentliche Original: Wer es danach klont, bekäme seinen Stil und überspränge das Onboarding.
 2. **Speichern erlauben:** Eine Cloud-Sitzung ist nach einer Weile weg. Was bleiben soll (Einstellungen, Stil, Projekte), muss in sein GitHub-Repo. Frag: "Darf ich deine Einstellungen, deinen Stil und deine Projekte direkt in dein Repo speichern (Hauptzweig main)?"
    - "Ja, direkt auf main (Empfohlen)": sonst fehlen sie in der nächsten Sitzung.
    - "Nein, frag mich jedes Mal".
    Merk dir die Antwort für `faber-cut.json` (`"speichern": "main"` oder `"fragen"`).
 3. **Stil (Schritt 5) und Gemini-Wahl (Schritt 4, nur die Frage)** jetzt, solange die Sitzung läuft.
-4. **Die Klick-Etappe.** Jetzt klickt er draußen: Drive-Ordner, Gemini-Schlüssel, Cloud-Umgebung, Drive-Verbindung. Kündige sie in einem Satz an ("Jetzt kommen 7 kurze Klick-Schritte, je etwa eine Minute"), dann gib die Mini-Schritte aus `anleitungen.md`, "Klick-Etappe online", **einzeln** weiter: eine Nachricht pro Schritt, danach AskUserQuestion mit "Erledigt", "Hat nicht geklappt" und, wo es passt, "Überspringen". Bei "Hat nicht geklappt" frag, was er sieht, und hilf genau dort.
+4. **Die Klick-Etappe.** Jetzt klickt er draußen: Drive-Ordner, Gemini-Schlüssel, Cloud-Umgebung, Drive-Verbindung. Kündige sie in einem Satz an ("Jetzt kommen 7 kurze Klick-Schritte, je etwa eine Minute. Ohne sie kann faber-cut online nicht laufen, weil die normale Cloud-Umgebung die nötigen Seiten sperrt"), dann gib die Mini-Schritte aus `anleitungen.md`, "Klick-Etappe online", **einzeln** weiter: eine Nachricht pro Schritt, danach AskUserQuestion mit "Erledigt", "Hat nicht geklappt" und, wo es passt, "Überspringen". Bei "Hat nicht geklappt" frag, was er sieht, und hilf genau dort.
 5. **Vor der neuen Sitzung:** Schreib `faber-cut.json` mit `"onboarding": "weiter"` und speichere es (committen und pushen, wie erlaubt). Dann der letzte Mini-Schritt "neue Sitzung starten" aus `anleitungen.md`.
 6. **In der neuen Sitzung:**
    - `npm run setup` (im Hintergrund, ein paar Minuten), dann `npm run doktor`.
