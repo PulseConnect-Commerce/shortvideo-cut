@@ -79,22 +79,24 @@ sie in den Einstellungen der laufenden Sitzung frei, nach etwa einer Minute gilt
 ohne Neustart.
 
 Claude führt dich durch alles, was nur du draußen klicken kannst, Schritt für Schritt:
-1. **Eine eigene Kopie** von faber-cut auf GitHub (ein Fork), damit dein Stil und deine Projekte gespeichert werden.
-   Startest du die Sitzung schon mit deiner Kopie, fällt das weg.
+1. **Eine eigene Kopie** von faber-cut auf GitHub, damit dein Stil und deine Projekte gespeichert werden. Die legt
+   Claude nach deinem OK selbst an (als Fork oder privat). Startest du die Sitzung schon mit deiner Kopie, fällt das
+   weg.
 2. Die Fragen zu deinem **Stil** und zur Gemini-Prüfung.
 3. **Sechs kurze Klick-Schritte** von je etwa einer Minute:
    1. Drive-Ordner anlegen.
    2. Den Ordner freigeben und den Link in den Chat kopieren.
    3. Gemini-Schlüssel holen (fällt weg, wenn du Gemini nicht willst).
    4. Die Einstellungen dieser Sitzung öffnen (Wolken-Symbol oben).
-   5. Internet freigeben.
+   5. Internet freigeben: am einfachsten **Full** (ein Klick), oder nur die nötigen Seiten (**Custom**).
    6. Schlüssel und Setup-Skript eintragen, speichern.
 
 Danach installiert Claude alles und macht den Probelauf. Eine Drive-Verbindung (Connector) brauchst du nicht: Claude
 lädt deine Clips über den Ordner-Link in voller Größe.
 
-Abkürzung: Stellst du bei **Network access** **Full** ein, ist alles erreichbar und das Eintragen in Schritt 5 fällt
-weg. Das ist einfacher, aber offener: Claude darf dann jede Seite aufrufen.
+Zu Schritt 5: **Full** ist der einfachste Weg (ein Klick), Claude darf dann in dieser Umgebung jede Seite aufrufen.
+**Custom** erlaubt nur die sechs Seiten, die faber-cut braucht; das ist enger, aber mehr Eintragen. Claude fragt dich,
+was du willst.
 
 ### Was das Onboarding dich fragt
 

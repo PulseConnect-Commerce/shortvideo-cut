@@ -48,6 +48,9 @@ faber-cut braucht **Node.js 20 oder neuer** und **ffmpeg**. Python braucht er ni
 
 ## Eigene Kopie auf GitHub (für online)
 
+Normalerweise legt Claude die Kopie selbst an (SKILL.md, 3O.1). Diese Schritte nur, wenn er es selbst machen will oder Claude keine GitHub-Werkzeuge hat.
+
+
 1. Bei https://github.com anmelden (oder kostenlos registrieren).
 2. https://github.com/TobiB1505/faber-cut öffnen, oben rechts **Fork** klicken, dann **Create fork**.
 3. **Geklappt, wenn** oben links `<sein-name>/faber-cut` steht.
@@ -96,7 +99,14 @@ Jeder Mini-Schritt ist **eine eigene Nachricht** und wird **vollständig ausgesc
 - Geklappt, wenn: ein Fenster mit **Name**, **Network access**, **Environment variables** und **Setup script** offen ist.
 - Warum: Hier steht, was Claude im Internet erreichen darf. Änderungen gelten nach etwa einer Minute auch für diese laufende Sitzung. Sie gelten für alle Sitzungen in dieser Umgebung; will er die nicht ändern, legt er stattdessen mit **Add cloud environment** eine eigene an (dann braucht es eine neue Sitzung in ihr).
 
-**Schritt 5: Internet freigeben** (im selben Fenster)
+**Schritt 5: Internet freigeben** (im selben Fenster). Zwei Fassungen, er hat vorher gewählt:
+
+*Fassung Full (empfohlen):*
+1. Bei **Network access** **Full** wählen.
+- Geklappt, wenn: bei Network access **Full** steht.
+- Warum: Die normale Cloud-Umgebung sperrt die Seiten, von denen faber-cut die Sprachmodelle, PyTorch und seine Clips holt. Full öffnet alles in einem Klick; Claude darf in dieser Umgebung dann jede Seite aufrufen.
+
+*Fassung Custom (nur die nötigen Seiten):*
 1. Bei **Network access** **Custom** wählen.
 2. In **Allowed domains** diese Zeilen einfügen:
    ```
@@ -109,8 +119,7 @@ Jeder Mini-Schritt ist **eine eigene Nachricht** und wird **vollständig ausgesc
    ```
 3. Den Haken bei **Also include default list of common package managers** setzen.
 - Geklappt, wenn: die sechs Zeilen drinstehen und der Haken gesetzt ist.
-- Warum: Die normale Cloud-Umgebung sperrt genau diese Seiten, und von dort kommen die Sprachmodelle, PyTorch und seine Clips. Ohne die Freigabe bricht `npm run setup` ab.
-- Abkürzung: Statt Custom **Full** wählen, dann fällt das Eintragen weg. Einfacher, aber offener: Claude darf in dieser Umgebung dann jede Seite aufrufen.
+- Warum: Genau diese Seiten sperrt die normale Cloud-Umgebung, und von dort kommen die Sprachmodelle, PyTorch und seine Clips. Ohne die Freigabe bricht `npm run setup` ab.
 
 **Schritt 6: Schlüssel und Setup-Skript eintragen, speichern** (im selben Fenster)
 1. Nur mit Gemini: bei **Environment variables** `GEMINI_API_KEY=` schreiben und direkt dahinter den Schlüssel einfügen, ohne Leerzeichen.
