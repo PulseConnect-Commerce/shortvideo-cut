@@ -31,6 +31,15 @@ def ass_text(t):
     return t.replace("\\", "\\\\").replace("{", "(").replace("}", ")")
 
 
+def has_filter(name):
+    """Ob das installierte ffmpeg einen Filter kennt (ffmpeg -filters)."""
+    try:
+        out = subprocess.run(["ffmpeg", "-hide_banner", "-filters"], capture_output=True, text=True).stdout
+    except OSError:
+        return False
+    return any(len(line.split()) > 1 and line.split()[1] == name for line in out.splitlines())
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cut")
@@ -115,6 +124,10 @@ def main():
             f"[{n}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=duration={dur:.4f},asetpts=PTS-STARTPTS,"
             f"apad=whole_dur={dur:.4f},afade=t=in:d=0.01,afade=t=out:st={max(0, dur - 0.01):.4f}:d=0.01{vol}[a{n}];")
 
+    with_subs = has_filter("subtitles")
+    if not with_subs:
+        print("HINWEIS: Dein ffmpeg kann keine Untertitel einbrennen (Filter \"subtitles\"/libass fehlt). "
+              "Der Rohschnitt kommt ohne Untertitel; der Schnitt selbst ist derselbe.")
     with tempfile.TemporaryDirectory() as tmp:
         sub = os.path.join(tmp, "roh.ass")
         open(sub, "w", encoding="utf-8").write(ass)
@@ -130,14 +143,20 @@ def main():
                 p = p.replace(c, "\\" + c)
             return p
         graph = "".join(chains) + "".join(f"[v{n}][a{n}]" for n in range(len(keeps)))
-        graph += f"concat=n={len(keeps)}:v=1:a=1[vc][ac];[vc]subtitles=filename={esc(sub)}:fontsdir={esc(fonts)}[vo]"
+        graph += f"concat=n={len(keeps)}:v=1:a=1[vc][ac];"
+        # Untertitel brauchen den subtitles-Filter (libass). Das ffmpeg von Homebrew bringt ihn nicht mit: dann
+        # kommt der Rohschnitt ohne eingebrannte Untertitel, statt abzubrechen.
+        if with_subs:
+            graph += f"[vc]subtitles=filename={esc(sub)}:fontsdir={esc(fonts)}[vo]"
+        else:
+            graph += "[vc]null[vo]"
         args += ["-filter_complex", graph, "-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "veryfast",
                  "-crf", "26", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", dst]
         r = subprocess.run(args)
     if r.returncode:
         sys.exit("FEHLER: ffmpeg ist abgebrochen (Meldung oben)")
-    print(f"✓ Rohschnitt: {os.path.relpath(dst, ROOT)}  ({total:.1f} s, {len(keeps)} Stücke, "
-          f"{sum(len(p) for p in pages)} Wörter in {len(pages)} Untertitel-Seiten)")
+    subs = f"{sum(len(p) for p in pages)} Wörter in {len(pages)} Untertitel-Seiten" if with_subs else "ohne Untertitel"
+    print(f"✓ Rohschnitt: {os.path.relpath(dst, ROOT)}  ({total:.1f} s, {len(keeps)} Stücke, {subs})")
 
 
 if __name__ == "__main__":

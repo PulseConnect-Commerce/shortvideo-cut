@@ -44,7 +44,11 @@ if (ff.error || quiet("ffprobe", ["-version"]).error)
   no("ffmpeg fehlt", win ? "winget install --id Gyan.FFmpeg -e, danach ein neues Terminal" : mac ? "brew install ffmpeg" : "sudo apt install -y ffmpeg");
 else if (!["loudnorm", "deesser", "ebur128"].every((f) => ff.stdout.includes(` ${f} `)))
   no("ffmpeg ohne die nötigen Filter (loudnorm, deesser, ebur128)", "ein vollständiges ffmpeg installieren (siehe README)");
-else ok("ffmpeg");
+else {
+  ok("ffmpeg");
+  // libass: nur für die Untertitel im Rohschnitt; ohne kommt er ohne Untertitel (das ffmpeg von Homebrew hat ihn nicht)
+  if (!/^\s*\S+\s+subtitles\s/m.test(ff.stdout)) warn("ffmpeg ohne Untertitel-Filter (libass): der Rohschnitt kommt ohne Untertitel");
+}
 existsSync("node_modules/@remotion/cli/remotion-cli.js") ? ok("Remotion") : no("Remotion fehlt", "npm run setup");
 
 // Python
