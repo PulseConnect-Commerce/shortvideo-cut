@@ -174,7 +174,8 @@ Rohclip ──npm run intake──► Take (Stimme entrauscht, 1080x1920)
                        ├─ transcribe.py   faster-whisper, lokal, gebündelt (4 min Ton in ~2,5 min)
                        └─ align.py        Wortzeiten per wav2vec2 auf den Frame genau
 schnitt.json ──npm run schnitt──► cut.json   Sätze als Text: was im Text fehlt, fliegt raus
-                       └─ fillerscan      findet "ähs", die Whisper nicht aufgeschrieben hat
+                       ├─ fillerscan      findet "ähs", die Whisper nicht aufgeschrieben hat
+                       └─ npm run rohschnitt   der Schnitt in Sekunden als Video, zum Freigeben vor den Grafiken
 Video.tsx (Remotion) ──► npm run vorschau    10-s-Stücke mit Cache, nur Geändertes neu
                        ├─ npm run sync    kommt jede Grafik wirklich auf ihrem Wort? (gemessen am Video)
                        ├─ npm run raster  liegt alles in der sicheren Fläche, frei von den Knöpfen von TikTok/Instagram?
@@ -224,7 +225,7 @@ die Werte vorsichtig gewählt und decken die Angaben aller Quellen ab (Datum und
 | `.claude/skills/skill-onboarding/` | das Onboarding beim ersten Start, mit allen Klickpfaden (`anleitungen.md`) |
 | `faber-cut.json` | deine Einstellungen aus dem Onboarding (lokal/online, Sprache, Gemini, Drive-Ordner) |
 | `tools/` | die Werkzeuge (Python und Node), jedes mit Erklärung im Kopf der Datei |
-| `src/lib/` | Remotion-Bausteine: Zeitachse (`schnitt.ts`), Untertitel, Titel, Splitscreen, J-Cuts, `stil.ts`, Raster (`raster.tsx`, `zonen.json`) |
+| `src/lib/` | Remotion-Bausteine: Zeitachse (`schnitt.ts`), Untertitel, Titel, Splitscreen, J-Cuts (`bausteine.tsx`), Terminal, Schritte, Zähler, Follow-Karte, Screenshot, Auto-Zoom (`kit.tsx`), gemessene Textbreiten (`messen.ts`), `stil.ts`, Raster (`raster.tsx`, `zonen.json`) |
 | `src/projekte/_vorlage/` | Vorlage für jedes neue Video |
 | `src/projekte/<projekt>/` | deine Videos: `schnitt.json`, `cut.json`, `Video.tsx` |
 | `public/projekte/` | deine Takes und Transkripte (bleiben privat, nicht im Git) |
@@ -246,6 +247,7 @@ npm run intake -- eingang/clip.mov video1 t1    # Clip vorbereiten, transkribier
 npm run raster -- public/projekte/video1/takes/t1.mp4 out/raster.jpg 2,10,20   # wohin Grafiken dürfen
 npm run schnitt -- src/projekte/video1/schnitt.json
 npm run fillerscan -- src/projekte/video1/cut.json
+npm run rohschnitt -- src/projekte/video1/cut.json   # Schnitt ohne Grafiken ansehen (Sekunden, nur ffmpeg)
 npm run studio                                  # Remotion Studio zum Durchklicken
 npm run vorschau -- Video1                      # Vorschau (halbe Größe, mit Cache)
 npm run sync -- out/vorschau/Video1.mp4 src/projekte/video1/cut.json github remotion

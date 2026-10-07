@@ -1,11 +1,12 @@
 """Bereitet einen Rohclip als Take vor (Windows, macOS, Linux):
 
-    npm run intake -- <rohclip> <projekt> <take> [--sprache de] [--namen "Claude, Remotion"]
+    npm run intake -- <rohclip> <projekt> <take> [--sprache de] [--namen "Claude, Remotion"] [--fps 30]
 
  - Stimme: entrauscht mit DeepFilterNet (falls installiert, siehe npm run setup), dann eine leichte Stimm-Kette
    (Hochpass, etwas Präsenz, De-Esser, sanfte Kompression, Limiter);
- - Bild: wird kopiert, nicht neu kodiert. Ist der Clip breiter als 1080 (4K) oder nicht 30 fps, wird eine
-   1080x1920-Arbeitskopie mit 30 fps gerechnet: zwei parallele Vorschau-Renders mit 4K-Quellen haben den Browser
+ - Bild: wird kopiert, nicht neu kodiert. Ist der Clip breiter als 1080 (4K) oder nicht in der Bildrate des Projekts
+   (--fps, Standard 30; dieselbe wie "fps" in schnitt.json), wird eine 1080x1920-Arbeitskopie in dieser Bildrate
+   gerechnet: zwei parallele Vorschau-Renders mit 4K-Quellen haben den Browser
    abstürzen lassen, und kein Zoom geht über 110 %;
  - transkribiert parallel dazu und richtet danach die Wortzeiten aus.
 Ergebnis: public/projekte/<projekt>/takes/<take>.mp4 und public/projekte/<projekt>/edit/transcripts/<take>.(aligned.)json
@@ -25,6 +26,7 @@ CHAIN = ("highpass=f=75,equalizer=f=200:t=q:w=0.9:g=1.5,equalizer=f=3200:t=q:w=1
 ap = argparse.ArgumentParser()
 ap.add_argument("rohclip"); ap.add_argument("projekt"); ap.add_argument("take")
 ap.add_argument("--sprache", default="de"); ap.add_argument("--namen", default="")
+ap.add_argument("--fps", type=int, default=30)   # Bildrate des Projekts (dieselbe wie "fps" in schnitt.json)
 o = ap.parse_args()
 if not os.path.exists(o.rohclip):
     sys.exit(f"Rohclip nicht gefunden: {o.rohclip}")
@@ -71,12 +73,12 @@ with tempfile.TemporaryDirectory() as tmp:
         print("Hinweis: deep-filter nicht gefunden, Stimme ohne Entrauschen (npm run setup installiert es)", flush=True)
 
     w, fps = int(probe("width")), probe("r_frame_rate")
-    if w <= 1080 and fps == "30/1":
+    if w <= 1080 and fps == f"{o.fps}/1":
         vopt = ["-c:v", "copy"]
     else:
-        vopt = ["-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30",
-                "-c:v", "libx264", "-preset", "fast", "-crf", "16", "-g", "30", "-pix_fmt", "yuv420p"]
-        print(f"Bild: {w}px / {fps} -> 1080x1920 @ 30 fps (dauert bei 4K ein paar Minuten)", flush=True)
+        vopt = ["-vf", f"scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps={o.fps}",
+                "-c:v", "libx264", "-preset", "fast", "-crf", "16", "-g", str(o.fps), "-pix_fmt", "yuv420p"]
+        print(f"Bild: {w}px / {fps} -> 1080x1920 @ {o.fps} fps (dauert bei 4K ein paar Minuten)", flush=True)
     ff("-i", o.rohclip, "-i", voice, "-map", "0:v:0", "-map", "1:a:0", *vopt, "-af", CHAIN,
        "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-ac", "2", "-movflags", "+faststart", out)
     print(f"Take fertig: {os.path.relpath(out, ROOT)}", flush=True)

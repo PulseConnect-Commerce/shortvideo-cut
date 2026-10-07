@@ -38,11 +38,6 @@ const opt = (name, def) => {
   const i = rest.indexOf(name);
   return i >= 0 ? rest[i + 1] : def;
 };
-const FPS = 30;
-const chunkFrames = Math.round(Number(opt("--chunk", "10")) * FPS);
-const scale = opt("--scale", "0.5");
-const dir = `out/vorschau/${id}`;
-mkdirSync(dir, { recursive: true });
 
 // "Tag5   30   1080x1920   3135 (104.50 sec)" aus `remotion compositions`
 const line = execFileSync(process.execPath, [...remotion, "compositions"], { encoding: "utf8" })
@@ -52,7 +47,12 @@ if (!line) {
   console.error(`Komposition ${id} nicht gefunden`);
   process.exit(1);
 }
-const meta = { durationInFrames: Number(line.trim().split(/\s+/)[3]) };
+const meta = { durationInFrames: Number(line.trim().split(/\s+/)[3]), fps: Number(line.trim().split(/\s+/)[1]) || 30 };
+const FPS = meta.fps;
+const chunkFrames = Math.round(Number(opt("--chunk", "10")) * FPS);
+const scale = opt("--scale", "0.5");
+const dir = `out/vorschau/${id}`;
+mkdirSync(dir, { recursive: true });
 const total = meta.durationInFrames;
 
 // Was die Stücke bestimmt: der Inhalt des Projekts (cut.json, Video.tsx, …) und der Bibliothek. Hat er sich geändert,

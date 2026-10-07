@@ -260,9 +260,25 @@ def tight(tid, a, b, lang, min_gap=0.3, pre=0.04, post=0.06, merge=0.12):
     return [(round(u, 3), round(v, 3)) for u, v in out]
 
 
+_BREITEN = None
+
+
+def text_width(text, size, weight=700, spacing=-0.02):
+    """Breite in px von Text in Geist: die Zeichenbreiten sind in Chromium gemessen (src/lib/geist-breiten.json, wie
+    beim Rendern; Unterschneidung nicht mitgerechnet, also eher 2-3 % zu breit), plus Buchstabenabstand in em."""
+    global _BREITEN
+    if _BREITEN is None:
+        p = os.path.join(ROOT, "src", "lib", "geist-breiten.json")
+        _BREITEN = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+    table = _BREITEN.get(str(weight)) or _BREITEN.get("700")
+    if not table:
+        return len(text) * size * 0.56   # ohne Tabelle: die alte Schätzung
+    return sum((table.get(c, 0.6) + spacing) * size for c in text)
+
+
 def _width(page, size):
-    # Breite in px, geschätzt für Geist Bold (ohne Font-Datei): ~0.56 em pro Zeichen plus Wortabstand
-    return sum(len(w["text"]) * size * 0.56 for w in page) + (len(page) - 1) * size * 0.28
+    # eine Untertitel-Seite: Geist 700, -0,02 em, Wörter mit Leerzeichen getrennt (wie Captions in bausteine.tsx)
+    return text_width(" ".join(w["text"].rstrip(",") for w in page), size)
 
 
 def build_pages(words, lang, max_words=3, gap=0.35, size=76, max_w=890):

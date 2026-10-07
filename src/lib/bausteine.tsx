@@ -6,6 +6,7 @@
 import { Audio, Video } from "@remotion/media";
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, Sequence, staticFile } from "remotion";
+import { fitSize, textWidth } from "./messen";
 import type { Cut } from "./schnitt";
 import { STIL } from "./stil";
 
@@ -124,6 +125,9 @@ export const Captions: React.FC<{
   if (i < 0) return null;
   const page = C.PAGES[i];
   const pop = interpolate(fr, [starts[i], starts[i] + 3], [0.94, 1], clamp);
+  // eine Seite, die breiter wäre als die sichere Fläche (ein langes Kompositum), wird kleiner statt umzubrechen
+  const text = page.map((w) => w.text.replace(/,$/, "")).join(" ");
+  const fs = Math.min(size, Math.floor((size * STIL.safe.width) / Math.max(1, textWidth(text, size, 700, -0.02))));
   return (
     <div
       style={{
@@ -135,9 +139,10 @@ export const Captions: React.FC<{
         textAlign: "center",
         transform: `scale(${pop})`,
         fontWeight: 700,
-        fontSize: size,
+        fontSize: fs,
         lineHeight: 1.1,
         letterSpacing: "-0.02em",
+        whiteSpace: "nowrap",
       }}
     >
       {page.map((w, k, pg) => {
@@ -162,10 +167,10 @@ export const HookTitle: React.FC<{
 }> = ({ fr, kicker, line1, line2, outAt }) => {
   const o = ramp(fr, outAt, 6, Easing.in(Easing.cubic));
   if (o >= 1) return null;
-  // so groß, wie die Zeile in die Breite passt (Geist 900: ~0,56 em pro Zeichen), höchstens 104 px. Oben (y 250-600)
-  // verdecken TikTok und Instagram nichts, darum darf der Hook 1000 px breit sein statt der sicheren 890.
+  // so groß, wie die Zeile in die Breite passt (gemessene Breite von Geist 900, abzüglich der Kontur), höchstens
+  // 104 px. Oben (y 250-600) verdecken TikTok und Instagram nichts, darum darf der Hook 1000 px breit sein statt 890.
   const width = 1000;
-  const fit = (text: string, max: number) => Math.min(max, Math.floor(width / (text.length * 0.56)));
+  const fit = (text: string, max: number) => fitSize(text, width - 18, max, 900, -0.035);
   return (
     <div
       style={{

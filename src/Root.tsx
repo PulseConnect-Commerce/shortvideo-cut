@@ -7,7 +7,7 @@ import "./fonts";
  * `meta` und `Video`). Ordner mit "_" am Anfang (die Vorlage) werden übersprungen.
  */
 type Projekt = {
-  meta: { id: string; durationInFrames: number };
+  meta: { id: string; durationInFrames: number; fps?: number };
   Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean }>;
 };
 const ctx = require.context("./projekte", true, /^\.\/[^_/][^/]*\/Video\.tsx$/);
@@ -43,7 +43,7 @@ export const RemotionRoot: React.FC = () => (
           id={p.meta.id}
           component={p.Video}
           durationInFrames={Math.max(1, p.meta.durationInFrames)}
-          fps={30}
+          fps={p.meta.fps ?? 30}
           width={1080}
           height={1920}
           defaultProps={{ voice: true, sfx: true, raster: false }}

@@ -25,7 +25,7 @@ import { STIL } from "../../lib/stil";
 import cut from "./cut.json";
 
 const C = createCut(cut);
-export const meta = { id: "Vorlage", durationInFrames: C.DURATION };
+export const meta = { id: "Vorlage", durationInFrames: C.DURATION, fps: C.FPS };
 
 /* Zeitpunkte: jedes Wort, auf das etwas fällt (ersetze die Wörter durch die aus deinem Schnitt) */
 const T = (() => {

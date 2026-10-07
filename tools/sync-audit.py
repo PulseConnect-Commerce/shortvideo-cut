@@ -14,8 +14,8 @@ import json, re, subprocess, sys
 import numpy as np
 
 mp4, cut_path, specs = sys.argv[1], sys.argv[2], sys.argv[3:]
-FPS = 30
 d = json.load(open(cut_path, encoding="utf-8"))
+FPS = d.get("fps", 30)
 K, at = [], 0
 for k in d["keeps"]:
     n = round(k["to"] * FPS) - round(k["from"] * FPS)

@@ -36,7 +36,7 @@ nb = np.abs(f[2:] - f[:-2]).mean(axis=(1, 2))
 spikes = [i + 1 for i in range(len(nb)) if d[i] > 8 and d[i + 1] > 8 and nb[i] < d[i] * 0.35]
 print(f"Frames: {len(f)}, Ausreißer: {spikes or 'keine'}")
 if spikes:
-    problems.append(f"Ausreißer-Frames bei {spikes} (Frame / 30 = Sekunde): ansehen")
+    problems.append(f"Ausreißer-Frames bei {spikes} (Frame / fps = Sekunde): ansehen")
 
 # 2. Lautheit
 r = subprocess.run(["ffmpeg", "-nostdin", "-hide_banner", "-nostats", "-i", o.video, "-af", "ebur128=peak=true", "-f", "null", "-"],

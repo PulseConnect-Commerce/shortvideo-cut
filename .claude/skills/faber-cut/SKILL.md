@@ -21,7 +21,8 @@ Liegt neben dieser Datei eine **`intern.md`**, lies sie auch: Sie ergänzt den A
 | Ergebnis des Schnitts | `src/projekte/<projekt>/cut.json` (von `tools/schnitt.py`) |
 | Grafiken und Video | `src/projekte/<projekt>/Video.tsx` (Kopie von `src/projekte/_vorlage/`) |
 | Stil in Zahlen (Farben, Schrift, Maße) | `src/lib/stil.ts` |
-| Vorschau / Vollversion | `out/vorschau/<Komposition>.mp4`, `out/final/` |
+| Fertige Grafik-Bausteine | `src/lib/bausteine.tsx` (Takes, Untertitel, Hook, Pillen, Split) und `src/lib/kit.tsx` (Terminal, Schritte, Zähler, Follow, Screenshot, Auto-Zoom) |
+| Rohschnitt / Vorschau / Vollversion | `out/vorschau/<projekt>-roh.mp4`, `out/vorschau/<Komposition>.mp4`, `out/final/` |
 
 Alle Werkzeuge laufen über **`npm run …`**, auf Windows, macOS und Linux gleich (Python nie direkt aufrufen). Liegt faber-cut als Ordner `faber-cut/` in einem anderen Repo (z. B. seiner App), sind alle Pfade hier relativ zu diesem Ordner: arbeite dort. Die Einstellungen aus dem Onboarding stehen in **`faber-cut.json`** (lokal oder online, Sprache, Gemini, Drive-Ordner): lies sie zuerst. Fehlt die Datei, führe zuerst den Skill **skill-onboarding** aus. Meldet ein Werkzeug, dass `.venv` oder `node_modules` fehlt: `npm run setup`, dann `npm run doktor`.
 
@@ -66,9 +67,20 @@ Schreib `src/projekte/<projekt>/schnitt.json` (Format: siehe Kopf von `tools/sch
 
 Dann `npm run schnitt -- src/projekte/<projekt>/schnitt.json`. Es muss **ohne "PRÜFEN"** durchlaufen: Untertitel = gewählter Text Wort für Wort, Reihenfolge stimmt, keine Mini-Schnitte. Danach `npm run fillerscan -- src/projekte/<projekt>/cut.json`: Stimme ohne Wort ist meist ein "äh", das Whisper nicht aufgeschrieben hat. Hör dir die Stelle über den Pegel an und schneide sie (Satz in zwei Einträge teilen).
 
+**Rohschnitt vor den Grafiken:** `npm run rohschnitt -- src/projekte/<projekt>/cut.json` setzt den Schnitt in Sekunden mit ffmpeg zusammen (halbe Größe, Untertitel mit dem gelben Wort eingebrannt, oben links die Sekunde, ohne Grafiken) nach `out/vorschau/<projekt>-roh.mp4`. Schick ihm den Rohschnitt und lass ihn den Schnitt freigeben (Reihenfolge, Länge, was raus ist), bevor du Grafiken baust: eine Schnitt-Notiz kostet dann einen neuen Rohschnitt in Sekunden statt einer neuen Vorschau in Minuten. Seine Notizen nennen die Sekunde oben links. Ist er nicht erreichbar, bau weiter und sag es im Bericht.
+
 ### 5. Grafiken
 
-Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx`, setz `meta.id` (z. B. `"Tag6"`), dann bau die Grafiken. Die Komposition meldet sich von selbst an (`npm run kompositionen`).
+Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx`, setz `meta.id` (z. B. `"Tag6"`), dann bau die Grafiken. Die Komposition meldet sich von selbst an (`npm run kompositionen`). Die Bildrate kommt aus der `cut.json` (`meta.fps: C.FPS`); Takes in 25 oder 60 fps: `npm run intake -- … --fps 25`, dann `"fps": 25` in die `schnitt.json`.
+
+**Erst die fertigen Bausteine** (`src/lib/kit.tsx`, Beispiele im Kopf der Datei), dann eigene Grafiken für das, was nur dieses Video braucht:
+- `Terminal`: Befehle werden getippt (mit Cursor, auch Wort für Wort mit der Stimme über `parts: C.spoken(…)`), Ausgaben (`kind: "out"`, `"ok"`) erscheinen auf ihrem Wort.
+- `StepList` (nummerierte Schritte untereinander, der gesprochene gelb, erledigte mit Haken) und `StepRail` (Schiene oben, die sich füllt; für einen Ablauf, der länger mitläuft).
+- `CountUp`: eine Zahl zählt hoch und landet auf dem Wort, das sie sagt (`b = C.cue("250")`), mit kurzem Aufblitzen.
+- `Follow`: die Follow-Karte für den Aufruf, der Knopf wird auf seinem Wort angetippt (`tapAt`).
+- `Shot`: Screenshot oder Bildschirmaufnahme aus `public/` in einer Karte oder einem Handy-Rahmen, fährt auf seinen Wörtern an Ausschnitte heran (`zoom`).
+- `autoPunch(C, { base, skip })`: Punch-in-Stufen für `punchAt`, auf jedem sichtbaren Schnitt abwechselnd 1 und 1,07 (ein Jump-Cut wirkt wie ein Kamerawechsel); `skip` = Splitscreen-Bereiche.
+Ihre Farben und Maße kommen aus `stil.ts`; wirkt ein Baustein nicht wie sein Stil, ändere `stil.ts` oder den Baustein, nicht jedes Video einzeln.
 
 **Timing (das wichtigste):**
 - Jede Grafik landet mit `C.cue("wort")` auf ihrem Wort, also **2 Frames vor dem ersten Laut** (Wortzeiten sind auf den Frame ausgerichtet). Nie geschätzte Frames, nie "+10", nie "alle 22 Frames": Zähler, Schritte, Runden wechseln auf dem Wort, das sie sagt. Das nächste gleiche Wort: `C.cue("schritt", C.W("github"))`. `cue` trifft das Wort oder ein Wort, das so anfängt ("schritt" → "Schritte"), nicht ein Stück mitten im Wort ("app" nicht in "klappt"). Zahlen ("250") sind ausgerichtet wie Wörter, die Beweis-Zahl im Hook sitzt also auf dem Frame.
@@ -87,6 +99,7 @@ Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx
 - **Sichere Fläche x 60-950, y 250-1500.** Außerhalb liegen die Knöpfe und Texte von TikTok und Instagram (Leiste oben, Knöpfe rechts, Name und Beschreibung unten); die Maße stehen in `src/lib/zonen.json`. Dort kommt nie etwas hin, was etwas bedeutet. Untertitel im Vollbild bei y 1340, im Split auf der Naht (y 872).
 - **Vor dem Platzieren das Raster:** `npm run raster -- public/projekte/<projekt>/takes/t1.mp4 out/raster.jpg 2,10,20`. Es zeichnet ein 60-px-Raster mit Pixelwerten, die sichere Fläche (grün), das Untertitel-Band (gelb), die Zonen von TikTok (türkis) und Instagram (pink) und seinen Kopf (rot), und nennt pro Zeitpunkt die freien Felder A-F. Platziere nach diesen Zahlen, nicht nach Gefühl, und nichts auf das Gesicht.
 - Text in Grafiken mindestens 42 px, Listen 46 px, Zeilenhöhe 1,3. Darunter ist es auf dem Handy nicht lesbar.
+- Ob eine Zeile in die Breite passt, misst `textWidth`/`fitSize` aus `src/lib/messen.ts` (echte Breiten von Geist, nicht geschätzt); Untertitel und Hook-Titel werden damit selbst kleiner statt umzubrechen.
 
 ### 6. Vorschau und eigene Prüfung
 

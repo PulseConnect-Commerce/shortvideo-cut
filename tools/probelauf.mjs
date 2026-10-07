@@ -76,6 +76,7 @@ writeFileSync("src/projekte/probelauf/Video.tsx", readFileSync("beispiel/Probela
 console.log(`\nSchnitt: ${saetze.length} Sätze, ohne Füllwörter und Pausen`);
 
 step("Schnitt nach Text", ...py("schnitt.py", "src/projekte/probelauf/schnitt.json"));
+step("Rohschnitt (ffmpeg, ohne Grafiken)", ...py("rohschnitt.py", "src/projekte/probelauf/cut.json"));
 step("Vorschau (halbe Größe)", ...node("tools/preview.mjs", "Probelauf", "--all"));
 step("Vollversion (-14 LUFS, Post- und Chat-Kopie)", ...node("tools/final.mjs", "Probelauf"));
 step("Raster (sichere Fläche, Zonen von TikTok und Instagram)", ...py("grid.py", "out/final/Probelauf.mp4", "out/final/Probelauf-raster.jpg", "1.5,5,9,13", "--scale", "0.35"));
