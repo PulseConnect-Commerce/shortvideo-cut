@@ -4,12 +4,15 @@
 
 Warum: faster-whisper schätzt Wortzeiten aus der Attention und liegt 0,1-0,3 s daneben (zwei Wörter können sogar
 denselben Start haben). Grafiken, die auf so eine Zeit gesetzt werden, kommen zu früh oder zu spät. Der Text bleibt
-der von Whisper, nur start/end werden neu gesetzt; Wörter ohne ausrichtbare Buchstaben (nur Ziffern) behalten ihre Zeit.
+der von Whisper, nur start/end werden neu gesetzt. Zahlen ("250", "1,5", "30 %") werden für die Ausrichtung als Wörter
+gesprochen ("zweihundertfünfzig"), damit auch die Beweis-Zahl im Hook auf dem Frame sitzt; Wörter ohne ausrichtbare
+Buchstaben behalten ihre Zeit.
 Schreibt <take>.aligned.json neben das Transkript ("w_start" = Whispers Start, zum Vergleich). ~1 min für 2:20 Ton.
 """
 import argparse
 import json
 import os
+import re
 import subprocess
 import time
 
@@ -46,8 +49,68 @@ SEP = vocab.get("|")
 HOP = 0.02   # ein CTC-Frame = 320 Samples
 
 
+DE_1 = ["null", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn", "elf", "zwölf",
+        "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"]
+DE_10 = ["", "", "zwanzig", "dreißig", "vierzig", "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig"]
+EN_1 = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",
+        "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+EN_10 = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+
+def zahl_de(n):
+    if n < 20:
+        return DE_1[n]
+    if n < 100:
+        e, z = n % 10, DE_10[n // 10]
+        return z if not e else ("ein" if e == 1 else DE_1[e]) + "und" + z
+    if n < 1000:
+        h, r = divmod(n, 100)
+        return ("" if h == 1 else DE_1[h]) + "hundert" + (zahl_de(r) if r else "")
+    if n < 1_000_000:
+        t, r = divmod(n, 1000)
+        return ("" if t == 1 else zahl_de(t)) + "tausend" + (zahl_de(r) if r else "")
+    m, r = divmod(n, 1_000_000)
+    return ("eine million" if m == 1 else zahl_de(m) + " millionen") + (" " + zahl_de(r) if r else "")
+
+
+def zahl_en(n):
+    if n < 20:
+        return EN_1[n]
+    if n < 100:
+        return EN_10[n // 10] + ("" if n % 10 == 0 else " " + EN_1[n % 10])
+    if n < 1000:
+        return EN_1[n // 100] + " hundred" + ("" if n % 100 == 0 else " " + zahl_en(n % 100))
+    if n < 1_000_000:
+        return zahl_en(n // 1000) + " thousand" + ("" if n % 1000 == 0 else " " + zahl_en(n % 1000))
+    return zahl_en(n // 1_000_000) + " million" + ("" if n % 1_000_000 == 0 else " " + zahl_en(n % 1_000_000))
+
+
+ZEICHEN = {"de": {"%": " prozent", "€": " euro", "$": " dollar", "+": " plus"},
+           "en": {"%": " percent", "€": " euros", "$": " dollars", "+": " plus"}}
+
+
+def gesprochen(text, sprache):
+    """Ziffern als gesprochene Wörter: "250" → "zweihundertfünfzig", "1,5" → "eins komma fünf", "30 %" → "dreißig
+    prozent". Tausenderpunkte ("1.000") zählen als eine Zahl; Jahreszahlen werden wie Zahlen gesprochen."""
+    if not any(c.isdigit() for c in text):
+        return text
+    zahl, komma = (zahl_de, "komma") if sprache == "de" else (zahl_en, "point")
+
+    def ganz(m):
+        d = m.group(0).replace(".", "") if sprache == "de" else m.group(0).replace(",", "")
+        return " " + zahl(int(d)) + " " if len(d) <= 9 else m.group(0)
+
+    sep = "," if sprache == "de" else "."
+    out = re.sub(rf"(\d+)\{sep}(\d+)", lambda m: f" {zahl(int(m.group(1)))} {komma} "
+                 + " ".join(zahl(int(c)) for c in m.group(2)) + " ", text)
+    out = re.sub(r"\d{1,3}(?:[.,]\d{3})+|\d+", ganz, out)
+    for z, w in ZEICHEN.get(sprache, {}).items():
+        out = out.replace(z, w)
+    return out
+
+
 def letters(w):
-    return [c for c in w.lower() if c in vocab and c != "|"]
+    return [c for c in gesprochen(w, o.sprache).lower() if c in vocab and c != "|"]
 
 
 def align(emis, tokens):

@@ -124,6 +124,9 @@ def _snap_wide(take, t, lo, hi, reach):
     return s1 if at(s1) <= at(s0) - 6 else s0
 
 
+WARNUNGEN = []   # Hinweise aus ranges_for, die schnitt.py als PRÜFEN ausgibt
+
+
 def ranges_for(tid, text, lang, start=0.0, pre=0.08, post=0.12):
     """Schnitt nach Text: richtet den gewählten Text Wort für Wort am Transkript aus und gibt die Quellbereiche zurück.
     Wörter, die im Text fehlen (Füllwörter, Versprecher, ein weggelassenes "Dann,"), werden zu Schnitten. Ein Wort,
@@ -131,15 +134,38 @@ def ranges_for(tid, text, lang, start=0.0, pre=0.08, post=0.12):
     tk = Take.get(tid)
     ws = tk.words
     toks = [norm(t) for t in text.split() if norm(t) and not is_filler(t, lang)]
+    real = [k for k, w in enumerate(ws) if norm(w["text"]) and not is_filler(w["text"], lang)]  # ohne Füllwörter
+    pos = {k: i for i, k in enumerate(real)}
+    said = [norm(ws[k]["text"]) for k in real]
     idx = []
-    j = next((k for k, w in enumerate(ws) if w["start"] >= start - 0.05), len(ws))
-    for t in toks:
-        while j < len(ws) and (norm(ws[j]["text"]) != t or is_filler(ws[j]["text"], lang)):
+    j = next((i for i, k in enumerate(real) if ws[k]["start"] >= start - 0.05), len(real))
+    run = 0   # wie viele der letzten Wörter direkt hintereinander gesprochen wurden
+    for ti, t in enumerate(toks):
+        j0 = j
+        while j < len(real) and said[j] != t:
             j += 1
-        if j >= len(ws):
+        if j >= len(real):
             raise SystemExit(f"Schnitt: Wort {t!r} nicht in {tid} gefunden (ab {start:.2f} s). Verhörer? Satzanfang 'start' prüfen.")
-        idx.append(j)
+        if j - j0 > 8:
+            WARNUNGEN.append(f"{tid}: {t!r} erst {j - j0} Wörter weiter ({ws[real[j]]['start']:.2f} s) gefunden; "
+                             f"ein Verhörer davor? Sonst stimmt der Schnitt hier nicht")
+        run = run + 1 if idx and pos.get(idx[-1], -2) == j - 1 else 1
+        idx.append(real[j])
         j += 1
+        # Neustart ("wenn du … wenn du noch"): bricht der gesprochene Anlauf hier ab und kommt dasselbe Stück kurz
+        # danach noch einmal und geht dann weiter wie der Text, gilt der zweite, ganze Anlauf
+        # (das längste Ende des Laufs, mindestens zwei Wörter: "also wenn du … wenn du noch" → "also | wenn du noch")
+        if ti + 1 < len(toks) and (j >= len(real) or said[j] != toks[ti + 1]):
+            done = False
+            for n in range(min(run, 6), 1, -1):
+                seq = toks[ti + 1 - n:ti + 1]
+                for k in range(j, min(len(real) - n, j + 12)):
+                    if said[k:k + n] == seq and said[k + n] == toks[ti + 1]:
+                        idx[len(idx) - n:] = real[k:k + n]
+                        j, run, done = k + n, n, True
+                        break
+                if done:
+                    break
     runs, cur = [], [idx[0]]
     for k in idx[1:]:
         if k == cur[-1] + 1:

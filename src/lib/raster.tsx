@@ -6,7 +6,7 @@
  *   {raster && <Raster />}     in Video.tsx; Standbild mit Raster:
  *   npm run still -- <Komposition> out/raster.jpg --frame=120 --scale=0.5 --props='{"raster":true}'
  *
- * `p` (0-1) blendet es ein, z. B. für eine Erklär-Szene.
+ * `p` (0-1) blendet es ein, z. B. für eine Erklär-Szene. `grid={false}` zeigt nur die Zonen von TikTok und Instagram.
  */
 import type React from "react";
 import { AbsoluteFill, interpolate } from "remotion";
@@ -30,15 +30,16 @@ const box = (r: Rect): React.CSSProperties => ({
 const hatch = (c: string) =>
   `repeating-linear-gradient(135deg, ${c}55 0 10px, transparent 10px 22px)`;
 
-export const Raster: React.FC<{ p?: number; tiktok?: number; instagram?: number; labels?: boolean }> = ({
+export const Raster: React.FC<{ p?: number; tiktok?: number; instagram?: number; labels?: boolean; grid?: boolean }> = ({
   p = 1,
   tiktok = 1,
   instagram = 1,
   labels = true,
+  grid: withGrid = true,
 }) => {
-  const grid = interpolate(p, [0, 0.6], [0, 1], clamp);
+  const grid = withGrid ? interpolate(p, [0, 0.6], [0, 1], clamp) : 0;
   const lines = [];
-  for (let x = 0; x <= W; x += 60)
+  for (let x = 0; withGrid && x <= W; x += 60)
     lines.push(
       <div
         key={`x${x}`}
@@ -52,7 +53,7 @@ export const Raster: React.FC<{ p?: number; tiktok?: number; instagram?: number;
         }}
       />,
     );
-  for (let y = 0; y <= H; y += 60)
+  for (let y = 0; withGrid && y <= H; y += 60)
     lines.push(
       <div
         key={`y${y}`}

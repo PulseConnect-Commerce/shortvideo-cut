@@ -12,7 +12,16 @@
  * Ergebnis: out/vorschau/<id>.mp4. Nie mehr als zwei Renders gleichzeitig (drei bringen kleine Rechner zum Absturz).
  */
 import { execFileSync, spawn } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  rmSync,
+  statSync,
+  writeFileSync,
+} from "node:fs";
 import { cpus } from "node:os";
 
 // Remotion direkt über Node starten (npx gibt es auf Windows nur als .cmd, das spawn nicht ohne Shell startet)
@@ -45,13 +54,42 @@ if (!line) {
 }
 const meta = { durationInFrames: Number(line.trim().split(/\s+/)[3]) };
 const total = meta.durationInFrames;
-const key = JSON.stringify({ total, chunkFrames, scale, ton: "pcm" });
+
+// Was die Stücke bestimmt: der Inhalt des Projekts (cut.json, Video.tsx, …) und der Bibliothek. Hat er sich geändert,
+// ohne dass --changed oder --from sagt, wo, wird alles neu gerendert: lieber langsamer als eine alte Vorschau.
+const projectDir = readdirSync("src/projekte", { withFileTypes: true })
+  .filter((d) => d.isDirectory())
+  .map((d) => `src/projekte/${d.name}`)
+  .find((d) => {
+    const v = `${d}/Video.tsx`;
+    return existsSync(v) && new RegExp(`id:\\s*["'\`]${id}["'\`]`).test(readFileSync(v, "utf8"));
+  });
+const hashOf = (dirs) => {
+  const h = createHash("sha1");
+  for (const d of dirs)
+    for (const f of readdirSync(d, { recursive: true }).map(String).sort()) {
+      const p = `${d}/${f}`;
+      if (/\.(tsx?|json)$/.test(f) && statSync(p).isFile()) h.update(p).update(readFileSync(p));
+    }
+  return h.digest("hex");
+};
+const inputs = hashOf(["src/lib", ...(projectDir ? [projectDir] : [])]);
+
+const key = JSON.stringify({ chunkFrames, scale, ton: "pcm" });
 const keyFile = `${dir}/key.json`;
+const stateFile = `${dir}/state.json`;
+const state = existsSync(stateFile) ? JSON.parse(readFileSync(stateFile, "utf8")) : {};
+const told = rest.includes("--changed") || rest.includes("--from");
 if (
   rest.includes("--all") ||
   !existsSync(keyFile) ||
-  readFileSync(keyFile, "utf8") !== key
+  readFileSync(keyFile, "utf8") !== key ||
+  // die Länge hat sich geändert: ohne --from ist unklar, ab wo
+  (state.total !== total && !rest.includes("--from")) ||
+  (state.inputs !== inputs && !told)
 ) {
+  if (existsSync(keyFile) && state.inputs && state.inputs !== inputs && !told)
+    console.log("Projekt geändert, ohne --changed/--from: rendere alles neu");
   rmSync(dir, { recursive: true, force: true });
   mkdirSync(dir, { recursive: true });
   writeFileSync(keyFile, key);
@@ -101,11 +139,14 @@ const render = (i) =>
 
 const t0 = Date.now();
 const todo = [...dirty].sort((x, y) => x - y);
+// ein abgebrochener Lauf darf kein altes Stück stehen lassen: erst löschen, den Stand erst nach dem Rendern merken
+for (const i of todo) rmSync(file(i), { force: true });
 const queue = [...todo];
 const worker = async () => {
   while (queue.length) await render(queue.shift());
 };
 await Promise.all([worker(), worker()]); // zwei gleichzeitig
+writeFileSync(stateFile, JSON.stringify({ total, inputs }));
 // "outpoint" schneidet jedes Stück auf seine Bildlänge, damit der Ton von Stück zu Stück nicht gegen das Bild wandert.
 // Pfade relativ zur Liste (gilt auch auf Windows)
 const list = chunks

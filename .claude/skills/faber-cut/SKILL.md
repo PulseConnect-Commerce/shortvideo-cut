@@ -71,7 +71,7 @@ Dann `npm run schnitt -- src/projekte/<projekt>/schnitt.json`. Es muss **ohne "P
 Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx`, setz `meta.id` (z. B. `"Tag6"`), dann bau die Grafiken. Die Komposition meldet sich von selbst an (`npm run kompositionen`).
 
 **Timing (das wichtigste):**
-- Jede Grafik landet mit `C.cue("wort")` auf ihrem Wort, also **2 Frames vor dem ersten Laut** (Wortzeiten sind auf den Frame ausgerichtet). Nie geschätzte Frames, nie "+10", nie "alle 22 Frames": Zähler, Schritte, Runden wechseln auf dem Wort, das sie sagt. Das nächste gleiche Wort: `C.cue("schritt", C.W("github"))`.
+- Jede Grafik landet mit `C.cue("wort")` auf ihrem Wort, also **2 Frames vor dem ersten Laut** (Wortzeiten sind auf den Frame ausgerichtet). Nie geschätzte Frames, nie "+10", nie "alle 22 Frames": Zähler, Schritte, Runden wechseln auf dem Wort, das sie sagt. Das nächste gleiche Wort: `C.cue("schritt", C.W("github"))`. `cue` trifft das Wort oder ein Wort, das so anfängt ("schritt" → "Schritte"), nicht ein Stück mitten im Wort ("app" nicht in "klappt"). Zahlen ("250") sind ausgerichtet wie Wörter, die Beweis-Zahl im Hook sitzt also auf dem Frame.
 - Jedes Element bekommt auch ein **Ende** auf einem Wort oder am nächsten Element.
 - Getippter Text (Chat, Terminal, Prompt) läuft **Wort für Wort mit seiner Stimme**: `typedSync(C.spoken("der Text", C.W("schreib")), fr)`.
 - Einblendungen, die "auf dem Wort" wirken sollen, sind kurz: Pop-in (`popS`) oder Fade ≤ 3 Frames. Ein 6-Frame-Fade wirkt zu spät.
@@ -90,7 +90,7 @@ Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx
 
 ### 6. Vorschau und eigene Prüfung
 
-1. `npm run vorschau -- <Komposition>` (halbe Größe, 10-s-Stücke mit Cache). Nach Änderungen an Ort und Stelle `--changed a-b` (Frames), nach Änderungen am Schnitt `--from N`.
+1. `npm run vorschau -- <Komposition>` (halbe Größe, 10-s-Stücke mit Cache). Nach Änderungen an Ort und Stelle `--changed a-b` (Frames), nach Änderungen am Schnitt `--from N`. Ändert sich das Projekt ohne eine der beiden Angaben, rendert sie alles neu (nie eine alte Vorschau).
 2. **Sync messen:** `npm run sync -- out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json wort[:s|c] …` mit jedem Stichwort einer Grafik (`s` = Bühne oben im Split, `c` = Brustzone im Vollbild). Ziel -4..+1 Frames. Eine CHECK-Zeile ist oft eine andere Bewegung im Bereich: den 8-Frame-Streifen um das Wort ansehen, bevor du etwas änderst.
 3. **Pacing messen:** `npm run pacing -- out/vorschau/<id>.mp4 src/projekte/<projekt>/cut.json`. Jede Strecke über 2 s ohne Bildänderung bekommt eine Grafik, die die Zeile trägt. Stille am Ton nachmessen (Wortenden liegen eher früh).
 4. **Standbilder** an jeder Grafik (Anfang und Ende, `npm run still -- <id> out/x.jpg --frame=N --scale=0.4`): nichts überlappt, nichts bleibt zu lange stehen, Text bricht nicht ungewollt um, das Ende zeigt ihn noch im Bild.
@@ -127,5 +127,6 @@ Erst wenn er "passt" sagt:
 - **Nie mehr als zwei Renders gleichzeitig**, und halte ~2 GB Platz frei (ein 4K-Take hat ~340 MB pro Minute). Alte Takes fertiger Projekte löschen (die Originale hat er).
 - **Symlinks** unter `public/` lädt Remotion nicht: Takes immer als Datei ablegen.
 - **Ein "Wort nicht gefunden"** in `schnitt.py`: `ab` liegt nach dem ersten Wort des Satzes, oder der Text weicht vom Transkript ab (Verhörer: Text wie im Transkript schreiben und über `korrekturen` richtigstellen).
+- **Ein "HINWEIS: … erst N Wörter weiter gefunden"** in `schnitt.py`: ein Wort des Texts lag weit hinter der Stelle, an der der Satz stand (meist ein Verhörer davor). Prüfen, sonst stimmt der Schnitt dort nicht. Fängt er einen Satz neu an ("wenn du … wenn du noch"), nimmt der Schnitt von selbst den zweiten, ganzen Anlauf.
 - **Ein leises "äh" ohne Wort** im Transkript bleibt sonst drin: `npm run fillerscan` nach jedem Schnitt.
 - **Ein langes Video verliert am Anfang:** der erste Frame braucht ein scharfes Gesicht und den Hook-Satz; ein Aufruf ganz am Ende erreicht nur, wer bis zum Ende schaut.

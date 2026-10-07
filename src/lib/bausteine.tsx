@@ -55,6 +55,8 @@ export const Takes: React.FC<{
         const pre = i === 0 ? 0 : Math.min(XFADE, C.f(k.from), Math.floor((k.vor ?? 0.1) * C.FPS));
         const post = last ? 0 : Math.min(XFADE, Math.floor((k.nach ?? 0.1) * C.FPS));
         const len = k.len + pre + post;
+        // Ausblenden am Schluss: höchstens 12 Frames, aber nur in der Stille nach dem letzten Wort (Ende auf dem Wort)
+        const tailFade = Math.max(2, Math.min(12, k.at + k.len - C.LAST));
         const up = (n: number) => Math.sin((Math.PI / 2) * Math.min(1, Math.max(0, n)));
         // "stumm": leise statt geschnitten (-34 dB, Raumklang bleibt, kein Loch), 2 Frames Blende an jeder Seite
         const quiet = (x: number) => {
@@ -74,7 +76,7 @@ export const Takes: React.FC<{
                 quiet(x) *
                 Math.min(
                   pre ? up((x + 0.5) / (2 * pre)) : up((x + 0.5) / 2),
-                  last ? Math.min(1, (len - 1 - x) / 12) : post ? up((len - x - 0.5) / (2 * post)) : up((len - x - 0.5) / 2),
+                  last ? Math.min(1, (len - 1 - x) / tailFade) : post ? up((len - x - 0.5) / (2 * post)) : up((len - x - 0.5) / 2),
                 )
               }
             />

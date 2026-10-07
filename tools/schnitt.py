@@ -32,7 +32,7 @@ import sys
 
 import numpy as np
 
-from fclib import ROOT, Take, build_pages, is_filler, norm, ranges_for, tight
+from fclib import ROOT, WARNUNGEN, Take, build_pages, is_filler, norm, ranges_for, tight
 
 spec_path = sys.argv[1]
 spec = json.load(open(spec_path, encoding="utf-8"))
@@ -145,6 +145,8 @@ print(f"{len(keeps)} Schnittstücke, {len(words)} Wörter, {len(pages)} Untertit
       f"{os.path.relpath(dst, ROOT)}")
 if not aligned:
     print("Hinweis: Wortzeiten sind von Whisper (bis 0,3 s daneben). Für Grafiken auf dem Wort erst tools/align.py.")
+for w in dict.fromkeys(WARNUNGEN):
+    print("HINWEIS:", w)
 for p in problems:
     print("PRÜFEN:", p)
 sys.exit(1 if problems else 0)

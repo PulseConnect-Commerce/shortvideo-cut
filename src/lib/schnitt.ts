@@ -63,9 +63,13 @@ export const createCut = (cut: CutJson, opts: { tail?: number; avoid?: number[] 
   }));
   const WORDS = all.filter((w): w is Word => w.a !== null && w.b !== null && w.text !== "");
 
+  // Das nächste Wort ab `after`, das so heißt oder so anfängt ("schritt" → "Schritte"); ein Treffer mitten im Wort
+  // ("app" in "klappt", "er" in "der") zählt nur, wenn es keinen anderen gibt.
   const hit = (word: string, after: number) => {
     const n = norm(word);
-    const h = WORDS.find((w) => norm(w.text).includes(n) && w.a >= after);
+    const later = WORDS.filter((w) => w.a >= after);
+    const h =
+      later.find((w) => norm(w.text).startsWith(n)) ?? later.find((w) => norm(w.text).includes(n));
     if (!h) throw new Error(`Wort nicht im Schnitt: ${word} (nach Frame ${after})`);
     return h;
   };

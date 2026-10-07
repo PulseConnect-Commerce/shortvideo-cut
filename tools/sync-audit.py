@@ -60,7 +60,11 @@ after, rows = 0, []
 for spec in specs:
     word, _, reg = spec.partition(":")
     reg = reg or "s"
-    hit = next(((t, a) for t, a in words if word in norm(t) and a >= after), None)
+    # the word itself or a word starting with it ("schritt" → "Schritte"); inside a word ("app" in "klappt") only
+    # when there is no other
+    later, key = [(t, a) for t, a in words if a >= after], norm(word)
+    hit = next(((t, a) for t, a in later if norm(t).startswith(key)), None) or next(
+        ((t, a) for t, a in later if key in norm(t)), None)
     if not hit:
         print(f"{word:14s} nicht im Schnitt"); continue
     text, wa = hit; after = wa
