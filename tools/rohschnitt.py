@@ -119,10 +119,18 @@ def main():
         sub = os.path.join(tmp, "roh.ass")
         open(sub, "w", encoding="utf-8").write(ass)
         fonts = os.path.join(ROOT, "public", "fonts")
-        # Pfade im Filter: Doppelpunkte (Windows-Laufwerk) und Backslashes maskieren
-        esc = lambda p: p.replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
+        # Pfade im Filter doppelt maskieren: einmal für die Option (\ ' :), einmal für den Filtergraphen
+        # (\ ' [ ] , ;). Anführungszeichen allein reichen nicht: der Graph entfernt sie, bevor der Filter
+        # die Option liest (macOS-CI: "No option name near …roh.ass:fontsdir=…").
+        def esc(p):
+            p = p.replace("\\", "/")
+            for c in "\\':":
+                p = p.replace(c, "\\" + c)
+            for c in "\\'[],;":
+                p = p.replace(c, "\\" + c)
+            return p
         graph = "".join(chains) + "".join(f"[v{n}][a{n}]" for n in range(len(keeps)))
-        graph += f"concat=n={len(keeps)}:v=1:a=1[vc][ac];[vc]subtitles='{esc(sub)}':fontsdir='{esc(fonts)}'[vo]"
+        graph += f"concat=n={len(keeps)}:v=1:a=1[vc][ac];[vc]subtitles=filename={esc(sub)}:fontsdir={esc(fonts)}[vo]"
         args += ["-filter_complex", graph, "-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "veryfast",
                  "-crf", "26", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", dst]
         r = subprocess.run(args)
