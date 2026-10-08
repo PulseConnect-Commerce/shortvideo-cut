@@ -68,9 +68,9 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
   Bilder zu den jeweiligen Themen anzeigen, sodass man das gesprochene auch gleich visuell hat." Jedes Thema bekommt
   eine Bildkarte in der freien Fläche über dem Kopf, deren Teile auf ihrem Wort erscheinen (Vorlage:
   `src/projekte/shopcheck/broll.tsx`). Echte Fotos, wenn welche da sind; sonst gezeichnete Bildkarten.
-- **Hook und leichte Zoom-ins gehören immer dazu** (2026-10-08): "Und wo bleibt die Hook sowie ein paar leichte
-  Zoom-In Animationen?" Hook-Satz ab dem ersten Frame, in jedem Bildstück ein langsames Heranfahren (~3 %), die
-  Stufe wechselt an jedem Schnitt. Im Rohschnitt dazusagen, dass Hook und Zooms erst mit der Vorschau kommen.
+- **Hook und ein ruhiges Zoom-in gehören immer dazu** (2026-10-08): "Und wo bleibt die Hook sowie ein paar leichte
+  Zoom-In Animationen?" Hook-Satz ab dem ersten Frame. Zoom: siehe "Zoom ruhig halten" unten. Im Rohschnitt
+  dazusagen, dass Hook und Zooms erst mit der Vorschau kommen.
 - **Keine Beine im Bild** (2026-10-08): "Bitte unten die Hose rausschneiden." Sitzt er am Tisch und die Hose ist unten
   im Bild: fester Ausschnitt ab der Oberkante (`Takes transform="scale(…)" transformOrigin="50% 0%"`), so weit, dass
   die Hose in keinem Frame mehr zu sehen ist (vorher messen).
@@ -85,7 +85,8 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
   `accent2`.
 - **Speichern-Aufruf in TikTok-Gelb** (2026-10-08): "Bitte beim 'Label' ... die Farbe Gelb/Orange verwenden, wie es
   auch im Original ist" (das Speichern-Lesezeichen am Ende). Das Lesezeichen füllt sich in `#FACE15` (`STIL.save`).
-- **Nahaufnahmen auf Betonungen** (2026-10-08): "zwischendurch ein paar Nahaufnahmen bei bestimmten Betonungen ...
-  oder kleine Zoomeffekte". 8-10 pro Minute auf betonten Stellen (Warnung, Pointe, Aufruf): in 5 Frames auf ~1,18 ans
-  Gesicht (Anker zwischen Augen und Kinn), halten bis zum Ende der Phrase, zurück in 6 Frames. Zusätzlich zu den
-  langsamen Zoom-ins pro Bildstück.
+- **Zoom ruhig halten** (2026-10-08): "jetzt sind es mir zu viele Zoom Ins und Zoom Outs. Ich dachte da eher an einige
+  kleine Akzente, wo es relevant ist und ein dauerhaftes langsames Zoom-in." Ein einziges, durchgehendes Zoom-in über
+  das ganze Video (100 % → 110 %), kein Stufenwechsel an den Schnitten. Dazu nur 3-4 kleine Akzente pro Video an den
+  wichtigsten Stellen (Pointe, Warnung): sanft in 8 Frames auf ~1,08 (Anker zwischen Augen und Kinn), halten bis zum
+  Ende der Phrase, sanft zurück in 10 Frames. Keine Nahaufnahmen im Sekundentakt.

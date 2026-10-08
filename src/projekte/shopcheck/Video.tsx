@@ -1,8 +1,7 @@
 /**
  * "5 Dinge, bevor du bei einem unbekannten Onlineshop bestellst". Talking Head im Vollbild, fester Ausschnitt ohne
- * Hose (1,17 ab der Oberkante), langsame Zoom-ins pro Bildstück (abwechselnd 1 und 1,045, so wirken die Jump-Cuts wie
- * Kamerawechsel), Nahaufnahmen auf betonten Stellen, Hook-Satz oben, und über dem Kopf pro Thema eine Bildkarte
- * (B-Roll, broll.tsx), deren Teile auf ihrem Wort erscheinen.
+ * Hose (1,17 ab der Oberkante), ein durchgehendes langsames Zoom-in und vier kleine Akzente, Hook-Satz oben, und
+ * über dem Kopf pro Thema eine Bildkarte (B-Roll, broll.tsx), deren Teile auf ihrem Wort erscheinen.
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
@@ -65,33 +64,21 @@ const T = (() => {
   return { zeit, s1, s2, s3, cookies, s4, s5, rabatt, zweimal, cta };
 })();
 
-/** leichte Zoom-ins: in jedem Bildstück fährt das Bild langsam um 3 % heran, die Stufe wechselt an jedem Schnitt;
- * im ersten Stück (Hook) zusätzlich ein spürbarer Zoom um 5 % in den ersten 2 s */
-const zoomAt = (fr: number) => {
-  const i = C.SPANS.findIndex((s) => fr >= s.at && fr < s.at + s.len);
-  const k = i < 0 ? C.SPANS.length - 1 : i;
-  const s = C.SPANS[k];
-  const hook = k === 0 ? interpolate(fr, [0, 2 * C.FPS], [0, 0.05], { ...clamp, easing: Easing.out(Easing.cubic) }) : 0;
-  return (k % 2 ? 1.045 : 1) + hook + interpolate(fr, [s.at, s.at + s.len], [0, 0.03], clamp);
-};
+/** ein durchgehendes, langsames Zoom-in über das ganze Video (100 % → 110 %), ohne Sprünge an den Schnitten */
+const zoomAt = (fr: number) => 1 + 0.1 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
 
-/** Nahaufnahmen auf betonten Stellen: [von, bis] in Frames, das Bild fährt in 5 Frames auf CLOSE heran und hält bis
- * zum Ende der Phrase. Anker 50 % 42 % (zwischen Augen und Kinn), so bleibt der Kopf unter der Bildkarte. */
-const CLOSE = 1.18;
-const CLOSEUPS: [number, number][] = [
+/** wenige kleine Akzente an den wichtigsten Stellen: [von, bis] in Frames, sanft auf AKZENT heran (8 Frames), halten
+ * bis zum Ende der Phrase, sanft zurück (10 Frames). Anker 50 % 42 % (zwischen Augen und Kinn). */
+const AKZENT = 1.08;
+const AKZENTE: [number, number][] = [
   [F("viel", T.zeit), C.WE("ersparen") + 4],
-  [F("professionell"), C.WE("professionell") + 4],
-  [F("kurz", C.W("adresse")), C.WE("googeln") + 4],
   [F("widerrufs-button"), C.WE("widerrufs-button") + 4],
   [F("vorsicht"), C.WE("geboten", F("vorsicht")) + 4],
-  [F("definitiv", T.s4), C.WE("zeichen") + 4],
-  [F("realitätscheck"), C.WE("realitätscheck") + 4],
   [F("viel", T.rabatt), C.WE("sein", F("wahr")) + 4],
-  [T.zweimal, C.WE("hinschauen") + 4],
 ];
-const closeAt = (fr: number) =>
-  CLOSEUPS.reduce(
-    (z, [a, b]) => Math.max(z, interpolate(fr, [a, a + 5, b, b + 6], [1, CLOSE, CLOSE, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) })),
+const akzentAt = (fr: number) =>
+  AKZENTE.reduce(
+    (z, [a, b]) => Math.max(z, interpolate(fr, [a, a + 8, b, b + 10], [1, AKZENT, AKZENT, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) })),
     1,
   );
 
@@ -102,7 +89,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
   const bm = interpolate(fr, [F("speichere") + 4, F("speichere") + 14], [0, 1], clamp);
   return (
     <AbsoluteFill style={{ backgroundColor: STIL.paper }}>
-      <AbsoluteFill style={{ transform: `scale(${closeAt(fr)})`, transformOrigin: "50% 42%" }}>
+      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
         <SplitPerson split={0} zoom={zoomAt(fr)}>
           <Takes C={C} voice={voice} transform={`scale(${CROP})`} transformOrigin="50% 0%" />
         </SplitPerson>
@@ -156,7 +143,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
 
       {/* 2: Impressum, im Zweifel googeln */}
       <Szene fr={fr} at={T.s2} until={T.s3 - 2} nr={2} title="Ins Impressum schauen">
-        <div style={{ opacity: 1 - interpolate(fr, [F("zweifel"), F("zweifel") + 6], [0, 1], clamp) }}>
+        <div style={{ opacity: 1 - interpolate(fr, [F("zweifel") - 7, F("zweifel") - 1], [0, 1], clamp) }}>
           <Pop fr={fr} at={F("unternehmen")} x={40} y={128}>
             <Row icon={<IconBuilding />} text="Unternehmen" mark="ok" width={600} />
           </Pop>
@@ -180,7 +167,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
 
       {/* 3: rechtliche Seiten */}
       <Szene fr={fr} at={T.s3} until={T.cookies - 2} nr={3} title="Rechtliche Seiten">
-        <Pop fr={fr} at={F("rechtlichen")} until={F("datenschutzerklärung") - 4} x={250} y={130} style={{ transformOrigin: "center" }}>
+        <Pop fr={fr} at={F("rechtlichen")} until={F("datenschutzerklärung") - 8} x={250} y={130} style={{ transformOrigin: "center" }}>
           <div style={{ display: "flex" }}>
             {[-8, 0, 8].map((r, i) => (
               <div key={r} style={{ marginLeft: i ? -90 : 0, transform: `rotate(${r}deg)` }}>
@@ -246,7 +233,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
         <Pop fr={fr} at={F("krypto")} x={40} y={224}>
           <Row icon={<IconCoin />} text="Krypto" mark="no" width={400} />
         </Pop>
-        <Pop fr={fr} at={F("dubiose")} until={F("vorsicht") - 4} x={40} y={322}>
+        <Pop fr={fr} at={F("dubiose")} until={F("vorsicht") - 8} x={40} y={322}>
           <Tag kind="ink" size={44}>
             dubios?
           </Tag>
@@ -273,7 +260,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
         <Pop fr={fr} at={F("händler")} x={470} y={138}>
           <Tag size={44}>für Händler</Tag>
         </Pop>
-        <Pop fr={fr} at={F("gesetzliche")} until={F("händler") - 4} x={470} y={138}>
+        <Pop fr={fr} at={F("gesetzliche")} until={F("händler") - 8} x={470} y={138}>
           <Tag kind="ink" size={44}>
             Pflichten
           </Tag>
@@ -302,7 +289,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
         <Pop fr={fr} at={F("80")} x={300} y={160} style={{ transformOrigin: "center" }}>
           <SaleTag text="-80 %" rot={5} />
         </Pop>
-        <Pop fr={fr} at={F("gut", T.rabatt)} until={T.zweimal} x={40} y={330}>
+        <Pop fr={fr} at={F("gut", T.rabatt)} until={T.zweimal - 7} x={40} y={330}>
           <Tag kind="ink">zu gut, um wahr zu sein?</Tag>
         </Pop>
         <Pop fr={fr} at={F("vorsicht", T.rabatt)} x={700} y={112} style={{ transformOrigin: "center" }}>
