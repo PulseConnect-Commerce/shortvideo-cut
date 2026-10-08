@@ -3,8 +3,9 @@
   npm run bild -- "<prompt>" <ziel.png> [--format 16:9] [--modell gemini-2.5-flash-image]
 
 Braucht GEMINI_API_KEY (derselbe Schlüssel wie npm run gemini), als Umgebungsvariable oder in der Datei .env.
-Formate: 1:1, 3:2, 2:3, 4:3, 3:4, 16:9, 9:16, 21:9. Bilder für ein Projekt gehören nach
-public/projekte/<projekt>/broll/ (wie die Takes nicht im Git; mit demselben Befehl jederzeit neu zu erzeugen).
+Formate: 1:1, 3:2, 2:3, 4:3, 3:4, 16:9, 9:16, 21:9. Bilder für ein Projekt gehören nach public/broll/<projekt>/ und
+ins Git (anders als die Takes sind es keine privaten Aufnahmen, und das Projekt rendert so in jeder Sitzung); endet
+das Ziel auf .jpg, wird als JPEG gespeichert (Qualität 86, ein Zehntel der PNG-Größe).
 Kosten: Google rechnet Bildmodelle pro Bild ab; ob dein Schlüssel ein kostenloses Kontingent hat, zeigt der erste
 Aufruf (429 mit "limit: 0" heißt: nur mit Abrechnung im Google-Konto). Erzeugte Bilder tragen ein unsichtbares
 SynthID-Wasserzeichen von Google.
@@ -68,6 +69,14 @@ if not img:
     grund = resp.get("promptFeedback") or [c.get("finishReason") for c in resp.get("candidates", [])]
     sys.exit(f"Kein Bild zurück ({modell}): {grund}")
 os.makedirs(os.path.dirname(os.path.abspath(ziel)), exist_ok=True)
-with open(ziel, "wb") as f:
-    f.write(base64.b64decode(img["data"]))
+data = base64.b64decode(img["data"])
+if ziel.lower().endswith((".jpg", ".jpeg")):
+    import io
+
+    from PIL import Image
+
+    Image.open(io.BytesIO(data)).convert("RGB").save(ziel, "JPEG", quality=86, optimize=True)
+else:
+    with open(ziel, "wb") as f:
+        f.write(data)
 print(f"✓ {ziel} ({img.get('mimeType', '?')}, {modell}, {fmt})")

@@ -3,7 +3,7 @@
  * Szene mit Icons und Begriffen, die auf ihrem Wort erscheinen. Alle Zeitpunkte kommen aus C.cue("wort").
  */
 import type React from "react";
-import { Easing, interpolate } from "remotion";
+import { Easing, Img, interpolate, staticFile } from "remotion";
 import { card, clamp, popS, ramp } from "../../lib/bausteine";
 import { fitSize } from "../../lib/messen";
 import { STIL } from "../../lib/stil";
@@ -13,7 +13,16 @@ export const BOX = { left: 60, top: 262, width: 890, height: 430 };
 
 const leave = (fr: number, until: number, len = 6) => (Number.isFinite(until) ? ramp(fr, until, len, Easing.in(Easing.cubic)) : 0);
 
-/** Die Bildkarte einer Szene: poppt auf ihrem Wort auf, Kopfzeile mit Nummer (1-5) und Titel, geht ab `until` */
+/** Weißer Chip mit Schatten: hält Text und Icons auf einem Foto lesbar */
+export const chip: React.CSSProperties = {
+  background: "#fff",
+  borderRadius: 20,
+  boxShadow: "0 6px 18px rgb(20 22 26 / 0.22)",
+};
+
+/** Die Bildkarte einer Szene: poppt auf ihrem Wort auf, Kopfzeile mit Nummer (1-5) und Titel, geht ab `until`.
+ * `photo` (Pfad in public/, z. B. von npm run bild): füllt die Karte und fährt langsam heran (100 % → 106 %); der
+ * Titel liegt dann als weißer Chip darauf. */
 export const Szene: React.FC<{
   fr: number;
   at: number;
@@ -21,11 +30,13 @@ export const Szene: React.FC<{
   nr?: number;
   title: string;
   titleAt?: number;
+  photo?: string;
   children?: React.ReactNode;
-}> = ({ fr, at, until, nr, title, titleAt = at, children }) => {
+}> = ({ fr, at, until, nr, title, titleAt = at, photo, children }) => {
   if (fr < at || fr >= until + 6) return null;
   const o = leave(fr, until);
   const size = fitSize(title, BOX.width - (nr ? 150 : 70), 52, 800, -0.02);
+  const push = Number.isFinite(until) ? interpolate(fr, [at, until], [1, 1.06], clamp) : 1;
   return (
     <div
       style={{
@@ -41,7 +52,24 @@ export const Szene: React.FC<{
         transformOrigin: "50% 100%",
       }}
     >
-      <div style={{ position: "absolute", left: 34, top: 28, right: 34, display: "flex", alignItems: "center", gap: 22, opacity: ramp(fr, titleAt, 4) }}>
+      {photo && (
+        <Img
+          src={staticFile(photo)}
+          style={{ position: "absolute", left: 0, top: 0, width: BOX.width, height: BOX.height, objectFit: "cover", transform: `scale(${push})` }}
+        />
+      )}
+      <div
+        style={{
+          position: "absolute",
+          left: photo ? 22 : 34,
+          top: photo ? 20 : 28,
+          display: "flex",
+          alignItems: "center",
+          gap: 18,
+          opacity: ramp(fr, titleAt, 4),
+          ...(photo ? { ...chip, borderRadius: 999, padding: "8px 30px 8px 8px" } : {}),
+        }}
+      >
         {nr !== undefined && (
           <div
             style={{
@@ -98,20 +126,30 @@ export const Pop: React.FC<{
   );
 };
 
-/** Zeile: Icon und Begriff (≥ 46 px), rechts optional ein Haken oder ein Kreuz */
-export const Row: React.FC<{ icon?: React.ReactNode; text: string; mark?: "ok" | "no"; size?: number; width?: number; color?: string }> = ({
-  icon,
-  text,
-  mark,
-  size = 46,
-  width = 400,
-  color = STIL.ink,
-}) => {
+/** Zeile: Icon und Begriff (≥ 46 px), rechts optional ein Haken oder ein Kreuz; auf einem Foto als weißer Chip
+ * (`onPhoto`, so breit wie der Inhalt) */
+export const Row: React.FC<{
+  icon?: React.ReactNode;
+  text: string;
+  mark?: "ok" | "no";
+  size?: number;
+  width?: number;
+  color?: string;
+  onPhoto?: boolean;
+}> = ({ icon, text, mark, size = 46, width = 400, color = STIL.ink, onPhoto = false }) => {
   const fs = fitSize(text, width - (icon ? 92 : 0) - (mark ? 70 : 0), size, 700, -0.01);
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 18, width }}>
+    <div
+      style={{
+        display: onPhoto ? "inline-flex" : "flex",
+        alignItems: "center",
+        gap: 18,
+        width: onPhoto ? undefined : width,
+        ...(onPhoto ? { ...chip, padding: icon ? "6px 20px 6px 8px" : "12px 22px" } : {}),
+      }}
+    >
       {icon && <div style={{ width: 74, height: 74, flex: "none", display: "grid", placeItems: "center" }}>{icon}</div>}
-      <div style={{ fontSize: fs, fontWeight: 700, letterSpacing: "-0.01em", whiteSpace: "nowrap", color, flex: 1 }}>{text}</div>
+      <div style={{ fontSize: fs, fontWeight: 700, letterSpacing: "-0.01em", whiteSpace: "nowrap", color, flex: onPhoto ? "none" : 1 }}>{text}</div>
       {mark && <Mark ok={mark === "ok"} size={54} />}
     </div>
   );

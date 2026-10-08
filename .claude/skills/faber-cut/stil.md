@@ -67,7 +67,9 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 - **B-Rolls über dem Kopf** (2026-10-08): "Ich möchte über meinem Kopf bzw. dort, wo noch Platz ist auch passende
   Bilder zu den jeweiligen Themen anzeigen, sodass man das gesprochene auch gleich visuell hat." Jedes Thema bekommt
   eine Bildkarte in der freien Fläche über dem Kopf, deren Teile auf ihrem Wort erscheinen (Vorlage:
-  `src/projekte/shopcheck/broll.tsx`). Echte Fotos, wenn welche da sind; sonst gezeichnete Bildkarten.
+  `src/projekte/shopcheck/broll.tsx`). Fotos pro Thema mit Nano Banana (`npm run bild -- "<prompt>" public/broll/<projekt>/<name>.jpg --format 21:9`,
+  realistisch, Tageslicht, gedeckte Farben, ohne Text und Logos), Begriffe als weiße Chips darauf; ohne Gemini-Abrechnung
+  gezeichnete Bildkarten.
 - **Hook und ein ruhiges Zoom-in gehören immer dazu** (2026-10-08): "Und wo bleibt die Hook sowie ein paar leichte
   Zoom-In Animationen?" Hook-Satz ab dem ersten Frame. Zoom: siehe "Zoom ruhig halten" unten. Im Rohschnitt
   dazusagen, dass Hook und Zooms erst mit der Vorschau kommen.
@@ -90,3 +92,6 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
   das ganze Video (100 % → 110 %), kein Stufenwechsel an den Schnitten. Dazu nur 3-4 kleine Akzente pro Video an den
   wichtigsten Stellen (Pointe, Warnung): sanft in 8 Frames auf ~1,08 (Anker zwischen Augen und Kinn), halten bis zum
   Ende der Phrase, sanft zurück in 10 Frames. Keine Nahaufnahmen im Sekundentakt.
+- **Hook nie in der Untertitel-Farbe** (2026-10-08): "Bitte den Hook nicht in der gleichen Farbe wie die Untertitel
+  machen. ich habe bisher immer ein weiß mit Rot verwendet oder ein Rot mit weißer Umrandung." Erste Zeile weiß mit
+  roter Kontur, der Kern rot (`#E4222C`) mit weißer Kontur (`STIL.hook`).

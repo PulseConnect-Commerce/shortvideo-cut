@@ -17,6 +17,8 @@ export const STIL = {
   accent2: "#00E090",
   /** das Gelb des Speichern-Lesezeichens wie in TikTok, für den Speichern-Aufruf am Ende */
   save: "#FACE15",
+  /** Hook-Titel: nie in der Farbe der Untertitel. Erste Zeile weiß mit roter Kontur, der Kern rot mit weißer Kontur */
+  hook: { text: "#FFFFFF", rand: "#E4222C", kern: "#E4222C", kernRand: "#FFFFFF" },
   ink: "#14161A",
   green: "#1F9D6B",
   red: "#E5484D",

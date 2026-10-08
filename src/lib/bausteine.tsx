@@ -195,11 +195,17 @@ export const HookTitle: React.FC<{
           fontWeight: 900,
           letterSpacing: "-0.035em",
           lineHeight: 1.0,
-          WebkitTextStroke: "9px rgb(20 22 26 / 0.92)",
         }}
       >
-        <div style={{ fontSize: fit(line1, 104), whiteSpace: "nowrap" }}>{line1}</div>
-        {line2 && <div style={{ fontSize: fit(line2, 104), color: STIL.yellow, whiteSpace: "nowrap" }}>{line2}</div>}
+        {/* Farben aus STIL.hook (nicht die Untertitel-Farbe): Zeile 1 weiß mit roter Kontur, der Kern rot mit weißer */}
+        <div style={{ fontSize: fit(line1, 104), whiteSpace: "nowrap", color: STIL.hook.text, WebkitTextStroke: `10px ${STIL.hook.rand}` }}>
+          {line1}
+        </div>
+        {line2 && (
+          <div style={{ fontSize: fit(line2, 104), color: STIL.hook.kern, WebkitTextStroke: `10px ${STIL.hook.kernRand}`, whiteSpace: "nowrap" }}>
+            {line2}
+          </div>
+        )}
       </div>
     </div>
   );

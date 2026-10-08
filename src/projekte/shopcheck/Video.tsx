@@ -11,6 +11,7 @@ import { createCut, typedSync } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
 import {
   between,
+  chip,
   IconBattery,
   IconBin,
   IconBookmark,
@@ -19,15 +20,12 @@ import {
   IconCard,
   IconCash,
   IconCoin,
-  IconCookie,
-  IconDoc,
   IconEye,
   IconImage,
   IconMail,
   IconPin,
   IconPlug,
   IconPrice,
-  IconSearch,
   IconShield,
   IconStopwatch,
   IconText,
@@ -36,7 +34,6 @@ import {
   Row,
   SaleTag,
   SearchBar,
-  ShopMock,
   Szene,
   Tag,
 } from "./broll";
@@ -98,63 +95,50 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
       <HookTitle fr={fr} line1="Bevor du im Onlineshop bestellst:" line2="Check diese 5 Dinge." outAt={T.zeit - 8} />
 
       {/* 2 Minuten, viel Ärger gespart */}
-      <Szene fr={fr} at={T.zeit} until={T.s1 - 2} title="5 Checks vor dem Kauf">
-        <Pop fr={fr} at={F("zwei")} x={50} y={130}>
-          <IconStopwatch size={200} turn={interpolate(fr, [F("zwei"), F("zwei") + 40], [0, 0.85], clamp)} />
+      <Szene fr={fr} at={T.zeit} until={T.s1 - 2} title="5 Checks vor dem Kauf" photo="broll/shopcheck/zeit.jpg">
+        <Pop fr={fr} at={F("zwei")} x={24} y={122}>
+          <div style={{ ...chip, display: "inline-flex", alignItems: "center", gap: 14, padding: "8px 28px 8px 12px" }}>
+            <IconStopwatch size={76} turn={interpolate(fr, [F("zwei"), F("zwei") + 40], [0, 0.85], clamp)} />
+            <div style={{ fontSize: 60, fontWeight: 900, letterSpacing: "-0.03em" }}>max. 2 Minuten</div>
+          </div>
         </Pop>
-        <Pop fr={fr} at={F("zwei")} x={290} y={150}>
-          <div style={{ fontSize: 72, fontWeight: 900, letterSpacing: "-0.03em" }}>max. 2 Minuten</div>
-        </Pop>
-        <Pop fr={fr} at={F("ärger")} x={290} y={270}>
+        <Pop fr={fr} at={F("ärger")} x={24} y={244}>
           <Tag kind="ok">spart viel Ärger</Tag>
         </Pop>
       </Szene>
 
       {/* 1: der Shop als Ganzes */}
-      <Szene fr={fr} at={T.s1} until={T.s2 - 2} nr={1} title="Der Shop als Ganzes">
-        <Pop fr={fr} at={F("shop", T.s1)} x={34} y={122} style={{ transformOrigin: "center" }}>
-          <ShopMock
-            x={0}
-            y={0}
-            w={470}
-            h={280}
-            wonky={interpolate(fr, [F("schnell"), F("schnell") + 10], [0, 1], clamp)}
-            hi={fr >= F("preise") ? "preis" : fr >= F("bilder") ? "bild" : fr >= F("texte") ? "text" : null}
-          />
-        </Pop>
-        <Pop fr={fr} at={F("professionell")} until={F("passen")} x={110} y={235}>
+      <Szene fr={fr} at={T.s1} until={T.s2 - 2} nr={1} title="Der Shop als Ganzes" photo="broll/shopcheck/shop.jpg">
+        <Pop fr={fr} at={F("professionell")} until={F("passen")} x={500} y={130}>
           <Tag>professionell?</Tag>
         </Pop>
-        <Pop fr={fr} at={F("schnell")} x={70} y={312}>
+        <Pop fr={fr} at={F("texte")} x={24} y={118}>
+          <Row icon={<IconText />} text="Texte" mark="ok" width={330} onPhoto />
+        </Pop>
+        <Pop fr={fr} at={F("bilder")} x={24} y={210}>
+          <Row icon={<IconImage />} text="Bilder" mark="ok" width={330} onPhoto />
+        </Pop>
+        <Pop fr={fr} at={F("preise")} x={24} y={302}>
+          <Row icon={<IconPrice />} text="Preise" mark="ok" width={330} onPhoto />
+        </Pop>
+        <Pop fr={fr} at={F("schnell")} x={430} y={316}>
           <Tag kind="warn" size={44}>
             zusammengebaut?
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("texte")} x={530} y={128}>
-          <Row icon={<IconText />} text="Texte" mark="ok" width={330} />
-        </Pop>
-        <Pop fr={fr} at={F("bilder")} x={530} y={222}>
-          <Row icon={<IconImage />} text="Bilder" mark="ok" width={330} />
-        </Pop>
-        <Pop fr={fr} at={F("preise")} x={530} y={316}>
-          <Row icon={<IconPrice />} text="Preise" mark="ok" width={330} />
-        </Pop>
       </Szene>
 
       {/* 2: Impressum, im Zweifel googeln */}
-      <Szene fr={fr} at={T.s2} until={T.s3 - 2} nr={2} title="Ins Impressum schauen">
+      <Szene fr={fr} at={T.s2} until={T.s3 - 2} nr={2} title="Ins Impressum schauen" photo="broll/shopcheck/impressum.jpg">
         <div style={{ opacity: 1 - interpolate(fr, [F("zweifel") - 7, F("zweifel") - 1], [0, 1], clamp) }}>
-          <Pop fr={fr} at={F("unternehmen")} x={40} y={128}>
-            <Row icon={<IconBuilding />} text="Unternehmen" mark="ok" width={600} />
+          <Pop fr={fr} at={F("unternehmen")} x={24} y={118}>
+            <Row icon={<IconBuilding />} text="Unternehmen" mark="ok" width={600} onPhoto />
           </Pop>
-          <Pop fr={fr} at={F("anschrift")} x={40} y={222}>
-            <Row icon={<IconPin />} text="Anschrift" mark="ok" width={600} />
+          <Pop fr={fr} at={F("anschrift")} x={24} y={210}>
+            <Row icon={<IconPin />} text="Anschrift" mark="ok" width={600} onPhoto />
           </Pop>
-          <Pop fr={fr} at={F("kontaktieren")} x={40} y={316}>
-            <Row icon={<IconMail />} text="Kontakt" mark="ok" width={600} />
-          </Pop>
-          <Pop fr={fr} at={T.s2} x={680} y={140}>
-            <IconDoc size={180} />
+          <Pop fr={fr} at={F("kontaktieren")} x={24} y={302}>
+            <Row icon={<IconMail />} text="Kontakt" mark="ok" width={600} onPhoto />
           </Pop>
         </div>
         <Pop fr={fr} at={F("zweifel")} x={40} y={150} w={810}>
@@ -166,23 +150,14 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
       </Szene>
 
       {/* 3: rechtliche Seiten */}
-      <Szene fr={fr} at={T.s3} until={T.cookies - 2} nr={3} title="Rechtliche Seiten">
-        <Pop fr={fr} at={F("rechtlichen")} until={F("datenschutzerklärung") - 8} x={250} y={130} style={{ transformOrigin: "center" }}>
-          <div style={{ display: "flex" }}>
-            {[-8, 0, 8].map((r, i) => (
-              <div key={r} style={{ marginLeft: i ? -90 : 0, transform: `rotate(${r}deg)` }}>
-                <IconDoc size={220} />
-              </div>
-            ))}
-          </div>
+      <Szene fr={fr} at={T.s3} until={T.cookies - 2} nr={3} title="Rechtliche Seiten" photo="broll/shopcheck/recht.jpg">
+        <Pop fr={fr} at={F("datenschutzerklärung")} x={24} y={122}>
+          <Row text="Datenschutz" mark="ok" width={400} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("datenschutzerklärung")} x={40} y={135}>
-          <Row text="Datenschutz" mark="ok" width={400} />
+        <Pop fr={fr} at={F("widerruf")} x={430} y={122}>
+          <Row text="Widerruf" mark="ok" width={340} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("widerruf")} x={490} y={135}>
-          <Row text="Widerruf" mark="ok" width={340} />
-        </Pop>
-        <Pop fr={fr} at={F("widerrufs-button")} x={40} y={262}>
+        <Pop fr={fr} at={F("widerrufs-button")} x={24} y={250}>
           <div
             style={{
               display: "inline-block",
@@ -191,119 +166,125 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
               background: STIL.yellow,
               fontSize: 46,
               fontWeight: 800,
-              boxShadow: "0 8px 20px rgb(20 22 26 / 0.18)",
+              boxShadow: "0 8px 20px rgb(20 22 26 / 0.25)",
               transform: `scale(${1 - 0.06 * between(fr, F("widerrufs-button") + 10, F("widerrufs-button") + 14, 3)})`,
             }}
           >
             Widerrufs-Button
           </div>
         </Pop>
-        <Pop fr={fr} at={F("agb")} x={600} y={268}>
-          <Row text="AGB" mark="ok" width={250} />
+        <Pop fr={fr} at={F("agb")} x={560} y={254}>
+          <Row text="AGB" mark="ok" width={250} onPhoto />
         </Pop>
       </Szene>
 
       {/* 3: Tracking, Cookies, Einwilligung */}
-      <Szene fr={fr} at={T.cookies} until={T.s4 - 2} nr={3} title="Tracking & Cookies">
-        <Pop fr={fr} at={F("cookies")} x={50} y={140}>
-          <IconCookie size={200} />
+      <Szene fr={fr} at={T.cookies} until={T.s4 - 2} nr={3} title="Tracking & Cookies" photo="broll/shopcheck/cookies.jpg">
+        <Pop fr={fr} at={F("einwilligung")} x={300} y={118}>
+          <div style={{ ...chip, display: "inline-block", padding: "10px 24px", fontSize: 50, fontWeight: 800 }}>Einwilligung?</div>
         </Pop>
-        <Pop fr={fr} at={F("einwilligung")} x={290} y={140}>
-          <div style={{ fontSize: 50, fontWeight: 800 }}>Einwilligung?</div>
-        </Pop>
-        <Pop fr={fr} at={F("einwilligung") + 6} x={290} y={220}>
+        <Pop fr={fr} at={F("einwilligung") + 6} x={300} y={212}>
           <div style={{ display: "flex", gap: 18 }}>
             {["Akzeptieren", "Ablehnen"].map((t) => (
-              <div key={t} style={{ padding: "14px 26px", borderRadius: 14, border: `4px solid ${STIL.ink}`, fontSize: 42, fontWeight: 700 }}>
+              <div key={t} style={{ ...chip, padding: "14px 26px", borderRadius: 14, border: `4px solid ${STIL.ink}`, fontSize: 42, fontWeight: 700 }}>
                 {t}
               </div>
             ))}
           </div>
         </Pop>
-        <Pop fr={fr} at={F("sauber")} x={290} y={318}>
+        <Pop fr={fr} at={F("sauber")} x={300} y={318}>
           <Tag kind="ok">sauber umgesetzt</Tag>
         </Pop>
       </Szene>
 
       {/* 4: Zahlungsmethoden */}
-      <Szene fr={fr} at={T.s4} until={T.s5 - 2} nr={4} title="Zahlungsmethoden">
-        <Pop fr={fr} at={F("vorkasse")} x={40} y={130}>
-          <Row icon={<IconCash />} text="Vorkasse" mark="no" width={400} />
+      <Szene fr={fr} at={T.s4} until={T.s5 - 2} nr={4} title="Zahlungsmethoden" photo="broll/shopcheck/zahlung.jpg">
+        <Pop fr={fr} at={F("vorkasse")} x={24} y={118}>
+          <Row icon={<IconCash />} text="Vorkasse" mark="no" width={400} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("krypto")} x={40} y={224}>
-          <Row icon={<IconCoin />} text="Krypto" mark="no" width={400} />
+        <Pop fr={fr} at={F("krypto")} x={24} y={210}>
+          <Row icon={<IconCoin />} text="Krypto" mark="no" width={400} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("dubiose")} until={F("vorsicht") - 8} x={40} y={322}>
+        <Pop fr={fr} at={F("dubiose")} until={F("vorsicht") - 8} x={24} y={316}>
           <Tag kind="ink" size={44}>
             dubios?
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("vorsicht")} x={40} y={322}>
+        <Pop fr={fr} at={F("vorsicht")} x={24} y={316}>
           <Tag kind="warn">Vorsicht!</Tag>
         </Pop>
-        <Pop fr={fr} at={F("etablierte")} x={480} y={130}>
-          <Row icon={<IconCard />} text="etabliert" width={380} />
+        <Pop fr={fr} at={F("etablierte")} x={470} y={118}>
+          <Row icon={<IconCard />} text="etabliert" width={380} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("käuferschutz")} x={480} y={224}>
-          <Row icon={<IconShield />} text="Käuferschutz" width={380} />
+        <Pop fr={fr} at={F("käuferschutz")} x={470} y={210}>
+          <Row icon={<IconShield />} text="Käuferschutz" width={380} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("gutes")} x={480} y={322}>
+        <Pop fr={fr} at={F("gutes")} x={470} y={316}>
           <Tag kind="ok">gutes Zeichen</Tag>
         </Pop>
       </Szene>
 
       {/* 5: Realitätscheck */}
-      <Szene fr={fr} at={T.s5} until={T.rabatt - 2} nr={5} title="Realitätscheck">
-        <Pop fr={fr} at={F("elektrogeräte")} x={40} y={130}>
-          <Row icon={<IconPlug />} text="Elektrogeräte" width={400} />
+      <Szene fr={fr} at={T.s5} until={T.rabatt - 2} nr={5} title="Realitätscheck" photo="broll/shopcheck/technik.jpg">
+        <Pop fr={fr} at={F("elektrogeräte")} x={24} y={118}>
+          <Row icon={<IconPlug />} text="Elektrogeräte" width={400} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("händler")} x={470} y={138}>
+        <Pop fr={fr} at={F("händler")} x={480} y={126}>
           <Tag size={44}>für Händler</Tag>
         </Pop>
-        <Pop fr={fr} at={F("gesetzliche")} until={F("händler") - 8} x={470} y={138}>
+        <Pop fr={fr} at={F("gesetzliche")} until={F("händler") - 8} x={480} y={126}>
           <Tag kind="ink" size={44}>
             Pflichten
           </Tag>
         </Pop>
         {(
           [
-            ["weee", <IconBin key="b" size={84} />, "WEEE-Nr."],
-            ["battg", <IconBattery key="a" size={84} />, "BattG"],
-            ["verpackungsregister", <IconBox key="v" size={84} />, "Verpackung"],
+            ["weee", <IconBin key="b" size={76} />, "WEEE-Nr."],
+            ["battg", <IconBattery key="a" size={76} />, "BattG"],
+            ["verpackungsregister", <IconBox key="v" size={76} />, "Verpackung"],
           ] as const
         ).map(([w, icon, label], i) => (
-          <Pop key={w} fr={fr} at={F(w)} x={40 + i * 280} y={238} w={250} style={{ transformOrigin: "center" }}>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+          <Pop key={w} fr={fr} at={F(w)} x={24 + i * 283} y={226} w={272} style={{ transformOrigin: "center" }}>
+            <div style={{ ...chip, display: "flex", flexDirection: "column", alignItems: "center", gap: 4, padding: "12px 10px" }}>
               {icon}
-              <div style={{ fontSize: 44, fontWeight: 800, whiteSpace: "nowrap" }}>{label}</div>
+              <div style={{ fontSize: 42, fontWeight: 800, whiteSpace: "nowrap" }}>{label}</div>
             </div>
           </Pop>
         ))}
       </Szene>
 
       {/* vor allem: 70 oder 80 % reduziert, zu gut um wahr zu sein, zweimal hinschauen */}
-      <Szene fr={fr} at={T.rabatt} until={T.cta - 2} title="Fast alles reduziert?" titleAt={F("fast", T.rabatt)}>
-        <Pop fr={fr} at={F("70")} x={36} y={140} style={{ transformOrigin: "center" }}>
+      <Szene
+        fr={fr}
+        at={T.rabatt}
+        until={T.cta - 2}
+        title="Fast alles reduziert?"
+        titleAt={F("fast", T.rabatt)}
+        photo="broll/shopcheck/rabatt.jpg"
+      >
+        <Pop fr={fr} at={F("70")} x={36} y={130} style={{ transformOrigin: "center" }}>
           <SaleTag text="-70 %" rot={-6} />
         </Pop>
-        <Pop fr={fr} at={F("80")} x={300} y={160} style={{ transformOrigin: "center" }}>
+        <Pop fr={fr} at={F("80")} x={300} y={150} style={{ transformOrigin: "center" }}>
           <SaleTag text="-80 %" rot={5} />
         </Pop>
-        <Pop fr={fr} at={F("gut", T.rabatt)} until={T.zweimal - 7} x={40} y={330}>
+        <Pop fr={fr} at={F("gut", T.rabatt)} until={T.zweimal - 7} x={28} y={330}>
           <Tag kind="ink">zu gut, um wahr zu sein?</Tag>
         </Pop>
-        <Pop fr={fr} at={F("vorsicht", T.rabatt)} x={700} y={112} style={{ transformOrigin: "center" }}>
+        <Pop fr={fr} at={F("vorsicht", T.rabatt)} x={700} y={104} style={{ transformOrigin: "center" }}>
           <IconWarn size={130} />
         </Pop>
-        <Pop fr={fr} at={F("vorsicht", T.rabatt) + 4} x={660} y={250}>
+        <Pop fr={fr} at={F("vorsicht", T.rabatt) + 4} x={660} y={244}>
           <Tag kind="warn" size={42}>
             Vorsicht
           </Tag>
         </Pop>
-        <Pop fr={fr} at={T.zweimal} x={40} y={322}>
+        <Pop fr={fr} at={T.zweimal} x={28} y={318}>
           <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            <IconEye size={80} />
-            <IconEye size={80} />
+            <div style={{ ...chip, borderRadius: 999, display: "flex", gap: 6, padding: "4px 14px" }}>
+              <IconEye size={70} />
+              <IconEye size={70} />
+            </div>
             <Tag>2× hinschauen</Tag>
           </div>
         </Pop>
