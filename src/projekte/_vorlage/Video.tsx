@@ -59,7 +59,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
         <Takes C={C} voice={voice} />
       </SplitPerson>
 
-      <HookTitle fr={fr} kicker="MEINE SERIE · TAG 1" line1="Dein Hook in einer Zeile" line2="mit dem Kern in Gelb." outAt={T.split - 8} />
+      <HookTitle fr={fr} line1="Dein Hook in einer Zeile" line2="mit dem Kern in Blau." outAt={T.split - 8} />
       <PopOn fr={fr} at={T.first + 30} until={T.split - 6} style={{ left: 60, top: 1000, width: 890, textAlign: "center" }}>
         <Pill bg={STIL.yellow} color={STIL.ink} size={46}>
           Pille auf einem Wort

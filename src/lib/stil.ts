@@ -1,7 +1,6 @@
 /**
- * Dein Schnittstil in Zahlen. Das hier ist der Stil, mit dem die Videos von Marketing Faber geschnitten werden:
- * ändere ihn, bis es deiner ist (oder sag Claude, was anders sein soll, dann trägt es den Wunsch hier und in
- * .claude/skills/faber-cut/stil.md ein).
+ * Mein Schnittstil in Zahlen (angelegt beim Onboarding am 2026-10-08): Akzentfarbe Blau, leise Soundeffekte.
+ * Sag Claude, was anders sein soll, dann trägt es den Wunsch hier und in .claude/skills/faber-cut/stil.md ein.
  */
 import zonen from "./zonen.json";
 
@@ -11,8 +10,8 @@ export const STIL = {
   /** Schrift (Geist liegt in public/fonts, Lizenz: SIL OFL) */
   font: "Geist, system-ui, sans-serif",
   mono: "Geist Mono, ui-monospace, monospace",
-  /** Akzent für das gesprochene Wort und Hervorhebungen */
-  yellow: "#FFDE28",
+  /** Akzent für das gesprochene Wort und Hervorhebungen (heißt aus Kompatibilität "yellow", ist mein Blau) */
+  yellow: "#31ADEC",
   ink: "#14161A",
   green: "#1F9D6B",
   red: "#E5484D",

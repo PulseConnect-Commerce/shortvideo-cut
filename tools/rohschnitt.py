@@ -18,7 +18,7 @@ import tempfile
 from fclib import ROOT, take_paths
 from frames import frame
 
-YELLOW = "&H0028DEFF"  # ASS: &HAABBGGRR, das Gelb aus STIL (#FFDE28)
+YELLOW = "&H00ECAD31"  # ASS: &HAABBGGRR, die Akzentfarbe aus STIL (#31ADEC)
 WHITE = "&H00FFFFFF"
 INK = "&H001A1614"
 

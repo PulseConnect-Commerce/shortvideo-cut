@@ -8,8 +8,6 @@ public/projekte/
 eingang/
 # deine Projekte (Schnitt, Grafiken): im Online-Modus nimmt das Onboarding diese zwei Zeilen raus, damit sie in
 # deinem GitHub-Repo gespeichert werden
-src/projekte/*
-!src/projekte/_vorlage/
 __pycache__/
 *.pyc
 .DS_Store
