@@ -74,7 +74,9 @@ const npmCi = npm
   : run("npm", ["ci", "--no-audit", "--no-fund"], { shell: true });
 if (!npmCi) fail("npm konnte die Pakete nicht installieren (Internet? Siehe Meldung oben).");
 ok("Node-Pakete (Remotion)");
-if (!run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "browser", "ensure"], { stdio: "ignore" }))
+// NODE_USE_ENV_PROXY: Node lädt sonst am HTTPS_PROXY vorbei (Cloud-Sitzungen lassen dann remotion.media nicht durch)
+const browserEnv = { ...process.env, NODE_USE_ENV_PROXY: "1" };
+if (!run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "browser", "ensure"], { stdio: "ignore", env: browserEnv }))
   fail("Remotion konnte seinen Browser (Chrome Headless Shell) nicht laden (Internet? Siehe npm run doktor).");
 ok("Browser für Remotion");
 
