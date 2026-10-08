@@ -5,7 +5,7 @@
  * ihrem Wort erscheinen.
  */
 import type React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { Captions, clamp, HookTitle, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
 import { Raster } from "../../lib/raster";
 import { createCut, typedSync } from "../../lib/schnitt";
@@ -65,12 +65,14 @@ const T = (() => {
   return { zeit, s1, s2, s3, cookies, s4, s5, rabatt, zweimal, cta };
 })();
 
-/** leichte Zoom-ins: in jedem Bildstück fährt das Bild langsam um 3 % heran, die Stufe wechselt an jedem Schnitt */
+/** leichte Zoom-ins: in jedem Bildstück fährt das Bild langsam um 3 % heran, die Stufe wechselt an jedem Schnitt;
+ * im ersten Stück (Hook) zusätzlich ein spürbarer Zoom um 5 % in den ersten 2 s */
 const zoomAt = (fr: number) => {
   const i = C.SPANS.findIndex((s) => fr >= s.at && fr < s.at + s.len);
   const k = i < 0 ? C.SPANS.length - 1 : i;
   const s = C.SPANS[k];
-  return (k % 2 ? 1.045 : 1) + interpolate(fr, [s.at, s.at + s.len], [0, 0.03], clamp);
+  const hook = k === 0 ? interpolate(fr, [0, 2 * C.FPS], [0, 0.05], { ...clamp, easing: Easing.out(Easing.cubic) }) : 0;
+  return (k % 2 ? 1.045 : 1) + hook + interpolate(fr, [s.at, s.at + s.len], [0, 0.03], clamp);
 };
 
 /** raster: Platzierungsraster mit sicherer Fläche und den Zonen von TikTok/Instagram (nur für Standbilder) */
@@ -101,14 +103,16 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
 
       {/* 1: der Shop als Ganzes */}
       <Szene fr={fr} at={T.s1} until={T.s2 - 2} nr={1} title="Der Shop als Ganzes">
-        <ShopMock
-          x={34}
-          y={122}
-          w={470}
-          h={280}
-          wonky={interpolate(fr, [F("schnell"), F("schnell") + 10], [0, 1], clamp)}
-          hi={fr >= F("preise") ? "preis" : fr >= F("bilder") ? "bild" : fr >= F("texte") ? "text" : null}
-        />
+        <Pop fr={fr} at={F("shop", T.s1)} x={34} y={122} style={{ transformOrigin: "center" }}>
+          <ShopMock
+            x={0}
+            y={0}
+            w={470}
+            h={280}
+            wonky={interpolate(fr, [F("schnell"), F("schnell") + 10], [0, 1], clamp)}
+            hi={fr >= F("preise") ? "preis" : fr >= F("bilder") ? "bild" : fr >= F("texte") ? "text" : null}
+          />
+        </Pop>
         <Pop fr={fr} at={F("professionell")} until={F("passen")} x={110} y={235}>
           <Tag>professionell?</Tag>
         </Pop>
@@ -154,6 +158,15 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
 
       {/* 3: rechtliche Seiten */}
       <Szene fr={fr} at={T.s3} until={T.cookies - 2} nr={3} title="Rechtliche Seiten">
+        <Pop fr={fr} at={F("rechtlichen")} until={F("datenschutzerklärung") - 4} x={250} y={130} style={{ transformOrigin: "center" }}>
+          <div style={{ display: "flex" }}>
+            {[-8, 0, 8].map((r, i) => (
+              <div key={r} style={{ marginLeft: i ? -90 : 0, transform: `rotate(${r}deg)` }}>
+                <IconDoc size={220} />
+              </div>
+            ))}
+          </div>
+        </Pop>
         <Pop fr={fr} at={F("datenschutzerklärung")} x={40} y={135}>
           <Row text="Datenschutz" mark="ok" width={400} />
         </Pop>
@@ -211,6 +224,11 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
         <Pop fr={fr} at={F("krypto")} x={40} y={224}>
           <Row icon={<IconCoin />} text="Krypto" mark="no" width={400} />
         </Pop>
+        <Pop fr={fr} at={F("dubiose")} until={F("vorsicht") - 4} x={40} y={322}>
+          <Tag kind="ink" size={44}>
+            dubios?
+          </Tag>
+        </Pop>
         <Pop fr={fr} at={F("vorsicht")} x={40} y={322}>
           <Tag kind="warn">Vorsicht!</Tag>
         </Pop>
@@ -230,7 +248,10 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
         <Pop fr={fr} at={F("elektrogeräte")} x={40} y={130}>
           <Row icon={<IconPlug />} text="Elektrogeräte" width={400} />
         </Pop>
-        <Pop fr={fr} at={F("gesetzliche")} x={470} y={138}>
+        <Pop fr={fr} at={F("händler")} x={470} y={138}>
+          <Tag size={44}>für Händler</Tag>
+        </Pop>
+        <Pop fr={fr} at={F("gesetzliche")} until={F("händler") - 4} x={470} y={138}>
           <Tag kind="ink" size={44}>
             Pflichten
           </Tag>
