@@ -21,6 +21,7 @@
     "sync": "node tools/py.mjs sync-audit.py",
     "pacing": "node tools/py.mjs pacing-scan.py",
     "gemini": "node tools/py.mjs gemini-review.py",
+    "bild": "node tools/py.mjs bild.py",
     "final": "node tools/final.mjs",
     "checks": "node tools/py.mjs checks.py",
     "studio": "remotion studio",
