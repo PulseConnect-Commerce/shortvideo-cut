@@ -89,10 +89,10 @@
   },
   {
    "src": "shopcheck/t1",
-   "from": 56.545,
+   "from": 54.845,
    "to": 58.155,
    "nach": 0.09,
-   "vor": 0.08
+   "vor": 0.09
   },
   {
    "src": "shopcheck/t1",
@@ -147,6 +147,20 @@
    "src": "shopcheck/t1",
    "from": 133.235,
    "to": 136.765,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 136.885,
+   "to": 138.245,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 138.365,
+   "to": 139.845,
    "nach": 0.09,
    "vor": 0.09
   },
@@ -839,6 +853,30 @@
   {
    "text": "oder",
    "src": "shopcheck/t1",
+   "start": 54.91,
+   "end": 55.11
+  },
+  {
+   "text": "überhaupt",
+   "src": "shopcheck/t1",
+   "start": 55.19,
+   "end": 55.47
+  },
+  {
+   "text": "ein",
+   "src": "shopcheck/t1",
+   "start": 55.51,
+   "end": 55.57
+  },
+  {
+   "text": "Widerrufs-Button",
+   "src": "shopcheck/t1",
+   "start": 55.61,
+   "end": 56.33
+  },
+  {
+   "text": "oder",
+   "src": "shopcheck/t1",
    "start": 56.57,
    "end": 56.73
   },
@@ -1275,10 +1313,46 @@
    "end": 136.15
   },
   {
-   "text": "Pflichten.",
+   "text": "Pflichten,",
    "src": "shopcheck/t1",
    "start": 136.19,
    "end": 136.57
+  },
+  {
+   "text": "wie",
+   "src": "shopcheck/t1",
+   "start": 136.97,
+   "end": 137.05
+  },
+  {
+   "text": "die",
+   "src": "shopcheck/t1",
+   "start": 137.09,
+   "end": 137.17
+  },
+  {
+   "text": "WEEE-Nummer",
+   "src": "shopcheck/t1",
+   "start": 137.29,
+   "end": 138.07
+  },
+  {
+   "text": "oder",
+   "src": "shopcheck/t1",
+   "start": 138.41,
+   "end": 138.55
+  },
+  {
+   "text": "auch",
+   "src": "shopcheck/t1",
+   "start": 138.63,
+   "end": 138.73
+  },
+  {
+   "text": "BattG-Gesetz.",
+   "src": "shopcheck/t1",
+   "start": 138.79,
+   "end": 139.73
   },
   {
    "text": "Auch",
@@ -1656,6 +1730,8 @@
   1,
   2,
   2,
+  2,
+  2,
   3,
   4,
   1,
@@ -1688,6 +1764,9 @@
   2,
   3,
   2,
+  3,
+  2,
+  1,
   1,
   1,
   3,

@@ -63,3 +63,19 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 ## Meine Notizen (neue Regeln kommen hier dazu)
 
 <!-- Claude: trag hier jede Geschmacksregel ein, die der Nutzer beim Schnitt sagt, mit seinem Satz und Datum. -->
+
+- **B-Rolls über dem Kopf** (2026-10-08): "Ich möchte über meinem Kopf bzw. dort, wo noch Platz ist auch passende
+  Bilder zu den jeweiligen Themen anzeigen, sodass man das gesprochene auch gleich visuell hat." Jedes Thema bekommt
+  eine Bildkarte in der freien Fläche über dem Kopf, deren Teile auf ihrem Wort erscheinen (Vorlage:
+  `src/projekte/shopcheck/broll.tsx`). Echte Fotos, wenn welche da sind; sonst gezeichnete Bildkarten.
+- **Hook und leichte Zoom-ins gehören immer dazu** (2026-10-08): "Und wo bleibt die Hook sowie ein paar leichte
+  Zoom-In Animationen?" Hook-Satz ab dem ersten Frame, in jedem Bildstück ein langsames Heranfahren (~3 %), die
+  Stufe wechselt an jedem Schnitt. Im Rohschnitt dazusagen, dass Hook und Zooms erst mit der Vorschau kommen.
+- **Keine Beine im Bild** (2026-10-08): "Bitte unten die Hose rausschneiden." Sitzt er am Tisch und die Hose ist unten
+  im Bild: fester Ausschnitt ab der Oberkante (`Takes transform="scale(…)" transformOrigin="50% 0%"`), so weit, dass
+  die Hose in keinem Frame mehr zu sehen ist (vorher messen).
+- **Skript als Gerüst, Ergänzungen bleiben** (2026-10-08): "Bitte unbedingt auch die beiden Punkte mit reinnehmen"
+  (Widerrufs-Button, WEEE-Nummer/BattG). Gibt er ein Skript mit, bestimmt es Reihenfolge und Inhalt; was er im Take
+  fachlich ergänzt, bleibt drin. Nur Versprecher, Wiederholungen und Füllwörter fliegen raus.
+- **Mehrere Takes desselben Texts** (2026-10-08): pro Satz den besten Take nehmen und mischen ("Nutze die beiden
+  besten Videoausschnitte aus beiden Videos").
