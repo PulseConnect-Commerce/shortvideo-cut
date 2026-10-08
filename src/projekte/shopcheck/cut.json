@@ -1,0 +1,1713 @@
+{
+ "projekt": "shopcheck",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "shopcheck/t1",
+   "from": 2.535,
+   "to": 7.115,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 14.945,
+   "to": 18.195,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 21.145,
+   "to": 23.255,
+   "nach": 0.02,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 23.275,
+   "to": 24.495,
+   "nach": 0.09,
+   "vor": 0.08
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 24.725,
+   "to": 27.055,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 27.395,
+   "to": 29.865,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 33.375,
+   "to": 34.915,
+   "nach": 0.085,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 35.025,
+   "to": 38.095,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 38.345,
+   "to": 40.455,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 41.345,
+   "to": 44.265,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 47.235,
+   "to": 50.595,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 51.045,
+   "to": 54.325,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 56.545,
+   "to": 58.155,
+   "nach": 0.09,
+   "vor": 0.08
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 88.035,
+   "to": 90.615,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 90.785,
+   "to": 94.405,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t2",
+   "from": 82.795,
+   "to": 84.335,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 98.855,
+   "to": 104.685,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 105.535,
+   "to": 110.045,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 110.215,
+   "to": 111.865,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 130.525,
+   "to": 132.845,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 133.235,
+   "to": 136.765,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 140.295,
+   "to": 143.875,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 154.565,
+   "to": 158.325,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 158.765,
+   "to": 161.605,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 161.765,
+   "to": 163.205,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 163.925,
+   "to": 165.875,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopcheck/t1",
+   "from": 166.135,
+   "to": 169.55,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Bevor",
+   "src": "shopcheck/t1",
+   "start": 2.53,
+   "end": 2.75
+  },
+  {
+   "text": "du",
+   "src": "shopcheck/t1",
+   "start": 2.81,
+   "end": 2.87
+  },
+  {
+   "text": "das",
+   "src": "shopcheck/t1",
+   "start": 2.91,
+   "end": 3.03
+  },
+  {
+   "text": "nächste",
+   "src": "shopcheck/t1",
+   "start": 3.11,
+   "end": 3.33
+  },
+  {
+   "text": "Mal",
+   "src": "shopcheck/t1",
+   "start": 3.37,
+   "end": 3.47
+  },
+  {
+   "text": "beim",
+   "src": "shopcheck/t1",
+   "start": 3.51,
+   "end": 3.63
+  },
+  {
+   "text": "Onlineshop",
+   "src": "shopcheck/t1",
+   "start": 3.71,
+   "end": 4.09
+  },
+  {
+   "text": "bestellst,",
+   "src": "shopcheck/t1",
+   "start": 4.13,
+   "end": 4.49
+  },
+  {
+   "text": "den",
+   "src": "shopcheck/t1",
+   "start": 4.51,
+   "end": 4.61
+  },
+  {
+   "text": "du",
+   "src": "shopcheck/t1",
+   "start": 4.65,
+   "end": 4.69
+  },
+  {
+   "text": "noch",
+   "src": "shopcheck/t1",
+   "start": 4.75,
+   "end": 4.85
+  },
+  {
+   "text": "gar",
+   "src": "shopcheck/t1",
+   "start": 4.91,
+   "end": 5.03
+  },
+  {
+   "text": "nicht",
+   "src": "shopcheck/t1",
+   "start": 5.13,
+   "end": 5.25
+  },
+  {
+   "text": "kennst,",
+   "src": "shopcheck/t1",
+   "start": 5.31,
+   "end": 5.59
+  },
+  {
+   "text": "check",
+   "src": "shopcheck/t1",
+   "start": 5.73,
+   "end": 5.91
+  },
+  {
+   "text": "mal",
+   "src": "shopcheck/t1",
+   "start": 5.99,
+   "end": 6.09
+  },
+  {
+   "text": "lieber",
+   "src": "shopcheck/t1",
+   "start": 6.11,
+   "end": 6.25
+  },
+  {
+   "text": "diese",
+   "src": "shopcheck/t1",
+   "start": 6.29,
+   "end": 6.43
+  },
+  {
+   "text": "fünf",
+   "src": "shopcheck/t1",
+   "start": 6.53,
+   "end": 6.69
+  },
+  {
+   "text": "Dinge",
+   "src": "shopcheck/t1",
+   "start": 6.73,
+   "end": 6.87
+  },
+  {
+   "text": "ab.",
+   "src": "shopcheck/t1",
+   "start": 6.95,
+   "end": 7.03
+  },
+  {
+   "text": "Das",
+   "src": "shopcheck/t1",
+   "start": 14.99,
+   "end": 15.09
+  },
+  {
+   "text": "dauert",
+   "src": "shopcheck/t1",
+   "start": 15.15,
+   "end": 15.41
+  },
+  {
+   "text": "maximal",
+   "src": "shopcheck/t1",
+   "start": 15.67,
+   "end": 16.13
+  },
+  {
+   "text": "zwei",
+   "src": "shopcheck/t1",
+   "start": 16.19,
+   "end": 16.33
+  },
+  {
+   "text": "Minuten",
+   "src": "shopcheck/t1",
+   "start": 16.39,
+   "end": 16.77
+  },
+  {
+   "text": "und",
+   "src": "shopcheck/t1",
+   "start": 16.81,
+   "end": 16.89
+  },
+  {
+   "text": "kann",
+   "src": "shopcheck/t1",
+   "start": 16.95,
+   "end": 17.09
+  },
+  {
+   "text": "dir",
+   "src": "shopcheck/t1",
+   "start": 17.13,
+   "end": 17.21
+  },
+  {
+   "text": "viel",
+   "src": "shopcheck/t1",
+   "start": 17.29,
+   "end": 17.43
+  },
+  {
+   "text": "Ärger",
+   "src": "shopcheck/t1",
+   "start": 17.51,
+   "end": 17.71
+  },
+  {
+   "text": "ersparen.",
+   "src": "shopcheck/t1",
+   "start": 17.75,
+   "end": 18.09
+  },
+  {
+   "text": "Erstens,",
+   "src": "shopcheck/t1",
+   "start": 21.19,
+   "end": 21.55
+  },
+  {
+   "text": "schau",
+   "src": "shopcheck/t1",
+   "start": 21.59,
+   "end": 21.77
+  },
+  {
+   "text": "dir",
+   "src": "shopcheck/t1",
+   "start": 21.85,
+   "end": 21.95
+  },
+  {
+   "text": "den",
+   "src": "shopcheck/t1",
+   "start": 21.99,
+   "end": 22.09
+  },
+  {
+   "text": "Shop",
+   "src": "shopcheck/t1",
+   "start": 22.15,
+   "end": 22.33
+  },
+  {
+   "text": "als",
+   "src": "shopcheck/t1",
+   "start": 22.43,
+   "end": 22.55
+  },
+  {
+   "text": "Ganzes",
+   "src": "shopcheck/t1",
+   "start": 22.61,
+   "end": 22.93
+  },
+  {
+   "text": "an.",
+   "src": "shopcheck/t1",
+   "start": 22.99,
+   "end": 23.09
+  },
+  {
+   "text": "Wirkt",
+   "src": "shopcheck/t1",
+   "start": 23.33,
+   "end": 23.53
+  },
+  {
+   "text": "er",
+   "src": "shopcheck/t1",
+   "start": 23.57,
+   "end": 23.63
+  },
+  {
+   "text": "professionell?",
+   "src": "shopcheck/t1",
+   "start": 23.67,
+   "end": 24.31
+  },
+  {
+   "text": "Passen",
+   "src": "shopcheck/t1",
+   "start": 24.75,
+   "end": 25.01
+  },
+  {
+   "text": "die",
+   "src": "shopcheck/t1",
+   "start": 25.05,
+   "end": 25.13
+  },
+  {
+   "text": "Texte,",
+   "src": "shopcheck/t1",
+   "start": 25.19,
+   "end": 25.49
+  },
+  {
+   "text": "Bilder",
+   "src": "shopcheck/t1",
+   "start": 25.59,
+   "end": 25.85
+  },
+  {
+   "text": "und",
+   "src": "shopcheck/t1",
+   "start": 25.91,
+   "end": 25.97
+  },
+  {
+   "text": "Preise",
+   "src": "shopcheck/t1",
+   "start": 26.01,
+   "end": 26.27
+  },
+  {
+   "text": "überhaupt",
+   "src": "shopcheck/t1",
+   "start": 26.31,
+   "end": 26.53
+  },
+  {
+   "text": "zusammen?",
+   "src": "shopcheck/t1",
+   "start": 26.57,
+   "end": 26.91
+  },
+  {
+   "text": "Oder",
+   "src": "shopcheck/t1",
+   "start": 27.45,
+   "end": 27.65
+  },
+  {
+   "text": "wirkt",
+   "src": "shopcheck/t1",
+   "start": 27.73,
+   "end": 27.87
+  },
+  {
+   "text": "das",
+   "src": "shopcheck/t1",
+   "start": 27.91,
+   "end": 28.01
+  },
+  {
+   "text": "Ganze",
+   "src": "shopcheck/t1",
+   "start": 28.09,
+   "end": 28.37
+  },
+  {
+   "text": "eher",
+   "src": "shopcheck/t1",
+   "start": 28.49,
+   "end": 28.63
+  },
+  {
+   "text": "schnell",
+   "src": "shopcheck/t1",
+   "start": 28.73,
+   "end": 29.05
+  },
+  {
+   "text": "zusammengebaut?",
+   "src": "shopcheck/t1",
+   "start": 29.15,
+   "end": 29.83
+  },
+  {
+   "text": "Zweitens,",
+   "src": "shopcheck/t1",
+   "start": 33.43,
+   "end": 33.85
+  },
+  {
+   "text": "geh",
+   "src": "shopcheck/t1",
+   "start": 33.95,
+   "end": 34.07
+  },
+  {
+   "text": "ins",
+   "src": "shopcheck/t1",
+   "start": 34.09,
+   "end": 34.17
+  },
+  {
+   "text": "Impressum.",
+   "src": "shopcheck/t1",
+   "start": 34.23,
+   "end": 34.69
+  },
+  {
+   "text": "Gibt",
+   "src": "shopcheck/t1",
+   "start": 35.03,
+   "end": 35.19
+  },
+  {
+   "text": "es",
+   "src": "shopcheck/t1",
+   "start": 35.25,
+   "end": 35.31
+  },
+  {
+   "text": "dort",
+   "src": "shopcheck/t1",
+   "start": 35.39,
+   "end": 35.57
+  },
+  {
+   "text": "überhaupt",
+   "src": "shopcheck/t1",
+   "start": 35.69,
+   "end": 35.95
+  },
+  {
+   "text": "ein",
+   "src": "shopcheck/t1",
+   "start": 35.99,
+   "end": 36.07
+  },
+  {
+   "text": "Unternehmen,",
+   "src": "shopcheck/t1",
+   "start": 36.13,
+   "end": 36.67
+  },
+  {
+   "text": "eine",
+   "src": "shopcheck/t1",
+   "start": 36.87,
+   "end": 36.99
+  },
+  {
+   "text": "vollständige",
+   "src": "shopcheck/t1",
+   "start": 37.07,
+   "end": 37.59
+  },
+  {
+   "text": "Anschrift",
+   "src": "shopcheck/t1",
+   "start": 37.65,
+   "end": 38.01
+  },
+  {
+   "text": "oder",
+   "src": "shopcheck/t1",
+   "start": 38.39,
+   "end": 38.53
+  },
+  {
+   "text": "überhaupt",
+   "src": "shopcheck/t1",
+   "start": 38.55,
+   "end": 38.75
+  },
+  {
+   "text": "eine",
+   "src": "shopcheck/t1",
+   "start": 38.79,
+   "end": 38.91
+  },
+  {
+   "text": "Möglichkeit",
+   "src": "shopcheck/t1",
+   "start": 38.99,
+   "end": 39.51
+  },
+  {
+   "text": "jemanden",
+   "src": "shopcheck/t1",
+   "start": 39.57,
+   "end": 39.81
+  },
+  {
+   "text": "zu",
+   "src": "shopcheck/t1",
+   "start": 39.83,
+   "end": 39.89
+  },
+  {
+   "text": "kontaktieren?",
+   "src": "shopcheck/t1",
+   "start": 39.95,
+   "end": 40.41
+  },
+  {
+   "text": "Im",
+   "src": "shopcheck/t1",
+   "start": 41.38,
+   "end": 41.44
+  },
+  {
+   "text": "Zweifel",
+   "src": "shopcheck/t1",
+   "start": 41.5,
+   "end": 41.86
+  },
+  {
+   "text": "kannst",
+   "src": "shopcheck/t1",
+   "start": 41.96,
+   "end": 42.16
+  },
+  {
+   "text": "du",
+   "src": "shopcheck/t1",
+   "start": 42.2,
+   "end": 42.26
+  },
+  {
+   "text": "die",
+   "src": "shopcheck/t1",
+   "start": 42.32,
+   "end": 42.4
+  },
+  {
+   "text": "Firma",
+   "src": "shopcheck/t1",
+   "start": 42.46,
+   "end": 42.68
+  },
+  {
+   "text": "oder",
+   "src": "shopcheck/t1",
+   "start": 42.82,
+   "end": 42.98
+  },
+  {
+   "text": "Adresse",
+   "src": "shopcheck/t1",
+   "start": 43.06,
+   "end": 43.34
+  },
+  {
+   "text": "einfach",
+   "src": "shopcheck/t1",
+   "start": 43.4,
+   "end": 43.56
+  },
+  {
+   "text": "mal",
+   "src": "shopcheck/t1",
+   "start": 43.58,
+   "end": 43.68
+  },
+  {
+   "text": "kurz",
+   "src": "shopcheck/t1",
+   "start": 43.72,
+   "end": 43.86
+  },
+  {
+   "text": "googeln.",
+   "src": "shopcheck/t1",
+   "start": 43.9,
+   "end": 44.18
+  },
+  {
+   "text": "Drittens,",
+   "src": "shopcheck/t1",
+   "start": 47.35,
+   "end": 47.69
+  },
+  {
+   "text": "schau",
+   "src": "shopcheck/t1",
+   "start": 48.51,
+   "end": 48.71
+  },
+  {
+   "text": "dir",
+   "src": "shopcheck/t1",
+   "start": 48.77,
+   "end": 48.87
+  },
+  {
+   "text": "einfach",
+   "src": "shopcheck/t1",
+   "start": 48.91,
+   "end": 49.13
+  },
+  {
+   "text": "die",
+   "src": "shopcheck/t1",
+   "start": 49.19,
+   "end": 49.27
+  },
+  {
+   "text": "rechtlichen",
+   "src": "shopcheck/t1",
+   "start": 49.35,
+   "end": 49.79
+  },
+  {
+   "text": "Seiten",
+   "src": "shopcheck/t1",
+   "start": 49.85,
+   "end": 50.13
+  },
+  {
+   "text": "einmal",
+   "src": "shopcheck/t1",
+   "start": 50.17,
+   "end": 50.33
+  },
+  {
+   "text": "an.",
+   "src": "shopcheck/t1",
+   "start": 50.39,
+   "end": 50.47
+  },
+  {
+   "text": "Gibt",
+   "src": "shopcheck/t1",
+   "start": 51.07,
+   "end": 51.21
+  },
+  {
+   "text": "es",
+   "src": "shopcheck/t1",
+   "start": 51.27,
+   "end": 51.33
+  },
+  {
+   "text": "eine",
+   "src": "shopcheck/t1",
+   "start": 51.37,
+   "end": 51.51
+  },
+  {
+   "text": "vernünftige",
+   "src": "shopcheck/t1",
+   "start": 51.55,
+   "end": 52.01
+  },
+  {
+   "text": "Datenschutzerklärung,",
+   "src": "shopcheck/t1",
+   "start": 52.05,
+   "end": 52.89
+  },
+  {
+   "text": "Information",
+   "src": "shopcheck/t1",
+   "start": 52.95,
+   "end": 53.47
+  },
+  {
+   "text": "zum",
+   "src": "shopcheck/t1",
+   "start": 53.55,
+   "end": 53.65
+  },
+  {
+   "text": "Widerruf",
+   "src": "shopcheck/t1",
+   "start": 53.69,
+   "end": 54.21
+  },
+  {
+   "text": "oder",
+   "src": "shopcheck/t1",
+   "start": 56.57,
+   "end": 56.73
+  },
+  {
+   "text": "gegebenenfalls",
+   "src": "shopcheck/t1",
+   "start": 56.81,
+   "end": 57.23
+  },
+  {
+   "text": "sogar",
+   "src": "shopcheck/t1",
+   "start": 57.27,
+   "end": 57.43
+  },
+  {
+   "text": "eine",
+   "src": "shopcheck/t1",
+   "start": 57.47,
+   "end": 57.57
+  },
+  {
+   "text": "AGB?",
+   "src": "shopcheck/t1",
+   "start": 57.67,
+   "end": 57.89
+  },
+  {
+   "text": "Und",
+   "src": "shopcheck/t1",
+   "start": 88.07,
+   "end": 88.15
+  },
+  {
+   "text": "wenn",
+   "src": "shopcheck/t1",
+   "start": 88.17,
+   "end": 88.29
+  },
+  {
+   "text": "der",
+   "src": "shopcheck/t1",
+   "start": 88.31,
+   "end": 88.39
+  },
+  {
+   "text": "Shop",
+   "src": "shopcheck/t1",
+   "start": 88.43,
+   "end": 88.61
+  },
+  {
+   "text": "Tracking",
+   "src": "shopcheck/t1",
+   "start": 88.69,
+   "end": 89.05
+  },
+  {
+   "text": "und",
+   "src": "shopcheck/t1",
+   "start": 89.09,
+   "end": 89.17
+  },
+  {
+   "text": "entsprechende",
+   "src": "shopcheck/t1",
+   "start": 89.21,
+   "end": 89.67
+  },
+  {
+   "text": "Cookies",
+   "src": "shopcheck/t1",
+   "start": 89.75,
+   "end": 90.05
+  },
+  {
+   "text": "verwendet,",
+   "src": "shopcheck/t1",
+   "start": 90.09,
+   "end": 90.49
+  },
+  {
+   "text": "dann",
+   "src": "shopcheck/t1",
+   "start": 90.83,
+   "end": 90.97
+  },
+  {
+   "text": "sollte",
+   "src": "shopcheck/t1",
+   "start": 91.01,
+   "end": 91.21
+  },
+  {
+   "text": "das",
+   "src": "shopcheck/t1",
+   "start": 91.27,
+   "end": 91.37
+  },
+  {
+   "text": "natürlich",
+   "src": "shopcheck/t1",
+   "start": 91.41,
+   "end": 91.73
+  },
+  {
+   "text": "auch",
+   "src": "shopcheck/t1",
+   "start": 91.79,
+   "end": 91.91
+  },
+  {
+   "text": "wiederum",
+   "src": "shopcheck/t1",
+   "start": 91.95,
+   "end": 92.27
+  },
+  {
+   "text": "in",
+   "src": "shopcheck/t1",
+   "start": 92.49,
+   "end": 92.57
+  },
+  {
+   "text": "der",
+   "src": "shopcheck/t1",
+   "start": 92.65,
+   "end": 92.75
+  },
+  {
+   "text": "Einwilligung",
+   "src": "shopcheck/t1",
+   "start": 92.85,
+   "end": 93.33
+  },
+  {
+   "text": "sauber",
+   "src": "shopcheck/t1",
+   "start": 93.41,
+   "end": 93.69
+  },
+  {
+   "text": "umgesetzt",
+   "src": "shopcheck/t1",
+   "start": 93.73,
+   "end": 94.13
+  },
+  {
+   "text": "sein.",
+   "src": "shopcheck/t1",
+   "start": 94.15,
+   "end": 94.33
+  },
+  {
+   "text": "Viertens",
+   "src": "shopcheck/t2",
+   "start": 82.84,
+   "end": 83.24
+  },
+  {
+   "text": "sind",
+   "src": "shopcheck/t2",
+   "start": 83.34,
+   "end": 83.46
+  },
+  {
+   "text": "die",
+   "src": "shopcheck/t2",
+   "start": 83.48,
+   "end": 83.56
+  },
+  {
+   "text": "Zahlungsmethoden.",
+   "src": "shopcheck/t2",
+   "start": 83.6,
+   "end": 84.22
+  },
+  {
+   "text": "Wenn",
+   "src": "shopcheck/t1",
+   "start": 98.89,
+   "end": 99.03
+  },
+  {
+   "text": "ein",
+   "src": "shopcheck/t1",
+   "start": 99.09,
+   "end": 99.17
+  },
+  {
+   "text": "unbekannter",
+   "src": "shopcheck/t1",
+   "start": 99.27,
+   "end": 99.75
+  },
+  {
+   "text": "Shop",
+   "src": "shopcheck/t1",
+   "start": 99.79,
+   "end": 99.97
+  },
+  {
+   "text": "nur",
+   "src": "shopcheck/t1",
+   "start": 100.15,
+   "end": 100.29
+  },
+  {
+   "text": "Vorkasse",
+   "src": "shopcheck/t1",
+   "start": 100.37,
+   "end": 100.85
+  },
+  {
+   "text": "oder",
+   "src": "shopcheck/t1",
+   "start": 100.97,
+   "end": 101.15
+  },
+  {
+   "text": "irgendwie",
+   "src": "shopcheck/t1",
+   "start": 101.31,
+   "end": 101.73
+  },
+  {
+   "text": "dubiose",
+   "src": "shopcheck/t1",
+   "start": 101.91,
+   "end": 102.41
+  },
+  {
+   "text": "Zahlungsmethoden",
+   "src": "shopcheck/t1",
+   "start": 102.51,
+   "end": 103.25
+  },
+  {
+   "text": "mit",
+   "src": "shopcheck/t1",
+   "start": 103.29,
+   "end": 103.37
+  },
+  {
+   "text": "Krypto",
+   "src": "shopcheck/t1",
+   "start": 103.43,
+   "end": 103.73
+  },
+  {
+   "text": "anbietet,",
+   "src": "shopcheck/t1",
+   "start": 104.15,
+   "end": 104.57
+  },
+  {
+   "text": "dann",
+   "src": "shopcheck/t1",
+   "start": 105.58,
+   "end": 105.76
+  },
+  {
+   "text": "wäre",
+   "src": "shopcheck/t1",
+   "start": 105.96,
+   "end": 106.14
+  },
+  {
+   "text": "hier",
+   "src": "shopcheck/t1",
+   "start": 106.2,
+   "end": 106.32
+  },
+  {
+   "text": "lieber",
+   "src": "shopcheck/t1",
+   "start": 106.36,
+   "end": 106.5
+  },
+  {
+   "text": "Vorsicht",
+   "src": "shopcheck/t1",
+   "start": 106.56,
+   "end": 106.86
+  },
+  {
+   "text": "geboten,",
+   "src": "shopcheck/t1",
+   "start": 106.88,
+   "end": 107.22
+  },
+  {
+   "text": "denn",
+   "src": "shopcheck/t1",
+   "start": 107.28,
+   "end": 107.42
+  },
+  {
+   "text": "etablierte",
+   "src": "shopcheck/t1",
+   "start": 107.58,
+   "end": 108.02
+  },
+  {
+   "text": "Zahlungsmöglichkeiten",
+   "src": "shopcheck/t1",
+   "start": 108.14,
+   "end": 109.12
+  },
+  {
+   "text": "mit",
+   "src": "shopcheck/t1",
+   "start": 109.18,
+   "end": 109.28
+  },
+  {
+   "text": "Käuferschutz",
+   "src": "shopcheck/t1",
+   "start": 109.4,
+   "end": 109.94
+  },
+  {
+   "text": "sind",
+   "src": "shopcheck/t1",
+   "start": 110.26,
+   "end": 110.38
+  },
+  {
+   "text": "hier",
+   "src": "shopcheck/t1",
+   "start": 110.42,
+   "end": 110.5
+  },
+  {
+   "text": "definitiv",
+   "src": "shopcheck/t1",
+   "start": 110.54,
+   "end": 111.02
+  },
+  {
+   "text": "ein",
+   "src": "shopcheck/t1",
+   "start": 111.08,
+   "end": 111.16
+  },
+  {
+   "text": "gutes",
+   "src": "shopcheck/t1",
+   "start": 111.2,
+   "end": 111.42
+  },
+  {
+   "text": "Zeichen.",
+   "src": "shopcheck/t1",
+   "start": 111.46,
+   "end": 111.76
+  },
+  {
+   "text": "Und",
+   "src": "shopcheck/t1",
+   "start": 130.57,
+   "end": 130.65
+  },
+  {
+   "text": "fünftens,",
+   "src": "shopcheck/t1",
+   "start": 130.73,
+   "end": 131.23
+  },
+  {
+   "text": "mach",
+   "src": "shopcheck/t1",
+   "start": 131.41,
+   "end": 131.53
+  },
+  {
+   "text": "einen",
+   "src": "shopcheck/t1",
+   "start": 131.59,
+   "end": 131.69
+  },
+  {
+   "text": "kurzen",
+   "src": "shopcheck/t1",
+   "start": 131.73,
+   "end": 132.01
+  },
+  {
+   "text": "Realitätscheck.",
+   "src": "shopcheck/t1",
+   "start": 132.05,
+   "end": 132.75
+  },
+  {
+   "text": "Werden",
+   "src": "shopcheck/t1",
+   "start": 133.29,
+   "end": 133.47
+  },
+  {
+   "text": "Elektrogeräte",
+   "src": "shopcheck/t1",
+   "start": 133.51,
+   "end": 134.17
+  },
+  {
+   "text": "verkauft,",
+   "src": "shopcheck/t1",
+   "start": 134.23,
+   "end": 134.69
+  },
+  {
+   "text": "gibt",
+   "src": "shopcheck/t1",
+   "start": 134.83,
+   "end": 134.99
+  },
+  {
+   "text": "es",
+   "src": "shopcheck/t1",
+   "start": 135.05,
+   "end": 135.11
+  },
+  {
+   "text": "zusätzliche",
+   "src": "shopcheck/t1",
+   "start": 135.17,
+   "end": 135.67
+  },
+  {
+   "text": "gesetzliche",
+   "src": "shopcheck/t1",
+   "start": 135.73,
+   "end": 136.15
+  },
+  {
+   "text": "Pflichten.",
+   "src": "shopcheck/t1",
+   "start": 136.19,
+   "end": 136.57
+  },
+  {
+   "text": "Auch",
+   "src": "shopcheck/t1",
+   "start": 140.35,
+   "end": 140.45
+  },
+  {
+   "text": "Verpackungsregister",
+   "src": "shopcheck/t1",
+   "start": 140.49,
+   "end": 141.39
+  },
+  {
+   "text": "und",
+   "src": "shopcheck/t1",
+   "start": 141.45,
+   "end": 141.53
+  },
+  {
+   "text": "ähnliche",
+   "src": "shopcheck/t1",
+   "start": 141.59,
+   "end": 141.87
+  },
+  {
+   "text": "Vorgaben",
+   "src": "shopcheck/t1",
+   "start": 141.95,
+   "end": 142.33
+  },
+  {
+   "text": "könnten",
+   "src": "shopcheck/t1",
+   "start": 142.43,
+   "end": 142.79
+  },
+  {
+   "text": "für",
+   "src": "shopcheck/t1",
+   "start": 142.87,
+   "end": 142.95
+  },
+  {
+   "text": "Händler",
+   "src": "shopcheck/t1",
+   "start": 142.99,
+   "end": 143.21
+  },
+  {
+   "text": "relevant",
+   "src": "shopcheck/t1",
+   "start": 143.25,
+   "end": 143.59
+  },
+  {
+   "text": "sein.",
+   "src": "shopcheck/t1",
+   "start": 143.65,
+   "end": 143.79
+  },
+  {
+   "text": "Und vor",
+   "src": "shopcheck/t1",
+   "start": 154.75,
+   "end": 154.85
+  },
+  {
+   "text": "allem",
+   "src": "shopcheck/t1",
+   "start": 154.97,
+   "end": 155.19
+  },
+  {
+   "text": "wenn",
+   "src": "shopcheck/t1",
+   "start": 155.23,
+   "end": 155.35
+  },
+  {
+   "text": "hier",
+   "src": "shopcheck/t1",
+   "start": 155.37,
+   "end": 155.47
+  },
+  {
+   "text": "plötzlich",
+   "src": "shopcheck/t1",
+   "start": 155.51,
+   "end": 155.85
+  },
+  {
+   "text": "fast",
+   "src": "shopcheck/t1",
+   "start": 155.91,
+   "end": 156.05
+  },
+  {
+   "text": "alles",
+   "src": "shopcheck/t1",
+   "start": 156.11,
+   "end": 156.31
+  },
+  {
+   "text": "70",
+   "src": "shopcheck/t1",
+   "start": 156.37,
+   "end": 156.69
+  },
+  {
+   "text": "oder",
+   "src": "shopcheck/t1",
+   "start": 156.75,
+   "end": 156.87
+  },
+  {
+   "text": "80%",
+   "src": "shopcheck/t1",
+   "start": 156.89,
+   "end": 157.64
+  },
+  {
+   "text": "reduziert",
+   "src": "shopcheck/t1",
+   "start": 157.63,
+   "end": 158.09
+  },
+  {
+   "text": "ist",
+   "src": "shopcheck/t1",
+   "start": 158.13,
+   "end": 158.25
+  },
+  {
+   "text": "und",
+   "src": "shopcheck/t1",
+   "start": 158.83,
+   "end": 158.93
+  },
+  {
+   "text": "die",
+   "src": "shopcheck/t1",
+   "start": 159.05,
+   "end": 159.11
+  },
+  {
+   "text": "Preise",
+   "src": "shopcheck/t1",
+   "start": 159.15,
+   "end": 159.43
+  },
+  {
+   "text": "viel",
+   "src": "shopcheck/t1",
+   "start": 159.59,
+   "end": 159.77
+  },
+  {
+   "text": "zu",
+   "src": "shopcheck/t1",
+   "start": 159.85,
+   "end": 159.91
+  },
+  {
+   "text": "gut",
+   "src": "shopcheck/t1",
+   "start": 159.97,
+   "end": 160.11
+  },
+  {
+   "text": "klingen",
+   "src": "shopcheck/t1",
+   "start": 160.15,
+   "end": 160.41
+  },
+  {
+   "text": "um",
+   "src": "shopcheck/t1",
+   "start": 160.55,
+   "end": 160.61
+  },
+  {
+   "text": "wahr",
+   "src": "shopcheck/t1",
+   "start": 160.65,
+   "end": 160.77
+  },
+  {
+   "text": "zu",
+   "src": "shopcheck/t1",
+   "start": 160.83,
+   "end": 160.91
+  },
+  {
+   "text": "sein,",
+   "src": "shopcheck/t1",
+   "start": 160.97,
+   "end": 161.15
+  },
+  {
+   "text": "dann",
+   "src": "shopcheck/t1",
+   "start": 161.23,
+   "end": 161.41
+  },
+  {
+   "text": "ist",
+   "src": "shopcheck/t1",
+   "start": 161.81,
+   "end": 161.91
+  },
+  {
+   "text": "immer",
+   "src": "shopcheck/t1",
+   "start": 161.95,
+   "end": 162.09
+  },
+  {
+   "text": "hier",
+   "src": "shopcheck/t1",
+   "start": 162.15,
+   "end": 162.27
+  },
+  {
+   "text": "Vorsicht",
+   "src": "shopcheck/t1",
+   "start": 162.43,
+   "end": 162.73
+  },
+  {
+   "text": "geboten.",
+   "src": "shopcheck/t1",
+   "start": 162.75,
+   "end": 163.09
+  },
+  {
+   "text": "Immer",
+   "src": "shopcheck/t1",
+   "start": 163.97,
+   "end": 164.17
+  },
+  {
+   "text": "zweimal",
+   "src": "shopcheck/t1",
+   "start": 164.49,
+   "end": 164.87
+  },
+  {
+   "text": "bei",
+   "src": "shopcheck/t1",
+   "start": 164.91,
+   "end": 164.99
+  },
+  {
+   "text": "sowas",
+   "src": "shopcheck/t1",
+   "start": 165.03,
+   "end": 165.25
+  },
+  {
+   "text": "hinschauen.",
+   "src": "shopcheck/t1",
+   "start": 165.27,
+   "end": 165.71
+  },
+  {
+   "text": "Und",
+   "src": "shopcheck/t1",
+   "start": 166.19,
+   "end": 166.31
+  },
+  {
+   "text": "speichere",
+   "src": "shopcheck/t1",
+   "start": 166.41,
+   "end": 166.77
+  },
+  {
+   "text": "dir",
+   "src": "shopcheck/t1",
+   "start": 166.79,
+   "end": 166.87
+  },
+  {
+   "text": "das",
+   "src": "shopcheck/t1",
+   "start": 166.93,
+   "end": 167.01
+  },
+  {
+   "text": "Video",
+   "src": "shopcheck/t1",
+   "start": 167.07,
+   "end": 167.31
+  },
+  {
+   "text": "einfach",
+   "src": "shopcheck/t1",
+   "start": 167.43,
+   "end": 167.71
+  },
+  {
+   "text": "für",
+   "src": "shopcheck/t1",
+   "start": 167.81,
+   "end": 167.89
+  },
+  {
+   "text": "deinen",
+   "src": "shopcheck/t1",
+   "start": 167.93,
+   "end": 168.05
+  },
+  {
+   "text": "nächsten",
+   "src": "shopcheck/t1",
+   "start": 168.07,
+   "end": 168.35
+  },
+  {
+   "text": "Online",
+   "src": "shopcheck/t1",
+   "start": 168.41,
+   "end": 168.89
+  },
+  {
+   "text": "Einkauf.",
+   "src": "shopcheck/t1",
+   "start": 168.65,
+   "end": 168.95
+  }
+ ],
+ "pages": [
+  4,
+  2,
+  2,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  3,
+  3,
+  1,
+  4,
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  2,
+  1,
+  1,
+  3,
+  4,
+  2,
+  2,
+  1,
+  2,
+  2,
+  1,
+  2,
+  3,
+  3,
+  3,
+  3,
+  1,
+  3,
+  3,
+  2,
+  4,
+  1,
+  1,
+  2,
+  2,
+  3,
+  4,
+  1,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  1,
+  2,
+  1,
+  3,
+  3,
+  2,
+  1,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  1,
+  2,
+  3,
+  2,
+  1,
+  1,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2
+ ]
+}

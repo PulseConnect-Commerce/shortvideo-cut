@@ -1,0 +1,43 @@
+{
+ "projekt": "shopcheck",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {"min_gap": 0.2, "pre": 0.04, "post": 0.06},
+ "saetze": [
+  {"take": "t1", "ab": 2.41, "text": "Bevor du das nächste Mal beim Onlineshop bestellst, den du noch gar nicht kennst, check mal lieber diese fünf Dinge ab."},
+  {"take": "t1", "ab": 14.87, "text": "Das dauert maximal zwei Minuten und kann dir viel Ärger ersparen."},
+  {"take": "t1", "ab": 21.07, "text": "Erstens, schau dir den Shop als Ganzes an."},
+  {"take": "t1", "ab": 23.21, "text": "Wirkt er professionell?"},
+  {"take": "t1", "ab": 24.63, "text": "Passen die Texte, Bilder und Preise überhaupt zusammen?"},
+  {"take": "t1", "ab": 27.33, "text": "Oder wirkt das Ganze eher schnell zusammengebaut?"},
+  {"take": "t1", "ab": 33.31, "text": "Zweitens, geh ins Impressum."},
+  {"take": "t1", "ab": 34.91, "text": "Gibt es dort überhaupt ein Unternehmen, eine vollständige Anschrift oder überhaupt eine Möglichkeit jemanden zu kontaktieren?"},
+  {"take": "t1", "ab": 41.26, "text": "Im Zweifel kannst du die Firma oder Adresse einfach mal kurz googeln."},
+  {"take": "t1", "ab": 47.23, "text": "Drittens, schau dir einfach die rechtlichen Seiten einmal an."},
+  {"take": "t1", "ab": 50.95, "text": "Gibt es eine vernünftige Datenschutzerklärung, Information zum Widerruf"},
+  {"take": "t1", "ab": 56.45, "text": "oder gegebenenfalls sogar eine AGB?"},
+  {"take": "t1", "ab": 87.95, "text": "Und wenn der Shop Tracking und entsprechende Cookies verwendet, dann sollte das natürlich auch wiederum in der Einwilligung sauber umgesetzt sein."},
+  {"take": "t2", "ab": 82.72, "text": "Viertens sind die Zahlungsmethoden."},
+  {"take": "t1", "ab": 98.77, "text": "Wenn ein unbekannter Shop nur Vorkasse oder irgendwie dubiose Zahlungsmethoden mit Krypto anbietet, Dann wäre hier lieber Vorsicht geboten, denn etablierte Zahlungsmöglichkeiten mit Käuferschutz sind hier definitiv ein gutes Zeichen."},
+  {"take": "t1", "ab": 130.45, "text": "Und Fünftens, mach einen kurzen Realitätscheck."},
+  {"take": "t1", "ab": 133.17, "text": "Werden Elektrogeräte verkauft, gibt es zusätzliche gesetzliche Pflichten,"},
+  {"take": "t1", "ab": 140.23, "text": "auch Verpackungsregister und ähnliche Vorgaben könnten für Händler relevant sein"},
+  {"take": "t1", "ab": 154.63, "text": "vor allem wenn hier plötzlich fast alles 70 oder 80% reduziert ist und die Preise viel zu gut klingen um wahr zu sein dann ist immer hier Vorsicht geboten immer zweimal bei sowas hinschauen"},
+  {"take": "t1", "ab": 166.07, "text": "und speichere dir das Video einfach für deinen nächsten Online Einkauf"}
+ ],
+ "ende": {"bis": 169.55},
+ "korrekturen": [
+  ["t1", 105.58, "Dann", "dann"],
+  ["t1", 130.73, "Fünftens,", "fünftens,"],
+  ["t1", 136.19, "Pflichten,", "Pflichten."],
+  ["t1", 140.35, "auch", "Auch"],
+  ["t1", 143.65, "sein", "sein."],
+  ["t1", 154.75, "vor", "Und vor"],
+  ["t1", 160.97, "sein", "sein,"],
+  ["t1", 162.75, "geboten", "geboten."],
+  ["t1", 163.97, "immer", "Immer"],
+  ["t1", 165.27, "hinschauen", "hinschauen."],
+  ["t1", 166.19, "und", "Und"],
+  ["t1", 168.65, "Einkauf", "Einkauf."]
+ ]
+}
