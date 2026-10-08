@@ -13,12 +13,14 @@ import json, re, subprocess, sys
 
 import numpy as np
 
+from frames import frame, js_round
+
 mp4, cut_path, specs = sys.argv[1], sys.argv[2], sys.argv[3:]
 d = json.load(open(cut_path, encoding="utf-8"))
 FPS = d.get("fps", 30)
 K, at = [], 0
 for k in d["keeps"]:
-    n = round(k["to"] * FPS) - round(k["from"] * FPS)
+    n = frame(k["to"], FPS) - frame(k["from"], FPS)
     K.append((k, at)); at += n
 
 
@@ -68,7 +70,7 @@ for spec in specs:
     if not hit:
         print(f"{word:14s} nicht im Schnitt"); continue
     text, wa = hit; after = wa
-    wf = int(round(wa))
+    wf = js_round(wa)
     bl = blocks[reg]   # bl[i] = change from frame i to i+1
     lo, hi = max(0, wf - 12), min(len(bl) - 1, wf + 12)
     # a block "lights up" when it changes by more than 25 levels; it counts only if it did not flicker in the
