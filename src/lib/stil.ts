@@ -12,6 +12,11 @@ export const STIL = {
   mono: "Geist Mono, ui-monospace, monospace",
   /** Akzent für das gesprochene Wort und Hervorhebungen (heißt aus Kompatibilität "yellow", ist mein Blau) */
   yellow: "#31ADEC",
+  /** zweite Akzentfarbe: das Hellgrün von PulseConnect (pulseconnect.de), für alles Positive (Haken, "ok", Schutz);
+   * darauf immer dunkle Schrift (ink), weiße hat zu wenig Kontrast */
+  accent2: "#00E090",
+  /** das Gelb des Speichern-Lesezeichens wie in TikTok, für den Speichern-Aufruf am Ende */
+  save: "#FACE15",
   ink: "#14161A",
   green: "#1F9D6B",
   red: "#E5484D",

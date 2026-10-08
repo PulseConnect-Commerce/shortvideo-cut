@@ -120,9 +120,9 @@ export const Row: React.FC<{ icon?: React.ReactNode; text: string; mark?: "ok" |
 /** grüner Haken oder rotes Kreuz im Kreis */
 export const Mark: React.FC<{ ok: boolean; size?: number }> = ({ ok, size = 54 }) => (
   <svg width={size} height={size} viewBox="0 0 48 48" style={{ flex: "none" }}>
-    <circle cx="24" cy="24" r="22" fill={ok ? STIL.green : STIL.red} />
+    <circle cx="24" cy="24" r="22" fill={ok ? STIL.accent2 : STIL.red} />
     {ok ? (
-      <path d="M14 25 l7 7 l13 -15" stroke="#fff" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M14 25 l7 7 l13 -15" stroke={STIL.ink} strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
     ) : (
       <path d="M16 16 L32 32 M32 16 L16 32" stroke="#fff" strokeWidth="5" strokeLinecap="round" />
     )}
@@ -131,8 +131,8 @@ export const Mark: React.FC<{ ok: boolean; size?: number }> = ({ ok, size = 54 }
 
 /** Pille auf der Karte (Akzent, Warnung, ok) */
 export const Tag: React.FC<{ children: React.ReactNode; kind?: "accent" | "warn" | "ok" | "ink"; size?: number }> = ({ children, kind = "accent", size = 46 }) => {
-  const bg = { accent: STIL.yellow, warn: STIL.red, ok: STIL.green, ink: STIL.ink }[kind];
-  const color = kind === "accent" ? STIL.ink : "#fff";
+  const bg = { accent: STIL.yellow, warn: STIL.red, ok: STIL.accent2, ink: STIL.ink }[kind];
+  const color = kind === "accent" || kind === "ok" ? STIL.ink : "#fff";
   return (
     <div
       style={{
@@ -251,8 +251,8 @@ export const IconCoin: React.FC<IconP> = ({ size = 74 }) => (
 );
 export const IconShield: React.FC<IconP> = ({ size = 74 }) => (
   <svg width={size} height={size} viewBox="0 0 64 64">
-    <path d="M32 5 L54 13 V30 C54 45 44 54 32 59 C20 54 10 45 10 30 V13 Z" fill={STIL.green} stroke={ink} strokeWidth={sw} strokeLinejoin="round" />
-    <path d="M21 32 l8 8 l14 -16" stroke="#fff" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M32 5 L54 13 V30 C54 45 44 54 32 59 C20 54 10 45 10 30 V13 Z" fill={STIL.accent2} stroke={ink} strokeWidth={sw} strokeLinejoin="round" />
+    <path d="M21 32 l8 8 l14 -16" stroke={ink} strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 export const IconCard: React.FC<IconP> = ({ size = 74 }) => (
@@ -289,7 +289,7 @@ export const IconBattery: React.FC<IconP> = ({ size = 74 }) => (
   <svg width={size} height={size} viewBox="0 0 64 64">
     <rect x="6" y="18" width="46" height="28" rx="5" fill="#fff" stroke={ink} strokeWidth={sw} />
     <rect x="52" y="26" width="6" height="12" rx="2" fill={ink} />
-    <rect x="11" y="23" width="24" height="18" rx="2" fill={STIL.green} />
+    <rect x="11" y="23" width="24" height="18" rx="2" fill={STIL.accent2} />
   </svg>
 );
 export const IconBox: React.FC<IconP> = ({ size = 74 }) => (
@@ -312,7 +312,7 @@ export const IconBookmark: React.FC<IconP & { fill?: number }> = ({ size = 74, f
       </clipPath>
     </defs>
     <path d="M16 6 H48 V58 L32 46 L16 58 Z" fill="#fff" />
-    <rect x="0" y={64 - 64 * fill} width="64" height="64" fill={STIL.yellow} clipPath="url(#bm)" />
+    <rect x="0" y={64 - 64 * fill} width="64" height="64" fill={STIL.save} clipPath="url(#bm)" />
     <path d="M16 6 H48 V58 L32 46 L16 58 Z" fill="none" stroke={ink} strokeWidth={sw} strokeLinejoin="round" />
   </svg>
 );
@@ -334,7 +334,7 @@ export const ShopMock: React.FC<{ x: number; y: number; w: number; h: number; wo
   return (
     <div style={{ position: "absolute", left: x, top: y, width: w, height: h, borderRadius: 18, border: `4px solid ${ink}`, background: "#fff", overflow: "hidden" }}>
       <div style={{ height: 44, borderBottom: `4px solid ${ink}`, display: "flex", alignItems: "center", gap: 10, paddingLeft: 16 }}>
-        {[STIL.red, "#F2B544", STIL.green].map((c) => (
+        {[STIL.red, "#F2B544", STIL.accent2].map((c) => (
           <div key={c} style={{ width: 14, height: 14, borderRadius: 99, background: c }} />
         ))}
         <div style={{ marginLeft: 12, height: 18, width: w * 0.5, borderRadius: 9, background: STIL.line }} />

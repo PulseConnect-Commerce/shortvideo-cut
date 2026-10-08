@@ -1,8 +1,8 @@
 /**
  * "5 Dinge, bevor du bei einem unbekannten Onlineshop bestellst". Talking Head im Vollbild, fester Ausschnitt ohne
  * Hose (1,17 ab der Oberkante), langsame Zoom-ins pro Bildstück (abwechselnd 1 und 1,045, so wirken die Jump-Cuts wie
- * Kamerawechsel), Hook-Satz oben, und über dem Kopf pro Thema eine Bildkarte (B-Roll, broll.tsx), deren Teile auf
- * ihrem Wort erscheinen.
+ * Kamerawechsel), Nahaufnahmen auf betonten Stellen, Hook-Satz oben, und über dem Kopf pro Thema eine Bildkarte
+ * (B-Roll, broll.tsx), deren Teile auf ihrem Wort erscheinen.
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
@@ -75,6 +75,26 @@ const zoomAt = (fr: number) => {
   return (k % 2 ? 1.045 : 1) + hook + interpolate(fr, [s.at, s.at + s.len], [0, 0.03], clamp);
 };
 
+/** Nahaufnahmen auf betonten Stellen: [von, bis] in Frames, das Bild fährt in 5 Frames auf CLOSE heran und hält bis
+ * zum Ende der Phrase. Anker 50 % 42 % (zwischen Augen und Kinn), so bleibt der Kopf unter der Bildkarte. */
+const CLOSE = 1.18;
+const CLOSEUPS: [number, number][] = [
+  [F("viel", T.zeit), C.WE("ersparen") + 4],
+  [F("professionell"), C.WE("professionell") + 4],
+  [F("kurz", C.W("adresse")), C.WE("googeln") + 4],
+  [F("widerrufs-button"), C.WE("widerrufs-button") + 4],
+  [F("vorsicht"), C.WE("geboten", F("vorsicht")) + 4],
+  [F("definitiv", T.s4), C.WE("zeichen") + 4],
+  [F("realitätscheck"), C.WE("realitätscheck") + 4],
+  [F("viel", T.rabatt), C.WE("sein", F("wahr")) + 4],
+  [T.zweimal, C.WE("hinschauen") + 4],
+];
+const closeAt = (fr: number) =>
+  CLOSEUPS.reduce(
+    (z, [a, b]) => Math.max(z, interpolate(fr, [a, a + 5, b, b + 6], [1, CLOSE, CLOSE, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) })),
+    1,
+  );
+
 /** raster: Platzierungsraster mit sicherer Fläche und den Zonen von TikTok/Instagram (nur für Standbilder) */
 export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean }> = ({ voice = true, sfx = true, raster = false }) => {
   const fr = useCurrentFrame();
@@ -82,9 +102,11 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
   const bm = interpolate(fr, [F("speichere") + 4, F("speichere") + 14], [0, 1], clamp);
   return (
     <AbsoluteFill style={{ backgroundColor: STIL.paper }}>
-      <SplitPerson split={0} zoom={zoomAt(fr)}>
-        <Takes C={C} voice={voice} transform={`scale(${CROP})`} transformOrigin="50% 0%" />
-      </SplitPerson>
+      <AbsoluteFill style={{ transform: `scale(${closeAt(fr)})`, transformOrigin: "50% 42%" }}>
+        <SplitPerson split={0} zoom={zoomAt(fr)}>
+          <Takes C={C} voice={voice} transform={`scale(${CROP})`} transformOrigin="50% 0%" />
+        </SplitPerson>
+      </AbsoluteFill>
 
       <HookTitle fr={fr} line1="Bevor du im Onlineshop bestellst:" line2="Check diese 5 Dinge." outAt={T.zeit - 8} />
 

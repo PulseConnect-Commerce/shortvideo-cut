@@ -79,3 +79,13 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
   fachlich ergänzt, bleibt drin. Nur Versprecher, Wiederholungen und Füllwörter fliegen raus.
 - **Mehrere Takes desselben Texts** (2026-10-08): pro Satz den besten Take nehmen und mischen ("Nutze die beiden
   besten Videoausschnitte aus beiden Videos").
+- **Zweite Akzentfarbe: PulseConnect-Hellgrün `#00E090`** (2026-10-08): "Ich möcht gerne als zweite Akzentfarbe in den
+  Videos immer ein hellgrün von PulseConnect verwenden." Für alles Positive (Haken, "ok", Schutz, gutes Zeichen), immer
+  mit dunkler Schrift. Blau `#31ADEC` bleibt die erste Akzentfarbe (gesprochenes Wort, Hook, Nummern). In `stil.ts`:
+  `accent2`.
+- **Speichern-Aufruf in TikTok-Gelb** (2026-10-08): "Bitte beim 'Label' ... die Farbe Gelb/Orange verwenden, wie es
+  auch im Original ist" (das Speichern-Lesezeichen am Ende). Das Lesezeichen füllt sich in `#FACE15` (`STIL.save`).
+- **Nahaufnahmen auf Betonungen** (2026-10-08): "zwischendurch ein paar Nahaufnahmen bei bestimmten Betonungen ...
+  oder kleine Zoomeffekte". 8-10 pro Minute auf betonten Stellen (Warnung, Pointe, Aufruf): in 5 Frames auf ~1,18 ans
+  Gesicht (Anker zwischen Augen und Kinn), halten bis zum Ende der Phrase, zurück in 6 Frames. Zusätzlich zu den
+  langsamen Zoom-ins pro Bildstück.
