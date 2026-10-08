@@ -32,6 +32,7 @@ import sys
 
 import numpy as np
 
+from frames import frame
 from fclib import ROOT, WARNUNGEN, Take, build_pages, is_filler, norm, ranges_for, tight
 
 spec_path = sys.argv[1]
@@ -41,7 +42,7 @@ LANG = spec.get("sprache", "de")
 FPS = spec.get("fps", 30)
 gap = {"min_gap": 0.3, "pre": 0.04, "post": 0.06, **spec.get("pausen", {})}
 tid = lambda take: f"{P}/{take}"
-f = lambda s: round(s * FPS)
+f = lambda s: frame(s, FPS)
 
 # 1. Sätze -> Schnittstücke
 keeps, chosen = [], set()     # chosen: die Wörter aus dem Text (ein Schnitt in eine Lücke kann ein Nachbarwort streifen)

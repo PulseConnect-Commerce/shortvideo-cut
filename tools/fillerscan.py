@@ -12,6 +12,8 @@ brauchen (darin versteckt sich oft ein "ähm"). Prüfen, dann den Satz in schnit
 import argparse, json, subprocess
 import numpy as np
 
+from frames import frame
+
 ap = argparse.ArgumentParser()
 ap.add_argument("cut"); ap.add_argument("--db", type=float, default=None)
 ap.add_argument("--min", type=float, default=0.10)
@@ -62,4 +64,4 @@ for k in cut["keeps"]:
             i = j
         else:
             i += 1
-    at += round(k["to"] * FPS) - round(k["from"] * FPS)
+    at += frame(k["to"], FPS) - frame(k["from"], FPS)

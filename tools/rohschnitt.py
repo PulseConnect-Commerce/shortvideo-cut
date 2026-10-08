@@ -16,6 +16,7 @@ import sys
 import tempfile
 
 from fclib import ROOT, take_paths
+from frames import frame
 
 YELLOW = "&H0028DEFF"  # ASS: &HAABBGGRR, das Gelb aus STIL (#FFDE28)
 WHITE = "&H00FFFFFF"
@@ -49,7 +50,7 @@ def main():
 
     cut = json.load(open(o.cut, encoding="utf-8"))
     fps = cut.get("fps", 30)
-    f = lambda s: round(s * fps)  # wie createCut: Stücke auf ganze Frames
+    f = lambda s: frame(s, fps)  # wie createCut: Stücke auf ganze Frames
     keeps, at = [], 0
     for k in cut["keeps"]:
         n = f(k["to"]) - f(k["from"])
