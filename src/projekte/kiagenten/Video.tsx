@@ -101,20 +101,24 @@ export const Video: React.FC<{
   raster?: boolean;
   hookStil?: HookStil;
   untertitel?: keyof typeof UNTERTITEL;
-}> = ({ voice = true, sfx = true, raster = false, hookStil = "balken", untertitel = "face" }) => {
+  /** "oben": Gesicht im oberen Drittel (etwas mehr Ausschnitt), Bildkarten auf der Brust statt über dem Kopf */
+  layout?: "standard" | "oben";
+}> = ({ voice = true, sfx = true, raster = false, hookStil = "balken", untertitel = "face", layout = "standard" }) => {
+  const oben = layout === "oben";
   const fr = useCurrentFrame();
   const ut = UNTERTITEL[untertitel];
   return (
     <AbsoluteFill style={{ backgroundColor: STIL.paper }}>
       <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
         <SplitPerson split={0} zoom={zoomAt(fr)}>
-          <Takes C={C} voice={voice} transform={`scale(${CROP})`} transformOrigin="50% 0%" />
+          <Takes C={C} voice={voice} transform={oben ? "translateY(-772px) scale(1.65)" : `scale(${CROP})`} transformOrigin="50% 0%" />
         </SplitPerson>
       </AbsoluteFill>
 
       <HookTitle fr={fr} line1="KI-AGENTEN:" line2="GENIAL ODER BULLSHIT?" outAt={T.hype - 8} stil={hookStil} />
 
       {/* Überall KI-Agenten: wofür angeblich */}
+      <AbsoluteFill style={{ transform: oben ? "translateY(640px)" : undefined }}>
       <Szene fr={fr} at={T.hype} until={T.basics - 2} title="Überall KI-Agenten" photo="broll/kiagenten/hype.jpg">
         <Pop fr={fr} at={F("onlineshop")} x={24} y={118}>
           <Row icon={<IconBrowser />} text="Onlineshop" width={400} onPhoto />
@@ -224,7 +228,9 @@ export const Video: React.FC<{
         </Pop>
       </Szene>
 
-      {ut && <Captions C={C} fr={fr} top={ut.top} size={ut.size} />}
+      </AbsoluteFill>
+
+      {ut && <Captions C={C} fr={fr} top={oben ? 1350 : ut.top} size={ut.size} />}
 
       {sfx && (
         <>
