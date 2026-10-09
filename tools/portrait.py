@@ -1,13 +1,14 @@
 """Porträt-Modus: der Hintergrund wird weichgezeichnet, die Person bleibt scharf (wie mit offener Blende).
 
-  npm run portrait -- <projekt> [--staerke 20] [--alles]
+  npm run portrait -- <projekt> [--staerke 6] [--alles]
 
 Die Person wird mit Robust Video Matting freigestellt (MobileNetV3 als TorchScript, ~15 MB, lädt sich beim ersten Mal
 von GitHub nach .tools/rvm/; läuft auf der CPU in halber Auflösung, ~6 Bilder pro Sekunde mit 4 Kernen). Bearbeitet
 werden alle Takes des Projekts, aber nur die Stellen, die der Schnitt nutzt (src/projekte/<projekt>/cut.json), mit
 0,5 s Rand; der Rest bleibt unverändert (--alles: der ganze Take). Das Original bleibt als <take>.orig.mp4 liegen, und
 jeder Lauf geht wieder vom Original aus: nach einer Schnitt-Änderung, die neue Stellen nutzt, einfach noch einmal.
---staerke: Unschärfe des Hintergrunds (Gauß-Sigma in Pixeln bei 1080 Breite), Standard 20.
+--staerke: Unschärfe des Hintergrunds (Gauß-Sigma in Pixeln bei 1080 Breite), Standard 6: leicht, wie eine
+Spiegelreflex mit offener Blende (der Hintergrund bleibt erkennbar); 20 zeichnet ihn ganz weich.
 """
 
 import json
@@ -27,7 +28,7 @@ args = [a for a in sys.argv[1:] if not a.startswith("--")]
 if not args:
     sys.exit(__doc__)
 projekt = args[0]
-staerke = float(sys.argv[sys.argv.index("--staerke") + 1]) if "--staerke" in sys.argv else 20.0
+staerke = float(sys.argv[sys.argv.index("--staerke") + 1]) if "--staerke" in sys.argv else 6.0
 if "--staerke" in sys.argv and str(sys.argv[sys.argv.index("--staerke") + 1]) in args:
     args.remove(sys.argv[sys.argv.index("--staerke") + 1])
 alles = "--alles" in sys.argv

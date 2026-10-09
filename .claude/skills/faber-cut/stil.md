@@ -99,6 +99,8 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 - **Porträt-Modus** (2026-10-09): "Ist es möglich, dass du den Hintergrund aus dem Fokus nimmst und mich mehr im Fokus
   wie ein Portrait Modus anpasst? Dann sieht es aus, als ob man mit einer teureren Spiegelreflexkamera aufgenommen hat."
   Nach dem Schnitt `npm run portrait -- <projekt>` (Hintergrund weich, Person scharf; nach Schnitt-Änderungen erneut).
+  Nur leicht, Stärke 6: "der Hintergrund sollte nur leicht angepasst werden. Wie bei einer Spiegelreflexkamera" (der
+  Hintergrund bleibt erkennbar, 20 war "vollständig geblurrt").
 - **Wortdoppler hören, nicht nur lesen** (2026-10-09): "An einer Stelle kommt noch das Wort 'an' zweimal vor." Whisper
   schreibt Stotterer ("an- anbietet") nur einmal auf: jede Stelle, die fillerscan meldet, am Pegel anhören; einen
   Doppler mitten im Satz mit `"stumm"` leise machen, wenn ein Schnitt dort ein Mini-Stück ließe.
