@@ -229,19 +229,19 @@ export const Video: React.FC<{
       {sfx && (
         <>
           {[T.hype, T.basics, T.auto, T.tipp, T.cta].map((at) => (
-            <Sfx key={`w${at}`} file="whoosh.mp3" at={at} volume={STIL.sfx * 0.8} />
+            <Sfx key={`w${at}`} file="whoosh.mp3" at={at} volume={STIL.sfx * 0.6} />
           ))}
           {[F("onlineshop"), F("kundenservice"), F("marketing"), F("zeit", F("welche")), F("geld", F("welche"))].map((at) => (
-            <Sfx key={`t${at}`} file="tick.mp3" at={at} />
+            <Sfx key={`t${at}`} file="tick.mp3" at={at} volume={STIL.sfx * 0.7} />
           ))}
           {[F("besucher"), F("produktseite"), F("checkout"), F("ki-tool")].map((at) => (
-            <Sfx key={`s${at}`} file="stamp.mp3" at={at} />
+            <Sfx key={`s${at}`} file="stamp.mp3" at={at} volume={STIL.sfx * 0.5} />
           ))}
           {[F("problem"), F("plus") + 2].map((at) => (
-            <Sfx key={`o${at}`} file="success.mp3" at={at} />
+            <Sfx key={`o${at}`} file="success.mp3" at={at} volume={STIL.sfx * 0.5} />
           ))}
           {[F("meinung"), F("vergiss")].map((at) => (
-            <Sfx key={`p${at}`} file="pop.mp3" at={at} />
+            <Sfx key={`p${at}`} file="pop.mp3" at={at} volume={STIL.sfx * 0.7} />
           ))}
         </>
       )}

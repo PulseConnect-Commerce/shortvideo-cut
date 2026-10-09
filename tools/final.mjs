@@ -34,17 +34,22 @@ const t0 = Date.now();
 run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", id, raw, "--codec=h264-mkv", `--concurrency=${Math.max(1, Math.min(4, cpus().length))}`, "--crf=18", "--log=error"]);
 console.log(`gerendert in ${Math.round((Date.now() - t0) / 1000)} s`);
 
+// Raumklang-Teppich: ein sehr leises Rosa-Rauschen (~-75 dBFS) unter allem, damit es nie digitale Stille gibt.
+// Teleprompter-Apps schalten in Pausen auf null; bleiben solche Pausen im Video ("ganz"-Sätze), hört man sie als Loch.
+const bed = ["-f", "lavfi", "-i", "anoisesrc=color=pink:amplitude=0.0004:sample_rate=48000"];
+const mix = (af) => ["-filter_complex", `[0:a][1:a]amix=inputs=2:duration=first:normalize=0,${af}[a]`];
 // Lautheit: zwei Durchgänge (messen, dann linear anpassen), Bild wird nur kopiert
 const probe = spawnSync(
   "ffmpeg",
-  ["-hide_banner", "-nostats", "-i", raw, "-af", "loudnorm=I=-14:TP=-1:LRA=11:print_format=json", "-f", "null", "-"],
+  ["-hide_banner", "-nostats", "-i", raw, ...bed, ...mix("loudnorm=I=-14:TP=-1:LRA=11:print_format=json"), "-map", "[a]", "-f", "null", "-"],
   { encoding: "utf8" },
 );
 // der Messwert ist der letzte {...}-Block mit "input_i"; neuere ffmpeg schreiben danach noch Zeilen
 const m = JSON.parse(probe.stderr.match(/\{[^{}]*"input_i"[^{}]*\}/g).pop());
 run("ffmpeg", [
-  "-v", "error", "-y", "-i", raw, "-c:v", "copy",
-  "-af", `loudnorm=I=-14:TP=-1:LRA=11:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`,
+  "-v", "error", "-y", "-i", raw, ...bed,
+  ...mix(`loudnorm=I=-14:TP=-1:LRA=11:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`),
+  "-map", "0:v", "-map", "[a]", "-c:v", "copy",
   "-ar", "48000", "-c:a", "aac", "-b:a", "320k", "-movflags", "+faststart", master,
 ]);
 rmSync(raw, { force: true });
