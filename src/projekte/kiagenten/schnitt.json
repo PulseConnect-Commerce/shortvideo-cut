@@ -3,7 +3,7 @@
  "sprache": "de",
  "fps": 30,
  "pausen": {
-  "min_gap": 0.2,
+  "min_gap": 0.4,
   "pre": 0.04,
   "post": 0.06
  },
@@ -21,7 +21,8 @@
   {
    "take": "t1",
    "ab": 13.7,
-   "text": "Aber mal ganz ehrlich, brauchst Du es wirklich,"
+   "text": "Aber mal ganz ehrlich, brauchst Du es wirklich,",
+   "ganz": true
   },
   {
    "take": "t1",
@@ -41,17 +42,20 @@
   {
    "take": "t1",
    "ab": 50.85,
-   "text": "Ich finde Automatisierung natürlich prinzipiell extrem spannend und sehr wichtig und auch gut, aber ich sehe da einen Unterschied zwischen einem echten Problem, das du halt automatisieren kannst."
+   "text": "Ich finde Automatisierung natürlich prinzipiell extrem spannend und sehr wichtig und auch gut, aber ich sehe da einen Unterschied zwischen einem echten Problem, das du halt automatisieren kannst.",
+   "ganz": true
   },
   {
    "take": "t1",
    "ab": 66.4,
-   "text": "Und ein KI-Tool, das du einfach nur einbaust, weil gerade alle einfach darüber reden."
+   "text": "Und ein KI-Tool, das du einfach nur einbaust, weil gerade alle einfach darüber reden.",
+   "ganz": true
   },
   {
    "take": "t1",
    "ab": 127.8,
-   "text": "Mein Tipp, bevor du einen KI-Agenten kaufst, frag dich erst einmal, welche Aufgabe kostet mich wirklich Zeit und Geld in meinem Onlineshop?"
+   "text": "Mein Tipp, bevor du einen KI-Agenten kaufst, frag dich erst einmal, welche Aufgabe kostet mich wirklich Zeit und Geld in meinem Onlineshop?",
+   "ganz": true
   },
   {
    "take": "t1",

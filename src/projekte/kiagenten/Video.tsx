@@ -1,11 +1,11 @@
 /**
  * Format FACE (Skill stil-face). "KI-Agenten im Onlineshop – sinnvoll oder völliger Hype?" Meinungsvideo direkt in
- * die Kamera: Bild ab der Hüfte, Punch-ins an den Schnitten und auf Betonungen, große Untertitel, Hook als Balken,
+ * die Kamera: Bild ab der Hüfte, ruhig geschnitten (wenige Schnitte, zwei sanfte Zooms), große Untertitel, Hook als Balken,
  * Bildkarten über dem Kopf wie HERO (src/lib/broll.tsx), am Ende Kommentar-Blase und Folgen-Knopf mit Plus.
  */
 import type React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
-import { Captions, clamp, HookTitle, type HookStil, punchAt, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
+import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
+import { Captions, clamp, HookTitle, type HookStil, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
 import {
   chip,
   IconBrowser,
@@ -19,7 +19,6 @@ import {
   Szene,
   Tag,
 } from "../../lib/broll";
-import { autoPunch } from "../../lib/kit";
 import { Raster } from "../../lib/raster";
 import { createCut } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
@@ -42,18 +41,19 @@ const T = (() => {
   return { hype, basics, auto, tipp, cta };
 })();
 
-/** Punch-ins (FACE): an jedem Schnitt abwechselnd 1,0 und 1,07, auf den Betonungen kurz 1,1 */
-const PUNCH = autoPunch(C, {
-  base: [
-    [0, 1],
-    [F("hören"), 1.1],
-    [F("wirklich"), 1.1],
-    [F("beste"), 1.1],
-    [F("unterschied"), 1.1],
-    [F("welche"), 1.1],
-    [F("seht"), 1.1],
-  ],
-});
+/** ruhig (FACE, nach seinem Feedback): ein ganz langsames Zoom-in über das ganze Video und nur zwei sanfte Akzente
+ * auf den stärksten Stellen (8 Frames heran, halten bis zum Ende der Phrase, 10 Frames zurück) */
+const zoomAt = (fr: number) => 1 + 0.06 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
+const AKZENT = 1.06;
+const AKZENTE: [number, number][] = [
+  [F("aber"), C.WE("wirklich") + 4],
+  [F("welche"), C.WE("onlineshop", F("welche")) + 4],
+];
+const akzentAt = (fr: number) =>
+  AKZENTE.reduce(
+    (z, [a, b]) => Math.max(z, interpolate(fr, [a, a + 8, b, b + 10], [1, AKZENT, AKZENT, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) })),
+    1,
+  );
 
 /** Untertitel FACE: größer als HERO (100 px), Oberkante y 1320. Varianten nur für den Stilabgleich (Standbilder) */
 const UNTERTITEL = { face: { top: 1320, size: 100 }, hero: { top: STIL.captionY, size: STIL.captionSize }, aus: null };
@@ -106,9 +106,11 @@ export const Video: React.FC<{
   const ut = UNTERTITEL[untertitel];
   return (
     <AbsoluteFill style={{ backgroundColor: STIL.paper }}>
-      <SplitPerson split={0} zoom={punchAt(PUNCH, fr)}>
-        <Takes C={C} voice={voice} transform={`scale(${CROP})`} transformOrigin="50% 0%" />
-      </SplitPerson>
+      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
+        <SplitPerson split={0} zoom={zoomAt(fr)}>
+          <Takes C={C} voice={voice} transform={`scale(${CROP})`} transformOrigin="50% 0%" />
+        </SplitPerson>
+      </AbsoluteFill>
 
       <HookTitle fr={fr} line1="KI-AGENTEN:" line2="GENIAL ODER BULLSHIT?" outAt={T.hype - 8} stil={hookStil} />
 
@@ -156,6 +158,11 @@ export const Video: React.FC<{
         <Pop fr={fr} at={F("spannend")} x={444} y={126}>
           <Tag kind="ok" size={44}>
             extrem spannend
+          </Tag>
+        </Pop>
+        <Pop fr={fr} at={F("wichtig")} until={F("unterschied") - 8} x={24} y={226}>
+          <Tag kind="ok" size={44}>
+            und sehr wichtig
           </Tag>
         </Pop>
         <Pop fr={fr} at={F("unterschied")} until={F("problem") - 8} x={24} y={226}>
