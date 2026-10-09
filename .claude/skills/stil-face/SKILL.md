@@ -1,6 +1,6 @@
 ---
 name: stil-face
-description: Schnittstil FACE von PulseConnect für Meinungsvideos direkt in die Kamera (kurz, ~45-60 s, klare Haltung, Frage an die Community) - Bild ab der Hüfte, Punch-ins an Schnitten und Betonungen statt langsamem Zoom, große Untertitel (100 px) mit dem gesprochenen Wort in Blau, Hook als Balken (Stil pro Video wählbar), Bildkarten über dem Kopf wie HERO, leichter Porträt-Modus, am Ende Kommentar-Blase und Folgen-Knopf mit Plus. Verwende diesen Skill zusammen mit faber-cut, sobald ein FACE-Video geschnitten oder überarbeitet wird (der Nutzer sagt "FACE", "Meinungsvideo", "Hot Take") oder Feedback zu einem FACE-Video gibt.
+description: Schnittstil FACE von PulseConnect für Meinungsvideos direkt in die Kamera (kurz, ~45-60 s, klare Haltung, Frage an die Community) - Bild ab der Hüfte, ruhig geschnitten (wenig Schnitte und Zooms), große Untertitel (100 px) mit dem gesprochenen Wort in Blau, Hook als Balken (Stil pro Video wählbar), Bildkarten über dem Kopf wie HERO, leichter Porträt-Modus, am Ende Kommentar-Blase und Folgen-Knopf mit Plus. Verwende diesen Skill zusammen mit faber-cut, sobald ein FACE-Video geschnitten oder überarbeitet wird (der Nutzer sagt "FACE", "Meinungsvideo", "Hot Take") oder Feedback zu einem FACE-Video gibt.
 ---
 
 # Stil FACE
@@ -22,9 +22,9 @@ FACE-Video kommen hierher unter "Notizen", mit seinem Satz und Datum.
   (`<Takes transform="scale(…)" transformOrigin="50% 0%" />`), vorher messen. Bei kiagenten begann die Hose
   frühestens bei y 1640, also scale 1,2.
 - **Porträt-Modus wie HERO:** `npm run portrait -- <projekt>`, Stärke 6.
-- **Punch-ins statt langsamem Zoom:** an jedem sichtbaren Schnitt abwechselnd 1,0 und 1,07 (`autoPunch` aus
-  `src/lib/kit.tsx`), dazu auf 3-4 Betonungen (Pointe, Frage, Tipp) kurz 1,1. Ein Jump-Cut wirkt so wie ein
-  Kamerawechsel. Kein durchgehendes Zoom-in.
+- **Wenig Bewegung:** kein Punch-in an jedem Schnitt. Höchstens 2-3 sanfte Akzente auf den stärksten Stellen
+  (Pointe, Frage), sonst ruhiges Bild (ein ganz langsames Zoom-in wie HERO ist ok). Das erste FACE-Video hatte
+  Punch-ins an jedem Schnitt; das war ihm zu viel (siehe Notizen).
 - **Rand frei:** an jeder Seite mindestens 60 px (wie HERO).
 
 ## Hook (erstes Bild bis zum zweiten Satz)
@@ -57,7 +57,9 @@ FACE-Video kommen hierher unter "Notizen", mit seinem Satz und Datum.
 - **Skript als Gerüst** (wie HERO); wo er im Take anders formuliert, gilt seine gesprochene Fassung.
 - **Mehrere Anläufe desselben Satzes: meistens den letzten nehmen** ("Nutze hier meistens den letzten Versuch"),
   außer er ist abgebrochen oder schlechter. Abgebrochene Anläufe immer raus.
-- Pausen ab 0,2 s raus, keine Mini-Jump-Cuts, Stotterer mit dem Bild herausschneiden (wie HERO).
+- **Weniger Schnitte als HERO:** Pausen erst ab 0,4 s raus (`pausen.min_gap: 0.4`), ganze Sätze möglichst am Stück
+  aus einem Anlauf (`"ganz": true`, wenn die Pausen darin kurz sind), keine Mini-Jump-Cuts, Stotterer mit dem Bild
+  herausschneiden. Lieber einen Satz mit kleiner Pause lassen als zwei Schnitte setzen.
 - Leise Soundeffekte unter der Stimme (Wusch bei neuer Karte, Tick bei Haken, Pop beim Folgen-Knopf), ≥ 6 dB unter
   der Stimme. Keine Musik. -14 LUFS.
 
@@ -80,7 +82,11 @@ FACE-Video kommen hierher unter "Notizen", mit seinem Satz und Datum.
 Herkunft der Regeln oben (Format-Onboarding am 2026-10-09, erstes FACE-Video kiagenten):
 - Format: "FACE" als Meinungsvideo gewählt; anders als HERO sollen sein: Text im Bild, Schnitt & Bewegung, Look &
   Ende (Grafiken bleiben wie HERO).
-- Hook: Stil A "Balken weiß + rot"; Untertitel: B "Größer"; Tempo: "Wie HERO"; Zoom: "Punch-ins".
+- Hook: Stil A "Balken weiß + rot"; Untertitel: B "Größer"; Tempo: "Wie HERO"; Zoom: "Punch-ins" (beides nach dem
+  ersten Video zurückgenommen, siehe unten).
 - Porträt: "Wie HERO"; Farben: "Wie HERO"; Ende: "Kommentar + Plus".
 - Bild: "Auch hier bitte in diesem Fall erst ab Hüfthöhe starten."
 - Takes: "ich habe an einigen Stellen den Abschnitt neu aufgenommen. Nutze hier meistens den letzten Versuch".
+- Weniger Zooms und Schnitte (2026-10-09, nach dem ersten FACE-Video): "Bitte beim nächste Video weniger Video Zooms
+  und Schnitte. Das wirkt dann bei so einem Kurzen Video zu stark bearbeitet und es springt zu sehr zwischen den
+  Sequenzen hin und her."
