@@ -1,0 +1,40 @@
+{
+ "projekt": "vertrauen",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {"min_gap": 0.2, "pre": 0.04, "post": 0.06},
+ "saetze": [
+  {"take": "t1", "ab": 3.37, "text": "Du kannst den besten Onlineshop der Welt haben, wenn aber deine Besucher dir nicht vertrauen, dann kaufen sie trotzdem nicht."},
+  {"take": "t2", "ab": 6.83, "text": "Deshalb hier die fünf Dinge, die ich bei deinem Onlineshop definitiv überprüfen würde."},
+  {"take": "t1", "ab": 39.88, "text": "1. Der erste Eindruck sind professionelle Produktbilder vorhanden, sind vernünftige Texte eingebunden und ist ein einheitliches Design und vor allem keine offensichtlichen Fehler drin."},
+  {"take": "t1", "ab": 50.51, "text": "Dein Kunde entscheidet nämlich innerhalb kürzester Zeit, ob überhaupt dein Onlineshop seriös ist oder nicht."},
+  {"take": "t1", "ab": 56.55, "text": "2. Versteckt dein Unternehmen nicht.", "ganz": true},
+  {"take": "t1", "ab": 58.67, "text": "Ein vollständiges Impressum, eine echte Anschrift und eine leicht auffindbare Kontaktmöglichkeit wie ein Kontaktformular schaffen hier eindeutig Vertrauen."},
+  {"take": "t1", "ab": 96.13, "text": "Drittens, mach deine rechtlichen Seiten einfach ordentlich."},
+  {"take": "t1", "ab": 123.55, "text": "Denn Datenschutzerklärungen, Widerrufsinformationen und gegebenenfalls AGBs müssen zu deinem Onlineshop passen."},
+  {"take": "t1", "ab": 129.09, "text": "und wenn du einwilligungspflichtiges Tracking verwendest, dann muss auch die Cookie-Einwilligung entsprechend umgesetzt sein und ein sauberer Cookie-Banner angewendet werden."},
+  {"take": "t1", "ab": 138.1, "text": "Viertens, biete Zahlungsmethoden an, die bereits Vertrauen schaffen."},
+  {"take": "t1", "ab": 142.53, "text": "Denn je unbekannter deine Marke ist, desto wichtiger sind hier vertrauensvolle Zahlungsmethoden wie Paypal, Klarna oder einfach Kreditkarten beim Checkout."},
+  {"take": "t2", "ab": 310.93, "text": "und fünftens vergiss bitte nicht deine Pflichten hinter einem Onlineshop"},
+  {"take": "t1", "ab": 230.41, "text": "Denn gerade bei Elektronik können zum Beispiel die WEEE oder Batterievorgaben relevant sein."},
+  {"take": "t1", "ab": 279.18, "text": "Und beim Versand nach Deutschland solltest du auch das Thema Verpackungsregister bzw. die LUCID-ID definitiv auf dem Schirm haben und auch in deinem Impressum hinterlegen."},
+  {"take": "t2", "ab": 334.48, "text": "Und noch ein weiterer Punkt, übertreib es bitte nicht mit den künstlichen Rabatten, denn wenn ein Onlineshop dauerhaft 70-80% Rabatte hat, dann schafft das Ganze nicht unbedingt Vertrauen,"},
+  {"take": "t2", "ab": 349.16, "text": "Sondern bewirkt leider genau das Gegenteil."},
+  {"take": "t1", "ab": 311.7, "text": "Und wenn du einen Onlineshop betreibst, speichere dir einfach das Video ab"},
+  {"take": "t2", "ab": 390.61, "text": "und geh einmal selbst durch all diese fünf Punkte in deinem eigenen Onlineshop durch und schau, ob du sie auch alle einhältst."}
+ ],
+ "ende": {"bis": 396.12},
+ "korrekturen": [
+  ["t1", 40.0, "1.", "Erstens,"],
+  ["t1", 56.67, "2.", "Zweitens,"],
+  ["t1", 57.45, "Versteckt", "versteck"],
+  ["t1", 129.21, "und", "Und"],
+  ["t1", 148.17, "Paypal,", "PayPal,"],
+  ["t2", 311.05, "und", "Und"],
+  ["t2", 311.32, "fünftens", "fünftens,"],
+  ["t2", 313.82, "Onlineshop", "Onlineshop."],
+  ["t1", 232.33, "WEEE", "WEEE-"],
+  ["t2", 349.28, "Sondern", "sondern"],
+  ["t1", 282.5, "bzw.", "beziehungsweise"]
+ ]
+}

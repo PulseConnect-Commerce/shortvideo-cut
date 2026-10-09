@@ -1,0 +1,1981 @@
+{
+ "projekt": "vertrauen",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "vertrauen/t1",
+   "from": 3.445,
+   "to": 5.565,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 5.725,
+   "to": 8.985,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t2",
+   "from": 6.955,
+   "to": 11.085,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 39.955,
+   "to": 41.485,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 41.855,
+   "to": 45.715,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 45.885,
+   "to": 49.555,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 50.585,
+   "to": 55.425,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 56.605,
+   "to": 58.695,
+   "nach": 0.05,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 58.725,
+   "to": 61.035,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 61.205,
+   "to": 65.885,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 96.235,
+   "to": 98.555,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 123.625,
+   "to": 128.485,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 129.175,
+   "to": 136.595,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 138.175,
+   "to": 141.845,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 142.605,
+   "to": 145.825,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 145.965,
+   "to": 147.015,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 147.225,
+   "to": 150.835,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t2",
+   "from": 311.075,
+   "to": 314.315,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 230.525,
+   "to": 234.865,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 279.265,
+   "to": 287.235,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t2",
+   "from": 334.555,
+   "to": 338.565,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t2",
+   "from": 338.835,
+   "to": 341.715,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t2",
+   "from": 342.055,
+   "to": 343.935,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t2",
+   "from": 349.215,
+   "to": 350.995,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t1",
+   "from": 311.775,
+   "to": 314.615,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t2",
+   "from": 390.705,
+   "to": 394.125,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "vertrauen/t2",
+   "from": 394.305,
+   "to": 396.12,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Du",
+   "src": "vertrauen/t1",
+   "start": 3.49,
+   "end": 3.55
+  },
+  {
+   "text": "kannst",
+   "src": "vertrauen/t1",
+   "start": 3.61,
+   "end": 3.83
+  },
+  {
+   "text": "den",
+   "src": "vertrauen/t1",
+   "start": 3.89,
+   "end": 3.97
+  },
+  {
+   "text": "besten",
+   "src": "vertrauen/t1",
+   "start": 4.07,
+   "end": 4.37
+  },
+  {
+   "text": "Onlineshop",
+   "src": "vertrauen/t1",
+   "start": 4.43,
+   "end": 4.79
+  },
+  {
+   "text": "der",
+   "src": "vertrauen/t1",
+   "start": 4.83,
+   "end": 4.91
+  },
+  {
+   "text": "Welt",
+   "src": "vertrauen/t1",
+   "start": 4.93,
+   "end": 5.09
+  },
+  {
+   "text": "haben,",
+   "src": "vertrauen/t1",
+   "start": 5.15,
+   "end": 5.39
+  },
+  {
+   "text": "wenn",
+   "src": "vertrauen/t1",
+   "start": 5.77,
+   "end": 5.89
+  },
+  {
+   "text": "aber",
+   "src": "vertrauen/t1",
+   "start": 5.95,
+   "end": 6.07
+  },
+  {
+   "text": "deine",
+   "src": "vertrauen/t1",
+   "start": 6.11,
+   "end": 6.31
+  },
+  {
+   "text": "Besucher",
+   "src": "vertrauen/t1",
+   "start": 6.37,
+   "end": 6.71
+  },
+  {
+   "text": "dir",
+   "src": "vertrauen/t1",
+   "start": 6.77,
+   "end": 6.85
+  },
+  {
+   "text": "nicht",
+   "src": "vertrauen/t1",
+   "start": 6.93,
+   "end": 7.09
+  },
+  {
+   "text": "vertrauen,",
+   "src": "vertrauen/t1",
+   "start": 7.13,
+   "end": 7.57
+  },
+  {
+   "text": "dann",
+   "src": "vertrauen/t1",
+   "start": 7.85,
+   "end": 7.95
+  },
+  {
+   "text": "kaufen",
+   "src": "vertrauen/t1",
+   "start": 7.99,
+   "end": 8.23
+  },
+  {
+   "text": "sie",
+   "src": "vertrauen/t1",
+   "start": 8.27,
+   "end": 8.35
+  },
+  {
+   "text": "trotzdem",
+   "src": "vertrauen/t1",
+   "start": 8.37,
+   "end": 8.73
+  },
+  {
+   "text": "nicht.",
+   "src": "vertrauen/t1",
+   "start": 8.77,
+   "end": 8.95
+  },
+  {
+   "text": "Deshalb",
+   "src": "vertrauen/t2",
+   "start": 6.95,
+   "end": 7.25
+  },
+  {
+   "text": "hier",
+   "src": "vertrauen/t2",
+   "start": 7.35,
+   "end": 7.49
+  },
+  {
+   "text": "die",
+   "src": "vertrauen/t2",
+   "start": 7.59,
+   "end": 7.65
+  },
+  {
+   "text": "fünf",
+   "src": "vertrauen/t2",
+   "start": 7.81,
+   "end": 8.03
+  },
+  {
+   "text": "Dinge,",
+   "src": "vertrauen/t2",
+   "start": 8.11,
+   "end": 8.31
+  },
+  {
+   "text": "die",
+   "src": "vertrauen/t2",
+   "start": 8.67,
+   "end": 8.73
+  },
+  {
+   "text": "ich",
+   "src": "vertrauen/t2",
+   "start": 8.83,
+   "end": 8.91
+  },
+  {
+   "text": "bei",
+   "src": "vertrauen/t2",
+   "start": 8.99,
+   "end": 9.07
+  },
+  {
+   "text": "deinem",
+   "src": "vertrauen/t2",
+   "start": 9.13,
+   "end": 9.31
+  },
+  {
+   "text": "Onlineshop",
+   "src": "vertrauen/t2",
+   "start": 9.37,
+   "end": 9.73
+  },
+  {
+   "text": "definitiv",
+   "src": "vertrauen/t2",
+   "start": 9.81,
+   "end": 10.27
+  },
+  {
+   "text": "überprüfen",
+   "src": "vertrauen/t2",
+   "start": 10.35,
+   "end": 10.77
+  },
+  {
+   "text": "würde.",
+   "src": "vertrauen/t2",
+   "start": 10.83,
+   "end": 10.99
+  },
+  {
+   "text": "Erstens,",
+   "src": "vertrauen/t1",
+   "start": 40.0,
+   "end": 40.42
+  },
+  {
+   "text": "Der",
+   "src": "vertrauen/t1",
+   "start": 40.66,
+   "end": 40.74
+  },
+  {
+   "text": "erste",
+   "src": "vertrauen/t1",
+   "start": 40.78,
+   "end": 40.98
+  },
+  {
+   "text": "Eindruck",
+   "src": "vertrauen/t1",
+   "start": 41.04,
+   "end": 41.36
+  },
+  {
+   "text": "sind",
+   "src": "vertrauen/t1",
+   "start": 41.9,
+   "end": 42.35
+  },
+  {
+   "text": "professionelle",
+   "src": "vertrauen/t1",
+   "start": 42.36,
+   "end": 42.94
+  },
+  {
+   "text": "Produktbilder",
+   "src": "vertrauen/t1",
+   "start": 43.0,
+   "end": 43.48
+  },
+  {
+   "text": "vorhanden,",
+   "src": "vertrauen/t1",
+   "start": 43.54,
+   "end": 43.88
+  },
+  {
+   "text": "sind",
+   "src": "vertrauen/t1",
+   "start": 44.18,
+   "end": 44.32
+  },
+  {
+   "text": "vernünftige",
+   "src": "vertrauen/t1",
+   "start": 44.34,
+   "end": 44.7
+  },
+  {
+   "text": "Texte",
+   "src": "vertrauen/t1",
+   "start": 44.76,
+   "end": 45.02
+  },
+  {
+   "text": "eingebunden",
+   "src": "vertrauen/t1",
+   "start": 45.1,
+   "end": 45.58
+  },
+  {
+   "text": "und",
+   "src": "vertrauen/t1",
+   "start": 45.94,
+   "end": 46.02
+  },
+  {
+   "text": "ist",
+   "src": "vertrauen/t1",
+   "start": 46.06,
+   "end": 46.16
+  },
+  {
+   "text": "ein",
+   "src": "vertrauen/t1",
+   "start": 46.18,
+   "end": 46.28
+  },
+  {
+   "text": "einheitliches",
+   "src": "vertrauen/t1",
+   "start": 46.42,
+   "end": 46.96
+  },
+  {
+   "text": "Design",
+   "src": "vertrauen/t1",
+   "start": 47.02,
+   "end": 47.38
+  },
+  {
+   "text": "und",
+   "src": "vertrauen/t1",
+   "start": 47.44,
+   "end": 47.52
+  },
+  {
+   "text": "vor",
+   "src": "vertrauen/t1",
+   "start": 47.56,
+   "end": 47.64
+  },
+  {
+   "text": "allem",
+   "src": "vertrauen/t1",
+   "start": 47.72,
+   "end": 47.88
+  },
+  {
+   "text": "keine",
+   "src": "vertrauen/t1",
+   "start": 47.98,
+   "end": 48.2
+  },
+  {
+   "text": "offensichtlichen",
+   "src": "vertrauen/t1",
+   "start": 48.3,
+   "end": 48.88
+  },
+  {
+   "text": "Fehler",
+   "src": "vertrauen/t1",
+   "start": 48.96,
+   "end": 49.22
+  },
+  {
+   "text": "drin.",
+   "src": "vertrauen/t1",
+   "start": 49.26,
+   "end": 49.44
+  },
+  {
+   "text": "Dein",
+   "src": "vertrauen/t1",
+   "start": 50.63,
+   "end": 50.77
+  },
+  {
+   "text": "Kunde",
+   "src": "vertrauen/t1",
+   "start": 50.85,
+   "end": 51.11
+  },
+  {
+   "text": "entscheidet",
+   "src": "vertrauen/t1",
+   "start": 51.23,
+   "end": 51.67
+  },
+  {
+   "text": "nämlich",
+   "src": "vertrauen/t1",
+   "start": 51.71,
+   "end": 51.93
+  },
+  {
+   "text": "innerhalb",
+   "src": "vertrauen/t1",
+   "start": 51.97,
+   "end": 52.27
+  },
+  {
+   "text": "kürzester",
+   "src": "vertrauen/t1",
+   "start": 52.39,
+   "end": 52.83
+  },
+  {
+   "text": "Zeit,",
+   "src": "vertrauen/t1",
+   "start": 52.89,
+   "end": 53.13
+  },
+  {
+   "text": "ob",
+   "src": "vertrauen/t1",
+   "start": 53.39,
+   "end": 53.49
+  },
+  {
+   "text": "überhaupt",
+   "src": "vertrauen/t1",
+   "start": 53.57,
+   "end": 53.83
+  },
+  {
+   "text": "dein",
+   "src": "vertrauen/t1",
+   "start": 53.85,
+   "end": 53.95
+  },
+  {
+   "text": "Onlineshop",
+   "src": "vertrauen/t1",
+   "start": 53.99,
+   "end": 54.33
+  },
+  {
+   "text": "seriös",
+   "src": "vertrauen/t1",
+   "start": 54.39,
+   "end": 54.83
+  },
+  {
+   "text": "ist",
+   "src": "vertrauen/t1",
+   "start": 54.87,
+   "end": 54.99
+  },
+  {
+   "text": "oder",
+   "src": "vertrauen/t1",
+   "start": 55.03,
+   "end": 55.17
+  },
+  {
+   "text": "nicht.",
+   "src": "vertrauen/t1",
+   "start": 55.21,
+   "end": 55.39
+  },
+  {
+   "text": "Zweitens,",
+   "src": "vertrauen/t1",
+   "start": 56.67,
+   "end": 56.83
+  },
+  {
+   "text": "versteck",
+   "src": "vertrauen/t1",
+   "start": 57.45,
+   "end": 57.79
+  },
+  {
+   "text": "dein",
+   "src": "vertrauen/t1",
+   "start": 57.81,
+   "end": 57.91
+  },
+  {
+   "text": "Unternehmen",
+   "src": "vertrauen/t1",
+   "start": 57.95,
+   "end": 58.33
+  },
+  {
+   "text": "nicht.",
+   "src": "vertrauen/t1",
+   "start": 58.37,
+   "end": 58.53
+  },
+  {
+   "text": "Ein",
+   "src": "vertrauen/t1",
+   "start": 58.79,
+   "end": 58.89
+  },
+  {
+   "text": "vollständiges",
+   "src": "vertrauen/t1",
+   "start": 58.99,
+   "end": 59.53
+  },
+  {
+   "text": "Impressum,",
+   "src": "vertrauen/t1",
+   "start": 59.59,
+   "end": 60.07
+  },
+  {
+   "text": "eine",
+   "src": "vertrauen/t1",
+   "start": 60.19,
+   "end": 60.31
+  },
+  {
+   "text": "echte",
+   "src": "vertrauen/t1",
+   "start": 60.39,
+   "end": 60.55
+  },
+  {
+   "text": "Anschrift",
+   "src": "vertrauen/t1",
+   "start": 60.63,
+   "end": 60.93
+  },
+  {
+   "text": "und",
+   "src": "vertrauen/t1",
+   "start": 61.25,
+   "end": 61.33
+  },
+  {
+   "text": "eine",
+   "src": "vertrauen/t1",
+   "start": 61.41,
+   "end": 61.55
+  },
+  {
+   "text": "leicht",
+   "src": "vertrauen/t1",
+   "start": 61.63,
+   "end": 61.85
+  },
+  {
+   "text": "auffindbare",
+   "src": "vertrauen/t1",
+   "start": 61.91,
+   "end": 62.37
+  },
+  {
+   "text": "Kontaktmöglichkeit",
+   "src": "vertrauen/t1",
+   "start": 62.43,
+   "end": 63.33
+  },
+  {
+   "text": "wie",
+   "src": "vertrauen/t1",
+   "start": 63.39,
+   "end": 63.47
+  },
+  {
+   "text": "ein",
+   "src": "vertrauen/t1",
+   "start": 63.49,
+   "end": 63.55
+  },
+  {
+   "text": "Kontaktformular",
+   "src": "vertrauen/t1",
+   "start": 63.57,
+   "end": 64.21
+  },
+  {
+   "text": "schaffen",
+   "src": "vertrauen/t1",
+   "start": 64.53,
+   "end": 64.81
+  },
+  {
+   "text": "hier",
+   "src": "vertrauen/t1",
+   "start": 64.85,
+   "end": 64.97
+  },
+  {
+   "text": "eindeutig",
+   "src": "vertrauen/t1",
+   "start": 65.07,
+   "end": 65.43
+  },
+  {
+   "text": "Vertrauen.",
+   "src": "vertrauen/t1",
+   "start": 65.47,
+   "end": 65.79
+  },
+  {
+   "text": "Drittens,",
+   "src": "vertrauen/t1",
+   "start": 96.25,
+   "end": 96.63
+  },
+  {
+   "text": "mach",
+   "src": "vertrauen/t1",
+   "start": 96.81,
+   "end": 96.93
+  },
+  {
+   "text": "deine",
+   "src": "vertrauen/t1",
+   "start": 97.01,
+   "end": 97.15
+  },
+  {
+   "text": "rechtlichen",
+   "src": "vertrauen/t1",
+   "start": 97.21,
+   "end": 97.57
+  },
+  {
+   "text": "Seiten",
+   "src": "vertrauen/t1",
+   "start": 97.61,
+   "end": 97.85
+  },
+  {
+   "text": "einfach",
+   "src": "vertrauen/t1",
+   "start": 97.89,
+   "end": 98.09
+  },
+  {
+   "text": "ordentlich.",
+   "src": "vertrauen/t1",
+   "start": 98.15,
+   "end": 98.47
+  },
+  {
+   "text": "Denn",
+   "src": "vertrauen/t1",
+   "start": 123.67,
+   "end": 123.79
+  },
+  {
+   "text": "Datenschutzerklärungen,",
+   "src": "vertrauen/t1",
+   "start": 123.83,
+   "end": 124.69
+  },
+  {
+   "text": "Widerrufsinformationen",
+   "src": "vertrauen/t1",
+   "start": 124.77,
+   "end": 125.81
+  },
+  {
+   "text": "und",
+   "src": "vertrauen/t1",
+   "start": 125.89,
+   "end": 125.97
+  },
+  {
+   "text": "gegebenenfalls",
+   "src": "vertrauen/t1",
+   "start": 126.03,
+   "end": 126.61
+  },
+  {
+   "text": "AGBs",
+   "src": "vertrauen/t1",
+   "start": 126.67,
+   "end": 127.05
+  },
+  {
+   "text": "müssen",
+   "src": "vertrauen/t1",
+   "start": 127.15,
+   "end": 127.39
+  },
+  {
+   "text": "zu",
+   "src": "vertrauen/t1",
+   "start": 127.43,
+   "end": 127.51
+  },
+  {
+   "text": "deinem",
+   "src": "vertrauen/t1",
+   "start": 127.55,
+   "end": 127.73
+  },
+  {
+   "text": "Onlineshop",
+   "src": "vertrauen/t1",
+   "start": 127.79,
+   "end": 128.11
+  },
+  {
+   "text": "passen.",
+   "src": "vertrauen/t1",
+   "start": 128.15,
+   "end": 128.39
+  },
+  {
+   "text": "Und",
+   "src": "vertrauen/t1",
+   "start": 129.21,
+   "end": 129.27
+  },
+  {
+   "text": "wenn",
+   "src": "vertrauen/t1",
+   "start": 129.31,
+   "end": 129.43
+  },
+  {
+   "text": "du",
+   "src": "vertrauen/t1",
+   "start": 129.45,
+   "end": 129.49
+  },
+  {
+   "text": "einwilligungspflichtiges",
+   "src": "vertrauen/t1",
+   "start": 129.63,
+   "end": 130.45
+  },
+  {
+   "text": "Tracking",
+   "src": "vertrauen/t1",
+   "start": 130.51,
+   "end": 130.81
+  },
+  {
+   "text": "verwendest,",
+   "src": "vertrauen/t1",
+   "start": 130.87,
+   "end": 131.27
+  },
+  {
+   "text": "dann",
+   "src": "vertrauen/t1",
+   "start": 131.29,
+   "end": 131.43
+  },
+  {
+   "text": "muss",
+   "src": "vertrauen/t1",
+   "start": 131.51,
+   "end": 131.67
+  },
+  {
+   "text": "auch",
+   "src": "vertrauen/t1",
+   "start": 131.79,
+   "end": 131.91
+  },
+  {
+   "text": "die",
+   "src": "vertrauen/t1",
+   "start": 131.95,
+   "end": 132.03
+  },
+  {
+   "text": "Cookie-Einwilligung",
+   "src": "vertrauen/t1",
+   "start": 132.11,
+   "end": 132.83
+  },
+  {
+   "text": "entsprechend",
+   "src": "vertrauen/t1",
+   "start": 133.07,
+   "end": 133.57
+  },
+  {
+   "text": "umgesetzt",
+   "src": "vertrauen/t1",
+   "start": 133.65,
+   "end": 134.09
+  },
+  {
+   "text": "sein",
+   "src": "vertrauen/t1",
+   "start": 134.13,
+   "end": 134.31
+  },
+  {
+   "text": "und",
+   "src": "vertrauen/t1",
+   "start": 134.61,
+   "end": 134.71
+  },
+  {
+   "text": "ein",
+   "src": "vertrauen/t1",
+   "start": 134.75,
+   "end": 134.83
+  },
+  {
+   "text": "sauberer",
+   "src": "vertrauen/t1",
+   "start": 134.87,
+   "end": 135.21
+  },
+  {
+   "text": "Cookie-Banner",
+   "src": "vertrauen/t1",
+   "start": 135.27,
+   "end": 135.77
+  },
+  {
+   "text": "angewendet",
+   "src": "vertrauen/t1",
+   "start": 135.89,
+   "end": 136.31
+  },
+  {
+   "text": "werden.",
+   "src": "vertrauen/t1",
+   "start": 136.33,
+   "end": 136.53
+  },
+  {
+   "text": "Viertens,",
+   "src": "vertrauen/t1",
+   "start": 138.22,
+   "end": 138.6
+  },
+  {
+   "text": "biete",
+   "src": "vertrauen/t1",
+   "start": 138.84,
+   "end": 139.06
+  },
+  {
+   "text": "Zahlungsmethoden",
+   "src": "vertrauen/t1",
+   "start": 139.18,
+   "end": 139.88
+  },
+  {
+   "text": "an,",
+   "src": "vertrauen/t1",
+   "start": 139.98,
+   "end": 140.12
+  },
+  {
+   "text": "die",
+   "src": "vertrauen/t1",
+   "start": 140.42,
+   "end": 140.5
+  },
+  {
+   "text": "bereits",
+   "src": "vertrauen/t1",
+   "start": 140.58,
+   "end": 140.9
+  },
+  {
+   "text": "Vertrauen",
+   "src": "vertrauen/t1",
+   "start": 140.98,
+   "end": 141.4
+  },
+  {
+   "text": "schaffen.",
+   "src": "vertrauen/t1",
+   "start": 141.44,
+   "end": 141.72
+  },
+  {
+   "text": "Denn",
+   "src": "vertrauen/t1",
+   "start": 142.65,
+   "end": 142.81
+  },
+  {
+   "text": "je",
+   "src": "vertrauen/t1",
+   "start": 143.07,
+   "end": 143.15
+  },
+  {
+   "text": "unbekannter",
+   "src": "vertrauen/t1",
+   "start": 143.33,
+   "end": 143.85
+  },
+  {
+   "text": "deine",
+   "src": "vertrauen/t1",
+   "start": 143.89,
+   "end": 144.05
+  },
+  {
+   "text": "Marke",
+   "src": "vertrauen/t1",
+   "start": 144.11,
+   "end": 144.39
+  },
+  {
+   "text": "ist,",
+   "src": "vertrauen/t1",
+   "start": 144.45,
+   "end": 144.57
+  },
+  {
+   "text": "desto",
+   "src": "vertrauen/t1",
+   "start": 144.61,
+   "end": 144.81
+  },
+  {
+   "text": "wichtiger",
+   "src": "vertrauen/t1",
+   "start": 144.89,
+   "end": 145.29
+  },
+  {
+   "text": "sind",
+   "src": "vertrauen/t1",
+   "start": 145.39,
+   "end": 145.51
+  },
+  {
+   "text": "hier",
+   "src": "vertrauen/t1",
+   "start": 145.55,
+   "end": 145.67
+  },
+  {
+   "text": "vertrauensvolle",
+   "src": "vertrauen/t1",
+   "start": 146.01,
+   "end": 146.75
+  },
+  {
+   "text": "Zahlungsmethoden",
+   "src": "vertrauen/t1",
+   "start": 147.27,
+   "end": 147.99
+  },
+  {
+   "text": "wie",
+   "src": "vertrauen/t1",
+   "start": 148.03,
+   "end": 148.11
+  },
+  {
+   "text": "PayPal,",
+   "src": "vertrauen/t1",
+   "start": 148.17,
+   "end": 148.59
+  },
+  {
+   "text": "Klarna",
+   "src": "vertrauen/t1",
+   "start": 148.67,
+   "end": 149.01
+  },
+  {
+   "text": "oder",
+   "src": "vertrauen/t1",
+   "start": 149.21,
+   "end": 149.35
+  },
+  {
+   "text": "einfach",
+   "src": "vertrauen/t1",
+   "start": 149.39,
+   "end": 149.59
+  },
+  {
+   "text": "Kreditkarten",
+   "src": "vertrauen/t1",
+   "start": 149.63,
+   "end": 150.23
+  },
+  {
+   "text": "beim",
+   "src": "vertrauen/t1",
+   "start": 150.29,
+   "end": 150.41
+  },
+  {
+   "text": "Checkout.",
+   "src": "vertrauen/t1",
+   "start": 150.45,
+   "end": 150.79
+  },
+  {
+   "text": "Und",
+   "src": "vertrauen/t2",
+   "start": 311.05,
+   "end": 311.35
+  },
+  {
+   "text": "fünftens,",
+   "src": "vertrauen/t2",
+   "start": 311.32,
+   "end": 311.82
+  },
+  {
+   "text": "vergiss",
+   "src": "vertrauen/t2",
+   "start": 311.92,
+   "end": 312.2
+  },
+  {
+   "text": "bitte",
+   "src": "vertrauen/t2",
+   "start": 312.24,
+   "end": 312.42
+  },
+  {
+   "text": "nicht",
+   "src": "vertrauen/t2",
+   "start": 312.5,
+   "end": 312.62
+  },
+  {
+   "text": "deine",
+   "src": "vertrauen/t2",
+   "start": 312.66,
+   "end": 312.82
+  },
+  {
+   "text": "Pflichten",
+   "src": "vertrauen/t2",
+   "start": 312.86,
+   "end": 313.2
+  },
+  {
+   "text": "hinter",
+   "src": "vertrauen/t2",
+   "start": 313.24,
+   "end": 313.48
+  },
+  {
+   "text": "einem",
+   "src": "vertrauen/t2",
+   "start": 313.6,
+   "end": 313.76
+  },
+  {
+   "text": "Onlineshop.",
+   "src": "vertrauen/t2",
+   "start": 313.82,
+   "end": 314.24
+  },
+  {
+   "text": "Denn",
+   "src": "vertrauen/t1",
+   "start": 230.53,
+   "end": 230.65
+  },
+  {
+   "text": "gerade",
+   "src": "vertrauen/t1",
+   "start": 230.67,
+   "end": 230.89
+  },
+  {
+   "text": "bei",
+   "src": "vertrauen/t1",
+   "start": 230.95,
+   "end": 231.01
+  },
+  {
+   "text": "Elektronik",
+   "src": "vertrauen/t1",
+   "start": 231.03,
+   "end": 231.49
+  },
+  {
+   "text": "können",
+   "src": "vertrauen/t1",
+   "start": 231.55,
+   "end": 231.73
+  },
+  {
+   "text": "zum",
+   "src": "vertrauen/t1",
+   "start": 231.75,
+   "end": 231.81
+  },
+  {
+   "text": "Beispiel",
+   "src": "vertrauen/t1",
+   "start": 231.85,
+   "end": 232.11
+  },
+  {
+   "text": "die",
+   "src": "vertrauen/t1",
+   "start": 232.15,
+   "end": 232.23
+  },
+  {
+   "text": "WEEE-",
+   "src": "vertrauen/t1",
+   "start": 232.33,
+   "end": 232.87
+  },
+  {
+   "text": "oder",
+   "src": "vertrauen/t1",
+   "start": 233.21,
+   "end": 233.37
+  },
+  {
+   "text": "Batterievorgaben",
+   "src": "vertrauen/t1",
+   "start": 233.41,
+   "end": 234.17
+  },
+  {
+   "text": "relevant",
+   "src": "vertrauen/t1",
+   "start": 234.21,
+   "end": 234.59
+  },
+  {
+   "text": "sein.",
+   "src": "vertrauen/t1",
+   "start": 234.65,
+   "end": 234.81
+  },
+  {
+   "text": "Und",
+   "src": "vertrauen/t1",
+   "start": 279.3,
+   "end": 279.38
+  },
+  {
+   "text": "beim",
+   "src": "vertrauen/t1",
+   "start": 279.42,
+   "end": 279.54
+  },
+  {
+   "text": "Versand",
+   "src": "vertrauen/t1",
+   "start": 279.58,
+   "end": 279.86
+  },
+  {
+   "text": "nach",
+   "src": "vertrauen/t1",
+   "start": 279.92,
+   "end": 280.02
+  },
+  {
+   "text": "Deutschland",
+   "src": "vertrauen/t1",
+   "start": 280.1,
+   "end": 280.54
+  },
+  {
+   "text": "solltest",
+   "src": "vertrauen/t1",
+   "start": 280.6,
+   "end": 280.88
+  },
+  {
+   "text": "du",
+   "src": "vertrauen/t1",
+   "start": 280.9,
+   "end": 280.96
+  },
+  {
+   "text": "auch",
+   "src": "vertrauen/t1",
+   "start": 281.04,
+   "end": 281.14
+  },
+  {
+   "text": "das",
+   "src": "vertrauen/t1",
+   "start": 281.18,
+   "end": 281.28
+  },
+  {
+   "text": "Thema",
+   "src": "vertrauen/t1",
+   "start": 281.32,
+   "end": 281.48
+  },
+  {
+   "text": "Verpackungsregister",
+   "src": "vertrauen/t1",
+   "start": 281.58,
+   "end": 282.42
+  },
+  {
+   "text": "beziehungsweise",
+   "src": "vertrauen/t1",
+   "start": 282.5,
+   "end": 282.84
+  },
+  {
+   "text": "die",
+   "src": "vertrauen/t1",
+   "start": 283.06,
+   "end": 283.14
+  },
+  {
+   "text": "LUCID-ID",
+   "src": "vertrauen/t1",
+   "start": 283.18,
+   "end": 283.7
+  },
+  {
+   "text": "definitiv",
+   "src": "vertrauen/t1",
+   "start": 284.1,
+   "end": 284.56
+  },
+  {
+   "text": "auf",
+   "src": "vertrauen/t1",
+   "start": 284.62,
+   "end": 284.7
+  },
+  {
+   "text": "dem",
+   "src": "vertrauen/t1",
+   "start": 284.74,
+   "end": 284.82
+  },
+  {
+   "text": "Schirm",
+   "src": "vertrauen/t1",
+   "start": 284.86,
+   "end": 285.06
+  },
+  {
+   "text": "haben",
+   "src": "vertrauen/t1",
+   "start": 285.12,
+   "end": 285.32
+  },
+  {
+   "text": "und",
+   "src": "vertrauen/t1",
+   "start": 285.66,
+   "end": 285.72
+  },
+  {
+   "text": "auch",
+   "src": "vertrauen/t1",
+   "start": 285.82,
+   "end": 285.94
+  },
+  {
+   "text": "in",
+   "src": "vertrauen/t1",
+   "start": 285.98,
+   "end": 286.02
+  },
+  {
+   "text": "deinem",
+   "src": "vertrauen/t1",
+   "start": 286.06,
+   "end": 286.26
+  },
+  {
+   "text": "Impressum",
+   "src": "vertrauen/t1",
+   "start": 286.3,
+   "end": 286.64
+  },
+  {
+   "text": "hinterlegen.",
+   "src": "vertrauen/t1",
+   "start": 286.72,
+   "end": 287.14
+  },
+  {
+   "text": "Und",
+   "src": "vertrauen/t2",
+   "start": 334.6,
+   "end": 334.68
+  },
+  {
+   "text": "noch",
+   "src": "vertrauen/t2",
+   "start": 334.74,
+   "end": 334.84
+  },
+  {
+   "text": "ein",
+   "src": "vertrauen/t2",
+   "start": 334.92,
+   "end": 335.0
+  },
+  {
+   "text": "weiterer",
+   "src": "vertrauen/t2",
+   "start": 335.04,
+   "end": 335.34
+  },
+  {
+   "text": "Punkt,",
+   "src": "vertrauen/t2",
+   "start": 335.4,
+   "end": 335.64
+  },
+  {
+   "text": "übertreib",
+   "src": "vertrauen/t2",
+   "start": 335.84,
+   "end": 336.26
+  },
+  {
+   "text": "es",
+   "src": "vertrauen/t2",
+   "start": 336.28,
+   "end": 336.4
+  },
+  {
+   "text": "bitte",
+   "src": "vertrauen/t2",
+   "start": 336.46,
+   "end": 336.64
+  },
+  {
+   "text": "nicht",
+   "src": "vertrauen/t2",
+   "start": 336.72,
+   "end": 336.9
+  },
+  {
+   "text": "mit",
+   "src": "vertrauen/t2",
+   "start": 337.06,
+   "end": 337.16
+  },
+  {
+   "text": "den",
+   "src": "vertrauen/t2",
+   "start": 337.22,
+   "end": 337.3
+  },
+  {
+   "text": "künstlichen",
+   "src": "vertrauen/t2",
+   "start": 337.36,
+   "end": 337.82
+  },
+  {
+   "text": "Rabatten,",
+   "src": "vertrauen/t2",
+   "start": 337.88,
+   "end": 338.24
+  },
+  {
+   "text": "denn",
+   "src": "vertrauen/t2",
+   "start": 338.28,
+   "end": 338.44
+  },
+  {
+   "text": "wenn",
+   "src": "vertrauen/t2",
+   "start": 338.88,
+   "end": 339.0
+  },
+  {
+   "text": "ein",
+   "src": "vertrauen/t2",
+   "start": 339.04,
+   "end": 339.12
+  },
+  {
+   "text": "Onlineshop",
+   "src": "vertrauen/t2",
+   "start": 339.18,
+   "end": 339.52
+  },
+  {
+   "text": "dauerhaft",
+   "src": "vertrauen/t2",
+   "start": 339.58,
+   "end": 339.96
+  },
+  {
+   "text": "70-80%",
+   "src": "vertrauen/t2",
+   "start": 340.04,
+   "end": 341.01
+  },
+  {
+   "text": "Rabatte",
+   "src": "vertrauen/t2",
+   "start": 341.04,
+   "end": 341.36
+  },
+  {
+   "text": "hat,",
+   "src": "vertrauen/t2",
+   "start": 341.46,
+   "end": 341.6
+  },
+  {
+   "text": "dann",
+   "src": "vertrauen/t2",
+   "start": 342.1,
+   "end": 342.22
+  },
+  {
+   "text": "schafft",
+   "src": "vertrauen/t2",
+   "start": 342.24,
+   "end": 342.44
+  },
+  {
+   "text": "das",
+   "src": "vertrauen/t2",
+   "start": 342.48,
+   "end": 342.58
+  },
+  {
+   "text": "Ganze",
+   "src": "vertrauen/t2",
+   "start": 342.62,
+   "end": 342.82
+  },
+  {
+   "text": "nicht",
+   "src": "vertrauen/t2",
+   "start": 342.88,
+   "end": 343.0
+  },
+  {
+   "text": "unbedingt",
+   "src": "vertrauen/t2",
+   "start": 343.02,
+   "end": 343.3
+  },
+  {
+   "text": "Vertrauen,",
+   "src": "vertrauen/t2",
+   "start": 343.32,
+   "end": 343.7
+  },
+  {
+   "text": "sondern",
+   "src": "vertrauen/t2",
+   "start": 349.28,
+   "end": 349.56
+  },
+  {
+   "text": "bewirkt",
+   "src": "vertrauen/t2",
+   "start": 349.6,
+   "end": 349.86
+  },
+  {
+   "text": "leider",
+   "src": "vertrauen/t2",
+   "start": 349.92,
+   "end": 350.1
+  },
+  {
+   "text": "genau",
+   "src": "vertrauen/t2",
+   "start": 350.14,
+   "end": 350.32
+  },
+  {
+   "text": "das",
+   "src": "vertrauen/t2",
+   "start": 350.36,
+   "end": 350.46
+  },
+  {
+   "text": "Gegenteil.",
+   "src": "vertrauen/t2",
+   "start": 350.5,
+   "end": 350.9
+  },
+  {
+   "text": "Und",
+   "src": "vertrauen/t1",
+   "start": 311.82,
+   "end": 311.9
+  },
+  {
+   "text": "wenn",
+   "src": "vertrauen/t1",
+   "start": 311.94,
+   "end": 312.06
+  },
+  {
+   "text": "du",
+   "src": "vertrauen/t1",
+   "start": 312.1,
+   "end": 312.14
+  },
+  {
+   "text": "einen",
+   "src": "vertrauen/t1",
+   "start": 312.2,
+   "end": 312.34
+  },
+  {
+   "text": "Onlineshop",
+   "src": "vertrauen/t1",
+   "start": 312.38,
+   "end": 312.74
+  },
+  {
+   "text": "betreibst,",
+   "src": "vertrauen/t1",
+   "start": 312.78,
+   "end": 313.2
+  },
+  {
+   "text": "speichere",
+   "src": "vertrauen/t1",
+   "start": 313.26,
+   "end": 313.6
+  },
+  {
+   "text": "dir",
+   "src": "vertrauen/t1",
+   "start": 313.62,
+   "end": 313.7
+  },
+  {
+   "text": "einfach",
+   "src": "vertrauen/t1",
+   "start": 313.78,
+   "end": 314.0
+  },
+  {
+   "text": "das",
+   "src": "vertrauen/t1",
+   "start": 314.02,
+   "end": 314.1
+  },
+  {
+   "text": "Video",
+   "src": "vertrauen/t1",
+   "start": 314.14,
+   "end": 314.34
+  },
+  {
+   "text": "ab",
+   "src": "vertrauen/t1",
+   "start": 314.4,
+   "end": 314.5
+  },
+  {
+   "text": "und",
+   "src": "vertrauen/t2",
+   "start": 390.73,
+   "end": 390.81
+  },
+  {
+   "text": "geh",
+   "src": "vertrauen/t2",
+   "start": 390.89,
+   "end": 391.01
+  },
+  {
+   "text": "einmal",
+   "src": "vertrauen/t2",
+   "start": 391.09,
+   "end": 391.29
+  },
+  {
+   "text": "selbst",
+   "src": "vertrauen/t2",
+   "start": 391.33,
+   "end": 391.55
+  },
+  {
+   "text": "durch",
+   "src": "vertrauen/t2",
+   "start": 391.59,
+   "end": 391.71
+  },
+  {
+   "text": "all",
+   "src": "vertrauen/t2",
+   "start": 391.81,
+   "end": 391.93
+  },
+  {
+   "text": "diese",
+   "src": "vertrauen/t2",
+   "start": 391.99,
+   "end": 392.15
+  },
+  {
+   "text": "fünf",
+   "src": "vertrauen/t2",
+   "start": 392.21,
+   "end": 392.37
+  },
+  {
+   "text": "Punkte",
+   "src": "vertrauen/t2",
+   "start": 392.43,
+   "end": 392.67
+  },
+  {
+   "text": "in",
+   "src": "vertrauen/t2",
+   "start": 392.73,
+   "end": 392.77
+  },
+  {
+   "text": "deinem",
+   "src": "vertrauen/t2",
+   "start": 392.83,
+   "end": 393.03
+  },
+  {
+   "text": "eigenen",
+   "src": "vertrauen/t2",
+   "start": 393.13,
+   "end": 393.37
+  },
+  {
+   "text": "Onlineshop",
+   "src": "vertrauen/t2",
+   "start": 393.43,
+   "end": 393.77
+  },
+  {
+   "text": "durch",
+   "src": "vertrauen/t2",
+   "start": 393.83,
+   "end": 394.03
+  },
+  {
+   "text": "und",
+   "src": "vertrauen/t2",
+   "start": 394.35,
+   "end": 394.43
+  },
+  {
+   "text": "schau,",
+   "src": "vertrauen/t2",
+   "start": 394.47,
+   "end": 394.67
+  },
+  {
+   "text": "ob",
+   "src": "vertrauen/t2",
+   "start": 394.83,
+   "end": 394.91
+  },
+  {
+   "text": "du",
+   "src": "vertrauen/t2",
+   "start": 394.97,
+   "end": 395.03
+  },
+  {
+   "text": "sie",
+   "src": "vertrauen/t2",
+   "start": 395.11,
+   "end": 395.19
+  },
+  {
+   "text": "auch",
+   "src": "vertrauen/t2",
+   "start": 395.23,
+   "end": 395.33
+  },
+  {
+   "text": "alle",
+   "src": "vertrauen/t2",
+   "start": 395.41,
+   "end": 395.55
+  },
+  {
+   "text": "einhältst.",
+   "src": "vertrauen/t2",
+   "start": 395.65,
+   "end": 396.03
+  }
+ ],
+ "pages": [
+  2,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  4,
+  2,
+  2,
+  1,
+  3,
+  2,
+  1,
+  1,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  1,
+  3,
+  3,
+  1,
+  1,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  1,
+  1,
+  1,
+  2,
+  4,
+  2,
+  3,
+  1,
+  2,
+  3,
+  2,
+  1,
+  1,
+  4,
+  1,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  1,
+  2,
+  3,
+  1,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  4,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  1,
+  1,
+  2,
+  4,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  1,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  4,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2
+ ]
+}
