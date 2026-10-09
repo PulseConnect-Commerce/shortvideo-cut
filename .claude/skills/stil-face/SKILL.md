@@ -1,6 +1,6 @@
 ---
 name: stil-face
-description: Schnittstil FACE von PulseConnect für Meinungsvideos direkt in die Kamera (kurz, ~45-60 s, klare Haltung, Frage an die Community) - Bild ab der Hüfte, ruhig geschnitten (wenig Schnitte und Zooms), große Untertitel (100 px) mit dem gesprochenen Wort in Blau, Hook als Balken (Stil pro Video wählbar), Bildkarten über dem Kopf wie HERO, leichter Porträt-Modus, am Ende Kommentar-Blase und Folgen-Knopf mit Plus. Verwende diesen Skill zusammen mit faber-cut, sobald ein FACE-Video geschnitten oder überarbeitet wird (der Nutzer sagt "FACE", "Meinungsvideo", "Hot Take") oder Feedback zu einem FACE-Video gibt.
+description: Schnittstil FACE von PulseConnect für Meinungsvideos direkt in die Kamera (kurz, ~45-60 s, klare Haltung, Frage an die Community) - Bild ab der Hüfte, ruhig geschnitten (wenig Schnitte und Zooms), große Untertitel (100 px) mit dem gesprochenen Wort in Blau, Hook als Balken (Stil pro Video wählbar), Begriffe als weiße Chips über dem Kopf (ohne Karte und Foto), leichter Porträt-Modus, am Ende Kommentar-Blase und Folgen-Knopf mit Plus. Verwende diesen Skill zusammen mit faber-cut, sobald ein FACE-Video geschnitten oder überarbeitet wird (der Nutzer sagt "FACE", "Meinungsvideo", "Hot Take") oder Feedback zu einem FACE-Video gibt.
 ---
 
 # Stil FACE
@@ -40,13 +40,12 @@ FACE-Video kommen hierher unter "Notizen", mit seinem Satz und Datum.
   y 1320 (unter dem Kinn, auf der Brust). Lange Wörter werden von selbst kleiner (`fitSize`).
 - Fachbegriffe richtig schreiben (z. B. "KI-Agenten", "E-Commerce", "überhypt" statt Whispers "überhalbt").
 
-## B-Roll: Bildkarten über dem Kopf (wie HERO)
+## B-Roll: Begriffe über dem Kopf (ohne Karte und Foto)
 
-- Pro Gedanke ein Bild über dem Kopf, **randlos in voller Breite bis zum oberen Bildrand** (`<Szene vollbild>`:
-  0-1080, 0-752, ohne Rahmen und Ecken, gleitet von oben herein), Foto mit Nano Banana. Die Begriffe liegen als Chips
-  auf ihrem Wort in der sicheren Fläche (x 95-985, ab y 262) und haben **mindestens ~50 px Abstand zur Unterkante des
-  Bildes** (Bausteine aus `src/lib/broll.tsx`). Hinter den Leisten von TikTok/Instagram liegt nur Foto. Alle 1,5-2 s
-  ändert sich etwas.
+- Pro Gedanke **keine Karte und kein Foto**, nur der Titel und die Begriffe als weiße Chips direkt über dem Kopf im
+  Bild (`<Szene frei>`, Bausteine aus `src/lib/broll.tsx`; Positionen wie bei HERO in der sicheren Fläche x 95-985,
+  y 262-692), jeder Begriff auf seinem Wort. Auch Texte ohne eigenen Hintergrund (z. B. "Schreib mir deine Meinung")
+  bekommen einen weißen Chip. Keine Nano-Banana-Fotos nötig. Alle 1,5-2 s ändert sich etwas.
 - Bei einer Meinung zeigen die Karten seine Gegenüberstellungen (Hype gegen echtes Problem, ohne gegen mit), keine
   Aufzählung von Funktionen.
 
@@ -99,3 +98,4 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-09, erstes FACE-Video kia
 - Randlos wieder verworfen (2026-10-09): "Ich mag die vorherige Version lieber. Bitte einmal komplett ohne
   Hintergrundbild erstellen" → Versuch `<Szene frei>`: keine Karte, kein Foto, nur die weißen Chips über dem Kopf.
   Ob "frei" oder die Karte mit Foto bleibt, entscheidet er nach der Vorschau.
+- Entschieden (2026-10-09): ohne Hintergrundbild ("sieht gut aus").
