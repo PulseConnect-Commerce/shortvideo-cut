@@ -134,13 +134,16 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
           <Row icon={<IconDoc />} text="Impressum" mark="ok" width={420} onPhoto />
         </Pop>
         <Pop fr={fr} at={F("anschrift")} x={24} y={210}>
-          <Row icon={<IconPin />} text="echte Anschrift" mark="ok" width={460} onPhoto />
+          <Row icon={<IconPin />} text="echte Anschrift" mark="ok" width={530} onPhoto />
         </Pop>
         <Pop fr={fr} at={F("kontaktmöglichkeit")} x={24} y={302}>
           <Row icon={<IconMail />} text="Kontakt" mark="ok" width={330} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("vertrauen", T.s2)} x={520} y={316}>
-          <Tag kind="ok">schafft Vertrauen</Tag>
+        <Pop fr={fr} at={F("kontaktformular")} until={F("vertrauen", T.s2) - 8} x={372} y={310}>
+          <Tag size={40}>Kontaktformular</Tag>
+        </Pop>
+        <Pop fr={fr} at={F("vertrauen", T.s2)} x={372} y={310}>
+          <Tag kind="ok" size={42}>schafft Vertrauen</Tag>
         </Pop>
       </Szene>
 
@@ -175,7 +178,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
           </div>
         </Pop>
         <Pop fr={fr} at={F("sauberer")} x={300} y={318}>
-          <Tag kind="ok">sauberer Cookie-Banner</Tag>
+          <Tag kind="ok" size={40}>sauberer Cookie-Banner</Tag>
         </Pop>
       </Szene>
 
@@ -208,6 +211,11 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
 
       {/* 5: Pflichten hinter dem Shop */}
       <Szene fr={fr} at={T.s5} until={T.rabatt - 2} nr={5} title="Pflichten hinter dem Shop" photo="broll/vertrauen/pflichten.jpg">
+        <Pop fr={fr} at={F("vergiss")} until={F("elektronik") - 8} x={24} y={126}>
+          <Tag kind="warn" size={44}>
+            nicht vergessen
+          </Tag>
+        </Pop>
         <Pop fr={fr} at={F("elektronik")} x={24} y={118}>
           <Row icon={<IconPlug />} text="Elektronik" width={360} onPhoto />
         </Pop>
@@ -238,7 +246,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
       </Szene>
 
       {/* noch ein Punkt: künstliche Rabatte */}
-      <Szene fr={fr} at={T.rabatt} until={T.cta - 2} title="Künstliche Rabatte?" photo="broll/vertrauen/rabatt.jpg">
+      <Szene fr={fr} at={T.rabatt} until={T.cta - 2} title="Künstliche Rabatte?" titleAt={F("künstlichen")} photo="broll/vertrauen/rabatt.jpg">
         <Pop fr={fr} at={F("übertreib")} until={F("gegenteil") - 8} x={28} y={322}>
           <Tag kind="ink">übertreib es nicht</Tag>
         </Pop>
