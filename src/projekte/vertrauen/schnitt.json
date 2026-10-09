@@ -26,6 +26,7 @@
  "ende": {"bis": 396.12},
  "korrekturen": [
   ["t1", 40.0, "1.", "Erstens,"],
+  ["t1", 40.66, "Der", "der"],
   ["t1", 56.67, "2.", "Zweitens,"],
   ["t1", 57.45, "Versteckt", "versteck"],
   ["t1", 129.21, "und", "Und"],

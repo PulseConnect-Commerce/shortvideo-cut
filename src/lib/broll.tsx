@@ -1,12 +1,12 @@
 /**
- * B-Roll für "5 Checks vor dem Kauf": Bildkarten über dem Kopf (die freie Wand oben, y 262-692), pro Thema eine
+ * B-Roll für HERO-Videos (Skill stil-hero): Bildkarten über dem Kopf (die freie Wand oben, y 262-692), pro Thema eine
  * Szene mit Icons und Begriffen, die auf ihrem Wort erscheinen. Alle Zeitpunkte kommen aus C.cue("wort").
  */
 import type React from "react";
 import { Easing, Img, interpolate, staticFile } from "remotion";
-import { card, clamp, popS, ramp } from "../../lib/bausteine";
-import { fitSize } from "../../lib/messen";
-import { STIL } from "../../lib/stil";
+import { card, clamp, popS, ramp } from "./bausteine";
+import { fitSize } from "./messen";
+import { STIL } from "./stil";
 
 /** Platz für die Bildkarte: über dem Kopf, in der sicheren Fläche */
 export const BOX = { left: 60, top: 262, width: 890, height: 430 };

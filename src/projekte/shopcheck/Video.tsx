@@ -1,7 +1,7 @@
 /**
  * Format HERO (Skill stil-hero). "5 Dinge, bevor du bei einem unbekannten Onlineshop bestellst". Talking Head im Vollbild, fester Ausschnitt ohne
  * Hose (1,17 ab der Oberkante), ein durchgehendes langsames Zoom-in und vier kleine Akzente, Hook-Satz oben, und
- * über dem Kopf pro Thema eine Bildkarte (B-Roll, broll.tsx), deren Teile auf ihrem Wort erscheinen.
+ * über dem Kopf pro Thema eine Bildkarte (B-Roll, src/lib/broll.tsx), deren Teile auf ihrem Wort erscheinen.
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
@@ -36,7 +36,7 @@ import {
   SearchBar,
   Szene,
   Tag,
-} from "./broll";
+} from "../../lib/broll";
 import cut from "./cut.json";
 
 const C = createCut(cut);

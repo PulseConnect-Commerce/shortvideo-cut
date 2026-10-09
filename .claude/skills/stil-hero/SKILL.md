@@ -44,7 +44,7 @@ HERO-Werte. Neue Geschmacksregeln aus seinem Feedback zu einem HERO-Video kommen
 - Pro Thema (jeder Punkt der Liste, Einstieg, Warnung) eine **Bildkarte in der freien Fläche über dem Kopf**
   (x 60-950, y 262-692; der Kopf bleibt darunter frei): ein Foto füllt die Karte und fährt langsam heran
   (100 % → 106 %), darauf der Titel als weißer Chip (bei Punkten mit Nummer 1-5) und die Begriffe als weiße Chips,
-  jeder **auf seinem Wort** (2 Frames vor dem Laut). Bausteine: `src/projekte/shopcheck/broll.tsx`
+  jeder **auf seinem Wort** (2 Frames vor dem Laut). Bausteine: `src/lib/broll.tsx`
   (`Szene photo=…`, `Pop`, `Row onPhoto`, `Tag`, `chip`, Icons).
 - **Fotos mit Nano Banana:** `npm run bild -- "<prompt>" public/broll/<projekt>/<name>.jpg --format 21:9`, ein Foto
   pro Thema. Prompt-Stil: realistisches Editorial-Foto, weiches Tageslicht, gedeckte neutrale Farben, ruhig und
