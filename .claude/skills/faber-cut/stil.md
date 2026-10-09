@@ -6,7 +6,7 @@ bewusst nicht gleich schneiden lassen (2026-10-09).
 | Format | Wofür | Stil (Skill) | Stand |
 | --- | --- | --- | --- |
 | **HERO** | Erklär- und Expertenvideos, die etwas länger gehen (meist 1-3 min) | `.claude/skills/stil-hero/SKILL.md` | festgelegt (Vorlage: `src/projekte/shopcheck/`) |
-| **FACE** | noch festzulegen | `.claude/skills/stil-face/SKILL.md` | Stilabgleich beim ersten FACE-Video |
+| **FACE** | Meinungsvideos direkt in die Kamera (~45-60 s), Frage an die Community | `.claude/skills/stil-face/SKILL.md` | festgelegt (Vorlage: `src/projekte/kiagenten/`) |
 | **NEWS / Reaction** | optional: News oder Reactions auf andere Videos | `.claude/skills/stil-news/SKILL.md` | Stilabgleich beim ersten News-Video |
 
 So gehst du vor:

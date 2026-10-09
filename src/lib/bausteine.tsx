@@ -168,7 +168,9 @@ export const HOOK_STILE = {
   schwarzgruen: { z1: { farbe: "#FFFFFF", balken: STIL.ink }, z2: { farbe: STIL.accent2, balken: STIL.ink } },
   gelb: { z1: { farbe: "#FFFFFF", kontur: STIL.ink }, z2: { farbe: STIL.ink, balken: STIL.save } },
   gruen: { z1: { farbe: "#FFFFFF", kontur: STIL.ink }, z2: { farbe: STIL.accent2, kontur: STIL.ink } },
-} satisfies Record<string, { z1: HookZeile; z2: HookZeile; kippen?: number }>;
+  /** groß über die ganze Breite: weiß mit dunkler Kontur, der Kern rot mit weißer, bis 150 px */
+  gross: { z1: { farbe: "#FFFFFF", kontur: STIL.ink }, z2: { farbe: STIL.hook.kern, kontur: "#FFFFFF" }, max: 150 },
+} satisfies Record<string, { z1: HookZeile; z2: HookZeile; kippen?: number; max?: number }>;
 export type HookStil = keyof typeof HOOK_STILE;
 
 export const HookTitle: React.FC<{
@@ -184,9 +186,9 @@ export const HookTitle: React.FC<{
   // so groß, wie die Zeile in die Breite passt (gemessene Breite von Geist 900, abzüglich Kontur oder Balken),
   // höchstens 104 px. Höchstens STIL.hookBreite breit und zentriert: am Rand bleibt ein Streifen frei (dort nie Inhalte).
   const width = STIL.hookBreite;
-  const S: { z1: HookZeile; z2: HookZeile; kippen?: number } = HOOK_STILE[stil];
+  const S: { z1: HookZeile; z2: HookZeile; kippen?: number; max?: number } = HOOK_STILE[stil];
   const zeile = (text: string, z: HookZeile) => {
-    const size = fitSize(text, width - (z.balken ? 90 : 18), 104, 900, -0.035);
+    const size = fitSize(text, width - (z.balken ? 90 : 18), S.max ?? 104, 900, -0.035);
     return (
       <div style={{ marginTop: z.balken ? 10 : 0 }}>
         <div

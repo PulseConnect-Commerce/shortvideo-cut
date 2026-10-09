@@ -1,0 +1,185 @@
+{
+ "projekt": "kiagenten",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.2,
+  "pre": 0.04,
+  "post": 0.06
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 2.5,
+   "text": "Ich kann dieses ganze Gerede über KI-Agenten echt langsam nicht mehr hören."
+  },
+  {
+   "take": "t1",
+   "ab": 6.9,
+   "text": "Angeblich brauchst Du jetzt für alles einen KI-Agenten, für Deinen Onlineshop, für Deinen Kundenservice und auch für Deinen Marketing."
+  },
+  {
+   "take": "t1",
+   "ab": 13.7,
+   "text": "Aber mal ganz ehrlich, brauchst Du es wirklich,"
+  },
+  {
+   "take": "t1",
+   "ab": 35.8,
+   "text": "Denn wenn ein Onlineshop gar keine Besucher hat und deine Produktseite schlecht ist und dein Checkout überhaupt nicht funktioniert,"
+  },
+  {
+   "take": "t1",
+   "ab": 44.7,
+   "text": "dann wird auch der beste KI-Agent das nicht retten können."
+  },
+  {
+   "take": "t1",
+   "ab": 49.6,
+   "text": "verstehe mich nicht falsch."
+  },
+  {
+   "take": "t1",
+   "ab": 50.85,
+   "text": "Ich finde Automatisierung natürlich prinzipiell extrem spannend und sehr wichtig und auch gut, aber ich sehe da einen Unterschied zwischen einem echten Problem, das du halt automatisieren kannst."
+  },
+  {
+   "take": "t1",
+   "ab": 66.4,
+   "text": "Und ein KI-Tool, das du einfach nur einbaust, weil gerade alle einfach darüber reden."
+  },
+  {
+   "take": "t1",
+   "ab": 127.8,
+   "text": "Mein Tipp, bevor du einen KI-Agenten kaufst, frag dich erst einmal, welche Aufgabe kostet mich wirklich Zeit und Geld in meinem Onlineshop?"
+  },
+  {
+   "take": "t1",
+   "ab": 139.7,
+   "text": "und wenn du darauf dann keine Antwort hast, dann brauchst du wahrscheinlich auch keine KI-Agenten."
+  },
+  {
+   "take": "t1",
+   "ab": 144.8,
+   "text": "Aber wie seht ihr das? Sind KI-Agenten in E-Commerce wirklich sinnvoll oder ist es einfach nur ein komplett überhalbtes Thema?"
+  },
+  {
+   "take": "t1",
+   "ab": 175.8,
+   "text": "Schreib mir gerne deine Meinung"
+  },
+  {
+   "take": "t1",
+   "ab": 177.4,
+   "text": "Vergiss nicht auf das Plus zu drücken, wenn du mehr solcher Videos sehen willst.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 180.55
+ },
+ "korrekturen": [
+  [
+   "t1",
+   7.71,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   9.97,
+   "Deinen",
+   "deinen"
+  ],
+  [
+   "t1",
+   10.95,
+   "Deinen",
+   "deinen"
+  ],
+  [
+   "t1",
+   12.49,
+   "Deinen",
+   "dein"
+  ],
+  [
+   "t1",
+   15.47,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   15.69,
+   "wirklich,",
+   "wirklich?"
+  ],
+  [
+   "t1",
+   49.8,
+   "verstehe",
+   "Und versteh"
+  ],
+  [
+   "t1",
+   61.69,
+   "kannst.",
+   "kannst,"
+  ],
+  [
+   "t1",
+   66.46,
+   "Und",
+   "und"
+  ],
+  [
+   "t1",
+   128.13,
+   "Tipp,",
+   "Tipp:"
+  ],
+  [
+   "t1",
+   128.51,
+   "bevor",
+   "Bevor"
+  ],
+  [
+   "t1",
+   131.09,
+   "einmal,",
+   "einmal:"
+  ],
+  [
+   "t1",
+   131.93,
+   "welche",
+   "Welche"
+  ],
+  [
+   "t1",
+   139.74,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   146.98,
+   "in",
+   "im"
+  ],
+  [
+   "t1",
+   150.24,
+   "überhalbtes",
+   "überhyptes"
+  ],
+  [
+   "t1",
+   176.58,
+   "Meinung",
+   "Meinung."
+  ]
+ ]
+}

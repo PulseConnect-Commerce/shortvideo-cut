@@ -1,0 +1,1393 @@
+{
+ "projekt": "kiagenten",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "kiagenten/t1",
+   "from": 2.625,
+   "to": 6.305,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 6.925,
+   "to": 9.585,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 9.805,
+   "to": 11.915,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 12.165,
+   "to": 13.175,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 13.745,
+   "to": 14.785,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 15.105,
+   "to": 16.125,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 35.815,
+   "to": 41.765,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 44.775,
+   "to": 47.345,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 49.755,
+   "to": 50.875,
+   "nach": 0.005,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 50.885,
+   "to": 53.935,
+   "nach": 0.09,
+   "vor": 0.05
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 54.125,
+   "to": 55.585,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 56.055,
+   "to": 59.475,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 59.785,
+   "to": 62.025,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 66.415,
+   "to": 68.385,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 68.895,
+   "to": 70.375,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 127.775,
+   "to": 131.485,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 131.855,
+   "to": 135.505,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 139.695,
+   "to": 141.235,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 141.455,
+   "to": 143.655,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 144.845,
+   "to": 146.025,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 146.195,
+   "to": 148.465,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 148.735,
+   "to": 151.045,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 175.815,
+   "to": 176.915,
+   "nach": 0.01,
+   "vor": 0.09
+  },
+  {
+   "src": "kiagenten/t1",
+   "from": 177.315,
+   "to": 180.55,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Ich",
+   "src": "kiagenten/t1",
+   "start": 2.67,
+   "end": 2.75
+  },
+  {
+   "text": "kann",
+   "src": "kiagenten/t1",
+   "start": 2.81,
+   "end": 2.95
+  },
+  {
+   "text": "dieses",
+   "src": "kiagenten/t1",
+   "start": 2.99,
+   "end": 3.21
+  },
+  {
+   "text": "ganze",
+   "src": "kiagenten/t1",
+   "start": 3.31,
+   "end": 3.63
+  },
+  {
+   "text": "Gerede",
+   "src": "kiagenten/t1",
+   "start": 3.73,
+   "end": 4.15
+  },
+  {
+   "text": "über",
+   "src": "kiagenten/t1",
+   "start": 4.25,
+   "end": 4.39
+  },
+  {
+   "text": "KI-Agenten",
+   "src": "kiagenten/t1",
+   "start": 4.47,
+   "end": 5.05
+  },
+  {
+   "text": "echt",
+   "src": "kiagenten/t1",
+   "start": 5.15,
+   "end": 5.31
+  },
+  {
+   "text": "langsam",
+   "src": "kiagenten/t1",
+   "start": 5.37,
+   "end": 5.71
+  },
+  {
+   "text": "nicht",
+   "src": "kiagenten/t1",
+   "start": 5.77,
+   "end": 5.89
+  },
+  {
+   "text": "mehr",
+   "src": "kiagenten/t1",
+   "start": 5.91,
+   "end": 6.01
+  },
+  {
+   "text": "hören.",
+   "src": "kiagenten/t1",
+   "start": 6.03,
+   "end": 6.23
+  },
+  {
+   "text": "Angeblich",
+   "src": "kiagenten/t1",
+   "start": 6.97,
+   "end": 7.35
+  },
+  {
+   "text": "brauchst",
+   "src": "kiagenten/t1",
+   "start": 7.41,
+   "end": 7.67
+  },
+  {
+   "text": "du",
+   "src": "kiagenten/t1",
+   "start": 7.71,
+   "end": 7.75
+  },
+  {
+   "text": "jetzt",
+   "src": "kiagenten/t1",
+   "start": 7.85,
+   "end": 8.07
+  },
+  {
+   "text": "für",
+   "src": "kiagenten/t1",
+   "start": 8.13,
+   "end": 8.21
+  },
+  {
+   "text": "alles",
+   "src": "kiagenten/t1",
+   "start": 8.39,
+   "end": 8.63
+  },
+  {
+   "text": "einen",
+   "src": "kiagenten/t1",
+   "start": 8.73,
+   "end": 8.87
+  },
+  {
+   "text": "KI-Agenten,",
+   "src": "kiagenten/t1",
+   "start": 8.91,
+   "end": 9.49
+  },
+  {
+   "text": "für",
+   "src": "kiagenten/t1",
+   "start": 9.85,
+   "end": 9.93
+  },
+  {
+   "text": "deinen",
+   "src": "kiagenten/t1",
+   "start": 9.97,
+   "end": 10.11
+  },
+  {
+   "text": "Onlineshop,",
+   "src": "kiagenten/t1",
+   "start": 10.19,
+   "end": 10.75
+  },
+  {
+   "text": "für",
+   "src": "kiagenten/t1",
+   "start": 10.85,
+   "end": 10.91
+  },
+  {
+   "text": "deinen",
+   "src": "kiagenten/t1",
+   "start": 10.95,
+   "end": 11.09
+  },
+  {
+   "text": "Kundenservice",
+   "src": "kiagenten/t1",
+   "start": 11.17,
+   "end": 11.87
+  },
+  {
+   "text": "und",
+   "src": "kiagenten/t1",
+   "start": 12.21,
+   "end": 12.27
+  },
+  {
+   "text": "auch",
+   "src": "kiagenten/t1",
+   "start": 12.31,
+   "end": 12.39
+  },
+  {
+   "text": "für",
+   "src": "kiagenten/t1",
+   "start": 12.41,
+   "end": 12.47
+  },
+  {
+   "text": "dein",
+   "src": "kiagenten/t1",
+   "start": 12.49,
+   "end": 12.61
+  },
+  {
+   "text": "Marketing.",
+   "src": "kiagenten/t1",
+   "start": 12.63,
+   "end": 13.07
+  },
+  {
+   "text": "Aber",
+   "src": "kiagenten/t1",
+   "start": 13.79,
+   "end": 13.93
+  },
+  {
+   "text": "mal",
+   "src": "kiagenten/t1",
+   "start": 13.97,
+   "end": 14.09
+  },
+  {
+   "text": "ganz",
+   "src": "kiagenten/t1",
+   "start": 14.15,
+   "end": 14.37
+  },
+  {
+   "text": "ehrlich,",
+   "src": "kiagenten/t1",
+   "start": 14.43,
+   "end": 14.73
+  },
+  {
+   "text": "brauchst",
+   "src": "kiagenten/t1",
+   "start": 15.15,
+   "end": 15.45
+  },
+  {
+   "text": "du",
+   "src": "kiagenten/t1",
+   "start": 15.47,
+   "end": 15.53
+  },
+  {
+   "text": "es",
+   "src": "kiagenten/t1",
+   "start": 15.57,
+   "end": 15.63
+  },
+  {
+   "text": "wirklich?",
+   "src": "kiagenten/t1",
+   "start": 15.69,
+   "end": 16.07
+  },
+  {
+   "text": "Denn",
+   "src": "kiagenten/t1",
+   "start": 35.86,
+   "end": 35.98
+  },
+  {
+   "text": "wenn",
+   "src": "kiagenten/t1",
+   "start": 36.02,
+   "end": 36.16
+  },
+  {
+   "text": "ein",
+   "src": "kiagenten/t1",
+   "start": 36.2,
+   "end": 36.3
+  },
+  {
+   "text": "Onlineshop",
+   "src": "kiagenten/t1",
+   "start": 36.38,
+   "end": 36.84
+  },
+  {
+   "text": "gar",
+   "src": "kiagenten/t1",
+   "start": 36.9,
+   "end": 36.98
+  },
+  {
+   "text": "keine",
+   "src": "kiagenten/t1",
+   "start": 37.04,
+   "end": 37.22
+  },
+  {
+   "text": "Besucher",
+   "src": "kiagenten/t1",
+   "start": 37.26,
+   "end": 37.64
+  },
+  {
+   "text": "hat",
+   "src": "kiagenten/t1",
+   "start": 37.7,
+   "end": 37.88
+  },
+  {
+   "text": "und",
+   "src": "kiagenten/t1",
+   "start": 38.08,
+   "end": 38.16
+  },
+  {
+   "text": "deine",
+   "src": "kiagenten/t1",
+   "start": 38.18,
+   "end": 38.36
+  },
+  {
+   "text": "Produktseite",
+   "src": "kiagenten/t1",
+   "start": 38.44,
+   "end": 39.06
+  },
+  {
+   "text": "schlecht",
+   "src": "kiagenten/t1",
+   "start": 39.2,
+   "end": 39.58
+  },
+  {
+   "text": "ist",
+   "src": "kiagenten/t1",
+   "start": 39.68,
+   "end": 39.88
+  },
+  {
+   "text": "und",
+   "src": "kiagenten/t1",
+   "start": 40.04,
+   "end": 40.12
+  },
+  {
+   "text": "dein",
+   "src": "kiagenten/t1",
+   "start": 40.16,
+   "end": 40.26
+  },
+  {
+   "text": "Checkout",
+   "src": "kiagenten/t1",
+   "start": 40.42,
+   "end": 40.72
+  },
+  {
+   "text": "überhaupt",
+   "src": "kiagenten/t1",
+   "start": 40.76,
+   "end": 40.98
+  },
+  {
+   "text": "nicht",
+   "src": "kiagenten/t1",
+   "start": 41.0,
+   "end": 41.1
+  },
+  {
+   "text": "funktioniert,",
+   "src": "kiagenten/t1",
+   "start": 41.14,
+   "end": 41.68
+  },
+  {
+   "text": "dann",
+   "src": "kiagenten/t1",
+   "start": 44.82,
+   "end": 44.96
+  },
+  {
+   "text": "wird",
+   "src": "kiagenten/t1",
+   "start": 45.0,
+   "end": 45.16
+  },
+  {
+   "text": "auch",
+   "src": "kiagenten/t1",
+   "start": 45.18,
+   "end": 45.36
+  },
+  {
+   "text": "der",
+   "src": "kiagenten/t1",
+   "start": 45.4,
+   "end": 45.48
+  },
+  {
+   "text": "beste",
+   "src": "kiagenten/t1",
+   "start": 45.5,
+   "end": 45.84
+  },
+  {
+   "text": "KI-Agent",
+   "src": "kiagenten/t1",
+   "start": 45.86,
+   "end": 46.4
+  },
+  {
+   "text": "das",
+   "src": "kiagenten/t1",
+   "start": 46.42,
+   "end": 46.52
+  },
+  {
+   "text": "nicht",
+   "src": "kiagenten/t1",
+   "start": 46.6,
+   "end": 46.72
+  },
+  {
+   "text": "retten",
+   "src": "kiagenten/t1",
+   "start": 46.76,
+   "end": 47.0
+  },
+  {
+   "text": "können.",
+   "src": "kiagenten/t1",
+   "start": 47.04,
+   "end": 47.26
+  },
+  {
+   "text": "Und versteh",
+   "src": "kiagenten/t1",
+   "start": 49.8,
+   "end": 50.26
+  },
+  {
+   "text": "mich",
+   "src": "kiagenten/t1",
+   "start": 50.23,
+   "end": 50.31
+  },
+  {
+   "text": "nicht",
+   "src": "kiagenten/t1",
+   "start": 50.35,
+   "end": 50.47
+  },
+  {
+   "text": "falsch.",
+   "src": "kiagenten/t1",
+   "start": 50.51,
+   "end": 50.79
+  },
+  {
+   "text": "Ich",
+   "src": "kiagenten/t1",
+   "start": 50.91,
+   "end": 50.99
+  },
+  {
+   "text": "finde",
+   "src": "kiagenten/t1",
+   "start": 51.09,
+   "end": 51.29
+  },
+  {
+   "text": "Automatisierung",
+   "src": "kiagenten/t1",
+   "start": 51.41,
+   "end": 52.03
+  },
+  {
+   "text": "natürlich",
+   "src": "kiagenten/t1",
+   "start": 52.11,
+   "end": 52.39
+  },
+  {
+   "text": "prinzipiell",
+   "src": "kiagenten/t1",
+   "start": 52.45,
+   "end": 53.01
+  },
+  {
+   "text": "extrem",
+   "src": "kiagenten/t1",
+   "start": 53.09,
+   "end": 53.43
+  },
+  {
+   "text": "spannend",
+   "src": "kiagenten/t1",
+   "start": 53.51,
+   "end": 53.85
+  },
+  {
+   "text": "und",
+   "src": "kiagenten/t1",
+   "start": 54.17,
+   "end": 54.23
+  },
+  {
+   "text": "sehr",
+   "src": "kiagenten/t1",
+   "start": 54.29,
+   "end": 54.45
+  },
+  {
+   "text": "wichtig",
+   "src": "kiagenten/t1",
+   "start": 54.57,
+   "end": 54.89
+  },
+  {
+   "text": "und",
+   "src": "kiagenten/t1",
+   "start": 54.99,
+   "end": 55.05
+  },
+  {
+   "text": "auch",
+   "src": "kiagenten/t1",
+   "start": 55.11,
+   "end": 55.19
+  },
+  {
+   "text": "gut,",
+   "src": "kiagenten/t1",
+   "start": 55.25,
+   "end": 55.47
+  },
+  {
+   "text": "aber",
+   "src": "kiagenten/t1",
+   "start": 56.13,
+   "end": 56.33
+  },
+  {
+   "text": "ich",
+   "src": "kiagenten/t1",
+   "start": 56.69,
+   "end": 56.77
+  },
+  {
+   "text": "sehe",
+   "src": "kiagenten/t1",
+   "start": 56.85,
+   "end": 57.03
+  },
+  {
+   "text": "da",
+   "src": "kiagenten/t1",
+   "start": 57.11,
+   "end": 57.17
+  },
+  {
+   "text": "einen",
+   "src": "kiagenten/t1",
+   "start": 57.27,
+   "end": 57.39
+  },
+  {
+   "text": "Unterschied",
+   "src": "kiagenten/t1",
+   "start": 57.47,
+   "end": 57.91
+  },
+  {
+   "text": "zwischen",
+   "src": "kiagenten/t1",
+   "start": 58.17,
+   "end": 58.45
+  },
+  {
+   "text": "einem",
+   "src": "kiagenten/t1",
+   "start": 58.57,
+   "end": 58.79
+  },
+  {
+   "text": "echten",
+   "src": "kiagenten/t1",
+   "start": 58.99,
+   "end": 59.33
+  },
+  {
+   "text": "Problem,",
+   "src": "kiagenten/t1",
+   "start": 59.83,
+   "end": 60.37
+  },
+  {
+   "text": "das",
+   "src": "kiagenten/t1",
+   "start": 60.63,
+   "end": 60.75
+  },
+  {
+   "text": "du",
+   "src": "kiagenten/t1",
+   "start": 60.81,
+   "end": 60.87
+  },
+  {
+   "text": "halt",
+   "src": "kiagenten/t1",
+   "start": 60.89,
+   "end": 61.03
+  },
+  {
+   "text": "automatisieren",
+   "src": "kiagenten/t1",
+   "start": 61.07,
+   "end": 61.65
+  },
+  {
+   "text": "kannst,",
+   "src": "kiagenten/t1",
+   "start": 61.69,
+   "end": 61.99
+  },
+  {
+   "text": "und",
+   "src": "kiagenten/t1",
+   "start": 66.46,
+   "end": 66.54
+  },
+  {
+   "text": "ein",
+   "src": "kiagenten/t1",
+   "start": 66.6,
+   "end": 66.68
+  },
+  {
+   "text": "KI-Tool,",
+   "src": "kiagenten/t1",
+   "start": 66.74,
+   "end": 67.18
+  },
+  {
+   "text": "das",
+   "src": "kiagenten/t1",
+   "start": 67.26,
+   "end": 67.36
+  },
+  {
+   "text": "du",
+   "src": "kiagenten/t1",
+   "start": 67.4,
+   "end": 67.44
+  },
+  {
+   "text": "einfach",
+   "src": "kiagenten/t1",
+   "start": 67.48,
+   "end": 67.66
+  },
+  {
+   "text": "nur",
+   "src": "kiagenten/t1",
+   "start": 67.68,
+   "end": 67.76
+  },
+  {
+   "text": "einbaust,",
+   "src": "kiagenten/t1",
+   "start": 67.86,
+   "end": 68.36
+  },
+  {
+   "text": "weil",
+   "src": "kiagenten/t1",
+   "start": 68.94,
+   "end": 69.04
+  },
+  {
+   "text": "gerade",
+   "src": "kiagenten/t1",
+   "start": 69.08,
+   "end": 69.28
+  },
+  {
+   "text": "alle",
+   "src": "kiagenten/t1",
+   "start": 69.42,
+   "end": 69.54
+  },
+  {
+   "text": "einfach",
+   "src": "kiagenten/t1",
+   "start": 69.58,
+   "end": 69.8
+  },
+  {
+   "text": "darüber",
+   "src": "kiagenten/t1",
+   "start": 69.82,
+   "end": 70.06
+  },
+  {
+   "text": "reden.",
+   "src": "kiagenten/t1",
+   "start": 70.08,
+   "end": 70.28
+  },
+  {
+   "text": "Mein",
+   "src": "kiagenten/t1",
+   "start": 127.85,
+   "end": 128.05
+  },
+  {
+   "text": "Tipp:",
+   "src": "kiagenten/t1",
+   "start": 128.13,
+   "end": 128.33
+  },
+  {
+   "text": "Bevor",
+   "src": "kiagenten/t1",
+   "start": 128.51,
+   "end": 128.89
+  },
+  {
+   "text": "du",
+   "src": "kiagenten/t1",
+   "start": 128.99,
+   "end": 129.03
+  },
+  {
+   "text": "einen",
+   "src": "kiagenten/t1",
+   "start": 129.17,
+   "end": 129.29
+  },
+  {
+   "text": "KI-Agenten",
+   "src": "kiagenten/t1",
+   "start": 129.33,
+   "end": 129.89
+  },
+  {
+   "text": "kaufst,",
+   "src": "kiagenten/t1",
+   "start": 129.95,
+   "end": 130.31
+  },
+  {
+   "text": "frag",
+   "src": "kiagenten/t1",
+   "start": 130.39,
+   "end": 130.61
+  },
+  {
+   "text": "dich",
+   "src": "kiagenten/t1",
+   "start": 130.73,
+   "end": 130.83
+  },
+  {
+   "text": "erst",
+   "src": "kiagenten/t1",
+   "start": 130.89,
+   "end": 131.05
+  },
+  {
+   "text": "einmal:",
+   "src": "kiagenten/t1",
+   "start": 131.09,
+   "end": 131.37
+  },
+  {
+   "text": "Welche",
+   "src": "kiagenten/t1",
+   "start": 131.93,
+   "end": 132.23
+  },
+  {
+   "text": "Aufgabe",
+   "src": "kiagenten/t1",
+   "start": 132.41,
+   "end": 132.85
+  },
+  {
+   "text": "kostet",
+   "src": "kiagenten/t1",
+   "start": 132.95,
+   "end": 133.27
+  },
+  {
+   "text": "mich",
+   "src": "kiagenten/t1",
+   "start": 133.35,
+   "end": 133.45
+  },
+  {
+   "text": "wirklich",
+   "src": "kiagenten/t1",
+   "start": 133.57,
+   "end": 133.91
+  },
+  {
+   "text": "Zeit",
+   "src": "kiagenten/t1",
+   "start": 134.05,
+   "end": 134.27
+  },
+  {
+   "text": "und",
+   "src": "kiagenten/t1",
+   "start": 134.33,
+   "end": 134.39
+  },
+  {
+   "text": "Geld",
+   "src": "kiagenten/t1",
+   "start": 134.45,
+   "end": 134.65
+  },
+  {
+   "text": "in",
+   "src": "kiagenten/t1",
+   "start": 134.71,
+   "end": 134.77
+  },
+  {
+   "text": "meinem",
+   "src": "kiagenten/t1",
+   "start": 134.81,
+   "end": 134.97
+  },
+  {
+   "text": "Onlineshop?",
+   "src": "kiagenten/t1",
+   "start": 135.03,
+   "end": 135.47
+  },
+  {
+   "text": "Und",
+   "src": "kiagenten/t1",
+   "start": 139.74,
+   "end": 139.82
+  },
+  {
+   "text": "wenn",
+   "src": "kiagenten/t1",
+   "start": 139.84,
+   "end": 139.96
+  },
+  {
+   "text": "du",
+   "src": "kiagenten/t1",
+   "start": 139.98,
+   "end": 140.02
+  },
+  {
+   "text": "darauf",
+   "src": "kiagenten/t1",
+   "start": 140.08,
+   "end": 140.34
+  },
+  {
+   "text": "dann",
+   "src": "kiagenten/t1",
+   "start": 140.38,
+   "end": 140.48
+  },
+  {
+   "text": "keine",
+   "src": "kiagenten/t1",
+   "start": 140.52,
+   "end": 140.66
+  },
+  {
+   "text": "Antwort",
+   "src": "kiagenten/t1",
+   "start": 140.72,
+   "end": 140.96
+  },
+  {
+   "text": "hast,",
+   "src": "kiagenten/t1",
+   "start": 140.98,
+   "end": 141.22
+  },
+  {
+   "text": "dann",
+   "src": "kiagenten/t1",
+   "start": 141.5,
+   "end": 141.7
+  },
+  {
+   "text": "brauchst",
+   "src": "kiagenten/t1",
+   "start": 141.74,
+   "end": 142.0
+  },
+  {
+   "text": "du",
+   "src": "kiagenten/t1",
+   "start": 142.04,
+   "end": 142.08
+  },
+  {
+   "text": "wahrscheinlich",
+   "src": "kiagenten/t1",
+   "start": 142.14,
+   "end": 142.56
+  },
+  {
+   "text": "auch",
+   "src": "kiagenten/t1",
+   "start": 142.64,
+   "end": 142.74
+  },
+  {
+   "text": "keine",
+   "src": "kiagenten/t1",
+   "start": 142.78,
+   "end": 143.02
+  },
+  {
+   "text": "KI-Agenten.",
+   "src": "kiagenten/t1",
+   "start": 143.12,
+   "end": 143.655
+  },
+  {
+   "text": "Aber",
+   "src": "kiagenten/t1",
+   "start": 144.9,
+   "end": 145.06
+  },
+  {
+   "text": "wie",
+   "src": "kiagenten/t1",
+   "start": 145.36,
+   "end": 145.44
+  },
+  {
+   "text": "seht",
+   "src": "kiagenten/t1",
+   "start": 145.48,
+   "end": 145.6
+  },
+  {
+   "text": "ihr",
+   "src": "kiagenten/t1",
+   "start": 145.64,
+   "end": 145.7
+  },
+  {
+   "text": "das?",
+   "src": "kiagenten/t1",
+   "start": 145.74,
+   "end": 145.9
+  },
+  {
+   "text": "Sind",
+   "src": "kiagenten/t1",
+   "start": 146.24,
+   "end": 146.34
+  },
+  {
+   "text": "KI-Agenten",
+   "src": "kiagenten/t1",
+   "start": 146.4,
+   "end": 146.94
+  },
+  {
+   "text": "im",
+   "src": "kiagenten/t1",
+   "start": 146.98,
+   "end": 147.02
+  },
+  {
+   "text": "E-Commerce",
+   "src": "kiagenten/t1",
+   "start": 147.04,
+   "end": 147.42
+  },
+  {
+   "text": "wirklich",
+   "src": "kiagenten/t1",
+   "start": 147.46,
+   "end": 147.74
+  },
+  {
+   "text": "sinnvoll",
+   "src": "kiagenten/t1",
+   "start": 147.84,
+   "end": 148.32
+  },
+  {
+   "text": "oder",
+   "src": "kiagenten/t1",
+   "start": 148.78,
+   "end": 148.96
+  },
+  {
+   "text": "ist",
+   "src": "kiagenten/t1",
+   "start": 149.02,
+   "end": 149.12
+  },
+  {
+   "text": "es",
+   "src": "kiagenten/t1",
+   "start": 149.16,
+   "end": 149.24
+  },
+  {
+   "text": "einfach",
+   "src": "kiagenten/t1",
+   "start": 149.32,
+   "end": 149.58
+  },
+  {
+   "text": "nur",
+   "src": "kiagenten/t1",
+   "start": 149.66,
+   "end": 149.74
+  },
+  {
+   "text": "ein",
+   "src": "kiagenten/t1",
+   "start": 149.76,
+   "end": 149.82
+  },
+  {
+   "text": "komplett",
+   "src": "kiagenten/t1",
+   "start": 149.86,
+   "end": 150.18
+  },
+  {
+   "text": "überhyptes",
+   "src": "kiagenten/t1",
+   "start": 150.24,
+   "end": 150.66
+  },
+  {
+   "text": "Thema?",
+   "src": "kiagenten/t1",
+   "start": 150.7,
+   "end": 150.92
+  },
+  {
+   "text": "Schreib",
+   "src": "kiagenten/t1",
+   "start": 175.86,
+   "end": 176.06
+  },
+  {
+   "text": "mir",
+   "src": "kiagenten/t1",
+   "start": 176.12,
+   "end": 176.18
+  },
+  {
+   "text": "gerne",
+   "src": "kiagenten/t1",
+   "start": 176.22,
+   "end": 176.36
+  },
+  {
+   "text": "deine",
+   "src": "kiagenten/t1",
+   "start": 176.38,
+   "end": 176.54
+  },
+  {
+   "text": "Meinung.",
+   "src": "kiagenten/t1",
+   "start": 176.58,
+   "end": 176.86
+  },
+  {
+   "text": "Vergiss",
+   "src": "kiagenten/t1",
+   "start": 177.54,
+   "end": 177.82
+  },
+  {
+   "text": "nicht",
+   "src": "kiagenten/t1",
+   "start": 177.88,
+   "end": 178.0
+  },
+  {
+   "text": "auf",
+   "src": "kiagenten/t1",
+   "start": 178.04,
+   "end": 178.1
+  },
+  {
+   "text": "das",
+   "src": "kiagenten/t1",
+   "start": 178.14,
+   "end": 178.24
+  },
+  {
+   "text": "Plus",
+   "src": "kiagenten/t1",
+   "start": 178.28,
+   "end": 178.44
+  },
+  {
+   "text": "zu",
+   "src": "kiagenten/t1",
+   "start": 178.48,
+   "end": 178.54
+  },
+  {
+   "text": "drücken,",
+   "src": "kiagenten/t1",
+   "start": 178.58,
+   "end": 178.86
+  },
+  {
+   "text": "wenn",
+   "src": "kiagenten/t1",
+   "start": 179.14,
+   "end": 179.24
+  },
+  {
+   "text": "du",
+   "src": "kiagenten/t1",
+   "start": 179.26,
+   "end": 179.3
+  },
+  {
+   "text": "mehr",
+   "src": "kiagenten/t1",
+   "start": 179.34,
+   "end": 179.46
+  },
+  {
+   "text": "solcher",
+   "src": "kiagenten/t1",
+   "start": 179.48,
+   "end": 179.7
+  },
+  {
+   "text": "Videos",
+   "src": "kiagenten/t1",
+   "start": 179.72,
+   "end": 179.96
+  },
+  {
+   "text": "sehen",
+   "src": "kiagenten/t1",
+   "start": 179.98,
+   "end": 180.16
+  },
+  {
+   "text": "willst.",
+   "src": "kiagenten/t1",
+   "start": 180.2,
+   "end": 180.42
+  }
+ ],
+ "pages": [
+  4,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2,
+  3,
+  2,
+  1,
+  2,
+  3,
+  4,
+  4,
+  1,
+  3,
+  3,
+  3,
+  2,
+  4,
+  1,
+  2,
+  3,
+  3,
+  4,
+  2,
+  2,
+  2,
+  1,
+  2,
+  2,
+  3,
+  3,
+  1,
+  3,
+  2,
+  1,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  3,
+  2,
+  3,
+  4,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  4,
+  3
+ ]
+}
