@@ -24,7 +24,7 @@ export const chip: React.CSSProperties = {
 /** Die Bildkarte einer Szene: poppt auf ihrem Wort auf, Kopfzeile mit Nummer (1-5) und Titel, geht ab `until`.
  * `photo` (Pfad in public/, z. B. von npm run bild): füllt die Karte und fährt langsam heran (100 % → 106 %); der
  * Titel liegt dann als weißer Chip darauf. `vollbild`: das Foto füllt oben die ganze Breite bis zum oberen Rand
- * (0-1080, 0-692), ohne Rahmen und Ecken; Titel und Begriffe bleiben, wo sie sonst liegen (in der sicheren Fläche). */
+ * (0-1080, 0-752), ohne Rahmen und Ecken; Titel und Begriffe bleiben, wo sie sonst liegen (in der sicheren Fläche). */
 export const Szene: React.FC<{
   fr: number;
   at: number;
@@ -41,7 +41,8 @@ export const Szene: React.FC<{
   const size = fitSize(title, BOX.width - (nr ? 150 : 70), 52, 800, -0.02);
   const push = Number.isFinite(until) ? interpolate(fr, [at, until], [1, 1.06], clamp) : 1;
   // Vollbild: die Fläche reicht von oben bis zur Unterkante der Karte; der Inhalt sitzt an der gewohnten Stelle
-  const outer = vollbild ? { left: 0, top: 0, width: 1080, height: BOX.top + BOX.height } : BOX;
+  // (60 px mehr nach unten, damit auch die untersten Begriffe Abstand zur Unterkante des Bildes haben)
+  const outer = vollbild ? { left: 0, top: 0, width: 1080, height: BOX.top + BOX.height + 60 } : BOX;
   const inner = vollbild ? { left: BOX.left, top: BOX.top } : { left: 0, top: 0 };
   return (
     <div

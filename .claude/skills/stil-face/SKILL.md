@@ -42,8 +42,11 @@ FACE-Video kommen hierher unter "Notizen", mit seinem Satz und Datum.
 
 ## B-Roll: Bildkarten über dem Kopf (wie HERO)
 
-- Pro Gedanke eine Bildkarte mittig über dem Kopf (x 95-985, y 262-692), Foto mit Nano Banana, darauf die Begriffe
-  als Chips auf ihrem Wort (Bausteine aus `src/lib/broll.tsx`). Alle 1,5-2 s ändert sich etwas.
+- Pro Gedanke ein Bild über dem Kopf, **randlos in voller Breite bis zum oberen Bildrand** (`<Szene vollbild>`:
+  0-1080, 0-752, ohne Rahmen und Ecken, gleitet von oben herein), Foto mit Nano Banana. Die Begriffe liegen als Chips
+  auf ihrem Wort in der sicheren Fläche (x 95-985, ab y 262) und haben **mindestens ~50 px Abstand zur Unterkante des
+  Bildes** (Bausteine aus `src/lib/broll.tsx`). Hinter den Leisten von TikTok/Instagram liegt nur Foto. Alle 1,5-2 s
+  ändert sich etwas.
 - Bei einer Meinung zeigen die Karten seine Gegenüberstellungen (Hype gegen echtes Problem, ohne gegen mit), keine
   Aufzählung von Funktionen.
 
@@ -90,3 +93,6 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-09, erstes FACE-Video kia
 - Weniger Zooms und Schnitte (2026-10-09, nach dem ersten FACE-Video): "Bitte beim nächste Video weniger Video Zooms
   und Schnitte. Das wirkt dann bei so einem Kurzen Video zu stark bearbeitet und es springt zu sehr zwischen den
   Sequenzen hin und her."
+- Bilder randlos (2026-10-09): "Lass uns einmal das Bild oben aber in voller Breite und bis oben hin ganz ohne Rand
+  anzeigen", dann "sieht gut aus, aber bitte darauf achten, dass noch ein Abstand der oberen Texte zum Rand des Bilder
+  vorhanden ist". Das Gesicht bleibt in der Mitte ("Dann bitte Variante 1 verwenden"), nicht im oberen Drittel.
