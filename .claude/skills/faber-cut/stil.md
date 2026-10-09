@@ -104,3 +104,7 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 - **Wortdoppler hören, nicht nur lesen** (2026-10-09): "An einer Stelle kommt noch das Wort 'an' zweimal vor." Whisper
   schreibt Stotterer ("an- anbietet") nur einmal auf: jede Stelle, die fillerscan meldet, am Pegel anhören; einen
   Doppler mitten im Satz mit `"stumm"` leise machen, wenn ein Schnitt dort ein Mini-Stück ließe.
+- **Rand frei lassen** (2026-10-09): "Und bitte die Titel nicht so breit setzen. Wir haben innerhalb des Videos einen
+  Roten Bereich am Rand, der ca. 3mm breit ist, dieser sollte idealerweise keine Inhalte oder Bilder darin anzeigen."
+  An jeder Seite mindestens 60 px (von 1080) ohne Text, Grafik oder Bild; der Hook höchstens 880 px breit, zentriert
+  (`STIL.hookBreite`), Bildkarten und Untertitel in der sicheren Fläche x 60-950.

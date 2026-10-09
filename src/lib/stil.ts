@@ -19,6 +19,8 @@ export const STIL = {
   save: "#FACE15",
   /** Hook-Titel: nie in der Farbe der Untertitel. Erste Zeile weiß mit roter Kontur, der Kern rot mit weißer Kontur */
   hook: { text: "#FFFFFF", rand: "#E4222C", kern: "#E4222C", kernRand: "#FFFFFF" },
+  /** Hook-Titel höchstens so breit (zentriert): links und rechts je 100 px frei, nichts im Randstreifen (~3 mm) */
+  hookBreite: 880,
   ink: "#14161A",
   green: "#1F9D6B",
   red: "#E5484D",

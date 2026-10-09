@@ -168,8 +168,8 @@ export const HookTitle: React.FC<{
   const o = ramp(fr, outAt, 6, Easing.in(Easing.cubic));
   if (o >= 1) return null;
   // so groß, wie die Zeile in die Breite passt (gemessene Breite von Geist 900, abzüglich der Kontur), höchstens
-  // 104 px. Oben (y 250-600) verdecken TikTok und Instagram nichts, darum darf der Hook 1000 px breit sein statt 890.
-  const width = 1000;
+  // 104 px. Höchstens STIL.hookBreite breit und zentriert: am Rand bleibt ein Streifen frei (dort nie Inhalte).
+  const width = STIL.hookBreite;
   const fit = (text: string, max: number) => fitSize(text, width - 18, max, 900, -0.035);
   return (
     <div
