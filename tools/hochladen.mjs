@@ -1,6 +1,7 @@
 /**
  * Lädt ein fertiges Video in deinen Drive-Ordner, in den Unterordner "Final geschnittene Videos", benannt nach dem
- * Titel des Videos ("<Titel>.mp4"):
+ * Titel des Videos ("<Titel>.mp4"). Danach kommt es mit seinen Beschreibungen in einen eigenen Ordner "<Titel>"
+ * (Skill faber-cut, Übergeben; das macht Claude mit dem Google-Drive-Connector):
  *
  *   npm run hochladen -- <datei> "<Titel>"
  *
