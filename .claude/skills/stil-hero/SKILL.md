@@ -122,3 +122,7 @@ Herkunft der Regeln oben (seine Sätze beim ersten HERO-Video, 2026-10-08/09):
 - Karten mittig (2026-10-09): "Bitte die eingeblendeten B-Rolls zentrieren. Links ist weniger Abstand als rechts."
 - Hook-Stile (2026-10-09): "Bitte zu Beginn unterschiedliche Hook Titel Stile verwenden und verschiedene Farben
   ausprobieren."
+- Hook-Wahl Video 2 "vertrauen" (2026-10-09): Stil B `balken`, Text "5 Vertrauens-Killer / in deinem Onlineshop"
+  ("Ich finde Text 4 Stil B gut"). Den Satz "Bester Onlineshop der Welt? / Ohne Vertrauen kauft keiner." mochte er
+  nicht: lieber kurz, mit Zahl und Schlagwort, statt den ersten Satz nachzuerzählen. Vor der Vorschau 3-4 Hook-Texte in
+  1-2 Stilen als Standbilder zeigen (`--props='{"hookStil":"…","hook1":"…","hook2":"…"}'`).

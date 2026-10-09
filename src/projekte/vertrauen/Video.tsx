@@ -80,9 +80,9 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean;
   voice = true,
   sfx = true,
   raster = false,
-  hookStil = "kontur",
-  hook1 = "Bester Onlineshop der Welt?",
-  hook2 = "Ohne Vertrauen kauft keiner.",
+  hookStil = "balken",
+  hook1 = "5 Vertrauens-Killer",
+  hook2 = "in deinem Onlineshop",
 }) => {
   const fr = useCurrentFrame();
   const bm = interpolate(fr, [F("speichere") + 4, F("speichere") + 14], [0, 1], clamp);
