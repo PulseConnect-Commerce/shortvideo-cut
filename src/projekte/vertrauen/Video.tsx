@@ -6,7 +6,7 @@
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
-import { Captions, clamp, HookTitle, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
+import { Captions, clamp, HookTitle, type HookStil, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
 import {
   chip,
   IconBattery,
@@ -75,7 +75,13 @@ const akzentAt = (fr: number) =>
   );
 
 /** raster: Platzierungsraster mit sicherer Fläche und den Zonen von TikTok/Instagram (nur für Standbilder) */
-export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean }> = ({ voice = true, sfx = true, raster = false }) => {
+/** hookStil: einer aus HOOK_STILE (src/lib/bausteine.tsx), zum Vergleichen als Standbild */
+export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean; hookStil?: HookStil }> = ({
+  voice = true,
+  sfx = true,
+  raster = false,
+  hookStil = "kontur",
+}) => {
   const fr = useCurrentFrame();
   const bm = interpolate(fr, [F("speichere") + 4, F("speichere") + 14], [0, 1], clamp);
   return (
@@ -86,7 +92,7 @@ export const Video: React.FC<{ voice?: boolean; sfx?: boolean; raster?: boolean 
         </SplitPerson>
       </AbsoluteFill>
 
-      <HookTitle fr={fr} line1="Bester Onlineshop der Welt?" line2="Ohne Vertrauen kauft keiner." outAt={T.intro - 8} />
+      <HookTitle fr={fr} line1="Bester Onlineshop der Welt?" line2="Ohne Vertrauen kauft keiner." outAt={T.intro - 8} stil={hookStil} />
 
       {/* 5 Dinge, die ich überprüfen würde */}
       <Szene fr={fr} at={T.intro} until={T.s1 - 2} title="5 Dinge für mehr Vertrauen" photo="broll/vertrauen/vertrauen.jpg">

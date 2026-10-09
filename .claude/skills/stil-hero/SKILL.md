@@ -29,8 +29,12 @@ HERO-Werte. Neue Geschmacksregeln aus seinem Feedback zu einem HERO-Video kommen
 
 ## Hook (erstes Bild bis ~4 s)
 
-- Der Hook-Satz steht ab dem ersten Frame fest oben, ohne Serienzeile, in zwei Zeilen: die erste **weiß mit roter
-  Kontur**, der Kern **rot (`#E4222C`) mit weißer Kontur** (`STIL.hook`). Nie in der Farbe der Untertitel.
+- Der Hook-Satz steht ab dem ersten Frame fest oben, ohne Serienzeile, in zwei Zeilen. **Stil und Farbe wechseln von
+  Video zu Video:** sechs Stile in `HOOK_STILE` (`src/lib/bausteine.tsx`, `<HookTitle stil=…>`): A `kontur` (weiß mit
+  roter Kontur, Kern rot mit weißer, der erste Stil), B `balken` (weißer und roter Balken), C `rot` (rote Balken,
+  schräg), D `schwarzgruen` (schwarze Balken, Kern PulseConnect-Grün), E `gelb` (Kern auf TikTok-Gelb), F `gruen`
+  (Kern grün mit Kontur). Vor der Vorschau die Stile als Standbild nebeneinander zeigen (`--props='{"hookStil":"…"}'`),
+  er wählt. Nie in der Farbe der Untertitel (Blau).
 - Höchstens 880 px breit, zentriert (`STIL.hookBreite`). Er geht, bevor die erste Bildkarte kommt.
 
 ## Untertitel
@@ -41,8 +45,9 @@ HERO-Werte. Neue Geschmacksregeln aus seinem Feedback zu einem HERO-Video kommen
 
 ## B-Roll: Bildkarten über dem Kopf
 
-- Pro Thema (jeder Punkt der Liste, Einstieg, Warnung) eine **Bildkarte in der freien Fläche über dem Kopf**
-  (x 60-950, y 262-692; der Kopf bleibt darunter frei): ein Foto füllt die Karte und fährt langsam heran
+- Pro Thema (jeder Punkt der Liste, Einstieg, Warnung) eine **Bildkarte in der freien Fläche über dem Kopf**,
+  **mittig** (x 95-985, y 262-692, links und rechts gleich viel Rand; der Kopf bleibt darunter frei; unten rechts
+  ab x 960 nur Foto, kein Begriff, dort liegt TikToks Knopfspalte): ein Foto füllt die Karte und fährt langsam heran
   (100 % → 106 %), darauf der Titel als weißer Chip (bei Punkten mit Nummer 1-5) und die Begriffe als weiße Chips,
   jeder **auf seinem Wort** (2 Frames vor dem Laut). Bausteine: `src/lib/broll.tsx`
   (`Szene photo=…`, `Pop`, `Row onPhoto`, `Tag`, `chip`, Icons).
@@ -114,3 +119,6 @@ Herkunft der Regeln oben (seine Sätze beim ersten HERO-Video, 2026-10-08/09):
   idealerweise keine Inhalte oder Bilder darin anzeigen."
 - Doppler im Bild (2026-10-09): "Bei 0:48 sieht man, wie ich "an" vor dem "anbietet" sage, aber du hast hier nur den
   Ton vom "an" entfernt, nicht den Videoausschnitt dazu."
+- Karten mittig (2026-10-09): "Bitte die eingeblendeten B-Rolls zentrieren. Links ist weniger Abstand als rechts."
+- Hook-Stile (2026-10-09): "Bitte zu Beginn unterschiedliche Hook Titel Stile verwenden und verschiedene Farben
+  ausprobieren."

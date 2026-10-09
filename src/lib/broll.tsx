@@ -8,8 +8,9 @@ import { card, clamp, popS, ramp } from "./bausteine";
 import { fitSize } from "./messen";
 import { STIL } from "./stil";
 
-/** Platz für die Bildkarte: über dem Kopf, in der sicheren Fläche */
-export const BOX = { left: 60, top: 262, width: 890, height: 430 };
+/** Platz für die Bildkarte: über dem Kopf, mittig (links und rechts je 95 px frei). Unten rechts ragt nur das Foto
+ * in TikToks Knopfspalte (ab x 960, y 620): dort nie einen Begriff hinsetzen (Karte x < 865, wenn y > 358). */
+export const BOX = { left: 95, top: 262, width: 890, height: 430 };
 
 const leave = (fr: number, until: number, len = 6) => (Number.isFinite(until) ? ramp(fr, until, len, Easing.in(Easing.cubic)) : 0);
 

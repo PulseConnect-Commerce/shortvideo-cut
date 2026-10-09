@@ -158,19 +158,61 @@ export const Captions: React.FC<{
 };
 
 /** Hook-Titel oben: ab Frame 0 fest stehend, kleine Zeile darüber (Serie/Tag), verschwindet ab `outAt` */
+/** Hook-Stile zum Durchprobieren (er wählt pro Video): je Zeile Schriftfarbe und entweder eine Kontur oder ein Balken
+ * dahinter. Nie in der Farbe der Untertitel (Blau). "kontur" ist der Stil aus STIL.hook (weiß/rot). */
+type HookZeile = { farbe: string; kontur?: string; balken?: string };
+export const HOOK_STILE = {
+  kontur: { z1: { farbe: STIL.hook.text, kontur: STIL.hook.rand }, z2: { farbe: STIL.hook.kern, kontur: STIL.hook.kernRand } },
+  balken: { z1: { farbe: STIL.ink, balken: "#FFFFFF" }, z2: { farbe: "#FFFFFF", balken: STIL.hook.kern } },
+  rot: { z1: { farbe: "#FFFFFF", balken: STIL.hook.kern }, z2: { farbe: "#FFFFFF", balken: STIL.hook.kern }, kippen: -3 },
+  schwarzgruen: { z1: { farbe: "#FFFFFF", balken: STIL.ink }, z2: { farbe: STIL.accent2, balken: STIL.ink } },
+  gelb: { z1: { farbe: "#FFFFFF", kontur: STIL.ink }, z2: { farbe: STIL.ink, balken: STIL.save } },
+  gruen: { z1: { farbe: "#FFFFFF", kontur: STIL.ink }, z2: { farbe: STIL.accent2, kontur: STIL.ink } },
+} satisfies Record<string, { z1: HookZeile; z2: HookZeile; kippen?: number }>;
+export type HookStil = keyof typeof HOOK_STILE;
+
 export const HookTitle: React.FC<{
   fr: number;
   kicker?: string;
   line1: string;
   line2?: string;
   outAt: number;
-}> = ({ fr, kicker, line1, line2, outAt }) => {
+  stil?: HookStil;
+}> = ({ fr, kicker, line1, line2, outAt, stil = "kontur" }) => {
   const o = ramp(fr, outAt, 6, Easing.in(Easing.cubic));
   if (o >= 1) return null;
-  // so groß, wie die Zeile in die Breite passt (gemessene Breite von Geist 900, abzüglich der Kontur), höchstens
-  // 104 px. Höchstens STIL.hookBreite breit und zentriert: am Rand bleibt ein Streifen frei (dort nie Inhalte).
+  // so groß, wie die Zeile in die Breite passt (gemessene Breite von Geist 900, abzüglich Kontur oder Balken),
+  // höchstens 104 px. Höchstens STIL.hookBreite breit und zentriert: am Rand bleibt ein Streifen frei (dort nie Inhalte).
   const width = STIL.hookBreite;
-  const fit = (text: string, max: number) => fitSize(text, width - 18, max, 900, -0.035);
+  const S: { z1: HookZeile; z2: HookZeile; kippen?: number } = HOOK_STILE[stil];
+  const zeile = (text: string, z: HookZeile) => {
+    const size = fitSize(text, width - (z.balken ? 90 : 18), 104, 900, -0.035);
+    return (
+      <div style={{ marginTop: z.balken ? 10 : 0 }}>
+        <div
+          style={{
+            display: "inline-block",
+            fontSize: size,
+            whiteSpace: "nowrap",
+            color: z.farbe,
+            ...(z.kontur ? { WebkitTextStroke: `10px ${z.kontur}` } : {}),
+            ...(z.balken
+              ? {
+                  background: z.balken,
+                  padding: "0.1em 0.3em 0.14em",
+                  borderRadius: "0.16em",
+                  WebkitTextStroke: "0px transparent",
+                  textShadow: "none",
+                  boxShadow: "0 10px 26px rgb(20 22 26 / 0.28)",
+                }
+              : {}),
+          }}
+        >
+          {text}
+        </div>
+      </div>
+    );
+  };
   return (
     <div
       style={{
@@ -181,7 +223,7 @@ export const HookTitle: React.FC<{
         width,
         textAlign: "center",
         opacity: 1 - o,
-        transform: `translateY(${-40 * o}px)`,
+        transform: `translateY(${-40 * o}px) rotate(${S.kippen ?? 0}deg)`,
       }}
     >
       {kicker && (
@@ -189,23 +231,9 @@ export const HookTitle: React.FC<{
           {kicker}
         </div>
       )}
-      <div
-        style={{
-          marginTop: 14,
-          fontWeight: 900,
-          letterSpacing: "-0.035em",
-          lineHeight: 1.0,
-        }}
-      >
-        {/* Farben aus STIL.hook (nicht die Untertitel-Farbe): Zeile 1 weiß mit roter Kontur, der Kern rot mit weißer */}
-        <div style={{ fontSize: fit(line1, 104), whiteSpace: "nowrap", color: STIL.hook.text, WebkitTextStroke: `10px ${STIL.hook.rand}` }}>
-          {line1}
-        </div>
-        {line2 && (
-          <div style={{ fontSize: fit(line2, 104), color: STIL.hook.kern, WebkitTextStroke: `10px ${STIL.hook.kernRand}`, whiteSpace: "nowrap" }}>
-            {line2}
-          </div>
-        )}
+      <div style={{ marginTop: 14, fontWeight: 900, letterSpacing: "-0.035em", lineHeight: 1.0 }}>
+        {zeile(line1, S.z1)}
+        {line2 && zeile(line2, S.z2)}
       </div>
     </div>
   );
