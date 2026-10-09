@@ -1,9 +1,9 @@
 /**
  * faber-cut Upload-Helfer (Google Apps Script, läuft in deinem Google-Konto).
  *
- * faber-cut schickt den Titel eines fertigen Videos; der Helfer legt in deinem Drive-Ordner einen Unterordner mit
- * diesem Titel an (oder nimmt den vorhandenen) und gibt eine einmalige Upload-Adresse zurück, über die faber-cut das
- * Video direkt dort hineinlädt (Drive-Upload in Stücken, ohne Größengrenze). Einrichten: siehe skill-onboarding,
+ * faber-cut schickt Ordner und Dateinamen eines fertigen Videos ("Final geschnittene Videos", "<Titel>.mp4"); der
+ * Helfer legt den Unterordner in deinem Drive-Ordner an, falls er fehlt, und gibt eine einmalige Upload-Adresse
+ * zurück, über die faber-cut das Video direkt dort hineinlädt (Drive-Upload in Stücken, ohne Größengrenze). Einrichten: siehe skill-onboarding,
  * "Upload-Helfer"; danach `npm run hochladen -- <video> "<Titel>"`.
  *
  * Die Web-App-Adresse ist wie ein Schlüssel: wer sie hat, kann Dateien in diesen einen Ordner legen (nur dort,
