@@ -8,6 +8,7 @@
   "scripts": {
     "setup": "node tools/setup.mjs",
     "drive": "node tools/drive.mjs",
+    "hochladen": "node tools/hochladen.mjs",
     "doktor": "node tools/doktor.mjs",
     "probelauf": "node tools/probelauf.mjs",
     "intake": "node tools/py.mjs intake.py",
