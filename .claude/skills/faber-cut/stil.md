@@ -51,8 +51,9 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 ## Aufruf und Ende
 
 - Der Aufruf kommt ans Ende, nicht in die Mitte.
-- Das Ende hält mich im Bild unter der letzten Grafik (~0,6 s nach dem letzten Wort), dann ist Schluss. Kein leeres
-  Bild mit Grafik.
+- Schluss direkt nach dem letzten Wort (`ende.bis` ~0,1 s nach dem Ausklingen, am Pegel gemessen), kein Halt danach
+  ("beim aller letzten Abschnitt sollte nach dem letzten Wort abgeschnitten werden", 2026-10-09). Kein leeres Bild
+  mit Grafik.
 
 ## Arbeitsweise
 
@@ -95,3 +96,9 @@ Die Zahlen dazu (Farben, Schrift, Maße, Lautstärke der Effekte) stehen in `src
 - **Hook nie in der Untertitel-Farbe** (2026-10-08): "Bitte den Hook nicht in der gleichen Farbe wie die Untertitel
   machen. ich habe bisher immer ein weiß mit Rot verwendet oder ein Rot mit weißer Umrandung." Erste Zeile weiß mit
   roter Kontur, der Kern rot (`#E4222C`) mit weißer Kontur (`STIL.hook`).
+- **Porträt-Modus** (2026-10-09): "Ist es möglich, dass du den Hintergrund aus dem Fokus nimmst und mich mehr im Fokus
+  wie ein Portrait Modus anpasst? Dann sieht es aus, als ob man mit einer teureren Spiegelreflexkamera aufgenommen hat."
+  Nach dem Schnitt `npm run portrait -- <projekt>` (Hintergrund weich, Person scharf; nach Schnitt-Änderungen erneut).
+- **Wortdoppler hören, nicht nur lesen** (2026-10-09): "An einer Stelle kommt noch das Wort 'an' zweimal vor." Whisper
+  schreibt Stotterer ("an- anbietet") nur einmal auf: jede Stelle, die fillerscan meldet, am Pegel anhören; einen
+  Doppler mitten im Satz mit `"stumm"` leise machen, wenn ein Schnitt dort ein Mini-Stück ließe.

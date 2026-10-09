@@ -17,14 +17,15 @@
   {"take": "t1", "ab": 50.95, "text": "Gibt es eine vernünftige Datenschutzerklärung, Information zum Widerruf oder überhaupt ein Widerrufs-Button oder gegebenenfalls sogar eine AGB?"},
   {"take": "t1", "ab": 87.95, "text": "Und wenn der Shop Tracking und entsprechende Cookies verwendet, dann sollte das natürlich auch wiederum in der Einwilligung sauber umgesetzt sein."},
   {"take": "t2", "ab": 82.72, "text": "Viertens sind die Zahlungsmethoden."},
-  {"take": "t1", "ab": 98.77, "text": "Wenn ein unbekannter Shop nur Vorkasse oder irgendwie dubiose Zahlungsmethoden mit Krypto anbietet, Dann wäre hier lieber Vorsicht geboten, denn etablierte Zahlungsmöglichkeiten mit Käuferschutz sind hier definitiv ein gutes Zeichen."},
+  {"take": "t1", "ab": 98.77, "text": "Wenn ein unbekannter Shop nur Vorkasse oder irgendwie dubiose Zahlungsmethoden mit Krypto anbietet,", "ganz": true, "stumm": [[103.82, 104.07]]},
+  {"take": "t1", "ab": 105.46, "text": "Dann wäre hier lieber Vorsicht geboten, denn etablierte Zahlungsmöglichkeiten mit Käuferschutz sind hier definitiv ein gutes Zeichen."},
   {"take": "t1", "ab": 130.45, "text": "Und Fünftens, mach einen kurzen Realitätscheck."},
   {"take": "t1", "ab": 133.17, "text": "Werden Elektrogeräte verkauft, gibt es zusätzliche gesetzliche Pflichten, wie die WE-Nummer oder auch Batterie-G-Gesetz."},
   {"take": "t1", "ab": 140.23, "text": "auch Verpackungsregister und ähnliche Vorgaben könnten für Händler relevant sein"},
   {"take": "t1", "ab": 154.63, "text": "vor allem wenn hier plötzlich fast alles 70 oder 80% reduziert ist und die Preise viel zu gut klingen um wahr zu sein dann ist immer hier Vorsicht geboten immer zweimal bei sowas hinschauen"},
   {"take": "t1", "ab": 166.07, "text": "und speichere dir das Video einfach für deinen nächsten Online Einkauf"}
  ],
- "ende": {"bis": 169.55},
+ "ende": {"bis": 169.1},
  "korrekturen": [
   ["t1", 105.58, "Dann", "dann"],
   ["t1", 130.73, "Fünftens,", "fünftens,"],

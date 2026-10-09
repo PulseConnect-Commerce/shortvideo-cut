@@ -16,6 +16,7 @@
     "schnitt": "node tools/py.mjs schnitt.py",
     "fillerscan": "node tools/py.mjs fillerscan.py",
     "rohschnitt": "node tools/py.mjs rohschnitt.py",
+    "portrait": "node tools/py.mjs portrait.py",
     "raster": "node tools/py.mjs grid.py",
     "vorschau": "node tools/preview.mjs",
     "sync": "node tools/py.mjs sync-audit.py",
