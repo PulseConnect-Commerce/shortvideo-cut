@@ -23,7 +23,8 @@ export const chip: React.CSSProperties = {
 
 /** Die Bildkarte einer Szene: poppt auf ihrem Wort auf, Kopfzeile mit Nummer (1-5) und Titel, geht ab `until`.
  * `photo` (Pfad in public/, z. B. von npm run bild): füllt die Karte und fährt langsam heran (100 % → 106 %); der
- * Titel liegt dann als weißer Chip darauf. */
+ * Titel liegt dann als weißer Chip darauf. `vollbild`: das Foto füllt oben die ganze Breite bis zum oberen Rand
+ * (0-1080, 0-692), ohne Rahmen und Ecken; Titel und Begriffe bleiben, wo sie sonst liegen (in der sicheren Fläche). */
 export const Szene: React.FC<{
   fr: number;
   at: number;
@@ -32,33 +33,39 @@ export const Szene: React.FC<{
   title: string;
   titleAt?: number;
   photo?: string;
+  vollbild?: boolean;
   children?: React.ReactNode;
-}> = ({ fr, at, until, nr, title, titleAt = at, photo, children }) => {
+}> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, children }) => {
   if (fr < at || fr >= until + 6) return null;
   const o = leave(fr, until);
   const size = fitSize(title, BOX.width - (nr ? 150 : 70), 52, 800, -0.02);
   const push = Number.isFinite(until) ? interpolate(fr, [at, until], [1, 1.06], clamp) : 1;
+  // Vollbild: die Fläche reicht von oben bis zur Unterkante der Karte; der Inhalt sitzt an der gewohnten Stelle
+  const outer = vollbild ? { left: 0, top: 0, width: 1080, height: BOX.top + BOX.height } : BOX;
+  const inner = vollbild ? { left: BOX.left, top: BOX.top } : { left: 0, top: 0 };
   return (
     <div
       style={{
         ...card,
+        ...(vollbild ? { borderRadius: 0, boxShadow: "none" } : {}),
         position: "absolute",
-        left: BOX.left,
-        top: BOX.top,
-        width: BOX.width,
-        height: BOX.height,
+        left: outer.left,
+        top: outer.top,
+        width: outer.width,
+        height: outer.height,
         overflow: "hidden",
-        opacity: 1 - o,
-        transform: `scale(${popS(fr, at) - 0.04 * o})`,
+        opacity: vollbild ? Math.min(ramp(fr, at, 5), 1 - o) : 1 - o,
+        transform: vollbild ? `translateY(${-30 * (1 - ramp(fr, at, 6)) - 30 * o}px)` : `scale(${popS(fr, at) - 0.04 * o})`,
         transformOrigin: "50% 100%",
       }}
     >
       {photo && (
         <Img
           src={staticFile(photo)}
-          style={{ position: "absolute", left: 0, top: 0, width: BOX.width, height: BOX.height, objectFit: "cover", transform: `scale(${push})` }}
+          style={{ position: "absolute", left: 0, top: 0, width: outer.width, height: outer.height, objectFit: "cover", transform: `scale(${push})` }}
         />
       )}
+      <div style={{ position: "absolute", left: inner.left, top: inner.top, width: BOX.width, height: BOX.height }}>
       <div
         style={{
           position: "absolute",
@@ -92,6 +99,7 @@ export const Szene: React.FC<{
         <div style={{ fontSize: size, fontWeight: 800, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>{title}</div>
       </div>
       <div style={{ position: "absolute", left: 0, top: 0, width: BOX.width, height: BOX.height }}>{children}</div>
+      </div>
     </div>
   );
 };
