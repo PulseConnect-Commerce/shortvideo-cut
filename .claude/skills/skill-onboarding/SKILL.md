@@ -185,6 +185,9 @@ Dazu: "Wie lang sind deine Videos meistens?"
 Musik legt faber-cut nie drunter: Er wählt sie in Instagram oder TikTok selbst (sag ihm das als Hinweis).
 
 **Umsetzen:**
+- **Gibt es schon Format-Stile** (`.claude/skills/stil-*/`, Übersicht in `.claude/skills/faber-cut/stil.md`), bleibt
+  `stil.md` die Übersicht: frag, für welches Format der Stil gilt, und schreib dessen Skill neu
+  (`.claude/skills/stil-<format>/SKILL.md`, gleiche Abschnitte wie `stil-hero`). Sonst:
 - **`.claude/skills/faber-cut/stil.md` neu schreiben**, als sein Stil:
   - Überschrift "Mein Schnittstil", eine Zeile "angelegt beim Onboarding am <Datum>".
   - Dieselben Abschnitte wie bisher, aber mit seinen Antworten.

@@ -221,7 +221,8 @@ die Werte vorsichtig gewählt und decken die Angaben aller Quellen ab (Datum und
 
 | Ordner / Datei | Inhalt |
 | --- | --- |
-| `.claude/skills/faber-cut/` | der Skill: `SKILL.md` (der Ablauf) und `stil.md` (**dein Geschmack**, wächst mit) |
+| `.claude/skills/faber-cut/` | der Skill: `SKILL.md` (der Ablauf) und `stil.md` (welcher Stil für welches Videoformat) |
+| `.claude/skills/stil-hero/`, `stil-face/`, `stil-news/` | **dein Geschmack pro Format** (HERO, FACE, NEWS/Reaction), wächst mit |
 | `.claude/skills/skill-onboarding/` | das Onboarding beim ersten Start, mit allen Klickpfaden (`anleitungen.md`) |
 | `faber-cut.json` | deine Einstellungen aus dem Onboarding (lokal/online, Sprache, Gemini, Drive-Ordner) |
 | `tools/` | die Werkzeuge (Python und Node), jedes mit Erklärung im Kopf der Datei |

@@ -1,6 +1,7 @@
 /**
- * Mein Schnittstil in Zahlen (angelegt beim Onboarding am 2026-10-08): Akzentfarbe Blau, leise Soundeffekte.
- * Sag Claude, was anders sein soll, dann trägt es den Wunsch hier und in .claude/skills/faber-cut/stil.md ein.
+ * Die Zahlen des Stils HERO (Erklär- und Expertenvideos, Skill stil-hero): Farben, Maße, Lautstärke der Effekte.
+ * Andere Formate (FACE, NEWS) bekommen beim Stilabgleich eigene Abweichungen; diese Werte bleiben HERO.
+ * Sag Claude, was anders sein soll, dann trägt es den Wunsch hier und im Skill des Formats ein.
  */
 import zonen from "./zonen.json";
 

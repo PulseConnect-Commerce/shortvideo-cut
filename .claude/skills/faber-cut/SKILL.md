@@ -5,7 +5,7 @@ description: Schneidet Talking-Head-Rohclips (Handy, hochkant) wie ein Senior-Ed
 
 # faber-cut: Rohclips zu einem fertigen Reel
 
-Du schneidest die Videos des Nutzers so, wie er sie haben will. Sein Geschmack steht in **`stil.md`** (in diesem Ordner): lies die Datei vor jedem Schnitt. Sagt der Nutzer, dass er etwas anders haben will ("Untertitel größer", "der CTA ans Ende", "weniger Zooms"), setz es um **und trag es als Regel in `stil.md` ein** (mit seinem Satz in Anführungszeichen und dem Datum). So wird der Skill mit jedem Video mehr sein eigener.
+Du schneidest die Videos des Nutzers so, wie er sie haben will. Sein Geschmack steht **pro Videoformat in einem eigenen Skill** (HERO: `stil-hero`, FACE: `stil-face`, NEWS/Reaction: `stil-news`); die Übersicht und wie du das Format klärst, steht in **`stil.md`** (in diesem Ordner): lies sie und den Skill des Formats vor jedem Schnitt. Sagt der Nutzer, dass er etwas anders haben will ("Untertitel größer", "der CTA ans Ende", "weniger Zooms"), setz es um **und trag es als Regel in den Skill des Formats ein** (mit seinem Satz in Anführungszeichen und dem Datum). So wird der Skill mit jedem Video mehr sein eigener.
 
 Sprich mit dem Nutzer in seiner Sprache. Die Untertitel und Texte im Video folgen der Sprache des Videos.
 
@@ -60,7 +60,7 @@ Schreib `src/projekte/<projekt>/schnitt.json` (Format: siehe Kopf von `tools/sch
 - **Ein Eintrag pro Satz**, in der Reihenfolge des Videos. `text` ist der gewählte Text. Was du weglassen willst (Füllwort, Versprecher, "Dann,", "Das heißt,", ein Nebensatz), lässt du einfach im Text weg. `ab` ist die Sekunde kurz vor dem ersten Wort des Satzes im Take.
 - **Umstellen:** Satz in der Liste verschieben (z. B. den Follow-Aufruf ans Ende).
 - **`start.ab`:** beginnt das Video mit einer Bewegung (er stellt das Handy hin), dann ab dem Moment, ab dem man sie versteht, nicht Sekunden davor.
-- **`ende.bis`:** kurz nach dem letzten Wort, bevor sein nächster Laut kommt (wie lange, sagt `stil.md`; keine Frames ohne Bild anhängen).
+- **`ende.bis`:** kurz nach dem letzten Wort, bevor sein nächster Laut kommt (wie lange, sagt der Stil des Formats; keine Frames ohne Bild anhängen).
 - **`"ganz": true`** an einem Satz: keine Pausen herausschneiden. Für jeden Gedanken, den ein Schnitt zerreißen würde, vor allem den Aufruf am Ende samt Begründung: ein Pausen- oder Äh-Schnitt mitten darin klingt wie zwei Sätze. Ein "äh" darin wird mit **`"stumm": [[von, bis]]`** (Quell-Sekunden) leise statt geschnitten, das Bild läuft weiter.
 - **`ende.halt`:** ein stilles Stück aus dem Take als Halt nach dem letzten Wort, nur wenn nach dem letzten Wort noch etwas gesagt wird, das nicht ins Video gehört. Nie einen Satz weglassen, der den Aufruf begründet.
 - **`korrekturen`:** Verhörer in den Untertiteln (`[take, sekunde, "falsch", "richtig"]`), `""` nimmt ein Wort raus, das nicht im Ton ist.
@@ -69,7 +69,7 @@ Dann `npm run schnitt -- src/projekte/<projekt>/schnitt.json`. Es muss **ohne "P
 
 **Rohschnitt vor den Grafiken:** `npm run rohschnitt -- src/projekte/<projekt>/cut.json` setzt den Schnitt in Sekunden mit ffmpeg zusammen (halbe Größe, Untertitel mit dem gelben Wort eingebrannt, oben links die Sekunde, ohne Grafiken) nach `out/vorschau/<projekt>-roh.mp4`. Schick ihm den Rohschnitt und lass ihn den Schnitt freigeben (Reihenfolge, Länge, was raus ist), bevor du Grafiken baust: eine Schnitt-Notiz kostet dann einen neuen Rohschnitt in Sekunden statt einer neuen Vorschau in Minuten. Seine Notizen nennen die Sekunde oben links. Ist er nicht erreichbar, bau weiter und sag es im Bericht.
 
-**Porträt-Modus** (wenn `stil.md` ihn verlangt): nach dem freigegebenen Schnitt `npm run portrait -- <projekt>`. Es stellt die Person in jedem Take frei (Robust Video Matting, CPU, ~6 Bilder/s) und zeichnet nur den Hintergrund weich, aber nur an den Stellen, die `cut.json` nutzt; das Original bleibt als `<take>.orig.mp4`. Ändert sich der Schnitt danach, noch einmal laufen lassen. Vor der nächsten Vorschau `out/vorschau/<Komposition>/` löschen, damit keine Stücke mit dem alten Bild bleiben.
+**Porträt-Modus** (wenn der Stil des Formats ihn verlangt): nach dem freigegebenen Schnitt `npm run portrait -- <projekt>`. Es stellt die Person in jedem Take frei (Robust Video Matting, CPU, ~6 Bilder/s) und zeichnet nur den Hintergrund weich, aber nur an den Stellen, die `cut.json` nutzt; das Original bleibt als `<take>.orig.mp4`. Ändert sich der Schnitt danach, noch einmal laufen lassen. Vor der nächsten Vorschau `out/vorschau/<Komposition>/` löschen, damit keine Stücke mit dem alten Bild bleiben.
 
 ### 5. Grafiken
 
@@ -114,7 +114,7 @@ Ihre Farben und Maße kommen aus `stil.ts`; wirkt ein Baustein nicht wie sein St
 
 ### 7. Runde mit dem Nutzer
 
-Schick ihm die Vorschau mit: was du gemacht hast, die Gemini-Noten, welche Punkte du übernommen oder verworfen hast und warum. Dann wartest du auf seine Notizen. **Keine Vollversion vor seinem OK.** Jede Notiz: umsetzen, neue Vorschau, wieder schicken. Ist eine Notiz eine Geschmacksregel, trag sie in `stil.md` ein.
+Schick ihm die Vorschau mit: was du gemacht hast, die Gemini-Noten, welche Punkte du übernommen oder verworfen hast und warum. Dann wartest du auf seine Notizen. **Keine Vollversion vor seinem OK.** Jede Notiz: umsetzen, neue Vorschau, wieder schicken. Ist eine Notiz eine Geschmacksregel, trag sie in den Skill des Formats ein (`stil-hero`, `stil-face`, `stil-news`).
 
 ### 8. Vollversion
 
@@ -123,14 +123,14 @@ Erst wenn er "passt" sagt:
 2. `npm run checks -- out/final/<id>.mp4 --stems <id>`: keine Ausreißer-Frames, Lautheit, keine Tonlöcher (digitale Stille mitten im Video hört man als Sprung), jeder Effekt ≥ 6 dB unter der Stimme. Erst bei OK übergeben.
 3. Cover: ein Frame mit Titel und Gesicht (`ffmpeg -ss 1.4 -i out/final/<id>.mp4 -frames:v 1 out/final/<id>-cover.jpg`).
 4. **Übergeben:** lokal nennst du ihm den Ordner `out/final/` (`<id>-post.mp4` zum Hochladen auf Instagram/TikTok). Online kann er nicht in deinen Rechner schauen: schick ihm `out/final/<id>-chat.mp4` (unter 29 MB) als Datei in den Chat, falls du ein Werkzeug zum Senden von Dateien hast; sonst sag ihm ehrlich, dass es nicht geht.
-5. **Online speichern:** die Sitzung ist nach einer Weile weg. Committe `src/projekte/<projekt>/`, `stil.md` und `faber-cut.json` und pushe sie so, wie es in `faber-cut.json` unter `speichern` steht (`main` = er hat erlaubt, direkt auf seinen Hauptzweig zu pushen).
+5. **Online speichern:** die Sitzung ist nach einer Weile weg. Committe `src/projekte/<projekt>/`, `public/broll/<projekt>/`, den Skill des Formats (`.claude/skills/stil-*/`) und `faber-cut.json` und pushe sie so, wie es in `faber-cut.json` unter `speichern` steht (`main` = er hat erlaubt, direkt auf seinen Hauptzweig zu pushen).
 
 ## Regeln, die immer gelten
 
 1. **Füllwörter immer raus, Pausen ab 0,3 s raus, aber keine Mini-Jump-Cuts:** kein Stück unter ~0,8 s mitten im Satz (das macht `tools/schnitt.py` selbst). Ein Satz wird nie zerhackt, ein Wort nie angeschnitten.
 2. **Kontext vor Tempo.** Bevor ein Nebensatz rausfliegt: Satz davor und danach ohne ihn lesen. Fragt ein Zuschauer dann "warum?" oder "was?", bleibt er drin. Der Aufruf (CTA) bleibt ein Stück.
 3. **Zahlen, Ergebnisse, Daten werden nie erfunden.** Auf dem Bildschirm stehen die Zahlen, die er sagt oder die gemessen sind.
-4. **Keine Musik**, wenn er seine eigene drunterlegt (Standard, siehe `stil.md`). Soundeffekte immer deutlich unter der Stimme.
+4. **Keine Musik**, wenn er seine eigene drunterlegt (Standard, siehe der Stil des Formats). Soundeffekte immer deutlich unter der Stimme.
 5. **Eine Bildeinstellung wie gedreht:** kein Gesichts-Tracking, kein Wackeln, kein Angleichen pro Schnitt, ein Grade für alles. Bewegung kommt nur aus bewussten Zooms und Layout-Wechseln.
 6. **Rohclips bleiben privat** (`public/projekte/` ist git-ignoriert). Hochgeladen wird nur, was er freigibt.
 7. **Messen statt fühlen:** Sync, Pacing, Lautheit und Ausreißer werden am Render gemessen, nicht am Code geglaubt.
