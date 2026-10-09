@@ -24,7 +24,8 @@ export const chip: React.CSSProperties = {
 /** Die Bildkarte einer Szene: poppt auf ihrem Wort auf, Kopfzeile mit Nummer (1-5) und Titel, geht ab `until`.
  * `photo` (Pfad in public/, z. B. von npm run bild): füllt die Karte und fährt langsam heran (100 % → 106 %); der
  * Titel liegt dann als weißer Chip darauf. `vollbild`: das Foto füllt oben die ganze Breite bis zum oberen Rand
- * (0-1080, 0-752), ohne Rahmen und Ecken; Titel und Begriffe bleiben, wo sie sonst liegen (in der sicheren Fläche). */
+ * (0-1080, 0-752), ohne Rahmen und Ecken; Titel und Begriffe bleiben, wo sie sonst liegen (in der sicheren Fläche).
+ * `frei`: keine Karte und kein Foto, Titel und Begriffe stehen als weiße Chips direkt über dem Kopf im Bild. */
 export const Szene: React.FC<{
   fr: number;
   at: number;
@@ -34,8 +35,9 @@ export const Szene: React.FC<{
   titleAt?: number;
   photo?: string;
   vollbild?: boolean;
+  frei?: boolean;
   children?: React.ReactNode;
-}> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, children }) => {
+}> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, frei = false, children }) => {
   if (fr < at || fr >= until + 6) return null;
   const o = leave(fr, until);
   const size = fitSize(title, BOX.width - (nr ? 150 : 70), 52, 800, -0.02);
@@ -49,6 +51,7 @@ export const Szene: React.FC<{
       style={{
         ...card,
         ...(vollbild ? { borderRadius: 0, boxShadow: "none" } : {}),
+        ...(frei ? { background: "transparent", boxShadow: "none", overflow: "visible" } : {}),
         position: "absolute",
         left: outer.left,
         top: outer.top,
@@ -76,7 +79,7 @@ export const Szene: React.FC<{
           alignItems: "center",
           gap: 18,
           opacity: ramp(fr, titleAt, 4),
-          ...(photo ? { ...chip, borderRadius: 999, padding: "8px 30px 8px 8px" } : {}),
+          ...(photo || frei ? { ...chip, borderRadius: 999, padding: nr !== undefined ? "8px 30px 8px 8px" : "10px 30px" } : {}),
         }}
       >
         {nr !== undefined && (

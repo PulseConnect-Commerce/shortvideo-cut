@@ -103,9 +103,10 @@ export const Video: React.FC<{
   untertitel?: keyof typeof UNTERTITEL;
   /** "oben": Gesicht im oberen Drittel (etwas mehr Ausschnitt), Bildkarten auf der Brust statt über dem Kopf */
   layout?: "standard" | "oben";
-  /** Bildkarten oben in voller Breite bis zum oberen Rand, ohne Rahmen (Versuch 2026-10-09) */
-  vollbild?: boolean;
-}> = ({ voice = true, sfx = true, raster = false, hookStil = "balken", untertitel = "face", layout = "standard", vollbild = true }) => {
+  /** Bildkarten: "foto" (Karte mit Foto über dem Kopf), "vollbild" (Foto randlos oben), "frei" (ohne Karte und Foto,
+   * nur die Chips über dem Kopf). Er mochte "vollbild" weniger als "foto" und wollte "frei" sehen (2026-10-09). */
+  karte?: "foto" | "vollbild" | "frei";
+}> = ({ voice = true, sfx = true, raster = false, hookStil = "balken", untertitel = "face", layout = "standard", karte = "frei" }) => {
   const oben = layout === "oben";
   const fr = useCurrentFrame();
   const ut = UNTERTITEL[untertitel];
@@ -121,7 +122,7 @@ export const Video: React.FC<{
 
       {/* Überall KI-Agenten: wofür angeblich */}
       <AbsoluteFill style={{ transform: oben ? "translateY(640px)" : undefined }}>
-      <Szene fr={fr} at={T.hype} until={T.basics - 2} title="Überall KI-Agenten" photo="broll/kiagenten/hype.jpg" vollbild={vollbild}>
+      <Szene fr={fr} at={T.hype} until={T.basics - 2} title="Überall KI-Agenten" photo={karte === "frei" ? undefined : "broll/kiagenten/hype.jpg"} vollbild={karte === "vollbild"} frei={karte === "frei"}>
         <Pop fr={fr} at={F("onlineshop")} x={24} y={118}>
           <Row icon={<IconBrowser />} text="Onlineshop" width={400} onPhoto />
         </Pop>
@@ -137,7 +138,7 @@ export const Video: React.FC<{
       </Szene>
 
       {/* Wenn die Basics fehlen, rettet auch kein Agent */}
-      <Szene fr={fr} at={T.basics} until={T.auto - 2} title="Wenn die Basics fehlen" photo="broll/kiagenten/leer.jpg" vollbild={vollbild}>
+      <Szene fr={fr} at={T.basics} until={T.auto - 2} title="Wenn die Basics fehlen" photo={karte === "frei" ? undefined : "broll/kiagenten/leer.jpg"} vollbild={karte === "vollbild"} frei={karte === "frei"}>
         <Pop fr={fr} at={F("besucher")} x={24} y={118}>
           <Row icon={<IconEye />} text="keine Besucher" mark="no" width={470} onPhoto />
         </Pop>
@@ -157,7 +158,7 @@ export const Video: React.FC<{
       </Szene>
 
       {/* Automatisierung ja, Hype nein */}
-      <Szene fr={fr} at={T.auto} until={T.tipp - 2} title="Echtes Problem oder Hype?" photo="broll/kiagenten/automatisierung.jpg" vollbild={vollbild}>
+      <Szene fr={fr} at={T.auto} until={T.tipp - 2} title="Echtes Problem oder Hype?" photo={karte === "frei" ? undefined : "broll/kiagenten/automatisierung.jpg"} vollbild={karte === "vollbild"} frei={karte === "frei"}>
         <Pop fr={fr} at={F("automatisierung")} x={24} y={126}>
           <Tag size={44}>Automatisierung</Tag>
         </Pop>
@@ -185,7 +186,7 @@ export const Video: React.FC<{
       </Szene>
 
       {/* Mein Tipp: welche Aufgabe kostet Zeit oder Geld? */}
-      <Szene fr={fr} at={T.tipp} until={T.cta - 2} nr={1} title="Mein Tipp vor dem Kauf" photo="broll/kiagenten/zeitgeld.jpg" vollbild={vollbild}>
+      <Szene fr={fr} at={T.tipp} until={T.cta - 2} nr={1} title="Mein Tipp vor dem Kauf" photo={karte === "frei" ? undefined : "broll/kiagenten/zeitgeld.jpg"} vollbild={karte === "vollbild"} frei={karte === "frei"}>
         <Pop fr={fr} at={F("welche")} x={24} y={118}>
           <div style={{ ...chip, display: "inline-block", padding: "10px 24px", fontSize: 46, fontWeight: 800 }}>Welche Aufgabe kostet mich …</div>
         </Pop>
@@ -208,7 +209,7 @@ export const Video: React.FC<{
       </Szene>
 
       {/* Aufruf: Meinung in die Kommentare, auf das Plus drücken */}
-      <Szene fr={fr} at={T.cta} until={Infinity} title="Genial oder Bullshit?" vollbild={vollbild}>
+      <Szene fr={fr} at={T.cta} until={Infinity} title="Genial oder Bullshit?" vollbild={karte === "vollbild"} frei={karte === "frei"}>
         <Pop fr={fr} at={F("sinnvoll")} x={40} y={120}>
           <Tag kind="ok" size={48}>
             sinnvoll?
@@ -220,7 +221,7 @@ export const Video: React.FC<{
           </Tag>
         </Pop>
         <Pop fr={fr} at={F("meinung")} x={40} y={214}>
-          <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 18, ...(karte === "frei" ? { ...chip, borderRadius: 999, padding: "6px 30px 6px 14px" } : {}) }}>
             <Blase />
             <div style={{ fontSize: 48, fontWeight: 800, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>Schreib mir deine Meinung</div>
           </div>

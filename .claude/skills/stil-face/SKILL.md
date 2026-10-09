@@ -96,3 +96,6 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-09, erstes FACE-Video kia
 - Bilder randlos (2026-10-09): "Lass uns einmal das Bild oben aber in voller Breite und bis oben hin ganz ohne Rand
   anzeigen", dann "sieht gut aus, aber bitte darauf achten, dass noch ein Abstand der oberen Texte zum Rand des Bilder
   vorhanden ist". Das Gesicht bleibt in der Mitte ("Dann bitte Variante 1 verwenden"), nicht im oberen Drittel.
+- Randlos wieder verworfen (2026-10-09): "Ich mag die vorherige Version lieber. Bitte einmal komplett ohne
+  Hintergrundbild erstellen" → Versuch `<Szene frei>`: keine Karte, kein Foto, nur die weißen Chips über dem Kopf.
+  Ob "frei" oder die Karte mit Foto bleibt, entscheidet er nach der Vorschau.
