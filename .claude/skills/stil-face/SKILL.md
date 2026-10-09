@@ -11,6 +11,9 @@ folgenden 2-3 Formate haben, für die ich nicht den gleichen Stil verwenden möc
 Stil 3 Optional wie z.B. News oder Reactions auf andere Videos. Sobald du das erst Mal eines der anderen beiden Videos
 schneidest, sollten wir hier eine Stilanpassung durchführen", 2026-10-09).
 
+
+**Stilabgleich:** läuft über den Skill **format-onboarding** (ausgehend von HERO: nur fragen, was bei FACE anders sein soll, mit Standbildern aus seinem Clip). Die Schritte unten sind die ältere Fassung davon.
+
 ## Stilabgleich beim ersten FACE-Video (Pflicht, vor dem Schnitt)
 
 Dieser Stil ist noch nicht festgelegt. Bevor du das erste FACE-Video schneidest:
@@ -33,3 +36,7 @@ Dieser Stil ist noch nicht festgelegt. Bevor du das erste FACE-Video schneidest:
    das unverändert aussehen muss.
 5. Erst dann schneiden, wie faber-cut es beschreibt. Nach dem ersten Video noch einmal fragen, was am Stil anders
    sein soll, und es hier eintragen.
+
+## Notizen (schon bekannt, vor dem Stilabgleich)
+
+- Bild ab der Hüfte wie bei HERO (2026-10-09): "Auch hier bitte in diesem Fall erst ab Hüfthöhe starten."

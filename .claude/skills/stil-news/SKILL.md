@@ -9,6 +9,9 @@ NEWS/Reaction ist das optionale dritte Videoformat von PulseConnect neben HERO (
 `stil-face`): News oder Reactions auf andere Videos. Der Nutzer will dafür **nicht** denselben Stil wie für HERO
 (Zitat und Datum: siehe `stil-face`).
 
+
+**Stilabgleich:** läuft über den Skill **format-onboarding** (ausgehend von HERO: nur fragen, was bei NEWS anders sein soll, mit Standbildern aus seinem Clip). Die Schritte unten sind die ältere Fassung davon.
+
 ## Stilabgleich beim ersten NEWS-Video (Pflicht, vor dem Schnitt)
 
 Dieser Stil ist noch nicht festgelegt. Bevor du das erste NEWS-Video schneidest:
