@@ -46,8 +46,10 @@ const T = (() => {
 const PUNCH = autoPunch(C, {
   base: [
     [0, 1],
+    [F("hören"), 1.1],
     [F("wirklich"), 1.1],
     [F("beste"), 1.1],
+    [F("unterschied"), 1.1],
     [F("welche"), 1.1],
     [F("seht"), 1.1],
   ],
@@ -148,9 +150,17 @@ export const Video: React.FC<{
 
       {/* Automatisierung ja, Hype nein */}
       <Szene fr={fr} at={T.auto} until={T.tipp - 2} title="Echtes Problem oder Hype?" photo="broll/kiagenten/automatisierung.jpg">
-        <Pop fr={fr} at={F("spannend")} x={24} y={126}>
+        <Pop fr={fr} at={F("automatisierung")} x={24} y={126}>
+          <Tag size={44}>Automatisierung</Tag>
+        </Pop>
+        <Pop fr={fr} at={F("spannend")} x={444} y={126}>
           <Tag kind="ok" size={44}>
-            Automatisierung: spannend
+            extrem spannend
+          </Tag>
+        </Pop>
+        <Pop fr={fr} at={F("unterschied")} until={F("problem") - 8} x={24} y={226}>
+          <Tag kind="ink" size={44}>
+            der Unterschied:
           </Tag>
         </Pop>
         <Pop fr={fr} at={F("problem")} x={24} y={218}>
