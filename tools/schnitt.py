@@ -16,6 +16,10 @@ Schnitt-Datei (JSON):
      pro Satz optional: "ganz": true   keine Pausen herausschneiden (der Satz bleibt, wie er gesprochen ist)
                         "stumm": [[114.42, 114.65]]   Quell-Sekunden leise machen statt schneiden (ein "äh" in
                                        einem ganzen Satz: das Bild läuft weiter, kein Sprung)
+                        "bis": 104.88   das Satzende läuft bis zu dieser Quell-Sekunde weiter (ein kurzer Atemzug,
+                                       z. B. damit nach einem herausgeschnittenen Stotterer kein Mini-Stück bleibt)
+                        "von": 104.07   der Satz beginnt schon bei dieser Quell-Sekunde (am Pegel gemessen, wenn der
+                                       erste Laut sonst angeschnitten würde)
   "ende": {"bis": 86.95},                  optional: der letzte Satz läuft weiter (das Bild bleibt unter der Endgrafik)
   "ende": {"halt": {"take": "t3", "ab": 125.95, "bis": 126.75}}   optional statt "bis": ein stilles Stück als Halt
                                            nach dem letzten Wort (z. B. das Lächeln nach dem Satz, wenn danach
@@ -56,6 +60,11 @@ for si, s in enumerate(spec["saetze"]):
             if stumm:
                 k["stumm"] = stumm
             keeps.append(k)
+    if "bis" in s:
+        keeps[-1]["to"] = max(keeps[-1]["to"], s["bis"])
+    if "von" in s:
+        first = next(k for k in keeps if k["satz"] == si)
+        first["from"] = min(first["from"], s["von"])
 if "start" in spec:
     k0 = keeps[0]
     if spec["start"]["ab"] >= k0["from"]:

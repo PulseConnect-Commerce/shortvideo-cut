@@ -72,9 +72,11 @@ HERO-Werte. Neue Geschmacksregeln aus seinem Feedback zu einem HERO-Video kommen
 - **Mehrere Takes desselben Texts:** pro Satz den besten Take nehmen und mischen (sauberer Satz, Blick in die Linse,
   näher am Skript; die Aufzählung einheitlich: "Erstens … Viertens").
 - Füllwörter immer raus, Pausen ab 0,2 s raus, aber keine Mini-Jump-Cuts. Kontext vor Tempo.
-- **Wortdoppler am Pegel prüfen:** Whisper schreibt Stotterer ("an- anbietet") nur einmal auf. Jede Stelle, die
-  fillerscan meldet, am Pegel ansehen; einen Doppler mitten im Satz mit `"stumm"` leise machen, wenn ein Schnitt dort
-  ein Mini-Stück ließe.
+- **Wortdoppler am Pegel prüfen und im Bild herausschneiden:** Whisper schreibt Stotterer ("an- anbietet") nur einmal
+  auf. Jede Stelle, die fillerscan meldet, am Pegel ansehen und **mit dem Bild herausschneiden, nie nur stumm machen**
+  (man sieht die Lippen das Wort sagen). Den Satz dort teilen, die Schnittkanten am Pegel setzen (`"bis"` am Teil
+  davor, `"von"` am Teil danach); bliebe ein Mini-Stück, läuft es mit `"bis"` einen kurzen Atemzug weiter, bis es
+  0,8 s hat. `"stumm"` nur für Geräusche ohne sichtbare Mundbewegung.
 - Leise Soundeffekte unter der Stimme (Wusch bei jeder neuen Karte, Tick bei Haken, Stempel bei Warnungen, Erfolg bei
   "ok"), ≥ 6 dB unter der Stimme. Keine Musik (die legt er in der App drunter). -14 LUFS.
 
@@ -110,3 +112,5 @@ Herkunft der Regeln oben (seine Sätze beim ersten HERO-Video, 2026-10-08/09):
   kommt noch das Wort 'an' zweimal vor."
 - Rand: "Wir haben innerhalb des Videos einen Roten Bereich am Rand, der ca. 3mm breit ist, dieser sollte
   idealerweise keine Inhalte oder Bilder darin anzeigen."
+- Doppler im Bild (2026-10-09): "Bei 0:48 sieht man, wie ich "an" vor dem "anbietet" sage, aber du hast hier nur den
+  Ton vom "an" entfernt, nicht den Videoausschnitt dazu."
