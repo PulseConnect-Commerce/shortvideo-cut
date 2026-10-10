@@ -24,29 +24,31 @@ So gehst du vor:
 
 Neben dem Format hat jedes Video ein **Design**: Schrift, Farben, Untertitel, Hook, Chips und Karten, Farbstimmung.
 Das Format sagt, wie geschnitten wird (Bildausschnitt, Tempo, Zooms, Aufbau, Aufruf), das Design, wie es aussieht.
-Eingeführt am 2026-10-10: "Bitte noch 2-3 komplett andere Design Stile für die nächsten Videos vorbereiten. Beim
-nächsten Video dann einen der neuen Stile verwenden". Die Werte stehen in `src/lib/design.tsx`, die Vergleichsbilder
-entstehen aus `src/projekte/kiagenten/` (`--props='{"design":"<name>"}'`).
+Die Werte stehen in `src/lib/design.tsx`, die Vergleichsbilder entstehen aus `src/projekte/kiagenten/`
+(`--props='{"design":"<name>"}'`).
 
-| Design | Look | Schrift | Untertitel | Chips und Hook | Farben und Bild |
-| --- | --- | --- | --- | --- | --- |
-| **pulse** | der Look der ersten drei Videos | Geist | weiß, das gesprochene Wort blau | weiße Chips, Hook aus `HOOK_STILE` | Blau, PulseConnect-Grün, Rot |
-| **nacht** | dunkel und laut, Tech | Anton (Großbuchstaben), Space Grotesk | Großbuchstaben, das Wort in einer neongrünen Box | dunkle Glas-Chips, Titel neongrün; Hook weiß, Kernzeile schwarz auf Neon | Neon-Grün `#CCFF00`, Pink-Rot; Bild dunkler und kühler, oben abgedunkelt, Vignette |
-| **magazin** | ruhig und edel, wie ein Magazin | Instrument Serif (Serifen), Geist für die Dachzeile | Serifen, das Wort orange unterstrichen | Papier-Chips in Creme, Titel dunkel mit kursiver Serife; Hook als Creme-Karte (orange Dachzeile, kursive Schlagzeile) | Creme, Tinte, Orange, Salbeigrün; Bild warm, etwas entsättigt, Filmkorn, Vignette |
-| **sticker** | verspielt, wie Aufkleber | Bricolage Grotesque | weiß mit schwarzer Kontur, das Wort als gelber, gekippter Aufkleber | weiße Aufkleber mit schwarzem Rand und hartem Schatten; Hook als zwei gekippte Aufkleber (weiß, pink) | Gelb, Pink, Mint, Blau; Bild kräftig |
+| Design | Look | Leuchtfarbe |
+| --- | --- | --- |
+| **pulse** | der Look der ersten drei Videos: Geist, das gesprochene Wort blau, weiße Chips, Hook aus `HOOK_STILE` | (Blau `#31ADEC`, PulseConnect-Grün, Rot) |
+| **nacht** (Variante 1) | dunkel und laut: Anton in Großbuchstaben, das gesprochene Wort in einer leuchtenden Box, dunkle Glas-Chips mit Space Grotesk, Szenen-Titel in der Leuchtfarbe, Hook weiß und darunter schwarz auf Leuchtfarbe; Bild dunkler und kühler, oben abgedunkelt, Vignette; Warnungen Pink-Rot `#FF3B5C` | Neon-Gelbgrün `#CCFF00` |
+| **nacht-gruen** (Variante 2) | wie nacht | Hellgrün vom rechten Ende des PulseConnect-Logos `#00F090` |
+| **nacht-mint** (Variante 3) | wie nacht | helles Mint-Türkis `#40E8E0` (das Türkis aus der Mitte des Logo-Verlaufs, aufgehellt) |
+
+Das Logo (pulseconnect.de/pulseconnect-logo.png) läuft von Blau `#00A2FC` über Türkis `#00C3CB` nach Hellgrün
+`#00EE88`-`#00F699`; die Website nutzt `#00E090` und `#0090F0`.
 
 So gehst du vor:
 
-- **Das nächste Video bekommt eines der neuen Designs** (nacht, magazin oder sticker), nicht pulse. Hat er noch keins
-  gewählt: vor der Vorschau die Vergleichsbilder aus seinem neuen Clip zeigen (Hook, eine Szene, das Ende; je Design
-  eine Spalte) und fragen (AskUserQuestion). Antwortet er nicht, nimm **magazin** (ruhig, passt zu "weniger Zooms
-  und Schnitte"). Danach wechselt der Look von Video zu Video, wie er es will.
+- **Beim nächsten Video die drei Nacht-Varianten testen** (nacht, nacht-gruen, nacht-mint), nicht pulse: vor der
+  Vorschau aus seinem neuen Clip je Variante dieselben Standbilder zeigen (Hook, eine Szene, das Ende) und fragen
+  (AskUserQuestion), welche Variante das Video bekommt; will er sie im Bewegtbild vergleichen, die Vorschau in allen
+  drei. Antwortet er nicht, nimm **nacht** (Variante 1, "genau richtig").
 - **Was das Format sagt, bleibt:** Bildausschnitt, Tempo, Zooms, Untertitel-Position und -Größe, Hook-Text, Aufruf.
   Wo der Skill des Formats Farben oder Schrift nennt ("Farben wie HERO", "das gesprochene Wort in Blau", Hook-Stil aus
-  `HOOK_STILE`), gilt das für pulse; bei einem anderen Design gelten dessen Farben, Schriften und Hook.
-- **Feedback zum Look eines Designs** ("das Neon ist zu grell") kommt hier unter "Notizen zu den Designs", mit
+  `HOOK_STILE`), gilt das für pulse; bei nacht gelten dessen Farben, Schriften und Hook.
+- **Feedback zum Look eines Designs** ("das Grün ist zu grell") kommt hier unter "Notizen zu den Designs", mit
   seinem Satz und Datum, und die Werte in `design.tsx`; Feedback zum Schnitt in den Skill des Formats.
-- **Verlauf:** pro Video Format und Design in die Tabelle unten, damit sich der Look nicht ungewollt wiederholt.
+- **Verlauf:** pro Video Format und Design in die Tabelle unten.
 
 | Video | Format | Design |
 | --- | --- | --- |
@@ -57,3 +59,12 @@ So gehst du vor:
 ### Notizen zu den Designs
 
 <!-- Claude: trag hier jede neue Regel zum Look eines Designs ein, mit seinem Satz in Anführungszeichen und dem Datum. -->
+
+- Wunsch (2026-10-10): "Bitte noch 2-3 komplett andere Design Stile für die nächsten Videos vorbereiten. Beim
+  nächsten Video dann einen der neuen Stile verwenden". Gezeigt wurden nacht, magazin (Serifen, Creme, Orange,
+  Filmkorn) und sticker (Aufkleber mit schwarzem Rand, Gelb, Pink, Mint).
+- Entschieden (2026-10-10): "Ich finde leider Design 2 nicht passend und Design 3 viel zu verspielt. Design 1 ist
+  genau richtig. Können wir ggf. einen Hellgrünton aus unserem Logo (PulseConnect) verwenden und daraus Design 2 bauen
+  und einen hellblauen/mint gefärbten für Design 3 nehmen? Dann testen wir die drei Varianten beim den nächsten
+  Video". Also: kein Serifen- und kein Aufkleber-Look; nacht bleibt, die beiden anderen Varianten sind nacht mit
+  einer anderen Leuchtfarbe. magazin und sticker sind entfernt (stehen noch in Git, Commit 830cc56).

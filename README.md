@@ -226,7 +226,7 @@ die Werte vorsichtig gewählt und decken die Angaben aller Quellen ab (Datum und
 | `.claude/skills/skill-onboarding/` | das Onboarding beim ersten Start, mit allen Klickpfaden (`anleitungen.md`) |
 | `faber-cut.json` | deine Einstellungen aus dem Onboarding (lokal/online, Sprache, Gemini, Drive-Ordner) |
 | `tools/` | die Werkzeuge (Python und Node), jedes mit Erklärung im Kopf der Datei |
-| `src/lib/` | Remotion-Bausteine: Zeitachse (`schnitt.ts`), Untertitel, Titel, Splitscreen, J-Cuts (`bausteine.tsx`), Terminal, Schritte, Zähler, Follow-Karte, Screenshot, Auto-Zoom (`kit.tsx`), gemessene Textbreiten (`messen.ts`), `stil.ts`, Designs (`design.tsx`: pulse, nacht, magazin, sticker), Raster (`raster.tsx`, `zonen.json`) |
+| `src/lib/` | Remotion-Bausteine: Zeitachse (`schnitt.ts`), Untertitel, Titel, Splitscreen, J-Cuts (`bausteine.tsx`), Terminal, Schritte, Zähler, Follow-Karte, Screenshot, Auto-Zoom (`kit.tsx`), gemessene Textbreiten (`messen.ts`), `stil.ts`, Designs (`design.tsx`: pulse und nacht in drei Leuchtfarben), Raster (`raster.tsx`, `zonen.json`) |
 | `src/projekte/_vorlage/` | Vorlage für jedes neue Video |
 | `src/projekte/<projekt>/` | deine Videos: `schnitt.json`, `cut.json`, `Video.tsx` |
 | `public/projekte/` | deine Takes und Transkripte (bleiben privat, nicht im Git) |

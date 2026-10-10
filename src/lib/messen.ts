@@ -2,8 +2,8 @@
  * Textbreite in Geist, ohne den Browser zu fragen: die Zeichenbreiten sind einmal in Chromium gemessen
  * (geist-breiten.json, dieselbe Datei nimmt tools/fclib.py für die Untertitel-Seiten). So steht die Größe schon im
  * ersten Frame fest, auch bevor die Schrift geladen ist. Unterschneidung zählt nicht mit: eher 2-3 % zu breit.
- * Die Schriften der Designs (design.tsx) stehen in design-breiten.json, Schlüssel "<Familie>|<Gewicht>" ("400i" =
- * kursiv), ebenso in Chromium gemessen.
+ * Die Schriften der Designs (design.tsx) stehen in design-breiten.json, Schlüssel "<Familie>|<Gewicht>", ebenso in
+ * Chromium gemessen.
  */
 import designBreiten from "./design-breiten.json";
 import breiten from "./geist-breiten.json";

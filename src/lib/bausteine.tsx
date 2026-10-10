@@ -250,8 +250,8 @@ export const HookTitle: React.FC<{
 };
 
 /** Untertitel eines Designs (nicht "pulse", design.tsx): Schrift und Farben aus dem Design, das gesprochene Wort in
- * Farbe (optional unterstrichen), in einer Box oder als gekippter Aufkleber. Bei Box und Aufkleber hat jedes Wort
- * denselben Innenabstand und Rand (unsichtbar, solange es nicht gesprochen wird): so springt die Zeile nie. */
+ * Farbe oder in einer Box. Mit Box hat jedes Wort denselben Innenabstand (die Box ist unsichtbar, solange es nicht
+ * gesprochen wird): so springt die Zeile nie. */
 const DesignCaptions: React.FC<{ page: Cut["PAGES"][number]; i: number; fr: number; top: number; size: number; pop: number }> = ({
   page,
   i,
@@ -266,11 +266,10 @@ const DesignCaptions: React.FC<{ page: Cut["PAGES"][number]; i: number; fr: numb
   const words = page.map((x) => setze(S, x.text.replace(/,$/, "")));
   const box = U.modus !== "farbe";
   const padX = box ? 0.14 : 0;
-  const rand = U.modus === "sticker" ? 0.05 : 0;
   const gap = box ? 0.06 : textWidth(" ", 1, w, sp, fam);
   const max = Math.round(size * U.faktor);
   const breite = (fs: number) =>
-    words.reduce((n, x) => n + textWidth(x, fs, w, sp, fam), 0) + fs * (2 * (padX + rand) * words.length + gap * (words.length - 1));
+    words.reduce((n, x) => n + textWidth(x, fs, w, sp, fam), 0) + fs * (2 * padX * words.length + gap * (words.length - 1));
   const fs = Math.min(max, Math.floor((max * STIL.safe.width) / Math.max(1, breite(max))));
   return (
     <div
@@ -292,25 +291,19 @@ const DesignCaptions: React.FC<{ page: Cut["PAGES"][number]; i: number; fr: numb
       {page.map((x, k, pg) => {
         const on = fr >= x.a - 1 && fr < (pg[k + 1]?.a ?? x.b + 12) - 1;
         const hit = on ? interpolate(fr, [x.a - 1, x.a + 3], [1.1, 1], clamp) : 1;
-        const kipp = U.modus === "sticker" && on ? (k % 2 ? 3 : -3) : 0;
         return (
           <span
             key={`${i}-${k}`}
             style={{
               display: "inline-block",
               padding: box ? `0.02em ${padX}em 0.06em` : 0,
-              border: rand ? `${rand}em solid ${on ? (U.wortRand ?? "#111") : "transparent"}` : undefined,
-              borderRadius: U.modus === "sticker" ? "0.16em" : "0.06em",
+              borderRadius: "0.06em",
               color: on ? (box ? U.wortText : U.wort) : U.farbe,
               background: on && box ? U.wort : "transparent",
-              boxShadow: on && U.modus === "sticker" ? `0.06em 0.07em 0 ${U.wortRand ?? "#111"}` : "none",
               WebkitTextStroke: on && box ? "0px transparent" : (U.kontur ?? "0px transparent"),
               paintOrder: "stroke fill",
               textShadow: on && box ? "none" : U.schatten,
-              textDecoration: on && U.unterstrich ? "underline" : "none",
-              textDecorationThickness: "0.05em",
-              textUnderlineOffset: "0.14em",
-              transform: `scale(${box ? hit : 1}) rotate(${kipp}deg)`,
+              transform: `scale(${box ? hit : 1})`,
             }}
           >
             {words[k]}
@@ -322,16 +315,15 @@ const DesignCaptions: React.FC<{ page: Cut["PAGES"][number]; i: number; fr: numb
 };
 
 /** Hook eines Designs (nicht "pulse", design.tsx): zwei Zeilen nach dem Design, oben in der Mitte, höchstens
- * STIL.hookBreite breit (mit Fläche oder Karte entsprechend weniger) */
+ * STIL.hookBreite breit (mit Fläche entsprechend weniger Text) */
 const DesignHook: React.FC<{ o: number; line1: string; line2?: string }> = ({ o, line1, line2 }) => {
   const H = useDesign().hook;
   if (!H) return null;
   const width = STIL.hookBreite;
-  const innen = width - (H.box ? 100 : 0);
   const zeile = (text: string, z: DesignZeile, erste: boolean) => {
     const t = setze(z.schrift, text);
     const [w, sp, fam] = mass(z.schrift);
-    const size = fitSize(t, innen - (z.flaeche ? z.max * 0.75 : 24), z.max, w, sp, 24, fam);
+    const size = fitSize(t, width - (z.flaeche ? z.max * 0.75 : 24), z.max, w, sp, 24, fam);
     return (
       <div style={{ marginTop: erste ? 0 : H.abstand }}>
         <div
@@ -343,14 +335,12 @@ const DesignHook: React.FC<{ o: number; line1: string; line2?: string }> = ({ o,
             whiteSpace: "nowrap",
             color: z.farbe,
             background: z.flaeche,
-            border: z.rand,
             borderRadius: z.radius,
             padding: z.padding,
             boxShadow: z.flaeche ? z.schatten : undefined,
             textShadow: z.flaeche ? undefined : z.schatten,
             WebkitTextStroke: z.kontur,
             paintOrder: "stroke fill",
-            transform: `rotate(${z.kippen ?? 0}deg)`,
           }}
         >
           {t}
@@ -358,12 +348,6 @@ const DesignHook: React.FC<{ o: number; line1: string; line2?: string }> = ({ o,
       </div>
     );
   };
-  const zeilen = (
-    <>
-      {zeile(line1, H.z1, true)}
-      {line2 && zeile(line2, H.z2, false)}
-    </>
-  );
   return (
     <div
       style={{
@@ -376,7 +360,8 @@ const DesignHook: React.FC<{ o: number; line1: string; line2?: string }> = ({ o,
         transform: `translateY(${-40 * o}px)`,
       }}
     >
-      {H.box ? <div style={{ display: "inline-block", ...H.box }}>{zeilen}</div> : zeilen}
+      {zeile(line1, H.z1, true)}
+      {line2 && zeile(line2, H.z2, false)}
     </div>
   );
 };

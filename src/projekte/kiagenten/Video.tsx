@@ -65,7 +65,7 @@ const Blase: React.FC = () => {
   const D = useDesign();
   return (
     <svg width={86} height={78} viewBox="0 0 86 78">
-      <path d="M10 6 h66 a8 8 0 0 1 8 8 v36 a8 8 0 0 1 -8 8 h-38 l-18 16 v-16 h-10 a8 8 0 0 1 -8 -8 v-36 a8 8 0 0 1 8 -8 z" fill={D.blase} stroke={D.markRand} strokeWidth={D.markRand ? 3 : 0} />
+      <path d="M10 6 h66 a8 8 0 0 1 8 8 v36 a8 8 0 0 1 -8 8 h-38 l-18 16 v-16 h-10 a8 8 0 0 1 -8 -8 v-36 a8 8 0 0 1 8 -8 z" fill={D.blase} />
       <circle cx="26" cy="32" r="5" fill={STIL.ink} />
       <circle cx="43" cy="32" r="5" fill={STIL.ink} />
       <circle cx="60" cy="32" r="5" fill={STIL.ink} />
@@ -182,7 +182,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, hoo
               kein KI-Agent
             </div>
           ) : (
-            <div style={{ ...D.tag, ...D.tags.warn, ...schriftCss(D.titel), borderRadius: 18, padding: "10px 22px", fontSize: Math.round(40 * (D.titel.faktor ?? 1)), lineHeight: 1.12 }}>
+            <div style={{ ...D.tag, ...D.tags.warn, ...schriftCss(D.titel), borderRadius: 18, padding: "10px 22px", fontSize: 40, lineHeight: 1.12 }}>
               {D.titel.caps ? "DA HILFT AUCH" : "Da hilft auch"}
               <br />
               {D.titel.caps ? "KEIN KI-AGENT" : "kein KI-Agent"}
@@ -222,7 +222,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, hoo
       {/* Mein Tipp: welche Aufgabe kostet Zeit oder Geld? */}
       <Szene fr={fr} at={T.tipp} until={T.cta - 2} nr={1} title="Mein Tipp vor dem Kauf" photo={karte === "frei" ? undefined : "broll/kiagenten/zeitgeld.jpg"} vollbild={karte === "vollbild"} frei={karte === "frei"}>
         <Pop fr={fr} at={F("welche")} x={24} y={118}>
-          <div style={{ ...D.chip, color: D.chipText, display: "inline-block", padding: "10px 24px", ...(D.name === "pulse" ? { fontWeight: 800 } : schriftCss(D.text)), fontSize: Math.round(46 * (D.text.faktor ?? 1)) }}>
+          <div style={{ ...D.chip, color: D.chipText, display: "inline-block", padding: "10px 24px", ...(D.name === "pulse" ? { fontWeight: 800 } : schriftCss(D.text)), fontSize: 46 }}>
             Welche Aufgabe kostet mich …
           </div>
         </Pop>
@@ -259,7 +259,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, hoo
         <Pop fr={fr} at={F("meinung")} x={40} y={214}>
           <div style={{ display: "flex", alignItems: "center", gap: 18, ...(karte === "frei" ? { ...D.chip, color: D.chipText, borderRadius: D.name === "pulse" ? 999 : D.chip.borderRadius, padding: "6px 30px 6px 14px" } : {}) }}>
             <Blase />
-            <div style={{ ...(D.name === "pulse" ? { fontWeight: 800, letterSpacing: "-0.02em" } : schriftCss(D.text)), fontSize: Math.round(48 * (D.text.faktor ?? 1)), whiteSpace: "nowrap" }}>Schreib mir deine Meinung</div>
+            <div style={{ ...(D.name === "pulse" ? { fontWeight: 800, letterSpacing: "-0.02em" } : schriftCss(D.text)), fontSize: 48, whiteSpace: "nowrap" }}>Schreib mir deine Meinung</div>
           </div>
         </Pop>
         <Pop fr={fr} at={F("vergiss")} x={40} y={316}>

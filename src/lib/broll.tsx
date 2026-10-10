@@ -40,7 +40,7 @@ export const Szene: React.FC<{
   const o = leave(fr, until);
   const [tw, tsp, tfam] = mass(D.titel);
   const titel = setze(D.titel, title);
-  const size = fitSize(titel, BOX.width - (nr ? 150 : 70), Math.round(52 * (D.titel.faktor ?? 1)), tw, tsp, 24, tfam);
+  const size = fitSize(titel, BOX.width - (nr ? 150 : 70), 52, tw, tsp, 24, tfam);
   const push = Number.isFinite(until) ? interpolate(fr, [at, until], [1, 1.06], clamp) : 1;
   // Vollbild: die Fläche reicht von oben bis zur Unterkante der Karte; der Inhalt sitzt an der gewohnten Stelle
   // (60 px mehr nach unten, damit auch die untersten Begriffe Abstand zur Unterkante des Bildes haben)
@@ -92,7 +92,6 @@ export const Szene: React.FC<{
               display: "grid",
               placeItems: "center",
               background: D.nummer.background,
-              border: D.nummer.border,
               ...(D.name === "pulse" ? { fontWeight: 900 } : schriftCss(D.titel)),
               fontSize: 46,
               color: D.nummer.color,
@@ -154,7 +153,7 @@ export const Row: React.FC<{
   const D = useDesign();
   const [w, sp, fam] = mass(D.text);
   const t = setze(D.text, text);
-  const fs = fitSize(t, width - (icon ? 92 : 0) - (mark ? 70 : 0), Math.round(size * (D.text.faktor ?? 1)), w, sp, 24, fam);
+  const fs = fitSize(t, width - (icon ? 92 : 0) - (mark ? 70 : 0), size, w, sp, 24, fam);
   return (
     <div
       style={{
@@ -177,7 +176,7 @@ export const Mark: React.FC<{ ok: boolean; size?: number }> = ({ ok, size = 54 }
   const D = useDesign();
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" style={{ flex: "none" }}>
-      <circle cx="24" cy="24" r={D.markRand ? 20.5 : 22} fill={ok ? D.ok : D.warn} stroke={D.markRand} strokeWidth={D.markRand ? 3 : 0} />
+      <circle cx="24" cy="24" r="22" fill={ok ? D.ok : D.warn} />
       {ok ? (
         <path d="M14 25 l7 7 l13 -15" stroke={D.okZeichen} strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
       ) : (
@@ -188,11 +187,10 @@ export const Mark: React.FC<{ ok: boolean; size?: number }> = ({ ok, size = 54 }
 };
 
 /** Pille auf der Karte (Akzent, Warnung, ok) */
-export const Tag: React.FC<{ children: React.ReactNode; kind?: "accent" | "warn" | "ok" | "ink"; size?: number }> = ({ children, kind = "accent", size: s = 46 }) => {
+export const Tag: React.FC<{ children: React.ReactNode; kind?: "accent" | "warn" | "ok" | "ink"; size?: number }> = ({ children, kind = "accent", size = 46 }) => {
   const D = useDesign();
   const { background: bg, color } = D.tags[kind];
   const pulse = D.name === "pulse";
-  const size = pulse ? s : Math.round(s * (D.titel.faktor ?? 1));
   return (
     <div
       style={{
@@ -214,19 +212,18 @@ export const Tag: React.FC<{ children: React.ReactNode; kind?: "accent" | "warn"
   );
 };
 
-/** Breite einer Pille (Tag) in px im Design D, mit Rand und Schatten: um die nächste Pille daneben zu setzen */
-export const tagBreite = (D: Design, text: string, s = 46) => {
-  const size = D.name === "pulse" ? s : Math.round(s * (D.titel.faktor ?? 1));
+/** Breite einer Pille (Tag) in px im Design D: um die nächste Pille daneben zu setzen */
+export const tagBreite = (D: Design, text: string, size = 46) => {
   const [w, sp, fam] = D.name === "pulse" ? ([800, -0.01, "Geist"] as const) : mass(D.titel);
-  return Math.ceil(textWidth(setze(D.titel, text), size, w, sp, fam) + 2 * 0.62 * size + (D.tag.border ? 14 : 0));
+  return Math.ceil(textWidth(setze(D.titel, text), size, w, sp, fam) + 2 * 0.62 * size);
 };
 
 /** Breite einer Zeile als Chip (`<Row onPhoto>`) in px im Design D: um etwas rechts daneben zu setzen */
 export const rowBreite = (D: Design, text: string, { icon = false, mark = false, size = 46, width = 400 } = {}) => {
   const [w, sp, fam] = mass(D.text);
   const t = setze(D.text, text);
-  const fs = fitSize(t, width - (icon ? 92 : 0) - (mark ? 70 : 0), Math.round(size * (D.text.faktor ?? 1)), w, sp, 24, fam);
-  const rand = D.chip.border ? 8 : 0;
+  const fs = fitSize(t, width - (icon ? 92 : 0) - (mark ? 70 : 0), size, w, sp, 24, fam);
+  const rand = D.chip.border ? 4 : 0;
   return Math.ceil((icon ? 8 + 74 + 18 + 20 : 44) + textWidth(t, fs, w, sp, fam) + (mark ? 18 + 54 : 0) + rand);
 };
 

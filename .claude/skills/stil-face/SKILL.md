@@ -16,7 +16,7 @@ und in `src/lib/stil.ts` (die HERO-Zahlen, unverändert). Neue Geschmacksregeln 
 FACE-Video kommen hierher unter "Notizen", mit seinem Satz und Datum.
 
 **Design:** Farben, Schriften, Hook-Look, Untertitel-Look und Chips hier sind die des Designs **pulse**. Ab dem
-nächsten Video kommt ein anderes Design dazu (nacht, magazin oder sticker; `.claude/skills/faber-cut/stil.md` unter
+nächsten Video werden die drei Varianten des Designs nacht getestet (`.claude/skills/faber-cut/stil.md` unter
 "Designs"): dann gelten dessen Farben und Schriften, alles andere aus diesem Skill (Bild, Schnitt, Aufbau, Aufruf)
 bleibt.
 
