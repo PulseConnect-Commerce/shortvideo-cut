@@ -4,8 +4,9 @@
  */
 import type React from "react";
 import { Easing, Img, interpolate, staticFile } from "remotion";
-import { card, clamp, popS, ramp } from "./bausteine";
-import { fitSize } from "./messen";
+import { clamp, popS, ramp } from "./bausteine";
+import { chip, type Design, mass, schriftCss, setze, useDesign } from "./design";
+import { fitSize, textWidth } from "./messen";
 import { STIL } from "./stil";
 
 /** Platz für die Bildkarte: über dem Kopf, mittig (links und rechts je 95 px frei). Unten rechts ragt nur das Foto
@@ -14,12 +15,8 @@ export const BOX = { left: 95, top: 262, width: 890, height: 430 };
 
 const leave = (fr: number, until: number, len = 6) => (Number.isFinite(until) ? ramp(fr, until, len, Easing.in(Easing.cubic)) : 0);
 
-/** Weißer Chip mit Schatten: hält Text und Icons auf einem Foto lesbar */
-export const chip: React.CSSProperties = {
-  background: "#fff",
-  borderRadius: 20,
-  boxShadow: "0 6px 18px rgb(20 22 26 / 0.22)",
-};
+/** Weißer Chip mit Schatten: hält Text und Icons auf einem Foto lesbar (der Chip von "pulse"; im Design: D.chip) */
+export { chip };
 
 /** Die Bildkarte einer Szene: poppt auf ihrem Wort auf, Kopfzeile mit Nummer (1-5) und Titel, geht ab `until`.
  * `photo` (Pfad in public/, z. B. von npm run bild): füllt die Karte und fährt langsam heran (100 % → 106 %); der
@@ -38,9 +35,12 @@ export const Szene: React.FC<{
   frei?: boolean;
   children?: React.ReactNode;
 }> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, frei = false, children }) => {
+  const D = useDesign();
   if (fr < at || fr >= until + 6) return null;
   const o = leave(fr, until);
-  const size = fitSize(title, BOX.width - (nr ? 150 : 70), 52, 800, -0.02);
+  const [tw, tsp, tfam] = mass(D.titel);
+  const titel = setze(D.titel, title);
+  const size = fitSize(titel, BOX.width - (nr ? 150 : 70), Math.round(52 * (D.titel.faktor ?? 1)), tw, tsp, 24, tfam);
   const push = Number.isFinite(until) ? interpolate(fr, [at, until], [1, 1.06], clamp) : 1;
   // Vollbild: die Fläche reicht von oben bis zur Unterkante der Karte; der Inhalt sitzt an der gewohnten Stelle
   // (60 px mehr nach unten, damit auch die untersten Begriffe Abstand zur Unterkante des Bildes haben)
@@ -49,9 +49,9 @@ export const Szene: React.FC<{
   return (
     <div
       style={{
-        ...card,
-        ...(vollbild ? { borderRadius: 0, boxShadow: "none" } : {}),
-        ...(frei ? { background: "transparent", boxShadow: "none", overflow: "visible" } : {}),
+        ...D.karte,
+        ...(vollbild ? { borderRadius: 0, boxShadow: "none", border: "none" } : {}),
+        ...(frei ? { background: "transparent", boxShadow: "none", border: "none", overflow: "visible" } : {}),
         position: "absolute",
         left: outer.left,
         top: outer.top,
@@ -79,7 +79,7 @@ export const Szene: React.FC<{
           alignItems: "center",
           gap: 18,
           opacity: ramp(fr, titleAt, 4),
-          ...(photo || frei ? { ...chip, borderRadius: 999, padding: nr !== undefined ? "8px 30px 8px 8px" : "10px 30px" } : {}),
+          ...(photo || frei ? { ...D.titelChip, padding: nr !== undefined ? "8px 30px 8px 8px" : "10px 30px" } : {}),
         }}
       >
         {nr !== undefined && (
@@ -91,16 +91,17 @@ export const Szene: React.FC<{
               flex: "none",
               display: "grid",
               placeItems: "center",
-              background: STIL.yellow,
-              fontWeight: 900,
+              background: D.nummer.background,
+              border: D.nummer.border,
+              ...(D.name === "pulse" ? { fontWeight: 900 } : schriftCss(D.titel)),
               fontSize: 46,
-              color: STIL.ink,
+              color: D.nummer.color,
             }}
           >
             {nr}
           </div>
         )}
-        <div style={{ fontSize: size, fontWeight: 800, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>{title}</div>
+        <div style={{ ...schriftCss(D.titel), fontSize: size, whiteSpace: "nowrap" }}>{titel}</div>
       </div>
       <div style={{ position: "absolute", left: 0, top: 0, width: BOX.width, height: BOX.height }}>{children}</div>
       </div>
@@ -149,8 +150,11 @@ export const Row: React.FC<{
   width?: number;
   color?: string;
   onPhoto?: boolean;
-}> = ({ icon, text, mark, size = 46, width = 400, color = STIL.ink, onPhoto = false }) => {
-  const fs = fitSize(text, width - (icon ? 92 : 0) - (mark ? 70 : 0), size, 700, -0.01);
+}> = ({ icon, text, mark, size = 46, width = 400, color, onPhoto = false }) => {
+  const D = useDesign();
+  const [w, sp, fam] = mass(D.text);
+  const t = setze(D.text, text);
+  const fs = fitSize(t, width - (icon ? 92 : 0) - (mark ? 70 : 0), Math.round(size * (D.text.faktor ?? 1)), w, sp, 24, fam);
   return (
     <div
       style={{
@@ -158,32 +162,37 @@ export const Row: React.FC<{
         alignItems: "center",
         gap: 18,
         width: onPhoto ? undefined : width,
-        ...(onPhoto ? { ...chip, padding: icon ? "6px 20px 6px 8px" : "12px 22px" } : {}),
+        ...(onPhoto ? { ...D.chip, padding: icon ? "6px 20px 6px 8px" : "12px 22px" } : {}),
       }}
     >
       {icon && <div style={{ width: 74, height: 74, flex: "none", display: "grid", placeItems: "center" }}>{icon}</div>}
-      <div style={{ fontSize: fs, fontWeight: 700, letterSpacing: "-0.01em", whiteSpace: "nowrap", color, flex: onPhoto ? "none" : 1 }}>{text}</div>
+      <div style={{ ...schriftCss(D.text), fontSize: fs, whiteSpace: "nowrap", color: color ?? (onPhoto ? D.chipText : D.kartenText), flex: onPhoto ? "none" : 1 }}>{t}</div>
       {mark && <Mark ok={mark === "ok"} size={54} />}
     </div>
   );
 };
 
 /** grüner Haken oder rotes Kreuz im Kreis */
-export const Mark: React.FC<{ ok: boolean; size?: number }> = ({ ok, size = 54 }) => (
-  <svg width={size} height={size} viewBox="0 0 48 48" style={{ flex: "none" }}>
-    <circle cx="24" cy="24" r="22" fill={ok ? STIL.accent2 : STIL.red} />
-    {ok ? (
-      <path d="M14 25 l7 7 l13 -15" stroke={STIL.ink} strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-    ) : (
-      <path d="M16 16 L32 32 M32 16 L16 32" stroke="#fff" strokeWidth="5" strokeLinecap="round" />
-    )}
-  </svg>
-);
+export const Mark: React.FC<{ ok: boolean; size?: number }> = ({ ok, size = 54 }) => {
+  const D = useDesign();
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" style={{ flex: "none" }}>
+      <circle cx="24" cy="24" r={D.markRand ? 20.5 : 22} fill={ok ? D.ok : D.warn} stroke={D.markRand} strokeWidth={D.markRand ? 3 : 0} />
+      {ok ? (
+        <path d="M14 25 l7 7 l13 -15" stroke={D.okZeichen} strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      ) : (
+        <path d="M16 16 L32 32 M32 16 L16 32" stroke={D.warnZeichen} strokeWidth="5" strokeLinecap="round" />
+      )}
+    </svg>
+  );
+};
 
 /** Pille auf der Karte (Akzent, Warnung, ok) */
-export const Tag: React.FC<{ children: React.ReactNode; kind?: "accent" | "warn" | "ok" | "ink"; size?: number }> = ({ children, kind = "accent", size = 46 }) => {
-  const bg = { accent: STIL.yellow, warn: STIL.red, ok: STIL.accent2, ink: STIL.ink }[kind];
-  const color = kind === "accent" || kind === "ok" ? STIL.ink : "#fff";
+export const Tag: React.FC<{ children: React.ReactNode; kind?: "accent" | "warn" | "ok" | "ink"; size?: number }> = ({ children, kind = "accent", size: s = 46 }) => {
+  const D = useDesign();
+  const { background: bg, color } = D.tags[kind];
+  const pulse = D.name === "pulse";
+  const size = pulse ? s : Math.round(s * (D.titel.faktor ?? 1));
   return (
     <div
       style={{
@@ -194,16 +203,31 @@ export const Tag: React.FC<{ children: React.ReactNode; kind?: "accent" | "warn"
         borderRadius: 999,
         background: bg,
         color,
-        fontWeight: 800,
+        ...(pulse ? { fontWeight: 800, letterSpacing: "-0.01em" } : schriftCss(D.titel)),
         fontSize: size,
-        letterSpacing: "-0.01em",
         whiteSpace: "nowrap",
-        boxShadow: "0 8px 20px rgb(20 22 26 / 0.18)",
+        ...D.tag,
       }}
     >
-      {children}
+      {typeof children === "string" ? setze(D.titel, children) : children}
     </div>
   );
+};
+
+/** Breite einer Pille (Tag) in px im Design D, mit Rand und Schatten: um die nächste Pille daneben zu setzen */
+export const tagBreite = (D: Design, text: string, s = 46) => {
+  const size = D.name === "pulse" ? s : Math.round(s * (D.titel.faktor ?? 1));
+  const [w, sp, fam] = D.name === "pulse" ? ([800, -0.01, "Geist"] as const) : mass(D.titel);
+  return Math.ceil(textWidth(setze(D.titel, text), size, w, sp, fam) + 2 * 0.62 * size + (D.tag.border ? 14 : 0));
+};
+
+/** Breite einer Zeile als Chip (`<Row onPhoto>`) in px im Design D: um etwas rechts daneben zu setzen */
+export const rowBreite = (D: Design, text: string, { icon = false, mark = false, size = 46, width = 400 } = {}) => {
+  const [w, sp, fam] = mass(D.text);
+  const t = setze(D.text, text);
+  const fs = fitSize(t, width - (icon ? 92 : 0) - (mark ? 70 : 0), Math.round(size * (D.text.faktor ?? 1)), w, sp, 24, fam);
+  const rand = D.chip.border ? 8 : 0;
+  return Math.ceil((icon ? 8 + 74 + 18 + 20 : 44) + textWidth(t, fs, w, sp, fam) + (mark ? 18 + 54 : 0) + rand);
 };
 
 /* ---------- Icons (SVG, Linien in Tinte, Akzent in der Akzentfarbe) ---------- */

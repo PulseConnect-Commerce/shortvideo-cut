@@ -84,6 +84,8 @@ Kopiere `src/projekte/_vorlage/Video.tsx` nach `src/projekte/<projekt>/Video.tsx
 - `autoPunch(C, { base, skip })`: Punch-in-Stufen für `punchAt`, auf jedem sichtbaren Schnitt abwechselnd 1 und 1,07 (ein Jump-Cut wirkt wie ein Kamerawechsel); `skip` = Splitscreen-Bereiche.
 Ihre Farben und Maße kommen aus `stil.ts`; wirkt ein Baustein nicht wie sein Stil, ändere `stil.ts` oder den Baustein, nicht jedes Video einzeln.
 
+**Design (der Look) pro Video:** neben dem Format hat jedes Video ein Design aus `src/lib/design.tsx` (`pulse`, `nacht`, `magazin`, `sticker`; welches dran ist, steht in `stil.md` unter "Designs"). Wickle den Inhalt der `Video.tsx` in `<DesignRahmen design="…">`, setz `<Toenung />` direkt über das Bild der Person (unter die Grafiken) und nimm für eigene Grafiken die Farben und Schriften aus `useDesign()` (`D.chip`, `D.tags`, `schriftCss(D.titel)`), nicht feste Farben. Vorlage: `src/projekte/kiagenten/Video.tsx` (Prop `design`). Untertitel, Hook, `Szene`, `Row`, `Tag` und `Mark` folgen dem Design von selbst; die Bausteine aus `kit.tsx` (Terminal, Schritte, Zähler, Follow, Shot) noch nicht: brauchst du einen davon in einem anderen Design als pulse, gib ihm die Farben und Schriften aus `useDesign()` und prüf mit einem Standbild aus einem pulse-Projekt, dass dort alles gleich bleibt.
+
 **Timing (das wichtigste):**
 - Jede Grafik landet mit `C.cue("wort")` auf ihrem Wort, also **2 Frames vor dem ersten Laut** (Wortzeiten sind auf den Frame ausgerichtet). Nie geschätzte Frames, nie "+10", nie "alle 22 Frames": Zähler, Schritte, Runden wechseln auf dem Wort, das sie sagt. Das nächste gleiche Wort: `C.cue("schritt", C.W("github"))`. `cue` trifft das Wort oder ein Wort, das so anfängt ("schritt" → "Schritte"), nicht ein Stück mitten im Wort ("app" nicht in "klappt"). Zahlen ("250") sind ausgerichtet wie Wörter, die Beweis-Zahl im Hook sitzt also auf dem Frame.
 - Jedes Element bekommt auch ein **Ende** auf einem Wort oder am nächsten Element.
@@ -101,7 +103,7 @@ Ihre Farben und Maße kommen aus `stil.ts`; wirkt ein Baustein nicht wie sein St
 - **Sichere Fläche x 60-950, y 250-1500.** Außerhalb liegen die Knöpfe und Texte von TikTok und Instagram (Leiste oben, Knöpfe rechts, Name und Beschreibung unten); die Maße stehen in `src/lib/zonen.json`. Dort kommt nie etwas hin, was etwas bedeutet. Untertitel im Vollbild bei y 1340, im Split auf der Naht (y 872).
 - **Vor dem Platzieren das Raster:** `npm run raster -- public/projekte/<projekt>/takes/t1.mp4 out/raster.jpg 2,10,20`. Es zeichnet ein 60-px-Raster mit Pixelwerten, die sichere Fläche (grün), das Untertitel-Band (gelb), die Zonen von TikTok (türkis) und Instagram (pink) und seinen Kopf (rot), und nennt pro Zeitpunkt die freien Felder A-F. Platziere nach diesen Zahlen, nicht nach Gefühl, und nichts auf das Gesicht.
 - Text in Grafiken mindestens 42 px, Listen 46 px, Zeilenhöhe 1,3. Darunter ist es auf dem Handy nicht lesbar.
-- Ob eine Zeile in die Breite passt, misst `textWidth`/`fitSize` aus `src/lib/messen.ts` (echte Breiten von Geist, nicht geschätzt); Untertitel und Hook-Titel werden damit selbst kleiner statt umzubrechen.
+- Ob eine Zeile in die Breite passt, misst `textWidth`/`fitSize` aus `src/lib/messen.ts` (echte Breiten von Geist und den Schriften der Designs, nicht geschätzt; die Schrift als letztes Argument); Untertitel und Hook-Titel werden damit selbst kleiner statt umzubrechen.
 
 ### 6. Vorschau und eigene Prüfung
 

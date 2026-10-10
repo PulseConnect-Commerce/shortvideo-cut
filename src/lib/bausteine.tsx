@@ -6,6 +6,7 @@
 import { Audio, Video } from "@remotion/media";
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, Sequence, staticFile } from "remotion";
+import { type HookZeile as DesignZeile, mass, schriftCss, setze, useDesign } from "./design";
 import { fitSize, textWidth } from "./messen";
 import type { Cut } from "./schnitt";
 import { STIL } from "./stil";
@@ -34,7 +35,9 @@ export const Takes: React.FC<{
   /** CSS-Transform für das Bild, z. B. ein Zoom (punch) oder das Verschieben im Splitscreen */
   transform?: string;
   transformOrigin?: string;
-}> = ({ C, voice = true, transform, transformOrigin = "50% 30%" }) => (
+}> = ({ C, voice = true, transform, transformOrigin = "50% 30%" }) => {
+  const D = useDesign();
+  return (
   <>
     <AbsoluteFill style={{ transform, transformOrigin }}>
       {C.SPANS.map((s, i) => (
@@ -44,7 +47,7 @@ export const Takes: React.FC<{
             trimBefore={s.trimBefore}
             trimAfter={s.trimBefore + s.len}
             muted
-            style={{ width: "100%", height: "100%", objectFit: "cover", filter: STIL.grade }}
+            style={{ width: "100%", height: "100%", objectFit: "cover", filter: D.grade }}
           />
         </Sequence>
       ))}
@@ -85,7 +88,8 @@ export const Takes: React.FC<{
         );
       })}
   </>
-);
+  );
+};
 
 /** Soundeffekt, immer deutlich unter der Stimme (STIL.sfx ≈ 0,08-0,12; checks.py misst ≥ 6 dB Abstand) */
 export const Sfx: React.FC<{ file: string; at: number; volume?: number }> = ({ file, at, volume = STIL.sfx }) => (
@@ -112,6 +116,7 @@ export const Captions: React.FC<{
   /** Frames, in denen eine große Grafik die gesprochenen Worte zeigt: dann keine Untertitel */
   off?: [number, number][];
 }> = ({ C, fr, top = STIL.captionY, size = STIL.captionSize, off = [] }) => {
+  const D = useDesign();
   if (off.some(([a, b]) => fr >= a && fr < b)) return null;
   const starts = C.PAGES.reduce<number[]>((acc, p, i) => {
     acc.push(Math.max(p[0].a - 1, i ? acc[i - 1] + 4 : 0));
@@ -125,6 +130,7 @@ export const Captions: React.FC<{
   if (i < 0) return null;
   const page = C.PAGES[i];
   const pop = interpolate(fr, [starts[i], starts[i] + 3], [0.94, 1], clamp);
+  if (D.name !== "pulse") return <DesignCaptions page={page} i={i} fr={fr} top={top} size={size} pop={pop} />;
   // eine Seite, die breiter wäre als die sichere Fläche (ein langes Kompositum), wird kleiner statt umzubrechen
   const text = page.map((w) => w.text.replace(/,$/, "")).join(" ");
   const fs = Math.min(size, Math.floor((size * STIL.safe.width) / Math.max(1, textWidth(text, size, 700, -0.02))));
@@ -181,8 +187,10 @@ export const HookTitle: React.FC<{
   outAt: number;
   stil?: HookStil;
 }> = ({ fr, kicker, line1, line2, outAt, stil = "kontur" }) => {
+  const D = useDesign();
   const o = ramp(fr, outAt, 6, Easing.in(Easing.cubic));
   if (o >= 1) return null;
+  if (D.hook) return <DesignHook o={o} line1={line1} line2={line2} />;
   // so groß, wie die Zeile in die Breite passt (gemessene Breite von Geist 900, abzüglich Kontur oder Balken),
   // höchstens 104 px. Höchstens STIL.hookBreite breit und zentriert: am Rand bleibt ein Streifen frei (dort nie Inhalte).
   const width = STIL.hookBreite;
@@ -241,6 +249,138 @@ export const HookTitle: React.FC<{
   );
 };
 
+/** Untertitel eines Designs (nicht "pulse", design.tsx): Schrift und Farben aus dem Design, das gesprochene Wort in
+ * Farbe (optional unterstrichen), in einer Box oder als gekippter Aufkleber. Bei Box und Aufkleber hat jedes Wort
+ * denselben Innenabstand und Rand (unsichtbar, solange es nicht gesprochen wird): so springt die Zeile nie. */
+const DesignCaptions: React.FC<{ page: Cut["PAGES"][number]; i: number; fr: number; top: number; size: number; pop: number }> = ({
+  page,
+  i,
+  fr,
+  top,
+  size,
+  pop,
+}) => {
+  const U = useDesign().untertitel;
+  const S = U.schrift;
+  const [w, sp, fam] = mass(S);
+  const words = page.map((x) => setze(S, x.text.replace(/,$/, "")));
+  const box = U.modus !== "farbe";
+  const padX = box ? 0.14 : 0;
+  const rand = U.modus === "sticker" ? 0.05 : 0;
+  const gap = box ? 0.06 : textWidth(" ", 1, w, sp, fam);
+  const max = Math.round(size * U.faktor);
+  const breite = (fs: number) =>
+    words.reduce((n, x) => n + textWidth(x, fs, w, sp, fam), 0) + fs * (2 * (padX + rand) * words.length + gap * (words.length - 1));
+  const fs = Math.min(max, Math.floor((max * STIL.safe.width) / Math.max(1, breite(max))));
+  return (
+    <div
+      style={{
+        ...schriftCss(S),
+        position: "absolute",
+        left: STIL.safe.left,
+        width: STIL.safe.width,
+        top,
+        display: "flex",
+        justifyContent: "center",
+        gap: `${gap}em`,
+        fontSize: fs,
+        lineHeight: 1.1,
+        whiteSpace: "nowrap",
+        transform: `scale(${pop})`,
+      }}
+    >
+      {page.map((x, k, pg) => {
+        const on = fr >= x.a - 1 && fr < (pg[k + 1]?.a ?? x.b + 12) - 1;
+        const hit = on ? interpolate(fr, [x.a - 1, x.a + 3], [1.1, 1], clamp) : 1;
+        const kipp = U.modus === "sticker" && on ? (k % 2 ? 3 : -3) : 0;
+        return (
+          <span
+            key={`${i}-${k}`}
+            style={{
+              display: "inline-block",
+              padding: box ? `0.02em ${padX}em 0.06em` : 0,
+              border: rand ? `${rand}em solid ${on ? (U.wortRand ?? "#111") : "transparent"}` : undefined,
+              borderRadius: U.modus === "sticker" ? "0.16em" : "0.06em",
+              color: on ? (box ? U.wortText : U.wort) : U.farbe,
+              background: on && box ? U.wort : "transparent",
+              boxShadow: on && U.modus === "sticker" ? `0.06em 0.07em 0 ${U.wortRand ?? "#111"}` : "none",
+              WebkitTextStroke: on && box ? "0px transparent" : (U.kontur ?? "0px transparent"),
+              paintOrder: "stroke fill",
+              textShadow: on && box ? "none" : U.schatten,
+              textDecoration: on && U.unterstrich ? "underline" : "none",
+              textDecorationThickness: "0.05em",
+              textUnderlineOffset: "0.14em",
+              transform: `scale(${box ? hit : 1}) rotate(${kipp}deg)`,
+            }}
+          >
+            {words[k]}
+          </span>
+        );
+      })}
+    </div>
+  );
+};
+
+/** Hook eines Designs (nicht "pulse", design.tsx): zwei Zeilen nach dem Design, oben in der Mitte, höchstens
+ * STIL.hookBreite breit (mit Fläche oder Karte entsprechend weniger) */
+const DesignHook: React.FC<{ o: number; line1: string; line2?: string }> = ({ o, line1, line2 }) => {
+  const H = useDesign().hook;
+  if (!H) return null;
+  const width = STIL.hookBreite;
+  const innen = width - (H.box ? 100 : 0);
+  const zeile = (text: string, z: DesignZeile, erste: boolean) => {
+    const t = setze(z.schrift, text);
+    const [w, sp, fam] = mass(z.schrift);
+    const size = fitSize(t, innen - (z.flaeche ? z.max * 0.75 : 24), z.max, w, sp, 24, fam);
+    return (
+      <div style={{ marginTop: erste ? 0 : H.abstand }}>
+        <div
+          style={{
+            ...schriftCss(z.schrift),
+            display: "inline-block",
+            fontSize: size,
+            lineHeight: 1.05,
+            whiteSpace: "nowrap",
+            color: z.farbe,
+            background: z.flaeche,
+            border: z.rand,
+            borderRadius: z.radius,
+            padding: z.padding,
+            boxShadow: z.flaeche ? z.schatten : undefined,
+            textShadow: z.flaeche ? undefined : z.schatten,
+            WebkitTextStroke: z.kontur,
+            paintOrder: "stroke fill",
+            transform: `rotate(${z.kippen ?? 0}deg)`,
+          }}
+        >
+          {t}
+        </div>
+      </div>
+    );
+  };
+  const zeilen = (
+    <>
+      {zeile(line1, H.z1, true)}
+      {line2 && zeile(line2, H.z2, false)}
+    </>
+  );
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: (1080 - width) / 2,
+        top: STIL.safe.top,
+        width,
+        textAlign: "center",
+        opacity: 1 - o,
+        transform: `translateY(${-40 * o}px)`,
+      }}
+    >
+      {H.box ? <div style={{ display: "inline-block", ...H.box }}>{zeilen}</div> : zeilen}
+    </div>
+  );
+};
+
 /** Pille (Begriff, Tool, Aufruf) */
 export const Pill: React.FC<{ children: React.ReactNode; bg?: string; color?: string; size?: number }> = ({
   children,
@@ -269,14 +409,8 @@ export const Pill: React.FC<{ children: React.ReactNode; bg?: string; color?: st
   </div>
 );
 
-/** Weiße Karte mit weichem Schatten (für Dokumente, Listen, Fenster) */
-export const card = {
-  background: "#fff",
-  borderRadius: 28,
-  boxShadow: "0 2px 0 rgb(20 22 26 / 0.06), 0 14px 34px rgb(20 22 26 / 0.12)",
-  fontFamily: STIL.font,
-  color: STIL.ink,
-} as const;
+/** Weiße Karte mit weichem Schatten (für Dokumente, Listen, Fenster); steht in design.tsx (die Karte von "pulse") */
+export { card } from "./design";
 
 /** Etwas, das auf seinem Wort aufpoppt und bis `until` bleibt */
 export const PopOn: React.FC<{

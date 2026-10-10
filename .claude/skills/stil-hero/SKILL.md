@@ -14,6 +14,11 @@ hier steht, wie ein HERO-Video aussieht. Die Zahlen (Farben, Maße) stehen in `s
 HERO-Werte. Neue Geschmacksregeln aus seinem Feedback zu einem HERO-Video kommen in diese Datei (unten unter
 "Notizen", mit seinem Satz und Datum), nicht in die Skills der anderen Formate.
 
+**Design:** Farben, Schriften, Hook-Look, Untertitel-Look und Chips hier sind die des Designs **pulse**. Ab dem
+nächsten Video kommt ein anderes Design dazu (nacht, magazin oder sticker; `.claude/skills/faber-cut/stil.md` unter
+"Designs"): dann gelten dessen Farben und Schriften, alles andere aus diesem Skill (Bild, Schnitt, Aufbau, Aufruf)
+bleibt.
+
 ## Bild
 
 - 1080x1920, 30 fps, hochkant, für Instagram Reels und TikTok. Sprache Deutsch. Ein Grade für alles, kein Tracking.

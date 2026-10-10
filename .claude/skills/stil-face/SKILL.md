@@ -15,6 +15,11 @@ hier steht, wie ein FACE-Video aussieht. Alles, was hier "wie HERO" heißt, steh
 und in `src/lib/stil.ts` (die HERO-Zahlen, unverändert). Neue Geschmacksregeln aus seinem Feedback zu einem
 FACE-Video kommen hierher unter "Notizen", mit seinem Satz und Datum.
 
+**Design:** Farben, Schriften, Hook-Look, Untertitel-Look und Chips hier sind die des Designs **pulse**. Ab dem
+nächsten Video kommt ein anderes Design dazu (nacht, magazin oder sticker; `.claude/skills/faber-cut/stil.md` unter
+"Designs"): dann gelten dessen Farben und Schriften, alles andere aus diesem Skill (Bild, Schnitt, Aufbau, Aufruf)
+bleibt.
+
 ## Bild
 
 - 1080x1920, 30 fps, Deutsch, ein Grade für alles (wie HERO).
