@@ -86,6 +86,9 @@ export type Design = {
   /** Begriffe (Zeilen, Pillen) und Titel der Szene */
   text: Schrift;
   titel: Schrift;
+  /** Größe des Szenen-Titels (px, höchstens; lange Titel werden kleiner). Größer als 52 rückt der Inhalt der Szene um
+   * den Unterschied nach unten, die Koordinaten im Video bleiben dieselben. */
+  titelGroesse: number;
   /** der Titel einer Szene als Chip (frei oder auf einem Foto) */
   titelChip: React.CSSProperties;
   nummer: { background: string; color: string };
@@ -122,6 +125,7 @@ const PULSE: Design = {
   chipText: STIL.ink,
   text: { family: "Geist", weight: 700, spacing: -0.01 },
   titel: { family: "Geist", weight: 800, spacing: -0.02 },
+  titelGroesse: 52,
   titelChip: { ...chip, borderRadius: 999 },
   nummer: { background: STIL.yellow, color: STIL.ink },
   tags: {
@@ -189,6 +193,8 @@ const nacht = (name: keyof typeof LEUCHT): Design => {
     chipText: "#fff",
     text: space,
     titel: anton,
+    /** groß und laut: "Die Hook mit 'Überall KI Agenten' ist viel zu klein geschrieben" (2026-10-10) */
+    titelGroesse: 92,
     titelChip: { background: neon, color: NACHT_TINTE, borderRadius: 10, boxShadow: leuchten(neon, 34, 0.35) },
     nummer: { background: NACHT_TINTE, color: neon },
     tags: {

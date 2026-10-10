@@ -40,7 +40,9 @@ export const Szene: React.FC<{
   const o = leave(fr, until);
   const [tw, tsp, tfam] = mass(D.titel);
   const titel = setze(D.titel, title);
-  const size = fitSize(titel, BOX.width - (nr ? 150 : 70), 52, tw, tsp, 24, tfam);
+  const size = fitSize(titel, BOX.width - (nr ? 150 : 70), D.titelGroesse, tw, tsp, 24, tfam);
+  // ein größerer Titel als 52 px schiebt den Inhalt um den Unterschied nach unten (Koordinaten wie bei 52 px)
+  const versatz = Math.round((D.titelGroesse - 52) * (D.titel.zeile ?? 1.2));
   const push = Number.isFinite(until) ? interpolate(fr, [at, until], [1, 1.06], clamp) : 1;
   // Vollbild: die Fläche reicht von oben bis zur Unterkante der Karte; der Inhalt sitzt an der gewohnten Stelle
   // (60 px mehr nach unten, damit auch die untersten Begriffe Abstand zur Unterkante des Bildes haben)
@@ -102,7 +104,7 @@ export const Szene: React.FC<{
         )}
         <div style={{ ...schriftCss(D.titel), fontSize: size, whiteSpace: "nowrap" }}>{titel}</div>
       </div>
-      <div style={{ position: "absolute", left: 0, top: 0, width: BOX.width, height: BOX.height }}>{children}</div>
+      <div style={{ position: "absolute", left: 0, top: versatz, width: BOX.width, height: BOX.height }}>{children}</div>
       </div>
     </div>
   );

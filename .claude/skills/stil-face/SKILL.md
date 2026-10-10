@@ -38,6 +38,10 @@ bleibt.
   ersten Frame. **Stil pro Video aus `HOOK_STILE`** (`src/lib/bausteine.tsx`); vor der Vorschau 3-4 Stile als
   Standbild aus seinem Clip zeigen, er wählt. Bei kiagenten: `balken` (weißer Balken, Kernzeile roter Balken).
 - Nie in der Farbe der Untertitel (Blau). Höchstens 880 px breit, zentriert (wie HERO).
+- **Der erste Szenen-Titel nach dem Hook gehört noch zum Hook:** groß (im Design nacht 92 px, `D.titelGroesse`)
+  und knackig. Das gilt für jeden Szenen-Titel: 2-4 Wörter, eine Behauptung, Frage oder Ansage mit Haltung, gern mit
+  "?!", einer Zahl oder "du/dein" ("KI-Agenten überall?!", "Stopp: erst die Basics!", "Hype oder Hebel?"), nie ein
+  neutrales Etikett wie "Überall KI-Agenten" (siehe Notizen).
 
 ## Untertitel
 
@@ -107,3 +111,6 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-09, erstes FACE-Video kia
   Hintergrundbild erstellen" → Versuch `<Szene frei>`: keine Karte, kein Foto, nur die weißen Chips über dem Kopf.
   Ob "frei" oder die Karte mit Foto bleibt, entscheidet er nach der Vorschau.
 - Entschieden (2026-10-09): ohne Hintergrundbild ("sieht gut aus").
+- Titel größer und knackiger (2026-10-10, nach dem ersten FACE-Video): "Die Hook mit "Überall KI Agenten" ist viel
+  zu klein geschrieben und nicht Catchy genug. Für dieses Video ist es nun egal, da es bereits abgedreht und
+  veröffentlicht wurde. Aber für die nächsten sollte es größer und mehr catchy sein."

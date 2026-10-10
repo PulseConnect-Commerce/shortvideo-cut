@@ -366,6 +366,19 @@ const DesignHook: React.FC<{ o: number; line1: string; line2?: string }> = ({ o,
   );
 };
 
+/**
+ * Liegt das Bild höher (Gesicht weiter oben, damit die Untertitel es nicht verdecken), rückt unten mehr vom Take ins
+ * Bild, oft die Hose. Die Bodenblende dunkelt ab `ab` (y in px, dort beginnt die Hose) bis zum unteren Rand fast ganz
+ * ab, mit 160 px weichem Übergang davor. Unten liegen ohnehin Name und Text von TikTok und Instagram.
+ */
+export const Bodenblende: React.FC<{ ab: number }> = ({ ab }) => (
+  <AbsoluteFill
+    style={{
+      background: `linear-gradient(180deg, rgb(6 7 10 / 0) ${ab - 160}px, rgb(6 7 10 / 0.94) ${ab}px, rgb(6 7 10 / 0.97) 1920px)`,
+    }}
+  />
+);
+
 /** Pille (Begriff, Tool, Aufruf) */
 export const Pill: React.FC<{ children: React.ReactNode; bg?: string; color?: string; size?: number }> = ({
   children,

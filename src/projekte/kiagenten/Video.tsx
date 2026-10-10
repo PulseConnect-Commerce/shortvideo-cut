@@ -5,7 +5,7 @@
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
-import { Captions, clamp, HookTitle, type HookStil, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
+import { Bodenblende, Captions, clamp, HookTitle, type HookStil, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
 import {
   IconBrowser,
   IconCard,
@@ -31,6 +31,7 @@ export const meta = { id: "KiAgenten", durationInFrames: C.DURATION, fps: C.FPS 
 
 /** fester Bildausschnitt ab der Hüfte: die Hose beginnt frühestens bei y 1640, das Bild endet so bei 1600 */
 const CROP = 1.2;
+const HOSE = 1640;
 
 /* Zeitpunkte: jede Szene und jedes Element auf seinem Wort */
 const F = C.cue;
@@ -114,6 +115,8 @@ type Props = {
   karte?: "foto" | "vollbild" | "frei";
   /** Design (src/lib/design.tsx): "pulse" ist der Look dieses Videos; die anderen nur zum Vergleich als Standbild */
   design?: DesignName;
+  /** Bild so viele px höher (Gesicht weiter weg von den Untertiteln); nur zum Vergleich als Standbild (2026-10-10) */
+  hoehe?: number;
 };
 
 /** raster: Platzierungsraster (nur Standbilder); hookStil, untertitel, layout, karte, design: Varianten zum
@@ -124,7 +127,7 @@ export const Video: React.FC<Props> = ({ design = "pulse", ...p }) => (
   </DesignRahmen>
 );
 
-const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, hookStil = "balken", untertitel = "face", layout = "standard", karte = "frei" }) => {
+const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, hookStil = "balken", untertitel = "face", layout = "standard", karte = "frei", hoehe = 0 }) => {
   const D = useDesign();
   const oben = layout === "oben";
   const fr = useCurrentFrame();
@@ -133,10 +136,11 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, hoo
     <AbsoluteFill style={{ backgroundColor: STIL.paper }}>
       <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
         <SplitPerson split={0} zoom={zoomAt(fr)}>
-          <Takes C={C} voice={voice} transform={oben ? "translateY(-772px) scale(1.65)" : `scale(${CROP})`} transformOrigin="50% 0%" />
+          <Takes C={C} voice={voice} transform={oben ? "translateY(-772px) scale(1.65)" : hoehe ? `translateY(${-hoehe}px) scale(${CROP})` : `scale(${CROP})`} transformOrigin="50% 0%" />
         </SplitPerson>
       </AbsoluteFill>
       <Toenung />
+      {hoehe > 0 && <Bodenblende ab={HOSE * CROP - hoehe} />}
 
       <HookTitle
         fr={fr}
@@ -148,7 +152,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, hoo
 
       {/* Überall KI-Agenten: wofür angeblich */}
       <AbsoluteFill style={{ transform: oben ? "translateY(640px)" : undefined }}>
-      <Szene fr={fr} at={T.hype} until={T.basics - 2} title="Überall KI-Agenten" photo={karte === "frei" ? undefined : "broll/kiagenten/hype.jpg"} vollbild={karte === "vollbild"} frei={karte === "frei"}>
+      <Szene fr={fr} at={T.hype} until={T.basics - 2} title={D.name === "pulse" ? "Überall KI-Agenten" : "KI-Agenten überall?!"} photo={karte === "frei" ? undefined : "broll/kiagenten/hype.jpg"} vollbild={karte === "vollbild"} frei={karte === "frei"}>
         <Pop fr={fr} at={F("onlineshop")} x={24} y={118}>
           <Row icon={<IconBrowser />} text="Onlineshop" width={400} onPhoto />
         </Pop>
