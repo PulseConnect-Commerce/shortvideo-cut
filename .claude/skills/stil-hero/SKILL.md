@@ -89,6 +89,12 @@ bleibt.
   0,8 s hat. `"stumm"` nur für Geräusche ohne sichtbare Mundbewegung.
 - Leise Soundeffekte unter der Stimme (Wusch bei jeder neuen Karte, Tick bei Haken, Stempel bei Warnungen, Erfolg bei
   "ok"), ≥ 6 dB unter der Stimme. Keine Musik (die legt er in der App drunter). -14 LUFS.
+- **Ab und zu ein Extra-Effekt** (Wunsch nach einem Referenzvideo; selbst synthetisiert, in `public/sfx/`): nie alle
+  auf einmal, pro Video höchstens ein bis zwei davon, nur wo das Bild sie trägt, und von Video zu Video abwechseln.
+  `klick.mp3` (Knopf oder Haken wird angetippt, Maus-Klick im Splitscreen), `kamera.mp3` (Screenshot, Foto, Bildkarte
+  friert ein), `riser.mp3` (Spannung vor einer großen Aussage; Höhepunkt nach ~1,6 s, also `at` = Wort − 48 Frames),
+  `glitzer.mp3` (Ergebnis, Vorher/Nachher, "magischer" Moment), `wusch-gross.mp3` (großer Szenenwechsel statt des
+  normalen Wuschs). Auch sie ≥ 6 dB unter der Stimme.
 
 ## Aufruf und Ende
 

@@ -69,6 +69,9 @@ bleibt.
   herausschneiden. Lieber einen Satz mit kleiner Pause lassen als zwei Schnitte setzen.
 - Leise Soundeffekte unter der Stimme (Wusch bei neuer Karte, Tick bei Haken, Pop beim Folgen-Knopf), ≥ 6 dB unter
   der Stimme. Keine Musik. -14 LUFS.
+- **Ab und zu ein Extra-Effekt** wie bei HERO (`klick`, `kamera`, `riser`, `glitzer`, `wusch-gross` in `public/sfx/`):
+  pro Video höchstens einer bis zwei, nur wo das Bild sie trägt, von Video zu Video abwechseln. Für FACE passen vor
+  allem `riser.mp3` vor der klaren Haltung (`at` = Wort − 48 Frames) und `klick.mp3` beim Folgen-Knopf statt Pop.
 
 ## Aufruf und Ende
 
