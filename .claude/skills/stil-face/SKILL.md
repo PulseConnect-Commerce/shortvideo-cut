@@ -31,6 +31,11 @@ bleibt.
   (Pointe, Frage), sonst ruhiges Bild (ein ganz langsames Zoom-in wie HERO ist ok). Das erste FACE-Video hatte
   Punch-ins an jedem Schnitt; das war ihm zu viel (siehe Notizen).
 - **Rand frei:** an jeder Seite mindestens 60 px (wie HERO).
+- **Gesicht höher, frei von den Untertiteln** (wie HERO, seit 2026-10-10): das Bild liegt 160 px höher
+  (`translateY(-160px)` vor dem `scale`), das Kinn laut `npm run raster` in keinem Frame tiefer als ~40 px über der
+  Oberkante der Untertitel (y 1320); unten deckt `<Bodenblende ab={HOSE * CROP - 160} />` die Hose ab. Vorlage:
+  `src/projekte/kiagenten/Video.tsx` mit der Prop `hoehe`. Über dem Kopf ist dann Platz für den großen Titel und
+  höchstens 2 Zeilen Begriffe gleichzeitig (bis ~y 590); weitere Begriffe ersetzen die früheren.
 
 ## Hook (erstes Bild bis zum zweiten Satz)
 
@@ -114,3 +119,6 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-09, erstes FACE-Video kia
 - Titel größer und knackiger (2026-10-10, nach dem ersten FACE-Video): "Die Hook mit "Überall KI Agenten" ist viel
   zu klein geschrieben und nicht Catchy genug. Für dieses Video ist es nun egal, da es bereits abgedreht und
   veröffentlicht wurde. Aber für die nächsten sollte es größer und mehr catchy sein."
+- Gesicht höher (2026-10-10, gilt für alle Formate): "Auch gefällt mir die Höhe meines Gesichts nicht. Dieses sollte
+  noch um einiges höher liegen, sodass es nicht zur Hälfte von den Untertitel verdeckt wird". Aus den Standbildern
+  gewählt: "A: etwas höher" (+160 px) und "Für alle Formate".

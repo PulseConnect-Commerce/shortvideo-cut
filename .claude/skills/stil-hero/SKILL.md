@@ -31,6 +31,12 @@ bleibt.
   Schnitten. Dazu nur 3-4 kleine Akzente an den wichtigsten Stellen (Pointe, Warnung): sanft in 8 Frames auf 1,08
   (Anker 50 % 42 %, zwischen Augen und Kinn), halten bis zum Ende der Phrase, zurück in 10 Frames.
 - **Rand frei:** an jeder Seite mindestens 60 px (≈ 3 mm) ohne Text, Grafik oder Bild.
+- **Gesicht höher, frei von den Untertiteln** (seit 2026-10-10, alle Formate): das Bild liegt 160 px höher als der
+  Ausschnitt allein ergibt, `<Takes transform={`translateY(-160px) scale(${CROP})`} transformOrigin="50% 0%" />`.
+  Ziel: die Unterkante des Kopfs (Kinn) laut `npm run raster` liegt in keinem Frame tiefer als ~40 px über der
+  Oberkante der Untertitel; reichen 160 px dafür nicht, mehr. Was dadurch unten ins Bild rückt (die Hose), deckt
+  `<Bodenblende ab={HOSE * CROP - 160} />` ab (direkt über dem Bild, unter den Grafiken; HOSE = Quell-y, ab dem die
+  Hose zu sehen ist). Über dem Kopf bleibt dafür weniger Platz (siehe B-Roll).
 
 ## Hook (erstes Bild bis ~4 s)
 
@@ -42,6 +48,10 @@ bleibt.
   er wählt. Nie in der Farbe der Untertitel (Blau).
 - Höchstens 880 px breit, zentriert (`STIL.hookBreite`). Er geht, bevor die erste Bildkarte kommt.
 
+- **Titel groß und knackig** (wie FACE, seit 2026-10-10): jeder Szenen-Titel 2-4 Wörter mit Haltung (Behauptung,
+  Frage, Ansage, gern "?!", eine Zahl oder "du/dein"), nie ein neutrales Etikett; im Design nacht 92 px groß.
+  Er sagte es zum ersten FACE-Video "für die nächsten", darum gilt es auch hier.
+
 ## Untertitel
 
 - Wort für Wort, 2-3 Wörter pro Seite, das gesprochene Wort in Blau `#31ADEC`, sonst weiß; Geist fett, dünne dunkle
@@ -51,7 +61,8 @@ bleibt.
 ## B-Roll: Bildkarten über dem Kopf
 
 - Pro Thema (jeder Punkt der Liste, Einstieg, Warnung) eine **Bildkarte in der freien Fläche über dem Kopf**,
-  **mittig** (x 95-985, y 262-692, links und rechts gleich viel Rand; der Kopf bleibt darunter frei; unten rechts
+  **mittig** (x 95-985, ab y 262 bis 20 px über dem Kopf; mit dem höheren Gesicht (+160 px) meist ~y 262-590,
+  also `<Szene hoehe={330}>`, nach dem Raster prüfen; links und rechts gleich viel Rand; unten rechts
   ab x 960 nur Foto, kein Begriff, dort liegt TikToks Knopfspalte): ein Foto füllt die Karte und fährt langsam heran
   (100 % → 106 %), darauf der Titel als weißer Chip (bei Punkten mit Nummer 1-5) und die Begriffe als weiße Chips,
   jeder **auf seinem Wort** (2 Frames vor dem Laut). Bausteine: `src/lib/broll.tsx`
@@ -137,3 +148,7 @@ Herkunft der Regeln oben (seine Sätze beim ersten HERO-Video, 2026-10-08/09):
   ("Ich finde Text 4 Stil B gut"). Den Satz "Bester Onlineshop der Welt? / Ohne Vertrauen kauft keiner." mochte er
   nicht: lieber kurz, mit Zahl und Schlagwort, statt den ersten Satz nachzuerzählen. Vor der Vorschau 3-4 Hook-Texte in
   1-2 Stilen als Standbilder zeigen (`--props='{"hookStil":"…","hook1":"…","hook2":"…"}'`).
+- Gesicht höher (2026-10-10, nach dem ersten FACE-Video, für alle Formate): "Auch gefällt mir die Höhe meines
+  Gesichts nicht. Dieses sollte noch um einiges höher liegen, sodass es nicht zur Hälfte von den Untertitel verdeckt
+  wird". Aus den Standbildern gewählt: "A: etwas höher" (+160 px), und "Für alle Formate". Die Bildkarten werden dafür
+  niedriger (`<Szene hoehe={…}>`, endet 20 px über dem Kopf laut Raster).

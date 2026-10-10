@@ -22,7 +22,9 @@ export { chip };
  * `photo` (Pfad in public/, z. B. von npm run bild): füllt die Karte und fährt langsam heran (100 % → 106 %); der
  * Titel liegt dann als weißer Chip darauf. `vollbild`: das Foto füllt oben die ganze Breite bis zum oberen Rand
  * (0-1080, 0-752), ohne Rahmen und Ecken; Titel und Begriffe bleiben, wo sie sonst liegen (in der sicheren Fläche).
- * `frei`: keine Karte und kein Foto, Titel und Begriffe stehen als weiße Chips direkt über dem Kopf im Bild. */
+ * `frei`: keine Karte und kein Foto, Titel und Begriffe stehen als weiße Chips direkt über dem Kopf im Bild.
+ * `hoehe`: Höhe der Karte (Standard 430). Liegt das Bild höher (Gesicht 160 px höher, seit 2026-10-10), endet die
+ * Karte über dem Kopf: Kopf-Oberkante aus `npm run raster` minus 20 px minus BOX.top. */
 export const Szene: React.FC<{
   fr: number;
   at: number;
@@ -33,9 +35,11 @@ export const Szene: React.FC<{
   photo?: string;
   vollbild?: boolean;
   frei?: boolean;
+  hoehe?: number;
   children?: React.ReactNode;
-}> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, frei = false, children }) => {
+}> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, frei = false, hoehe = BOX.height, children }) => {
   const D = useDesign();
+  const box = { ...BOX, height: hoehe };
   if (fr < at || fr >= until + 6) return null;
   const o = leave(fr, until);
   const [tw, tsp, tfam] = mass(D.titel);
@@ -46,7 +50,7 @@ export const Szene: React.FC<{
   const push = Number.isFinite(until) ? interpolate(fr, [at, until], [1, 1.06], clamp) : 1;
   // Vollbild: die Fläche reicht von oben bis zur Unterkante der Karte; der Inhalt sitzt an der gewohnten Stelle
   // (60 px mehr nach unten, damit auch die untersten Begriffe Abstand zur Unterkante des Bildes haben)
-  const outer = vollbild ? { left: 0, top: 0, width: 1080, height: BOX.top + BOX.height + 60 } : BOX;
+  const outer = vollbild ? { left: 0, top: 0, width: 1080, height: box.top + box.height + 60 } : box;
   const inner = vollbild ? { left: BOX.left, top: BOX.top } : { left: 0, top: 0 };
   return (
     <div
@@ -71,7 +75,7 @@ export const Szene: React.FC<{
           style={{ position: "absolute", left: 0, top: 0, width: outer.width, height: outer.height, objectFit: "cover", transform: `scale(${push})` }}
         />
       )}
-      <div style={{ position: "absolute", left: inner.left, top: inner.top, width: BOX.width, height: BOX.height }}>
+      <div style={{ position: "absolute", left: inner.left, top: inner.top, width: box.width, height: box.height }}>
       <div
         style={{
           position: "absolute",
@@ -104,7 +108,7 @@ export const Szene: React.FC<{
         )}
         <div style={{ ...schriftCss(D.titel), fontSize: size, whiteSpace: "nowrap" }}>{titel}</div>
       </div>
-      <div style={{ position: "absolute", left: 0, top: versatz, width: BOX.width, height: BOX.height }}>{children}</div>
+      <div style={{ position: "absolute", left: 0, top: versatz, width: box.width, height: box.height }}>{children}</div>
       </div>
     </div>
   );
