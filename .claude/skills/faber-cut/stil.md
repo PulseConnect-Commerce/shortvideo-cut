@@ -30,7 +30,7 @@ Die Werte stehen in `src/lib/design.tsx`, die Vergleichsbilder entstehen aus `sr
 | Design | Look | Leuchtfarbe |
 | --- | --- | --- |
 | **pulse** | der Look der ersten drei Videos: Geist, das gesprochene Wort blau, weiße Chips, Hook aus `HOOK_STILE` | (Blau `#31ADEC`, PulseConnect-Grün, Rot) |
-| **nacht** (Variante 1) | dunkel und laut: Anton in Großbuchstaben, das gesprochene Wort in einer leuchtenden Box, dunkle Glas-Chips mit Space Grotesk, Szenen-Titel in der Leuchtfarbe, Hook weiß und darunter schwarz auf Leuchtfarbe; Bild dunkler und kühler, oben abgedunkelt, Vignette; Warnungen Pink-Rot `#FF3B5C` | Neon-Gelbgrün `#CCFF00` |
+| **nacht** (Variante 1) | dunkel und laut: Titel und Hook in Anton (Großbuchstaben); Untertitel klein und ruhig (Space Grotesk 64 px, kein Kasten, nur das gesprochene Wort in der Leuchtfarbe, seit 2026-10-11), dunkle Glas-Chips mit Space Grotesk, Szenen-Titel in der Leuchtfarbe, Hook weiß und darunter schwarz auf Leuchtfarbe; Bild dunkler und kühler, oben abgedunkelt, Vignette; Warnungen Pink-Rot `#FF3B5C` | Neon-Gelbgrün `#CCFF00` |
 | **nacht-gruen** (Variante 2) | wie nacht | Hellgrün vom rechten Ende des PulseConnect-Logos `#00F090` |
 | **nacht-mint** (Variante 3) | wie nacht | helles Mint-Türkis `#40E8E0` (das Türkis aus der Mitte des Logo-Verlaufs, aufgehellt) |
 
@@ -39,12 +39,17 @@ Das Logo (pulseconnect.de/pulseconnect-logo.png) läuft von Blau `#00A2FC` über
 
 So gehst du vor:
 
-- **NEWS/Reaction immer `nacht-gruen`** (2026-10-11: "Bitte alle News Videos in Zukunft i, Video Stil 2 von oben
-  schneiden. "Logo Hellgrün""; ersetzt seine Angabe kurz davor, Variante 3 Mint-Hellblau). Dort wird nicht getestet.
-- **Beim nächsten HERO- oder FACE-Video die drei Nacht-Varianten testen** (nacht, nacht-gruen, nacht-mint), nicht pulse: vor der
-  Vorschau aus seinem neuen Clip je Variante dieselben Standbilder zeigen (Hook, eine Szene, das Ende) und fragen
-  (AskUserQuestion), welche Variante das Video bekommt; will er sie im Bewegtbild vergleichen, die Vorschau in allen
-  drei. Antwortet er nicht, nimm **nacht** (Variante 1, "genau richtig").
+- **Die Farbe hängt fest am Format, nicht mehr fragen und nicht mehr testen** (seine Vorgabe 2026-10-11: "Das haben
+  wir doch vorab besprochen. Für News Videos immer Logo-Hellgrün. Für Hot Takes die Neon Farbe und für Hero Videos
+  Mint-Hellblau verwenden."):
+
+  | Format | Design | Leuchtfarbe |
+  |---|---|---|
+  | NEWS/Reaction (auch "News/Hot Take" zu einem Artikel) | `nacht-gruen` | Logo-Hellgrün `#00F090` |
+  | FACE / Hot Take (Meinung ohne Artikel) | `nacht` | Neon `#CCFF00` |
+  | HERO | `nacht-mint` | Mint-Hellblau `#40E8E0` |
+
+  pulse nur noch für die alten Videos (Shopcheck, Vertrauen, KI-Agenten).
 - **Was das Format sagt, bleibt:** Bildausschnitt, Tempo, Zooms, Untertitel-Position und -Größe, Hook-Text, Aufruf.
   Wo der Skill des Formats Farben oder Schrift nennt ("Farben wie HERO", "das gesprochene Wort in Blau", Hook-Stil aus
   `HOOK_STILE`), gilt das für pulse; bei nacht gelten dessen Farben, Schriften und Hook.
@@ -60,7 +65,7 @@ So gehst du vor:
 | kiagenten ("KI-Agenten: genial oder Bullshit?") | FACE | pulse | – |
 | shopifycanvas ("Shopify Canvas – Brauchen wir bald keine Webdesigner mehr?") | NEWS | nacht-gruen | kamera, riser |
 | kiweihnachten ("65 % wollen KI beim Weihnachtsshopping nutzen") | NEWS | nacht-gruen | kamera, riser |
-| shopifyapps ("Warum zahlst du für so viele Shopify-Apps?") | FACE | nacht (Test der drei Farben) | riser |
+| shopifyapps ("Warum zahlst du für so viele Shopify-Apps?") | FACE (Hot Take) | nacht | riser |
 
 ### Notizen zu den Designs
 

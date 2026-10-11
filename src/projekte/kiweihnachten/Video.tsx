@@ -25,6 +25,8 @@ export const meta = { id: "KiWeihnachten", durationInFrames: C.DURATION, fps: C.
  * Take frühestens bei y ~1700; die Bodenblende deckt sie in beiden Lagen ab. */
 const OBEN = { scale: 1.2, hoch: 348 };
 const MITTE = { scale: 1.2, hoch: 160 };
+/** Untertitel: klein und ruhig, damit sie nicht wie Titel wirken (seine Vorgabe 2026-10-11) */
+const UT = { top: 1400, size: 64 };
 const HOSE = 1700;
 const QUELLE = [...ausgabeFrames(C, 113.95, 116.8), ...ausgabeFrames(C, 117.25, 124.5)];
 const mitte = (fr: number) => QUELLE.some(([a, b]) => fr >= a && fr < b);
@@ -71,7 +73,7 @@ const Blase: React.FC = () => {
 };
 
 /** große Zahl in der Leuchtfarbe (z. B. "~33 %"), poppt auf ihrem Wort auf; so groß, dass sie über dem Kopf bleibt */
-const ZAHL = 124;
+const ZAHL = 112;
 const GrosseZahl: React.FC<{ fr: number; at: number; text: string }> = ({ fr, at, text }) => {
   const D = useDesign();
   return (
@@ -139,10 +141,10 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Der spannende Teil: nur jeder Dritte lässt die KI einkaufen */}
       <Szene fr={fr} at={T.spannend} until={T.stehen - 2} title="Der spannende Teil" frei>
-        <Pop fr={fr} at={F("dritte")} x={24} y={100} style={{ transform: "none" }}>
+        <Pop fr={fr} at={F("dritte")} x={24} y={114} style={{ transform: "none" }}>
           <GrosseZahl fr={fr} at={F("dritte")} text="~33 %" />
         </Pop>
-        <Pop fr={fr} at={F("eigenständig")} x={zahlX} y={118}>
+        <Pop fr={fr} at={F("eigenständig")} x={zahlX} y={126}>
           <Tag kind="warn" size={44}>
             lassen KI einkaufen
           </Tag>
@@ -224,7 +226,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         </Pop>
       </Szene>
 
-      <Captions C={C} fr={fr} top={1360} size={100} />
+      <Captions C={C} fr={fr} top={UT.top} size={UT.size} />
 
       {sfx && (
         <>

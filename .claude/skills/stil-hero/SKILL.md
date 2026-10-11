@@ -1,6 +1,6 @@
 ---
 name: stil-hero
-description: Schnittstil HERO von PulseConnect für Erklär- und Expertenvideos (eher länger, ~1-3 min) - Hook weiß/rot, B-Roll-Bildkarten mit Nano-Banana-Fotos über dem Kopf, ein ruhiges durchgehendes Zoom-in mit wenigen Akzenten, leichter Porträt-Modus, Untertitel Wort für Wort mit dem gesprochenen Wort in Blau, PulseConnect-Hellgrün als zweite Akzentfarbe, Speichern-Aufruf am Ende. Verwende diesen Skill zusammen mit faber-cut, sobald ein HERO-Video geschnitten oder überarbeitet wird (der Nutzer sagt "HERO", "Erklärvideo", "Expertenvideo") oder Feedback zu einem HERO-Video gibt.
+description: Schnittstil HERO von PulseConnect für Erklär- und Expertenvideos (eher länger, ~1-3 min) - Hook weiß/rot, B-Roll-Bildkarten mit Nano-Banana-Fotos über dem Kopf, ein ruhiges durchgehendes Zoom-in mit wenigen Akzenten, leichter Porträt-Modus, Design nacht-mint (Mint-Hellblau), kleine ruhige Untertitel Wort für Wort, Speichern-Aufruf am Ende. Verwende diesen Skill zusammen mit faber-cut, sobald ein HERO-Video geschnitten oder überarbeitet wird (der Nutzer sagt "HERO", "Erklärvideo", "Expertenvideo") oder Feedback zu einem HERO-Video gibt.
 ---
 
 # Stil HERO
@@ -14,10 +14,11 @@ hier steht, wie ein HERO-Video aussieht. Die Zahlen (Farben, Maße) stehen in `s
 HERO-Werte. Neue Geschmacksregeln aus seinem Feedback zu einem HERO-Video kommen in diese Datei (unten unter
 "Notizen", mit seinem Satz und Datum), nicht in die Skills der anderen Formate.
 
-**Design:** Farben, Schriften, Hook-Look, Untertitel-Look und Chips hier sind die des Designs **pulse**. Ab dem
-nächsten Video werden die drei Varianten des Designs nacht getestet (`.claude/skills/faber-cut/stil.md` unter
-"Designs"): dann gelten dessen Farben und Schriften, alles andere aus diesem Skill (Bild, Schnitt, Aufbau, Aufruf)
-bleibt.
+**Design: immer `nacht-mint`** (Mint-Hellblau `#40E8E0`; festgelegt 2026-10-11: "Für News Videos immer Logo-Hellgrün. Für Hot
+Takes die Neon Farbe und für Hero Videos Mint-Hellblau verwenden."). Schrift, Farben, Hook-Look, Untertitel-Look und
+Chips kommen aus dem Design (`src/lib/design.tsx`, Übersicht in `.claude/skills/faber-cut/stil.md`); was hier unten
+zu Farben steht (Blau, Rot, Weiß), gilt nur noch für die alten pulse-Videos. Alles andere aus diesem Skill (Bild,
+Schnitt, Aufbau, Aufruf) bleibt.
 
 ## Bild
 
@@ -37,7 +38,7 @@ bleibt.
   y ~510). Der Kopf beginnt direkt darunter, so hoch wie es geht: Bildlage "OBEN" mit
   `<Takes transform="translateY(-348px) scale(1.2)" transformOrigin="50% 0%" />` (bei seinem Bürostuhl-Setup liegt der
   Haaransatz dann bei y ~550-580, das Kinn bei ~1000-1100; mit Standbildern nachmessen, zwischen Begriffen und Haar
-  mindestens 30 px). Untertitel bei y 1360, unten `<Bodenblende ab={HOSE * 1.2 - 348} />` gegen Hose und leeren Rand.
+  mindestens 30 px). Untertitel bei y 1400 (klein, siehe Untertitel), unten `<Bodenblende ab={HOSE * 1.2 - 348} />` gegen Hose und leeren Rand.
   Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
   Wort - 4 Frames) oder steht daneben (`tagBreite`). Keine Pille unter dem Hook, keine Antwort-Chips (Ja/Nein) am
   Ende, nur die Kommentar-Blase. Akzent-Anker 50 % 42 %.
@@ -62,8 +63,11 @@ bleibt.
 
 ## Untertitel
 
-- Wort für Wort, 2-3 Wörter pro Seite, das gesprochene Wort in Blau `#31ADEC`, sonst weiß; Geist fett, dünne dunkle
-  Kontur, weicher Schatten. Vollbild y 1340.
+- **Klein und ruhig, nie wie ein Titel** (seine Vorgabe 2026-10-11, alle Formate): `const UT = { top: 1400, size: 64 }`,
+  `<Captions C={C} fr={fr} top={UT.top} size={UT.size} />`. Im Design nacht: Space Grotesk fett, normale Groß- und
+  Kleinschreibung, weiß mit dünner dunkler Kontur, **kein Kasten**, nur das gesprochene Wort in der Leuchtfarbe. Nie
+  in derselben Schrift (Anton) oder Größe wie die Titel.
+- Wort für Wort, 2-3 Wörter pro Seite. (pulse, alte Videos: das gesprochene Wort in Blau `#31ADEC`, Geist fett.)
 - Fachbegriffe richtig schreiben, auch wenn er sie anders ausspricht (z. B. "WEEE-Nummer", "BattG-Gesetz").
 
 ## B-Roll: Bildkarten über dem Kopf
@@ -167,3 +171,8 @@ Herkunft der Regeln oben (seine Sätze beim ersten HERO-Video, 2026-10-08/09):
 - Titel wieder oben (2026-10-11, zur Canvas-Vorschau mit dem Kopf ganz oben und den Titeln unter dem Kinn): "Den Titel
   sowie die Einblendungen sollten bitte nach wie vor oben angezeigt werden. Untertitel passen unten soweit". Umgesetzt:
   Titel und eine Zeile Begriffe oben, der Kopf direkt darunter (1,2fach, 348 px nach oben), Untertitel bei y 1360.
+- Untertitel kleiner (2026-10-11, zur dritten Canvas-Vorschau): "Die Untertitel sollten bitte kleiner sein und nicht so
+  stark in auffälligen Farben dargestellt werden. Untertitel sollten deutlich kleiner sein, sonst wirkt es aufgrund
+  der gleichen Schriftart und Farbe so aus wie ein Titel". Aus Standbildern bestätigt ("Ja, so passt es"): 64 px,
+  Space Grotesk, kein Kasten, nur das gesprochene Wort in der Leuchtfarbe. Lage der Titel dabei bestätigt: "A: Titel
+  über dem Kopf" (ganz oben, mit Abstand darüber).

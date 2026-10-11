@@ -23,6 +23,8 @@ export const meta = { id: "ShopifyApps", durationInFrames: C.DURATION, fps: C.FP
  * ersetzen die vorherigen. Die Hose beginnt im Take frühestens bei y ~1700, die Bodenblende deckt sie ab. */
 const CROP = 1.2;
 const HOCH = 348;
+/** Untertitel: klein und ruhig, damit sie nicht wie Titel wirken (seine Vorgabe 2026-10-11) */
+const UT = { top: 1400, size: 64 };
 const HOSE = 1700;
 
 const F = C.cue;
@@ -217,7 +219,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         </Pop>
       </Szene>
 
-      <Captions C={C} fr={fr} top={1360} size={100} />
+      <Captions C={C} fr={fr} top={UT.top} size={UT.size} />
 
       {sfx && (
         <>

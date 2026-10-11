@@ -172,13 +172,15 @@ const nacht = (name: keyof typeof LEUCHT): Design => {
   return {
     name,
     grade: "contrast(1.12) saturate(0.88) brightness(0.9) hue-rotate(-6deg)",
+    // Untertitel klar anders als die Titel (seine Vorgabe 2026-10-11): kleiner, Space Grotesk statt Anton, keine
+    // Großbuchstaben, kein Kasten; nur das gesprochene Wort in der Leuchtfarbe
     untertitel: {
-      schrift: anton,
-      faktor: 1.12,
+      schrift: space,
+      faktor: 1,
       farbe: "#fff",
-      kontur: "0.07em rgb(6 8 12 / 0.95)",
-      schatten: "0 6px 22px rgb(0 0 0 / 0.55)",
-      modus: "box",
+      kontur: "0.05em rgb(6 8 12 / 0.9)",
+      schatten: "0 4px 16px rgb(0 0 0 / 0.6)",
+      modus: "farbe",
       wort: neon,
       wortText: NACHT_TINTE,
     },

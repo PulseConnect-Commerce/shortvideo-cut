@@ -25,6 +25,8 @@ export const meta = { id: "ShopifyCanvas", durationInFrames: C.DURATION, fps: C.
  * im Take frühestens bei y 1680; die Bodenblende deckt sie in beiden Lagen ab. */
 const OBEN = { scale: 1.2, hoch: 348 };
 const MITTE = { scale: 1.2, hoch: 160 };
+/** Untertitel: klein und ruhig, damit sie nicht wie Titel wirken (seine Vorgabe 2026-10-11) */
+const UT = { top: 1400, size: 64 };
 const HOSE = 1680;
 /** die Greenscreen-Stellen im Take (wie bei npm run portrait --hintergrund) */
 const QUELLE = [...ausgabeFrames(C, 12.8, 17.85), ...ausgabeFrames(C, 27.9, 34.2)];
@@ -210,7 +212,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         </Pop>
       </Szene>
 
-      <Captions C={C} fr={fr} top={1360} size={100} />
+      <Captions C={C} fr={fr} top={UT.top} size={UT.size} />
 
       {sfx && (
         <>

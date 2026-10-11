@@ -1,6 +1,6 @@
 ---
 name: stil-news
-description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~60-80 s) - Design fest nacht-gruen (Anton in Großbuchstaben, das gesprochene Wort in einer Box in Logo-Hellgrün, dunkle Glas-Chips), Bild ab der Hüfte, Titel und Einblendungen oben, der Kopf direkt darunter (nur bei der Quelle tiefer), die Quelle (1-2 Screenshots aus dem Artikel, Stelle hellgrün markiert) als Hintergrund hinter ihm wie ein Greenscreen, große knackige Titel über dem Kopf, große Untertitel, Kamera-Auslöser bei der Quelle und Riser vor seiner Meinung, am Ende die Frage mit Kommentar-Blase. Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten oder überarbeitet wird (der Nutzer sagt "News", "News-Reaction", "Reaction", "Reaktion auf ein Video", "Hot Take" zu einer Meldung) oder Feedback zu einem News-Video gibt.
+description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~60-80 s) - Design fest nacht-gruen (Titel in Anton und Großbuchstaben, kleine ruhige Untertitel mit dem gesprochenen Wort in Logo-Hellgrün, dunkle Glas-Chips), Bild ab der Hüfte, Titel und Einblendungen oben, der Kopf direkt darunter (nur bei der Quelle tiefer), die Quelle (1-2 Screenshots aus dem Artikel, Stelle hellgrün markiert) als Hintergrund hinter ihm wie ein Greenscreen, große knackige Titel über dem Kopf, kleine Untertitel, Kamera-Auslöser bei der Quelle und Riser vor seiner Meinung, am Ende die Frage mit Kommentar-Blase. Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten oder überarbeitet wird (der Nutzer sagt "News", "News-Reaction", "Reaction", "Reaktion auf ein Video", "Hot Take" zu einer Meldung) oder Feedback zu einem News-Video gibt.
 ---
 
 # Stil NEWS / Reaction
@@ -34,7 +34,7 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   y ~510). Der Kopf beginnt direkt darunter, so hoch wie es geht: Bildlage "OBEN" mit
   `<Takes transform="translateY(-348px) scale(1.2)" transformOrigin="50% 0%" />` (bei seinem Bürostuhl-Setup liegt der
   Haaransatz dann bei y ~550-580, das Kinn bei ~1000-1100; mit Standbildern nachmessen, zwischen Begriffen und Haar
-  mindestens 30 px). Untertitel bei y 1360, unten `<Bodenblende ab={HOSE * 1.2 - 348} />` gegen Hose und leeren Rand.
+  mindestens 30 px). Untertitel bei y 1400 (klein, siehe Untertitel), unten `<Bodenblende ab={HOSE * 1.2 - 348} />` gegen Hose und leeren Rand.
   Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
   Wort - 4 Frames) oder steht daneben (`tagBreite`). Keine Pille unter dem Hook, keine Antwort-Chips (Ja/Nein) am
   Ende, nur die Kommentar-Blase. Akzent-Anker 50 % 42 %.
@@ -76,8 +76,11 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
 
 ## Untertitel
 
-- **Groß wie FACE** (Empfehlung): 100 px, Oberkante y 1360 (unter den Titeln), das gesprochene Wort in der
-  hellgrünen Box. Fachbegriffe richtig (Shopify, Sidekick, Judge.me, "Builder" statt Whispers "Bilder").
+- **Klein und ruhig, nie wie ein Titel** (seine Vorgabe 2026-10-11, alle Formate): `const UT = { top: 1400, size: 64 }`,
+  `<Captions C={C} fr={fr} top={UT.top} size={UT.size} />`. Im Design nacht: Space Grotesk fett, normale Groß- und
+  Kleinschreibung, weiß mit dünner dunkler Kontur, **kein Kasten**, nur das gesprochene Wort in der Leuchtfarbe. Nie
+  in derselben Schrift (Anton) oder Größe wie die Titel.
+- Fachbegriffe richtig (Shopify, Sidekick, Judge.me, "Builder" statt Whispers "Bilder").
 
 ## Grafiken über dem Kopf
 
@@ -85,7 +88,7 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   dem Design, 2-4 Wörter mit Haltung: "Sag's einfach der KI!", "Was wirklich verkauft", "Bauen ≠ verkaufen", "Der
   spannende Teil") und **einer** Zeile Chips darunter (`y={118}`, endet bei y ~510). Mehr Begriffe nebeneinander
   (`tagBreite`) oder nacheinander (der nächste ersetzt den vorigen), nie untereinander.
-- **Zahlen groß**, wenn er sie betont (z. B. "~33 %" in 124 px in der Leuchtfarbe auf "jeder Dritte", der Chip
+- **Zahlen groß**, wenn er sie betont (z. B. "~33 %" in 112 px in der Leuchtfarbe, mit Abstand unter dem Titel auf "jeder Dritte", der Chip
   daneben; größer geht nicht, sonst liegt die Zahl auf dem Kopf).
 - Tippt er im Beispiel einen Prompt ("Mach meine Startseite moderner"), läuft er als Chat-Chip Wort für Wort mit der
   Stimme mit (`typedSync`, `C.spoken`).
@@ -136,3 +139,8 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-11, erste News-Videos sho
 - Titel wieder oben (2026-10-11, zur Canvas-Vorschau mit dem Kopf ganz oben und den Titeln unter dem Kinn): "Den Titel
   sowie die Einblendungen sollten bitte nach wie vor oben angezeigt werden. Untertitel passen unten soweit". Umgesetzt:
   Titel und eine Zeile Begriffe oben, der Kopf direkt darunter (1,2fach, 348 px nach oben), Untertitel bei y 1360.
+- Untertitel kleiner (2026-10-11, zur dritten Canvas-Vorschau): "Die Untertitel sollten bitte kleiner sein und nicht so
+  stark in auffälligen Farben dargestellt werden. Untertitel sollten deutlich kleiner sein, sonst wirkt es aufgrund
+  der gleichen Schriftart und Farbe so aus wie ein Titel". Aus Standbildern bestätigt ("Ja, so passt es"): 64 px,
+  Space Grotesk, kein Kasten, nur das gesprochene Wort in der Leuchtfarbe. Lage der Titel dabei bestätigt: "A: Titel
+  über dem Kopf" (ganz oben, mit Abstand darüber).
