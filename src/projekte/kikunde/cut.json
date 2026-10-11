@@ -1,0 +1,1571 @@
+{
+ "projekt": "kikunde",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "kikunde/t1",
+   "from": 46.905,
+   "to": 50.175,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 50.425,
+   "to": 52.545,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 56.695,
+   "to": 58.345,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 58.905,
+   "to": 61.335,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 62.035,
+   "to": 65.405,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 65.825,
+   "to": 68.005,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 68.895,
+   "to": 72.755,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 72.935,
+   "to": 73.995,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 76.745,
+   "to": 78.625,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 98.685,
+   "to": 99.815,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 99.995,
+   "to": 101.535,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 101.785,
+   "to": 103.995,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 106.715,
+   "to": 110.445,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 110.995,
+   "to": 113.065,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 113.285,
+   "to": 116.705,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 117.115,
+   "to": 120.085,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 120.405,
+   "to": 123.205,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 125.865,
+   "to": 129.105,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 129.325,
+   "to": 130.415,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 162.095,
+   "to": 164.155,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 164.665,
+   "to": 169.025,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 169.805,
+   "to": 170.655,
+   "nach": 0.08,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 170.715,
+   "to": 173.805,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 183.845,
+   "to": 185.305,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kikunde/t1",
+   "from": 203.965,
+   "to": 208.2,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Was",
+   "src": "kikunde/t1",
+   "start": 46.93,
+   "end": 47.07
+  },
+  {
+   "text": "ist,",
+   "src": "kikunde/t1",
+   "start": 47.13,
+   "end": 47.23
+  },
+  {
+   "text": "wenn",
+   "src": "kikunde/t1",
+   "start": 47.27,
+   "end": 47.41
+  },
+  {
+   "text": "dein",
+   "src": "kikunde/t1",
+   "start": 47.45,
+   "end": 47.51
+  },
+  {
+   "text": "nächster",
+   "src": "kikunde/t1",
+   "start": 47.63,
+   "end": 47.97
+  },
+  {
+   "text": "Kunde",
+   "src": "kikunde/t1",
+   "start": 48.09,
+   "end": 48.35
+  },
+  {
+   "text": "deinen",
+   "src": "kikunde/t1",
+   "start": 48.47,
+   "end": 48.63
+  },
+  {
+   "text": "Onlineshop",
+   "src": "kikunde/t1",
+   "start": 48.69,
+   "end": 49.05
+  },
+  {
+   "text": "gar",
+   "src": "kikunde/t1",
+   "start": 49.11,
+   "end": 49.21
+  },
+  {
+   "text": "nicht",
+   "src": "kikunde/t1",
+   "start": 49.25,
+   "end": 49.35
+  },
+  {
+   "text": "mehr",
+   "src": "kikunde/t1",
+   "start": 49.39,
+   "end": 49.47
+  },
+  {
+   "text": "selbst",
+   "src": "kikunde/t1",
+   "start": 49.51,
+   "end": 49.73
+  },
+  {
+   "text": "besucht,",
+   "src": "kikunde/t1",
+   "start": 49.77,
+   "end": 50.07
+  },
+  {
+   "text": "sondern",
+   "src": "kikunde/t1",
+   "start": 50.47,
+   "end": 50.75
+  },
+  {
+   "text": "seine",
+   "src": "kikunde/t1",
+   "start": 50.83,
+   "end": 51.01
+  },
+  {
+   "text": "KI",
+   "src": "kikunde/t1",
+   "start": 51.07,
+   "end": 51.25
+  },
+  {
+   "text": "für",
+   "src": "kikunde/t1",
+   "start": 51.33,
+   "end": 51.5
+  },
+  {
+   "text": "ihn",
+   "src": "kikunde/t1",
+   "start": 51.53,
+   "end": 51.62
+  },
+  {
+   "text": "den",
+   "src": "kikunde/t1",
+   "start": 51.64,
+   "end": 51.73
+  },
+  {
+   "text": "Einkauf",
+   "src": "kikunde/t1",
+   "start": 51.75,
+   "end": 52.05
+  },
+  {
+   "text": "erledigt?",
+   "src": "kikunde/t1",
+   "start": 52.09,
+   "end": 52.51
+  },
+  {
+   "text": "Klingt",
+   "src": "kikunde/t1",
+   "start": 56.74,
+   "end": 56.92
+  },
+  {
+   "text": "das",
+   "src": "kikunde/t1",
+   "start": 56.96,
+   "end": 57.04
+  },
+  {
+   "text": "für",
+   "src": "kikunde/t1",
+   "start": 57.06,
+   "end": 57.14
+  },
+  {
+   "text": "dich",
+   "src": "kikunde/t1",
+   "start": 57.16,
+   "end": 57.24
+  },
+  {
+   "text": "noch",
+   "src": "kikunde/t1",
+   "start": 57.3,
+   "end": 57.4
+  },
+  {
+   "text": "nach",
+   "src": "kikunde/t1",
+   "start": 57.42,
+   "end": 57.52
+  },
+  {
+   "text": "Zukunftsmusik?",
+   "src": "kikunde/t1",
+   "start": 57.58,
+   "end": 58.22
+  },
+  {
+   "text": "Dann",
+   "src": "kikunde/t1",
+   "start": 58.9,
+   "end": 59.04
+  },
+  {
+   "text": "schau",
+   "src": "kikunde/t1",
+   "start": 59.08,
+   "end": 59.22
+  },
+  {
+   "text": "dir",
+   "src": "kikunde/t1",
+   "start": 59.3,
+   "end": 59.38
+  },
+  {
+   "text": "bitte",
+   "src": "kikunde/t1",
+   "start": 59.4,
+   "end": 59.54
+  },
+  {
+   "text": "das",
+   "src": "kikunde/t1",
+   "start": 59.62,
+   "end": 59.76
+  },
+  {
+   "text": "mal",
+   "src": "kikunde/t1",
+   "start": 59.82,
+   "end": 59.92
+  },
+  {
+   "text": "an,",
+   "src": "kikunde/t1",
+   "start": 59.98,
+   "end": 60.08
+  },
+  {
+   "text": "was",
+   "src": "kikunde/t1",
+   "start": 60.12,
+   "end": 60.22
+  },
+  {
+   "text": "Shopify",
+   "src": "kikunde/t1",
+   "start": 60.28,
+   "end": 60.66
+  },
+  {
+   "text": "hier",
+   "src": "kikunde/t1",
+   "start": 60.7,
+   "end": 60.82
+  },
+  {
+   "text": "gemacht",
+   "src": "kikunde/t1",
+   "start": 60.86,
+   "end": 61.1
+  },
+  {
+   "text": "hat.",
+   "src": "kikunde/t1",
+   "start": 61.14,
+   "end": 61.28
+  },
+  {
+   "text": "Denn",
+   "src": "kikunde/t1",
+   "start": 62.04,
+   "end": 62.18
+  },
+  {
+   "text": "Shopify",
+   "src": "kikunde/t1",
+   "start": 62.2,
+   "end": 62.54
+  },
+  {
+   "text": "hat",
+   "src": "kikunde/t1",
+   "start": 62.64,
+   "end": 62.72
+  },
+  {
+   "text": "eine",
+   "src": "kikunde/t1",
+   "start": 62.8,
+   "end": 62.94
+  },
+  {
+   "text": "neue",
+   "src": "kikunde/t1",
+   "start": 63.04,
+   "end": 63.24
+  },
+  {
+   "text": "Technik",
+   "src": "kikunde/t1",
+   "start": 63.3,
+   "end": 63.6
+  },
+  {
+   "text": "namens",
+   "src": "kikunde/t1",
+   "start": 63.7,
+   "end": 63.96
+  },
+  {
+   "text": "WebMCP",
+   "src": "kikunde/t1",
+   "start": 64.06,
+   "end": 64.58
+  },
+  {
+   "text": "vorgestellt",
+   "src": "kikunde/t1",
+   "start": 64.72,
+   "end": 65.26
+  },
+  {
+   "text": "und",
+   "src": "kikunde/t1",
+   "start": 65.88,
+   "end": 65.96
+  },
+  {
+   "text": "sie",
+   "src": "kikunde/t1",
+   "start": 66.04,
+   "end": 66.14
+  },
+  {
+   "text": "allen",
+   "src": "kikunde/t1",
+   "start": 66.44,
+   "end": 66.66
+  },
+  {
+   "text": "Onlineshops",
+   "src": "kikunde/t1",
+   "start": 66.76,
+   "end": 67.24
+  },
+  {
+   "text": "bereitgestellt.",
+   "src": "kikunde/t1",
+   "start": 67.3,
+   "end": 67.96
+  },
+  {
+   "text": "Und",
+   "src": "kikunde/t1",
+   "start": 68.94,
+   "end": 69.0
+  },
+  {
+   "text": "damit",
+   "src": "kikunde/t1",
+   "start": 69.04,
+   "end": 69.3
+  },
+  {
+   "text": "können",
+   "src": "kikunde/t1",
+   "start": 69.36,
+   "end": 69.54
+  },
+  {
+   "text": "kompatible",
+   "src": "kikunde/t1",
+   "start": 69.6,
+   "end": 70.18
+  },
+  {
+   "text": "KI-Agenten",
+   "src": "kikunde/t1",
+   "start": 70.48,
+   "end": 71.12
+  },
+  {
+   "text": "zum",
+   "src": "kikunde/t1",
+   "start": 71.16,
+   "end": 71.26
+  },
+  {
+   "text": "Beispiel",
+   "src": "kikunde/t1",
+   "start": 71.3,
+   "end": 71.62
+  },
+  {
+   "text": "jetzt",
+   "src": "kikunde/t1",
+   "start": 71.66,
+   "end": 71.8
+  },
+  {
+   "text": "Produkte",
+   "src": "kikunde/t1",
+   "start": 71.84,
+   "end": 72.22
+  },
+  {
+   "text": "suchen,",
+   "src": "kikunde/t1",
+   "start": 72.3,
+   "end": 72.58
+  },
+  {
+   "text": "Warenkörbe",
+   "src": "kikunde/t1",
+   "start": 72.98,
+   "end": 73.42
+  },
+  {
+   "text": "befüllen",
+   "src": "kikunde/t1",
+   "start": 73.48,
+   "end": 73.86
+  },
+  {
+   "text": "oder",
+   "src": "kikunde/t1",
+   "start": 76.79,
+   "end": 76.91
+  },
+  {
+   "text": "auch",
+   "src": "kikunde/t1",
+   "start": 76.93,
+   "end": 77.01
+  },
+  {
+   "text": "einfach",
+   "src": "kikunde/t1",
+   "start": 77.05,
+   "end": 77.27
+  },
+  {
+   "text": "selbst",
+   "src": "kikunde/t1",
+   "start": 77.35,
+   "end": 77.59
+  },
+  {
+   "text": "den",
+   "src": "kikunde/t1",
+   "start": 77.63,
+   "end": 77.71
+  },
+  {
+   "text": "Checkout",
+   "src": "kikunde/t1",
+   "start": 77.75,
+   "end": 78.05
+  },
+  {
+   "text": "anstoßen.",
+   "src": "kikunde/t1",
+   "start": 78.09,
+   "end": 78.55
+  },
+  {
+   "text": "Nun",
+   "src": "kikunde/t1",
+   "start": 98.74,
+   "end": 98.84
+  },
+  {
+   "text": "stell",
+   "src": "kikunde/t1",
+   "start": 98.9,
+   "end": 99.06
+  },
+  {
+   "text": "dir",
+   "src": "kikunde/t1",
+   "start": 99.12,
+   "end": 99.18
+  },
+  {
+   "text": "das",
+   "src": "kikunde/t1",
+   "start": 99.22,
+   "end": 99.32
+  },
+  {
+   "text": "mal",
+   "src": "kikunde/t1",
+   "start": 99.38,
+   "end": 99.48
+  },
+  {
+   "text": "vor,",
+   "src": "kikunde/t1",
+   "start": 99.52,
+   "end": 99.66
+  },
+  {
+   "text": "du",
+   "src": "kikunde/t1",
+   "start": 100.04,
+   "end": 100.1
+  },
+  {
+   "text": "sagst",
+   "src": "kikunde/t1",
+   "start": 100.16,
+   "end": 100.36
+  },
+  {
+   "text": "deiner",
+   "src": "kikunde/t1",
+   "start": 100.38,
+   "end": 100.58
+  },
+  {
+   "text": "KI",
+   "src": "kikunde/t1",
+   "start": 100.62,
+   "end": 100.8
+  },
+  {
+   "text": "einfach",
+   "src": "kikunde/t1",
+   "start": 100.94,
+   "end": 101.16
+  },
+  {
+   "text": "nur:",
+   "src": "kikunde/t1",
+   "start": 101.22,
+   "end": 101.34
+  },
+  {
+   "text": "„Such",
+   "src": "kikunde/t1",
+   "start": 101.86,
+   "end": 102.02
+  },
+  {
+   "text": "mir",
+   "src": "kikunde/t1",
+   "start": 102.1,
+   "end": 102.2
+  },
+  {
+   "text": "mal",
+   "src": "kikunde/t1",
+   "start": 102.24,
+   "end": 102.4
+  },
+  {
+   "text": "Schuhe",
+   "src": "kikunde/t1",
+   "start": 102.54,
+   "end": 102.74
+  },
+  {
+   "text": "unter",
+   "src": "kikunde/t1",
+   "start": 102.86,
+   "end": 103.04
+  },
+  {
+   "text": "100",
+   "src": "kikunde/t1",
+   "start": 103.26,
+   "end": 103.46
+  },
+  {
+   "text": "Euro.“",
+   "src": "kikunde/t1",
+   "start": 103.56,
+   "end": 103.74
+  },
+  {
+   "text": "Und",
+   "src": "kikunde/t1",
+   "start": 106.76,
+   "end": 106.82
+  },
+  {
+   "text": "statt",
+   "src": "kikunde/t1",
+   "start": 106.86,
+   "end": 107.04
+  },
+  {
+   "text": "einfach",
+   "src": "kikunde/t1",
+   "start": 107.06,
+   "end": 107.24
+  },
+  {
+   "text": "selbst",
+   "src": "kikunde/t1",
+   "start": 107.28,
+   "end": 107.54
+  },
+  {
+   "text": "5",
+   "src": "kikunde/t1",
+   "start": 107.58,
+   "end": 107.76
+  },
+  {
+   "text": "Onlineshops",
+   "src": "kikunde/t1",
+   "start": 107.82,
+   "end": 108.18
+  },
+  {
+   "text": "zu",
+   "src": "kikunde/t1",
+   "start": 108.22,
+   "end": 108.28
+  },
+  {
+   "text": "vergleichen,",
+   "src": "kikunde/t1",
+   "start": 108.34,
+   "end": 108.76
+  },
+  {
+   "text": "übernimmt",
+   "src": "kikunde/t1",
+   "start": 108.88,
+   "end": 109.2
+  },
+  {
+   "text": "die",
+   "src": "kikunde/t1",
+   "start": 109.24,
+   "end": 109.32
+  },
+  {
+   "text": "KI",
+   "src": "kikunde/t1",
+   "start": 109.36,
+   "end": 109.54
+  },
+  {
+   "text": "einfach",
+   "src": "kikunde/t1",
+   "start": 109.62,
+   "end": 109.84
+  },
+  {
+   "text": "einen",
+   "src": "kikunde/t1",
+   "start": 109.86,
+   "end": 109.96
+  },
+  {
+   "text": "Teil",
+   "src": "kikunde/t1",
+   "start": 109.98,
+   "end": 110.06
+  },
+  {
+   "text": "davon.",
+   "src": "kikunde/t1",
+   "start": 110.1,
+   "end": 110.32
+  },
+  {
+   "text": "Und",
+   "src": "kikunde/t1",
+   "start": 111.04,
+   "end": 111.12
+  },
+  {
+   "text": "jetzt",
+   "src": "kikunde/t1",
+   "start": 111.16,
+   "end": 111.32
+  },
+  {
+   "text": "kommt",
+   "src": "kikunde/t1",
+   "start": 111.36,
+   "end": 111.48
+  },
+  {
+   "text": "aber",
+   "src": "kikunde/t1",
+   "start": 111.54,
+   "end": 111.66
+  },
+  {
+   "text": "der",
+   "src": "kikunde/t1",
+   "start": 111.72,
+   "end": 111.8
+  },
+  {
+   "text": "entscheidende",
+   "src": "kikunde/t1",
+   "start": 111.82,
+   "end": 112.28
+  },
+  {
+   "text": "und",
+   "src": "kikunde/t1",
+   "start": 112.32,
+   "end": 112.4
+  },
+  {
+   "text": "wichtige",
+   "src": "kikunde/t1",
+   "start": 112.44,
+   "end": 112.74
+  },
+  {
+   "text": "Punkt:",
+   "src": "kikunde/t1",
+   "start": 112.82,
+   "end": 113.02
+  },
+  {
+   "text": "Denn",
+   "src": "kikunde/t1",
+   "start": 113.3,
+   "end": 113.44
+  },
+  {
+   "text": "wenn",
+   "src": "kikunde/t1",
+   "start": 113.46,
+   "end": 113.58
+  },
+  {
+   "text": "KI-Agenten",
+   "src": "kikunde/t1",
+   "start": 113.64,
+   "end": 114.18
+  },
+  {
+   "text": "künftig",
+   "src": "kikunde/t1",
+   "start": 114.22,
+   "end": 114.56
+  },
+  {
+   "text": "auch",
+   "src": "kikunde/t1",
+   "start": 114.66,
+   "end": 114.78
+  },
+  {
+   "text": "bei",
+   "src": "kikunde/t1",
+   "start": 114.88,
+   "end": 114.96
+  },
+  {
+   "text": "dir",
+   "src": "kikunde/t1",
+   "start": 115.04,
+   "end": 115.16
+  },
+  {
+   "text": "im",
+   "src": "kikunde/t1",
+   "start": 115.26,
+   "end": 115.32
+  },
+  {
+   "text": "Onlineshop",
+   "src": "kikunde/t1",
+   "start": 115.42,
+   "end": 115.78
+  },
+  {
+   "text": "mitentscheiden,",
+   "src": "kikunde/t1",
+   "start": 115.9,
+   "end": 116.54
+  },
+  {
+   "text": "dann",
+   "src": "kikunde/t1",
+   "start": 117.16,
+   "end": 117.28
+  },
+  {
+   "text": "müssen",
+   "src": "kikunde/t1",
+   "start": 117.34,
+   "end": 117.56
+  },
+  {
+   "text": "natürlich",
+   "src": "kikunde/t1",
+   "start": 117.58,
+   "end": 117.92
+  },
+  {
+   "text": "auch",
+   "src": "kikunde/t1",
+   "start": 118.0,
+   "end": 118.12
+  },
+  {
+   "text": "Onlineshops",
+   "src": "kikunde/t1",
+   "start": 118.2,
+   "end": 118.66
+  },
+  {
+   "text": "nicht",
+   "src": "kikunde/t1",
+   "start": 118.72,
+   "end": 118.84
+  },
+  {
+   "text": "nur",
+   "src": "kikunde/t1",
+   "start": 118.86,
+   "end": 118.94
+  },
+  {
+   "text": "für",
+   "src": "kikunde/t1",
+   "start": 118.98,
+   "end": 119.06
+  },
+  {
+   "text": "Menschen",
+   "src": "kikunde/t1",
+   "start": 119.12,
+   "end": 119.4
+  },
+  {
+   "text": "funktionieren,",
+   "src": "kikunde/t1",
+   "start": 119.46,
+   "end": 119.96
+  },
+  {
+   "text": "sondern",
+   "src": "kikunde/t1",
+   "start": 120.5,
+   "end": 120.8
+  },
+  {
+   "text": "eben",
+   "src": "kikunde/t1",
+   "start": 120.88,
+   "end": 121.04
+  },
+  {
+   "text": "auch",
+   "src": "kikunde/t1",
+   "start": 121.16,
+   "end": 121.28
+  },
+  {
+   "text": "für",
+   "src": "kikunde/t1",
+   "start": 121.32,
+   "end": 121.42
+  },
+  {
+   "text": "KI",
+   "src": "kikunde/t1",
+   "start": 121.48,
+   "end": 121.7
+  },
+  {
+   "text": "verständlich",
+   "src": "kikunde/t1",
+   "start": 121.84,
+   "end": 122.42
+  },
+  {
+   "text": "aufgebaut",
+   "src": "kikunde/t1",
+   "start": 122.5,
+   "end": 122.94
+  },
+  {
+   "text": "sein.",
+   "src": "kikunde/t1",
+   "start": 122.98,
+   "end": 123.14
+  },
+  {
+   "text": "Und",
+   "src": "kikunde/t1",
+   "start": 125.91,
+   "end": 125.97
+  },
+  {
+   "text": "das",
+   "src": "kikunde/t1",
+   "start": 126.01,
+   "end": 126.11
+  },
+  {
+   "text": "heißt",
+   "src": "kikunde/t1",
+   "start": 126.15,
+   "end": 126.29
+  },
+  {
+   "text": "dann",
+   "src": "kikunde/t1",
+   "start": 126.31,
+   "end": 126.41
+  },
+  {
+   "text": "zum",
+   "src": "kikunde/t1",
+   "start": 126.43,
+   "end": 126.51
+  },
+  {
+   "text": "Beispiel:",
+   "src": "kikunde/t1",
+   "start": 126.55,
+   "end": 126.77
+  },
+  {
+   "text": "vernünftige",
+   "src": "kikunde/t1",
+   "start": 126.81,
+   "end": 127.23
+  },
+  {
+   "text": "Produktdaten,",
+   "src": "kikunde/t1",
+   "start": 127.31,
+   "end": 127.91
+  },
+  {
+   "text": "klare",
+   "src": "kikunde/t1",
+   "start": 127.99,
+   "end": 128.29
+  },
+  {
+   "text": "Beschreibungen",
+   "src": "kikunde/t1",
+   "start": 128.35,
+   "end": 128.95
+  },
+  {
+   "text": "und",
+   "src": "kikunde/t1",
+   "start": 129.37,
+   "end": 129.47
+  },
+  {
+   "text": "auch",
+   "src": "kikunde/t1",
+   "start": 129.51,
+   "end": 129.61
+  },
+  {
+   "text": "aktuelle",
+   "src": "kikunde/t1",
+   "start": 129.67,
+   "end": 129.97
+  },
+  {
+   "text": "Preise.",
+   "src": "kikunde/t1",
+   "start": 130.01,
+   "end": 130.29
+  },
+  {
+   "text": "Noch",
+   "src": "kikunde/t1",
+   "start": 162.15,
+   "end": 162.27
+  },
+  {
+   "text": "ist",
+   "src": "kikunde/t1",
+   "start": 162.35,
+   "end": 162.45
+  },
+  {
+   "text": "das",
+   "src": "kikunde/t1",
+   "start": 162.47,
+   "end": 162.57
+  },
+  {
+   "text": "zwar",
+   "src": "kikunde/t1",
+   "start": 162.63,
+   "end": 162.75
+  },
+  {
+   "text": "nicht",
+   "src": "kikunde/t1",
+   "start": 162.81,
+   "end": 162.93
+  },
+  {
+   "text": "der",
+   "src": "kikunde/t1",
+   "start": 162.97,
+   "end": 163.05
+  },
+  {
+   "text": "normale",
+   "src": "kikunde/t1",
+   "start": 163.09,
+   "end": 163.39
+  },
+  {
+   "text": "Einkaufsalltag,",
+   "src": "kikunde/t1",
+   "start": 163.47,
+   "end": 164.13
+  },
+  {
+   "text": "aber",
+   "src": "kikunde/t1",
+   "start": 164.75,
+   "end": 164.97
+  },
+  {
+   "text": "diese",
+   "src": "kikunde/t1",
+   "start": 165.27,
+   "end": 165.45
+  },
+  {
+   "text": "Richtung",
+   "src": "kikunde/t1",
+   "start": 165.53,
+   "end": 165.83
+  },
+  {
+   "text": "finde",
+   "src": "kikunde/t1",
+   "start": 165.93,
+   "end": 166.07
+  },
+  {
+   "text": "ich",
+   "src": "kikunde/t1",
+   "start": 166.11,
+   "end": 166.17
+  },
+  {
+   "text": "natürlich",
+   "src": "kikunde/t1",
+   "start": 166.21,
+   "end": 166.55
+  },
+  {
+   "text": "schon",
+   "src": "kikunde/t1",
+   "start": 166.59,
+   "end": 166.71
+  },
+  {
+   "text": "extrem",
+   "src": "kikunde/t1",
+   "start": 166.77,
+   "end": 167.09
+  },
+  {
+   "text": "spannend,",
+   "src": "kikunde/t1",
+   "start": 167.19,
+   "end": 167.55
+  },
+  {
+   "text": "wohin",
+   "src": "kikunde/t1",
+   "start": 167.57,
+   "end": 167.75
+  },
+  {
+   "text": "sich",
+   "src": "kikunde/t1",
+   "start": 167.81,
+   "end": 167.91
+  },
+  {
+   "text": "das",
+   "src": "kikunde/t1",
+   "start": 167.95,
+   "end": 168.05
+  },
+  {
+   "text": "Ganze",
+   "src": "kikunde/t1",
+   "start": 168.11,
+   "end": 168.35
+  },
+  {
+   "text": "weiterentwickelt.",
+   "src": "kikunde/t1",
+   "start": 168.39,
+   "end": 168.99
+  },
+  {
+   "text": "Aber",
+   "src": "kikunde/t1",
+   "start": 169.86,
+   "end": 169.98
+  },
+  {
+   "text": "was",
+   "src": "kikunde/t1",
+   "start": 170.04,
+   "end": 170.14
+  },
+  {
+   "text": "meint",
+   "src": "kikunde/t1",
+   "start": 170.18,
+   "end": 170.32
+  },
+  {
+   "text": "ihr?",
+   "src": "kikunde/t1",
+   "start": 170.38,
+   "end": 170.46
+  },
+  {
+   "text": "Würdet",
+   "src": "kikunde/t1",
+   "start": 170.78,
+   "end": 171.0
+  },
+  {
+   "text": "ihr",
+   "src": "kikunde/t1",
+   "start": 171.08,
+   "end": 171.16
+  },
+  {
+   "text": "eurer",
+   "src": "kikunde/t1",
+   "start": 171.18,
+   "end": 171.36
+  },
+  {
+   "text": "KI",
+   "src": "kikunde/t1",
+   "start": 171.42,
+   "end": 171.64
+  },
+  {
+   "text": "einfach",
+   "src": "kikunde/t1",
+   "start": 171.74,
+   "end": 171.96
+  },
+  {
+   "text": "einen",
+   "src": "kikunde/t1",
+   "start": 172.0,
+   "end": 172.1
+  },
+  {
+   "text": "Einkauf",
+   "src": "kikunde/t1",
+   "start": 172.24,
+   "end": 172.58
+  },
+  {
+   "text": "komplett",
+   "src": "kikunde/t1",
+   "start": 172.76,
+   "end": 173.08
+  },
+  {
+   "text": "anvertrauen?",
+   "src": "kikunde/t1",
+   "start": 173.18,
+   "end": 173.66
+  },
+  {
+   "text": "Schreibt",
+   "src": "kikunde/t1",
+   "start": 183.89,
+   "end": 184.09
+  },
+  {
+   "text": "mal",
+   "src": "kikunde/t1",
+   "start": 184.11,
+   "end": 184.19
+  },
+  {
+   "text": "gerne",
+   "src": "kikunde/t1",
+   "start": 184.23,
+   "end": 184.41
+  },
+  {
+   "text": "eure",
+   "src": "kikunde/t1",
+   "start": 184.49,
+   "end": 184.61
+  },
+  {
+   "text": "Meinung",
+   "src": "kikunde/t1",
+   "start": 184.65,
+   "end": 184.91
+  },
+  {
+   "text": "dazu.",
+   "src": "kikunde/t1",
+   "start": 184.95,
+   "end": 185.17
+  },
+  {
+   "text": "Und",
+   "src": "kikunde/t1",
+   "start": 203.99,
+   "end": 204.05
+  },
+  {
+   "text": "wenn",
+   "src": "kikunde/t1",
+   "start": 204.07,
+   "end": 204.19
+  },
+  {
+   "text": "ihr",
+   "src": "kikunde/t1",
+   "start": 204.23,
+   "end": 204.29
+  },
+  {
+   "text": "mehr",
+   "src": "kikunde/t1",
+   "start": 204.33,
+   "end": 204.45
+  },
+  {
+   "text": "von",
+   "src": "kikunde/t1",
+   "start": 204.49,
+   "end": 204.59
+  },
+  {
+   "text": "solchen",
+   "src": "kikunde/t1",
+   "start": 204.63,
+   "end": 204.81
+  },
+  {
+   "text": "Videos",
+   "src": "kikunde/t1",
+   "start": 204.83,
+   "end": 205.07
+  },
+  {
+   "text": "sehen",
+   "src": "kikunde/t1",
+   "start": 205.11,
+   "end": 205.29
+  },
+  {
+   "text": "wollt,",
+   "src": "kikunde/t1",
+   "start": 205.33,
+   "end": 205.51
+  },
+  {
+   "text": "dann",
+   "src": "kikunde/t1",
+   "start": 205.57,
+   "end": 205.71
+  },
+  {
+   "text": "like",
+   "src": "kikunde/t1",
+   "start": 205.75,
+   "end": 205.93
+  },
+  {
+   "text": "gerne",
+   "src": "kikunde/t1",
+   "start": 205.95,
+   "end": 206.13
+  },
+  {
+   "text": "dieses",
+   "src": "kikunde/t1",
+   "start": 206.19,
+   "end": 206.31
+  },
+  {
+   "text": "Video",
+   "src": "kikunde/t1",
+   "start": 206.37,
+   "end": 206.59
+  },
+  {
+   "text": "und",
+   "src": "kikunde/t1",
+   "start": 206.71,
+   "end": 206.77
+  },
+  {
+   "text": "folgt",
+   "src": "kikunde/t1",
+   "start": 206.83,
+   "end": 207.01
+  },
+  {
+   "text": "meinem",
+   "src": "kikunde/t1",
+   "start": 207.05,
+   "end": 207.19
+  },
+  {
+   "text": "Kanal.",
+   "src": "kikunde/t1",
+   "start": 207.23,
+   "end": 207.49
+  }
+ ],
+ "pages": [
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  4,
+  1,
+  2,
+  4,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  1,
+  1,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  3,
+  3,
+  3,
+  2,
+  3,
+  1,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  2,
+  1,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  1,
+  1,
+  2,
+  2,
+  2,
+  4,
+  2,
+  2,
+  3,
+  3,
+  3,
+  4,
+  1,
+  4,
+  4,
+  3,
+  2,
+  3,
+  3,
+  4,
+  3,
+  2,
+  4,
+  3,
+  2
+ ]
+}

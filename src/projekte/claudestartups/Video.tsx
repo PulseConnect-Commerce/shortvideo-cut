@@ -4,13 +4,14 @@
  * 6. Okt. 2026) als Hintergrund hinter ihm (Greenscreen, von npm run portrait mit --hintergrund in den Take gerechnet).
  * Einblendungen nach seinem Schnittplan: Hook "CLAUDE 1 JAHR KOSTENLOS?!", "1 JAHR CLAUDE TEAM + 1.000 $ API", "AUCH
  * OHNE INVESTOREN!" (mit Sprechpause vor dem "Nein"), am Schluss "BEWERBUNG: LINK IN BESCHREIBUNG". Der
- * Folgen-Aufruf läuft ohne Einblendung.
+ * Folgen-Aufruf läuft ohne Einblendung. Am Ende ein Hinweis zum Stand (seine Wahl 2026-10-11): laut FAQ der
+ * Programmseite ist Anthropic beim Team-Jahr und den 1.000 $ derzeit überlastet und prüft Bewerbungen neu.
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { ausgabeFrames, Bodenblende, Captions, clamp, HookTitle, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
 import { Pop, Row, Szene, Tag } from "../../lib/broll";
-import { DesignRahmen, type DesignName, Toenung } from "../../lib/design";
+import { DesignRahmen, type DesignName, schriftCss, Toenung, useDesign } from "../../lib/design";
 import { Raster } from "../../lib/raster";
 import { createCut } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
@@ -57,6 +58,21 @@ const akzentAt = (fr: number) =>
     (z, [a, b]) => Math.max(z, interpolate(fr, [a, a + 8, b, b + 10], [1, 1.06, 1.06, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) })),
     1,
   );
+
+/** kleiner Hinweis-Kasten über den Untertiteln (wie die Quellen-Pille, aber zweizeilig) */
+const Hinweis: React.FC<{ fr: number; at: number }> = ({ fr, at }) => {
+  const D = useDesign();
+  return (
+    <Pop fr={fr} at={at} x={60} y={1206}>
+      <div style={{ ...D.chip, color: D.chipText, width: 880, padding: "14px 24px", boxSizing: "border-box" }}>
+        <div style={{ ...schriftCss(D.text), fontSize: 34, lineHeight: 1.25 }}>
+          <span style={{ color: D.warn }}>Stand 11.10.:</span> Team-Jahr und 1.000 $ sind laut Anthropic derzeit
+          überlastet, Bewerbungen werden neu geprüft.
+        </div>
+      </div>
+    </Pop>
+  );
+};
 
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; design?: DesignName };
 
@@ -169,6 +185,9 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
           </Tag>
         </Pop>
       </Szene>
+
+      {/* Hinweis zum Stand des Angebots, bis zum Schluss */}
+      <Hinweis fr={fr} at={T.meinung} />
 
       <Captions C={C} fr={fr} top={UT.top} size={UT.size} />
 
