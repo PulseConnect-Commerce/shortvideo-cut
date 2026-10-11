@@ -62,8 +62,10 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
 - **In den Take rechnen:** `npm run portrait -- <projekt> --hintergrund public/broll/<projekt>/hg-x.png@<von>-<bis>
   [--hintergrund …] --ausschnitt 1.2,160` (von/bis in Sekunden im Take, genau die Sätze, die über die Quelle reden).
   Das Werkzeug stellt ihn dort frei und legt das Bild dahinter; überall sonst bleibt der weiche Porträt-Hintergrund.
-- Während der Quelle: keine Titel über dem Kopf, nur unten links auf der Brust eine Quellen-Pille
-  ("Quelle: Shopify, 1. Okt. 2026", `Tag kind="ink"`, y 1350, unter den Untertiteln). Kamera-Auslöser (`kamera.mp3`) auf dem ersten Wort.
+- Während der Quelle: keine Titel über dem Kopf, nur die **Quelle klein unten rechts** im sicheren Bereich
+  ("Quelle: Shopify, 1. Okt. 2026", `Tag kind="ink" size={28}`, `<Pop x={60} y={1440} w={890} style={{ textAlign:
+  "right", transformOrigin: "right center" }}>`, rechte Kante x 950; seine Vorgabe 2026-10-11). Kamera-Auslöser
+  (`kamera.mp3`) auf dem ersten Wort.
 - **Fakten am Artikel prüfen**, bevor das Video rausgeht: jede Zahl und jede Aussage im Skript gegen die Quelle.
   Weicht etwas ab oder hat sich die Lage geändert (z. B. Angebot ausgebucht), ihm sofort sagen und erst nach seinem
   OK einplanen.
@@ -147,3 +149,5 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-11, erste News-Videos sho
 - Untertitel höher (2026-10-11, beim Einplanen von Canvas und Apps): "Bei den nächsten Videos die Untertitel bitte etwas
   höher setzen, damit sie nicht von den captions überdeckt werden". Umgesetzt: y 1260 statt 1400, Quellen-Pille und
   Hinweis-Kasten darunter bei y 1350.
+- Quelle kleiner (2026-10-11): "Die Quelle kann beim nächsten Mal ruhig deutlich kleiner unten rechts, aber im sicheren
+  Bereich, angezeigt werden." Umgesetzt: 28 px, unten rechts bis x 950, y 1440.

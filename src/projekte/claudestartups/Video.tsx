@@ -99,8 +99,8 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       <HookTitle fr={fr} line1="Claude 1 Jahr" line2="kostenlos?!" outAt={T.gs - 6} />
 
       {/* Quelle hinter ihm (Greenscreen im Take): die Schlagzeile der Ankündigung */}
-      <Pop fr={fr} at={T.gs} until={T.angebot - 4} x={60} y={1350}>
-        <Tag kind="ink" size={42}>
+      <Pop fr={fr} at={T.gs} until={T.angebot - 4} x={60} y={1440} w={890} style={{ textAlign: "right", transformOrigin: "right center" }}>
+        <Tag kind="ink" size={28}>
           Quelle: Anthropic, 6. Okt. 2026
         </Tag>
       </Pop>

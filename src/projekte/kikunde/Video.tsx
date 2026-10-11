@@ -129,8 +129,8 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Szene>
 
       {/* Quelle hinter ihm (Greenscreen im Take): Schlagzeile, dann die markierte Stelle; nicht tagesaktuell */}
-      <Pop fr={fr} at={T.gs1} until={T.gs2 - 4} x={60} y={1350}>
-        <Tag kind="ink" size={42}>
+      <Pop fr={fr} at={T.gs1} until={T.vor - 4} x={60} y={1440} w={890} style={{ textAlign: "right", transformOrigin: "right center" }}>
+        <Tag kind="ink" size={28}>
           Quelle: IT Boltwise, 29. Sep. 2026
         </Tag>
       </Pop>
