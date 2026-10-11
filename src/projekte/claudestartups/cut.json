@@ -1,0 +1,1809 @@
+{
+ "projekt": "claudestartups",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "claudestartups/t1",
+   "from": 29.955,
+   "to": 32.855,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 33.175,
+   "to": 34.895,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 35.655,
+   "to": 38.205,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 39.005,
+   "to": 41.595,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 42.125,
+   "to": 44.925,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 45.805,
+   "to": 46.845,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 47.715,
+   "to": 52.445,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 52.625,
+   "to": 54.115,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 70.125,
+   "to": 75.865,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 76.205,
+   "to": 81.25,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 102.135,
+   "to": 105.695,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 106.135,
+   "to": 111.275,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 111.615,
+   "to": 114.015,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 114.565,
+   "to": 115.645,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 116.035,
+   "to": 119.525,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 119.695,
+   "to": 120.845,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 120.925,
+   "to": 125.265,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 144.185,
+   "to": 148.855,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 149.185,
+   "to": 150.995,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 152.115,
+   "to": 153.315,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 153.905,
+   "to": 156.075,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 156.355,
+   "to": 159.225,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 174.955,
+   "to": 179.935,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 211.265,
+   "to": 212.535,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 213.165,
+   "to": 216.045,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 216.205,
+   "to": 219.515,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudestartups/t1",
+   "from": 219.825,
+   "to": 222.4,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Claude",
+   "src": "claudestartups/t1",
+   "start": 29.98,
+   "end": 30.26
+  },
+  {
+   "text": "verschenkt",
+   "src": "claudestartups/t1",
+   "start": 30.3,
+   "end": 30.62
+  },
+  {
+   "text": "gerade",
+   "src": "claudestartups/t1",
+   "start": 30.64,
+   "end": 30.78
+  },
+  {
+   "text": "ein",
+   "src": "claudestartups/t1",
+   "start": 30.94,
+   "end": 31.04
+  },
+  {
+   "text": "ganzes",
+   "src": "claudestartups/t1",
+   "start": 31.12,
+   "end": 31.5
+  },
+  {
+   "text": "Jahr",
+   "src": "claudestartups/t1",
+   "start": 31.6,
+   "end": 31.76
+  },
+  {
+   "text": "lang",
+   "src": "claudestartups/t1",
+   "start": 31.82,
+   "end": 31.94
+  },
+  {
+   "text": "KI",
+   "src": "claudestartups/t1",
+   "start": 32.0,
+   "end": 32.24
+  },
+  {
+   "text": "an",
+   "src": "claudestartups/t1",
+   "start": 32.34,
+   "end": 32.42
+  },
+  {
+   "text": "Gründer.",
+   "src": "claudestartups/t1",
+   "start": 32.46,
+   "end": 32.76
+  },
+  {
+   "text": "Und",
+   "src": "claudestartups/t1",
+   "start": 33.22,
+   "end": 33.3
+  },
+  {
+   "text": "du",
+   "src": "claudestartups/t1",
+   "start": 33.44,
+   "end": 33.52
+  },
+  {
+   "text": "kannst",
+   "src": "claudestartups/t1",
+   "start": 33.64,
+   "end": 33.84
+  },
+  {
+   "text": "dich",
+   "src": "claudestartups/t1",
+   "start": 33.86,
+   "end": 33.96
+  },
+  {
+   "text": "sogar",
+   "src": "claudestartups/t1",
+   "start": 33.98,
+   "end": 34.18
+  },
+  {
+   "text": "dafür",
+   "src": "claudestartups/t1",
+   "start": 34.2,
+   "end": 34.4
+  },
+  {
+   "text": "bewerben.",
+   "src": "claudestartups/t1",
+   "start": 34.46,
+   "end": 34.8
+  },
+  {
+   "text": "Anthropic,",
+   "src": "claudestartups/t1",
+   "start": 35.68,
+   "end": 36.22
+  },
+  {
+   "text": "also",
+   "src": "claudestartups/t1",
+   "start": 36.3,
+   "end": 36.44
+  },
+  {
+   "text": "das",
+   "src": "claudestartups/t1",
+   "start": 36.48,
+   "end": 36.58
+  },
+  {
+   "text": "Unternehmen",
+   "src": "claudestartups/t1",
+   "start": 36.64,
+   "end": 37.12
+  },
+  {
+   "text": "hinter",
+   "src": "claudestartups/t1",
+   "start": 37.26,
+   "end": 37.6
+  },
+  {
+   "text": "Claude,",
+   "src": "claudestartups/t1",
+   "start": 37.78,
+   "end": 38.14
+  },
+  {
+   "text": "hat",
+   "src": "claudestartups/t1",
+   "start": 39.06,
+   "end": 39.18
+  },
+  {
+   "text": "sein",
+   "src": "claudestartups/t1",
+   "start": 39.28,
+   "end": 39.42
+  },
+  {
+   "text": "Startup-Programm",
+   "src": "claudestartups/t1",
+   "start": 39.5,
+   "end": 40.2
+  },
+  {
+   "text": "gerade",
+   "src": "claudestartups/t1",
+   "start": 40.28,
+   "end": 40.54
+  },
+  {
+   "text": "erst",
+   "src": "claudestartups/t1",
+   "start": 40.6,
+   "end": 40.74
+  },
+  {
+   "text": "deutlich",
+   "src": "claudestartups/t1",
+   "start": 40.8,
+   "end": 41.08
+  },
+  {
+   "text": "erweitert.",
+   "src": "claudestartups/t1",
+   "start": 41.14,
+   "end": 41.54
+  },
+  {
+   "text": "Und",
+   "src": "claudestartups/t1",
+   "start": 42.17,
+   "end": 42.25
+  },
+  {
+   "text": "das",
+   "src": "claudestartups/t1",
+   "start": 42.29,
+   "end": 42.37
+  },
+  {
+   "text": "Angebot",
+   "src": "claudestartups/t1",
+   "start": 42.49,
+   "end": 42.89
+  },
+  {
+   "text": "hier",
+   "src": "claudestartups/t1",
+   "start": 42.99,
+   "end": 43.15
+  },
+  {
+   "text": "ist",
+   "src": "claudestartups/t1",
+   "start": 43.29,
+   "end": 43.39
+  },
+  {
+   "text": "tatsächlich",
+   "src": "claudestartups/t1",
+   "start": 43.45,
+   "end": 43.97
+  },
+  {
+   "text": "ziemlich",
+   "src": "claudestartups/t1",
+   "start": 44.09,
+   "end": 44.37
+  },
+  {
+   "text": "interessant.",
+   "src": "claudestartups/t1",
+   "start": 44.41,
+   "end": 44.81
+  },
+  {
+   "text": "Denn",
+   "src": "claudestartups/t1",
+   "start": 45.85,
+   "end": 45.97
+  },
+  {
+   "text": "wenn",
+   "src": "claudestartups/t1",
+   "start": 46.01,
+   "end": 46.13
+  },
+  {
+   "text": "dein",
+   "src": "claudestartups/t1",
+   "start": 46.17,
+   "end": 46.33
+  },
+  {
+   "text": "Startup",
+   "src": "claudestartups/t1",
+   "start": 46.39,
+   "end": 46.845
+  },
+  {
+   "text": "angenommen",
+   "src": "claudestartups/t1",
+   "start": 48.69,
+   "end": 49.07
+  },
+  {
+   "text": "wird,",
+   "src": "claudestartups/t1",
+   "start": 49.13,
+   "end": 49.29
+  },
+  {
+   "text": "dann",
+   "src": "claudestartups/t1",
+   "start": 49.41,
+   "end": 49.55
+  },
+  {
+   "text": "bekommst",
+   "src": "claudestartups/t1",
+   "start": 49.57,
+   "end": 49.91
+  },
+  {
+   "text": "du",
+   "src": "claudestartups/t1",
+   "start": 49.95,
+   "end": 50.01
+  },
+  {
+   "text": "ein",
+   "src": "claudestartups/t1",
+   "start": 50.07,
+   "end": 50.15
+  },
+  {
+   "text": "ganzes",
+   "src": "claudestartups/t1",
+   "start": 50.23,
+   "end": 50.63
+  },
+  {
+   "text": "Jahr",
+   "src": "claudestartups/t1",
+   "start": 50.71,
+   "end": 50.89
+  },
+  {
+   "text": "lang",
+   "src": "claudestartups/t1",
+   "start": 50.95,
+   "end": 51.07
+  },
+  {
+   "text": "Claude",
+   "src": "claudestartups/t1",
+   "start": 51.19,
+   "end": 51.45
+  },
+  {
+   "text": "Team",
+   "src": "claudestartups/t1",
+   "start": 51.49,
+   "end": 51.69
+  },
+  {
+   "text": "kostenlos",
+   "src": "claudestartups/t1",
+   "start": 51.77,
+   "end": 52.31
+  },
+  {
+   "text": "für",
+   "src": "claudestartups/t1",
+   "start": 52.67,
+   "end": 52.77
+  },
+  {
+   "text": "bis",
+   "src": "claudestartups/t1",
+   "start": 52.93,
+   "end": 53.07
+  },
+  {
+   "text": "zu",
+   "src": "claudestartups/t1",
+   "start": 53.17,
+   "end": 53.27
+  },
+  {
+   "text": "fünf",
+   "src": "claudestartups/t1",
+   "start": 53.39,
+   "end": 53.59
+  },
+  {
+   "text": "Nutzer.",
+   "src": "claudestartups/t1",
+   "start": 53.67,
+   "end": 53.99
+  },
+  {
+   "text": "Und",
+   "src": "claudestartups/t1",
+   "start": 70.16,
+   "end": 70.22
+  },
+  {
+   "text": "dafür",
+   "src": "claudestartups/t1",
+   "start": 70.26,
+   "end": 70.46
+  },
+  {
+   "text": "gibt",
+   "src": "claudestartups/t1",
+   "start": 70.5,
+   "end": 70.58
+  },
+  {
+   "text": "es",
+   "src": "claudestartups/t1",
+   "start": 70.6,
+   "end": 70.64
+  },
+  {
+   "text": "auch",
+   "src": "claudestartups/t1",
+   "start": 70.66,
+   "end": 70.74
+  },
+  {
+   "text": "noch",
+   "src": "claudestartups/t1",
+   "start": 70.76,
+   "end": 70.84
+  },
+  {
+   "text": "1.000",
+   "src": "claudestartups/t1",
+   "start": 70.9,
+   "end": 71.3
+  },
+  {
+   "text": "Dollar",
+   "src": "claudestartups/t1",
+   "start": 71.36,
+   "end": 71.56
+  },
+  {
+   "text": "für",
+   "src": "claudestartups/t1",
+   "start": 71.6,
+   "end": 71.72
+  },
+  {
+   "text": "API-Guthaben",
+   "src": "claudestartups/t1",
+   "start": 71.84,
+   "end": 72.66
+  },
+  {
+   "text": "und",
+   "src": "claudestartups/t1",
+   "start": 72.96,
+   "end": 73.06
+  },
+  {
+   "text": "weitere",
+   "src": "claudestartups/t1",
+   "start": 73.12,
+   "end": 73.44
+  },
+  {
+   "text": "Rabatte",
+   "src": "claudestartups/t1",
+   "start": 73.54,
+   "end": 73.92
+  },
+  {
+   "text": "und",
+   "src": "claudestartups/t1",
+   "start": 74.02,
+   "end": 74.08
+  },
+  {
+   "text": "Guthaben",
+   "src": "claudestartups/t1",
+   "start": 74.12,
+   "end": 74.54
+  },
+  {
+   "text": "für",
+   "src": "claudestartups/t1",
+   "start": 74.58,
+   "end": 74.68
+  },
+  {
+   "text": "Partner",
+   "src": "claudestartups/t1",
+   "start": 74.74,
+   "end": 75.08
+  },
+  {
+   "text": "wie",
+   "src": "claudestartups/t1",
+   "start": 75.14,
+   "end": 75.24
+  },
+  {
+   "text": "ElevenLabs.",
+   "src": "claudestartups/t1",
+   "start": 75.28,
+   "end": 75.76
+  },
+  {
+   "text": "Jetzt",
+   "src": "claudestartups/t1",
+   "start": 76.24,
+   "end": 76.42
+  },
+  {
+   "text": "denkst",
+   "src": "claudestartups/t1",
+   "start": 76.46,
+   "end": 76.66
+  },
+  {
+   "text": "du",
+   "src": "claudestartups/t1",
+   "start": 76.68,
+   "end": 76.72
+  },
+  {
+   "text": "dir",
+   "src": "claudestartups/t1",
+   "start": 76.74,
+   "end": 76.82
+  },
+  {
+   "text": "vielleicht,",
+   "src": "claudestartups/t1",
+   "start": 76.84,
+   "end": 77.1
+  },
+  {
+   "text": "ok,",
+   "src": "claudestartups/t1",
+   "start": 77.18,
+   "end": 77.3
+  },
+  {
+   "text": "aber",
+   "src": "claudestartups/t1",
+   "start": 77.5,
+   "end": 77.72
+  },
+  {
+   "text": "dafür",
+   "src": "claudestartups/t1",
+   "start": 78.02,
+   "end": 78.24
+  },
+  {
+   "text": "brauche",
+   "src": "claudestartups/t1",
+   "start": 78.28,
+   "end": 78.5
+  },
+  {
+   "text": "ich",
+   "src": "claudestartups/t1",
+   "start": 78.54,
+   "end": 78.6
+  },
+  {
+   "text": "ja",
+   "src": "claudestartups/t1",
+   "start": 78.62,
+   "end": 78.66
+  },
+  {
+   "text": "bestimmt",
+   "src": "claudestartups/t1",
+   "start": 78.68,
+   "end": 78.96
+  },
+  {
+   "text": "Millionen",
+   "src": "claudestartups/t1",
+   "start": 79.0,
+   "end": 79.4
+  },
+  {
+   "text": "von",
+   "src": "claudestartups/t1",
+   "start": 79.44,
+   "end": 79.54
+  },
+  {
+   "text": "Investoren,",
+   "src": "claudestartups/t1",
+   "start": 79.62,
+   "end": 80.12
+  },
+  {
+   "text": "aber",
+   "src": "claudestartups/t1",
+   "start": 80.57,
+   "end": 80.69
+  },
+  {
+   "text": "nein.",
+   "src": "claudestartups/t1",
+   "start": 80.75,
+   "end": 80.93
+  },
+  {
+   "text": "Du",
+   "src": "claudestartups/t1",
+   "start": 102.18,
+   "end": 102.24
+  },
+  {
+   "text": "kannst",
+   "src": "claudestartups/t1",
+   "start": 102.3,
+   "end": 102.52
+  },
+  {
+   "text": "dich",
+   "src": "claudestartups/t1",
+   "start": 102.58,
+   "end": 102.66
+  },
+  {
+   "text": "nämlich",
+   "src": "claudestartups/t1",
+   "start": 102.7,
+   "end": 102.9
+  },
+  {
+   "text": "auch",
+   "src": "claudestartups/t1",
+   "start": 102.94,
+   "end": 103.02
+  },
+  {
+   "text": "bewerben,",
+   "src": "claudestartups/t1",
+   "start": 103.08,
+   "end": 103.5
+  },
+  {
+   "text": "wenn",
+   "src": "claudestartups/t1",
+   "start": 103.64,
+   "end": 103.76
+  },
+  {
+   "text": "dein",
+   "src": "claudestartups/t1",
+   "start": 103.8,
+   "end": 103.94
+  },
+  {
+   "text": "Startup",
+   "src": "claudestartups/t1",
+   "start": 104.0,
+   "end": 104.32
+  },
+  {
+   "text": "komplett",
+   "src": "claudestartups/t1",
+   "start": 104.38,
+   "end": 104.74
+  },
+  {
+   "text": "eigenfinanziert",
+   "src": "claudestartups/t1",
+   "start": 104.84,
+   "end": 105.48
+  },
+  {
+   "text": "ist.",
+   "src": "claudestartups/t1",
+   "start": 105.52,
+   "end": 105.62
+  },
+  {
+   "text": "Voraussetzung",
+   "src": "claudestartups/t1",
+   "start": 106.2,
+   "end": 106.78
+  },
+  {
+   "text": "unter",
+   "src": "claudestartups/t1",
+   "start": 107.02,
+   "end": 107.2
+  },
+  {
+   "text": "anderem",
+   "src": "claudestartups/t1",
+   "start": 107.28,
+   "end": 107.62
+  },
+  {
+   "text": "ist",
+   "src": "claudestartups/t1",
+   "start": 107.76,
+   "end": 107.84
+  },
+  {
+   "text": "eben",
+   "src": "claudestartups/t1",
+   "start": 107.92,
+   "end": 108.1
+  },
+  {
+   "text": "nur,",
+   "src": "claudestartups/t1",
+   "start": 108.16,
+   "end": 108.3
+  },
+  {
+   "text": "dass",
+   "src": "claudestartups/t1",
+   "start": 108.4,
+   "end": 108.54
+  },
+  {
+   "text": "dein",
+   "src": "claudestartups/t1",
+   "start": 108.56,
+   "end": 108.7
+  },
+  {
+   "text": "Unternehmen",
+   "src": "claudestartups/t1",
+   "start": 108.76,
+   "end": 109.1
+  },
+  {
+   "text": "innerhalb",
+   "src": "claudestartups/t1",
+   "start": 109.16,
+   "end": 109.42
+  },
+  {
+   "text": "der",
+   "src": "claudestartups/t1",
+   "start": 109.46,
+   "end": 109.54
+  },
+  {
+   "text": "letzten",
+   "src": "claudestartups/t1",
+   "start": 109.58,
+   "end": 109.9
+  },
+  {
+   "text": "fünf",
+   "src": "claudestartups/t1",
+   "start": 109.96,
+   "end": 110.12
+  },
+  {
+   "text": "Jahren",
+   "src": "claudestartups/t1",
+   "start": 110.14,
+   "end": 110.36
+  },
+  {
+   "text": "gegründet",
+   "src": "claudestartups/t1",
+   "start": 110.4,
+   "end": 110.8
+  },
+  {
+   "text": "wurde",
+   "src": "claudestartups/t1",
+   "start": 110.86,
+   "end": 111.06
+  },
+  {
+   "text": "oder",
+   "src": "claudestartups/t1",
+   "start": 111.68,
+   "end": 111.86
+  },
+  {
+   "text": "eben",
+   "src": "claudestartups/t1",
+   "start": 111.98,
+   "end": 112.16
+  },
+  {
+   "text": "in",
+   "src": "claudestartups/t1",
+   "start": 112.18,
+   "end": 112.22
+  },
+  {
+   "text": "den",
+   "src": "claudestartups/t1",
+   "start": 112.24,
+   "end": 112.34
+  },
+  {
+   "text": "letzten",
+   "src": "claudestartups/t1",
+   "start": 112.38,
+   "end": 112.7
+  },
+  {
+   "text": "zwei",
+   "src": "claudestartups/t1",
+   "start": 112.8,
+   "end": 112.98
+  },
+  {
+   "text": "Jahren",
+   "src": "claudestartups/t1",
+   "start": 113.04,
+   "end": 113.2
+  },
+  {
+   "text": "finanziert",
+   "src": "claudestartups/t1",
+   "start": 113.24,
+   "end": 113.7
+  },
+  {
+   "text": "wurde.",
+   "src": "claudestartups/t1",
+   "start": 113.74,
+   "end": 113.92
+  },
+  {
+   "text": "Und",
+   "src": "claudestartups/t1",
+   "start": 114.62,
+   "end": 114.7
+  },
+  {
+   "text": "wichtig",
+   "src": "claudestartups/t1",
+   "start": 114.76,
+   "end": 115.04
+  },
+  {
+   "text": "dabei",
+   "src": "claudestartups/t1",
+   "start": 115.1,
+   "end": 115.34
+  },
+  {
+   "text": "ist,",
+   "src": "claudestartups/t1",
+   "start": 115.42,
+   "end": 115.58
+  },
+  {
+   "text": "das",
+   "src": "claudestartups/t1",
+   "start": 116.08,
+   "end": 116.2
+  },
+  {
+   "text": "Programm",
+   "src": "claudestartups/t1",
+   "start": 116.24,
+   "end": 116.54
+  },
+  {
+   "text": "richtet",
+   "src": "claudestartups/t1",
+   "start": 116.6,
+   "end": 116.88
+  },
+  {
+   "text": "sich",
+   "src": "claudestartups/t1",
+   "start": 116.94,
+   "end": 117.06
+  },
+  {
+   "text": "hauptsächlich",
+   "src": "claudestartups/t1",
+   "start": 117.12,
+   "end": 117.6
+  },
+  {
+   "text": "an",
+   "src": "claudestartups/t1",
+   "start": 117.64,
+   "end": 117.72
+  },
+  {
+   "text": "Startups,",
+   "src": "claudestartups/t1",
+   "start": 117.76,
+   "end": 118.22
+  },
+  {
+   "text": "die",
+   "src": "claudestartups/t1",
+   "start": 118.28,
+   "end": 118.36
+  },
+  {
+   "text": "mit",
+   "src": "claudestartups/t1",
+   "start": 118.38,
+   "end": 118.48
+  },
+  {
+   "text": "Claude",
+   "src": "claudestartups/t1",
+   "start": 118.56,
+   "end": 118.84
+  },
+  {
+   "text": "arbeiten",
+   "src": "claudestartups/t1",
+   "start": 118.92,
+   "end": 119.32
+  },
+  {
+   "text": "oder",
+   "src": "claudestartups/t1",
+   "start": 119.74,
+   "end": 119.92
+  },
+  {
+   "text": "eben",
+   "src": "claudestartups/t1",
+   "start": 120.0,
+   "end": 120.1
+  },
+  {
+   "text": "darauf",
+   "src": "claudestartups/t1",
+   "start": 120.16,
+   "end": 120.4
+  },
+  {
+   "text": "aufbauen.",
+   "src": "claudestartups/t1",
+   "start": 120.5,
+   "end": 120.845
+  },
+  {
+   "text": "Es",
+   "src": "claudestartups/t1",
+   "start": 120.9,
+   "end": 120.96
+  },
+  {
+   "text": "ist",
+   "src": "claudestartups/t1",
+   "start": 121.02,
+   "end": 121.1
+  },
+  {
+   "text": "also",
+   "src": "claudestartups/t1",
+   "start": 121.14,
+   "end": 121.28
+  },
+  {
+   "text": "nicht",
+   "src": "claudestartups/t1",
+   "start": 121.36,
+   "end": 121.5
+  },
+  {
+   "text": "einfach",
+   "src": "claudestartups/t1",
+   "start": 121.56,
+   "end": 121.8
+  },
+  {
+   "text": "nur",
+   "src": "claudestartups/t1",
+   "start": 121.88,
+   "end": 121.96
+  },
+  {
+   "text": "ein",
+   "src": "claudestartups/t1",
+   "start": 122.0,
+   "end": 122.08
+  },
+  {
+   "text": "Gratis-Abo",
+   "src": "claudestartups/t1",
+   "start": 122.14,
+   "end": 122.5
+  },
+  {
+   "text": "für",
+   "src": "claudestartups/t1",
+   "start": 123.16,
+   "end": 123.24
+  },
+  {
+   "text": "jedes",
+   "src": "claudestartups/t1",
+   "start": 123.3,
+   "end": 123.54
+  },
+  {
+   "text": "Unternehmen,",
+   "src": "claudestartups/t1",
+   "start": 123.62,
+   "end": 124.06
+  },
+  {
+   "text": "was",
+   "src": "claudestartups/t1",
+   "start": 124.1,
+   "end": 124.22
+  },
+  {
+   "text": "Claude",
+   "src": "claudestartups/t1",
+   "start": 124.28,
+   "end": 124.52
+  },
+  {
+   "text": "nutzen",
+   "src": "claudestartups/t1",
+   "start": 124.56,
+   "end": 124.78
+  },
+  {
+   "text": "möchte.",
+   "src": "claudestartups/t1",
+   "start": 124.82,
+   "end": 125.06
+  },
+  {
+   "text": "Wenn",
+   "src": "claudestartups/t1",
+   "start": 144.21,
+   "end": 144.31
+  },
+  {
+   "text": "aber",
+   "src": "claudestartups/t1",
+   "start": 144.33,
+   "end": 144.47
+  },
+  {
+   "text": "du",
+   "src": "claudestartups/t1",
+   "start": 144.55,
+   "end": 144.63
+  },
+  {
+   "text": "solche",
+   "src": "claudestartups/t1",
+   "start": 144.75,
+   "end": 144.95
+  },
+  {
+   "text": "KI-Tools",
+   "src": "claudestartups/t1",
+   "start": 145.03,
+   "end": 145.69
+  },
+  {
+   "text": "und",
+   "src": "claudestartups/t1",
+   "start": 145.79,
+   "end": 145.87
+  },
+  {
+   "text": "Möglichkeiten",
+   "src": "claudestartups/t1",
+   "start": 146.07,
+   "end": 146.75
+  },
+  {
+   "text": "für",
+   "src": "claudestartups/t1",
+   "start": 146.81,
+   "end": 146.91
+  },
+  {
+   "text": "Unternehmen",
+   "src": "claudestartups/t1",
+   "start": 146.97,
+   "end": 147.35
+  },
+  {
+   "text": "in",
+   "src": "claudestartups/t1",
+   "start": 147.41,
+   "end": 147.45
+  },
+  {
+   "text": "Zukunft",
+   "src": "claudestartups/t1",
+   "start": 147.49,
+   "end": 147.83
+  },
+  {
+   "text": "nicht",
+   "src": "claudestartups/t1",
+   "start": 147.91,
+   "end": 148.05
+  },
+  {
+   "text": "verpassen",
+   "src": "claudestartups/t1",
+   "start": 148.09,
+   "end": 148.43
+  },
+  {
+   "text": "möchtest,",
+   "src": "claudestartups/t1",
+   "start": 148.47,
+   "end": 148.79
+  },
+  {
+   "text": "dann",
+   "src": "claudestartups/t1",
+   "start": 149.23,
+   "end": 149.37
+  },
+  {
+   "text": "folgt",
+   "src": "claudestartups/t1",
+   "start": 149.43,
+   "end": 149.61
+  },
+  {
+   "text": "mir",
+   "src": "claudestartups/t1",
+   "start": 149.63,
+   "end": 149.69
+  },
+  {
+   "text": "hier",
+   "src": "claudestartups/t1",
+   "start": 149.71,
+   "end": 149.81
+  },
+  {
+   "text": "gerne",
+   "src": "claudestartups/t1",
+   "start": 149.85,
+   "end": 150.07
+  },
+  {
+   "text": "für",
+   "src": "claudestartups/t1",
+   "start": 150.11,
+   "end": 150.19
+  },
+  {
+   "text": "mehr",
+   "src": "claudestartups/t1",
+   "start": 150.23,
+   "end": 150.35
+  },
+  {
+   "text": "solcher",
+   "src": "claudestartups/t1",
+   "start": 150.37,
+   "end": 150.57
+  },
+  {
+   "text": "Videos.",
+   "src": "claudestartups/t1",
+   "start": 150.61,
+   "end": 150.91
+  },
+  {
+   "text": "Was",
+   "src": "claudestartups/t1",
+   "start": 152.16,
+   "end": 152.3
+  },
+  {
+   "text": "ich",
+   "src": "claudestartups/t1",
+   "start": 152.34,
+   "end": 152.42
+  },
+  {
+   "text": "jetzt",
+   "src": "claudestartups/t1",
+   "start": 154.27,
+   "end": 154.53
+  },
+  {
+   "text": "besonders",
+   "src": "claudestartups/t1",
+   "start": 154.46,
+   "end": 154.86
+  },
+  {
+   "text": "daran",
+   "src": "claudestartups/t1",
+   "start": 154.92,
+   "end": 155.12
+  },
+  {
+   "text": "spannend",
+   "src": "claudestartups/t1",
+   "start": 155.16,
+   "end": 155.44
+  },
+  {
+   "text": "finde,",
+   "src": "claudestartups/t1",
+   "start": 155.5,
+   "end": 155.7
+  },
+  {
+   "text": "ist,",
+   "src": "claudestartups/t1",
+   "start": 155.86,
+   "end": 156.0
+  },
+  {
+   "text": "dass",
+   "src": "claudestartups/t1",
+   "start": 156.4,
+   "end": 156.54
+  },
+  {
+   "text": "diese",
+   "src": "claudestartups/t1",
+   "start": 156.58,
+   "end": 156.76
+  },
+  {
+   "text": "KI-Modelle",
+   "src": "claudestartups/t1",
+   "start": 156.84,
+   "end": 157.52
+  },
+  {
+   "text": "nämlich",
+   "src": "claudestartups/t1",
+   "start": 157.6,
+   "end": 157.84
+  },
+  {
+   "text": "immer",
+   "src": "claudestartups/t1",
+   "start": 157.94,
+   "end": 158.1
+  },
+  {
+   "text": "leistungsfähiger",
+   "src": "claudestartups/t1",
+   "start": 158.18,
+   "end": 158.84
+  },
+  {
+   "text": "werden.",
+   "src": "claudestartups/t1",
+   "start": 158.9,
+   "end": 159.12
+  },
+  {
+   "text": "Und",
+   "src": "claudestartups/t1",
+   "start": 175.0,
+   "end": 175.28
+  },
+  {
+   "text": "gleichzeitig",
+   "src": "claudestartups/t1",
+   "start": 175.32,
+   "end": 175.62
+  },
+  {
+   "text": "versuchen",
+   "src": "claudestartups/t1",
+   "start": 175.66,
+   "end": 176.0
+  },
+  {
+   "text": "aber",
+   "src": "claudestartups/t1",
+   "start": 176.04,
+   "end": 176.32
+  },
+  {
+   "text": "natürlich",
+   "src": "claudestartups/t1",
+   "start": 176.36,
+   "end": 176.66
+  },
+  {
+   "text": "Anbieter,",
+   "src": "claudestartups/t1",
+   "start": 176.7,
+   "end": 177.2
+  },
+  {
+   "text": "die",
+   "src": "claudestartups/t1",
+   "start": 177.32,
+   "end": 177.42
+  },
+  {
+   "text": "Gründer",
+   "src": "claudestartups/t1",
+   "start": 177.46,
+   "end": 177.74
+  },
+  {
+   "text": "möglichst",
+   "src": "claudestartups/t1",
+   "start": 177.77,
+   "end": 178.17
+  },
+  {
+   "text": "früh",
+   "src": "claudestartups/t1",
+   "start": 178.23,
+   "end": 178.43
+  },
+  {
+   "text": "für",
+   "src": "claudestartups/t1",
+   "start": 178.59,
+   "end": 178.69
+  },
+  {
+   "text": "ihre",
+   "src": "claudestartups/t1",
+   "start": 178.81,
+   "end": 178.97
+  },
+  {
+   "text": "Plattform",
+   "src": "claudestartups/t1",
+   "start": 179.05,
+   "end": 179.41
+  },
+  {
+   "text": "zu",
+   "src": "claudestartups/t1",
+   "start": 179.47,
+   "end": 179.53
+  },
+  {
+   "text": "gewinnen.",
+   "src": "claudestartups/t1",
+   "start": 179.59,
+   "end": 179.85
+  },
+  {
+   "text": "Meine",
+   "src": "claudestartups/t1",
+   "start": 211.29,
+   "end": 211.49
+  },
+  {
+   "text": "Meinung",
+   "src": "claudestartups/t1",
+   "start": 211.55,
+   "end": 211.79
+  },
+  {
+   "text": "dazu",
+   "src": "claudestartups/t1",
+   "start": 211.85,
+   "end": 212.15
+  },
+  {
+   "text": "ist,",
+   "src": "claudestartups/t1",
+   "start": 212.27,
+   "end": 212.41
+  },
+  {
+   "text": "wenn",
+   "src": "claudestartups/t1",
+   "start": 214.35,
+   "end": 214.47
+  },
+  {
+   "text": "du",
+   "src": "claudestartups/t1",
+   "start": 214.55,
+   "end": 214.63
+  },
+  {
+   "text": "gerade",
+   "src": "claudestartups/t1",
+   "start": 214.71,
+   "end": 214.95
+  },
+  {
+   "text": "ein",
+   "src": "claudestartups/t1",
+   "start": 215.01,
+   "end": 215.09
+  },
+  {
+   "text": "Startup",
+   "src": "claudestartups/t1",
+   "start": 215.15,
+   "end": 215.51
+  },
+  {
+   "text": "aufbaust,",
+   "src": "claudestartups/t1",
+   "start": 215.59,
+   "end": 215.99
+  },
+  {
+   "text": "dann",
+   "src": "claudestartups/t1",
+   "start": 216.25,
+   "end": 216.37
+  },
+  {
+   "text": "solltest",
+   "src": "claudestartups/t1",
+   "start": 216.43,
+   "end": 216.71
+  },
+  {
+   "text": "du",
+   "src": "claudestartups/t1",
+   "start": 216.73,
+   "end": 216.77
+  },
+  {
+   "text": "dir",
+   "src": "claudestartups/t1",
+   "start": 216.83,
+   "end": 216.91
+  },
+  {
+   "text": "definitiv",
+   "src": "claudestartups/t1",
+   "start": 216.97,
+   "end": 217.43
+  },
+  {
+   "text": "mal",
+   "src": "claudestartups/t1",
+   "start": 217.47,
+   "end": 217.53
+  },
+  {
+   "text": "die",
+   "src": "claudestartups/t1",
+   "start": 217.59,
+   "end": 217.65
+  },
+  {
+   "text": "Bewerbung",
+   "src": "claudestartups/t1",
+   "start": 217.67,
+   "end": 218.01
+  },
+  {
+   "text": "anschauen",
+   "src": "claudestartups/t1",
+   "start": 218.15,
+   "end": 218.49
+  },
+  {
+   "text": "und",
+   "src": "claudestartups/t1",
+   "start": 218.55,
+   "end": 218.63
+  },
+  {
+   "text": "dich",
+   "src": "claudestartups/t1",
+   "start": 218.67,
+   "end": 218.77
+  },
+  {
+   "text": "darauf",
+   "src": "claudestartups/t1",
+   "start": 218.81,
+   "end": 219.03
+  },
+  {
+   "text": "bewerben.",
+   "src": "claudestartups/t1",
+   "start": 219.09,
+   "end": 219.41
+  },
+  {
+   "text": "Ich",
+   "src": "claudestartups/t1",
+   "start": 219.87,
+   "end": 219.95
+  },
+  {
+   "text": "pack",
+   "src": "claudestartups/t1",
+   "start": 220.01,
+   "end": 220.15
+  },
+  {
+   "text": "dir",
+   "src": "claudestartups/t1",
+   "start": 220.21,
+   "end": 220.27
+  },
+  {
+   "text": "mal",
+   "src": "claudestartups/t1",
+   "start": 220.29,
+   "end": 220.39
+  },
+  {
+   "text": "den",
+   "src": "claudestartups/t1",
+   "start": 220.43,
+   "end": 220.51
+  },
+  {
+   "text": "offiziellen",
+   "src": "claudestartups/t1",
+   "start": 220.61,
+   "end": 221.05
+  },
+  {
+   "text": "Link",
+   "src": "claudestartups/t1",
+   "start": 221.09,
+   "end": 221.23
+  },
+  {
+   "text": "in",
+   "src": "claudestartups/t1",
+   "start": 221.27,
+   "end": 221.31
+  },
+  {
+   "text": "die",
+   "src": "claudestartups/t1",
+   "start": 221.35,
+   "end": 221.41
+  },
+  {
+   "text": "Shownotes.",
+   "src": "claudestartups/t1",
+   "start": 221.43,
+   "end": 221.57
+  }
+ ],
+ "pages": [
+  2,
+  3,
+  3,
+  2,
+  4,
+  3,
+  1,
+  3,
+  2,
+  2,
+  1,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  1,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  1,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  3,
+  4,
+  3,
+  4,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  4,
+  1,
+  2,
+  2,
+  3,
+  2,
+  4,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  1,
+  2,
+  1,
+  3,
+  3,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  4,
+  3,
+  3
+ ]
+}
