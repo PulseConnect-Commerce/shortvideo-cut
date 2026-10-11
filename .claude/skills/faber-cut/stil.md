@@ -39,7 +39,9 @@ Das Logo (pulseconnect.de/pulseconnect-logo.png) läuft von Blau `#00A2FC` über
 
 So gehst du vor:
 
-- **Beim nächsten Video die drei Nacht-Varianten testen** (nacht, nacht-gruen, nacht-mint), nicht pulse: vor der
+- **NEWS/Reaction immer `nacht-mint`** (2026-10-11: "Bitte alle News Videos im Video Stil 3 mit Mintblau anlegen").
+  Dort wird nicht getestet.
+- **Beim nächsten HERO- oder FACE-Video die drei Nacht-Varianten testen** (nacht, nacht-gruen, nacht-mint), nicht pulse: vor der
   Vorschau aus seinem neuen Clip je Variante dieselben Standbilder zeigen (Hook, eine Szene, das Ende) und fragen
   (AskUserQuestion), welche Variante das Video bekommt; will er sie im Bewegtbild vergleichen, die Vorschau in allen
   drei. Antwortet er nicht, nimm **nacht** (Variante 1, "genau richtig").

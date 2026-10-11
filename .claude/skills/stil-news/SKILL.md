@@ -1,6 +1,6 @@
 ---
 name: stil-news
-description: Schnittstil NEWS/Reaction von PulseConnect (optionales Videoformat für News oder Reactions auf andere Videos, noch nicht festgelegt). Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten wird (der Nutzer sagt "News", "Reaction", "Reaktion auf ein Video"); solange der Stil nicht festgelegt ist, führt er vor dem ersten Schnitt einen Stilabgleich mit dem Nutzer durch.
+description: Schnittstil NEWS/Reaction von PulseConnect (optionales Videoformat für News oder Reactions auf andere Videos; Design fest nacht-mint, der Rest noch nicht festgelegt). Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten wird (der Nutzer sagt "News", "Reaction", "Reaktion auf ein Video"); solange der Stil nicht festgelegt ist, führt er vor dem ersten Schnitt einen Stilabgleich mit dem Nutzer durch.
 ---
 
 # Stil NEWS / Reaction (noch nicht festgelegt)
@@ -9,6 +9,13 @@ NEWS/Reaction ist das optionale dritte Videoformat von PulseConnect neben HERO (
 `stil-face`): News oder Reactions auf andere Videos. Der Nutzer will dafür **nicht** denselben Stil wie für HERO
 (Zitat und Datum: siehe `stil-face`).
 
+
+**Design: immer `nacht-mint`** (Variante 3 von nacht, Mint-Hellblau `#40E8E0`; `src/lib/design.tsx`, Übersicht in
+`.claude/skills/faber-cut/stil.md` unter "Designs"). Festgelegt am 2026-10-11: "Bitte alle News Videos im Video Stil
+3 mit Mintblau anlegen". Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen damit aus dem Design: im
+Stilabgleich nicht mehr nach Farben oder dem Look von Hook und Untertiteln fragen, nur nach dem Rest (Größe und Lage
+der Untertitel, Menge der Grafiken, Tempo, Zoom, Porträt, Aufruf, wie die Quelle gezeigt wird). Dazu gilt wie überall
+das Gesicht 160 px höher und knackige, große Titel (siehe `stil-hero`).
 
 **Stilabgleich:** läuft über den Skill **format-onboarding** (ausgehend von HERO: nur fragen, was bei NEWS anders sein soll, mit Standbildern aus seinem Clip). Die Schritte unten sind die ältere Fassung davon.
 
