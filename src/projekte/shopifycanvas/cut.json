@@ -1,0 +1,1715 @@
+{
+ "projekt": "shopifycanvas",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "shopifycanvas/t1",
+   "from": 2.565,
+   "to": 5.515,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 8.295,
+   "to": 10.885,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 11.005,
+   "to": 12.505,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 12.865,
+   "to": 14.385,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 14.815,
+   "to": 17.805,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 27.975,
+   "to": 32.455,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 32.895,
+   "to": 34.175,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 34.575,
+   "to": 39.275,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 39.455,
+   "to": 40.515,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 53.085,
+   "to": 56.765,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 57.095,
+   "to": 60.905,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 61.545,
+   "to": 64.235,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 84.325,
+   "to": 88.835,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 89.165,
+   "to": 92.355,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 92.935,
+   "to": 94.815,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 95.315,
+   "to": 96.745,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 96.875,
+   "to": 99.975,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 100.385,
+   "to": 103.185,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 103.445,
+   "to": 104.785,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 105.545,
+   "to": 108.255,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 108.425,
+   "to": 110.705,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 110.895,
+   "to": 113.715,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 126.525,
+   "to": 127.985,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 128.255,
+   "to": 132.195,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 132.395,
+   "to": 134.165,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 134.685,
+   "to": 137.845,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "shopifycanvas/t1",
+   "from": 141.705,
+   "to": 146.45,
+   "nach": 0.0,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Brauchen",
+   "src": "shopifycanvas/t1",
+   "start": 2.61,
+   "end": 2.95
+  },
+  {
+   "text": "wir",
+   "src": "shopifycanvas/t1",
+   "start": 2.97,
+   "end": 3.05
+  },
+  {
+   "text": "bald",
+   "src": "shopifycanvas/t1",
+   "start": 3.09,
+   "end": 3.23
+  },
+  {
+   "text": "überhaupt",
+   "src": "shopifycanvas/t1",
+   "start": 3.29,
+   "end": 3.69
+  },
+  {
+   "text": "noch",
+   "src": "shopifycanvas/t1",
+   "start": 3.75,
+   "end": 3.85
+  },
+  {
+   "text": "jemanden,",
+   "src": "shopifycanvas/t1",
+   "start": 3.91,
+   "end": 4.29
+  },
+  {
+   "text": "der",
+   "src": "shopifycanvas/t1",
+   "start": 4.35,
+   "end": 4.43
+  },
+  {
+   "text": "Shopify-Shops",
+   "src": "shopifycanvas/t1",
+   "start": 4.51,
+   "end": 5.09
+  },
+  {
+   "text": "baut?",
+   "src": "shopifycanvas/t1",
+   "start": 5.15,
+   "end": 5.37
+  },
+  {
+   "text": "Shopify",
+   "src": "shopifycanvas/t1",
+   "start": 8.32,
+   "end": 8.74
+  },
+  {
+   "text": "hat",
+   "src": "shopifycanvas/t1",
+   "start": 8.76,
+   "end": 8.92
+  },
+  {
+   "text": "gerade",
+   "src": "shopifycanvas/t1",
+   "start": 8.93,
+   "end": 9.17
+  },
+  {
+   "text": "eine",
+   "src": "shopifycanvas/t1",
+   "start": 9.23,
+   "end": 9.35
+  },
+  {
+   "text": "neue",
+   "src": "shopifycanvas/t1",
+   "start": 9.43,
+   "end": 9.59
+  },
+  {
+   "text": "KI-Funktion",
+   "src": "shopifycanvas/t1",
+   "start": 9.67,
+   "end": 10.23
+  },
+  {
+   "text": "vorgestellt,",
+   "src": "shopifycanvas/t1",
+   "start": 10.27,
+   "end": 10.75
+  },
+  {
+   "text": "die",
+   "src": "shopifycanvas/t1",
+   "start": 11.05,
+   "end": 11.13
+  },
+  {
+   "text": "ziemlich",
+   "src": "shopifycanvas/t1",
+   "start": 11.27,
+   "end": 11.57
+  },
+  {
+   "text": "viel",
+   "src": "shopifycanvas/t1",
+   "start": 11.61,
+   "end": 11.73
+  },
+  {
+   "text": "verändern",
+   "src": "shopifycanvas/t1",
+   "start": 11.79,
+   "end": 12.11
+  },
+  {
+   "text": "könnte.",
+   "src": "shopifycanvas/t1",
+   "start": 12.15,
+   "end": 12.37
+  },
+  {
+   "text": "Das",
+   "src": "shopifycanvas/t1",
+   "start": 12.87,
+   "end": 12.97
+  },
+  {
+   "text": "Ganze",
+   "src": "shopifycanvas/t1",
+   "start": 13.01,
+   "end": 13.29
+  },
+  {
+   "text": "nennt",
+   "src": "shopifycanvas/t1",
+   "start": 13.37,
+   "end": 13.55
+  },
+  {
+   "text": "sich",
+   "src": "shopifycanvas/t1",
+   "start": 13.59,
+   "end": 13.71
+  },
+  {
+   "text": "Canvas",
+   "src": "shopifycanvas/t1",
+   "start": 13.87,
+   "end": 14.27
+  },
+  {
+   "text": "und",
+   "src": "shopifycanvas/t1",
+   "start": 14.87,
+   "end": 14.97
+  },
+  {
+   "text": "das",
+   "src": "shopifycanvas/t1",
+   "start": 15.01,
+   "end": 15.13
+  },
+  {
+   "text": "ist",
+   "src": "shopifycanvas/t1",
+   "start": 15.19,
+   "end": 15.27
+  },
+  {
+   "text": "nicht",
+   "src": "shopifycanvas/t1",
+   "start": 15.31,
+   "end": 15.43
+  },
+  {
+   "text": "einfach",
+   "src": "shopifycanvas/t1",
+   "start": 15.49,
+   "end": 15.73
+  },
+  {
+   "text": "nur",
+   "src": "shopifycanvas/t1",
+   "start": 15.81,
+   "end": 15.91
+  },
+  {
+   "text": "der",
+   "src": "shopifycanvas/t1",
+   "start": 15.95,
+   "end": 16.03
+  },
+  {
+   "text": "nächste",
+   "src": "shopifycanvas/t1",
+   "start": 16.09,
+   "end": 16.41
+  },
+  {
+   "text": "KI-Website-Builder.",
+   "src": "shopifycanvas/t1",
+   "start": 16.53,
+   "end": 17.61
+  },
+  {
+   "text": "Du",
+   "src": "shopifycanvas/t1",
+   "start": 27.97,
+   "end": 28.01
+  },
+  {
+   "text": "kannst",
+   "src": "shopifycanvas/t1",
+   "start": 28.09,
+   "end": 28.31
+  },
+  {
+   "text": "dir",
+   "src": "shopifycanvas/t1",
+   "start": 28.39,
+   "end": 28.49
+  },
+  {
+   "text": "damit",
+   "src": "shopifycanvas/t1",
+   "start": 28.55,
+   "end": 28.79
+  },
+  {
+   "text": "verschiedene",
+   "src": "shopifycanvas/t1",
+   "start": 28.87,
+   "end": 29.29
+  },
+  {
+   "text": "Seiten",
+   "src": "shopifycanvas/t1",
+   "start": 29.35,
+   "end": 29.67
+  },
+  {
+   "text": "deines",
+   "src": "shopifycanvas/t1",
+   "start": 29.71,
+   "end": 29.89
+  },
+  {
+   "text": "Onlineshops",
+   "src": "shopifycanvas/t1",
+   "start": 29.72,
+   "end": 30.34
+  },
+  {
+   "text": "auf",
+   "src": "shopifycanvas/t1",
+   "start": 30.38,
+   "end": 30.44
+  },
+  {
+   "text": "einer",
+   "src": "shopifycanvas/t1",
+   "start": 30.48,
+   "end": 30.64
+  },
+  {
+   "text": "großen",
+   "src": "shopifycanvas/t1",
+   "start": 30.7,
+   "end": 31.04
+  },
+  {
+   "text": "Oberfläche",
+   "src": "shopifycanvas/t1",
+   "start": 31.08,
+   "end": 31.48
+  },
+  {
+   "text": "anzeigen",
+   "src": "shopifycanvas/t1",
+   "start": 31.56,
+   "end": 31.92
+  },
+  {
+   "text": "lassen",
+   "src": "shopifycanvas/t1",
+   "start": 31.98,
+   "end": 32.24
+  },
+  {
+   "text": "und",
+   "src": "shopifycanvas/t1",
+   "start": 32.94,
+   "end": 33.02
+  },
+  {
+   "text": "nebeneinander",
+   "src": "shopifycanvas/t1",
+   "start": 33.14,
+   "end": 33.64
+  },
+  {
+   "text": "anschauen",
+   "src": "shopifycanvas/t1",
+   "start": 33.72,
+   "end": 34.12
+  },
+  {
+   "text": "und",
+   "src": "shopifycanvas/t1",
+   "start": 34.64,
+   "end": 34.72
+  },
+  {
+   "text": "einzelne",
+   "src": "shopifycanvas/t1",
+   "start": 34.84,
+   "end": 35.18
+  },
+  {
+   "text": "Bereiche",
+   "src": "shopifycanvas/t1",
+   "start": 35.24,
+   "end": 35.6
+  },
+  {
+   "text": "verändern",
+   "src": "shopifycanvas/t1",
+   "start": 35.72,
+   "end": 36.24
+  },
+  {
+   "text": "oder",
+   "src": "shopifycanvas/t1",
+   "start": 36.42,
+   "end": 36.62
+  },
+  {
+   "text": "Shopifys",
+   "src": "shopifycanvas/t1",
+   "start": 36.68,
+   "end": 37.12
+  },
+  {
+   "text": "KI-Assistenten",
+   "src": "shopifycanvas/t1",
+   "start": 37.26,
+   "end": 37.48
+  },
+  {
+   "text": "Sidekick",
+   "src": "shopifycanvas/t1",
+   "start": 38.08,
+   "end": 38.46
+  },
+  {
+   "text": "einfach",
+   "src": "shopifycanvas/t1",
+   "start": 38.54,
+   "end": 38.78
+  },
+  {
+   "text": "sagen,",
+   "src": "shopifycanvas/t1",
+   "start": 38.84,
+   "end": 39.12
+  },
+  {
+   "text": "was",
+   "src": "shopifycanvas/t1",
+   "start": 39.52,
+   "end": 39.68
+  },
+  {
+   "text": "du",
+   "src": "shopifycanvas/t1",
+   "start": 39.74,
+   "end": 39.8
+  },
+  {
+   "text": "haben",
+   "src": "shopifycanvas/t1",
+   "start": 39.86,
+   "end": 40.08
+  },
+  {
+   "text": "möchtest.",
+   "src": "shopifycanvas/t1",
+   "start": 40.12,
+   "end": 40.46
+  },
+  {
+   "text": "Zum",
+   "src": "shopifycanvas/t1",
+   "start": 53.1,
+   "end": 53.48
+  },
+  {
+   "text": "Beispiel:",
+   "src": "shopifycanvas/t1",
+   "start": 54.12,
+   "end": 54.83
+  },
+  {
+   "text": "mach",
+   "src": "shopifycanvas/t1",
+   "start": 54.88,
+   "end": 55.0
+  },
+  {
+   "text": "meine",
+   "src": "shopifycanvas/t1",
+   "start": 55.1,
+   "end": 55.24
+  },
+  {
+   "text": "Startseite",
+   "src": "shopifycanvas/t1",
+   "start": 55.3,
+   "end": 55.7
+  },
+  {
+   "text": "moderner",
+   "src": "shopifycanvas/t1",
+   "start": 55.76,
+   "end": 56.12
+  },
+  {
+   "text": "oder",
+   "src": "shopifycanvas/t1",
+   "start": 56.28,
+   "end": 56.52
+  },
+  {
+   "text": "ändere",
+   "src": "shopifycanvas/t1",
+   "start": 57.16,
+   "end": 57.48
+  },
+  {
+   "text": "die",
+   "src": "shopifycanvas/t1",
+   "start": 57.56,
+   "end": 57.62
+  },
+  {
+   "text": "Produktdarstellung",
+   "src": "shopifycanvas/t1",
+   "start": 57.66,
+   "end": 58.52
+  },
+  {
+   "text": "oder",
+   "src": "shopifycanvas/t1",
+   "start": 58.76,
+   "end": 58.92
+  },
+  {
+   "text": "pass",
+   "src": "shopifycanvas/t1",
+   "start": 59.0,
+   "end": 59.18
+  },
+  {
+   "text": "einfach",
+   "src": "shopifycanvas/t1",
+   "start": 59.26,
+   "end": 59.5
+  },
+  {
+   "text": "die",
+   "src": "shopifycanvas/t1",
+   "start": 59.56,
+   "end": 59.64
+  },
+  {
+   "text": "Farben",
+   "src": "shopifycanvas/t1",
+   "start": 59.72,
+   "end": 59.98
+  },
+  {
+   "text": "an",
+   "src": "shopifycanvas/t1",
+   "start": 60.04,
+   "end": 60.1
+  },
+  {
+   "text": "meine",
+   "src": "shopifycanvas/t1",
+   "start": 60.14,
+   "end": 60.32
+  },
+  {
+   "text": "Marke",
+   "src": "shopifycanvas/t1",
+   "start": 60.4,
+   "end": 60.7
+  },
+  {
+   "text": "an.",
+   "src": "shopifycanvas/t1",
+   "start": 60.76,
+   "end": 60.84
+  },
+  {
+   "text": "Und",
+   "src": "shopifycanvas/t1",
+   "start": 61.6,
+   "end": 61.68
+  },
+  {
+   "text": "die",
+   "src": "shopifycanvas/t1",
+   "start": 61.72,
+   "end": 61.78
+  },
+  {
+   "text": "KI",
+   "src": "shopifycanvas/t1",
+   "start": 61.84,
+   "end": 62.04
+  },
+  {
+   "text": "kann",
+   "src": "shopifycanvas/t1",
+   "start": 62.16,
+   "end": 62.3
+  },
+  {
+   "text": "das",
+   "src": "shopifycanvas/t1",
+   "start": 62.32,
+   "end": 62.42
+  },
+  {
+   "text": "ganze",
+   "src": "shopifycanvas/t1",
+   "start": 62.46,
+   "end": 62.66
+  },
+  {
+   "text": "dann",
+   "src": "shopifycanvas/t1",
+   "start": 62.68,
+   "end": 62.78
+  },
+  {
+   "text": "direkt",
+   "src": "shopifycanvas/t1",
+   "start": 62.86,
+   "end": 63.16
+  },
+  {
+   "text": "für",
+   "src": "shopifycanvas/t1",
+   "start": 63.2,
+   "end": 63.28
+  },
+  {
+   "text": "dich",
+   "src": "shopifycanvas/t1",
+   "start": 63.36,
+   "end": 63.44
+  },
+  {
+   "text": "im",
+   "src": "shopifycanvas/t1",
+   "start": 63.48,
+   "end": 63.54
+  },
+  {
+   "text": "Theme",
+   "src": "shopifycanvas/t1",
+   "start": 63.6,
+   "end": 63.76
+  },
+  {
+   "text": "umsetzen.",
+   "src": "shopifycanvas/t1",
+   "start": 63.8,
+   "end": 64.18
+  },
+  {
+   "text": "Und",
+   "src": "shopifycanvas/t1",
+   "start": 84.54,
+   "end": 84.64
+  },
+  {
+   "text": "wenn",
+   "src": "shopifycanvas/t1",
+   "start": 84.67,
+   "end": 84.77
+  },
+  {
+   "text": "du",
+   "src": "shopifycanvas/t1",
+   "start": 84.79,
+   "end": 84.83
+  },
+  {
+   "text": "solche",
+   "src": "shopifycanvas/t1",
+   "start": 84.87,
+   "end": 85.07
+  },
+  {
+   "text": "Shopify-",
+   "src": "shopifycanvas/t1",
+   "start": 85.13,
+   "end": 85.53
+  },
+  {
+   "text": "und",
+   "src": "shopifycanvas/t1",
+   "start": 85.61,
+   "end": 85.69
+  },
+  {
+   "text": "KI-Updates",
+   "src": "shopifycanvas/t1",
+   "start": 85.75,
+   "end": 86.45
+  },
+  {
+   "text": "nicht",
+   "src": "shopifycanvas/t1",
+   "start": 86.57,
+   "end": 86.71
+  },
+  {
+   "text": "verpassen",
+   "src": "shopifycanvas/t1",
+   "start": 86.75,
+   "end": 87.15
+  },
+  {
+   "text": "willst,",
+   "src": "shopifycanvas/t1",
+   "start": 87.19,
+   "end": 87.45
+  },
+  {
+   "text": "dann",
+   "src": "shopifycanvas/t1",
+   "start": 87.71,
+   "end": 87.85
+  },
+  {
+   "text": "folge",
+   "src": "shopifycanvas/t1",
+   "start": 87.89,
+   "end": 88.11
+  },
+  {
+   "text": "mir",
+   "src": "shopifycanvas/t1",
+   "start": 88.19,
+   "end": 88.25
+  },
+  {
+   "text": "hier",
+   "src": "shopifycanvas/t1",
+   "start": 88.29,
+   "end": 88.37
+  },
+  {
+   "text": "gerne.",
+   "src": "shopifycanvas/t1",
+   "start": 88.43,
+   "end": 88.65
+  },
+  {
+   "text": "Denn",
+   "src": "shopifycanvas/t1",
+   "start": 89.19,
+   "end": 89.31
+  },
+  {
+   "text": "ich",
+   "src": "shopifycanvas/t1",
+   "start": 89.35,
+   "end": 89.41
+  },
+  {
+   "text": "zeige",
+   "src": "shopifycanvas/t1",
+   "start": 89.47,
+   "end": 89.69
+  },
+  {
+   "text": "dir",
+   "src": "shopifycanvas/t1",
+   "start": 89.77,
+   "end": 89.87
+  },
+  {
+   "text": "regelmäßig,",
+   "src": "shopifycanvas/t1",
+   "start": 89.95,
+   "end": 90.53
+  },
+  {
+   "text": "was",
+   "src": "shopifycanvas/t1",
+   "start": 90.67,
+   "end": 90.83
+  },
+  {
+   "text": "davon",
+   "src": "shopifycanvas/t1",
+   "start": 90.89,
+   "end": 91.13
+  },
+  {
+   "text": "hier",
+   "src": "shopifycanvas/t1",
+   "start": 91.17,
+   "end": 91.25
+  },
+  {
+   "text": "wirklich",
+   "src": "shopifycanvas/t1",
+   "start": 91.29,
+   "end": 91.61
+  },
+  {
+   "text": "relevant",
+   "src": "shopifycanvas/t1",
+   "start": 91.65,
+   "end": 91.95
+  },
+  {
+   "text": "ist.",
+   "src": "shopifycanvas/t1",
+   "start": 92.01,
+   "end": 92.13
+  },
+  {
+   "text": "Aber",
+   "src": "shopifycanvas/t1",
+   "start": 92.99,
+   "end": 93.11
+  },
+  {
+   "text": "jetzt",
+   "src": "shopifycanvas/t1",
+   "start": 93.15,
+   "end": 93.29
+  },
+  {
+   "text": "kommt",
+   "src": "shopifycanvas/t1",
+   "start": 93.33,
+   "end": 93.51
+  },
+  {
+   "text": "der",
+   "src": "shopifycanvas/t1",
+   "start": 93.53,
+   "end": 93.61
+  },
+  {
+   "text": "für",
+   "src": "shopifycanvas/t1",
+   "start": 93.65,
+   "end": 93.73
+  },
+  {
+   "text": "mich",
+   "src": "shopifycanvas/t1",
+   "start": 93.79,
+   "end": 93.91
+  },
+  {
+   "text": "entscheidende",
+   "src": "shopifycanvas/t1",
+   "start": 93.95,
+   "end": 94.45
+  },
+  {
+   "text": "Punkt.",
+   "src": "shopifycanvas/t1",
+   "start": 94.53,
+   "end": 94.75
+  },
+  {
+   "text": "Nur",
+   "src": "shopifycanvas/t1",
+   "start": 95.45,
+   "end": 95.57
+  },
+  {
+   "text": "weil",
+   "src": "shopifycanvas/t1",
+   "start": 95.61,
+   "end": 95.73
+  },
+  {
+   "text": "du",
+   "src": "shopifycanvas/t1",
+   "start": 95.77,
+   "end": 95.81
+  },
+  {
+   "text": "mit",
+   "src": "shopifycanvas/t1",
+   "start": 95.85,
+   "end": 95.95
+  },
+  {
+   "text": "der",
+   "src": "shopifycanvas/t1",
+   "start": 95.99,
+   "end": 96.09
+  },
+  {
+   "text": "KI",
+   "src": "shopifycanvas/t1",
+   "start": 96.13,
+   "end": 96.41
+  },
+  {
+   "text": "in",
+   "src": "shopifycanvas/t1",
+   "start": 96.93,
+   "end": 96.99
+  },
+  {
+   "text": "kurzer",
+   "src": "shopifycanvas/t1",
+   "start": 97.23,
+   "end": 97.55
+  },
+  {
+   "text": "Zeit",
+   "src": "shopifycanvas/t1",
+   "start": 97.63,
+   "end": 97.83
+  },
+  {
+   "text": "natürlich",
+   "src": "shopifycanvas/t1",
+   "start": 97.89,
+   "end": 98.15
+  },
+  {
+   "text": "einen",
+   "src": "shopifycanvas/t1",
+   "start": 98.17,
+   "end": 98.27
+  },
+  {
+   "text": "neuen",
+   "src": "shopifycanvas/t1",
+   "start": 98.29,
+   "end": 98.45
+  },
+  {
+   "text": "Shopify-Shop",
+   "src": "shopifycanvas/t1",
+   "start": 98.55,
+   "end": 99.25
+  },
+  {
+   "text": "bauen",
+   "src": "shopifycanvas/t1",
+   "start": 99.31,
+   "end": 99.53
+  },
+  {
+   "text": "kannst",
+   "src": "shopifycanvas/t1",
+   "start": 99.57,
+   "end": 99.89
+  },
+  {
+   "text": "und",
+   "src": "shopifycanvas/t1",
+   "start": 100.43,
+   "end": 100.49
+  },
+  {
+   "text": "den",
+   "src": "shopifycanvas/t1",
+   "start": 100.53,
+   "end": 100.63
+  },
+  {
+   "text": "auch",
+   "src": "shopifycanvas/t1",
+   "start": 100.67,
+   "end": 100.77
+  },
+  {
+   "text": "schön",
+   "src": "shopifycanvas/t1",
+   "start": 100.81,
+   "end": 100.97
+  },
+  {
+   "text": "gestalten",
+   "src": "shopifycanvas/t1",
+   "start": 101.03,
+   "end": 101.47
+  },
+  {
+   "text": "kannst,",
+   "src": "shopifycanvas/t1",
+   "start": 101.53,
+   "end": 101.79
+  },
+  {
+   "text": "heißt",
+   "src": "shopifycanvas/t1",
+   "start": 101.83,
+   "end": 102.03
+  },
+  {
+   "text": "das",
+   "src": "shopifycanvas/t1",
+   "start": 102.05,
+   "end": 102.17
+  },
+  {
+   "text": "Ganze",
+   "src": "shopifycanvas/t1",
+   "start": 102.21,
+   "end": 102.49
+  },
+  {
+   "text": "natürlich",
+   "src": "shopifycanvas/t1",
+   "start": 102.55,
+   "end": 102.81
+  },
+  {
+   "text": "nicht,",
+   "src": "shopifycanvas/t1",
+   "start": 102.89,
+   "end": 103.09
+  },
+  {
+   "text": "dass",
+   "src": "shopifycanvas/t1",
+   "start": 103.49,
+   "end": 103.63
+  },
+  {
+   "text": "dieser",
+   "src": "shopifycanvas/t1",
+   "start": 103.69,
+   "end": 103.91
+  },
+  {
+   "text": "auch",
+   "src": "shopifycanvas/t1",
+   "start": 103.99,
+   "end": 104.11
+  },
+  {
+   "text": "verkaufen",
+   "src": "shopifycanvas/t1",
+   "start": 104.15,
+   "end": 104.57
+  },
+  {
+   "text": "wird.",
+   "src": "shopifycanvas/t1",
+   "start": 104.59,
+   "end": 104.73
+  },
+  {
+   "text": "Denn",
+   "src": "shopifycanvas/t1",
+   "start": 105.59,
+   "end": 105.73
+  },
+  {
+   "text": "gute",
+   "src": "shopifycanvas/t1",
+   "start": 105.81,
+   "end": 106.03
+  },
+  {
+   "text": "Produktseiten,",
+   "src": "shopifycanvas/t1",
+   "start": 106.09,
+   "end": 106.73
+  },
+  {
+   "text": "eine",
+   "src": "shopifycanvas/t1",
+   "start": 106.79,
+   "end": 106.93
+  },
+  {
+   "text": "klare",
+   "src": "shopifycanvas/t1",
+   "start": 106.99,
+   "end": 107.31
+  },
+  {
+   "text": "Nutzerführung,",
+   "src": "shopifycanvas/t1",
+   "start": 107.37,
+   "end": 107.97
+  },
+  {
+   "text": "Vertrauen,",
+   "src": "shopifycanvas/t1",
+   "start": 108.47,
+   "end": 108.95
+  },
+  {
+   "text": "aber",
+   "src": "shopifycanvas/t1",
+   "start": 109.01,
+   "end": 109.13
+  },
+  {
+   "text": "auch",
+   "src": "shopifycanvas/t1",
+   "start": 109.23,
+   "end": 109.35
+  },
+  {
+   "text": "eine",
+   "src": "shopifycanvas/t1",
+   "start": 109.39,
+   "end": 109.51
+  },
+  {
+   "text": "vernünftige",
+   "src": "shopifycanvas/t1",
+   "start": 109.57,
+   "end": 109.95
+  },
+  {
+   "text": "Conversion-Rate",
+   "src": "shopifycanvas/t1",
+   "start": 110.01,
+   "end": 110.55
+  },
+  {
+   "text": "entstehen",
+   "src": "shopifycanvas/t1",
+   "start": 110.95,
+   "end": 111.27
+  },
+  {
+   "text": "ja",
+   "src": "shopifycanvas/t1",
+   "start": 111.31,
+   "end": 111.35
+  },
+  {
+   "text": "nicht",
+   "src": "shopifycanvas/t1",
+   "start": 111.41,
+   "end": 111.53
+  },
+  {
+   "text": "automatisch",
+   "src": "shopifycanvas/t1",
+   "start": 111.55,
+   "end": 111.99
+  },
+  {
+   "text": "dadurch,",
+   "src": "shopifycanvas/t1",
+   "start": 112.05,
+   "end": 112.31
+  },
+  {
+   "text": "nur",
+   "src": "shopifycanvas/t1",
+   "start": 112.39,
+   "end": 112.49
+  },
+  {
+   "text": "weil",
+   "src": "shopifycanvas/t1",
+   "start": 112.53,
+   "end": 112.63
+  },
+  {
+   "text": "der",
+   "src": "shopifycanvas/t1",
+   "start": 112.67,
+   "end": 112.75
+  },
+  {
+   "text": "Shop",
+   "src": "shopifycanvas/t1",
+   "start": 112.81,
+   "end": 112.97
+  },
+  {
+   "text": "jetzt",
+   "src": "shopifycanvas/t1",
+   "start": 112.99,
+   "end": 113.13
+  },
+  {
+   "text": "hübsch",
+   "src": "shopifycanvas/t1",
+   "start": 113.15,
+   "end": 113.35
+  },
+  {
+   "text": "aussieht.",
+   "src": "shopifycanvas/t1",
+   "start": 113.41,
+   "end": 113.715
+  },
+  {
+   "text": "Einen",
+   "src": "shopifycanvas/t1",
+   "start": 126.5,
+   "end": 126.62
+  },
+  {
+   "text": "Onlineshop",
+   "src": "shopifycanvas/t1",
+   "start": 126.66,
+   "end": 127.14
+  },
+  {
+   "text": "zu",
+   "src": "shopifycanvas/t1",
+   "start": 127.28,
+   "end": 127.34
+  },
+  {
+   "text": "bauen,",
+   "src": "shopifycanvas/t1",
+   "start": 127.44,
+   "end": 127.76
+  },
+  {
+   "text": "wird",
+   "src": "shopifycanvas/t1",
+   "start": 128.3,
+   "end": 128.42
+  },
+  {
+   "text": "zwar",
+   "src": "shopifycanvas/t1",
+   "start": 128.46,
+   "end": 128.56
+  },
+  {
+   "text": "immer",
+   "src": "shopifycanvas/t1",
+   "start": 128.58,
+   "end": 128.72
+  },
+  {
+   "text": "einfacher,",
+   "src": "shopifycanvas/t1",
+   "start": 128.8,
+   "end": 129.2
+  },
+  {
+   "text": "aber",
+   "src": "shopifycanvas/t1",
+   "start": 129.38,
+   "end": 129.52
+  },
+  {
+   "text": "einen",
+   "src": "shopifycanvas/t1",
+   "start": 129.56,
+   "end": 129.78
+  },
+  {
+   "text": "Onlineshop",
+   "src": "shopifycanvas/t1",
+   "start": 129.86,
+   "end": 130.22
+  },
+  {
+   "text": "so",
+   "src": "shopifycanvas/t1",
+   "start": 130.32,
+   "end": 130.4
+  },
+  {
+   "text": "zu",
+   "src": "shopifycanvas/t1",
+   "start": 130.52,
+   "end": 130.6
+  },
+  {
+   "text": "bauen,",
+   "src": "shopifycanvas/t1",
+   "start": 130.66,
+   "end": 130.9
+  },
+  {
+   "text": "dass",
+   "src": "shopifycanvas/t1",
+   "start": 131.18,
+   "end": 131.32
+  },
+  {
+   "text": "er",
+   "src": "shopifycanvas/t1",
+   "start": 131.36,
+   "end": 131.4
+  },
+  {
+   "text": "auch",
+   "src": "shopifycanvas/t1",
+   "start": 131.44,
+   "end": 131.52
+  },
+  {
+   "text": "verkauft,",
+   "src": "shopifycanvas/t1",
+   "start": 131.58,
+   "end": 132.12
+  },
+  {
+   "text": "ist",
+   "src": "shopifycanvas/t1",
+   "start": 132.44,
+   "end": 132.54
+  },
+  {
+   "text": "natürlich",
+   "src": "shopifycanvas/t1",
+   "start": 132.6,
+   "end": 132.88
+  },
+  {
+   "text": "nochmal",
+   "src": "shopifycanvas/t1",
+   "start": 132.9,
+   "end": 133.12
+  },
+  {
+   "text": "hier",
+   "src": "shopifycanvas/t1",
+   "start": 133.16,
+   "end": 133.24
+  },
+  {
+   "text": "eine",
+   "src": "shopifycanvas/t1",
+   "start": 133.26,
+   "end": 133.34
+  },
+  {
+   "text": "ganz",
+   "src": "shopifycanvas/t1",
+   "start": 133.4,
+   "end": 133.56
+  },
+  {
+   "text": "andere",
+   "src": "shopifycanvas/t1",
+   "start": 133.6,
+   "end": 133.8
+  },
+  {
+   "text": "Sache.",
+   "src": "shopifycanvas/t1",
+   "start": 133.84,
+   "end": 134.04
+  },
+  {
+   "text": "Canvas",
+   "src": "shopifycanvas/t1",
+   "start": 134.72,
+   "end": 135.02
+  },
+  {
+   "text": "ist",
+   "src": "shopifycanvas/t1",
+   "start": 135.08,
+   "end": 135.16
+  },
+  {
+   "text": "übrigens",
+   "src": "shopifycanvas/t1",
+   "start": 135.22,
+   "end": 135.52
+  },
+  {
+   "text": "aktuell",
+   "src": "shopifycanvas/t1",
+   "start": 135.64,
+   "end": 135.92
+  },
+  {
+   "text": "noch",
+   "src": "shopifycanvas/t1",
+   "start": 135.96,
+   "end": 136.06
+  },
+  {
+   "text": "nicht",
+   "src": "shopifycanvas/t1",
+   "start": 136.14,
+   "end": 136.3
+  },
+  {
+   "text": "für",
+   "src": "shopifycanvas/t1",
+   "start": 136.34,
+   "end": 136.42
+  },
+  {
+   "text": "jeden",
+   "src": "shopifycanvas/t1",
+   "start": 136.48,
+   "end": 136.66
+  },
+  {
+   "text": "Shopify-Shop",
+   "src": "shopifycanvas/t1",
+   "start": 136.7,
+   "end": 137.24
+  },
+  {
+   "text": "verfügbar.",
+   "src": "shopifycanvas/t1",
+   "start": 137.32,
+   "end": 137.76
+  },
+  {
+   "text": "Aber",
+   "src": "shopifycanvas/t1",
+   "start": 141.74,
+   "end": 142.05
+  },
+  {
+   "text": "was",
+   "src": "shopifycanvas/t1",
+   "start": 142.05,
+   "end": 142.25
+  },
+  {
+   "text": "meint",
+   "src": "shopifycanvas/t1",
+   "start": 142.25,
+   "end": 142.41
+  },
+  {
+   "text": "ihr,",
+   "src": "shopifycanvas/t1",
+   "start": 142.41,
+   "end": 142.65
+  },
+  {
+   "text": "würdet",
+   "src": "shopifycanvas/t1",
+   "start": 142.85,
+   "end": 143.05
+  },
+  {
+   "text": "ihr",
+   "src": "shopifycanvas/t1",
+   "start": 143.05,
+   "end": 143.19
+  },
+  {
+   "text": "eure",
+   "src": "shopifycanvas/t1",
+   "start": 143.19,
+   "end": 143.35
+  },
+  {
+   "text": "KI",
+   "src": "shopifycanvas/t1",
+   "start": 143.35,
+   "end": 143.75
+  },
+  {
+   "text": "den",
+   "src": "shopifycanvas/t1",
+   "start": 143.81,
+   "end": 143.93
+  },
+  {
+   "text": "kompletten",
+   "src": "shopifycanvas/t1",
+   "start": 143.99,
+   "end": 144.49
+  },
+  {
+   "text": "Onlineshop",
+   "src": "shopifycanvas/t1",
+   "start": 144.55,
+   "end": 144.99
+  },
+  {
+   "text": "neu",
+   "src": "shopifycanvas/t1",
+   "start": 145.17,
+   "end": 145.29
+  },
+  {
+   "text": "gestalten",
+   "src": "shopifycanvas/t1",
+   "start": 145.39,
+   "end": 145.77
+  },
+  {
+   "text": "lassen?",
+   "src": "shopifycanvas/t1",
+   "start": 145.81,
+   "end": 146.07
+  }
+ ],
+ "pages": [
+  3,
+  1,
+  2,
+  2,
+  1,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  4,
+  4,
+  1,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  1,
+  3,
+  4,
+  2,
+  3,
+  3,
+  2,
+  3,
+  4,
+  2,
+  4,
+  3,
+  3,
+  3,
+  4,
+  1,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  3,
+  3,
+  2,
+  3,
+  2,
+  1,
+  2,
+  2,
+  1,
+  3,
+  2,
+  1,
+  3,
+  2,
+  4,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  1,
+  4,
+  3,
+  3,
+  2,
+  2
+ ]
+}

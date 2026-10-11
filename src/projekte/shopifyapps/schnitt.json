@@ -1,0 +1,177 @@
+{
+ "projekt": "shopifyapps",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.4,
+  "pre": 0.04,
+  "post": 0.06
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 24.85,
+   "text": "Kann mir mal jemand erklären, warum so viele Shopify-Händler für jede noch so kleine Funktion eine eigene App installieren?"
+  },
+  {
+   "take": "t1",
+   "ab": 52.4,
+   "text": "Wenn ich mir Shopify-Shops meiner deutschen Kunden zum Beispiel ansehe, dann fällt mir immer wieder auf, wie viele Apps sich einfach mit der Zeit bei denen ansammeln."
+  },
+  {
+   "take": "t1",
+   "ab": 60.05,
+   "text": "Und manche davon kosten einfach jeden Monat unnötig Geld, obwohl es dafür auch kostenlose Alternativen gibt."
+  },
+  {
+   "take": "t1",
+   "ab": 76.65,
+   "text": "Nehmen wir zum Beispiel die Produktbewertungen."
+  },
+  {
+   "take": "t1",
+   "ab": 82.55,
+   "text": "wenn deine Kunden tatsächlich Produkte bewerten, Dann ist eine Review-App natürlich schon sinnvoll."
+  },
+  {
+   "take": "t1",
+   "ab": 87.65,
+   "text": "Aber dafür musst du halt nicht immer extra Geld ausgeben."
+  },
+  {
+   "take": "t1",
+   "ab": 93.35,
+   "text": "Denn Judge.me zum Beispiel hat auch einen kostenlosen Tarif."
+  },
+  {
+   "take": "t1",
+   "ab": 104.35,
+   "text": "oder nehmen wir zum Beispiel Newsletter-Apps, wenn du gerade mal 30 Newsletter-Abonnenten hast, dann brauchst du nicht wirklich schon ein teures E-Mail-Marketing-Tool, oder?"
+  },
+  {
+   "take": "t1",
+   "ab": 112.3,
+   "text": "Für den Anfang reicht zum Beispiel auch vollkommendes Shopify-Messaging mit seinen kostenlosen E-Mail-Kontingent aus."
+  },
+  {
+   "take": "t1",
+   "ab": 272.1,
+   "text": "Und beim Thema Kundenservice wird es halt hier besonders interessant."
+  },
+  {
+   "take": "t1",
+   "ab": 277.95,
+   "text": "Denn manche installieren eine App für den Kundenchat und eine zweite nur als KI-Verkaufsberater."
+  },
+  {
+   "take": "t1",
+   "ab": 283.2,
+   "text": "Und dabei gibt es mittlerweile aber Lösungen, die einfach beides kombinieren."
+  },
+  {
+   "take": "t1",
+   "ab": 286.1,
+   "text": "Zum Beispiel MyStoreBuddy. Das ist eine App, die wir selbst entwickelt haben."
+  },
+  {
+   "take": "t1",
+   "ab": 301.4,
+   "text": "Und dabei gibt es hier sogar auch einen Free Plan."
+  },
+  {
+   "take": "t1",
+   "ab": 313.5,
+   "text": "Und dann gibt's aber auch noch Apps für einfache Produktbundles, für Buttons oder auch kleine Designänderungen."
+  },
+  {
+   "take": "t1",
+   "ab": 319.0,
+   "text": "Dabei lassen sich viele von denen einfach direkt auch mit Shopify ins Thema umsetzen."
+  },
+  {
+   "take": "t1",
+   "ab": 381.2,
+   "text": "Und jede zusätzliche App kann dabei natürlich Geld kosten, neue Abhängigkeiten schaffen und unter Umständen sogar deine Ladezeit vom online Shop verschlechtern."
+  },
+  {
+   "take": "t1",
+   "ab": 402.25,
+   "text": "Versteht mich hier natürlich nicht falsch. Gute Apps sind schon absolut sinnvoll."
+  },
+  {
+   "take": "t1",
+   "ab": 405.8,
+   "text": "Aber manchmal braucht dein Shop nun keine neue App, sondern vielleicht einfach nur einen ordentlichen App-Check."
+  },
+  {
+   "take": "t1",
+   "ab": 420.5,
+   "text": "Aber was ist deine Meinung zu Shopify-Apps? Nutzt du auch sehr viele Shopify-Apps oder bist du eher der Ansicht, alles selbst zu bauen?"
+  }
+ ],
+ "ende": {
+  "bis": 427.1
+ },
+ "korrekturen": [
+  [
+   "t1",
+   82.65,
+   "wenn",
+   "Wenn"
+  ],
+  [
+   "t1",
+   85.01,
+   "Dann",
+   "dann"
+  ],
+  [
+   "t1",
+   104.42,
+   "oder",
+   "Oder"
+  ],
+  [
+   "t1",
+   113.82,
+   "vollkommendes",
+   "vollkommen das"
+  ],
+  [
+   "t1",
+   114.4,
+   "Shopify-Messaging",
+   "Shopify Messaging"
+  ],
+  [
+   "t1",
+   115.42,
+   "seinen",
+   "seinem"
+  ],
+  [
+   "t1",
+   321.43,
+   "ins",
+   "im"
+  ],
+  [
+   "t1",
+   321.59,
+   "Thema",
+   "Theme"
+  ],
+  [
+   "t1",
+   387.9,
+   "online",
+   "Onlineshop"
+  ],
+  [
+   "t1",
+   388.1,
+   "Shop",
+   ""
+  ]
+ ]
+}

@@ -9,6 +9,14 @@ werden alle Takes des Projekts, aber nur die Stellen, die der Schnitt nutzt (src
 jeder Lauf geht wieder vom Original aus: nach einer Schnitt-Änderung, die neue Stellen nutzt, einfach noch einmal.
 --staerke: Unschärfe des Hintergrunds (Gauß-Sigma in Pixeln bei 1080 Breite), Standard 6: leicht, wie eine
 Spiegelreflex mit offener Blende (der Hintergrund bleibt erkennbar); 20 zeichnet ihn ganz weich.
+
+Hintergrund ersetzen (News: die Quelle hinter ihm, wie ein Greenscreen):
+  --hintergrund <bild.png>@<von>-<bis>   (mehrfach möglich; von/bis in Sekunden im Take)
+  --ausschnitt <scale>,<hoch>            der Bildausschnitt aus Video.tsx (z. B. 1.2,160 für
+                                         translateY(-160px) scale(1.2) mit transformOrigin 50% 0%)
+Das Bild ist so gestaltet, wie es im fertigen Video aussehen soll (1080x1920, in Video-Koordinaten); es wird für den
+Take so umgerechnet, dass es nach dem Ausschnitt wieder genau so dasteht. In diesen Sekunden steht er freigestellt vor
+dem Bild statt vor seinem weichgezeichneten Zimmer.
 """
 
 import json
@@ -33,6 +41,20 @@ if "--staerke" in sys.argv and str(sys.argv[sys.argv.index("--staerke") + 1]) in
     args.remove(sys.argv[sys.argv.index("--staerke") + 1])
 alles = "--alles" in sys.argv
 RAND = 0.5
+hintergruende = []  # (bild, von, bis)
+for i, a in enumerate(sys.argv):
+    if a == "--hintergrund":
+        bild, zeit = sys.argv[i + 1].rsplit("@", 1)
+        von, bis = (float(x) for x in zeit.split("-"))
+        hintergruende.append((bild, von, bis))
+        if sys.argv[i + 1] in args:
+            args.remove(sys.argv[i + 1])
+aus_scale, aus_hoch = 1.0, 0.0
+if "--ausschnitt" in sys.argv:
+    v = sys.argv[sys.argv.index("--ausschnitt") + 1]
+    aus_scale, aus_hoch = (float(x) for x in v.split(","))
+    if v in args:
+        args.remove(v)
 
 MODELL = os.path.join(ROOT, ".tools", "rvm", "rvm_mobilenetv3_fp32.torchscript")
 URL = "https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_fp32.torchscript"
@@ -97,6 +119,15 @@ for take in takes:
     size = W * H * 3
     sw, sh = W // 2, H // 2          # Freistellung in halber Auflösung, die Maske wird hochgerechnet
     bw, bh = W // 4, H // 4          # Unschärfe auf einem Viertel der Größe (schnell, und sie wird ohnehin weich)
+    # Hintergründe in Take-Koordinaten: Video-Punkt X = (x - W/2) * s + W/2, Y = y * s - hoch
+    ersatz = []
+    for bild, von, bis in hintergruende:
+        b = cv2.cvtColor(cv2.imread(bild, cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB)
+        b = cv2.resize(b, (1080 * W // 1080, 1920 * H // 1920), interpolation=cv2.INTER_AREA)
+        m = np.float32([[aus_scale, 0, W / 2 - W / 2 * aus_scale], [0, aus_scale, -aus_hoch]])
+        warped = cv2.warpAffine(b, m, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REPLICATE)
+        ersatz.append((int(von * fps), int(bis * fps) + 1, warped.astype(np.float32)))
+        print(f"{take}: Hintergrund {os.path.basename(bild)} von {von} bis {bis} s", flush=True)
     rec, inside, done, t0, i = [None] * 4, False, 0, time.time(), 0
     with torch.no_grad():
         while True:
@@ -113,8 +144,10 @@ for take in takes:
                 _, pha, *rec = model(src, *rec, 0.4)
                 a = cv2.resize(pha[0, 0].numpy(), (W, H), interpolation=cv2.INTER_LINEAR)[..., None]
                 f = img.astype(np.float32)
-                bg = cv2.resize(cv2.GaussianBlur(cv2.resize(f, (bw, bh), interpolation=cv2.INTER_AREA), (0, 0), staerke / 4),
-                                (W, H), interpolation=cv2.INTER_LINEAR)
+                eigen = next((e for a0, b0, e in ersatz if a0 <= i < b0), None)
+                bg = eigen if eigen is not None else cv2.resize(
+                    cv2.GaussianBlur(cv2.resize(f, (bw, bh), interpolation=cv2.INTER_AREA), (0, 0), staerke / 4),
+                    (W, H), interpolation=cv2.INTER_LINEAR)
                 buf = np.clip(a * f + (1 - a) * bg, 0, 255).astype(np.uint8).tobytes()
                 done += 1
                 if done % 300 == 0:

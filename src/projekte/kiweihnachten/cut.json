@@ -1,0 +1,1673 @@
+{
+ "projekt": "kiweihnachten",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "kiweihnachten/t1",
+   "from": 34.145,
+   "to": 38.385,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 44.705,
+   "to": 48.575,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 114.065,
+   "to": 116.715,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 117.395,
+   "to": 124.435,
+   "nach": 0.09,
+   "vor": 0.01
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 125.075,
+   "to": 126.645,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 126.845,
+   "to": 129.175,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 130.005,
+   "to": 131.465,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 132.205,
+   "to": 135.305,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 135.545,
+   "to": 137.345,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 138.385,
+   "to": 140.115,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 140.305,
+   "to": 141.455,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 150.975,
+   "to": 153.385,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 153.625,
+   "to": 155.755,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 191.255,
+   "to": 195.075,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 195.315,
+   "to": 197.785,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 200.415,
+   "to": 203.595,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 204.115,
+   "to": 206.305,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 215.515,
+   "to": 221.545,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 222.115,
+   "to": 224.045,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 224.195,
+   "to": 227.665,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 232.335,
+   "to": 238.085,
+   "nach": 0.09,
+   "vor": 0.05
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 238.085,
+   "to": 240.235,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 299.865,
+   "to": 301.355,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 301.595,
+   "to": 303.835,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 304.045,
+   "to": 306.935,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kiweihnachten/t1",
+   "from": 307.755,
+   "to": 313.55,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Laut",
+   "src": "kiweihnachten/t1",
+   "start": 34.2,
+   "end": 34.44
+  },
+  {
+   "text": "Shopify",
+   "src": "kiweihnachten/t1",
+   "start": 34.48,
+   "end": 34.86
+  },
+  {
+   "text": "News",
+   "src": "kiweihnachten/t1",
+   "start": 34.9,
+   "end": 35.2
+  },
+  {
+   "text": "wollen",
+   "src": "kiweihnachten/t1",
+   "start": 35.24,
+   "end": 35.46
+  },
+  {
+   "text": "rund",
+   "src": "kiweihnachten/t1",
+   "start": 35.5,
+   "end": 35.74
+  },
+  {
+   "text": "65%",
+   "src": "kiweihnachten/t1",
+   "start": 35.78,
+   "end": 36.82
+  },
+  {
+   "text": "beim",
+   "src": "kiweihnachten/t1",
+   "start": 36.86,
+   "end": 37.02
+  },
+  {
+   "text": "Weihnachtsshopping",
+   "src": "kiweihnachten/t1",
+   "start": 37.04,
+   "end": 37.66
+  },
+  {
+   "text": "KI",
+   "src": "kiweihnachten/t1",
+   "start": 37.73,
+   "end": 37.89
+  },
+  {
+   "text": "nutzen.",
+   "src": "kiweihnachten/t1",
+   "start": 38.01,
+   "end": 38.29
+  },
+  {
+   "text": "Aber",
+   "src": "kiweihnachten/t1",
+   "start": 44.76,
+   "end": 44.88
+  },
+  {
+   "text": "ihre",
+   "src": "kiweihnachten/t1",
+   "start": 44.94,
+   "end": 45.06
+  },
+  {
+   "text": "Einkäufe",
+   "src": "kiweihnachten/t1",
+   "start": 45.2,
+   "end": 45.72
+  },
+  {
+   "text": "der",
+   "src": "kiweihnachten/t1",
+   "start": 45.78,
+   "end": 45.88
+  },
+  {
+   "text": "KI",
+   "src": "kiweihnachten/t1",
+   "start": 45.92,
+   "end": 46.14
+  },
+  {
+   "text": "überlassen?",
+   "src": "kiweihnachten/t1",
+   "start": 46.26,
+   "end": 46.76
+  },
+  {
+   "text": "Da",
+   "src": "kiweihnachten/t1",
+   "start": 47.12,
+   "end": 47.18
+  },
+  {
+   "text": "sieht",
+   "src": "kiweihnachten/t1",
+   "start": 47.28,
+   "end": 47.42
+  },
+  {
+   "text": "es",
+   "src": "kiweihnachten/t1",
+   "start": 47.44,
+   "end": 47.48
+  },
+  {
+   "text": "plötzlich",
+   "src": "kiweihnachten/t1",
+   "start": 47.54,
+   "end": 47.86
+  },
+  {
+   "text": "ganz",
+   "src": "kiweihnachten/t1",
+   "start": 47.9,
+   "end": 48.06
+  },
+  {
+   "text": "anders",
+   "src": "kiweihnachten/t1",
+   "start": 48.1,
+   "end": 48.3
+  },
+  {
+   "text": "aus!",
+   "src": "kiweihnachten/t1",
+   "start": 48.34,
+   "end": 48.48
+  },
+  {
+   "text": "Shopify",
+   "src": "kiweihnachten/t1",
+   "start": 114.09,
+   "end": 114.49
+  },
+  {
+   "text": "hat",
+   "src": "kiweihnachten/t1",
+   "start": 114.57,
+   "end": 114.65
+  },
+  {
+   "text": "gerade",
+   "src": "kiweihnachten/t1",
+   "start": 114.69,
+   "end": 114.97
+  },
+  {
+   "text": "seinen",
+   "src": "kiweihnachten/t1",
+   "start": 115.03,
+   "end": 115.21
+  },
+  {
+   "text": "neuen",
+   "src": "kiweihnachten/t1",
+   "start": 115.27,
+   "end": 115.49
+  },
+  {
+   "text": "Holiday-Report",
+   "src": "kiweihnachten/t1",
+   "start": 115.55,
+   "end": 116.19
+  },
+  {
+   "text": "veröffentlicht.",
+   "src": "kiweihnachten/t1",
+   "start": 116.23,
+   "end": 116.71
+  },
+  {
+   "text": "Und",
+   "src": "kiweihnachten/t1",
+   "start": 117.37,
+   "end": 117.43
+  },
+  {
+   "text": "laut",
+   "src": "kiweihnachten/t1",
+   "start": 117.63,
+   "end": 117.77
+  },
+  {
+   "text": "der",
+   "src": "kiweihnachten/t1",
+   "start": 117.83,
+   "end": 117.89
+  },
+  {
+   "text": "Umfrage",
+   "src": "kiweihnachten/t1",
+   "start": 117.99,
+   "end": 118.45
+  },
+  {
+   "text": "wollen",
+   "src": "kiweihnachten/t1",
+   "start": 118.51,
+   "end": 118.69
+  },
+  {
+   "text": "65%",
+   "src": "kiweihnachten/t1",
+   "start": 118.81,
+   "end": 119.86
+  },
+  {
+   "text": "der",
+   "src": "kiweihnachten/t1",
+   "start": 119.85,
+   "end": 119.93
+  },
+  {
+   "text": "befragten",
+   "src": "kiweihnachten/t1",
+   "start": 119.97,
+   "end": 120.41
+  },
+  {
+   "text": "Verbraucher",
+   "src": "kiweihnachten/t1",
+   "start": 120.45,
+   "end": 120.89
+  },
+  {
+   "text": "KI",
+   "src": "kiweihnachten/t1",
+   "start": 121.19,
+   "end": 121.43
+  },
+  {
+   "text": "für",
+   "src": "kiweihnachten/t1",
+   "start": 121.57,
+   "end": 121.65
+  },
+  {
+   "text": "mindestens",
+   "src": "kiweihnachten/t1",
+   "start": 121.77,
+   "end": 122.23
+  },
+  {
+   "text": "eine",
+   "src": "kiweihnachten/t1",
+   "start": 122.37,
+   "end": 122.55
+  },
+  {
+   "text": "Aufgabe",
+   "src": "kiweihnachten/t1",
+   "start": 122.67,
+   "end": 123.05
+  },
+  {
+   "text": "beim",
+   "src": "kiweihnachten/t1",
+   "start": 123.13,
+   "end": 123.25
+  },
+  {
+   "text": "Weihnachtseinkauf",
+   "src": "kiweihnachten/t1",
+   "start": 123.31,
+   "end": 123.99
+  },
+  {
+   "text": "nutzen.",
+   "src": "kiweihnachten/t1",
+   "start": 124.07,
+   "end": 124.35
+  },
+  {
+   "text": "Zum",
+   "src": "kiweihnachten/t1",
+   "start": 125.11,
+   "end": 125.19
+  },
+  {
+   "text": "Beispiel",
+   "src": "kiweihnachten/t1",
+   "start": 125.23,
+   "end": 125.57
+  },
+  {
+   "text": "um",
+   "src": "kiweihnachten/t1",
+   "start": 125.63,
+   "end": 125.69
+  },
+  {
+   "text": "Geschenkideen",
+   "src": "kiweihnachten/t1",
+   "start": 125.75,
+   "end": 126.51
+  },
+  {
+   "text": "zu",
+   "src": "kiweihnachten/t1",
+   "start": 126.89,
+   "end": 126.95
+  },
+  {
+   "text": "finden",
+   "src": "kiweihnachten/t1",
+   "start": 127.07,
+   "end": 127.43
+  },
+  {
+   "text": "oder",
+   "src": "kiweihnachten/t1",
+   "start": 127.65,
+   "end": 127.85
+  },
+  {
+   "text": "eben",
+   "src": "kiweihnachten/t1",
+   "start": 127.95,
+   "end": 128.11
+  },
+  {
+   "text": "Produkte",
+   "src": "kiweihnachten/t1",
+   "start": 128.13,
+   "end": 128.51
+  },
+  {
+   "text": "zu",
+   "src": "kiweihnachten/t1",
+   "start": 128.57,
+   "end": 128.63
+  },
+  {
+   "text": "vergleichen.",
+   "src": "kiweihnachten/t1",
+   "start": 128.69,
+   "end": 129.11
+  },
+  {
+   "text": "Aber",
+   "src": "kiweihnachten/t1",
+   "start": 130.05,
+   "end": 130.17
+  },
+  {
+   "text": "jetzt",
+   "src": "kiweihnachten/t1",
+   "start": 130.23,
+   "end": 130.39
+  },
+  {
+   "text": "kommt",
+   "src": "kiweihnachten/t1",
+   "start": 130.43,
+   "end": 130.57
+  },
+  {
+   "text": "der",
+   "src": "kiweihnachten/t1",
+   "start": 130.59,
+   "end": 130.67
+  },
+  {
+   "text": "spannende",
+   "src": "kiweihnachten/t1",
+   "start": 130.73,
+   "end": 131.13
+  },
+  {
+   "text": "Teil:",
+   "src": "kiweihnachten/t1",
+   "start": 131.17,
+   "end": 131.37
+  },
+  {
+   "text": "Nur",
+   "src": "kiweihnachten/t1",
+   "start": 132.27,
+   "end": 132.35
+  },
+  {
+   "text": "ungefähr",
+   "src": "kiweihnachten/t1",
+   "start": 132.47,
+   "end": 132.87
+  },
+  {
+   "text": "jeder",
+   "src": "kiweihnachten/t1",
+   "start": 132.97,
+   "end": 133.17
+  },
+  {
+   "text": "Dritte",
+   "src": "kiweihnachten/t1",
+   "start": 133.31,
+   "end": 133.65
+  },
+  {
+   "text": "vertraut",
+   "src": "kiweihnachten/t1",
+   "start": 133.77,
+   "end": 134.19
+  },
+  {
+   "text": "der",
+   "src": "kiweihnachten/t1",
+   "start": 134.25,
+   "end": 134.33
+  },
+  {
+   "text": "KI",
+   "src": "kiweihnachten/t1",
+   "start": 134.37,
+   "end": 134.59
+  },
+  {
+   "text": "so weit,",
+   "src": "kiweihnachten/t1",
+   "start": 134.75,
+   "end": 135.19
+  },
+  {
+   "text": "dass",
+   "src": "kiweihnachten/t1",
+   "start": 135.59,
+   "end": 135.73
+  },
+  {
+   "text": "sie",
+   "src": "kiweihnachten/t1",
+   "start": 135.77,
+   "end": 135.87
+  },
+  {
+   "text": "auch",
+   "src": "kiweihnachten/t1",
+   "start": 135.91,
+   "end": 136.03
+  },
+  {
+   "text": "eigenständig",
+   "src": "kiweihnachten/t1",
+   "start": 136.19,
+   "end": 136.75
+  },
+  {
+   "text": "für",
+   "src": "kiweihnachten/t1",
+   "start": 136.79,
+   "end": 136.85
+  },
+  {
+   "text": "ihn",
+   "src": "kiweihnachten/t1",
+   "start": 136.89,
+   "end": 136.95
+  },
+  {
+   "text": "einkauft.",
+   "src": "kiweihnachten/t1",
+   "start": 137.01,
+   "end": 137.345
+  },
+  {
+   "text": "Und",
+   "src": "kiweihnachten/t1",
+   "start": 138.43,
+   "end": 138.51
+  },
+  {
+   "text": "das",
+   "src": "kiweihnachten/t1",
+   "start": 138.55,
+   "end": 138.71
+  },
+  {
+   "text": "zeigt",
+   "src": "kiweihnachten/t1",
+   "start": 138.77,
+   "end": 138.99
+  },
+  {
+   "text": "für",
+   "src": "kiweihnachten/t1",
+   "start": 139.03,
+   "end": 139.13
+  },
+  {
+   "text": "mich",
+   "src": "kiweihnachten/t1",
+   "start": 139.19,
+   "end": 139.31
+  },
+  {
+   "text": "ganz",
+   "src": "kiweihnachten/t1",
+   "start": 139.41,
+   "end": 139.61
+  },
+  {
+   "text": "klar,",
+   "src": "kiweihnachten/t1",
+   "start": 139.67,
+   "end": 139.93
+  },
+  {
+   "text": "wo",
+   "src": "kiweihnachten/t1",
+   "start": 140.41,
+   "end": 140.47
+  },
+  {
+   "text": "wir",
+   "src": "kiweihnachten/t1",
+   "start": 140.57,
+   "end": 140.65
+  },
+  {
+   "text": "gerade",
+   "src": "kiweihnachten/t1",
+   "start": 140.69,
+   "end": 140.95
+  },
+  {
+   "text": "stehen.",
+   "src": "kiweihnachten/t1",
+   "start": 141.03,
+   "end": 141.31
+  },
+  {
+   "text": "Denn",
+   "src": "kiweihnachten/t1",
+   "start": 151.02,
+   "end": 151.18
+  },
+  {
+   "text": "KI",
+   "src": "kiweihnachten/t1",
+   "start": 151.2,
+   "end": 151.46
+  },
+  {
+   "text": "wird",
+   "src": "kiweihnachten/t1",
+   "start": 151.5,
+   "end": 151.7
+  },
+  {
+   "text": "immer",
+   "src": "kiweihnachten/t1",
+   "start": 151.74,
+   "end": 152.08
+  },
+  {
+   "text": "mehr",
+   "src": "kiweihnachten/t1",
+   "start": 152.12,
+   "end": 152.3
+  },
+  {
+   "text": "zum",
+   "src": "kiweihnachten/t1",
+   "start": 152.34,
+   "end": 152.52
+  },
+  {
+   "text": "Einkaufsberater,",
+   "src": "kiweihnachten/t1",
+   "start": 152.56,
+   "end": 153.3
+  },
+  {
+   "text": "aber",
+   "src": "kiweihnachten/t1",
+   "start": 153.69,
+   "end": 153.81
+  },
+  {
+   "text": "noch",
+   "src": "kiweihnachten/t1",
+   "start": 153.87,
+   "end": 153.97
+  },
+  {
+   "text": "lange",
+   "src": "kiweihnachten/t1",
+   "start": 154.07,
+   "end": 154.29
+  },
+  {
+   "text": "nicht",
+   "src": "kiweihnachten/t1",
+   "start": 154.37,
+   "end": 154.51
+  },
+  {
+   "text": "automatisch",
+   "src": "kiweihnachten/t1",
+   "start": 154.55,
+   "end": 155.07
+  },
+  {
+   "text": "zum",
+   "src": "kiweihnachten/t1",
+   "start": 155.11,
+   "end": 155.19
+  },
+  {
+   "text": "Einkäufer.",
+   "src": "kiweihnachten/t1",
+   "start": 155.25,
+   "end": 155.67
+  },
+  {
+   "text": "Und",
+   "src": "kiweihnachten/t1",
+   "start": 191.3,
+   "end": 191.36
+  },
+  {
+   "text": "genau",
+   "src": "kiweihnachten/t1",
+   "start": 191.42,
+   "end": 191.72
+  },
+  {
+   "text": "deshalb",
+   "src": "kiweihnachten/t1",
+   "start": 191.82,
+   "end": 192.18
+  },
+  {
+   "text": "sollte",
+   "src": "kiweihnachten/t1",
+   "start": 192.28,
+   "end": 192.58
+  },
+  {
+   "text": "sich",
+   "src": "kiweihnachten/t1",
+   "start": 192.68,
+   "end": 192.8
+  },
+  {
+   "text": "ein",
+   "src": "kiweihnachten/t1",
+   "start": 192.9,
+   "end": 193.0
+  },
+  {
+   "text": "Onlineshop-Betreiber",
+   "src": "kiweihnachten/t1",
+   "start": 193.1,
+   "end": 193.92
+  },
+  {
+   "text": "jetzt",
+   "src": "kiweihnachten/t1",
+   "start": 193.98,
+   "end": 194.2
+  },
+  {
+   "text": "die",
+   "src": "kiweihnachten/t1",
+   "start": 194.26,
+   "end": 194.32
+  },
+  {
+   "text": "Frage",
+   "src": "kiweihnachten/t1",
+   "start": 194.36,
+   "end": 194.62
+  },
+  {
+   "text": "stellen:",
+   "src": "kiweihnachten/t1",
+   "start": 194.7,
+   "end": 194.96
+  },
+  {
+   "text": "Versteht",
+   "src": "kiweihnachten/t1",
+   "start": 195.36,
+   "end": 195.7
+  },
+  {
+   "text": "eine",
+   "src": "kiweihnachten/t1",
+   "start": 195.76,
+   "end": 195.9
+  },
+  {
+   "text": "KI",
+   "src": "kiweihnachten/t1",
+   "start": 195.96,
+   "end": 196.14
+  },
+  {
+   "text": "überhaupt,",
+   "src": "kiweihnachten/t1",
+   "start": 196.26,
+   "end": 196.62
+  },
+  {
+   "text": "was",
+   "src": "kiweihnachten/t1",
+   "start": 196.7,
+   "end": 196.84
+  },
+  {
+   "text": "ich",
+   "src": "kiweihnachten/t1",
+   "start": 196.92,
+   "end": 196.98
+  },
+  {
+   "text": "hier",
+   "src": "kiweihnachten/t1",
+   "start": 197.02,
+   "end": 197.12
+  },
+  {
+   "text": "verkaufe?",
+   "src": "kiweihnachten/t1",
+   "start": 197.16,
+   "end": 197.6
+  },
+  {
+   "text": "Wenn",
+   "src": "kiweihnachten/t1",
+   "start": 200.59,
+   "end": 200.83
+  },
+  {
+   "text": "deine",
+   "src": "kiweihnachten/t1",
+   "start": 200.83,
+   "end": 201.13
+  },
+  {
+   "text": "Produktbeschreibung",
+   "src": "kiweihnachten/t1",
+   "start": 201.16,
+   "end": 202.0
+  },
+  {
+   "text": "nur",
+   "src": "kiweihnachten/t1",
+   "start": 202.1,
+   "end": 202.2
+  },
+  {
+   "text": "aus",
+   "src": "kiweihnachten/t1",
+   "start": 202.24,
+   "end": 202.34
+  },
+  {
+   "text": "drei",
+   "src": "kiweihnachten/t1",
+   "start": 202.4,
+   "end": 202.54
+  },
+  {
+   "text": "Stichpunkten",
+   "src": "kiweihnachten/t1",
+   "start": 202.64,
+   "end": 203.16
+  },
+  {
+   "text": "besteht,",
+   "src": "kiweihnachten/t1",
+   "start": 203.2,
+   "end": 203.52
+  },
+  {
+   "text": "dann",
+   "src": "kiweihnachten/t1",
+   "start": 204.16,
+   "end": 204.34
+  },
+  {
+   "text": "wird",
+   "src": "kiweihnachten/t1",
+   "start": 204.46,
+   "end": 204.58
+  },
+  {
+   "text": "es",
+   "src": "kiweihnachten/t1",
+   "start": 204.6,
+   "end": 204.64
+  },
+  {
+   "text": "natürlich",
+   "src": "kiweihnachten/t1",
+   "start": 204.7,
+   "end": 205.0
+  },
+  {
+   "text": "ganz",
+   "src": "kiweihnachten/t1",
+   "start": 205.06,
+   "end": 205.2
+  },
+  {
+   "text": "schön",
+   "src": "kiweihnachten/t1",
+   "start": 205.22,
+   "end": 205.32
+  },
+  {
+   "text": "schwierig",
+   "src": "kiweihnachten/t1",
+   "start": 205.36,
+   "end": 205.64
+  },
+  {
+   "text": "für",
+   "src": "kiweihnachten/t1",
+   "start": 205.7,
+   "end": 205.76
+  },
+  {
+   "text": "die",
+   "src": "kiweihnachten/t1",
+   "start": 205.8,
+   "end": 205.88
+  },
+  {
+   "text": "KI.",
+   "src": "kiweihnachten/t1",
+   "start": 205.92,
+   "end": 206.14
+  },
+  {
+   "text": "Klare",
+   "src": "kiweihnachten/t1",
+   "start": 215.53,
+   "end": 215.79
+  },
+  {
+   "text": "Produktnamen,",
+   "src": "kiweihnachten/t1",
+   "start": 215.87,
+   "end": 216.59
+  },
+  {
+   "text": "vollständige",
+   "src": "kiweihnachten/t1",
+   "start": 216.87,
+   "end": 217.51
+  },
+  {
+   "text": "Eigenschaften",
+   "src": "kiweihnachten/t1",
+   "start": 217.77,
+   "end": 218.45
+  },
+  {
+   "text": "und",
+   "src": "kiweihnachten/t1",
+   "start": 218.69,
+   "end": 218.77
+  },
+  {
+   "text": "verständliche",
+   "src": "kiweihnachten/t1",
+   "start": 218.83,
+   "end": 219.43
+  },
+  {
+   "text": "Beschreibungen",
+   "src": "kiweihnachten/t1",
+   "start": 219.49,
+   "end": 219.97
+  },
+  {
+   "text": "werden",
+   "src": "kiweihnachten/t1",
+   "start": 220.29,
+   "end": 220.45
+  },
+  {
+   "text": "deshalb",
+   "src": "kiweihnachten/t1",
+   "start": 220.49,
+   "end": 220.73
+  },
+  {
+   "text": "immer",
+   "src": "kiweihnachten/t1",
+   "start": 220.83,
+   "end": 220.99
+  },
+  {
+   "text": "wichtiger.",
+   "src": "kiweihnachten/t1",
+   "start": 221.05,
+   "end": 221.43
+  },
+  {
+   "text": "Und",
+   "src": "kiweihnachten/t1",
+   "start": 222.17,
+   "end": 222.23
+  },
+  {
+   "text": "übrigens:",
+   "src": "kiweihnachten/t1",
+   "start": 222.31,
+   "end": 222.67
+  },
+  {
+   "text": "die",
+   "src": "kiweihnachten/t1",
+   "start": 222.75,
+   "end": 222.81
+  },
+  {
+   "text": "65%",
+   "src": "kiweihnachten/t1",
+   "start": 222.89,
+   "end": 224.045
+  },
+  {
+   "text": "stammen",
+   "src": "kiweihnachten/t1",
+   "start": 224.29,
+   "end": 224.61
+  },
+  {
+   "text": "aus",
+   "src": "kiweihnachten/t1",
+   "start": 224.67,
+   "end": 224.77
+  },
+  {
+   "text": "einer",
+   "src": "kiweihnachten/t1",
+   "start": 224.93,
+   "end": 225.23
+  },
+  {
+   "text": "Umfrage",
+   "src": "kiweihnachten/t1",
+   "start": 225.29,
+   "end": 225.73
+  },
+  {
+   "text": "und",
+   "src": "kiweihnachten/t1",
+   "start": 225.79,
+   "end": 225.87
+  },
+  {
+   "text": "sind",
+   "src": "kiweihnachten/t1",
+   "start": 225.91,
+   "end": 226.03
+  },
+  {
+   "text": "natürlich",
+   "src": "kiweihnachten/t1",
+   "start": 226.07,
+   "end": 226.35
+  },
+  {
+   "text": "keine",
+   "src": "kiweihnachten/t1",
+   "start": 226.41,
+   "end": 226.61
+  },
+  {
+   "text": "Prognose",
+   "src": "kiweihnachten/t1",
+   "start": 226.69,
+   "end": 227.05
+  },
+  {
+   "text": "für",
+   "src": "kiweihnachten/t1",
+   "start": 227.11,
+   "end": 227.19
+  },
+  {
+   "text": "Deutschland.",
+   "src": "kiweihnachten/t1",
+   "start": 227.25,
+   "end": 227.61
+  },
+  {
+   "text": "Und",
+   "src": "kiweihnachten/t1",
+   "start": 232.34,
+   "end": 232.46
+  },
+  {
+   "text": "wenn",
+   "src": "kiweihnachten/t1",
+   "start": 232.5,
+   "end": 232.84
+  },
+  {
+   "text": "du",
+   "src": "kiweihnachten/t1",
+   "start": 233.42,
+   "end": 233.58
+  },
+  {
+   "text": "wissen",
+   "src": "kiweihnachten/t1",
+   "start": 233.6,
+   "end": 233.92
+  },
+  {
+   "text": "willst,",
+   "src": "kiweihnachten/t1",
+   "start": 233.94,
+   "end": 234.12
+  },
+  {
+   "text": "wie",
+   "src": "kiweihnachten/t1",
+   "start": 234.22,
+   "end": 234.34
+  },
+  {
+   "text": "sich",
+   "src": "kiweihnachten/t1",
+   "start": 234.36,
+   "end": 234.56
+  },
+  {
+   "text": "KI",
+   "src": "kiweihnachten/t1",
+   "start": 234.66,
+   "end": 234.82
+  },
+  {
+   "text": "auf",
+   "src": "kiweihnachten/t1",
+   "start": 234.86,
+   "end": 235.12
+  },
+  {
+   "text": "Shopify",
+   "src": "kiweihnachten/t1",
+   "start": 235.14,
+   "end": 235.62
+  },
+  {
+   "text": "und",
+   "src": "kiweihnachten/t1",
+   "start": 235.78,
+   "end": 235.86
+  },
+  {
+   "text": "den",
+   "src": "kiweihnachten/t1",
+   "start": 235.88,
+   "end": 235.96
+  },
+  {
+   "text": "E-Commerce",
+   "src": "kiweihnachten/t1",
+   "start": 236.04,
+   "end": 236.44
+  },
+  {
+   "text": "auswirkt,",
+   "src": "kiweihnachten/t1",
+   "start": 236.52,
+   "end": 236.88
+  },
+  {
+   "text": "dann",
+   "src": "kiweihnachten/t1",
+   "start": 237.22,
+   "end": 237.36
+  },
+  {
+   "text": "folge",
+   "src": "kiweihnachten/t1",
+   "start": 237.42,
+   "end": 237.66
+  },
+  {
+   "text": "mir.",
+   "src": "kiweihnachten/t1",
+   "start": 237.72,
+   "end": 237.86
+  },
+  {
+   "text": "Denn",
+   "src": "kiweihnachten/t1",
+   "start": 238.3,
+   "end": 238.42
+  },
+  {
+   "text": "genau",
+   "src": "kiweihnachten/t1",
+   "start": 238.46,
+   "end": 238.64
+  },
+  {
+   "text": "darum",
+   "src": "kiweihnachten/t1",
+   "start": 238.72,
+   "end": 238.96
+  },
+  {
+   "text": "geht",
+   "src": "kiweihnachten/t1",
+   "start": 239.04,
+   "end": 239.18
+  },
+  {
+   "text": "es",
+   "src": "kiweihnachten/t1",
+   "start": 239.22,
+   "end": 239.26
+  },
+  {
+   "text": "hier",
+   "src": "kiweihnachten/t1",
+   "start": 239.3,
+   "end": 239.4
+  },
+  {
+   "text": "in",
+   "src": "kiweihnachten/t1",
+   "start": 239.42,
+   "end": 239.48
+  },
+  {
+   "text": "meinem",
+   "src": "kiweihnachten/t1",
+   "start": 239.5,
+   "end": 239.66
+  },
+  {
+   "text": "Kanal.",
+   "src": "kiweihnachten/t1",
+   "start": 239.7,
+   "end": 239.98
+  },
+  {
+   "text": "Denn",
+   "src": "kiweihnachten/t1",
+   "start": 299.91,
+   "end": 300.03
+  },
+  {
+   "text": "meine",
+   "src": "kiweihnachten/t1",
+   "start": 300.07,
+   "end": 300.27
+  },
+  {
+   "text": "Meinung",
+   "src": "kiweihnachten/t1",
+   "start": 300.37,
+   "end": 300.69
+  },
+  {
+   "text": "dazu:",
+   "src": "kiweihnachten/t1",
+   "start": 300.77,
+   "end": 301.07
+  },
+  {
+   "text": "Wer",
+   "src": "kiweihnachten/t1",
+   "start": 301.67,
+   "end": 301.77
+  },
+  {
+   "text": "seine",
+   "src": "kiweihnachten/t1",
+   "start": 301.81,
+   "end": 301.97
+  },
+  {
+   "text": "Produktdaten",
+   "src": "kiweihnachten/t1",
+   "start": 302.05,
+   "end": 302.71
+  },
+  {
+   "text": "heute",
+   "src": "kiweihnachten/t1",
+   "start": 302.77,
+   "end": 303.01
+  },
+  {
+   "text": "vernachlässigt,",
+   "src": "kiweihnachten/t1",
+   "start": 303.09,
+   "end": 303.79
+  },
+  {
+   "text": "der",
+   "src": "kiweihnachten/t1",
+   "start": 304.09,
+   "end": 304.19
+  },
+  {
+   "text": "macht",
+   "src": "kiweihnachten/t1",
+   "start": 304.21,
+   "end": 304.35
+  },
+  {
+   "text": "es",
+   "src": "kiweihnachten/t1",
+   "start": 304.41,
+   "end": 304.47
+  },
+  {
+   "text": "morgen",
+   "src": "kiweihnachten/t1",
+   "start": 304.55,
+   "end": 304.81
+  },
+  {
+   "text": "nicht",
+   "src": "kiweihnachten/t1",
+   "start": 304.87,
+   "end": 304.99
+  },
+  {
+   "text": "nur",
+   "src": "kiweihnachten/t1",
+   "start": 305.05,
+   "end": 305.13
+  },
+  {
+   "text": "dem",
+   "src": "kiweihnachten/t1",
+   "start": 305.15,
+   "end": 305.23
+  },
+  {
+   "text": "Kunden",
+   "src": "kiweihnachten/t1",
+   "start": 305.29,
+   "end": 305.49
+  },
+  {
+   "text": "schwer,",
+   "src": "kiweihnachten/t1",
+   "start": 305.51,
+   "end": 305.71
+  },
+  {
+   "text": "sondern",
+   "src": "kiweihnachten/t1",
+   "start": 305.81,
+   "end": 306.07
+  },
+  {
+   "text": "leider",
+   "src": "kiweihnachten/t1",
+   "start": 306.09,
+   "end": 306.27
+  },
+  {
+   "text": "auch",
+   "src": "kiweihnachten/t1",
+   "start": 306.33,
+   "end": 306.41
+  },
+  {
+   "text": "der",
+   "src": "kiweihnachten/t1",
+   "start": 306.43,
+   "end": 306.53
+  },
+  {
+   "text": "KI.",
+   "src": "kiweihnachten/t1",
+   "start": 306.57,
+   "end": 306.79
+  },
+  {
+   "text": "Aber:",
+   "src": "kiweihnachten/t1",
+   "start": 307.82,
+   "end": 307.98
+  },
+  {
+   "text": "Würdet",
+   "src": "kiweihnachten/t1",
+   "start": 308.32,
+   "end": 308.56
+  },
+  {
+   "text": "ihr",
+   "src": "kiweihnachten/t1",
+   "start": 308.68,
+   "end": 308.8
+  },
+  {
+   "text": "eurer",
+   "src": "kiweihnachten/t1",
+   "start": 308.98,
+   "end": 309.2
+  },
+  {
+   "text": "KI",
+   "src": "kiweihnachten/t1",
+   "start": 309.26,
+   "end": 309.52
+  },
+  {
+   "text": "die",
+   "src": "kiweihnachten/t1",
+   "start": 309.86,
+   "end": 309.94
+  },
+  {
+   "text": "Weihnachtsgeschenke",
+   "src": "kiweihnachten/t1",
+   "start": 310.0,
+   "end": 310.7
+  },
+  {
+   "text": "empfehlen",
+   "src": "kiweihnachten/t1",
+   "start": 310.76,
+   "end": 311.1
+  },
+  {
+   "text": "lassen",
+   "src": "kiweihnachten/t1",
+   "start": 311.14,
+   "end": 311.4
+  },
+  {
+   "text": "oder",
+   "src": "kiweihnachten/t1",
+   "start": 311.56,
+   "end": 311.72
+  },
+  {
+   "text": "sie",
+   "src": "kiweihnachten/t1",
+   "start": 311.78,
+   "end": 311.86
+  },
+  {
+   "text": "sogar",
+   "src": "kiweihnachten/t1",
+   "start": 311.88,
+   "end": 312.08
+  },
+  {
+   "text": "komplett",
+   "src": "kiweihnachten/t1",
+   "start": 312.14,
+   "end": 312.44
+  },
+  {
+   "text": "einkaufen",
+   "src": "kiweihnachten/t1",
+   "start": 312.54,
+   "end": 312.9
+  },
+  {
+   "text": "lassen?",
+   "src": "kiweihnachten/t1",
+   "start": 312.94,
+   "end": 313.18
+  }
+ ],
+ "pages": [
+  3,
+  4,
+  1,
+  2,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  1,
+  1,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  1,
+  1,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  1,
+  3,
+  3,
+  4,
+  4,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  1,
+  4,
+  1,
+  3,
+  4,
+  2,
+  1,
+  3,
+  2,
+  4,
+  3,
+  3,
+  2,
+  1,
+  1,
+  2,
+  2,
+  1,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  4,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  4,
+  2,
+  3,
+  3,
+  2,
+  1,
+  3,
+  2,
+  1,
+  2,
+  4,
+  2
+ ]
+}

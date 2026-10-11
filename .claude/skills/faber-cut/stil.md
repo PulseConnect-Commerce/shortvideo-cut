@@ -7,7 +7,7 @@ bewusst nicht gleich schneiden lassen (2026-10-09).
 | --- | --- | --- | --- |
 | **HERO** | Erklär- und Expertenvideos, die etwas länger gehen (meist 1-3 min) | `.claude/skills/stil-hero/SKILL.md` | festgelegt (Vorlage: `src/projekte/shopcheck/`) |
 | **FACE** | Meinungsvideos direkt in die Kamera (~45-60 s), Frage an die Community | `.claude/skills/stil-face/SKILL.md` | festgelegt (Vorlage: `src/projekte/kiagenten/`) |
-| **NEWS / Reaction** | optional: News oder Reactions auf andere Videos | `.claude/skills/stil-news/SKILL.md` | Stilabgleich beim ersten News-Video |
+| **NEWS / Reaction** | News oder Reactions auf Meldungen (~60-80 s), Quelle als Greenscreen hinter ihm | `.claude/skills/stil-news/SKILL.md` | festgelegt (vorläufig, Vorlage: `src/projekte/shopifycanvas/`) |
 
 So gehst du vor:
 
@@ -58,6 +58,9 @@ So gehst du vor:
 | shopcheck ("5 Dinge, die du checken solltest …") | HERO | pulse | – |
 | vertrauen ("5 Vertrauens-Killer") | HERO | pulse | – |
 | kiagenten ("KI-Agenten: genial oder Bullshit?") | FACE | pulse | – |
+| shopifycanvas ("Shopify Canvas – Brauchen wir bald keine Webdesigner mehr?") | NEWS | nacht-gruen | kamera, riser |
+| kiweihnachten ("65 % wollen KI beim Weihnachtsshopping nutzen") | NEWS | nacht-gruen | kamera, riser |
+| shopifyapps ("Warum zahlst du für so viele Shopify-Apps?") | FACE | nacht (Test der drei Farben) | riser |
 
 ### Notizen zu den Designs
 

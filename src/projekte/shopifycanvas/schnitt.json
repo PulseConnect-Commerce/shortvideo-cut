@@ -1,0 +1,33 @@
+{
+ "projekt": "shopifycanvas",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {"min_gap": 0.2, "pre": 0.04, "post": 0.06},
+ "saetze": [
+  {"take": "t1", "ab": 2.5, "text": "Brauchen wir bald überhaupt noch jemanden, der Shopify-Shops baut?"},
+  {"take": "t1", "ab": 8.2, "text": "Shopify hat gerade eine neue KI-Funktion vorgestellt, die ziemlich viel verändern könnte."},
+  {"take": "t1", "ab": 12.8, "text": "Das Ganze nennt sich Canvas und das ist nicht einfach nur der nächste KI-Website-Bilder,"},
+  {"take": "t1", "ab": 27.95, "text": "Du kannst Dir damit verschiedene Seiten Deines Onlineshops auf einer großen Oberfläche anzeigen lassen und nebeneinander anschauen und einzelne Bereiche verändern oder Shopify, KI, Assistenten, Sidekick einfach sagen, was Du haben möchtest."},
+  {"take": "t1", "ab": 53.0, "text": "zum Beispiel mach meine Startseite moderner oder Ändere die Produktdarstellung oder pass einfach die Farben an meine Marke an."},
+  {"take": "t1", "ab": 61.5, "text": "Und die KI kann das ganze dann direkt für dich im Theme umsetzen."},
+  {"take": "t1", "ab": 84.45, "text": "und wenn du solche Shopify und KI-Updates nicht verpassen willst, dann folge mir hier gerne.", "ganz": true},
+  {"take": "t1", "ab": 89.1, "text": "Denn ich zeige dir regelmäßig, was davon hier wirklich relevant ist.", "ganz": true},
+  {"take": "t1", "ab": 92.9, "text": "Aber jetzt kommt der für mich entscheidende Punkt."},
+  {"take": "t1", "ab": 95.4, "text": "Nur weil du mit der KI in kurzer Zeit natürlich einen neuen Shopify-Shop bauen kannst und den auch schön gestalten kannst, heißt das Ganze natürlich nicht, dass dieser auch verkaufen wird."},
+  {"take": "t1", "ab": 105.5, "text": "Denn gute Produktzeiten, eine klare Nutzerführung, Vertrauen, aber auch eine vernünftige Conversion-Rate entstehen ja nicht automatisch dadurch, nur weil der Shop jetzt hübsch aussieht."},
+  {"take": "t1", "ab": 126.47, "text": "einen Onlineshop zu bauen, wird zwar immer einfacher, aber einen Onlineshop so zu bauen, dass er auch verkauft, ist natürlich nochmal hier eine ganz andere Sache."},
+  {"take": "t1", "ab": 134.6, "text": "Canvas ist übrigens aktuell noch nicht für jeden Shopify-Shop verfügbar."},
+  {"take": "t1", "ab": 141.6, "text": "Aber was meint ihr, würdet ihr eure KI den kompletten Onlineshop neu gestalten lassen?", "ganz": true}
+ ],
+ "ende": {"bis": 146.45},
+ "korrekturen": [
+  ["t1", 16.53, "KI-Website-Bilder,", "KI-Website-Builder."],
+  ["t1", 28.39, "Dir", "dir"], ["t1", 29.71, "Deines", "deines"],
+  ["t1", 36.68, "Shopify,", "Shopifys"], ["t1", 37.26, "KI,", "KI-Assistenten"], ["t1", 37.58, "Assistenten,", ""],
+  ["t1", 39.74, "Du", "du"],
+  ["t1", 53.10, "zum", "Zum"], ["t1", 54.12, "Beispiel", "Beispiel:"], ["t1", 57.16, "Ändere", "ändere"],
+  ["t1", 84.54, "und", "Und"], ["t1", 85.13, "Shopify", "Shopify-"],
+  ["t1", 106.09, "Produktzeiten,", "Produktseiten,"],
+  ["t1", 126.50, "einen", "Einen"]
+ ]
+}
