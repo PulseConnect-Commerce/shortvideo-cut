@@ -7,7 +7,7 @@
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
-import { Bodenblende, Captions, clamp, HookTitle, popS, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
+import { ausgabeFrames, Bodenblende, Captions, clamp, HookTitle, popS, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
 import { Pop, Row, Szene, Tag, tagBreite } from "../../lib/broll";
 import { DesignRahmen, type DesignName, schriftCss, Toenung, useDesign } from "../../lib/design";
 import { Raster } from "../../lib/raster";
@@ -18,10 +18,15 @@ import cut from "./cut.json";
 const C = createCut(cut);
 export const meta = { id: "KiWeihnachten", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Bildausschnitt ab der Hüfte (die Hose beginnt im Take frühestens bei y ~1700), Gesicht 160 px höher */
-const CROP = 1.2;
-const HOCH = 160;
+/** Bildlage (seine Vorgabe, 2026-10-11): der Kopf im oberen Drittel ("OBEN"), Titel und Begriffe darunter auf der Brust;
+ * nur solange die Quelle hinter ihm steht (Greenscreen), liegt er tiefer ("MITTE"), damit der Artikel lesbar ist. Die
+ * Hose beginnt im Take frühestens bei y ~1700; die Bodenblende deckt sie in beiden Lagen ab. */
+const OBEN = { scale: 1.3, hoch: 686 };
+const MITTE = { scale: 1.2, hoch: 160 };
 const HOSE = 1700;
+const UNTEN = 650;
+const QUELLE = [...ausgabeFrames(C, 113.95, 116.8), ...ausgabeFrames(C, 117.25, 124.5)];
+const mitte = (fr: number) => QUELLE.some(([a, b]) => fr >= a && fr < b);
 
 const F = C.cue;
 const T = (() => {
@@ -98,23 +103,26 @@ export const Video: React.FC<Props> = ({ design = "nacht-gruen", ...p }) => (
 const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) => {
   const D = useDesign();
   const fr = useCurrentFrame();
+  const lage = mitte(fr) ? MITTE : OBEN;
   const tagX = (text: string, size: number, x0 = 24) => x0 + tagBreite(D, text, size) + 22;
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
-      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
+      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: lage === MITTE ? "50% 42%" : "50% 28%" }}>
         <SplitPerson split={0} zoom={zoomAt(fr)}>
-          <Takes C={C} voice={voice} transform={`translateY(${-HOCH}px) scale(${CROP})`} transformOrigin="50% 0%" />
+          <Takes C={C} voice={voice} transform={`translateY(${-lage.hoch}px) scale(${lage.scale})`} transformOrigin="50% 0%" />
         </SplitPerson>
       </AbsoluteFill>
       <Toenung />
-      <Bodenblende ab={HOSE * CROP - HOCH} />
+      <Bodenblende ab={HOSE * lage.scale - lage.hoch} />
 
+      <AbsoluteFill style={{ transform: `translateY(${UNTEN}px)` }}>
       <HookTitle fr={fr} line1="65 % shoppen" line2="mit KI?!" outAt={T.gsA - 6} />
       <Pop fr={fr} at={F("überlassen")} until={T.gsA - 6} x={0} y={560} w={1080} style={{ textAlign: "center", transformOrigin: "center" }}>
         <Tag kind="warn" size={48}>
           KI kauft selbst ein?
         </Tag>
       </Pop>
+      </AbsoluteFill>
 
       {/* Quelle hinter ihm (Greenscreen im Take): Schlagzeile, dann die markierte 65-%-Stelle */}
       <Pop fr={fr} at={T.gsA} until={T.beispiel - 4} x={60} y={1228}>
@@ -123,6 +131,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         </Tag>
       </Pop>
 
+      <AbsoluteFill style={{ transform: `translateY(${UNTEN}px)` }}>
       {/* Wofür sie KI nutzen wollen */}
       <Szene fr={fr} at={T.beispiel} until={T.spannend - 2} title="KI als Berater" frei>
         <Pop fr={fr} at={F("geschenkideen")} x={24} y={118}>
@@ -230,7 +239,9 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         </Pop>
       </Szene>
 
-      <Captions C={C} fr={fr} top={1320} size={100} />
+      </AbsoluteFill>
+
+      <Captions C={C} fr={fr} top={1360} size={100} />
 
       {sfx && (
         <>

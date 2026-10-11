@@ -31,11 +31,15 @@ bleibt.
   (Pointe, Frage), sonst ruhiges Bild (ein ganz langsames Zoom-in wie HERO ist ok). Das erste FACE-Video hatte
   Punch-ins an jedem Schnitt; das war ihm zu viel (siehe Notizen).
 - **Rand frei:** an jeder Seite mindestens 60 px (wie HERO).
-- **Gesicht höher, frei von den Untertiteln** (wie HERO, seit 2026-10-10): das Bild liegt 160 px höher
-  (`translateY(-160px)` vor dem `scale`), das Kinn laut `npm run raster` in keinem Frame tiefer als ~40 px über der
-  Oberkante der Untertitel (y 1320); unten deckt `<Bodenblende ab={HOSE * CROP - 160} />` die Hose ab. Vorlage:
-  `src/projekte/kiagenten/Video.tsx` mit der Prop `hoehe`. Über dem Kopf ist dann Platz für den großen Titel und
-  höchstens 2 Zeilen Begriffe gleichzeitig (bis ~y 590); weitere Begriffe ersetzen die früheren.
+- **Kopf im oberen Drittel** (seine Vorgabe seit 2026-10-11, alle Formate; ersetzt "Gesicht 160 px höher"): Bildlage
+  "OBEN" mit `<Takes transform="translateY(-686px) scale(1.3)" transformOrigin="50% 0%" />` (bei seinem Bürostuhl-Setup
+  liegt der Kopf dann bei y ~250-900; mit `npm run raster` nachmessen, die Kopf-Oberkante gehört knapp unter y 250).
+  Hook, Titel und Begriffe liegen darunter auf der Brust (alles in `<AbsoluteFill style={{ transform: "translateY(650px)" }}>`,
+  Titel ab y ~940), Untertitel bei y 1360, unten `<Bodenblende ab={HOSE * 1.3 - 686} />` gegen Hose und leeren Rand.
+  **Ausnahme:** Solange etwas gelesen werden muss, das hinter oder über ihm steht (Zeitungsartikel, Screenshot der
+  Quelle), liegt er tiefer, Lage "MITTE" (`translateY(-160px) scale(1.2)`), und wechselt danach zurück
+  (`ausgabeFrames(C, von, bis)` aus `bausteine.tsx` gibt die Frames der Greenscreen-Stellen). Vorlage:
+  `src/projekte/shopifycanvas/Video.tsx`.
 
 ## Hook (erstes Bild bis zum zweiten Satz)
 
@@ -122,3 +126,6 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-09, erstes FACE-Video kia
 - Gesicht höher (2026-10-10, gilt für alle Formate): "Auch gefällt mir die Höhe meines Gesichts nicht. Dieses sollte
   noch um einiges höher liegen, sodass es nicht zur Hälfte von den Untertitel verdeckt wird". Aus den Standbildern
   gewählt: "A: etwas höher" (+160 px) und "Für alle Formate".
+- Kopf im oberen Drittel (2026-10-11, zur Vorschau von Shopify Canvas; ersetzt die +160 px von 2026-10-10): "Leider
+  passt meine Kopfposition nicht. Es wurde vereinbart, dass diese im obendrein drittel auftauchen soll. Nur da, weil
+  z.B ein Zeitungsartikel gezeigt wird und man ihn sonst nicht lesen kann, kann man kopf nach unten geschoben werden".

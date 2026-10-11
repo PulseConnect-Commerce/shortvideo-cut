@@ -1,6 +1,6 @@
 ---
 name: stil-news
-description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~60-80 s) - Design fest nacht-gruen (Anton in Großbuchstaben, das gesprochene Wort in einer Box in Logo-Hellgrün, dunkle Glas-Chips), Bild ab der Hüfte mit dem Gesicht 160 px höher, die Quelle (1-2 Screenshots aus dem Artikel, Stelle hellgrün markiert) als Hintergrund hinter ihm wie ein Greenscreen, große knackige Titel, große Untertitel, Kamera-Auslöser bei der Quelle und Riser vor seiner Meinung, am Ende die Frage mit Kommentar-Blase. Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten oder überarbeitet wird (der Nutzer sagt "News", "News-Reaction", "Reaction", "Reaktion auf ein Video", "Hot Take" zu einer Meldung) oder Feedback zu einem News-Video gibt.
+description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~60-80 s) - Design fest nacht-gruen (Anton in Großbuchstaben, das gesprochene Wort in einer Box in Logo-Hellgrün, dunkle Glas-Chips), Bild ab der Hüfte mit dem Kopf im oberen Drittel (nur bei der Quelle tiefer), die Quelle (1-2 Screenshots aus dem Artikel, Stelle hellgrün markiert) als Hintergrund hinter ihm wie ein Greenscreen, große knackige Titel auf der Brust, große Untertitel, Kamera-Auslöser bei der Quelle und Riser vor seiner Meinung, am Ende die Frage mit Kommentar-Blase. Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten oder überarbeitet wird (der Nutzer sagt "News", "News-Reaction", "Reaction", "Reaktion auf ein Video", "Hot Take" zu einer Meldung) oder Feedback zu einem News-Video gibt.
 ---
 
 # Stil NEWS / Reaction
@@ -28,9 +28,15 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
 
 - 1080x1920, 30 fps, Deutsch, ein Grade (aus dem Design).
 - **Ab der Hüfte, keine Hose** (wie HERO): fester Ausschnitt `scale(1.2)` ab der Oberkante, vorher messen.
-- **Gesicht 160 px höher** (wie überall seit 2026-10-10): `translateY(-160px) scale(1.2)`, unten
-  `<Bodenblende ab={HOSE * 1.2 - 160} />` gegen die Hose (HOSE = Quell-y, ab dem sie zu sehen ist, bei seinem
-  Bürostuhl-Setup ~1680-1700).
+- **Kopf im oberen Drittel** (seine Vorgabe seit 2026-10-11, alle Formate; ersetzt "Gesicht 160 px höher"): Bildlage
+  "OBEN" mit `<Takes transform="translateY(-686px) scale(1.3)" transformOrigin="50% 0%" />` (bei seinem Bürostuhl-Setup
+  liegt der Kopf dann bei y ~250-900; mit `npm run raster` nachmessen, die Kopf-Oberkante gehört knapp unter y 250).
+  Hook, Titel und Begriffe liegen darunter auf der Brust (alles in `<AbsoluteFill style={{ transform: "translateY(650px)" }}>`,
+  Titel ab y ~940), Untertitel bei y 1360, unten `<Bodenblende ab={HOSE * 1.3 - 686} />` gegen Hose und leeren Rand.
+  **Ausnahme:** Solange etwas gelesen werden muss, das hinter oder über ihm steht (Zeitungsartikel, Screenshot der
+  Quelle), liegt er tiefer, Lage "MITTE" (`translateY(-160px) scale(1.2)`), und wechselt danach zurück
+  (`ausgabeFrames(C, von, bis)` aus `bausteine.tsx` gibt die Frames der Greenscreen-Stellen). Vorlage:
+  `src/projekte/shopifycanvas/Video.tsx`.
 - **Leichter Porträt-Modus** wie HERO (`npm run portrait`, Stärke 6).
 - **Zoom ruhig** wie HERO (Empfehlung): ein langsames Zoom-in über das Video (100 % → 108 %) und 3 sanfte Akzente auf
   den stärksten Stellen (1,06; 8 Frames hin, 10 zurück).
@@ -45,7 +51,8 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   die Stelle, über die er spricht, im Artikel **hellgrün markieren** (`<mark>` in `#00F090`, dunkle Schrift) und
   mittig scrollen. Erst die Schlagzeile (Seite oben), dann die markierte Zahl oder Aussage.
 - **Hintergrundbild bauen** (1080x1920, so wie es im fertigen Video aussehen soll): das Wichtige (Schlagzeile,
-  markierte Stelle) liegt über dem Kopf, also zwischen y ~230 und ~650 (Kopf ab ~680 laut `npm run raster`). Liegen
+  markierte Stelle) liegt über dem Kopf, also zwischen y ~230 und ~650 (in Lage MITTE beginnt der Kopf bei ~680 laut
+  `npm run raster`). Liegen
   lassen in `public/broll/<projekt>/hg-*.png`.
 - **In den Take rechnen:** `npm run portrait -- <projekt> --hintergrund public/broll/<projekt>/hg-x.png@<von>-<bis>
   [--hintergrund …] --ausschnitt 1.2,160` (von/bis in Sekunden im Take, genau die Sätze, die über die Quelle reden).
@@ -64,14 +71,14 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
 
 ## Untertitel
 
-- **Groß wie FACE** (Empfehlung): 100 px, Oberkante y 1320 (auf der Brust unter dem Kinn), das gesprochene Wort in der
+- **Groß wie FACE** (Empfehlung): 100 px, Oberkante y 1360 (unter den Titeln), das gesprochene Wort in der
   hellgrünen Box. Fachbegriffe richtig (Shopify, Sidekick, Judge.me, "Builder" statt Whispers "Bilder").
 
 ## Grafiken über dem Kopf
 
-- Pro Gedanke eine Szene `<Szene frei>` mit **großem, knackigem Titel** (92 px aus dem Design, 2-4 Wörter mit Haltung:
+- Pro Gedanke eine Szene `<Szene frei>` (unter dem Kinn, siehe Bild) mit **großem, knackigem Titel** (92 px aus dem Design, 2-4 Wörter mit Haltung:
   "Sag's einfach der KI!", "Was wirklich verkauft", "Bauen ≠ verkaufen", "Der spannende Teil") und höchstens zwei
-  Zeilen Chips darunter (Platz bis y ~650, darunter der Kopf). Mehr Begriffe nebeneinander (`tagBreite`), nicht
+  Zeilen Chips darunter (Platz bis y ~1300, darunter die Untertitel). Mehr Begriffe nebeneinander (`tagBreite`), nicht
   untereinander.
 - **Zahlen groß**, wenn er sie betont (z. B. "~33 %" in 210 px in der Leuchtfarbe auf "jeder Dritte").
 - Tippt er im Beispiel einen Prompt ("Mach meine Startseite moderner"), läuft er als Chat-Chip Wort für Wort mit der
@@ -117,3 +124,6 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-11, erste News-Videos sho
 - Die Fragen zu Tempo, Zoom, Untertitel und Ende hat er weggeklickt: darum gelten die Empfehlungen (Tempo und Zoom
   wie HERO, Untertitel groß wie FACE, Frage mit Kommentar-Blase, Folgen ohne Einblendung). Nach seiner ersten
   Vorschau fragen, was anders sein soll, und hier eintragen.
+- Kopf im oberen Drittel (2026-10-11, zur Vorschau von Shopify Canvas; ersetzt die +160 px von 2026-10-10): "Leider
+  passt meine Kopfposition nicht. Es wurde vereinbart, dass diese im obendrein drittel auftauchen soll. Nur da, weil
+  z.B ein Zeitungsartikel gezeigt wird und man ihn sonst nicht lesen kann, kann man kopf nach unten geschoben werden".

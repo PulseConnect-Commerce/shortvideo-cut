@@ -379,6 +379,16 @@ export const Bodenblende: React.FC<{ ab: number }> = ({ ab }) => (
   />
 );
 
+/**
+ * Die Ausgabe-Frames [von, bis), deren Bild aus diesen Sekunden des Takes stammt (nach den J-Cuts), z. B. die Stellen,
+ * an denen `npm run portrait -- … --hintergrund` die Quelle hinter ihn gelegt hat. Damit wechselt die Bildlage genau
+ * dort, wo das Greenscreen-Bild beginnt und endet.
+ */
+export const ausgabeFrames = (C: Cut, von: number, bis: number, take?: string): [number, number][] =>
+  C.SPANS.filter((s) => (!take || s.src.endsWith(`/${take}`)) && s.trimBefore < bis * C.FPS && s.trimBefore + s.len > von * C.FPS).map(
+    (s) => [s.at + Math.max(0, Math.round(von * C.FPS) - s.trimBefore), s.at + Math.min(s.len, Math.round(bis * C.FPS) - s.trimBefore)],
+  );
+
 /** Pille (Begriff, Tool, Aufruf) */
 export const Pill: React.FC<{ children: React.ReactNode; bg?: string; color?: string; size?: number }> = ({
   children,

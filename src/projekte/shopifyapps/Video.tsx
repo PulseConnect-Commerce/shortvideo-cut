@@ -18,10 +18,13 @@ import cut from "./cut.json";
 const C = createCut(cut);
 export const meta = { id: "ShopifyApps", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Bildausschnitt ab der Hüfte (die Hose beginnt im Take frühestens bei y ~1700), Gesicht 160 px höher */
-const CROP = 1.2;
-const HOCH = 160;
+/** Bildlage (seine Vorgabe, 2026-10-11): der Kopf im oberen Drittel (1,3fach, 686 px nach oben), Titel und Begriffe
+ * darunter auf der Brust, unten die Untertitel. Die Hose beginnt im Take frühestens bei y ~1700, die Bodenblende deckt
+ * sie ab. */
+const CROP = 1.3;
+const HOCH = 686;
 const HOSE = 1700;
+const UNTEN = 650;
 
 const F = C.cue;
 const T = (() => {
@@ -74,7 +77,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
   const tagX = (text: string, size: number, x0 = 24) => x0 + tagBreite(D, text, size) + 22;
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
-      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
+      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 28%" }}>
         <SplitPerson split={0} zoom={zoomAt(fr)}>
           <Takes C={C} voice={voice} transform={`translateY(${-HOCH}px) scale(${CROP})`} transformOrigin="50% 0%" />
         </SplitPerson>
@@ -82,6 +85,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       <Toenung />
       <Bodenblende ab={HOSE * CROP - HOCH} />
 
+      <AbsoluteFill style={{ transform: `translateY(${UNTEN}px)` }}>
       <HookTitle fr={fr} line1="Zu viele" line2="Shopify-Apps?!" outAt={T.sammeln - 6} />
 
       {/* Apps sammeln sich an und kosten jeden Monat */}
@@ -225,7 +229,9 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         </Pop>
       </Szene>
 
-      <Captions C={C} fr={fr} top={1320} size={100} />
+      </AbsoluteFill>
+
+      <Captions C={C} fr={fr} top={1360} size={100} />
 
       {sfx && (
         <>
