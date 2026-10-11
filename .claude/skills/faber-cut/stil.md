@@ -48,13 +48,14 @@ So gehst du vor:
   `HOOK_STILE`), gilt das für pulse; bei nacht gelten dessen Farben, Schriften und Hook.
 - **Feedback zum Look eines Designs** ("das Grün ist zu grell") kommt hier unter "Notizen zu den Designs", mit
   seinem Satz und Datum, und die Werte in `design.tsx`; Feedback zum Schnitt in den Skill des Formats.
-- **Verlauf:** pro Video Format und Design in die Tabelle unten.
+- **Verlauf:** pro Video Format, Design und die Extra-Effekte (`klick`, `kamera`, `riser`, `glitzer`,
+  `wusch-gross`; höchstens ein bis zwei pro Video, von Video zu Video abwechseln) in die Tabelle unten.
 
-| Video | Format | Design |
-| --- | --- | --- |
-| shopcheck ("5 Dinge, die du checken solltest …") | HERO | pulse |
-| vertrauen ("5 Vertrauens-Killer") | HERO | pulse |
-| kiagenten ("KI-Agenten: genial oder Bullshit?") | FACE | pulse |
+| Video | Format | Design | Extra-Effekte |
+| --- | --- | --- | --- |
+| shopcheck ("5 Dinge, die du checken solltest …") | HERO | pulse | – |
+| vertrauen ("5 Vertrauens-Killer") | HERO | pulse | – |
+| kiagenten ("KI-Agenten: genial oder Bullshit?") | FACE | pulse | – |
 
 ### Notizen zu den Designs
 

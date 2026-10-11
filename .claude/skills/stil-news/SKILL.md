@@ -24,6 +24,10 @@ Dieser Stil ist noch nicht festgelegt. Bevor du das erste NEWS-Video schneidest:
      Hook (wie HERO weiß-rot / andere Farben / ohne), Tempo (Pausen ab 0,2 s wie HERO / ruhiger / schneller).
    - Runde 2: Zoom (wie HERO ruhig / dynamischer / keiner), Porträt-Modus (wie HERO leicht / stärker / aus), Farben
      (wie HERO Blau + PulseConnect-Grün / andere), Ende und Aufruf (wie HERO "speichern" / folgen / kommentieren).
+   Dazu die **Extra-Effekte** (`public/sfx/`, Regeln wie in `stil-hero` unter "Schnitt und Ton": höchstens ein bis
+   zwei pro Video, nur wo das Bild sie trägt, von Video zu Video abwechseln): naheliegend sind `kamera.mp3` beim
+   Einblenden der Quelle oder Schlagzeile und `riser.mp3` vor seiner eigenen Meinung (`at` = Wort − 48 Frames).
+   Fragen, ob das passt, und hier eintragen.
    Dazu, was NEWS ausmacht und HERO nicht hat (z. B. wie das fremde Video oder die Quelle gezeigt wird: Splitscreen, Bild-im-Bild, Screenshot der Schlagzeile; Quelle immer nennen, fremdes Material nur mit Recht oder als kurzes Zitat).
 3. **Diese Datei neu schreiben** als "Stil NEWS" mit denselben Abschnitten wie `stil-hero` (Bild, Hook, Untertitel,
    B-Roll, Farben, Schnitt und Ton, Aufruf und Ende, Arbeitsweise, Notizen), seine Antworten mit Datum. Die

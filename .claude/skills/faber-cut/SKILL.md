@@ -134,6 +134,10 @@ Erst wenn er "passt" sagt:
 2. **Kontext vor Tempo.** Bevor ein Nebensatz rausfliegt: Satz davor und danach ohne ihn lesen. Fragt ein Zuschauer dann "warum?" oder "was?", bleibt er drin. Der Aufruf (CTA) bleibt ein Stück.
 3. **Zahlen, Ergebnisse, Daten werden nie erfunden.** Auf dem Bildschirm stehen die Zahlen, die er sagt oder die gemessen sind.
 4. **Keine Musik**, wenn er seine eigene drunterlegt (Standard, siehe der Stil des Formats). Soundeffekte immer deutlich unter der Stimme.
+   **Nur Effekte aus `public/sfx/`** (selbst erzeugt, frei nutzbar). Klänge aus der TikTok- oder CapCut-Bibliothek
+   dürfen nur in der App selbst benutzt werden, nie in einem fertig gerenderten Video (das geht auch zu Instagram und
+   YouTube): gefällt ihm so ein Klang, einen eigenen ähnlichen mit ffmpeg bauen, wie bei `klick`, `kamera`, `riser`,
+   `glitzer` und `wusch-gross` (2026-10-10, nach seinem Referenzvideo).
 5. **Eine Bildeinstellung wie gedreht:** kein Gesichts-Tracking, kein Wackeln, kein Angleichen pro Schnitt, ein Grade für alles. Bewegung kommt nur aus bewussten Zooms und Layout-Wechseln.
 6. **Rohclips bleiben privat** (`public/projekte/` ist git-ignoriert). Hochgeladen wird nur, was er freigibt.
 7. **Messen statt fühlen:** Sync, Pacing, Lautheit und Ausreißer werden am Render gemessen, nicht am Code geglaubt.
