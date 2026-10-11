@@ -1,6 +1,6 @@
 /**
  * Format NEWS (Skill stil-news), Design nacht-gruen. "Shopify Canvas – Brauchen wir bald keine Webdesigner mehr?"
- * News-Reaction: Bild ab der Hüfte, Gesicht 160 px höher, die Quelle (offizielle Shopify-Seite) als Hintergrund hinter
+ * News-Reaction: Bild ab der Hüfte, Titel oben, der Kopf direkt darunter, die Quelle (offizielle Shopify-Seite) als Hintergrund hinter
  * ihm (Greenscreen, von npm run portrait mit --hintergrund in den Take gerechnet), große knackige Titel über dem Kopf,
  * große Untertitel, am Ende die Frage mit Kommentar-Blase. Der Folgen-Aufruf läuft ohne Einblendung.
  */
@@ -18,15 +18,14 @@ import cut from "./cut.json";
 const C = createCut(cut);
 export const meta = { id: "ShopifyCanvas", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Bildlage (seine Vorgabe, 2026-10-11): der Kopf im oberen Drittel ("OBEN": 1,3fach, 686 px nach oben; Kopf ~y 250-900,
- * darunter Titel und Begriffe auf der Brust, unten die Untertitel). Nur solange die Quelle hinter ihm steht
+/** Bildlage (seine Vorgabe, 2026-10-11): Titel und Einblendungen oben, der Kopf direkt darunter (so hoch wie möglich),
+ * die Untertitel unten. "OBEN": 1,2fach, 348 px nach oben (Haaransatz ~y 550, Kinn ~y 1000); pro Szene stehen deshalb
+ * nur der Titel und eine Zeile Begriffe über ihm, weitere Begriffe ersetzen die vorherigen. Nur solange die Quelle hinter ihm steht
  * (Greenscreen), liegt er tiefer ("MITTE": 1,2fach, 160 px; so ist der Artikel über dem Kopf lesbar). Die Hose beginnt
  * im Take frühestens bei y 1680; die Bodenblende deckt sie in beiden Lagen ab. */
-const OBEN = { scale: 1.3, hoch: 686 };
+const OBEN = { scale: 1.2, hoch: 348 };
 const MITTE = { scale: 1.2, hoch: 160 };
 const HOSE = 1680;
-/** Titel und Hook in der Lage OBEN: unter dem Kinn statt über dem Kopf */
-const UNTEN = 650;
 /** die Greenscreen-Stellen im Take (wie bei npm run portrait --hintergrund) */
 const QUELLE = [...ausgabeFrames(C, 12.8, 17.85), ...ausgabeFrames(C, 27.9, 34.2)];
 const mitte = (fr: number) => QUELLE.some(([a, b]) => fr >= a && fr < b);
@@ -107,7 +106,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
   const tagX = (text: string, size: number, x0 = 24) => x0 + tagBreite(D, text, size) + 22;
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
-      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: lage === MITTE ? "50% 42%" : "50% 28%" }}>
+      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
         <SplitPerson split={0} zoom={zoomAt(fr)}>
           <Takes C={C} voice={voice} transform={`translateY(${-lage.hoch}px) scale(${lage.scale})`} transformOrigin="50% 0%" />
         </SplitPerson>
@@ -115,14 +114,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       <Toenung />
       <Bodenblende ab={HOSE * lage.scale - lage.hoch} />
 
-      <AbsoluteFill style={{ transform: `translateY(${UNTEN}px)` }}>
       <HookTitle fr={fr} line1="Shopify baut" line2="deinen Shop mit KI?!" outAt={T.gs1 - 6} />
-      <Pop fr={fr} at={F("ki-funktion")} until={T.gs1 - 6} x={0} y={548} w={1080} style={{ textAlign: "center", transformOrigin: "center" }}>
-        <Tag kind="ok" size={48}>
-          Neue KI-Funktion
-        </Tag>
-      </Pop>
-      </AbsoluteFill>
 
       {/* Quelle hinter ihm (Greenscreen im Take): nur die Quellenangabe dazu */}
       <Pop fr={fr} at={T.gs1} until={T.sidekick - 4} x={60} y={1228}>
@@ -131,59 +123,58 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         </Tag>
       </Pop>
 
-      <AbsoluteFill style={{ transform: `translateY(${UNTEN}px)` }}>
       {/* Sidekick: sagen, was du willst, die KI setzt es im Theme um */}
       <Szene fr={fr} at={T.sidekick} until={T.folgen - 2} title="Sag's einfach der KI!" frei>
         <Pop fr={fr} at={F("sidekick")} until={F("zum") - 6} x={24} y={118}>
           <Row text="Sidekick = Shopifys KI-Assistent" width={760} onPhoto />
         </Pop>
         {/* der ganze Satz ist breit: der Chip beginnt am linken Rand der sicheren Fläche (x 65), so endet er vor x 950 */}
-        <Pop fr={fr} at={F("zum")} x={-30} y={118}>
+        <Pop fr={fr} at={F("zum")} until={F("produktdarstellung") - 4} x={-30} y={118}>
           <Chat fr={fr} text={prompt} voll="Mach meine Startseite moderner" />
         </Pop>
-        <Pop fr={fr} at={F("produktdarstellung")} until={F("theme") - 6} x={24} y={210}>
+        <Pop fr={fr} at={F("produktdarstellung")} until={F("theme") - 4} x={24} y={118}>
           <Tag kind="accent" size={44}>
             Produkte neu
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("farben")} until={F("theme") - 6} x={tagX("Produkte neu", 44)} y={210}>
+        <Pop fr={fr} at={F("farben")} until={F("theme") - 4} x={tagX("Produkte neu", 44)} y={118}>
           <Tag kind="accent" size={44}>
             Farben = Marke
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("theme")} x={24} y={210}>
+        <Pop fr={fr} at={F("theme")} x={24} y={118}>
           <Row text="direkt im Theme umgesetzt" mark="ok" width={640} onPhoto />
         </Pop>
       </Szene>
 
       {/* Der entscheidende Punkt: schön heißt nicht verkauft */}
       <Szene fr={fr} at={T.punkt} until={T.verkauft - 2} title="Der entscheidende Punkt" frei>
-        <Pop fr={fr} at={F("schön", T.punkt)} x={24} y={118}>
+        <Pop fr={fr} at={F("schön", T.punkt)} until={F("verkaufen") - 4} x={24} y={118}>
           <Row text="schöner Shop in kurzer Zeit" mark="ok" width={680} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("verkaufen")} x={24} y={210}>
+        <Pop fr={fr} at={F("verkaufen")} x={24} y={118}>
           <Row text="verkauft er deshalb?" mark="no" width={560} onPhoto />
         </Pop>
       </Szene>
 
       {/* Was wirklich verkauft */}
       <Szene fr={fr} at={T.verkauft} until={T.bauen - 2} title="Was wirklich verkauft" frei>
-        <Pop fr={fr} at={F("produktseiten")} x={24} y={118}>
+        <Pop fr={fr} at={F("produktseiten")} until={F("vertrauen", T.verkauft) - 4} x={24} y={118}>
           <Tag kind="ok" size={44}>
             Produktseiten
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("nutzerführung")} x={tagX("Produktseiten", 44)} y={118}>
+        <Pop fr={fr} at={F("nutzerführung")} until={F("vertrauen", T.verkauft) - 4} x={tagX("Produktseiten", 44)} y={118}>
           <Tag kind="ok" size={44}>
             Nutzerführung
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("vertrauen", T.verkauft)} x={24} y={210}>
+        <Pop fr={fr} at={F("vertrauen", T.verkauft)} x={24} y={118}>
           <Tag kind="ok" size={44}>
             Vertrauen
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("conversion-rate")} x={tagX("Vertrauen", 44)} y={210}>
+        <Pop fr={fr} at={F("conversion-rate")} x={tagX("Vertrauen", 44)} y={118}>
           <Tag kind="ok" size={44}>
             Conversion-Rate
           </Tag>
@@ -192,10 +183,10 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Bauen ist leicht, verkaufen nicht */}
       <Szene fr={fr} at={T.bauen} until={T.hinweis - 2} title="Bauen ≠ verkaufen" frei>
-        <Pop fr={fr} at={F("einfacher")} x={24} y={118}>
+        <Pop fr={fr} at={F("einfacher")} until={F("verkauft", T.bauen) - 4} x={24} y={118}>
           <Row text="Shop bauen: immer einfacher" mark="ok" width={700} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("verkauft", T.bauen)} x={24} y={210}>
+        <Pop fr={fr} at={F("verkauft", T.bauen)} x={24} y={118}>
           <Tag kind="warn" size={44}>
             Shop, der verkauft: andere Sache
           </Tag>
@@ -217,19 +208,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
             <div style={{ ...schriftCss(D.text), fontSize: 48, whiteSpace: "nowrap" }}>Schreib mir deine Meinung</div>
           </div>
         </Pop>
-        <Pop fr={fr} at={F("würdet")} x={24} y={214}>
-          <Tag kind="ok" size={48}>
-            Ja
-          </Tag>
-        </Pop>
-        <Pop fr={fr} at={F("kompletten")} x={tagX("Ja", 48)} y={214}>
-          <Tag kind="warn" size={48}>
-            Nein
-          </Tag>
-        </Pop>
       </Szene>
-
-      </AbsoluteFill>
 
       <Captions C={C} fr={fr} top={1360} size={100} />
 
@@ -240,7 +219,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
             <Sfx key={`w${at}`} file="whoosh.mp3" at={at} volume={STIL.sfx * 0.6} />
           ))}
           <Sfx file="riser.mp3" at={F("punkt") - 48} volume={STIL.sfx * 0.6} />
-          {[F("ki-funktion"), F("sidekick"), F("produktdarstellung"), F("farben"), F("produktseiten"), F("nutzerführung"), F("vertrauen", T.verkauft), F("conversion-rate"), F("einfacher")].map((at) => (
+          {[F("sidekick"), F("produktdarstellung"), F("farben"), F("produktseiten"), F("nutzerführung"), F("vertrauen", T.verkauft), F("conversion-rate"), F("einfacher")].map((at) => (
             <Sfx key={`t${at}`} file="tick.mp3" at={at} volume={STIL.sfx * 0.7} />
           ))}
           {[F("verkaufen"), F("jeden", T.hinweis)].map((at) => (

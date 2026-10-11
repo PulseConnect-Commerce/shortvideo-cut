@@ -1,6 +1,6 @@
 /**
  * Format FACE (Skill stil-face), Design nacht (die drei Leuchtfarben werden an diesem Video getestet). "Warum zahlst
- * du für so viele Shopify-Apps?" Hot Take aus dem Agenturalltag: Bild ab der Hüfte, Gesicht 160 px höher, ruhig
+ * du für so viele Shopify-Apps?" Hot Take aus dem Agenturalltag: Bild ab der Hüfte, Titel oben, Kopf darunter, ruhig
  * geschnitten, die vier Einblendungen aus seinem Skript als große Titel (Reviews → Judge.me, Newsletter → Shopify
  * Messaging, KI-Verkauf + Support → MyStoreBuddy, Designänderung = Extra-App?!), dazu wenige Chips, am Ende die Frage
  * mit Kommentar-Blase. MyStoreBuddy ist seine eigene App: das steht im Bild ("unsere eigene App").
@@ -18,13 +18,12 @@ import cut from "./cut.json";
 const C = createCut(cut);
 export const meta = { id: "ShopifyApps", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Bildlage (seine Vorgabe, 2026-10-11): der Kopf im oberen Drittel (1,3fach, 686 px nach oben), Titel und Begriffe
- * darunter auf der Brust, unten die Untertitel. Die Hose beginnt im Take frühestens bei y ~1700, die Bodenblende deckt
- * sie ab. */
-const CROP = 1.3;
-const HOCH = 686;
+/** Bildlage (seine Vorgabe, 2026-10-11): Titel und Einblendungen oben, der Kopf direkt darunter (1,2fach, 348 px nach
+ * oben; Haaransatz ~y 550-580), die Untertitel unten. Pro Szene nur der Titel und eine Zeile Begriffe, weitere Begriffe
+ * ersetzen die vorherigen. Die Hose beginnt im Take frühestens bei y ~1700, die Bodenblende deckt sie ab. */
+const CROP = 1.2;
+const HOCH = 348;
 const HOSE = 1700;
-const UNTEN = 650;
 
 const F = C.cue;
 const T = (() => {
@@ -77,7 +76,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
   const tagX = (text: string, size: number, x0 = 24) => x0 + tagBreite(D, text, size) + 22;
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
-      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 28%" }}>
+      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
         <SplitPerson split={0} zoom={zoomAt(fr)}>
           <Takes C={C} voice={voice} transform={`translateY(${-HOCH}px) scale(${CROP})`} transformOrigin="50% 0%" />
         </SplitPerson>
@@ -85,22 +84,21 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       <Toenung />
       <Bodenblende ab={HOSE * CROP - HOCH} />
 
-      <AbsoluteFill style={{ transform: `translateY(${UNTEN}px)` }}>
       <HookTitle fr={fr} line1="Zu viele" line2="Shopify-Apps?!" outAt={T.sammeln - 6} />
 
       {/* Apps sammeln sich an und kosten jeden Monat */}
       <Szene fr={fr} at={T.sammeln} until={T.reviews - 2} title="App-Friedhof im Shop?!" frei>
-        <Pop fr={fr} at={F("ansammeln")} x={24} y={118}>
+        <Pop fr={fr} at={F("ansammeln")} until={F("monat") - 4} x={24} y={118}>
           <Tag kind="warn" size={44}>
             Apps sammeln sich an
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("monat")} x={24} y={210}>
+        <Pop fr={fr} at={F("monat")} x={24} y={118}>
           <Tag kind="warn" size={44}>
             jeden Monat Kosten
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("kostenlose")} x={tagX("jeden Monat Kosten", 44)} y={210}>
+        <Pop fr={fr} at={F("kostenlose")} x={tagX("jeden Monat Kosten", 44)} y={118}>
           <Tag kind="ok" size={44}>
             gratis geht oft
           </Tag>
@@ -114,10 +112,10 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
             Produktbewertungen
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("review-app")} x={24} y={118}>
+        <Pop fr={fr} at={F("review-app")} until={F("kostenlosen", T.reviews) - 4} x={24} y={118}>
           <Row text="Review-App: sinnvoll" mark="ok" width={560} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("kostenlosen", T.reviews)} x={24} y={210}>
+        <Pop fr={fr} at={F("kostenlosen", T.reviews)} x={24} y={118}>
           <Tag kind="ok" size={44}>
             kostenloser Tarif
           </Tag>
@@ -126,13 +124,13 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* 2. Newsletter → Shopify Messaging */}
       <Szene fr={fr} at={T.newsletter} until={T.service - 2} title="Newsletter → Shopify Messaging" titleAt={F("shopify-messaging")} frei>
-        <Pop fr={fr} at={F("newsletter-abonnenten")} x={24} y={118}>
+        <Pop fr={fr} at={F("newsletter-abonnenten")} until={F("kostenlosen", T.newsletter) - 4} x={24} y={118}>
           <Row text="30 Abonnenten" width={420} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("teures")} x={tagX("30 Abonnenten", 44, 24) + 60} y={118}>
+        <Pop fr={fr} at={F("teures")} until={F("kostenlosen", T.newsletter) - 4} x={tagX("30 Abonnenten", 44, 24) + 60} y={118}>
           <Row text="teures Tool?" mark="no" width={380} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("kostenlosen", T.newsletter)} x={24} y={210}>
+        <Pop fr={fr} at={F("kostenlosen", T.newsletter)} x={24} y={118}>
           <Tag kind="ok" size={44}>
             Gratis-Kontingent
           </Tag>
@@ -156,7 +154,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
             unsere eigene App
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("free")} x={24} y={210}>
+        <Pop fr={fr} at={F("free")} x={tagX("unsere eigene App", 44)} y={118}>
           <Tag kind="ok" size={44}>
             mit Free Plan
           </Tag>
@@ -192,7 +190,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
             Abhängigkeiten
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("ladezeit")} x={24} y={210}>
+        <Pop fr={fr} at={F("ladezeit")} x={tagX("Abhängigkeiten", 44, tagX("Geld", 44))} y={118}>
           <Tag kind="warn" size={44}>
             Ladezeit
           </Tag>
@@ -217,19 +215,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
             <div style={{ ...schriftCss(D.text), fontSize: 48, whiteSpace: "nowrap" }}>Schreib mir deine Meinung</div>
           </div>
         </Pop>
-        <Pop fr={fr} at={F("viele", T.frage)} x={24} y={214}>
-          <Tag kind="warn" size={48}>
-            viele Apps
-          </Tag>
-        </Pop>
-        <Pop fr={fr} at={F("selbst", T.frage)} x={tagX("viele Apps", 48)} y={214}>
-          <Tag kind="ok" size={48}>
-            selbst bauen
-          </Tag>
-        </Pop>
       </Szene>
-
-      </AbsoluteFill>
 
       <Captions C={C} fr={fr} top={1360} size={100} />
 

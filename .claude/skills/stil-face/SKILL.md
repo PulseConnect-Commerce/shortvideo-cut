@@ -31,11 +31,16 @@ bleibt.
   (Pointe, Frage), sonst ruhiges Bild (ein ganz langsames Zoom-in wie HERO ist ok). Das erste FACE-Video hatte
   Punch-ins an jedem Schnitt; das war ihm zu viel (siehe Notizen).
 - **Rand frei:** an jeder Seite mindestens 60 px (wie HERO).
-- **Kopf im oberen Drittel** (seine Vorgabe seit 2026-10-11, alle Formate; ersetzt "Gesicht 160 px höher"): Bildlage
-  "OBEN" mit `<Takes transform="translateY(-686px) scale(1.3)" transformOrigin="50% 0%" />` (bei seinem Bürostuhl-Setup
-  liegt der Kopf dann bei y ~250-900; mit `npm run raster` nachmessen, die Kopf-Oberkante gehört knapp unter y 250).
-  Hook, Titel und Begriffe liegen darunter auf der Brust (alles in `<AbsoluteFill style={{ transform: "translateY(650px)" }}>`,
-  Titel ab y ~940), Untertitel bei y 1360, unten `<Bodenblende ab={HOSE * 1.3 - 686} />` gegen Hose und leeren Rand.
+- **Titel oben, Kopf direkt darunter, Untertitel unten** (seine Vorgabe seit 2026-10-11, alle Formate; ersetzt
+  "Gesicht 160 px höher" und den kurzen Versuch mit dem Kopf ganz oben und den Titeln unter dem Kinn): Hook, Titel und
+  Einblendungen stehen **oben** (Hook ab y ~210, Szenen-Titel ab y 262, Begriffe in **einer** Zeile darunter bis
+  y ~510). Der Kopf beginnt direkt darunter, so hoch wie es geht: Bildlage "OBEN" mit
+  `<Takes transform="translateY(-348px) scale(1.2)" transformOrigin="50% 0%" />` (bei seinem Bürostuhl-Setup liegt der
+  Haaransatz dann bei y ~550-580, das Kinn bei ~1000-1100; mit Standbildern nachmessen, zwischen Begriffen und Haar
+  mindestens 30 px). Untertitel bei y 1360, unten `<Bodenblende ab={HOSE * 1.2 - 348} />` gegen Hose und leeren Rand.
+  Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
+  Wort - 4 Frames) oder steht daneben (`tagBreite`). Keine Pille unter dem Hook, keine Antwort-Chips (Ja/Nein) am
+  Ende, nur die Kommentar-Blase. Akzent-Anker 50 % 42 %.
   **Ausnahme:** Solange etwas gelesen werden muss, das hinter oder über ihm steht (Zeitungsartikel, Screenshot der
   Quelle), liegt er tiefer, Lage "MITTE" (`translateY(-160px) scale(1.2)`), und wechselt danach zurück
   (`ausgabeFrames(C, von, bis)` aus `bausteine.tsx` gibt die Frames der Greenscreen-Stellen). Vorlage:
@@ -55,7 +60,7 @@ bleibt.
 ## Untertitel
 
 - Wort für Wort, das gesprochene Wort in Blau `#31ADEC` (wie HERO), aber **größer: 100 px** statt 76, Oberkante
-  y 1320 (unter dem Kinn, auf der Brust). Lange Wörter werden von selbst kleiner (`fitSize`).
+  y 1360 (unter dem Kinn, auf der Brust). Lange Wörter werden von selbst kleiner (`fitSize`).
 - Fachbegriffe richtig schreiben (z. B. "KI-Agenten", "E-Commerce", "überhypt" statt Whispers "überhalbt").
 
 ## B-Roll: Begriffe über dem Kopf (ohne Karte und Foto)
@@ -129,3 +134,6 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-09, erstes FACE-Video kia
 - Kopf im oberen Drittel (2026-10-11, zur Vorschau von Shopify Canvas; ersetzt die +160 px von 2026-10-10): "Leider
   passt meine Kopfposition nicht. Es wurde vereinbart, dass diese im obendrein drittel auftauchen soll. Nur da, weil
   z.B ein Zeitungsartikel gezeigt wird und man ihn sonst nicht lesen kann, kann man kopf nach unten geschoben werden".
+- Titel wieder oben (2026-10-11, zur Canvas-Vorschau mit dem Kopf ganz oben und den Titeln unter dem Kinn): "Den Titel
+  sowie die Einblendungen sollten bitte nach wie vor oben angezeigt werden. Untertitel passen unten soweit". Umgesetzt:
+  Titel und eine Zeile Begriffe oben, der Kopf direkt darunter (1,2fach, 348 px nach oben), Untertitel bei y 1360.

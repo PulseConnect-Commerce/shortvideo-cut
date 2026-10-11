@@ -1,6 +1,6 @@
 /**
  * Format NEWS (Skill stil-news), Design nacht-gruen. "65 % wollen KI beim Weihnachtsshopping nutzen"
- * News-Reaction: Bild ab der Hüfte, Gesicht 160 px höher, die Quelle (Shopify Holiday-Report) als Hintergrund hinter
+ * News-Reaction: Bild ab der Hüfte, Titel oben, der Kopf direkt darunter, die Quelle (Shopify Holiday-Report) als Hintergrund hinter
  * ihm (Greenscreen, von npm run portrait mit --hintergrund in den Take gerechnet): erst die Schlagzeile, dann die
  * markierte 65-%-Stelle. "~33 %" groß auf "jeder Dritte". Große knackige Titel, große Untertitel, am Ende die Frage mit
  * Kommentar-Blase. Der Folgen-Aufruf läuft bewusst ohne Einblendung (sein Wunsch).
@@ -9,7 +9,8 @@ import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { ausgabeFrames, Bodenblende, Captions, clamp, HookTitle, popS, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
 import { Pop, Row, Szene, Tag, tagBreite } from "../../lib/broll";
-import { DesignRahmen, type DesignName, schriftCss, Toenung, useDesign } from "../../lib/design";
+import { DesignRahmen, type DesignName, mass, schriftCss, Toenung, useDesign } from "../../lib/design";
+import { textWidth } from "../../lib/messen";
 import { Raster } from "../../lib/raster";
 import { createCut } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
@@ -18,13 +19,13 @@ import cut from "./cut.json";
 const C = createCut(cut);
 export const meta = { id: "KiWeihnachten", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Bildlage (seine Vorgabe, 2026-10-11): der Kopf im oberen Drittel ("OBEN"), Titel und Begriffe darunter auf der Brust;
- * nur solange die Quelle hinter ihm steht (Greenscreen), liegt er tiefer ("MITTE"), damit der Artikel lesbar ist. Die
- * Hose beginnt im Take frühestens bei y ~1700; die Bodenblende deckt sie in beiden Lagen ab. */
-const OBEN = { scale: 1.3, hoch: 686 };
+/** Bildlage (seine Vorgabe, 2026-10-11): Titel und Einblendungen oben, der Kopf direkt darunter ("OBEN"), die Untertitel
+ * unten; pro Szene nur der Titel und eine Zeile Begriffe, weitere Begriffe ersetzen die vorherigen. Nur solange die
+ * Quelle hinter ihm steht (Greenscreen), liegt er tiefer ("MITTE"), damit der Artikel lesbar ist. Die Hose beginnt im
+ * Take frühestens bei y ~1700; die Bodenblende deckt sie in beiden Lagen ab. */
+const OBEN = { scale: 1.2, hoch: 348 };
 const MITTE = { scale: 1.2, hoch: 160 };
 const HOSE = 1700;
-const UNTEN = 650;
 const QUELLE = [...ausgabeFrames(C, 113.95, 116.8), ...ausgabeFrames(C, 117.25, 124.5)];
 const mitte = (fr: number) => QUELLE.some(([a, b]) => fr >= a && fr < b);
 
@@ -69,14 +70,15 @@ const Blase: React.FC = () => {
   );
 };
 
-/** große Zahl in der Leuchtfarbe (z. B. "~33 %"), poppt auf ihrem Wort auf */
+/** große Zahl in der Leuchtfarbe (z. B. "~33 %"), poppt auf ihrem Wort auf; so groß, dass sie über dem Kopf bleibt */
+const ZAHL = 124;
 const GrosseZahl: React.FC<{ fr: number; at: number; text: string }> = ({ fr, at, text }) => {
   const D = useDesign();
   return (
     <div
       style={{
         ...schriftCss(D.titel),
-        fontSize: 210,
+        fontSize: ZAHL,
         lineHeight: 1,
         color: D.ok,
         textShadow: `0 0 40px ${D.ok}66, 0 8px 30px rgb(0 0 0 / 0.6)`,
@@ -105,9 +107,10 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
   const fr = useCurrentFrame();
   const lage = mitte(fr) ? MITTE : OBEN;
   const tagX = (text: string, size: number, x0 = 24) => x0 + tagBreite(D, text, size) + 22;
+  const zahlX = 24 + Math.round(textWidth("~33 %", ZAHL, ...mass(D.titel))) + 36;
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
-      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: lage === MITTE ? "50% 42%" : "50% 28%" }}>
+      <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
         <SplitPerson split={0} zoom={zoomAt(fr)}>
           <Takes C={C} voice={voice} transform={`translateY(${-lage.hoch}px) scale(${lage.scale})`} transformOrigin="50% 0%" />
         </SplitPerson>
@@ -115,14 +118,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       <Toenung />
       <Bodenblende ab={HOSE * lage.scale - lage.hoch} />
 
-      <AbsoluteFill style={{ transform: `translateY(${UNTEN}px)` }}>
       <HookTitle fr={fr} line1="65 % shoppen" line2="mit KI?!" outAt={T.gsA - 6} />
-      <Pop fr={fr} at={F("überlassen")} until={T.gsA - 6} x={0} y={560} w={1080} style={{ textAlign: "center", transformOrigin: "center" }}>
-        <Tag kind="warn" size={48}>
-          KI kauft selbst ein?
-        </Tag>
-      </Pop>
-      </AbsoluteFill>
 
       {/* Quelle hinter ihm (Greenscreen im Take): Schlagzeile, dann die markierte 65-%-Stelle */}
       <Pop fr={fr} at={T.gsA} until={T.beispiel - 4} x={60} y={1228}>
@@ -131,23 +127,22 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         </Tag>
       </Pop>
 
-      <AbsoluteFill style={{ transform: `translateY(${UNTEN}px)` }}>
       {/* Wofür sie KI nutzen wollen */}
       <Szene fr={fr} at={T.beispiel} until={T.spannend - 2} title="KI als Berater" frei>
-        <Pop fr={fr} at={F("geschenkideen")} x={24} y={118}>
+        <Pop fr={fr} at={F("geschenkideen")} until={F("vergleichen") - 4} x={24} y={118}>
           <Row text="Geschenkideen finden" mark="ok" width={600} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("vergleichen")} x={24} y={210}>
+        <Pop fr={fr} at={F("vergleichen")} x={24} y={118}>
           <Row text="Produkte vergleichen" mark="ok" width={600} onPhoto />
         </Pop>
       </Szene>
 
       {/* Der spannende Teil: nur jeder Dritte lässt die KI einkaufen */}
       <Szene fr={fr} at={T.spannend} until={T.stehen - 2} title="Der spannende Teil" frei>
-        <Pop fr={fr} at={F("dritte")} x={24} y={110} style={{ transform: "none" }}>
+        <Pop fr={fr} at={F("dritte")} x={24} y={100} style={{ transform: "none" }}>
           <GrosseZahl fr={fr} at={F("dritte")} text="~33 %" />
         </Pop>
-        <Pop fr={fr} at={F("eigenständig")} x={560} y={150}>
+        <Pop fr={fr} at={F("eigenständig")} x={zahlX} y={118}>
           <Tag kind="warn" size={44}>
             lassen KI einkaufen
           </Tag>
@@ -156,20 +151,20 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Berater ja, Einkäufer (noch) nein */}
       <Szene fr={fr} at={T.stehen} until={T.frage1 - 2} title="Berater ja, Einkäufer nein" frei>
-        <Pop fr={fr} at={F("einkaufsberater")} x={24} y={118}>
+        <Pop fr={fr} at={F("einkaufsberater")} until={F("einkäufer") - 4} x={24} y={118}>
           <Row text="KI als Einkaufsberater" mark="ok" width={620} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("einkäufer")} x={24} y={210}>
+        <Pop fr={fr} at={F("einkäufer")} x={24} y={118}>
           <Row text="KI als Einkäufer" mark="no" width={520} onPhoto />
         </Pop>
       </Szene>
 
       {/* Versteht eine KI, was du verkaufst? */}
       <Szene fr={fr} at={T.frage1} until={T.klar - 2} title="Versteht KI deinen Shop?" frei>
-        <Pop fr={fr} at={F("stichpunkten")} x={24} y={118}>
+        <Pop fr={fr} at={F("stichpunkten")} until={F("schwierig") - 4} x={24} y={118}>
           <Row text="nur 3 Stichpunkte" mark="no" width={520} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("schwierig")} x={24} y={210}>
+        <Pop fr={fr} at={F("schwierig")} x={24} y={118}>
           <Tag kind="warn" size={44}>
             schwierig für die KI
           </Tag>
@@ -178,17 +173,17 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Was immer wichtiger wird */}
       <Szene fr={fr} at={T.klar} until={T.uebrigens - 2} title="Das braucht die KI" frei>
-        <Pop fr={fr} at={F("produktnamen")} x={24} y={118}>
+        <Pop fr={fr} at={F("produktnamen")} until={F("eigenschaften") - 4} x={24} y={118}>
           <Tag kind="ok" size={44}>
             klare Produktnamen
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("eigenschaften")} x={24} y={210}>
+        <Pop fr={fr} at={F("eigenschaften")} x={24} y={118}>
           <Tag kind="ok" size={44}>
             alle Eigenschaften
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("beschreibungen")} x={tagX("alle Eigenschaften", 44)} y={210}>
+        <Pop fr={fr} at={F("beschreibungen")} x={tagX("alle Eigenschaften", 44)} y={118}>
           <Tag kind="ok" size={44}>
             Beschreibungen
           </Tag>
@@ -197,10 +192,10 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Einordnung der 65 % */}
       <Szene fr={fr} at={T.uebrigens} until={T.folgen - 2} title="Gut zu wissen" frei>
-        <Pop fr={fr} at={F("umfrage", T.uebrigens)} x={24} y={118}>
+        <Pop fr={fr} at={F("umfrage", T.uebrigens)} until={F("prognose") - 4} x={24} y={118}>
           <Row text="65 % = Umfrage" width={520} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("prognose")} x={24} y={210}>
+        <Pop fr={fr} at={F("prognose")} x={24} y={118}>
           <Row text="keine Prognose für Deutschland" mark="no" width={780} onPhoto />
         </Pop>
       </Szene>
@@ -209,12 +204,12 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Seine Meinung */}
       <Szene fr={fr} at={T.meinung} until={T.frage - 2} title="Meine Meinung" frei>
-        <Pop fr={fr} at={F("produktdaten", T.meinung)} x={24} y={118}>
+        <Pop fr={fr} at={F("produktdaten", T.meinung)} until={F("kunden", T.meinung) - 4} x={24} y={118}>
           <Tag kind="warn" size={44}>
             Produktdaten vernachlässigt?
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("kunden", T.meinung)} x={24} y={210}>
+        <Pop fr={fr} at={F("kunden", T.meinung)} x={24} y={118}>
           <Row text="schwer für Kunden und KI" mark="no" width={660} onPhoto />
         </Pop>
       </Szene>
@@ -227,19 +222,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
             <div style={{ ...schriftCss(D.text), fontSize: 48, whiteSpace: "nowrap" }}>Schreib mir deine Meinung</div>
           </div>
         </Pop>
-        <Pop fr={fr} at={F("empfehlen")} x={24} y={214}>
-          <Tag kind="ok" size={48}>
-            empfehlen
-          </Tag>
-        </Pop>
-        <Pop fr={fr} at={F("einkaufen", T.frage)} x={tagX("empfehlen", 48)} y={214}>
-          <Tag kind="warn" size={48}>
-            einkaufen
-          </Tag>
-        </Pop>
       </Szene>
-
-      </AbsoluteFill>
 
       <Captions C={C} fr={fr} top={1360} size={100} />
 
@@ -253,7 +236,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
           {[F("geschenkideen"), F("vergleichen"), F("einkaufsberater"), F("produktnamen"), F("eigenschaften"), F("beschreibungen")].map((at) => (
             <Sfx key={`t${at}`} file="tick.mp3" at={at} volume={STIL.sfx * 0.7} />
           ))}
-          {[F("überlassen"), F("einkäufer"), F("stichpunkten"), F("prognose"), F("kunden", T.meinung)].map((at) => (
+          {[F("einkäufer"), F("stichpunkten"), F("prognose"), F("kunden", T.meinung)].map((at) => (
             <Sfx key={`s${at}`} file="stamp.mp3" at={at} volume={STIL.sfx * 0.5} />
           ))}
           <Sfx file="impact.mp3" at={F("dritte")} volume={STIL.sfx * 0.6} />
