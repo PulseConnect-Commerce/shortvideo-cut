@@ -27,8 +27,9 @@ export const meta = { id: "KiKunde", durationInFrames: C.DURATION, fps: C.FPS };
  * Quelle hinter ihm steht (Greenscreen), liegt er tiefer ("MITTE"), damit der Artikel lesbar ist. */
 const OBEN = { scale: 1.2, hoch: 348 };
 const MITTE = { scale: 1.2, hoch: 160 };
-/** Untertitel: klein und ruhig, damit sie nicht wie Titel wirken (seine Vorgabe 2026-10-11) */
-const UT = { top: 1400, size: 64 };
+/** Untertitel: klein und ruhig (seine Vorgabe 2026-10-11) und höher bei y 1260, damit der Beschreibungstext der App sie
+ * nicht verdeckt; Quellen-Pille und Hinweise liegen darunter bei y 1350 */
+const UT = { top: 1260, size: 64 };
 const HOSE = 1700;
 /** die Greenscreen-Stellen im Take (wie bei npm run portrait --hintergrund) */
 const QUELLE = [...ausgabeFrames(C, 61.95, 68.0), ...ausgabeFrames(C, 68.85, 73.95), ...ausgabeFrames(C, 76.7, 78.6)];
@@ -128,12 +129,12 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Szene>
 
       {/* Quelle hinter ihm (Greenscreen im Take): Schlagzeile, dann die markierte Stelle; nicht tagesaktuell */}
-      <Pop fr={fr} at={T.gs1} until={T.gs2 - 4} x={60} y={1228}>
+      <Pop fr={fr} at={T.gs1} until={T.gs2 - 4} x={60} y={1350}>
         <Tag kind="ink" size={42}>
           Quelle: IT Boltwise, 29. Sep. 2026
         </Tag>
       </Pop>
-      <Pop fr={fr} at={T.gs2} until={T.vor - 4} x={60} y={1228}>
+      <Pop fr={fr} at={T.gs2} until={T.vor - 4} x={60} y={1350}>
         <Tag kind="ink" size={42}>
           Seit August in Shopify-Shops aktiv
         </Tag>

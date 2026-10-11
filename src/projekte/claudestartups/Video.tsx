@@ -25,8 +25,9 @@ export const meta = { id: "ClaudeStartups", durationInFrames: C.DURATION, fps: C
  * Quelle hinter ihm steht (Greenscreen), liegt er tiefer ("MITTE"), damit die Schlagzeile lesbar ist. */
 const OBEN = { scale: 1.2, hoch: 348 };
 const MITTE = { scale: 1.2, hoch: 160 };
-/** Untertitel: klein und ruhig, damit sie nicht wie Titel wirken (seine Vorgabe 2026-10-11) */
-const UT = { top: 1400, size: 64 };
+/** Untertitel: klein und ruhig (seine Vorgabe 2026-10-11) und höher bei y 1260, damit der Beschreibungstext der App sie
+ * nicht verdeckt; Quellen-Pille und Hinweise liegen darunter bei y 1350 */
+const UT = { top: 1260, size: 64 };
 const HOSE = 1700;
 /** die Greenscreen-Stelle im Take (wie bei npm run portrait --hintergrund): "Anthropic … erweitert. Und das Angebot …" */
 const QUELLE = ausgabeFrames(C, 35.55, 44.95);
@@ -63,7 +64,7 @@ const akzentAt = (fr: number) =>
 const Hinweis: React.FC<{ fr: number; at: number }> = ({ fr, at }) => {
   const D = useDesign();
   return (
-    <Pop fr={fr} at={at} x={60} y={1206}>
+    <Pop fr={fr} at={at} x={60} y={1350}>
       <div style={{ ...D.chip, color: D.chipText, width: 880, padding: "14px 24px", boxSizing: "border-box" }}>
         <div style={{ ...schriftCss(D.text), fontSize: 34, lineHeight: 1.25 }}>
           <span style={{ color: D.warn }}>Stand 11.10.:</span> Team-Jahr und 1.000 $ sind laut Anthropic derzeit
@@ -98,7 +99,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       <HookTitle fr={fr} line1="Claude 1 Jahr" line2="kostenlos?!" outAt={T.gs - 6} />
 
       {/* Quelle hinter ihm (Greenscreen im Take): die Schlagzeile der Ankündigung */}
-      <Pop fr={fr} at={T.gs} until={T.angebot - 4} x={60} y={1228}>
+      <Pop fr={fr} at={T.gs} until={T.angebot - 4} x={60} y={1350}>
         <Tag kind="ink" size={42}>
           Quelle: Anthropic, 6. Okt. 2026
         </Tag>
