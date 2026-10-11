@@ -39,8 +39,8 @@ Das Logo (pulseconnect.de/pulseconnect-logo.png) läuft von Blau `#00A2FC` über
 
 So gehst du vor:
 
-- **NEWS/Reaction immer `nacht-mint`** (2026-10-11: "Bitte alle News Videos im Video Stil 3 mit Mintblau anlegen").
-  Dort wird nicht getestet.
+- **NEWS/Reaction immer `nacht-gruen`** (2026-10-11: "Bitte alle News Videos in Zukunft i, Video Stil 2 von oben
+  schneiden. "Logo Hellgrün""; ersetzt seine Angabe kurz davor, Variante 3 Mint-Hellblau). Dort wird nicht getestet.
 - **Beim nächsten HERO- oder FACE-Video die drei Nacht-Varianten testen** (nacht, nacht-gruen, nacht-mint), nicht pulse: vor der
   Vorschau aus seinem neuen Clip je Variante dieselben Standbilder zeigen (Hook, eine Szene, das Ende) und fragen
   (AskUserQuestion), welche Variante das Video bekommt; will er sie im Bewegtbild vergleichen, die Vorschau in allen
