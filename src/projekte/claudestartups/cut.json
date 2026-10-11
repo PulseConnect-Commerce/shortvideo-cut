@@ -40,14 +40,7 @@
   },
   {
    "src": "claudestartups/t1",
-   "from": 45.805,
-   "to": 46.845,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "claudestartups/t1",
-   "from": 47.715,
+   "from": 47.655,
    "to": 52.445,
    "nach": 0.09,
    "vor": 0.09
@@ -138,14 +131,7 @@
   },
   {
    "src": "claudestartups/t1",
-   "from": 152.115,
-   "to": 153.315,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "claudestartups/t1",
-   "from": 153.905,
+   "from": 153.755,
    "to": 156.075,
    "nach": 0.09,
    "vor": 0.09
@@ -166,14 +152,7 @@
   },
   {
    "src": "claudestartups/t1",
-   "from": 211.265,
-   "to": 212.535,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "claudestartups/t1",
-   "from": 213.165,
+   "from": 212.955,
    "to": 216.045,
    "nach": 0.09,
    "vor": 0.09
@@ -425,26 +404,26 @@
   {
    "text": "Denn",
    "src": "claudestartups/t1",
-   "start": 45.85,
-   "end": 45.97
+   "start": 47.7,
+   "end": 47.86
   },
   {
    "text": "wenn",
    "src": "claudestartups/t1",
-   "start": 46.01,
-   "end": 46.13
+   "start": 47.89,
+   "end": 48.02
   },
   {
    "text": "dein",
    "src": "claudestartups/t1",
-   "start": 46.17,
-   "end": 46.33
+   "start": 48.05,
+   "end": 48.28
   },
   {
    "text": "Startup",
    "src": "claudestartups/t1",
-   "start": 46.39,
-   "end": 46.845
+   "start": 48.31,
+   "end": 48.62
   },
   {
    "text": "angenommen",
@@ -1331,20 +1310,20 @@
   {
    "text": "Was",
    "src": "claudestartups/t1",
-   "start": 152.16,
-   "end": 152.3
+   "start": 153.8,
+   "end": 154.1
   },
   {
    "text": "ich",
    "src": "claudestartups/t1",
-   "start": 152.34,
-   "end": 152.42
+   "start": 154.14,
+   "end": 154.3
   },
   {
    "text": "jetzt",
    "src": "claudestartups/t1",
-   "start": 154.27,
-   "end": 154.53
+   "start": 154.34,
+   "end": 154.5
   },
   {
    "text": "besonders",
@@ -1511,26 +1490,26 @@
   {
    "text": "Meine",
    "src": "claudestartups/t1",
-   "start": 211.29,
-   "end": 211.49
+   "start": 213.0,
+   "end": 213.45
   },
   {
    "text": "Meinung",
    "src": "claudestartups/t1",
-   "start": 211.55,
-   "end": 211.79
+   "start": 213.5,
+   "end": 213.82
   },
   {
    "text": "dazu",
    "src": "claudestartups/t1",
-   "start": 211.85,
-   "end": 212.15
+   "start": 213.86,
+   "end": 214.08
   },
   {
    "text": "ist,",
    "src": "claudestartups/t1",
-   "start": 212.27,
-   "end": 212.41
+   "start": 214.12,
+   "end": 214.3
   },
   {
    "text": "wenn",
@@ -1781,9 +1760,8 @@
   4,
   3,
   2,
-  2,
+  4,
   3,
-  2,
   3,
   2,
   2,

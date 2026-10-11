@@ -2,37 +2,218 @@
  "projekt": "kiweihnachten",
  "sprache": "de",
  "fps": 30,
- "pausen": {"min_gap": 0.2, "pre": 0.04, "post": 0.06},
+ "pausen": {
+  "min_gap": 0.2,
+  "pre": 0.04,
+  "post": 0.06
+ },
  "saetze": [
-  {"take": "t1", "ab": 34.1, "text": "Laut Shopify News wollen rund 65% beim Weihnachtshopping KI nutzen."},
-  {"take": "t1", "ab": 44.7, "text": "Aber ihre Einkäufe der KI überlassen, da sieht es plötzlich ganz anders aus."},
-  {"take": "t1", "ab": 114.0, "text": "Shopify hat gerade seinen neuen Holiday-Report veröffentlicht."},
-  {"take": "t1", "ab": 117.3, "text": "Und laut der Umfrage wollen 65% der befragten Verbraucher KI für mindestens eine Aufgabe beim Weihnachtseinkauf nutzen."},
-  {"take": "t1", "ab": 125.0, "text": "Zum Beispiel um Geschenkideen zu finden oder eben Produkte zu vergleichen."},
-  {"take": "t1", "ab": 130.0, "text": "Aber jetzt kommt der spannende Teil."},
-  {"take": "t1", "ab": 132.2, "text": "Nur ungefähr jeder Dritte vertraut der KI soweit, dass sie auch eigenständig für ihn einkauft."},
-  {"take": "t1", "ab": 138.4, "text": "Und das zeigt für mich ganz klar, wo wir gerade stehen."},
-  {"take": "t1", "ab": 150.95, "text": "Denn KI wird immer mehr zum Einkaufsberater, aber noch lange nicht automatisch zum Einkäufer"},
-  {"take": "t1", "ab": 191.2, "text": "Und genau deshalb sollte sich ein Onlineshop-Betreiber jetzt die Frage stellen, versteht eine KI überhaupt, was ich hier verkaufe"},
-  {"take": "t1", "ab": 200.5, "text": "wenn deine Produktbeschreibung nur aus drei Stichpunkten besteht, dann wird es natürlich ganz schön schwierig für die KI."},
-  {"take": "t1", "ab": 215.4, "text": "Klare Produktnamen, vollständige Eigenschaften und verständliche Beschreibungen werden deshalb immer wichtiger."},
-  {"take": "t1", "ab": 222.1, "text": "Und übrigens, die 65% stammen aus eigener Umfrage und sind natürlich keine Prognose für Deutschland."},
-  {"take": "t1", "ab": 232.3, "text": "Und wenn du wissen willst, wie sich KI auf Shopify und den E-Commerce auslebt, dann folge mir.", "ganz": true},
-  {"take": "t1", "ab": 238.25, "text": "Denn genau darum geht es hier in meinem Kanal.", "ganz": true},
-  {"take": "t1", "ab": 299.85, "text": "Denn meine Meinung dazu, wer seine Produktdaten heute vernachlässigt, der macht es morgen nicht nur dem Kunden schwer, sondern leider auch der KI."},
-  {"take": "t1", "ab": 307.75, "text": "Aber, würdet ihr eurer KI die Weihnachtsgeschenke empfehlen lassen oder sie sogar komplett einkaufen lassen?", "ganz": true}
+  {
+   "take": "t1",
+   "ab": 34.1,
+   "text": "Laut Shopify News wollen rund 65% beim Weihnachtshopping KI nutzen."
+  },
+  {
+   "take": "t1",
+   "ab": 44.7,
+   "text": "Aber ihre Einkäufe der KI überlassen, da sieht es plötzlich ganz anders aus."
+  },
+  {
+   "take": "t1",
+   "ab": 114.0,
+   "text": "Shopify hat gerade seinen neuen Holiday-Report veröffentlicht."
+  },
+  {
+   "take": "t1",
+   "ab": 117.3,
+   "text": "Und laut der Umfrage wollen 65% der befragten Verbraucher KI für mindestens eine Aufgabe beim Weihnachtseinkauf nutzen."
+  },
+  {
+   "take": "t1",
+   "ab": 125.0,
+   "text": "Zum Beispiel um Geschenkideen zu finden oder eben Produkte zu vergleichen."
+  },
+  {
+   "take": "t1",
+   "ab": 130.0,
+   "text": "Aber jetzt kommt der spannende Teil."
+  },
+  {
+   "take": "t1",
+   "ab": 132.2,
+   "text": "Nur ungefähr jeder Dritte vertraut der KI soweit, dass sie auch eigenständig für ihn einkauft."
+  },
+  {
+   "take": "t1",
+   "ab": 138.4,
+   "text": "Und das zeigt für mich ganz klar, wo wir gerade stehen."
+  },
+  {
+   "take": "t1",
+   "ab": 150.95,
+   "text": "Denn KI wird immer mehr zum Einkaufsberater, aber noch lange nicht automatisch zum Einkäufer"
+  },
+  {
+   "take": "t1",
+   "ab": 191.2,
+   "text": "Und genau deshalb sollte sich ein Onlineshop-Betreiber jetzt die Frage stellen, versteht eine KI überhaupt, was ich hier verkaufe"
+  },
+  {
+   "take": "t1",
+   "ab": 200.5,
+   "text": "wenn deine Produktbeschreibung nur aus drei Stichpunkten besteht, dann wird es natürlich ganz schön schwierig für die KI."
+  },
+  {
+   "take": "t1",
+   "ab": 215.4,
+   "text": "Klare Produktnamen, vollständige Eigenschaften und verständliche Beschreibungen werden deshalb immer wichtiger."
+  },
+  {
+   "take": "t1",
+   "ab": 222.1,
+   "text": "Und übrigens, die 65% stammen aus eigener Umfrage und sind natürlich keine Prognose für Deutschland."
+  },
+  {
+   "take": "t1",
+   "ab": 233.3,
+   "text": "du wissen willst, wie sich KI auf Shopify und den E-Commerce auslebt, dann folge mir.",
+   "ganz": true
+  },
+  {
+   "take": "t1",
+   "ab": 238.25,
+   "text": "Denn genau darum geht es hier in meinem Kanal.",
+   "ganz": true
+  },
+  {
+   "take": "t1",
+   "ab": 299.85,
+   "text": "Denn meine Meinung dazu, wer seine Produktdaten heute vernachlässigt, der macht es morgen nicht nur dem Kunden schwer, sondern leider auch der KI."
+  },
+  {
+   "take": "t1",
+   "ab": 307.75,
+   "text": "Aber, würdet ihr eurer KI die Weihnachtsgeschenke empfehlen lassen oder sie sogar komplett einkaufen lassen?",
+   "ganz": true
+  }
  ],
- "ende": {"bis": 313.55},
+ "ende": {
+  "bis": 313.55
+ },
  "korrekturen": [
-  ["t1", 37.04, "Weihnachtshopping", "Weihnachtsshopping"],
-  ["t1", 46.26, "überlassen,", "überlassen?"], ["t1", 47.12, "da", "Da"], ["t1", 48.34, "aus.", "aus!"],
-  ["t1", 131.17, "Teil.", "Teil:"], ["t1", 134.75, "soweit,", "so weit,"],
-  ["t1", 155.25, "Einkäufer", "Einkäufer."],
-  ["t1", 194.70, "stellen,", "stellen:"], ["t1", 195.36, "versteht", "Versteht"], ["t1", 197.16, "verkaufe", "verkaufe?"],
-  ["t1", 200.59, "wenn", "Wenn"],
-  ["t1", 222.31, "übrigens,", "übrigens:"], ["t1", 224.93, "eigener", "einer"],
-  ["t1", 236.52, "auslebt,", "auswirkt,"],
-  ["t1", 300.77, "dazu,", "dazu:"], ["t1", 301.67, "wer", "Wer"],
-  ["t1", 307.82, "Aber,", "Aber:"], ["t1", 308.32, "würdet", "Würdet"]
+  [
+   "t1",
+   37.04,
+   "Weihnachtshopping",
+   "Weihnachtsshopping"
+  ],
+  [
+   "t1",
+   46.26,
+   "überlassen,",
+   "überlassen?"
+  ],
+  [
+   "t1",
+   47.12,
+   "da",
+   "Da"
+  ],
+  [
+   "t1",
+   48.34,
+   "aus.",
+   "aus!"
+  ],
+  [
+   "t1",
+   131.17,
+   "Teil.",
+   "Teil:"
+  ],
+  [
+   "t1",
+   134.75,
+   "soweit,",
+   "so weit,"
+  ],
+  [
+   "t1",
+   155.25,
+   "Einkäufer",
+   "Einkäufer."
+  ],
+  [
+   "t1",
+   194.7,
+   "stellen,",
+   "stellen:"
+  ],
+  [
+   "t1",
+   195.36,
+   "versteht",
+   "Versteht"
+  ],
+  [
+   "t1",
+   197.16,
+   "verkaufe",
+   "verkaufe?"
+  ],
+  [
+   "t1",
+   200.59,
+   "wenn",
+   "Wenn"
+  ],
+  [
+   "t1",
+   222.31,
+   "übrigens,",
+   "übrigens:"
+  ],
+  [
+   "t1",
+   224.93,
+   "eigener",
+   "einer"
+  ],
+  [
+   "t1",
+   236.52,
+   "auslebt,",
+   "auswirkt,"
+  ],
+  [
+   "t1",
+   300.77,
+   "dazu,",
+   "dazu:"
+  ],
+  [
+   "t1",
+   301.67,
+   "wer",
+   "Wer"
+  ],
+  [
+   "t1",
+   307.82,
+   "Aber,",
+   "Aber:"
+  ],
+  [
+   "t1",
+   308.32,
+   "würdet",
+   "Würdet"
+  ],
+  [
+   "t1",
+   233.42,
+   "du",
+   "Du"
+  ]
  ]
 }

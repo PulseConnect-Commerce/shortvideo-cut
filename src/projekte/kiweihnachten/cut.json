@@ -145,10 +145,10 @@
   },
   {
    "src": "kiweihnachten/t1",
-   "from": 232.335,
+   "from": 233.185,
    "to": 238.085,
    "nach": 0.09,
-   "vor": 0.05
+   "vor": 0.09
   },
   {
    "src": "kiweihnachten/t1",
@@ -1190,19 +1190,7 @@
    "end": 227.61
   },
   {
-   "text": "Und",
-   "src": "kiweihnachten/t1",
-   "start": 232.34,
-   "end": 232.46
-  },
-  {
-   "text": "wenn",
-   "src": "kiweihnachten/t1",
-   "start": 232.5,
-   "end": 232.84
-  },
-  {
-   "text": "du",
+   "text": "Du",
    "src": "kiweihnachten/t1",
    "start": 233.42,
    "end": 233.58
@@ -1642,7 +1630,6 @@
   3,
   3,
   3,
-  2,
   2,
   2,
   3,

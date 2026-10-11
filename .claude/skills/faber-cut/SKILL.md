@@ -130,6 +130,12 @@ Erst wenn er "passt" sagt:
 
 ## Regeln, die immer gelten
 
+0. **Nichts doppelt** (seine Vorgabe 2026-10-11, nach drei doppelten Stellen im Claude-Video und einer im
+   Weihnachtsvideo): nach jedem `npm run schnitt` läuft `npm run doppelt -- <projekt>`. Es meldet Lücken zwischen zwei
+   behaltenen Wörtern, in denen trotzdem gesprochen wird: dort hat die Transkription einen Neuansatz verschluckt
+   ("Denn wenn dein Star- … Denn wenn dein Startup"). Jede Meldung nachhören (`snips`), den sauberen letzten Anlauf
+   nehmen, die Wortzeiten im `t1.aligned.json` korrigieren. Auch hörbare Fehlstarts mit Pause danach ("Und wenn …
+   du wissen willst") gehören raus.
 1. **Füllwörter immer raus, Pausen ab 0,3 s raus, aber keine Mini-Jump-Cuts:** kein Stück unter ~0,8 s mitten im Satz (das macht `tools/schnitt.py` selbst). Ein Satz wird nie zerhackt, ein Wort nie angeschnitten.
 2. **Kontext vor Tempo.** Bevor ein Nebensatz rausfliegt: Satz davor und danach ohne ihn lesen. Fragt ein Zuschauer dann "warum?" oder "was?", bleibt er drin. Der Aufruf (CTA) bleibt ein Stück.
 3. **Zahlen, Ergebnisse, Daten werden nie erfunden.** Auf dem Bildschirm stehen die Zahlen, die er sagt oder die gemessen sind.

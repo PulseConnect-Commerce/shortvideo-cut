@@ -26,6 +26,7 @@
     "bild": "node tools/py.mjs bild.py",
     "final": "node tools/final.mjs",
     "checks": "node tools/py.mjs checks.py",
+    "doppelt": "node tools/py.mjs doppelt.py",
     "studio": "remotion studio",
     "still": "remotion still",
     "kompositionen": "remotion compositions",

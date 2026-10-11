@@ -41,7 +41,7 @@ const T = (() => {
   const frage1 = F("und", C.W("einkäufer"));
   const klar = F("klare");
   const uebrigens = F("und", C.W("wichtiger"));
-  const folgen = F("und", C.W("deutschland"));
+  const folgen = F("du", C.W("deutschland"));
   const meinung = F("denn", C.W("kanal"));
   const frage = F("aber", C.W("leider"));
   return { gsA, gsB, beispiel, spannend, stehen, frage1, klar, uebrigens, folgen, meinung, frage };
