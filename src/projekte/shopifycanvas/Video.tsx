@@ -68,7 +68,8 @@ const Blase: React.FC = () => {
 const Chat: React.FC<{ fr: number; text: string; voll: string }> = ({ fr, text, voll }) => {
   const D = useDesign();
   const [w, sp, fam] = mass(D.text);
-  const fs = fitSize(`„${voll}|“`, 760, 46, w, sp, 30, fam);
+  // nie unter 42 px (Mindestgröße für Text in Grafiken)
+  const fs = fitSize(`„${voll}“`, 790, 46, w, sp, 42, fam);
   return (
     <div style={{ ...D.chip, display: "inline-flex", alignItems: "center", gap: 14, padding: "12px 24px 12px 16px", color: D.chipText }}>
       <svg width={44} height={40} viewBox="0 0 86 78" style={{ flex: "none" }}>
@@ -124,7 +125,8 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         <Pop fr={fr} at={F("sidekick")} until={F("zum") - 6} x={24} y={118}>
           <Row text="Sidekick = Shopifys KI-Assistent" width={760} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("zum")} x={24} y={118}>
+        {/* der ganze Satz ist breit: der Chip beginnt am linken Rand der sicheren Fläche (x 65), so endet er vor x 950 */}
+        <Pop fr={fr} at={F("zum")} x={-30} y={118}>
           <Chat fr={fr} text={prompt} voll="Mach meine Startseite moderner" />
         </Pop>
         <Pop fr={fr} at={F("produktdarstellung")} until={F("theme") - 6} x={24} y={210}>
