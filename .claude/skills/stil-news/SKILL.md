@@ -1,6 +1,6 @@
 ---
 name: stil-news
-description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~60-80 s) - Design fest nacht-gruen (Titel in Anton und Großbuchstaben, kleine ruhige Untertitel mit dem gesprochenen Wort in Logo-Hellgrün, dunkle Glas-Chips), Bild ab der Hüfte, Titel und Einblendungen oben, der Kopf direkt darunter (nur bei der Quelle tiefer), die Quelle (1-2 Screenshots aus dem Artikel, Stelle hellgrün markiert) als Hintergrund hinter ihm wie ein Greenscreen, große knackige Titel über dem Kopf, kleine Untertitel, Kamera-Auslöser bei der Quelle und Riser vor seiner Meinung, am Ende die Frage mit Kommentar-Blase. Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten oder überarbeitet wird (der Nutzer sagt "News", "News-Reaction", "Reaction", "Reaktion auf ein Video", "Hot Take" zu einer Meldung) oder Feedback zu einem News-Video gibt.
+description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~60-80 s) - Design fest nacht-gruen (Titel in Anton und Großbuchstaben, kleine ruhige weiße Untertitel ohne Hervorhebung, dunkle Glas-Chips), Bild ab der Hüfte, Titel und Einblendungen oben, der Kopf direkt darunter (nur bei der Quelle tiefer), die Quelle (1-2 Screenshots aus dem Artikel, Stelle hellgrün markiert) als Hintergrund hinter ihm wie ein Greenscreen, große knackige Titel über dem Kopf, kleine Untertitel, Kamera-Auslöser bei der Quelle und Riser vor seiner Meinung, am Ende die Frage mit Kommentar-Blase. Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten oder überarbeitet wird (der Nutzer sagt "News", "News-Reaction", "Reaction", "Reaktion auf ein Video", "Hot Take" zu einer Meldung) oder Feedback zu einem News-Video gibt.
 ---
 
 # Stil NEWS / Reaction
@@ -80,7 +80,7 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
 
 - **Klein und ruhig, nie wie ein Titel** (seine Vorgabe 2026-10-11, alle Formate): `const UT = { top: 1260, size: 64 }` (höher seit 2026-10-11, damit der Beschreibungstext der App sie nicht verdeckt; Quellen-Pille und Hinweise darunter bei y 1350),
   `<Captions C={C} fr={fr} top={UT.top} size={UT.size} />`. Im Design nacht: Space Grotesk fett, normale Groß- und
-  Kleinschreibung, weiß mit dünner dunkler Kontur, **kein Kasten**, nur das gesprochene Wort in der Leuchtfarbe. Nie
+  Kleinschreibung, weiß mit dünner dunkler Kontur, **kein Kasten** und **kein hervorgehobenes Wort**: die Untertitel werden nur eingeblendet, alles weiß (seit 2026-10-12). Nie
   in derselben Schrift (Anton) oder Größe wie die Titel.
 - Fachbegriffe richtig (Shopify, Sidekick, Judge.me, "Builder" statt Whispers "Bilder").
 
@@ -151,3 +151,6 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-11, erste News-Videos sho
   Hinweis-Kasten darunter bei y 1350.
 - Quelle kleiner (2026-10-11): "Die Quelle kann beim nächsten Mal ruhig deutlich kleiner unten rechts, aber im sicheren
   Bereich, angezeigt werden." Umgesetzt: 28 px, unten rechts bis x 950, y 1440.
+- Untertitel ohne Hervorhebung (2026-10-12): "Bitte bei den zukünftigen Videos die Untertitel nur einblenden, nicht
+  highlighted. Das Video wirkt sonst zu sehr geschnitten und bearbeitet und weniger natürlich". Umgesetzt im Design
+  nacht: das gesprochene Wort hat dieselbe Farbe wie der Rest (weiß).

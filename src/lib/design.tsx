@@ -173,7 +173,8 @@ const nacht = (name: keyof typeof LEUCHT): Design => {
     name,
     grade: "contrast(1.12) saturate(0.88) brightness(0.9) hue-rotate(-6deg)",
     // Untertitel klar anders als die Titel (seine Vorgabe 2026-10-11): kleiner, Space Grotesk statt Anton, keine
-    // Großbuchstaben, kein Kasten; nur das gesprochene Wort in der Leuchtfarbe
+    // Großbuchstaben, kein Kasten; und nur eingeblendet, ohne hervorgehobenes Wort (2026-10-12: "Die Untertitel nur
+    // einblenden, nicht highlighted. Das Video wirkt sonst zu sehr geschnitten und bearbeitet")
     untertitel: {
       schrift: space,
       faktor: 1,
@@ -181,7 +182,7 @@ const nacht = (name: keyof typeof LEUCHT): Design => {
       kontur: "0.05em rgb(6 8 12 / 0.9)",
       schatten: "0 4px 16px rgb(0 0 0 / 0.6)",
       modus: "farbe",
-      wort: neon,
+      wort: "#fff",
       wortText: NACHT_TINTE,
     },
     hook: {

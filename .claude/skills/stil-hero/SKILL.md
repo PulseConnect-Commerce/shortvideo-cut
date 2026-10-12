@@ -65,7 +65,7 @@ Schnitt, Aufbau, Aufruf) bleibt.
 
 - **Klein und ruhig, nie wie ein Titel** (seine Vorgabe 2026-10-11, alle Formate): `const UT = { top: 1260, size: 64 }` (höher seit 2026-10-11, damit der Beschreibungstext der App sie nicht verdeckt; Quellen-Pille und Hinweise darunter bei y 1350),
   `<Captions C={C} fr={fr} top={UT.top} size={UT.size} />`. Im Design nacht: Space Grotesk fett, normale Groß- und
-  Kleinschreibung, weiß mit dünner dunkler Kontur, **kein Kasten**, nur das gesprochene Wort in der Leuchtfarbe. Nie
+  Kleinschreibung, weiß mit dünner dunkler Kontur, **kein Kasten** und **kein hervorgehobenes Wort**: die Untertitel werden nur eingeblendet, alles weiß (seit 2026-10-12). Nie
   in derselben Schrift (Anton) oder Größe wie die Titel.
 - Wort für Wort, 2-3 Wörter pro Seite. (pulse, alte Videos: das gesprochene Wort in Blau `#31ADEC`, Geist fett.)
 - Fachbegriffe richtig schreiben, auch wenn er sie anders ausspricht (z. B. "WEEE-Nummer", "BattG-Gesetz").
@@ -179,3 +179,6 @@ Herkunft der Regeln oben (seine Sätze beim ersten HERO-Video, 2026-10-08/09):
 - Untertitel höher (2026-10-11, beim Einplanen von Canvas und Apps): "Bei den nächsten Videos die Untertitel bitte etwas
   höher setzen, damit sie nicht von den captions überdeckt werden". Umgesetzt: y 1260 statt 1400, Quellen-Pille und
   Hinweis-Kasten darunter bei y 1350.
+- Untertitel ohne Hervorhebung (2026-10-12): "Bitte bei den zukünftigen Videos die Untertitel nur einblenden, nicht
+  highlighted. Das Video wirkt sonst zu sehr geschnitten und bearbeitet und weniger natürlich". Umgesetzt im Design
+  nacht: das gesprochene Wort hat dieselbe Farbe wie der Rest (weiß).
