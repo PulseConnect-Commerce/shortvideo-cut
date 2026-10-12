@@ -31,17 +31,20 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
 - **Titel oben, Kopf direkt darunter, Untertitel unten** (seine Vorgabe seit 2026-10-11, alle Formate; ersetzt
   "Gesicht 160 px höher" und den kurzen Versuch mit dem Kopf ganz oben und den Titeln unter dem Kinn): Hook, Titel und
   Einblendungen stehen **oben** (Hook ab y ~210, Szenen-Titel ab y 262, Begriffe in **einer** Zeile darunter bis
-  y ~510). Der Kopf beginnt direkt darunter, so hoch wie es geht: Bildlage "OBEN" mit
-  `<Takes transform="translateY(-348px) scale(1.2)" transformOrigin="50% 0%" />` (bei seinem Bürostuhl-Setup liegt der
-  Haaransatz dann bei y ~550-580, das Kinn bei ~1000-1100; mit Standbildern nachmessen, zwischen Begriffen und Haar
-  mindestens 30 px). Untertitel bei y 1260 (klein, siehe Untertitel), unten `<Bodenblende ab={HOSE * 1.2 - 348} />` gegen Hose und leeren Rand.
+  y ~500). Der Kopf beginnt direkt darunter: **das Gesicht im unteren Teil des oberen Drittels** (Augen bei y ~600-640,
+  seine Vorgabe 2026-10-12: "mein Gesicht könnte hier etwas höher gesetzt sein, im unteren Teil des oberen Drittels"),
+  Bildlage "OBEN" mit `<Takes transform="translateY(-430px) scale(1.2)" transformOrigin="50% 0%" />` (bei seinem
+  Bürostuhl-Setup Haar bei y ~400; mit Standbildern nachmessen; die Begriffe dürfen das Haar knapp berühren, nie die
+  Stirn). Begriffe in der Szene bei `y={110}`. Untertitel bei y 1260 (klein, siehe Untertitel), unten
+  `<Bodenblende ab={HOSE * 1.2 - 430} />` gegen Hose und leeren Rand.
   Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
   Wort - 4 Frames) oder steht daneben (`tagBreite`). Keine Pille unter dem Hook, keine Antwort-Chips (Ja/Nein) am
   Ende, nur die Kommentar-Blase. Akzent-Anker 50 % 42 %.
-  **Ausnahme:** Solange etwas gelesen werden muss, das hinter oder über ihm steht (Zeitungsartikel, Screenshot der
-  Quelle), liegt er tiefer, Lage "MITTE" (`translateY(-160px) scale(1.2)`), und wechselt danach zurück
-  (`ausgabeFrames(C, von, bis)` aus `bausteine.tsx` gibt die Frames der Greenscreen-Stellen). Vorlage:
-  `src/projekte/shopifycanvas/Video.tsx`.
+  **Auch vor der Quelle bleibt er in dieser Lage** (seit 2026-10-12, Temu; vorher lag er dort tiefer, "MITTE" mit
+  -160, und die Einblendungen klebten am oberen Rand: "Die eingeblendeten B-Rolls sind meiner Meinung nach viel zu
+  hoch und stehen direkt am oberen Rand, obwohl nach unten hin noch mehr Platz vorhanden ist"). Kein Lagewechsel mehr;
+  `ausgabeFrames(C, von, bis)` aus `bausteine.tsx` gibt die Frames der Greenscreen-Stellen. Vorlage:
+  `src/projekte/temu/Video.tsx`.
 - **Leichter Porträt-Modus** wie HERO (`npm run portrait`, Stärke 6).
 - **Zoom ruhig** wie HERO (Empfehlung): ein langsames Zoom-in über das Video (100 % → 108 %) und 3 sanfte Akzente auf
   den stärksten Stellen (1,06; 8 Frames hin, 10 zurück).
@@ -56,11 +59,12 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   die Stelle, über die er spricht, im Artikel **hellgrün markieren** (`<mark>` in `#00F090`, dunkle Schrift) und
   mittig scrollen. Erst die Schlagzeile (Seite oben), dann die markierte Zahl oder Aussage.
 - **Hintergrundbild bauen** (1080x1920, so wie es im fertigen Video aussehen soll): das Wichtige (Schlagzeile,
-  markierte Stelle) liegt über dem Kopf, also zwischen y ~230 und ~650 (in Lage MITTE beginnt der Kopf bei ~680 laut
-  `npm run raster`). Liegen
+  markierte Stelle) liegt über dem Kopf und über der Einblendung zur Quelle: markierte Stelle bei y ~130-330
+  (Screenshot: `scrollTo(markTop - 50)` in CSS-Pixeln), die Einblendung dazu (z. B. groß "−35,5 % Umsatz",
+  `Tag kind="wichtig" size={64}`) direkt darunter bei y 340, der Kopf ab ~400. Liegen
   lassen in `public/broll/<projekt>/hg-*.png`.
 - **In den Take rechnen:** `npm run portrait -- <projekt> --hintergrund public/broll/<projekt>/hg-x.png@<von>-<bis>
-  [--hintergrund …] --ausschnitt 1.2,160` (von/bis in Sekunden im Take, genau die Sätze, die über die Quelle reden; `bis` mindestens 0,15 s nach dem letzten Wort, sonst blitzt am Schnitt ein Einzelbild mit dem Raum auf, so passiert bei KI-Kunde 2026-10-12, gefunden von `npm run checks`).
+  [--hintergrund …] --ausschnitt 1.2,430` (von/bis in Sekunden im Take, genau die Sätze, die über die Quelle reden; `bis` mindestens 0,15 s nach dem letzten Wort, sonst blitzt am Schnitt ein Einzelbild mit dem Raum auf, so passiert bei KI-Kunde 2026-10-12, gefunden von `npm run checks`).
   Das Werkzeug stellt ihn dort frei und legt das Bild dahinter; überall sonst bleibt der weiche Porträt-Hintergrund.
 - Während der Quelle: keine Titel über dem Kopf, nur die **Quelle klein unten rechts** im sicheren Bereich
   ("Quelle: Shopify, 1. Okt. 2026", `Tag kind="ink" size={28}`, `<Pop x={60} y={1440} w={890} style={{ textAlign:

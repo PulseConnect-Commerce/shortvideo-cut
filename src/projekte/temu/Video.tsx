@@ -21,10 +21,13 @@ import cut from "./cut.json";
 const C = createCut(cut);
 export const meta = { id: "Temu", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Bildlage (seine Vorgabe, 2026-10-11): Titel und Einblendungen oben, der Kopf direkt darunter ("OBEN"); nur solange
- * die Quelle hinter ihm steht (Greenscreen), liegt er tiefer ("MITTE"), damit der Artikel lesbar ist. */
-const OBEN = { scale: 1.2, hoch: 348 };
-const MITTE = { scale: 1.2, hoch: 160 };
+/** Bildlage (seine Vorgabe, 2026-10-12): das Gesicht im unteren Teil des oberen Drittels, auch vor der Quelle
+ * (Greenscreen); Einblendungen nicht am oberen Rand, sondern direkt über dem Kopf. Die markierte Artikelstelle liegt
+ * darüber (y ~150-330), die Einblendung zur Quelle bei y 340. */
+const OBEN = { scale: 1.2, hoch: 430 };
+const MITTE = OBEN;
+/** Einblendungen zur Quelle: direkt über dem Kopf */
+const QY = 340;
 /** Untertitel klein bei y 1260; Hinweise bei y 1350, die Quellen-Pille klein unten rechts bei y 1440 */
 const UT = { top: 1260, size: 64 };
 const HOSE = 1700;
@@ -109,20 +112,20 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
           Shein, Temu, AliExpress · 3. Quartal
         </Tag>
       </Pop>
-      <Pop fr={fr} at={MINUS} until={T.zoll - 4} x={24} y={118}>
-        <Tag kind="wichtig" size={96}>
+      <Pop fr={fr} at={MINUS} until={T.zoll - 4} x={24} y={QY}>
+        <Tag kind="wichtig" size={64}>
           −35,5 % Umsatz
         </Tag>
       </Pop>
 
       {/* Ein möglicher Grund: der neue EU-Zoll */}
-      <Pop fr={fr} at={F("eu-zölle")} until={DREI - 4} x={24} y={118}>
-        <Tag kind="ok" size={48}>
+      <Pop fr={fr} at={F("eu-zölle")} until={DREI - 4} x={24} y={QY}>
+        <Tag kind="ok" size={44}>
           Möglicher Grund: EU-Zoll
         </Tag>
       </Pop>
-      <Pop fr={fr} at={DREI} until={T.trifft - 4} x={24} y={118}>
-        <Tag kind="wichtig" size={72}>
+      <Pop fr={fr} at={DREI} until={T.trifft - 4} x={24} y={QY}>
+        <Tag kind="wichtig" size={60}>
           3 € pro Warenkategorie
         </Tag>
       </Pop>
@@ -134,32 +137,32 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Das Spannende: Temu verkauft weniger, deutsche Shops gewinnen nicht automatisch */}
       <Szene fr={fr} at={T.spannend} until={T.shops - 2} title="Das Spannende" frei titelDauer={TITEL}>
-        <Pop fr={fr} at={F("weniger", T.spannend)} until={F("automatisch", T.spannend) - 4} x={24} y={118}>
+        <Pop fr={fr} at={F("weniger", T.spannend)} until={F("automatisch", T.spannend) - 4} x={24} y={110}>
           <Row text="Temu & Co. verkaufen weniger" mark="ok" width={720} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("automatisch", T.spannend)} x={24} y={118}>
+        <Pop fr={fr} at={F("automatisch", T.spannend)} x={24} y={110}>
           <Row text="deutsche Shops gewinnen nicht automatisch" mark="no" width={900} onPhoto />
         </Pop>
       </Szene>
 
       {/* Womit Shops überzeugen */}
       <Szene fr={fr} at={T.shops} until={T.meinung - 2} title="So überzeugst du Kunden" frei titelDauer={TITEL}>
-        <Pop fr={fr} at={F("produkten")} x={24} y={118}>
+        <Pop fr={fr} at={F("produkten")} x={24} y={110}>
           <Tag kind="ok" size={S}>
             Produkte
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("vertrauen")} x={x2} y={118}>
+        <Pop fr={fr} at={F("vertrauen")} x={x2} y={110}>
           <Tag kind="ok" size={S}>
             Vertrauen
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("preisen")} x={x3} y={118}>
+        <Pop fr={fr} at={F("preisen")} x={x3} y={110}>
           <Tag kind="ok" size={S}>
             Preise
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("funktioniert")} x={x4} y={118}>
+        <Pop fr={fr} at={F("funktioniert")} x={x4} y={110}>
           <Tag kind="ok" size={S}>
             guter Shop
           </Tag>
@@ -168,12 +171,12 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Seine Meinung */}
       <Szene fr={fr} at={T.meinung} until={T.frage - 2} title="Meine Meinung" frei titelDauer={TITEL}>
-        <Pop fr={fr} at={F("konkurrenz", T.meinung)} x={24} y={118}>
+        <Pop fr={fr} at={F("konkurrenz", T.meinung)} x={24} y={110}>
           <Tag kind="ok" size={44}>
             Weniger Konkurrenz
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("verkaufsstrategie")} x={tagX("Weniger Konkurrenz", 44)} y={118}>
+        <Pop fr={fr} at={F("verkaufsstrategie")} x={tagX("Weniger Konkurrenz", 44)} y={110}>
           <Tag kind="wichtig" size={44}>
             ≠ Verkaufsstrategie
           </Tag>
@@ -182,12 +185,12 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Frage an die Community */}
       <Szene fr={fr} at={T.frage} until={Infinity} title="Was glaubt ihr?" frei titelDauer={TITEL}>
-        <Pop fr={fr} at={F("deutschen", T.frage)} x={24} y={118}>
+        <Pop fr={fr} at={F("deutschen", T.frage)} x={24} y={110}>
           <Tag kind="ok" size={44}>
             Mehr bei deutschen Shops?
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("bestellen", T.frage)} x={tagX("Mehr bei deutschen Shops?", 44)} y={118}>
+        <Pop fr={fr} at={F("bestellen", T.frage)} x={tagX("Mehr bei deutschen Shops?", 44)} y={110}>
           <Tag kind="ok" size={44}>
             Oder weniger?
           </Tag>

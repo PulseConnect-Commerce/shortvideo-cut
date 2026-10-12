@@ -76,6 +76,13 @@
   {
    "src": "temu/t1",
    "from": 82.765,
+   "to": 83.975,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 84.145,
    "to": 86.025,
    "nach": 0.09,
    "vor": 0.09
@@ -740,7 +747,7 @@
    "text": "E-Commerce-Tipps",
    "src": "temu/t1",
    "start": 83.49,
-   "end": 83.95
+   "end": 83.86
   },
   {
    "text": "in",
