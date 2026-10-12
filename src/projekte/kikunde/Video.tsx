@@ -34,7 +34,7 @@ const HOSE = 1700;
 /** Szenen-Titel nur kurz einblenden (seine Vorgabe 2026-10-12: "Den Titel kannst du aber kürzer einblenden") */
 const TITEL = 75;
 /** die Greenscreen-Stellen im Take (wie bei npm run portrait --hintergrund) */
-const QUELLE = [...ausgabeFrames(C, 61.95, 68.0), ...ausgabeFrames(C, 68.85, 73.95), ...ausgabeFrames(C, 76.7, 78.6)];
+const QUELLE = [...ausgabeFrames(C, 61.95, 68.1), ...ausgabeFrames(C, 68.85, 74.1), ...ausgabeFrames(C, 76.7, 78.7)];
 const mitte = (fr: number) => QUELLE.some(([a, b]) => fr >= a && fr < b);
 
 const F = C.cue;

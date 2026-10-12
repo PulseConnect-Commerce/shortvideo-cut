@@ -60,7 +60,7 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   `npm run raster`). Liegen
   lassen in `public/broll/<projekt>/hg-*.png`.
 - **In den Take rechnen:** `npm run portrait -- <projekt> --hintergrund public/broll/<projekt>/hg-x.png@<von>-<bis>
-  [--hintergrund …] --ausschnitt 1.2,160` (von/bis in Sekunden im Take, genau die Sätze, die über die Quelle reden).
+  [--hintergrund …] --ausschnitt 1.2,160` (von/bis in Sekunden im Take, genau die Sätze, die über die Quelle reden; `bis` mindestens 0,15 s nach dem letzten Wort, sonst blitzt am Schnitt ein Einzelbild mit dem Raum auf, so passiert bei KI-Kunde 2026-10-12, gefunden von `npm run checks`).
   Das Werkzeug stellt ihn dort frei und legt das Bild dahinter; überall sonst bleibt der weiche Porträt-Hintergrund.
 - Während der Quelle: keine Titel über dem Kopf, nur die **Quelle klein unten rechts** im sicheren Bereich
   ("Quelle: Shopify, 1. Okt. 2026", `Tag kind="ink" size={28}`, `<Pop x={60} y={1440} w={890} style={{ textAlign:
