@@ -11,7 +11,7 @@
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { ausgabeFrames, Bodenblende, Captions, clamp, HookTitle, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
-import { Pop, Row, Szene, Tag, tagBreite } from "../../lib/broll";
+import { BOX, Pop, Row, Szene, Tag, tagBreite } from "../../lib/broll";
 import { DesignRahmen, type DesignName, Toenung, useDesign } from "../../lib/design";
 import { Raster } from "../../lib/raster";
 import { createCut } from "../../lib/schnitt";
@@ -24,18 +24,21 @@ export const meta = { id: "Temu", durationInFrames: C.DURATION, fps: C.FPS };
 /** Bildlage (seine Vorgabe, 2026-10-12): das Gesicht im unteren Teil des oberen Drittels, auch vor der Quelle
  * (Greenscreen); Einblendungen nicht am oberen Rand, sondern direkt über dem Kopf. Die markierte Artikelstelle liegt
  * darüber (y ~150-330), die Einblendung zur Quelle bei y 340. */
-const OBEN = { scale: 1.2, hoch: 430 };
+const OBEN = { scale: 1.35, hoch: 560 };
+/** während der Hook liegt das Bild tiefer (Kopf ab y ~500), damit die zweizeilige Hook über dem Kopf Platz hat; der
+ * Wechsel fällt mit dem Schnitt auf die Quelle zusammen */
+const HOOK_LAGE = { scale: 1.35, hoch: 430 };
 const MITTE = OBEN;
 /** Einblendungen zur Quelle: direkt über dem Kopf */
-const QY = 265;
+const QY = 255;
 /** Hook, Szenen-Titel und Begriffe stehen über dem Kopf (Haar bei y ~400, seine Vorgabe 2026-10-12: "Jetzt liegen die
  * Einblendungen leider direkt auf meinem Kopf"): der Hook kleiner (y ~200-395), die Szenen 60 px höher (Titel
  * y ~230-360); die Begriffe stehen in derselben Zeile und ersetzen den Titel, sobald der erste erscheint. */
-const HOCH = -60;
+const HOCH = -80;
 const titelBis = (at: number, ersterBegriff: number) => Math.min(TITEL, ersterBegriff - at - 8);
 /** Untertitel klein bei y 1260; Hinweise bei y 1350, die Quellen-Pille klein unten rechts bei y 1440 */
 const UT = { top: 1260, size: 64 };
-const HOSE = 1700;
+const HOSE = 1725;
 /** Szenen-Titel nur kurz einblenden (seine Vorgabe 2026-10-12) */
 const TITEL = 75;
 /** die Greenscreen-Stellen im Take (wie bei npm run portrait --hintergrund) */
@@ -86,12 +89,21 @@ export const Video: React.FC<Props> = ({ design = "nacht-gruen", ...p }) => (
 const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) => {
   const D = useDesign();
   const fr = useCurrentFrame();
-  const lage = mitte(fr) ? MITTE : OBEN;
-  const tagX = (text: string, size: number, x0 = 24) => x0 + tagBreite(D, text, size) + 22;
+  const lage = fr < T.gs1 ? HOOK_LAGE : mitte(fr) ? MITTE : OBEN;
+  // eine Zeile Begriffe als Ganzes mittig in der Karte (seine Vorgabe 2026-10-12): Startpunkte der einzelnen Chips
+  const reihe = (texte: string[], size: number) => {
+    const ws = texte.map((t) => tagBreite(D, t, size));
+    let x = (BOX.width - ws.reduce((a, b) => a + b, 0) - 22 * (ws.length - 1)) / 2;
+    return ws.map((w) => {
+      const x0 = x;
+      x += w + 22;
+      return x0;
+    });
+  };
   const S = 40;
-  const x2 = tagX("Produkte", S);
-  const x3 = tagX("Vertrauen", S, x2);
-  const x4 = tagX("Preise", S, x3);
+  const [x1, x2, x3, x4] = reihe(["Produkte", "Vertrauen", "Preise", "guter Shop"], S);
+  const [m1, m2] = reihe(["Weniger Konkurrenz", "≠ Verkaufsstrategie"], 44);
+  const [f1, f2] = reihe(["Mehr bei deutschen Shops?", "Oder weniger?"], 44);
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
       <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
@@ -100,9 +112,9 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
         </SplitPerson>
       </AbsoluteFill>
       <Toenung />
-      <Bodenblende ab={HOSE * lage.scale - lage.hoch} />
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgb(6 7 10 / 0) 1640px, rgb(6 7 10 / 0.55) 1920px)" }} />
 
-      <AbsoluteFill style={{ transform: "translateY(-10px) scale(0.68)", transformOrigin: "50% 0%" }}>
+      <AbsoluteFill style={{ transform: "translateY(40px) scale(0.68)", transformOrigin: "50% 0%" }}>
         <HookTitle fr={fr} line1="Temu verliert" line2="35 % Umsatz?!" outAt={T.gs1 - 4} />
       </AbsoluteFill>
 
@@ -114,29 +126,29 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Pop>
 
       {/* Die Zahlen: −35,5 % */}
-      <Pop fr={fr} at={F("plattformen", T.zahlen)} until={T.zoll - 4} x={24} y={1350}>
+      <Pop fr={fr} at={F("plattformen", T.zahlen)} until={T.zoll - 4} x={0} w={1080} style={{ textAlign: "center", transformOrigin: "center center" }} y={1350}>
         <Tag kind="ink" size={42}>
           Shein, Temu, AliExpress · 3. Quartal
         </Tag>
       </Pop>
-      <Pop fr={fr} at={MINUS} until={T.zoll - 4} x={24} y={QY}>
-        <Tag kind="wichtig" size={64}>
+      <Pop fr={fr} at={MINUS} until={T.zoll - 4} x={0} w={1080} style={{ textAlign: "center", transformOrigin: "center center" }} y={QY}>
+        <Tag kind="wichtig" size={56}>
           −35,5 % Umsatz
         </Tag>
       </Pop>
 
       {/* Ein möglicher Grund: der neue EU-Zoll */}
-      <Pop fr={fr} at={F("eu-zölle")} until={DREI - 4} x={24} y={QY}>
+      <Pop fr={fr} at={F("eu-zölle")} until={DREI - 4} x={0} w={1080} style={{ textAlign: "center", transformOrigin: "center center" }} y={QY}>
         <Tag kind="ok" size={44}>
           Möglicher Grund: EU-Zoll
         </Tag>
       </Pop>
-      <Pop fr={fr} at={DREI} until={T.trifft - 4} x={24} y={QY}>
-        <Tag kind="wichtig" size={60}>
+      <Pop fr={fr} at={DREI} until={T.trifft - 4} x={0} w={1080} style={{ textAlign: "center", transformOrigin: "center center" }} y={QY}>
+        <Tag kind="wichtig" size={56}>
           3 € pro Warenkategorie
         </Tag>
       </Pop>
-      <Pop fr={fr} at={F("juli")} until={T.trifft - 4} x={24} y={1350}>
+      <Pop fr={fr} at={F("juli")} until={T.trifft - 4} x={0} w={1080} style={{ textAlign: "center", transformOrigin: "center center" }} y={1350}>
         <Tag kind="ink" size={42}>
           seit Juli · Sendungen unter 150 €
         </Tag>
@@ -144,11 +156,11 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Das Spannende: Temu verkauft weniger, deutsche Shops gewinnen nicht automatisch */}
       <AbsoluteFill style={{ transform: `translateY(${HOCH}px)` }}>
-      <Szene fr={fr} at={T.spannend} until={T.shops - 2} title="Das Spannende" frei titelDauer={titelBis(T.spannend, F("weniger", T.spannend))}>
-        <Pop fr={fr} at={F("weniger", T.spannend)} until={F("automatisch", T.spannend) - 4} x={24} y={10}>
+      <Szene fr={fr} at={T.spannend} until={T.shops - 2} title="Das Spannende" frei mittig titelDauer={titelBis(T.spannend, F("weniger", T.spannend))}>
+        <Pop fr={fr} at={F("weniger", T.spannend)} until={F("automatisch", T.spannend) - 4} x={(BOX.width - 720) / 2} y={10}>
           <Row text="Temu & Co. verkaufen weniger" mark="ok" width={720} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("automatisch", T.spannend)} x={24} y={10}>
+        <Pop fr={fr} at={F("automatisch", T.spannend)} x={(BOX.width - 760) / 2} y={10}>
           <Row text="Shops gewinnen nicht automatisch" mark="no" width={760} onPhoto />
         </Pop>
       </Szene>
@@ -156,8 +168,8 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Womit Shops überzeugen */}
       <AbsoluteFill style={{ transform: `translateY(${HOCH}px)` }}>
-      <Szene fr={fr} at={T.shops} until={T.meinung - 2} title="So überzeugst du Kunden" frei titelDauer={titelBis(T.shops, F("produkten"))}>
-        <Pop fr={fr} at={F("produkten")} x={24} y={10}>
+      <Szene fr={fr} at={T.shops} until={T.meinung - 2} title="So überzeugst du Kunden" frei mittig titelDauer={titelBis(T.shops, F("produkten"))}>
+        <Pop fr={fr} at={F("produkten")} x={x1} y={10}>
           <Tag kind="ok" size={S}>
             Produkte
           </Tag>
@@ -182,13 +194,13 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Seine Meinung */}
       <AbsoluteFill style={{ transform: `translateY(${HOCH}px)` }}>
-      <Szene fr={fr} at={T.meinung} until={T.frage - 2} title="Meine Meinung" frei titelDauer={titelBis(T.meinung, F("konkurrenz", T.meinung))}>
-        <Pop fr={fr} at={F("konkurrenz", T.meinung)} x={24} y={10}>
+      <Szene fr={fr} at={T.meinung} until={T.frage - 2} title="Meine Meinung" frei mittig titelDauer={titelBis(T.meinung, F("konkurrenz", T.meinung))}>
+        <Pop fr={fr} at={F("konkurrenz", T.meinung)} x={m1} y={10}>
           <Tag kind="ok" size={44}>
             Weniger Konkurrenz
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("verkaufsstrategie")} x={tagX("Weniger Konkurrenz", 44)} y={10}>
+        <Pop fr={fr} at={F("verkaufsstrategie")} x={m2} y={10}>
           <Tag kind="wichtig" size={44}>
             ≠ Verkaufsstrategie
           </Tag>
@@ -198,13 +210,13 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
 
       {/* Frage an die Community */}
       <AbsoluteFill style={{ transform: `translateY(${HOCH}px)` }}>
-      <Szene fr={fr} at={T.frage} until={Infinity} title="Was glaubt ihr?" frei titelDauer={titelBis(T.frage, F("deutschen", T.frage))}>
-        <Pop fr={fr} at={F("deutschen", T.frage)} x={24} y={10}>
+      <Szene fr={fr} at={T.frage} until={Infinity} title="Was glaubt ihr?" frei mittig titelDauer={titelBis(T.frage, F("deutschen", T.frage))}>
+        <Pop fr={fr} at={F("deutschen", T.frage)} x={f1} y={10}>
           <Tag kind="ok" size={44}>
             Mehr bei deutschen Shops?
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("bestellen", T.frage)} x={tagX("Mehr bei deutschen Shops?", 44)} y={10}>
+        <Pop fr={fr} at={F("bestellen", T.frage)} x={f2} y={10}>
           <Tag kind="ok" size={44}>
             Oder weniger?
           </Tag>

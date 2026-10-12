@@ -38,8 +38,10 @@ export const Szene: React.FC<{
   hoehe?: number;
   /** der Titel steht nur so viele Frames, dann blendet er aus (die Begriffe bleiben); ohne Angabe: die ganze Szene */
   titelDauer?: number;
+  /** der Titel steht waagerecht mittig in der Karte statt links (seine Vorgabe 2026-10-12: Einblendungen mittig) */
+  mittig?: boolean;
   children?: React.ReactNode;
-}> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, frei = false, hoehe = BOX.height, titelDauer, children }) => {
+}> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, frei = false, hoehe = BOX.height, titelDauer, mittig = false, children }) => {
   const D = useDesign();
   const box = { ...BOX, height: hoehe };
   if (fr < at || fr >= until + 6) return null;
@@ -82,6 +84,7 @@ export const Szene: React.FC<{
         style={{
           position: "absolute",
           left: photo ? 22 : 34,
+          ...(mittig ? { left: "50%", transform: "translateX(-50%)" } : {}),
           top: photo ? 20 : 28,
           display: "flex",
           alignItems: "center",

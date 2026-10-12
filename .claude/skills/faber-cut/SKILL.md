@@ -136,6 +136,13 @@ Erst wenn er "passt" sagt:
    ("Denn wenn dein Star- … Denn wenn dein Startup"). Jede Meldung nachhören (`snips`), den sauberen letzten Anlauf
    nehmen, die Wortzeiten im `t1.aligned.json` korrigieren. Auch hörbare Fehlstarts mit Pause danach ("Und wenn …
    du wissen willst") gehören raus.
+0b. **Ton der Rohaufnahme prüfen** (2026-10-12, Temu: "schauen, weshalb die Tonqualität schlechter als bei den
+   bisherigen Videos hochgeladen wurde"): Die Aufnahme selbst war dumpf (4-8 kHz rund 10 dB unter KI-Kunde), unser
+   Schnitt hatte nichts verschlechtert. Nach jedem Intake die Höhen der Rohaufnahme mit einem Vorgänger vergleichen
+   (Bänder 4-6/6-8/8-12 kHz relativ zu 0,1-4 kHz). Liegen sie mehr als 4 dB darunter, vor dem Porträt-Schritt einen EQ
+   auf `takes/t1.orig.mp4` legen (Sicherung `t1.orig.vor-eq.mp4`), z. B. `equalizer=f=5200:t=o:w=1:g=10,
+   equalizer=f=7000:t=o:w=0.6:g=12,equalizer=f=10500:t=o:w=0.9:g=-5,alimiter=limit=0.89`, nachmessen und ihm sagen,
+   dass das Mikro dumpf klang (Mikro verdeckt, Windschutz, falsches Mikro gewählt?).
 1. **Füllwörter immer raus, Pausen ab 0,3 s raus, aber keine Mini-Jump-Cuts:** kein Stück unter ~0,8 s mitten im Satz (das macht `tools/schnitt.py` selbst). Ein Satz wird nie zerhackt, ein Wort nie angeschnitten. Die Wortzeiten von Whisper verdecken solche Pausen oft (das Wort "endet" erst nach der Stille): bei verdächtigen Stellen mit `spec` die Pegel ansehen und Wortende/-anfang im `t1.aligned.json` auf den Laut setzen ("Bei 0:30 ist eine kurze Pause nach 'E-Commerce' welche raus kann", Temu 2026-10-12: 0,3 s Stille in "E-Commerce … Tipps").
 2. **Kontext vor Tempo.** Bevor ein Nebensatz rausfliegt: Satz davor und danach ohne ihn lesen. Fragt ein Zuschauer dann "warum?" oder "was?", bleibt er drin. Der Aufruf (CTA) bleibt ein Stück.
 3. **Zahlen, Ergebnisse, Daten werden nie erfunden.** Auf dem Bildschirm stehen die Zahlen, die er sagt oder die gemessen sind.

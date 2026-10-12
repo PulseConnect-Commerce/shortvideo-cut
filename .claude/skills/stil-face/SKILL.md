@@ -38,7 +38,10 @@ Schnitt, Aufbau, Aufruf) bleibt.
   y ~510). Der Kopf beginnt direkt darunter, so hoch wie es geht: Bildlage "OBEN" mit
   `<Takes transform="translateY(-348px) scale(1.2)" transformOrigin="50% 0%" />` (bei seinem Bürostuhl-Setup liegt der
   Haaransatz dann bei y ~550-580, das Kinn bei ~1000-1100; mit Standbildern nachmessen, zwischen Begriffen und Haar
-  mindestens 30 px). Untertitel bei y 1260 (klein, siehe Untertitel), unten `<Bodenblende ab={HOSE * 1.2 - 348} />` gegen Hose und leeren Rand.
+  mindestens 30 px). Untertitel bei y 1260 (klein, siehe Untertitel), unten **nie schwarz** (seine Vorgabe 2026-10-12, alle
+  Formate: "Unsere Shortvideos sind alle unten komplett schwarz"): keine `Bodenblende`; der Ausschnitt füllt das Bild
+  bis unten (`(1920 + hoch) / scale ≤ 1920`, sonst stärker skalieren), nur ein leichter Verlauf 1640-1920 px bis 55 %
+  Schwarz für die App-Texte (Vorlage `src/projekte/temu/Video.tsx`).
   Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
   Wort - 4 Frames) oder steht daneben (`tagBreite`). Keine Pille unter dem Hook, keine Antwort-Chips (Ja/Nein) am
   Ende, nur die Kommentar-Blase. Akzent-Anker 50 % 42 %.

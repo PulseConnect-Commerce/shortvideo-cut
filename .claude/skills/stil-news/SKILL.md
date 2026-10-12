@@ -33,12 +33,13 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   Einblendungen stehen **oben** (Hook ab y ~210, Szenen-Titel ab y 262, Begriffe in **einer** Zeile darunter bis
   y ~500). Der Kopf beginnt direkt darunter: **das Gesicht im unteren Teil des oberen Drittels** (Augen bei y ~600-640,
   seine Vorgabe 2026-10-12: "mein Gesicht könnte hier etwas höher gesetzt sein, im unteren Teil des oberen Drittels"),
-  Bildlage "OBEN" mit `<Takes transform="translateY(-430px) scale(1.2)" transformOrigin="50% 0%" />` (bei seinem
-  Bürostuhl-Setup Haar bei y ~400; mit Standbildern nachmessen). **Alle Einblendungen enden mindestens 30 px über
+  Bildlage "OBEN" mit `<Takes transform="translateY(-560px) scale(1.35)" transformOrigin="50% 0%" />` (bei seinem
+  Bürostuhl-Setup Haar bei y ~370, Augen ~630; mit Standbildern nachmessen), **während der Hook** tiefer
+  (`scale 1.35, hoch 430`, Kopf ab ~500; der Wechsel fällt mit dem Schnitt auf die Quelle zusammen). **Alle Einblendungen enden mindestens 30 px über
   dem Haar** ("Jetzt liegen die Einblendungen leider direkt auf meinem Kopf. Sie müssten somit ein wenig über meinem
-  Kopf angezeigt werden", 2026-10-12): der Hook in `<AbsoluteFill style={{ transform: "translateY(-10px) scale(0.68)",
-  transformOrigin: "50% 0%" }}>` (y ~165-395), jede Szene in `<AbsoluteFill style={{ transform: "translateY(-60px)" }}>`
-  (Titel y ~230-360), die Begriffe in **derselben Zeile** wie der Titel (`y={10}`), der Titel blendet aus, sobald der
+  Kopf angezeigt werden", 2026-10-12): der Hook in `<AbsoluteFill style={{ transform: "translateY(40px) scale(0.68)",
+  transformOrigin: "50% 0%" }}>` (y ~215-445, über dem tieferen Kopf der Hook-Lage), jede Szene in
+  `<AbsoluteFill style={{ transform: "translateY(-80px)" }}>` mit `<Szene … frei mittig>` (Titel y ~210-340), die Begriffe in **derselben Zeile** wie der Titel (`y={10}`), der Titel blendet aus, sobald der
   erste Begriff kommt (`titelDauer={Math.min(TITEL, ersterBegriff - at - 8)}`). Vorlage `src/projekte/temu/Video.tsx`.
   **Alle Einblendungen horizontal mittig** ("Kannst du bitte die B-Roll Einblendungen zukünftig mittig einblenden?
   Einige sind hier nicht genau zentriert, sondern leicht versetzt", 2026-10-12, nach Temu): Titel, Chips, Zeilen,
@@ -47,8 +48,14 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   `x={-BOX.left}`); eine Chip-Zeile als Ganzes mitteln (Gesamtbreite aus `tagBreite` plus Abstände, Start
   `x = (1080 - gesamt) / 2`, bei Szenen minus `BOX.left`), so dass der letzte Begriff die Zeile mittig abschließt. Der
   Szenen-Titel steht ebenfalls mittig. Nur die Quellen-Pille bleibt klein unten rechts. Vor dem Abschicken an einem
-  Standbild nachmessen: linker und rechter Rand gleich (±10 px). Untertitel bei y 1260 (klein, siehe Untertitel), unten
-  `<Bodenblende ab={HOSE * 1.2 - 430} />` gegen Hose und leeren Rand.
+  Standbild nachmessen: linker und rechter Rand gleich (±10 px). Untertitel bei y 1260 (klein, siehe Untertitel).
+  **Unten nie schwarz** (2026-10-12: "Unsere Shortvideos sind alle unten komplett schwarz und oben dafür ein wenig
+  abgeschnitten"): keine `Bodenblende` mehr. Der Ausschnitt muss das Bild bis zum unteren Rand füllen, also
+  `(1920 + hoch) / scale ≤ 1920` (bei 1.35 also hoch ≤ 672); ganz unten sitzen Hände und Hosenbund unter TikToks Text,
+  das ist in Ordnung. Nur ein leichter Verlauf für die Lesbarkeit der App-Texte:
+  `<AbsoluteFill style={{ background: "linear-gradient(180deg, rgb(6 7 10 / 0) 1640px, rgb(6 7 10 / 0.55) 1920px)" }} />`.
+  TikTok schneidet auf hohen Handys links und rechts je ~5 % ab und legt seine Leisten über das Bild: Text nie
+  näher als 60 px an den Seitenrand.
   Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
   Wort - 4 Frames) oder steht daneben (`tagBreite`). Keine Pille unter dem Hook, keine Antwort-Chips (Ja/Nein) am
   Ende, nur die Kommentar-Blase. Akzent-Anker 50 % 42 %.
