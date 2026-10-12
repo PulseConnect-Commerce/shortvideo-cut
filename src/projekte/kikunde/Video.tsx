@@ -31,6 +31,8 @@ const MITTE = { scale: 1.2, hoch: 160 };
  * nicht verdeckt; Quellen-Pille und Hinweise liegen darunter bei y 1350 */
 const UT = { top: 1260, size: 64 };
 const HOSE = 1700;
+/** Szenen-Titel nur kurz einblenden (seine Vorgabe 2026-10-12: "Den Titel kannst du aber kürzer einblenden") */
+const TITEL = 75;
 /** die Greenscreen-Stellen im Take (wie bei npm run portrait --hintergrund) */
 const QUELLE = [...ausgabeFrames(C, 61.95, 68.0), ...ausgabeFrames(C, 68.85, 73.95), ...ausgabeFrames(C, 76.7, 78.6)];
 const mitte = (fr: number) => QUELLE.some(([a, b]) => fr >= a && fr < b);
@@ -120,7 +122,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       <HookTitle fr={fr} line1="Dein nächster Kunde" line2="ist eine KI?!" outAt={T.klingt - 4} />
 
       {/* Zukunftsmusik? */}
-      <Szene fr={fr} at={T.klingt} until={T.gs1 - 6} title="Zukunftsmusik?" frei>
+      <Szene fr={fr} at={T.klingt} until={T.gs1 - 6} title="Zukunftsmusik?" frei titelDauer={TITEL}>
         <Pop fr={fr} at={F("shopify")} x={24} y={118}>
           <Tag kind="accent" size={44}>
             Schau, was Shopify macht
@@ -141,7 +143,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Pop>
 
       {/* Stell dir vor: der Auftrag an die KI */}
-      <Szene fr={fr} at={T.vor} until={T.punkt - 2} title="Stell dir vor …" frei>
+      <Szene fr={fr} at={T.vor} until={T.punkt - 2} title="Stell dir vor …" frei titelDauer={TITEL}>
         <Pop fr={fr} at={F("such", T.vor)} until={F("vergleichen") - 4} x={-30} y={118}>
           <Chat fr={fr} text={auftrag} voll="Such mir mal Schuhe unter 100 Euro" />
         </Pop>
@@ -154,7 +156,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Szene>
 
       {/* Der entscheidende Punkt: Shops müssen auch für KI verständlich sein */}
-      <Szene fr={fr} at={T.punkt} until={T.heisst - 2} title="Der entscheidende Punkt" frei>
+      <Szene fr={fr} at={T.punkt} until={T.heisst - 2} title="Der entscheidende Punkt" frei titelDauer={TITEL}>
         <Pop fr={fr} at={F("menschen")} x={24} y={118}>
           <Tag kind="ok" size={44}>
             für Menschen
@@ -168,7 +170,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Szene>
 
       {/* Was die KI braucht */}
-      <Szene fr={fr} at={T.heisst} until={T.meinung - 2} title="Das braucht die KI" frei>
+      <Szene fr={fr} at={T.heisst} until={T.meinung - 2} title="Das braucht die KI" frei titelDauer={TITEL}>
         <Pop fr={fr} at={F("produktdaten")} x={24} y={118}>
           <Tag kind="ok" size={44}>
             Produktdaten
@@ -187,7 +189,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Szene>
 
       {/* Seine Meinung */}
-      <Szene fr={fr} at={T.meinung} until={T.frage - 2} title="Meine Meinung" frei>
+      <Szene fr={fr} at={T.meinung} until={T.frage - 2} title="Meine Meinung" frei titelDauer={TITEL}>
         <Pop fr={fr} at={F("einkaufsalltag")} until={F("spannend") - 4} x={24} y={118}>
           <Tag kind="warn" size={44}>
             noch nicht Alltag
@@ -199,7 +201,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Szene>
 
       {/* Frage an die Community; der Folgen-Aufruf danach läuft ohne Einblendung */}
-      <Szene fr={fr} at={T.frage} until={Infinity} title="KI als Einkäufer?" frei>
+      <Szene fr={fr} at={T.frage} until={Infinity} title="KI als Einkäufer?" frei titelDauer={TITEL}>
         <Pop fr={fr} at={F("meint")} x={24} y={118}>
           <div style={{ ...D.chip, color: D.chipText, display: "flex", alignItems: "center", gap: 18, padding: "6px 30px 6px 14px" }}>
             <Blase />

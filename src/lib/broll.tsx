@@ -36,8 +36,10 @@ export const Szene: React.FC<{
   vollbild?: boolean;
   frei?: boolean;
   hoehe?: number;
+  /** der Titel steht nur so viele Frames, dann blendet er aus (die Begriffe bleiben); ohne Angabe: die ganze Szene */
+  titelDauer?: number;
   children?: React.ReactNode;
-}> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, frei = false, hoehe = BOX.height, children }) => {
+}> = ({ fr, at, until, nr, title, titleAt = at, photo, vollbild = false, frei = false, hoehe = BOX.height, titelDauer, children }) => {
   const D = useDesign();
   const box = { ...BOX, height: hoehe };
   if (fr < at || fr >= until + 6) return null;
@@ -84,7 +86,7 @@ export const Szene: React.FC<{
           display: "flex",
           alignItems: "center",
           gap: 18,
-          opacity: ramp(fr, titleAt, 4),
+          opacity: ramp(fr, titleAt, 4) * (titelDauer === undefined ? 1 : 1 - ramp(fr, titleAt + titelDauer, 8)),
           ...(photo || frei ? { ...D.titelChip, padding: nr !== undefined ? "8px 30px 8px 8px" : "10px 30px" } : {}),
         }}
       >
