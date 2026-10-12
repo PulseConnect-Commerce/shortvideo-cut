@@ -2,7 +2,10 @@
  * Die Vollversion: rendert in voller Größe (ein Durchgang), normalisiert die Lautheit auf -14 LUFS (zwei Durchgänge,
  * True Peak -1 dB) und schreibt zwei Kopien zum Weitergeben.
  *
- *   npm run final -- <Komposition>
+ *   npm run final -- <Komposition> [--ohne-untertitel]
+ *
+ * --ohne-untertitel: rendert ohne eingebrannte Untertitel (Prop `untertitel: false`) als <id>-ohne-ut.mp4, für den
+ * Fall, dass er Untertitel und Musik selbst in TikTok anlegt (seine Überlegung 2026-10-12).
  *
  * Ergebnis in out/final/:
  *   <id>.mp4         das Master (CRF 18)
@@ -15,11 +18,13 @@ import { execFileSync, spawnSync } from "node:child_process";
 import { copyFileSync, mkdirSync, rmSync, statSync } from "node:fs";
 import { cpus } from "node:os";
 
-const id = process.argv[2];
-if (!id) {
-  console.error("Aufruf: npm run final -- <Komposition>");
+const comp = process.argv[2];
+const ohneUt = process.argv.includes("--ohne-untertitel");
+if (!comp) {
+  console.error("Aufruf: npm run final -- <Komposition> [--ohne-untertitel]");
   process.exit(1);
 }
+const id = ohneUt ? `${comp}-ohne-ut` : comp;
 mkdirSync("out/final", { recursive: true });
 const master = `out/final/${id}.mp4`;
 // erst Matroska mit PCM-Ton: Remotions AAC legt ~43 ms Stille an den Anfang, die Lautheits-Stufe trug sie mit, der Ton
@@ -31,7 +36,7 @@ const run = (cmd, args) => {
 };
 
 const t0 = Date.now();
-run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", id, raw, "--codec=h264-mkv", `--concurrency=${Math.max(1, Math.min(4, cpus().length))}`, "--crf=16", "--jpeg-quality=95", "--log=error"]);
+run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", comp, raw, ...(ohneUt ? ['--props={"untertitel":false}'] : []), "--codec=h264-mkv", `--concurrency=${Math.max(1, Math.min(4, cpus().length))}`, "--crf=16", "--jpeg-quality=95", "--log=error"]);
 console.log(`gerendert in ${Math.round((Date.now() - t0) / 1000)} s`);
 
 // Raumklang-Teppich: ein sehr leises Rosa-Rauschen (~-75 dBFS) unter allem, damit es nie digitale Stille gibt.

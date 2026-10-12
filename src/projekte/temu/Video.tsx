@@ -78,7 +78,7 @@ const akzentAt = (fr: number) =>
     1,
   );
 
-type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; design?: DesignName };
+type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; design?: DesignName };
 
 export const Video: React.FC<Props> = ({ design = "nacht-gruen", ...p }) => (
   <DesignRahmen design={design}>
@@ -86,7 +86,7 @@ export const Video: React.FC<Props> = ({ design = "nacht-gruen", ...p }) => (
   </DesignRahmen>
 );
 
-const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) => {
+const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, untertitel = true }) => {
   const D = useDesign();
   const fr = useCurrentFrame();
   const lage = fr < T.gs1 ? HOOK_LAGE : mitte(fr) ? MITTE : OBEN;
@@ -224,7 +224,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Szene>
       </AbsoluteFill>
 
-      <Captions C={C} fr={fr} top={UT.top} size={UT.size} />
+      {untertitel && <Captions C={C} fr={fr} top={UT.top} size={UT.size} />}
 
       {sfx && (
         <>
