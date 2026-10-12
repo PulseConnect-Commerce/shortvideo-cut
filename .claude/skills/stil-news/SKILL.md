@@ -130,7 +130,13 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
 - Leise Effekte wie HERO (Wusch bei neuer Szene, Tick bei Chips, Stempel bei Warnungen). **Extra-Effekte:**
   `kamera.mp3` beim Einblenden der Quelle. **Kein Riser** ("Bitte den Sound bei 0:51 entfernen. Mir gefällt dieser
   leider überhaupt nicht", 2026-10-12, Temu: das war `riser.mp3` vor "Meine Meinung"; ersetzt "Kamera + Riser" vom
-  2026-10-11). Keine Musik, -14 LUFS.
+  2026-10-11). **Effekte sparsam** ("Die anderen Soundeffekte können ruhig drin bleiben, jedoch sollten diese im
+  Video nicht zu oft verwendet werden", 2026-10-12): höchstens etwa ein Effekt pro 12 Sekunden, nur an echten
+  Wendepunkten (Kamera bei der Quelle, Stempel auf der großen Zahl, Whoosh beim Wechsel zu seiner Meinung), keine
+  Ticks auf jedem Begriff.
+  **Variante ohne Untertitel:** `npm run final -- <Video> --ohne-untertitel` (Prop `untertitel: false`). Er legt die
+  Untertitel dann in TikTok selbst ins untere Drittel ("Ich lege die Untertitel-Position bei TikTok manuell im unteren
+  Drittel fest"): dort nichts von uns, keine Hinweis-Chips bei y 1350, die Quellen-Pille bei y 1190. Keine Musik, -14 LUFS.
 
 ## Aufruf und Ende
 

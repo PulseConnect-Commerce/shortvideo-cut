@@ -36,7 +36,9 @@ const QY = 255;
  * y ~230-360); die Begriffe stehen in derselben Zeile und ersetzen den Titel, sobald der erste erscheint. */
 const HOCH = -80;
 const titelBis = (at: number, ersterBegriff: number) => Math.min(TITEL, ersterBegriff - at - 8);
-/** Untertitel klein bei y 1260; Hinweise bei y 1350, die Quellen-Pille klein unten rechts bei y 1440 */
+/** Untertitel klein bei y 1260; Hinweise bei y 1350, die Quellen-Pille klein unten rechts bei y 1440. Ohne
+ * eingebrannte Untertitel (er legt sie in TikTok ins untere Drittel) bleibt das untere Drittel frei: keine Hinweise,
+ * die Quellen-Pille bei y 1190. */
 const UT = { top: 1260, size: 64 };
 const HOSE = 1725;
 /** Szenen-Titel nur kurz einblenden (seine Vorgabe 2026-10-12) */
@@ -119,18 +121,20 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
       </AbsoluteFill>
 
       {/* Quelle hinter ihm (Greenscreen im Take): Schlagzeile, dann die markierten Stellen */}
-      <Pop fr={fr} at={T.gs1} until={QUELLE_ENDE} x={60} y={1440} w={890} style={{ textAlign: "right", transformOrigin: "right center" }}>
+      <Pop fr={fr} at={T.gs1} until={QUELLE_ENDE} x={60} y={untertitel ? 1440 : 1190} w={890} style={{ textAlign: "right", transformOrigin: "right center" }}>
         <Tag kind="ink" size={28}>
           Quelle: n-tv, 9. Okt. 2026 · Zahlen: bevh
         </Tag>
       </Pop>
 
       {/* Die Zahlen: −35,5 % */}
+      {untertitel && (
       <Pop fr={fr} at={F("plattformen", T.zahlen)} until={T.zoll - 4} x={0} w={1080} style={{ textAlign: "center", transformOrigin: "center center" }} y={1350}>
         <Tag kind="ink" size={42}>
           Shein, Temu, AliExpress · 3. Quartal
         </Tag>
       </Pop>
+      )}
       <Pop fr={fr} at={MINUS} until={T.zoll - 4} x={0} w={1080} style={{ textAlign: "center", transformOrigin: "center center" }} y={QY}>
         <Tag kind="wichtig" size={56}>
           −35,5 % Umsatz
@@ -148,11 +152,13 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           3 € pro Warenkategorie
         </Tag>
       </Pop>
+      {untertitel && (
       <Pop fr={fr} at={F("juli")} until={T.trifft - 4} x={0} w={1080} style={{ textAlign: "center", transformOrigin: "center center" }} y={1350}>
         <Tag kind="ink" size={42}>
           seit Juli · Sendungen unter 150 €
         </Tag>
       </Pop>
+      )}
 
       {/* Das Spannende: Temu verkauft weniger, deutsche Shops gewinnen nicht automatisch */}
       <AbsoluteFill style={{ transform: `translateY(${HOCH}px)` }}>
@@ -228,15 +234,13 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
 
       {sfx && (
         <>
+          {/* sparsam (seine Vorgabe 2026-10-12: Effekte "nicht zu oft"): fünf Effekte in gut einer Minute */}
           <Sfx file="kamera.mp3" at={T.gs1} volume={STIL.sfx * 0.7} />
-          {[T.zahlen, T.zoll, T.spannend, T.shops, T.meinung, T.frage].map((at) => (
-            <Sfx key={`w${at}`} file="whoosh.mp3" at={at} volume={STIL.sfx * 0.6} />
-          ))}
           {[MINUS, DREI].map((at) => (
             <Sfx key={`s${at}`} file="stamp.mp3" at={at} volume={STIL.sfx * 0.5} />
           ))}
-          {[F("eu-zölle"), F("produkten"), F("vertrauen"), F("preisen"), F("funktioniert"), F("konkurrenz", T.meinung), F("verkaufsstrategie"), F("deutschen", T.frage), F("bestellen", T.frage)].map((at) => (
-            <Sfx key={`t${at}`} file="tick.mp3" at={at} volume={STIL.sfx * 0.7} />
+          {[T.spannend, T.meinung].map((at) => (
+            <Sfx key={`w${at}`} file="whoosh.mp3" at={at} volume={STIL.sfx * 0.6} />
           ))}
         </>
       )}
