@@ -7,7 +7,7 @@ bewusst nicht gleich schneiden lassen (2026-10-09).
 | --- | --- | --- | --- |
 | **HERO** | Erklär- und Expertenvideos, die etwas länger gehen (meist 1-3 min) | `.claude/skills/stil-hero/SKILL.md` | festgelegt (Vorlage: `src/projekte/shopcheck/`) |
 | **FACE** | Meinungsvideos direkt in die Kamera (~45-60 s), Frage an die Community | `.claude/skills/stil-face/SKILL.md` | festgelegt (Vorlage: `src/projekte/kiagenten/`) |
-| **NEWS / Reaction** | News oder Reactions auf Meldungen (~60-80 s), Quelle als Greenscreen hinter ihm | `.claude/skills/stil-news/SKILL.md` | festgelegt (vorläufig, Vorlage: `src/projekte/shopifycanvas/`) |
+| **NEWS / Reaction** | News oder Reactions auf Meldungen (~60-80 s), Quelle als Greenscreen hinter ihm | `.claude/skills/stil-news/SKILL.md` | festgelegt (vorläufig, Vorlage: `src/projekte/temu/`) |
 
 So gehst du vor:
 

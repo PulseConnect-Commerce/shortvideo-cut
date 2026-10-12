@@ -39,7 +39,15 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   Kopf angezeigt werden", 2026-10-12): der Hook in `<AbsoluteFill style={{ transform: "translateY(-10px) scale(0.68)",
   transformOrigin: "50% 0%" }}>` (y ~165-395), jede Szene in `<AbsoluteFill style={{ transform: "translateY(-60px)" }}>`
   (Titel y ~230-360), die Begriffe in **derselben Zeile** wie der Titel (`y={10}`), der Titel blendet aus, sobald der
-  erste Begriff kommt (`titelDauer={Math.min(TITEL, ersterBegriff - at - 8)}`). Vorlage `src/projekte/temu/Video.tsx`. Untertitel bei y 1260 (klein, siehe Untertitel), unten
+  erste Begriff kommt (`titelDauer={Math.min(TITEL, ersterBegriff - at - 8)}`). Vorlage `src/projekte/temu/Video.tsx`.
+  **Alle Einblendungen horizontal mittig** ("Kannst du bitte die B-Roll Einblendungen zukünftig mittig einblenden?
+  Einige sind hier nicht genau zentriert, sondern leicht versetzt", 2026-10-12, nach Temu): Titel, Chips, Zeilen,
+  "−35,5 %"-Chips und Hinweise nicht mit festem `x={24}` links anlegen, sondern mittig setzen. Einzelne Einblendung:
+  `<Pop x={0} w={1080} style={{ textAlign: "center", transformOrigin: "center center" }}>` (innerhalb einer Szene
+  `x={-BOX.left}`); eine Chip-Zeile als Ganzes mitteln (Gesamtbreite aus `tagBreite` plus Abstände, Start
+  `x = (1080 - gesamt) / 2`, bei Szenen minus `BOX.left`), so dass der letzte Begriff die Zeile mittig abschließt. Der
+  Szenen-Titel steht ebenfalls mittig. Nur die Quellen-Pille bleibt klein unten rechts. Vor dem Abschicken an einem
+  Standbild nachmessen: linker und rechter Rand gleich (±10 px). Untertitel bei y 1260 (klein, siehe Untertitel), unten
   `<Bodenblende ab={HOSE * 1.2 - 430} />` gegen Hose und leeren Rand.
   Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
   Wort - 4 Frames) oder steht daneben (`tagBreite`). Keine Pille unter dem Hook, keine Antwort-Chips (Ja/Nein) am
