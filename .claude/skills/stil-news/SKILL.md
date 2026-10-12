@@ -1,6 +1,6 @@
 ---
 name: stil-news
-description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~60-80 s) - Design fest nacht-gruen (Titel in Anton und Großbuchstaben, kleine ruhige Untertitel mit dem gesprochenen Wort in Logo-Hellgrün, dunkle Glas-Chips), Bild ab der Hüfte, Titel und Einblendungen oben, der Kopf direkt darunter (nur bei der Quelle tiefer), die Quelle (1-2 Screenshots aus dem Artikel, Stelle hellgrün markiert) als Hintergrund hinter ihm wie ein Greenscreen, große knackige Titel über dem Kopf, kleine Untertitel, Kamera-Auslöser bei der Quelle und Riser vor seiner Meinung, am Ende die Frage mit Kommentar-Blase. Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten oder überarbeitet wird (der Nutzer sagt "News", "News-Reaction", "Reaction", "Reaktion auf ein Video", "Hot Take" zu einer Meldung) oder Feedback zu einem News-Video gibt.
+description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~60-80 s) - Design fest nacht-gruen (Titel in Anton und Großbuchstaben, kleine ruhige Untertitel mit dem gesprochenen Wort in Logo-Hellgrün, dunkle Glas-Chips), Bild ab der Hüfte, Titel und Einblendungen oben, der Kopf direkt darunter (nur bei der Quelle tiefer), die Quelle (1-2 Screenshots aus dem Artikel, Stelle hellgrün markiert) als Hintergrund hinter ihm wie ein Greenscreen, große knackige Titel über dem Kopf, kleine Untertitel, Kamera-Auslöser bei der Quelle (kein Riser), am Ende die Frage mit Kommentar-Blase. Verwende diesen Skill zusammen mit faber-cut, sobald ein News- oder Reaction-Video geschnitten oder überarbeitet wird (der Nutzer sagt "News", "News-Reaction", "Reaction", "Reaktion auf ein Video", "Hot Take" zu einer Meldung) oder Feedback zu einem News-Video gibt.
 ---
 
 # Stil NEWS / Reaction
@@ -33,9 +33,9 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   Einblendungen stehen **oben** (Hook ab y ~210, Szenen-Titel ab y 262, Begriffe in **einer** Zeile darunter bis
   y ~500). Der Kopf beginnt direkt darunter: **das Gesicht im unteren Teil des oberen Drittels** (Augen bei y ~600-640,
   seine Vorgabe 2026-10-12: "mein Gesicht könnte hier etwas höher gesetzt sein, im unteren Teil des oberen Drittels"),
-  Bildlage "OBEN" mit `<Takes transform="translateY(-560px) scale(1.35)" transformOrigin="50% 0%" />` (bei seinem
-  Bürostuhl-Setup Haar bei y ~370, Augen ~630; mit Standbildern nachmessen), **während der Hook** tiefer
-  (`scale 1.35, hoch 430`, Kopf ab ~500; der Wechsel fällt mit dem Schnitt auf die Quelle zusammen). **Alle Einblendungen enden mindestens 30 px über
+  Bildlage "OBEN" mit `<Takes transform="translateY(-384px) scale(1.2)" transformOrigin="50% 0%" />` (bei seinem
+  Bürostuhl-Setup Haar bei y ~440, Augen ~670; mit Standbildern nachmessen), **während der Hook** tiefer
+  (`scale 1.2, hoch 300`, Kopf ab ~530; der Wechsel fällt mit dem Schnitt auf die Quelle zusammen). **Alle Einblendungen enden mindestens 30 px über
   dem Haar** ("Jetzt liegen die Einblendungen leider direkt auf meinem Kopf. Sie müssten somit ein wenig über meinem
   Kopf angezeigt werden", 2026-10-12): der Hook in `<AbsoluteFill style={{ transform: "translateY(40px) scale(0.68)",
   transformOrigin: "50% 0%" }}>` (y ~215-445, über dem tieferen Kopf der Hook-Lage), jede Szene in
@@ -51,9 +51,12 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   Standbild nachmessen: linker und rechter Rand gleich (±10 px). Untertitel bei y 1260 (klein, siehe Untertitel).
   **Unten nie schwarz** (2026-10-12: "Unsere Shortvideos sind alle unten komplett schwarz und oben dafür ein wenig
   abgeschnitten"): keine `Bodenblende` mehr. Der Ausschnitt muss das Bild bis zum unteren Rand füllen, also
-  `(1920 + hoch) / scale ≤ 1920` (bei 1.35 also hoch ≤ 672); ganz unten sitzen Hände und Hosenbund unter TikToks Text,
+  `(1920 + hoch) / scale ≤ 1920` (bei 1.2 also hoch ≤ 384); ganz unten sitzen Hände und Hosenbund unter TikToks Text,
   das ist in Ordnung. Nur ein leichter Verlauf für die Lesbarkeit der App-Texte:
   `<AbsoluteFill style={{ background: "linear-gradient(180deg, rgb(6 7 10 / 0) 1640px, rgb(6 7 10 / 0.55) 1920px)" }} />`.
+  **Nie stärker als 1,2-fach vergrößern** und das langsame Zoom-in höchstens bis 103 %, Akzente 1,03 ("Leider gefällt
+  mir die Qualität des neuen Videos überhaupt nicht. Es sieht leider zu unscharf aus", 2026-10-12: Temu war mit 1,35
+  plus Zoom 108 % plus Akzent 106 % rund 1,55-fach hochgezogen, aus einer ohnehin weichen Aufnahme).
   TikTok schneidet auf hohen Handys links und rechts je ~5 % ab und legt seine Leisten über das Bild: Text nie
   näher als 60 px an den Seitenrand.
   Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
@@ -80,7 +83,7 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
 - **Hintergrundbild bauen** (1080x1920, so wie es im fertigen Video aussehen soll): das Wichtige (Schlagzeile,
   markierte Stelle) liegt über dem Kopf und über der Einblendung zur Quelle: markierte Stelle endet bei y ~245
   (Screenshot: `scrollTo(markBottom - 93)` in CSS-Pixeln), die Einblendung dazu (z. B. groß "−35,5 % Umsatz",
-  `Tag kind="wichtig" size={64}`) direkt darunter bei y 265-360, der Kopf ab ~400. Liegen
+  `Tag kind="wichtig" size={64}`) direkt darunter bei y 265-360, der Kopf ab ~440. Liegen
   lassen in `public/broll/<projekt>/hg-*.png`.
 - **In den Take rechnen:** `npm run portrait -- <projekt> --hintergrund public/broll/<projekt>/hg-x.png@<von>-<bis>
   [--hintergrund …] --ausschnitt 1.2,430` (von/bis in Sekunden im Take, genau die Sätze, die über die Quelle reden; `bis` mindestens 0,15 s nach dem letzten Wort, sonst blitzt am Schnitt ein Einzelbild mit dem Raum auf, so passiert bei KI-Kunde 2026-10-12, gefunden von `npm run checks`).
@@ -125,8 +128,9 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   abgebrochene Anläufe immer raus (am Ton nachprüfen: Whisper fasst Wiederholungen gern zu einem gedehnten Wort
   zusammen, dann die Wortzeiten in `t1.aligned.json` richtigstellen, Sicherung `.vor-korrektur`).
 - Leise Effekte wie HERO (Wusch bei neuer Szene, Tick bei Chips, Stempel bei Warnungen). **Extra-Effekte:**
-  `kamera.mp3` beim Einblenden der Quelle, `riser.mp3` vor seiner eigenen Meinung (Höhepunkt auf dem Wort, `at` =
-  Wort − 48 Frames) ("Kamera + Riser", 2026-10-11). Keine Musik, -14 LUFS.
+  `kamera.mp3` beim Einblenden der Quelle. **Kein Riser** ("Bitte den Sound bei 0:51 entfernen. Mir gefällt dieser
+  leider überhaupt nicht", 2026-10-12, Temu: das war `riser.mp3` vor "Meine Meinung"; ersetzt "Kamera + Riser" vom
+  2026-10-11). Keine Musik, -14 LUFS.
 
 ## Aufruf und Ende
 
@@ -154,7 +158,7 @@ Herkunft der Regeln oben (Format-Onboarding am 2026-10-11, erste News-Videos sho
   Untertitel, Ende & Porträt.
 - Quelle: "Wenn möglich komplett als Hintergrund hinter meiner ausgeschnittenen Person legen, ansonsten Variante 1
   wählen".
-- Effekte: "Kamera + Riser".
+- Effekte: "Kamera + Riser" (2026-10-11), der Riser ist seit 2026-10-12 raus.
 - Die Fragen zu Tempo, Zoom, Untertitel und Ende hat er weggeklickt: darum gelten die Empfehlungen (Tempo und Zoom
   wie HERO, Untertitel groß wie FACE, Frage mit Kommentar-Blase, Folgen ohne Einblendung). Nach seiner ersten
   Vorschau fragen, was anders sein soll, und hier eintragen.

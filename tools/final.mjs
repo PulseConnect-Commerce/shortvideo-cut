@@ -31,7 +31,7 @@ const run = (cmd, args) => {
 };
 
 const t0 = Date.now();
-run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", id, raw, "--codec=h264-mkv", `--concurrency=${Math.max(1, Math.min(4, cpus().length))}`, "--crf=18", "--log=error"]);
+run(process.execPath, ["node_modules/@remotion/cli/remotion-cli.js", "render", id, raw, "--codec=h264-mkv", `--concurrency=${Math.max(1, Math.min(4, cpus().length))}`, "--crf=16", "--jpeg-quality=95", "--log=error"]);
 console.log(`gerendert in ${Math.round((Date.now() - t0) / 1000)} s`);
 
 // Raumklang-Teppich: ein sehr leises Rosa-Rauschen (~-75 dBFS) unter allem, damit es nie digitale Stille gibt.

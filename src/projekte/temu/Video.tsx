@@ -24,10 +24,10 @@ export const meta = { id: "Temu", durationInFrames: C.DURATION, fps: C.FPS };
 /** Bildlage (seine Vorgabe, 2026-10-12): das Gesicht im unteren Teil des oberen Drittels, auch vor der Quelle
  * (Greenscreen); Einblendungen nicht am oberen Rand, sondern direkt über dem Kopf. Die markierte Artikelstelle liegt
  * darüber (y ~150-330), die Einblendung zur Quelle bei y 340. */
-const OBEN = { scale: 1.35, hoch: 560 };
+const OBEN = { scale: 1.2, hoch: 384 };
 /** während der Hook liegt das Bild tiefer (Kopf ab y ~500), damit die zweizeilige Hook über dem Kopf Platz hat; der
  * Wechsel fällt mit dem Schnitt auf die Quelle zusammen */
-const HOOK_LAGE = { scale: 1.35, hoch: 430 };
+const HOOK_LAGE = { scale: 1.2, hoch: 300 };
 const MITTE = OBEN;
 /** Einblendungen zur Quelle: direkt über dem Kopf */
 const QY = 255;
@@ -67,14 +67,14 @@ const DREI = F("3", C.W("150"));
 const QUELLE_ENDE = C.WE("fällig") + 4;
 
 /** ein langsames Zoom-in über das ganze Video und zwei sanfte Akzente auf den stärksten Stellen */
-const zoomAt = (fr: number) => 1 + 0.08 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
+const zoomAt = (fr: number) => 1 + 0.03 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
 const AKZENTE: [number, number][] = [
   [F("nur", T.spannend), C.WE("profitieren", T.spannend) + 6],
   [F("weniger", T.meinung), C.WE("verkaufsstrategie") + 8],
 ];
 const akzentAt = (fr: number) =>
   AKZENTE.reduce(
-    (z, [a, b]) => Math.max(z, interpolate(fr, [a, a + 8, b, b + 10], [1, 1.06, 1.06, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) })),
+    (z, [a, b]) => Math.max(z, interpolate(fr, [a, a + 8, b, b + 10], [1, 1.03, 1.03, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) })),
     1,
   );
 
@@ -232,7 +232,6 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
           {[T.zahlen, T.zoll, T.spannend, T.shops, T.meinung, T.frage].map((at) => (
             <Sfx key={`w${at}`} file="whoosh.mp3" at={at} volume={STIL.sfx * 0.6} />
           ))}
-          <Sfx file="riser.mp3" at={T.meinung - 48} volume={STIL.sfx * 0.6} />
           {[MINUS, DREI].map((at) => (
             <Sfx key={`s${at}`} file="stamp.mp3" at={at} volume={STIL.sfx * 0.5} />
           ))}

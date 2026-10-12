@@ -112,7 +112,7 @@ for take in takes:
                               stdout=subprocess.PIPE)
     writer = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
                                "-r", f"{num}/{den}", "-i", "-", "-i", orig, "-map", "0:v", "-map", "1:a?",
-                               "-c:v", "libx264", "-preset", "fast", "-crf", "16", "-g", str(round(fps)),
+                               "-c:v", "libx264", "-preset", "fast", "-crf", "12", "-g", str(round(fps)),
                                "-pix_fmt", "yuv420p", "-color_primaries", "bt709", "-color_trc", "bt709",
                                "-colorspace", "bt709", "-c:a", "copy", "-movflags", "+faststart", "-shortest", tmp],
                               stdin=subprocess.PIPE)

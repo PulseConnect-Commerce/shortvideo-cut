@@ -40,7 +40,7 @@ Schnitt, Aufbau, Aufruf) bleibt.
   Haaransatz dann bei y ~550-580, das Kinn bei ~1000-1100; mit Standbildern nachmessen, zwischen Begriffen und Haar
   mindestens 30 px). Untertitel bei y 1260 (klein, siehe Untertitel), unten **nie schwarz** (seine Vorgabe 2026-10-12, alle
   Formate: "Unsere Shortvideos sind alle unten komplett schwarz"): keine `Bodenblende`; der Ausschnitt füllt das Bild
-  bis unten (`(1920 + hoch) / scale ≤ 1920`, sonst stärker skalieren), nur ein leichter Verlauf 1640-1920 px bis 55 %
+  bis unten (`(1920 + hoch) / scale ≤ 1920`, höchstens 1,2-fach vergrößern, sonst wird es unscharf), nur ein leichter Verlauf 1640-1920 px bis 55 %
   Schwarz für die App-Texte (Vorlage `src/projekte/temu/Video.tsx`).
   Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
   Wort - 4 Frames) oder steht daneben (`tagBreite`). Keine Pille unter dem Hook, keine Antwort-Chips (Ja/Nein) am

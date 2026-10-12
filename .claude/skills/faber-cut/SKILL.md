@@ -143,6 +143,12 @@ Erst wenn er "passt" sagt:
    auf `takes/t1.orig.mp4` legen (Sicherung `t1.orig.vor-eq.mp4`), z. B. `equalizer=f=5200:t=o:w=1:g=10,
    equalizer=f=7000:t=o:w=0.6:g=12,equalizer=f=10500:t=o:w=0.9:g=-5,alimiter=limit=0.89`, nachmessen und ihm sagen,
    dass das Mikro dumpf klang (Mikro verdeckt, Windschutz, falsches Mikro gewählt?).
+0c. **Schärfe der Rohaufnahme prüfen** (2026-10-12, Temu "zu unscharf"): Die Aufnahme hatte im Gesicht nur halb so
+   viel Detail wie KI-Kunde (Laplace-Varianz im Gesichtsausschnitt ~90 statt ~180). Dann leicht nachschärfen, bevor
+   `npm run portrait` läuft: `unsharp=5:5:0.8:3:3:0` auf `takes/t1.orig.mp4` (libx264 crf 12, Sicherung
+   `t1.orig.vor-schaerfe.mp4`), nie stärker als 1,2-fach vergrößern, und ihm sagen, dass Aufnahme und Ton weicher
+   waren als sonst (Linse sauber? genug Licht? Mikro frei?). Seit diesem Tag rendert `npm run final` mit `--crf=16
+   --jpeg-quality=95` (vorher 18 und Remotions JPEG-Standard 80) und `npm run portrait` mit crf 12 (vorher 16).
 1. **Füllwörter immer raus, Pausen ab 0,3 s raus, aber keine Mini-Jump-Cuts:** kein Stück unter ~0,8 s mitten im Satz (das macht `tools/schnitt.py` selbst). Ein Satz wird nie zerhackt, ein Wort nie angeschnitten. Die Wortzeiten von Whisper verdecken solche Pausen oft (das Wort "endet" erst nach der Stille): bei verdächtigen Stellen mit `spec` die Pegel ansehen und Wortende/-anfang im `t1.aligned.json` auf den Laut setzen ("Bei 0:30 ist eine kurze Pause nach 'E-Commerce' welche raus kann", Temu 2026-10-12: 0,3 s Stille in "E-Commerce … Tipps").
 2. **Kontext vor Tempo.** Bevor ein Nebensatz rausfliegt: Satz davor und danach ohne ihn lesen. Fragt ein Zuschauer dann "warum?" oder "was?", bleibt er drin. Der Aufruf (CTA) bleibt ein Stück.
 3. **Zahlen, Ergebnisse, Daten werden nie erfunden.** Auf dem Bildschirm stehen die Zahlen, die er sagt oder die gemessen sind.
