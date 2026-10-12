@@ -1,0 +1,1581 @@
+{
+ "projekt": "temu",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "temu/t1",
+   "from": 39.995,
+   "to": 44.535,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 45.195,
+   "to": 47.355,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 47.595,
+   "to": 49.855,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 50.595,
+   "to": 53.405,
+   "nach": 0.02,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 59.145,
+   "to": 64.055,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "temu/t1",
+   "from": 64.385,
+   "to": 65.425,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 66.195,
+   "to": 69.265,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 69.365,
+   "to": 71.585,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 71.855,
+   "to": 75.555,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 76.145,
+   "to": 78.735,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 82.765,
+   "to": 86.025,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 86.225,
+   "to": 87.365,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 95.695,
+   "to": 97.965,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 101.665,
+   "to": 104.535,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 104.745,
+   "to": 108.595,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 109.215,
+   "to": 111.905,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 112.295,
+   "to": 117.285,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 117.735,
+   "to": 119.575,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 140.825,
+   "to": 142.085,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 142.435,
+   "to": 145.435,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 146.385,
+   "to": 150.525,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 150.725,
+   "to": 152.705,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temu/t1",
+   "from": 153.025,
+   "to": 157.0,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Temu,",
+   "src": "temu/t1",
+   "start": 40.04,
+   "end": 40.28
+  },
+  {
+   "text": "Shein",
+   "src": "temu/t1",
+   "start": 40.36,
+   "end": 40.64
+  },
+  {
+   "text": "und",
+   "src": "temu/t1",
+   "start": 40.8,
+   "end": 40.9
+  },
+  {
+   "text": "AliExpress",
+   "src": "temu/t1",
+   "start": 41.08,
+   "end": 41.64
+  },
+  {
+   "text": "verlieren",
+   "src": "temu/t1",
+   "start": 41.74,
+   "end": 42.04
+  },
+  {
+   "text": "plötzlich",
+   "src": "temu/t1",
+   "start": 42.12,
+   "end": 42.5
+  },
+  {
+   "text": "in",
+   "src": "temu/t1",
+   "start": 42.52,
+   "end": 42.58
+  },
+  {
+   "text": "Deutschland",
+   "src": "temu/t1",
+   "start": 42.62,
+   "end": 42.92
+  },
+  {
+   "text": "über",
+   "src": "temu/t1",
+   "start": 43.02,
+   "end": 43.18
+  },
+  {
+   "text": "ein",
+   "src": "temu/t1",
+   "start": 43.32,
+   "end": 43.46
+  },
+  {
+   "text": "Drittel",
+   "src": "temu/t1",
+   "start": 43.52,
+   "end": 43.78
+  },
+  {
+   "text": "ihres",
+   "src": "temu/t1",
+   "start": 43.84,
+   "end": 44.0
+  },
+  {
+   "text": "Umsatzes.",
+   "src": "temu/t1",
+   "start": 44.08,
+   "end": 44.52
+  },
+  {
+   "text": "Und",
+   "src": "temu/t1",
+   "start": 45.24,
+   "end": 45.32
+  },
+  {
+   "text": "jetzt",
+   "src": "temu/t1",
+   "start": 45.34,
+   "end": 45.5
+  },
+  {
+   "text": "kommt",
+   "src": "temu/t1",
+   "start": 45.54,
+   "end": 45.66
+  },
+  {
+   "text": "aber",
+   "src": "temu/t1",
+   "start": 45.72,
+   "end": 45.84
+  },
+  {
+   "text": "leider",
+   "src": "temu/t1",
+   "start": 45.9,
+   "end": 46.12
+  },
+  {
+   "text": "das",
+   "src": "temu/t1",
+   "start": 46.18,
+   "end": 46.28
+  },
+  {
+   "text": "Verrückte",
+   "src": "temu/t1",
+   "start": 46.34,
+   "end": 46.68
+  },
+  {
+   "text": "daran,",
+   "src": "temu/t1",
+   "start": 46.76,
+   "end": 47.0
+  },
+  {
+   "text": "denn",
+   "src": "temu/t1",
+   "start": 47.06,
+   "end": 47.22
+  },
+  {
+   "text": "deutsche",
+   "src": "temu/t1",
+   "start": 47.64,
+   "end": 47.9
+  },
+  {
+   "text": "Onlineshops",
+   "src": "temu/t1",
+   "start": 47.96,
+   "end": 48.34
+  },
+  {
+   "text": "profitieren",
+   "src": "temu/t1",
+   "start": 48.42,
+   "end": 48.9
+  },
+  {
+   "text": "trotzdem",
+   "src": "temu/t1",
+   "start": 48.94,
+   "end": 49.34
+  },
+  {
+   "text": "nicht",
+   "src": "temu/t1",
+   "start": 49.38,
+   "end": 49.5
+  },
+  {
+   "text": "davon.",
+   "src": "temu/t1",
+   "start": 49.54,
+   "end": 49.78
+  },
+  {
+   "text": "Denn",
+   "src": "temu/t1",
+   "start": 50.64,
+   "end": 50.74
+  },
+  {
+   "text": "der",
+   "src": "temu/t1",
+   "start": 50.76,
+   "end": 50.84
+  },
+  {
+   "text": "Bundesverband",
+   "src": "temu/t1",
+   "start": 50.88,
+   "end": 51.44
+  },
+  {
+   "text": "hat",
+   "src": "temu/t1",
+   "start": 51.5,
+   "end": 51.6
+  },
+  {
+   "text": "hier",
+   "src": "temu/t1",
+   "start": 51.68,
+   "end": 51.8
+  },
+  {
+   "text": "gerade",
+   "src": "temu/t1",
+   "start": 51.88,
+   "end": 52.14
+  },
+  {
+   "text": "neue",
+   "src": "temu/t1",
+   "start": 52.26,
+   "end": 52.44
+  },
+  {
+   "text": "Zahlen",
+   "src": "temu/t1",
+   "start": 52.54,
+   "end": 52.78
+  },
+  {
+   "text": "veröffentlicht.",
+   "src": "temu/t1",
+   "start": 52.84,
+   "end": 53.4
+  },
+  {
+   "text": "Demnach",
+   "src": "temu/t1",
+   "start": 59.14,
+   "end": 59.4
+  },
+  {
+   "text": "haben",
+   "src": "temu/t1",
+   "start": 59.42,
+   "end": 59.58
+  },
+  {
+   "text": "diese",
+   "src": "temu/t1",
+   "start": 59.62,
+   "end": 59.76
+  },
+  {
+   "text": "drei",
+   "src": "temu/t1",
+   "start": 59.82,
+   "end": 59.98
+  },
+  {
+   "text": "Plattformen",
+   "src": "temu/t1",
+   "start": 60.08,
+   "end": 60.52
+  },
+  {
+   "text": "im",
+   "src": "temu/t1",
+   "start": 60.56,
+   "end": 60.6
+  },
+  {
+   "text": "dritten",
+   "src": "temu/t1",
+   "start": 60.68,
+   "end": 60.9
+  },
+  {
+   "text": "Quartal",
+   "src": "temu/t1",
+   "start": 60.96,
+   "end": 61.28
+  },
+  {
+   "text": "zusammen",
+   "src": "temu/t1",
+   "start": 61.34,
+   "end": 61.62
+  },
+  {
+   "text": "35,5",
+   "src": "temu/t1",
+   "start": 61.76,
+   "end": 62.3
+  },
+  {
+   "text": "Prozent",
+   "src": "temu/t1",
+   "start": 62.74,
+   "end": 63.04
+  },
+  {
+   "text": "weniger",
+   "src": "temu/t1",
+   "start": 63.12,
+   "end": 63.4
+  },
+  {
+   "text": "Umsatz",
+   "src": "temu/t1",
+   "start": 63.46,
+   "end": 63.72
+  },
+  {
+   "text": "gemacht",
+   "src": "temu/t1",
+   "start": 63.76,
+   "end": 64.0
+  },
+  {
+   "text": "als",
+   "src": "temu/t1",
+   "start": 64.44,
+   "end": 64.56
+  },
+  {
+   "text": "noch",
+   "src": "temu/t1",
+   "start": 64.64,
+   "end": 64.74
+  },
+  {
+   "text": "ein",
+   "src": "temu/t1",
+   "start": 64.76,
+   "end": 64.84
+  },
+  {
+   "text": "Jahr",
+   "src": "temu/t1",
+   "start": 64.88,
+   "end": 64.98
+  },
+  {
+   "text": "zuvor.",
+   "src": "temu/t1",
+   "start": 65.04,
+   "end": 65.3
+  },
+  {
+   "text": "Und",
+   "src": "temu/t1",
+   "start": 66.29,
+   "end": 66.35
+  },
+  {
+   "text": "ein",
+   "src": "temu/t1",
+   "start": 66.63,
+   "end": 66.71
+  },
+  {
+   "text": "Grund",
+   "src": "temu/t1",
+   "start": 66.75,
+   "end": 66.95
+  },
+  {
+   "text": "dafür",
+   "src": "temu/t1",
+   "start": 66.99,
+   "end": 67.21
+  },
+  {
+   "text": "können",
+   "src": "temu/t1",
+   "start": 67.31,
+   "end": 67.51
+  },
+  {
+   "text": "natürlich",
+   "src": "temu/t1",
+   "start": 67.53,
+   "end": 67.85
+  },
+  {
+   "text": "diese",
+   "src": "temu/t1",
+   "start": 67.87,
+   "end": 68.03
+  },
+  {
+   "text": "neuen",
+   "src": "temu/t1",
+   "start": 68.11,
+   "end": 68.31
+  },
+  {
+   "text": "EU-Zölle",
+   "src": "temu/t1",
+   "start": 68.39,
+   "end": 68.83
+  },
+  {
+   "text": "sein.",
+   "src": "temu/t1",
+   "start": 68.89,
+   "end": 69.09
+  },
+  {
+   "text": "Denn",
+   "src": "temu/t1",
+   "start": 69.41,
+   "end": 69.53
+  },
+  {
+   "text": "seit",
+   "src": "temu/t1",
+   "start": 69.57,
+   "end": 69.69
+  },
+  {
+   "text": "Juli",
+   "src": "temu/t1",
+   "start": 69.75,
+   "end": 69.93
+  },
+  {
+   "text": "werden",
+   "src": "temu/t1",
+   "start": 70.01,
+   "end": 70.21
+  },
+  {
+   "text": "bei",
+   "src": "temu/t1",
+   "start": 70.25,
+   "end": 70.31
+  },
+  {
+   "text": "betroffenen",
+   "src": "temu/t1",
+   "start": 70.37,
+   "end": 70.77
+  },
+  {
+   "text": "Billigimporten",
+   "src": "temu/t1",
+   "start": 70.81,
+   "end": 71.49
+  },
+  {
+   "text": "unter",
+   "src": "temu/t1",
+   "start": 71.93,
+   "end": 72.15
+  },
+  {
+   "text": "150",
+   "src": "temu/t1",
+   "start": 72.21,
+   "end": 72.83
+  },
+  {
+   "text": "Euro",
+   "src": "temu/t1",
+   "start": 72.93,
+   "end": 73.15
+  },
+  {
+   "text": "immer",
+   "src": "temu/t1",
+   "start": 73.19,
+   "end": 73.33
+  },
+  {
+   "text": "3",
+   "src": "temu/t1",
+   "start": 73.39,
+   "end": 73.59
+  },
+  {
+   "text": "Euro",
+   "src": "temu/t1",
+   "start": 73.73,
+   "end": 73.89
+  },
+  {
+   "text": "Zoll",
+   "src": "temu/t1",
+   "start": 73.97,
+   "end": 74.15
+  },
+  {
+   "text": "pro",
+   "src": "temu/t1",
+   "start": 74.25,
+   "end": 74.39
+  },
+  {
+   "text": "Warenkategorie",
+   "src": "temu/t1",
+   "start": 74.47,
+   "end": 75.15
+  },
+  {
+   "text": "fällig.",
+   "src": "temu/t1",
+   "start": 75.23,
+   "end": 75.49
+  },
+  {
+   "text": "Und",
+   "src": "temu/t1",
+   "start": 76.19,
+   "end": 76.27
+  },
+  {
+   "text": "das",
+   "src": "temu/t1",
+   "start": 76.29,
+   "end": 76.41
+  },
+  {
+   "text": "trifft",
+   "src": "temu/t1",
+   "start": 76.47,
+   "end": 76.65
+  },
+  {
+   "text": "natürlich",
+   "src": "temu/t1",
+   "start": 76.69,
+   "end": 77.01
+  },
+  {
+   "text": "besonders",
+   "src": "temu/t1",
+   "start": 77.07,
+   "end": 77.49
+  },
+  {
+   "text": "diese",
+   "src": "temu/t1",
+   "start": 77.53,
+   "end": 77.69
+  },
+  {
+   "text": "günstigen",
+   "src": "temu/t1",
+   "start": 77.79,
+   "end": 78.19
+  },
+  {
+   "text": "Produkte.",
+   "src": "temu/t1",
+   "start": 78.23,
+   "end": 78.57
+  },
+  {
+   "text": "Und",
+   "src": "temu/t1",
+   "start": 82.81,
+   "end": 82.89
+  },
+  {
+   "text": "wenn",
+   "src": "temu/t1",
+   "start": 82.93,
+   "end": 83.03
+  },
+  {
+   "text": "du",
+   "src": "temu/t1",
+   "start": 83.07,
+   "end": 83.11
+  },
+  {
+   "text": "solche",
+   "src": "temu/t1",
+   "start": 83.15,
+   "end": 83.33
+  },
+  {
+   "text": "E-Commerce-Tipps",
+   "src": "temu/t1",
+   "start": 83.49,
+   "end": 83.95
+  },
+  {
+   "text": "in",
+   "src": "temu/t1",
+   "start": 84.41,
+   "end": 84.47
+  },
+  {
+   "text": "Zukunft",
+   "src": "temu/t1",
+   "start": 84.51,
+   "end": 84.77
+  },
+  {
+   "text": "nicht",
+   "src": "temu/t1",
+   "start": 84.79,
+   "end": 84.89
+  },
+  {
+   "text": "mehr",
+   "src": "temu/t1",
+   "start": 84.91,
+   "end": 84.99
+  },
+  {
+   "text": "verpassen",
+   "src": "temu/t1",
+   "start": 85.03,
+   "end": 85.39
+  },
+  {
+   "text": "möchtest,",
+   "src": "temu/t1",
+   "start": 85.43,
+   "end": 85.73
+  },
+  {
+   "text": "dann",
+   "src": "temu/t1",
+   "start": 85.77,
+   "end": 85.91
+  },
+  {
+   "text": "folge",
+   "src": "temu/t1",
+   "start": 86.27,
+   "end": 86.43
+  },
+  {
+   "text": "gerne",
+   "src": "temu/t1",
+   "start": 86.55,
+   "end": 86.75
+  },
+  {
+   "text": "diesem",
+   "src": "temu/t1",
+   "start": 86.81,
+   "end": 86.99
+  },
+  {
+   "text": "Kanal.",
+   "src": "temu/t1",
+   "start": 87.03,
+   "end": 87.29
+  },
+  {
+   "text": "Aber",
+   "src": "temu/t1",
+   "start": 95.74,
+   "end": 95.88
+  },
+  {
+   "text": "was",
+   "src": "temu/t1",
+   "start": 95.9,
+   "end": 96.04
+  },
+  {
+   "text": "ich",
+   "src": "temu/t1",
+   "start": 96.06,
+   "end": 96.18
+  },
+  {
+   "text": "an",
+   "src": "temu/t1",
+   "start": 96.2,
+   "end": 96.28
+  },
+  {
+   "text": "dieser",
+   "src": "temu/t1",
+   "start": 96.3,
+   "end": 96.42
+  },
+  {
+   "text": "Meldung",
+   "src": "temu/t1",
+   "start": 96.44,
+   "end": 96.74
+  },
+  {
+   "text": "besonders",
+   "src": "temu/t1",
+   "start": 96.76,
+   "end": 97.06
+  },
+  {
+   "text": "spannend",
+   "src": "temu/t1",
+   "start": 97.08,
+   "end": 97.38
+  },
+  {
+   "text": "finde",
+   "src": "temu/t1",
+   "start": 97.4,
+   "end": 97.66
+  },
+  {
+   "text": "ist:",
+   "src": "temu/t1",
+   "start": 97.68,
+   "end": 97.86
+  },
+  {
+   "text": "Nur",
+   "src": "temu/t1",
+   "start": 101.74,
+   "end": 101.82
+  },
+  {
+   "text": "weil",
+   "src": "temu/t1",
+   "start": 101.86,
+   "end": 101.96
+  },
+  {
+   "text": "jetzt",
+   "src": "temu/t1",
+   "start": 102.0,
+   "end": 102.12
+  },
+  {
+   "text": "bei",
+   "src": "temu/t1",
+   "start": 102.16,
+   "end": 102.22
+  },
+  {
+   "text": "Temu",
+   "src": "temu/t1",
+   "start": 102.32,
+   "end": 102.56
+  },
+  {
+   "text": "und",
+   "src": "temu/t1",
+   "start": 102.64,
+   "end": 102.72
+  },
+  {
+   "text": "den",
+   "src": "temu/t1",
+   "start": 102.74,
+   "end": 102.8
+  },
+  {
+   "text": "anderen",
+   "src": "temu/t1",
+   "start": 102.86,
+   "end": 103.08
+  },
+  {
+   "text": "Marktplätzen",
+   "src": "temu/t1",
+   "start": 103.1,
+   "end": 103.52
+  },
+  {
+   "text": "weniger",
+   "src": "temu/t1",
+   "start": 103.54,
+   "end": 103.8
+  },
+  {
+   "text": "gekauft",
+   "src": "temu/t1",
+   "start": 103.86,
+   "end": 104.24
+  },
+  {
+   "text": "wird,",
+   "src": "temu/t1",
+   "start": 104.3,
+   "end": 104.46
+  },
+  {
+   "text": "heißt",
+   "src": "temu/t1",
+   "start": 104.8,
+   "end": 105.0
+  },
+  {
+   "text": "es",
+   "src": "temu/t1",
+   "start": 105.04,
+   "end": 105.1
+  },
+  {
+   "text": "leider",
+   "src": "temu/t1",
+   "start": 105.16,
+   "end": 105.34
+  },
+  {
+   "text": "nicht",
+   "src": "temu/t1",
+   "start": 105.42,
+   "end": 105.58
+  },
+  {
+   "text": "automatisch,",
+   "src": "temu/t1",
+   "start": 105.7,
+   "end": 106.36
+  },
+  {
+   "text": "dass",
+   "src": "temu/t1",
+   "start": 106.48,
+   "end": 106.62
+  },
+  {
+   "text": "die",
+   "src": "temu/t1",
+   "start": 106.66,
+   "end": 106.74
+  },
+  {
+   "text": "deutschen",
+   "src": "temu/t1",
+   "start": 106.78,
+   "end": 107.1
+  },
+  {
+   "text": "Onlineshops",
+   "src": "temu/t1",
+   "start": 107.16,
+   "end": 107.56
+  },
+  {
+   "text": "jetzt",
+   "src": "temu/t1",
+   "start": 107.58,
+   "end": 107.74
+  },
+  {
+   "text": "davon",
+   "src": "temu/t1",
+   "start": 107.78,
+   "end": 107.98
+  },
+  {
+   "text": "profitieren.",
+   "src": "temu/t1",
+   "start": 108.02,
+   "end": 108.56
+  },
+  {
+   "text": "Denn",
+   "src": "temu/t1",
+   "start": 109.26,
+   "end": 109.4
+  },
+  {
+   "text": "diese",
+   "src": "temu/t1",
+   "start": 109.48,
+   "end": 109.68
+  },
+  {
+   "text": "müssen",
+   "src": "temu/t1",
+   "start": 109.74,
+   "end": 109.94
+  },
+  {
+   "text": "leider",
+   "src": "temu/t1",
+   "start": 109.96,
+   "end": 110.14
+  },
+  {
+   "text": "ihre",
+   "src": "temu/t1",
+   "start": 110.18,
+   "end": 110.3
+  },
+  {
+   "text": "Kunden",
+   "src": "temu/t1",
+   "start": 110.42,
+   "end": 110.7
+  },
+  {
+   "text": "trotzdem",
+   "src": "temu/t1",
+   "start": 110.78,
+   "end": 111.2
+  },
+  {
+   "text": "noch",
+   "src": "temu/t1",
+   "start": 111.24,
+   "end": 111.34
+  },
+  {
+   "text": "überzeugen.",
+   "src": "temu/t1",
+   "start": 111.38,
+   "end": 111.82
+  },
+  {
+   "text": "Denn",
+   "src": "temu/t1",
+   "start": 112.34,
+   "end": 112.46
+  },
+  {
+   "text": "mit",
+   "src": "temu/t1",
+   "start": 112.48,
+   "end": 112.58
+  },
+  {
+   "text": "guten",
+   "src": "temu/t1",
+   "start": 112.64,
+   "end": 112.88
+  },
+  {
+   "text": "Produkten,",
+   "src": "temu/t1",
+   "start": 112.92,
+   "end": 113.3
+  },
+  {
+   "text": "Vertrauen,",
+   "src": "temu/t1",
+   "start": 113.38,
+   "end": 113.88
+  },
+  {
+   "text": "vernünftigen",
+   "src": "temu/t1",
+   "start": 114.1,
+   "end": 114.58
+  },
+  {
+   "text": "Preisen",
+   "src": "temu/t1",
+   "start": 114.64,
+   "end": 114.98
+  },
+  {
+   "text": "und",
+   "src": "temu/t1",
+   "start": 115.08,
+   "end": 115.18
+  },
+  {
+   "text": "einem",
+   "src": "temu/t1",
+   "start": 115.34,
+   "end": 115.54
+  },
+  {
+   "text": "Onlineshop,",
+   "src": "temu/t1",
+   "start": 115.6,
+   "end": 115.94
+  },
+  {
+   "text": "der",
+   "src": "temu/t1",
+   "start": 116.0,
+   "end": 116.06
+  },
+  {
+   "text": "auch",
+   "src": "temu/t1",
+   "start": 116.08,
+   "end": 116.18
+  },
+  {
+   "text": "wirklich",
+   "src": "temu/t1",
+   "start": 116.24,
+   "end": 116.56
+  },
+  {
+   "text": "funktioniert,",
+   "src": "temu/t1",
+   "start": 116.62,
+   "end": 117.2
+  },
+  {
+   "text": "kann",
+   "src": "temu/t1",
+   "start": 117.78,
+   "end": 117.94
+  },
+  {
+   "text": "man",
+   "src": "temu/t1",
+   "start": 117.96,
+   "end": 118.06
+  },
+  {
+   "text": "auch",
+   "src": "temu/t1",
+   "start": 118.1,
+   "end": 118.22
+  },
+  {
+   "text": "die",
+   "src": "temu/t1",
+   "start": 118.34,
+   "end": 118.4
+  },
+  {
+   "text": "Kunden",
+   "src": "temu/t1",
+   "start": 118.48,
+   "end": 118.8
+  },
+  {
+   "text": "für",
+   "src": "temu/t1",
+   "start": 118.94,
+   "end": 119.04
+  },
+  {
+   "text": "sich",
+   "src": "temu/t1",
+   "start": 119.1,
+   "end": 119.22
+  },
+  {
+   "text": "gewinnen.",
+   "src": "temu/t1",
+   "start": 119.28,
+   "end": 119.54
+  },
+  {
+   "text": "Meine",
+   "src": "temu/t1",
+   "start": 140.87,
+   "end": 141.07
+  },
+  {
+   "text": "Meinung",
+   "src": "temu/t1",
+   "start": 141.13,
+   "end": 141.41
+  },
+  {
+   "text": "hierzu",
+   "src": "temu/t1",
+   "start": 141.51,
+   "end": 141.79
+  },
+  {
+   "text": "ist,",
+   "src": "temu/t1",
+   "start": 141.89,
+   "end": 142.03
+  },
+  {
+   "text": "weniger",
+   "src": "temu/t1",
+   "start": 142.51,
+   "end": 142.79
+  },
+  {
+   "text": "Konkurrenz",
+   "src": "temu/t1",
+   "start": 142.87,
+   "end": 143.33
+  },
+  {
+   "text": "ist",
+   "src": "temu/t1",
+   "start": 143.39,
+   "end": 143.47
+  },
+  {
+   "text": "halt",
+   "src": "temu/t1",
+   "start": 143.49,
+   "end": 143.61
+  },
+  {
+   "text": "eben",
+   "src": "temu/t1",
+   "start": 143.67,
+   "end": 143.77
+  },
+  {
+   "text": "noch",
+   "src": "temu/t1",
+   "start": 143.81,
+   "end": 143.91
+  },
+  {
+   "text": "lange",
+   "src": "temu/t1",
+   "start": 143.97,
+   "end": 144.19
+  },
+  {
+   "text": "keine",
+   "src": "temu/t1",
+   "start": 144.45,
+   "end": 144.63
+  },
+  {
+   "text": "Verkaufsstrategie.",
+   "src": "temu/t1",
+   "start": 144.69,
+   "end": 145.35
+  },
+  {
+   "text": "Aber",
+   "src": "temu/t1",
+   "start": 146.43,
+   "end": 146.59
+  },
+  {
+   "text": "was",
+   "src": "temu/t1",
+   "start": 146.79,
+   "end": 146.89
+  },
+  {
+   "text": "glaubt",
+   "src": "temu/t1",
+   "start": 146.93,
+   "end": 147.11
+  },
+  {
+   "text": "ihr?",
+   "src": "temu/t1",
+   "start": 147.15,
+   "end": 147.23
+  },
+  {
+   "text": "Kaufen",
+   "src": "temu/t1",
+   "start": 147.37,
+   "end": 147.65
+  },
+  {
+   "text": "jetzt",
+   "src": "temu/t1",
+   "start": 147.67,
+   "end": 147.83
+  },
+  {
+   "text": "die",
+   "src": "temu/t1",
+   "start": 147.87,
+   "end": 147.93
+  },
+  {
+   "text": "Leute,",
+   "src": "temu/t1",
+   "start": 147.99,
+   "end": 148.25
+  },
+  {
+   "text": "nur",
+   "src": "temu/t1",
+   "start": 148.39,
+   "end": 148.51
+  },
+  {
+   "text": "weil",
+   "src": "temu/t1",
+   "start": 148.55,
+   "end": 148.67
+  },
+  {
+   "text": "sie",
+   "src": "temu/t1",
+   "start": 148.71,
+   "end": 148.77
+  },
+  {
+   "text": "auf",
+   "src": "temu/t1",
+   "start": 148.79,
+   "end": 148.85
+  },
+  {
+   "text": "den",
+   "src": "temu/t1",
+   "start": 148.89,
+   "end": 148.97
+  },
+  {
+   "text": "Marktplätzen",
+   "src": "temu/t1",
+   "start": 149.01,
+   "end": 149.47
+  },
+  {
+   "text": "weniger",
+   "src": "temu/t1",
+   "start": 149.53,
+   "end": 149.81
+  },
+  {
+   "text": "kaufen,",
+   "src": "temu/t1",
+   "start": 149.93,
+   "end": 150.35
+  },
+  {
+   "text": "bei",
+   "src": "temu/t1",
+   "start": 150.77,
+   "end": 150.87
+  },
+  {
+   "text": "deutschen",
+   "src": "temu/t1",
+   "start": 150.95,
+   "end": 151.27
+  },
+  {
+   "text": "Online-Händlern",
+   "src": "temu/t1",
+   "start": 151.37,
+   "end": 151.97
+  },
+  {
+   "text": "stattdessen?",
+   "src": "temu/t1",
+   "start": 152.03,
+   "end": 152.53
+  },
+  {
+   "text": "Oder",
+   "src": "temu/t1",
+   "start": 153.07,
+   "end": 153.25
+  },
+  {
+   "text": "bestellen",
+   "src": "temu/t1",
+   "start": 153.49,
+   "end": 153.87
+  },
+  {
+   "text": "wir",
+   "src": "temu/t1",
+   "start": 153.91,
+   "end": 153.97
+  },
+  {
+   "text": "in",
+   "src": "temu/t1",
+   "start": 153.99,
+   "end": 154.05
+  },
+  {
+   "text": "Deutschland",
+   "src": "temu/t1",
+   "start": 154.09,
+   "end": 154.37
+  },
+  {
+   "text": "einfach",
+   "src": "temu/t1",
+   "start": 154.39,
+   "end": 154.53
+  },
+  {
+   "text": "generell",
+   "src": "temu/t1",
+   "start": 154.59,
+   "end": 154.89
+  },
+  {
+   "text": "gerade",
+   "src": "temu/t1",
+   "start": 154.95,
+   "end": 155.15
+  },
+  {
+   "text": "weniger,",
+   "src": "temu/t1",
+   "start": 155.21,
+   "end": 155.49
+  },
+  {
+   "text": "weil",
+   "src": "temu/t1",
+   "start": 155.53,
+   "end": 155.65
+  },
+  {
+   "text": "alles",
+   "src": "temu/t1",
+   "start": 155.83,
+   "end": 156.03
+  },
+  {
+   "text": "hier",
+   "src": "temu/t1",
+   "start": 156.07,
+   "end": 156.17
+  },
+  {
+   "text": "viel",
+   "src": "temu/t1",
+   "start": 156.21,
+   "end": 156.35
+  },
+  {
+   "text": "teurer",
+   "src": "temu/t1",
+   "start": 156.39,
+   "end": 156.63
+  },
+  {
+   "text": "wird?",
+   "src": "temu/t1",
+   "start": 156.67,
+   "end": 156.81
+  }
+ ],
+ "pages": [
+  1,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  1,
+  2,
+  4,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  4,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  2,
+  2,
+  4,
+  1,
+  4,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  1,
+  3,
+  1,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  1,
+  4,
+  4,
+  3,
+  3,
+  2,
+  2,
+  1,
+  1,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3
+ ]
+}
