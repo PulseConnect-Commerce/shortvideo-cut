@@ -195,7 +195,7 @@ export const Mark: React.FC<{ ok: boolean; size?: number }> = ({ ok, size = 54 }
 };
 
 /** Pille auf der Karte (Akzent, Warnung, ok) */
-export const Tag: React.FC<{ children: React.ReactNode; kind?: "accent" | "warn" | "ok" | "ink"; size?: number }> = ({ children, kind = "accent", size = 46 }) => {
+export const Tag: React.FC<{ children: React.ReactNode; kind?: "accent" | "warn" | "ok" | "ink" | "wichtig"; size?: number }> = ({ children, kind = "accent", size = 46 }) => {
   const D = useDesign();
   const { background: bg, color } = D.tags[kind];
   const pulse = D.name === "pulse";

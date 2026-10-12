@@ -163,7 +163,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
           </Tag>
         </Pop>
         <Pop fr={fr} at={F("verständlich")} x={tagX("für Menschen", 44)} y={118}>
-          <Tag kind="ok" size={44}>
+          <Tag kind="wichtig" size={44}>
             + für KI verständlich
           </Tag>
         </Pop>

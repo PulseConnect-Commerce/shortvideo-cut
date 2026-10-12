@@ -93,7 +93,7 @@ export type Design = {
   titelChip: React.CSSProperties;
   nummer: { background: string; color: string };
   /** Pillen: Farben je Art, dazu ihre Form (Ecken, Schatten) */
-  tags: Record<"accent" | "warn" | "ok" | "ink", { background: string; color: string }>;
+  tags: Record<"accent" | "warn" | "ok" | "ink" | "wichtig", { background: string; color: string }>;
   tag: React.CSSProperties;
   /** Haken und Kreuz */
   ok: string;
@@ -132,6 +132,7 @@ const PULSE: Design = {
     accent: { background: STIL.yellow, color: STIL.ink },
     warn: { background: STIL.red, color: "#fff" },
     ok: { background: STIL.accent2, color: STIL.ink },
+    wichtig: { background: STIL.accent2, color: STIL.ink },
     ink: { background: STIL.ink, color: "#fff" },
   },
   tag: { borderRadius: 999, boxShadow: "0 8px 20px rgb(20 22 26 / 0.18)" },
@@ -191,8 +192,11 @@ const nacht = (name: keyof typeof LEUCHT): Design => {
     },
     karte: { background: GLAS, borderRadius: 18, boxShadow: "0 16px 40px rgb(0 0 0 / 0.45)", border: "2px solid rgb(255 255 255 / 0.12)", fontFamily: `"Space Grotesk", ${STIL.font}`, color: "#fff" },
     kartenText: "#fff",
-    chip: { background: GLAS, borderRadius: 16, boxShadow: "0 10px 26px rgb(0 0 0 / 0.4)", border: "2px solid rgb(255 255 255 / 0.12)" },
-    chipText: "#fff",
+    // Karten und Begriffe oben weiß, die Leuchtfarbe nur für Titel und ganz Wichtiges (seine Vorgabe 2026-10-12: "Bitte
+    // die Akzentfarbe nicht so häufig im oberen Bereich verwenden. lieber häufiger weiß als Hintergrund der Karten
+    // nehmen und die Highlight Farbe nur bei ganz wichtigen Dingen sowie dem Titel verwenden")
+    chip: { background: "#fff", borderRadius: 16, boxShadow: "0 10px 26px rgb(0 0 0 / 0.4)" },
+    chipText: NACHT_TINTE,
     text: space,
     titel: anton,
     /** groß und laut: "Die Hook mit 'Überall KI Agenten' ist viel zu klein geschrieben" (2026-10-10) */
@@ -202,8 +206,9 @@ const nacht = (name: keyof typeof LEUCHT): Design => {
     tags: {
       accent: { background: "#fff", color: NACHT_TINTE },
       warn: { background: NACHT_PINK, color: "#fff" },
-      ok: { background: neon, color: NACHT_TINTE },
+      ok: { background: "#fff", color: NACHT_TINTE },
       ink: { background: GLAS, color: "#fff" },
+      wichtig: { background: neon, color: NACHT_TINTE },
     },
     tag: { borderRadius: 12, boxShadow: "0 10px 26px rgb(0 0 0 / 0.4)" },
     ok: neon,
