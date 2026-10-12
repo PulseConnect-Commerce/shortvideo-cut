@@ -27,7 +27,12 @@ export const meta = { id: "Temu", durationInFrames: C.DURATION, fps: C.FPS };
 const OBEN = { scale: 1.2, hoch: 430 };
 const MITTE = OBEN;
 /** Einblendungen zur Quelle: direkt über dem Kopf */
-const QY = 340;
+const QY = 265;
+/** Hook, Szenen-Titel und Begriffe stehen über dem Kopf (Haar bei y ~400, seine Vorgabe 2026-10-12: "Jetzt liegen die
+ * Einblendungen leider direkt auf meinem Kopf"): der Hook kleiner (y ~200-395), die Szenen 60 px höher (Titel
+ * y ~230-360); die Begriffe stehen in derselben Zeile und ersetzen den Titel, sobald der erste erscheint. */
+const HOCH = -60;
+const titelBis = (at: number, ersterBegriff: number) => Math.min(TITEL, ersterBegriff - at - 8);
 /** Untertitel klein bei y 1260; Hinweise bei y 1350, die Quellen-Pille klein unten rechts bei y 1440 */
 const UT = { top: 1260, size: 64 };
 const HOSE = 1700;
@@ -97,7 +102,9 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       <Toenung />
       <Bodenblende ab={HOSE * lage.scale - lage.hoch} />
 
-      <HookTitle fr={fr} line1="Temu verliert" line2="35 % Umsatz?!" outAt={T.gs1 - 4} />
+      <AbsoluteFill style={{ transform: "translateY(-10px) scale(0.68)", transformOrigin: "50% 0%" }}>
+        <HookTitle fr={fr} line1="Temu verliert" line2="35 % Umsatz?!" outAt={T.gs1 - 4} />
+      </AbsoluteFill>
 
       {/* Quelle hinter ihm (Greenscreen im Take): Schlagzeile, dann die markierten Stellen */}
       <Pop fr={fr} at={T.gs1} until={QUELLE_ENDE} x={60} y={1440} w={890} style={{ textAlign: "right", transformOrigin: "right center" }}>
@@ -136,66 +143,74 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false }) =
       </Pop>
 
       {/* Das Spannende: Temu verkauft weniger, deutsche Shops gewinnen nicht automatisch */}
-      <Szene fr={fr} at={T.spannend} until={T.shops - 2} title="Das Spannende" frei titelDauer={TITEL}>
-        <Pop fr={fr} at={F("weniger", T.spannend)} until={F("automatisch", T.spannend) - 4} x={24} y={110}>
+      <AbsoluteFill style={{ transform: `translateY(${HOCH}px)` }}>
+      <Szene fr={fr} at={T.spannend} until={T.shops - 2} title="Das Spannende" frei titelDauer={titelBis(T.spannend, F("weniger", T.spannend))}>
+        <Pop fr={fr} at={F("weniger", T.spannend)} until={F("automatisch", T.spannend) - 4} x={24} y={10}>
           <Row text="Temu & Co. verkaufen weniger" mark="ok" width={720} onPhoto />
         </Pop>
-        <Pop fr={fr} at={F("automatisch", T.spannend)} x={24} y={110}>
-          <Row text="deutsche Shops gewinnen nicht automatisch" mark="no" width={900} onPhoto />
+        <Pop fr={fr} at={F("automatisch", T.spannend)} x={24} y={10}>
+          <Row text="Shops gewinnen nicht automatisch" mark="no" width={760} onPhoto />
         </Pop>
       </Szene>
+      </AbsoluteFill>
 
       {/* Womit Shops überzeugen */}
-      <Szene fr={fr} at={T.shops} until={T.meinung - 2} title="So überzeugst du Kunden" frei titelDauer={TITEL}>
-        <Pop fr={fr} at={F("produkten")} x={24} y={110}>
+      <AbsoluteFill style={{ transform: `translateY(${HOCH}px)` }}>
+      <Szene fr={fr} at={T.shops} until={T.meinung - 2} title="So überzeugst du Kunden" frei titelDauer={titelBis(T.shops, F("produkten"))}>
+        <Pop fr={fr} at={F("produkten")} x={24} y={10}>
           <Tag kind="ok" size={S}>
             Produkte
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("vertrauen")} x={x2} y={110}>
+        <Pop fr={fr} at={F("vertrauen")} x={x2} y={10}>
           <Tag kind="ok" size={S}>
             Vertrauen
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("preisen")} x={x3} y={110}>
+        <Pop fr={fr} at={F("preisen")} x={x3} y={10}>
           <Tag kind="ok" size={S}>
             Preise
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("funktioniert")} x={x4} y={110}>
+        <Pop fr={fr} at={F("funktioniert")} x={x4} y={10}>
           <Tag kind="ok" size={S}>
             guter Shop
           </Tag>
         </Pop>
       </Szene>
+      </AbsoluteFill>
 
       {/* Seine Meinung */}
-      <Szene fr={fr} at={T.meinung} until={T.frage - 2} title="Meine Meinung" frei titelDauer={TITEL}>
-        <Pop fr={fr} at={F("konkurrenz", T.meinung)} x={24} y={110}>
+      <AbsoluteFill style={{ transform: `translateY(${HOCH}px)` }}>
+      <Szene fr={fr} at={T.meinung} until={T.frage - 2} title="Meine Meinung" frei titelDauer={titelBis(T.meinung, F("konkurrenz", T.meinung))}>
+        <Pop fr={fr} at={F("konkurrenz", T.meinung)} x={24} y={10}>
           <Tag kind="ok" size={44}>
             Weniger Konkurrenz
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("verkaufsstrategie")} x={tagX("Weniger Konkurrenz", 44)} y={110}>
+        <Pop fr={fr} at={F("verkaufsstrategie")} x={tagX("Weniger Konkurrenz", 44)} y={10}>
           <Tag kind="wichtig" size={44}>
             ≠ Verkaufsstrategie
           </Tag>
         </Pop>
       </Szene>
+      </AbsoluteFill>
 
       {/* Frage an die Community */}
-      <Szene fr={fr} at={T.frage} until={Infinity} title="Was glaubt ihr?" frei titelDauer={TITEL}>
-        <Pop fr={fr} at={F("deutschen", T.frage)} x={24} y={110}>
+      <AbsoluteFill style={{ transform: `translateY(${HOCH}px)` }}>
+      <Szene fr={fr} at={T.frage} until={Infinity} title="Was glaubt ihr?" frei titelDauer={titelBis(T.frage, F("deutschen", T.frage))}>
+        <Pop fr={fr} at={F("deutschen", T.frage)} x={24} y={10}>
           <Tag kind="ok" size={44}>
             Mehr bei deutschen Shops?
           </Tag>
         </Pop>
-        <Pop fr={fr} at={F("bestellen", T.frage)} x={tagX("Mehr bei deutschen Shops?", 44)} y={110}>
+        <Pop fr={fr} at={F("bestellen", T.frage)} x={tagX("Mehr bei deutschen Shops?", 44)} y={10}>
           <Tag kind="ok" size={44}>
             Oder weniger?
           </Tag>
         </Pop>
       </Szene>
+      </AbsoluteFill>
 
       <Captions C={C} fr={fr} top={UT.top} size={UT.size} />
 

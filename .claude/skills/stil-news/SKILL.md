@@ -34,8 +34,12 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   y ~500). Der Kopf beginnt direkt darunter: **das Gesicht im unteren Teil des oberen Drittels** (Augen bei y ~600-640,
   seine Vorgabe 2026-10-12: "mein Gesicht könnte hier etwas höher gesetzt sein, im unteren Teil des oberen Drittels"),
   Bildlage "OBEN" mit `<Takes transform="translateY(-430px) scale(1.2)" transformOrigin="50% 0%" />` (bei seinem
-  Bürostuhl-Setup Haar bei y ~400; mit Standbildern nachmessen; die Begriffe dürfen das Haar knapp berühren, nie die
-  Stirn). Begriffe in der Szene bei `y={110}`. Untertitel bei y 1260 (klein, siehe Untertitel), unten
+  Bürostuhl-Setup Haar bei y ~400; mit Standbildern nachmessen). **Alle Einblendungen enden mindestens 30 px über
+  dem Haar** ("Jetzt liegen die Einblendungen leider direkt auf meinem Kopf. Sie müssten somit ein wenig über meinem
+  Kopf angezeigt werden", 2026-10-12): der Hook in `<AbsoluteFill style={{ transform: "translateY(-10px) scale(0.68)",
+  transformOrigin: "50% 0%" }}>` (y ~165-395), jede Szene in `<AbsoluteFill style={{ transform: "translateY(-60px)" }}>`
+  (Titel y ~230-360), die Begriffe in **derselben Zeile** wie der Titel (`y={10}`), der Titel blendet aus, sobald der
+  erste Begriff kommt (`titelDauer={Math.min(TITEL, ersterBegriff - at - 8)}`). Vorlage `src/projekte/temu/Video.tsx`. Untertitel bei y 1260 (klein, siehe Untertitel), unten
   `<Bodenblende ab={HOSE * 1.2 - 430} />` gegen Hose und leeren Rand.
   Pro Szene also nur Titel plus eine Zeile Begriffe: ein weiterer Begriff ersetzt den vorherigen (`until` = nächstes
   Wort - 4 Frames) oder steht daneben (`tagBreite`). Keine Pille unter dem Hook, keine Antwort-Chips (Ja/Nein) am
@@ -59,9 +63,9 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   die Stelle, über die er spricht, im Artikel **hellgrün markieren** (`<mark>` in `#00F090`, dunkle Schrift) und
   mittig scrollen. Erst die Schlagzeile (Seite oben), dann die markierte Zahl oder Aussage.
 - **Hintergrundbild bauen** (1080x1920, so wie es im fertigen Video aussehen soll): das Wichtige (Schlagzeile,
-  markierte Stelle) liegt über dem Kopf und über der Einblendung zur Quelle: markierte Stelle bei y ~130-330
-  (Screenshot: `scrollTo(markTop - 50)` in CSS-Pixeln), die Einblendung dazu (z. B. groß "−35,5 % Umsatz",
-  `Tag kind="wichtig" size={64}`) direkt darunter bei y 340, der Kopf ab ~400. Liegen
+  markierte Stelle) liegt über dem Kopf und über der Einblendung zur Quelle: markierte Stelle endet bei y ~245
+  (Screenshot: `scrollTo(markBottom - 93)` in CSS-Pixeln), die Einblendung dazu (z. B. groß "−35,5 % Umsatz",
+  `Tag kind="wichtig" size={64}`) direkt darunter bei y 265-360, der Kopf ab ~400. Liegen
   lassen in `public/broll/<projekt>/hg-*.png`.
 - **In den Take rechnen:** `npm run portrait -- <projekt> --hintergrund public/broll/<projekt>/hg-x.png@<von>-<bis>
   [--hintergrund …] --ausschnitt 1.2,430` (von/bis in Sekunden im Take, genau die Sätze, die über die Quelle reden; `bis` mindestens 0,15 s nach dem letzten Wort, sonst blitzt am Schnitt ein Einzelbild mit dem Raum auf, so passiert bei KI-Kunde 2026-10-12, gefunden von `npm run checks`).
