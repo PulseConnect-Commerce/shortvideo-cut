@@ -30,7 +30,7 @@ Die Werte stehen in `src/lib/design.tsx`, die Vergleichsbilder entstehen aus `sr
 | Design | Look | Leuchtfarbe |
 | --- | --- | --- |
 | **pulse** | der Look der ersten drei Videos: Geist, das gesprochene Wort blau, weiße Chips, Hook aus `HOOK_STILE` | (Blau `#31ADEC`, PulseConnect-Grün, Rot) |
-| **nacht** (Variante 1) | dunkel und laut: Titel und Hook in Anton (Großbuchstaben); Untertitel klein und ruhig (Space Grotesk 64 px, kein Kasten, seit 2026-10-12 auch ohne hervorgehobenes Wort, nur eingeblendet), dunkle Glas-Chips mit Space Grotesk, Szenen-Titel in der Leuchtfarbe, Hook weiß und darunter schwarz auf Leuchtfarbe; Bild dunkler und kühler, oben abgedunkelt, Vignette; Warnungen Pink-Rot `#FF3B5C` | Neon-Gelbgrün `#CCFF00` |
+| **nacht** (Variante 1) | dunkel und laut: Titel und Hook in Anton (Großbuchstaben); Untertitel klein und ruhig (Space Grotesk 64 px, kein Kasten, nur das gesprochene Wort in der Leuchtfarbe, seit 2026-10-11), dunkle Glas-Chips mit Space Grotesk, Szenen-Titel in der Leuchtfarbe, Hook weiß und darunter schwarz auf Leuchtfarbe; Bild dunkler und kühler, oben abgedunkelt, Vignette; Warnungen Pink-Rot `#FF3B5C` | Neon-Gelbgrün `#CCFF00` |
 | **nacht-gruen** (Variante 2) | wie nacht | Hellgrün vom rechten Ende des PulseConnect-Logos `#00F090` |
 | **nacht-mint** (Variante 3) | wie nacht | helles Mint-Türkis `#40E8E0` (das Türkis aus der Mitte des Logo-Verlaufs, aufgehellt) |
 
