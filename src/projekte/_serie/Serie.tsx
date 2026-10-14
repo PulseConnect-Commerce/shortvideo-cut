@@ -21,9 +21,11 @@ type Cut = ReturnType<typeof createCut>;
 export type Chip = { at: number; text: string; wichtig?: boolean; neu?: boolean; stempel?: boolean };
 export type SerienSzene = { at: number; title: string; chips: Chip[] };
 
-const OBEN = { scale: 1.2, hoch: 384 };
-const HOOK_LAGE = { scale: 1.2, hoch: 300 };
-const HOCH = -80;
+/** Tabu-Zonen (seine Vorgabe 2026-10-14, src/lib/zonen.json): oben bis y 280, rechts ab x 900, unten ab y 1560.
+ * Hook, Titel und Chips stehen in y 280-560, der Kopf beginnt bei y ~600 (Bild 1,2-fach, bis unten gefüllt). */
+const OBEN = { scale: 1.2, hoch: 204 };
+const HOOK_LAGE = OBEN;
+const HOCH = 0;
 const UT = { top: 1260, size: 64 };
 const TITEL = 75;
 
@@ -70,7 +72,7 @@ export const serienVideo = (C: Cut, hook: { line1: string; line2: string }, szen
         <Toenung />
         <AbsoluteFill style={{ background: "linear-gradient(180deg, rgb(6 7 10 / 0) 1640px, rgb(6 7 10 / 0.55) 1920px)" }} />
 
-        <AbsoluteFill style={{ transform: "translateY(40px) scale(0.68)", transformOrigin: "50% 0%" }}>
+        <AbsoluteFill style={{ transform: "translateY(56px) scale(0.8)", transformOrigin: "50% 0%" }}>
           <HookTitle fr={fr} line1={hook.line1} line2={hook.line2} outAt={ende - 4} />
         </AbsoluteFill>
 

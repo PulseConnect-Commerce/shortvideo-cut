@@ -1,0 +1,97 @@
+{
+ "projekt": "roas",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.4,
+  "pre": 0.04,
+  "post": 0.06
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 2.8,
+   "text": "ROAS klingt immer gut, sagt aber leider eben nicht alles aus."
+  },
+  {
+   "take": "t1",
+   "ab": 6.5,
+   "text": "Willkommen zu E-Commerce einfach erklärt. Heute zeige ich dir, was diese Kennzahl wirklich aussagt."
+  },
+  {
+   "take": "t1",
+   "ab": 12.55,
+   "text": "Der ROAS steht für Return on Ad Spend."
+  },
+  {
+   "take": "t1",
+   "ab": 17.4,
+   "text": "Also hier mal ein Beispiel. Gibst du 1000 Euro für Werbung aus und die Kampagne bekommt 4000 Euro an Umsatz zurückgerechnet, dann liegt eben der ROAS bei 4."
+  },
+  {
+   "take": "t1",
+   "ab": 26.25,
+   "text": "Davon gehören aber natürlich auch noch der Wareneinsatz, Versand, Zahlungsgebühren und auch eben andere Kosten abgezogen."
+  },
+  {
+   "take": "t1",
+   "ab": 33.1,
+   "text": "Deshalb kann derselbe ROAS für einen Shop gut sein, für einen anderen Shop hingegen aber auch einfach zu niedrig sein."
+  },
+  {
+   "take": "t1",
+   "ab": 39.3,
+   "text": "Dein Vorteil hier, mit dem ROAS kannst du eben die Umsatzwirkung deiner Werbung vergleichen und Kampagnen gezielter Steuern."
+  },
+  {
+   "take": "t1",
+   "ab": 81.7,
+   "text": "Ob du"
+  },
+  {
+   "take": "t1",
+   "ab": 83.1,
+   "text": "jedoch profitabel bist, zeigen dann erst die Kosten und die Margen."
+  },
+  {
+   "take": "t1",
+   "ab": 111.9,
+   "text": "Ein guter ROAS ist eben nicht immer automatisch ein Gewinn. Was aber ein automatischer Gewinn ist, ist wenn du mir hier ein Follow hinterlässt, um weitere solcher E-Commerce Kennzahlen nicht zu verpassen."
+  }
+ ],
+ "ende": {
+  "bis": 121.25
+ },
+ "korrekturen": [
+  [
+   "t1",
+   19.15,
+   "1000",
+   "1.000"
+  ],
+  [
+   "t1",
+   21.65,
+   "4000",
+   "4.000"
+  ],
+  [
+   "t1",
+   22.99,
+   "zurückgerechnet,",
+   "zugerechnet,"
+  ],
+  [
+   "t1",
+   45.17,
+   "Steuern.",
+   "steuern."
+  ],
+  [
+   "t1",
+   39.97,
+   "hier,",
+   "hier:"
+  ]
+ ]
+}

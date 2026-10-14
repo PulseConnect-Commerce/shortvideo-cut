@@ -1,0 +1,1116 @@
+{
+ "projekt": "roas",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "roas/t1",
+   "from": 2.815,
+   "to": 5.915,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 6.535,
+   "to": 11.565,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 12.585,
+   "to": 14.855,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 17.425,
+   "to": 25.655,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 26.285,
+   "to": 29.455,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 29.805,
+   "to": 32.415,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 33.125,
+   "to": 38.575,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 39.305,
+   "to": 45.505,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 81.705,
+   "to": 82.255,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 83.125,
+   "to": 86.095,
+   "nach": 0.09,
+   "vor": 0.01
+  },
+  {
+   "src": "roas/t1",
+   "from": 111.905,
+   "to": 114.735,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "roas/t1",
+   "from": 115.145,
+   "to": 121.25,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "ROAS",
+   "src": "roas/t1",
+   "start": 2.9,
+   "end": 3.36
+  },
+  {
+   "text": "klingt",
+   "src": "roas/t1",
+   "start": 3.58,
+   "end": 3.8
+  },
+  {
+   "text": "immer",
+   "src": "roas/t1",
+   "start": 3.84,
+   "end": 4.0
+  },
+  {
+   "text": "gut,",
+   "src": "roas/t1",
+   "start": 4.06,
+   "end": 4.26
+  },
+  {
+   "text": "sagt",
+   "src": "roas/t1",
+   "start": 4.54,
+   "end": 4.74
+  },
+  {
+   "text": "aber",
+   "src": "roas/t1",
+   "start": 4.8,
+   "end": 4.92
+  },
+  {
+   "text": "leider",
+   "src": "roas/t1",
+   "start": 4.96,
+   "end": 5.16
+  },
+  {
+   "text": "eben",
+   "src": "roas/t1",
+   "start": 5.2,
+   "end": 5.3
+  },
+  {
+   "text": "nicht",
+   "src": "roas/t1",
+   "start": 5.32,
+   "end": 5.46
+  },
+  {
+   "text": "alles",
+   "src": "roas/t1",
+   "start": 5.48,
+   "end": 5.64
+  },
+  {
+   "text": "aus.",
+   "src": "roas/t1",
+   "start": 5.72,
+   "end": 5.86
+  },
+  {
+   "text": "Willkommen",
+   "src": "roas/t1",
+   "start": 6.58,
+   "end": 6.92
+  },
+  {
+   "text": "zu",
+   "src": "roas/t1",
+   "start": 6.98,
+   "end": 7.02
+  },
+  {
+   "text": "E-Commerce",
+   "src": "roas/t1",
+   "start": 7.18,
+   "end": 7.64
+  },
+  {
+   "text": "einfach",
+   "src": "roas/t1",
+   "start": 7.78,
+   "end": 8.04
+  },
+  {
+   "text": "erklärt.",
+   "src": "roas/t1",
+   "start": 8.1,
+   "end": 8.46
+  },
+  {
+   "text": "Heute",
+   "src": "roas/t1",
+   "start": 8.82,
+   "end": 9.06
+  },
+  {
+   "text": "zeige",
+   "src": "roas/t1",
+   "start": 9.16,
+   "end": 9.34
+  },
+  {
+   "text": "ich",
+   "src": "roas/t1",
+   "start": 9.4,
+   "end": 9.48
+  },
+  {
+   "text": "dir,",
+   "src": "roas/t1",
+   "start": 9.52,
+   "end": 9.62
+  },
+  {
+   "text": "was",
+   "src": "roas/t1",
+   "start": 9.72,
+   "end": 9.84
+  },
+  {
+   "text": "diese",
+   "src": "roas/t1",
+   "start": 9.94,
+   "end": 10.18
+  },
+  {
+   "text": "Kennzahl",
+   "src": "roas/t1",
+   "start": 10.28,
+   "end": 10.66
+  },
+  {
+   "text": "wirklich",
+   "src": "roas/t1",
+   "start": 10.78,
+   "end": 11.12
+  },
+  {
+   "text": "aussagt.",
+   "src": "roas/t1",
+   "start": 11.2,
+   "end": 11.565
+  },
+  {
+   "text": "Der",
+   "src": "roas/t1",
+   "start": 12.63,
+   "end": 12.73
+  },
+  {
+   "text": "ROAS",
+   "src": "roas/t1",
+   "start": 12.77,
+   "end": 12.97
+  },
+  {
+   "text": "steht",
+   "src": "roas/t1",
+   "start": 13.03,
+   "end": 13.23
+  },
+  {
+   "text": "für",
+   "src": "roas/t1",
+   "start": 13.31,
+   "end": 13.41
+  },
+  {
+   "text": "Return",
+   "src": "roas/t1",
+   "start": 13.53,
+   "end": 13.99
+  },
+  {
+   "text": "on",
+   "src": "roas/t1",
+   "start": 14.13,
+   "end": 14.23
+  },
+  {
+   "text": "Ad",
+   "src": "roas/t1",
+   "start": 14.39,
+   "end": 14.47
+  },
+  {
+   "text": "Spend.",
+   "src": "roas/t1",
+   "start": 14.53,
+   "end": 14.81
+  },
+  {
+   "text": "Also",
+   "src": "roas/t1",
+   "start": 17.47,
+   "end": 17.61
+  },
+  {
+   "text": "hier",
+   "src": "roas/t1",
+   "start": 17.67,
+   "end": 17.77
+  },
+  {
+   "text": "mal",
+   "src": "roas/t1",
+   "start": 17.81,
+   "end": 17.93
+  },
+  {
+   "text": "ein",
+   "src": "roas/t1",
+   "start": 17.95,
+   "end": 18.03
+  },
+  {
+   "text": "Beispiel.",
+   "src": "roas/t1",
+   "start": 18.07,
+   "end": 18.43
+  },
+  {
+   "text": "Gibst",
+   "src": "roas/t1",
+   "start": 18.79,
+   "end": 18.99
+  },
+  {
+   "text": "du",
+   "src": "roas/t1",
+   "start": 19.03,
+   "end": 19.09
+  },
+  {
+   "text": "1.000",
+   "src": "roas/t1",
+   "start": 19.15,
+   "end": 19.45
+  },
+  {
+   "text": "Euro",
+   "src": "roas/t1",
+   "start": 19.51,
+   "end": 19.67
+  },
+  {
+   "text": "für",
+   "src": "roas/t1",
+   "start": 19.77,
+   "end": 19.85
+  },
+  {
+   "text": "Werbung",
+   "src": "roas/t1",
+   "start": 19.91,
+   "end": 20.17
+  },
+  {
+   "text": "aus",
+   "src": "roas/t1",
+   "start": 20.29,
+   "end": 20.45
+  },
+  {
+   "text": "und",
+   "src": "roas/t1",
+   "start": 20.53,
+   "end": 20.61
+  },
+  {
+   "text": "die",
+   "src": "roas/t1",
+   "start": 20.63,
+   "end": 20.71
+  },
+  {
+   "text": "Kampagne",
+   "src": "roas/t1",
+   "start": 20.75,
+   "end": 21.17
+  },
+  {
+   "text": "bekommt",
+   "src": "roas/t1",
+   "start": 21.23,
+   "end": 21.53
+  },
+  {
+   "text": "4.000",
+   "src": "roas/t1",
+   "start": 21.65,
+   "end": 22.09
+  },
+  {
+   "text": "Euro",
+   "src": "roas/t1",
+   "start": 22.17,
+   "end": 22.33
+  },
+  {
+   "text": "an",
+   "src": "roas/t1",
+   "start": 22.49,
+   "end": 22.59
+  },
+  {
+   "text": "Umsatz",
+   "src": "roas/t1",
+   "start": 22.63,
+   "end": 22.95
+  },
+  {
+   "text": "zugerechnet,",
+   "src": "roas/t1",
+   "start": 22.99,
+   "end": 23.73
+  },
+  {
+   "text": "dann",
+   "src": "roas/t1",
+   "start": 24.07,
+   "end": 24.21
+  },
+  {
+   "text": "liegt",
+   "src": "roas/t1",
+   "start": 24.25,
+   "end": 24.43
+  },
+  {
+   "text": "eben",
+   "src": "roas/t1",
+   "start": 24.49,
+   "end": 24.65
+  },
+  {
+   "text": "der",
+   "src": "roas/t1",
+   "start": 24.67,
+   "end": 24.75
+  },
+  {
+   "text": "ROAS",
+   "src": "roas/t1",
+   "start": 24.81,
+   "end": 25.07
+  },
+  {
+   "text": "bei",
+   "src": "roas/t1",
+   "start": 25.19,
+   "end": 25.27
+  },
+  {
+   "text": "4.",
+   "src": "roas/t1",
+   "start": 25.41,
+   "end": 25.57
+  },
+  {
+   "text": "Davon",
+   "src": "roas/t1",
+   "start": 26.33,
+   "end": 26.67
+  },
+  {
+   "text": "gehören",
+   "src": "roas/t1",
+   "start": 26.73,
+   "end": 27.03
+  },
+  {
+   "text": "aber",
+   "src": "roas/t1",
+   "start": 27.07,
+   "end": 27.21
+  },
+  {
+   "text": "natürlich",
+   "src": "roas/t1",
+   "start": 27.27,
+   "end": 27.67
+  },
+  {
+   "text": "auch",
+   "src": "roas/t1",
+   "start": 27.75,
+   "end": 27.85
+  },
+  {
+   "text": "noch",
+   "src": "roas/t1",
+   "start": 27.91,
+   "end": 28.01
+  },
+  {
+   "text": "der",
+   "src": "roas/t1",
+   "start": 28.07,
+   "end": 28.15
+  },
+  {
+   "text": "Wareneinsatz,",
+   "src": "roas/t1",
+   "start": 28.21,
+   "end": 28.91
+  },
+  {
+   "text": "Versand,",
+   "src": "roas/t1",
+   "start": 29.01,
+   "end": 29.37
+  },
+  {
+   "text": "Zahlungsgebühren",
+   "src": "roas/t1",
+   "start": 29.85,
+   "end": 30.61
+  },
+  {
+   "text": "und",
+   "src": "roas/t1",
+   "start": 30.69,
+   "end": 30.75
+  },
+  {
+   "text": "auch",
+   "src": "roas/t1",
+   "start": 30.81,
+   "end": 30.91
+  },
+  {
+   "text": "eben",
+   "src": "roas/t1",
+   "start": 30.95,
+   "end": 31.05
+  },
+  {
+   "text": "andere",
+   "src": "roas/t1",
+   "start": 31.09,
+   "end": 31.31
+  },
+  {
+   "text": "Kosten",
+   "src": "roas/t1",
+   "start": 31.39,
+   "end": 31.75
+  },
+  {
+   "text": "abgezogen.",
+   "src": "roas/t1",
+   "start": 31.91,
+   "end": 32.39
+  },
+  {
+   "text": "Deshalb",
+   "src": "roas/t1",
+   "start": 33.17,
+   "end": 33.49
+  },
+  {
+   "text": "kann",
+   "src": "roas/t1",
+   "start": 33.59,
+   "end": 33.73
+  },
+  {
+   "text": "derselbe",
+   "src": "roas/t1",
+   "start": 33.77,
+   "end": 34.17
+  },
+  {
+   "text": "ROAS",
+   "src": "roas/t1",
+   "start": 34.25,
+   "end": 34.51
+  },
+  {
+   "text": "für",
+   "src": "roas/t1",
+   "start": 34.57,
+   "end": 34.65
+  },
+  {
+   "text": "einen",
+   "src": "roas/t1",
+   "start": 34.77,
+   "end": 34.97
+  },
+  {
+   "text": "Shop",
+   "src": "roas/t1",
+   "start": 35.03,
+   "end": 35.19
+  },
+  {
+   "text": "gut",
+   "src": "roas/t1",
+   "start": 35.25,
+   "end": 35.43
+  },
+  {
+   "text": "sein,",
+   "src": "roas/t1",
+   "start": 35.49,
+   "end": 35.71
+  },
+  {
+   "text": "für",
+   "src": "roas/t1",
+   "start": 36.03,
+   "end": 36.11
+  },
+  {
+   "text": "einen",
+   "src": "roas/t1",
+   "start": 36.15,
+   "end": 36.27
+  },
+  {
+   "text": "anderen",
+   "src": "roas/t1",
+   "start": 36.35,
+   "end": 36.63
+  },
+  {
+   "text": "Shop",
+   "src": "roas/t1",
+   "start": 36.65,
+   "end": 36.81
+  },
+  {
+   "text": "hingegen",
+   "src": "roas/t1",
+   "start": 36.87,
+   "end": 37.21
+  },
+  {
+   "text": "aber",
+   "src": "roas/t1",
+   "start": 37.27,
+   "end": 37.39
+  },
+  {
+   "text": "auch",
+   "src": "roas/t1",
+   "start": 37.45,
+   "end": 37.55
+  },
+  {
+   "text": "einfach",
+   "src": "roas/t1",
+   "start": 37.59,
+   "end": 37.81
+  },
+  {
+   "text": "zu",
+   "src": "roas/t1",
+   "start": 37.87,
+   "end": 37.95
+  },
+  {
+   "text": "niedrig",
+   "src": "roas/t1",
+   "start": 38.01,
+   "end": 38.29
+  },
+  {
+   "text": "sein.",
+   "src": "roas/t1",
+   "start": 38.35,
+   "end": 38.51
+  },
+  {
+   "text": "Dein",
+   "src": "roas/t1",
+   "start": 39.35,
+   "end": 39.51
+  },
+  {
+   "text": "Vorteil",
+   "src": "roas/t1",
+   "start": 39.59,
+   "end": 39.91
+  },
+  {
+   "text": "hier:",
+   "src": "roas/t1",
+   "start": 39.97,
+   "end": 40.11
+  },
+  {
+   "text": "mit",
+   "src": "roas/t1",
+   "start": 40.57,
+   "end": 40.65
+  },
+  {
+   "text": "dem",
+   "src": "roas/t1",
+   "start": 40.69,
+   "end": 40.77
+  },
+  {
+   "text": "ROAS",
+   "src": "roas/t1",
+   "start": 40.83,
+   "end": 41.09
+  },
+  {
+   "text": "kannst",
+   "src": "roas/t1",
+   "start": 41.17,
+   "end": 41.39
+  },
+  {
+   "text": "du",
+   "src": "roas/t1",
+   "start": 41.45,
+   "end": 41.49
+  },
+  {
+   "text": "eben",
+   "src": "roas/t1",
+   "start": 41.55,
+   "end": 41.69
+  },
+  {
+   "text": "die",
+   "src": "roas/t1",
+   "start": 41.73,
+   "end": 41.81
+  },
+  {
+   "text": "Umsatzwirkung",
+   "src": "roas/t1",
+   "start": 41.87,
+   "end": 42.53
+  },
+  {
+   "text": "deiner",
+   "src": "roas/t1",
+   "start": 42.59,
+   "end": 42.79
+  },
+  {
+   "text": "Werbung",
+   "src": "roas/t1",
+   "start": 42.85,
+   "end": 43.11
+  },
+  {
+   "text": "vergleichen",
+   "src": "roas/t1",
+   "start": 43.17,
+   "end": 43.63
+  },
+  {
+   "text": "und",
+   "src": "roas/t1",
+   "start": 44.03,
+   "end": 44.11
+  },
+  {
+   "text": "Kampagnen",
+   "src": "roas/t1",
+   "start": 44.15,
+   "end": 44.65
+  },
+  {
+   "text": "gezielter",
+   "src": "roas/t1",
+   "start": 44.73,
+   "end": 45.13
+  },
+  {
+   "text": "steuern.",
+   "src": "roas/t1",
+   "start": 45.17,
+   "end": 45.47
+  },
+  {
+   "text": "Ob",
+   "src": "roas/t1",
+   "start": 81.77,
+   "end": 81.85
+  },
+  {
+   "text": "du",
+   "src": "roas/t1",
+   "start": 81.93,
+   "end": 81.99
+  },
+  {
+   "text": "jedoch",
+   "src": "roas/t1",
+   "start": 83.19,
+   "end": 83.35
+  },
+  {
+   "text": "profitabel",
+   "src": "roas/t1",
+   "start": 83.39,
+   "end": 83.93
+  },
+  {
+   "text": "bist,",
+   "src": "roas/t1",
+   "start": 83.99,
+   "end": 84.17
+  },
+  {
+   "text": "zeigen",
+   "src": "roas/t1",
+   "start": 84.27,
+   "end": 84.57
+  },
+  {
+   "text": "dann",
+   "src": "roas/t1",
+   "start": 84.61,
+   "end": 84.75
+  },
+  {
+   "text": "erst",
+   "src": "roas/t1",
+   "start": 84.87,
+   "end": 85.03
+  },
+  {
+   "text": "die",
+   "src": "roas/t1",
+   "start": 85.09,
+   "end": 85.17
+  },
+  {
+   "text": "Kosten",
+   "src": "roas/t1",
+   "start": 85.21,
+   "end": 85.55
+  },
+  {
+   "text": "und",
+   "src": "roas/t1",
+   "start": 85.61,
+   "end": 85.67
+  },
+  {
+   "text": "die",
+   "src": "roas/t1",
+   "start": 85.71,
+   "end": 85.77
+  },
+  {
+   "text": "Margen.",
+   "src": "roas/t1",
+   "start": 85.81,
+   "end": 86.095
+  },
+  {
+   "text": "Ein",
+   "src": "roas/t1",
+   "start": 111.95,
+   "end": 112.05
+  },
+  {
+   "text": "guter",
+   "src": "roas/t1",
+   "start": 112.19,
+   "end": 112.47
+  },
+  {
+   "text": "ROAS",
+   "src": "roas/t1",
+   "start": 112.53,
+   "end": 112.77
+  },
+  {
+   "text": "ist",
+   "src": "roas/t1",
+   "start": 112.83,
+   "end": 112.93
+  },
+  {
+   "text": "eben",
+   "src": "roas/t1",
+   "start": 112.97,
+   "end": 113.07
+  },
+  {
+   "text": "nicht",
+   "src": "roas/t1",
+   "start": 113.17,
+   "end": 113.33
+  },
+  {
+   "text": "immer",
+   "src": "roas/t1",
+   "start": 113.39,
+   "end": 113.53
+  },
+  {
+   "text": "automatisch",
+   "src": "roas/t1",
+   "start": 113.69,
+   "end": 114.23
+  },
+  {
+   "text": "ein",
+   "src": "roas/t1",
+   "start": 114.27,
+   "end": 114.37
+  },
+  {
+   "text": "Gewinn.",
+   "src": "roas/t1",
+   "start": 114.41,
+   "end": 114.63
+  },
+  {
+   "text": "Was",
+   "src": "roas/t1",
+   "start": 115.19,
+   "end": 115.31
+  },
+  {
+   "text": "aber",
+   "src": "roas/t1",
+   "start": 115.37,
+   "end": 115.47
+  },
+  {
+   "text": "ein",
+   "src": "roas/t1",
+   "start": 115.51,
+   "end": 115.57
+  },
+  {
+   "text": "automatischer",
+   "src": "roas/t1",
+   "start": 115.69,
+   "end": 116.31
+  },
+  {
+   "text": "Gewinn",
+   "src": "roas/t1",
+   "start": 116.37,
+   "end": 116.59
+  },
+  {
+   "text": "ist,",
+   "src": "roas/t1",
+   "start": 116.63,
+   "end": 116.73
+  },
+  {
+   "text": "ist",
+   "src": "roas/t1",
+   "start": 116.77,
+   "end": 116.87
+  },
+  {
+   "text": "wenn",
+   "src": "roas/t1",
+   "start": 116.89,
+   "end": 117.03
+  },
+  {
+   "text": "du",
+   "src": "roas/t1",
+   "start": 117.09,
+   "end": 117.13
+  },
+  {
+   "text": "mir",
+   "src": "roas/t1",
+   "start": 117.21,
+   "end": 117.31
+  },
+  {
+   "text": "hier",
+   "src": "roas/t1",
+   "start": 117.37,
+   "end": 117.49
+  },
+  {
+   "text": "ein",
+   "src": "roas/t1",
+   "start": 117.65,
+   "end": 117.75
+  },
+  {
+   "text": "Follow",
+   "src": "roas/t1",
+   "start": 117.81,
+   "end": 118.01
+  },
+  {
+   "text": "hinterlässt,",
+   "src": "roas/t1",
+   "start": 118.05,
+   "end": 118.51
+  },
+  {
+   "text": "um",
+   "src": "roas/t1",
+   "start": 118.83,
+   "end": 118.89
+  },
+  {
+   "text": "weitere",
+   "src": "roas/t1",
+   "start": 118.95,
+   "end": 119.23
+  },
+  {
+   "text": "solcher",
+   "src": "roas/t1",
+   "start": 119.29,
+   "end": 119.49
+  },
+  {
+   "text": "E-Commerce",
+   "src": "roas/t1",
+   "start": 119.57,
+   "end": 119.99
+  },
+  {
+   "text": "Kennzahlen",
+   "src": "roas/t1",
+   "start": 120.03,
+   "end": 120.45
+  },
+  {
+   "text": "nicht",
+   "src": "roas/t1",
+   "start": 120.49,
+   "end": 120.61
+  },
+  {
+   "text": "zu",
+   "src": "roas/t1",
+   "start": 120.65,
+   "end": 120.71
+  },
+  {
+   "text": "verpassen.",
+   "src": "roas/t1",
+   "start": 120.77,
+   "end": 121.15
+  }
+ ],
+ "pages": [
+  4,
+  4,
+  3,
+  1,
+  2,
+  2,
+  4,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  2,
+  3,
+  3,
+  1,
+  1,
+  4,
+  2,
+  3,
+  4,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  1,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  4,
+  3,
+  1,
+  3,
+  2,
+  4,
+  1,
+  3,
+  2,
+  2,
+  2,
+  2
+ ]
+}
