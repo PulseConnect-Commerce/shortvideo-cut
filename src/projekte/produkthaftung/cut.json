@@ -1,0 +1,1221 @@
+{
+ "projekt": "produkthaftung",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "produkthaftung/t1",
+   "from": 13.815,
+   "to": 18.725,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 19.735,
+   "to": 23.115,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 24.375,
+   "to": 28.325,
+   "nach": 0.02,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 30.815,
+   "to": 33.125,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 33.415,
+   "to": 37.255,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 46.225,
+   "to": 51.225,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 51.665,
+   "to": 54.095,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 54.365,
+   "to": 57.155,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 59.005,
+   "to": 64.185,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 65.185,
+   "to": 68.715,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 74.135,
+   "to": 78.025,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 78.315,
+   "to": 82.325,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 83.135,
+   "to": 85.965,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "produkthaftung/t1",
+   "from": 89.715,
+   "to": 92.75,
+   "nach": 0.0,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Wenn",
+   "src": "produkthaftung/t1",
+   "start": 13.86,
+   "end": 14.0
+  },
+  {
+   "text": "du",
+   "src": "produkthaftung/t1",
+   "start": 14.02,
+   "end": 14.14
+  },
+  {
+   "text": "Produkte",
+   "src": "produkthaftung/t1",
+   "start": 14.26,
+   "end": 14.52
+  },
+  {
+   "text": "aus",
+   "src": "produkthaftung/t1",
+   "start": 14.54,
+   "end": 14.68
+  },
+  {
+   "text": "China",
+   "src": "produkthaftung/t1",
+   "start": 14.7,
+   "end": 14.94
+  },
+  {
+   "text": "oder",
+   "src": "produkthaftung/t1",
+   "start": 14.96,
+   "end": 15.12
+  },
+  {
+   "text": "anderen",
+   "src": "produkthaftung/t1",
+   "start": 15.14,
+   "end": 15.5
+  },
+  {
+   "text": "Nicht-EU-Ländern",
+   "src": "produkthaftung/t1",
+   "start": 15.52,
+   "end": 16.3
+  },
+  {
+   "text": "verkaufst,",
+   "src": "produkthaftung/t1",
+   "start": 16.34,
+   "end": 16.76
+  },
+  {
+   "text": "dann",
+   "src": "produkthaftung/t1",
+   "start": 16.82,
+   "end": 17.0
+  },
+  {
+   "text": "solltest",
+   "src": "produkthaftung/t1",
+   "start": 17.0,
+   "end": 17.24
+  },
+  {
+   "text": "du",
+   "src": "produkthaftung/t1",
+   "start": 17.26,
+   "end": 17.34
+  },
+  {
+   "text": "diese",
+   "src": "produkthaftung/t1",
+   "start": 17.35,
+   "end": 17.55
+  },
+  {
+   "text": "Nachricht",
+   "src": "produkthaftung/t1",
+   "start": 17.58,
+   "end": 17.9
+  },
+  {
+   "text": "unbedingt",
+   "src": "produkthaftung/t1",
+   "start": 18.0,
+   "end": 18.38
+  },
+  {
+   "text": "kennen.",
+   "src": "produkthaftung/t1",
+   "start": 18.42,
+   "end": 18.64
+  },
+  {
+   "text": "Denn",
+   "src": "produkthaftung/t1",
+   "start": 19.78,
+   "end": 19.92
+  },
+  {
+   "text": "beim",
+   "src": "produkthaftung/t1",
+   "start": 19.96,
+   "end": 20.1
+  },
+  {
+   "text": "Produkthaftungsrecht",
+   "src": "produkthaftung/t1",
+   "start": 20.14,
+   "end": 21.16
+  },
+  {
+   "text": "gibt",
+   "src": "produkthaftung/t1",
+   "start": 21.24,
+   "end": 21.4
+  },
+  {
+   "text": "es",
+   "src": "produkthaftung/t1",
+   "start": 21.48,
+   "end": 21.56
+  },
+  {
+   "text": "hier",
+   "src": "produkthaftung/t1",
+   "start": 21.64,
+   "end": 21.78
+  },
+  {
+   "text": "wichtige",
+   "src": "produkthaftung/t1",
+   "start": 21.94,
+   "end": 22.42
+  },
+  {
+   "text": "Änderungen.",
+   "src": "produkthaftung/t1",
+   "start": 22.58,
+   "end": 23.02
+  },
+  {
+   "text": "Onlinehändler",
+   "src": "produkthaftung/t1",
+   "start": 24.42,
+   "end": 24.92
+  },
+  {
+   "text": "News",
+   "src": "produkthaftung/t1",
+   "start": 25.0,
+   "end": 25.3
+  },
+  {
+   "text": "hat",
+   "src": "produkthaftung/t1",
+   "start": 25.36,
+   "end": 25.48
+  },
+  {
+   "text": "nämlich",
+   "src": "produkthaftung/t1",
+   "start": 25.54,
+   "end": 25.72
+  },
+  {
+   "text": "dazu",
+   "src": "produkthaftung/t1",
+   "start": 25.76,
+   "end": 26.0
+  },
+  {
+   "text": "gerade",
+   "src": "produkthaftung/t1",
+   "start": 26.06,
+   "end": 26.36
+  },
+  {
+   "text": "einen",
+   "src": "produkthaftung/t1",
+   "start": 26.5,
+   "end": 26.72
+  },
+  {
+   "text": "interessanten",
+   "src": "produkthaftung/t1",
+   "start": 26.82,
+   "end": 27.44
+  },
+  {
+   "text": "Artikel",
+   "src": "produkthaftung/t1",
+   "start": 27.48,
+   "end": 27.8
+  },
+  {
+   "text": "veröffentlicht,",
+   "src": "produkthaftung/t1",
+   "start": 27.84,
+   "end": 28.28
+  },
+  {
+   "text": "Der",
+   "src": "produkthaftung/t1",
+   "start": 30.86,
+   "end": 30.96
+  },
+  {
+   "text": "Bundestag",
+   "src": "produkthaftung/t1",
+   "start": 31.0,
+   "end": 31.42
+  },
+  {
+   "text": "hat",
+   "src": "produkthaftung/t1",
+   "start": 31.5,
+   "end": 31.62
+  },
+  {
+   "text": "hier",
+   "src": "produkthaftung/t1",
+   "start": 31.66,
+   "end": 31.74
+  },
+  {
+   "text": "nämlich",
+   "src": "produkthaftung/t1",
+   "start": 31.76,
+   "end": 31.96
+  },
+  {
+   "text": "eine",
+   "src": "produkthaftung/t1",
+   "start": 31.98,
+   "end": 32.08
+  },
+  {
+   "text": "Reform",
+   "src": "produkthaftung/t1",
+   "start": 32.14,
+   "end": 32.48
+  },
+  {
+   "text": "beschlossen.",
+   "src": "produkthaftung/t1",
+   "start": 32.54,
+   "end": 32.96
+  },
+  {
+   "text": "durch",
+   "src": "produkthaftung/t1",
+   "start": 33.46,
+   "end": 33.6
+  },
+  {
+   "text": "die",
+   "src": "produkthaftung/t1",
+   "start": 33.66,
+   "end": 33.76
+  },
+  {
+   "text": "unter",
+   "src": "produkthaftung/t1",
+   "start": 33.82,
+   "end": 33.98
+  },
+  {
+   "text": "bestimmten",
+   "src": "produkthaftung/t1",
+   "start": 34.06,
+   "end": 34.52
+  },
+  {
+   "text": "Voraussetzungen",
+   "src": "produkthaftung/t1",
+   "start": 34.56,
+   "end": 35.28
+  },
+  {
+   "text": "auch",
+   "src": "produkthaftung/t1",
+   "start": 35.32,
+   "end": 35.42
+  },
+  {
+   "text": "Händler",
+   "src": "produkthaftung/t1",
+   "start": 35.46,
+   "end": 35.76
+  },
+  {
+   "text": "stärker",
+   "src": "produkthaftung/t1",
+   "start": 35.86,
+   "end": 36.2
+  },
+  {
+   "text": "in",
+   "src": "produkthaftung/t1",
+   "start": 36.24,
+   "end": 36.28
+  },
+  {
+   "text": "die",
+   "src": "produkthaftung/t1",
+   "start": 36.3,
+   "end": 36.36
+  },
+  {
+   "text": "Haftung",
+   "src": "produkthaftung/t1",
+   "start": 36.4,
+   "end": 36.62
+  },
+  {
+   "text": "geraten",
+   "src": "produkthaftung/t1",
+   "start": 36.68,
+   "end": 37.0
+  },
+  {
+   "text": "können.",
+   "src": "produkthaftung/t1",
+   "start": 37.04,
+   "end": 37.22
+  },
+  {
+   "text": "Stell",
+   "src": "produkthaftung/t1",
+   "start": 46.27,
+   "end": 46.41
+  },
+  {
+   "text": "mal",
+   "src": "produkthaftung/t1",
+   "start": 46.45,
+   "end": 46.53
+  },
+  {
+   "text": "vor,",
+   "src": "produkthaftung/t1",
+   "start": 46.57,
+   "end": 46.67
+  },
+  {
+   "text": "du",
+   "src": "produkthaftung/t1",
+   "start": 46.69,
+   "end": 46.75
+  },
+  {
+   "text": "verkaufst",
+   "src": "produkthaftung/t1",
+   "start": 46.79,
+   "end": 47.11
+  },
+  {
+   "text": "eine",
+   "src": "produkthaftung/t1",
+   "start": 47.15,
+   "end": 47.27
+  },
+  {
+   "text": "Powerbank,",
+   "src": "produkthaftung/t1",
+   "start": 47.35,
+   "end": 47.79
+  },
+  {
+   "text": "die",
+   "src": "produkthaftung/t1",
+   "start": 47.89,
+   "end": 47.95
+  },
+  {
+   "text": "auf",
+   "src": "produkthaftung/t1",
+   "start": 47.97,
+   "end": 48.07
+  },
+  {
+   "text": "einmal",
+   "src": "produkthaftung/t1",
+   "start": 48.15,
+   "end": 48.35
+  },
+  {
+   "text": "bei",
+   "src": "produkthaftung/t1",
+   "start": 48.39,
+   "end": 48.45
+  },
+  {
+   "text": "deinem",
+   "src": "produkthaftung/t1",
+   "start": 48.49,
+   "end": 48.63
+  },
+  {
+   "text": "Kunden",
+   "src": "produkthaftung/t1",
+   "start": 48.71,
+   "end": 49.03
+  },
+  {
+   "text": "in",
+   "src": "produkthaftung/t1",
+   "start": 49.13,
+   "end": 49.19
+  },
+  {
+   "text": "Flammen",
+   "src": "produkthaftung/t1",
+   "start": 49.31,
+   "end": 49.55
+  },
+  {
+   "text": "aufgeht",
+   "src": "produkthaftung/t1",
+   "start": 49.65,
+   "end": 49.95
+  },
+  {
+   "text": "und",
+   "src": "produkthaftung/t1",
+   "start": 50.03,
+   "end": 50.11
+  },
+  {
+   "text": "dadurch",
+   "src": "produkthaftung/t1",
+   "start": 50.15,
+   "end": 50.39
+  },
+  {
+   "text": "einen",
+   "src": "produkthaftung/t1",
+   "start": 50.41,
+   "end": 50.51
+  },
+  {
+   "text": "Brand",
+   "src": "produkthaftung/t1",
+   "start": 50.53,
+   "end": 50.71
+  },
+  {
+   "text": "verursacht.",
+   "src": "produkthaftung/t1",
+   "start": 50.75,
+   "end": 51.21
+  },
+  {
+   "text": "Dann",
+   "src": "produkthaftung/t1",
+   "start": 51.71,
+   "end": 51.83
+  },
+  {
+   "text": "geht",
+   "src": "produkthaftung/t1",
+   "start": 51.87,
+   "end": 51.99
+  },
+  {
+   "text": "es",
+   "src": "produkthaftung/t1",
+   "start": 52.01,
+   "end": 52.07
+  },
+  {
+   "text": "ja",
+   "src": "produkthaftung/t1",
+   "start": 52.11,
+   "end": 52.15
+  },
+  {
+   "text": "plötzlich",
+   "src": "produkthaftung/t1",
+   "start": 52.25,
+   "end": 52.59
+  },
+  {
+   "text": "nicht",
+   "src": "produkthaftung/t1",
+   "start": 52.65,
+   "end": 52.81
+  },
+  {
+   "text": "mehr",
+   "src": "produkthaftung/t1",
+   "start": 52.87,
+   "end": 52.95
+  },
+  {
+   "text": "nur",
+   "src": "produkthaftung/t1",
+   "start": 53.03,
+   "end": 53.15
+  },
+  {
+   "text": "um",
+   "src": "produkthaftung/t1",
+   "start": 53.25,
+   "end": 53.31
+  },
+  {
+   "text": "den",
+   "src": "produkthaftung/t1",
+   "start": 53.35,
+   "end": 53.43
+  },
+  {
+   "text": "Kaufpreis,",
+   "src": "produkthaftung/t1",
+   "start": 53.51,
+   "end": 54.01
+  },
+  {
+   "text": "sondern",
+   "src": "produkthaftung/t1",
+   "start": 54.41,
+   "end": 54.63
+  },
+  {
+   "text": "möglicherweise",
+   "src": "produkthaftung/t1",
+   "start": 54.67,
+   "end": 55.23
+  },
+  {
+   "text": "leider",
+   "src": "produkthaftung/t1",
+   "start": 55.31,
+   "end": 55.53
+  },
+  {
+   "text": "auch",
+   "src": "produkthaftung/t1",
+   "start": 55.59,
+   "end": 55.69
+  },
+  {
+   "text": "um",
+   "src": "produkthaftung/t1",
+   "start": 55.75,
+   "end": 55.81
+  },
+  {
+   "text": "einen",
+   "src": "produkthaftung/t1",
+   "start": 55.87,
+   "end": 56.03
+  },
+  {
+   "text": "richtig",
+   "src": "produkthaftung/t1",
+   "start": 56.11,
+   "end": 56.41
+  },
+  {
+   "text": "hohen",
+   "src": "produkthaftung/t1",
+   "start": 56.51,
+   "end": 56.73
+  },
+  {
+   "text": "Schaden.",
+   "src": "produkthaftung/t1",
+   "start": 56.77,
+   "end": 57.07
+  },
+  {
+   "text": "Und",
+   "src": "produkthaftung/t1",
+   "start": 59.05,
+   "end": 59.11
+  },
+  {
+   "text": "genau",
+   "src": "produkthaftung/t1",
+   "start": 59.15,
+   "end": 59.33
+  },
+  {
+   "text": "deshalb",
+   "src": "produkthaftung/t1",
+   "start": 59.39,
+   "end": 59.67
+  },
+  {
+   "text": "sage",
+   "src": "produkthaftung/t1",
+   "start": 59.73,
+   "end": 59.89
+  },
+  {
+   "text": "ich",
+   "src": "produkthaftung/t1",
+   "start": 59.95,
+   "end": 60.03
+  },
+  {
+   "text": "hier",
+   "src": "produkthaftung/t1",
+   "start": 60.07,
+   "end": 60.15
+  },
+  {
+   "text": "auch",
+   "src": "produkthaftung/t1",
+   "start": 60.19,
+   "end": 60.29
+  },
+  {
+   "text": "immer",
+   "src": "produkthaftung/t1",
+   "start": 60.33,
+   "end": 60.47
+  },
+  {
+   "text": "wieder,",
+   "src": "produkthaftung/t1",
+   "start": 60.53,
+   "end": 60.71
+  },
+  {
+   "text": "E-Commerce",
+   "src": "produkthaftung/t1",
+   "start": 61.03,
+   "end": 61.53
+  },
+  {
+   "text": "ist",
+   "src": "produkthaftung/t1",
+   "start": 61.61,
+   "end": 61.71
+  },
+  {
+   "text": "halt",
+   "src": "produkthaftung/t1",
+   "start": 61.73,
+   "end": 61.89
+  },
+  {
+   "text": "einfach",
+   "src": "produkthaftung/t1",
+   "start": 62.05,
+   "end": 62.31
+  },
+  {
+   "text": "mehr",
+   "src": "produkthaftung/t1",
+   "start": 62.45,
+   "end": 62.63
+  },
+  {
+   "text": "als",
+   "src": "produkthaftung/t1",
+   "start": 62.77,
+   "end": 62.89
+  },
+  {
+   "text": "nur",
+   "src": "produkthaftung/t1",
+   "start": 62.97,
+   "end": 63.09
+  },
+  {
+   "text": "Produkte",
+   "src": "produkthaftung/t1",
+   "start": 63.13,
+   "end": 63.43
+  },
+  {
+   "text": "online",
+   "src": "produkthaftung/t1",
+   "start": 63.49,
+   "end": 63.71
+  },
+  {
+   "text": "zu",
+   "src": "produkthaftung/t1",
+   "start": 63.75,
+   "end": 63.81
+  },
+  {
+   "text": "stellen.",
+   "src": "produkthaftung/t1",
+   "start": 63.85,
+   "end": 64.11
+  },
+  {
+   "text": "Hier",
+   "src": "produkthaftung/t1",
+   "start": 65.25,
+   "end": 65.43
+  },
+  {
+   "text": "bist",
+   "src": "produkthaftung/t1",
+   "start": 65.63,
+   "end": 65.77
+  },
+  {
+   "text": "du",
+   "src": "produkthaftung/t1",
+   "start": 65.79,
+   "end": 65.83
+  },
+  {
+   "text": "nämlich",
+   "src": "produkthaftung/t1",
+   "start": 65.87,
+   "end": 66.03
+  },
+  {
+   "text": "auch",
+   "src": "produkthaftung/t1",
+   "start": 66.07,
+   "end": 66.17
+  },
+  {
+   "text": "als",
+   "src": "produkthaftung/t1",
+   "start": 66.21,
+   "end": 66.31
+  },
+  {
+   "text": "Onlinehändler",
+   "src": "produkthaftung/t1",
+   "start": 66.37,
+   "end": 66.95
+  },
+  {
+   "text": "für",
+   "src": "produkthaftung/t1",
+   "start": 67.09,
+   "end": 67.19
+  },
+  {
+   "text": "sehr",
+   "src": "produkthaftung/t1",
+   "start": 67.27,
+   "end": 67.41
+  },
+  {
+   "text": "viele",
+   "src": "produkthaftung/t1",
+   "start": 67.45,
+   "end": 67.61
+  },
+  {
+   "text": "Pflichten",
+   "src": "produkthaftung/t1",
+   "start": 67.67,
+   "end": 68.05
+  },
+  {
+   "text": "verantwortlich.",
+   "src": "produkthaftung/t1",
+   "start": 68.09,
+   "end": 68.63
+  },
+  {
+   "text": "Mein",
+   "src": "produkthaftung/t1",
+   "start": 74.18,
+   "end": 74.34
+  },
+  {
+   "text": "Tipp",
+   "src": "produkthaftung/t1",
+   "start": 74.38,
+   "end": 74.52
+  },
+  {
+   "text": "hierzu",
+   "src": "produkthaftung/t1",
+   "start": 74.56,
+   "end": 74.86
+  },
+  {
+   "text": "ist,",
+   "src": "produkthaftung/t1",
+   "start": 74.94,
+   "end": 75.08
+  },
+  {
+   "text": "prüfe",
+   "src": "produkthaftung/t1",
+   "start": 75.2,
+   "end": 75.52
+  },
+  {
+   "text": "bitte",
+   "src": "produkthaftung/t1",
+   "start": 75.6,
+   "end": 75.74
+  },
+  {
+   "text": "deine",
+   "src": "produkthaftung/t1",
+   "start": 75.82,
+   "end": 76.0
+  },
+  {
+   "text": "Lieferanten,",
+   "src": "produkthaftung/t1",
+   "start": 76.08,
+   "end": 76.6
+  },
+  {
+   "text": "deine",
+   "src": "produkthaftung/t1",
+   "start": 76.64,
+   "end": 76.84
+  },
+  {
+   "text": "verantwortlichen",
+   "src": "produkthaftung/t1",
+   "start": 76.92,
+   "end": 77.44
+  },
+  {
+   "text": "Unternehmen",
+   "src": "produkthaftung/t1",
+   "start": 77.5,
+   "end": 77.92
+  },
+  {
+   "text": "in",
+   "src": "produkthaftung/t1",
+   "start": 78.36,
+   "end": 78.42
+  },
+  {
+   "text": "der",
+   "src": "produkthaftung/t1",
+   "start": 78.44,
+   "end": 78.54
+  },
+  {
+   "text": "EU",
+   "src": "produkthaftung/t1",
+   "start": 78.62,
+   "end": 78.82
+  },
+  {
+   "text": "und",
+   "src": "produkthaftung/t1",
+   "start": 79.26,
+   "end": 79.38
+  },
+  {
+   "text": "auch",
+   "src": "produkthaftung/t1",
+   "start": 79.52,
+   "end": 79.62
+  },
+  {
+   "text": "natürlich",
+   "src": "produkthaftung/t1",
+   "start": 79.66,
+   "end": 79.98
+  },
+  {
+   "text": "deine",
+   "src": "produkthaftung/t1",
+   "start": 80.02,
+   "end": 80.18
+  },
+  {
+   "text": "Produkthaftungsrisiken",
+   "src": "produkthaftung/t1",
+   "start": 80.24,
+   "end": 81.3
+  },
+  {
+   "text": "als",
+   "src": "produkthaftung/t1",
+   "start": 81.46,
+   "end": 81.56
+  },
+  {
+   "text": "Online-Shop-Händler.",
+   "src": "produkthaftung/t1",
+   "start": 81.62,
+   "end": 82.26
+  },
+  {
+   "text": "Und",
+   "src": "produkthaftung/t1",
+   "start": 83.18,
+   "end": 83.24
+  },
+  {
+   "text": "gerade",
+   "src": "produkthaftung/t1",
+   "start": 83.28,
+   "end": 83.62
+  },
+  {
+   "text": "beim",
+   "src": "produkthaftung/t1",
+   "start": 83.68,
+   "end": 83.8
+  },
+  {
+   "text": "Import",
+   "src": "produkthaftung/t1",
+   "start": 83.9,
+   "end": 84.28
+  },
+  {
+   "text": "würde",
+   "src": "produkthaftung/t1",
+   "start": 84.4,
+   "end": 84.58
+  },
+  {
+   "text": "ich",
+   "src": "produkthaftung/t1",
+   "start": 84.64,
+   "end": 84.7
+  },
+  {
+   "text": "das",
+   "src": "produkthaftung/t1",
+   "start": 84.76,
+   "end": 84.9
+  },
+  {
+   "text": "echt",
+   "src": "produkthaftung/t1",
+   "start": 85.04,
+   "end": 85.2
+  },
+  {
+   "text": "nicht",
+   "src": "produkthaftung/t1",
+   "start": 85.26,
+   "end": 85.36
+  },
+  {
+   "text": "unterschätzen.",
+   "src": "produkthaftung/t1",
+   "start": 85.4,
+   "end": 85.9
+  },
+  {
+   "text": "Aber",
+   "src": "produkthaftung/t1",
+   "start": 89.76,
+   "end": 89.86
+  },
+  {
+   "text": "was",
+   "src": "produkthaftung/t1",
+   "start": 89.92,
+   "end": 90.04
+  },
+  {
+   "text": "meinst",
+   "src": "produkthaftung/t1",
+   "start": 90.1,
+   "end": 90.26
+  },
+  {
+   "text": "du?",
+   "src": "produkthaftung/t1",
+   "start": 90.28,
+   "end": 90.36
+  },
+  {
+   "text": "Wie",
+   "src": "produkthaftung/t1",
+   "start": 90.46,
+   "end": 90.56
+  },
+  {
+   "text": "ist",
+   "src": "produkthaftung/t1",
+   "start": 90.58,
+   "end": 90.68
+  },
+  {
+   "text": "deine",
+   "src": "produkthaftung/t1",
+   "start": 90.7,
+   "end": 90.92
+  },
+  {
+   "text": "Meinung",
+   "src": "produkthaftung/t1",
+   "start": 90.96,
+   "end": 91.18
+  },
+  {
+   "text": "dazu?",
+   "src": "produkthaftung/t1",
+   "start": 91.24,
+   "end": 91.46
+  },
+  {
+   "text": "Schreib",
+   "src": "produkthaftung/t1",
+   "start": 91.78,
+   "end": 91.96
+  },
+  {
+   "text": "mir",
+   "src": "produkthaftung/t1",
+   "start": 92.02,
+   "end": 92.1
+  },
+  {
+   "text": "gerne",
+   "src": "produkthaftung/t1",
+   "start": 92.14,
+   "end": 92.3
+  },
+  {
+   "text": "in",
+   "src": "produkthaftung/t1",
+   "start": 92.34,
+   "end": 92.4
+  },
+  {
+   "text": "die",
+   "src": "produkthaftung/t1",
+   "start": 92.44,
+   "end": 92.5
+  },
+  {
+   "text": "Kommentare.",
+   "src": "produkthaftung/t1",
+   "start": 92.54,
+   "end": 92.75
+  }
+ ],
+ "pages": [
+  4,
+  3,
+  1,
+  3,
+  3,
+  2,
+  2,
+  1,
+  3,
+  2,
+  2,
+  4,
+  2,
+  2,
+  4,
+  2,
+  2,
+  3,
+  1,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  1,
+  2,
+  4,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  3,
+  4,
+  1,
+  4,
+  2,
+  2,
+  2,
+  4,
+  4,
+  1,
+  1,
+  1,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  2,
+  3,
+  3
+ ]
+}

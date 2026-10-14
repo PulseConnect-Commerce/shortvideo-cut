@@ -1,0 +1,127 @@
+{
+ "projekt": "produkthaftung",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.2,
+  "pre": 0.04,
+  "post": 0.06
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 13.8,
+   "text": "Wenn Du Produkte aus China oder anderen Nicht-EU-Ländern verkaufst, dann solltest Du diese Nachricht unbedingt kennen."
+  },
+  {
+   "take": "t1",
+   "ab": 19.7,
+   "text": "Denn beim Produkthaftungsrecht gibt es hier wichtige Änderungen."
+  },
+  {
+   "take": "t1",
+   "ab": 24.3,
+   "text": "Onlinehändler News hat nämlich dazu gerade einen interessanten Artikel veröffentlicht,"
+  },
+  {
+   "take": "t1",
+   "ab": 30.8,
+   "text": "Der Bundestag hat hier nämlich eine Reform beschlossen. Durch die unter bestimmten Voraussetzungen auch Händler stärker in die Haftung geraten können."
+  },
+  {
+   "take": "t1",
+   "ab": 46.2,
+   "text": "Stell mal vor, du verkaufst eine Powerbank, die auf einmal bei deinem Kunden in Flammen aufgeht und dadurch einen Brand verursacht. Dann geht es ja plötzlich nicht mehr nur um den Kaufpreis, sondern möglicherweise leider auch um einen richtig hohen Schaden."
+  },
+  {
+   "take": "t1",
+   "ab": 59.0,
+   "text": "Und genau deshalb sage ich hier auch immer wieder, E-Commerce ist halt einfach mehr als nur Produkte online zu stellen."
+  },
+  {
+   "take": "t1",
+   "ab": 65.2,
+   "text": "Hier bist Du nämlich auch als Onlinehändler für sehr viele Pflichten verantwortlich."
+  },
+  {
+   "take": "t1",
+   "ab": 74.1,
+   "text": "mein Tipp hierzu ist, prüfe bitte Deine Lieferanten, Deine verantwortlichen Unternehmen in der EU und auch natürlich Deine Produkthaftungsrisiken als Online-Shop-Händler."
+  },
+  {
+   "take": "t1",
+   "ab": 83.1,
+   "text": "Und gerade beim Import würde ich das echt nicht unterschätzen."
+  },
+  {
+   "take": "t1",
+   "ab": 89.7,
+   "text": "Aber was meinst Du? Wie ist Deine Meinung dazu? Schreib mir gerne in die Kommentare."
+  }
+ ],
+ "ende": {
+  "bis": 92.75
+ },
+ "korrekturen": [
+  [
+   "t1",
+   14.02,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   17.26,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   65.79,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   75.82,
+   "Deine",
+   "deine"
+  ],
+  [
+   "t1",
+   76.64,
+   "Deine",
+   "deine"
+  ],
+  [
+   "t1",
+   80.02,
+   "Deine",
+   "deine"
+  ],
+  [
+   "t1",
+   90.28,
+   "Du?",
+   "du?"
+  ],
+  [
+   "t1",
+   90.7,
+   "Deine",
+   "deine"
+  ],
+  [
+   "t1",
+   33.46,
+   "Durch",
+   "durch"
+  ],
+  [
+   "t1",
+   74.18,
+   "mein",
+   "Mein"
+  ]
+ ]
+}
