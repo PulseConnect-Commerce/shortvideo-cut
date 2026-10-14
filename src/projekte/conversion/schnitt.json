@@ -1,0 +1,109 @@
+{
+ "projekt": "conversion",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.4,
+  "pre": 0.04,
+  "post": 0.06
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 3.0,
+   "text": "Conversion Rate, was bedeutet das eigentlich?"
+  },
+  {
+   "take": "t1",
+   "ab": 5.8,
+   "text": "Wir kommen zu E-Commerce einfach erklärt mit Paul. Heute zeige ich dir, wie du erkennst, wie viele Shopbesucher wirklich kaufen. Denn wenn 100 Menschen deinen Online-Shop besuchen, aber nur zwei davon etwas kaufen, dann hast du die sogenannte Conversion Rate von 2%."
+  },
+  {
+   "take": "t1",
+   "ab": 23.4,
+   "text": "Die Conversion Rate zeigt dir dabei, wie viele deiner Besucher tatsächlich eine Bestellung abschließen."
+  },
+  {
+   "take": "t1",
+   "ab": 28.5,
+   "text": "Aber 2% heißt jetzt nicht automatisch, dass es gut oder schlecht ist."
+  },
+  {
+   "take": "t1",
+   "ab": 32.3,
+   "text": "denn das hängt leider ganz von deinem Produkt, deiner Zielgruppe und auch der Traffic-Quelle ab."
+  },
+  {
+   "take": "t1",
+   "ab": 37.6,
+   "text": "Beobachte deshalb hier immer vor allem, wie sich deine Conversion Rate eben im Zeitverlauf verändert hat."
+  },
+  {
+   "take": "t1",
+   "ab": 51.4,
+   "text": "Denn wenn deine Conversion Rate konstant hier steigt, ist das meistens ein sehr gutes Zeichen."
+  },
+  {
+   "take": "t1",
+   "ab": 56.1,
+   "text": "Dein Vorteil, wenn du deine Conversion Rate verbesserst, dann kannst du eben aus derselben Besucherzahl mehr Bestellungen erzielen. ohne eben dabei automatisch mehr Traffic einkaufen zu müssen."
+  },
+  {
+   "take": "t1",
+   "ab": 100.3,
+   "text": "und jetzt die Testfrage an dich, wie hoch ist hier wohl jetzt meine Conversion Rate für ein Follow von dir?"
+  },
+  {
+   "take": "t1",
+   "ab": 105.9,
+   "text": "Wenn dir solche Erklärungen helfen, dann folge mich hier gerne für weitere solcher Tipps."
+  }
+ ],
+ "ende": {
+  "bis": 109.81
+ },
+ "korrekturen": [
+  [
+   "t1",
+   5.87,
+   "Wir",
+   "Willkommen"
+  ],
+  [
+   "t1",
+   6.01,
+   "kommen",
+   ""
+  ],
+  [
+   "t1",
+   32.37,
+   "denn",
+   "Denn"
+  ],
+  [
+   "t1",
+   100.43,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   56.4,
+   "Vorteil,",
+   "Vorteil:"
+  ],
+  [
+   "t1",
+   61.62,
+   "erzielen.",
+   "erzielen,"
+  ],
+  [
+   "t1",
+   108.03,
+   "mich",
+   "mir"
+  ]
+ ]
+}

@@ -1,0 +1,1261 @@
+{
+ "projekt": "conversion",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "conversion/t1",
+   "from": 3.025,
+   "to": 5.135,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 5.825,
+   "to": 8.175,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 8.585,
+   "to": 11.915,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 12.325,
+   "to": 14.525,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 15.765,
+   "to": 22.645,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 23.425,
+   "to": 28.015,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 28.505,
+   "to": 31.745,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 32.325,
+   "to": 36.865,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 37.645,
+   "to": 42.825,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 51.455,
+   "to": 55.255,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 56.135,
+   "to": 62.105,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 62.415,
+   "to": 65.175,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 100.385,
+   "to": 105.085,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "conversion/t1",
+   "from": 105.925,
+   "to": 109.81,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Conversion",
+   "src": "conversion/t1",
+   "start": 3.07,
+   "end": 3.49
+  },
+  {
+   "text": "Rate,",
+   "src": "conversion/t1",
+   "start": 3.55,
+   "end": 3.77
+  },
+  {
+   "text": "was",
+   "src": "conversion/t1",
+   "start": 3.95,
+   "end": 4.11
+  },
+  {
+   "text": "bedeutet",
+   "src": "conversion/t1",
+   "start": 4.19,
+   "end": 4.57
+  },
+  {
+   "text": "das",
+   "src": "conversion/t1",
+   "start": 4.61,
+   "end": 4.69
+  },
+  {
+   "text": "eigentlich?",
+   "src": "conversion/t1",
+   "start": 4.75,
+   "end": 5.11
+  },
+  {
+   "text": "Willkommen",
+   "src": "conversion/t1",
+   "start": 5.87,
+   "end": 5.95
+  },
+  {
+   "text": "zu",
+   "src": "conversion/t1",
+   "start": 6.27,
+   "end": 6.31
+  },
+  {
+   "text": "E-Commerce",
+   "src": "conversion/t1",
+   "start": 6.41,
+   "end": 6.87
+  },
+  {
+   "text": "einfach",
+   "src": "conversion/t1",
+   "start": 6.97,
+   "end": 7.25
+  },
+  {
+   "text": "erklärt",
+   "src": "conversion/t1",
+   "start": 7.31,
+   "end": 7.67
+  },
+  {
+   "text": "mit",
+   "src": "conversion/t1",
+   "start": 7.73,
+   "end": 7.83
+  },
+  {
+   "text": "Paul.",
+   "src": "conversion/t1",
+   "start": 7.89,
+   "end": 8.09
+  },
+  {
+   "text": "Heute",
+   "src": "conversion/t1",
+   "start": 8.63,
+   "end": 8.85
+  },
+  {
+   "text": "zeige",
+   "src": "conversion/t1",
+   "start": 8.93,
+   "end": 9.11
+  },
+  {
+   "text": "ich",
+   "src": "conversion/t1",
+   "start": 9.15,
+   "end": 9.21
+  },
+  {
+   "text": "dir,",
+   "src": "conversion/t1",
+   "start": 9.25,
+   "end": 9.35
+  },
+  {
+   "text": "wie",
+   "src": "conversion/t1",
+   "start": 9.43,
+   "end": 9.51
+  },
+  {
+   "text": "du",
+   "src": "conversion/t1",
+   "start": 9.55,
+   "end": 9.59
+  },
+  {
+   "text": "erkennst,",
+   "src": "conversion/t1",
+   "start": 9.65,
+   "end": 10.07
+  },
+  {
+   "text": "wie",
+   "src": "conversion/t1",
+   "start": 10.21,
+   "end": 10.31
+  },
+  {
+   "text": "viele",
+   "src": "conversion/t1",
+   "start": 10.37,
+   "end": 10.53
+  },
+  {
+   "text": "Shopbesucher",
+   "src": "conversion/t1",
+   "start": 10.59,
+   "end": 11.09
+  },
+  {
+   "text": "wirklich",
+   "src": "conversion/t1",
+   "start": 11.19,
+   "end": 11.49
+  },
+  {
+   "text": "kaufen.",
+   "src": "conversion/t1",
+   "start": 11.55,
+   "end": 11.85
+  },
+  {
+   "text": "Denn",
+   "src": "conversion/t1",
+   "start": 12.37,
+   "end": 12.51
+  },
+  {
+   "text": "wenn",
+   "src": "conversion/t1",
+   "start": 12.55,
+   "end": 12.67
+  },
+  {
+   "text": "100",
+   "src": "conversion/t1",
+   "start": 12.71,
+   "end": 12.99
+  },
+  {
+   "text": "Menschen",
+   "src": "conversion/t1",
+   "start": 13.05,
+   "end": 13.75
+  },
+  {
+   "text": "deinen",
+   "src": "conversion/t1",
+   "start": 13.77,
+   "end": 13.91
+  },
+  {
+   "text": "Online-Shop",
+   "src": "conversion/t1",
+   "start": 13.97,
+   "end": 14.525
+  },
+  {
+   "text": "besuchen,",
+   "src": "conversion/t1",
+   "start": 17.31,
+   "end": 17.67
+  },
+  {
+   "text": "aber",
+   "src": "conversion/t1",
+   "start": 18.05,
+   "end": 18.17
+  },
+  {
+   "text": "nur",
+   "src": "conversion/t1",
+   "start": 18.21,
+   "end": 18.31
+  },
+  {
+   "text": "zwei",
+   "src": "conversion/t1",
+   "start": 18.43,
+   "end": 18.61
+  },
+  {
+   "text": "davon",
+   "src": "conversion/t1",
+   "start": 18.67,
+   "end": 18.89
+  },
+  {
+   "text": "etwas",
+   "src": "conversion/t1",
+   "start": 18.95,
+   "end": 19.15
+  },
+  {
+   "text": "kaufen,",
+   "src": "conversion/t1",
+   "start": 19.23,
+   "end": 19.57
+  },
+  {
+   "text": "dann",
+   "src": "conversion/t1",
+   "start": 19.99,
+   "end": 20.13
+  },
+  {
+   "text": "hast",
+   "src": "conversion/t1",
+   "start": 20.19,
+   "end": 20.33
+  },
+  {
+   "text": "du",
+   "src": "conversion/t1",
+   "start": 20.39,
+   "end": 20.43
+  },
+  {
+   "text": "die",
+   "src": "conversion/t1",
+   "start": 20.49,
+   "end": 20.55
+  },
+  {
+   "text": "sogenannte",
+   "src": "conversion/t1",
+   "start": 20.59,
+   "end": 21.01
+  },
+  {
+   "text": "Conversion",
+   "src": "conversion/t1",
+   "start": 21.11,
+   "end": 21.55
+  },
+  {
+   "text": "Rate",
+   "src": "conversion/t1",
+   "start": 21.59,
+   "end": 21.77
+  },
+  {
+   "text": "von",
+   "src": "conversion/t1",
+   "start": 21.81,
+   "end": 21.91
+  },
+  {
+   "text": "2%.",
+   "src": "conversion/t1",
+   "start": 21.99,
+   "end": 22.59
+  },
+  {
+   "text": "Die",
+   "src": "conversion/t1",
+   "start": 23.47,
+   "end": 23.55
+  },
+  {
+   "text": "Conversion",
+   "src": "conversion/t1",
+   "start": 23.59,
+   "end": 23.93
+  },
+  {
+   "text": "Rate",
+   "src": "conversion/t1",
+   "start": 23.99,
+   "end": 24.15
+  },
+  {
+   "text": "zeigt",
+   "src": "conversion/t1",
+   "start": 24.19,
+   "end": 24.41
+  },
+  {
+   "text": "dir",
+   "src": "conversion/t1",
+   "start": 24.43,
+   "end": 24.51
+  },
+  {
+   "text": "dabei,",
+   "src": "conversion/t1",
+   "start": 24.55,
+   "end": 24.75
+  },
+  {
+   "text": "wie",
+   "src": "conversion/t1",
+   "start": 25.17,
+   "end": 25.25
+  },
+  {
+   "text": "viele",
+   "src": "conversion/t1",
+   "start": 25.31,
+   "end": 25.49
+  },
+  {
+   "text": "deiner",
+   "src": "conversion/t1",
+   "start": 25.57,
+   "end": 25.77
+  },
+  {
+   "text": "Besucher",
+   "src": "conversion/t1",
+   "start": 25.81,
+   "end": 26.15
+  },
+  {
+   "text": "tatsächlich",
+   "src": "conversion/t1",
+   "start": 26.25,
+   "end": 26.83
+  },
+  {
+   "text": "eine",
+   "src": "conversion/t1",
+   "start": 26.91,
+   "end": 27.03
+  },
+  {
+   "text": "Bestellung",
+   "src": "conversion/t1",
+   "start": 27.09,
+   "end": 27.45
+  },
+  {
+   "text": "abschließen.",
+   "src": "conversion/t1",
+   "start": 27.53,
+   "end": 27.95
+  },
+  {
+   "text": "Aber",
+   "src": "conversion/t1",
+   "start": 28.55,
+   "end": 28.67
+  },
+  {
+   "text": "2%",
+   "src": "conversion/t1",
+   "start": 28.75,
+   "end": 29.41
+  },
+  {
+   "text": "heißt",
+   "src": "conversion/t1",
+   "start": 29.45,
+   "end": 29.67
+  },
+  {
+   "text": "jetzt",
+   "src": "conversion/t1",
+   "start": 29.69,
+   "end": 29.79
+  },
+  {
+   "text": "nicht",
+   "src": "conversion/t1",
+   "start": 29.85,
+   "end": 29.97
+  },
+  {
+   "text": "automatisch,",
+   "src": "conversion/t1",
+   "start": 30.01,
+   "end": 30.49
+  },
+  {
+   "text": "dass",
+   "src": "conversion/t1",
+   "start": 30.53,
+   "end": 30.67
+  },
+  {
+   "text": "es",
+   "src": "conversion/t1",
+   "start": 30.71,
+   "end": 30.79
+  },
+  {
+   "text": "gut",
+   "src": "conversion/t1",
+   "start": 30.87,
+   "end": 31.03
+  },
+  {
+   "text": "oder",
+   "src": "conversion/t1",
+   "start": 31.09,
+   "end": 31.21
+  },
+  {
+   "text": "schlecht",
+   "src": "conversion/t1",
+   "start": 31.25,
+   "end": 31.51
+  },
+  {
+   "text": "ist.",
+   "src": "conversion/t1",
+   "start": 31.57,
+   "end": 31.69
+  },
+  {
+   "text": "Denn",
+   "src": "conversion/t1",
+   "start": 32.37,
+   "end": 32.53
+  },
+  {
+   "text": "das",
+   "src": "conversion/t1",
+   "start": 32.75,
+   "end": 32.87
+  },
+  {
+   "text": "hängt",
+   "src": "conversion/t1",
+   "start": 32.91,
+   "end": 33.09
+  },
+  {
+   "text": "leider",
+   "src": "conversion/t1",
+   "start": 33.13,
+   "end": 33.33
+  },
+  {
+   "text": "ganz",
+   "src": "conversion/t1",
+   "start": 33.47,
+   "end": 33.71
+  },
+  {
+   "text": "von",
+   "src": "conversion/t1",
+   "start": 33.77,
+   "end": 33.87
+  },
+  {
+   "text": "deinem",
+   "src": "conversion/t1",
+   "start": 33.91,
+   "end": 34.13
+  },
+  {
+   "text": "Produkt,",
+   "src": "conversion/t1",
+   "start": 34.15,
+   "end": 34.45
+  },
+  {
+   "text": "deiner",
+   "src": "conversion/t1",
+   "start": 34.51,
+   "end": 34.71
+  },
+  {
+   "text": "Zielgruppe",
+   "src": "conversion/t1",
+   "start": 34.79,
+   "end": 35.21
+  },
+  {
+   "text": "und",
+   "src": "conversion/t1",
+   "start": 35.67,
+   "end": 35.75
+  },
+  {
+   "text": "auch",
+   "src": "conversion/t1",
+   "start": 35.81,
+   "end": 35.89
+  },
+  {
+   "text": "der",
+   "src": "conversion/t1",
+   "start": 36.07,
+   "end": 36.15
+  },
+  {
+   "text": "Traffic-Quelle",
+   "src": "conversion/t1",
+   "start": 36.19,
+   "end": 36.67
+  },
+  {
+   "text": "ab.",
+   "src": "conversion/t1",
+   "start": 36.73,
+   "end": 36.81
+  },
+  {
+   "text": "Beobachte",
+   "src": "conversion/t1",
+   "start": 37.69,
+   "end": 38.11
+  },
+  {
+   "text": "deshalb",
+   "src": "conversion/t1",
+   "start": 38.19,
+   "end": 38.49
+  },
+  {
+   "text": "hier",
+   "src": "conversion/t1",
+   "start": 38.55,
+   "end": 38.65
+  },
+  {
+   "text": "immer",
+   "src": "conversion/t1",
+   "start": 38.67,
+   "end": 38.81
+  },
+  {
+   "text": "vor",
+   "src": "conversion/t1",
+   "start": 38.89,
+   "end": 38.97
+  },
+  {
+   "text": "allem,",
+   "src": "conversion/t1",
+   "start": 39.07,
+   "end": 39.31
+  },
+  {
+   "text": "wie",
+   "src": "conversion/t1",
+   "start": 39.91,
+   "end": 40.03
+  },
+  {
+   "text": "sich",
+   "src": "conversion/t1",
+   "start": 40.13,
+   "end": 40.25
+  },
+  {
+   "text": "deine",
+   "src": "conversion/t1",
+   "start": 40.31,
+   "end": 40.49
+  },
+  {
+   "text": "Conversion",
+   "src": "conversion/t1",
+   "start": 40.57,
+   "end": 40.93
+  },
+  {
+   "text": "Rate",
+   "src": "conversion/t1",
+   "start": 40.97,
+   "end": 41.15
+  },
+  {
+   "text": "eben",
+   "src": "conversion/t1",
+   "start": 41.19,
+   "end": 41.33
+  },
+  {
+   "text": "im",
+   "src": "conversion/t1",
+   "start": 41.41,
+   "end": 41.47
+  },
+  {
+   "text": "Zeitverlauf",
+   "src": "conversion/t1",
+   "start": 41.59,
+   "end": 42.13
+  },
+  {
+   "text": "verändert",
+   "src": "conversion/t1",
+   "start": 42.29,
+   "end": 42.61
+  },
+  {
+   "text": "hat.",
+   "src": "conversion/t1",
+   "start": 42.65,
+   "end": 42.77
+  },
+  {
+   "text": "Denn",
+   "src": "conversion/t1",
+   "start": 51.5,
+   "end": 51.62
+  },
+  {
+   "text": "wenn",
+   "src": "conversion/t1",
+   "start": 51.64,
+   "end": 51.74
+  },
+  {
+   "text": "deine",
+   "src": "conversion/t1",
+   "start": 51.78,
+   "end": 51.96
+  },
+  {
+   "text": "Conversion",
+   "src": "conversion/t1",
+   "start": 52.02,
+   "end": 52.4
+  },
+  {
+   "text": "Rate",
+   "src": "conversion/t1",
+   "start": 52.42,
+   "end": 52.56
+  },
+  {
+   "text": "konstant",
+   "src": "conversion/t1",
+   "start": 52.6,
+   "end": 53.08
+  },
+  {
+   "text": "hier",
+   "src": "conversion/t1",
+   "start": 53.14,
+   "end": 53.24
+  },
+  {
+   "text": "steigt,",
+   "src": "conversion/t1",
+   "start": 53.3,
+   "end": 53.62
+  },
+  {
+   "text": "ist",
+   "src": "conversion/t1",
+   "start": 53.8,
+   "end": 53.9
+  },
+  {
+   "text": "das",
+   "src": "conversion/t1",
+   "start": 53.94,
+   "end": 54.02
+  },
+  {
+   "text": "meistens",
+   "src": "conversion/t1",
+   "start": 54.1,
+   "end": 54.48
+  },
+  {
+   "text": "ein",
+   "src": "conversion/t1",
+   "start": 54.52,
+   "end": 54.58
+  },
+  {
+   "text": "sehr",
+   "src": "conversion/t1",
+   "start": 54.62,
+   "end": 54.74
+  },
+  {
+   "text": "gutes",
+   "src": "conversion/t1",
+   "start": 54.76,
+   "end": 54.98
+  },
+  {
+   "text": "Zeichen.",
+   "src": "conversion/t1",
+   "start": 55.02,
+   "end": 55.255
+  },
+  {
+   "text": "Dein",
+   "src": "conversion/t1",
+   "start": 56.18,
+   "end": 56.34
+  },
+  {
+   "text": "Vorteil:",
+   "src": "conversion/t1",
+   "start": 56.4,
+   "end": 56.74
+  },
+  {
+   "text": "wenn",
+   "src": "conversion/t1",
+   "start": 56.88,
+   "end": 57.0
+  },
+  {
+   "text": "du",
+   "src": "conversion/t1",
+   "start": 57.04,
+   "end": 57.08
+  },
+  {
+   "text": "deine",
+   "src": "conversion/t1",
+   "start": 57.12,
+   "end": 57.26
+  },
+  {
+   "text": "Conversion",
+   "src": "conversion/t1",
+   "start": 57.34,
+   "end": 57.7
+  },
+  {
+   "text": "Rate",
+   "src": "conversion/t1",
+   "start": 57.76,
+   "end": 57.88
+  },
+  {
+   "text": "verbesserst,",
+   "src": "conversion/t1",
+   "start": 57.92,
+   "end": 58.46
+  },
+  {
+   "text": "dann",
+   "src": "conversion/t1",
+   "start": 58.5,
+   "end": 58.64
+  },
+  {
+   "text": "kannst",
+   "src": "conversion/t1",
+   "start": 58.72,
+   "end": 59.0
+  },
+  {
+   "text": "du",
+   "src": "conversion/t1",
+   "start": 59.04,
+   "end": 59.1
+  },
+  {
+   "text": "eben",
+   "src": "conversion/t1",
+   "start": 59.18,
+   "end": 59.32
+  },
+  {
+   "text": "aus",
+   "src": "conversion/t1",
+   "start": 59.34,
+   "end": 59.44
+  },
+  {
+   "text": "derselben",
+   "src": "conversion/t1",
+   "start": 59.5,
+   "end": 59.9
+  },
+  {
+   "text": "Besucherzahl",
+   "src": "conversion/t1",
+   "start": 59.94,
+   "end": 60.48
+  },
+  {
+   "text": "mehr",
+   "src": "conversion/t1",
+   "start": 60.92,
+   "end": 61.06
+  },
+  {
+   "text": "Bestellungen",
+   "src": "conversion/t1",
+   "start": 61.1,
+   "end": 61.56
+  },
+  {
+   "text": "erzielen,",
+   "src": "conversion/t1",
+   "start": 61.62,
+   "end": 62.0
+  },
+  {
+   "text": "ohne",
+   "src": "conversion/t1",
+   "start": 62.46,
+   "end": 62.64
+  },
+  {
+   "text": "eben",
+   "src": "conversion/t1",
+   "start": 62.72,
+   "end": 62.82
+  },
+  {
+   "text": "dabei",
+   "src": "conversion/t1",
+   "start": 62.86,
+   "end": 63.04
+  },
+  {
+   "text": "automatisch",
+   "src": "conversion/t1",
+   "start": 63.1,
+   "end": 63.66
+  },
+  {
+   "text": "mehr",
+   "src": "conversion/t1",
+   "start": 63.9,
+   "end": 64.02
+  },
+  {
+   "text": "Traffic",
+   "src": "conversion/t1",
+   "start": 64.08,
+   "end": 64.36
+  },
+  {
+   "text": "einkaufen",
+   "src": "conversion/t1",
+   "start": 64.42,
+   "end": 64.78
+  },
+  {
+   "text": "zu",
+   "src": "conversion/t1",
+   "start": 64.82,
+   "end": 64.88
+  },
+  {
+   "text": "müssen.",
+   "src": "conversion/t1",
+   "start": 64.94,
+   "end": 65.14
+  },
+  {
+   "text": "Und",
+   "src": "conversion/t1",
+   "start": 100.43,
+   "end": 100.51
+  },
+  {
+   "text": "jetzt",
+   "src": "conversion/t1",
+   "start": 100.55,
+   "end": 100.73
+  },
+  {
+   "text": "die",
+   "src": "conversion/t1",
+   "start": 100.77,
+   "end": 100.83
+  },
+  {
+   "text": "Testfrage",
+   "src": "conversion/t1",
+   "start": 100.87,
+   "end": 101.31
+  },
+  {
+   "text": "an",
+   "src": "conversion/t1",
+   "start": 101.37,
+   "end": 101.43
+  },
+  {
+   "text": "dich,",
+   "src": "conversion/t1",
+   "start": 101.49,
+   "end": 101.63
+  },
+  {
+   "text": "wie",
+   "src": "conversion/t1",
+   "start": 101.85,
+   "end": 101.95
+  },
+  {
+   "text": "hoch",
+   "src": "conversion/t1",
+   "start": 102.01,
+   "end": 102.13
+  },
+  {
+   "text": "ist",
+   "src": "conversion/t1",
+   "start": 102.19,
+   "end": 102.29
+  },
+  {
+   "text": "hier",
+   "src": "conversion/t1",
+   "start": 102.31,
+   "end": 102.41
+  },
+  {
+   "text": "wohl",
+   "src": "conversion/t1",
+   "start": 102.45,
+   "end": 102.59
+  },
+  {
+   "text": "jetzt",
+   "src": "conversion/t1",
+   "start": 102.65,
+   "end": 102.81
+  },
+  {
+   "text": "meine",
+   "src": "conversion/t1",
+   "start": 102.91,
+   "end": 103.15
+  },
+  {
+   "text": "Conversion",
+   "src": "conversion/t1",
+   "start": 103.23,
+   "end": 103.61
+  },
+  {
+   "text": "Rate",
+   "src": "conversion/t1",
+   "start": 103.65,
+   "end": 103.85
+  },
+  {
+   "text": "für",
+   "src": "conversion/t1",
+   "start": 104.15,
+   "end": 104.23
+  },
+  {
+   "text": "ein",
+   "src": "conversion/t1",
+   "start": 104.27,
+   "end": 104.35
+  },
+  {
+   "text": "Follow",
+   "src": "conversion/t1",
+   "start": 104.49,
+   "end": 104.71
+  },
+  {
+   "text": "von",
+   "src": "conversion/t1",
+   "start": 104.75,
+   "end": 104.87
+  },
+  {
+   "text": "dir?",
+   "src": "conversion/t1",
+   "start": 104.89,
+   "end": 105.01
+  },
+  {
+   "text": "Wenn",
+   "src": "conversion/t1",
+   "start": 105.97,
+   "end": 106.09
+  },
+  {
+   "text": "dir",
+   "src": "conversion/t1",
+   "start": 106.11,
+   "end": 106.19
+  },
+  {
+   "text": "solche",
+   "src": "conversion/t1",
+   "start": 106.23,
+   "end": 106.43
+  },
+  {
+   "text": "Erklärungen",
+   "src": "conversion/t1",
+   "start": 106.49,
+   "end": 106.95
+  },
+  {
+   "text": "helfen,",
+   "src": "conversion/t1",
+   "start": 106.99,
+   "end": 107.33
+  },
+  {
+   "text": "dann",
+   "src": "conversion/t1",
+   "start": 107.57,
+   "end": 107.71
+  },
+  {
+   "text": "folge",
+   "src": "conversion/t1",
+   "start": 107.77,
+   "end": 107.97
+  },
+  {
+   "text": "mir",
+   "src": "conversion/t1",
+   "start": 108.03,
+   "end": 108.11
+  },
+  {
+   "text": "hier",
+   "src": "conversion/t1",
+   "start": 108.13,
+   "end": 108.23
+  },
+  {
+   "text": "gerne",
+   "src": "conversion/t1",
+   "start": 108.25,
+   "end": 108.49
+  },
+  {
+   "text": "für",
+   "src": "conversion/t1",
+   "start": 108.75,
+   "end": 108.83
+  },
+  {
+   "text": "weitere",
+   "src": "conversion/t1",
+   "start": 108.89,
+   "end": 109.15
+  },
+  {
+   "text": "solcher",
+   "src": "conversion/t1",
+   "start": 109.21,
+   "end": 109.45
+  },
+  {
+   "text": "Tipps.",
+   "src": "conversion/t1",
+   "start": 109.49,
+   "end": 109.71
+  }
+ ],
+ "pages": [
+  2,
+  2,
+  2,
+  1,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  3,
+  1,
+  2,
+  1,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  4,
+  2,
+  3,
+  1,
+  2,
+  2,
+  3,
+  2,
+  1,
+  2,
+  3,
+  2,
+  2,
+  2,
+  4,
+  2,
+  4,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  2
+ ]
+}
