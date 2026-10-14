@@ -32,6 +32,15 @@ Schnitt, Aufbau, Aufruf) bleibt.
   (Pointe, Frage), sonst ruhiges Bild (ein ganz langsames Zoom-in wie HERO ist ok). Das erste FACE-Video hatte
   Punch-ins an jedem Schnitt; das war ihm zu viel (siehe Notizen).
 - **Rand frei:** an jeder Seite mindestens 60 px (wie HERO).
+- **Tabu-Zonen oben, rechts und unten** (seine Vorgabe 2026-10-14, gilt für alle Formate und geht allen Lage-Angaben
+  unten vor: "Bitte in Zukunft beim Bild Hochladen immer den oberen und unteren Teil sowie den rechten Teil als
+  Tabu-Zone zum Anzeigen von Inhalten und Texten nutzen"; TikToks Suchleiste hatte den Text oben verdeckt). Werte in
+  `src/lib/zonen.json`: oben bis y 280, rechts ab x 900 (Like-/Kommentar-Leiste), unten ab y 1560, sicher also
+  `[80, 280, 900, 1560]`. Hook, Titel, Chips, Quellen-Markierungen und Quellen-Pille stehen **nur in y 280-560**
+  und links von x 900 (mittig in dieser Fläche, nicht mittig im ganzen Bild), Untertitel bei y 1260-1500. Damit das
+  passt, sitzt der Kopf tiefer: Bildlage `translateY(-204px) scale(1.2)` (Haar bei y ~600), Hook in
+  `translateY(56px) scale(0.8)`, Szenen ohne Verschiebung. Vorlage `src/projekte/_serie/Serie.tsx`. Vor dem Abschicken
+  an Standbildern prüfen, dass nichts in die Tabu-Zonen ragt (das Bild selbst darf bis an den Rand gehen).
 - **Titel oben, Kopf direkt darunter, Untertitel unten** (seine Vorgabe seit 2026-10-11, alle Formate; ersetzt
   "Gesicht 160 px höher" und den kurzen Versuch mit dem Kopf ganz oben und den Titeln unter dem Kinn): Hook, Titel und
   Einblendungen stehen **oben** (Hook ab y ~210, Szenen-Titel ab y 262, Begriffe in **einer** Zeile darunter bis
