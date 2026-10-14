@@ -1,0 +1,101 @@
+{
+ "projekt": "cac",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.4,
+  "pre": 0.04,
+  "post": 0.06
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 38.8,
+   "text": "CAC, was kostet dich hier wirklich ein neuer Kunde?"
+  },
+  {
+   "take": "t1",
+   "ab": 41.85,
+   "text": "Willkommen zu E-Commerce einfach erklärt. Heute erkläre ich dir die Customer Acquisition Cost oder auch eben kurz CAC genannt."
+  },
+  {
+   "take": "t1",
+   "ab": 53.0,
+   "text": "Letztes mal ging es hier um den Bestellwert, heute schauen wir uns aber die Kosten der Kundengewinnung an, also kurz CAC."
+  },
+  {
+   "take": "t1",
+   "ab": 60.6,
+   "text": "Gibst du zum Beispiel 1000 Euro für eine Kundengewinnung aus und gewinnst dabei aber 20 neue Kunden,"
+  },
+  {
+   "take": "t1",
+   "ab": 66.8,
+   "text": "dann sind das eben"
+  },
+  {
+   "take": "t1",
+   "ab": 68.2,
+   "text": "50 Euro pro Neukunde."
+  },
+  {
+   "take": "t1",
+   "ab": 70.5,
+   "text": "Je nachdem, wie du also rechnest, gehören nicht nur Anzeigenkosten dazu,"
+  },
+  {
+   "take": "t1",
+   "ab": 74.6,
+   "text": "sondern eben auch weitere Marketing - und Vertriebskosten."
+  },
+  {
+   "take": "t1",
+   "ab": 77.6,
+   "text": "Entscheidend ist hier, was du wirklich mit diesem Kunden verdienst und ob sich die Akquise eben rechnet."
+  },
+  {
+   "take": "t1",
+   "ab": 90.0,
+   "text": "Dein Vorteil hier, wenn du eben deinen CAC kennst und ihn sinnvoll senkst, weißt du immer besser, ob sich deine Neukundengewinnung rechnet. und kannst eben dabei dein Budget effizienter einsetzen."
+  },
+  {
+   "take": "t1",
+   "ab": 161.2,
+   "text": "Neue Kunden kosten eben leider immer Geld."
+  },
+  {
+   "take": "t1",
+   "ab": 178.1,
+   "text": "Was hingegen kein Geld kostet, ist wenn du hier ein Follow hinterlässt, um weitere solche E-Commerce Tipps zu erhalten."
+  }
+ ],
+ "ende": {
+  "bis": 183.69
+ },
+ "korrekturen": [
+  [
+   "t1",
+   53.39,
+   "mal",
+   "Mal"
+  ],
+  [
+   "t1",
+   62.05,
+   "1000",
+   "1.000"
+  ],
+  [
+   "t1",
+   90.63,
+   "hier,",
+   "hier:"
+  ],
+  [
+   "t1",
+   179.69,
+   "ist",
+   "ist,"
+  ]
+ ]
+}

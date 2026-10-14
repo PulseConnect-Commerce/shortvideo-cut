@@ -1,0 +1,1190 @@
+{
+ "projekt": "cac",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "cac/t1",
+   "from": 38.805,
+   "to": 41.375,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 41.885,
+   "to": 43.815,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 44.285,
+   "to": 47.195,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 47.575,
+   "to": 49.345,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 52.995,
+   "to": 58.215,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 58.515,
+   "to": 59.935,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 60.645,
+   "to": 66.405,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 66.845,
+   "to": 67.795,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 68.265,
+   "to": 69.865,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 70.535,
+   "to": 74.245,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 74.645,
+   "to": 76.965,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 77.605,
+   "to": 82.935,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 89.985,
+   "to": 93.835,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 94.225,
+   "to": 97.255,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 97.695,
+   "to": 100.005,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 161.145,
+   "to": 163.255,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 178.105,
+   "to": 179.905,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "cac/t1",
+   "from": 180.225,
+   "to": 183.69,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "CAC,",
+   "src": "cac/t1",
+   "start": 38.85,
+   "end": 39.19
+  },
+  {
+   "text": "was",
+   "src": "cac/t1",
+   "start": 39.49,
+   "end": 39.67
+  },
+  {
+   "text": "kostet",
+   "src": "cac/t1",
+   "start": 39.75,
+   "end": 40.01
+  },
+  {
+   "text": "dich",
+   "src": "cac/t1",
+   "start": 40.03,
+   "end": 40.13
+  },
+  {
+   "text": "hier",
+   "src": "cac/t1",
+   "start": 40.15,
+   "end": 40.23
+  },
+  {
+   "text": "wirklich",
+   "src": "cac/t1",
+   "start": 40.27,
+   "end": 40.55
+  },
+  {
+   "text": "ein",
+   "src": "cac/t1",
+   "start": 40.63,
+   "end": 40.71
+  },
+  {
+   "text": "neuer",
+   "src": "cac/t1",
+   "start": 40.77,
+   "end": 40.97
+  },
+  {
+   "text": "Kunde?",
+   "src": "cac/t1",
+   "start": 41.03,
+   "end": 41.27
+  },
+  {
+   "text": "Willkommen",
+   "src": "cac/t1",
+   "start": 41.93,
+   "end": 42.29
+  },
+  {
+   "text": "zu",
+   "src": "cac/t1",
+   "start": 42.33,
+   "end": 42.39
+  },
+  {
+   "text": "E-Commerce",
+   "src": "cac/t1",
+   "start": 42.53,
+   "end": 43.01
+  },
+  {
+   "text": "einfach",
+   "src": "cac/t1",
+   "start": 43.15,
+   "end": 43.41
+  },
+  {
+   "text": "erklärt.",
+   "src": "cac/t1",
+   "start": 43.45,
+   "end": 43.79
+  },
+  {
+   "text": "Heute",
+   "src": "cac/t1",
+   "start": 44.33,
+   "end": 44.53
+  },
+  {
+   "text": "erkläre",
+   "src": "cac/t1",
+   "start": 44.59,
+   "end": 44.87
+  },
+  {
+   "text": "ich",
+   "src": "cac/t1",
+   "start": 44.91,
+   "end": 44.99
+  },
+  {
+   "text": "dir",
+   "src": "cac/t1",
+   "start": 45.05,
+   "end": 45.13
+  },
+  {
+   "text": "die",
+   "src": "cac/t1",
+   "start": 45.21,
+   "end": 45.31
+  },
+  {
+   "text": "Customer",
+   "src": "cac/t1",
+   "start": 45.63,
+   "end": 46.07
+  },
+  {
+   "text": "Acquisition",
+   "src": "cac/t1",
+   "start": 46.21,
+   "end": 46.79
+  },
+  {
+   "text": "Cost",
+   "src": "cac/t1",
+   "start": 46.89,
+   "end": 47.15
+  },
+  {
+   "text": "oder",
+   "src": "cac/t1",
+   "start": 47.63,
+   "end": 47.77
+  },
+  {
+   "text": "auch",
+   "src": "cac/t1",
+   "start": 47.81,
+   "end": 47.91
+  },
+  {
+   "text": "eben",
+   "src": "cac/t1",
+   "start": 47.97,
+   "end": 48.05
+  },
+  {
+   "text": "kurz",
+   "src": "cac/t1",
+   "start": 48.13,
+   "end": 48.41
+  },
+  {
+   "text": "CAC",
+   "src": "cac/t1",
+   "start": 48.59,
+   "end": 48.89
+  },
+  {
+   "text": "genannt.",
+   "src": "cac/t1",
+   "start": 49.03,
+   "end": 49.29
+  },
+  {
+   "text": "Letztes",
+   "src": "cac/t1",
+   "start": 53.05,
+   "end": 53.33
+  },
+  {
+   "text": "Mal",
+   "src": "cac/t1",
+   "start": 53.39,
+   "end": 53.49
+  },
+  {
+   "text": "ging",
+   "src": "cac/t1",
+   "start": 53.57,
+   "end": 53.69
+  },
+  {
+   "text": "es",
+   "src": "cac/t1",
+   "start": 53.77,
+   "end": 53.83
+  },
+  {
+   "text": "hier",
+   "src": "cac/t1",
+   "start": 53.89,
+   "end": 53.99
+  },
+  {
+   "text": "um",
+   "src": "cac/t1",
+   "start": 54.07,
+   "end": 54.15
+  },
+  {
+   "text": "den",
+   "src": "cac/t1",
+   "start": 54.19,
+   "end": 54.29
+  },
+  {
+   "text": "Bestellwert,",
+   "src": "cac/t1",
+   "start": 54.35,
+   "end": 54.87
+  },
+  {
+   "text": "heute",
+   "src": "cac/t1",
+   "start": 55.19,
+   "end": 55.39
+  },
+  {
+   "text": "schauen",
+   "src": "cac/t1",
+   "start": 55.45,
+   "end": 55.61
+  },
+  {
+   "text": "wir",
+   "src": "cac/t1",
+   "start": 55.63,
+   "end": 55.69
+  },
+  {
+   "text": "uns",
+   "src": "cac/t1",
+   "start": 55.73,
+   "end": 55.81
+  },
+  {
+   "text": "aber",
+   "src": "cac/t1",
+   "start": 55.87,
+   "end": 55.99
+  },
+  {
+   "text": "die",
+   "src": "cac/t1",
+   "start": 56.07,
+   "end": 56.17
+  },
+  {
+   "text": "Kosten",
+   "src": "cac/t1",
+   "start": 56.53,
+   "end": 56.93
+  },
+  {
+   "text": "der",
+   "src": "cac/t1",
+   "start": 56.99,
+   "end": 57.07
+  },
+  {
+   "text": "Kundengewinnung",
+   "src": "cac/t1",
+   "start": 57.15,
+   "end": 57.85
+  },
+  {
+   "text": "an,",
+   "src": "cac/t1",
+   "start": 57.95,
+   "end": 58.07
+  },
+  {
+   "text": "also",
+   "src": "cac/t1",
+   "start": 58.57,
+   "end": 58.73
+  },
+  {
+   "text": "kurz",
+   "src": "cac/t1",
+   "start": 58.81,
+   "end": 59.05
+  },
+  {
+   "text": "CAC.",
+   "src": "cac/t1",
+   "start": 59.25,
+   "end": 59.73
+  },
+  {
+   "text": "Gibst",
+   "src": "cac/t1",
+   "start": 60.69,
+   "end": 60.89
+  },
+  {
+   "text": "du",
+   "src": "cac/t1",
+   "start": 60.93,
+   "end": 60.99
+  },
+  {
+   "text": "zum",
+   "src": "cac/t1",
+   "start": 61.09,
+   "end": 61.19
+  },
+  {
+   "text": "Beispiel",
+   "src": "cac/t1",
+   "start": 61.25,
+   "end": 61.65
+  },
+  {
+   "text": "1.000",
+   "src": "cac/t1",
+   "start": 62.05,
+   "end": 62.33
+  },
+  {
+   "text": "Euro",
+   "src": "cac/t1",
+   "start": 62.43,
+   "end": 62.59
+  },
+  {
+   "text": "für",
+   "src": "cac/t1",
+   "start": 62.71,
+   "end": 62.79
+  },
+  {
+   "text": "eine",
+   "src": "cac/t1",
+   "start": 62.85,
+   "end": 62.99
+  },
+  {
+   "text": "Kundengewinnung",
+   "src": "cac/t1",
+   "start": 63.11,
+   "end": 63.77
+  },
+  {
+   "text": "aus",
+   "src": "cac/t1",
+   "start": 63.87,
+   "end": 64.05
+  },
+  {
+   "text": "und",
+   "src": "cac/t1",
+   "start": 64.21,
+   "end": 64.29
+  },
+  {
+   "text": "gewinnst",
+   "src": "cac/t1",
+   "start": 64.35,
+   "end": 64.61
+  },
+  {
+   "text": "dabei",
+   "src": "cac/t1",
+   "start": 64.69,
+   "end": 64.91
+  },
+  {
+   "text": "aber",
+   "src": "cac/t1",
+   "start": 64.97,
+   "end": 65.13
+  },
+  {
+   "text": "20",
+   "src": "cac/t1",
+   "start": 65.25,
+   "end": 65.63
+  },
+  {
+   "text": "neue",
+   "src": "cac/t1",
+   "start": 65.69,
+   "end": 65.85
+  },
+  {
+   "text": "Kunden,",
+   "src": "cac/t1",
+   "start": 65.91,
+   "end": 66.27
+  },
+  {
+   "text": "dann",
+   "src": "cac/t1",
+   "start": 66.89,
+   "end": 67.03
+  },
+  {
+   "text": "sind",
+   "src": "cac/t1",
+   "start": 67.09,
+   "end": 67.23
+  },
+  {
+   "text": "das",
+   "src": "cac/t1",
+   "start": 67.27,
+   "end": 67.39
+  },
+  {
+   "text": "eben",
+   "src": "cac/t1",
+   "start": 67.49,
+   "end": 67.69
+  },
+  {
+   "text": "50",
+   "src": "cac/t1",
+   "start": 68.31,
+   "end": 68.71
+  },
+  {
+   "text": "Euro",
+   "src": "cac/t1",
+   "start": 68.83,
+   "end": 69.03
+  },
+  {
+   "text": "pro",
+   "src": "cac/t1",
+   "start": 69.17,
+   "end": 69.27
+  },
+  {
+   "text": "Neukunde.",
+   "src": "cac/t1",
+   "start": 69.39,
+   "end": 69.81
+  },
+  {
+   "text": "Je",
+   "src": "cac/t1",
+   "start": 70.58,
+   "end": 70.64
+  },
+  {
+   "text": "nachdem,",
+   "src": "cac/t1",
+   "start": 70.72,
+   "end": 70.98
+  },
+  {
+   "text": "wie",
+   "src": "cac/t1",
+   "start": 71.06,
+   "end": 71.14
+  },
+  {
+   "text": "du",
+   "src": "cac/t1",
+   "start": 71.16,
+   "end": 71.22
+  },
+  {
+   "text": "also",
+   "src": "cac/t1",
+   "start": 71.28,
+   "end": 71.44
+  },
+  {
+   "text": "rechnest,",
+   "src": "cac/t1",
+   "start": 71.5,
+   "end": 71.94
+  },
+  {
+   "text": "gehören",
+   "src": "cac/t1",
+   "start": 72.0,
+   "end": 72.3
+  },
+  {
+   "text": "nicht",
+   "src": "cac/t1",
+   "start": 72.34,
+   "end": 72.5
+  },
+  {
+   "text": "nur",
+   "src": "cac/t1",
+   "start": 72.56,
+   "end": 72.68
+  },
+  {
+   "text": "Anzeigenkosten",
+   "src": "cac/t1",
+   "start": 72.98,
+   "end": 73.74
+  },
+  {
+   "text": "dazu,",
+   "src": "cac/t1",
+   "start": 73.78,
+   "end": 74.04
+  },
+  {
+   "text": "sondern",
+   "src": "cac/t1",
+   "start": 74.72,
+   "end": 75.0
+  },
+  {
+   "text": "eben",
+   "src": "cac/t1",
+   "start": 75.08,
+   "end": 75.24
+  },
+  {
+   "text": "auch",
+   "src": "cac/t1",
+   "start": 75.28,
+   "end": 75.38
+  },
+  {
+   "text": "weitere",
+   "src": "cac/t1",
+   "start": 75.42,
+   "end": 75.74
+  },
+  {
+   "text": "Marketing-",
+   "src": "cac/t1",
+   "start": 75.82,
+   "end": 76.24
+  },
+  {
+   "text": "und",
+   "src": "cac/t1",
+   "start": 76.32,
+   "end": 76.38
+  },
+  {
+   "text": "Vertriebskosten.",
+   "src": "cac/t1",
+   "start": 76.4,
+   "end": 76.965
+  },
+  {
+   "text": "Entscheidend",
+   "src": "cac/t1",
+   "start": 77.68,
+   "end": 78.12
+  },
+  {
+   "text": "ist",
+   "src": "cac/t1",
+   "start": 78.18,
+   "end": 78.28
+  },
+  {
+   "text": "hier,",
+   "src": "cac/t1",
+   "start": 78.32,
+   "end": 78.46
+  },
+  {
+   "text": "was",
+   "src": "cac/t1",
+   "start": 78.98,
+   "end": 79.18
+  },
+  {
+   "text": "du",
+   "src": "cac/t1",
+   "start": 79.26,
+   "end": 79.34
+  },
+  {
+   "text": "wirklich",
+   "src": "cac/t1",
+   "start": 79.46,
+   "end": 79.8
+  },
+  {
+   "text": "mit",
+   "src": "cac/t1",
+   "start": 79.86,
+   "end": 79.94
+  },
+  {
+   "text": "diesem",
+   "src": "cac/t1",
+   "start": 80.0,
+   "end": 80.2
+  },
+  {
+   "text": "Kunden",
+   "src": "cac/t1",
+   "start": 80.26,
+   "end": 80.52
+  },
+  {
+   "text": "verdienst",
+   "src": "cac/t1",
+   "start": 80.56,
+   "end": 81.0
+  },
+  {
+   "text": "und",
+   "src": "cac/t1",
+   "start": 81.1,
+   "end": 81.18
+  },
+  {
+   "text": "ob",
+   "src": "cac/t1",
+   "start": 81.3,
+   "end": 81.4
+  },
+  {
+   "text": "sich",
+   "src": "cac/t1",
+   "start": 81.48,
+   "end": 81.64
+  },
+  {
+   "text": "die",
+   "src": "cac/t1",
+   "start": 81.76,
+   "end": 81.86
+  },
+  {
+   "text": "Akquise",
+   "src": "cac/t1",
+   "start": 81.92,
+   "end": 82.24
+  },
+  {
+   "text": "eben",
+   "src": "cac/t1",
+   "start": 82.34,
+   "end": 82.52
+  },
+  {
+   "text": "rechnet.",
+   "src": "cac/t1",
+   "start": 82.56,
+   "end": 82.9
+  },
+  {
+   "text": "Dein",
+   "src": "cac/t1",
+   "start": 90.03,
+   "end": 90.21
+  },
+  {
+   "text": "Vorteil",
+   "src": "cac/t1",
+   "start": 90.27,
+   "end": 90.57
+  },
+  {
+   "text": "hier:",
+   "src": "cac/t1",
+   "start": 90.63,
+   "end": 90.77
+  },
+  {
+   "text": "wenn",
+   "src": "cac/t1",
+   "start": 91.13,
+   "end": 91.25
+  },
+  {
+   "text": "du",
+   "src": "cac/t1",
+   "start": 91.29,
+   "end": 91.33
+  },
+  {
+   "text": "eben",
+   "src": "cac/t1",
+   "start": 91.39,
+   "end": 91.51
+  },
+  {
+   "text": "deinen",
+   "src": "cac/t1",
+   "start": 91.57,
+   "end": 91.75
+  },
+  {
+   "text": "CAC",
+   "src": "cac/t1",
+   "start": 91.83,
+   "end": 92.11
+  },
+  {
+   "text": "kennst",
+   "src": "cac/t1",
+   "start": 92.27,
+   "end": 92.57
+  },
+  {
+   "text": "und",
+   "src": "cac/t1",
+   "start": 92.67,
+   "end": 92.75
+  },
+  {
+   "text": "ihn",
+   "src": "cac/t1",
+   "start": 92.81,
+   "end": 92.89
+  },
+  {
+   "text": "sinnvoll",
+   "src": "cac/t1",
+   "start": 93.01,
+   "end": 93.41
+  },
+  {
+   "text": "senkst,",
+   "src": "cac/t1",
+   "start": 93.47,
+   "end": 93.81
+  },
+  {
+   "text": "weißt",
+   "src": "cac/t1",
+   "start": 94.27,
+   "end": 94.51
+  },
+  {
+   "text": "du",
+   "src": "cac/t1",
+   "start": 94.55,
+   "end": 94.59
+  },
+  {
+   "text": "immer",
+   "src": "cac/t1",
+   "start": 94.63,
+   "end": 94.79
+  },
+  {
+   "text": "besser,",
+   "src": "cac/t1",
+   "start": 94.85,
+   "end": 95.13
+  },
+  {
+   "text": "ob",
+   "src": "cac/t1",
+   "start": 95.49,
+   "end": 95.57
+  },
+  {
+   "text": "sich",
+   "src": "cac/t1",
+   "start": 95.65,
+   "end": 95.77
+  },
+  {
+   "text": "deine",
+   "src": "cac/t1",
+   "start": 95.81,
+   "end": 95.99
+  },
+  {
+   "text": "Neukundengewinnung",
+   "src": "cac/t1",
+   "start": 96.07,
+   "end": 96.77
+  },
+  {
+   "text": "rechnet.",
+   "src": "cac/t1",
+   "start": 96.83,
+   "end": 97.19
+  },
+  {
+   "text": "und",
+   "src": "cac/t1",
+   "start": 97.75,
+   "end": 97.83
+  },
+  {
+   "text": "kannst",
+   "src": "cac/t1",
+   "start": 97.89,
+   "end": 98.17
+  },
+  {
+   "text": "eben",
+   "src": "cac/t1",
+   "start": 98.27,
+   "end": 98.37
+  },
+  {
+   "text": "dabei",
+   "src": "cac/t1",
+   "start": 98.43,
+   "end": 98.61
+  },
+  {
+   "text": "dein",
+   "src": "cac/t1",
+   "start": 98.67,
+   "end": 98.77
+  },
+  {
+   "text": "Budget",
+   "src": "cac/t1",
+   "start": 98.81,
+   "end": 99.07
+  },
+  {
+   "text": "effizienter",
+   "src": "cac/t1",
+   "start": 99.15,
+   "end": 99.65
+  },
+  {
+   "text": "einsetzen.",
+   "src": "cac/t1",
+   "start": 99.71,
+   "end": 100.005
+  },
+  {
+   "text": "Neue",
+   "src": "cac/t1",
+   "start": 161.27,
+   "end": 161.47
+  },
+  {
+   "text": "Kunden",
+   "src": "cac/t1",
+   "start": 161.55,
+   "end": 161.77
+  },
+  {
+   "text": "kosten",
+   "src": "cac/t1",
+   "start": 161.83,
+   "end": 162.15
+  },
+  {
+   "text": "eben",
+   "src": "cac/t1",
+   "start": 162.21,
+   "end": 162.33
+  },
+  {
+   "text": "leider",
+   "src": "cac/t1",
+   "start": 162.35,
+   "end": 162.55
+  },
+  {
+   "text": "immer",
+   "src": "cac/t1",
+   "start": 162.77,
+   "end": 162.93
+  },
+  {
+   "text": "Geld.",
+   "src": "cac/t1",
+   "start": 163.01,
+   "end": 163.21
+  },
+  {
+   "text": "Was",
+   "src": "cac/t1",
+   "start": 178.15,
+   "end": 178.27
+  },
+  {
+   "text": "hingegen",
+   "src": "cac/t1",
+   "start": 178.31,
+   "end": 178.63
+  },
+  {
+   "text": "kein",
+   "src": "cac/t1",
+   "start": 178.71,
+   "end": 178.89
+  },
+  {
+   "text": "Geld",
+   "src": "cac/t1",
+   "start": 178.95,
+   "end": 179.07
+  },
+  {
+   "text": "kostet,",
+   "src": "cac/t1",
+   "start": 179.15,
+   "end": 179.53
+  },
+  {
+   "text": "ist,",
+   "src": "cac/t1",
+   "start": 179.69,
+   "end": 179.87
+  },
+  {
+   "text": "wenn",
+   "src": "cac/t1",
+   "start": 180.27,
+   "end": 180.39
+  },
+  {
+   "text": "du",
+   "src": "cac/t1",
+   "start": 180.41,
+   "end": 180.45
+  },
+  {
+   "text": "hier",
+   "src": "cac/t1",
+   "start": 180.53,
+   "end": 180.67
+  },
+  {
+   "text": "ein",
+   "src": "cac/t1",
+   "start": 180.83,
+   "end": 180.91
+  },
+  {
+   "text": "Follow",
+   "src": "cac/t1",
+   "start": 180.99,
+   "end": 181.19
+  },
+  {
+   "text": "hinterlässt,",
+   "src": "cac/t1",
+   "start": 181.25,
+   "end": 181.69
+  },
+  {
+   "text": "um",
+   "src": "cac/t1",
+   "start": 181.79,
+   "end": 181.87
+  },
+  {
+   "text": "weitere",
+   "src": "cac/t1",
+   "start": 181.93,
+   "end": 182.21
+  },
+  {
+   "text": "solche",
+   "src": "cac/t1",
+   "start": 182.29,
+   "end": 182.47
+  },
+  {
+   "text": "E-Commerce",
+   "src": "cac/t1",
+   "start": 182.57,
+   "end": 182.93
+  },
+  {
+   "text": "Tipps",
+   "src": "cac/t1",
+   "start": 182.95,
+   "end": 183.13
+  },
+  {
+   "text": "zu",
+   "src": "cac/t1",
+   "start": 183.19,
+   "end": 183.25
+  },
+  {
+   "text": "erhalten.",
+   "src": "cac/t1",
+   "start": 183.27,
+   "end": 183.59
+  }
+ ],
+ "pages": [
+  1,
+  3,
+  2,
+  3,
+  1,
+  2,
+  2,
+  4,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  2,
+  2,
+  2,
+  3,
+  4,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  4,
+  4,
+  3,
+  1,
+  1,
+  3,
+  3,
+  2,
+  3,
+  4,
+  3,
+  2,
+  1,
+  3,
+  3,
+  3,
+  2,
+  2
+ ]
+}
