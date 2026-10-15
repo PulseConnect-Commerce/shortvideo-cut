@@ -38,9 +38,9 @@ export const serienVideo = (
   szenen: SerienSzene[],
   akzente: [number, number][],
   /** eigener Bildausschnitt (z. B. enger, damit ein Stuhl aus dem Bild fällt); Standard wie die Serie */
-  bild: { scale: number; hoch: number } = OBEN,
+  bild: { scale: number; hoch: number; x?: number } = OBEN,
   /** Lage der Einblendungen (Verschiebung der Szenen in px) und der Untertitel; Standard wie die Serie */
-  layout: { einblendungen?: number; untertitel?: number } = {},
+  layout: { einblendungen?: number; untertitel?: number; design?: DesignName } = {},
 ) => {
   const ende = szenen.length ? szenen[0].at : C.DURATION;
   const zoomAt = (fr: number) => 1 + 0.03 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
@@ -79,7 +79,7 @@ export const serienVideo = (
       <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
         <AbsoluteFill style={{ transform: `scale(${akzentAt(fr)})`, transformOrigin: "50% 42%" }}>
           <SplitPerson split={0} zoom={zoomAt(fr)}>
-            <Takes C={C} voice={voice} transform={`translateY(${-lage.hoch}px) scale(${lage.scale})`} transformOrigin="50% 0%" />
+            <Takes C={C} voice={voice} transform={`translate(${-((lage as { x?: number }).x ?? 0)}px, ${-lage.hoch}px) scale(${lage.scale})`} transformOrigin="50% 0%" />
           </SplitPerson>
         </AbsoluteFill>
         <Toenung />
@@ -124,7 +124,7 @@ export const serienVideo = (
     );
   };
 
-  const Video: React.FC<Props> = ({ design = "nacht", ...p }) => (
+  const Video: React.FC<Props> = ({ design = layout.design ?? "nacht", ...p }) => (
     <DesignRahmen design={design}>
       <Inhalt {...p} />
     </DesignRahmen>

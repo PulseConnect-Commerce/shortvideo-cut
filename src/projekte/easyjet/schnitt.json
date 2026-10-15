@@ -1,0 +1,119 @@
+{
+ "projekt": "easyjet",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.35,
+  "pre": 0.04,
+  "post": 0.06
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 4.67,
+   "text": "Amazon bekommt jetzt tatsächlich Konkurrenz. Und zwar vom Gründer von EasyJet. Ja, du hast richtig gehört. Der Mann, der hinter EasyJet steckt,"
+  },
+  {
+   "take": "t1",
+   "ab": 18.22,
+   "text": "hat die Flugbranche bereits aufgemischt und will jetzt auch den Onlinehandel angreifen."
+  },
+  {
+   "take": "t1",
+   "ab": 24.5,
+   "text": "Ein neuer Marktplatz namens EasyShop ist gerade in 21 europäischen Ländern gestartet. Und eben auch in Deutschland."
+  },
+  {
+   "take": "t1",
+   "ab": 31.34,
+   "text": "Und das Spannende daran ist tatsächlich das Geschäftsmodell."
+  },
+  {
+   "take": "t1",
+   "ab": 34.56,
+   "text": "Denn anders als zum Beispiel Amazon selbst, will EasyShop selber gar keine Produkte verkaufen und damit eben auch nicht gegen die eigenen Händler antreten."
+  },
+  {
+   "take": "t1",
+   "ab": 53.72,
+   "text": "Und außerdem sollen Händler mit nur einem"
+  },
+  {
+   "take": "t1",
+   "ab": 58.82,
+   "text": "Count direkt in 21 Ländern verkaufen können."
+  },
+  {
+   "take": "t1",
+   "ab": 63.64,
+   "text": "Und sogar die Umsatzsteuer soll eben damit automatisch berechnet werden."
+  },
+  {
+   "take": "t1",
+   "ab": 67.16,
+   "text": "Aber jetzt kommt eben der entscheidende Punkt."
+  },
+  {
+   "take": "t1",
+   "ab": 69.48,
+   "text": "Ein neuer Marktplatz bringt ja natürlich als Händler überhaupt nichts, wenn dort einfach keine Kunden einkaufen."
+  },
+  {
+   "take": "t1",
+   "ab": 74.83,
+   "text": "Und wie groß die tatsächliche Reichweite ist und was im Händler am Ende bezahlen müssen, ist bislang einfach noch nicht ausreichend klar."
+  },
+  {
+   "take": "t1",
+   "ab": 82.73,
+   "text": "Ich finde aber die Entwicklung trotzdem spannend, denn mehr Wettbewerb zu Amazon kann natürlich für uns Händler auch sehr interessant werden."
+  },
+  {
+   "take": "t1",
+   "ab": 109.01,
+   "text": "Aber was glaubt ihr?"
+  },
+  {
+   "take": "t1",
+   "ab": 110.37,
+   "text": "Habt EasyShop überhaupt wirklich eine Chance gegen Amazon? Oder ist das wieder einfach nur der nächste Marktplatz, von dem in einem Jahr wieder niemand spricht und keiner was davon gehört hat?"
+  },
+  {
+   "take": "t1",
+   "ab": 118.99,
+   "text": "Was sagt ihr?"
+  }
+ ],
+ "korrekturen": [
+  [
+   "t1",
+   10.25,
+   "EasyJet.",
+   "easyJet."
+  ],
+  [
+   "t1",
+   13.46,
+   "EasyJet",
+   "easyJet"
+  ],
+  [
+   "t1",
+   58.82,
+   "Count",
+   "Account"
+  ],
+  [
+   "t1",
+   77.49,
+   "im",
+   "wir"
+  ],
+  [
+   "t1",
+   110.37,
+   "Habt",
+   "Hat"
+  ]
+ ]
+}
