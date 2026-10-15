@@ -1,0 +1,100 @@
+{
+ "projekt": "besucher",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.4,
+  "pre": 0.04,
+  "post": 0.06
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 6.75,
+   "text": "Dein Shopify-Shop braucht vielleicht gar nicht mehr Besucher."
+  },
+  {
+   "take": "t1",
+   "ab": 42.57,
+   "text": "Warum kaufen die Leute eigentlich nicht, die bereits auf deinem Online-Shop sind?"
+  },
+  {
+   "take": "t1",
+   "ab": 68.52,
+   "text": "Und die erste Reaktion ist halt meistens bei den Kunden immer, wir brauchen mehr Traffic."
+  },
+  {
+   "take": "t1",
+   "ab": 72.61,
+   "text": "Aber stell mal folgendes vor, du hast jetzt jeden Monat, sagen wir mal, 10 .000 Besucher auf deinem Onlineshop und bei einer Coversion Rate von, sagen wir mal, nur 1%, sind das halt rund 100 Bestellungen. Jetzt optimierst du deinen Onlineshop, schaffst du es halt irgendwie, deine Coversion Rate auf 2% zu steigern, plötzlich hast du halt auf einmal 200 Bestellungen statt nur 100, also doppelt so viele, bei exakt derselben Besucherzahl."
+  },
+  {
+   "take": "t1",
+   "ab": 104.95,
+   "text": "Dafür müsstest du ja nicht mal einen einzigen zusätzlichen Besucher kaufen."
+  },
+  {
+   "take": "t1",
+   "ab": 136.79,
+   "text": "Aber genau deshalb würde ich genau diese drei Dinge jetzt eben prüfen."
+  },
+  {
+   "take": "t1",
+   "ab": 142.97,
+   "text": "Punkt Nummer eins. Deine Produktseiten. Versteht der Kunde überhaupt sofort, was dein Produkt kann und warum er es kaufen sollte? Punkt Nummer 2. Vertrauen. Sind die Lieferzeiten, Versandkosten, die Rückgabbedingungen überhaupt klar geregelt? Gibt es hier überhaupt Bewertungen?"
+  },
+  {
+   "take": "t1",
+   "ab": 162.26,
+   "text": "Punkt Nummer 3 ist ein Checkout. Kann der Kunde einfach bezahlen oder machst du es ihm immer unnötig kompliziert in dem Checkout? Denn mehr Traffic auf einen schlecht funktionierenden Shop zu schicken, löst halt leider immer noch lange nicht dein Problem."
+  },
+  {
+   "take": "t1",
+   "ab": 177.91,
+   "text": "Mein Fazit daher, bevor du überhaupt dein Werbebudget erhöhst, solltest du erstmal verstehen, was überhaupt mit deinen bestehenden Besuchern passiert."
+  },
+  {
+   "take": "t1",
+   "ab": 189.5,
+   "text": "Und wenn du jetzt wissen willst, wie du deine Conversion Rate überhaupt berechnest und richtig bewertest, dann folge mir hier gerne, denn genau das erkläre ich dir in meiner neuen Serie E-Commerce einfach erklärt."
+  }
+ ],
+ "korrekturen": [
+  [
+   "t1",
+   78.63,
+   "Coversion",
+   "Conversion"
+  ],
+  [
+   "t1",
+   87.45,
+   "Coversion",
+   "Conversion"
+  ],
+  [
+   "t1",
+   155.49,
+   "Rückgabbedingungen",
+   "Rückgabebedingungen"
+  ],
+  [
+   "t1",
+   163.24,
+   "ein",
+   "dein"
+  ],
+  [
+   "t1",
+   75.55,
+   "10",
+   "10.000"
+  ],
+  [
+   "t1",
+   75.83,
+   ".000",
+   ""
+  ]
+ ]
+}
