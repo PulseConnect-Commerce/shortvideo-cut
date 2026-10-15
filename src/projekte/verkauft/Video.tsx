@@ -1,7 +1,7 @@
 /**
  * "Ich habe ein E-Commerce-Business verkauft – und das ist meine wichtigste Erkenntnis" (Paul, 15.10.2026).
  * Format FACE im Serien-Look (Vorlage _serie/Serie.tsx, Design nacht). Er steht; nur hier ist links unten ein Stuhl im
- * Bild, darum ein engerer Ausschnitt ab dem Oberkörper (1,4-fach ab der Oberkante, Stuhl außerhalb), seine Vorgabe.
+ * Bild, darum ein engerer Ausschnitt ab dem Oberkörper (1,5-fach, Kopf wie in der Serie bei y ~600, Stuhl außerhalb), seine Vorgabe.
  * Der Skript-Hook ("Anfang dieses Jahres ... Umsatz ist nicht gleich Erfolg") ist nicht aufgenommen; der Hook steht
  * darum als Einblendung, gesprochen beginnt es mit 2016. Wiederholungen gekürzt (~91 s), Einblendungen nach seinem Plan.
  */
@@ -22,7 +22,7 @@ const cta = F("und", C.WE("praxis"));
 
 export const Video = serienVideo(
   C,
-  { line1: "2026:", line2: "Unternehmen verkauft", scale: 1.05 },
+  { line1: "2026:", line2: "Unternehmen verkauft", scale: 0.9 },
   [
     {
       at: weg,
@@ -72,5 +72,5 @@ export const Video = serienVideo(
     [F("umsatz", seite), C.WE("klein", seite) + 8],
     [F("folge", cta), C.WE("reise", cta) + 10],
   ],
-  { scale: 1.4, hoch: 0 },
+  { scale: 1.5, hoch: 320 },
 );
