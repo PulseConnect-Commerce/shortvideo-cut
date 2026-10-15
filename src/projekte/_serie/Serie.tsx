@@ -61,7 +61,10 @@ export const serienVideo = (
       const gruppen: Chip[][] = [];
       for (const c of chips) (c.neu || !gruppen.length ? gruppen.push([c]) : gruppen[gruppen.length - 1].push(c));
       gruppen.forEach((g, gi) => {
-        const size = g.length === 1 ? 48 : S;
+        // höchstens 760 px breit (sicherer Bereich x 150-925 um die Mitte), sonst die ganze Zeile kleiner setzen
+        const wunsch = g.length === 1 ? 48 : S;
+        const breite = (s: number) => g.reduce((a, c) => a + tagBreite(D, c.text, s), 0) + 22 * (g.length - 1);
+        const size = Math.min(wunsch, Math.floor((wunsch * 760) / breite(wunsch)));
         const ws = g.map((c) => tagBreite(D, c.text, size));
         let x = (BOX.width - ws.reduce((a, b) => a + b, 0) - 22 * (g.length - 1)) / 2;
         const until = gi + 1 < gruppen.length ? gruppen[gi + 1][0].at - 4 : Infinity;
