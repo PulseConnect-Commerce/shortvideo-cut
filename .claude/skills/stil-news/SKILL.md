@@ -28,6 +28,14 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
 
 - 1080x1920, 30 fps, Deutsch, ein Grade (aus dem Design).
 - **Ab der Hüfte, keine Hose** (wie HERO): fester Ausschnitt `scale(1.2)` ab der Oberkante, vorher messen.
+- **Bildlage nach seinem Referenzvideo** (2026-10-15, gilt für alle Formate, geht den älteren Lage-Angaben vor; "Bitte
+  orientiere dich an das Video. Hier wird genau erklärt, wo die Augen sein sollen, welche Bereiche vermieden werden
+  sollen"): **Augen bei y ~610-775** (Mitte ~700), Gesicht groß (Kopf beginnt bei ~y 350-450); **Texthook oben bei y
+  ~250-475**, mittig, darf den Haaransatz berühren; **Einblendungen auf der Brust bei y ~1100-1650** (nicht über dem
+  Kopf); sicherer Bereich x 150-925, y 250-1625; **tabu** sind rechts ab x ~925 (ab y ~750) und unten ab y ~1650.
+  Beim Ranzoomen bleiben die Augen auf derselben Höhe. Nicht vor weißer Wand filmen (Tiefe schaffen). Umsetzung mit
+  `serienVideo(..., bild, { einblendungen: 800, untertitel: 1460 })` (Vorlage `src/projekte/verkauft/Video.tsx`,
+  dort 1,8-fach bei scharfer 1080er-Aufnahme). Vor dem Abschicken an Standbildern die Augenhöhe messen.
 - **Tabu-Zonen oben, rechts und unten** (seine Vorgabe 2026-10-14, gilt für alle Formate und geht allen Lage-Angaben
   unten vor: "Bitte in Zukunft beim Bild Hochladen immer den oberen und unteren Teil sowie den rechten Teil als
   Tabu-Zone zum Anzeigen von Inhalten und Texten nutzen"; TikToks Suchleiste hatte den Text oben verdeckt). Werte in
