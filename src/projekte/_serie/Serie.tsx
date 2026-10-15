@@ -60,6 +60,8 @@ export const serienVideo = (
     return acc;
   }, []);
   const ende = szenen.length ? szenen[0].at : C.DURATION;
+  // die Hook geht spätestens, wenn die Quelle kommt (sonst liegt sie über der Schlagzeile)
+  const hookEnde = Math.min(ende, pillen.length ? pillen[0][0] : Infinity);
   const zoomAt = (fr: number) => 1 + 0.03 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
   const akzentAt = (fr: number) =>
     akzente.reduce(
@@ -103,7 +105,7 @@ export const serienVideo = (
         <AbsoluteFill style={{ background: "linear-gradient(180deg, rgb(6 7 10 / 0) 1640px, rgb(6 7 10 / 0.55) 1920px)" }} />
 
         <AbsoluteFill style={{ transform: `translateY(56px) scale(${hook.scale ?? 0.8})`, transformOrigin: "50% 0%" }}>
-          <HookTitle fr={fr} line1={hook.line1} line2={hook.line2} outAt={ende - 4} />
+          <HookTitle fr={fr} line1={hook.line1} line2={hook.line2} outAt={hookEnde - 4} />
         </AbsoluteFill>
 
         {szenen.map((sz, i) => {
