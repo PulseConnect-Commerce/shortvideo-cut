@@ -1,0 +1,93 @@
+{
+ "projekt": "verkauft",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.3,
+  "pre": 0.04,
+  "post": 0.06
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 4.89,
+   "text": "Ich habe 2016 bereits mit Dropshipping angefangen und damals war das natürlich mein Einstieg in das ganze Thema E-Commerce."
+  },
+  {
+   "take": "t1",
+   "ab": 13.29,
+   "text": "Seitdem habe ich eigene Onlineshops aufgebaut, über Amazon, Ebay, Kaufland und auch andere Marktplätze viel verkauft."
+  },
+  {
+   "take": "t1",
+   "ab": 36.89,
+   "text": "Und Anfang 2026 habe ich mich dann entschlossen, eines meiner E-Commerce-Unternehmen zu verkaufen."
+  },
+  {
+   "take": "t1",
+   "ab": 42.37,
+   "text": "In dieser Zeit habe ich natürlich viel gelernt, aber vor allem habe ich natürlich auch bemerkt, wie unterschiedlich einfach ein Online-Shop von außen und auch natürlich von innen aussehen kann. Und von außen siehst du halt vielleicht immer einen Online-Shop mit richtig guten Umsätzen, aber was du halt meistens nicht siehst, sind natürlich Werbekosten, Retouren, Versandkosten, Gebühren und diese ganze Arbeit, die einfach dahinter steckt."
+  },
+  {
+   "take": "t1",
+   "ab": 64.33,
+   "text": "Und genau deshalb sage ich immer, ein Shopify-Shop ist schnell gebaut, aber ein funktionierendes E-Commerce-Business eben nicht."
+  },
+  {
+   "take": "t1",
+   "ab": 86.35,
+   "text": "Denn durch meine Arbeit mit Online-Händlern habe ich natürlich Shops gesehen, die trotz Umsatz einfach nicht funktioniert haben. Denn meist war dann einfach die Marge zu klein."
+  },
+  {
+   "take": "t1",
+   "ab": 116.75,
+   "text": "Und heute kommt einfach noch ein wichtiges Thema mit dazu, das den Online-Händler natürlich gerade sehr stark verändert. Wie du es dir schon denken kannst, künstliche Intelligenz."
+  },
+  {
+   "take": "t1",
+   "ab": 124.73,
+   "text": "Kai kann dir natürlich dabei vielen Dingen helfen. Bei Produkttexten, Kundservice, Automatisierungen, Auswertungen deiner Zahlen und so weiter. Aber KI macht natürlich aus einem schlechten Geschäftsmodell nicht automatisch auch einfach ein gutes."
+  },
+  {
+   "take": "t1",
+   "ab": 141.59,
+   "text": "Und genau darum geht es hier immer auf meinem Kanal."
+  },
+  {
+   "take": "t1",
+   "ab": 145.1,
+   "text": "Nicht um irgendwelche Versprechen, wie du jetzt in 30 Tagen irgendwie reich wirst, sondern einfach um Shopify, E-Commerce und KI aus der Praxis."
+  },
+  {
+   "take": "t1",
+   "ab": 173.92,
+   "text": "Und wenn du jetzt auch deinen Online Shop wirklich besser machen möchtest und wissen willst, welche KI Tools dir dabei helfen können, dann folge mir gerne auf meine Reise und ich zeige dir eben, was funktioniert. und was du dir am besten sparen kannst."
+  }
+ ],
+ "korrekturen": [
+  [
+   "t1",
+   16.43,
+   "Ebay,",
+   "eBay,"
+  ],
+  [
+   "t1",
+   124.73,
+   "Kai",
+   "KI"
+  ],
+  [
+   "t1",
+   128.85,
+   "Kundservice,",
+   "Kundenservice,"
+  ],
+  [
+   "t1",
+   184.68,
+   "funktioniert.",
+   "funktioniert"
+  ]
+ ]
+}
