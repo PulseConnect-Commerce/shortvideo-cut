@@ -33,7 +33,8 @@ type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: bo
 
 export const serienVideo = (
   C: Cut,
-  hook: { line1: string; line2: string },
+  /** scale: Größe der Hook (Standard 0,8; größer nur, wo über dem Kopf Platz ist) */
+  hook: { line1: string; line2: string; scale?: number },
   szenen: SerienSzene[],
   akzente: [number, number][],
   /** eigener Bildausschnitt (z. B. enger, damit ein Stuhl aus dem Bild fällt); Standard wie die Serie */
@@ -79,7 +80,7 @@ export const serienVideo = (
         <Toenung />
         <AbsoluteFill style={{ background: "linear-gradient(180deg, rgb(6 7 10 / 0) 1640px, rgb(6 7 10 / 0.55) 1920px)" }} />
 
-        <AbsoluteFill style={{ transform: "translateY(56px) scale(0.8)", transformOrigin: "50% 0%" }}>
+        <AbsoluteFill style={{ transform: `translateY(56px) scale(${hook.scale ?? 0.8})`, transformOrigin: "50% 0%" }}>
           <HookTitle fr={fr} line1={hook.line1} line2={hook.line2} outAt={ende - 4} />
         </AbsoluteFill>
 

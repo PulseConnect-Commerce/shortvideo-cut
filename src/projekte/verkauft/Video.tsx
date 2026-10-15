@@ -22,7 +22,7 @@ const cta = F("und", C.WE("praxis"));
 
 export const Video = serienVideo(
   C,
-  { line1: "2026:", line2: "E-Commerce-Unternehmen verkauft" },
+  { line1: "2026:", line2: "Unternehmen verkauft", scale: 1.05 },
   [
     {
       at: weg,
