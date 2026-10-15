@@ -39,6 +39,8 @@ export const serienVideo = (
   akzente: [number, number][],
   /** eigener Bildausschnitt (z. B. enger, damit ein Stuhl aus dem Bild fällt); Standard wie die Serie */
   bild: { scale: number; hoch: number } = OBEN,
+  /** Lage der Einblendungen (Verschiebung der Szenen in px) und der Untertitel; Standard wie die Serie */
+  layout: { einblendungen?: number; untertitel?: number } = {},
 ) => {
   const ende = szenen.length ? szenen[0].at : C.DURATION;
   const zoomAt = (fr: number) => 1 + 0.03 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
@@ -88,7 +90,7 @@ export const serienVideo = (
           const until = i + 1 < szenen.length ? szenen[i + 1].at - 2 : Infinity;
           const erster = sz.chips.length ? sz.chips[0].at : sz.at + TITEL;
           return (
-            <AbsoluteFill key={sz.at} style={{ transform: `translateY(${HOCH}px)` }}>
+            <AbsoluteFill key={sz.at} style={{ transform: `translateY(${layout.einblendungen ?? HOCH}px)` }}>
               <Szene fr={fr} at={sz.at} until={until} title={sz.title} frei mittig titelDauer={Math.min(TITEL, erster - sz.at - 8)}>
                 {zeilen(sz.chips).map(({ chip, x, until: u, size }) => (
                   <Pop key={`${chip.at}-${chip.text}`} fr={fr} at={chip.at} until={u} x={x} y={10}>
@@ -102,7 +104,7 @@ export const serienVideo = (
           );
         })}
 
-        {untertitel && <Captions C={C} fr={fr} top={UT.top} size={UT.size} />}
+        {untertitel && <Captions C={C} fr={fr} top={layout.untertitel ?? UT.top} size={UT.size} />}
 
         {sfx && (
           <>

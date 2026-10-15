@@ -72,5 +72,6 @@ export const Video = serienVideo(
     [F("umsatz", seite), C.WE("klein", seite) + 8],
     [F("folge", cta), C.WE("reise", cta) + 10],
   ],
-  { scale: 1.5, hoch: 320 },
+  { scale: 1.8, hoch: 633 },
+  { einblendungen: 800, untertitel: 1460 },
 );
