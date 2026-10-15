@@ -186,3 +186,13 @@ Erst wenn er "passt" sagt:
 - **Ein "HINWEIS: … erst N Wörter weiter gefunden"** in `schnitt.py`: ein Wort des Texts lag weit hinter der Stelle, an der der Satz stand (meist ein Verhörer davor). Prüfen, sonst stimmt der Schnitt dort nicht. Fängt er einen Satz neu an ("wenn du … wenn du noch"), nimmt der Schnitt von selbst den zweiten, ganzen Anlauf.
 - **Ein leises "äh" ohne Wort** im Transkript bleibt sonst drin: `npm run fillerscan` nach jedem Schnitt.
 - **Ein langes Video verliert am Anfang:** der erste Frame braucht ein scharfes Gesicht und den Hook-Satz; ein Aufruf ganz am Ende erreicht nur, wer bis zum Ende schaut.
+
+## HyperFrames-Test (vereinbart 2026-10-16)
+
+Paul: "Lass uns das gerne mal im nächsten Video für Freitag testen." Beim nächsten Video für Freitag (nicht die Serie)
+**eine** aufwendige Grafik (z. B. animiertes Diagramm, hochzählende Zahl, Bauchbinde) mit HyperFrames bauen
+(`npx hyperframes skills update` in einem leeren Ordner, Skill `/motion-graphics`, Ausgabe als transparentes Overlay)
+und in die Remotion-Komposition legen. Schnitt, Untertitel, Prüfungen und Upload bleiben bei faber-cut; der
+HyperFrames-Router nennt sich "Standard für jedes Video", das gilt hier nicht. Keine HeyGen-Dienste (Sprecher,
+Musik, Soundeffekte über `media-use`) mit seinen Rohclips. Danach ihm beide Fassungen zeigen und fragen, ob es
+besser aussieht und ob es Zeit spart.
