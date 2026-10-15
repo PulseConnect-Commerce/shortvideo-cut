@@ -31,6 +31,12 @@ const HOCH = 0;
 const UT = { top: 1260, size: 64 };
 const TITEL = 75;
 
+/** News: die Quelle als Hintergrund hinter ihm (Greenscreen aus npm run portrait --hintergrund … --ausschnitt
+ * <scale>,<hoch>,<x> mit genau diesem `bild`). frames = Ausgabe-Frames der Greenscreen-Stellen (ausgabeFrames), dort
+ * gilt `bild` statt des normalen Ausschnitts (Augen auf derselben Höhe), unten rechts klein die Quellen-Pille und ein
+ * Kamera-Auslöser beim ersten Bild. */
+export type Quelle = { bild: { scale: number; hoch: number; x?: number }; frames: [number, number][]; pille: string; pilleY?: number };
+
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; design?: DesignName };
 
 export const serienVideo = (
@@ -42,8 +48,17 @@ export const serienVideo = (
   /** eigener Bildausschnitt (z. B. enger, damit ein Stuhl aus dem Bild fällt); Standard wie die Serie */
   bild: { scale: number; hoch: number; x?: number } = OBEN,
   /** Lage der Einblendungen (Verschiebung der Szenen in px) und der Untertitel; Standard wie die Serie */
-  layout: { einblendungen?: number; untertitel?: number; design?: DesignName; whoosh?: boolean } = {},
+  layout: { einblendungen?: number; untertitel?: number; design?: DesignName; whoosh?: boolean; quelle?: Quelle } = {},
 ) => {
+  const q = layout.quelle;
+  const inQuelle = (fr: number) => !!q && q.frames.some(([a, b]) => fr >= a && fr < b);
+  // die Pille bleibt über aneinander grenzende Stellen stehen
+  const pillen = (q?.frames ?? []).reduce<[number, number][]>((acc, [a, b]) => {
+    const l = acc[acc.length - 1];
+    if (l && a <= l[1] + 1) l[1] = Math.max(l[1], b);
+    else acc.push([a, b]);
+    return acc;
+  }, []);
   const ende = szenen.length ? szenen[0].at : C.DURATION;
   const zoomAt = (fr: number) => 1 + 0.03 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
   const akzentAt = (fr: number) =>
@@ -55,7 +70,7 @@ export const serienVideo = (
   const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, untertitel = true }) => {
     const D = useDesign();
     const fr = useCurrentFrame();
-    const lage = bild === OBEN && fr < ende ? HOOK_LAGE : bild;
+    const lage = q && inQuelle(fr) ? q.bild : bild === OBEN && fr < ende ? HOOK_LAGE : bild;
     const S = 46;
     // Chips in Zeilen gruppieren (eine neue Zeile ersetzt die vorige) und jede Zeile als Ganzes mitteln
     const zeilen = (chips: Chip[]) => {
@@ -110,6 +125,15 @@ export const serienVideo = (
           );
         })}
 
+        {q &&
+          pillen.map(([a, b]) => (
+            <Pop key={`q${a}`} fr={fr} at={a} until={b - 6} x={60} y={q.pilleY ?? 1385} w={865} style={{ textAlign: "right", transformOrigin: "right center" }}>
+              <Tag kind="ink" size={28}>
+                {q.pille}
+              </Tag>
+            </Pop>
+          ))}
+
         {untertitel && <Captions C={C} fr={fr} top={layout.untertitel ?? UT.top} size={UT.size} />}
 
         {sfx && (
@@ -117,6 +141,7 @@ export const serienVideo = (
             {(layout.whoosh ?? true ? szenen.slice(1) : []).map((sz) => (
               <Sfx key={`w${sz.at}`} file="whoosh.mp3" at={sz.at} volume={STIL.sfx * 0.5} />
             ))}
+            {q?.frames.length ? <Sfx file="kamera.mp3" at={q.frames[0][0]} volume={STIL.sfx * 0.5} /> : null}
             {szenen.flatMap((sz) => sz.chips.filter((c) => c.stempel)).map((c) => (
               <Sfx key={`s${c.at}`} file="stamp.mp3" at={c.at} volume={STIL.sfx * 0.5} />
             ))}

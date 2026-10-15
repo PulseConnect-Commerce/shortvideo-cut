@@ -109,6 +109,14 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   ("Quelle: Shopify, 1. Okt. 2026", `Tag kind="ink" size={28}`, `<Pop x={60} y={1440} w={890} style={{ textAlign:
   "right", transformOrigin: "right center" }}>`, rechte Kante x 950; seine Vorgabe 2026-10-11). Kamera-Auslöser
   (`kamera.mp3`) auf dem ersten Wort.
+- **Immer mit Quelle** (seine Vorgabe 2026-10-15 zum easyJet-Video: "Zudem fehlt mir hier eine Quelle" und "bitte ein
+  paar Quellen im Video mit einblenden, also als Screenshot-Ausschnitte"): kein News-Video ohne Screenshots aus dem
+  Artikel. Den Satz, mit dem er auf die Meldung zeigt ("Jetzt schaut euch mal diese Meldung hier an"), nie streichen,
+  dort beginnt die Quelle. Mehrere markierte Stellen (eine pro Kernaussage) statt nur der Schlagzeile. Mit dem
+  Serien-Template (`src/projekte/_serie/Serie.tsx`) geht das über `layout.quelle` (Bild 1,2-fach mit den Augen auf
+  derselben Höhe wie sonst, `npm run portrait -- <projekt> --ausschnitt 1.2,<hoch>,<x>`; Beispiel easyJet). Beim
+  Screenshot das Pop-up-Dunkel (`.modal-backdrop`) und schwebende Knöpfe ausblenden, mehrzeilige Markierungen ganz
+  oben unter die Kopfleiste scrollen (`b.top - 42` CSS-Pixel), damit sie über dem Kopf stehen.
 - **Fakten am Artikel prüfen**, bevor das Video rausgeht: jede Zahl und jede Aussage im Skript gegen die Quelle.
   Weicht etwas ab oder hat sich die Lage geändert (z. B. Angebot ausgebucht), ihm sofort sagen und erst nach seinem
   OK einplanen.

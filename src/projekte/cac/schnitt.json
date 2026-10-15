@@ -3,7 +3,7 @@
  "sprache": "de",
  "fps": 30,
  "pausen": {
-  "min_gap": 0.9,
+  "min_gap": 2.0,
   "pre": 0.06,
   "post": 0.1
  },
@@ -11,12 +11,7 @@
   {
    "take": "t1",
    "ab": 38.8,
-   "text": "CAC, was kostet dich hier wirklich ein neuer Kunde? Willkommen zu E-Commerce einfach erklärt. Heute erkläre ich dir die Customer Acquisition Cost oder auch eben kurz CAC genannt. Also was kostet dich hier wirklich ein neuer Kunde? Letztes mal ging es hier um den Bestellwert, heute schauen wir uns aber die Kosten der Kundengewinnung an, also kurz CAC."
-  },
-  {
-   "take": "t1",
-   "ab": 60.6,
-   "text": "Gibst du zum Beispiel 1000 Euro für eine Kundengewinnung aus und gewinnst dabei aber 20 neue Kunden, dann sind das eben 50 Euro pro Neukunde. Je nachdem, wie du also rechnest, gehören nicht nur Anzeigenkosten dazu, sondern eben auch weitere Marketing- und Vertriebskosten. Entscheidend ist hier, was du wirklich mit diesem Kunden verdienst und ob sich die Akquise eben rechnet."
+   "text": "CAC, was kostet dich hier wirklich ein neuer Kunde? Willkommen zu E-Commerce einfach erklärt. Heute erkläre ich dir die Customer Acquisition Cost oder auch eben kurz CAC genannt. Also was kostet dich hier wirklich ein neuer Kunde? Letztes mal ging es hier um den Bestellwert, heute schauen wir uns aber die Kosten der Kundengewinnung an, also kurz CAC. Gibst du zum Beispiel 1000 Euro für eine Kundengewinnung aus und gewinnst dabei aber 20 neue Kunden, dann sind das eben 50 Euro pro Neukunde. Je nachdem, wie du also rechnest, gehören nicht nur Anzeigenkosten dazu, sondern eben auch weitere Marketing- und Vertriebskosten. Entscheidend ist hier, was du wirklich mit diesem Kunden verdienst und ob sich die Akquise eben rechnet."
   },
   {
    "take": "t1",
@@ -56,6 +51,12 @@
    179.69,
    "ist",
    "ist,"
+  ],
+  [
+   "t1",
+   97.75,
+   "und",
+   "Und"
   ]
  ]
 }

@@ -5,176 +5,43 @@
  "keeps": [
   {
    "src": "easyjet/t1",
-   "from": 4.595,
-   "to": 5.675,
-   "nach": 0.02,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 6.555,
-   "to": 8.675,
+   "from": 6.535,
+   "to": 14.345,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "easyjet/t1",
-   "from": 8.965,
-   "to": 10.705,
+   "from": 18.155,
+   "to": 43.375,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "easyjet/t1",
-   "from": 11.015,
-   "to": 12.145,
+   "from": 56.785,
+   "to": 61.425,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "easyjet/t1",
-   "from": 12.635,
-   "to": 14.305,
+   "from": 63.575,
+   "to": 81.615,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "easyjet/t1",
-   "from": 18.175,
-   "to": 20.145,
+   "from": 82.665,
+   "to": 89.545,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "easyjet/t1",
-   "from": 20.415,
-   "to": 22.345,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 24.465,
-   "to": 29.185,
-   "nach": 0.09,
-   "vor": 0.02
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 29.595,
-   "to": 30.705,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 31.295,
-   "to": 33.855,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 34.515,
-   "to": 36.765,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 37.225,
-   "to": 40.075,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 40.355,
-   "to": 43.345,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 53.675,
-   "to": 56.125,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 56.815,
-   "to": 58.115,
-   "nach": 0.0,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 58.675,
-   "to": 61.405,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 63.595,
-   "to": 66.515,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 67.115,
-   "to": 68.805,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 69.435,
-   "to": 73.955,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 74.765,
-   "to": 81.575,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 82.685,
-   "to": 86.685,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 87.065,
-   "to": 89.515,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 108.945,
-   "to": 109.775,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 110.295,
-   "to": 118.085,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "easyjet/t1",
-   "from": 118.945,
-   "to": 119.535,
+   "from": 108.925,
+   "to": 119.585,
    "nach": 0.09,
    "vor": 0.09
   }
@@ -183,14 +50,14 @@
   {
    "text": "Amazon",
    "src": "easyjet/t1",
-   "start": 4.67,
-   "end": 5.675
+   "start": 6.62,
+   "end": 6.98
   },
   {
    "text": "bekommt",
    "src": "easyjet/t1",
-   "start": 5.25,
-   "end": 5.675
+   "start": 7.0,
+   "end": 7.33
   },
   {
    "text": "jetzt",
@@ -383,6 +250,54 @@
    "src": "easyjet/t1",
    "start": 21.9,
    "end": 22.3
+  },
+  {
+   "text": "Jetzt",
+   "src": "easyjet/t1",
+   "start": 23.02,
+   "end": 23.14
+  },
+  {
+   "text": "schaut",
+   "src": "easyjet/t1",
+   "start": 23.16,
+   "end": 23.32
+  },
+  {
+   "text": "euch",
+   "src": "easyjet/t1",
+   "start": 23.36,
+   "end": 23.46
+  },
+  {
+   "text": "mal",
+   "src": "easyjet/t1",
+   "start": 23.48,
+   "end": 23.6
+  },
+  {
+   "text": "diese",
+   "src": "easyjet/t1",
+   "start": 23.64,
+   "end": 23.82
+  },
+  {
+   "text": "Meldung",
+   "src": "easyjet/t1",
+   "start": 23.88,
+   "end": 24.12
+  },
+  {
+   "text": "hier",
+   "src": "easyjet/t1",
+   "start": 24.16,
+   "end": 24.3
+  },
+  {
+   "text": "an.",
+   "src": "easyjet/t1",
+   "start": 24.34,
+   "end": 24.38
   },
   {
    "text": "Ein",
@@ -681,44 +596,44 @@
   {
    "text": "Und",
    "src": "easyjet/t1",
-   "start": 53.72,
-   "end": 53.8
+   "start": 56.85,
+   "end": 56.93
   },
   {
    "text": "außerdem",
    "src": "easyjet/t1",
-   "start": 53.88,
-   "end": 54.3
+   "start": 57.01,
+   "end": 57.43
   },
   {
    "text": "sollen",
    "src": "easyjet/t1",
-   "start": 54.4,
-   "end": 54.6
+   "start": 57.53,
+   "end": 57.73
   },
   {
    "text": "Händler",
    "src": "easyjet/t1",
-   "start": 54.64,
-   "end": 54.9
+   "start": 57.77,
+   "end": 58.03
   },
   {
    "text": "mit",
    "src": "easyjet/t1",
-   "start": 54.98,
-   "end": 55.06
+   "start": 58.11,
+   "end": 58.19
   },
   {
    "text": "nur",
    "src": "easyjet/t1",
-   "start": 55.14,
-   "end": 55.22
+   "start": 58.27,
+   "end": 58.35
   },
   {
    "text": "einem",
    "src": "easyjet/t1",
-   "start": 55.42,
-   "end": 56.125
+   "start": 58.42,
+   "end": 58.72
   },
   {
    "text": "Account",
@@ -1448,12 +1363,11 @@
   }
  ],
  "pages": [
+  3,
   2,
+  3,
+  3,
   1,
-  2,
-  3,
-  3,
-  1,
   4,
   2,
   2,
@@ -1464,44 +1378,48 @@
   2,
   2,
   3,
-  2,
-  2,
-  3,
-  2,
-  3,
-  2,
-  3,
   3,
   2,
   3,
   2,
   2,
   3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
   3,
   3,
   3,
   3,
   2,
+  2,
   3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
   4,
   2,
   3,
   2,
-  2,
-  3,
-  3,
-  2,
-  3,
-  2,
-  2,
-  3,
-  3,
-  2,
-  2,
-  4,
-  2,
-  3,
-  2,
   4,
   3,
   3,
@@ -1511,8 +1429,8 @@
   3,
   2,
   3,
-  3,
-  3,
+  2,
+  4,
   3,
   2,
   4,

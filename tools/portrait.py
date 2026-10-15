@@ -12,8 +12,9 @@ Spiegelreflex mit offener Blende (der Hintergrund bleibt erkennbar); 20 zeichnet
 
 Hintergrund ersetzen (News: die Quelle hinter ihm, wie ein Greenscreen):
   --hintergrund <bild.png>@<von>-<bis>   (mehrfach möglich; von/bis in Sekunden im Take)
-  --ausschnitt <scale>,<hoch>            der Bildausschnitt aus Video.tsx (z. B. 1.2,160 für
-                                         translateY(-160px) scale(1.2) mit transformOrigin 50% 0%)
+  --ausschnitt <scale>,<hoch>[,<x>]      der Bildausschnitt aus Video.tsx (z. B. 1.2,160 für
+                                         translateY(-160px) scale(1.2) mit transformOrigin 50% 0%; x für
+                                         translate(-x, -hoch), wie bild.x im Serien-Template)
 Das Bild ist so gestaltet, wie es im fertigen Video aussehen soll (1080x1920, in Video-Koordinaten); es wird für den
 Take so umgerechnet, dass es nach dem Ausschnitt wieder genau so dasteht. In diesen Sekunden steht er freigestellt vor
 dem Bild statt vor seinem weichgezeichneten Zimmer.
@@ -49,10 +50,12 @@ for i, a in enumerate(sys.argv):
         hintergruende.append((bild, von, bis))
         if sys.argv[i + 1] in args:
             args.remove(sys.argv[i + 1])
-aus_scale, aus_hoch = 1.0, 0.0
+aus_scale, aus_hoch, aus_x = 1.0, 0.0, 0.0
 if "--ausschnitt" in sys.argv:
     v = sys.argv[sys.argv.index("--ausschnitt") + 1]
-    aus_scale, aus_hoch = (float(x) for x in v.split(","))
+    teile = [float(x) for x in v.split(",")]
+    aus_scale, aus_hoch = teile[0], teile[1]
+    aus_x = teile[2] if len(teile) > 2 else 0.0
     if v in args:
         args.remove(v)
 
@@ -119,12 +122,12 @@ for take in takes:
     size = W * H * 3
     sw, sh = W // 2, H // 2          # Freistellung in halber Auflösung, die Maske wird hochgerechnet
     bw, bh = W // 4, H // 4          # Unschärfe auf einem Viertel der Größe (schnell, und sie wird ohnehin weich)
-    # Hintergründe in Take-Koordinaten: Video-Punkt X = (x - W/2) * s + W/2, Y = y * s - hoch
+    # Hintergründe in Take-Koordinaten: Video-Punkt X = (x - W/2) * s + W/2 - x_versatz, Y = y * s - hoch
     ersatz = []
     for bild, von, bis in hintergruende:
         b = cv2.cvtColor(cv2.imread(bild, cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB)
         b = cv2.resize(b, (1080 * W // 1080, 1920 * H // 1920), interpolation=cv2.INTER_AREA)
-        m = np.float32([[aus_scale, 0, W / 2 - W / 2 * aus_scale], [0, aus_scale, -aus_hoch]])
+        m = np.float32([[aus_scale, 0, W / 2 - W / 2 * aus_scale - aus_x * W / 1080], [0, aus_scale, -aus_hoch * H / 1920]])
         warped = cv2.warpAffine(b, m, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REPLICATE)
         ersatz.append((int(von * fps), int(bis * fps) + 1, warped.astype(np.float32)))
         print(f"{take}: Hintergrund {os.path.basename(bild)} von {von} bis {bis} s", flush=True)

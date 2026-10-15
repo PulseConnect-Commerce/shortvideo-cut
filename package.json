@@ -27,6 +27,7 @@
     "final": "node tools/final.mjs",
     "checks": "node tools/py.mjs checks.py",
     "doppelt": "node tools/py.mjs doppelt.py",
+    "kontrolle": "node tools/py.mjs kontrolle.py",
     "studio": "remotion studio",
     "still": "remotion still",
     "kompositionen": "remotion compositions",

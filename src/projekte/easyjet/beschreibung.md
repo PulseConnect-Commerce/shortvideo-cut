@@ -1,6 +1,6 @@
 # easyJet-Gruender-Amazon: Beschreibungen für TikTok, Instagram und YouTube
 
-Video: `easyJet-Gruender-Amazon.mp4` (ca. 66 s, 1080x1920, Format NEWS, Design nacht-gruen).
+Video: `easyJet-Gruender-Amazon.mp4` (ca. 73 s, 1080x1920, Format NEWS, Design nacht-gruen).
 Geplant: 16.10.2026, 09:00 Uhr (Europe/Berlin), TikTok, Instagram Reel, YouTube Short.
 TikTok-Titel: "easyJet-Gründer greift Amazon an"
 
@@ -14,6 +14,8 @@ EasyShop ist in 21 europäischen Ländern gestartet, auch in Deutschland. Der Ma
 Aber: Ohne Kunden bringt der beste Marktplatz nichts.
 
 Hat EasyShop eine Chance gegen Amazon? Schreib's in die Kommentare 👇
+
+Quelle: Händlerbund / Onlinehändler-News, 14.10.2026
 
 #ecommerce #amazon #onlinehandel #marktplatz #news
 ```
@@ -36,6 +38,8 @@ Mehr Wettbewerb zu Amazon finde ich trotzdem spannend.
 
 Was glaubst du: Hat EasyShop eine Chance – oder spricht in einem Jahr niemand mehr davon? 👇
 
+Quelle: Händlerbund / Onlinehändler-News, 14.10.2026
+
 #ecommerce #amazon #onlinehandel #marktplatz #onlineshop
 ```
 
@@ -55,6 +59,9 @@ Amazon bekommt Konkurrenz vom Gründer von easyJet: Der neue Marktplatz EasyShop
 Der Haken: Reichweite und Kosten für Händler sind noch unklar – und ohne Kunden bringt ein Marktplatz nichts.
 
 Hat EasyShop eine Chance gegen Amazon? Schreib es in die Kommentare.
+
+Quelle: Händlerbund / Onlinehändler-News, 14.10.2026
+https://ohn.haendlerbund.de/themen/marktplaetze/marktplatz-easyshop-amazon-alternative-haendler
 
 #shorts #ecommerce #amazon #onlinehandel
 ```

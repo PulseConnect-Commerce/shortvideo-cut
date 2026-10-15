@@ -5,91 +5,28 @@
  "keeps": [
   {
    "src": "conversion/t1",
-   "from": 3.025,
-   "to": 5.135,
+   "from": 3.005,
+   "to": 11.955,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "conversion/t1",
-   "from": 5.825,
-   "to": 8.175,
+   "from": 15.745,
+   "to": 42.865,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "conversion/t1",
-   "from": 8.585,
-   "to": 11.915,
+   "from": 51.435,
+   "to": 65.215,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "conversion/t1",
-   "from": 15.765,
-   "to": 22.645,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
-   "from": 23.425,
-   "to": 28.015,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
-   "from": 28.505,
-   "to": 31.745,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
-   "from": 32.325,
-   "to": 36.865,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
-   "from": 37.645,
-   "to": 42.825,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
-   "from": 51.455,
-   "to": 55.255,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
-   "from": 56.135,
-   "to": 62.105,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
-   "from": 62.415,
-   "to": 65.175,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
-   "from": 100.385,
-   "to": 105.085,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
-   "from": 105.925,
+   "from": 100.365,
    "to": 109.81,
    "nach": 0.09,
    "vor": 0.09
@@ -808,7 +745,7 @@
    "text": "Zeichen.",
    "src": "conversion/t1",
    "start": 55.02,
-   "end": 55.255
+   "end": 55.3
   },
   {
    "text": "Dein",
