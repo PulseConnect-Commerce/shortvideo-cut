@@ -31,7 +31,14 @@ const TITEL = 75;
 
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; design?: DesignName };
 
-export const serienVideo = (C: Cut, hook: { line1: string; line2: string }, szenen: SerienSzene[], akzente: [number, number][]) => {
+export const serienVideo = (
+  C: Cut,
+  hook: { line1: string; line2: string },
+  szenen: SerienSzene[],
+  akzente: [number, number][],
+  /** eigener Bildausschnitt (z. B. enger, damit ein Stuhl aus dem Bild fällt); Standard wie die Serie */
+  bild: { scale: number; hoch: number } = OBEN,
+) => {
   const ende = szenen.length ? szenen[0].at : C.DURATION;
   const zoomAt = (fr: number) => 1 + 0.03 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
   const akzentAt = (fr: number) =>
@@ -43,7 +50,7 @@ export const serienVideo = (C: Cut, hook: { line1: string; line2: string }, szen
   const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, untertitel = true }) => {
     const D = useDesign();
     const fr = useCurrentFrame();
-    const lage = fr < ende ? HOOK_LAGE : OBEN;
+    const lage = bild === OBEN && fr < ende ? HOOK_LAGE : bild;
     const S = 46;
     // Chips in Zeilen gruppieren (eine neue Zeile ersetzt die vorige) und jede Zeile als Ganzes mitteln
     const zeilen = (chips: Chip[]) => {
