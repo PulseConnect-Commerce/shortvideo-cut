@@ -17,15 +17,16 @@ const cta = F("und", C.WE("einkaufen"));
 
 export const Video = serienVideo(
   C,
-  { line1: "Conversion Rate:", line2: "Was bedeutet das?" },
+  { line1: "Conversion Rate:", line2: "Was bedeutet das?", scale: 0.9 },
   [
     {
       at: F("denn"),
       title: "Ein Beispiel",
-      chips: [
-        { at: F("100"), text: "100 Besucher" },
-        { at: F("zwei"), text: "2 kaufen" },
-        { at: F("sogenannte"), text: "= 2 % Conversion Rate", wichtig: true, neu: true, stempel: true },
+      chips: [],
+      skizze: [
+        { at: F("100"), icon: "personen", text: "100 Besucher" },
+        { at: F("zwei"), zeichen: "→", icon: "wagen", text: "2 kaufen" },
+        { at: F("sogenannte"), zeichen: "=", text: "2 % CR", ergebnis: true },
       ],
     },
     {
@@ -40,10 +41,8 @@ export const Video = serienVideo(
     {
       at: F("beobachte"),
       title: "Das zählt",
-      chips: [
-        { at: F("zeitverlauf"), text: "Verlauf beobachten" },
-        { at: F("steigt"), text: "Steigt sie? Gutes Zeichen", wichtig: true, neu: true },
-      ],
+      chips: [{ at: F("steigt"), text: "Steigt sie? Gutes Zeichen", wichtig: true }],
+      skizze: [{ at: F("zeitverlauf"), icon: "kurve", text: "Verlauf beobachten" }],
     },
     {
       at: vorteil,
@@ -63,4 +62,6 @@ export const Video = serienVideo(
     [F("sogenannte"), C.WE("rate", F("sogenannte")) + 6],
     [F("follow", cta), C.WE("follow", cta) + 10],
   ],
+  { scale: 1.4, hoch: 462, x: 118 },
+  { einblendungen: 800, untertitel: 1460, whoosh: false },
 );

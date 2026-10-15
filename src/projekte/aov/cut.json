@@ -5,105 +5,42 @@
  "keeps": [
   {
    "src": "aov/t1",
-   "from": 34.285,
-   "to": 35.715,
+   "from": 3.915,
+   "to": 13.725,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "aov/t1",
-   "from": 5.585,
-   "to": 7.975,
+   "from": 92.985,
+   "to": 102.495,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "aov/t1",
-   "from": 39.275,
-   "to": 43.235,
+   "from": 107.025,
+   "to": 123.185,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "aov/t1",
-   "from": 43.575,
-   "to": 45.515,
+   "from": 129.775,
+   "to": 132.595,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "aov/t1",
-   "from": 93.005,
-   "to": 97.455,
+   "from": 143.165,
+   "to": 154.225,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "aov/t1",
-   "from": 98.035,
-   "to": 100.155,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "aov/t1",
-   "from": 100.525,
-   "to": 102.455,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "aov/t1",
-   "from": 107.045,
-   "to": 109.525,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "aov/t1",
-   "from": 110.105,
-   "to": 118.065,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "aov/t1",
-   "from": 125.665,
-   "to": 129.095,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "aov/t1",
-   "from": 129.795,
-   "to": 132.555,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "aov/t1",
-   "from": 143.185,
-   "to": 143.955,
-   "nach": 0.0,
-   "vor": 0.09
-  },
-  {
-   "src": "aov/t1",
-   "from": 144.585,
-   "to": 152.225,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "aov/t1",
-   "from": 152.735,
-   "to": 154.195,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "aov/t1",
-   "from": 196.945,
+   "from": 196.925,
    "to": 203.61,
    "nach": 0.09,
    "vor": 0.09
@@ -113,44 +50,26 @@
   {
    "text": "AOV,",
    "src": "aov/t1",
-   "start": 34.36,
-   "end": 34.58
-  },
-  {
-   "text": "hast",
-   "src": "aov/t1",
-   "start": 34.82,
-   "end": 34.94
-  },
-  {
-   "text": "du",
-   "src": "aov/t1",
-   "start": 34.96,
-   "end": 35.0
-  },
-  {
-   "text": "das",
-   "src": "aov/t1",
-   "start": 35.06,
-   "end": 35.12
+   "start": 4.01,
+   "end": 4.23
   },
   {
    "text": "schon",
    "src": "aov/t1",
-   "start": 35.14,
-   "end": 35.24
+   "start": 4.47,
+   "end": 4.61
   },
   {
    "text": "mal",
    "src": "aov/t1",
-   "start": 35.26,
-   "end": 35.32
+   "start": 4.63,
+   "end": 4.71
   },
   {
    "text": "gehört?",
    "src": "aov/t1",
-   "start": 35.36,
-   "end": 35.62
+   "start": 4.75,
+   "end": 5.07
   },
   {
    "text": "Willkommen",
@@ -197,104 +116,74 @@
   {
    "text": "Heute",
    "src": "aov/t1",
-   "start": 39.32,
-   "end": 39.56
+   "start": 9.77,
+   "end": 9.97
   },
   {
    "text": "erkläre",
    "src": "aov/t1",
-   "start": 39.64,
-   "end": 40.0
+   "start": 10.03,
+   "end": 10.29
   },
   {
    "text": "ich",
    "src": "aov/t1",
-   "start": 40.06,
-   "end": 40.14
+   "start": 10.35,
+   "end": 10.41
   },
   {
    "text": "dir",
    "src": "aov/t1",
-   "start": 40.2,
-   "end": 40.34
+   "start": 10.47,
+   "end": 10.59
   },
   {
    "text": "den",
    "src": "aov/t1",
-   "start": 40.46,
-   "end": 40.58
+   "start": 10.71,
+   "end": 10.81
   },
   {
    "text": "Average",
    "src": "aov/t1",
-   "start": 40.8,
-   "end": 41.18
+   "start": 11.01,
+   "end": 11.35
   },
   {
    "text": "Order",
    "src": "aov/t1",
-   "start": 41.28,
-   "end": 41.48
+   "start": 11.49,
+   "end": 11.67
   },
   {
-   "text": "Value",
+   "text": "Value,",
    "src": "aov/t1",
-   "start": 41.52,
-   "end": 41.72
+   "start": 11.71,
+   "end": 11.97
   },
   {
-   "text": "oder",
+   "text": "also",
    "src": "aov/t1",
-   "start": 41.8,
-   "end": 41.92
-  },
-  {
-   "text": "auch",
-   "src": "aov/t1",
-   "start": 41.94,
-   "end": 42.02
-  },
-  {
-   "text": "kurz",
-   "src": "aov/t1",
-   "start": 42.08,
-   "end": 42.36
-  },
-  {
-   "text": "AOV",
-   "src": "aov/t1",
-   "start": 42.52,
-   "end": 42.74
-  },
-  {
-   "text": "genannt.",
-   "src": "aov/t1",
-   "start": 42.92,
-   "end": 43.18
-  },
-  {
-   "text": "Also",
-   "src": "aov/t1",
-   "start": 43.64,
-   "end": 43.78
+   "start": 12.05,
+   "end": 12.21
   },
   {
    "text": "deinen",
    "src": "aov/t1",
-   "start": 43.82,
-   "end": 44.04
+   "start": 12.29,
+   "end": 12.49
   },
   {
    "text": "durchschnittlichen",
    "src": "aov/t1",
-   "start": 44.14,
-   "end": 44.84
+   "start": 12.57,
+   "end": 13.17
   },
   {
    "text": "Bestellwert.",
    "src": "aov/t1",
-   "start": 44.94,
-   "end": 45.48
+   "start": 13.21,
+   "end": 13.65
   },
   {
    "text": "Mehr",
@@ -699,70 +588,70 @@
    "end": 117.95
   },
   {
+   "text": "Passende",
+   "src": "aov/t1",
+   "start": 118.71,
+   "end": 119.11
+  },
+  {
    "text": "Zusatzprodukte",
    "src": "aov/t1",
-   "start": 125.71,
-   "end": 126.35
+   "start": 119.25,
+   "end": 119.93
   },
   {
-   "text": "oder",
+   "text": "und",
    "src": "aov/t1",
-   "start": 126.43,
-   "end": 126.51
-  },
-  {
-   "text": "auch",
-   "src": "aov/t1",
-   "start": 126.53,
-   "end": 126.61
+   "start": 120.03,
+   "end": 120.11
   },
   {
    "text": "Bundles",
    "src": "aov/t1",
-   "start": 126.67,
-   "end": 127.03
+   "start": 120.17,
+   "end": 120.57
   },
   {
    "text": "können",
    "src": "aov/t1",
-   "start": 127.09,
-   "end": 127.25
+   "start": 120.65,
+   "end": 120.85
   },
   {
-   "text": "ja",
+   "text": "halt",
    "src": "aov/t1",
-   "start": 127.29,
-   "end": 127.33
-  },
-  {
-   "text": "natürlich",
-   "src": "aov/t1",
-   "start": 127.41,
-   "end": 127.71
+   "start": 120.89,
+   "end": 121.01
   },
   {
    "text": "durchaus",
    "src": "aov/t1",
-   "start": 127.77,
-   "end": 128.09
+   "start": 121.07,
+   "end": 121.35
   },
   {
    "text": "den",
    "src": "aov/t1",
-   "start": 128.15,
-   "end": 128.25
+   "start": 121.39,
+   "end": 121.49
   },
   {
    "text": "AOV",
    "src": "aov/t1",
-   "start": 128.39,
-   "end": 128.59
+   "start": 121.59,
+   "end": 121.81
+  },
+  {
+   "text": "hier",
+   "src": "aov/t1",
+   "start": 121.99,
+   "end": 122.09
   },
   {
    "text": "erhöhen.",
    "src": "aov/t1",
-   "start": 128.75,
-   "end": 129.03
+   "start": 122.79,
+   "end": 123.07
   },
   {
    "text": "Aber",
@@ -1145,15 +1034,13 @@
  ],
  "pages": [
   1,
-  4,
-  2,
+  3,
   1,
   3,
   3,
   4,
-  3,
-  3,
-  3,
+  2,
+  2,
   2,
   1,
   1,
@@ -1183,10 +1070,11 @@
   2,
   3,
   1,
+  1,
   3,
   2,
-  2,
   3,
+  1,
   3,
   3,
   3,

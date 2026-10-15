@@ -17,7 +17,7 @@ const cta = F("neue", C.WE("einsetzen"));
 
 export const Video = serienVideo(
   C,
-  { line1: "CAC:", line2: "Was kostet ein Neukunde?" },
+  { line1: "CAC:", line2: "Was kostet ein Neukunde?", scale: 0.9 },
   [
     {
       at: F("letztes"),
@@ -30,19 +30,21 @@ export const Video = serienVideo(
     {
       at: beispiel,
       title: "Ein Beispiel",
-      chips: [
-        { at: F("1000"), text: "1.000 € Budget" },
-        { at: F("20", beispiel), text: "20 neue Kunden" },
-        { at: F("50", beispiel), text: "CAC = 50 € pro Neukunde", wichtig: true, neu: true, stempel: true },
+      chips: [],
+      skizze: [
+        { at: F("1000"), icon: "geld", text: "1.000 € Budget" },
+        { at: F("20", beispiel), zeichen: "÷", icon: "personen", text: "20 Neukunden" },
+        { at: F("50", beispiel), zeichen: "=", text: "50 € CAC", ergebnis: true },
       ],
     },
     {
       at: F("je"),
       title: "Was zählt dazu?",
-      chips: [
-        { at: F("anzeigenkosten"), text: "Anzeigen" },
-        { at: F("marketing"), text: "Marketing" },
-        { at: F("vertriebskosten"), text: "Vertrieb" },
+      chips: [],
+      skizze: [
+        { at: F("anzeigenkosten"), icon: "megafon", text: "Anzeigen" },
+        { at: F("marketing"), zeichen: "+", icon: "kurve", text: "Marketing" },
+        { at: F("vertriebskosten"), zeichen: "+", icon: "person", text: "Vertrieb" },
       ],
     },
     {
@@ -65,4 +67,6 @@ export const Video = serienVideo(
     [F("50", beispiel), C.WE("neukunde", beispiel) + 8],
     [F("follow", cta), C.WE("follow", cta) + 10],
   ],
+  { scale: 1.4, hoch: 462, x: 118 },
+  { einblendungen: 800, untertitel: 1460, whoosh: false },
 );

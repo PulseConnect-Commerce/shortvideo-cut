@@ -3,55 +3,20 @@
  "sprache": "de",
  "fps": 30,
  "pausen": {
-  "min_gap": 0.4,
-  "pre": 0.04,
-  "post": 0.06
+  "min_gap": 0.9,
+  "pre": 0.06,
+  "post": 0.1
  },
  "saetze": [
   {
    "take": "t1",
    "ab": 38.8,
-   "text": "CAC, was kostet dich hier wirklich ein neuer Kunde?"
-  },
-  {
-   "take": "t1",
-   "ab": 41.85,
-   "text": "Willkommen zu E-Commerce einfach erklärt. Heute erkläre ich dir die Customer Acquisition Cost oder auch eben kurz CAC genannt."
-  },
-  {
-   "take": "t1",
-   "ab": 53.0,
-   "text": "Letztes mal ging es hier um den Bestellwert, heute schauen wir uns aber die Kosten der Kundengewinnung an, also kurz CAC."
+   "text": "CAC, was kostet dich hier wirklich ein neuer Kunde? Willkommen zu E-Commerce einfach erklärt. Heute erkläre ich dir die Customer Acquisition Cost oder auch eben kurz CAC genannt. Also was kostet dich hier wirklich ein neuer Kunde? Letztes mal ging es hier um den Bestellwert, heute schauen wir uns aber die Kosten der Kundengewinnung an, also kurz CAC."
   },
   {
    "take": "t1",
    "ab": 60.6,
-   "text": "Gibst du zum Beispiel 1000 Euro für eine Kundengewinnung aus und gewinnst dabei aber 20 neue Kunden,"
-  },
-  {
-   "take": "t1",
-   "ab": 66.8,
-   "text": "dann sind das eben"
-  },
-  {
-   "take": "t1",
-   "ab": 68.2,
-   "text": "50 Euro pro Neukunde."
-  },
-  {
-   "take": "t1",
-   "ab": 70.5,
-   "text": "Je nachdem, wie du also rechnest, gehören nicht nur Anzeigenkosten dazu,"
-  },
-  {
-   "take": "t1",
-   "ab": 74.6,
-   "text": "sondern eben auch weitere Marketing - und Vertriebskosten."
-  },
-  {
-   "take": "t1",
-   "ab": 77.6,
-   "text": "Entscheidend ist hier, was du wirklich mit diesem Kunden verdienst und ob sich die Akquise eben rechnet."
+   "text": "Gibst du zum Beispiel 1000 Euro für eine Kundengewinnung aus und gewinnst dabei aber 20 neue Kunden, dann sind das eben 50 Euro pro Neukunde. Je nachdem, wie du also rechnest, gehören nicht nur Anzeigenkosten dazu, sondern eben auch weitere Marketing- und Vertriebskosten. Entscheidend ist hier, was du wirklich mit diesem Kunden verdienst und ob sich die Akquise eben rechnet."
   },
   {
    "take": "t1",
@@ -60,13 +25,8 @@
   },
   {
    "take": "t1",
-   "ab": 161.2,
-   "text": "Neue Kunden kosten eben leider immer Geld."
-  },
-  {
-   "take": "t1",
-   "ab": 178.1,
-   "text": "Was hingegen kein Geld kostet, ist wenn du hier ein Follow hinterlässt, um weitere solche E-Commerce Tipps zu erhalten."
+   "ab": 171.0,
+   "text": "Neue E-Commerce Kunden kosten eben leider immer Geld. Was hingegen kein Geld kostet, ist wenn du hier ein Follow hinterlässt, um weitere solche E-Commerce Tipps zu erhalten."
   }
  ],
  "ende": {

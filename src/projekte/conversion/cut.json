@@ -26,13 +26,6 @@
   },
   {
    "src": "conversion/t1",
-   "from": 12.325,
-   "to": 14.525,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "conversion/t1",
    "from": 15.765,
    "to": 22.645,
    "nach": 0.09,
@@ -256,38 +249,38 @@
   {
    "text": "Denn",
    "src": "conversion/t1",
-   "start": 12.37,
-   "end": 12.51
+   "start": 15.84,
+   "end": 15.93
   },
   {
    "text": "wenn",
    "src": "conversion/t1",
-   "start": 12.55,
-   "end": 12.67
+   "start": 15.949,
+   "end": 16.032
   },
   {
    "text": "100",
    "src": "conversion/t1",
-   "start": 12.71,
-   "end": 12.99
+   "start": 16.06,
+   "end": 16.255
   },
   {
    "text": "Menschen",
    "src": "conversion/t1",
-   "start": 13.05,
-   "end": 13.75
+   "start": 16.297,
+   "end": 16.785
   },
   {
    "text": "deinen",
    "src": "conversion/t1",
-   "start": 13.77,
-   "end": 13.91
+   "start": 16.799,
+   "end": 16.897
   },
   {
    "text": "Online-Shop",
    "src": "conversion/t1",
-   "start": 13.97,
-   "end": 14.525
+   "start": 16.938,
+   "end": 17.28
   },
   {
    "text": "besuchen,",
@@ -1196,9 +1189,8 @@
   3,
   2,
   3,
-  1,
   2,
-  1,
+  2,
   3,
   3,
   2,

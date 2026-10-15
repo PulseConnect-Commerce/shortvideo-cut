@@ -17,7 +17,7 @@ const cta = F("ein", C.WE("margen"));
 
 export const Video = serienVideo(
   C,
-  { line1: "ROAS:", line2: "Klingt gut – sagt alles?" },
+  { line1: "ROAS:", line2: "Klingt gut – sagt alles?", scale: 0.9 },
   [
     {
       at: F("der", C.WE("aussagt")),
@@ -27,19 +27,21 @@ export const Video = serienVideo(
     {
       at: beispiel,
       title: "Ein Beispiel",
-      chips: [
-        { at: F("1000", beispiel), text: "1.000 € Werbung" },
-        { at: F("4000", beispiel), text: "4.000 € Umsatz" },
-        { at: F("4", F("liegt")), text: "ROAS = 4", wichtig: true, neu: true, stempel: true },
+      chips: [],
+      skizze: [
+        { at: F("1000", beispiel), icon: "megafon", text: "1.000 € Werbung" },
+        { at: F("4000", beispiel), zeichen: "→", icon: "geld", text: "4.000 € Umsatz" },
+        { at: F("4", F("liegt")), zeichen: "=", text: "ROAS 4", ergebnis: true },
       ],
     },
     {
       at: F("davon"),
       title: "Davon geht ab",
-      chips: [
-        { at: F("wareneinsatz"), text: "Wareneinsatz" },
-        { at: F("versand"), text: "Versand" },
-        { at: F("zahlungsgebühren"), text: "Gebühren" },
+      chips: [],
+      skizze: [
+        { at: F("wareneinsatz"), icon: "paket", text: "Ware" },
+        { at: F("versand"), zeichen: "−", icon: "lkw", text: "Versand" },
+        { at: F("zahlungsgebühren"), zeichen: "−", icon: "karte", text: "Gebühren" },
       ],
     },
     {
@@ -72,4 +74,6 @@ export const Video = serienVideo(
     [F("4", F("liegt")), C.WE("4", F("liegt")) + 12],
     [F("follow", cta), C.WE("follow", cta) + 10],
   ],
+  { scale: 1.4, hoch: 462, x: 118 },
+  { einblendungen: 800, untertitel: 1460, whoosh: false },
 );

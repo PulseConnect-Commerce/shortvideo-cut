@@ -3,50 +3,25 @@
  "sprache": "de",
  "fps": 30,
  "pausen": {
-  "min_gap": 0.4,
-  "pre": 0.04,
-  "post": 0.06
+  "min_gap": 0.9,
+  "pre": 0.06,
+  "post": 0.1
  },
  "saetze": [
   {
    "take": "t1",
-   "ab": 34.3,
-   "text": "AOV, hast du das schon mal gehört?"
-  },
-  {
-   "take": "t1",
-   "ab": 5.58,
-   "text": "Willkommen zu E-Commerce einfach erklärt mit Paul."
-  },
-  {
-   "take": "t1",
-   "ab": 39.2,
-   "text": "Heute erkläre ich dir den Average Order Value oder auch kurz AOV genannt. Also deinen durchschnittlichen Bestellwert."
+   "ab": 4.0,
+   "text": "AOV, schon mal gehört? Willkommen zu E-Commerce einfach erklärt mit Paul. Heute erkläre ich dir den Average Order Value, also deinen durchschnittlichen Bestellwert."
   },
   {
    "take": "t1",
    "ab": 93.0,
-   "text": "Mehr Umsatz, ohne mehr Besucher, das kann über den durchschnittlichen Bestellwert durchaus funktionieren."
+   "text": "Mehr Umsatz, ohne mehr Besucher, das kann über den durchschnittlichen Bestellwert durchaus funktionieren. Im letzten Video ging es ja um die Conversion Rate, also wie viele Besucher kaufen bei dir."
   },
   {
    "take": "t1",
-   "ab": 98.0,
-   "text": "Im letzten Video ging es ja um die Conversion Rate, also wie viele Besucher kaufen bei dir."
-  },
-  {
-   "take": "t1",
-   "ab": 107.0,
-   "text": "Heute geht es aber eher darum, wie viel sie denn bestellen."
-  },
-  {
-   "take": "t1",
-   "ab": 110.1,
-   "text": "Machen wir mal ein Beispiel. Machst du 10 .000 Umsatz mit noch 100 Bestellungen, dann liegt dein Average Order Value oder kurz AOV eben bei 100 Euro."
-  },
-  {
-   "take": "t1",
-   "ab": 125.6,
-   "text": "Zusatzprodukte oder auch Bundles können ja natürlich durchaus den AOV erhöhen."
+   "ab": 107.05,
+   "text": "Heute geht es aber eher darum, wie viel sie denn bestellen. Machen wir mal ein Beispiel. Machst du 10 .000 Umsatz mit noch 100 Bestellungen, dann liegt dein Average Order Value oder kurz AOV eben bei 100 Euro. Passende Zusatzprodukte und Bundles können halt durchaus den AOV hier erhöhen."
   },
   {
    "take": "t1",
@@ -55,13 +30,8 @@
   },
   {
    "take": "t1",
-   "ab": 143.1,
-   "text": "Dein Vorteil ist,"
-  },
-  {
-   "take": "t1",
-   "ab": 144.5,
-   "text": "wenn du den AOV steigerst, dann kannst du eben auch bei gleicher Bestellzahl mehr Umsatz machen, ohne eben dabei zusätzlich Besucher gewinnen zu müssen. Achte eben dabei auf die Marge."
+   "ab": 143.2,
+   "text": "Dein Vorteil ist, wenn du den AOV steigerst, dann kannst du eben auch bei gleicher Bestellzahl mehr Umsatz machen, ohne eben dabei zusätzlich Besucher gewinnen zu müssen. Achte eben dabei auf die Marge."
   },
   {
    "take": "t1",

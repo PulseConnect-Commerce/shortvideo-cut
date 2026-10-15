@@ -13,13 +13,15 @@ import { BOX, Pop, Szene, Tag, tagBreite } from "../../lib/broll";
 import { DesignRahmen, type DesignName, Toenung, useDesign } from "../../lib/design";
 import { Raster } from "../../lib/raster";
 import type { createCut } from "../../lib/schnitt";
+import { type Glied, Skizze } from "../../lib/skizzen";
 import { STIL } from "../../lib/stil";
 
 type Cut = ReturnType<typeof createCut>;
 
 /** ein Chip: erscheint auf `at`; `neu` beginnt eine neue Zeile (die vorherigen Chips gehen) */
 export type Chip = { at: number; text: string; wichtig?: boolean; neu?: boolean; stempel?: boolean };
-export type SerienSzene = { at: number; title: string; chips: Chip[] };
+/** skizze: kleine Erklär-Skizze statt der Chip-Zeile (Rechnung/Kette mit Icons, lib/skizzen.tsx) */
+export type SerienSzene = { at: number; title: string; chips: Chip[]; skizze?: Glied[] };
 
 /** Tabu-Zonen (seine Vorgabe 2026-10-14, src/lib/zonen.json): oben bis y 280, rechts ab x 900, unten ab y 1560.
  * Hook, Titel und Chips stehen in y 280-560, der Kopf beginnt bei y ~600 (Bild 1,2-fach, bis unten gefüllt). */
@@ -40,7 +42,7 @@ export const serienVideo = (
   /** eigener Bildausschnitt (z. B. enger, damit ein Stuhl aus dem Bild fällt); Standard wie die Serie */
   bild: { scale: number; hoch: number; x?: number } = OBEN,
   /** Lage der Einblendungen (Verschiebung der Szenen in px) und der Untertitel; Standard wie die Serie */
-  layout: { einblendungen?: number; untertitel?: number; design?: DesignName } = {},
+  layout: { einblendungen?: number; untertitel?: number; design?: DesignName; whoosh?: boolean } = {},
 ) => {
   const ende = szenen.length ? szenen[0].at : C.DURATION;
   const zoomAt = (fr: number) => 1 + 0.03 * interpolate(fr, [0, C.DURATION], [0, 1], clamp);
@@ -91,7 +93,7 @@ export const serienVideo = (
 
         {szenen.map((sz, i) => {
           const until = i + 1 < szenen.length ? szenen[i + 1].at - 2 : Infinity;
-          const erster = sz.chips.length ? sz.chips[0].at : sz.at + TITEL;
+          const erster = sz.skizze?.length ? sz.skizze[0].at : sz.chips.length ? sz.chips[0].at : sz.at + TITEL;
           return (
             <AbsoluteFill key={sz.at} style={{ transform: `translateY(${layout.einblendungen ?? HOCH}px)` }}>
               <Szene fr={fr} at={sz.at} until={until} title={sz.title} frei mittig titelDauer={Math.min(TITEL, erster - sz.at - 8)}>
@@ -103,6 +105,7 @@ export const serienVideo = (
                   </Pop>
                 ))}
               </Szene>
+              {sz.skizze && <Skizze fr={fr} glieder={sz.skizze} until={until} y={BOX.top + 10} />}
             </AbsoluteFill>
           );
         })}
@@ -111,7 +114,7 @@ export const serienVideo = (
 
         {sfx && (
           <>
-            {szenen.slice(1).map((sz) => (
+            {(layout.whoosh ?? true ? szenen.slice(1) : []).map((sz) => (
               <Sfx key={`w${sz.at}`} file="whoosh.mp3" at={sz.at} volume={STIL.sfx * 0.5} />
             ))}
             {szenen.flatMap((sz) => sz.chips.filter((c) => c.stempel)).map((c) => (

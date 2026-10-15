@@ -5,126 +5,35 @@
  "keeps": [
   {
    "src": "cac/t1",
-   "from": 38.805,
-   "to": 41.375,
+   "from": 38.785,
+   "to": 59.955,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "cac/t1",
-   "from": 41.885,
-   "to": 43.815,
+   "from": 60.625,
+   "to": 82.965,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "cac/t1",
-   "from": 44.285,
-   "to": 47.195,
+   "from": 89.965,
+   "to": 100.045,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "cac/t1",
-   "from": 47.575,
-   "to": 49.345,
+   "from": 170.955,
+   "to": 173.425,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "cac/t1",
-   "from": 52.995,
-   "to": 58.215,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 58.515,
-   "to": 59.935,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 60.645,
-   "to": 66.405,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 66.845,
-   "to": 67.795,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 68.265,
-   "to": 69.865,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 70.535,
-   "to": 74.245,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 74.645,
-   "to": 76.965,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 77.605,
-   "to": 82.935,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 89.985,
-   "to": 93.835,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 94.225,
-   "to": 97.255,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 97.695,
-   "to": 100.005,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 161.145,
-   "to": 163.255,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 178.105,
-   "to": 179.905,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "cac/t1",
-   "from": 180.225,
+   "from": 174.995,
    "to": 183.69,
    "nach": 0.09,
    "vor": 0.09
@@ -298,6 +207,60 @@
    "src": "cac/t1",
    "start": 49.03,
    "end": 49.29
+  },
+  {
+   "text": "Also",
+   "src": "cac/t1",
+   "start": 49.97,
+   "end": 50.11
+  },
+  {
+   "text": "was",
+   "src": "cac/t1",
+   "start": 50.23,
+   "end": 50.41
+  },
+  {
+   "text": "kostet",
+   "src": "cac/t1",
+   "start": 50.49,
+   "end": 50.77
+  },
+  {
+   "text": "dich",
+   "src": "cac/t1",
+   "start": 50.81,
+   "end": 50.91
+  },
+  {
+   "text": "hier",
+   "src": "cac/t1",
+   "start": 50.93,
+   "end": 51.05
+  },
+  {
+   "text": "wirklich",
+   "src": "cac/t1",
+   "start": 51.09,
+   "end": 51.41
+  },
+  {
+   "text": "ein",
+   "src": "cac/t1",
+   "start": 51.49,
+   "end": 51.59
+  },
+  {
+   "text": "neuer",
+   "src": "cac/t1",
+   "start": 51.65,
+   "end": 51.91
+  },
+  {
+   "text": "Kunde?",
+   "src": "cac/t1",
+   "start": 51.99,
+   "end": 52.27
   },
   {
    "text": "Letztes",
@@ -681,7 +644,7 @@
    "text": "Vertriebskosten.",
    "src": "cac/t1",
    "start": 76.4,
-   "end": 76.965
+   "end": 77.08
   },
   {
    "text": "Entscheidend",
@@ -963,49 +926,55 @@
    "text": "einsetzen.",
    "src": "cac/t1",
    "start": 99.71,
-   "end": 100.005
+   "end": 100.045
   },
   {
    "text": "Neue",
    "src": "cac/t1",
-   "start": 161.27,
-   "end": 161.47
+   "start": 171.06,
+   "end": 171.24
+  },
+  {
+   "text": "E-Commerce",
+   "src": "cac/t1",
+   "start": 171.34,
+   "end": 172.52
   },
   {
    "text": "Kunden",
    "src": "cac/t1",
-   "start": 161.55,
-   "end": 161.77
+   "start": 172.8,
+   "end": 173.425
   },
   {
    "text": "kosten",
    "src": "cac/t1",
-   "start": 161.83,
-   "end": 162.15
+   "start": 176.15,
+   "end": 176.49
   },
   {
    "text": "eben",
    "src": "cac/t1",
-   "start": 162.21,
-   "end": 162.33
+   "start": 176.55,
+   "end": 176.67
   },
   {
    "text": "leider",
    "src": "cac/t1",
-   "start": 162.35,
-   "end": 162.55
+   "start": 176.71,
+   "end": 176.93
   },
   {
    "text": "immer",
    "src": "cac/t1",
-   "start": 162.77,
-   "end": 162.93
+   "start": 177.11,
+   "end": 177.29
   },
   {
    "text": "Geld.",
    "src": "cac/t1",
-   "start": 163.01,
-   "end": 163.21
+   "start": 177.33,
+   "end": 177.53
   },
   {
    "text": "Was",
@@ -1137,6 +1106,9 @@
   3,
   3,
   3,
+  3,
+  3,
+  3,
   2,
   4,
   2,
@@ -1149,9 +1121,8 @@
   3,
   3,
   2,
-  2,
-  3,
-  3,
+  4,
+  4,
   2,
   4,
   3,
@@ -1176,8 +1147,10 @@
   3,
   3,
   2,
+  1,
+  2,
   3,
-  4,
+  2,
   3,
   2,
   1,
