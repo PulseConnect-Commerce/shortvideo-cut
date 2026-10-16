@@ -20,9 +20,11 @@ So gehst du vor:
 - `src/lib/stil.ts` enthält die Zahlen von HERO. Andere Formate bekommen eigene Abweichungen (siehe ihr Skill),
   die HERO-Werte bleiben unverändert.
 
-**Test ab 2026-10-16 (alle Formate außer der Serie):** schlichte Untertitel, keine B-Rolls, wenige Schnitte, sehr
-natürlich ("Zu viel bearbeitet kommt heutzutage nicht mehr so gut an"). Details oben in jedem Stil-Skill; das geht
-den älteren Regeln dort vor.
+**Look ab 2026-10-16 (alle Formate außer der Serie):** Editorial nach seinem Referenzvideo: Untertitel oben mit
+1-3 Wörtern (Anton klein, betonte Wörter in Playfair-Kursive, Zahlen in unserem Grün), Hook im alten Titel-Stil
+(nacht-gruen), Hintergrund leicht unscharf, weit/eng im Wechsel bei jedem Schnitt, wenige Schnitte, leise Klicks nur
+auf Einblendungen, keine Musik, Quellen als Screenshot-Ausschnitt. Details oben in jedem Stil-Skill; das geht den
+älteren Regeln dort vor.
 
 **Shopify-Praxis-Tipps (seine Vorgabe 2026-10-16):** keine Screenshots ("bei Shortvideos nicht viel auf einem
 Desktop-Screenshot zu erkennen"). Stattdessen nachgebaute, stark vereinfachte UI-Animationen im Handy-Maßstab (große
@@ -30,7 +32,7 @@ Karte, wenige Elemente, Schrift ≥ 46 px): z. B. ein Schalter, der auf seinem W
 Rabattcode getippt wird, ein Knopf, der angetippt wird, eine Zahl, die hochzählt. Kein Shopify-Logo und kein
 originalgetreuer Nachbau des Admins, nur der Inhalt, den er sagt (Namen der Einstellungen, seine Beispielwerte; nichts
 erfinden). Gebaut mit HyperFrames (`/motion-graphics`, transparentes Overlay) oder `src/lib/kit.tsx`; das ist die
-Ausnahme vom Test "keine B-Rolls", weil es zeigt, was er erklärt.
+Ausnahme von "Einblendungen sparsam", weil es zeigt, was er erklärt.
 Beispielprodukte (seine Vorgabe 2026-10-16: "an unserem Development Store bedienen und die Beispielprodukte vom
 'online-store-development-pulseconnect' verwenden"): der Store ist öffentlich lesbar,
 `https://online-store-development-pulseconnect.myshopify.com/products.json?limit=250` (100 Produkte, Marken STRAIV,

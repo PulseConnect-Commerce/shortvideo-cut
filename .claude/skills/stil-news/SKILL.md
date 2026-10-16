@@ -5,20 +5,31 @@ description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~6
 
 # Stil NEWS / Reaction
 
-> **Test ab 2026-10-16: schlicht und natürlich (geht allem Folgenden vor).** Seine Vorgabe: "lass uns mal für die
-> Reaction Videos und alle anderen nicht Serien Shorts mal schlichte Untertitel und keine B-Rolls ausprobieren. Es soll
-> sehr natürlich wirken und mit wenigen Schnitten gezeigt werden. Zu viel bearbeitet kommt heutzutage nicht mehr so gut
-> an." Gilt für NEWS/Reaction, FACE und HERO, **nicht** für die Serie "E-Commerce einfach erklärt".
-> - **Untertitel schlicht:** eine ruhige Zeile, weiße Schrift mit leichtem Schatten, ohne Kasten, ohne farbiges
->   Wort, ohne Pop-Animation; im sicheren Bereich unter dem Kinn (nicht in den Tabu-Zonen).
-> - **Keine B-Rolls:** keine Chips, Szenen-Titel, Bildkarten, Fotos, Skizzen, Stempel, Kommentar-Blase oder
->   Folgen-Knopf. Höchstens die kurze Text-Hook am Anfang (2-3 s), die bleibt.
+> **Look ab 2026-10-16: Editorial (geht allem Folgenden vor).** Gilt für NEWS/Reaction, FACE und HERO, **nicht** für
+> die Serie "E-Commerce einfach erklärt". Entstanden in zwei Schritten: erst der Test "schlichte Untertitel und keine
+> B-Rolls … sehr natürlich … mit wenigen Schnitten. Zu viel bearbeitet kommt heutzutage nicht mehr so gut an", dann
+> sein Referenzvideo: "Können wir unseren Videoschnitt (gerade die Untertitel und den Schnittstil mit den
+> Soundeffekten) auf diesen Stil … anpassen? … Unsere Farben können hier natürlich nach wie vor als Highlight verwendet
+> werden, gerade für Titel." Vorlagen: `src/projekte/zoll/Video.tsx` (freigegeben 2026-10-16),
+> `src/projekte/easyshop/Video.tsx`.
+> - **Untertitel:** `EditorialUntertitel` aus `src/lib/editorial.tsx`, oben über dem Kopf (y ~330), 1-3 Wörter auf
+>   einmal, Anton in Großbuchstaben, eher klein; betonte Wörter (Zahlen, Schlüsselbegriffe, etwa eins pro Satz) groß in
+>   Playfair Display Black Italic, Zahlen und Kernaussage in unserem Grün `#00F090`. Während der Hook aus (`off`).
+> - **Hook:** im alten Titel-Stil, `HookTitle` in `DesignRahmen design="nacht-gruen"`, zweizeilig über dem Kopf. Zu
+>   den Editorial-Hook-Varianten sagte er "Die Hook finde ich nicht besonders gut im Titel" und dann "Nein, beide nicht
+>   so gut, dann bitte für die Hook den alten Titel Stil verwenden". Während der Hook liegt das Bild 130 px tiefer;
+>   der Wechsel fällt auf den ersten Schnitt.
+> - **Bild:** leichter Porträt-Modus, Hintergrund leicht unscharf (`npm run portrait`; "Der Hintergrund sollte
+>   dennoch wieder leicht verschwommen sein wie vorher"). Bei jedem Schnitt abwechselnd weit und eng
+>   (`autoPunch(C, { low: 1, high: 1.08 })`), sonst keine Zooms.
 > - **Wenige Schnitte:** nur Versprecher, Anläufe und weggelassene Sätze raus (Regel "ganze Sätze ohne Schnitt" im
->   Skill faber-cut, `min_gap` ≥ 1,0); keine Zoom-Akzente, kein Zoom-in, keine Soundeffekte, keine Musik.
-> - **Bild natürlich:** leichter Porträt-Modus darf bleiben, sonst das Bild wie aufgenommen (Augen bei y ~610-775).
-> - **NEWS-Quelle:** ob die Artikel-Screenshots bleiben, klärt er noch (offen gefragt am 2026-10-16); bis dahin die
->   Quelle als kleine Text-Zeile im sicheren Bereich und in der Beschreibung.
-> Nach dem ersten Video so ihn fragen, ob es so bleiben soll, und das Ergebnis hier eintragen.
+>   Skill faber-cut, `min_gap` ≥ 1,0).
+> - **Einblendungen sparsam, nur was er sagt:** Quelle oder Schlagzeile als Screenshot-Ausschnitt ("Auch bitte ein
+>   paar Quellen im Video mit einblenden (also als Screenshot Ausschnitte)"; NEWS immer mit Quelle), Fakten als
+>   schlichte Zeilen in Anton (`SchlichterText`). Keine Chips, Stempel, Fotos, Skizzen, Kommentar-Blase oder
+>   Folgen-Knopf.
+> - **Ton:** leise Klicks (`klick.mp3`, Lautstärke `STIL.sfx * 0.3`) nur auf Einblendungen; keine Musik, keine
+>   Whooshes.
 
 **Wofür:** Er reagiert auf eine Meldung (Shopify, KI-Anbieter, E-Commerce-Studien): was passiert ist, was es kann,
 seine Einordnung, eine Frage an die Community. Festgelegt am 2026-10-11 per Format-Onboarding (Skill
