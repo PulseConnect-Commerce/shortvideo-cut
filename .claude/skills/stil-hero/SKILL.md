@@ -5,6 +5,21 @@ description: Schnittstil HERO von PulseConnect für Erklär- und Expertenvideos 
 
 # Stil HERO
 
+> **Test ab 2026-10-16: schlicht und natürlich (geht allem Folgenden vor).** Seine Vorgabe: "lass uns mal für die
+> Reaction Videos und alle anderen nicht Serien Shorts mal schlichte Untertitel und keine B-Rolls ausprobieren. Es soll
+> sehr natürlich wirken und mit wenigen Schnitten gezeigt werden. Zu viel bearbeitet kommt heutzutage nicht mehr so gut
+> an." Gilt für NEWS/Reaction, FACE und HERO, **nicht** für die Serie "E-Commerce einfach erklärt".
+> - **Untertitel schlicht:** eine ruhige Zeile, weiße Schrift mit leichtem Schatten, ohne Kasten, ohne farbiges
+>   Wort, ohne Pop-Animation; im sicheren Bereich unter dem Kinn (nicht in den Tabu-Zonen).
+> - **Keine B-Rolls:** keine Chips, Szenen-Titel, Bildkarten, Fotos, Skizzen, Stempel, Kommentar-Blase oder
+>   Folgen-Knopf. Höchstens die kurze Text-Hook am Anfang (2-3 s), die bleibt.
+> - **Wenige Schnitte:** nur Versprecher, Anläufe und weggelassene Sätze raus (Regel "ganze Sätze ohne Schnitt" im
+>   Skill faber-cut, `min_gap` ≥ 1,0); keine Zoom-Akzente, kein Zoom-in, keine Soundeffekte, keine Musik.
+> - **Bild natürlich:** leichter Porträt-Modus darf bleiben, sonst das Bild wie aufgenommen (Augen bei y ~610-775).
+> - **NEWS-Quelle:** ob die Artikel-Screenshots bleiben, klärt er noch (offen gefragt am 2026-10-16); bis dahin die
+>   Quelle als kleine Text-Zeile im sicheren Bereich und in der Beschreibung.
+> Nach dem ersten Video so ihn fragen, ob es so bleiben soll, und das Ergebnis hier eintragen.
+
 **Wofür:** Erklär- und Expertenvideos, die etwas länger gehen (meist 1-3 Minuten): ein Thema in mehreren Punkten,
 fachlich, oft nach einem Skript vom Teleprompter. Festgelegt am 2026-10-08/09 am Video "5 Checks vor dem Kauf in
 einem unbekannten Onlineshop" (`src/projekte/shopcheck/`, die Vorlage für jedes neue HERO-Video).

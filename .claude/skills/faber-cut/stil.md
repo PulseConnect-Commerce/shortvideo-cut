@@ -20,6 +20,10 @@ So gehst du vor:
 - `src/lib/stil.ts` enthält die Zahlen von HERO. Andere Formate bekommen eigene Abweichungen (siehe ihr Skill),
   die HERO-Werte bleiben unverändert.
 
+**Test ab 2026-10-16 (alle Formate außer der Serie):** schlichte Untertitel, keine B-Rolls, wenige Schnitte, sehr
+natürlich ("Zu viel bearbeitet kommt heutzutage nicht mehr so gut an"). Details oben in jedem Stil-Skill; das geht
+den älteren Regeln dort vor.
+
 **Für alle Formate gilt:** oben (bis y 280), rechts (ab x 900) und unten (ab y 1560) sind Tabu-Zonen für Inhalte und
 Texte (seine Vorgabe 2026-10-14, Werte in `src/lib/zonen.json`, Details in jedem Stil-Skill). Nie schwarzer Boden, nie
 stärker als 1,2-fach vergrößern.

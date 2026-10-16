@@ -195,4 +195,5 @@ Paul: "Lass uns das gerne mal im nächsten Video für Freitag testen." Beim näc
 und in die Remotion-Komposition legen. Schnitt, Untertitel, Prüfungen und Upload bleiben bei faber-cut; der
 HyperFrames-Router nennt sich "Standard für jedes Video", das gilt hier nicht. Keine HeyGen-Dienste (Sprecher,
 Musik, Soundeffekte über `media-use`) mit seinen Rohclips. Danach ihm beide Fassungen zeigen und fragen, ob es
-besser aussieht und ob es Zeit spart.
+besser aussieht und ob es Zeit spart. Achtung: seit 2026-10-16 gilt für diese Videos "keine B-Rolls" (Stil-Skills);
+den Test darum vorher mit ihm abstimmen (z. B. nur als Vergleichsfassung).
