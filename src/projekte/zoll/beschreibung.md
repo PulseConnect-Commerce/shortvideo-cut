@@ -1,7 +1,7 @@
 # Zollkontrollen-in-der-EU: Beschreibungen für TikTok, Instagram und YouTube
 
 Video: `Zollkontrollen-in-der-EU.mp4` (ca. 72 s, 1080x1920, Format NEWS/Reaction, schlichter Stil).
-Geplant: 16.10.2026, 19:00 Uhr (Europe/Berlin), TikTok, Instagram Reel, YouTube Short.
+Geplant: 17.10.2026, 10:00 Uhr (Europe/Berlin), TikTok, Instagram Reel, YouTube Short (freigegeben 16.10.).
 TikTok-Titel: "Nur 65 von 1 Million kontrolliert"
 
 ## TikTok
