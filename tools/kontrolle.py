@@ -41,7 +41,8 @@ def norm(t):
     return re.sub(r"[^\wäöüß%]", "", t.lower())
 
 
-plan = [norm(w["text"]) for w in sorted(cut["words"], key=lambda w: w["start"])]
+# cut["words"] steht schon in der Reihenfolge des Videos (auch bei mehreren Takes oder umgestellten Sätzen)
+plan = [norm(w["text"]) for w in cut["words"]]
 plan = [w for w in plan if w]
 
 model = WhisperModel(o.modell, device="cpu", compute_type="int8", cpu_threads=os.cpu_count() or 4)
