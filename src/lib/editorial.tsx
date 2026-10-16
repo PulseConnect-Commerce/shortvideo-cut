@@ -73,7 +73,7 @@ export const EditorialUntertitel: React.FC<{
       (n, t) =>
         n +
         (t.gross
-          ? textWidth(t.w.text, gross * f, 900, 0, "Playfair Display") * 1.05
+          ? textWidth(t.w.text, gross * f, 900, 0, "Playfair Display") * 1.3
           : textWidth(t.w.text.toUpperCase(), klein * f, 400, 0, "Anton")),
       0,
     ) +

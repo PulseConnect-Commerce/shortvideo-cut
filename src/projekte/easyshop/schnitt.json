@@ -1,0 +1,103 @@
+{
+ "projekt": "easyshop",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 6.6,
+   "text": "easyShop will eine Alternative zu Amazon sein, aber lohnt sich das überhaupt für Händler?"
+  },
+  {
+   "take": "t1",
+   "ab": 26.0,
+   "text": "Ich habe mir deshalb angeschaut, wie der Verkauf über easyShop funktionieren soll."
+  },
+  {
+   "take": "t1",
+   "ab": 32.25,
+   "text": "Die Händleranbindung läuft über eine Plattform namens OnCommerce. Darüber kannst du dann potentiell gleich mehrere Marktplätze bedienen. Interessant ist hier eben auch die angekündigte Shopify Integration. Das ist natürlich für mich als Shopify Experte hier besonders interessant. Aber jetzt kommen wir eben zu den Kosten, denn das Standard Abo kostet laut eigener Preisliste 25 Pfund, also umgerechnet 28 Euro im Monat. Und bei meisten Produkten liegt eben die Verkaufsgebühr bei ca. 15%. Dazu können eben weitere Gebühren dazukommen. Das ist also nicht einfach nur ein kostenloser zusätzlicher Vertriebskanal, den du nutzen kannst, denn entscheidend wird sein, ob EasyShop tatsächlich überhaupt genug Kunden und Bestellungen bringt."
+  },
+  {
+   "take": "t1",
+   "ab": 4.55,
+   "text": "Und genau deshalb stelle ich mir die Frage,"
+  }
+ ],
+ "ende": {
+  "bis": 6.32
+ },
+ "korrekturen": [
+  [
+   "t1",
+   48.59,
+   "Abo",
+   ""
+  ],
+  [
+   "t1",
+   41.29,
+   "Integration.",
+   ""
+  ],
+  [
+   "t1",
+   43.83,
+   "Experte",
+   ""
+  ],
+  [
+   "t1",
+   48.17,
+   "Standard",
+   "Standard-Abo"
+  ],
+  [
+   "t1",
+   40.89,
+   "Shopify",
+   "Shopify-Integration."
+  ],
+  [
+   "t1",
+   43.47,
+   "Shopify",
+   "Shopify-Experte"
+  ],
+  [
+   "t1",
+   68.99,
+   "EasyShop",
+   "easyShop"
+  ],
+  [
+   "t1",
+   55.31,
+   "bei",
+   "bei den"
+  ],
+  [
+   "t1",
+   57.77,
+   "ca.",
+   "circa"
+  ],
+  [
+   "t1",
+   58.06,
+   "15%.",
+   "15 %."
+  ],
+  [
+   "t1",
+   5.95,
+   "Frage,",
+   "Frage:"
+  ]
+ ]
+}

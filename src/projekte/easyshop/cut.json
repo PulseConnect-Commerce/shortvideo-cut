@@ -1,0 +1,929 @@
+{
+ "projekt": "easyshop",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "easyshop/t1",
+   "from": 6.655,
+   "to": 11.085,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "easyshop/t1",
+   "from": 25.985,
+   "to": 29.285,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "easyshop/t1",
+   "from": 32.255,
+   "to": 58.915,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "easyshop/t1",
+   "from": 60.035,
+   "to": 62.105,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "easyshop/t1",
+   "from": 62.945,
+   "to": 72.755,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "easyshop/t1",
+   "from": 4.565,
+   "to": 6.32,
+   "nach": 0.0,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "easyShop",
+   "src": "easyshop/t1",
+   "start": 6.69,
+   "end": 7.01
+  },
+  {
+   "text": "will",
+   "src": "easyshop/t1",
+   "start": 7.07,
+   "end": 7.17
+  },
+  {
+   "text": "eine",
+   "src": "easyshop/t1",
+   "start": 7.19,
+   "end": 7.33
+  },
+  {
+   "text": "Alternative",
+   "src": "easyshop/t1",
+   "start": 7.43,
+   "end": 7.93
+  },
+  {
+   "text": "zu",
+   "src": "easyshop/t1",
+   "start": 8.01,
+   "end": 8.07
+  },
+  {
+   "text": "Amazon",
+   "src": "easyshop/t1",
+   "start": 8.19,
+   "end": 8.45
+  },
+  {
+   "text": "sein,",
+   "src": "easyshop/t1",
+   "start": 8.51,
+   "end": 8.69
+  },
+  {
+   "text": "aber",
+   "src": "easyshop/t1",
+   "start": 8.75,
+   "end": 8.95
+  },
+  {
+   "text": "lohnt",
+   "src": "easyshop/t1",
+   "start": 9.49,
+   "end": 9.71
+  },
+  {
+   "text": "sich",
+   "src": "easyshop/t1",
+   "start": 9.75,
+   "end": 9.87
+  },
+  {
+   "text": "das",
+   "src": "easyshop/t1",
+   "start": 9.91,
+   "end": 10.05
+  },
+  {
+   "text": "überhaupt",
+   "src": "easyshop/t1",
+   "start": 10.11,
+   "end": 10.43
+  },
+  {
+   "text": "für",
+   "src": "easyshop/t1",
+   "start": 10.47,
+   "end": 10.57
+  },
+  {
+   "text": "Händler?",
+   "src": "easyshop/t1",
+   "start": 10.61,
+   "end": 10.89
+  },
+  {
+   "text": "Ich",
+   "src": "easyshop/t1",
+   "start": 26.05,
+   "end": 26.13
+  },
+  {
+   "text": "habe",
+   "src": "easyshop/t1",
+   "start": 26.17,
+   "end": 26.31
+  },
+  {
+   "text": "mir",
+   "src": "easyshop/t1",
+   "start": 26.37,
+   "end": 26.45
+  },
+  {
+   "text": "deshalb",
+   "src": "easyshop/t1",
+   "start": 26.49,
+   "end": 26.75
+  },
+  {
+   "text": "angeschaut,",
+   "src": "easyshop/t1",
+   "start": 26.81,
+   "end": 27.21
+  },
+  {
+   "text": "wie",
+   "src": "easyshop/t1",
+   "start": 27.29,
+   "end": 27.37
+  },
+  {
+   "text": "der",
+   "src": "easyshop/t1",
+   "start": 27.41,
+   "end": 27.49
+  },
+  {
+   "text": "Verkauf",
+   "src": "easyshop/t1",
+   "start": 27.55,
+   "end": 27.83
+  },
+  {
+   "text": "über",
+   "src": "easyshop/t1",
+   "start": 27.89,
+   "end": 28.01
+  },
+  {
+   "text": "easyShop",
+   "src": "easyshop/t1",
+   "start": 28.11,
+   "end": 28.49
+  },
+  {
+   "text": "funktionieren",
+   "src": "easyshop/t1",
+   "start": 28.55,
+   "end": 28.97
+  },
+  {
+   "text": "soll.",
+   "src": "easyshop/t1",
+   "start": 29.01,
+   "end": 29.17
+  },
+  {
+   "text": "Die",
+   "src": "easyshop/t1",
+   "start": 32.3,
+   "end": 32.38
+  },
+  {
+   "text": "Händleranbindung",
+   "src": "easyshop/t1",
+   "start": 32.4,
+   "end": 33.06
+  },
+  {
+   "text": "läuft",
+   "src": "easyshop/t1",
+   "start": 33.1,
+   "end": 33.3
+  },
+  {
+   "text": "über",
+   "src": "easyshop/t1",
+   "start": 33.32,
+   "end": 33.47
+  },
+  {
+   "text": "eine",
+   "src": "easyshop/t1",
+   "start": 33.49,
+   "end": 33.61
+  },
+  {
+   "text": "Plattform",
+   "src": "easyshop/t1",
+   "start": 33.69,
+   "end": 34.07
+  },
+  {
+   "text": "namens",
+   "src": "easyshop/t1",
+   "start": 34.13,
+   "end": 34.47
+  },
+  {
+   "text": "OnCommerce.",
+   "src": "easyshop/t1",
+   "start": 34.63,
+   "end": 35.09
+  },
+  {
+   "text": "Darüber",
+   "src": "easyshop/t1",
+   "start": 35.25,
+   "end": 35.59
+  },
+  {
+   "text": "kannst",
+   "src": "easyshop/t1",
+   "start": 35.67,
+   "end": 35.91
+  },
+  {
+   "text": "du",
+   "src": "easyshop/t1",
+   "start": 35.95,
+   "end": 36.01
+  },
+  {
+   "text": "dann",
+   "src": "easyshop/t1",
+   "start": 36.05,
+   "end": 36.19
+  },
+  {
+   "text": "potentiell",
+   "src": "easyshop/t1",
+   "start": 36.25,
+   "end": 36.73
+  },
+  {
+   "text": "gleich",
+   "src": "easyshop/t1",
+   "start": 36.77,
+   "end": 36.97
+  },
+  {
+   "text": "mehrere",
+   "src": "easyshop/t1",
+   "start": 37.25,
+   "end": 37.59
+  },
+  {
+   "text": "Marktplätze",
+   "src": "easyshop/t1",
+   "start": 37.67,
+   "end": 38.15
+  },
+  {
+   "text": "bedienen.",
+   "src": "easyshop/t1",
+   "start": 38.21,
+   "end": 38.49
+  },
+  {
+   "text": "Interessant",
+   "src": "easyshop/t1",
+   "start": 38.95,
+   "end": 39.37
+  },
+  {
+   "text": "ist",
+   "src": "easyshop/t1",
+   "start": 39.41,
+   "end": 39.49
+  },
+  {
+   "text": "hier",
+   "src": "easyshop/t1",
+   "start": 39.51,
+   "end": 39.63
+  },
+  {
+   "text": "eben",
+   "src": "easyshop/t1",
+   "start": 39.65,
+   "end": 39.73
+  },
+  {
+   "text": "auch",
+   "src": "easyshop/t1",
+   "start": 39.81,
+   "end": 39.95
+  },
+  {
+   "text": "die",
+   "src": "easyshop/t1",
+   "start": 40.03,
+   "end": 40.11
+  },
+  {
+   "text": "angekündigte",
+   "src": "easyshop/t1",
+   "start": 40.23,
+   "end": 40.79
+  },
+  {
+   "text": "Shopify-Integration.",
+   "src": "easyshop/t1",
+   "start": 40.89,
+   "end": 41.21
+  },
+  {
+   "text": "Das",
+   "src": "easyshop/t1",
+   "start": 42.41,
+   "end": 42.57
+  },
+  {
+   "text": "ist",
+   "src": "easyshop/t1",
+   "start": 42.61,
+   "end": 42.69
+  },
+  {
+   "text": "natürlich",
+   "src": "easyshop/t1",
+   "start": 42.73,
+   "end": 43.05
+  },
+  {
+   "text": "für",
+   "src": "easyshop/t1",
+   "start": 43.07,
+   "end": 43.13
+  },
+  {
+   "text": "mich",
+   "src": "easyshop/t1",
+   "start": 43.17,
+   "end": 43.29
+  },
+  {
+   "text": "als",
+   "src": "easyshop/t1",
+   "start": 43.33,
+   "end": 43.43
+  },
+  {
+   "text": "Shopify-Experte",
+   "src": "easyshop/t1",
+   "start": 43.47,
+   "end": 43.79
+  },
+  {
+   "text": "hier",
+   "src": "easyshop/t1",
+   "start": 44.31,
+   "end": 44.41
+  },
+  {
+   "text": "besonders",
+   "src": "easyshop/t1",
+   "start": 44.45,
+   "end": 44.83
+  },
+  {
+   "text": "interessant.",
+   "src": "easyshop/t1",
+   "start": 44.89,
+   "end": 45.29
+  },
+  {
+   "text": "Aber",
+   "src": "easyshop/t1",
+   "start": 46.03,
+   "end": 46.15
+  },
+  {
+   "text": "jetzt",
+   "src": "easyshop/t1",
+   "start": 46.21,
+   "end": 46.37
+  },
+  {
+   "text": "kommen",
+   "src": "easyshop/t1",
+   "start": 46.41,
+   "end": 46.59
+  },
+  {
+   "text": "wir",
+   "src": "easyshop/t1",
+   "start": 46.63,
+   "end": 46.69
+  },
+  {
+   "text": "eben",
+   "src": "easyshop/t1",
+   "start": 46.71,
+   "end": 46.81
+  },
+  {
+   "text": "zu",
+   "src": "easyshop/t1",
+   "start": 46.85,
+   "end": 46.91
+  },
+  {
+   "text": "den",
+   "src": "easyshop/t1",
+   "start": 46.97,
+   "end": 47.05
+  },
+  {
+   "text": "Kosten,",
+   "src": "easyshop/t1",
+   "start": 47.11,
+   "end": 47.43
+  },
+  {
+   "text": "denn",
+   "src": "easyshop/t1",
+   "start": 47.49,
+   "end": 47.65
+  },
+  {
+   "text": "das",
+   "src": "easyshop/t1",
+   "start": 48.01,
+   "end": 48.11
+  },
+  {
+   "text": "Standard-Abo",
+   "src": "easyshop/t1",
+   "start": 48.17,
+   "end": 48.51
+  },
+  {
+   "text": "kostet",
+   "src": "easyshop/t1",
+   "start": 48.85,
+   "end": 49.19
+  },
+  {
+   "text": "laut",
+   "src": "easyshop/t1",
+   "start": 49.25,
+   "end": 49.41
+  },
+  {
+   "text": "eigener",
+   "src": "easyshop/t1",
+   "start": 49.53,
+   "end": 49.83
+  },
+  {
+   "text": "Preisliste",
+   "src": "easyshop/t1",
+   "start": 49.89,
+   "end": 50.41
+  },
+  {
+   "text": "25",
+   "src": "easyshop/t1",
+   "start": 50.55,
+   "end": 51.13
+  },
+  {
+   "text": "Pfund,",
+   "src": "easyshop/t1",
+   "start": 51.19,
+   "end": 51.41
+  },
+  {
+   "text": "also",
+   "src": "easyshop/t1",
+   "start": 51.51,
+   "end": 51.65
+  },
+  {
+   "text": "umgerechnet",
+   "src": "easyshop/t1",
+   "start": 52.07,
+   "end": 52.61
+  },
+  {
+   "text": "28",
+   "src": "easyshop/t1",
+   "start": 52.69,
+   "end": 53.19
+  },
+  {
+   "text": "Euro",
+   "src": "easyshop/t1",
+   "start": 53.27,
+   "end": 53.47
+  },
+  {
+   "text": "im",
+   "src": "easyshop/t1",
+   "start": 53.65,
+   "end": 53.71
+  },
+  {
+   "text": "Monat.",
+   "src": "easyshop/t1",
+   "start": 53.75,
+   "end": 54.07
+  },
+  {
+   "text": "Und",
+   "src": "easyshop/t1",
+   "start": 54.97,
+   "end": 55.13
+  },
+  {
+   "text": "bei den",
+   "src": "easyshop/t1",
+   "start": 55.31,
+   "end": 55.37
+  },
+  {
+   "text": "meisten",
+   "src": "easyshop/t1",
+   "start": 55.53,
+   "end": 55.85
+  },
+  {
+   "text": "Produkten",
+   "src": "easyshop/t1",
+   "start": 55.89,
+   "end": 56.27
+  },
+  {
+   "text": "liegt",
+   "src": "easyshop/t1",
+   "start": 56.35,
+   "end": 56.51
+  },
+  {
+   "text": "eben",
+   "src": "easyshop/t1",
+   "start": 56.59,
+   "end": 56.69
+  },
+  {
+   "text": "die",
+   "src": "easyshop/t1",
+   "start": 56.75,
+   "end": 56.81
+  },
+  {
+   "text": "Verkaufsgebühr",
+   "src": "easyshop/t1",
+   "start": 56.87,
+   "end": 57.51
+  },
+  {
+   "text": "bei",
+   "src": "easyshop/t1",
+   "start": 57.55,
+   "end": 57.63
+  },
+  {
+   "text": "circa",
+   "src": "easyshop/t1",
+   "start": 57.77,
+   "end": 58.02
+  },
+  {
+   "text": "15 %.",
+   "src": "easyshop/t1",
+   "start": 58.06,
+   "end": 58.8
+  },
+  {
+   "text": "Dazu",
+   "src": "easyshop/t1",
+   "start": 60.1,
+   "end": 60.33
+  },
+  {
+   "text": "können",
+   "src": "easyshop/t1",
+   "start": 60.41,
+   "end": 60.59
+  },
+  {
+   "text": "eben",
+   "src": "easyshop/t1",
+   "start": 60.63,
+   "end": 60.75
+  },
+  {
+   "text": "weitere",
+   "src": "easyshop/t1",
+   "start": 60.77,
+   "end": 61.07
+  },
+  {
+   "text": "Gebühren",
+   "src": "easyshop/t1",
+   "start": 61.13,
+   "end": 61.49
+  },
+  {
+   "text": "dazukommen.",
+   "src": "easyshop/t1",
+   "start": 61.53,
+   "end": 62.03
+  },
+  {
+   "text": "Das",
+   "src": "easyshop/t1",
+   "start": 63.01,
+   "end": 63.13
+  },
+  {
+   "text": "ist",
+   "src": "easyshop/t1",
+   "start": 63.19,
+   "end": 63.27
+  },
+  {
+   "text": "also",
+   "src": "easyshop/t1",
+   "start": 63.33,
+   "end": 63.49
+  },
+  {
+   "text": "nicht",
+   "src": "easyshop/t1",
+   "start": 63.57,
+   "end": 63.69
+  },
+  {
+   "text": "einfach",
+   "src": "easyshop/t1",
+   "start": 63.77,
+   "end": 64.03
+  },
+  {
+   "text": "nur",
+   "src": "easyshop/t1",
+   "start": 64.09,
+   "end": 64.17
+  },
+  {
+   "text": "ein",
+   "src": "easyshop/t1",
+   "start": 64.21,
+   "end": 64.29
+  },
+  {
+   "text": "kostenloser",
+   "src": "easyshop/t1",
+   "start": 64.39,
+   "end": 64.97
+  },
+  {
+   "text": "zusätzlicher",
+   "src": "easyshop/t1",
+   "start": 65.07,
+   "end": 65.63
+  },
+  {
+   "text": "Vertriebskanal,",
+   "src": "easyshop/t1",
+   "start": 65.69,
+   "end": 66.31
+  },
+  {
+   "text": "den",
+   "src": "easyshop/t1",
+   "start": 66.35,
+   "end": 66.45
+  },
+  {
+   "text": "du",
+   "src": "easyshop/t1",
+   "start": 66.49,
+   "end": 66.53
+  },
+  {
+   "text": "nutzen",
+   "src": "easyshop/t1",
+   "start": 66.59,
+   "end": 66.85
+  },
+  {
+   "text": "kannst,",
+   "src": "easyshop/t1",
+   "start": 66.89,
+   "end": 67.19
+  },
+  {
+   "text": "denn",
+   "src": "easyshop/t1",
+   "start": 67.59,
+   "end": 67.77
+  },
+  {
+   "text": "entscheidend",
+   "src": "easyshop/t1",
+   "start": 67.93,
+   "end": 68.39
+  },
+  {
+   "text": "wird",
+   "src": "easyshop/t1",
+   "start": 68.43,
+   "end": 68.57
+  },
+  {
+   "text": "sein,",
+   "src": "easyshop/t1",
+   "start": 68.63,
+   "end": 68.83
+  },
+  {
+   "text": "ob",
+   "src": "easyshop/t1",
+   "start": 68.89,
+   "end": 68.95
+  },
+  {
+   "text": "easyShop",
+   "src": "easyshop/t1",
+   "start": 68.99,
+   "end": 69.45
+  },
+  {
+   "text": "tatsächlich",
+   "src": "easyshop/t1",
+   "start": 69.53,
+   "end": 70.03
+  },
+  {
+   "text": "überhaupt",
+   "src": "easyshop/t1",
+   "start": 70.09,
+   "end": 70.35
+  },
+  {
+   "text": "genug",
+   "src": "easyshop/t1",
+   "start": 70.39,
+   "end": 70.57
+  },
+  {
+   "text": "Kunden",
+   "src": "easyshop/t1",
+   "start": 70.65,
+   "end": 71.03
+  },
+  {
+   "text": "und",
+   "src": "easyshop/t1",
+   "start": 71.65,
+   "end": 71.77
+  },
+  {
+   "text": "Bestellungen",
+   "src": "easyshop/t1",
+   "start": 71.87,
+   "end": 72.37
+  },
+  {
+   "text": "bringt.",
+   "src": "easyshop/t1",
+   "start": 72.41,
+   "end": 72.63
+  },
+  {
+   "text": "Und",
+   "src": "easyshop/t1",
+   "start": 4.63,
+   "end": 4.71
+  },
+  {
+   "text": "genau",
+   "src": "easyshop/t1",
+   "start": 4.75,
+   "end": 4.95
+  },
+  {
+   "text": "deshalb",
+   "src": "easyshop/t1",
+   "start": 5.03,
+   "end": 5.35
+  },
+  {
+   "text": "stelle",
+   "src": "easyshop/t1",
+   "start": 5.41,
+   "end": 5.59
+  },
+  {
+   "text": "ich",
+   "src": "easyshop/t1",
+   "start": 5.61,
+   "end": 5.69
+  },
+  {
+   "text": "mir",
+   "src": "easyshop/t1",
+   "start": 5.71,
+   "end": 5.79
+  },
+  {
+   "text": "die",
+   "src": "easyshop/t1",
+   "start": 5.85,
+   "end": 5.91
+  },
+  {
+   "text": "Frage:",
+   "src": "easyshop/t1",
+   "start": 5.95,
+   "end": 6.25
+  }
+ ],
+ "pages": [
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  1,
+  3,
+  2,
+  2,
+  1,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  1,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  1,
+  1,
+  4,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  1,
+  3,
+  3,
+  2
+ ]
+}
