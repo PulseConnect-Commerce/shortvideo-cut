@@ -40,10 +40,33 @@ const PFLICHTEN_ENDE = F("gleichzeitig") - 4;
 
 /** "editorial": Look nach seinem Referenzvideo vom 2026-10-16 (Untertitel oben, betonte Wörter in Serifen-Kursive,
  * weites/enges Bild im Wechsel bei jedem Schnitt, leise Klicks auf Einblendungen); "schlicht": Test vom 2026-10-16 */
-type Props = { voice?: boolean; raster?: boolean; untertitel?: boolean; look?: "schlicht" | "editorial" };
+type Props = { voice?: boolean; raster?: boolean; untertitel?: boolean; look?: "schlicht" | "editorial"; hook?: "a" | "c" };
+
+/** während der Hook (das erste Schnittstück) liegt das Bild etwas tiefer, damit die zweizeilige Hook über dem Kopf
+ * Platz hat; der Wechsel fällt mit dem ersten Schnitt zusammen */
+const HOOK_TIEFER = 130;
+const SERIF = { fontFamily: '"Playfair Display", serif', fontWeight: 900, fontStyle: "italic" } as const;
+const ANTON = { fontFamily: "Anton, sans-serif", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.01em" } as const;
+const HookZoll: React.FC<{ fr: number; v: "a" | "c" }> = ({ fr, v }) => {
+  const o = interpolate(fr, [0, 4, HOOK_ENDE, HOOK_ENDE + 5], [1, 1, 1, 0], clamp);
+  const zeile = (at: number) => interpolate(fr, [at, at + 6], [0, 1], clamp);
+  const box: React.CSSProperties = { position: "absolute", left: 0, width: 1080, textAlign: "center", color: "#fff", textShadow: "0 3px 6px rgb(0 0 0 / 0.55), 0 0 26px rgb(0 0 0 / 0.35)", opacity: o, whiteSpace: "nowrap" };
+  return v === "a" ? (
+    <>
+      <div style={{ ...box, ...SERIF, top: 250, fontSize: 168, lineHeight: 1, color: "#00F090", opacity: o * zeile(0) }}>Nur 65</div>
+      <div style={{ ...box, ...ANTON, top: 432, fontSize: 54, lineHeight: 1, opacity: o * zeile(8) }}>von 1.000.000 Importen kontrolliert</div>
+    </>
+  ) : (
+    <>
+      <div style={{ ...box, ...ANTON, top: 262, fontSize: 64, lineHeight: 1, opacity: o * zeile(0) }}>Der Zoll kontrolliert nur</div>
+      <div style={{ ...box, ...SERIF, top: 330, fontSize: 176, lineHeight: 1, color: "#00F090", opacity: o * zeile(8) }}>0,0065 %</div>
+    </>
+  );
+};
 
 const BETONT = ["zoll", "überrascht", "meldung", "65", "million", "0,0065", "vorschriften", "steuern", "milliarden", "sinn", "diskussionswürdig", "regeln", "illegal", "kontrollen", "temu"];
 const FARBIG = ["65", "0,0065", "illegal"];
+const ERSTER_SCHNITT = C.SPANS[1]?.at ?? C.DURATION;
 const PUNCH = autoPunch(C, { low: 1, high: 1.08 });
 const punchAt = (fr: number) => PUNCH.reduce((z, [at, v]) => (fr >= at ? v : z), 1);
 
@@ -53,22 +76,19 @@ export const Video: React.FC<Props> = (p) => (
   </DesignRahmen>
 );
 
-const Inhalt: React.FC<Props> = ({ voice = true, raster = false, untertitel = true, look = "editorial" }) => {
+const Inhalt: React.FC<Props> = ({ voice = true, raster = false, untertitel = true, look = "editorial", hook = "a" }) => {
   const fr = useCurrentFrame();
   const ed = look === "editorial";
   const karte = interpolate(fr, [SCHLAGZEILE, SCHLAGZEILE + 5, SCHLAGZEILE_ENDE, SCHLAGZEILE_ENDE + 5], [0, 1, 1, 0], clamp);
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
       <AbsoluteFill style={{ transform: `scale(${ed ? punchAt(fr) : 1})`, transformOrigin: "540px 740px" }}>
-        <Takes C={C} voice={voice} transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`} transformOrigin="50% 0%" />
+        <Takes C={C} voice={voice} transform={`translate(${-BILD.x}px, ${-(BILD.hoch - (ed && fr < ERSTER_SCHNITT ? HOOK_TIEFER : 0))}px) scale(${BILD.scale})`} transformOrigin="50% 0%" />
       </AbsoluteFill>
 
       {/* direkt mit der Zahl starten */}
       {ed ? (
-        <SchlichterText fr={fr} at={0} until={HOOK_ENDE} top={250} size={128} style={{ whiteSpace: "nowrap", left: 40, width: 1000 }}>
-          <span style={{ fontFamily: '"Playfair Display", serif', fontWeight: 900, fontStyle: "italic", color: "#00F090" }}>65</span>
-          <span style={{ fontFamily: "Anton, sans-serif", fontWeight: 400, fontSize: 64, marginLeft: 18, textTransform: "uppercase" }}>von 1.000.000</span>
-        </SchlichterText>
+        <HookZoll fr={fr} v={hook} />
       ) : (
         <SchlichterText fr={fr} at={0} until={HOOK_ENDE} top={262} size={92} style={{ whiteSpace: "nowrap", left: 40, width: 1000 }}>
           65 von 1.000.000
