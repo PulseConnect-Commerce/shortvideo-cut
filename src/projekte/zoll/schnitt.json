@@ -1,0 +1,83 @@
+{
+ "projekt": "zoll",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 18.5,
+   "text": "Wisst ihr eigentlich, wie viele importierte Artikel der Zoll tatsächlich in Europa kontrolliert hat? Diese Zahl hat mich echt überrascht"
+  },
+  {
+   "take": "t1",
+   "ab": 28.6,
+   "text": "Schaut euch mal diese Meldung hier an."
+  },
+  {
+   "take": "t1",
+   "ab": 35.8,
+   "text": "Denn laut einem neuen Papier von der DIHK und dem Handelsverband in Deutschland gab es 2025 im Durchschnitt gerade einmal 65, nicht 65 .000, sondern 65 Zollinterventionen auf eine Million importierte Artikel. Das sind gerade mal 0 ,0065%. Und jetzt überleg mal, wenn du jetzt in Deutschland einen Online-Shop betreibst, dann musst du dich an zahlreiche Vorschriften halten. Du musst Dutzende Gesetze und Produkt-Sicherheiten und Kennzeichnungen und Verpackungspflichten und natürlich auch Steuern einhalten.",
+   "stumm": [
+    [
+     38.32,
+     38.66
+    ]
+   ]
+  },
+  {
+   "take": "t1",
+   "ab": 68.9,
+   "text": "Gleichzeitig kommen halt milliardengünstige Produkte einfach aus den Nicht-EU-Ländern in den europäischen Markt geschwemmt. Das macht irgendwie gar keinen Sinn, oder?"
+  },
+  {
+   "take": "t1",
+   "ab": 87.1,
+   "text": "Und ich finde halt, das ist auch absolut diskussionswürdig. Denn der Wettbewerb ist halt gut, aber die gleichen Regeln sollten natürlich auch für alle gelten und nicht nur für uns EU-Bürger."
+  },
+  {
+   "take": "t1",
+   "ab": 101.3,
+   "text": "Wichtig ist allerdings, dass nicht kontrolliert bedeutet natürlich auch nicht automatisch illegal. Aber ja, was machen wir dazu? Brauchen wir echt strengere Kontrollen für irgendwie Plattformen wie AliExpress, Temu oder auch neuere Plattformen, die jetzt auf den Markt kommen?"
+  }
+ ],
+ "ende": {
+  "bis": 116.4
+ },
+ "korrekturen": [
+  [
+   "t1",
+   44.57,
+   "65",
+   "65.000,"
+  ],
+  [
+   "t1",
+   45.03,
+   ".000,",
+   ""
+  ],
+  [
+   "t1",
+   51.17,
+   "0",
+   "0,0065 %."
+  ],
+  [
+   "t1",
+   51.41,
+   ",0065%.",
+   ""
+  ],
+  [
+   "t1",
+   69.91,
+   "milliardengünstige",
+   "Milliarden günstige"
+  ]
+ ]
+}

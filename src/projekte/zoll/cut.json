@@ -1,0 +1,1270 @@
+{
+ "projekt": "zoll",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "zoll/t1",
+   "from": 18.585,
+   "to": 25.385,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "zoll/t1",
+   "from": 28.615,
+   "to": 30.255,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "zoll/t1",
+   "from": 35.795,
+   "to": 67.425,
+   "stumm": [
+    [
+     38.32,
+     38.66
+    ]
+   ],
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "zoll/t1",
+   "from": 68.905,
+   "to": 76.555,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "zoll/t1",
+   "from": 87.165,
+   "to": 96.535,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "zoll/t1",
+   "from": 101.345,
+   "to": 116.4,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Wisst",
+   "src": "zoll/t1",
+   "start": 18.6,
+   "end": 18.74
+  },
+  {
+   "text": "ihr",
+   "src": "zoll/t1",
+   "start": 18.78,
+   "end": 18.86
+  },
+  {
+   "text": "eigentlich,",
+   "src": "zoll/t1",
+   "start": 18.9,
+   "end": 19.24
+  },
+  {
+   "text": "wie",
+   "src": "zoll/t1",
+   "start": 19.32,
+   "end": 19.42
+  },
+  {
+   "text": "viele",
+   "src": "zoll/t1",
+   "start": 19.5,
+   "end": 19.7
+  },
+  {
+   "text": "importierte",
+   "src": "zoll/t1",
+   "start": 19.84,
+   "end": 20.36
+  },
+  {
+   "text": "Artikel",
+   "src": "zoll/t1",
+   "start": 20.42,
+   "end": 20.74
+  },
+  {
+   "text": "der",
+   "src": "zoll/t1",
+   "start": 20.78,
+   "end": 20.86
+  },
+  {
+   "text": "Zoll",
+   "src": "zoll/t1",
+   "start": 21.0,
+   "end": 21.2
+  },
+  {
+   "text": "tatsächlich",
+   "src": "zoll/t1",
+   "start": 21.26,
+   "end": 21.72
+  },
+  {
+   "text": "in",
+   "src": "zoll/t1",
+   "start": 21.76,
+   "end": 21.82
+  },
+  {
+   "text": "Europa",
+   "src": "zoll/t1",
+   "start": 21.9,
+   "end": 22.32
+  },
+  {
+   "text": "kontrolliert",
+   "src": "zoll/t1",
+   "start": 22.46,
+   "end": 22.98
+  },
+  {
+   "text": "hat?",
+   "src": "zoll/t1",
+   "start": 23.02,
+   "end": 23.14
+  },
+  {
+   "text": "Diese",
+   "src": "zoll/t1",
+   "start": 24.02,
+   "end": 24.2
+  },
+  {
+   "text": "Zahl",
+   "src": "zoll/t1",
+   "start": 24.28,
+   "end": 24.42
+  },
+  {
+   "text": "hat",
+   "src": "zoll/t1",
+   "start": 24.44,
+   "end": 24.52
+  },
+  {
+   "text": "mich",
+   "src": "zoll/t1",
+   "start": 24.58,
+   "end": 24.68
+  },
+  {
+   "text": "echt",
+   "src": "zoll/t1",
+   "start": 24.82,
+   "end": 24.96
+  },
+  {
+   "text": "überrascht",
+   "src": "zoll/t1",
+   "start": 25.02,
+   "end": 25.38
+  },
+  {
+   "text": "Schaut",
+   "src": "zoll/t1",
+   "start": 28.68,
+   "end": 28.86
+  },
+  {
+   "text": "euch",
+   "src": "zoll/t1",
+   "start": 28.88,
+   "end": 28.98
+  },
+  {
+   "text": "mal",
+   "src": "zoll/t1",
+   "start": 29.02,
+   "end": 29.12
+  },
+  {
+   "text": "diese",
+   "src": "zoll/t1",
+   "start": 29.2,
+   "end": 29.42
+  },
+  {
+   "text": "Meldung",
+   "src": "zoll/t1",
+   "start": 29.5,
+   "end": 29.78
+  },
+  {
+   "text": "hier",
+   "src": "zoll/t1",
+   "start": 29.82,
+   "end": 29.94
+  },
+  {
+   "text": "an.",
+   "src": "zoll/t1",
+   "start": 30.0,
+   "end": 30.1
+  },
+  {
+   "text": "Denn",
+   "src": "zoll/t1",
+   "start": 35.88,
+   "end": 36.02
+  },
+  {
+   "text": "laut",
+   "src": "zoll/t1",
+   "start": 36.06,
+   "end": 36.24
+  },
+  {
+   "text": "einem",
+   "src": "zoll/t1",
+   "start": 36.28,
+   "end": 36.52
+  },
+  {
+   "text": "neuen",
+   "src": "zoll/t1",
+   "start": 36.55,
+   "end": 36.77
+  },
+  {
+   "text": "Papier",
+   "src": "zoll/t1",
+   "start": 36.83,
+   "end": 37.15
+  },
+  {
+   "text": "von",
+   "src": "zoll/t1",
+   "start": 37.23,
+   "end": 37.35
+  },
+  {
+   "text": "der",
+   "src": "zoll/t1",
+   "start": 37.41,
+   "end": 37.49
+  },
+  {
+   "text": "DIHK",
+   "src": "zoll/t1",
+   "start": 37.61,
+   "end": 38.25
+  },
+  {
+   "text": "und",
+   "src": "zoll/t1",
+   "start": 39.11,
+   "end": 39.17
+  },
+  {
+   "text": "dem",
+   "src": "zoll/t1",
+   "start": 39.23,
+   "end": 39.33
+  },
+  {
+   "text": "Handelsverband",
+   "src": "zoll/t1",
+   "start": 39.37,
+   "end": 39.91
+  },
+  {
+   "text": "in",
+   "src": "zoll/t1",
+   "start": 39.95,
+   "end": 40.01
+  },
+  {
+   "text": "Deutschland",
+   "src": "zoll/t1",
+   "start": 40.05,
+   "end": 40.37
+  },
+  {
+   "text": "gab",
+   "src": "zoll/t1",
+   "start": 40.43,
+   "end": 40.53
+  },
+  {
+   "text": "es",
+   "src": "zoll/t1",
+   "start": 40.61,
+   "end": 40.67
+  },
+  {
+   "text": "2025",
+   "src": "zoll/t1",
+   "start": 40.71,
+   "end": 41.69
+  },
+  {
+   "text": "im",
+   "src": "zoll/t1",
+   "start": 41.75,
+   "end": 41.81
+  },
+  {
+   "text": "Durchschnitt",
+   "src": "zoll/t1",
+   "start": 41.87,
+   "end": 42.19
+  },
+  {
+   "text": "gerade",
+   "src": "zoll/t1",
+   "start": 42.23,
+   "end": 42.47
+  },
+  {
+   "text": "einmal",
+   "src": "zoll/t1",
+   "start": 42.55,
+   "end": 42.77
+  },
+  {
+   "text": "65,",
+   "src": "zoll/t1",
+   "start": 42.95,
+   "end": 43.79
+  },
+  {
+   "text": "nicht",
+   "src": "zoll/t1",
+   "start": 44.41,
+   "end": 44.53
+  },
+  {
+   "text": "65.000,",
+   "src": "zoll/t1",
+   "start": 44.57,
+   "end": 44.93
+  },
+  {
+   "text": "sondern",
+   "src": "zoll/t1",
+   "start": 45.25,
+   "end": 45.47
+  },
+  {
+   "text": "65",
+   "src": "zoll/t1",
+   "start": 45.69,
+   "end": 46.41
+  },
+  {
+   "text": "Zollinterventionen",
+   "src": "zoll/t1",
+   "start": 46.89,
+   "end": 47.75
+  },
+  {
+   "text": "auf",
+   "src": "zoll/t1",
+   "start": 47.99,
+   "end": 48.07
+  },
+  {
+   "text": "eine",
+   "src": "zoll/t1",
+   "start": 48.25,
+   "end": 48.47
+  },
+  {
+   "text": "Million",
+   "src": "zoll/t1",
+   "start": 48.55,
+   "end": 48.95
+  },
+  {
+   "text": "importierte",
+   "src": "zoll/t1",
+   "start": 49.01,
+   "end": 49.43
+  },
+  {
+   "text": "Artikel.",
+   "src": "zoll/t1",
+   "start": 49.49,
+   "end": 49.79
+  },
+  {
+   "text": "Das",
+   "src": "zoll/t1",
+   "start": 50.37,
+   "end": 50.49
+  },
+  {
+   "text": "sind",
+   "src": "zoll/t1",
+   "start": 50.53,
+   "end": 50.63
+  },
+  {
+   "text": "gerade",
+   "src": "zoll/t1",
+   "start": 50.67,
+   "end": 50.89
+  },
+  {
+   "text": "mal",
+   "src": "zoll/t1",
+   "start": 50.95,
+   "end": 51.03
+  },
+  {
+   "text": "0,0065 %.",
+   "src": "zoll/t1",
+   "start": 51.17,
+   "end": 51.35
+  },
+  {
+   "text": "Und",
+   "src": "zoll/t1",
+   "start": 54.23,
+   "end": 54.29
+  },
+  {
+   "text": "jetzt",
+   "src": "zoll/t1",
+   "start": 54.33,
+   "end": 54.49
+  },
+  {
+   "text": "überleg",
+   "src": "zoll/t1",
+   "start": 54.51,
+   "end": 54.75
+  },
+  {
+   "text": "mal,",
+   "src": "zoll/t1",
+   "start": 54.87,
+   "end": 55.01
+  },
+  {
+   "text": "wenn",
+   "src": "zoll/t1",
+   "start": 55.41,
+   "end": 55.51
+  },
+  {
+   "text": "du",
+   "src": "zoll/t1",
+   "start": 55.57,
+   "end": 55.61
+  },
+  {
+   "text": "jetzt",
+   "src": "zoll/t1",
+   "start": 55.67,
+   "end": 55.81
+  },
+  {
+   "text": "in",
+   "src": "zoll/t1",
+   "start": 55.83,
+   "end": 55.89
+  },
+  {
+   "text": "Deutschland",
+   "src": "zoll/t1",
+   "start": 55.95,
+   "end": 56.25
+  },
+  {
+   "text": "einen",
+   "src": "zoll/t1",
+   "start": 56.27,
+   "end": 56.39
+  },
+  {
+   "text": "Online-Shop",
+   "src": "zoll/t1",
+   "start": 56.43,
+   "end": 56.81
+  },
+  {
+   "text": "betreibst,",
+   "src": "zoll/t1",
+   "start": 56.85,
+   "end": 57.25
+  },
+  {
+   "text": "dann",
+   "src": "zoll/t1",
+   "start": 57.27,
+   "end": 57.39
+  },
+  {
+   "text": "musst",
+   "src": "zoll/t1",
+   "start": 57.43,
+   "end": 57.55
+  },
+  {
+   "text": "du",
+   "src": "zoll/t1",
+   "start": 57.57,
+   "end": 57.63
+  },
+  {
+   "text": "dich",
+   "src": "zoll/t1",
+   "start": 57.67,
+   "end": 57.77
+  },
+  {
+   "text": "an",
+   "src": "zoll/t1",
+   "start": 57.83,
+   "end": 57.91
+  },
+  {
+   "text": "zahlreiche",
+   "src": "zoll/t1",
+   "start": 58.09,
+   "end": 58.59
+  },
+  {
+   "text": "Vorschriften",
+   "src": "zoll/t1",
+   "start": 58.67,
+   "end": 59.15
+  },
+  {
+   "text": "halten.",
+   "src": "zoll/t1",
+   "start": 59.21,
+   "end": 59.49
+  },
+  {
+   "text": "Du",
+   "src": "zoll/t1",
+   "start": 59.55,
+   "end": 59.61
+  },
+  {
+   "text": "musst",
+   "src": "zoll/t1",
+   "start": 59.63,
+   "end": 59.81
+  },
+  {
+   "text": "Dutzende",
+   "src": "zoll/t1",
+   "start": 60.31,
+   "end": 60.81
+  },
+  {
+   "text": "Gesetze",
+   "src": "zoll/t1",
+   "start": 61.47,
+   "end": 61.95
+  },
+  {
+   "text": "und",
+   "src": "zoll/t1",
+   "start": 62.21,
+   "end": 62.35
+  },
+  {
+   "text": "Produkt-Sicherheiten",
+   "src": "zoll/t1",
+   "start": 62.57,
+   "end": 63.39
+  },
+  {
+   "text": "und",
+   "src": "zoll/t1",
+   "start": 63.43,
+   "end": 63.51
+  },
+  {
+   "text": "Kennzeichnungen",
+   "src": "zoll/t1",
+   "start": 63.61,
+   "end": 64.25
+  },
+  {
+   "text": "und",
+   "src": "zoll/t1",
+   "start": 64.09,
+   "end": 64.37
+  },
+  {
+   "text": "Verpackungspflichten",
+   "src": "zoll/t1",
+   "start": 64.43,
+   "end": 65.37
+  },
+  {
+   "text": "und",
+   "src": "zoll/t1",
+   "start": 65.77,
+   "end": 65.83
+  },
+  {
+   "text": "natürlich",
+   "src": "zoll/t1",
+   "start": 65.85,
+   "end": 66.09
+  },
+  {
+   "text": "auch",
+   "src": "zoll/t1",
+   "start": 66.11,
+   "end": 66.19
+  },
+  {
+   "text": "Steuern",
+   "src": "zoll/t1",
+   "start": 66.27,
+   "end": 66.67
+  },
+  {
+   "text": "einhalten.",
+   "src": "zoll/t1",
+   "start": 66.75,
+   "end": 67.21
+  },
+  {
+   "text": "Gleichzeitig",
+   "src": "zoll/t1",
+   "start": 68.97,
+   "end": 69.45
+  },
+  {
+   "text": "kommen",
+   "src": "zoll/t1",
+   "start": 69.53,
+   "end": 69.71
+  },
+  {
+   "text": "halt",
+   "src": "zoll/t1",
+   "start": 69.73,
+   "end": 69.85
+  },
+  {
+   "text": "Milliarden günstige",
+   "src": "zoll/t1",
+   "start": 69.91,
+   "end": 70.75
+  },
+  {
+   "text": "Produkte",
+   "src": "zoll/t1",
+   "start": 70.83,
+   "end": 71.17
+  },
+  {
+   "text": "einfach",
+   "src": "zoll/t1",
+   "start": 71.29,
+   "end": 71.55
+  },
+  {
+   "text": "aus",
+   "src": "zoll/t1",
+   "start": 71.61,
+   "end": 71.69
+  },
+  {
+   "text": "den",
+   "src": "zoll/t1",
+   "start": 71.73,
+   "end": 71.83
+  },
+  {
+   "text": "Nicht-EU-Ländern",
+   "src": "zoll/t1",
+   "start": 71.89,
+   "end": 72.67
+  },
+  {
+   "text": "in",
+   "src": "zoll/t1",
+   "start": 73.05,
+   "end": 73.09
+  },
+  {
+   "text": "den",
+   "src": "zoll/t1",
+   "start": 73.13,
+   "end": 73.23
+  },
+  {
+   "text": "europäischen",
+   "src": "zoll/t1",
+   "start": 73.29,
+   "end": 73.79
+  },
+  {
+   "text": "Markt",
+   "src": "zoll/t1",
+   "start": 73.85,
+   "end": 74.03
+  },
+  {
+   "text": "geschwemmt.",
+   "src": "zoll/t1",
+   "start": 74.07,
+   "end": 74.45
+  },
+  {
+   "text": "Das",
+   "src": "zoll/t1",
+   "start": 75.03,
+   "end": 75.15
+  },
+  {
+   "text": "macht",
+   "src": "zoll/t1",
+   "start": 75.21,
+   "end": 75.35
+  },
+  {
+   "text": "irgendwie",
+   "src": "zoll/t1",
+   "start": 75.41,
+   "end": 75.61
+  },
+  {
+   "text": "gar",
+   "src": "zoll/t1",
+   "start": 75.63,
+   "end": 75.73
+  },
+  {
+   "text": "keinen",
+   "src": "zoll/t1",
+   "start": 75.77,
+   "end": 75.95
+  },
+  {
+   "text": "Sinn,",
+   "src": "zoll/t1",
+   "start": 75.99,
+   "end": 76.11
+  },
+  {
+   "text": "oder?",
+   "src": "zoll/t1",
+   "start": 76.17,
+   "end": 76.33
+  },
+  {
+   "text": "Und",
+   "src": "zoll/t1",
+   "start": 87.22,
+   "end": 87.36
+  },
+  {
+   "text": "ich",
+   "src": "zoll/t1",
+   "start": 87.82,
+   "end": 87.9
+  },
+  {
+   "text": "finde",
+   "src": "zoll/t1",
+   "start": 87.96,
+   "end": 88.14
+  },
+  {
+   "text": "halt,",
+   "src": "zoll/t1",
+   "start": 88.18,
+   "end": 88.26
+  },
+  {
+   "text": "das",
+   "src": "zoll/t1",
+   "start": 88.34,
+   "end": 88.46
+  },
+  {
+   "text": "ist",
+   "src": "zoll/t1",
+   "start": 88.52,
+   "end": 88.62
+  },
+  {
+   "text": "auch",
+   "src": "zoll/t1",
+   "start": 88.74,
+   "end": 88.86
+  },
+  {
+   "text": "absolut",
+   "src": "zoll/t1",
+   "start": 88.98,
+   "end": 89.38
+  },
+  {
+   "text": "diskussionswürdig.",
+   "src": "zoll/t1",
+   "start": 89.42,
+   "end": 90.18
+  },
+  {
+   "text": "Denn",
+   "src": "zoll/t1",
+   "start": 90.8,
+   "end": 90.92
+  },
+  {
+   "text": "der",
+   "src": "zoll/t1",
+   "start": 90.94,
+   "end": 91.02
+  },
+  {
+   "text": "Wettbewerb",
+   "src": "zoll/t1",
+   "start": 91.06,
+   "end": 91.46
+  },
+  {
+   "text": "ist",
+   "src": "zoll/t1",
+   "start": 91.54,
+   "end": 91.62
+  },
+  {
+   "text": "halt",
+   "src": "zoll/t1",
+   "start": 91.64,
+   "end": 91.76
+  },
+  {
+   "text": "gut,",
+   "src": "zoll/t1",
+   "start": 91.86,
+   "end": 92.06
+  },
+  {
+   "text": "aber",
+   "src": "zoll/t1",
+   "start": 92.16,
+   "end": 92.3
+  },
+  {
+   "text": "die",
+   "src": "zoll/t1",
+   "start": 92.64,
+   "end": 92.7
+  },
+  {
+   "text": "gleichen",
+   "src": "zoll/t1",
+   "start": 92.74,
+   "end": 93.06
+  },
+  {
+   "text": "Regeln",
+   "src": "zoll/t1",
+   "start": 93.12,
+   "end": 93.42
+  },
+  {
+   "text": "sollten",
+   "src": "zoll/t1",
+   "start": 93.46,
+   "end": 93.7
+  },
+  {
+   "text": "natürlich",
+   "src": "zoll/t1",
+   "start": 93.74,
+   "end": 94.06
+  },
+  {
+   "text": "auch",
+   "src": "zoll/t1",
+   "start": 94.16,
+   "end": 94.28
+  },
+  {
+   "text": "für",
+   "src": "zoll/t1",
+   "start": 94.34,
+   "end": 94.42
+  },
+  {
+   "text": "alle",
+   "src": "zoll/t1",
+   "start": 94.54,
+   "end": 94.7
+  },
+  {
+   "text": "gelten",
+   "src": "zoll/t1",
+   "start": 94.78,
+   "end": 95.04
+  },
+  {
+   "text": "und",
+   "src": "zoll/t1",
+   "start": 95.08,
+   "end": 95.14
+  },
+  {
+   "text": "nicht",
+   "src": "zoll/t1",
+   "start": 95.18,
+   "end": 95.32
+  },
+  {
+   "text": "nur",
+   "src": "zoll/t1",
+   "start": 95.36,
+   "end": 95.44
+  },
+  {
+   "text": "für",
+   "src": "zoll/t1",
+   "start": 95.48,
+   "end": 95.58
+  },
+  {
+   "text": "uns",
+   "src": "zoll/t1",
+   "start": 95.66,
+   "end": 95.8
+  },
+  {
+   "text": "EU-Bürger.",
+   "src": "zoll/t1",
+   "start": 95.86,
+   "end": 96.4
+  },
+  {
+   "text": "Wichtig",
+   "src": "zoll/t1",
+   "start": 101.39,
+   "end": 101.63
+  },
+  {
+   "text": "ist",
+   "src": "zoll/t1",
+   "start": 101.73,
+   "end": 101.87
+  },
+  {
+   "text": "allerdings,",
+   "src": "zoll/t1",
+   "start": 101.93,
+   "end": 102.37
+  },
+  {
+   "text": "dass",
+   "src": "zoll/t1",
+   "start": 102.51,
+   "end": 102.69
+  },
+  {
+   "text": "nicht",
+   "src": "zoll/t1",
+   "start": 102.89,
+   "end": 103.05
+  },
+  {
+   "text": "kontrolliert",
+   "src": "zoll/t1",
+   "start": 103.09,
+   "end": 103.67
+  },
+  {
+   "text": "bedeutet",
+   "src": "zoll/t1",
+   "start": 103.83,
+   "end": 104.19
+  },
+  {
+   "text": "natürlich",
+   "src": "zoll/t1",
+   "start": 104.23,
+   "end": 104.55
+  },
+  {
+   "text": "auch",
+   "src": "zoll/t1",
+   "start": 104.59,
+   "end": 104.69
+  },
+  {
+   "text": "nicht",
+   "src": "zoll/t1",
+   "start": 104.79,
+   "end": 104.97
+  },
+  {
+   "text": "automatisch",
+   "src": "zoll/t1",
+   "start": 105.07,
+   "end": 105.63
+  },
+  {
+   "text": "illegal.",
+   "src": "zoll/t1",
+   "start": 105.69,
+   "end": 106.11
+  },
+  {
+   "text": "Aber",
+   "src": "zoll/t1",
+   "start": 107.17,
+   "end": 107.27
+  },
+  {
+   "text": "ja,",
+   "src": "zoll/t1",
+   "start": 107.55,
+   "end": 107.63
+  },
+  {
+   "text": "was",
+   "src": "zoll/t1",
+   "start": 107.73,
+   "end": 107.85
+  },
+  {
+   "text": "machen",
+   "src": "zoll/t1",
+   "start": 107.87,
+   "end": 107.99
+  },
+  {
+   "text": "wir",
+   "src": "zoll/t1",
+   "start": 108.01,
+   "end": 108.09
+  },
+  {
+   "text": "dazu?",
+   "src": "zoll/t1",
+   "start": 108.15,
+   "end": 108.31
+  },
+  {
+   "text": "Brauchen",
+   "src": "zoll/t1",
+   "start": 108.39,
+   "end": 108.61
+  },
+  {
+   "text": "wir",
+   "src": "zoll/t1",
+   "start": 108.63,
+   "end": 108.71
+  },
+  {
+   "text": "echt",
+   "src": "zoll/t1",
+   "start": 108.77,
+   "end": 108.87
+  },
+  {
+   "text": "strengere",
+   "src": "zoll/t1",
+   "start": 108.95,
+   "end": 109.33
+  },
+  {
+   "text": "Kontrollen",
+   "src": "zoll/t1",
+   "start": 109.41,
+   "end": 109.91
+  },
+  {
+   "text": "für",
+   "src": "zoll/t1",
+   "start": 110.53,
+   "end": 110.59
+  },
+  {
+   "text": "irgendwie",
+   "src": "zoll/t1",
+   "start": 110.61,
+   "end": 110.81
+  },
+  {
+   "text": "Plattformen",
+   "src": "zoll/t1",
+   "start": 110.91,
+   "end": 111.35
+  },
+  {
+   "text": "wie",
+   "src": "zoll/t1",
+   "start": 111.39,
+   "end": 111.45
+  },
+  {
+   "text": "AliExpress,",
+   "src": "zoll/t1",
+   "start": 111.51,
+   "end": 112.09
+  },
+  {
+   "text": "Temu",
+   "src": "zoll/t1",
+   "start": 112.19,
+   "end": 112.49
+  },
+  {
+   "text": "oder",
+   "src": "zoll/t1",
+   "start": 113.21,
+   "end": 113.39
+  },
+  {
+   "text": "auch",
+   "src": "zoll/t1",
+   "start": 113.97,
+   "end": 114.09
+  },
+  {
+   "text": "neuere",
+   "src": "zoll/t1",
+   "start": 114.19,
+   "end": 114.51
+  },
+  {
+   "text": "Plattformen,",
+   "src": "zoll/t1",
+   "start": 114.61,
+   "end": 115.07
+  },
+  {
+   "text": "die",
+   "src": "zoll/t1",
+   "start": 115.11,
+   "end": 115.17
+  },
+  {
+   "text": "jetzt",
+   "src": "zoll/t1",
+   "start": 115.19,
+   "end": 115.35
+  },
+  {
+   "text": "auf",
+   "src": "zoll/t1",
+   "start": 115.41,
+   "end": 115.47
+  },
+  {
+   "text": "den",
+   "src": "zoll/t1",
+   "start": 115.49,
+   "end": 115.55
+  },
+  {
+   "text": "Markt",
+   "src": "zoll/t1",
+   "start": 115.57,
+   "end": 115.75
+  },
+  {
+   "text": "kommen?",
+   "src": "zoll/t1",
+   "start": 115.81,
+   "end": 116.03
+  }
+ ],
+ "pages": [
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  1,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  1,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  3,
+  2,
+  4,
+  2,
+  2,
+  2,
+  3,
+  1,
+  2,
+  1,
+  1,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  1,
+  1,
+  3,
+  4,
+  1,
+  3,
+  3,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  2,
+  2,
+  1,
+  2,
+  2,
+  1,
+  2,
+  2,
+  4
+ ]
+}
