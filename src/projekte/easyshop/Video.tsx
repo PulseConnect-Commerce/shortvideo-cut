@@ -41,8 +41,8 @@ const ABO = F("25");
 const PROV = F("15");
 const KOSTEN_ENDE = F("das", F("dazukommen")) - 4;
 
-const BETONT = ["amazon", "händler", "oncommerce", "marktplätze", "shopify-integration", "kosten", "25", "28", "15", "gebühren", "kostenloser", "kunden", "bestellungen", "frage"];
-const FARBIG = ["25", "15"];
+const BETONT = ["amazon", "händler", "oncommerce", "marktplätze", "shopify-integration", "kosten", "25", "28", "15%", "gebühren", "kostenloser", "kunden", "bestellungen", "frage"];
+const FARBIG = ["25", "15%"];
 const PUNCH = autoPunch(C, { low: 1, high: 1.08 });
 const punchAt = (fr: number) => PUNCH.reduce((z, [at, v]) => (fr >= at ? v : z), 1);
 
