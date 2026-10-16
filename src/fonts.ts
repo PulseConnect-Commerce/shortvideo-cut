@@ -10,3 +10,6 @@ loadFont({ family: "Geist Mono", url: staticFile("fonts/GeistMono-Variable.woff2
 // (Lizenz: public/fonts/DESIGN-FONTS-LICENSE.txt, SIL OFL 1.1)
 loadFont({ family: "Anton", url: staticFile("fonts/Anton-Regular.woff2"), weight: "400" });
 loadFont({ family: "Space Grotesk", url: staticFile("fonts/SpaceGrotesk-Variable.woff2"), weight: "300 700" });
+
+// Serifen-Akzent für den Editorial-Look (src/lib/editorial.tsx), lokal (Lizenz: public/fonts/DESIGN-FONTS-LICENSE.txt)
+loadFont({ family: "Playfair Display", url: staticFile("fonts/PlayfairDisplay-BlackItalic.woff2"), weight: "900", style: "italic" });
