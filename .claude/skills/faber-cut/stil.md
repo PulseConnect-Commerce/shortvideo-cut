@@ -24,6 +24,14 @@ So gehst du vor:
 natürlich ("Zu viel bearbeitet kommt heutzutage nicht mehr so gut an"). Details oben in jedem Stil-Skill; das geht
 den älteren Regeln dort vor.
 
+**Shopify-Praxis-Tipps (seine Vorgabe 2026-10-16):** keine Screenshots ("bei Shortvideos nicht viel auf einem
+Desktop-Screenshot zu erkennen"). Stattdessen nachgebaute, stark vereinfachte UI-Animationen im Handy-Maßstab (große
+Karte, wenige Elemente, Schrift ≥ 46 px): z. B. ein Schalter, der auf seinem Wort umspringt, ein Feld, in das der
+Rabattcode getippt wird, ein Knopf, der angetippt wird, eine Zahl, die hochzählt. Kein Shopify-Logo und kein
+originalgetreuer Nachbau des Admins, nur der Inhalt, den er sagt (Namen der Einstellungen, seine Beispielwerte; nichts
+erfinden). Gebaut mit HyperFrames (`/motion-graphics`, transparentes Overlay) oder `src/lib/kit.tsx`; das ist die
+Ausnahme vom Test "keine B-Rolls", weil es zeigt, was er erklärt.
+
 **Für alle Formate gilt:** oben (bis y 280), rechts (ab x 900) und unten (ab y 1560) sind Tabu-Zonen für Inhalte und
 Texte (seine Vorgabe 2026-10-14, Werte in `src/lib/zonen.json`, Details in jedem Stil-Skill). Nie schwarzer Boden, nie
 stärker als 1,2-fach vergrößern.
