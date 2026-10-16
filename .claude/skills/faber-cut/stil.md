@@ -31,6 +31,12 @@ Rabattcode getippt wird, ein Knopf, der angetippt wird, eine Zahl, die hochzähl
 originalgetreuer Nachbau des Admins, nur der Inhalt, den er sagt (Namen der Einstellungen, seine Beispielwerte; nichts
 erfinden). Gebaut mit HyperFrames (`/motion-graphics`, transparentes Overlay) oder `src/lib/kit.tsx`; das ist die
 Ausnahme vom Test "keine B-Rolls", weil es zeigt, was er erklärt.
+Beispielprodukte (seine Vorgabe 2026-10-16: "an unserem Development Store bedienen und die Beispielprodukte vom
+'online-store-development-pulseconnect' verwenden"): der Store ist öffentlich lesbar,
+`https://online-store-development-pulseconnect.myshopify.com/products.json?limit=250` (100 Produkte, Marken STRAIV,
+VELOA, Nordwind, Mila & Ben, Kiesel & Korn; Mode, Schuhe, Taschen, Accessoires; flache Illustrationen auf hellem
+Grund, Preise wie 24,90 €; keine Streichpreise). Bild in klein: `<bild-url>&width=400`. Nur lesen, im Store nichts
+ändern; benutzte Bilder nach `public/broll/<projekt>/` legen.
 
 **Für alle Formate gilt:** oben (bis y 280), rechts (ab x 900) und unten (ab y 1560) sind Tabu-Zonen für Inhalte und
 Texte (seine Vorgabe 2026-10-14, Werte in `src/lib/zonen.json`, Details in jedem Stil-Skill). Nie schwarzer Boden, nie
