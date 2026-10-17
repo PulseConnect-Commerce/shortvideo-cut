@@ -187,13 +187,14 @@ Erst wenn er "passt" sagt:
 - **Ein leises "äh" ohne Wort** im Transkript bleibt sonst drin: `npm run fillerscan` nach jedem Schnitt.
 - **Ein langes Video verliert am Anfang:** der erste Frame braucht ein scharfes Gesicht und den Hook-Satz; ein Aufruf ganz am Ende erreicht nur, wer bis zum Ende schaut.
 
-## HyperFrames-Test (vereinbart 2026-10-16)
+## B-Rolls und Animationen mit HyperFrames (seit 2026-10-17 Standard)
 
-Paul: "Lass uns das gerne mal im nächsten Video für Freitag testen." Beim nächsten Video für Freitag (nicht die Serie)
-**eine** aufwendige Grafik (z. B. animiertes Diagramm, hochzählende Zahl, Bauchbinde) mit HyperFrames bauen
-(`npx hyperframes skills update` in einem leeren Ordner, Skill `/motion-graphics`, Ausgabe als transparentes Overlay)
-und in die Remotion-Komposition legen. Schnitt, Untertitel, Prüfungen und Upload bleiben bei faber-cut; der
-HyperFrames-Router nennt sich "Standard für jedes Video", das gilt hier nicht. Keine HeyGen-Dienste (Sprecher,
-Musik, Soundeffekte über `media-use`) mit seinen Rohclips. Danach ihm beide Fassungen zeigen und fragen, ob es
-besser aussieht und ob es Zeit spart. Achtung: seit 2026-10-16 gilt für diese Videos "keine B-Rolls" (Stil-Skills);
-den Test darum vorher mit ihm abstimmen (z. B. nur als Vergleichsfassung).
+Seine Vorgabe 2026-10-17 (nach REWE × Lieferando): "Mir fehlen bisher leider die neuen b-Rolls und Animationen,
+welche über den neuen skill „Hyperframes" erstellt werden können." In jedem Video außer der Serie bekommt jeder
+Abschnitt eine animierte Grafik oder B-Roll, die zeigt, was er sagt (animiertes Diagramm, hochzählende Zahl, Karte,
+Ablauf, Bauchbinde). Gebaut mit den HyperFrames-Skills (`hyperframes`, `hyperframes-animation`, `hyperframes-cli`) in
+einem eigenen Ordner unter `hyperframes/<projekt>/`, gerendert als transparentes Overlay und in die
+Remotion-Komposition gelegt, auf dem Wort (wie jede Grafik: `C.cue`). Schnitt, Untertitel, Prüfungen und Upload
+bleiben bei faber-cut; der HyperFrames-Router nennt sich "Standard für jedes Video", das gilt nur für diese Grafiken.
+Keine HeyGen-Dienste (Sprecher, Musik, Soundeffekte über `media-use`) mit seinen Rohclips. Nur Inhalte, die er sagt
+oder die Quelle belegt; keine fremden Logos oder Markenfotos ohne Rechte.

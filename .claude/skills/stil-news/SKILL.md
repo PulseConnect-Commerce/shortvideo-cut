@@ -5,6 +5,26 @@ description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~6
 
 # Stil NEWS / Reaction
 
+> **Ab 2026-10-17: wie das easyJet-Video, Untertitel im neuen Stil, B-Rolls mit HyperFrames (geht dem
+> Editorial-Look unten vor).** Gilt für NEWS/Reaction, nicht für die Serie "E-Commerce einfach erklärt".
+> Seine Worte (nach REWE × Lieferando): "Ich finde, dass in diesem Video zu viele Schnitte und Zooms enthalten sind.
+> Orientiere dich mal an das Video, welches die beste Resonanz erzielt hat. „Easyshop neuer Konkurrent für Amazon".
+> Nur die Untertitel unter dem Kopf kannst du gerne im neuen Stil erstellen. Mir fehlen bisher leider die neuen
+> b-Rolls und Animationen, welche über den neuen skill „Hyperframes" erstellt werden können." 
+> - **Vorlage:** `src/projekte/easyjet/Video.tsx` (veröffentlicht 16.10., beste Resonanz): `serienVideo` aus
+>   `src/projekte/_serie/Serie.tsx`, Design nacht-gruen, Hook-Titel, Szenen-Titel mit Chips auf der Brust, die Quelle
+>   als Greenscreen-Hintergrund hinter ihm (`layout.quelle`, `npm run portrait -- … --hintergrund`), keine Whooshes.
+> - **Wenige Schnitte, kaum Zooms:** nur ein ruhiges durchgehendes Zoom-in (wie im easyJet-Video, 3 % über das ganze
+>   Video), **kein** Wechsel weit/eng bei jedem Schnitt (kein `autoPunch`), keine Punch-ins. Geschnitten wird nur,
+>   wo etwas raus muss (easyJet: 6 Stücke; REWE mit 8 Stücken und Zoom-Wechseln war ihm zu viel).
+> - **Untertitel:** im neuen Stil (`EditorialUntertitel`: 1-3 Wörter, Anton klein, betonte Wörter in Playfair-Kursive,
+>   Zahlen in unserem Grün), aber **unter dem Kopf** (wie im easyJet-Video, y ~1460), nicht oben.
+> - **B-Rolls und Animationen mit HyperFrames:** in jedem Abschnitt eine animierte Grafik oder B-Roll, die zeigt, was
+>   er sagt (z. B. Karte mit den Standorten, hochzählende Zahl, Ablauf "bestellt → gepackt → geliefert"), gebaut mit
+>   den HyperFrames-Skills (`hyperframes`, `hyperframes-animation`) als transparentes Overlay und in die
+>   Remotion-Komposition gelegt. Nur Inhalte, die er sagt oder die Quelle belegt; keine fremden Logos oder
+>   Markenfotos ohne Rechte; keine HeyGen-Dienste mit seinen Rohclips.
+
 > **Look ab 2026-10-16: Editorial (geht allem Folgenden vor).** Gilt für NEWS/Reaction, FACE und HERO, **nicht** für
 > die Serie "E-Commerce einfach erklärt". Entstanden in zwei Schritten: erst der Test "schlichte Untertitel und keine
 > B-Rolls … sehr natürlich … mit wenigen Schnitten. Zu viel bearbeitet kommt heutzutage nicht mehr so gut an", dann

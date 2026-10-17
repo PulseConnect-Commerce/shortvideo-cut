@@ -5,6 +5,20 @@ description: Schnittstil FACE von PulseConnect für Meinungsvideos direkt in die
 
 # Stil FACE
 
+> **Ab 2026-10-17: weniger Schnitte und Zooms, Untertitel im neuen Stil unter dem Kopf, B-Rolls mit HyperFrames
+> (geht dem Editorial-Look unten vor).** Gilt für FACE und HERO, nicht für die Serie "E-Commerce einfach erklärt".
+> Seine Worte (nach REWE × Lieferando): "Ich finde, dass in diesem Video zu viele Schnitte und Zooms enthalten sind.
+> Orientiere dich mal an das Video, welches die beste Resonanz erzielt hat. „Easyshop neuer Konkurrent für Amazon".
+> Nur die Untertitel unter dem Kopf kannst du gerne im neuen Stil erstellen. Mir fehlen bisher leider die neuen
+> b-Rolls und Animationen, welche über den neuen skill „Hyperframes" erstellt werden können." 
+> - **Vorbild für Schnitt und Tempo:** das easyJet-Video (`src/projekte/easyjet/Video.tsx`): nur ein ruhiges
+>   durchgehendes Zoom-in, **kein** Wechsel weit/eng bei jedem Schnitt (kein `autoPunch`), keine Punch-ins,
+>   geschnitten wird nur, wo etwas raus muss.
+> - **Untertitel:** im neuen Stil (`EditorialUntertitel`), aber **unter dem Kopf** (y ~1460), nicht oben.
+> - **B-Rolls und Animationen mit HyperFrames:** in jedem Abschnitt eine animierte Grafik oder B-Roll, die zeigt, was
+>   er sagt, als transparentes Overlay aus den HyperFrames-Skills in der Remotion-Komposition. Nur Inhalte, die er
+>   sagt; keine HeyGen-Dienste mit seinen Rohclips.
+
 > **Look ab 2026-10-16: Editorial (geht allem Folgenden vor).** Gilt für NEWS/Reaction, FACE und HERO, **nicht** für
 > die Serie "E-Commerce einfach erklärt". Entstanden in zwei Schritten: erst der Test "schlichte Untertitel und keine
 > B-Rolls … sehr natürlich … mit wenigen Schnitten. Zu viel bearbeitet kommt heutzutage nicht mehr so gut an", dann
