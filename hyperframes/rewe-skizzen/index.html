@@ -9,7 +9,9 @@
       Transparente Skizzen-Overlays für das REWE-Video (faber-cut, src/projekte/rewe). Die Zeiten sind die Sekunden im
       geschnittenen Video (cut.json), damit jede Zeichnung auf ihrem Wort erscheint:
         Hamburg 7.34 / fünf 8.88 · 45 11.78 · 5.000 15.05 / 9.000 15.83 ·
-        REWE-Mitarbeiter 17.73 / Lieferando 20.04 / Zustellung 22.29
+        REWE-Mitarbeiter 17.73 / Lieferando 20.04 / Zustellung 22.29 · Filiale 25.94 / Versandlager 27.42 ·
+        Lager 30.47 · Standorte 32.97 / Reichweite 33.86 · schnelle 36.75 / nicht 38.41 / profitabel 39.21 ·
+        Online 42.53 / stationär 42.99 · Meinung 46.17 · Stunde 49.05 / Normalität 50.03 / Ausnahme 52.49
       Zeichenfläche: über dem Kopf, x 153-927, y 290-623 (Karte 860x370 auf 90 %); seine Vorgabe 2026-10-17: "B-Rolls
       sollten besser über dem Kopf angezeigt werden, damit mehr Platz für den Untertitel ist". Die Hook (bis ~3,8 s)
       gehört oben dem Hook-Titel, darum dort keine Skizze.
@@ -97,7 +99,7 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="rewe-skizzen" data-start="0" data-duration="23" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="rewe-skizzen" data-start="0" data-duration="55.2" data-width="1080" data-height="1920">
       <svg width="0" height="0" style="position: absolute">
         <defs>
           <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
@@ -198,6 +200,149 @@
           <div id="sz4-l3" class="lbl center" style="left: 610px; top: 250px; width: 230px; font-size: 42px; white-space: normal">Lieferando bringt</div>
         </div>
       </section>
+      <!-- 5: Filiale = lokales Versandlager -->
+      <section id="sz5" class="scene clip" data-start="25.85" data-duration="3.45" data-track-index="0">
+        <div id="sz5-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s d5a" pathLength="1" d="M95 140 H255 V250 H95 Z" />
+              <path class="s g d5a" pathLength="1" d="M80 140 L100 95 H250 L270 140 Q253 160 236 140 Q219 160 202 140 Q185 160 168 140 Q151 160 134 140 Q117 160 80 140" />
+              <path class="s thin d5a" pathLength="1" d="M140 250 V190 H190 V250 M205 180 H240 V215 H205 Z" />
+              <path class="s d5b" pathLength="1" d="M400 120 L450 95 L500 120 V185 L450 210 L400 185 Z M400 120 L450 145 L500 120 M450 145 V210" />
+              <path class="s g thin d5c" pathLength="1" d="M515 150 H585 M570 138 L587 150 L570 162" />
+              <path class="s g thin d5c" pathLength="1" d="M510 115 L580 85 M562 80 L582 84 L574 102" />
+              <path class="s g thin d5c" pathLength="1" d="M510 185 L580 215 M574 198 L582 216 L562 220" />
+              <path class="s thin d5d" pathLength="1" d="M600 95 L625 75 L650 95 V120 H600 Z M600 160 L625 140 L650 160 V185 H600 Z M600 230 L625 210 L650 230 V255 H600 Z" />
+            </g>
+          </svg>
+          <div id="sz5-l1" class="lbl center" style="left: 70px; top: 275px; width: 210px; font-size: 52px">Filiale</div>
+          <div id="sz5-eq" class="lbl center green" style="left: 290px; top: 115px; width: 90px; font-size: 100px">=</div>
+          <div id="sz5-l2" class="lbl" style="left: 380px; top: 236px; font-size: 40px">lokales</div>
+          <div id="sz5-l3" class="lbl green" style="left: 380px; top: 285px; font-size: 52px">Versandlager</div>
+        </div>
+      </section>
+
+      <!-- 6: keine neuen Lager -->
+      <section id="sz6" class="scene clip" data-start="29.3" data-duration="2.05" data-track-index="0">
+        <div id="sz6-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s d6a" pathLength="1" d="M70 150 L200 80 L330 150 M90 140 V295 H310 V140" />
+              <path class="s thin d6a" pathLength="1" d="M150 295 V205 H250 V295 M150 230 H250 M150 255 H250 M150 280 H250" />
+            </g>
+            <path class="s d6b" pathLength="1" style="stroke: #ff5a5f; stroke-width: 12" d="M60 320 L340 60" />
+          </svg>
+          <div id="sz6-l1" class="lbl" style="left: 400px; top: 95px; font-size: 64px">keine neuen</div>
+          <div id="sz6-l2" class="lbl green" style="left: 400px; top: 170px; font-size: 110px">Lager</div>
+        </div>
+      </section>
+
+      <!-- 7: bestehende Standorte + Reichweite der Plattform -->
+      <section id="sz7" class="scene clip" data-start="31.35" data-duration="4.8" data-track-index="0">
+        <div id="sz7-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g id="sz7-pins" filter="url(#rough)">
+              <g class="p7"><path class="s g thin" d="M95 80 C75 80 65 96 65 110 C65 132 95 162 95 162 C95 162 125 132 125 110 C125 96 115 80 95 80 Z" /><circle class="s thin" cx="95" cy="110" r="10" /></g>
+              <g class="p7"><path class="s g thin" d="M185 120 C165 120 155 136 155 150 C155 172 185 202 185 202 C185 202 215 172 215 150 C215 136 205 120 185 120 Z" /><circle class="s thin" cx="185" cy="150" r="10" /></g>
+              <g class="p7"><path class="s g thin" d="M275 70 C255 70 245 86 245 100 C245 122 275 152 275 152 C275 152 305 122 305 100 C305 86 295 70 275 70 Z" /><circle class="s thin" cx="275" cy="100" r="10" /></g>
+            </g>
+            <g filter="url(#rough)">
+              <path class="s thin d7a" pathLength="1" d="M335 140 H415 M400 127 L418 140 L400 153" />
+              <path class="s d7b" pathLength="1" d="M478 50 H542 Q552 50 552 60 V210 Q552 220 542 220 H478 Q468 220 468 210 V60 Q468 50 478 50 Z" />
+              <path class="s g d7c" pathLength="1" d="M585 95 Q610 135 585 175" />
+              <path class="s g d7c" pathLength="1" d="M615 75 Q655 135 615 195" />
+              <path class="s g d7c" pathLength="1" d="M645 55 Q700 135 645 215" />
+              <path class="s thin d7d" pathLength="1" d="M720 90 L745 70 L770 90 V115 H720 Z M745 150 L770 130 L795 150 V175 H745 Z M710 205 L735 185 L760 205 V230 H710 Z" />
+            </g>
+          </svg>
+          <div id="sz7-l1" class="lbl center" style="left: 40px; top: 245px; width: 310px; font-size: 40px; white-space: normal">bestehende Standorte</div>
+          <div id="sz7-l2" class="lbl center green" style="left: 440px; top: 245px; width: 400px; font-size: 52px">Reichweite</div>
+          <div id="sz7-l3" class="lbl center grey" style="left: 440px; top: 305px; width: 400px; font-size: 34px">der Lieferplattform</div>
+        </div>
+      </section>
+
+      <!-- 8: schnell ≠ profitabel -->
+      <section id="sz8" class="scene clip" data-start="36.15" data-duration="6.25" data-track-index="0">
+        <div id="sz8-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <circle class="s d8a" pathLength="1" cx="120" cy="200" r="22" />
+              <circle class="s d8a" pathLength="1" cx="230" cy="200" r="22" />
+              <path class="s d8a" pathLength="1" d="M142 200 H208 L192 150 H152 L140 120 H122" />
+              <path class="s g d8a" pathLength="1" d="M175 70 H240 V130 H175 Z" />
+              <path class="s thin d8s" pathLength="1" d="M30 120 H80 M20 160 H75 M35 200 H80" />
+              <ellipse class="s d8c" pathLength="1" cx="650" cy="225" rx="75" ry="22" />
+              <path class="s d8c" pathLength="1" d="M575 225 V200 M725 225 V200" />
+              <ellipse class="s d8c" pathLength="1" cx="650" cy="200" rx="75" ry="22" />
+              <path class="s d8c" pathLength="1" d="M575 200 V175 M725 200 V175" />
+              <ellipse class="s g d8c" pathLength="1" cx="650" cy="175" rx="75" ry="22" />
+            </g>
+          </svg>
+          <div id="sz8-l1" class="lbl center" style="left: 40px; top: 260px; width: 260px; font-size: 52px">schnell</div>
+          <div id="sz8-ne" class="lbl center" style="left: 345px; top: 105px; width: 140px; font-size: 130px">≠</div>
+          <div id="sz8-l2" class="lbl center green" style="left: 520px; top: 260px; width: 260px; font-size: 52px">profitabel?</div>
+          <div id="sz8-fr" class="lbl green" style="left: 745px; top: 40px; font-size: 110px">?</div>
+        </div>
+      </section>
+
+      <!-- 9: Online + stationär wachsen zusammen -->
+      <section id="sz9" class="scene clip" data-start="42.45" data-duration="2.75" data-track-index="0">
+        <div id="sz9-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s d9a" pathLength="1" d="M110 80 H270 Q280 80 280 90 V195 H100 V90 Q100 80 110 80 Z" />
+              <path class="s d9a" pathLength="1" d="M75 195 H305 L290 220 H90 Z" />
+              <path class="s d9b" pathLength="1" d="M600 125 H760 V225 H600 Z" />
+              <path class="s g d9b" pathLength="1" d="M585 125 L605 85 H755 L775 125 Q758 145 741 125 Q724 145 707 125 Q690 145 673 125 Q656 145 639 125 Q622 145 585 125" />
+              <path class="s thin d9b" pathLength="1" d="M640 225 V170 H685 V225" />
+              <path class="s g d9c" pathLength="1" d="M330 140 C380 90 480 90 545 140" />
+              <path class="s g d9c" pathLength="1" d="M330 170 C380 220 480 220 545 170" />
+            </g>
+          </svg>
+          <div id="sz9-plus" class="lbl center green" style="left: 380px; top: 100px; width: 110px; font-size: 110px">+</div>
+          <div id="sz9-l1" class="lbl center" style="left: 60px; top: 265px; width: 260px; font-size: 52px">Online</div>
+          <div id="sz9-l2" class="lbl center" style="left: 550px; top: 265px; width: 260px; font-size: 52px">stationär</div>
+        </div>
+      </section>
+
+      <!-- 10: eure Meinung -->
+      <section id="sz10" class="scene clip" data-start="45.25" data-duration="1.85" data-track-index="0">
+        <div id="sz10-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s g d10a" pathLength="1" d="M90 90 H300 Q320 90 320 110 V210 Q320 230 300 230 H170 L120 275 V230 H110 Q90 230 90 210 V110 Q90 90 110 90 Z" />
+              <path class="s thin d10a" pathLength="1" d="M140 140 H270 M140 180 H230" />
+            </g>
+          </svg>
+          <div id="sz10-l1" class="lbl green" style="left: 370px; top: 95px; width: 440px; font-size: 92px; white-space: normal">eure Meinung?</div>
+        </div>
+      </section>
+
+      <!-- 11: Lieferung unter 1 Stunde: Normalität oder Ausnahme? -->
+      <section id="sz11" class="scene clip" data-start="47.12" data-duration="8.08" data-track-index="0">
+        <div id="sz11-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <circle class="s d11a" pathLength="1" cx="160" cy="185" r="115" />
+              <path class="s thin d11t" d="M160 82 V96 M263 185 H249 M160 288 V274 M57 185 H71" />
+              <line id="sz11-zeiger" class="s" x1="160" y1="185" x2="160" y2="105" />
+              <circle class="s" cx="160" cy="185" r="6" style="fill: #ffffff" />
+              <path class="s g thin d11b" pathLength="1" d="M330 140 H372 V182 H330 Z" />
+              <path class="s g thin d11c" pathLength="1" d="M330 235 H372 V277 H330 Z" />
+            </g>
+          </svg>
+          <div id="sz11-l1" class="lbl" style="left: 320px; top: 22px; font-size: 76px"><span class="green">&lt; 1</span><span> Stunde</span></div>
+          <div id="sz11-l2" class="lbl" style="left: 395px; top: 133px; font-size: 56px">Normalität?</div>
+          <div id="sz11-l3" class="lbl" style="left: 395px; top: 228px; font-size: 56px">Ausnahme?</div>
+        </div>
+      </section>
     </div>
 
     <script>
@@ -252,6 +397,70 @@
       draw(".d4c", 20.0, 0.55);
       pop("#sz4-l3", 20.15);
       tl.fromTo("#sz4-haken", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 22.28);
+
+      // 5: Filiale (25.94) = lokales Versandlager (27.42)
+      card("sz5", 25.85, 29.3);
+      draw(".d5a", 25.9, 0.5);
+      pop("#sz5-l1", 26.0);
+      tl.fromTo("#sz5-eq", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 27.0);
+      draw(".d5b", 27.1, 0.4);
+      pop("#sz5-l3", 27.4);
+      draw(".d5c", 27.6, 0.35);
+      draw(".d5d", 27.85, 0.4);
+      pop("#sz5-l2", 27.3);
+
+      // 6: nicht erst überall neue Lager (30.47) bauen
+      card("sz6", 29.3, 31.35);
+      draw(".d6a", 29.35, 0.45);
+      pop("#sz6-l1", 29.6);
+      pop("#sz6-l2", 30.2);
+      tl.fromTo(".d6b", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.25, ease: "power3.out" }, 30.45);
+
+      // 7: bestehende Standorte (32.08 / 32.97), Reichweite (33.86) der Lieferando-Plattform (35.18)
+      card("sz7", 31.35, 36.15);
+      tl.fromTo("#sz7-pins .p7", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)", stagger: 0.3 }, 32.0);
+      pop("#sz7-l1", 32.9);
+      draw(".d7a", 33.5, 0.3);
+      draw(".d7b", 33.7, 0.4);
+      draw(".d7c", 33.9, 0.5);
+      pop("#sz7-l2", 33.9);
+      draw(".d7d", 34.4, 0.45);
+      pop("#sz7-l3", 35.1);
+
+      // 8: schnelle (36.75) Lieferung … nicht (38.41) … profitabel (39.21)
+      card("sz8", 36.15, 42.4);
+      draw(".d8a", 36.7, 0.5);
+      draw(".d8s", 37.0, 0.3);
+      pop("#sz8-l1", 36.85);
+      tl.fromTo("#sz8-ne", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 38.35);
+      draw(".d8c", 39.1, 0.55);
+      pop("#sz8-l2", 39.2);
+      tl.fromTo("#sz8-fr", { opacity: 0, rotation: -25, scale: 0.4 }, { opacity: 1, rotation: 0, scale: 1, duration: 0.35, ease: "back.out(2.4)" }, 39.6);
+
+      // 9: Online (42.53) und stationär (42.99) wachsen (43.57) zusammen
+      card("sz9", 42.45, 45.2);
+      draw(".d9a", 42.5, 0.4);
+      pop("#sz9-l1", 42.55);
+      draw(".d9b", 42.95, 0.4);
+      pop("#sz9-l2", 43.0);
+      draw(".d9c", 43.55, 0.5);
+      tl.fromTo("#sz9-plus", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 43.9);
+
+      // 10: eure Meinung (46.17)
+      card("sz10", 45.25, 47.1);
+      draw(".d10a", 45.3, 0.45);
+      pop("#sz10-l1", 46.1);
+
+      // 11: Lieferung (47.61) innerhalb einer Stunde (49.05) … Normalität (50.03) oder … Ausnahme (52.49)
+      card("sz11", 47.12, 55.25);
+      draw(".d11a", 47.2, 0.5);
+      tl.fromTo(".d11t", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 47.5);
+      tl.fromTo("#sz11-zeiger", { rotation: 0, svgOrigin: "160 185" }, { rotation: 330, svgOrigin: "160 185", duration: 1.2, ease: "power2.inOut" }, 47.7);
+      pop("#sz11-l1", 49.0);
+      draw(".d11b", 49.95, 0.3);
+      pop("#sz11-l2", 50.0);
+      draw(".d11c", 52.4, 0.3);
+      pop("#sz11-l3", 52.45);
 
       tl.seek(0);
       window.__timelines["rewe-skizzen"] = tl;

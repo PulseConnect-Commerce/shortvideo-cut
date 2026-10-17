@@ -59,16 +59,22 @@ const punchAt = (fr: number) => PUNCH.reduce((z, [at, v]) => (fr >= at ? v : z),
 
 const ANTON: React.CSSProperties = { fontFamily: "Anton, sans-serif", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.01em", left: 180, width: 720 };
 
-/** musik und neu: nur für die Beispiele vom 2026-10-17 (veröffentlicht wurde ohne beides). neu = der Stil ab 2026-10-17:
- * Skizzen aus HyperFrames (hyperframes/rewe-skizzen, transparent) statt der Textzeilen, Untertitel unter dem Kopf, nur
- * ein ruhiges Zoom-in statt weit/eng bei jedem Schnitt, Soundeffekte auf den Zeichnungen, Musik "news" */
+/** musik und neu: die erste Fassung (17.10. 18:00) lief ohne beides. neu = der freigegebene Look ab 2026-10-17, als
+ * zweite Fassung für den A/B-Test (Komposition ReweV2, 18.10. 09:00): Skizzen aus HyperFrames (hyperframes/rewe-skizzen,
+ * transparent) über dem Kopf statt der Textzeilen, Untertitel unter dem Kopf, nur ein ruhiges Zoom-in statt weit/eng bei
+ * jedem Schnitt, Soundeffekte auf den Zeichnungen, Musik "news" */
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false; neu?: boolean };
 
 /** Sekunden im Video, an denen die Skizzen erscheinen (wie in hyperframes/rewe-skizzen/index.html) */
-const SKIZZEN = [7.25, 10.45, 13.55, 17.45];
+const SKIZZEN = [7.25, 10.45, 13.55, 17.45, 25.85, 29.3, 31.35, 36.15, 42.45, 45.25, 47.12];
+/** leise Akzente auf einzelnen Zeichnungen: Datei, Sekunde, Lautstärke (Anteil von STIL.sfx) */
+const AKZENTE: [string, number, number][] = [
+  ["pop.mp3", 8.84, 0.3], ["tick.mp3", 11.72, 0.35], ["pop.mp3", 15.8, 0.3], ["success.mp3", 22.28, 0.35],
+  ["tick.mp3", 30.45, 0.3], ["pop.mp3", 39.6, 0.3], ["tick.mp3", 43.9, 0.3], ["tick.mp3", 49.0, 0.3],
+  ["klick.mp3", 50.0, 0.25], ["klick.mp3", 52.45, 0.25],
+];
 /** neu: Bild 175 px tiefer (Augen bei ~915), damit über dem Kopf Platz für B-Rolls ist (seine Vorgabe 2026-10-17) */
 const BILD_NEU = { ...BILD, hoch: 190 };
-const SKIZZEN_ENDE = 23;
 
 export const Video: React.FC<Props> = (p) => (
   <DesignRahmen design="pulse">
@@ -112,7 +118,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
 
       {/* neu: Skizzen aus HyperFrames (transparentes WebM) statt der Textzeilen */}
       {neu && (
-        <Sequence from={0} durationInFrames={Math.round(SKIZZEN_ENDE * C.FPS)} layout="none">
+        <Sequence from={0} durationInFrames={C.DURATION} layout="none">
           <OffthreadVideo src={staticFile("broll/rewe/skizzen.webm")} transparent muted style={{ position: "absolute", inset: 0, width: 1080, height: 1920 }} />
         </Sequence>
       )}
@@ -132,20 +138,24 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
       ))}
 
       {/* Einordnung */}
-      <SchlichterText fr={fr} at={FILIALE} until={EINORDNUNG_ENDE} top={1090} size={62} style={ANTON}>
-        Filiale = lokales Versandlager
-      </SchlichterText>
-      <SchlichterText fr={fr} at={REICHWEITE} until={EINORDNUNG_ENDE} top={1250} size={58} style={ANTON}>
-        Reichweite über Lieferando
-      </SchlichterText>
+      {!neu && (
+        <>
+          <SchlichterText fr={fr} at={FILIALE} until={EINORDNUNG_ENDE} top={1090} size={62} style={ANTON}>
+            Filiale = lokales Versandlager
+          </SchlichterText>
+          <SchlichterText fr={fr} at={REICHWEITE} until={EINORDNUNG_ENDE} top={1250} size={58} style={ANTON}>
+            Reichweite über Lieferando
+          </SchlichterText>
 
-      {/* kritischer Punkt */}
-      <SchlichterText fr={fr} at={PROFIT} until={PROFIT_ENDE} top={1130} size={62} style={ANTON}>
-        Schnelle Lieferung ≠ <span style={{ color: "#00F090" }}>automatisch profitabel</span>
-      </SchlichterText>
-      <SchlichterText fr={fr} at={ONLINE} until={ONLINE_ENDE} top={1130} size={62} style={ANTON}>
-        Online + stationär wachsen zusammen
-      </SchlichterText>
+          {/* kritischer Punkt */}
+          <SchlichterText fr={fr} at={PROFIT} until={PROFIT_ENDE} top={1130} size={62} style={ANTON}>
+            Schnelle Lieferung ≠ <span style={{ color: "#00F090" }}>automatisch profitabel</span>
+          </SchlichterText>
+          <SchlichterText fr={fr} at={ONLINE} until={ONLINE_ENDE} top={1130} size={62} style={ANTON}>
+            Online + stationär wachsen zusammen
+          </SchlichterText>
+        </>
+      )}
 
       {untertitel && !neu && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} y={330} off={[[0, HOOK_ENDE + 4]]} />}
       {untertitel && neu && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} y={1400} />}
@@ -155,17 +165,16 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           {SKIZZEN.map((s) => (
             <Sfx key={s} file="pop.mp3" at={s * C.FPS} volume={STIL.sfx * 0.4} />
           ))}
-          <Sfx file="tick.mp3" at={11.72 * C.FPS} volume={STIL.sfx * 0.35} />
-          <Sfx file="pop.mp3" at={8.84 * C.FPS} volume={STIL.sfx * 0.3} />
-          <Sfx file="pop.mp3" at={15.8 * C.FPS} volume={STIL.sfx * 0.3} />
-          <Sfx file="success.mp3" at={22.28 * C.FPS} volume={STIL.sfx * 0.35} />
+          {AKZENTE.map(([file, s, v]) => (
+            <Sfx key={`${file}${s}`} file={file} at={s * C.FPS} volume={STIL.sfx * v} />
+          ))}
         </>
       )}
       {sfx && <Sfx file="klick.mp3" at={SCHLAGZEILE} volume={STIL.sfx * 0.35} />}
       {sfx && !neu && [...FAKTEN, ...ABLAUF].map((x) => (
         <Sfx key={x.text} file="klick.mp3" at={x.at} volume={STIL.sfx * 0.3} />
       ))}
-      {sfx && [FILIALE, REICHWEITE, PROFIT, ONLINE].map((at) => (
+      {sfx && !neu && [FILIALE, REICHWEITE, PROFIT, ONLINE].map((at) => (
         <Sfx key={at} file="klick.mp3" at={at} volume={STIL.sfx * 0.3} />
       ))}
       {musik && <Musik C={C} datei={musik} />}

@@ -5,6 +5,11 @@ Geplant: 17.10.2026, 18:00 Uhr (Europe/Berlin), TikTok, Instagram Reel, YouTube 
 TikTok-Titel: "REWE in 45 Minuten?"
 Cover: "REWE in 45 Minuten?"
 
+**A/B-Test (seine Vorgabe 17.10.: "gerne noch einmal morgen früh um 9 Uhr hochladen", "Dann testen wir mal beide
+Varianten gegeneinander aus"):** Fassung B `REWE-x-Lieferando_v2.mp4` (Komposition `ReweV2`, freigegebener Look ab
+2026-10-17: Skizzen über dem Kopf, Untertitel darunter, leichte Musik) am 18.10.2026 um 09:00 Uhr auf denselben drei
+Kanälen. Texte, Titel und Cover bleiben gleich, damit sich nur der Look unterscheidet.
+
 ## TikTok
 
 ```
