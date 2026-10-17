@@ -1,11 +1,33 @@
 ---
 name: stil-face
-description: Schnittstil FACE von PulseConnect für Meinungsvideos direkt in die Kamera (kurz, ~45-60 s, klare Haltung, Frage an die Community) - Bild ab der Hüfte, ruhig geschnitten (wenig Schnitte und Zooms), Design nacht in Neon (Hot Take), kleine ruhige Untertitel (64 px, kein Kasten), Titel und Begriffe oben über dem Kopf (ohne Karte und Foto), leichter Porträt-Modus, am Ende Kommentar-Blase und Folgen-Knopf mit Plus. Verwende diesen Skill zusammen mit faber-cut, sobald ein FACE-Video geschnitten oder überarbeitet wird (der Nutzer sagt "FACE", "Meinungsvideo", "Hot Take") oder Feedback zu einem FACE-Video gibt.
+description: Schnittstil FACE von PulseConnect für Meinungsvideos direkt in die Kamera (kurz, ~45-60 s, klare Haltung, Frage an die Community) - freigegebener Look ab 2026-10-17: wenige Schnitte ohne Zoom-Wechsel, Farbkorrektur, er steht tiefer im Bild, über dem Kopf Hook-Titel und Skizzen/Icons/Animationen aus HyperFrames, Untertitel im Editorial-Stil unter dem Kopf, ganz leichte eigene Musik und leise Soundeffekte. Verwende diesen Skill zusammen mit faber-cut, sobald ein FACE-Video geschnitten oder überarbeitet wird (der Nutzer sagt "FACE", "Meinungsvideo", "Hot Take") oder Feedback zu einem FACE-Video gibt.
 ---
 
 # Stil FACE
 
-> **Ab 2026-10-17: weniger Schnitte und Zooms, Untertitel im neuen Stil unter dem Kopf, B-Rolls mit HyperFrames
+> **FREIGEGEBENER LOOK ab 2026-10-17 (geht allen Blöcken darunter vor; die sind nur noch Vorgeschichte).**
+> Seine Freigabe nach dem Beispiel REWE × Lieferando: "perfekt, genau so gefällt mir das. Bitte so als Skill
+> abspeichern für die nächsten Videos". Gilt für NEWS/Reaction, FACE und HERO, nicht für die Serie "E-Commerce einfach
+> erklärt". Vorlage im Code: `src/projekte/rewe/Video.tsx` mit `neu` (alles unten, wie freigegeben) und die Skizzen
+> `hyperframes/rewe-skizzen/index.html`.
+> 1. **Briefing** im Kalender Punkt für Punkt umsetzen, Checkliste mit Rohschnitt und Vorschau (Regel 00 im Skill
+>    faber-cut).
+> 2. **Schnitt:** wenige Schnitte, ganze Sätze, je Satz der letzte saubere Anlauf; Tempo wie im easyJet-Video.
+>    **Kein** Wechsel weit/eng bei jedem Schnitt, keine Punch-ins, nur ein ruhiges Zoom-in (3 % über das ganze Video).
+> 3. **Bild:** Farbkorrektur `npm run farbe` vor dem Porträt, leichter Porträt-Modus (Hintergrund weich). Er steht
+>    **tiefer im Bild** (Augen bei ~900-915; REWE: `scale 1.3`, `hoch 190`), damit oben Platz ist.
+> 4. **Oben über dem Kopf:** während der Hook der Hook-Titel im alten Titel-Stil (`HookTitle`, nacht-gruen), danach
+>    die B-Rolls: Quellen-Screenshot (Breite ~560 ab y 300, Quellenzeile direkt darunter) und **Skizzen, Icons und
+>    Animationen aus HyperFrames** auf dunkler Karte (x 153-927, y 290-623), jede auf ihrem Wort. Jede Aussage und
+>    jedes Beispiel bekommt eine (Ablauf im Skill faber-cut, Abschnitt "Skizzen, Icons und Animationen").
+> 5. **Untertitel** im neuen Stil (`EditorialUntertitel`: 1-3 Wörter, Anton, betonte Wörter groß in
+>    Playfair-Kursive, Zahlen grün) **unter dem Kopf bei y ~1400**, in Standardgröße, auch während der Hook.
+> 6. **Ton:** ganz leichte eigene Musik (`<Musik>`; NEWS `news`, FACE `puls`, HERO `ruhig`; ~21 dB unter der
+>    Stimme), leise Soundeffekte auf jeder Skizze (`pop`), auf Zählern und Uhren (`pop`/`tick`), auf dem Haken
+>    (`success`) und auf der Quelle (`klick`). Keine Whooshes auf jedem Schnitt.
+> 7. **Prüfungen** wie immer (checks mit Musikabstand, kontrolle vor dem Upload).
+
+> **Vorstufe, ersetzt durch den freigegebenen Look oben – Ab 2026-10-17: weniger Schnitte und Zooms, Untertitel im neuen Stil unter dem Kopf, B-Rolls mit HyperFrames
 > (geht dem Editorial-Look unten vor).** Gilt für FACE und HERO, nicht für die Serie "E-Commerce einfach erklärt".
 > Seine Worte (nach REWE × Lieferando): "Ich finde, dass in diesem Video zu viele Schnitte und Zooms enthalten sind.
 > Orientiere dich mal an das Video, welches die beste Resonanz erzielt hat. „Easyshop neuer Konkurrent für Amazon".
@@ -31,7 +53,7 @@ description: Schnittstil FACE von PulseConnect für Meinungsvideos direkt in die
 >   damit mehr Platz für den Untertitel ist", 2026-10-17): er steht dafür etwas tiefer im Bild, die Untertitel liegen
 >   unter dem Kopf bei y ~1400.
 
-> **Look ab 2026-10-16: Editorial (geht allem Folgenden vor).** Gilt für NEWS/Reaction, FACE und HERO, **nicht** für
+> **Vorstufe – Look ab 2026-10-16: Editorial (gilt nur noch, wo der freigegebene Look oben nichts sagt).** Gilt für NEWS/Reaction, FACE und HERO, **nicht** für
 > die Serie "E-Commerce einfach erklärt". Entstanden in zwei Schritten: erst der Test "schlichte Untertitel und keine
 > B-Rolls … sehr natürlich … mit wenigen Schnitten. Zu viel bearbeitet kommt heutzutage nicht mehr so gut an", dann
 > sein Referenzvideo: "Können wir unseren Videoschnitt (gerade die Untertitel und den Schnittstil mit den

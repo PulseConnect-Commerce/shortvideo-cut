@@ -20,6 +20,13 @@ So gehst du vor:
 - `src/lib/stil.ts` enthält die Zahlen von HERO. Andere Formate bekommen eigene Abweichungen (siehe ihr Skill),
   die HERO-Werte bleiben unverändert.
 
+**Freigegebener Look ab 2026-10-17 (alle Formate außer der Serie; "perfekt, genau so gefällt mir das. Bitte so als
+Skill abspeichern für die nächsten Videos"):** Briefing Punkt für Punkt, wenige Schnitte ohne Zoom-Wechsel (nur ein
+ruhiges Zoom-in), Farbkorrektur, er steht tiefer im Bild, über dem Kopf Hook-Titel und danach Quelle und
+Skizzen/Icons/Animationen aus HyperFrames auf dunkler Karte, Untertitel im Editorial-Stil unter dem Kopf (y ~1400),
+ganz leichte eigene Musik, leise Soundeffekte auf den Skizzen. Vorlage: `src/projekte/rewe/Video.tsx` (`neu`) und
+`hyperframes/rewe-skizzen/`. Die sieben Punkte stehen oben in jedem Stil-Skill; die Absätze darunter sind Vorgeschichte.
+
 **Ab 2026-10-17 (alle Formate außer der Serie, geht dem Editorial-Look vor):** Schnitt und Tempo wie im easyJet-Video
 (beste Resonanz): wenige Schnitte, nur ein ruhiges durchgehendes Zoom-in, kein Wechsel weit/eng; Untertitel im neuen
 Stil, aber unter dem Kopf; in jedem Abschnitt eine B-Roll oder Animation aus HyperFrames. NEWS baut wieder auf
