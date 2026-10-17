@@ -128,7 +128,7 @@ for take in takes:
         raise SystemExit(f"  {os.path.relpath(backup, ROOT)} gibt es schon: der Take ist bereits korrigiert")
     shutil.copy2(src, backup)
     out = src + ".tmp.mp4"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", backup, "-vf", vf, "-c:v", "libx264", "-crf", "12", "-preset", "medium",
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", backup, "-vf", vf, "-c:v", "libx264", "-crf", "14", "-preset", "fast",
                     "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
                     "-c:a", "copy", "-movflags", "+faststart", out], check=True)
     os.replace(out, src)

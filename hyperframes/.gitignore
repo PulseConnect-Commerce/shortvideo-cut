@@ -1,0 +1,6 @@
+renders/
+.hyperframes/
+node_modules/
+*/renders/
+*/.hyperframes/
+*/node_modules/

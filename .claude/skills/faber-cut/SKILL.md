@@ -220,7 +220,32 @@ Erst wenn er "passt" sagt:
 - **Ein leises "äh" ohne Wort** im Transkript bleibt sonst drin: `npm run fillerscan` nach jedem Schnitt.
 - **Ein langes Video verliert am Anfang:** der erste Frame braucht ein scharfes Gesicht und den Hook-Satz; ein Aufruf ganz am Ende erreicht nur, wer bis zum Ende schaut.
 
-## B-Rolls und Animationen mit HyperFrames (seit 2026-10-17 Standard)
+## Skizzen, Icons und Animationen mit HyperFrames (seit 2026-10-17 Standard)
+
+Seine Vorgaben 2026-10-17: "Mir fehlen bisher leider die neuen b-Rolls und Animationen, welche über den neuen skill
+„Hyperframes" erstellt werden können" und "Ich finde es gut, wenn meine Aussagen und Beispiele mit kurzen Skizzen,
+Icons und Animationen visuell unterstützt werden". In jedem Video außer der Serie bekommt jede Aussage und jedes
+Beispiel eine kurze Skizze (weiße Strichzeichnung, die sich zeichnet, Akzente in unserem Grün `#00F090`, leicht
+handgezeichnet über einen festen SVG-Filter), ein Icon oder eine kleine Animation (Zähler, Uhr, Karte mit Pin, Ablauf
+mit Pfeilen, "A vs. B"). Vorlage: `hyperframes/rewe-skizzen/index.html` (fünf Szenen, Beispiel REWE × Lieferando).
+So geht es:
+1. Nach dem freigegebenen Schnitt die Sekunden der Stichwörter im geschnittenen Video aus `cut.json` ausrechnen
+   (Summe der Stücke davor + Wortzeit − Stückanfang) und je Aussage eine Szene planen; die Zeichnung erscheint auf dem
+   Wort, Einzelteile auf ihren Wörtern (z. B. die Märkte auf "fünf").
+2. Ein HyperFrames-Projekt `hyperframes/<projekt>-skizzen/` (`npx hyperframes init … --example=blank
+   --skill=motion-graphics`), 1080x1920, Hintergrund transparent, alle Szenen als `.clip` mit `data-start` in
+   Video-Sekunden, eine pausierte GSAP-Timeline (Skills `hyperframes`, `hyperframes-core`, `motion-graphics`). Fläche:
+   auf der Brust (x 110-970, y 1010-1380) auf einer dunklen, halbdurchsichtigen Karte, damit es auf jedem Pullover
+   lesbar ist; nie auf dem Gesicht, nie über den Untertiteln. Schrift Anton (aus `public/fonts`, per `@font-face`).
+3. `npx hyperframes check .` ohne Fehler, `npx hyperframes snapshot --at …` ansehen, dann
+   `npx hyperframes render . --format webm -q high -o renders/skizzen.webm` (VP9 mit Alpha) und nach
+   `public/broll/<projekt>/skizzen.webm` kopieren.
+4. In der Remotion-Komposition: `<OffthreadVideo src={staticFile("broll/<projekt>/skizzen.webm")} transparent muted />`
+   in einer `<Sequence from={0}>`; ein leiser `pop`/`tick`/`success` auf jeder Szene und jedem Zähler.
+Nur Inhalte, die er sagt oder die Quelle belegt; keine fremden Logos oder Markenfotos; keine HeyGen-Dienste mit
+seinen Rohclips (die Snapshot-Beschreibung schickt nur unsere Zeichnungen an Gemini, nie Takes).
+
+### Weitere B-Rolls mit HyperFrames
 
 Seine Vorgabe 2026-10-17 (nach REWE × Lieferando): "Mir fehlen bisher leider die neuen b-Rolls und Animationen,
 welche über den neuen skill „Hyperframes" erstellt werden können." In jedem Video außer der Serie bekommt jeder

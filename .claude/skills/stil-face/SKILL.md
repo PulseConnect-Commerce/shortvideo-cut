@@ -24,6 +24,10 @@ description: Schnittstil FACE von PulseConnect für Meinungsvideos direkt in die
 >   (`<Musik>`, ~21 dB unter der Stimme), Farben mit `npm run farbe` korrigiert, ein paar leise Soundeffekte auf
 >   Animationen und Einblendungen (Regeln 4 und 5b im Skill faber-cut). Das ersetzt "keine Musik" und "keine
 >   Whooshes" im Editorial-Block darunter.
+> - **Skizzen, Icons, Animationen** (seine Vorgabe 2026-10-17: "Ich finde es gut, wenn meine Aussagen und Beispiele
+>   mit kurzen Skizzen, Icons und Animationen visuell unterstützt werden"): jede Aussage und jedes Beispiel bekommt
+>   eine kurze Zeichnung aus HyperFrames auf der Brust (Ablauf im Skill faber-cut, Vorlage
+>   `hyperframes/rewe-skizzen/`), statt reiner Textzeilen.
 
 > **Look ab 2026-10-16: Editorial (geht allem Folgenden vor).** Gilt für NEWS/Reaction, FACE und HERO, **nicht** für
 > die Serie "E-Commerce einfach erklärt". Entstanden in zwei Schritten: erst der Test "schlichte Untertitel und keine
