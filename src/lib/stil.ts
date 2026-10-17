@@ -41,6 +41,10 @@ export const STIL = {
   captionSizeSplit: 64,
   /** Lautstärke der Soundeffekte (immer deutlich unter der Stimme) */
   sfx: 0.16,
+  /** Hintergrundmusik (public/musik/, selbst gebaut mit npm run musik): Lautstärke, während er spricht, und in Pausen.
+   * Seine Vorgabe 2026-10-17: "ganz leicht … so, dass man mich immer noch sehr gut versteht"; npm run checks misst,
+   * dass sie beim Sprechen mindestens 18 dB unter der Stimme liegt */
+  musik: { sprache: 0.065, pause: 0.11 },
   /** kleinste Schrift in Grafiken (px): darunter ist es auf dem Handy nicht lesbar */
   minText: 42,
 };

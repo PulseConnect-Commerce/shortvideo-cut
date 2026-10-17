@@ -10,7 +10,7 @@
  */
 import type React from "react";
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from "remotion";
-import { clamp, HookTitle, Sfx, Takes } from "../../lib/bausteine";
+import { clamp, HookTitle, Musik, Sfx, Takes } from "../../lib/bausteine";
 import { DesignRahmen } from "../../lib/design";
 import { EditorialUntertitel } from "../../lib/editorial";
 import { autoPunch } from "../../lib/kit";
@@ -59,7 +59,8 @@ const punchAt = (fr: number) => PUNCH.reduce((z, [at, v]) => (fr >= at ? v : z),
 
 const ANTON: React.CSSProperties = { fontFamily: "Anton, sans-serif", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.01em", left: 180, width: 720 };
 
-type Props = { voice?: boolean; raster?: boolean; untertitel?: boolean };
+/** musik: nur für das Hörbeispiel vom 2026-10-17 (veröffentlicht wurde ohne Musik) */
+type Props = { voice?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false };
 
 export const Video: React.FC<Props> = (p) => (
   <DesignRahmen design="pulse">
@@ -67,7 +68,7 @@ export const Video: React.FC<Props> = (p) => (
   </DesignRahmen>
 );
 
-const Inhalt: React.FC<Props> = ({ voice = true, raster = false, untertitel = true }) => {
+const Inhalt: React.FC<Props> = ({ voice = true, raster = false, untertitel = true, musik = false }) => {
   const fr = useCurrentFrame();
   const karte = interpolate(fr, [SCHLAGZEILE, SCHLAGZEILE + 5, SCHLAGZEILE_ENDE, SCHLAGZEILE_ENDE + 5], [0, 1, 1, 0], clamp);
   return (
@@ -135,6 +136,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, raster = false, untertitel = tr
       {[FILIALE, REICHWEITE, PROFIT, ONLINE].map((at) => (
         <Sfx key={at} file="klick.mp3" at={at} volume={STIL.sfx * 0.3} />
       ))}
+      {musik && <Musik C={C} datei={musik} />}
       {raster && <Raster />}
     </AbsoluteFill>
   );

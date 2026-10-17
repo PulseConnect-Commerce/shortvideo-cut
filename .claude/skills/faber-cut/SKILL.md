@@ -35,6 +35,7 @@ Alle Werkzeuge laufen über **`npm run …`**, auf Windows, macOS und Linux glei
 - Pro Take, nacheinander (nie parallel): `npm run intake -- <rohclip> <projekt> <take> [--sprache de|en] [--namen "…"]`. Das entrauscht die Stimme, kopiert das Bild (4K wird zu einer 1080er-Arbeitskopie), transkribiert lokal und richtet die Wortzeiten aus.
 - Kommen Produkt- und Eigennamen vor, die Whisper verhört (Claude, Remotion, sein Name, sein Firmenname), gib sie mit `--namen "…"` mit oder transkribiere neu: `npm run transkribieren -- public/projekte/<projekt>/takes/<take>.mp4 <projekt> <take> --namen "…"`, danach `npm run ausrichten -- <projekt> <take>`.
 - Prüfe, dass das letzte Wort des Transkripts kurz vor dem Ende des Tons liegt: Whisper verschluckt manchmal den letzten Satz.
+- Danach die Farben: `npm run farbe -- <projekt>` (Regel 5b), vor dem Porträt-Modus.
 
 ### 2. Verstehen, bevor du schneidest
 
@@ -181,12 +182,30 @@ Erst wenn er "passt" sagt:
 1. **Füllwörter immer raus, Pausen ab 0,3 s raus, aber keine Mini-Jump-Cuts:** kein Stück unter ~0,8 s mitten im Satz (das macht `tools/schnitt.py` selbst). Ein Satz wird nie zerhackt, ein Wort nie angeschnitten. Die Wortzeiten von Whisper verdecken solche Pausen oft (das Wort "endet" erst nach der Stille): bei verdächtigen Stellen mit `spec` die Pegel ansehen und Wortende/-anfang im `t1.aligned.json` auf den Laut setzen ("Bei 0:30 ist eine kurze Pause nach 'E-Commerce' welche raus kann", Temu 2026-10-12: 0,3 s Stille in "E-Commerce … Tipps").
 2. **Kontext vor Tempo.** Bevor ein Nebensatz rausfliegt: Satz davor und danach ohne ihn lesen. Fragt ein Zuschauer dann "warum?" oder "was?", bleibt er drin. Der Aufruf (CTA) bleibt ein Stück.
 3. **Zahlen, Ergebnisse, Daten werden nie erfunden.** Auf dem Bildschirm stehen die Zahlen, die er sagt oder die gemessen sind.
-4. **Keine Musik**, wenn er seine eigene drunterlegt (Standard, siehe der Stil des Formats). Soundeffekte immer deutlich unter der Stimme.
+4. **Ganz leichte Hintergrundmusik in jedem Video** (seine Vorgabe 2026-10-17: "Bitte füge ebenfalls zu jedem Video
+   ganz leicht Hintergrund Musik ohne Musikrechte hinzu, aber so, dass man mich immer noch sehr gut versteht"), außer
+   er sagt für ein Video etwas anderes. Nur unsere eigene, selbst gebaute Musik aus `public/musik/` (`npm run musik`
+   baut sie mit `tools/musik.py`, rechtefrei): `ruhig` (HERO, FACE), `puls` (FACE, NEWS), `news` (NEWS/Reaction).
+   In der Komposition `<Musik C={C} datei="news.mp3" />` (src/lib/bausteine.tsx): Schleife, beim Sprechen leiser,
+   in Pausen etwas lauter, weich ein- und ausgeblendet; die Komposition hat die Props `voice`, `sfx` und `musik`, damit
+   `npm run checks -- … --stems <id>` sie getrennt messen kann. Ziel: beim Sprechen ~21 dB unter der Stimme (Grenze
+   18 dB, die Prüfung meldet es); gefällt sie ihm lauter oder leiser, `STIL.musik` ändern. Nie Musik aus TikTok,
+   CapCut, YouTube oder sonstigen Bibliotheken.
+   **Ein paar Soundeffekte bei Animationen und Einblendungen** (seine Vorgabe 2026-10-17: "Ein paar Sound Effekte bei
+   Animationen und Einblendungen verwenden"): `pop`, `klick`, `tick`, `whoosh` leise auf dem Frame, auf dem die
+   Animation oder Einblendung erscheint, nicht auf jedem Wort. Soundeffekte immer deutlich unter der Stimme.
    **Nur Effekte aus `public/sfx/`** (selbst erzeugt, frei nutzbar). Klänge aus der TikTok- oder CapCut-Bibliothek
    dürfen nur in der App selbst benutzt werden, nie in einem fertig gerenderten Video (das geht auch zu Instagram und
    YouTube): gefällt ihm so ein Klang, einen eigenen ähnlichen mit ffmpeg bauen, wie bei `klick`, `kamera`, `riser`,
    `glitzer` und `wusch-gross` (2026-10-10, nach seinem Referenzvideo).
 5. **Eine Bildeinstellung wie gedreht:** kein Gesichts-Tracking, kein Wackeln, kein Angleichen pro Schnitt, ein Grade für alles. Bewegung kommt nur aus bewussten Zooms und Layout-Wechseln.
+5b. **Farben professionell** (seine Vorgabe 2026-10-17: "Und optimiere ebenfalls meine Farben im Video, damit es
+   professionell wirkt"): nach dem Intake und **vor** `npm run portrait` läuft `npm run farbe -- <projekt>`. Es misst
+   pro Take Weißabgleich (Farbstich zu 60 % raus, ein Hauch Wärme für die Haut), Belichtung am Gesicht, Schwarz-/
+   Weißpunkt und Sättigung und korrigiert den Take (Sicherung `<take>.vor-farbe.mp4`). Das Vorher/Nachher-Bild
+   `out/farbe-<projekt>-<take>.jpg` ansehen: Haut natürlich, Wand nicht ausgefressen, nichts bunt. Erst testen mit
+   `--nur-ansehen`. Den Look (Kontrast, Sättigung) gibt danach das Design (`grade`). Korrektur und Look gelten für den
+   ganzen Take, kein Angleichen pro Schnitt.
 6. **Rohclips bleiben privat** (`public/projekte/` ist git-ignoriert). Hochgeladen wird nur, was er freigibt.
 7. **Messen statt fühlen:** Sync, Pacing, Lautheit und Ausreißer werden am Render gemessen, nicht am Code geglaubt.
 

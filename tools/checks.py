@@ -7,7 +7,7 @@
   2. Lautheit: -14 LUFS (±0,5) und True Peak höchstens -1 dB;
   3. Tonlöcher: digitale Stille (unter -90 dB) mitten im Video hört man als Sprung, auch wenn sie nur 10 ms dauert
      (ein Schnitt ohne Überblendung, ein Stück mit AAC-Vorlauf); nur die letzte halbe Sekunde darf still sein;
-  4. mit --stems: rendert Stimme und Effekte getrennt (nur Ton, schnell) und prüft, dass jeder Effekt in seinen
+  4. mit --stems: rendert Stimme, Effekte und Musik getrennt (nur Ton, schnell) und prüft, dass jeder Effekt in seinen
      lautesten 100 ms mindestens 6 dB unter dem Sprech-Pegel bleibt.
 Gibt am Ende OK oder die Liste der Probleme aus (Exit-Code 1).
 """
@@ -70,7 +70,9 @@ def load(path):
 
 if o.stems:
     tmp = tempfile.mkdtemp()
-    for name, props in [("stimme", '{"sfx":false}'), ("effekte", '{"voice":false}')]:
+    stems = [("stimme", '{"sfx":false,"musik":false}'), ("effekte", '{"voice":false,"musik":false}'),
+             ("musik", '{"voice":false,"sfx":false}')]
+    for name, props in stems:
         subprocess.run(["node", os.path.join(ROOT, "node_modules", "@remotion", "cli", "remotion-cli.js"), "render", o.stems, os.path.join(tmp, f"{name}.wav"), "--codec=wav",
                         f"--props={props}", "--log=error"], check=True)
     v, s = load(os.path.join(tmp, "stimme.wav")), load(os.path.join(tmp, "effekte.wav"))
@@ -86,6 +88,18 @@ if o.stems:
     for dv, t in loud:
         if dv > -6:
             problems.append(f"Effekt bei {t:.1f} s nur {-dv:.1f} dB unter der Stimme (Ziel ≥ 6 dB): volume senken")
+    # Hintergrundmusik (seine Vorgabe 2026-10-17: "so, dass man mich immer noch sehr gut versteht"): während er
+    # spricht mindestens 18 dB unter der Stimme
+    m = load(os.path.join(tmp, "musik.wav"))
+    nm = min(n, len(m) // win)
+    mdb = np.array([20 * np.log10(np.sqrt(np.mean(m[i * win:(i + 1) * win] ** 2)) + 1e-9) for i in range(nm)])
+    sprechen = [i for i in range(nm) if vdb[i] > speech - 10]
+    if sprechen and np.median(mdb[sprechen]) > -70:
+        abst = speech - np.median(mdb[sprechen])
+        knapp = speech - np.percentile(mdb[sprechen], 95)
+        print(f"Musik beim Sprechen {abst:.1f} dB unter der Stimme (lauteste 5 %: {knapp:.1f} dB)")
+        if abst < 18 or knapp < 14:
+            problems.append(f"Musik nur {abst:.1f} dB unter der Stimme (Ziel ≥ 18 dB): STIL.musik senken")
 
 print("OK" if not problems else "\n".join("PROBLEM: " + p for p in problems))
 raise SystemExit(1 if problems else 0)

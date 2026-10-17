@@ -8,7 +8,8 @@
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
-import { Captions, clamp, HookTitle, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
+import { Captions, clamp, HookTitle, Musik, Sfx, SplitPerson, Takes } from "../../lib/bausteine";
+import { EditorialUntertitel } from "../../lib/editorial";
 import { BOX, Pop, Szene, Tag, tagBreite } from "../../lib/broll";
 import { DesignRahmen, type DesignName, Toenung, useDesign } from "../../lib/design";
 import { Raster } from "../../lib/raster";
@@ -37,7 +38,7 @@ const TITEL = 75;
  * Kamera-Auslöser beim ersten Bild. */
 export type Quelle = { bild: { scale: number; hoch: number; x?: number }; frames: [number, number][]; pille: string; pilleY?: number };
 
-type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; design?: DesignName };
+type Props = { voice?: boolean; sfx?: boolean; musik?: boolean; raster?: boolean; untertitel?: boolean; design?: DesignName };
 
 export const serienVideo = (
   C: Cut,
@@ -48,7 +49,17 @@ export const serienVideo = (
   /** eigener Bildausschnitt (z. B. enger, damit ein Stuhl aus dem Bild fällt); Standard wie die Serie */
   bild: { scale: number; hoch: number; x?: number } = OBEN,
   /** Lage der Einblendungen (Verschiebung der Szenen in px) und der Untertitel; Standard wie die Serie */
-  layout: { einblendungen?: number; untertitel?: number; design?: DesignName; whoosh?: boolean; quelle?: Quelle } = {},
+  layout: {
+    einblendungen?: number;
+    untertitel?: number;
+    design?: DesignName;
+    whoosh?: boolean;
+    quelle?: Quelle;
+    /** Hintergrundmusik aus public/musik/ (seine Vorgabe 2026-10-17), z. B. "news.mp3" */
+    musik?: string;
+    /** Untertitel im neuen Stil (EditorialUntertitel) statt der alten, auf Höhe `untertitel` (unter dem Kopf) */
+    editorial?: { betont: string[]; farbig?: string[] };
+  } = {},
 ) => {
   const q = layout.quelle;
   const inQuelle = (fr: number) => !!q && q.frames.some(([a, b]) => fr >= a && fr < b);
@@ -69,7 +80,7 @@ export const serienVideo = (
       1,
     );
 
-  const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, untertitel = true }) => {
+  const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, musik = true, raster = false, untertitel = true }) => {
     const D = useDesign();
     const fr = useCurrentFrame();
     const lage = q && inQuelle(fr) ? q.bild : bild === OBEN && fr < ende ? HOOK_LAGE : bild;
@@ -136,7 +147,11 @@ export const serienVideo = (
             </Pop>
           ))}
 
-        {untertitel && <Captions C={C} fr={fr} top={layout.untertitel ?? UT.top} size={UT.size} />}
+        {untertitel && !layout.editorial && <Captions C={C} fr={fr} top={layout.untertitel ?? UT.top} size={UT.size} />}
+        {untertitel && layout.editorial && (
+          <EditorialUntertitel C={C} fr={fr} betont={layout.editorial.betont} farbig={layout.editorial.farbig} y={layout.untertitel ?? 1460} />
+        )}
+        {musik && layout.musik && <Musik C={C} datei={layout.musik} />}
 
         {sfx && (
           <>

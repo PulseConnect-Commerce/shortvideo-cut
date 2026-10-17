@@ -1,0 +1,3 @@
+Die Musikstücke in diesem Ordner (ruhig.mp3, puls.mp3, news.mp3) sind selbst erzeugt: reine Klangsynthese mit
+tools/musik.py (numpy), ohne fremde Samples, Loops oder Vorlagen. Sie sind frei nutzbar, auch kommerziell, ohne
+Musikrechte Dritter. Neu bauen: npm run musik

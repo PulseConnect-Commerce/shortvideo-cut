@@ -31,7 +31,9 @@
     "studio": "remotion studio",
     "still": "remotion still",
     "kompositionen": "remotion compositions",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "musik": "node tools/py.mjs musik.py",
+    "farbe": "node tools/py.mjs farbe.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.527",

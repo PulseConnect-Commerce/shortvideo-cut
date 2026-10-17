@@ -98,6 +98,34 @@ export const Sfx: React.FC<{ file: string; at: number; volume?: number }> = ({ f
   </Sequence>
 );
 
+/** Hintergrundmusik aus public/musik/ (rechtefrei, selbst gebaut), in Schleife, unter der Stimme: leiser, solange er
+ * spricht (Lücken unter 0,4 s zählen als Sprechen, damit sie nicht pumpt), etwas lauter in Pausen, weich ein- und
+ * ausgeblendet. <Musik C={C} datei="puls.mp3" /> */
+export const Musik: React.FC<{ C: Cut; datei: string; sprache?: number; pause?: number }> = ({
+  C,
+  datei,
+  sprache = STIL.musik.sprache,
+  pause = STIL.musik.pause,
+}) => {
+  const n = C.DURATION;
+  const spricht = new Float32Array(n);
+  for (const w of C.WORDS) for (let f = Math.max(0, Math.floor(w.a) - 4); f < Math.min(n, Math.ceil(w.b) + 6); f++) spricht[f] = 1;
+  for (let f = 0, last = -1; f < n; f++) {
+    if (!spricht[f]) continue;
+    if (last >= 0 && f - last <= 12) for (let g = last; g < f; g++) spricht[g] = 1;
+    last = f;
+  }
+  const roh = Array.from(spricht, (s) => (s ? sprache : pause));
+  const glatt = roh.map((_, f) => {
+    let sum = 0;
+    let k = 0;
+    for (let g = Math.max(0, f - 8); g <= Math.min(n - 1, f + 2); g++, k++) sum += roh[g];
+    return sum / k;
+  });
+  const vol = glatt.map((v, f) => v * Math.min(1, f / 20, (n - 1 - f) / 30));
+  return <Audio src={staticFile(`musik/${datei}`)} loop volume={(f: number) => vol[Math.min(n - 1, Math.max(0, f))] ?? 0} />;
+};
+
 /** Text auf dem Video: Geist, dünne Kontur unter der Füllung, weicher Schatten */
 export const onVideo = {
   fontFamily: STIL.font,

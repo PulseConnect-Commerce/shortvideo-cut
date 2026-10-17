@@ -13,7 +13,8 @@ description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~6
 > b-Rolls und Animationen, welche über den neuen skill „Hyperframes" erstellt werden können." 
 > - **Vorlage:** `src/projekte/easyjet/Video.tsx` (veröffentlicht 16.10., beste Resonanz): `serienVideo` aus
 >   `src/projekte/_serie/Serie.tsx`, Design nacht-gruen, Hook-Titel, Szenen-Titel mit Chips auf der Brust, die Quelle
->   als Greenscreen-Hintergrund hinter ihm (`layout.quelle`, `npm run portrait -- … --hintergrund`), keine Whooshes.
+>   als Greenscreen-Hintergrund hinter ihm (`layout.quelle`, `npm run portrait -- … --hintergrund`); Musik und
+>   Soundeffekte siehe unten (`layout.musik`).
 > - **Wenige Schnitte, kaum Zooms:** nur ein ruhiges durchgehendes Zoom-in (wie im easyJet-Video, 3 % über das ganze
 >   Video), **kein** Wechsel weit/eng bei jedem Schnitt (kein `autoPunch`), keine Punch-ins. Geschnitten wird nur,
 >   wo etwas raus muss (easyJet: 6 Stücke; REWE mit 8 Stücken und Zoom-Wechseln war ihm zu viel).
@@ -24,6 +25,12 @@ description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~6
 >   den HyperFrames-Skills (`hyperframes`, `hyperframes-animation`) als transparentes Overlay und in die
 >   Remotion-Komposition gelegt. Nur Inhalte, die er sagt oder die Quelle belegt; keine fremden Logos oder
 >   Markenfotos ohne Rechte; keine HeyGen-Dienste mit seinen Rohclips.
+> - **Dazu seit dem zweiten Hinweis am 2026-10-17** ("Die b-rolls weiterhin mit Hyperframes erstellen und Titel und
+>   Untertitel wie besprochen. Ein paar Sound Effekte bei Animationen und Einblendungen verwenden."): Hook im alten
+>   Titel-Stil (nacht-gruen), Untertitel im neuen Stil unter dem Kopf, ganz leichte eigene Hintergrundmusik
+>   (`<Musik>`, ~21 dB unter der Stimme), Farben mit `npm run farbe` korrigiert, ein paar leise Soundeffekte auf
+>   Animationen und Einblendungen (Regeln 4 und 5b im Skill faber-cut). Das ersetzt "keine Musik" und "keine
+>   Whooshes" im Editorial-Block darunter.
 
 > **Look ab 2026-10-16: Editorial (geht allem Folgenden vor).** Gilt für NEWS/Reaction, FACE und HERO, **nicht** für
 > die Serie "E-Commerce einfach erklärt". Entstanden in zwei Schritten: erst der Test "schlichte Untertitel und keine
