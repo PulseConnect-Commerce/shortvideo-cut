@@ -9,6 +9,8 @@ Cover: "REWE in 45 Minuten?"
 Varianten gegeneinander aus"):** Fassung B `REWE-x-Lieferando_v2.mp4` (Komposition `ReweV2`, freigegebener Look ab
 2026-10-17: Skizzen über dem Kopf, Untertitel darunter, leichte Musik) am 18.10.2026 um 09:00 Uhr auf denselben drei
 Kanälen. Texte, Titel und Cover bleiben gleich, damit sich nur der Look unterscheidet.
+Eingeplant am 17.10. in Metricool (TikTok 398687297, Instagram 398687345, YouTube 398744568); Video in Drive unter
+REWE-x-Lieferando/REWE-x-Lieferando_v2.mp4.
 
 ## TikTok
 
