@@ -31,7 +31,14 @@
   {
    "take": "t1",
    "ab": 104.15,
-   "text": "denn die Filiale wird praktisch zum lokalen Versandlager und Treve muss dafür nicht erst neue Lager bauen, sondern nutzt einfach dafür bestehende Standorte und die Reichwerte der Lieferando Plattform."
+   "text": "denn die Filiale wird praktisch zum lokalen Versandlager und Treve muss dafür nicht erst neue Lager bauen, sondern nutzt einfach dafür bestehende Standorte und die Reichwerte der",
+   "bis": 113.53
+  },
+  {
+   "take": "t1",
+   "ab": 113.78,
+   "text": "Lieferando Plattform.",
+   "von": 113.84
   },
   {
    "take": "t1",

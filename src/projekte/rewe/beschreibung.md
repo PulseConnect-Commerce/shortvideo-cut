@@ -1,7 +1,7 @@
 # REWE-x-Lieferando: Beschreibungen für TikTok, Instagram und YouTube
 
 Video: `REWE-x-Lieferando.mp4` (ca. 55 s, 1080x1920, Format NEWS/Reaction).
-Geplant: 17.10.2026, 18:00 Uhr (Europe/Berlin), TikTok, Instagram Reel, YouTube Short (erst nach Freigabe).
+Geplant: 17.10.2026, 18:00 Uhr (Europe/Berlin), TikTok, Instagram Reel, YouTube Short (freigegeben 17.10.).
 TikTok-Titel: "REWE in 45 Minuten?"
 Cover: "REWE in 45 Minuten?"
 
