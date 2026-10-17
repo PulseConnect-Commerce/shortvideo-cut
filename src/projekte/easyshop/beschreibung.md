@@ -1,7 +1,7 @@
 # easyShop-Haendlercheck: Beschreibungen für TikTok, Instagram und YouTube
 
 Video: `easyShop-Haendlercheck.mp4` (ca. 48 s, 1080x1920, Format NEWS/Reaction, Teil 2 zum easyJet/easyShop-Video, Loop).
-Geplant: 17.10.2026, 10:00 Uhr (Europe/Berlin), TikTok, Instagram Reel, YouTube Short (erst nach Freigabe).
+Geplant: 17.10.2026, 10:00 Uhr (Europe/Berlin), TikTok, Instagram Reel, YouTube Short (freigegeben 16.10.).
 TikTok-Titel: "easyShop: Lohnt sich das für Händler?"
 Cover: "easyShop: Lohnt sich das für Händler?"
 
