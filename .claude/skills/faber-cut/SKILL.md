@@ -145,6 +145,20 @@ Erst wenn er "passt" sagt:
 
 ## Regeln, die immer gelten
 
+00. **Das Cutter-Briefing im Kalender ist die Vorgabe** (seine Vorgabe 2026-10-17, nach REWE × Lieferando: "Bitte
+   orientiere dich beim nächsten Video mehr an die Vorgaben"). Steht zum Video ein Briefing im Kalendertermin, wird
+   es Punkt für Punkt umgesetzt: Schnittfolge und Zeiten, jede genannte Einblendung **wörtlich** (z. B. "45 MINUTEN?!",
+   "5 REWE-MÄRKTE"), Thumbnail-/Cover-Text wörtlich, Untertitel-Vorgaben (z. B. max. 2 Zeilen, große kontrastreiche
+   Schrift, Safe Area), gewünschte B-Rolls, Länge, Claim-Check, Quellen, Dateiabgabe (z. B. SRT, Lizenz-Liste).
+   Vorher eine Checkliste aus dem Briefing schreiben und mit Rohschnitt und Vorschau zeigen (✓ umgesetzt / ✗ nicht,
+   mit Grund). Was nicht geht (fehlendes Material, Rechte), **vor** dem Rohschnitt nennen und eine Lösung vorschlagen,
+   statt es still wegzulassen: gewünschte B-Roll (Einkauf, Picking, Lieferfahrer …) als eigene Animation mit
+   HyperFrames bauen, nie fremde Markenbilder. Widerspricht das Briefing einer Stilregel, gilt das Briefing; seine
+   ausdrücklichen jüngeren Rückmeldungen (2026-10-17: weniger Schnitte und Zooms) gehen vor; im Zweifel fragen.
+   REWE-Abweichungen, die nicht noch einmal passieren: Untertitel oben in Mini-Schrift statt groß unter dem Kopf,
+   keine B-Roll, Hook-Text "REWE liefert in 45 Minuten?!" statt des Thumbnail-Texts "REWE in 45 Minuten?",
+   Zoom-Wechsel bei jedem Schnitt.
+
 0. **Nichts doppelt** (seine Vorgabe 2026-10-11, nach drei doppelten Stellen im Claude-Video und einer im
    Weihnachtsvideo): nach jedem `npm run schnitt` läuft `npm run doppelt -- <projekt>`. Es meldet Lücken zwischen zwei
    behaltenen Wörtern, in denen trotzdem gesprochen wird: dort hat die Transkription einen Neuansatz verschluckt
