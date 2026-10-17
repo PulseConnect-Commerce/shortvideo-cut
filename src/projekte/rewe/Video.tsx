@@ -36,7 +36,7 @@ const FAKTEN = [
   { at: F("hamburg"), text: "Hamburg" },
   { at: F("fünf"), text: "5 REWE-Märkte" },
   { at: F("45"), text: "≈ 45 Minuten (angekündigt)" },
-  { at: F("5000"), text: "5.000–9.000 Artikel je Markt" },
+  { at: F("5000"), text: "5.000–9.000 Artikel" },
 ];
 const FAKTEN_ENDE = F("rewe-mitarbeiter") - 4;
 const ABLAUF = [
@@ -48,8 +48,8 @@ const FILIALE = F("filiale");
 const REICHWEITE = F("reichweite");
 const EINORDNUNG_ENDE = F("natürlich") - 4;
 const PROFIT = F("profitabel");
-const PROFIT_ENDE = F("online") - 4;
-const ONLINE = F("online");
+const ONLINE = F("online", PROFIT);
+const PROFIT_ENDE = ONLINE - 4;
 const ONLINE_ENDE = F("aber", ONLINE) - 4;
 
 const BETONT = ["konkurrent", "supermarkt", "meldung", "hamburg", "fünf", "45", "5000", "9000", "zustellung", "spannend", "versandlager", "reichweite", "profitabel", "stationär", "meinung", "stunde", "normalität", "ausnahme"];
@@ -111,10 +111,10 @@ const Inhalt: React.FC<Props> = ({ voice = true, raster = false, untertitel = tr
       ))}
 
       {/* Einordnung */}
-      <SchlichterText fr={fr} at={FILIALE} until={EINORDNUNG_ENDE} top={1120} size={62} style={ANTON}>
+      <SchlichterText fr={fr} at={FILIALE} until={EINORDNUNG_ENDE} top={1090} size={62} style={ANTON}>
         Filiale = lokales Versandlager
       </SchlichterText>
-      <SchlichterText fr={fr} at={REICHWEITE} until={EINORDNUNG_ENDE} top={1200} size={58} style={ANTON}>
+      <SchlichterText fr={fr} at={REICHWEITE} until={EINORDNUNG_ENDE} top={1250} size={58} style={ANTON}>
         Reichweite über Lieferando
       </SchlichterText>
 
