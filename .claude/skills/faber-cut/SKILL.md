@@ -234,9 +234,14 @@ So geht es:
    Wort, Einzelteile auf ihren Wörtern (z. B. die Märkte auf "fünf").
 2. Ein HyperFrames-Projekt `hyperframes/<projekt>-skizzen/` (`npx hyperframes init … --example=blank
    --skill=motion-graphics`), 1080x1920, Hintergrund transparent, alle Szenen als `.clip` mit `data-start` in
-   Video-Sekunden, eine pausierte GSAP-Timeline (Skills `hyperframes`, `hyperframes-core`, `motion-graphics`). Fläche:
-   auf der Brust (x 110-970, y 1010-1380) auf einer dunklen, halbdurchsichtigen Karte, damit es auf jedem Pullover
-   lesbar ist; nie auf dem Gesicht, nie über den Untertiteln. Schrift Anton (aus `public/fonts`, per `@font-face`).
+   Video-Sekunden, eine pausierte GSAP-Timeline (Skills `hyperframes`, `hyperframes-core`, `motion-graphics`).
+   **Fläche: über dem Kopf** (seine Vorgabe 2026-10-17: "B-Rolls sollten besser über dem Kopf angezeigt werden, damit
+   mehr Platz für den Untertitel ist"): Karte 860x370 auf 90 %, x 153-927, y 290-623, dunkel (rgba 11,12,14 / 0,86),
+   damit sie auch vor heller Wand trägt. Dafür steht er tiefer im Bild (Augen bei ~900-915, z. B. `scale 1.3`,
+   `hoch` 175 px kleiner als sonst) und die Untertitel liegen unter dem Kopf bei y ~1400. Auch Quellen-Screenshots
+   kommen über den Kopf (Breite ~560, oben ab y 300, Quellenzeile direkt darunter). Während der Hook gehört der Platz
+   oben dem Hook-Titel: dort keine Skizze. Nie auf dem Gesicht. Beschriftungen passen in die Karte (lange Labels
+   umbrechen lassen, nicht überstehen). Schrift Anton (aus `public/fonts`, per `@font-face`).
 3. `npx hyperframes check .` ohne Fehler, `npx hyperframes snapshot --at …` ansehen, dann
    `npx hyperframes render . --format webm -q high -o renders/skizzen.webm` (VP9 mit Alpha) und nach
    `public/broll/<projekt>/skizzen.webm` kopieren.

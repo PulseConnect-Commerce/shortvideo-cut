@@ -65,7 +65,9 @@ const ANTON: React.CSSProperties = { fontFamily: "Anton, sans-serif", fontWeight
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false; neu?: boolean };
 
 /** Sekunden im Video, an denen die Skizzen erscheinen (wie in hyperframes/rewe-skizzen/index.html) */
-const SKIZZEN = [1.45, 7.25, 10.45, 13.55, 17.45];
+const SKIZZEN = [7.25, 10.45, 13.55, 17.45];
+/** neu: Bild 175 px tiefer (Augen bei ~915), damit über dem Kopf Platz für B-Rolls ist (seine Vorgabe 2026-10-17) */
+const BILD_NEU = { ...BILD, hoch: 190 };
 const SKIZZEN_ENDE = 23;
 
 export const Video: React.FC<Props> = (p) => (
@@ -80,7 +82,12 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
       <AbsoluteFill style={{ transform: `scale(${neu ? 1 + 0.03 * (fr / C.DURATION) : punchAt(fr)})`, transformOrigin: "540px 740px" }}>
-        <Takes C={C} voice={voice} transform={`translate(${-BILD.x}px, ${-(BILD.hoch - (fr < ERSTER_SCHNITT ? HOOK_TIEFER : 0))}px) scale(${BILD.scale})`} transformOrigin="50% 0%" />
+        <Takes
+          C={C}
+          voice={voice}
+          transform={neu ? `translate(${-BILD_NEU.x}px, ${-BILD_NEU.hoch}px) scale(${BILD_NEU.scale})` : `translate(${-BILD.x}px, ${-(BILD.hoch - (fr < ERSTER_SCHNITT ? HOOK_TIEFER : 0))}px) scale(${BILD.scale})`}
+          transformOrigin="50% 0%"
+        />
       </AbsoluteFill>
 
       {/* Hook im alten Titel-Stil (Briefing: großes Keyword "45 MINUTEN?!") */}
@@ -95,9 +102,9 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
         <>
           <Img
             src={staticFile("broll/rewe/schlagzeile.png")}
-            style={{ position: "absolute", left: neu ? 220 : 170, top: neu ? 990 : 1030, width: neu ? 640 : 720, borderRadius: 18, boxShadow: "0 14px 34px rgb(0 0 0 / 0.4)", opacity: karte }}
+            style={{ position: "absolute", left: neu ? 260 : 170, top: neu ? 300 : 1030, width: neu ? 560 : 720, borderRadius: 18, boxShadow: "0 14px 34px rgb(0 0 0 / 0.4)", opacity: karte }}
           />
-          <SchlichterText fr={fr} at={SCHLAGZEILE} until={SCHLAGZEILE_ENDE} top={neu ? 1368 : 1462} size={neu ? 26 : 28} weight={500} style={{ opacity: 0.85 * karte }}>
+          <SchlichterText fr={fr} at={SCHLAGZEILE} until={SCHLAGZEILE_ENDE} top={neu ? 630 : 1462} size={neu ? 24 : 28} weight={500} style={{ opacity: 0.85 * karte }}>
             Quelle: neuhandeln.de, 15.10.2026
           </SchlichterText>
         </>
@@ -141,7 +148,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
       </SchlichterText>
 
       {untertitel && !neu && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} y={330} off={[[0, HOOK_ENDE + 4]]} />}
-      {untertitel && neu && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} y={1470} gross={104} klein={46} />}
+      {untertitel && neu && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} y={1400} />}
 
       {sfx && neu && (
         <>

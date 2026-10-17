@@ -26,8 +26,10 @@ description: Schnittstil HERO von PulseConnect für Erklär- und Expertenvideos 
 >   Whooshes" im Editorial-Block darunter.
 > - **Skizzen, Icons, Animationen** (seine Vorgabe 2026-10-17: "Ich finde es gut, wenn meine Aussagen und Beispiele
 >   mit kurzen Skizzen, Icons und Animationen visuell unterstützt werden"): jede Aussage und jedes Beispiel bekommt
->   eine kurze Zeichnung aus HyperFrames auf der Brust (Ablauf im Skill faber-cut, Vorlage
->   `hyperframes/rewe-skizzen/`), statt reiner Textzeilen.
+>   eine kurze Zeichnung aus HyperFrames (Ablauf im Skill faber-cut, Vorlage `hyperframes/rewe-skizzen/`), statt
+>   reiner Textzeilen. **B-Rolls und Skizzen über dem Kopf** ("B-Rolls sollten besser über dem Kopf angezeigt werden,
+>   damit mehr Platz für den Untertitel ist", 2026-10-17): er steht dafür etwas tiefer im Bild, die Untertitel liegen
+>   unter dem Kopf bei y ~1400.
 
 > **Look ab 2026-10-16: Editorial (geht allem Folgenden vor).** Gilt für NEWS/Reaction, FACE und HERO, **nicht** für
 > die Serie "E-Commerce einfach erklärt". Entstanden in zwei Schritten: erst der Test "schlichte Untertitel und keine

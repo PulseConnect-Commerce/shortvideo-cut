@@ -8,9 +8,11 @@
     <!--
       Transparente Skizzen-Overlays für das REWE-Video (faber-cut, src/projekte/rewe). Die Zeiten sind die Sekunden im
       geschnittenen Video (cut.json), damit jede Zeichnung auf ihrem Wort erscheint:
-        Onlineshop 1.55 / Supermarkt 2.80 · Hamburg 7.34 / fünf 8.88 · 45 11.78 · 5.000 15.05 / 9.000 15.83 ·
+        Hamburg 7.34 / fünf 8.88 · 45 11.78 · 5.000 15.05 / 9.000 15.83 ·
         REWE-Mitarbeiter 17.73 / Lieferando 20.04 / Zustellung 22.29
-      Zeichenfläche: die Brust, x 110-970, y 1010-1380 (über den Untertiteln, unter dem Gesicht).
+      Zeichenfläche: über dem Kopf, x 153-927, y 290-623 (Karte 860x370 auf 90 %); seine Vorgabe 2026-10-17: "B-Rolls
+      sollten besser über dem Kopf angezeigt werden, damit mehr Platz für den Untertitel ist". Die Hook (bis ~3,8 s)
+      gehört oben dem Hook-Titel, darum dort keine Skizze.
     -->
     <style>
       @font-face {
@@ -44,7 +46,7 @@
       .card {
         position: absolute;
         left: 110px;
-        top: 1010px;
+        top: 290px;
         width: 860px;
         height: 370px;
       }
@@ -52,7 +54,7 @@
         position: absolute;
         inset: 0;
         border-radius: 40px;
-        background: rgba(11, 12, 14, 0.68);
+        background: rgba(11, 12, 14, 0.86);
         border: 2px solid rgba(255, 255, 255, 0.1);
       }
       .art {
@@ -104,29 +106,6 @@
           </filter>
         </defs>
       </svg>
-
-      <!-- 0: Onlineshop gegen Supermarkt um die Ecke -->
-      <section id="sz0" class="scene clip" data-start="1.45" data-duration="2.5" data-track-index="0">
-        <div id="sz0-card" class="card">
-          <div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370">
-            <g filter="url(#rough)">
-              <path class="s d0a" pathLength="1" d="M110 70 H290 Q300 70 300 80 V200 H100 V80 Q100 70 110 70 Z" />
-              <path class="s d0a" pathLength="1" d="M70 200 H330 L312 228 H88 Z" />
-              <path class="s g thin d0a" pathLength="1" d="M150 110 H170 L185 160 H245 L258 125 H178" />
-              <circle class="s g thin d0a" pathLength="1" cx="192" cy="178" r="8" />
-              <circle class="s g thin d0a" pathLength="1" cx="236" cy="178" r="8" />
-              <path class="s d0b" pathLength="1" d="M560 120 H780 V230 H560 Z" />
-              <path class="s g d0b" pathLength="1" d="M545 120 L565 75 H775 L795 120 Q778 140 761 120 Q744 140 727 120 Q710 140 693 120 Q676 140 659 120 Q642 140 625 120 Q608 140 591 120 Q574 140 545 120" />
-              <path class="s thin d0b" pathLength="1" d="M600 230 V165 H650 V230" />
-              <path class="s thin d0b" pathLength="1" d="M690 160 H750 V200 H690 Z" />
-            </g>
-          </svg>
-          <div id="sz0-l1" class="lbl center" style="left: 50px; top: 268px; width: 300px; font-size: 54px">Onlineshop</div>
-          <div id="sz0-vs" class="lbl center green" style="left: 380px; top: 110px; width: 100px; font-size: 96px">vs</div>
-          <div id="sz0-l2" class="lbl center" style="left: 520px; top: 268px; width: 300px; font-size: 54px">Supermarkt</div>
-        </div>
-      </section>
 
       <!-- 1: Hamburg, 5 Märkte -->
       <section id="sz1" class="scene clip" data-start="7.25" data-duration="3.25" data-track-index="0">
@@ -216,7 +195,7 @@
           </svg>
           <div id="sz4-l1" class="lbl center" style="left: 40px; top: 250px; width: 220px; font-size: 42px">Bestellung</div>
           <div id="sz4-l2" class="lbl center" style="left: 320px; top: 250px; width: 220px; font-size: 42px">REWE packt</div>
-          <div id="sz4-l3" class="lbl center" style="left: 600px; top: 250px; width: 260px; font-size: 42px">Lieferando bringt</div>
+          <div id="sz4-l3" class="lbl center" style="left: 610px; top: 250px; width: 230px; font-size: 42px; white-space: normal">Lieferando bringt</div>
         </div>
       </section>
     </div>
@@ -226,19 +205,12 @@
       const draw = (sel, at, dur = 0.5) =>
         tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dur, ease: "power2.inOut", stagger: 0.06 }, at);
       const card = (id, start, end) => {
-        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.28, ease: "back.out(1.6)" }, start);
-        tl.to(`#${id}-card`, { opacity: 0, y: 12, duration: 0.25, ease: "power2.in" }, end - 0.25);
+        // auf 90 % über dem Kopf (oben ab y 290, unten bis ~623), Ankerpunkt oben Mitte
+        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.28, ease: "back.out(1.6)" }, start);
+        tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.25, ease: "power2.in" }, end - 0.25);
       };
       const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, at);
       const zahlDe = (n) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-      // 0: Onlineshop (1.55) gegen Supermarkt (2.80)
-      card("sz0", 1.45, 3.95);
-      draw(".d0a", 1.5, 0.5);
-      pop("#sz0-l1", 1.7);
-      tl.fromTo("#sz0-vs", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 2.35);
-      draw(".d0b", 2.72, 0.5);
-      pop("#sz0-l2", 2.85);
 
       // 1: Hamburg (7.34), fünf Märkte (8.88)
       card("sz1", 7.25, 10.5);
