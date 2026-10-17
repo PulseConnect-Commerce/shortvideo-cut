@@ -1,0 +1,125 @@
+{
+ "projekt": "rewe",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 23.25,
+   "text": "Der nächste Konkurrent für deinen Onlineshop könnte direkt der Supermarkt um die Ecke sein."
+  },
+  {
+   "take": "t1",
+   "ab": 36.45,
+   "text": "Schaut euch mal diese Meldung an. REWE und Lieferando liefern nämlich jetzt in Hamburg Lebensmittel direkt aus fünf Supermärkten aus. Laut Ankündigung in rund 45 Minuten. Kunden können jetzt je nach Markt aus 5000 bis 9000 Produkten auswählen. Und die REWE-Mitarbeiter"
+  },
+  {
+   "take": "t1",
+   "ab": 51.24,
+   "text": "nehmen die Bestellung zusammen und Lieferando übernimmt dann eben dabei die komplette Stellung."
+  },
+  {
+   "take": "t1",
+   "ab": 78.6,
+   "text": "Und genau das finde ich aus E-Commerce Sicht besonders spannend,"
+  },
+  {
+   "take": "t1",
+   "ab": 104.15,
+   "text": "denn die Filiale wird praktisch zum lokalen Versandlager und Treve muss dafür nicht erst neue Lager bauen, sondern nutzt einfach dafür bestehende Standorte und die Reichwerte der Lieferando Plattform."
+  },
+  {
+   "take": "t1",
+   "ab": 135.2,
+   "text": "Natürlich heißt schnelle Lieferungen natürlich noch lange nicht, dass es auch profitabel ist, aber für Händler zeigt das Ganze schon. Online und stationär wachsen immer stärker zusammen"
+  },
+  {
+   "take": "t1",
+   "ab": 160.33,
+   "ganz": true,
+   "text": "Aber mich würde mal eure Meinung dazu interessieren. Wird wohl die Lieferung innerhalb von einer Stunde irgendwann zur Normalität oder ist das jetzt doch eher eine Ausnahme und erstmal ein erster Test in Hamburg?"
+  }
+ ],
+ "ende": {
+  "bis": 170.3
+ },
+ "korrekturen": [
+  [
+   "t1",
+   80.07,
+   "E-Commerce",
+   "E-Commerce-Sicht"
+  ],
+  [
+   "t1",
+   47.59,
+   "5000",
+   "5.000"
+  ],
+  [
+   "t1",
+   48.37,
+   "9000",
+   "9.000"
+  ],
+  [
+   "t1",
+   55.05,
+   "Stellung.",
+   "Zustellung."
+  ],
+  [
+   "t1",
+   80.51,
+   "Sicht",
+   ""
+  ],
+  [
+   "t1",
+   106.65,
+   "Treve",
+   "REWE"
+  ],
+  [
+   "t1",
+   112.37,
+   "Reichwerte",
+   "Reichweite"
+  ],
+  [
+   "t1",
+   113.89,
+   "Lieferando",
+   "Lieferando-Plattform."
+  ],
+  [
+   "t1",
+   114.35,
+   "Plattform.",
+   ""
+  ],
+  [
+   "t1",
+   140.77,
+   "schon.",
+   "schon:"
+  ],
+  [
+   "t1",
+   143.75,
+   "zusammen",
+   "zusammen."
+  ],
+  [
+   "t1",
+   108.15,
+   "erst",
+   "erst überall"
+  ]
+ ]
+}

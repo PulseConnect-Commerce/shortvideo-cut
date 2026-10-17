@@ -1,0 +1,1121 @@
+{
+ "projekt": "rewe",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "rewe/t1",
+   "from": 23.345,
+   "to": 27.295,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rewe/t1",
+   "from": 36.495,
+   "to": 51.065,
+   "nach": 0.01,
+   "vor": 0.09
+  },
+  {
+   "src": "rewe/t1",
+   "from": 51.275,
+   "to": 55.495,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "rewe/t1",
+   "from": 78.705,
+   "to": 81.635,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rewe/t1",
+   "from": 104.185,
+   "to": 114.885,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rewe/t1",
+   "from": 135.295,
+   "to": 144.265,
+   "nach": 0.01,
+   "vor": 0.09
+  },
+  {
+   "src": "rewe/t1",
+   "from": 160.285,
+   "to": 170.3,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Der",
+   "src": "rewe/t1",
+   "start": 23.34,
+   "end": 23.44
+  },
+  {
+   "text": "nächste",
+   "src": "rewe/t1",
+   "start": 23.54,
+   "end": 23.82
+  },
+  {
+   "text": "Konkurrent",
+   "src": "rewe/t1",
+   "start": 23.9,
+   "end": 24.34
+  },
+  {
+   "text": "für",
+   "src": "rewe/t1",
+   "start": 24.4,
+   "end": 24.5
+  },
+  {
+   "text": "deinen",
+   "src": "rewe/t1",
+   "start": 24.56,
+   "end": 24.84
+  },
+  {
+   "text": "Onlineshop",
+   "src": "rewe/t1",
+   "start": 24.9,
+   "end": 25.3
+  },
+  {
+   "text": "könnte",
+   "src": "rewe/t1",
+   "start": 25.38,
+   "end": 25.64
+  },
+  {
+   "text": "direkt",
+   "src": "rewe/t1",
+   "start": 25.72,
+   "end": 26.0
+  },
+  {
+   "text": "der",
+   "src": "rewe/t1",
+   "start": 26.04,
+   "end": 26.1
+  },
+  {
+   "text": "Supermarkt",
+   "src": "rewe/t1",
+   "start": 26.14,
+   "end": 26.56
+  },
+  {
+   "text": "um",
+   "src": "rewe/t1",
+   "start": 26.62,
+   "end": 26.68
+  },
+  {
+   "text": "die",
+   "src": "rewe/t1",
+   "start": 26.72,
+   "end": 26.78
+  },
+  {
+   "text": "Ecke",
+   "src": "rewe/t1",
+   "start": 26.82,
+   "end": 26.96
+  },
+  {
+   "text": "sein.",
+   "src": "rewe/t1",
+   "start": 27.02,
+   "end": 27.16
+  },
+  {
+   "text": "Schaut",
+   "src": "rewe/t1",
+   "start": 36.56,
+   "end": 36.76
+  },
+  {
+   "text": "euch",
+   "src": "rewe/t1",
+   "start": 36.78,
+   "end": 36.86
+  },
+  {
+   "text": "mal",
+   "src": "rewe/t1",
+   "start": 36.88,
+   "end": 36.98
+  },
+  {
+   "text": "diese",
+   "src": "rewe/t1",
+   "start": 37.04,
+   "end": 37.22
+  },
+  {
+   "text": "Meldung",
+   "src": "rewe/t1",
+   "start": 37.3,
+   "end": 37.54
+  },
+  {
+   "text": "an.",
+   "src": "rewe/t1",
+   "start": 37.62,
+   "end": 37.7
+  },
+  {
+   "text": "REWE",
+   "src": "rewe/t1",
+   "start": 38.1,
+   "end": 38.34
+  },
+  {
+   "text": "und",
+   "src": "rewe/t1",
+   "start": 38.4,
+   "end": 38.46
+  },
+  {
+   "text": "Lieferando",
+   "src": "rewe/t1",
+   "start": 38.5,
+   "end": 38.92
+  },
+  {
+   "text": "liefern",
+   "src": "rewe/t1",
+   "start": 39.0,
+   "end": 39.28
+  },
+  {
+   "text": "nämlich",
+   "src": "rewe/t1",
+   "start": 39.34,
+   "end": 39.5
+  },
+  {
+   "text": "jetzt",
+   "src": "rewe/t1",
+   "start": 39.54,
+   "end": 39.72
+  },
+  {
+   "text": "in",
+   "src": "rewe/t1",
+   "start": 39.76,
+   "end": 39.82
+  },
+  {
+   "text": "Hamburg",
+   "src": "rewe/t1",
+   "start": 39.88,
+   "end": 40.16
+  },
+  {
+   "text": "Lebensmittel",
+   "src": "rewe/t1",
+   "start": 40.24,
+   "end": 40.74
+  },
+  {
+   "text": "direkt",
+   "src": "rewe/t1",
+   "start": 40.84,
+   "end": 41.18
+  },
+  {
+   "text": "aus",
+   "src": "rewe/t1",
+   "start": 41.26,
+   "end": 41.34
+  },
+  {
+   "text": "fünf",
+   "src": "rewe/t1",
+   "start": 41.42,
+   "end": 41.58
+  },
+  {
+   "text": "Supermärkten",
+   "src": "rewe/t1",
+   "start": 41.64,
+   "end": 42.18
+  },
+  {
+   "text": "aus.",
+   "src": "rewe/t1",
+   "start": 42.24,
+   "end": 42.38
+  },
+  {
+   "text": "Laut",
+   "src": "rewe/t1",
+   "start": 43.06,
+   "end": 43.2
+  },
+  {
+   "text": "Ankündigung",
+   "src": "rewe/t1",
+   "start": 43.32,
+   "end": 43.84
+  },
+  {
+   "text": "in",
+   "src": "rewe/t1",
+   "start": 43.92,
+   "end": 43.98
+  },
+  {
+   "text": "rund",
+   "src": "rewe/t1",
+   "start": 44.04,
+   "end": 44.2
+  },
+  {
+   "text": "45",
+   "src": "rewe/t1",
+   "start": 44.32,
+   "end": 44.9
+  },
+  {
+   "text": "Minuten.",
+   "src": "rewe/t1",
+   "start": 44.98,
+   "end": 45.3
+  },
+  {
+   "text": "Kunden",
+   "src": "rewe/t1",
+   "start": 46.15,
+   "end": 46.37
+  },
+  {
+   "text": "können",
+   "src": "rewe/t1",
+   "start": 46.43,
+   "end": 46.61
+  },
+  {
+   "text": "jetzt",
+   "src": "rewe/t1",
+   "start": 46.65,
+   "end": 46.83
+  },
+  {
+   "text": "je",
+   "src": "rewe/t1",
+   "start": 46.85,
+   "end": 46.91
+  },
+  {
+   "text": "nach",
+   "src": "rewe/t1",
+   "start": 46.99,
+   "end": 47.09
+  },
+  {
+   "text": "Markt",
+   "src": "rewe/t1",
+   "start": 47.15,
+   "end": 47.37
+  },
+  {
+   "text": "aus",
+   "src": "rewe/t1",
+   "start": 47.43,
+   "end": 47.51
+  },
+  {
+   "text": "5.000",
+   "src": "rewe/t1",
+   "start": 47.59,
+   "end": 48.13
+  },
+  {
+   "text": "bis",
+   "src": "rewe/t1",
+   "start": 48.17,
+   "end": 48.27
+  },
+  {
+   "text": "9.000",
+   "src": "rewe/t1",
+   "start": 48.37,
+   "end": 48.89
+  },
+  {
+   "text": "Produkten",
+   "src": "rewe/t1",
+   "start": 48.93,
+   "end": 49.29
+  },
+  {
+   "text": "auswählen.",
+   "src": "rewe/t1",
+   "start": 49.33,
+   "end": 49.67
+  },
+  {
+   "text": "Und",
+   "src": "rewe/t1",
+   "start": 50.03,
+   "end": 50.11
+  },
+  {
+   "text": "die",
+   "src": "rewe/t1",
+   "start": 50.15,
+   "end": 50.21
+  },
+  {
+   "text": "REWE-Mitarbeiter",
+   "src": "rewe/t1",
+   "start": 50.27,
+   "end": 50.95
+  },
+  {
+   "text": "nehmen",
+   "src": "rewe/t1",
+   "start": 51.31,
+   "end": 51.49
+  },
+  {
+   "text": "die",
+   "src": "rewe/t1",
+   "start": 51.51,
+   "end": 51.59
+  },
+  {
+   "text": "Bestellung",
+   "src": "rewe/t1",
+   "start": 51.63,
+   "end": 51.99
+  },
+  {
+   "text": "zusammen",
+   "src": "rewe/t1",
+   "start": 52.07,
+   "end": 52.37
+  },
+  {
+   "text": "und",
+   "src": "rewe/t1",
+   "start": 52.69,
+   "end": 52.75
+  },
+  {
+   "text": "Lieferando",
+   "src": "rewe/t1",
+   "start": 52.79,
+   "end": 53.25
+  },
+  {
+   "text": "übernimmt",
+   "src": "rewe/t1",
+   "start": 53.37,
+   "end": 53.71
+  },
+  {
+   "text": "dann",
+   "src": "rewe/t1",
+   "start": 53.73,
+   "end": 53.83
+  },
+  {
+   "text": "eben",
+   "src": "rewe/t1",
+   "start": 53.87,
+   "end": 53.99
+  },
+  {
+   "text": "dabei",
+   "src": "rewe/t1",
+   "start": 54.01,
+   "end": 54.19
+  },
+  {
+   "text": "die",
+   "src": "rewe/t1",
+   "start": 54.27,
+   "end": 54.35
+  },
+  {
+   "text": "komplette",
+   "src": "rewe/t1",
+   "start": 54.41,
+   "end": 54.81
+  },
+  {
+   "text": "Zustellung.",
+   "src": "rewe/t1",
+   "start": 55.05,
+   "end": 55.35
+  },
+  {
+   "text": "Und",
+   "src": "rewe/t1",
+   "start": 78.75,
+   "end": 78.83
+  },
+  {
+   "text": "genau",
+   "src": "rewe/t1",
+   "start": 78.87,
+   "end": 79.11
+  },
+  {
+   "text": "das",
+   "src": "rewe/t1",
+   "start": 79.17,
+   "end": 79.33
+  },
+  {
+   "text": "finde",
+   "src": "rewe/t1",
+   "start": 79.39,
+   "end": 79.55
+  },
+  {
+   "text": "ich",
+   "src": "rewe/t1",
+   "start": 79.59,
+   "end": 79.65
+  },
+  {
+   "text": "aus",
+   "src": "rewe/t1",
+   "start": 79.89,
+   "end": 79.97
+  },
+  {
+   "text": "E-Commerce-Sicht",
+   "src": "rewe/t1",
+   "start": 80.07,
+   "end": 80.47
+  },
+  {
+   "text": "besonders",
+   "src": "rewe/t1",
+   "start": 80.73,
+   "end": 81.15
+  },
+  {
+   "text": "spannend,",
+   "src": "rewe/t1",
+   "start": 81.21,
+   "end": 81.49
+  },
+  {
+   "text": "denn",
+   "src": "rewe/t1",
+   "start": 104.25,
+   "end": 104.35
+  },
+  {
+   "text": "die",
+   "src": "rewe/t1",
+   "start": 104.37,
+   "end": 104.43
+  },
+  {
+   "text": "Filiale",
+   "src": "rewe/t1",
+   "start": 104.45,
+   "end": 104.77
+  },
+  {
+   "text": "wird",
+   "src": "rewe/t1",
+   "start": 104.81,
+   "end": 104.91
+  },
+  {
+   "text": "praktisch",
+   "src": "rewe/t1",
+   "start": 105.05,
+   "end": 105.35
+  },
+  {
+   "text": "zum",
+   "src": "rewe/t1",
+   "start": 105.39,
+   "end": 105.47
+  },
+  {
+   "text": "lokalen",
+   "src": "rewe/t1",
+   "start": 105.53,
+   "end": 105.89
+  },
+  {
+   "text": "Versandlager",
+   "src": "rewe/t1",
+   "start": 105.93,
+   "end": 106.49
+  },
+  {
+   "text": "und",
+   "src": "rewe/t1",
+   "start": 106.55,
+   "end": 106.61
+  },
+  {
+   "text": "REWE",
+   "src": "rewe/t1",
+   "start": 106.65,
+   "end": 106.89
+  },
+  {
+   "text": "muss",
+   "src": "rewe/t1",
+   "start": 106.93,
+   "end": 107.05
+  },
+  {
+   "text": "dafür",
+   "src": "rewe/t1",
+   "start": 107.11,
+   "end": 107.31
+  },
+  {
+   "text": "nicht",
+   "src": "rewe/t1",
+   "start": 107.89,
+   "end": 108.05
+  },
+  {
+   "text": "erst überall",
+   "src": "rewe/t1",
+   "start": 108.15,
+   "end": 108.33
+  },
+  {
+   "text": "neue",
+   "src": "rewe/t1",
+   "start": 108.73,
+   "end": 108.91
+  },
+  {
+   "text": "Lager",
+   "src": "rewe/t1",
+   "start": 108.99,
+   "end": 109.25
+  },
+  {
+   "text": "bauen,",
+   "src": "rewe/t1",
+   "start": 109.31,
+   "end": 109.55
+  },
+  {
+   "text": "sondern",
+   "src": "rewe/t1",
+   "start": 109.61,
+   "end": 109.85
+  },
+  {
+   "text": "nutzt",
+   "src": "rewe/t1",
+   "start": 109.91,
+   "end": 110.07
+  },
+  {
+   "text": "einfach",
+   "src": "rewe/t1",
+   "start": 110.11,
+   "end": 110.29
+  },
+  {
+   "text": "dafür",
+   "src": "rewe/t1",
+   "start": 110.33,
+   "end": 110.53
+  },
+  {
+   "text": "bestehende",
+   "src": "rewe/t1",
+   "start": 110.59,
+   "end": 111.09
+  },
+  {
+   "text": "Standorte",
+   "src": "rewe/t1",
+   "start": 111.49,
+   "end": 111.99
+  },
+  {
+   "text": "und",
+   "src": "rewe/t1",
+   "start": 112.15,
+   "end": 112.21
+  },
+  {
+   "text": "die",
+   "src": "rewe/t1",
+   "start": 112.25,
+   "end": 112.33
+  },
+  {
+   "text": "Reichweite",
+   "src": "rewe/t1",
+   "start": 112.37,
+   "end": 112.85
+  },
+  {
+   "text": "der",
+   "src": "rewe/t1",
+   "start": 113.27,
+   "end": 113.39
+  },
+  {
+   "text": "Lieferando-Plattform.",
+   "src": "rewe/t1",
+   "start": 113.89,
+   "end": 114.31
+  },
+  {
+   "text": "Natürlich",
+   "src": "rewe/t1",
+   "start": 135.31,
+   "end": 135.65
+  },
+  {
+   "text": "heißt",
+   "src": "rewe/t1",
+   "start": 135.69,
+   "end": 135.83
+  },
+  {
+   "text": "schnelle",
+   "src": "rewe/t1",
+   "start": 135.87,
+   "end": 136.11
+  },
+  {
+   "text": "Lieferungen",
+   "src": "rewe/t1",
+   "start": 136.19,
+   "end": 136.59
+  },
+  {
+   "text": "natürlich",
+   "src": "rewe/t1",
+   "start": 136.61,
+   "end": 136.95
+  },
+  {
+   "text": "noch",
+   "src": "rewe/t1",
+   "start": 137.01,
+   "end": 137.11
+  },
+  {
+   "text": "lange",
+   "src": "rewe/t1",
+   "start": 137.21,
+   "end": 137.45
+  },
+  {
+   "text": "nicht,",
+   "src": "rewe/t1",
+   "start": 137.53,
+   "end": 137.73
+  },
+  {
+   "text": "dass",
+   "src": "rewe/t1",
+   "start": 137.89,
+   "end": 138.03
+  },
+  {
+   "text": "es",
+   "src": "rewe/t1",
+   "start": 138.07,
+   "end": 138.13
+  },
+  {
+   "text": "auch",
+   "src": "rewe/t1",
+   "start": 138.19,
+   "end": 138.29
+  },
+  {
+   "text": "profitabel",
+   "src": "rewe/t1",
+   "start": 138.33,
+   "end": 138.91
+  },
+  {
+   "text": "ist,",
+   "src": "rewe/t1",
+   "start": 138.97,
+   "end": 139.07
+  },
+  {
+   "text": "aber",
+   "src": "rewe/t1",
+   "start": 139.11,
+   "end": 139.25
+  },
+  {
+   "text": "für",
+   "src": "rewe/t1",
+   "start": 139.73,
+   "end": 139.81
+  },
+  {
+   "text": "Händler",
+   "src": "rewe/t1",
+   "start": 139.83,
+   "end": 140.05
+  },
+  {
+   "text": "zeigt",
+   "src": "rewe/t1",
+   "start": 140.11,
+   "end": 140.29
+  },
+  {
+   "text": "das",
+   "src": "rewe/t1",
+   "start": 140.35,
+   "end": 140.43
+  },
+  {
+   "text": "Ganze",
+   "src": "rewe/t1",
+   "start": 140.49,
+   "end": 140.71
+  },
+  {
+   "text": "schon:",
+   "src": "rewe/t1",
+   "start": 140.77,
+   "end": 140.99
+  },
+  {
+   "text": "Online",
+   "src": "rewe/t1",
+   "start": 141.65,
+   "end": 141.93
+  },
+  {
+   "text": "und",
+   "src": "rewe/t1",
+   "start": 141.97,
+   "end": 142.05
+  },
+  {
+   "text": "stationär",
+   "src": "rewe/t1",
+   "start": 142.11,
+   "end": 142.61
+  },
+  {
+   "text": "wachsen",
+   "src": "rewe/t1",
+   "start": 142.69,
+   "end": 142.97
+  },
+  {
+   "text": "immer",
+   "src": "rewe/t1",
+   "start": 143.11,
+   "end": 143.29
+  },
+  {
+   "text": "stärker",
+   "src": "rewe/t1",
+   "start": 143.37,
+   "end": 143.69
+  },
+  {
+   "text": "zusammen.",
+   "src": "rewe/t1",
+   "start": 143.75,
+   "end": 144.11
+  },
+  {
+   "text": "Aber",
+   "src": "rewe/t1",
+   "start": 160.43,
+   "end": 160.55
+  },
+  {
+   "text": "mich",
+   "src": "rewe/t1",
+   "start": 160.61,
+   "end": 160.73
+  },
+  {
+   "text": "würde",
+   "src": "rewe/t1",
+   "start": 160.77,
+   "end": 160.91
+  },
+  {
+   "text": "mal",
+   "src": "rewe/t1",
+   "start": 160.93,
+   "end": 161.01
+  },
+  {
+   "text": "eure",
+   "src": "rewe/t1",
+   "start": 161.09,
+   "end": 161.25
+  },
+  {
+   "text": "Meinung",
+   "src": "rewe/t1",
+   "start": 161.31,
+   "end": 161.53
+  },
+  {
+   "text": "dazu",
+   "src": "rewe/t1",
+   "start": 161.57,
+   "end": 161.75
+  },
+  {
+   "text": "interessieren.",
+   "src": "rewe/t1",
+   "start": 161.81,
+   "end": 162.27
+  },
+  {
+   "text": "Wird",
+   "src": "rewe/t1",
+   "start": 162.31,
+   "end": 162.43
+  },
+  {
+   "text": "wohl",
+   "src": "rewe/t1",
+   "start": 162.47,
+   "end": 162.59
+  },
+  {
+   "text": "die",
+   "src": "rewe/t1",
+   "start": 162.63,
+   "end": 162.71
+  },
+  {
+   "text": "Lieferung",
+   "src": "rewe/t1",
+   "start": 162.75,
+   "end": 163.11
+  },
+  {
+   "text": "innerhalb",
+   "src": "rewe/t1",
+   "start": 163.45,
+   "end": 163.73
+  },
+  {
+   "text": "von",
+   "src": "rewe/t1",
+   "start": 163.77,
+   "end": 163.87
+  },
+  {
+   "text": "einer",
+   "src": "rewe/t1",
+   "start": 163.97,
+   "end": 164.15
+  },
+  {
+   "text": "Stunde",
+   "src": "rewe/t1",
+   "start": 164.19,
+   "end": 164.49
+  },
+  {
+   "text": "irgendwann",
+   "src": "rewe/t1",
+   "start": 164.63,
+   "end": 164.93
+  },
+  {
+   "text": "zur",
+   "src": "rewe/t1",
+   "start": 165.01,
+   "end": 165.13
+  },
+  {
+   "text": "Normalität",
+   "src": "rewe/t1",
+   "start": 165.17,
+   "end": 165.75
+  },
+  {
+   "text": "oder",
+   "src": "rewe/t1",
+   "start": 166.33,
+   "end": 166.49
+  },
+  {
+   "text": "ist",
+   "src": "rewe/t1",
+   "start": 166.55,
+   "end": 166.63
+  },
+  {
+   "text": "das",
+   "src": "rewe/t1",
+   "start": 166.65,
+   "end": 166.75
+  },
+  {
+   "text": "jetzt",
+   "src": "rewe/t1",
+   "start": 166.79,
+   "end": 166.93
+  },
+  {
+   "text": "doch",
+   "src": "rewe/t1",
+   "start": 166.97,
+   "end": 167.07
+  },
+  {
+   "text": "eher",
+   "src": "rewe/t1",
+   "start": 167.17,
+   "end": 167.31
+  },
+  {
+   "text": "eine",
+   "src": "rewe/t1",
+   "start": 167.43,
+   "end": 167.55
+  },
+  {
+   "text": "Ausnahme",
+   "src": "rewe/t1",
+   "start": 167.63,
+   "end": 168.03
+  },
+  {
+   "text": "und",
+   "src": "rewe/t1",
+   "start": 168.19,
+   "end": 168.29
+  },
+  {
+   "text": "erstmal",
+   "src": "rewe/t1",
+   "start": 168.39,
+   "end": 168.65
+  },
+  {
+   "text": "ein",
+   "src": "rewe/t1",
+   "start": 168.71,
+   "end": 168.81
+  },
+  {
+   "text": "erster",
+   "src": "rewe/t1",
+   "start": 169.03,
+   "end": 169.29
+  },
+  {
+   "text": "Test",
+   "src": "rewe/t1",
+   "start": 169.33,
+   "end": 169.53
+  },
+  {
+   "text": "in",
+   "src": "rewe/t1",
+   "start": 169.59,
+   "end": 169.65
+  },
+  {
+   "text": "Hamburg?",
+   "src": "rewe/t1",
+   "start": 169.69,
+   "end": 169.95
+  }
+ ],
+ "pages": [
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  4,
+  4,
+  3,
+  3,
+  2,
+  2,
+  1,
+  3,
+  1,
+  2,
+  3,
+  2,
+  2,
+  4,
+  2,
+  1,
+  2,
+  4,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  1,
+  3,
+  1,
+  1,
+  3,
+  2,
+  3,
+  3,
+  2,
+  1,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  3,
+  2,
+  2,
+  4,
+  2,
+  2,
+  4,
+  3
+ ]
+}
