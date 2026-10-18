@@ -1,6 +1,6 @@
 # Übergabekarte: N04 Shopify Sidekick + Drittanbieter-Apps
 
-Status: **freigegeben** (Prüfer, Runde 2, out/pruefung/Sidekick-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant (Planer, 18.10.2026 22:00 Europe/Berlin)**; Metricool-Post-IDs TikTok 399377035, Instagram 399377082, YouTube 399377150; Drive-Ordner 1vNLmNGbdunKHjLA8I8b5tqpqMu7Zm_H5 (Video 1uS-s-YyGu1K-I7dhYU7KvRAhLkeIWP_D, Doc 1h2pNEyTCooEzuQ7meQcXkgEn4I9N7kSBXhhJ73Z5HwE); Prüfer FREIGEGEBEN Runde 2 (out/pruefung/Sidekick-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): N04 Shopify Sidekick + Drittanbieter-Apps
 - **Format / Design:** HERO / Face-Up mit Screenshots (Briefing), Design nacht-mint (Hook), Skizzen weiß mit Grün, sanfte Farbe
