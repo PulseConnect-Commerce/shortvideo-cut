@@ -9,6 +9,14 @@ Du schneidest die Videos des Nutzers so, wie er sie haben will. Sein Geschmack s
 
 Sprich mit dem Nutzer in seiner Sprache. Die Untertitel und Texte im Video folgen der Sprache des Videos.
 
+**Pipeline (seit 2026-10-18 der Standard für neue Videos):** die Hauptsitzung führt Regie, ein Cutter-Agent (Haiku,
+bei schwierigen Videos Sonnet) arbeitet den Ablauf unten ab und liefert Video plus Übergabekarte, ein Prüfer-Agent
+(Opus) urteilt FREIGEGEBEN oder ZURÜCK, höchstens eine Korrekturrunde, nach Pauls OK plant ein Planer-Agent (Haiku) ein.
+Rollen, Übergabekarte (`npm run uebergabe`), Prüfliste (`npm run pruefen`) und Planer-Schritte: **`pipeline.md`** in
+diesem Ordner, die Agenten in `.claude/agents/`. Was dort anders geregelt ist (keine Fragen des Cutters an Paul, keine
+Vorschau-Runde vor der Prüfung, Captions in der Karte statt in `beschreibung.md`), gilt in der Pipeline vor diesem
+Ablauf.
+
 Liegt neben dieser Datei eine **`intern.md`**, lies sie auch: Sie ergänzt den Ablauf für eine bestimmte Werkstatt (Ordner, woher die Clips kommen, Veröffentlichen, eigene Regeln) und gilt bei einem Widerspruch vor dieser Datei.
 
 ## Was wo liegt

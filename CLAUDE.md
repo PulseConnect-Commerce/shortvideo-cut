@@ -9,6 +9,8 @@ Dieses Repo ist eine Schnitt-Werkstatt für Talking-Head-Videos (1080x1920, Inst
   (Erklär-/Expertenvideos, Skill **stil-hero**), FACE (**stil-face**), NEWS/Reaction (**stil-news**); Übersicht in
   `.claude/skills/faber-cut/stil.md`. Vor jedem Schnitt das Format klären; neue Geschmacksregeln aus seinem Feedback
   kommen in den Skill des Formats. Ein Format ohne festgelegten Stil beginnt mit dem Stilabgleich.
+- Neue Videos laufen über die **Pipeline** Cutter → Prüfer → Planer (`.claude/skills/faber-cut/pipeline.md`, Agenten
+  in `.claude/agents/`): die Hauptsitzung führt Regie und spricht mit dem Nutzer, eingeplant wird erst nach seinem OK.
 - Sprich mit dem Nutzer in seiner Sprache, einfach und Schritt für Schritt.
 - Alle Werkzeuge laufen über `npm run …` (Windows, macOS und Linux gleich). Python nie direkt aufrufen. Fehlen `.venv`
   oder `node_modules`: `npm run setup`, dann `npm run doktor`.
