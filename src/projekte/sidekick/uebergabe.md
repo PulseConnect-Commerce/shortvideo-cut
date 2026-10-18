@@ -1,6 +1,6 @@
 # Übergabekarte: N04 Shopify Sidekick + Drittanbieter-Apps
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **zurück, Runde 1** (Prüfer, out/pruefung/Sidekick-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): N04 Shopify Sidekick + Drittanbieter-Apps
 - **Format / Design:** HERO / Face-Up mit Screenshots (Briefing), Design nacht-mint (Hook), Skizzen weiß mit Grün, sanfte Farbe
