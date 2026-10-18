@@ -6,9 +6,12 @@ Video, damit es professionell wirkt."
 Misst an 12 Bildern des Takes:
   - Weißabgleich an den fast farblosen Flächen (Wand, Decke): Farbstich zu 60 % raus, dazu ein Hauch Wärme für die Haut,
     höchstens ±8 % je Kanal;
-  - Belichtung am Gesicht (YuNet, wie npm run raster): Haut auf eine helle, natürliche Helligkeit (Luma ~0,58),
-    Schwarz- und Weißpunkt aus den Perzentilen 0,5/99,5 (weiche Grenzen, nichts clippt);
-  - Sättigung: Vibrance nur, wenn das Bild blass ist (schützt Hauttöne).
+  - Belichtung am Gesicht (YuNet, wie npm run raster): Haut nur sanft Richtung Luma ~0,545 (höchstens ±7 %),
+    Schwarz- und Weißpunkt nur bei milchigem oder trübem Bild, und dann nur zur Hälfte (sonst mehr Kontrast);
+  - Sättigung: Vibrance nur, wenn das Bild blass ist (schützt Hauttöne), höchstens 0,12.
+Seine Vorgabe 2026-10-18 zum REWE-Video v2: "Ich finde die Farbe des neuen Videos zu kontrastreich und zu hell". Dort
+hatte die erste Fassung das Gesicht auf ~0,58 aufgehellt (Gamma 1,14) und die Lichter um 6 % gespreizt; seitdem bleibt
+die Korrektur nah an der Belichtung des Takes.
 Das ist die Korrektur; der Look (Kontrast, Sättigung) kommt danach vom Design (`grade` in design.tsx / stil.ts).
 
 Schreibt den korrigierten Take an seine Stelle (<take>.orig.mp4, falls es ihn gibt, sonst <take>.mp4), die Sicherung
@@ -86,17 +89,19 @@ def messen(path):
 
 
 def filterkette(m):
-    lo = min(0.06, max(0.0, m["schwarz"] - 0.01))
-    hi = max(0.94, min(1.0, m["weiss"] + 0.02))
-    kette = [f"colorchannelmixer=rr={m['gain'][0]:.4f}:gg={m['gain'][1]:.4f}:bb={m['gain'][2]:.4f}",
-             f"colorlevels=rimin={lo:.3f}:gimin={lo:.3f}:bimin={lo:.3f}:rimax={hi:.3f}:gimax={hi:.3f}:bimax={hi:.3f}"]
+    # Schwarz- und Weißpunkt nur, wenn das Bild milchig (Schwarz über 0,06) oder trüb (Weiß unter 0,8) ist, und dann nur halb
+    lo = (m["schwarz"] - 0.01) / 2 if m["schwarz"] > 0.06 else 0.0
+    hi = (1 + m["weiss"] + 0.02) / 2 if m["weiss"] < 0.8 else 1.0
+    kette = [f"colorchannelmixer=rr={m['gain'][0]:.4f}:gg={m['gain'][1]:.4f}:bb={m['gain'][2]:.4f}"]
+    if lo > 0 or hi < 1:
+        kette.append(f"colorlevels=rimin={lo:.3f}:gimin={lo:.3f}:bimin={lo:.3f}:rimax={hi:.3f}:gimax={hi:.3f}:bimax={hi:.3f}")
     if "haut_luma" in m:
         h = (m["haut_luma"] - lo) / (hi - lo)
-        gamma = float(np.clip(np.log(0.58) / np.log(max(0.05, min(0.95, h))), 0.85, 1.25))
+        gamma = float(np.clip(np.log(0.545) / np.log(max(0.05, min(0.95, h))), 0.93, 1.08))
         if abs(gamma - 1) > 0.02:
             kette.append(f"eq=gamma={1 / gamma:.3f}")
     if m["saettigung"] < 0.28:
-        kette.append(f"vibrance=intensity={min(0.18, (0.28 - m['saettigung']) * 1.5):.3f}")
+        kette.append(f"vibrance=intensity={min(0.12, (0.28 - m['saettigung']) * 1.0):.3f}")
     return ",".join(kette)
 
 
