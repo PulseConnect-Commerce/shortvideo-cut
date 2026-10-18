@@ -34,6 +34,13 @@ Skizzen mit HyperFrames), 6 (eigene Prüfung: Sync, Pacing, Standbilder, Raster)
 - `npm run pruefen -- <Komposition> <projekt>`. Jeden FEHLER beheben, den du beheben kannst; was bleibt, mit Grund in
   "Entscheidungen des Cutters".
 
+## Farbe
+
+Eine Leuchtfarbe im ganzen Video, die des Formats (stil.md): NEWS `#00F090`, FACE `#CCFF00`, HERO `#40E8E0`. Hook-Titel
+(`DesignRahmen`), Skizzen (HyperFrames: jede Akzentfarbe im index.html ersetzen, auch wenn die Vorlage aus einem anderen
+Format kommt) und betonte Untertitel tragen dieselbe Farbe. Seine Rüge 2026-10-18 zu N04: "Im Titel blau, bei den
+b-Rolls dann wieder grün?"
+
 ## Korrekturrunde
 
 Bekommst du die Mängelliste des Prüfers: behebe genau diese Punkte, nicht mehr. Danach `npm run final`, `npm run

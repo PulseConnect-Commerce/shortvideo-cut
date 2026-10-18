@@ -68,6 +68,9 @@ Bericht `out/pruefung/<Komposition>.md`), dazu Standbilder (`npm run still`) an 
    "garantiert", "ganz Deutschland").
 7. **Freigegebener Look** (die sieben Punkte oben im Stil-Skill): wenige Schnitte, kein Zoom-Wechsel; Untertitel unter
    dem Kopf (y ~1400); über dem Kopf Hook-Titel, Quelle und Skizzen, jede Skizze auf ihrem Wort (Standbild am Stichwort);
+   **eine Leuchtfarbe im ganzen Video** (Hook-Titel, Skizzen, betonte Untertitel in der Farbe des Formats aus stil.md:
+   NEWS nacht-gruen #00F090, FACE nacht #CCFF00, HERO nacht-mint #40E8E0; seine Rüge 2026-10-18 zu N04: "Weshalb wurden
+   denn die Farben durcheinander gemixt? Im Titel blau, bei den b-Rolls dann wieder grün?");
    keine leere Karte (die dunkle Karte erscheint erst mit ihrem ersten Inhalt; REWE v2 zeigte bei 31,4-32,0 s eine leere);
    nichts in den Zonen der Apps (TikTok rot, Instagram pink im Bogen); Farbe sanft (Helligkeit Gesicht im Bericht ~0,55-0,57); Musik leise
    (checks); Soundeffekte leise und sparsam.
