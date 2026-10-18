@@ -1,0 +1,102 @@
+{
+ "projekt": "googleads",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 21.2,
+   "text": "Google verändert gerade, wie dein Werbebudget verteilt wird. Und wenn du jetzt zum Beispiel einen eigenen Onlineshop hast, dann solltest du dir das unbedingt anschauen."
+  },
+  {
+   "take": "t1",
+   "ab": 32.5,
+   "text": "Hier ist mal die neue Meldung dazu. Seit dem 15. Oktober führt nämlich Google Ads neue Einstellungen ein."
+  },
+  {
+   "take": "t1",
+   "ab": 52.7,
+   "text": "du kannst jetzt nämlich bei bestimmten Kanälen festlegen welche Werbekanäle bevorzugt Budget bekommen soll und das betrifft jetzt eben unter anderem Google Shopping und die PMAX Kampagnen"
+  },
+  {
+   "take": "t1",
+   "ab": 83.8,
+   "text": "Klickt jetzt natürlich erstmal richtig gut, aber hier kommt jetzt doch mal ein kleiner Haken. Denn diese neun prozentualen Budgetgrenzen sind natürlich nicht immer verbindlich. Google kann sie natürlich an einem einzelnen Tag überschreiten. Und die Funktion wird eben erst nach und nach für alle freigeschaltet. Also ich würde deshalb nicht einfach nur blind neue Einstellungen jetzt aktivieren."
+  },
+  {
+   "take": "t1",
+   "ab": 103.3,
+   "text": "Aber schaut euch das natürlich vorher mal an, wo euer Geld tatsächlich aktuell ausgegeben wird und was dann eben tatsächlich Umsatz bringt."
+  },
+  {
+   "take": "t1",
+   "ab": 125.1,
+   "ganz": true,
+   "text": "Aber wie viel Kontrolle sollte jetzt Google über dein Werbebudget haben? Gibst du immer Google komplett freien Raum oder grenzt du das doch schon sehr stark ein? Mich wird mal deine Meinung dazu interessieren und Folgen nicht vergessen."
+  }
+ ],
+ "ende": {
+  "bis": 136.5
+ },
+ "korrekturen": [
+  [
+   "t1",
+   52.81,
+   "du",
+   "Du"
+  ],
+  [
+   "t1",
+   54.43,
+   "festlegen",
+   "festlegen,"
+  ],
+  [
+   "t1",
+   57.37,
+   "soll",
+   "sollen."
+  ],
+  [
+   "t1",
+   58.15,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   60.79,
+   "PMAX",
+   "P-Max"
+  ],
+  [
+   "t1",
+   61.17,
+   "Kampagnen",
+   "Kampagnen."
+  ],
+  [
+   "t1",
+   83.98,
+   "Klickt",
+   "Klingt"
+  ],
+  [
+   "t1",
+   88.9,
+   "neun",
+   "neuen"
+  ],
+  [
+   "t1",
+   133.35,
+   "wird",
+   "würde"
+  ]
+ ]
+}

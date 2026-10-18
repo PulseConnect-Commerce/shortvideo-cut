@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Google Ads Budgetsteuerung – Skizzen</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <!--
+      Transparente Skizzen-Overlays für das Video "Google Ads ändert Budgetsteuerung" (faber-cut, src/projekte/googleads).
+      Vorlage: hyperframes/rewe-skizzen. Die Zeiten sind die Sekunden im geschnittenen Video (cut.json):
+        Onlineshop 4.30 · [Quelle 6.6-12.0 in Remotion] · Kanälen 13.40 / Werbekanäle 14.68 / bevorzugt 15.32 /
+        Google Shopping 18.84 / P-Max 20.14 · Klingt 21.07 / gut 22.39 / aber 22.67 / Haken 24.69 ·
+        prozentualen 26.27 / Budgetgrenzen 26.91 / nicht 28.13 / verbindlich 28.57 · überschreiten 31.49 ·
+        Funktion 33.15 / nach und nach 34.21-34.62 / freigeschaltet 35.20 · nicht 37.06 / blind 37.68 / aktivieren 39.00 ·
+        schaut 40.16 / Geld 42.14 / ausgegeben 43.22 / Umsatz 45.62 · Kontrolle 46.81 / Google 47.69 / freien 50.83 / stark 53.67
+      Zeichenfläche: über dem Kopf, x 153-927, y 290-623 (Karte 860x370 auf 90 %). Die Hook (bis ~3,8 s) gehört oben
+      dem Hook-Titel, darum dort keine Skizze. Jede Karte erscheint erst mit ihrem ersten Inhalt.
+    -->
+    <style>
+      @font-face {
+        font-family: "Anton";
+        src: url("assets/fonts/Anton-Regular.woff2") format("woff2");
+        font-weight: 400;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: transparent;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Anton", sans-serif;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+      }
+      .card {
+        position: absolute;
+        left: 110px;
+        top: 290px;
+        width: 860px;
+        height: 370px;
+        opacity: 0;
+      }
+      .panel {
+        position: absolute;
+        inset: 0;
+        border-radius: 40px;
+        background: rgba(11, 12, 14, 0.86);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+      }
+      .art {
+        position: absolute;
+        inset: 0;
+        width: 860px;
+        height: 370px;
+        overflow: visible;
+      }
+      .s {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .g {
+        stroke: #00f090;
+      }
+      .r {
+        stroke: #ff5a5f;
+      }
+      .thin {
+        stroke-width: 5;
+      }
+      .lbl {
+        position: absolute;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        line-height: 1.05;
+        white-space: nowrap;
+      }
+      .center {
+        text-align: center;
+      }
+      .green {
+        color: #00f090;
+      }
+      .red {
+        color: #ff5a5f;
+      }
+      .grey {
+        color: #c9ced4;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="googleads-skizzen" data-start="0" data-duration="57.63" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position: absolute">
+        <defs>
+          <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" />
+            <feDisplacementMap in="SourceGraphic" scale="4" />
+          </filter>
+        </defs>
+      </svg>
+
+      <!-- 1: dein Onlineshop (4.2-6.55) -->
+      <section id="sz1" class="scene clip" data-start="4.2" data-duration="2.4" data-track-index="0">
+        <div id="sz1-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s d1a" pathLength="1" d="M85 160 H265 V290 H85 Z" />
+              <path class="s g d1a" pathLength="1" d="M65 160 L90 100 H260 L285 160 Q263 185 241 160 Q219 185 197 160 Q175 185 153 160 Q131 185 109 160 Q87 185 65 160" />
+              <path class="s thin d1a" pathLength="1" d="M130 290 V215 H190 V290 M208 200 H248 V245 H208 Z" />
+              <path class="s g d1b" pathLength="1" d="M365 270 Q470 295 560 268 Q650 242 780 272" />
+            </g>
+          </svg>
+          <div id="sz1-l1" class="lbl grey" style="left: 365px; top: 70px; font-size: 56px">Dein</div>
+          <div id="sz1-l2" class="lbl" style="left: 362px; top: 128px; font-size: 100px">Onlineshop</div>
+        </div>
+      </section>
+
+      <!-- 3: Kanal-Prioritäten (13.3-21.0) -->
+      <section id="sz3" class="scene clip" data-start="13.3" data-duration="7.75" data-track-index="0">
+        <div id="sz3-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <g id="r1" class="row" style="opacity: 0">
+                <path class="s thin" d="M400 170 H800" style="stroke: #7d838b" />
+                <path id="f1" class="s g" d="M400 170 H600" style="stroke-width: 12" />
+                <circle id="k1" class="s" cx="600" cy="170" r="17" style="fill: #0b0c0e" />
+              </g>
+              <g id="r2" class="row" style="opacity: 0">
+                <path class="s thin" d="M400 240 H800" style="stroke: #7d838b" />
+                <path id="f2" class="s g" d="M400 240 H600" style="stroke-width: 12" />
+                <circle id="k2" class="s" cx="600" cy="240" r="17" style="fill: #0b0c0e" />
+              </g>
+              <g id="r3" class="row" style="opacity: 0">
+                <path class="s thin" d="M400 310 H800" style="stroke: #7d838b" />
+                <path id="f3" class="s g" d="M400 310 H600" style="stroke-width: 12" />
+                <circle id="k3" class="s" cx="600" cy="310" r="17" style="fill: #0b0c0e" />
+              </g>
+              <rect id="hl2" class="s g thin" x="28" y="203" width="804" height="74" rx="22" style="opacity: 0" />
+              <rect id="hl3" class="s g thin" x="28" y="273" width="804" height="74" rx="22" style="opacity: 0" />
+            </g>
+          </svg>
+          <div id="sz3-l1" class="lbl green center" style="left: 0; width: 860px; top: 22px; font-size: 66px">Kanal-Prioritäten</div>
+          <div id="sz3-lo" class="lbl grey" style="left: 392px; top: 100px; font-size: 30px; opacity: 0">niedrig</div>
+          <div id="sz3-hi" class="lbl grey" style="left: 700px; width: 100px; text-align: right; top: 100px; font-size: 30px; opacity: 0">hoch</div>
+          <div id="t1" class="lbl row" style="left: 56px; top: 146px; font-size: 42px; opacity: 0">Search</div>
+          <div id="t2" class="lbl row" style="left: 56px; top: 216px; font-size: 42px; opacity: 0">Shopping</div>
+          <div id="t3" class="lbl row" style="left: 56px; top: 286px; font-size: 42px; opacity: 0">Performance Max</div>
+        </div>
+      </section>
+
+      <!-- 5: klingt gut, aber ein Haken (21.0-25.5) -->
+      <section id="sz5" class="scene clip" data-start="21.0" data-duration="4.55" data-track-index="0">
+        <div id="sz5-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <circle class="s d5a" pathLength="1" cx="215" cy="130" r="82" />
+              <path class="s g d5b" pathLength="1" style="stroke-width: 14" d="M170 130 L204 166 L266 92" />
+              <path class="s r d5c" pathLength="1" d="M645 50 L735 205 H555 Z" />
+              <path class="s r d5d" pathLength="1" style="stroke-width: 10" d="M645 100 V153 M645 178 V180" />
+            </g>
+          </svg>
+          <div id="sz5-l1" class="lbl center" style="left: 50px; top: 262px; width: 330px; font-size: 62px">Klingt gut</div>
+          <div id="sz5-ab" class="lbl center grey" style="left: 380px; top: 95px; width: 100px; font-size: 52px">aber</div>
+          <div id="sz5-l2" class="lbl center red" style="left: 470px; top: 262px; width: 350px; font-size: 62px">ein Haken</div>
+        </div>
+      </section>
+
+      <!-- 6: prozentuale Budgetgrenzen, nicht immer verbindlich (26.1-29.45) -->
+      <section id="sz6" class="scene clip" data-start="26.1" data-duration="3.35" data-track-index="0">
+        <div id="sz6-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s d6b" pathLength="1" d="M250 90 H800 V150 H250 Z" />
+              <path id="sz6-fill" class="s g" style="stroke-width: 40; opacity: 0" d="M262 120 H520" />
+              <path id="sz6-grenze" class="s g thin" style="stroke-dasharray: 12 10; opacity: 0" d="M520 62 V178" />
+            </g>
+          </svg>
+          <div id="sz6-pc" class="lbl green" style="left: 70px; top: 36px; font-size: 130px; opacity: 0">%</div>
+          <div id="sz6-l1" class="lbl center" style="left: 40px; width: 780px; top: 202px; font-size: 56px; opacity: 0">Prozentuale <span class="green">Budgetgrenzen</span></div>
+          <div id="sz6-l2" class="lbl center red" style="left: 40px; width: 780px; top: 278px; font-size: 60px; opacity: 0">nicht immer verbindlich</div>
+        </div>
+      </section>
+
+      <!-- 7: ACHTUNG, kein hartes Tageslimit (29.45-32.45) -->
+      <section id="sz7" class="scene clip" data-start="29.45" data-duration="3.05" data-track-index="0">
+        <div id="sz7-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s r d7a" pathLength="1" d="M85 18 L150 120 H20 Z" style="stroke-width: 6" />
+              <path class="s r d7a" pathLength="1" style="stroke-width: 7" d="M85 52 V82" />
+              <path class="s thin d7c" pathLength="1" d="M60 235 H800 V275 H60 Z" />
+              <path id="sz7-fill" class="s g" style="stroke-width: 26; opacity: 0" d="M72 255 H540" />
+              <path id="sz7-limit" class="s thin" style="stroke-dasharray: 10 8; opacity: 0" d="M540 208 V290" />
+              <path id="sz7-over" class="s r" style="stroke-width: 26; opacity: 0" d="M540 255 H730" />
+            </g>
+          </svg>
+          <div id="sz7-l1" class="lbl red" style="left: 175px; top: 16px; font-size: 92px">Achtung</div>
+          <div id="sz7-l2" class="lbl" style="left: 40px; top: 128px; font-size: 68px">kein hartes Tageslimit</div>
+          <div id="sz7-l3" class="lbl grey" style="left: 60px; top: 300px; font-size: 34px; opacity: 0">Anteil niedrig priorisierter Kanäle: „best effort“</div>
+        </div>
+      </section>
+
+      <!-- 8: schrittweiser Rollout (33.0-35.85) -->
+      <section id="sz8" class="scene clip" data-start="33.0" data-duration="2.85" data-track-index="0">
+        <div id="sz8-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s d8a" pathLength="1" d="M60 70 H240 V250 H60 Z M60 115 H240 M105 52 V86 M195 52 V86" />
+              <rect class="s thin acc" x="300" y="245" width="62" height="62" rx="12" />
+              <rect class="s thin acc" x="388" y="245" width="62" height="62" rx="12" />
+              <rect class="s thin acc" x="476" y="245" width="62" height="62" rx="12" />
+              <rect class="s thin acc" x="564" y="245" width="62" height="62" rx="12" />
+              <rect class="s thin acc" x="652" y="245" width="62" height="62" rx="12" />
+              <path id="sz8-haken" class="s g" pathLength="1" style="stroke-width: 11" d="M672 278 L685 291 L706 262" />
+            </g>
+          </svg>
+          <div id="sz8-dat" class="lbl center" style="left: 62px; width: 176px; top: 150px; font-size: 54px; opacity: 0">15.10.</div>
+          <div id="sz8-l1" class="lbl green" style="left: 290px; top: 28px; font-size: 100px">Rollout</div>
+          <div id="sz8-l2" class="lbl" style="left: 292px; top: 140px; font-size: 54px">Schritt für Schritt</div>
+          <div id="sz8-l3" class="lbl grey" style="left: 292px; top: 318px; font-size: 32px; opacity: 0">nicht sofort in allen Konten</div>
+        </div>
+      </section>
+
+      <!-- 9: nicht blind aktivieren (36.3-39.65) -->
+      <section id="sz9" class="scene clip" data-start="36.3" data-duration="3.4" data-track-index="0">
+        <div id="sz9-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <rect id="sz9-pill" class="s d9a" pathLength="1" x="60" y="110" width="220" height="90" rx="45" />
+              <circle id="sz9-knob" class="s" cx="105" cy="155" r="30" style="fill: #ffffff" />
+              <path id="sz9-x" class="s r" pathLength="1" style="stroke-width: 12" d="M30 75 L310 245 M310 75 L30 245" />
+            </g>
+          </svg>
+          <div id="sz9-l0" class="lbl center grey" style="left: 30px; width: 280px; top: 228px; font-size: 36px; opacity: 0">neue Einstellungen</div>
+          <div id="sz9-l1" class="lbl red" style="left: 360px; top: 0px; font-size: 110px; opacity: 0">Nicht</div>
+          <div id="sz9-l2" class="lbl" style="left: 360px; top: 118px; font-size: 110px; opacity: 0">blind</div>
+          <div id="sz9-l3" class="lbl green" style="left: 362px; top: 250px; font-size: 76px; opacity: 0">aktivieren</div>
+        </div>
+      </section>
+
+      <!-- 10: erst prüfen, wo das Geld hingeht und was Umsatz bringt (40.1-46.25) -->
+      <section id="sz10" class="scene clip" data-start="40.1" data-duration="6.15" data-track-index="0">
+        <div id="sz10-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <circle class="s d10a" pathLength="1" cx="88" cy="78" r="38" />
+              <path class="s d10a" pathLength="1" d="M116 106 L150 140" style="stroke-width: 11" />
+              <path class="s g thin d10b" pathLength="1" d="M60 190 H220 M60 215 H300 M60 240 H180" style="stroke-width: 14" />
+              <path class="s thin d10c" pathLength="1" d="M470 245 L540 205 L590 225 L690 170 L770 185" />
+              <path class="s g thin d10c" pathLength="1" d="M740 150 L775 185 L735 205" />
+            </g>
+          </svg>
+          <div id="sz10-l0" class="lbl green" style="left: 190px; top: 40px; font-size: 84px">Erst prüfen</div>
+          <div id="sz10-l1" class="lbl" style="left: 40px; top: 275px; width: 400px; font-size: 40px; white-space: normal; opacity: 0">Wo geht das Geld hin?</div>
+          <div id="sz10-l2" class="lbl green" style="left: 450px; top: 275px; width: 380px; font-size: 40px; opacity: 0">Was bringt Umsatz?</div>
+        </div>
+      </section>
+
+      <!-- 11: wie viel Kontrolle für Google? (46.7-54.25) -->
+      <section id="sz11" class="scene clip" data-start="46.7" data-duration="7.55" data-track-index="0">
+        <div id="sz11-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <g id="sz11-sl" style="opacity: 0">
+                <path class="s thin" d="M110 245 H750" style="stroke: #7d838b" />
+                <path id="sz11-fill" class="s g" d="M110 245 H430" style="stroke-width: 12" />
+                <circle id="sz11-knob" class="s" cx="430" cy="245" r="19" style="fill: #0b0c0e" />
+              </g>
+            </g>
+          </svg>
+          <div id="sz11-l1" class="lbl center" style="left: 0; width: 860px; top: 12px; font-size: 68px; opacity: 0">Wie viel Kontrolle</div>
+          <div id="sz11-l2" class="lbl center green" style="left: 0; width: 860px; top: 96px; font-size: 88px; opacity: 0">für Google?</div>
+          <div id="sz11-a" class="lbl grey" style="left: 40px; top: 290px; font-size: 38px; opacity: 0">komplett freier Raum</div>
+          <div id="sz11-b" class="lbl grey" style="left: 480px; width: 340px; text-align: right; top: 290px; font-size: 38px; opacity: 0">stark eingegrenzt</div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const draw = (sel, at, dur = 0.5) =>
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dur, ease: "power2.inOut", stagger: 0.06 }, at);
+      const card = (id, start, end) => {
+        // auf 90 % über dem Kopf (oben ab y 290, unten bis ~623), Ankerpunkt oben Mitte
+        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.28, ease: "back.out(1.6)" }, start);
+        tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.25, ease: "power2.in" }, end - 0.25);
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, at);
+      const show = (sel, at, dur = 0.25) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: dur }, at);
+
+      // 1: eigenen Onlineshop (4.00 / 4.30), unbedingt anschauen (5.82)
+      card("sz1", 4.2, 6.55);
+      draw(".d1a", 4.25, 0.55);
+      pop("#sz1-l1", 4.22);
+      pop("#sz1-l2", 4.3);
+      draw(".d1b", 5.8, 0.5);
+
+      // 3: Kanälen (13.40) festlegen, Werbekanäle (14.68), bevorzugt (15.32), Budget (15.96), Google Shopping (18.84), P-Max (20.14)
+      card("sz3", 13.3, 21.0);
+      pop("#sz3-l1", 13.34);
+      show("#sz3-lo", 14.2);
+      show("#sz3-hi", 14.2);
+      tl.fromTo("#r1, #t1", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, 14.62);
+      tl.fromTo("#r2, #t2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, 14.84);
+      tl.fromTo("#r3, #t3", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, 15.06);
+      tl.to("#k1", { attr: { cx: 470 }, duration: 0.5, ease: "power2.inOut" }, 15.3);
+      tl.to("#f1", { attr: { d: "M400 170 H470" }, duration: 0.5, ease: "power2.inOut" }, 15.3);
+      tl.to("#k2", { attr: { cx: 760 }, duration: 0.5, ease: "power2.inOut" }, 15.34);
+      tl.to("#f2", { attr: { d: "M400 240 H760" }, duration: 0.5, ease: "power2.inOut" }, 15.34);
+      tl.to("#k3", { attr: { cx: 690 }, duration: 0.5, ease: "power2.inOut" }, 15.38);
+      tl.to("#f3", { attr: { d: "M400 310 H690" }, duration: 0.5, ease: "power2.inOut" }, 15.38);
+      tl.to("#r1, #t1, #r2, #t2, #r3, #t3", { opacity: 0.4, duration: 0.25 }, 17.5);
+      tl.to("#r2, #t2", { opacity: 1, duration: 0.2 }, 18.78);
+      tl.fromTo("#hl2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 18.8);
+      tl.to("#r2, #t2", { opacity: 0.4, duration: 0.2 }, 20.05);
+      tl.to("#hl2", { opacity: 0, duration: 0.2 }, 20.05);
+      tl.to("#r3, #t3", { opacity: 1, duration: 0.2 }, 20.08);
+      tl.fromTo("#hl3", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 20.1);
+
+      // 5: Klingt (21.07) richtig gut (22.39), aber (22.67), kleiner Haken (24.69)
+      card("sz5", 21.0, 25.55);
+      pop("#sz5-l1", 21.05);
+      draw(".d5a", 21.9, 0.45);
+      draw(".d5b", 22.36, 0.3);
+      pop("#sz5-ab", 22.64);
+      draw(".d5c", 24.35, 0.4);
+      draw(".d5d", 24.68, 0.25);
+      pop("#sz5-l2", 24.67);
+
+      // 6: prozentualen (26.27), Budgetgrenzen (26.91), nicht (28.13) immer verbindlich (28.57)
+      card("sz6", 26.1, 29.45);
+      tl.fromTo("#sz6-pc", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 26.2);
+      draw(".d6b", 26.85, 0.4);
+      tl.fromTo("#sz6-fill", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 27.0);
+      tl.fromTo("#sz6-grenze", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 27.25);
+      pop("#sz6-l1", 26.9);
+      pop("#sz6-l2", 28.1);
+      tl.to("#sz6-grenze", { x: 18, duration: 0.1, yoyo: true, repeat: 5, ease: "power1.inOut" }, 28.55);
+
+      // 7: Google kann sie (29.57) einzelnen Tag (30.85) überschreiten (31.49)
+      card("sz7", 29.45, 32.5);
+      draw(".d7a", 29.5, 0.4);
+      pop("#sz7-l1", 29.55);
+      pop("#sz7-l2", 30.35);
+      draw(".d7c", 30.8, 0.3);
+      tl.fromTo("#sz7-fill", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 31.0);
+      tl.fromTo("#sz7-limit", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 31.2);
+      tl.fromTo("#sz7-over", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 31.45);
+      show("#sz7-l3", 31.7);
+
+      // 8: Funktion (33.15) erst (33.89) nach (34.21) und nach (34.62) alle (35.02) freigeschaltet (35.20)
+      card("sz8", 33.0, 35.85);
+      draw(".d8a", 33.05, 0.45);
+      show("#sz8-dat", 33.3, 0.2);
+      pop("#sz8-l1", 33.15);
+      pop("#sz8-l2", 33.55);
+      tl.fromTo(".acc", { opacity: 0.35 }, { opacity: 1, duration: 0.01, stagger: 0 }, 33.4);
+      tl.to(".acc:nth-of-type(1)", { stroke: "#00f090", fill: "rgba(0,240,144,0.35)", duration: 0.2 }, 33.89);
+      tl.to(".acc:nth-of-type(2)", { stroke: "#00f090", fill: "rgba(0,240,144,0.35)", duration: 0.2 }, 34.21);
+      tl.to(".acc:nth-of-type(3)", { stroke: "#00f090", fill: "rgba(0,240,144,0.35)", duration: 0.2 }, 34.62);
+      tl.to(".acc:nth-of-type(4)", { stroke: "#00f090", fill: "rgba(0,240,144,0.35)", duration: 0.2 }, 35.02);
+      tl.to(".acc:nth-of-type(5)", { stroke: "#00f090", fill: "rgba(0,240,144,0.35)", duration: 0.2 }, 35.2);
+      draw("#sz8-haken", 35.22, 0.25);
+      show("#sz8-l3", 34.2);
+
+      // 9: Also ich würde (36.42), nicht (37.06) blind (37.68) neue Einstellungen (38.28) aktivieren (39.00)
+      card("sz9", 36.3, 39.7);
+      draw(".d9a", 36.35, 0.4);
+      tl.fromTo("#sz9-knob", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 36.6);
+      pop("#sz9-l1", 37.03);
+      pop("#sz9-l2", 37.65);
+      show("#sz9-l0", 38.25);
+      pop("#sz9-l3", 38.97);
+      tl.to("#sz9-knob", { attr: { cx: 235 }, duration: 0.35, ease: "power2.inOut" }, 39.0);
+      tl.to("#sz9-pill", { stroke: "#00f090", duration: 0.2 }, 39.0);
+      draw("#sz9-x", 39.3, 0.25);
+
+      // 10: schaut (40.16) euch das vorher mal an, Geld (42.14) ausgegeben (43.22), Umsatz (45.62)
+      card("sz10", 40.1, 46.25);
+      draw(".d10a", 40.15, 0.45);
+      pop("#sz10-l0", 40.14);
+      pop("#sz10-l1", 41.6);
+      draw(".d10b", 42.1, 0.7);
+      pop("#sz10-l2", 44.5);
+      draw(".d10c", 45.55, 0.6);
+
+      // 11: Kontrolle (46.81) Google (47.69), Gibst du (49.57), freien Raum (50.83), grenzt (52.43) stark (53.67)
+      card("sz11", 46.7, 54.25);
+      pop("#sz11-l1", 46.74);
+      pop("#sz11-l2", 47.66);
+      show("#sz11-sl", 49.55, 0.3);
+      show("#sz11-a", 50.8, 0.2);
+      tl.to("#sz11-knob", { attr: { cx: 130 }, duration: 0.5, ease: "power2.inOut" }, 50.85);
+      tl.to("#sz11-fill", { attr: { d: "M110 245 H130" }, duration: 0.5, ease: "power2.inOut" }, 50.85);
+      show("#sz11-b", 53.0, 0.2);
+      tl.to("#sz11-knob", { attr: { cx: 730 }, duration: 0.9, ease: "power2.inOut" }, 52.7);
+      tl.to("#sz11-fill", { attr: { d: "M110 245 H730" }, duration: 0.9, ease: "power2.inOut" }, 52.7);
+
+      tl.seek(0);
+      window.__timelines["googleads-skizzen"] = tl;
+    </script>
+  </body>
+</html>

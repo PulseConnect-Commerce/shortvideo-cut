@@ -1,0 +1,1254 @@
+{
+ "projekt": "googleads",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "googleads/t1",
+   "from": 21.295,
+   "to": 27.915,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "googleads/t1",
+   "from": 32.585,
+   "to": 38.145,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "googleads/t1",
+   "from": 52.785,
+   "to": 61.685,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "googleads/t1",
+   "from": 83.945,
+   "to": 102.595,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "googleads/t1",
+   "from": 103.325,
+   "to": 109.875,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "googleads/t1",
+   "from": 125.115,
+   "to": 136.5,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Google",
+   "src": "googleads/t1",
+   "start": 21.32,
+   "end": 21.62
+  },
+  {
+   "text": "verändert",
+   "src": "googleads/t1",
+   "start": 21.7,
+   "end": 22.0
+  },
+  {
+   "text": "gerade,",
+   "src": "googleads/t1",
+   "start": 22.06,
+   "end": 22.32
+  },
+  {
+   "text": "wie",
+   "src": "googleads/t1",
+   "start": 22.4,
+   "end": 22.48
+  },
+  {
+   "text": "dein",
+   "src": "googleads/t1",
+   "start": 22.54,
+   "end": 22.76
+  },
+  {
+   "text": "Werbebudget",
+   "src": "googleads/t1",
+   "start": 22.82,
+   "end": 23.36
+  },
+  {
+   "text": "verteilt",
+   "src": "googleads/t1",
+   "start": 23.48,
+   "end": 23.84
+  },
+  {
+   "text": "wird.",
+   "src": "googleads/t1",
+   "start": 23.9,
+   "end": 24.04
+  },
+  {
+   "text": "Und",
+   "src": "googleads/t1",
+   "start": 24.28,
+   "end": 24.36
+  },
+  {
+   "text": "wenn",
+   "src": "googleads/t1",
+   "start": 24.4,
+   "end": 24.52
+  },
+  {
+   "text": "du",
+   "src": "googleads/t1",
+   "start": 24.54,
+   "end": 24.58
+  },
+  {
+   "text": "jetzt",
+   "src": "googleads/t1",
+   "start": 24.6,
+   "end": 24.7
+  },
+  {
+   "text": "zum",
+   "src": "googleads/t1",
+   "start": 24.72,
+   "end": 24.8
+  },
+  {
+   "text": "Beispiel",
+   "src": "googleads/t1",
+   "start": 24.82,
+   "end": 25.08
+  },
+  {
+   "text": "einen",
+   "src": "googleads/t1",
+   "start": 25.12,
+   "end": 25.22
+  },
+  {
+   "text": "eigenen",
+   "src": "googleads/t1",
+   "start": 25.3,
+   "end": 25.56
+  },
+  {
+   "text": "Onlineshop",
+   "src": "googleads/t1",
+   "start": 25.6,
+   "end": 25.98
+  },
+  {
+   "text": "hast,",
+   "src": "googleads/t1",
+   "start": 26.02,
+   "end": 26.2
+  },
+  {
+   "text": "dann",
+   "src": "googleads/t1",
+   "start": 26.22,
+   "end": 26.34
+  },
+  {
+   "text": "solltest",
+   "src": "googleads/t1",
+   "start": 26.38,
+   "end": 26.64
+  },
+  {
+   "text": "du",
+   "src": "googleads/t1",
+   "start": 26.66,
+   "end": 26.7
+  },
+  {
+   "text": "dir",
+   "src": "googleads/t1",
+   "start": 26.8,
+   "end": 26.88
+  },
+  {
+   "text": "das",
+   "src": "googleads/t1",
+   "start": 26.92,
+   "end": 27.02
+  },
+  {
+   "text": "unbedingt",
+   "src": "googleads/t1",
+   "start": 27.12,
+   "end": 27.46
+  },
+  {
+   "text": "anschauen.",
+   "src": "googleads/t1",
+   "start": 27.5,
+   "end": 27.82
+  },
+  {
+   "text": "Hier",
+   "src": "googleads/t1",
+   "start": 32.65,
+   "end": 32.77
+  },
+  {
+   "text": "ist",
+   "src": "googleads/t1",
+   "start": 32.81,
+   "end": 32.89
+  },
+  {
+   "text": "mal",
+   "src": "googleads/t1",
+   "start": 32.95,
+   "end": 33.07
+  },
+  {
+   "text": "die",
+   "src": "googleads/t1",
+   "start": 33.13,
+   "end": 33.19
+  },
+  {
+   "text": "neue",
+   "src": "googleads/t1",
+   "start": 33.31,
+   "end": 33.53
+  },
+  {
+   "text": "Meldung",
+   "src": "googleads/t1",
+   "start": 33.61,
+   "end": 33.87
+  },
+  {
+   "text": "dazu.",
+   "src": "googleads/t1",
+   "start": 33.93,
+   "end": 34.19
+  },
+  {
+   "text": "Seit",
+   "src": "googleads/t1",
+   "start": 34.71,
+   "end": 34.83
+  },
+  {
+   "text": "dem",
+   "src": "googleads/t1",
+   "start": 34.87,
+   "end": 34.95
+  },
+  {
+   "text": "15.",
+   "src": "googleads/t1",
+   "start": 35.01,
+   "end": 35.37
+  },
+  {
+   "text": "Oktober",
+   "src": "googleads/t1",
+   "start": 35.47,
+   "end": 35.83
+  },
+  {
+   "text": "führt",
+   "src": "googleads/t1",
+   "start": 35.91,
+   "end": 36.07
+  },
+  {
+   "text": "nämlich",
+   "src": "googleads/t1",
+   "start": 36.11,
+   "end": 36.27
+  },
+  {
+   "text": "Google",
+   "src": "googleads/t1",
+   "start": 36.33,
+   "end": 36.57
+  },
+  {
+   "text": "Ads",
+   "src": "googleads/t1",
+   "start": 36.63,
+   "end": 36.81
+  },
+  {
+   "text": "neue",
+   "src": "googleads/t1",
+   "start": 36.93,
+   "end": 37.13
+  },
+  {
+   "text": "Einstellungen",
+   "src": "googleads/t1",
+   "start": 37.25,
+   "end": 37.79
+  },
+  {
+   "text": "ein.",
+   "src": "googleads/t1",
+   "start": 37.87,
+   "end": 37.99
+  },
+  {
+   "text": "Du",
+   "src": "googleads/t1",
+   "start": 52.81,
+   "end": 52.87
+  },
+  {
+   "text": "kannst",
+   "src": "googleads/t1",
+   "start": 52.91,
+   "end": 53.07
+  },
+  {
+   "text": "jetzt",
+   "src": "googleads/t1",
+   "start": 53.09,
+   "end": 53.19
+  },
+  {
+   "text": "nämlich",
+   "src": "googleads/t1",
+   "start": 53.21,
+   "end": 53.39
+  },
+  {
+   "text": "bei",
+   "src": "googleads/t1",
+   "start": 53.43,
+   "end": 53.51
+  },
+  {
+   "text": "bestimmten",
+   "src": "googleads/t1",
+   "start": 53.57,
+   "end": 53.99
+  },
+  {
+   "text": "Kanälen",
+   "src": "googleads/t1",
+   "start": 54.05,
+   "end": 54.37
+  },
+  {
+   "text": "festlegen,",
+   "src": "googleads/t1",
+   "start": 54.43,
+   "end": 54.89
+  },
+  {
+   "text": "welche",
+   "src": "googleads/t1",
+   "start": 54.99,
+   "end": 55.25
+  },
+  {
+   "text": "Werbekanäle",
+   "src": "googleads/t1",
+   "start": 55.33,
+   "end": 55.89
+  },
+  {
+   "text": "bevorzugt",
+   "src": "googleads/t1",
+   "start": 55.97,
+   "end": 56.53
+  },
+  {
+   "text": "Budget",
+   "src": "googleads/t1",
+   "start": 56.61,
+   "end": 56.93
+  },
+  {
+   "text": "bekommen",
+   "src": "googleads/t1",
+   "start": 56.99,
+   "end": 57.31
+  },
+  {
+   "text": "sollen.",
+   "src": "googleads/t1",
+   "start": 57.37,
+   "end": 57.57
+  },
+  {
+   "text": "Und",
+   "src": "googleads/t1",
+   "start": 58.15,
+   "end": 58.21
+  },
+  {
+   "text": "das",
+   "src": "googleads/t1",
+   "start": 58.25,
+   "end": 58.33
+  },
+  {
+   "text": "betrifft",
+   "src": "googleads/t1",
+   "start": 58.37,
+   "end": 58.67
+  },
+  {
+   "text": "jetzt",
+   "src": "googleads/t1",
+   "start": 58.69,
+   "end": 58.83
+  },
+  {
+   "text": "eben",
+   "src": "googleads/t1",
+   "start": 58.85,
+   "end": 58.99
+  },
+  {
+   "text": "unter",
+   "src": "googleads/t1",
+   "start": 59.01,
+   "end": 59.15
+  },
+  {
+   "text": "anderem",
+   "src": "googleads/t1",
+   "start": 59.19,
+   "end": 59.43
+  },
+  {
+   "text": "Google",
+   "src": "googleads/t1",
+   "start": 59.49,
+   "end": 59.71
+  },
+  {
+   "text": "Shopping",
+   "src": "googleads/t1",
+   "start": 59.77,
+   "end": 60.11
+  },
+  {
+   "text": "und",
+   "src": "googleads/t1",
+   "start": 60.23,
+   "end": 60.33
+  },
+  {
+   "text": "die",
+   "src": "googleads/t1",
+   "start": 60.63,
+   "end": 60.73
+  },
+  {
+   "text": "P-Max",
+   "src": "googleads/t1",
+   "start": 60.79,
+   "end": 61.07
+  },
+  {
+   "text": "Kampagnen.",
+   "src": "googleads/t1",
+   "start": 61.17,
+   "end": 61.55
+  },
+  {
+   "text": "Klingt",
+   "src": "googleads/t1",
+   "start": 83.98,
+   "end": 84.2
+  },
+  {
+   "text": "jetzt",
+   "src": "googleads/t1",
+   "start": 84.22,
+   "end": 84.48
+  },
+  {
+   "text": "natürlich",
+   "src": "googleads/t1",
+   "start": 84.48,
+   "end": 84.62
+  },
+  {
+   "text": "erstmal",
+   "src": "googleads/t1",
+   "start": 84.66,
+   "end": 84.94
+  },
+  {
+   "text": "richtig",
+   "src": "googleads/t1",
+   "start": 85.0,
+   "end": 85.24
+  },
+  {
+   "text": "gut,",
+   "src": "googleads/t1",
+   "start": 85.3,
+   "end": 85.5
+  },
+  {
+   "text": "aber",
+   "src": "googleads/t1",
+   "start": 85.58,
+   "end": 85.76
+  },
+  {
+   "text": "hier",
+   "src": "googleads/t1",
+   "start": 86.02,
+   "end": 86.12
+  },
+  {
+   "text": "kommt",
+   "src": "googleads/t1",
+   "start": 86.16,
+   "end": 86.32
+  },
+  {
+   "text": "jetzt",
+   "src": "googleads/t1",
+   "start": 86.34,
+   "end": 86.48
+  },
+  {
+   "text": "doch",
+   "src": "googleads/t1",
+   "start": 86.52,
+   "end": 86.64
+  },
+  {
+   "text": "mal",
+   "src": "googleads/t1",
+   "start": 86.7,
+   "end": 86.82
+  },
+  {
+   "text": "ein",
+   "src": "googleads/t1",
+   "start": 87.0,
+   "end": 87.12
+  },
+  {
+   "text": "kleiner",
+   "src": "googleads/t1",
+   "start": 87.28,
+   "end": 87.56
+  },
+  {
+   "text": "Haken.",
+   "src": "googleads/t1",
+   "start": 87.6,
+   "end": 87.86
+  },
+  {
+   "text": "Denn",
+   "src": "googleads/t1",
+   "start": 88.52,
+   "end": 88.64
+  },
+  {
+   "text": "diese",
+   "src": "googleads/t1",
+   "start": 88.66,
+   "end": 88.8
+  },
+  {
+   "text": "neuen",
+   "src": "googleads/t1",
+   "start": 88.9,
+   "end": 89.14
+  },
+  {
+   "text": "prozentualen",
+   "src": "googleads/t1",
+   "start": 89.18,
+   "end": 89.78
+  },
+  {
+   "text": "Budgetgrenzen",
+   "src": "googleads/t1",
+   "start": 89.82,
+   "end": 90.48
+  },
+  {
+   "text": "sind",
+   "src": "googleads/t1",
+   "start": 90.54,
+   "end": 90.66
+  },
+  {
+   "text": "natürlich",
+   "src": "googleads/t1",
+   "start": 90.72,
+   "end": 91.0
+  },
+  {
+   "text": "nicht",
+   "src": "googleads/t1",
+   "start": 91.04,
+   "end": 91.16
+  },
+  {
+   "text": "immer",
+   "src": "googleads/t1",
+   "start": 91.22,
+   "end": 91.4
+  },
+  {
+   "text": "verbindlich.",
+   "src": "googleads/t1",
+   "start": 91.48,
+   "end": 92.0
+  },
+  {
+   "text": "Google",
+   "src": "googleads/t1",
+   "start": 92.48,
+   "end": 92.68
+  },
+  {
+   "text": "kann",
+   "src": "googleads/t1",
+   "start": 92.74,
+   "end": 92.88
+  },
+  {
+   "text": "sie",
+   "src": "googleads/t1",
+   "start": 92.92,
+   "end": 92.98
+  },
+  {
+   "text": "natürlich",
+   "src": "googleads/t1",
+   "start": 93.02,
+   "end": 93.3
+  },
+  {
+   "text": "an",
+   "src": "googleads/t1",
+   "start": 93.34,
+   "end": 93.4
+  },
+  {
+   "text": "einem",
+   "src": "googleads/t1",
+   "start": 93.48,
+   "end": 93.66
+  },
+  {
+   "text": "einzelnen",
+   "src": "googleads/t1",
+   "start": 93.76,
+   "end": 94.1
+  },
+  {
+   "text": "Tag",
+   "src": "googleads/t1",
+   "start": 94.16,
+   "end": 94.32
+  },
+  {
+   "text": "überschreiten.",
+   "src": "googleads/t1",
+   "start": 94.4,
+   "end": 94.92
+  },
+  {
+   "text": "Und",
+   "src": "googleads/t1",
+   "start": 95.42,
+   "end": 95.54
+  },
+  {
+   "text": "die",
+   "src": "googleads/t1",
+   "start": 95.94,
+   "end": 96.02
+  },
+  {
+   "text": "Funktion",
+   "src": "googleads/t1",
+   "start": 96.06,
+   "end": 96.4
+  },
+  {
+   "text": "wird",
+   "src": "googleads/t1",
+   "start": 96.46,
+   "end": 96.56
+  },
+  {
+   "text": "eben",
+   "src": "googleads/t1",
+   "start": 96.62,
+   "end": 96.76
+  },
+  {
+   "text": "erst",
+   "src": "googleads/t1",
+   "start": 96.8,
+   "end": 97.0
+  },
+  {
+   "text": "nach",
+   "src": "googleads/t1",
+   "start": 97.12,
+   "end": 97.3
+  },
+  {
+   "text": "und",
+   "src": "googleads/t1",
+   "start": 97.4,
+   "end": 97.48
+  },
+  {
+   "text": "nach",
+   "src": "googleads/t1",
+   "start": 97.53,
+   "end": 97.73
+  },
+  {
+   "text": "für",
+   "src": "googleads/t1",
+   "start": 97.79,
+   "end": 97.89
+  },
+  {
+   "text": "alle",
+   "src": "googleads/t1",
+   "start": 97.93,
+   "end": 98.05
+  },
+  {
+   "text": "freigeschaltet.",
+   "src": "googleads/t1",
+   "start": 98.11,
+   "end": 98.71
+  },
+  {
+   "text": "Also",
+   "src": "googleads/t1",
+   "start": 98.79,
+   "end": 98.93
+  },
+  {
+   "text": "ich",
+   "src": "googleads/t1",
+   "start": 99.33,
+   "end": 99.39
+  },
+  {
+   "text": "würde",
+   "src": "googleads/t1",
+   "start": 99.43,
+   "end": 99.57
+  },
+  {
+   "text": "deshalb",
+   "src": "googleads/t1",
+   "start": 99.65,
+   "end": 99.91
+  },
+  {
+   "text": "nicht",
+   "src": "googleads/t1",
+   "start": 99.97,
+   "end": 100.11
+  },
+  {
+   "text": "einfach",
+   "src": "googleads/t1",
+   "start": 100.17,
+   "end": 100.43
+  },
+  {
+   "text": "nur",
+   "src": "googleads/t1",
+   "start": 100.47,
+   "end": 100.55
+  },
+  {
+   "text": "blind",
+   "src": "googleads/t1",
+   "start": 100.59,
+   "end": 100.79
+  },
+  {
+   "text": "neue",
+   "src": "googleads/t1",
+   "start": 100.91,
+   "end": 101.09
+  },
+  {
+   "text": "Einstellungen",
+   "src": "googleads/t1",
+   "start": 101.19,
+   "end": 101.65
+  },
+  {
+   "text": "jetzt",
+   "src": "googleads/t1",
+   "start": 101.67,
+   "end": 101.87
+  },
+  {
+   "text": "aktivieren.",
+   "src": "googleads/t1",
+   "start": 101.91,
+   "end": 102.43
+  },
+  {
+   "text": "Aber",
+   "src": "googleads/t1",
+   "start": 103.43,
+   "end": 103.65
+  },
+  {
+   "text": "schaut",
+   "src": "googleads/t1",
+   "start": 103.79,
+   "end": 103.99
+  },
+  {
+   "text": "euch",
+   "src": "googleads/t1",
+   "start": 104.03,
+   "end": 104.11
+  },
+  {
+   "text": "das",
+   "src": "googleads/t1",
+   "start": 104.13,
+   "end": 104.25
+  },
+  {
+   "text": "natürlich",
+   "src": "googleads/t1",
+   "start": 104.29,
+   "end": 104.53
+  },
+  {
+   "text": "vorher",
+   "src": "googleads/t1",
+   "start": 104.59,
+   "end": 104.81
+  },
+  {
+   "text": "mal",
+   "src": "googleads/t1",
+   "start": 104.85,
+   "end": 104.97
+  },
+  {
+   "text": "an,",
+   "src": "googleads/t1",
+   "start": 105.05,
+   "end": 105.17
+  },
+  {
+   "text": "wo",
+   "src": "googleads/t1",
+   "start": 105.27,
+   "end": 105.33
+  },
+  {
+   "text": "euer",
+   "src": "googleads/t1",
+   "start": 105.47,
+   "end": 105.67
+  },
+  {
+   "text": "Geld",
+   "src": "googleads/t1",
+   "start": 105.77,
+   "end": 105.97
+  },
+  {
+   "text": "tatsächlich",
+   "src": "googleads/t1",
+   "start": 106.01,
+   "end": 106.43
+  },
+  {
+   "text": "aktuell",
+   "src": "googleads/t1",
+   "start": 106.53,
+   "end": 106.79
+  },
+  {
+   "text": "ausgegeben",
+   "src": "googleads/t1",
+   "start": 106.85,
+   "end": 107.35
+  },
+  {
+   "text": "wird",
+   "src": "googleads/t1",
+   "start": 107.43,
+   "end": 107.59
+  },
+  {
+   "text": "und",
+   "src": "googleads/t1",
+   "start": 108.05,
+   "end": 108.13
+  },
+  {
+   "text": "was",
+   "src": "googleads/t1",
+   "start": 108.17,
+   "end": 108.31
+  },
+  {
+   "text": "dann",
+   "src": "googleads/t1",
+   "start": 108.37,
+   "end": 108.51
+  },
+  {
+   "text": "eben",
+   "src": "googleads/t1",
+   "start": 108.53,
+   "end": 108.65
+  },
+  {
+   "text": "tatsächlich",
+   "src": "googleads/t1",
+   "start": 108.69,
+   "end": 109.13
+  },
+  {
+   "text": "Umsatz",
+   "src": "googleads/t1",
+   "start": 109.25,
+   "end": 109.55
+  },
+  {
+   "text": "bringt.",
+   "src": "googleads/t1",
+   "start": 109.61,
+   "end": 109.83
+  },
+  {
+   "text": "Aber",
+   "src": "googleads/t1",
+   "start": 125.25,
+   "end": 125.37
+  },
+  {
+   "text": "wie",
+   "src": "googleads/t1",
+   "start": 125.43,
+   "end": 125.51
+  },
+  {
+   "text": "viel",
+   "src": "googleads/t1",
+   "start": 125.55,
+   "end": 125.65
+  },
+  {
+   "text": "Kontrolle",
+   "src": "googleads/t1",
+   "start": 125.69,
+   "end": 126.11
+  },
+  {
+   "text": "sollte",
+   "src": "googleads/t1",
+   "start": 126.19,
+   "end": 126.39
+  },
+  {
+   "text": "jetzt",
+   "src": "googleads/t1",
+   "start": 126.45,
+   "end": 126.55
+  },
+  {
+   "text": "Google",
+   "src": "googleads/t1",
+   "start": 126.57,
+   "end": 126.81
+  },
+  {
+   "text": "über",
+   "src": "googleads/t1",
+   "start": 126.85,
+   "end": 126.97
+  },
+  {
+   "text": "dein",
+   "src": "googleads/t1",
+   "start": 127.05,
+   "end": 127.23
+  },
+  {
+   "text": "Werbebudget",
+   "src": "googleads/t1",
+   "start": 127.31,
+   "end": 127.77
+  },
+  {
+   "text": "haben?",
+   "src": "googleads/t1",
+   "start": 127.81,
+   "end": 128.03
+  },
+  {
+   "text": "Gibst",
+   "src": "googleads/t1",
+   "start": 128.45,
+   "end": 128.63
+  },
+  {
+   "text": "du",
+   "src": "googleads/t1",
+   "start": 128.67,
+   "end": 128.71
+  },
+  {
+   "text": "immer",
+   "src": "googleads/t1",
+   "start": 128.73,
+   "end": 128.85
+  },
+  {
+   "text": "Google",
+   "src": "googleads/t1",
+   "start": 128.89,
+   "end": 129.13
+  },
+  {
+   "text": "komplett",
+   "src": "googleads/t1",
+   "start": 129.25,
+   "end": 129.61
+  },
+  {
+   "text": "freien",
+   "src": "googleads/t1",
+   "start": 129.71,
+   "end": 129.97
+  },
+  {
+   "text": "Raum",
+   "src": "googleads/t1",
+   "start": 130.03,
+   "end": 130.25
+  },
+  {
+   "text": "oder",
+   "src": "googleads/t1",
+   "start": 130.37,
+   "end": 130.59
+  },
+  {
+   "text": "grenzt",
+   "src": "googleads/t1",
+   "start": 131.31,
+   "end": 131.57
+  },
+  {
+   "text": "du",
+   "src": "googleads/t1",
+   "start": 131.61,
+   "end": 131.65
+  },
+  {
+   "text": "das",
+   "src": "googleads/t1",
+   "start": 131.71,
+   "end": 131.83
+  },
+  {
+   "text": "doch",
+   "src": "googleads/t1",
+   "start": 131.91,
+   "end": 132.03
+  },
+  {
+   "text": "schon",
+   "src": "googleads/t1",
+   "start": 132.09,
+   "end": 132.25
+  },
+  {
+   "text": "sehr",
+   "src": "googleads/t1",
+   "start": 132.35,
+   "end": 132.49
+  },
+  {
+   "text": "stark",
+   "src": "googleads/t1",
+   "start": 132.55,
+   "end": 132.75
+  },
+  {
+   "text": "ein?",
+   "src": "googleads/t1",
+   "start": 132.83,
+   "end": 132.95
+  },
+  {
+   "text": "Mich",
+   "src": "googleads/t1",
+   "start": 133.21,
+   "end": 133.31
+  },
+  {
+   "text": "würde",
+   "src": "googleads/t1",
+   "start": 133.35,
+   "end": 133.45
+  },
+  {
+   "text": "mal",
+   "src": "googleads/t1",
+   "start": 133.53,
+   "end": 133.59
+  },
+  {
+   "text": "deine",
+   "src": "googleads/t1",
+   "start": 133.63,
+   "end": 133.81
+  },
+  {
+   "text": "Meinung",
+   "src": "googleads/t1",
+   "start": 133.87,
+   "end": 134.07
+  },
+  {
+   "text": "dazu",
+   "src": "googleads/t1",
+   "start": 134.11,
+   "end": 134.27
+  },
+  {
+   "text": "interessieren",
+   "src": "googleads/t1",
+   "start": 134.33,
+   "end": 134.79
+  },
+  {
+   "text": "und",
+   "src": "googleads/t1",
+   "start": 134.87,
+   "end": 134.97
+  },
+  {
+   "text": "Folgen",
+   "src": "googleads/t1",
+   "start": 135.37,
+   "end": 135.59
+  },
+  {
+   "text": "nicht",
+   "src": "googleads/t1",
+   "start": 135.63,
+   "end": 135.73
+  },
+  {
+   "text": "vergessen.",
+   "src": "googleads/t1",
+   "start": 135.75,
+   "end": 136.09
+  }
+ ],
+ "pages": [
+  1,
+  2,
+  3,
+  2,
+  4,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  4,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  1,
+  3,
+  3,
+  2,
+  3,
+  1,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  4,
+  4,
+  3,
+  3,
+  2,
+  3
+ ]
+}
