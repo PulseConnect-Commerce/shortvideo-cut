@@ -41,7 +41,7 @@
  ],
  "words": [
   {
-   "text": "Shopify,",
+   "text": "Shopify",
    "src": "sidekick/t1",
    "start": 4.56,
    "end": 4.94
@@ -233,16 +233,10 @@
    "end": 21.61
   },
   {
-   "text": "Drittanbieter-",
+   "text": "Drittanbieter-Apps",
    "src": "sidekick/t1",
    "start": 21.67,
    "end": 22.25
-  },
-  {
-   "text": "Apps",
-   "src": "sidekick/t1",
-   "start": 22.35,
-   "end": 22.53
   },
   {
    "text": "für",
@@ -335,16 +329,10 @@
    "end": 27.15
   },
   {
-   "text": "Marketing-",
+   "text": "Marketing-Kampagnen",
    "src": "sidekick/t1",
    "start": 27.19,
    "end": 27.49
-  },
-  {
-   "text": "Kampagnen",
-   "src": "sidekick/t1",
-   "start": 27.53,
-   "end": 27.93
   },
   {
    "text": "hast",
@@ -804,26 +792,27 @@
   }
  ],
  "pages": [
+  3,
+  2,
+  3,
+  2,
+  4,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
   1,
-  3,
-  4,
-  2,
-  4,
-  2,
-  2,
-  3,
-  2,
-  3,
-  3,
-  3,
-  2,
-  2,
-  2,
-  3,
-  3,
-  3,
-  3,
-  2,
+  1,
   3,
   2,
   4,

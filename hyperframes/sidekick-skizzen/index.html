@@ -203,7 +203,7 @@
               <path id="sz4-cur" class="s" d="M700 178 L700 222 L712 211 L724 235 L733 230 L721 207 L737 205 Z" style="fill: #ffffff; stroke-width: 4; opacity: 0" />
             </g>
           </svg>
-          <div id="sz4-l1" class="lbl grey center" style="left: 0; width: 860px; top: 238px; font-size: 46px; opacity: 0">Sidekick führt dich</div>
+          <div id="sz4-l1" class="lbl grey center" style="left: 0; width: 860px; top: 238px; font-size: 46px; opacity: 0">Sidekick führt dich teilweise</div>
           <div id="sz4-l2" class="lbl green center" style="left: 0; width: 860px; top: 292px; font-size: 66px; opacity: 0">direkt in die App</div>
         </div>
       </section>
@@ -245,9 +245,9 @@
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
       const draw = (sel, at, dur = 0.5) =>
-        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dur, ease: "power2.inOut", stagger: 0.06 }, at);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 0.8 }, { strokeDashoffset: 0, duration: dur, ease: "power2.out", stagger: 0.06 }, at);
       const card = (id, start, end) => {
-        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.28, ease: "back.out(1.6)" }, start);
+        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.2, ease: "power2.out" }, start);
         tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.25, ease: "power2.in" }, end - 0.25);
       };
       const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, at);
@@ -255,7 +255,7 @@
 
       // 1: Und das ist (3.08) ... Shopbetreiber (4.38) | sogenannten (6.39) Sidekick (6.95) App (7.79) Extensions (8.00) |
       //    Informationen (9.84) Drittanbieter-Apps (10.98 / 11.66) seine Antwort (12.21 / 12.57)
-      card("sz1", 3.3, 13.75);
+      card("sz1", 3.36, 13.75);
       draw(".d1a", 3.35, 0.5);
       pop("#sz1-la", 3.36);
       pop("#sz1-lb", 3.75);
@@ -280,7 +280,7 @@
       tl.to("#sz1-spark", { fill: "rgba(0,240,144,0.4)", duration: 0.25 }, 12.55);
 
       // 2: und zum Beispiel (14.05 / 14.18) eben aus Klaviyo (14.91) ... Marketing-Kampagnen (16.50 / 16.84) hast (17.28)
-      card("sz2", 13.95, 18.15);
+      card("sz2", 14.0, 18.15);
       draw(".d2a", 14.0, 0.5);
       pop("#sz2-l0", 14.16);
       pop("#sz2-l1", 14.89);
@@ -289,7 +289,7 @@
       pop("#sz2-l3", 17.26);
 
       // 3: oder eben auch aus (17.93 / 18.39 / 18.57) Matrixify (18.78) ... Daten (20.36) Abläufe (21.07)
-      card("sz3", 18.3, 22.25);
+      card("sz3", 18.36, 22.25);
       draw(".d3a", 18.35, 0.5);
       pop("#sz3-l0", 18.4);
       pop("#sz3-l1", 18.76);
@@ -298,7 +298,7 @@
       draw(".d3b", 21.05, 0.6);
 
       // 4: Teilweise (22.38) führt (22.80) ... direkt (23.81) ... Stellen (24.70) App (25.96)
-      card("sz4", 22.3, 26.55);
+      card("sz4", 22.36, 26.55);
       draw(".d4a", 22.35, 0.5);
       pop("#sz4-l1", 22.78);
       draw(".d4b", 23.79, 0.35);
@@ -309,7 +309,7 @@
 
       // 5: Aber (26.72) wichtig (26.92) das klappt (27.78) nicht (28.34) für jede App (28.62 / 28.92) |
       //    nicht (30.47) dass Sidekick (30.83) plötzlich (31.45) alle Aufgaben (31.91 / 32.09) erledigt (32.97)
-      card("sz5", 26.65, 33.3);
+      card("sz5", 26.71, 33.3);
       draw(".d5a", 26.7, 0.5);
       draw(".d5b", 27.76, 0.3);
       draw(".d5c", 28.32, 0.3);

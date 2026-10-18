@@ -5,18 +5,18 @@ Status: **zurück, Runde 1** (Prüfer, out/pruefung/Sidekick-urteil.md) <!-- dan
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): N04 Shopify Sidekick + Drittanbieter-Apps
 - **Format / Design:** HERO / Face-Up mit Screenshots (Briefing), Design nacht-mint (Hook), Skizzen weiß mit Grün, sanfte Farbe
 - **Plattformen:** TikTok, Instagram Reel, YouTube Short
-- **Termin laut Kalender:** 📣 N04 – Shopify Sidekick + Apps | Veröffentlichung, So 18.10.2026 21:00 Uhr (Europe/Berlin)
+- **Termin laut Kalender:** 📣 N04 – Shopify Sidekick + Apps | Veröffentlichung, So 18.10.2026 21:00 Uhr (Europe/Berlin); Regie plant 22:00
 - **Briefing:** 📣 N04 – Shopify Sidekick + Apps | Veröffentlichung (`src/projekte/sidekick/briefing.md`)
 
 <!-- auto:start (npm run uebergabe) -->
 - **Projekt / Komposition:** `sidekick` / `Sidekick`
 - **Datei:** `out/final/Sidekick.mp4` (Master), `-post.mp4` (Plattformen), `-chat.mp4` (Chat)
 - **Technik:** 1080x1920, 30 fps, 38.2 s
-- **Wörter im Video:** 127
+- **Wörter im Video:** 125
 
 ### Untertiteltext (so steht er im Video)
 
--   0.1 s  Shopify, Sidekick kann jetzt auch mit anderen Apps zusammenarbeiten Und das ist eben besonders für Shopbetreiber sehr interessant, denn mit den sogenannten Sidekick App Extensions kann jetzt nämlich Sidekick auch Informationen aus Drittanbieter- Apps für seine Antwort nutzen und zum Beispiel eben aus Klaviyo, wenn du jetzt Fragen für Marketing- Kampagnen hast oder eben auch aus Matrixify wenn es eben um Daten oder auch Abläufe in deinem Onlineshop geht.
+-   0.1 s  Shopify Sidekick kann jetzt auch mit anderen Apps zusammenarbeiten Und das ist eben besonders für Shopbetreiber sehr interessant, denn mit den sogenannten Sidekick App Extensions kann jetzt nämlich Sidekick auch Informationen aus Drittanbieter-Apps für seine Antwort nutzen und zum Beispiel eben aus Klaviyo, wenn du jetzt Fragen für Marketing-Kampagnen hast oder eben auch aus Matrixify wenn es eben um Daten oder auch Abläufe in deinem Onlineshop geht.
 -  22.4 s  Teilweise führt dich im Sidekick auch direkt an die passenden Stellen in einer bestimmten App.
 -  26.7 s  Aber wichtig natürlich, das klappt leider nicht für jede App und das bedeutet leider auch nicht, dass Sidekick jetzt plötzlich alle Aufgaben für dich alleine erledigt.
 -  33.4 s  Trotzdem zeigt das aber eben wohin Shopify sich entwickelt.
@@ -40,13 +40,15 @@ Status: **zurück, Runde 1** (Prüfer, out/pruefung/Sidekick-urteil.md) <!-- dan
 
 ## Entscheidungen des Cutters
 
+- Korrektur Runde 2, Mangel 1: Hook-Untertitel "Shopify," jetzt "Shopify" (`korrekturen`); dazu "Drittanbieter-Apps" und "Marketing-Kampagnen" ohne Leerzeichen (schnitt ohne PRÜFEN, 125 Wörter).
+- Korrektur Runde 2, Mangel 2: Alle fünf Karten erscheinen jetzt im selben Moment wie ihr erstes Icon (Karte 0,2 s statt 0,28 s, Zeichnung startet sichtbar); Standbilder bei Kartenstart +0,1 s zeigen Inhalt; Stichwortzeiten unverändert.
+- Korrektur Runde 2, Mangel 3: Skizze 4 lautet "Sidekick führt dich teilweise / direkt in die App".
 - Variante: Originalsprechtext, aber der Take ist improvisiert und hat Neuansätze; genommen wurde je Stelle der letzte saubere Anlauf (Teleprompter-Wortlaut weicht teils ab, z. B. "Und das ist eben besonders für Shopbetreiber sehr interessant", "Teilweise führt dich im Sidekick auch direkt an die passenden Stellen in einer bestimmten App").
 - Raus: Vorsatz "Und genau deshalb solltest du ihm wissen" (2,4 s, mit Versprecher "ihm", wie in der Aufnahmeoption des Briefings; dient hier nicht als Schluss), zwei abgebrochene Anläufe zu "denn mit den sogenannten ..." und "Teilweise führt dich ...", der Nachsatz ab 62 s ("Und deshalb müsstest du ...", "... eine automatische Aufgabe ... ein Follow dazu lassen"; nicht im Briefing, keine Aufruf-Vorgabe).
 - Schlussphrase: gesprochen "Und genau deshalb solltest du jetzt eben wissen:" (mit "jetzt eben"), weil der Satz ohne Mini-Schnitt bleiben sollte; Loop-Übergang liest sich natürlich.
 - Hinweis: Der Satz "Und genau" hat laut Whisper-Zeiten 0,7 s Abstand ("Und" 35,8 s, "genau" 36,5 s); `kontrolle` meldet keine Auffälligkeit.
 - Bild: Porträt-Modus, sanfte Farbe (`gradeSanft` plus brightness 0,8), Gesicht 0,550, ein ruhiges Zoom-in (3 %), kein Zoom-Wechsel. Musik `ruhig`.
 - 5 Skizzen aus HyperFrames (`hyperframes/sidekick-skizzen`, Zeiten in der Datei kommentiert), jede mit erstem Inhalt beim Erscheinen; keine Vorschau-Runde wegen Zeitdruck, Prüfung am Bilderbogen.
-- Untertitel schreiben "Drittanbieter- Apps" und "Marketing- Kampagnen" wegen der Wortgrenzen im Transkript (Bindestrich mit Leerzeichen); kosmetisch.
 
 ## Offene Fragen an Paul
 
