@@ -207,9 +207,13 @@ Erst wenn er "passt" sagt:
    `--nur-ansehen`. Den Look (Kontrast, Sättigung) gibt danach das Design (`grade`). Korrektur und Look gelten für den
    ganzen Take, kein Angleichen pro Schnitt.
    **Sanft, nicht heller und nicht kontrastreicher als nötig** (seine Vorgabe 2026-10-18 zu REWE v2: "Ich finde die
-   Farbe des neuen Videos zu kontrastreich und zu hell"): Gesicht nur leicht Richtung Luma ~0,545 (höchstens ±7 %),
-   Schwarz-/Weißpunkt nur bei milchigem oder trübem Bild und dann zur Hälfte, Vibrance höchstens 0,12. Im fertigen
-   Video soll das Gesicht bei ~0,55-0,59 liegen (REWE v2 hatte 0,66 und 2,5 % fast weiße Fläche: zu hell).
+   Farbe des neuen Videos zu kontrastreich und zu hell", danach "Für das nächste Video bitte optimieren und
+   abschwächen"): Farbstich zu 50 % raus, Gesicht nur leicht Richtung Luma ~0,535 (höchstens ±4 %), Schwarz-/Weißpunkt
+   nur bei milchigem oder trübem Bild und dann zur Hälfte, Vibrance höchstens 0,08. Im Video dazu der sanfte Grade:
+   `<Takes … grade={STIL.gradeSanft} />` (`contrast(1.02) saturate(1.03)`, nicht heller) statt des Design-Grades.
+   Im fertigen Video liegt das Gesicht dann bei ~0,55-0,57 (REWE v2 hatte 0,65 und knapp 3 % fast weiße Fläche: zu
+   hell und zu kontrastreich). `npm run farbe` behält die Zeitstempel des Takes (sonst rutscht das Bild bei
+   Handy-Takes mit schwankender Bildrate einen Frame neben den Ton).
 6. **Rohclips bleiben privat** (`public/projekte/` ist git-ignoriert). Hochgeladen wird nur, was er freigibt.
 7. **Messen statt fühlen:** Sync, Pacing, Lautheit und Ausreißer werden am Render gemessen, nicht am Code geglaubt.
 

@@ -30,6 +30,9 @@ export const STIL = {
   muted: "#6B675F",
   /** ein Grade für alle Takes (CSS-Filter); kein Angleichen pro Schnitt */
   grade: "contrast(1.05) saturate(1.08) brightness(1.02)",
+  /** der Grade im freigegebenen Look (nach npm run farbe): kaum Kontrast, nicht heller (seine Vorgabe 2026-10-18: "zu
+   * kontrastreich und zu hell", dann "Für das nächste Video bitte optimieren und abschwächen") */
+  gradeSanft: "contrast(1.02) saturate(1.03)",
   /** sichere Fläche (1080x1920): alles, was etwas bedeutet, liegt hier, frei von den Knöpfen von TikTok und Instagram
    * (die Zonen stehen in zonen.json; npm run raster und <Raster /> zeichnen sie ein) */
   safe: { left: sx0, top: sy0, width: sx1 - sx0, bottom: sy1 },

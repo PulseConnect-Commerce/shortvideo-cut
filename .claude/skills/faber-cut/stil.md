@@ -22,7 +22,7 @@ So gehst du vor:
 
 **Freigegebener Look ab 2026-10-17 (alle Formate außer der Serie; "perfekt, genau so gefällt mir das. Bitte so als
 Skill abspeichern für die nächsten Videos"):** Briefing Punkt für Punkt, wenige Schnitte ohne Zoom-Wechsel (nur ein
-ruhiges Zoom-in), Farbkorrektur, er steht tiefer im Bild, über dem Kopf Hook-Titel und danach Quelle und
+ruhiges Zoom-in), sanfte Farbkorrektur (nicht heller, kaum Kontrast: `npm run farbe` und `STIL.gradeSanft`), er steht tiefer im Bild, über dem Kopf Hook-Titel und danach Quelle und
 Skizzen/Icons/Animationen aus HyperFrames auf dunkler Karte, Untertitel im Editorial-Stil unter dem Kopf (y ~1400),
 ganz leichte eigene Musik, leise Soundeffekte auf den Skizzen. Vorlage: `src/projekte/rewe/Video.tsx` (`neu`) und
 `hyperframes/rewe-skizzen/`. Die sieben Punkte stehen oben in jedem Stil-Skill; die Absätze darunter sind Vorgeschichte.

@@ -35,7 +35,9 @@ export const Takes: React.FC<{
   /** CSS-Transform für das Bild, z. B. ein Zoom (punch) oder das Verschieben im Splitscreen */
   transform?: string;
   transformOrigin?: string;
-}> = ({ C, voice = true, transform, transformOrigin = "50% 30%" }) => {
+  /** CSS-Filter statt des Grades aus dem Design, z. B. STIL.gradeSanft im freigegebenen Look */
+  grade?: string;
+}> = ({ C, voice = true, transform, transformOrigin = "50% 30%", grade }) => {
   const D = useDesign();
   return (
   <>
@@ -47,7 +49,7 @@ export const Takes: React.FC<{
             trimBefore={s.trimBefore}
             trimAfter={s.trimBefore + s.len}
             muted
-            style={{ width: "100%", height: "100%", objectFit: "cover", filter: D.grade }}
+            style={{ width: "100%", height: "100%", objectFit: "cover", filter: grade ?? D.grade }}
           />
         </Sequence>
       ))}

@@ -15,7 +15,8 @@ description: Schnittstil HERO von PulseConnect für Erklär- und Expertenvideos 
 > 2. **Schnitt:** wenige Schnitte, ganze Sätze, je Satz der letzte saubere Anlauf; Tempo wie im easyJet-Video.
 >    **Kein** Wechsel weit/eng bei jedem Schnitt, keine Punch-ins, nur ein ruhiges Zoom-in (3 % über das ganze Video).
 > 3. **Bild:** Farbkorrektur `npm run farbe` vor dem Porträt, **sanft** (nicht heller, nicht kontrastreicher; seine
->    Vorgabe 2026-10-18: "zu kontrastreich und zu hell", Regel 5b in faber-cut), leichter Porträt-Modus (Hintergrund weich). Er steht
+>    Vorgabe 2026-10-18: "zu kontrastreich und zu hell", dann "optimieren und abschwächen", Regel 5b in faber-cut),
+>    im Video `<Takes … grade={STIL.gradeSanft} />` statt des Design-Grades, leichter Porträt-Modus (Hintergrund weich). Er steht
 >    **tiefer im Bild** (Augen bei ~900-915; REWE: `scale 1.3`, `hoch 190`), damit oben Platz ist.
 > 4. **Oben über dem Kopf:** während der Hook der Hook-Titel im alten Titel-Stil (`HookTitle`, nacht-gruen), danach
 >    die B-Rolls: Quellen-Screenshot (Breite ~560 ab y 300, Quellenzeile direkt darunter) und **Skizzen, Icons und

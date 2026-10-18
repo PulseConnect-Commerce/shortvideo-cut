@@ -4,15 +4,16 @@ Video, damit es professionell wirkt."
     npm run farbe -- <projekt> [take ...] [--nur-ansehen]
 
 Misst an 12 Bildern des Takes:
-  - Weißabgleich an den fast farblosen Flächen (Wand, Decke): Farbstich zu 60 % raus, dazu ein Hauch Wärme für die Haut,
-    höchstens ±8 % je Kanal;
-  - Belichtung am Gesicht (YuNet, wie npm run raster): Haut nur sanft Richtung Luma ~0,545 (höchstens ±7 %),
+  - Weißabgleich an den fast farblosen Flächen (Wand, Decke): Farbstich zu 50 % raus, dazu ein Hauch Wärme für die Haut,
+    höchstens ±6 % je Kanal;
+  - Belichtung am Gesicht (YuNet, wie npm run raster): Haut nur sanft Richtung Luma ~0,535 (höchstens ±4 %),
     Schwarz- und Weißpunkt nur bei milchigem oder trübem Bild, und dann nur zur Hälfte (sonst mehr Kontrast);
-  - Sättigung: Vibrance nur, wenn das Bild blass ist (schützt Hauttöne), höchstens 0,12.
+  - Sättigung: Vibrance nur, wenn das Bild blass ist (schützt Hauttöne), höchstens 0,08.
 Seine Vorgabe 2026-10-18 zum REWE-Video v2: "Ich finde die Farbe des neuen Videos zu kontrastreich und zu hell". Dort
 hatte die erste Fassung das Gesicht auf ~0,58 aufgehellt (Gamma 1,14) und die Lichter um 6 % gespreizt; seitdem bleibt
-die Korrektur nah an der Belichtung des Takes.
-Das ist die Korrektur; der Look (Kontrast, Sättigung) kommt danach vom Design (`grade` in design.tsx / stil.ts).
+die Korrektur nah an der Belichtung des Takes. Danach noch einmal (2026-10-18): "Für das nächste Video bitte optimieren
+und abschwächen", also alles noch eine Stufe leiser, und im Video der sanfte Grade `STIL.gradeSanft`.
+Das ist die Korrektur; der Look (Kontrast, Sättigung) kommt danach vom Grade (im freigegebenen Look `STIL.gradeSanft`).
 
 Schreibt den korrigierten Take an seine Stelle (<take>.orig.mp4, falls es ihn gibt, sonst <take>.mp4), die Sicherung
 als <take>.vor-farbe.mp4, und ein Vorher/Nachher-Bild nach out/farbe-<projekt>-<take>.jpg. Vor `npm run portrait`
@@ -73,8 +74,8 @@ def messen(path):
     neutral = px[(s < 0.15) & (v > 0.3) & (v < 0.95)]
     b, g, r = neutral.mean(0) if len(neutral) > 500 else px.mean(0)
     grau = (r + g + b) / 3
-    # zu 60 % neutral, dann ein Hauch Wärme (Haut wirkt sonst kühl), höchstens ±8 %
-    gain = np.clip((1 + 0.6 * (grau / np.array([r, g, b]) - 1)) * np.array([1.012, 1.0, 0.988]), 0.92, 1.08)  # R, G, B
+    # zu 50 % neutral, dann ein Hauch Wärme (Haut wirkt sonst kühl), höchstens ±6 %
+    gain = np.clip((1 + 0.5 * (grau / np.array([r, g, b]) - 1)) * np.array([1.008, 1.0, 0.992]), 0.94, 1.06)  # R, G, B
     luma = 0.2126 * px[:, 2] * gain[0] + 0.7152 * px[:, 1] * gain[1] + 0.0722 * px[:, 0] * gain[2]
     lo, hi = np.percentile(luma, [0.5, 99.5])
     haut = [face(i) for i in imgs]
@@ -97,11 +98,11 @@ def filterkette(m):
         kette.append(f"colorlevels=rimin={lo:.3f}:gimin={lo:.3f}:bimin={lo:.3f}:rimax={hi:.3f}:gimax={hi:.3f}:bimax={hi:.3f}")
     if "haut_luma" in m:
         h = (m["haut_luma"] - lo) / (hi - lo)
-        gamma = float(np.clip(np.log(0.545) / np.log(max(0.05, min(0.95, h))), 0.93, 1.08))
+        gamma = float(np.clip(np.log(0.535) / np.log(max(0.05, min(0.95, h))), 0.96, 1.04))
         if abs(gamma - 1) > 0.02:
             kette.append(f"eq=gamma={1 / gamma:.3f}")
-    if m["saettigung"] < 0.28:
-        kette.append(f"vibrance=intensity={min(0.12, (0.28 - m['saettigung']) * 1.0):.3f}")
+    if m["saettigung"] < 0.25:
+        kette.append(f"vibrance=intensity={min(0.08, (0.25 - m['saettigung']) * 0.8):.3f}")
     return ",".join(kette)
 
 
@@ -133,7 +134,11 @@ for take in takes:
         raise SystemExit(f"  {os.path.relpath(backup, ROOT)} gibt es schon: der Take ist bereits korrigiert")
     shutil.copy2(src, backup)
     out = src + ".tmp.mp4"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", backup, "-vf", vf, "-c:v", "libx264", "-crf", "14", "-preset", "fast",
+    # Zeitstempel wie im Original: Handy-Takes haben leicht schwankende Bildraten (z. B. 29,993 fps), ein Encode mit fester
+    # Bildrate fügt sonst ab und zu ein Bild ein und das Bild läuft danach einen Frame neben dem Ton (REWE t1, 2026-10-18)
+    skala = probe(backup, "stream=time_base").split("/")[-1] or "15360"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", backup, "-vf", vf, "-fps_mode", "passthrough", "-enc_time_base", "demux",
+                    "-video_track_timescale", skala, "-c:v", "libx264", "-crf", "14", "-preset", "fast",
                     "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
                     "-c:a", "copy", "-movflags", "+faststart", out], check=True)
     os.replace(out, src)
