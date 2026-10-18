@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Shopify Sidekick + Apps – Skizzen</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <!--
+      Transparente Skizzen-Overlays fuer "Shopify Sidekick + Drittanbieter-Apps" (faber-cut, src/projekte/sidekick).
+      Vorlage: hyperframes/googleads-skizzen. Zeiten = Sekunden im geschnittenen Video (cut.json).
+      Karte ueber dem Kopf (860x370 auf 90 %), Hook (bis ~3,0 s) gehoert dem Hook-Titel. Nur Text und schlichte Icons, keine Logos.
+    -->
+    <style>
+      @font-face {
+        font-family: "Anton";
+        src: url("assets/fonts/Anton-Regular.woff2") format("woff2");
+        font-weight: 400;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: transparent;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Anton", sans-serif;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+      }
+      .card {
+        position: absolute;
+        left: 110px;
+        top: 290px;
+        width: 860px;
+        height: 370px;
+        opacity: 0;
+      }
+      .panel {
+        position: absolute;
+        inset: 0;
+        border-radius: 40px;
+        background: rgba(11, 12, 14, 0.86);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+      }
+      .art {
+        position: absolute;
+        inset: 0;
+        width: 860px;
+        height: 370px;
+        overflow: visible;
+      }
+      .s {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .g {
+        stroke: #00f090;
+      }
+      .r {
+        stroke: #ff5a5f;
+      }
+      .thin {
+        stroke-width: 5;
+      }
+      .lbl {
+        position: absolute;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        line-height: 1.05;
+        white-space: nowrap;
+      }
+      .center {
+        text-align: center;
+      }
+      .green {
+        color: #00f090;
+      }
+      .red {
+        color: #ff5a5f;
+      }
+      .grey {
+        color: #c9ced4;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="sidekick-skizzen" data-start="0" data-duration="38.22" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position: absolute">
+        <defs>
+          <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" />
+            <feDisplacementMap in="SourceGraphic" scale="4" />
+          </filter>
+        </defs>
+      </svg>
+
+      <!-- 1: Sidekick arbeitet mit Apps / Sidekick App Extensions (3.3-13.75) -->
+      <section id="sz1" class="scene clip" data-start="3.3" data-duration="10.45" data-track-index="0">
+        <div id="sz1-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <g class="a1">
+                <path class="s d1a" pathLength="1" d="M45 60 H215 Q235 60 235 80 V160 Q235 180 215 180 H120 L85 215 V180 H65 Q45 180 45 160 Z" />
+                <path class="s g d1a" pathLength="1" d="M140 85 Q146 112 175 118 Q146 124 140 151 Q134 124 105 118 Q134 112 140 85 Z" />
+                <path class="s g thin d1b" pathLength="1" d="M265 118 H400 M375 98 L400 118 L375 138 M290 98 L265 118 L290 138" />
+                <rect class="s thin d1c" pathLength="1" x="440" y="85" width="72" height="72" rx="16" />
+                <rect class="s thin d1d" pathLength="1" x="535" y="85" width="72" height="72" rx="16" />
+                <rect class="s thin d1e" pathLength="1" x="630" y="85" width="72" height="72" rx="16" />
+                <path class="s thin d1c" pathLength="1" d="M462 121 H490 M476 107 V135" />
+                <path class="s thin d1d" pathLength="1" d="M557 121 H585 M571 107 V135" />
+                <path class="s thin d1e" pathLength="1" d="M652 121 H680 M666 107 V135" />
+              </g>
+              <g class="b1" style="opacity: 0">
+                <path class="s d1f" pathLength="1" d="M40 55 H210 Q230 55 230 75 V145 Q230 165 210 165 H115 L80 200 V165 H60 Q40 165 40 145 V75 Q40 55 60 55 Z" />
+                <path id="sz1-spark" class="s g d1f" pathLength="1" d="M135 78 Q141 105 170 111 Q141 117 135 144 Q129 117 100 111 Q129 105 135 78 Z" />
+              </g>
+              <g id="sz1-tiles" style="opacity: 0">
+                <rect id="sz1-t1" class="s thin" x="240" y="232" width="56" height="56" rx="13" style="opacity: 0" />
+                <rect id="sz1-t2" class="s thin" x="318" y="232" width="56" height="56" rx="13" style="opacity: 0" />
+                <rect id="sz1-t3" class="s thin" x="396" y="232" width="56" height="56" rx="13" style="opacity: 0" />
+                <path id="sz1-arr" class="s g thin" pathLength="1" d="M222 262 Q120 270 108 208 M104 232 L108 208 L130 218" />
+              </g>
+            </g>
+          </svg>
+          <div id="sz1-la" class="lbl" style="left: 40px; top: 238px; font-size: 62px">Shopify Sidekick</div>
+          <div id="sz1-lb" class="lbl green" style="left: 40px; top: 300px; font-size: 56px">arbeitet mit Apps</div>
+          <div id="sz1-m1" class="lbl" style="left: 270px; top: 40px; font-size: 96px; opacity: 0">Sidekick</div>
+          <div id="sz1-m2" class="lbl green" style="left: 272px; top: 126px; font-size: 96px; opacity: 0">App</div>
+          <div id="sz1-m3" class="lbl green" style="left: 430px; top: 126px; font-size: 96px; opacity: 0">Extensions</div>
+          <div id="sz1-app" class="lbl grey" style="left: 480px; top: 244px; font-size: 40px; opacity: 0">Drittanbieter-Apps</div>
+          <div id="sz1-q" class="lbl grey" style="left: 40px; top: 325px; font-size: 30px; opacity: 0">Quelle: Shopify App Store, 17.06.2026</div>
+        </div>
+      </section>
+
+      <!-- 2: Beispiel Klaviyo (13.95-18.15) -->
+      <section id="sz2" class="scene clip" data-start="13.95" data-duration="4.2" data-track-index="0">
+        <div id="sz2-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s d2a" pathLength="1" d="M50 70 H230 V180 H50 Z" />
+              <path class="s g d2a" pathLength="1" d="M50 70 L140 135 L230 70" />
+              <path class="s thin d2b" pathLength="1" d="M60 305 V270 M105 305 V240 M150 305 V255 M195 305 V215 M60 308 H220" />
+              <path class="s g thin d2b" pathLength="1" d="M60 255 L105 225 L150 240 L195 195 L225 205" />
+            </g>
+          </svg>
+          <div id="sz2-l0" class="lbl grey" style="left: 290px; top: 28px; font-size: 56px; opacity: 0">Beispiel:</div>
+          <div id="sz2-l1" class="lbl" style="left: 286px; top: 86px; font-size: 128px; opacity: 0">Klaviyo</div>
+          <div id="sz2-l2" class="lbl green" style="left: 290px; top: 235px; font-size: 62px; opacity: 0">Kampagnen</div>
+          <div id="sz2-l3" class="lbl" style="left: 290px; top: 296px; font-size: 62px; opacity: 0">verstehen</div>
+        </div>
+      </section>
+
+      <!-- 3: Beispiel Matrixify (18.3-22.25) -->
+      <section id="sz3" class="scene clip" data-start="18.3" data-duration="3.95" data-track-index="0">
+        <div id="sz3-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s d3a" pathLength="1" d="M50 60 H240 V200 H50 Z" />
+              <path class="s thin d3a" pathLength="1" d="M50 107 H240 M50 154 H240 M113 60 V200 M177 60 V200" />
+              <path class="s g d3b" pathLength="1" d="M95 285 A38 38 0 1 1 135 322 M135 322 L112 322 M135 322 L135 345" style="stroke-width: 8" />
+              <path class="s g thin d3b" pathLength="1" d="M200 330 A38 38 0 1 1 160 293 M160 293 L183 293 M160 293 L160 270" style="stroke-width: 8" />
+            </g>
+          </svg>
+          <div id="sz3-l0" class="lbl grey" style="left: 290px; top: 28px; font-size: 56px; opacity: 0">Beispiel:</div>
+          <div id="sz3-l1" class="lbl" style="left: 286px; top: 86px; font-size: 128px; opacity: 0">Matrixify</div>
+          <div id="sz3-l2" class="lbl green" style="left: 290px; top: 240px; font-size: 62px; opacity: 0">Shop-Daten</div>
+          <div id="sz3-l3" class="lbl" style="left: 290px; top: 300px; font-size: 62px; opacity: 0">&amp; Abläufe</div>
+        </div>
+      </section>
+
+      <!-- 4: führt direkt in die App (22.3-26.55) -->
+      <section id="sz4" class="scene clip" data-start="22.3" data-duration="4.25" data-track-index="0">
+        <div id="sz4-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <path class="s d4a" pathLength="1" d="M40 45 H180 Q200 45 200 65 V135 Q200 155 180 155 H105 L75 188 V155 H60 Q40 155 40 135 V65 Q40 45 60 45 Z" />
+              <path class="s g d4a" pathLength="1" d="M118 66 Q123 90 148 95 Q123 100 118 124 Q113 100 88 95 Q113 90 118 66 Z" />
+              <path class="s g thin d4b" pathLength="1" d="M225 100 H335 M312 80 L335 100 L312 120" />
+              <path class="s d4c" pathLength="1" d="M370 30 H810 V215 H370 Z M370 72 H810" />
+              <path class="s thin d4c" pathLength="1" d="M395 51 H405 M425 51 H435" />
+              <path class="s thin d4c" pathLength="1" d="M400 105 H600 M400 135 H560" style="stroke: #7d838b" />
+              <rect id="sz4-btn" class="s g" x="640" y="150" width="130" height="46" rx="14" style="opacity: 0" />
+              <path id="sz4-cur" class="s" d="M700 178 L700 222 L712 211 L724 235 L733 230 L721 207 L737 205 Z" style="fill: #ffffff; stroke-width: 4; opacity: 0" />
+            </g>
+          </svg>
+          <div id="sz4-l1" class="lbl grey center" style="left: 0; width: 860px; top: 238px; font-size: 46px; opacity: 0">Sidekick führt dich</div>
+          <div id="sz4-l2" class="lbl green center" style="left: 0; width: 860px; top: 292px; font-size: 66px; opacity: 0">direkt in die App</div>
+        </div>
+      </section>
+
+      <!-- 5: nicht jede App / nicht vollautomatisch (26.65-33.3) -->
+      <section id="sz5" class="scene clip" data-start="26.65" data-duration="6.65" data-track-index="0">
+        <div id="sz5-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+              <g class="a5">
+                <rect class="s d5a" pathLength="1" x="130" y="40" width="110" height="110" rx="24" />
+                <rect class="s d5a" pathLength="1" x="375" y="40" width="110" height="110" rx="24" />
+                <rect class="s d5a" pathLength="1" x="620" y="40" width="110" height="110" rx="24" />
+                <path class="s g d5b" pathLength="1" style="stroke-width: 12" d="M160 95 L184 120 L216 70" />
+                <path class="s g d5b" pathLength="1" style="stroke-width: 12" d="M405 95 L429 120 L461 70" />
+                <path class="s r d5c" pathLength="1" style="stroke-width: 12" d="M650 68 L700 122 M700 68 L650 122" />
+              </g>
+              <g class="b5" style="opacity: 0">
+                <path class="s d5d" pathLength="1" d="M40 45 H180 Q200 45 200 65 V135 Q200 155 180 155 H105 L75 188 V155 H60 Q40 155 40 135 V65 Q40 45 60 45 Z" />
+                <path class="s g d5d" pathLength="1" d="M118 66 Q123 90 148 95 Q123 100 118 124 Q113 100 88 95 Q113 90 118 66 Z" />
+                <rect class="s thin d5e" pathLength="1" x="580" y="50" width="44" height="44" rx="10" />
+                <rect class="s thin d5e" pathLength="1" x="580" y="125" width="44" height="44" rx="10" />
+                <rect class="s thin d5e" pathLength="1" x="580" y="200" width="44" height="44" rx="10" />
+                <path class="s thin d5e" pathLength="1" d="M650 72 H820 M650 147 H790 M650 222 H810" style="stroke: #7d838b" />
+                <path id="sz5-haken" class="s g" pathLength="1" style="stroke-width: 11" d="M588 73 L600 86 L620 58" />
+              </g>
+            </g>
+          </svg>
+          <div id="sz5-l1" class="lbl red center" style="left: 0; width: 860px; top: 190px; font-size: 100px; opacity: 0">Nicht</div>
+          <div id="sz5-l2" class="lbl center" style="left: 0; width: 860px; top: 278px; font-size: 80px; opacity: 0">jede App</div>
+          <div id="sz5-m1" class="lbl red" style="left: 40px; top: 220px; font-size: 96px; opacity: 0">Nicht</div>
+          <div id="sz5-m2" class="lbl" style="left: 40px; top: 300px; font-size: 62px; opacity: 0">vollautomatisch</div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const draw = (sel, at, dur = 0.5) =>
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dur, ease: "power2.inOut", stagger: 0.06 }, at);
+      const card = (id, start, end) => {
+        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.28, ease: "back.out(1.6)" }, start);
+        tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.25, ease: "power2.in" }, end - 0.25);
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, at);
+      const show = (sel, at, dur = 0.25) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: dur }, at);
+
+      // 1: Und das ist (3.08) ... Shopbetreiber (4.38) | sogenannten (6.39) Sidekick (6.95) App (7.79) Extensions (8.00) |
+      //    Informationen (9.84) Drittanbieter-Apps (10.98 / 11.66) seine Antwort (12.21 / 12.57)
+      card("sz1", 3.3, 13.75);
+      draw(".d1a", 3.35, 0.5);
+      pop("#sz1-la", 3.36);
+      pop("#sz1-lb", 3.75);
+      draw(".d1b", 4.2, 0.4);
+      draw(".d1c", 4.38, 0.4);
+      draw(".d1d", 4.6, 0.4);
+      draw(".d1e", 4.82, 0.4);
+      tl.to([".a1", "#sz1-la", "#sz1-lb"], { opacity: 0, duration: 0.15 }, 6.2);
+      tl.to(".b1", { opacity: 1, duration: 0.05 }, 6.3);
+      draw(".d1f", 6.32, 0.5);
+      pop("#sz1-m1", 6.93);
+      pop("#sz1-m2", 7.77);
+      pop("#sz1-m3", 7.98);
+      show("#sz1-q", 8.5, 0.3);
+      tl.to("#sz1-m1, #sz1-m2, #sz1-m3", { y: -22, duration: 0.3, ease: "power2.inOut" }, 9.8);
+      tl.to("#sz1-tiles", { opacity: 1, duration: 0.05 }, 9.8);
+      tl.fromTo("#sz1-t1", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, 10.96);
+      tl.fromTo("#sz1-t2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, 11.2);
+      tl.fromTo("#sz1-t3", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, 11.44);
+      show("#sz1-app", 11.64, 0.25);
+      draw("#sz1-arr", 12.2, 0.45);
+      tl.to("#sz1-spark", { fill: "rgba(0,240,144,0.4)", duration: 0.25 }, 12.55);
+
+      // 2: und zum Beispiel (14.05 / 14.18) eben aus Klaviyo (14.91) ... Marketing-Kampagnen (16.50 / 16.84) hast (17.28)
+      card("sz2", 13.95, 18.15);
+      draw(".d2a", 14.0, 0.5);
+      pop("#sz2-l0", 14.16);
+      pop("#sz2-l1", 14.89);
+      draw(".d2b", 16.4, 0.6);
+      pop("#sz2-l2", 16.82);
+      pop("#sz2-l3", 17.26);
+
+      // 3: oder eben auch aus (17.93 / 18.39 / 18.57) Matrixify (18.78) ... Daten (20.36) Abläufe (21.07)
+      card("sz3", 18.3, 22.25);
+      draw(".d3a", 18.35, 0.5);
+      pop("#sz3-l0", 18.4);
+      pop("#sz3-l1", 18.76);
+      pop("#sz3-l2", 20.34);
+      pop("#sz3-l3", 21.05);
+      draw(".d3b", 21.05, 0.6);
+
+      // 4: Teilweise (22.38) führt (22.80) ... direkt (23.81) ... Stellen (24.70) App (25.96)
+      card("sz4", 22.3, 26.55);
+      draw(".d4a", 22.35, 0.5);
+      pop("#sz4-l1", 22.78);
+      draw(".d4b", 23.79, 0.35);
+      pop("#sz4-l2", 23.79);
+      draw(".d4c", 23.95, 0.6);
+      tl.fromTo("#sz4-btn", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 24.7);
+      tl.fromTo("#sz4-cur", { opacity: 0, x: 40, y: 30 }, { opacity: 1, x: 0, y: 0, duration: 0.5, ease: "power2.out" }, 25.0);
+
+      // 5: Aber (26.72) wichtig (26.92) das klappt (27.78) nicht (28.34) für jede App (28.62 / 28.92) |
+      //    nicht (30.47) dass Sidekick (30.83) plötzlich (31.45) alle Aufgaben (31.91 / 32.09) erledigt (32.97)
+      card("sz5", 26.65, 33.3);
+      draw(".d5a", 26.7, 0.5);
+      draw(".d5b", 27.76, 0.3);
+      draw(".d5c", 28.32, 0.3);
+      pop("#sz5-l1", 28.32);
+      pop("#sz5-l2", 28.6);
+      tl.to([".a5", "#sz5-l1", "#sz5-l2"], { opacity: 0, duration: 0.15 }, 29.4);
+      tl.to(".b5", { opacity: 1, duration: 0.05 }, 29.5);
+      draw(".d5d", 29.52, 0.5);
+      pop("#sz5-m1", 30.45);
+      pop("#sz5-m2", 31.43);
+      draw(".d5e", 29.85, 0.5);
+      draw("#sz5-haken", 32.95, 0.25);
+
+      tl.seek(0);
+      window.__timelines["sidekick-skizzen"] = tl;
+    </script>
+  </body>
+</html>
