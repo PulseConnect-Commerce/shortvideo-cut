@@ -1,6 +1,6 @@
 # Übergabekarte: Google Ads ändert Budgetsteuerung
 
-Status: **zur Prüfung, Runde 2** (Cutter, Korrektur nach Urteil out/pruefung/GoogleAds-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **freigegeben** (Prüfer, Runde 2, 18.10.2026 17:24; Urteil out/pruefung/GoogleAds-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): Google Ads ändert Budgetsteuerung
 - **Format / Design:** NEWS / pulse mit Hook in nacht-gruen (freigegebener Look ab 2026-10-17, Vorlage REWE v2)
