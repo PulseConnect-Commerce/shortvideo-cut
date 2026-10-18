@@ -5,7 +5,7 @@
  * webmaster.de vom 15.10.2026; Primärquellen: Google Blog 14.10.2026, Google Ads Hilfe). Die Budgetanteile sind
  * "best effort", kein hartes Tageslimit; das GESAMTE Kampagnenbudget wird nicht als überschritten dargestellt.
  *
- * Bild: Augen bei ~900-915 (scale 1.3), sanfte Farbe (STIL.gradeSanft), nur ein ruhiges Zoom-in (3 %, in den ersten
+ * Bild: Augen bei ~900-915 (scale 1.3), sanfte Farbe (STIL.gradeSanft plus brightness(0.8): die Aufnahme ist hell, Gesicht 0,70 -> ~0,56), nur ein ruhiges Zoom-in (3 %, in den ersten
  * 3 s etwas schneller = der "leichte Push-in" aus dem Briefing), kein Zoom-Wechsel. Oben: Hook-Titel (nacht-gruen),
  * Quellen-Screenshot, Skizzen aus HyperFrames (hyperframes/googleads-skizzen). Untertitel unter dem Kopf (y 1400).
  */
@@ -71,7 +71,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           voice={voice}
           transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
           transformOrigin="50% 0%"
-          grade={STIL.gradeSanft}
+          grade={`${STIL.gradeSanft} brightness(0.8)`}
         />
       </AbsoluteFill>
 
