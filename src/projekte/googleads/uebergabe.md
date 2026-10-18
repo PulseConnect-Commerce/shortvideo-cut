@@ -1,6 +1,6 @@
 # Übergabekarte: Google Ads ändert Budgetsteuerung
 
-Status: **freigegeben** (Prüfer, Runde 2, 18.10.2026 17:24; Urteil out/pruefung/GoogleAds-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** (Planer, 18.10.2026 18:00 Europe/Berlin; Metricool-Post-IDs TikTok 399208928, Instagram 399209275, YouTube 399209356; Drive-Ordner https://drive.google.com/drive/folders/1bOZr6W3KukYq5ZtUxNQ2XUO80ZhNDuae mit Video 1jTYDRRjlOIbcXj9Fy4NKxmPtYdroSNk8 und Doc 1w09wCs-9C5OQbkcC9Jrqhpdipwe2pgdt; zuvor Prüfer: freigegeben, Runde 2, Urteil out/pruefung/GoogleAds-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): Google Ads ändert Budgetsteuerung
 - **Format / Design:** NEWS / pulse mit Hook in nacht-gruen (freigegebener Look ab 2026-10-17, Vorlage REWE v2)
