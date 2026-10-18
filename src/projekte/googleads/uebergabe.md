@@ -1,8 +1,8 @@
-# Übergabekarte: Google-Ads-Budgetsteuerung
+# Übergabekarte: Google Ads ändert Budgetsteuerung
 
-Status: **zurück, Runde 1** (Prüfer, 18.10.2026 17:06; Urteil out/pruefung/GoogleAds-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **zur Prüfung, Runde 2** (Cutter, Korrektur nach Urteil out/pruefung/GoogleAds-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
-- **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): Google-Ads-Budgetsteuerung
+- **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): Google Ads ändert Budgetsteuerung
 - **Format / Design:** NEWS / pulse mit Hook in nacht-gruen (freigegebener Look ab 2026-10-17, Vorlage REWE v2)
 - **Plattformen:** TikTok, Instagram Reel, YouTube Short
 - **Termin laut Kalender:** "📣 GEPLANT 18:00 | Google Ads ändert Budgetsteuerung – Reel · TikTok · Shorts", So 18.10.2026 18:00 Uhr (Europe/Berlin); laut Briefing noch nicht in Metricool terminiert
@@ -21,7 +21,7 @@ Status: **zurück, Runde 1** (Prüfer, 18.10.2026 17:06; Urteil out/pruefung/Goo
 -   6.7 s  Hier ist mal die neue Meldung dazu.
 -   8.7 s  Seit dem 15.
 -   9.5 s  Oktober führt nämlich Google Ads neue Einstellungen ein.
--  12.2 s  Du kannst jetzt nämlich bei bestimmten Kanälen festlegen, welche Werbekanäle bevorzugt Budget bekommen sollen.
+-  12.2 s  Du kannst jetzt nämlich bei bestimmten Kanälen festlegen, welche Werbekanäle bevorzugt Budget bekommen soll.
 -  17.5 s  Und das betrifft jetzt eben unter anderem Google Shopping und die P-Max Kampagnen.
 -  21.1 s  Klingt jetzt natürlich erstmal richtig gut, aber hier kommt jetzt doch mal ein kleiner Haken.
 -  25.7 s  Denn diese neuen prozentualen Budgetgrenzen sind natürlich nicht immer verbindlich.
@@ -57,7 +57,7 @@ Status: **zurück, Runde 1** (Prüfer, 18.10.2026 17:06; Urteil out/pruefung/Goo
 <!-- Variante (A/B/C), was weggelassen oder umgestellt ist, Sätze mit "ganz", Takes, Musik, Abweichungen vom Stil -->
 - Fassung: der Sprechtext im Briefing gibt Reihenfolge und Inhalt vor, daher keine Variantenwahl. Der Rohclip (139,7 s) besteht aus vielen Neuansätzen; pro Satz der letzte saubere Anlauf: Hook-Satz 3. Anlauf (Quelle 21,3 s), "Hier ist mal die neue Meldung dazu" (32,6 s), Satz zu den Werbekanälen 4. Anlauf (52,8 s), "Klingt ... Haken" bis "aktivieren" (83,9 s, durchgehend gesprochen), "Aber schaut euch das vorher an ..." (103,3 s), Frage und Schluss (125,1 s, "ganz"). Weggelassen: abgebrochene Anläufe ("verurteilt", "in bestimmte", "Hier mal meine Meinung dazu", "festlegen du kannst", "es kommt jetzt" usw.) und die Erstversion des Hook-Satzes. 6 Schnittstücke, `min_gap` 1,0 (ganze Sätze ohne Schnitt)
 - Transkription: der erste Lauf mit `--namen "Google Ads, Performance Max, Google Shopping, Demand Gen, Onlineshop"` hat ab 104 s die Namensliste als Schleife halluziniert (die Schluss-Sätze fehlten). Ab 97 s ohne Namen neu transkribiert (`--genau --ab 97`) und neu ausgerichtet; das Transkript davor blieb. "erst" (96,8 s) und "natürlich" (84,5 s, schnell gesprochen, vom zweiten Whisper-Lauf und von `kontrolle` gehört) von Hand in die Wortliste ergänzt
-- Untertitel-Korrekturen: "PMAX" → "P-Max" (so gesprochen, kurz), "Klickt" → "Klingt", "neun" → "neuen", "soll" → "sollen.", "wird" → "würde", Satzzeichen und Großschreibung am Satzanfang bei 12,2-21,0 s ergänzt
+- Untertitel-Korrekturen: "PMAX" → "P-Max" (so gesprochen, kurz), "Klickt" → "Klingt", "neun" → "neuen", "wird" → "würde", Satzzeichen und Großschreibung am Satzanfang bei 12,2-21,0 s ergänzt
 - Paul spricht am Schluss zwei Fragen, die zweite ("Gibst du immer Google komplett freien Raum oder grenzt du das doch schon sehr stark ein?", 49,6-54,2 s) und "Mich würde mal deine Meinung dazu interessieren und Folgen nicht vergessen." (54,4-57,3 s) stehen nicht im Briefing-Sprechtext; sie bleiben, weil es seine gedrehten Worte sind und das Video auf der Facecam endet
 - Bild: `npm run farbe` sanft (Gain 0,991/0,996/1,014, Gamma 0,96, Vibrance 0,08), im Video `STIL.gradeSanft` plus `brightness(0.8)` (die Aufnahme ist hell: Gesicht 0,70 im ersten Render, mit 0,8 gemessen 0,559; ohne die Abdunklung wäre es zu hell wie bei REWE v2); leichter Porträt-Modus (Stärke 6); `scale 1.3`, `hoch 205`, `x 215`, Augen bei ~900-925 (Paul variiert den Abstand zur Kamera leicht); nur ein ruhiges Zoom-in (3 %), kein Zoom-Wechsel
 - Quelle: Seite im Container geladen und mit headless Chromium (Handy-Breite, 18.10.2026) screenshottet, zugeschnitten auf Kicker, Datum und Überschrift (Google-Logo-Kachel und Teaser-Text weggelassen); echtes Layout, nichts nachgebaut. Primärquellen (Google Blog, Google Ads Hilfe) geladen und gegengelesen: "best effort", schrittweiser Rollout, Demand Gen ohne Budgetanteil, Umstellung ab Februar 2027 bestätigt
@@ -66,11 +66,15 @@ Status: **zurück, Runde 1** (Prüfer, 18.10.2026 17:06; Urteil out/pruefung/Goo
 - `kontrolle`: 97 % Übereinstimmung, keine Meldungen (die einzige im ersten Lauf, "natürlich" bei 21,6 s, ist seither ergänzt); `npm run pruefen`: TECHNIK OK, kein FEHLER, ein Punkt für den Prüfer (Bilderbogen ansehen: Hook, Quelle, Skizzen und Untertitel liegen in der sicheren Fläche, nichts in den Zonen von TikTok und Instagram, keine leere Karte)
 - Vollversion (Master) fertig So 18.10.2026 16:46 Uhr; im ersten Lauf lag das Bild versehentlich 47 px zu weit links (schwarzer Rand rechts) und das Gesicht bei 0,70: beides vor der Abgabe korrigiert und neu gerendert
 
+- Korrektur Runde 2, Mangel 1 (leere Karte 36,3-36,57 s): Skizze "Nicht blind aktivieren": Schalter und Knopf stehen jetzt von Anfang an in der Karte (kein Zeichnen, kein späteres Einblenden), Standbilder bei 36,32 / 36,4 / 36,5 s zeigen die Karte mit Schalter; Skizzen neu gerendert (`public/broll/googleads/skizzen.webm`), alle anderen Karten unverändert
+- Korrektur Runde 2, Mangel 2 (Untertitel 16,8 s): "sollen." wieder zu "soll." (Pauls Wort, `kontrolle` hört "soll."); `schnitt.json` angepasst, `cut.json` neu: Schnittstücke, Seiten und alle Wortzeiten unverändert, nur der Text dieses einen Worts
+- Korrektur Runde 2, Mangel 3 (Titel): "Google Ads ändert Budgetsteuerung" (Kalendertitel ohne "📣 GEPLANT 18:00 |" und ohne Plattformliste) in Kopfzeile und Titel-Zeile; gilt auch für Datei-, Drive-Ordner- und Doc-Name. In den Captions Instagram und YouTube ist der Prozentsatz für niedrig priorisierte Kanäle jetzt "optional" (laut Google-Ads-Hilfe optional); die Korrektur "soll → sollen." ist aus den Entscheidungen gestrichen
+
 ## Offene Fragen an Paul
 
 <!-- unsichere Wörter, Regieanweisungen, fehlendes Material; "keine", wenn es keine gibt -->
-- Im Satz zu den Werbekanälen sagt Paul "bei bestimmten **Kanälen** festlegen, welche Werbekanäle bevorzugt Budget bekommen sollen" (letzter sauberer Anlauf bei 52,8 s); im Briefing steht "bei bestimmten **Kampagnen**" (sein erster Anlauf bei 40,8 s sagte "Kampagnen", brach aber vor "Budget bekommen" ab). Im Video bleibt der letzte Anlauf stehen; soll stattdessen der frühere Anlauf mit "Kampagnen" genommen werden?
-- Gesprochen klingt es nach "soll" statt "sollen" (Untertitel: "sollen.") und nach "Mich würde" (Whisper hörte "wird"; Untertitel: "würde"): bitte kurz gegenhören
+- Im Satz zu den Werbekanälen sagt Paul "bei bestimmten **Kanälen** festlegen, welche Werbekanäle bevorzugt Budget bekommen soll" (letzter sauberer Anlauf bei 52,8 s); im Briefing steht "bei bestimmten **Kampagnen**" (sein erster Anlauf bei 40,8 s sagte "Kampagnen", brach aber vor "Budget bekommen" ab). Im Video bleibt der letzte Anlauf stehen; soll stattdessen der frühere Anlauf mit "Kampagnen" genommen werden?
+- Gesprochen klingt es nach "Mich würde" (Whisper hörte "wird"; Untertitel: "würde"): bitte kurz gegenhören
 - Soll "Folgen nicht vergessen" am Ende bleiben? Es steht nicht im Briefing-Sprechtext (Briefing: Zuschauerfrage, direkt auf Facecam enden). Ohne diesen Satz endet das Video bei ca. 56 s auf "interessieren"
 - Demand Gen (Prioritäten ja, prozentuale Budgetzuweisung aktuell nein) und die automatische Umstellung ab Februar 2027 stehen nur in den Captions, nicht im Video, weil Paul beides nicht spricht
 - Hook und Quelle: die Quelle erscheint erst bei 6,6 s (auf "Hier ist die neue Meldung"), nicht schon bei 3 s, weil Pauls Satz so liegt; davor eine Skizze "Dein Onlineshop".
@@ -106,7 +110,7 @@ Google verändert gerade, wie dein Werbebudget verteilt wird 💸
 
 Seit dem 15. Oktober rollt Google Ads neue Kanal-Prioritäten und Budgetanteile aus (Search, Shopping, Performance Max, Demand Gen):
 ✅ Kanäle lassen sich als „hoch“ oder „niedrig“ priorisieren
-✅ Für niedrig priorisierte Kanäle gibt es einen maximalen Prozentsatz des Tagesbudgets
+✅ Für niedrig priorisierte Kanäle lässt sich optional ein maximaler Prozentsatz des Tagesbudgets festlegen
 ✅ Demand Gen unterstützt Prioritäten, aktuell aber keine prozentuale Budgetzuweisung
 
 Der Haken: Diese Anteile sind „best effort“, also kein hartes Tageslimit. Google kann sie an einzelnen Tagen überschreiten (es geht um den Anteil einzelner Kanäle, nicht pauschal um das gesamte Kampagnenbudget). Und die Funktion wird erst nach und nach freigeschaltet, nicht sofort in jedem Konto.
@@ -127,7 +131,7 @@ Quellen: webmaster.de (15.10.2026), Google Blog (14.10.2026), Google Ads Hilfe
 Titel (max. 100 Zeichen): Google Ads: Neue Budgetsteuerung für Kanäle – das sollten Shop-Betreiber prüfen
 
 ```
-Seit dem 15. Oktober 2026 führt Google Ads schrittweise Kanal-Prioritäten und Budgetanteile ein (Search, Shopping, Performance Max, Demand Gen). Kanäle lassen sich als hoch oder niedrig priorisieren, für niedrig priorisierte Kanäle gibt es einen maximalen Prozentsatz des Tagesbudgets. Demand Gen unterstützt Prioritäten, aktuell aber keine prozentuale Budgetzuweisung.
+Seit dem 15. Oktober 2026 führt Google Ads schrittweise Kanal-Prioritäten und Budgetanteile ein (Search, Shopping, Performance Max, Demand Gen). Kanäle lassen sich als hoch oder niedrig priorisieren, für niedrig priorisierte Kanäle lässt sich optional ein maximaler Prozentsatz des Tagesbudgets festlegen. Demand Gen unterstützt Prioritäten, aktuell aber keine prozentuale Budgetzuweisung.
 
 Der Haken: Die Budgetanteile sind „best effort“, kein hartes Tageslimit, und die Funktion wird erst nach und nach freigeschaltet. Ab Februar 2027 stellt Google bestehende Suchkampagnen mit Display Expansion automatisch um.
 
