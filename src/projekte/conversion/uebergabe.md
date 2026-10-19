@@ -1,6 +1,6 @@
 # Übergabekarte: E01_Conversion-Rate
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **zurück, Runde 1** (Prüfer) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): E01_Conversion-Rate
 - **Format / Design:** FACE / nacht (Leuchtfarbe #CCFF00), freigegebener Look ab 2026-10-17 (Neuschnitt von E01, Vorlage simgym)
