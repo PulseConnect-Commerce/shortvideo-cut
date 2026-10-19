@@ -16,7 +16,7 @@ import cut from "../conversion/cut.json";
 const C = createCut(cut);
 export const meta = { id: "ConversionV2", durationInFrames: C.DURATION, fps: C.FPS };
 
-const BILD = { scale: 1.3, hoch: 300, x: 0 };
+const BILD = { scale: 1.3, hoch: 255, x: 0 };
 const HOOK_ENDE = Math.round(5.0 * C.FPS);
 
 const BETONT = ["conversion", "rate", "100", "zwei", "2%", "gut", "schlecht", "produkt", "zielgruppe", "traffic-quelle", "zeitverlauf", "steigt", "zeichen", "vorteil", "bestellungen", "traffic", "testfrage", "follow"];
@@ -51,7 +51,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           voice={voice}
           transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
           transformOrigin="50% 0%"
-          grade={`${STIL.gradeSanft} brightness(0.8)`}
+          grade={STIL.gradeSanft}
         />
       </AbsoluteFill>
 
