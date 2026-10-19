@@ -1,0 +1,967 @@
+{
+ "projekt": "simgym",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "simgym/t1",
+   "from": 5.205,
+   "to": 9.305,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "simgym/t1",
+   "from": 11.085,
+   "to": 15.015,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "simgym/t1",
+   "from": 22.185,
+   "to": 28.295,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "simgym/t1",
+   "from": 28.945,
+   "to": 60.445,
+   "stumm": [
+    [
+     29.55,
+     29.67
+    ]
+   ],
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "simgym/t1",
+   "from": 2.425,
+   "to": 4.98,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Shopify",
+   "src": "simgym/t1",
+   "start": 5.27,
+   "end": 5.59
+  },
+  {
+   "text": "hat",
+   "src": "simgym/t1",
+   "start": 5.71,
+   "end": 5.81
+  },
+  {
+   "text": "eine",
+   "src": "simgym/t1",
+   "start": 5.87,
+   "end": 5.99
+  },
+  {
+   "text": "neue",
+   "src": "simgym/t1",
+   "start": 6.11,
+   "end": 6.33
+  },
+  {
+   "text": "KI-App,",
+   "src": "simgym/t1",
+   "start": 6.41,
+   "end": 6.85
+  },
+  {
+   "text": "die",
+   "src": "simgym/t1",
+   "start": 7.05,
+   "end": 7.13
+  },
+  {
+   "text": "deinen",
+   "src": "simgym/t1",
+   "start": 7.19,
+   "end": 7.49
+  },
+  {
+   "text": "Online-Shop",
+   "src": "simgym/t1",
+   "start": 7.55,
+   "end": 7.93
+  },
+  {
+   "text": "mit",
+   "src": "simgym/t1",
+   "start": 7.99,
+   "end": 8.07
+  },
+  {
+   "text": "virtuellen",
+   "src": "simgym/t1",
+   "start": 8.15,
+   "end": 8.57
+  },
+  {
+   "text": "Kunden",
+   "src": "simgym/t1",
+   "start": 8.61,
+   "end": 9.05
+  },
+  {
+   "text": "testet.",
+   "src": "simgym/t1",
+   "start": 9.11,
+   "end": 9.23
+  },
+  {
+   "text": "Die",
+   "src": "simgym/t1",
+   "start": 11.15,
+   "end": 11.23
+  },
+  {
+   "text": "App",
+   "src": "simgym/t1",
+   "start": 11.29,
+   "end": 11.39
+  },
+  {
+   "text": "heißt",
+   "src": "simgym/t1",
+   "start": 11.43,
+   "end": 11.61
+  },
+  {
+   "text": "nämlich",
+   "src": "simgym/t1",
+   "start": 11.65,
+   "end": 11.89
+  },
+  {
+   "text": "SimGym",
+   "src": "simgym/t1",
+   "start": 11.99,
+   "end": 12.43
+  },
+  {
+   "text": "und",
+   "src": "simgym/t1",
+   "start": 12.93,
+   "end": 13.01
+  },
+  {
+   "text": "die",
+   "src": "simgym/t1",
+   "start": 13.07,
+   "end": 13.13
+  },
+  {
+   "text": "Idee",
+   "src": "simgym/t1",
+   "start": 13.19,
+   "end": 13.37
+  },
+  {
+   "text": "dahinter",
+   "src": "simgym/t1",
+   "start": 13.41,
+   "end": 13.71
+  },
+  {
+   "text": "ist",
+   "src": "simgym/t1",
+   "start": 13.79,
+   "end": 13.89
+  },
+  {
+   "text": "eigentlich",
+   "src": "simgym/t1",
+   "start": 13.97,
+   "end": 14.27
+  },
+  {
+   "text": "ziemlich",
+   "src": "simgym/t1",
+   "start": 14.37,
+   "end": 14.61
+  },
+  {
+   "text": "spannend.",
+   "src": "simgym/t1",
+   "start": 14.65,
+   "end": 14.93
+  },
+  {
+   "text": "denn",
+   "src": "simgym/t1",
+   "start": 22.25,
+   "end": 22.39
+  },
+  {
+   "text": "statt",
+   "src": "simgym/t1",
+   "start": 22.43,
+   "end": 22.61
+  },
+  {
+   "text": "Änderungen",
+   "src": "simgym/t1",
+   "start": 22.67,
+   "end": 23.11
+  },
+  {
+   "text": "direkt",
+   "src": "simgym/t1",
+   "start": 23.17,
+   "end": 23.45
+  },
+  {
+   "text": "jetzt",
+   "src": "simgym/t1",
+   "start": 23.49,
+   "end": 23.71
+  },
+  {
+   "text": "in",
+   "src": "simgym/t1",
+   "start": 23.77,
+   "end": 23.85
+  },
+  {
+   "text": "deinem",
+   "src": "simgym/t1",
+   "start": 23.89,
+   "end": 24.09
+  },
+  {
+   "text": "Online-Shop",
+   "src": "simgym/t1",
+   "start": 24.13,
+   "end": 24.53
+  },
+  {
+   "text": "live",
+   "src": "simgym/t1",
+   "start": 24.59,
+   "end": 24.79
+  },
+  {
+   "text": "zu",
+   "src": "simgym/t1",
+   "start": 24.83,
+   "end": 24.89
+  },
+  {
+   "text": "stellen,",
+   "src": "simgym/t1",
+   "start": 24.97,
+   "end": 25.25
+  },
+  {
+   "text": "kannst",
+   "src": "simgym/t1",
+   "start": 25.43,
+   "end": 25.63
+  },
+  {
+   "text": "du",
+   "src": "simgym/t1",
+   "start": 25.67,
+   "end": 25.71
+  },
+  {
+   "text": "sie",
+   "src": "simgym/t1",
+   "start": 25.77,
+   "end": 25.85
+  },
+  {
+   "text": "vorher",
+   "src": "simgym/t1",
+   "start": 25.93,
+   "end": 26.17
+  },
+  {
+   "text": "von",
+   "src": "simgym/t1",
+   "start": 26.23,
+   "end": 26.35
+  },
+  {
+   "text": "simulierten",
+   "src": "simgym/t1",
+   "start": 26.45,
+   "end": 26.93
+  },
+  {
+   "text": "KI-Käufern",
+   "src": "simgym/t1",
+   "start": 26.97,
+   "end": 27.57
+  },
+  {
+   "text": "testen",
+   "src": "simgym/t1",
+   "start": 27.67,
+   "end": 27.97
+  },
+  {
+   "text": "lassen.",
+   "src": "simgym/t1",
+   "start": 28.01,
+   "end": 28.25
+  },
+  {
+   "text": "Zum",
+   "src": "simgym/t1",
+   "start": 29.01,
+   "end": 29.11
+  },
+  {
+   "text": "Beispiel,",
+   "src": "simgym/t1",
+   "start": 29.15,
+   "end": 29.49
+  },
+  {
+   "text": "wenn",
+   "src": "simgym/t1",
+   "start": 29.71,
+   "end": 29.85
+  },
+  {
+   "text": "du",
+   "src": "simgym/t1",
+   "start": 29.89,
+   "end": 29.93
+  },
+  {
+   "text": "deinen",
+   "src": "simgym/t1",
+   "start": 30.01,
+   "end": 30.17
+  },
+  {
+   "text": "Shopify-Theme",
+   "src": "simgym/t1",
+   "start": 30.27,
+   "end": 30.87
+  },
+  {
+   "text": "überarbeitest.",
+   "src": "simgym/t1",
+   "start": 30.91,
+   "end": 31.47
+  },
+  {
+   "text": "Die",
+   "src": "simgym/t1",
+   "start": 31.99,
+   "end": 32.07
+  },
+  {
+   "text": "KI",
+   "src": "simgym/t1",
+   "start": 32.13,
+   "end": 32.31
+  },
+  {
+   "text": "simuliert",
+   "src": "simgym/t1",
+   "start": 32.43,
+   "end": 32.81
+  },
+  {
+   "text": "dann",
+   "src": "simgym/t1",
+   "start": 32.85,
+   "end": 32.95
+  },
+  {
+   "text": "eben,",
+   "src": "simgym/t1",
+   "start": 33.01,
+   "end": 33.17
+  },
+  {
+   "text": "wie",
+   "src": "simgym/t1",
+   "start": 33.23,
+   "end": 33.31
+  },
+  {
+   "text": "sich",
+   "src": "simgym/t1",
+   "start": 33.37,
+   "end": 33.47
+  },
+  {
+   "text": "unterschiedliche",
+   "src": "simgym/t1",
+   "start": 33.53,
+   "end": 34.03
+  },
+  {
+   "text": "Käufer",
+   "src": "simgym/t1",
+   "start": 34.11,
+   "end": 34.39
+  },
+  {
+   "text": "durch",
+   "src": "simgym/t1",
+   "start": 34.51,
+   "end": 34.67
+  },
+  {
+   "text": "deinen",
+   "src": "simgym/t1",
+   "start": 34.71,
+   "end": 34.97
+  },
+  {
+   "text": "Online-Shop",
+   "src": "simgym/t1",
+   "start": 35.05,
+   "end": 35.37
+  },
+  {
+   "text": "bewegen,",
+   "src": "simgym/t1",
+   "start": 35.43,
+   "end": 35.77
+  },
+  {
+   "text": "wie",
+   "src": "simgym/t1",
+   "start": 36.21,
+   "end": 36.29
+  },
+  {
+   "text": "sie",
+   "src": "simgym/t1",
+   "start": 36.33,
+   "end": 36.41
+  },
+  {
+   "text": "navigieren",
+   "src": "simgym/t1",
+   "start": 36.45,
+   "end": 36.97
+  },
+  {
+   "text": "und",
+   "src": "simgym/t1",
+   "start": 37.13,
+   "end": 37.25
+  },
+  {
+   "text": "eben",
+   "src": "simgym/t1",
+   "start": 37.29,
+   "end": 37.43
+  },
+  {
+   "text": "ob",
+   "src": "simgym/t1",
+   "start": 37.59,
+   "end": 37.71
+  },
+  {
+   "text": "sie",
+   "src": "simgym/t1",
+   "start": 37.79,
+   "end": 37.91
+  },
+  {
+   "text": "etwas",
+   "src": "simgym/t1",
+   "start": 38.03,
+   "end": 38.25
+  },
+  {
+   "text": "in",
+   "src": "simgym/t1",
+   "start": 38.29,
+   "end": 38.33
+  },
+  {
+   "text": "den",
+   "src": "simgym/t1",
+   "start": 38.37,
+   "end": 38.45
+  },
+  {
+   "text": "Warenkorb",
+   "src": "simgym/t1",
+   "start": 38.49,
+   "end": 38.83
+  },
+  {
+   "text": "legen.",
+   "src": "simgym/t1",
+   "start": 38.89,
+   "end": 39.05
+  },
+  {
+   "text": "Anschließend",
+   "src": "simgym/t1",
+   "start": 39.81,
+   "end": 40.21
+  },
+  {
+   "text": "bekommst",
+   "src": "simgym/t1",
+   "start": 40.27,
+   "end": 40.55
+  },
+  {
+   "text": "du",
+   "src": "simgym/t1",
+   "start": 40.59,
+   "end": 40.65
+  },
+  {
+   "text": "dann",
+   "src": "simgym/t1",
+   "start": 40.69,
+   "end": 40.83
+  },
+  {
+   "text": "eben",
+   "src": "simgym/t1",
+   "start": 40.89,
+   "end": 40.99
+  },
+  {
+   "text": "Hinweise,",
+   "src": "simgym/t1",
+   "start": 41.03,
+   "end": 41.49
+  },
+  {
+   "text": "wo",
+   "src": "simgym/t1",
+   "start": 41.89,
+   "end": 41.95
+  },
+  {
+   "text": "es",
+   "src": "simgym/t1",
+   "start": 42.03,
+   "end": 42.09
+  },
+  {
+   "text": "mögliche",
+   "src": "simgym/t1",
+   "start": 42.17,
+   "end": 42.53
+  },
+  {
+   "text": "Probleme",
+   "src": "simgym/t1",
+   "start": 42.59,
+   "end": 42.93
+  },
+  {
+   "text": "gibt.",
+   "src": "simgym/t1",
+   "start": 42.99,
+   "end": 43.17
+  },
+  {
+   "text": "Aber",
+   "src": "simgym/t1",
+   "start": 43.87,
+   "end": 44.03
+  },
+  {
+   "text": "Achtung,",
+   "src": "simgym/t1",
+   "start": 44.23,
+   "end": 44.51
+  },
+  {
+   "text": "denn",
+   "src": "simgym/t1",
+   "start": 44.97,
+   "end": 45.09
+  },
+  {
+   "text": "das",
+   "src": "simgym/t1",
+   "start": 45.13,
+   "end": 45.23
+  },
+  {
+   "text": "sind",
+   "src": "simgym/t1",
+   "start": 45.27,
+   "end": 45.37
+  },
+  {
+   "text": "nämlich",
+   "src": "simgym/t1",
+   "start": 45.39,
+   "end": 45.65
+  },
+  {
+   "text": "Simulationen",
+   "src": "simgym/t1",
+   "start": 45.79,
+   "end": 46.47
+  },
+  {
+   "text": "und",
+   "src": "simgym/t1",
+   "start": 46.51,
+   "end": 46.59
+  },
+  {
+   "text": "absolut",
+   "src": "simgym/t1",
+   "start": 46.75,
+   "end": 47.11
+  },
+  {
+   "text": "noch",
+   "src": "simgym/t1",
+   "start": 47.15,
+   "end": 47.25
+  },
+  {
+   "text": "keine",
+   "src": "simgym/t1",
+   "start": 47.29,
+   "end": 47.49
+  },
+  {
+   "text": "echten",
+   "src": "simgym/t1",
+   "start": 47.61,
+   "end": 47.87
+  },
+  {
+   "text": "Kundendaten.",
+   "src": "simgym/t1",
+   "start": 47.91,
+   "end": 48.37
+  },
+  {
+   "text": "Außerdem",
+   "src": "simgym/t1",
+   "start": 48.93,
+   "end": 49.23
+  },
+  {
+   "text": "befindet",
+   "src": "simgym/t1",
+   "start": 49.27,
+   "end": 49.59
+  },
+  {
+   "text": "sich",
+   "src": "simgym/t1",
+   "start": 49.65,
+   "end": 49.75
+  },
+  {
+   "text": "natürlich",
+   "src": "simgym/t1",
+   "start": 49.79,
+   "end": 50.11
+  },
+  {
+   "text": "die",
+   "src": "simgym/t1",
+   "start": 50.17,
+   "end": 50.23
+  },
+  {
+   "text": "App",
+   "src": "simgym/t1",
+   "start": 50.35,
+   "end": 50.45
+  },
+  {
+   "text": "auch",
+   "src": "simgym/t1",
+   "start": 50.57,
+   "end": 50.69
+  },
+  {
+   "text": "noch",
+   "src": "simgym/t1",
+   "start": 50.75,
+   "end": 50.85
+  },
+  {
+   "text": "klar",
+   "src": "simgym/t1",
+   "start": 50.91,
+   "end": 51.07
+  },
+  {
+   "text": "in",
+   "src": "simgym/t1",
+   "start": 51.13,
+   "end": 51.19
+  },
+  {
+   "text": "einer",
+   "src": "simgym/t1",
+   "start": 51.23,
+   "end": 51.39
+  },
+  {
+   "text": "Testphase",
+   "src": "simgym/t1",
+   "start": 51.43,
+   "end": 51.91
+  },
+  {
+   "text": "und",
+   "src": "simgym/t1",
+   "start": 52.43,
+   "end": 52.53
+  },
+  {
+   "text": "eben",
+   "src": "simgym/t1",
+   "start": 52.69,
+   "end": 52.85
+  },
+  {
+   "text": "einzelne",
+   "src": "simgym/t1",
+   "start": 52.95,
+   "end": 53.35
+  },
+  {
+   "text": "Simulationsläufe",
+   "src": "simgym/t1",
+   "start": 53.45,
+   "end": 54.45
+  },
+  {
+   "text": "können",
+   "src": "simgym/t1",
+   "start": 54.57,
+   "end": 54.75
+  },
+  {
+   "text": "natürlich",
+   "src": "simgym/t1",
+   "start": 54.79,
+   "end": 55.11
+  },
+  {
+   "text": "auch",
+   "src": "simgym/t1",
+   "start": 55.15,
+   "end": 55.25
+  },
+  {
+   "text": "Geld",
+   "src": "simgym/t1",
+   "start": 55.31,
+   "end": 55.47
+  },
+  {
+   "text": "kosten.",
+   "src": "simgym/t1",
+   "start": 55.53,
+   "end": 55.83
+  },
+  {
+   "text": "Aber",
+   "src": "simgym/t1",
+   "start": 56.64,
+   "end": 56.78
+  },
+  {
+   "text": "ob",
+   "src": "simgym/t1",
+   "start": 56.86,
+   "end": 56.94
+  },
+  {
+   "text": "die",
+   "src": "simgym/t1",
+   "start": 56.98,
+   "end": 57.06
+  },
+  {
+   "text": "Ergebnisse",
+   "src": "simgym/t1",
+   "start": 57.08,
+   "end": 57.46
+  },
+  {
+   "text": "wirklich",
+   "src": "simgym/t1",
+   "start": 57.54,
+   "end": 57.8
+  },
+  {
+   "text": "hilfreich",
+   "src": "simgym/t1",
+   "start": 57.84,
+   "end": 58.2
+  },
+  {
+   "text": "sind,",
+   "src": "simgym/t1",
+   "start": 58.24,
+   "end": 58.4
+  },
+  {
+   "text": "muss",
+   "src": "simgym/t1",
+   "start": 58.56,
+   "end": 58.7
+  },
+  {
+   "text": "natürlich",
+   "src": "simgym/t1",
+   "start": 58.78,
+   "end": 59.08
+  },
+  {
+   "text": "noch",
+   "src": "simgym/t1",
+   "start": 59.14,
+   "end": 59.24
+  },
+  {
+   "text": "ein",
+   "src": "simgym/t1",
+   "start": 59.26,
+   "end": 59.34
+  },
+  {
+   "text": "Praxistest",
+   "src": "simgym/t1",
+   "start": 59.4,
+   "end": 59.94
+  },
+  {
+   "text": "zeigen.",
+   "src": "simgym/t1",
+   "start": 59.98,
+   "end": 60.38
+  },
+  {
+   "text": "Und",
+   "src": "simgym/t1",
+   "start": 2.49,
+   "end": 2.57
+  },
+  {
+   "text": "genau",
+   "src": "simgym/t1",
+   "start": 2.63,
+   "end": 2.85
+  },
+  {
+   "text": "deshalb",
+   "src": "simgym/t1",
+   "start": 2.95,
+   "end": 3.27
+  },
+  {
+   "text": "ist",
+   "src": "simgym/t1",
+   "start": 3.39,
+   "end": 3.47
+  },
+  {
+   "text": "es",
+   "src": "simgym/t1",
+   "start": 3.51,
+   "end": 3.57
+  },
+  {
+   "text": "nämlich",
+   "src": "simgym/t1",
+   "start": 3.63,
+   "end": 3.83
+  },
+  {
+   "text": "interessant,",
+   "src": "simgym/t1",
+   "start": 3.87,
+   "end": 4.31
+  },
+  {
+   "text": "denn",
+   "src": "simgym/t1",
+   "start": 4.71,
+   "end": 4.89
+  }
+ ],
+ "pages": [
+  1,
+  4,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  4,
+  2,
+  1,
+  2,
+  2,
+  3,
+  1,
+  1,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  1,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  4,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  1,
+  3,
+  2,
+  4,
+  3,
+  3,
+  3,
+  4,
+  3,
+  1
+ ]
+}

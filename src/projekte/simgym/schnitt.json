@@ -1,0 +1,103 @@
+{
+ "projekt": "simgym",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 5.0,
+   "text": "Shopify hat eine neue KI-App, die Deinen Online-Shop mit virtuellen Kundentests ist."
+  },
+  {
+   "take": "t1",
+   "ab": 11.0,
+   "text": "Die App heißt nämlich SimGym und die Idee dahinter ist eigentlich ziemlich spannend."
+  },
+  {
+   "take": "t1",
+   "ab": 22.1,
+   "text": "Denn statt Änderungen direkt jetzt in Deinem Online-Shop live zu stellen, kannst Du sie vorher von simulierten KI-Käufern testen lassen."
+  },
+  {
+   "take": "t1",
+   "ab": 28.9,
+   "text": "Zum Beispiel, wenn Du Deinen Shopify-Theme überarbeitest. Die KI simuliert dann eben, wie sich unterschiedliche Käufer durch deinen Ownershop bewegen, wie sie navigieren und eben ob sie etwas in den Warenkorb legen. Anschließend bekommst du dann eben Hinweise, wo es mögliche Probleme gibt. Aber Achtung, denn das sind nämlich Simulationen und absolut noch keine echten Kundendaten. Außerdem befindet sich natürlich die App auch noch klar in einer Testphase und eben einzelne Simulationsläufe können natürlich auch Geld kosten. Aber ob die Ergebnisse wirklich hilfreich sind, muss natürlich noch ein Praxistest herzeigen.",
+   "stumm": [
+    [
+     29.55,
+     29.67
+    ]
+   ]
+  },
+  {
+   "take": "t1",
+   "ab": 2.3,
+   "ganz": true,
+   "text": "Und genau deshalb ist es nämlich interessant, denn"
+  }
+ ],
+ "ende": {
+  "bis": 4.98
+ },
+ "korrekturen": [
+  [
+   "t1",
+   7.19,
+   "Deinen",
+   "deinen"
+  ],
+  [
+   "t1",
+   8.61,
+   "Kundentests",
+   "Kunden"
+  ],
+  [
+   "t1",
+   9.11,
+   "ist.",
+   "testet."
+  ],
+  [
+   "t1",
+   23.89,
+   "Deinem",
+   "deinem"
+  ],
+  [
+   "t1",
+   25.67,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   29.89,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   30.01,
+   "Deinen",
+   "deinen"
+  ],
+  [
+   "t1",
+   35.05,
+   "Ownershop",
+   "Online-Shop"
+  ],
+  [
+   "t1",
+   59.98,
+   "herzeigen.",
+   "zeigen."
+  ]
+ ]
+}

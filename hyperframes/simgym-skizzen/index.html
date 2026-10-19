@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Shopify SimGym – Skizzen</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <!--
+      Transparente Skizzen-Overlays fuer "Shopify SimGym" (faber-cut, src/projekte/simgym). Vorlage: hyperframes/sidekick-skizzen.
+      Zeiten = Sekunden im geschnittenen Video (cut.json). Leuchtfarbe HERO #40E8E0. Nur Text und schlichte Icons, keine Logos.
+    -->
+    <style>
+      @font-face {
+        font-family: "Anton";
+        src: url("assets/fonts/Anton-Regular.woff2") format("woff2");
+        font-weight: 400;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: transparent;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Anton", sans-serif;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+      }
+      .card {
+        position: absolute;
+        left: 110px;
+        top: 290px;
+        width: 860px;
+        height: 370px;
+        opacity: 0;
+      }
+      .panel {
+        position: absolute;
+        inset: 0;
+        border-radius: 40px;
+        background: rgba(11, 12, 14, 0.86);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+      }
+      .art {
+        position: absolute;
+        inset: 0;
+        width: 860px;
+        height: 370px;
+        overflow: visible;
+      }
+      .s {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .g {
+        stroke: #40e8e0;
+      }
+      .r {
+        stroke: #ff5a5f;
+      }
+      .thin {
+        stroke-width: 5;
+      }
+      .lbl {
+        position: absolute;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        line-height: 1.05;
+        white-space: nowrap;
+      }
+      .center {
+        text-align: center;
+      }
+      .green {
+        color: #40e8e0;
+      }
+      .red {
+        color: #ff5a5f;
+      }
+      .grey {
+        color: #c9ced4;
+      }
+    </style>
+  </head>
+    <body>
+    <div id="root" data-composition-id="simgym-skizzen" data-start="0" data-duration="45.6" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position: absolute">
+        <defs>
+          <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" />
+            <feDisplacementMap in="SourceGraphic" scale="4" />
+          </filter>
+        </defs>
+      </svg>
+
+      <section id="sz1" class="scene clip" data-start="4.15" data-duration="3.80" data-track-index="0">
+        <div id="sz1-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<g transform="translate(50 70) scale(1.15)"><rect class="s thin d1a" pathLength="1" x="0" y="0" width="84" height="64" rx="16" /><path class="s thin d1a" pathLength="1" d="M42 0 V-16" /><path class="s g thin d1a" pathLength="1" d="M42 -22 h1" style="stroke-width:12" /><path class="s g thin d1a" pathLength="1" d="M24 28 h1 M60 28 h1" style="stroke-width:10" /><path class="s thin d1a" pathLength="1" d="M26 46 H58" /></g><path class="s g thin d1b" pathLength="1" d="M190 112 H290 M268 92 L290 112 L268 132" /><g transform="translate(320 62)"><path class="s thin d1c" pathLength="1" d="M0 40 L14 0 H116 L130 40 Z" /><path class="s thin d1c" pathLength="1" d="M10 40 V110 H120 V40" /><path class="s g thin d1c" pathLength="1" d="M52 110 V70 H78 V110" /></g>
+            </g>
+          </svg>
+          <div id="sz1-a" class="lbl grey" style="left: 470px; top: 28px; font-size: 44px; opacity: 0">Die Shopify-App</div>
+          <div id="sz1-b" class="lbl green" style="left: 470px; top: 70px; font-size: 132px; opacity: 0">SimGym</div>
+          <div id="sz1-c" class="lbl " style="left: 40px; top: 232px; font-size: 60px; opacity: 0">KI-Käufer testen <span class="green">deinen Shop</span></div>
+          <div id="sz1-q" class="lbl grey" style="left: 40px; top: 318px; font-size: 30px; opacity: 0">Quelle: apps.shopify.com/simgym</div>
+
+        </div>
+      </section>
+      <section id="sz2" class="scene clip" data-start="8.1" data-duration="8.85" data-track-index="0">
+        <div id="sz2-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<g transform="translate(40 45)"><path class="s d2a" pathLength="1" d="M0 0 H190 V140 H0 Z M0 30 H190" /><path class="s thin d2a" pathLength="1" d="M18 15 h1 M38 15 h1" style="stroke-width:8" /><path class="s g thin d2a" pathLength="1" d="M20 55 H105 V120 H20 Z" /><path class="s thin d2a" pathLength="1" d="M125 55 H170 M125 85 H155 M125 115 H170" style="stroke:#7d838b" /></g><path class="s thin d2x" pathLength="1" d="M300 190 H700" style="stroke:#c9ced4" /><g transform="translate(70 238) scale(0.95)"><rect class="s thin d2c" pathLength="1" x="0" y="0" width="84" height="64" rx="16" /><path class="s thin d2c" pathLength="1" d="M42 0 V-16" /><path class="s g thin d2c" pathLength="1" d="M42 -22 h1" style="stroke-width:12" /><path class="s g thin d2c" pathLength="1" d="M24 28 h1 M60 28 h1" style="stroke-width:10" /><path class="s thin d2c" pathLength="1" d="M26 46 H58" /></g><path class="s g d2d" pathLength="1" style="stroke-width:10" d="M180 285 L204 309 L240 262" /><g class="p2" style="opacity:0"><g transform="translate(40 45)"><path class="s d2e" pathLength="1" d="M0 0 H210 V150 H0 Z M0 30 H210" /><path class="s thin d2e" pathLength="1" d="M18 15 h1 M38 15 h1" style="stroke-width:8" /><path class="s g thin d2e" pathLength="1" d="M20 55 H115 V130 H20 Z" /><path class="s thin d2e" pathLength="1" d="M135 55 H190 M135 85 H175 M135 115 H190" style="stroke:#7d838b" /></g><path class="s g thin d2f" pathLength="1" d="M690 270 L725 310 L780 235" style="stroke-width:12" /></g>
+            </g>
+          </svg>
+          <div id="sz2-a" class="lbl " style="left: 290px; top: 36px; font-size: 96px; opacity: 0">Änderungen</div>
+          <div id="sz2-b" class="lbl grey" style="left: 290px; top: 140px; font-size: 46px; opacity: 0">direkt live stellen</div>
+          <div id="sz2-c" class="lbl green" style="left: 290px; top: 205px; font-size: 84px; opacity: 0">Vorher testen</div>
+          <div id="sz2-d" class="lbl " style="left: 290px; top: 292px; font-size: 46px; opacity: 0">mit KI-Käufern</div>
+          <div id="sz2-e" class="lbl grey" style="left: 290px; top: 28px; font-size: 56px; opacity: 0">Zum Beispiel:</div>
+          <div id="sz2-f" class="lbl " style="left: 286px; top: 86px; font-size: 128px; opacity: 0">Theme</div>
+          <div id="sz2-g" class="lbl green" style="left: 290px; top: 240px; font-size: 70px; opacity: 0">überarbeiten</div>
+
+        </div>
+      </section>
+      <section id="sz3" class="scene clip" data-start="17.1" data-duration="7.75" data-track-index="0">
+        <div id="sz3-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<g transform="translate(40 45) scale(0.9)"><rect class="s thin d3a0" pathLength="1" x="0" y="0" width="84" height="64" rx="16" /><path class="s thin d3a0" pathLength="1" d="M42 0 V-16" /><path class="s g thin d3a0" pathLength="1" d="M42 -22 h1" style="stroke-width:12" /><path class="s g thin d3a0" pathLength="1" d="M24 28 h1 M60 28 h1" style="stroke-width:10" /><path class="s thin d3a0" pathLength="1" d="M26 46 H58" /></g><g transform="translate(145 45) scale(0.9)"><rect class="s thin d3a1" pathLength="1" x="0" y="0" width="84" height="64" rx="16" /><path class="s thin d3a1" pathLength="1" d="M42 0 V-16" /><path class="s g thin d3a1" pathLength="1" d="M42 -22 h1" style="stroke-width:12" /><path class="s g thin d3a1" pathLength="1" d="M24 28 h1 M60 28 h1" style="stroke-width:10" /><path class="s thin d3a1" pathLength="1" d="M26 46 H58" /></g><g transform="translate(250 45) scale(0.9)"><rect class="s thin d3a2" pathLength="1" x="0" y="0" width="84" height="64" rx="16" /><path class="s thin d3a2" pathLength="1" d="M42 0 V-16" /><path class="s g thin d3a2" pathLength="1" d="M42 -22 h1" style="stroke-width:12" /><path class="s g thin d3a2" pathLength="1" d="M24 28 h1 M60 28 h1" style="stroke-width:10" /><path class="s thin d3a2" pathLength="1" d="M26 46 H58" /></g><g transform="translate(430 40)"><path class="s thin d3b" pathLength="1" d="M0 40 L14 0 H116 L130 40 Z" /><path class="s thin d3b" pathLength="1" d="M10 40 V110 H120 V40" /><path class="s g thin d3b" pathLength="1" d="M52 110 V70 H78 V110" /></g><path class="s g thin d3c" pathLength="1" d="M345 85 H415 M393 67 L415 85 L393 103" /><path class="s g thin d3d" pathLength="1" d="M585 90 H680 M658 72 L680 90 L658 108" /><g transform="translate(700 48)"><path class="s thin d3e" pathLength="1" d="M0 0 H22 L40 70 H100 L112 25 H28" /><path class="s thin d3e" pathLength="1" d="M52 92 h1 M92 92 h1" style="stroke-width:12" /></g><path id="sz3-haken" class="s g" pathLength="1" style="stroke-width:11" d="M726 148 L744 166 L778 126" />
+            </g>
+          </svg>
+          <div id="sz3-a" class="lbl " style="left: 40px; top: 190px; font-size: 70px; opacity: 0">Simulierte <span class="green">Käufer</span></div>
+          <div id="sz3-b" class="lbl grey" style="left: 40px; top: 282px; font-size: 62px; opacity: 0">navigieren</div>
+          <div id="sz3-c" class="lbl green" style="left: 350px; top: 282px; font-size: 62px; opacity: 0">Warenkorb</div>
+
+        </div>
+      </section>
+      <section id="sz4" class="scene clip" data-start="25.0" data-duration="3.90" data-track-index="0">
+        <div id="sz4-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<path class="s d4a" pathLength="1" d="M50 40 H190 L230 80 V235 H50 Z M190 40 V80 H230" /><path class="s thin d4b" pathLength="1" d="M80 130 H200 M80 165 H200 M80 200 H160" style="stroke:#7d838b" /><path class="s g d4c" pathLength="1" d="M735 70 L820 215 H650 Z M735 120 V170 M735 192 h1" style="stroke-width:9" />
+            </g>
+          </svg>
+          <div id="sz4-a" class="lbl " style="left: 290px; top: 40px; font-size: 96px; opacity: 0">Hinweise</div>
+          <div id="sz4-b" class="lbl grey" style="left: 290px; top: 168px; font-size: 52px; opacity: 0">mögliche</div>
+          <div id="sz4-c" class="lbl green" style="left: 290px; top: 218px; font-size: 118px; opacity: 0">Probleme</div>
+
+        </div>
+      </section>
+      <section id="sz5" class="scene clip" data-start="29.0" data-duration="12.70" data-track-index="0">
+        <div id="sz5-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<g class="a5"><path class="s g d5a" pathLength="1" d="M70 50 L130 160 H10 Z M70 85 V120 M70 140 h1" style="stroke-width:8" transform="translate(30 0)" /><path class="s g d5b" pathLength="1" style="stroke-width:12" d="M570 150 H670 M570 195 H670 M595 235 L645 110" /></g><g class="b5" style="opacity:0"><path class="s d5c" pathLength="1" d="M70 40 H150 M70 40 V120 L30 205 Q20 235 50 235 H170 Q200 235 190 205 L150 120 V40 M45 175 H175" /><path class="s g thin d5d" pathLength="1" d="M95 100 h1 M120 75 h1 M105 60 h1" style="stroke-width:12" /></g><g class="c5" style="opacity:0"><circle class="s g d5e" pathLength="1" cx="95" cy="140" r="78" /><path class="s thin d5f" pathLength="1" d="M125 100 Q70 90 62 140 Q70 190 125 180 M42 125 H105 M42 155 H105" style="stroke-width:8" /></g>
+            </g>
+          </svg>
+          <div id="sz5-w" class="lbl green" style="left: 230px; top: 30px; font-size: 88px; opacity: 0">Achtung</div>
+          <div id="sz5-s" class="lbl " style="left: 110px; top: 150px; font-size: 92px; opacity: 0">Simulation</div>
+          <div id="sz5-e" class="lbl " style="left: 110px; top: 262px; font-size: 76px; opacity: 0">echte Käuferdaten</div>
+          <div id="sz5-n" class="lbl grey" style="left: 290px; top: 40px; font-size: 56px; opacity: 0">noch in</div>
+          <div id="sz5-t" class="lbl green" style="left: 286px; top: 100px; font-size: 112px; opacity: 0">Testphase</div>
+          <div id="sz5-t2" class="lbl grey" style="left: 290px; top: 262px; font-size: 56px; opacity: 0">Simulationsläufe</div>
+          <div id="sz5-l" class="lbl grey" style="left: 290px; top: 60px; font-size: 56px; opacity: 0">Läufe können</div>
+          <div id="sz5-g" class="lbl green" style="left: 270px; top: 120px; font-size: 108px; opacity: 0">Geld kosten</div>
+          <div id="sz5-g2" class="lbl grey" style="left: 290px; top: 276px; font-size: 56px; opacity: 0">Simulationsläufe</div>
+
+        </div>
+      </section>
+      <section id="sz6" class="scene clip" data-start="41.85" data-duration="3.65" data-track-index="0">
+        <div id="sz6-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<path class="s g d6a" pathLength="1" style="stroke-width:14" d="M55 100 Q55 40 120 40 Q185 40 185 100 Q185 140 120 165 V205 M120 250 h1" />
+            </g>
+          </svg>
+          <div id="sz6-a" class="lbl " style="left: 230px; top: 28px; font-size: 92px; opacity: 0">Ergebnisse</div>
+          <div id="sz6-b" class="lbl green" style="left: 230px; top: 125px; font-size: 92px; opacity: 0">hilfreich?</div>
+          <div id="sz6-c" class="lbl " style="left: 230px; top: 238px; font-size: 84px; opacity: 0">Praxistest</div>
+          <div id="sz6-d" class="lbl green" style="left: 620px; top: 238px; font-size: 84px; opacity: 0">zeigen</div>
+
+        </div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const draw = (sel, at, dur = 0.5) =>
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 0.8 }, { strokeDashoffset: 0, duration: dur, ease: "power2.out", stagger: 0.06 }, at);
+      const card = (id, start, end) => {
+        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.2, ease: "power2.out" }, start);
+        tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.25, ease: "power2.in" }, end - 0.25);
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, at);
+      const show = (sel, at, dur = 0.25) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: dur }, at);
+      const out = (sel, at) => tl.to(sel, { opacity: 0, duration: 0.15 }, at);
+
+      // 1: Die (4.17) App heisst (4.44) SimGym (5.00) | die Idee (6.08) KI-Kaeufer testen deinen Shop
+      card("sz1", 4.2, 7.95);
+      draw(".d1a", 4.2, 0.5);
+      draw(".d1b", 4.4, 0.4);
+      draw(".d1c", 4.55, 0.5);
+      pop("#sz1-a", 4.3);
+      pop("#sz1-b", 4.98);
+      show("#sz1-q", 5.7, 0.3);
+      pop("#sz1-c", 6.1);
+
+      // 2: Aenderungen (8.49) direkt live (8.99/10.41) vorher (11.75) simulierten KI-Kaeufern (12.27) | Zum Beispiel (14.17) Theme (15.43) ueberarbeitest (16.07)
+      card("sz2", 8.15, 16.95);
+      draw(".d2a", 8.15, 0.5);
+      pop("#sz2-a", 8.47);
+      pop("#sz2-b", 10.39);
+      draw(".d2x", 10.8, 0.4);
+      pop("#sz2-c", 11.73);
+      draw(".d2c", 12.25, 0.45);
+      pop("#sz2-d", 12.77);
+      draw(".d2d", 13.5, 0.3);
+      out(["#sz2-a", "#sz2-b", "#sz2-c", "#sz2-d", ".d2a", ".d2x", ".d2c", ".d2d"], 13.95);
+      tl.to(".p2", { opacity: 1, duration: 0.05 }, 14.05);
+      draw(".d2e", 14.08, 0.5);
+      pop("#sz2-e", 14.15);
+      pop("#sz2-f", 15.41);
+      pop("#sz2-g", 16.05);
+      draw(".d2f", 16.3, 0.4);
+
+      // 3: Die KI simuliert (17.29/17.58) unterschiedliche Kaeufer (18.68/19.27) Online-Shop (20.20) navigieren (21.61) Warenkorb (23.64) legen (24.05)
+      card("sz3", 17.15, 24.85);
+      draw(".d3a0", 17.3, 0.4);
+      pop("#sz3-a", 17.56);
+      draw(".d3a1", 18.66, 0.4);
+      draw(".d3a2", 19.25, 0.4);
+      draw(".d3b", 20.18, 0.5);
+      draw(".d3c", 21.0, 0.4);
+      pop("#sz3-b", 21.59);
+      draw(".d3d", 23.2, 0.4);
+      draw(".d3e", 23.62, 0.5);
+      pop("#sz3-c", 23.62);
+      draw("#sz3-haken", 24.05, 0.3);
+
+      // 4: Anschliessend (24.96) Hinweise (26.18) moegliche (27.32) Probleme (27.75)
+      card("sz4", 25.0, 28.9);
+      draw(".d4a", 25.05, 0.5);
+      draw(".d4b", 25.5, 0.5);
+      pop("#sz4-a", 26.16);
+      pop("#sz4-b", 27.3);
+      pop("#sz4-c", 27.73);
+      draw(".d4c", 27.75, 0.45);
+
+      // 5: Achtung (29.38) Simulationen (30.94) keine echten Kundendaten (32.45/33.06) | Testphase (36.59) | Simulationslaeufe (38.61) Geld kosten (40.47/40.69)
+      card("sz5", 29.05, 41.7);
+      draw(".d5a", 29.05, 0.4);
+      pop("#sz5-w", 29.36);
+      pop("#sz5-s", 30.92);
+      draw(".d5b", 32.43, 0.4);
+      pop("#sz5-e", 32.75);
+      out([".a5", "#sz5-w", "#sz5-s", "#sz5-e"], 34.0);
+      tl.to(".b5", { opacity: 1, duration: 0.05 }, 34.1);
+      draw(".d5c", 34.12, 0.5);
+      draw(".d5d", 34.8, 0.4);
+      pop("#sz5-n", 35.89);
+      pop("#sz5-t", 36.57);
+      pop("#sz5-t2", 38.59);
+      out([".b5", "#sz5-n", "#sz5-t", "#sz5-t2"], 39.6);
+      tl.to(".c5", { opacity: 1, duration: 0.05 }, 39.7);
+      draw(".d5e", 39.7, 0.4);
+      draw(".d5f", 39.95, 0.4);
+      pop("#sz5-l", 39.93);
+      pop("#sz5-g", 40.45);
+      pop("#sz5-g2", 40.9);
+
+      // 6: Ergebnisse (42.23) hilfreich (43.00) Praxistest (44.55) zeigen (45.13)
+      card("sz6", 41.9, 45.5);
+      draw(".d6a", 41.95, 0.5);
+      pop("#sz6-a", 42.21);
+      pop("#sz6-b", 42.98);
+      pop("#sz6-c", 44.53);
+      pop("#sz6-d", 45.11);
+
+      tl.seek(0);
+      window.__timelines["simgym-skizzen"] = tl;
+    </script>
+  </body>
+</html>
