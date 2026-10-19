@@ -122,7 +122,7 @@
           <div id="A-c" class="lbl grey" style="left: 40px; top: 300px; font-size: 46px; opacity: 0">wirklich?</div>
         </div>
       </section>
-      <section id="szB" class="scene clip" data-start="9.15" data-duration="7.5" data-track-index="0">
+      <section id="szB" class="scene clip" data-start="9.15" data-duration="7.75" data-track-index="0">
         <div id="szB-card" class="card">
           <div class="panel"></div>
           <svg class="art" viewBox="0 0 860 370">
@@ -139,7 +139,7 @@
           <div id="B-7" class="lbl green" style="left: 40px; top: 166px; font-size: 170px; opacity: 0">= 2 %</div>
         </div>
       </section>
-      <section id="szC" class="scene clip" data-start="16.55" data-duration="5.2" data-track-index="0">
+      <section id="szC" class="scene clip" data-start="16.7" data-duration="5.35" data-track-index="0">
         <div id="szC-card" class="card">
           <div class="panel"></div>
           <svg class="art" viewBox="0 0 860 370">
@@ -152,7 +152,7 @@
           <div id="C-c" class="lbl green" style="left: 470px; top: 265px; font-size: 66px; opacity: 0">Bestellung</div>
         </div>
       </section>
-      <section id="szD" class="scene clip" data-start="21.6" data-duration="9.3" data-track-index="0">
+      <section id="szD" class="scene clip" data-start="21.85" data-duration="9.05" data-track-index="0">
         <div id="szD-card" class="card">
           <div class="panel"></div>
           <svg class="art" viewBox="0 0 860 370">
@@ -198,7 +198,7 @@
           <div id="F-d" class="lbl green" style="left: 480px; top: 275px; font-size: 84px; opacity: 0">Zeichen</div>
         </div>
       </section>
-      <section id="szG" class="scene clip" data-start="40.75" data-duration="9.2" data-track-index="0">
+      <section id="szG" class="scene clip" data-start="40.75" data-duration="9.75" data-track-index="0">
         <div id="szG-card" class="card">
           <div class="panel"></div>
           <svg class="art" viewBox="0 0 860 370">
@@ -212,7 +212,7 @@
           <div id="G-d" class="lbl grey" style="left: 40px; top: 285px; font-size: 44px; opacity: 0">ohne mehr Traffic</div>
         </div>
       </section>
-      <section id="szH" class="scene clip" data-start="49.9" data-duration="9.4" data-track-index="0">
+      <section id="szH" class="scene clip" data-start="50.25" data-duration="9.15" data-track-index="0">
         <div id="szH-card" class="card">
           <div class="panel"></div>
           <svg class="art" viewBox="0 0 860 370">
@@ -232,10 +232,10 @@
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
       const draw = (sel, at, dur = 0.5) =>
-        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 0.8 }, { strokeDashoffset: 0, duration: dur, ease: "power2.out", stagger: 0.06 }, at);
+        tl.fromTo(sel, { strokeDasharray: "1 3", strokeDashoffset: 1.05 }, { strokeDashoffset: 0, duration: dur, ease: "power2.out", stagger: 0.06 }, at);
       const card = (id, start, end) => {
-        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.2, ease: "power2.out" }, start);
-        tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.25, ease: "power2.in" }, end - 0.25);
+        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.12, ease: "power2.out" }, start);
+        tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.1, ease: "power2.in" }, end - 0.1);
       };
       const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, at);
       const show = (sel, at, dur = 0.25) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: dur }, at);
@@ -243,7 +243,7 @@
 
       // A: Heute (5.63) ... Shopbesucher (7.58) wirklich (8.18) kaufen (8.54)
       card("szA", 5.2, 9.2);
-      draw(".dAa", 5.4, 0.5);
+      draw(".dAa", 5.2, 0.5);
       pop("#A-a", 7.56);
       draw(".dAb", 8.0, 0.4);
       pop("#A-c", 8.16);
@@ -251,7 +251,7 @@
       pop("#A-b", 8.52);
 
       // B: 100 (9.28) Menschen | zwei (11.65) kaufen | sogenannte (13.81) Conversion (14.33) Rate | 2% (15.21)
-      card("szB", 9.2, 16.7);
+      card("szB", 9.2, 16.8);
       draw(".dBa", 9.26, 0.5);
       pop("#B-1", 9.26);
       pop("#B-2", 9.5);
@@ -266,8 +266,8 @@
       draw(".dBu", 15.5, 0.4);
 
       // C: Conversion Rate (16.81/17.21) zeigt | Besucher (19.03) | Bestellung (20.31) abschliessen (20.75)
-      card("szC", 16.65, 21.75);
-      pop("#C-a", 16.79);
+      card("szC", 16.75, 21.98);
+      pop("#C-a", 16.75);
       draw(".dCa", 19.0, 0.45);
       pop("#C-b", 19.01);
       draw(".dCb", 19.9, 0.35);
@@ -276,8 +276,8 @@
       draw(".dCd", 20.73, 0.3);
 
       // D: 2% (21.97) heisst nicht automatisch (22.67) gut (24.09) oder schlecht (24.47) | Denn das haengt (25.97) Produkt (27.37) Zielgruppe (28.01) Traffic-Quelle (29.41)
-      card("szD", 21.7, 30.9);
-      pop("#D-1", 21.95);
+      card("szD", 21.9, 30.9);
+      pop("#D-1", 21.92);
       pop("#D-2", 22.65);
       pop("#D-3", 24.07);
       pop("#D-4", 24.29);
@@ -311,7 +311,7 @@
       draw(".dFd", 39.7, 0.3);
 
       // G: Dein Vorteil (40.84/41.06) | Besucherzahl (44.60) | Bestellungen (45.77) | ohne mehr Traffic (47.12/48.74)
-      card("szG", 40.8, 49.95);
+      card("szG", 40.8, 50.38);
       pop("#G-a", 40.82);
       draw(".dGa", 44.0, 0.5);
       pop("#G-b", 44.58);
@@ -324,8 +324,8 @@
       pop("#G-d", 47.1);
 
       // H: Testfrage (50.37) | meine (52.41) Follow (53.99) | folge (57.27)
-      card("szH", 49.9, 59.35);
-      pop("#H-a", 50.35);
+      card("szH", 50.3, 59.35);
+      pop("#H-a", 50.3);
       draw(".dHq", 50.4, 0.6);
       pop("#H-b", 52.39);
       pop("#H-c", 53.97);

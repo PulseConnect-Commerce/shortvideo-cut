@@ -1,6 +1,6 @@
 # Übergabekarte: E01_Conversion-Rate
 
-Status: **zurück, Runde 1** (Prüfer) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **zur Prüfung, Runde 2** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): E01_Conversion-Rate
 - **Format / Design:** FACE / nacht (Leuchtfarbe #CCFF00), freigegebener Look ab 2026-10-17 (Neuschnitt von E01, Vorlage simgym)
@@ -52,6 +52,9 @@ Status: **zurück, Runde 1** (Prüfer) <!-- danach: freigegeben / zurück (Prüf
 - Skizzen: hyperframes/conversion-skizzen (8 Karten), Datei public/broll/conversion/skizzen.webm; nur Inhalte aus seinem Text, keine Zahlen erfunden
 - Die alte Komposition `Conversion` ist unverändert
 - kontrolle: einzige Meldung GEDEHNT bei 15,3 s ("2%." 1,1 s), Wortzeit von Whisper für "2 Prozent", Schnitt aus bereits geprüftem Stand; nicht geändert
+- Korrektur Runde 2: leere Karte 50,05-50,4 s, 5,4 s und 21,9 s: Karten erscheinen jetzt im Frame ihres ersten Inhalts (H ab 50,3 s, D ab 21,9 s, Einstieg zeichnet ab 5,2 s), die vorige Karte blendet in 0,1 s aus statt 0,25 s
+- Korrektur Runde 2: Platzhalterpunkte "· · ·" bei 16,7-17,3 s: Ursache waren Strichstart-Punkte der noch ungezeichneten Linien (Wagenräder, Köpfe); Zeichen-Start jetzt komplett unsichtbar, Karte C beginnt mit ihrem Titel auf 16,75 s
+- Korrektur Runde 2: Effekte bei 15,3 / 20,9 / 39,8 s (success) leiser (Lautstärke x0,6); lauteste Effekte jetzt 17,2 dB gegen Stimme (vorher 16,1)
 
 ## Offene Fragen an Paul
 

@@ -23,11 +23,11 @@ const BETONT = ["conversion", "rate", "100", "zwei", "2%", "gut", "schlecht", "p
 const FARBIG = ["100", "2%", "gut", "schlecht", "zeitverlauf", "steigt", "vorteil", "bestellungen", "follow"];
 
 /** Sekunden im Video, an denen die Karten erscheinen (wie in hyperframes/sidekick-skizzen/index.html) */
-const SKIZZEN = [5.2, 9.2, 16.65, 21.7, 30.8, 36.1, 40.8, 49.9];
+const SKIZZEN = [5.2, 9.2, 16.75, 21.9, 30.8, 36.1, 40.8, 50.3];
 const AKZENTE: [string, number, number][] = [
-  ["tick.mp3", 7.56, 0.3], ["tick.mp3", 11.63, 0.3], ["tick.mp3", 14.31, 0.3], ["success.mp3", 15.19, 0.3], ["tick.mp3", 19.01, 0.3],
-  ["success.mp3", 20.73, 0.3], ["tick.mp3", 24.07, 0.3], ["tick.mp3", 27.35, 0.3], ["tick.mp3", 27.99, 0.3], ["tick.mp3", 29.39, 0.3],
-  ["tick.mp3", 34.8, 0.3], ["tick.mp3", 37.94, 0.3], ["success.mp3", 39.7, 0.3], ["tick.mp3", 45.75, 0.3], ["tick.mp3", 47.1, 0.3],
+  ["tick.mp3", 7.56, 0.3], ["tick.mp3", 11.63, 0.3], ["tick.mp3", 14.31, 0.3], ["success.mp3", 15.19, 0.18], ["tick.mp3", 19.01, 0.3],
+  ["success.mp3", 20.73, 0.18], ["tick.mp3", 24.07, 0.3], ["tick.mp3", 27.35, 0.3], ["tick.mp3", 27.99, 0.3], ["tick.mp3", 29.39, 0.3],
+  ["tick.mp3", 34.8, 0.3], ["tick.mp3", 37.94, 0.3], ["success.mp3", 39.7, 0.18], ["tick.mp3", 45.75, 0.3], ["tick.mp3", 47.1, 0.3],
   ["klick.mp3", 53.97, 0.3],
 ];
 
