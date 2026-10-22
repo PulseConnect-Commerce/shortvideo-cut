@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>AOV – Skizzen</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <!--
+      Transparente Skizzen-Overlays fuer "E02 Average Order Value" (faber-cut, src/projekte/aov-v2). Vorlage: hyperframes/conversion-skizzen.
+      Zeiten = Sekunden im geschnittenen Video (src/projekte/aov/cut.json). Leuchtfarbe FACE #CCFF00. Nur Text und schlichte Icons, keine Logos.
+      Jede Karte erscheint mit ihrem ersten Inhalt (nie leer), Striche starten unsichtbar (kein Punkt vor dem Zeichnen).
+    -->
+    <style>
+      @font-face {
+        font-family: "Anton";
+        src: url("assets/fonts/Anton-Regular.woff2") format("woff2");
+        font-weight: 400;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Anton", sans-serif; }
+      .scene { position: absolute; inset: 0; }
+      .card { position: absolute; left: 110px; top: 290px; width: 860px; height: 370px; opacity: 0; }
+      .panel { position: absolute; inset: 0; border-radius: 40px; background: rgba(11, 12, 14, 0.86); border: 2px solid rgba(255, 255, 255, 0.1); }
+      .art { position: absolute; inset: 0; width: 860px; height: 370px; overflow: visible; }
+      .s { fill: none; stroke: #ffffff; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+      .g { stroke: #ccff00; }
+      .thin { stroke-width: 5; }
+      .lbl { position: absolute; color: #ffffff; text-transform: uppercase; letter-spacing: 0.01em; line-height: 1.05; white-space: nowrap; }
+      .green { color: #ccff00; }
+      .grey { color: #c9ced4; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="aov-skizzen" data-start="0" data-duration="56.1" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position: absolute">
+        <defs>
+          <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" />
+            <feDisplacementMap in="SourceGraphic" scale="4" />
+          </filter>
+        </defs>
+      </svg>
+
+      <section id="szA" class="scene clip" data-start="5.78" data-duration="4.09" data-track-index="0">
+        <div id="szA-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<g transform="translate(560 30) scale(1.3)"><path class="s thin dAa" pathLength="1" d="M0 0 H22 L40 70 H100 L112 25 H28" /><path class="s g thin dAa" pathLength="1" d="M52 92 h1 M92 92 h1" style="stroke-width:12" /></g>
+            </g>
+          </svg>
+<div id="A-0" class="lbl grey" style="left: 40px; top: 30px; font-size: 110px; opacity: 0">Heute</div>
+<div id="A-1" class="lbl " style="left: 40px; top: 24px; font-size: 96px; opacity: 0">Average</div>
+<div id="A-2" class="lbl " style="left: 40px; top: 124px; font-size: 96px; opacity: 0">Order</div>
+<div id="A-3" class="lbl green" style="left: 40px; top: 224px; font-size: 96px; opacity: 0">Value</div>
+<div id="A-4" class="lbl grey" style="left: 500px; top: 170px; font-size: 46px; opacity: 0">durchschnittlich</div>
+<div id="A-5" class="lbl green" style="left: 500px; top: 222px; font-size: 70px; opacity: 0">Bestellwert</div>
+        </div>
+      </section>
+      <section id="szB" class="scene clip" data-start="9.87" data-duration="5.0" data-track-index="0">
+        <div id="szB-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<path class="s thin dBa " pathLength="1" d="M540 40 V200 H820" /><path class="s dBb1 " pathLength="1" style="stroke-width:26" d="M600 200 V150" /><path class="s dBb2 " pathLength="1" style="stroke-width:26" d="M680 200 V110" /><path class="s dBb3 g" pathLength="1" style="stroke-width:26" d="M760 200 V60" /><path class="s thin dBc g" pathLength="1" d="M580 120 L790 30 M752 30 L790 30 L790 68" /><g transform="translate(40 205) scale(1.0)"><circle class="s thin dBp" pathLength="1" cx="20" cy="14" r="14" /><path class="s thin dBp" pathLength="1" d="M-2 74 Q-2 44 20 44 Q42 44 42 74" /></g><g transform="translate(110 205) scale(1.0)"><circle class="s thin dBp" pathLength="1" cx="20" cy="14" r="14" /><path class="s thin dBp" pathLength="1" d="M-2 74 Q-2 44 20 44 Q42 44 42 74" /></g><g transform="translate(180 205) scale(1.0)"><circle class="s thin dBp" pathLength="1" cx="20" cy="14" r="14" /><path class="s thin dBp" pathLength="1" d="M-2 74 Q-2 44 20 44 Q42 44 42 74" /></g><path class="s dBd g" pathLength="1" style="stroke-width:12" d="M700 285 L730 315 L790 250" />
+            </g>
+          </svg>
+<div id="B-a" class="lbl " style="left: 40px; top: 20px; font-size: 84px; opacity: 0">Mehr Umsatz</div>
+<div id="B-b" class="lbl grey" style="left: 40px; top: 130px; font-size: 52px; opacity: 0">ohne mehr Besucher</div>
+<div id="B-c" class="lbl green" style="left: 300px; top: 235px; font-size: 70px; opacity: 0">Bestellwert</div>
+        </div>
+      </section>
+      <section id="szC" class="scene clip" data-start="14.87" data-duration="4.46" data-track-index="0">
+        <div id="szC-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<g transform="translate(40 195) scale(1.1)"><circle class="s thin dCa" pathLength="1" cx="20" cy="14" r="14" /><path class="s thin dCa" pathLength="1" d="M-2 74 Q-2 44 20 44 Q42 44 42 74" /></g><g transform="translate(118 195) scale(1.1)"><circle class="s thin dCa" pathLength="1" cx="20" cy="14" r="14" /><path class="s thin dCa" pathLength="1" d="M-2 74 Q-2 44 20 44 Q42 44 42 74" /></g><g transform="translate(196 195) scale(1.1)"><circle class="s thin dCa" pathLength="1" cx="20" cy="14" r="14" /><path class="s thin dCa" pathLength="1" d="M-2 74 Q-2 44 20 44 Q42 44 42 74" /></g><path class="s thin dCb g" pathLength="1" d="M330 240 h110 M418 220 L440 240 L418 260" /><g transform="translate(490 185) scale(1.1)"><path class="s thin dCc" pathLength="1" d="M0 0 H22 L40 70 H100 L112 25 H28" /><path class="s g thin dCc" pathLength="1" d="M52 92 h1 M92 92 h1" style="stroke-width:12" /></g><path class="s dCd g" pathLength="1" style="stroke-width:11" d="M700 215 L720 235 L758 189" />
+            </g>
+          </svg>
+<div id="C-0" class="lbl grey" style="left: 40px; top: 22px; font-size: 56px; opacity: 0">Letztes Video:</div>
+<div id="C-a" class="lbl " style="left: 40px; top: 88px; font-size: 90px; opacity: 0">Conversion <span class="green">Rate</span></div>
+<div id="C-b" class="lbl " style="left: 40px; top: 292px; font-size: 56px; opacity: 0">Besucher</div>
+<div id="C-c" class="lbl green" style="left: 480px; top: 292px; font-size: 56px; opacity: 0">kaufen</div>
+        </div>
+      </section>
+      <section id="szD" class="scene clip" data-start="19.33" data-duration="3.06" data-track-index="0">
+        <div id="szD-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<g transform="translate(480 90) scale(1.6)"><path class="s thin dDa" pathLength="1" d="M0 0 H22 L40 70 H100 L112 25 H28" /><path class="s g thin dDa" pathLength="1" d="M52 92 h1 M92 92 h1" style="stroke-width:12" /></g><g transform="translate(500 10) scale(0.5)"><path class="s thin dDb" pathLength="1" d="M0 20 L35 0 L70 20 V68 L35 88 L0 68 Z M0 20 L35 40 L70 20 M35 40 V88" /></g><g transform="translate(545 10) scale(0.5)"><path class="s thin dDb" pathLength="1" d="M0 20 L35 0 L70 20 V68 L35 88 L0 68 Z M0 20 L35 40 L70 20 M35 40 V88" /></g><g transform="translate(590 10) scale(0.5)"><path class="s thin dDb" pathLength="1" d="M0 20 L35 0 L70 20 V68 L35 88 L0 68 Z M0 20 L35 40 L70 20 M35 40 V88" /></g>
+            </g>
+          </svg>
+<div id="D-0" class="lbl grey" style="left: 40px; top: 22px; font-size: 110px; opacity: 0">Heute</div>
+<div id="D-1" class="lbl green" style="left: 40px; top: 40px; font-size: 140px; opacity: 0">AOV</div>
+<div id="D-2" class="lbl grey" style="left: 40px; top: 205px; font-size: 52px; opacity: 0">wie viel sie</div>
+<div id="D-3" class="lbl " style="left: 40px; top: 262px; font-size: 80px; opacity: 0">bestellen</div>
+        </div>
+      </section>
+      <section id="szE" class="scene clip" data-start="22.39" data-duration="8.56" data-track-index="0">
+        <div id="szE-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<g transform="translate(700 62) scale(1.0)"><circle class="s thin dEa" pathLength="1" cx="40" cy="40" r="38" /><path class="s g thin dEa" pathLength="1" d="M54 24 Q26 14 26 40 Q26 66 54 56 M18 34 H48 M18 46 H48" /></g><g transform="translate(715 160) scale(0.85)"><path class="s thin dEb" pathLength="1" d="M0 20 L35 0 L70 20 V68 L35 88 L0 68 Z M0 20 L35 40 L70 20 M35 40 V88" /></g><path class="s thin dEc " pathLength="1" style="stroke-width:6" d="M40 258 H820" />
+            </g>
+          </svg>
+<div id="E-h" class="lbl grey" style="left: 40px; top: 10px; font-size: 46px; opacity: 0">Beispiel</div>
+<div id="E-1" class="lbl " style="left: 40px; top: 62px; font-size: 80px; opacity: 0">10.000 €</div>
+<div id="E-1b" class="lbl grey" style="left: 440px; top: 85px; font-size: 52px; opacity: 0">Umsatz</div>
+<div id="E-2" class="lbl " style="left: 40px; top: 158px; font-size: 80px; opacity: 0">÷ 100</div>
+<div id="E-2b" class="lbl grey" style="left: 270px; top: 180px; font-size: 52px; opacity: 0">Bestellungen</div>
+<div id="E-3a" class="lbl grey" style="left: 40px; top: 285px; font-size: 52px; opacity: 0">Average Order Value</div>
+<div id="E-3" class="lbl " style="left: 40px; top: 270px; font-size: 90px; opacity: 0">AOV</div>
+<div id="E-3b" class="lbl green" style="left: 240px; top: 270px; font-size: 90px; opacity: 0">= 100 €</div>
+        </div>
+      </section>
+      <section id="szF" class="scene clip" data-start="30.95" data-duration="4.55" data-track-index="0">
+        <div id="szF-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<g transform="translate(30 30) scale(1.4)"><path class="s thin dFa" pathLength="1" d="M0 0 H22 L40 70 H100 L112 25 H28" /><path class="s g thin dFa" pathLength="1" d="M52 92 h1 M92 92 h1" style="stroke-width:12" /></g><path class="s thin dFb g" pathLength="1" d="M222 100 h40 M242 80 V120" /><g transform="translate(285 30) scale(1.0)"><path class="s thin dFc" pathLength="1" d="M0 20 L35 0 L70 20 V68 L35 88 L0 68 Z M0 20 L35 40 L70 20 M35 40 V88" /></g><path class="s thin dFd g" pathLength="1" d="M382 100 h40 M402 80 V120" /><g transform="translate(440 55) scale(0.6)"><path class="s thin dFe" pathLength="1" d="M0 20 L35 0 L70 20 V68 L35 88 L0 68 Z M0 20 L35 40 L70 20 M35 40 V88" /></g><g transform="translate(484 55) scale(0.6)"><path class="s thin dFe" pathLength="1" d="M0 20 L35 0 L70 20 V68 L35 88 L0 68 Z M0 20 L35 40 L70 20 M35 40 V88" /></g><g transform="translate(462 22) scale(0.6)"><path class="s thin dFe" pathLength="1" d="M0 20 L35 0 L70 20 V68 L35 88 L0 68 Z M0 20 L35 40 L70 20 M35 40 V88" /></g><path class="s dFf g" pathLength="1" style="stroke-width:11" d="M805 200 V50 M773 85 L805 50 L837 85" />
+            </g>
+          </svg>
+<div id="F-a" class="lbl grey" style="left: 40px; top: 190px; font-size: 46px; opacity: 0">Produkt</div>
+<div id="F-b" class="lbl grey" style="left: 285px; top: 190px; font-size: 46px; opacity: 0">Zusatz</div>
+<div id="F-c" class="lbl grey" style="left: 445px; top: 190px; font-size: 46px; opacity: 0">Bundle</div>
+<div id="F-d" class="lbl " style="left: 585px; top: 50px; font-size: 110px; opacity: 0">AOV</div>
+<div id="F-e" class="lbl green" style="left: 595px; top: 190px; font-size: 56px; opacity: 0">erhöhen</div>
+        </div>
+      </section>
+      <section id="szG" class="scene clip" data-start="35.5" data-duration="2.83" data-track-index="0">
+        <div id="szG-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<path class="s thin dGa " pathLength="1" d="M690 30 L790 200 H590 Z" /><path class="s dGb g" pathLength="1" style="stroke-width:11" d="M690 90 V145 M690 172 h1" /><path class="s thin dGc " pathLength="1" d="M40 320 H520" /><path class="s dGd g" pathLength="1" style="stroke-width:22" d="M52 320 H508" />
+            </g>
+          </svg>
+<div id="G-a" class="lbl " style="left: 40px; top: 20px; font-size: 110px; opacity: 0">Aber</div>
+<div id="G-b" class="lbl green" style="left: 40px; top: 150px; font-size: 120px; opacity: 0">Marge</div>
+<div id="G-c" class="lbl grey" style="left: 400px; top: 160px; font-size: 52px; opacity: 0">nicht</div>
+<div id="G-d" class="lbl " style="left: 400px; top: 215px; font-size: 70px; opacity: 0">leiden</div>
+        </div>
+      </section>
+      <section id="szH" class="scene clip" data-start="38.33" data-duration="9.58" data-track-index="0">
+        <div id="szH-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<path class="s dHb g" pathLength="1" style="stroke-width:11" d="M340 270 V130 M310 160 L340 130 L370 160" /><g transform="translate(40 140) scale(0.9)"><path class="s thin dHc" pathLength="1" d="M0 0 H22 L40 70 H100 L112 25 H28" /><path class="s g thin dHc" pathLength="1" d="M52 92 h1 M92 92 h1" style="stroke-width:12" /></g><g transform="translate(150 140) scale(0.9)"><path class="s thin dHc" pathLength="1" d="M0 0 H22 L40 70 H100 L112 25 H28" /><path class="s g thin dHc" pathLength="1" d="M52 92 h1 M92 92 h1" style="stroke-width:12" /></g><g transform="translate(260 140) scale(0.9)"><path class="s thin dHc" pathLength="1" d="M0 0 H22 L40 70 H100 L112 25 H28" /><path class="s g thin dHc" pathLength="1" d="M52 92 h1 M92 92 h1" style="stroke-width:12" /></g><path class="s dHd g" pathLength="1" style="stroke-width:10" d="M800 235 V140 M772 168 L800 140 L828 168" /><g transform="translate(600 270) scale(0.9)"><circle class="s thin dHe" pathLength="1" cx="20" cy="14" r="14" /><path class="s thin dHe" pathLength="1" d="M-2 74 Q-2 44 20 44 Q42 44 42 74" /></g><path class="s dHf g" pathLength="1" style="stroke-width:8" d="M590 345 L690 265" />
+            </g>
+          </svg>
+<div id="H-a" class="lbl " style="left: 40px; top: 18px; font-size: 84px; opacity: 0">Dein <span class="green">Vorteil</span></div>
+<div id="H-b" class="lbl " style="left: 40px; top: 150px; font-size: 130px; opacity: 0">AOV</div>
+<div id="H-c" class="lbl grey" style="left: 40px; top: 235px; font-size: 46px; opacity: 0">gleiche Bestellzahl</div>
+<div id="H-d" class="lbl green" style="left: 390px; top: 160px; font-size: 58px; opacity: 0">Mehr Umsatz</div>
+<div id="H-e" class="lbl grey" style="left: 40px; top: 300px; font-size: 46px; opacity: 0">ohne zusätzliche Besucher</div>
+        </div>
+      </section>
+      <section id="szI" class="scene clip" data-start="47.91" data-duration="1.51" data-track-index="0">
+        <div id="szI-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<path class="s thin dIa " pathLength="1" d="M690 30 L790 200 H590 Z" /><path class="s dIb g" pathLength="1" style="stroke-width:11" d="M690 90 V145 M690 172 h1" />
+            </g>
+          </svg>
+<div id="I-a" class="lbl " style="left: 40px; top: 30px; font-size: 100px; opacity: 0">Achte</div>
+<div id="I-c" class="lbl grey" style="left: 290px; top: 55px; font-size: 56px; opacity: 0">auf die</div>
+<div id="I-b" class="lbl green" style="left: 40px; top: 150px; font-size: 150px; opacity: 0">Marge</div>
+        </div>
+      </section>
+      <section id="szJ" class="scene clip" data-start="50.05" data-duration="6.05" data-track-index="0">
+        <div id="szJ-card" class="card">
+          <div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370">
+            <g filter="url(#rough)">
+<path class="s thin dJa " pathLength="1" d="M650 30 H770 V270 H650 Z" /><path class="s dJb g" pathLength="1" style="stroke-width:9" d="M710 100 V200 M680 170 L710 200 L740 170" /><path class="s thin dJc " pathLength="1" d="M590 40 V240 H830" /><path class="s dJd1 " pathLength="1" style="stroke-width:26" d="M640 240 V200" /><path class="s dJd2 " pathLength="1" style="stroke-width:26" d="M710 240 V160" /><path class="s dJd3 g" pathLength="1" style="stroke-width:26" d="M780 240 V110" /><path class="s thin dJe g" pathLength="1" d="M610 130 L800 50 M762 52 L800 50 L795 88" /><g transform="translate(640 30) scale(1.5)"><circle class="s thin dJf" pathLength="1" cx="20" cy="14" r="14" /><path class="s thin dJf" pathLength="1" d="M-2 74 Q-2 44 20 44 Q42 44 42 74" /></g><path class="s thin dJg g" pathLength="1" d="M740 120 h60 M770 90 V150" />
+            </g>
+          </svg>
+<div id="J-a" class="lbl " style="left: 40px; top: 20px; font-size: 100px; opacity: 0">Mehr Wissen</div>
+<div id="J-b" class="lbl grey" style="left: 40px; top: 135px; font-size: 80px; opacity: 0">pro Scroll</div>
+<div id="J-c" class="lbl grey" style="left: 40px; top: 20px; font-size: 52px; opacity: 0">Dein persönlicher</div>
+<div id="J-d" class="lbl green" style="left: 40px; top: 130px; font-size: 88px; opacity: 0">Wissens-AOV</div>
+<div id="J-e" class="lbl " style="left: 40px; top: 30px; font-size: 100px; opacity: 0">Folg mir</div>
+<div id="J-f" class="lbl grey" style="left: 40px; top: 160px; font-size: 54px; opacity: 0">für mehr</div>
+<div id="J-g" class="lbl green" style="left: 40px; top: 225px; font-size: 100px; opacity: 0">Kennzahlen</div>
+        </div>
+      </section>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const draw = (sel, at, dur = 0.5) =>
+        tl.fromTo(sel, { strokeDasharray: "1 3", strokeDashoffset: 1.05 }, { strokeDashoffset: 0, duration: dur, ease: "power2.out", stagger: 0.06 }, at);
+      // Karte erscheint mit dem ersten Inhalt (gleicher Zeitpunkt), kurzes Ausblenden am Ende
+      const card = (id, start, end) => {
+        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.1, ease: "power2.out" }, start);
+        tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.1, ease: "power2.in" }, end - 0.1);
+      };
+      const pop = (sel, at, dur = 0.22) => tl.fromTo(sel, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: dur, ease: "back.out(1.8)" }, at);
+      const first = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.1, ease: "power2.out" }, at);
+      const out = (sel, at) => tl.to(sel, { opacity: 0, duration: 0.15 }, at);
+      const shrink = (sel, at, v) => tl.to(sel, { strokeDasharray: `${v} 3`, duration: 0.45, ease: "power2.in" }, at);
+
+      // A: Heute (5.85) | Average (7.09) Order Value | durchschnittlichen (8.66) Bestellwert (9.29)
+      card("szA", 5.78, 9.87);
+      first("#A-0", 5.78);
+      out("#A-0", 7.0);
+      pop("#A-1", 7.02);
+      pop("#A-2", 7.51);
+      pop("#A-3", 7.73);
+      draw(".dAa", 8.6, 0.5);
+      pop("#A-4", 8.6);
+      pop("#A-5", 9.22);
+
+      // B: Mehr (9.93) Umsatz | ohne mehr Besucher (10.53-10.85) | Bestellwert (12.87) | funktionieren (13.75)
+      card("szB", 9.87, 14.87);
+      first("#B-a", 9.87);
+      draw(".dBa", 10.07, 0.3);
+      draw(".dBb1", 10.1, 0.3);
+      draw(".dBb2", 10.2, 0.3);
+      draw(".dBb3", 10.3, 0.3);
+      draw(".dBc", 10.5, 0.4);
+      pop("#B-b", 10.46);
+      draw(".dBp", 10.78, 0.5);
+      pop("#B-c", 12.8);
+      draw(".dBd", 13.68, 0.3);
+
+      // C: Im letzten Video (14.93) | Conversion Rate (16.25) | Besucher (18.07) | kaufen (18.51) | dir (19.03)
+      card("szC", 14.87, 19.33);
+      first("#C-0", 14.87);
+      pop("#C-a", 16.18);
+      draw(".dCa", 18.0, 0.45);
+      pop("#C-b", 18.0);
+      draw(".dCb", 18.35, 0.3);
+      draw(".dCc", 18.43, 0.45);
+      pop("#C-c", 18.43);
+      draw(".dCd", 18.95, 0.3);
+
+      // D: Heute (19.40) | aber (19.92) | wie viel (20.66) | bestellen (21.32)
+      card("szD", 19.33, 22.39);
+      first("#D-0", 19.33);
+      out("#D-0", 19.8);
+      pop("#D-1", 19.85);
+      pop("#D-2", 20.6);
+      draw(".dDa", 20.6, 0.5);
+      pop("#D-3", 21.25);
+      draw(".dDb", 21.26, 0.35);
+
+      // E: Beispiel (22.94) | 10.000 (24.06) Umsatz (24.60) | 100 (25.28) Bestellungen (25.62) | Average Order Value (27.10) | AOV (28.68) | 100 Euro (29.78/30.10)
+      card("szE", 22.39, 30.95);
+      first("#E-h", 22.39);
+      pop("#E-1", 24.0);
+      draw(".dEa", 24.0, 0.5);
+      pop("#E-1b", 24.54);
+      pop("#E-2", 25.21);
+      draw(".dEb", 25.21, 0.5);
+      pop("#E-2b", 25.55);
+      draw(".dEc", 26.5, 0.4);
+      pop("#E-3a", 27.03);
+      out("#E-3a", 28.55);
+      pop("#E-3", 28.62);
+      pop("#E-3b", 29.71);
+
+      // F: Passende (31.02) Zusatzprodukte (31.56) | Bundles (32.48) | AOV (33.90) | erhöhen (35.10)
+      card("szF", 30.95, 35.5);
+      draw(".dFa", 30.95, 0.5);
+      first("#F-a", 30.95);
+      draw(".dFb", 31.45, 0.3);
+      draw(".dFc", 31.5, 0.5);
+      pop("#F-b", 31.5);
+      draw(".dFd", 32.35, 0.3);
+      draw(".dFe", 32.42, 0.5);
+      pop("#F-c", 32.42);
+      pop("#F-d", 33.82);
+      draw(".dFf", 35.02, 0.4);
+      pop("#F-e", 35.02);
+
+      // G: Aber (35.57) | Marge (37.03) | nicht (37.47) | leidet (38.00)
+      card("szG", 35.5, 38.33);
+      draw(".dGa", 35.5, 0.45);
+      first("#G-a", 35.5);
+      draw(".dGb", 35.8, 0.3);
+      pop("#G-b", 36.96);
+      draw(".dGc", 36.96, 0.3);
+      draw(".dGd", 37.1, 0.4);
+      pop("#G-c", 37.43);
+      shrink(".dGd", 37.93, 0.3);
+      pop("#G-d", 37.93);
+
+      // H: Dein Vorteil (38.40/38.64) | AOV (40.32) steigerst (40.88) | gleicher Bestellzahl (42.38/42.72) | mehr Umsatz (43.56/43.90) | ohne zusätzlich Besucher (45.02-46.28)
+      card("szH", 38.33, 47.91);
+      first("#H-a", 38.33);
+      pop("#H-b", 40.25);
+      draw(".dHb", 40.8, 0.4);
+      out(["#H-b", ".dHb"], 42.25);
+      draw(".dHc", 42.3, 0.45);
+      pop("#H-c", 42.65);
+      pop("#H-d", 43.43);
+      draw(".dHd", 43.85, 0.4);
+      pop("#H-e", 44.95);
+      draw(".dHe", 46.22, 0.4);
+      draw(".dHf", 46.5, 0.3);
+
+      // I: Achte (47.98) auf (48.72) Marge (48.98)
+      card("szI", 47.91, 49.42);
+      draw(".dIa", 47.91, 0.4);
+      first("#I-a", 47.91);
+      draw(".dIb", 48.2, 0.3);
+      pop("#I-c", 48.65);
+      pop("#I-b", 48.91);
+
+      // J: mehr Wissen (50.12) | Scroll (50.82) | erhöhe (51.76) persönlichen (52.24) Wissens-AOV (52.82) | folg (53.94) mir | für weitere (54.60) Kennzahlen (55.32)
+      card("szJ", 50.05, 56.1);
+      first("#J-a", 50.05);
+      pop("#J-b", 50.75);
+      draw(".dJa", 50.75, 0.4);
+      draw(".dJb", 50.95, 0.4);
+      out(["#J-a", "#J-b", ".dJa", ".dJb"], 51.55);
+      draw(".dJc", 51.62, 0.3);
+      draw(".dJd1", 51.69, 0.3);
+      draw(".dJd2", 51.8, 0.3);
+      draw(".dJd3", 51.91, 0.3);
+      draw(".dJe", 52.3, 0.4);
+      pop("#J-c", 52.17);
+      pop("#J-d", 52.7);
+      out(["#J-c", "#J-d", ".dJc", ".dJd1", ".dJd2", ".dJd3", ".dJe"], 53.78);
+      pop("#J-e", 53.87);
+      draw(".dJf", 53.87, 0.5);
+      draw(".dJg", 54.4, 0.4);
+      pop("#J-f", 54.5);
+      pop("#J-g", 55.25);
+
+      tl.seek(0);
+      window.__timelines["aov-skizzen"] = tl;
+    </script>
+  </body>
+</html>
