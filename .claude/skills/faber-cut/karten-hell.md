@@ -17,7 +17,12 @@ Vorlage: `hyperframes/look-probe/index.html` (kopieren, Hintergrundbild `#bg` en
 - Rechts der Text in **Geist**: kleine Zeile (Kicker, 30 px, Versalien, grau `#6B7280`), dann der **Titel zweifarbig**:
   erster Teil dunkel (`#0B0C0E`, 800, 76 px), zweiter Teil (das Schlüsselwort) als Textverlauf
   `linear-gradient(90deg, #00D088, #31ADEC)` mit `background-clip: text`. Höchstens eine Unterzeile (34 px, `#374151`).
-- Eine Karte erscheint erst mit ihrem Inhalt (keine leere Karte), höchstens ein Gedanke je Karte.
+- Eine Karte erscheint erst mit ihrem Inhalt (keine leere Karte), höchstens ein Gedanke je Karte. **Kicker und Titel
+  kommen gemeinsam mit der Karte** (Zeilenversatz höchstens 0,07 s), nie Karte mit Kicker und Icon und der Titel erst
+  Sekunden später auf seinem Wort (DHL 2026-10-22: 24,5-26,0 / 27,4-29,4 / 44,6-46,2 s fast leer). Die Karte kommt
+  stattdessen auf das Wort des Titels.
+- Helligkeit: Ist die Rohaufnahme hell (Gesicht im Bericht > 0,60), mit `npm run farbe` nachziehen, bevor gerendert
+  wird; Ziel 0,55-0,57 (DHL 2026-10-22 lag bei 0,687).
 
 **Bewegung** (Motion-Skill, `.claude/skills/motion/best-practices/index.md`: kurz, kein Überschwingen, jede Bewegung
 zeigt eine Änderung)
