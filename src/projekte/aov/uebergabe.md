@@ -1,6 +1,6 @@
 # Übergabekarte: E02_AOV
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **zurück, Runde 1** (Prüfer, Urteil: out/pruefung/AovV2-urteil.md) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): E02_AOV
 - **Format / Design:** FACE / nacht (eine Leuchtfarbe #CCFF00 in Hook, Skizzen und betonten Untertiteln; freigegebener Look ab 2026-10-17, Neuschnitt wie E01)
@@ -52,6 +52,8 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 
 ## Offene Fragen an Paul
 
+- Captions: nach Pauls neuer Regel nur 1-2 Hashtags je Plattform (TikTok/Instagram #ecommerce #aov, YouTube #shorts #aov), Rest wörtlich aus beschreibung.md
+
 - "hier aber," bei 39,2 s im Ton (siehe oben): so lassen oder rausschneiden? Wenn rausgeschnitten werden soll, ändert sich der Schnitt und damit Porträt, Skizzen-Zeiten und Render.
 - Die bestehenden Metricool-Posts der Alt-Fassung (E02_AOV) müssen vor dem Einplanen der neuen Fassung am 26.10. ersetzt werden.
 
@@ -68,7 +70,7 @@ Der Average Order Value ist dein durchschnittlicher Bestellwert. Beispiel: 10.00
 
 Erhöhe deinen Wissens-AOV und folg mir für weitere Kennzahlen 👇
 
-#ecommerce #aov #bestellwert #onlineshop #ecommerceeinfacherklärt
+#ecommerce #aov
 ```
 
 ### Instagram (Reels)
@@ -84,7 +86,7 @@ Teil der Serie „E-Commerce einfach erklärt“ – jede Woche eine Kennzahl.
 
 Erhöhe deinen Wissens-AOV und folg mir für weitere Kennzahlen 👇
 
-#ecommerce #aov #bestellwert #onlineshop #ecommerceeinfacherklärt
+#ecommerce #aov
 ```
 
 ### YouTube (Shorts)
@@ -98,7 +100,7 @@ Dein Vorteil: Steigerst du deinen AOV, machst du bei gleicher Bestellzahl mehr U
 
 Serie „E-Commerce einfach erklärt“ – jede Woche eine Kennzahl.
 
-#shorts #ecommerce #aov
+#shorts #aov
 ```
 
 ## Quellen

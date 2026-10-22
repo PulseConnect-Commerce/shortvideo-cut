@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>DHL 2027 – Skizzen</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <!-- Transparente Skizzen für "DHL-News 2027" (faber-cut, src/projekte/dhl). Zeiten = Sekunden im geschnittenen Video (cut.json). Leuchtfarbe nur #00f090. Zeichenfläche über dem Kopf, x 153-927, y 290-623. -->
+    <style>
+      @font-face {
+        font-family: "Anton";
+        src: url("assets/fonts/Anton-Regular.woff2") format("woff2");
+        font-weight: 400;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: transparent;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Anton", sans-serif;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+      }
+      .card {
+        position: absolute;
+        left: 110px;
+        top: 290px;
+        width: 860px;
+        height: 370px;
+        opacity: 0;
+      }
+      .panel {
+        position: absolute;
+        inset: 0;
+        border-radius: 40px;
+        background: rgba(11, 12, 14, 0.86);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+      }
+      .art {
+        position: absolute;
+        inset: 0;
+        width: 860px;
+        height: 370px;
+        overflow: visible;
+      }
+      .s {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .g {
+        stroke: #00f090;
+      }
+      .r {
+        stroke: #ffffff;
+      }
+      .thin {
+        stroke-width: 5;
+      }
+      .lbl {
+        position: absolute;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        line-height: 1.05;
+        white-space: nowrap;
+      }
+      .center {
+        text-align: center;
+      }
+      .green {
+        color: #00f090;
+      }
+      .red {
+        color: #ffffff;
+      }
+      .grey {
+        color: #c9ced4;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="dhl-skizzen" data-start="0" data-duration="62.9" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position: absolute"><defs><filter id="rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" /><feDisplacementMap in="SourceGraphic" scale="4" /></filter></defs></svg>
+
+      <!-- 1: Onlinehändler, teuer (3.45-6.55) -->
+      <section id="sz1" class="scene clip" data-start="3.45" data-duration="3.1" data-track-index="0">
+        <div id="sz1-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <path class="s d1a" pathLength="1" d="M85 160 H265 V300 H85 Z" />
+            <path class="s g d1a" pathLength="1" d="M65 160 L90 100 H260 L285 160 Q263 185 241 160 Q219 185 197 160 Q175 185 153 160 Q131 185 109 160 Q87 185 65 160" />
+            <path class="s thin d1a" pathLength="1" d="M130 300 V215 H190 V300 M208 200 H248 V245 H208 Z" />
+            <path class="s g d1b" pathLength="1" d="M620 300 V190 M570 235 L620 185 L670 235" style="stroke-width: 12" />
+          </g></svg>
+          <div id="sz1-l1" class="lbl" style="left: 335px; top: 40px; font-size: 76px">Onlinehändler</div>
+          <div id="sz1-l2" class="lbl green" style="left: 335px; top: 160px; font-size: 120px; opacity: 0">teuer?</div>
+        </div>
+      </section>
+
+      <!-- 2: Preise Geschäftskundenpakete (11.1-13.3) -->
+      <section id="sz2" class="scene clip" data-start="11.1" data-duration="2.2" data-track-index="0">
+        <div id="sz2-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <path class="s d2a" pathLength="1" d="M70 150 L150 110 L230 150 V250 L150 290 L70 250 Z M70 150 L150 190 L230 150 M150 190 V290" />
+            <path class="s g thin d2b" pathLength="1" d="M580 270 Q640 300 700 270 M740 215 L790 215 L790 265" style="opacity: 0" />
+          </g></svg>
+          <div id="sz2-l1" class="lbl green" style="left: 290px; top: 30px; font-size: 118px">Preise</div>
+          <div id="sz2-l2" class="lbl" style="left: 290px; top: 170px; font-size: 48px; opacity: 0">Geschäftskundenpakete</div>
+          <div id="sz2-l3" class="lbl green" style="left: 290px; top: 245px; font-size: 62px; opacity: 0">angepasst</div>
+        </div>
+      </section>
+
+      <!-- 3: wie viel teurer? erst später (13.3-16.9) -->
+      <section id="sz3" class="scene clip" data-start="13.3" data-duration="3.6" data-track-index="0">
+        <div id="sz3-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <path class="s g d3a" pathLength="1" style="stroke-width: 14" d="M95 110 Q95 50 160 50 Q225 50 225 110 Q225 150 170 180 Q150 195 150 225 M150 280 V284" />
+            <path class="s d3b" pathLength="1" d="M60 270 H190 V345 H60 Z M60 270 L125 315 L190 270" style="opacity: 0" />
+            <circle class="s thin d3c" pathLength="1" cx="700" cy="305" r="40" style="opacity: 0" />
+            <path class="s g thin d3c" pathLength="1" d="M700 305 V280 M700 305 L722 318" style="opacity: 0" />
+          </g></svg>
+          <div id="sz3-l1" class="lbl" style="left: 300px; top: 25px; font-size: 76px">Wie viel</div>
+          <div id="sz3-l1b" class="lbl green" style="left: 300px; top: 120px; font-size: 100px; opacity: 0">teurer?</div>
+          <div id="sz3-l2" class="lbl" style="left: 215px; top: 290px; font-size: 44px; opacity: 0">Händler erfahren es</div>
+          <div id="sz3-l3" class="lbl green" style="left: 590px; top: 232px; font-size: 52px; opacity: 0; width: 220px; text-align: center">später</div>
+        </div>
+      </section>
+
+      <!-- 4: Päckchen, Sendungsverfolgung, Haftung (18.75-24.45) -->
+      <section id="sz4" class="scene clip" data-start="18.75" data-duration="5.7" data-track-index="0">
+        <div id="sz4-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <path class="s d4a" pathLength="1" d="M40 60 L100 30 L160 60 V130 L100 160 L40 130 Z M40 60 L100 90 L160 60 M100 90 V160" />
+            <path id="sz4-route" class="s thin" style="stroke-dasharray: 3 16; opacity: 0" d="M50 250 Q150 190 250 245 T430 235" />
+            <path id="sz4-pin" class="s g" style="opacity: 0; stroke-width: 9" d="M430 235 C430 205 410 195 410 175 A22 22 0 1 1 450 175 C450 195 430 205 430 235 Z" />
+            <path id="sz4-shield" class="s g d4c" pathLength="1" style="opacity: 0" d="M650 120 L740 150 V230 Q740 290 650 325 Q560 290 560 230 V150 Z" />
+          </g></svg>
+          <div id="sz4-l0" class="lbl green" style="left: 190px; top: 48px; font-size: 84px">Päckchen</div>
+          <div id="sz4-l1" class="lbl" style="left: 40px; top: 285px; font-size: 46px; opacity: 0">Sendungsverfolgung</div>
+          <div id="sz4-l2" class="lbl grey" style="left: 560px; top: 62px; font-size: 46px; opacity: 0; width: 180px; text-align: center">Haftung</div>
+          <div id="sz4-l3" class="lbl green center" style="left: 560px; top: 190px; font-size: 72px; opacity: 0; width: 180px">20 €</div>
+        </div>
+      </section>
+
+      <!-- 5: maximal 1 kg (24.47-27.3) -->
+      <section id="sz5" class="scene clip" data-start="24.47" data-duration="2.85" data-track-index="0">
+        <div id="sz5-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <path class="s d5a" pathLength="1" d="M170 60 V300 M95 300 H245 M70 100 H270 M70 100 L45 190 H125 Z M270 100 L245 190 H325 Z" />
+            <path class="s g d5b" pathLength="1" d="M600 330 H820" style="stroke-width: 9; opacity: 0" />
+          </g></svg>
+          <div id="sz5-l0" class="lbl grey" style="left: 400px; top: 20px; font-size: 54px">Dafür</div>
+          <div id="sz5-l1" class="lbl" style="left: 400px; top: 90px; font-size: 76px; opacity: 0">maximal</div>
+          <div id="sz5-l2" class="lbl green" style="left: 400px; top: 178px; font-size: 150px; opacity: 0">1 kg</div>
+        </div>
+      </section>
+
+      <!-- 6: Versandkalkulation (27.4-32.1) -->
+      <section id="sz6" class="scene clip" data-start="27.4" data-duration="4.7" data-track-index="0">
+        <div id="sz6-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <path class="s d6a" pathLength="1" d="M60 40 H260 V335 H60 Z M85 65 H235 V120 H85 Z" />
+            <path class="s thin d6b" pathLength="1" d="M90 160 H110 M140 160 H160 M190 160 H210 M90 215 H110 M140 215 H160 M190 215 H210 M90 270 H110 M140 270 H160 M190 270 H210" style="stroke-width: 12" />
+            <path id="sz6-ok" class="s g" pathLength="1" style="stroke-width: 13; opacity: 0" d="M760 85 L785 112 L830 55" />
+          </g></svg>
+          <div id="sz6-l0" class="lbl grey" style="left: 320px; top: 30px; font-size: 56px">Ich finde:</div>
+          <div id="sz6-l1" class="lbl green" style="left: 320px; top: 100px; font-size: 120px; opacity: 0">wichtig</div>
+          <div id="sz6-l2" class="lbl" style="left: 320px; top: 240px; font-size: 54px; opacity: 0">Versandkalkulation</div>
+        </div>
+      </section>
+
+      <!-- 7: täglich hunderte Pakete, Preisänderungen, Geld (32.11-37.5) -->
+      <section id="sz7" class="scene clip" data-start="32.11" data-duration="5.4" data-track-index="0">
+        <div id="sz7-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <g id="sz7-grid" style="opacity: 0">
+              <rect class="s thin pk" x="540" y="30" width="52" height="52" rx="8" /><rect class="s thin pk" x="610" y="30" width="52" height="52" rx="8" /><rect class="s thin pk" x="680" y="30" width="52" height="52" rx="8" /><rect class="s thin pk" x="750" y="30" width="52" height="52" rx="8" />
+              <rect class="s thin pk" x="540" y="105" width="52" height="52" rx="8" /><rect class="s thin pk" x="610" y="105" width="52" height="52" rx="8" /><rect class="s thin pk" x="680" y="105" width="52" height="52" rx="8" /><rect class="s thin pk" x="750" y="105" width="52" height="52" rx="8" />
+            </g>
+            <path class="s g thin d7b" pathLength="1" style="opacity: 0" d="M60 215 H190 L215 245 L190 275 H60 Z" />
+            <circle id="sz7-coin" class="s g" cx="700" cy="285" r="52" style="opacity: 0" />
+          </g></svg>
+          <div id="sz7-l0" class="lbl grey" style="left: 40px; top: 18px; font-size: 56px">täglich</div>
+          <div id="sz7-l1" class="lbl" style="left: 40px; top: 85px; font-size: 64px; opacity: 0">hunderte Pakete</div>
+          <div id="sz7-eur" class="lbl green" style="left: 70px; top: 215px; font-size: 52px; opacity: 0">€</div>
+          <div id="sz7-l2" class="lbl" style="left: 240px; top: 225px; font-size: 44px; opacity: 0">kleine<br />Preisänderungen</div>
+          <div id="sz7-l3" class="lbl green center" style="left: 648px; top: 252px; width: 104px; font-size: 54px; opacity: 0">Geld</div>
+        </div>
+      </section>
+
+      <!-- 8: Tipp: Versandverträge prüfen (37.5-44.55) -->
+      <section id="sz8" class="scene clip" data-start="37.5" data-duration="7.05" data-track-index="0">
+        <div id="sz8-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <path class="s d8a" pathLength="1" d="M60 40 H230 V335 H60 Z M90 100 H200 M90 150 H200 M90 200 H170" />
+            <circle class="s g d8b" pathLength="1" cx="205" cy="265" r="36" style="opacity: 0" />
+            <path class="s g d8b" pathLength="1" d="M231 291 L262 322" style="opacity: 0; stroke-width: 11" />
+            <path id="sz8-ok" class="s g" pathLength="1" style="stroke-width: 12; opacity: 0" d="M730 300 L755 327 L800 270" />
+          </g></svg>
+          <div id="sz8-l0" class="lbl green" style="left: 300px; top: 5px; font-size: 80px">Tipp</div>
+          <div id="sz8-l1" class="lbl" style="left: 300px; top: 92px; font-size: 80px; opacity: 0">prüfen</div>
+          <div id="sz8-l2" class="lbl" style="left: 300px; top: 185px; font-size: 62px; opacity: 0">Versandverträge</div>
+          <div id="sz8-l3" class="lbl green" style="left: 640px; top: 12px; font-size: 80px; opacity: 0">DHL</div>
+          <div id="sz8-l4" class="lbl" style="left: 300px; top: 280px; font-size: 46px; opacity: 0">bessere Konditionen</div>
+        </div>
+      </section>
+
+      <!-- 9: wie stark belastet Versandkosten (44.6-49.2) -->
+      <section id="sz9" class="scene clip" data-start="44.6" data-duration="4.6" data-track-index="0">
+        <div id="sz9-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <path class="s d9a" pathLength="1" d="M60 300 A170 170 0 0 1 400 300" />
+            <path class="s g d9a" pathLength="1" d="M335 175 A170 170 0 0 1 400 300" style="opacity: 0.9" />
+            <g id="sz9-needle">
+              <path class="s" d="M230 300 L230 165" style="stroke-width: 9" />
+              <circle class="s" cx="230" cy="300" r="14" style="fill: #ffffff" />
+            </g>
+          </g></svg>
+          <div id="sz9-l1" class="lbl" style="left: 450px; top: 30px; font-size: 56px; opacity: 0; line-height: 1.1">wie stark<br />belastet dich</div>
+          <div id="sz9-l2" class="lbl green" style="left: 450px; top: 195px; font-size: 76px; opacity: 0">Versandkosten</div>
+        </div>
+      </section>
+
+      <!-- 10: Preise utopisch oder in Ordnung? (49.2-59.45) -->
+      <section id="sz10" class="scene clip" data-start="49.2" data-duration="10.25" data-track-index="0">
+        <div id="sz10-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <rect class="s d10a" pathLength="1" x="40" y="200" width="330" height="100" rx="50" />
+            <rect id="sz10-p2" class="s g" pathLength="1" x="490" y="200" width="330" height="100" rx="50" />
+            <path id="sz10-ok" class="s g" pathLength="1" style="stroke-width: 12; opacity: 0" d="M705 325 L730 345 L775 295" />
+          </g></svg>
+          <div id="sz10-l0" class="lbl grey" style="left: 40px; top: 20px; font-size: 54px">Findest du</div>
+          <div id="sz10-l1" class="lbl" style="left: 270px; top: 8px; font-size: 130px; opacity: 0">Preise?</div>
+          <div id="sz10-a" class="lbl center" style="left: 40px; width: 330px; top: 218px; font-size: 56px; opacity: 0">utopisch</div>
+          <div id="sz10-or" class="lbl grey center" style="left: 370px; width: 120px; top: 222px; font-size: 40px; opacity: 0">oder</div>
+          <div id="sz10-b" class="lbl green center" style="left: 490px; width: 330px; top: 218px; font-size: 56px; opacity: 0">in Ordnung</div>
+        </div>
+      </section>
+
+      <!-- 11: Deine Meinung? Follow (59.45-62.9) -->
+      <section id="sz11" class="scene clip" data-start="59.45" data-duration="3.45" data-track-index="0">
+        <div id="sz11-card" class="card"><div class="panel"></div>
+          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
+            <path class="s d11a" pathLength="1" d="M120 40 H740 Q790 40 790 90 V210 Q790 260 740 260 H300 L190 335 L215 260 H170 Q120 260 120 210 V90 Q120 40 170 40 Z" />
+          </g></svg>
+          <div id="sz11-l1" class="lbl center" style="left: 120px; width: 670px; top: 75px; font-size: 96px">Deine</div>
+          <div id="sz11-l2" class="lbl green center" style="left: 120px; width: 670px; top: 165px; font-size: 96px; opacity: 0">Meinung?</div>
+          <div id="sz11-l3" class="lbl green center" style="left: 470px; width: 340px; top: 292px; font-size: 52px; opacity: 0">+ Follow</div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const draw = (sel, at, dur = 0.5) =>
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1, opacity: 1 }, { strokeDashoffset: 0, duration: dur, ease: "power2.inOut", stagger: 0.06 }, at);
+      const card = (id, start, end) => {
+        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.28, ease: "back.out(1.6)" }, start);
+        tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.25, ease: "power2.in" }, end - 0.25);
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, at);
+      const show = (sel, at, dur = 0.25) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: dur }, at);
+
+      // 1: Onlinehändler (3.47), teuer (5.12)
+      card("sz1", 3.45, 6.55);
+      draw(".d1a", 3.48, 0.55);
+      pop("#sz1-l1", 3.47);
+      draw(".d1b", 5.1, 0.4);
+      pop("#sz1-l2", 5.12);
+
+      // 2: Preise (11.12), Geschäftskundenpakete (11.68), anpassen (12.90)
+      card("sz2", 11.1, 13.3);
+      draw(".d2a", 11.15, 0.45);
+      pop("#sz2-l1", 11.12);
+      pop("#sz2-l2", 11.66);
+      pop("#sz2-l3", 12.88);
+      draw(".d2b", 12.9, 0.3);
+
+      // 3: Wie viel (13.34) teurer (13.70) konkret (14.2) erfahren (14.88) später (16.46)
+      card("sz3", 13.3, 16.9);
+      draw(".d3a", 13.36, 0.5);
+      pop("#sz3-l1", 13.34);
+      pop("#sz3-l1b", 13.68);
+      draw(".d3b", 14.86, 0.4);
+      pop("#sz3-l2", 14.88);
+      draw(".d3c", 16.44, 0.4);
+      pop("#sz3-l3", 16.46);
+
+      // 4: Päckchen (19.65), Sendungsverfolgung (21.63), Haftung (23.15), 20 Euro (23.73)
+      card("sz4", 18.75, 24.45);
+      draw(".d4a", 18.8, 0.5);
+      pop("#sz4-l0", 19.62);
+      tl.fromTo("#sz4-route", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 21.6);
+      tl.fromTo("#sz4-route", { strokeDashoffset: 80 }, { strokeDashoffset: 0, duration: 1.2, ease: "none" }, 21.6);
+      pop("#sz4-l1", 21.62);
+      tl.fromTo("#sz4-pin", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(2)" }, 22.5);
+      show("#sz4-l2", 23.13);
+      draw("#sz4-shield", 23.15, 0.5);
+      pop("#sz4-l3", 23.71);
+
+      // 5: Dafür (24.53), maximal (26.01), 1 kg (26.71)
+      card("sz5", 24.47, 27.32);
+      draw(".d5a", 24.5, 0.55);
+      show("#sz5-l0", 24.52);
+      pop("#sz5-l1", 26.0);
+      pop("#sz5-l2", 26.69);
+      draw(".d5b", 26.9, 0.3);
+
+      // 6: Ich finde (27.41), wichtig (29.43), Versandkalkulation (30.53), ist (31.97)
+      card("sz6", 27.4, 32.1);
+      draw(".d6a", 27.43, 0.5);
+      draw(".d6b", 28.0, 0.7);
+      show("#sz6-l0", 27.42);
+      pop("#sz6-l1", 29.41);
+      pop("#sz6-l2", 30.51);
+      draw("#sz6-ok", 31.95, 0.25);
+
+      // 7: täglich (33.03), hunderte (33.41), Pakete (33.83), Preisänderungen (35.57), Geld (37.05)
+      card("sz7", 32.11, 37.5);
+      show("#sz7-l0", 32.15);
+      pop("#sz7-l1", 33.39);
+      tl.fromTo("#sz7-grid", { opacity: 0 }, { opacity: 1, duration: 0.1 }, 33.41);
+      tl.fromTo(".pk", { opacity: 0, scale: 0.5, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, stagger: 0.07, ease: "back.out(2)" }, 33.83);
+      draw(".d7b", 35.55, 0.35);
+      show("#sz7-eur", 35.8, 0.2);
+      pop("#sz7-l2", 35.57);
+      tl.fromTo("#sz7-coin", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 37.03);
+      pop("#sz7-l3", 37.05);
+
+      // 8: Tipp (38.13), prüft (38.67), Versandverträge (40.31), DHL (41.19), Konditionen (43.55)
+      card("sz8", 37.5, 44.55);
+      draw(".d8a", 37.55, 0.55);
+      pop("#sz8-l0", 38.11);
+      draw(".d8b", 38.65, 0.4);
+      pop("#sz8-l1", 38.65);
+      pop("#sz8-l2", 40.29);
+      pop("#sz8-l3", 41.17);
+      pop("#sz8-l4", 43.53);
+      draw("#sz8-ok", 43.55, 0.3);
+
+      // 9: wie stark (46.15) belastet (46.6) Versandkosten (47.98)
+      card("sz9", 44.6, 49.2);
+      draw(".d9a", 44.65, 0.6);
+      pop("#sz9-l1", 46.13);
+      tl.set("#sz9-needle", { rotation: -70, svgOrigin: "230 300" }, 0);
+      tl.to("#sz9-needle", { rotation: 55, svgOrigin: "230 300", duration: 0.9, ease: "power2.out" }, 46.6);
+      pop("#sz9-l2", 47.96);
+
+      // 10: Findest du (49.28), Preise (50.46), utopisch (51.22), oder (51.77), in Ordnung (54.0), verständlich (57.54)
+      card("sz10", 49.2, 59.45);
+      show("#sz10-l0", 49.28);
+      pop("#sz10-l1", 50.44);
+      draw(".d10a", 51.2, 0.4);
+      pop("#sz10-a", 51.2);
+      show("#sz10-or", 51.77);
+      draw("#sz10-p2", 53.5, 0.45);
+      pop("#sz10-b", 53.98);
+      draw("#sz10-ok", 57.5, 0.3);
+
+      // 11: Meinung (59.53), Follow (61.79)
+      card("sz11", 59.45, 62.9);
+      draw(".d11a", 59.5, 0.5);
+      pop("#sz11-l1", 59.47);
+      pop("#sz11-l2", 59.55);
+      pop("#sz11-l3", 61.77);
+
+      tl.seek(0);
+      window.__timelines["dhl-skizzen"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1327 @@
+{
+ "projekt": "dhl",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "dhl/t1",
+   "from": 2.185,
+   "to": 7.855,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "dhl/t1",
+   "from": 8.385,
+   "to": 16.055,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "dhl/t1",
+   "from": 33.865,
+   "to": 37.405,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "dhl/t1",
+   "from": 38.255,
+   "to": 45.845,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "dhl/t1",
+   "from": 50.505,
+   "to": 53.385,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "dhl/t1",
+   "from": 73.555,
+   "to": 78.315,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "dhl/t1",
+   "from": 86.955,
+   "to": 92.335,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "dhl/t1",
+   "from": 100.355,
+   "to": 107.425,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "dhl/t1",
+   "from": 108.265,
+   "to": 126.6,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "DHL",
+   "src": "dhl/t1",
+   "start": 2.25,
+   "end": 2.59
+  },
+  {
+   "text": "ändert",
+   "src": "dhl/t1",
+   "start": 2.73,
+   "end": 3.01
+  },
+  {
+   "text": "tatsächlich",
+   "src": "dhl/t1",
+   "start": 3.05,
+   "end": 3.49
+  },
+  {
+   "text": "schon",
+   "src": "dhl/t1",
+   "start": 3.53,
+   "end": 3.65
+  },
+  {
+   "text": "wieder",
+   "src": "dhl/t1",
+   "start": 3.73,
+   "end": 3.91
+  },
+  {
+   "text": "seine",
+   "src": "dhl/t1",
+   "start": 3.97,
+   "end": 4.15
+  },
+  {
+   "text": "Versandbedingungen",
+   "src": "dhl/t1",
+   "start": 4.19,
+   "end": 4.93
+  },
+  {
+   "text": "und",
+   "src": "dhl/t1",
+   "start": 5.39,
+   "end": 5.45
+  },
+  {
+   "text": "für",
+   "src": "dhl/t1",
+   "start": 5.49,
+   "end": 5.57
+  },
+  {
+   "text": "Onlinehändler",
+   "src": "dhl/t1",
+   "start": 5.65,
+   "end": 6.19
+  },
+  {
+   "text": "könnte",
+   "src": "dhl/t1",
+   "start": 6.31,
+   "end": 6.53
+  },
+  {
+   "text": "das",
+   "src": "dhl/t1",
+   "start": 6.63,
+   "end": 6.75
+  },
+  {
+   "text": "leider",
+   "src": "dhl/t1",
+   "start": 6.81,
+   "end": 7.01
+  },
+  {
+   "text": "echt",
+   "src": "dhl/t1",
+   "start": 7.13,
+   "end": 7.27
+  },
+  {
+   "text": "teuer",
+   "src": "dhl/t1",
+   "start": 7.31,
+   "end": 7.53
+  },
+  {
+   "text": "werden.",
+   "src": "dhl/t1",
+   "start": 7.59,
+   "end": 7.79
+  },
+  {
+   "text": "Schaut",
+   "src": "dhl/t1",
+   "start": 8.45,
+   "end": 8.65
+  },
+  {
+   "text": "euch",
+   "src": "dhl/t1",
+   "start": 8.69,
+   "end": 8.79
+  },
+  {
+   "text": "mal",
+   "src": "dhl/t1",
+   "start": 8.85,
+   "end": 8.95
+  },
+  {
+   "text": "diese",
+   "src": "dhl/t1",
+   "start": 9.03,
+   "end": 9.25
+  },
+  {
+   "text": "Meldung",
+   "src": "dhl/t1",
+   "start": 9.35,
+   "end": 9.61
+  },
+  {
+   "text": "hier",
+   "src": "dhl/t1",
+   "start": 9.67,
+   "end": 9.77
+  },
+  {
+   "text": "an.",
+   "src": "dhl/t1",
+   "start": 9.83,
+   "end": 9.91
+  },
+  {
+   "text": "Ab",
+   "src": "dhl/t1",
+   "start": 10.55,
+   "end": 10.61
+  },
+  {
+   "text": "Januar",
+   "src": "dhl/t1",
+   "start": 10.69,
+   "end": 11.01
+  },
+  {
+   "text": "2027",
+   "src": "dhl/t1",
+   "start": 11.11,
+   "end": 12.25
+  },
+  {
+   "text": "will",
+   "src": "dhl/t1",
+   "start": 12.33,
+   "end": 12.43
+  },
+  {
+   "text": "die",
+   "src": "dhl/t1",
+   "start": 12.59,
+   "end": 12.65
+  },
+  {
+   "text": "Deutsche",
+   "src": "dhl/t1",
+   "start": 12.69,
+   "end": 12.97
+  },
+  {
+   "text": "Post",
+   "src": "dhl/t1",
+   "start": 13.05,
+   "end": 13.25
+  },
+  {
+   "text": "auch",
+   "src": "dhl/t1",
+   "start": 13.35,
+   "end": 13.45
+  },
+  {
+   "text": "wieder",
+   "src": "dhl/t1",
+   "start": 13.49,
+   "end": 13.65
+  },
+  {
+   "text": "die",
+   "src": "dhl/t1",
+   "start": 13.71,
+   "end": 13.79
+  },
+  {
+   "text": "Preise",
+   "src": "dhl/t1",
+   "start": 13.83,
+   "end": 14.15
+  },
+  {
+   "text": "für",
+   "src": "dhl/t1",
+   "start": 14.23,
+   "end": 14.31
+  },
+  {
+   "text": "Geschäftskundenpakete",
+   "src": "dhl/t1",
+   "start": 14.39,
+   "end": 15.49
+  },
+  {
+   "text": "anpassen.",
+   "src": "dhl/t1",
+   "start": 15.61,
+   "end": 15.99
+  },
+  {
+   "text": "Wie",
+   "src": "dhl/t1",
+   "start": 33.93,
+   "end": 34.03
+  },
+  {
+   "text": "viel",
+   "src": "dhl/t1",
+   "start": 34.07,
+   "end": 34.17
+  },
+  {
+   "text": "teurer",
+   "src": "dhl/t1",
+   "start": 34.23,
+   "end": 34.47
+  },
+  {
+   "text": "es",
+   "src": "dhl/t1",
+   "start": 34.51,
+   "end": 34.57
+  },
+  {
+   "text": "konkret",
+   "src": "dhl/t1",
+   "start": 34.63,
+   "end": 35.09
+  },
+  {
+   "text": "wird,",
+   "src": "dhl/t1",
+   "start": 35.19,
+   "end": 35.35
+  },
+  {
+   "text": "erfahren",
+   "src": "dhl/t1",
+   "start": 35.41,
+   "end": 35.71
+  },
+  {
+   "text": "leider",
+   "src": "dhl/t1",
+   "start": 35.73,
+   "end": 35.93
+  },
+  {
+   "text": "die",
+   "src": "dhl/t1",
+   "start": 35.97,
+   "end": 36.05
+  },
+  {
+   "text": "betroffenen",
+   "src": "dhl/t1",
+   "start": 36.07,
+   "end": 36.49
+  },
+  {
+   "text": "Händler",
+   "src": "dhl/t1",
+   "start": 36.51,
+   "end": 36.75
+  },
+  {
+   "text": "erst",
+   "src": "dhl/t1",
+   "start": 36.81,
+   "end": 36.95
+  },
+  {
+   "text": "später.",
+   "src": "dhl/t1",
+   "start": 36.99,
+   "end": 37.29
+  },
+  {
+   "text": "Aber",
+   "src": "dhl/t1",
+   "start": 38.35,
+   "end": 38.55
+  },
+  {
+   "text": "es",
+   "src": "dhl/t1",
+   "start": 38.65,
+   "end": 38.73
+  },
+  {
+   "text": "gibt",
+   "src": "dhl/t1",
+   "start": 38.81,
+   "end": 38.95
+  },
+  {
+   "text": "hier",
+   "src": "dhl/t1",
+   "start": 38.99,
+   "end": 39.11
+  },
+  {
+   "text": "auch",
+   "src": "dhl/t1",
+   "start": 39.27,
+   "end": 39.39
+  },
+  {
+   "text": "eine",
+   "src": "dhl/t1",
+   "start": 39.45,
+   "end": 39.57
+  },
+  {
+   "text": "interessante",
+   "src": "dhl/t1",
+   "start": 39.63,
+   "end": 40.15
+  },
+  {
+   "text": "Änderung,",
+   "src": "dhl/t1",
+   "start": 40.21,
+   "end": 40.53
+  },
+  {
+   "text": "denn",
+   "src": "dhl/t1",
+   "start": 40.61,
+   "end": 40.75
+  },
+  {
+   "text": "Päckchen",
+   "src": "dhl/t1",
+   "start": 41.03,
+   "end": 41.37
+  },
+  {
+   "text": "bekommen",
+   "src": "dhl/t1",
+   "start": 41.41,
+   "end": 41.69
+  },
+  {
+   "text": "künftig",
+   "src": "dhl/t1",
+   "start": 41.75,
+   "end": 42.11
+  },
+  {
+   "text": "automatisch",
+   "src": "dhl/t1",
+   "start": 42.19,
+   "end": 42.77
+  },
+  {
+   "text": "eine",
+   "src": "dhl/t1",
+   "start": 42.83,
+   "end": 42.95
+  },
+  {
+   "text": "Sendungsverfolgung",
+   "src": "dhl/t1",
+   "start": 43.01,
+   "end": 43.73
+  },
+  {
+   "text": "und",
+   "src": "dhl/t1",
+   "start": 44.13,
+   "end": 44.23
+  },
+  {
+   "text": "eine",
+   "src": "dhl/t1",
+   "start": 44.33,
+   "end": 44.47
+  },
+  {
+   "text": "Haftung",
+   "src": "dhl/t1",
+   "start": 44.53,
+   "end": 44.85
+  },
+  {
+   "text": "bis",
+   "src": "dhl/t1",
+   "start": 44.91,
+   "end": 45.01
+  },
+  {
+   "text": "20",
+   "src": "dhl/t1",
+   "start": 45.11,
+   "end": 45.47
+  },
+  {
+   "text": "Euro.",
+   "src": "dhl/t1",
+   "start": 45.57,
+   "end": 45.73
+  },
+  {
+   "text": "Dafür",
+   "src": "dhl/t1",
+   "start": 50.57,
+   "end": 50.83
+  },
+  {
+   "text": "dürfen",
+   "src": "dhl/t1",
+   "start": 50.87,
+   "end": 51.09
+  },
+  {
+   "text": "sie",
+   "src": "dhl/t1",
+   "start": 51.15,
+   "end": 51.23
+  },
+  {
+   "text": "aber",
+   "src": "dhl/t1",
+   "start": 51.29,
+   "end": 51.43
+  },
+  {
+   "text": "leider",
+   "src": "dhl/t1",
+   "start": 51.47,
+   "end": 51.67
+  },
+  {
+   "text": "nur",
+   "src": "dhl/t1",
+   "start": 51.73,
+   "end": 51.83
+  },
+  {
+   "text": "noch",
+   "src": "dhl/t1",
+   "start": 51.87,
+   "end": 51.97
+  },
+  {
+   "text": "maximal",
+   "src": "dhl/t1",
+   "start": 52.05,
+   "end": 52.45
+  },
+  {
+   "text": "ein",
+   "src": "dhl/t1",
+   "start": 52.61,
+   "end": 52.71
+  },
+  {
+   "text": "Kilogramm",
+   "src": "dhl/t1",
+   "start": 52.75,
+   "end": 53.11
+  },
+  {
+   "text": "wiegen.",
+   "src": "dhl/t1",
+   "start": 53.13,
+   "end": 53.31
+  },
+  {
+   "text": "Ich",
+   "src": "dhl/t1",
+   "start": 73.62,
+   "end": 73.81
+  },
+  {
+   "text": "finde",
+   "src": "dhl/t1",
+   "start": 73.84,
+   "end": 74.0
+  },
+  {
+   "text": "es",
+   "src": "dhl/t1",
+   "start": 74.06,
+   "end": 74.12
+  },
+  {
+   "text": "zeigt",
+   "src": "dhl/t1",
+   "start": 74.16,
+   "end": 74.36
+  },
+  {
+   "text": "ja",
+   "src": "dhl/t1",
+   "start": 74.38,
+   "end": 74.42
+  },
+  {
+   "text": "einfach",
+   "src": "dhl/t1",
+   "start": 74.46,
+   "end": 74.66
+  },
+  {
+   "text": "wieder",
+   "src": "dhl/t1",
+   "start": 74.72,
+   "end": 74.88
+  },
+  {
+   "text": "mal,",
+   "src": "dhl/t1",
+   "start": 74.94,
+   "end": 75.06
+  },
+  {
+   "text": "wie",
+   "src": "dhl/t1",
+   "start": 75.44,
+   "end": 75.54
+  },
+  {
+   "text": "wichtig",
+   "src": "dhl/t1",
+   "start": 75.64,
+   "end": 75.92
+  },
+  {
+   "text": "hier",
+   "src": "dhl/t1",
+   "start": 75.98,
+   "end": 76.06
+  },
+  {
+   "text": "eine",
+   "src": "dhl/t1",
+   "start": 76.08,
+   "end": 76.2
+  },
+  {
+   "text": "vernünftige",
+   "src": "dhl/t1",
+   "start": 76.26,
+   "end": 76.7
+  },
+  {
+   "text": "Versandkalkulation",
+   "src": "dhl/t1",
+   "start": 76.74,
+   "end": 77.58
+  },
+  {
+   "text": "in",
+   "src": "dhl/t1",
+   "start": 77.64,
+   "end": 77.68
+  },
+  {
+   "text": "E-Commerce",
+   "src": "dhl/t1",
+   "start": 77.78,
+   "end": 78.12
+  },
+  {
+   "text": "ist",
+   "src": "dhl/t1",
+   "start": 78.18,
+   "end": 78.28
+  },
+  {
+   "text": "Wenn",
+   "src": "dhl/t1",
+   "start": 87.02,
+   "end": 87.21
+  },
+  {
+   "text": "du",
+   "src": "dhl/t1",
+   "start": 87.32,
+   "end": 87.38
+  },
+  {
+   "text": "jetzt",
+   "src": "dhl/t1",
+   "start": 87.48,
+   "end": 87.66
+  },
+  {
+   "text": "aber",
+   "src": "dhl/t1",
+   "start": 87.68,
+   "end": 87.8
+  },
+  {
+   "text": "täglich",
+   "src": "dhl/t1",
+   "start": 87.88,
+   "end": 88.2
+  },
+  {
+   "text": "hunderte",
+   "src": "dhl/t1",
+   "start": 88.26,
+   "end": 88.6
+  },
+  {
+   "text": "Pakete",
+   "src": "dhl/t1",
+   "start": 88.68,
+   "end": 89.0
+  },
+  {
+   "text": "verschickst,",
+   "src": "dhl/t1",
+   "start": 89.04,
+   "end": 89.36
+  },
+  {
+   "text": "dann",
+   "src": "dhl/t1",
+   "start": 89.38,
+   "end": 89.52
+  },
+  {
+   "text": "können",
+   "src": "dhl/t1",
+   "start": 89.58,
+   "end": 89.76
+  },
+  {
+   "text": "schon",
+   "src": "dhl/t1",
+   "start": 89.8,
+   "end": 89.96
+  },
+  {
+   "text": "kleine",
+   "src": "dhl/t1",
+   "start": 90.04,
+   "end": 90.34
+  },
+  {
+   "text": "Preisänderungen",
+   "src": "dhl/t1",
+   "start": 90.42,
+   "end": 91.02
+  },
+  {
+   "text": "richtig",
+   "src": "dhl/t1",
+   "start": 91.34,
+   "end": 91.64
+  },
+  {
+   "text": "ins",
+   "src": "dhl/t1",
+   "start": 91.72,
+   "end": 91.84
+  },
+  {
+   "text": "Geld",
+   "src": "dhl/t1",
+   "start": 91.9,
+   "end": 92.06
+  },
+  {
+   "text": "gehen",
+   "src": "dhl/t1",
+   "start": 92.1,
+   "end": 92.26
+  },
+  {
+   "text": "Deswegen",
+   "src": "dhl/t1",
+   "start": 100.42,
+   "end": 100.72
+  },
+  {
+   "text": "mein",
+   "src": "dhl/t1",
+   "start": 100.78,
+   "end": 100.96
+  },
+  {
+   "text": "Tipp",
+   "src": "dhl/t1",
+   "start": 101.0,
+   "end": 101.16
+  },
+  {
+   "text": "an",
+   "src": "dhl/t1",
+   "start": 101.2,
+   "end": 101.28
+  },
+  {
+   "text": "dich,",
+   "src": "dhl/t1",
+   "start": 101.3,
+   "end": 101.44
+  },
+  {
+   "text": "prüft",
+   "src": "dhl/t1",
+   "start": 101.54,
+   "end": 101.78
+  },
+  {
+   "text": "mal",
+   "src": "dhl/t1",
+   "start": 101.82,
+   "end": 101.92
+  },
+  {
+   "text": "jetzt",
+   "src": "dhl/t1",
+   "start": 101.96,
+   "end": 102.08
+  },
+  {
+   "text": "am",
+   "src": "dhl/t1",
+   "start": 102.14,
+   "end": 102.2
+  },
+  {
+   "text": "besten",
+   "src": "dhl/t1",
+   "start": 102.24,
+   "end": 102.48
+  },
+  {
+   "text": "rechtzeitig",
+   "src": "dhl/t1",
+   "start": 102.56,
+   "end": 102.94
+  },
+  {
+   "text": "eure",
+   "src": "dhl/t1",
+   "start": 102.98,
+   "end": 103.12
+  },
+  {
+   "text": "Versandverträge",
+   "src": "dhl/t1",
+   "start": 103.18,
+   "end": 103.84
+  },
+  {
+   "text": "von",
+   "src": "dhl/t1",
+   "start": 103.92,
+   "end": 104.02
+  },
+  {
+   "text": "DHL",
+   "src": "dhl/t1",
+   "start": 104.06,
+   "end": 104.46
+  },
+  {
+   "text": "und",
+   "src": "dhl/t1",
+   "start": 104.96,
+   "end": 105.04
+  },
+  {
+   "text": "schaut,",
+   "src": "dhl/t1",
+   "start": 105.12,
+   "end": 105.34
+  },
+  {
+   "text": "ob",
+   "src": "dhl/t1",
+   "start": 105.42,
+   "end": 105.5
+  },
+  {
+   "text": "ihr",
+   "src": "dhl/t1",
+   "start": 105.54,
+   "end": 105.62
+  },
+  {
+   "text": "da",
+   "src": "dhl/t1",
+   "start": 105.64,
+   "end": 105.72
+  },
+  {
+   "text": "nicht",
+   "src": "dhl/t1",
+   "start": 105.8,
+   "end": 105.92
+  },
+  {
+   "text": "noch",
+   "src": "dhl/t1",
+   "start": 105.96,
+   "end": 106.04
+  },
+  {
+   "text": "bessere",
+   "src": "dhl/t1",
+   "start": 106.1,
+   "end": 106.36
+  },
+  {
+   "text": "Konditionen",
+   "src": "dhl/t1",
+   "start": 106.42,
+   "end": 106.84
+  },
+  {
+   "text": "rausholen",
+   "src": "dhl/t1",
+   "start": 106.86,
+   "end": 107.18
+  },
+  {
+   "text": "könnt.",
+   "src": "dhl/t1",
+   "start": 107.2,
+   "end": 107.36
+  },
+  {
+   "text": "Und",
+   "src": "dhl/t1",
+   "start": 108.49,
+   "end": 108.59
+  },
+  {
+   "text": "mich",
+   "src": "dhl/t1",
+   "start": 108.77,
+   "end": 108.89
+  },
+  {
+   "text": "wird",
+   "src": "dhl/t1",
+   "start": 108.93,
+   "end": 109.03
+  },
+  {
+   "text": "natürlich",
+   "src": "dhl/t1",
+   "start": 109.07,
+   "end": 109.27
+  },
+  {
+   "text": "interessieren,",
+   "src": "dhl/t1",
+   "start": 109.29,
+   "end": 109.73
+  },
+  {
+   "text": "wie",
+   "src": "dhl/t1",
+   "start": 109.85,
+   "end": 109.93
+  },
+  {
+   "text": "stark",
+   "src": "dhl/t1",
+   "start": 110.01,
+   "end": 110.23
+  },
+  {
+   "text": "belastet",
+   "src": "dhl/t1",
+   "start": 110.29,
+   "end": 110.65
+  },
+  {
+   "text": "dich",
+   "src": "dhl/t1",
+   "start": 110.71,
+   "end": 110.85
+  },
+  {
+   "text": "überhaupt",
+   "src": "dhl/t1",
+   "start": 110.89,
+   "end": 111.19
+  },
+  {
+   "text": "das",
+   "src": "dhl/t1",
+   "start": 111.23,
+   "end": 111.33
+  },
+  {
+   "text": "Thema",
+   "src": "dhl/t1",
+   "start": 111.39,
+   "end": 111.59
+  },
+  {
+   "text": "Versandkosten?",
+   "src": "dhl/t1",
+   "start": 111.69,
+   "end": 112.41
+  },
+  {
+   "text": "Findest",
+   "src": "dhl/t1",
+   "start": 112.99,
+   "end": 113.23
+  },
+  {
+   "text": "du",
+   "src": "dhl/t1",
+   "start": 113.29,
+   "end": 113.35
+  },
+  {
+   "text": "mittlerweile,",
+   "src": "dhl/t1",
+   "start": 113.45,
+   "end": 113.85
+  },
+  {
+   "text": "sind",
+   "src": "dhl/t1",
+   "start": 113.89,
+   "end": 113.99
+  },
+  {
+   "text": "die",
+   "src": "dhl/t1",
+   "start": 114.03,
+   "end": 114.11
+  },
+  {
+   "text": "Preise",
+   "src": "dhl/t1",
+   "start": 114.17,
+   "end": 114.43
+  },
+  {
+   "text": "einfach",
+   "src": "dhl/t1",
+   "start": 114.49,
+   "end": 114.67
+  },
+  {
+   "text": "nur",
+   "src": "dhl/t1",
+   "start": 114.69,
+   "end": 114.77
+  },
+  {
+   "text": "noch",
+   "src": "dhl/t1",
+   "start": 114.79,
+   "end": 114.89
+  },
+  {
+   "text": "utopisch",
+   "src": "dhl/t1",
+   "start": 114.93,
+   "end": 115.41
+  },
+  {
+   "text": "oder",
+   "src": "dhl/t1",
+   "start": 115.47,
+   "end": 115.63
+  },
+  {
+   "text": "sind",
+   "src": "dhl/t1",
+   "start": 116.47,
+   "end": 116.61
+  },
+  {
+   "text": "die",
+   "src": "dhl/t1",
+   "start": 116.63,
+   "end": 116.73
+  },
+  {
+   "text": "tatsächlich",
+   "src": "dhl/t1",
+   "start": 116.77,
+   "end": 117.19
+  },
+  {
+   "text": "noch",
+   "src": "dhl/t1",
+   "start": 117.27,
+   "end": 117.39
+  },
+  {
+   "text": "aktuell",
+   "src": "dhl/t1",
+   "start": 117.55,
+   "end": 117.91
+  },
+  {
+   "text": "in",
+   "src": "dhl/t1",
+   "start": 118.01,
+   "end": 118.07
+  },
+  {
+   "text": "Ordnung",
+   "src": "dhl/t1",
+   "start": 118.19,
+   "end": 118.51
+  },
+  {
+   "text": "und",
+   "src": "dhl/t1",
+   "start": 118.67,
+   "end": 118.77
+  },
+  {
+   "text": "aufgrund",
+   "src": "dhl/t1",
+   "start": 119.35,
+   "end": 119.65
+  },
+  {
+   "text": "der",
+   "src": "dhl/t1",
+   "start": 119.71,
+   "end": 119.79
+  },
+  {
+   "text": "jetzigen",
+   "src": "dhl/t1",
+   "start": 119.97,
+   "end": 120.27
+  },
+  {
+   "text": "Entwicklung",
+   "src": "dhl/t1",
+   "start": 120.31,
+   "end": 120.67
+  },
+  {
+   "text": "einfach",
+   "src": "dhl/t1",
+   "start": 120.75,
+   "end": 120.97
+  },
+  {
+   "text": "klar",
+   "src": "dhl/t1",
+   "start": 121.05,
+   "end": 121.21
+  },
+  {
+   "text": "verständlich?",
+   "src": "dhl/t1",
+   "start": 121.25,
+   "end": 121.75
+  },
+  {
+   "text": "Mich",
+   "src": "dhl/t1",
+   "start": 122.68,
+   "end": 122.76
+  },
+  {
+   "text": "wird",
+   "src": "dhl/t1",
+   "start": 122.8,
+   "end": 122.9
+  },
+  {
+   "text": "mal",
+   "src": "dhl/t1",
+   "start": 122.94,
+   "end": 123.02
+  },
+  {
+   "text": "deine",
+   "src": "dhl/t1",
+   "start": 123.06,
+   "end": 123.18
+  },
+  {
+   "text": "Meinung",
+   "src": "dhl/t1",
+   "start": 123.24,
+   "end": 123.42
+  },
+  {
+   "text": "interessieren",
+   "src": "dhl/t1",
+   "start": 123.46,
+   "end": 123.92
+  },
+  {
+   "text": "und",
+   "src": "dhl/t1",
+   "start": 123.98,
+   "end": 124.08
+  },
+  {
+   "text": "nicht",
+   "src": "dhl/t1",
+   "start": 124.62,
+   "end": 124.76
+  },
+  {
+   "text": "vergessen",
+   "src": "dhl/t1",
+   "start": 124.78,
+   "end": 125.16
+  },
+  {
+   "text": "hier",
+   "src": "dhl/t1",
+   "start": 125.22,
+   "end": 125.32
+  },
+  {
+   "text": "ein",
+   "src": "dhl/t1",
+   "start": 125.34,
+   "end": 125.4
+  },
+  {
+   "text": "Follow",
+   "src": "dhl/t1",
+   "start": 125.5,
+   "end": 125.7
+  },
+  {
+   "text": "da",
+   "src": "dhl/t1",
+   "start": 125.74,
+   "end": 125.82
+  },
+  {
+   "text": "zu",
+   "src": "dhl/t1",
+   "start": 125.9,
+   "end": 125.96
+  },
+  {
+   "text": "lassen.",
+   "src": "dhl/t1",
+   "start": 126.0,
+   "end": 126.22
+  }
+ ],
+ "pages": [
+  3,
+  3,
+  1,
+  3,
+  3,
+  3,
+  4,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  1,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  1,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  1,
+  2,
+  4,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2
+ ]
+}

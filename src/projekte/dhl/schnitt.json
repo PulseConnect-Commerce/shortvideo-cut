@@ -1,0 +1,23 @@
+{
+ "projekt": "dhl",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {"min_gap": 1.0, "pre": 0.06, "post": 0.1},
+ "saetze": [
+  {"take": "t1", "ab": 2.15, "text": "DHL ändert tatsächlich schon wieder seine Versandbedingungen und für Onlinehändler könnte das leider echt teuer werden."},
+  {"take": "t1", "ab": 8.4, "text": "Schaut euch mal diese Meldung hier an. Ab Januar 2020 will ihm die Deutsche Post auch wieder die Preise für Geschäftskundenpakete anpassen."},
+  {"take": "t1", "ab": 33.85, "text": "Wie viel teurer es konkret wird, erfahren leider die betroffenen Händler erst später."},
+  {"take": "t1", "ab": 38.3, "text": "Aber es gibt hier auch eine interessante Änderung, denn Päckchen bekommen künftig automatisch eine Sendungsverfolgung und eine Haftung bis 20 Euro."},
+  {"take": "t1", "ab": 50.5, "text": "Dafür dürfen sie aber leider nur noch maximal ein Kilogramm liegen."},
+  {"take": "t1", "ab": 73.55, "text": "Ich finde es zeigt ja einfach wieder mal, wie wichtig hier eine vernünftige Versandkalkulation in E-Commerce ist."},
+  {"take": "t1", "ab": 86.95, "text": "Wenn du jetzt aber täglich hunderte Pakete verschickst, dann können schon kleine Preisänderungen richtig ins Geld gehen."},
+  {"take": "t1", "ab": 100.35, "text": "Deswegen mein Tipp an dich, prüft mal jetzt am besten rechtzeitig eure Versandverträge von DHL und schaut, ob ihr da nicht noch bessere Konditionen rausholen könnt."},
+  {"take": "t1", "ab": 108.35, "ganz": true, "text": "Und mich wird natürlich interessieren, wie stark belastet dich überhaupt das Thema Versandkosten? Findest du mittlerweile, sind die Preise einfach nur noch utopisch oder sind die tatsächlich noch aktuell in Ordnung und aufgrund der jetzigen Entwicklung einfach klar verständlich? Mich wird mal deine Meinung interessieren und nicht vergessen hier ein Follow da zu lassen."}
+ ],
+ "ende": {"bis": 126.6},
+ "korrekturen": [
+  ["t1", 11.11, "2020", "2027"],
+  ["t1", 12.45, "ihm", ""],
+  ["t1", 53.13, "liegen.", "wiegen."]
+ ]
+}
