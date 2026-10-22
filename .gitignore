@@ -11,3 +11,4 @@ eingang/
 __pycache__/
 *.pyc
 .DS_Store
+hyperframes/*/assets/*privat*

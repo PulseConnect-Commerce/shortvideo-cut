@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Look-Probe hell</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <!-- Probe für Pauls Vorgabe 2026-10-22: helle Karte statt dunkler, saubere Icons (Lucide, ISC) statt Kreide-Skizzen,
+         ruhige Bewegung nach den Motion-Regeln (kurz, kein Überschwingen, jede Bewegung zeigt eine Änderung).
+         Das Hintergrundbild ist nur für die Probe da und bleibt privat (.gitignore). -->
+    <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("assets/Geist-Variable.woff2") format("woff2");
+        font-weight: 100 900;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; }
+      #bg { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .card {
+        position: absolute; left: 110px; top: 300px; width: 860px; height: 300px;
+        border-radius: 36px; background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
+        display: flex; align-items: center; gap: 44px; padding: 0 56px; opacity: 0;
+      }
+      .tile {
+        flex: none; width: 176px; height: 176px; border-radius: 32px; background: #00f090;
+        display: flex; align-items: center; justify-content: center;
+      }
+      .d { opacity: 0; }
+      .tile svg { width: 104px; height: 104px; fill: none; stroke: #0b0c0e; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      .txt { display: flex; flex-direction: column; gap: 10px; }
+      .kicker { font-size: 30px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
+      .head { font-size: 76px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; color: #0b0c0e; }
+      .sub { font-size: 34px; font-weight: 500; color: #374151; }
+      .mark { position: relative; display: inline-block; }
+      .mark i { position: absolute; left: -6px; right: -6px; bottom: 4px; height: 26px; background: #00f090; border-radius: 6px; z-index: -1; transform-origin: left center; }
+      .mark b { position: relative; font-weight: inherit; }
+      .line { display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-start="0" data-duration="7.5">
+      <img id="bg" class="clip" src="assets/bg-privat.png" data-start="0" data-duration="7.5" />
+
+      <div id="k1" class="card clip" data-start="0" data-duration="2.4">
+        <div class="tile">
+          <svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M3 9l1.6-5h14.8L21 9" /><path class="d" pathLength="1" d="M3 9h18a3 3 0 0 1-6 0a3 3 0 0 1-6 0a3 3 0 0 1-6 0" /><path class="d" pathLength="1" d="M5 12v8h14v-8" /><path class="d" pathLength="1" d="M10 20v-5h4v5" /></svg>
+        </div>
+        <div class="txt">
+          <span class="kicker line">DHL ab 2027</span>
+          <span class="head line">Onlinehändler</span>
+          <span class="head line"><span class="mark"><i></i><b>teurer?</b></span></span>
+        </div>
+      </div>
+
+      <div id="k2" class="card clip" data-start="2.5" data-duration="2.4">
+        <div class="tile">
+          <svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path class="d" pathLength="1" d="M12 22V12" /><path class="d" pathLength="1" d="M3.3 7L12 12l8.7-5" /><path class="d" pathLength="1" d="M7.5 4.27l9 5.15" /></svg>
+        </div>
+        <div class="txt">
+          <span class="kicker line">Geschäftskundenpakete</span>
+          <span class="head line">Preise</span>
+          <span class="head line"><span class="mark"><i></i><b>angepasst</b></span></span>
+        </div>
+      </div>
+
+      <div id="k3" class="card clip" data-start="5" data-duration="2.5">
+        <div class="tile">
+          <svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M12 3v18" /><path class="d" pathLength="1" d="M7 21h10" /><path class="d" pathLength="1" d="M3 7h2c2 0 5-1 7-2c2 1 5 2 7 2h2" /><path class="d" pathLength="1" d="M16 16l3-8l3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z" /><path class="d" pathLength="1" d="M2 16l3-8l3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z" /></svg>
+        </div>
+        <div class="txt">
+          <span class="kicker line">Päckchen</span>
+          <span class="head line">maximal</span>
+          <span class="head line"><span class="mark"><i></i><b><span id="kg">1</span> kg</b></span></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Eine Karte: Fläche gleitet weich herein (kein Überschwingen), Icon zeichnet sich, Zeilen folgen versetzt,
+      // die Markierung läuft unter dem Schlüsselwort. Raus: kurz und leise.
+      function karte(id, an, aus) {
+        const k = "#" + id;
+        tl.fromTo(k, { opacity: 0, y: 28, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out" }, an);
+        tl.fromTo(k + " .tile", { scale: 0.85 }, { scale: 1, duration: 0.5, ease: "power3.out" }, an + 0.05);
+        tl.fromTo(k + " .d", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut", stagger: 0.08 }, an + 0.12);
+        tl.set(k + " .d", { opacity: 1 }, an + 0.2);
+        tl.fromTo(k + " .line", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out", stagger: 0.07 }, an + 0.1);
+        tl.fromTo(k + " .mark i", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, an + 0.45);
+        tl.to(k, { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, aus - 0.25);
+      }
+      karte("k1", 0.2, 2.4);
+      karte("k2", 2.7, 4.9);
+      karte("k3", 5.2, 7.5);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
