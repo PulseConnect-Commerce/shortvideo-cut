@@ -1,0 +1,172 @@
+{
+ "projekt": "video2",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 9.8,
+   "text": "Ich habe über 10 Jahre E-Commerce-Erfahrung gesammelt, mehrere Unternehmen aufgebaut und Anfang 2026 eines meiner E-Commerce-Unternehmen verkauft. Warum? Das erkläre ich dir jetzt."
+  },
+  {
+   "take": "t1",
+   "ab": 64.2,
+   "ganz": true,
+   "bis": 66.8,
+   "text": "Aber vielleicht fange ich"
+  },
+  {
+   "take": "t1",
+   "ab": 71.0,
+   "ganz": true,
+   "von": 71.1,
+   "text": "dafür am besten erstmal ganz von vorne an."
+  },
+  {
+   "take": "t1",
+   "ab": 72.6,
+   "text": "Ich habe 2016 mit E-Commerce angefangen. Damals natürlich noch klassisch mit Dropshipping, wie die meisten von euch da draußen. Ich habe unglaublich viel ausprobiert, Fehler gemacht und auch versucht, irgendwie zu verstehen, wie Onlinehandel überhaupt funktioniert."
+  },
+  {
+   "take": "t1",
+   "ab": 116.2,
+   "text": "Damals waren die Werbekosten teilweise noch extrem günstig. Und es waren teilweise Preise unter einem Cent möglich."
+  },
+  {
+   "take": "t1",
+   "ab": 129.3,
+   "text": "Das kann man mit den heutigen Werbekosten überhaupt nicht vergleichen. 2018 habe ich dann meine eigene Webdesign Agentur gegründet und mein Fokus lag dabei anfangs direkt auf Online-Jobs."
+  },
+  {
+   "take": "t1",
+   "ab": 217.6,
+   "text": "Und 2019 haben wir dann auch zusammen mit einem Geschäftspartner eine eigene Marke für personalisierte Produkte auf Shopify getestet. Und das lief tatsächlich eigentlich auch ziemlich gut. Und dann kam leider 2020. Jeder von euch weiß, was 2020 war. Ganz klar Corona."
+  },
+  {
+   "take": "t1",
+   "ab": 267.3,
+   "text": "Plötzlich hatten wir auf einmal Lieferengpässe. Und bestellte Ware wurde storniert."
+  },
+  {
+   "take": "t1",
+   "ab": 293.7,
+   "text": "Und dazu kam natürlich auch eine sehr große Unsicherheit der Kunden"
+  },
+  {
+   "take": "t1",
+   "ab": 308.9,
+   "text": "rund um das Thema Corona und keiner wollte mehr Lieferungen aus Asien annehmen. Wir hatten immer mehr Stornierungen und Retouren und auf einmal bestand dann eben ein großer Teil unserer Arbeit eben daraus Probleme zu lösen, die wir vorher einfach in dieser Form gar nicht kannten und für alle war es eher Neuland. Und am Ende haben wir uns einfach dann eben dazu entschieden, die Marke doch zu verkaufen. Zum Glück konnten wir damals noch einen recht guten Preis dafür erzielen und gleichzeitig passierte aber eben auch etwas anderes, denn 2020 begann dann erst mal so richtig der E-Commerce-Boom."
+  },
+  {
+   "take": "t1",
+   "ab": 343.9,
+   "text": "Und bei meiner Agentur kamen natürlich teilweise täglich einfach neue Anfragen von Unternehmen rein, die auch gerne mit einem eigenen Onlineshop starten wollten, um ihr bestehenden Shop zu verbessern."
+  },
+  {
+   "take": "t1",
+   "ab": 439.2,
+   "text": "Deshalb haben wir eben nach und nach die eigene Elektronikmarke aufgebaut. Und wer schon einmal Elektronik von euch verkauft hat, der weiß leider auch, dass das nicht unbedingt immer die einfachste Produktkategorie ist."
+  },
+  {
+   "take": "t1",
+   "ab": 470.2,
+   "text": "Und wir haben uns da natürlich durchgearbeitet und unsere Produkte sowohl auf Marktplätzen als auch über einen eigenen Ownershop verkauft. Und dann hat sich 2024 mein Leben ziemlich verändert. Ich bin Papa geworden. Und damit haben Sie natürlich auch meine Prioritäten stark verändert."
+  },
+  {
+   "take": "t1",
+   "ab": 497.3,
+   "text": "Und dazu kam es natürlich auch, dass leider eine unserer Mitarbeiterinnen uns damals verlassen hat, die uns im Tagesgeschäft leider sehr stark natürlich auch unterstützt hat. Und irgendwann stand ich natürlich vor einer Entscheidung. Entweder ich mache jetzt das Ganze selbst weiter, suche nach einer neuen Mitarbeiterin, investiere da einfach deutlich mehr Zeit und Geld."
+  },
+  {
+   "take": "t1",
+   "ab": 528.6,
+   "text": "Oder ich verkaufe einfach das Unternehmen inklusive aller aufgebauten Prozesse, der Marktplatzkonten und des eigenen Online-Shops. Und ich habe mich dann eben doch für zweiteres entschieden."
+  },
+  {
+   "take": "t1",
+   "ab": 550.7,
+   "text": "Und deshalb habe ich mich dann auch nach harten zwei Jahren weiter kämpfen, Anfang 2026 dazu entschieden, mein Unternehmen zu verkaufen. Nicht nur weil ich keine Lust mehr auf E-Commerce hatte, sondern einfach weil ich mich stärker auf meine Familie und meine Agentur fokussieren wollte."
+  },
+  {
+   "take": "t1",
+   "ab": 577.0,
+   "text": "Und weil ich einfach über die Jahre gelernt habe, dass man nicht jedes Unternehmen für sich selbst weiterführen muss."
+  },
+  {
+   "take": "t1",
+   "ab": 583.7,
+   "text": "Was ich bei dem Kauf besonders spannend fand, ist, dass beim Verkauf eines E-Kümmers Unternehmens eben nicht immer nur der Umsatz zählt. Es geht darüber hinaus."
+  },
+  {
+   "take": "t1",
+   "ab": 621.8,
+   "text": "Aber der Kunde schaut sich eben auch an, wie profitabel ist das Geschäft, wie funktionieren die Prozesse und wie abhängig ist einfach der Shop von einzelnen Personen und wie gut ist das Ganze überhaupt, es weiterzuführen."
+  },
+  {
+   "take": "t1",
+   "ab": 641.1,
+   "text": "Und genau das war auch einfach für mich noch einmal eine ziemlich wichtige Erfahrung, die ich für mich gelernt habe."
+  },
+  {
+   "take": "t1",
+   "ab": 647.1,
+   "text": "Denn ein Online-Shop, der einfach viel Umsatz macht, ist natürlich nicht automatisch ein Unternehmen, das sich auch sehr gut verkaufen lässt. Und vielleicht ist das eben auch einer der Gründe, warum ich jetzt mehr Content auf Social Media mache, denn ich sehe immer wieder Videos, bei denen es einfach erklärt wird, wie du mit Shopify oder auch KI in kürzester Zeit schnell reich werden kannst. Aber so funktioniert leider Unternehmertum nicht. Aus meiner Sicht zumindest nicht."
+  },
+  {
+   "take": "t1",
+   "ab": 672.1,
+   "text": "Und ich habe in den letzten zehn Jahren unglaublich viel ausprobiert. Manches hat funktioniert, manches leider auch überhaupt nicht. Ich habe auch Fehler gemacht, habe Marken aufgebaut, Unternehmen verkauft und immer wieder etwas Neues dazu gelernt. Genau diese Erfahrung möchte ich hier einfach mit dir teilen. Und ohne irgendwelche schnell Reichwerden versprechen, weil die siehst du da draußen mehr als genug."
+  },
+  {
+   "take": "t1",
+   "ab": 703.2,
+   "text": "Sondern ich möchte es hier lieber mit ehrlichen Einblicken in Shopify, E-Commerce, Marketing und auch die Dinge, die im Alltag einfach eines Unternehmers wirklich passieren machen."
+  },
+  {
+   "take": "t1",
+   "ab": 712.9,
+   "ganz": true,
+   "text": "Wenn du mich auf dieser Reise und meinem weiteren Weg einfach begleiten möchtest, dann würde mich hier selber ein Like und ein Follow von dir freuen, damit du einfach in Zukunft alle meine weiteren Videos nicht mehr verpasst."
+  }
+ ],
+ "ende": {
+  "bis": 724.0
+ },
+ "korrekturen": [
+  [
+   "t1",
+   143.0,
+   "Online-Jobs.",
+   "Onlineshops."
+  ],
+  [
+   "t1",
+   475.76,
+   "Ownershop",
+   "Onlineshop"
+  ],
+  [
+   "t1",
+   482.14,
+   "Sie",
+   "sich"
+  ],
+  [
+   "t1",
+   584.51,
+   "Kauf",
+   "Verkauf"
+  ],
+  [
+   "t1",
+   587.5,
+   "E-Kümmers",
+   "E-Commerce"
+  ]
+ ]
+}

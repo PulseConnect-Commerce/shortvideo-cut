@@ -3,383 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1080, height=1920" />
-    <title>DHL 2027 – Skizzen</title>
+    <title>DHL 2027 – helle Karten</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-    <!-- Transparente Skizzen für "DHL-News 2027" (faber-cut, src/projekte/dhl). Zeiten = Sekunden im geschnittenen Video (cut.json). Leuchtfarbe nur #00f090. Zeichenfläche über dem Kopf, x 153-927, y 290-623. -->
+    <!-- DHL-News 2027, heller Karten-Look (karten-hell.md). Zeiten = Sekunden im geschnittenen Video (cut.json). Lucide-Icons (ISC). -->
     <style>
       @font-face {
-        font-family: "Anton";
-        src: url("assets/fonts/Anton-Regular.woff2") format("woff2");
-        font-weight: 400;
+        font-family: "Geist";
+        src: url("assets/Geist-Variable.woff2") format("woff2");
+        font-weight: 100 900;
       }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        width: 1080px;
-        height: 1920px;
-        overflow: hidden;
-        background: transparent;
-      }
-      #root {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        font-family: "Anton", sans-serif;
-      }
-      .scene {
-        position: absolute;
-        inset: 0;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; }
       .card {
-        position: absolute;
-        left: 110px;
-        top: 290px;
-        width: 860px;
-        height: 370px;
-        opacity: 0;
+        position: absolute; left: 110px; top: 300px; width: 860px; height: 300px;
+        border-radius: 36px; background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
+        display: flex; align-items: center; gap: 44px; padding: 0 56px; opacity: 0;
       }
-      .panel {
-        position: absolute;
-        inset: 0;
-        border-radius: 40px;
-        background: rgba(11, 12, 14, 0.86);
-        border: 2px solid rgba(255, 255, 255, 0.1);
+      .tile {
+        flex: none; width: 176px; height: 176px; border-radius: 32px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%);
+        display: flex; align-items: center; justify-content: center;
       }
-      .art {
-        position: absolute;
-        inset: 0;
-        width: 860px;
-        height: 370px;
-        overflow: visible;
-      }
-      .s {
-        fill: none;
-        stroke: #ffffff;
-        stroke-width: 7;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-      .g {
-        stroke: #00f090;
-      }
-      .r {
-        stroke: #ffffff;
-      }
-      .thin {
-        stroke-width: 5;
-      }
-      .lbl {
-        position: absolute;
-        color: #ffffff;
-        text-transform: uppercase;
-        letter-spacing: 0.01em;
-        line-height: 1.05;
-        white-space: nowrap;
-      }
-      .center {
-        text-align: center;
-      }
-      .green {
-        color: #00f090;
-      }
-      .red {
-        color: #ffffff;
-      }
-      .grey {
-        color: #c9ced4;
-      }
+      .d { opacity: 0; }
+      .tile svg { width: 104px; height: 104px; fill: none; stroke: #0b0c0e; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      .txt { display: flex; flex-direction: column; gap: 10px; }
+      .kicker { font-size: 30px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
+      .head { font-size: 76px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; color: #0b0c0e; }
+      .sub { font-size: 34px; font-weight: 500; color: #374151; }
+      /* zweiter Teil des Titels im PulseConnect-Verlauf: Grün (#00E090) nach Hellblau (#31ADEC) */
+      .verlauf { display: inline-block; padding-bottom: 6px; background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .line { display: block; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="dhl-skizzen" data-start="0" data-duration="62.9" data-width="1080" data-height="1920">
-      <svg width="0" height="0" style="position: absolute"><defs><filter id="rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" /><feDisplacementMap in="SourceGraphic" scale="4" /></filter></defs></svg>
-
-      <!-- 1: Onlinehändler, teuer (3.45-6.55) -->
-      <section id="sz1" class="scene clip" data-start="3.45" data-duration="3.1" data-track-index="0">
-        <div id="sz1-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <path class="s d1a" pathLength="1" d="M85 160 H265 V300 H85 Z" />
-            <path class="s g d1a" pathLength="1" d="M65 160 L90 100 H260 L285 160 Q263 185 241 160 Q219 185 197 160 Q175 185 153 160 Q131 185 109 160 Q87 185 65 160" />
-            <path class="s thin d1a" pathLength="1" d="M130 300 V215 H190 V300 M208 200 H248 V245 H208 Z" />
-            <path class="s g d1b" pathLength="1" d="M620 300 V190 M570 235 L620 185 L670 235" style="stroke-width: 12" />
-          </g></svg>
-          <div id="sz1-l1" class="lbl" style="left: 335px; top: 40px; font-size: 76px">Onlinehändler</div>
-          <div id="sz1-l2" class="lbl green" style="left: 335px; top: 160px; font-size: 120px; opacity: 0">teuer?</div>
-        </div>
-      </section>
-
-      <!-- 2: Preise Geschäftskundenpakete (11.1-13.3) -->
-      <section id="sz2" class="scene clip" data-start="11.1" data-duration="2.2" data-track-index="0">
-        <div id="sz2-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <path class="s d2a" pathLength="1" d="M70 150 L150 110 L230 150 V250 L150 290 L70 250 Z M70 150 L150 190 L230 150 M150 190 V290" />
-            <path class="s g thin d2b" pathLength="1" d="M580 270 Q640 300 700 270 M740 215 L790 215 L790 265" style="opacity: 0" />
-          </g></svg>
-          <div id="sz2-l1" class="lbl green" style="left: 290px; top: 30px; font-size: 118px">Preise</div>
-          <div id="sz2-l2" class="lbl" style="left: 290px; top: 170px; font-size: 48px; opacity: 0">Geschäftskundenpakete</div>
-          <div id="sz2-l3" class="lbl green" style="left: 290px; top: 245px; font-size: 62px; opacity: 0">angepasst</div>
-        </div>
-      </section>
-
-      <!-- 3: wie viel teurer? erst später (13.3-16.9) -->
-      <section id="sz3" class="scene clip" data-start="13.3" data-duration="3.6" data-track-index="0">
-        <div id="sz3-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <path class="s g d3a" pathLength="1" style="stroke-width: 14" d="M95 110 Q95 50 160 50 Q225 50 225 110 Q225 150 170 180 Q150 195 150 225 M150 280 V284" />
-            <path class="s d3b" pathLength="1" d="M60 270 H190 V345 H60 Z M60 270 L125 315 L190 270" style="opacity: 0" />
-            <circle class="s thin d3c" pathLength="1" cx="700" cy="305" r="40" style="opacity: 0" />
-            <path class="s g thin d3c" pathLength="1" d="M700 305 V280 M700 305 L722 318" style="opacity: 0" />
-          </g></svg>
-          <div id="sz3-l1" class="lbl" style="left: 300px; top: 25px; font-size: 76px">Wie viel</div>
-          <div id="sz3-l1b" class="lbl green" style="left: 300px; top: 120px; font-size: 100px; opacity: 0">teurer?</div>
-          <div id="sz3-l2" class="lbl" style="left: 215px; top: 290px; font-size: 44px; opacity: 0">Händler erfahren es</div>
-          <div id="sz3-l3" class="lbl green" style="left: 590px; top: 232px; font-size: 52px; opacity: 0; width: 220px; text-align: center">später</div>
-        </div>
-      </section>
-
-      <!-- 4: Päckchen, Sendungsverfolgung, Haftung (18.75-24.45) -->
-      <section id="sz4" class="scene clip" data-start="18.75" data-duration="5.7" data-track-index="0">
-        <div id="sz4-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <path class="s d4a" pathLength="1" d="M40 60 L100 30 L160 60 V130 L100 160 L40 130 Z M40 60 L100 90 L160 60 M100 90 V160" />
-            <path id="sz4-route" class="s thin" style="stroke-dasharray: 3 16; opacity: 0" d="M50 250 Q150 190 250 245 T430 235" />
-            <path id="sz4-pin" class="s g" style="opacity: 0; stroke-width: 9" d="M430 235 C430 205 410 195 410 175 A22 22 0 1 1 450 175 C450 195 430 205 430 235 Z" />
-            <path id="sz4-shield" class="s g d4c" pathLength="1" style="opacity: 0" d="M650 120 L740 150 V230 Q740 290 650 325 Q560 290 560 230 V150 Z" />
-          </g></svg>
-          <div id="sz4-l0" class="lbl green" style="left: 190px; top: 48px; font-size: 84px">Päckchen</div>
-          <div id="sz4-l1" class="lbl" style="left: 40px; top: 285px; font-size: 46px; opacity: 0">Sendungsverfolgung</div>
-          <div id="sz4-l2" class="lbl grey" style="left: 560px; top: 62px; font-size: 46px; opacity: 0; width: 180px; text-align: center">Haftung</div>
-          <div id="sz4-l3" class="lbl green center" style="left: 560px; top: 190px; font-size: 72px; opacity: 0; width: 180px">20 €</div>
-        </div>
-      </section>
-
-      <!-- 5: maximal 1 kg (24.47-27.3) -->
-      <section id="sz5" class="scene clip" data-start="24.47" data-duration="2.85" data-track-index="0">
-        <div id="sz5-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <path class="s d5a" pathLength="1" d="M170 60 V300 M95 300 H245 M70 100 H270 M70 100 L45 190 H125 Z M270 100 L245 190 H325 Z" />
-            <path class="s g d5b" pathLength="1" d="M600 330 H820" style="stroke-width: 9; opacity: 0" />
-          </g></svg>
-          <div id="sz5-l0" class="lbl grey" style="left: 400px; top: 20px; font-size: 54px">Dafür</div>
-          <div id="sz5-l1" class="lbl" style="left: 400px; top: 90px; font-size: 76px; opacity: 0">maximal</div>
-          <div id="sz5-l2" class="lbl green" style="left: 400px; top: 178px; font-size: 150px; opacity: 0">1 kg</div>
-        </div>
-      </section>
-
-      <!-- 6: Versandkalkulation (27.4-32.1) -->
-      <section id="sz6" class="scene clip" data-start="27.4" data-duration="4.7" data-track-index="0">
-        <div id="sz6-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <path class="s d6a" pathLength="1" d="M60 40 H260 V335 H60 Z M85 65 H235 V120 H85 Z" />
-            <path class="s thin d6b" pathLength="1" d="M90 160 H110 M140 160 H160 M190 160 H210 M90 215 H110 M140 215 H160 M190 215 H210 M90 270 H110 M140 270 H160 M190 270 H210" style="stroke-width: 12" />
-            <path id="sz6-ok" class="s g" pathLength="1" style="stroke-width: 13; opacity: 0" d="M760 85 L785 112 L830 55" />
-          </g></svg>
-          <div id="sz6-l0" class="lbl grey" style="left: 320px; top: 30px; font-size: 56px">Ich finde:</div>
-          <div id="sz6-l1" class="lbl green" style="left: 320px; top: 100px; font-size: 120px; opacity: 0">wichtig</div>
-          <div id="sz6-l2" class="lbl" style="left: 320px; top: 240px; font-size: 54px; opacity: 0">Versandkalkulation</div>
-        </div>
-      </section>
-
-      <!-- 7: täglich hunderte Pakete, Preisänderungen, Geld (32.11-37.5) -->
-      <section id="sz7" class="scene clip" data-start="32.11" data-duration="5.4" data-track-index="0">
-        <div id="sz7-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <g id="sz7-grid" style="opacity: 0">
-              <rect class="s thin pk" x="540" y="30" width="52" height="52" rx="8" /><rect class="s thin pk" x="610" y="30" width="52" height="52" rx="8" /><rect class="s thin pk" x="680" y="30" width="52" height="52" rx="8" /><rect class="s thin pk" x="750" y="30" width="52" height="52" rx="8" />
-              <rect class="s thin pk" x="540" y="105" width="52" height="52" rx="8" /><rect class="s thin pk" x="610" y="105" width="52" height="52" rx="8" /><rect class="s thin pk" x="680" y="105" width="52" height="52" rx="8" /><rect class="s thin pk" x="750" y="105" width="52" height="52" rx="8" />
-            </g>
-            <path class="s g thin d7b" pathLength="1" style="opacity: 0" d="M60 215 H190 L215 245 L190 275 H60 Z" />
-            <circle id="sz7-coin" class="s g" cx="700" cy="285" r="52" style="opacity: 0" />
-          </g></svg>
-          <div id="sz7-l0" class="lbl grey" style="left: 40px; top: 18px; font-size: 56px">täglich</div>
-          <div id="sz7-l1" class="lbl" style="left: 40px; top: 85px; font-size: 64px; opacity: 0">hunderte Pakete</div>
-          <div id="sz7-eur" class="lbl green" style="left: 70px; top: 215px; font-size: 52px; opacity: 0">€</div>
-          <div id="sz7-l2" class="lbl" style="left: 240px; top: 225px; font-size: 44px; opacity: 0">kleine<br />Preisänderungen</div>
-          <div id="sz7-l3" class="lbl green center" style="left: 648px; top: 252px; width: 104px; font-size: 54px; opacity: 0">Geld</div>
-        </div>
-      </section>
-
-      <!-- 8: Tipp: Versandverträge prüfen (37.5-44.55) -->
-      <section id="sz8" class="scene clip" data-start="37.5" data-duration="7.05" data-track-index="0">
-        <div id="sz8-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <path class="s d8a" pathLength="1" d="M60 40 H230 V335 H60 Z M90 100 H200 M90 150 H200 M90 200 H170" />
-            <circle class="s g d8b" pathLength="1" cx="205" cy="265" r="36" style="opacity: 0" />
-            <path class="s g d8b" pathLength="1" d="M231 291 L262 322" style="opacity: 0; stroke-width: 11" />
-            <path id="sz8-ok" class="s g" pathLength="1" style="stroke-width: 12; opacity: 0" d="M730 300 L755 327 L800 270" />
-          </g></svg>
-          <div id="sz8-l0" class="lbl green" style="left: 300px; top: 5px; font-size: 80px">Tipp</div>
-          <div id="sz8-l1" class="lbl" style="left: 300px; top: 92px; font-size: 80px; opacity: 0">prüfen</div>
-          <div id="sz8-l2" class="lbl" style="left: 300px; top: 185px; font-size: 62px; opacity: 0">Versandverträge</div>
-          <div id="sz8-l3" class="lbl green" style="left: 640px; top: 12px; font-size: 80px; opacity: 0">DHL</div>
-          <div id="sz8-l4" class="lbl" style="left: 300px; top: 280px; font-size: 46px; opacity: 0">bessere Konditionen</div>
-        </div>
-      </section>
-
-      <!-- 9: wie stark belastet Versandkosten (44.6-49.2) -->
-      <section id="sz9" class="scene clip" data-start="44.6" data-duration="4.6" data-track-index="0">
-        <div id="sz9-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <path class="s d9a" pathLength="1" d="M60 300 A170 170 0 0 1 400 300" />
-            <path class="s g d9a" pathLength="1" d="M335 175 A170 170 0 0 1 400 300" style="opacity: 0.9" />
-            <g id="sz9-needle">
-              <path class="s" d="M230 300 L230 165" style="stroke-width: 9" />
-              <circle class="s" cx="230" cy="300" r="14" style="fill: #ffffff" />
-            </g>
-          </g></svg>
-          <div id="sz9-l1" class="lbl" style="left: 450px; top: 30px; font-size: 56px; opacity: 0; line-height: 1.1">wie stark<br />belastet dich</div>
-          <div id="sz9-l2" class="lbl green" style="left: 450px; top: 195px; font-size: 76px; opacity: 0">Versandkosten</div>
-        </div>
-      </section>
-
-      <!-- 10: Preise utopisch oder in Ordnung? (49.2-59.45) -->
-      <section id="sz10" class="scene clip" data-start="49.2" data-duration="10.25" data-track-index="0">
-        <div id="sz10-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <rect class="s d10a" pathLength="1" x="40" y="200" width="330" height="100" rx="50" />
-            <rect id="sz10-p2" class="s g" pathLength="1" x="490" y="200" width="330" height="100" rx="50" />
-            <path id="sz10-ok" class="s g" pathLength="1" style="stroke-width: 12; opacity: 0" d="M705 325 L730 345 L775 295" />
-          </g></svg>
-          <div id="sz10-l0" class="lbl grey" style="left: 40px; top: 20px; font-size: 54px">Findest du</div>
-          <div id="sz10-l1" class="lbl" style="left: 270px; top: 8px; font-size: 130px; opacity: 0">Preise?</div>
-          <div id="sz10-a" class="lbl center" style="left: 40px; width: 330px; top: 218px; font-size: 56px; opacity: 0">utopisch</div>
-          <div id="sz10-or" class="lbl grey center" style="left: 370px; width: 120px; top: 222px; font-size: 40px; opacity: 0">oder</div>
-          <div id="sz10-b" class="lbl green center" style="left: 490px; width: 330px; top: 218px; font-size: 56px; opacity: 0">in Ordnung</div>
-        </div>
-      </section>
-
-      <!-- 11: Deine Meinung? Follow (59.45-62.9) -->
-      <section id="sz11" class="scene clip" data-start="59.45" data-duration="3.45" data-track-index="0">
-        <div id="sz11-card" class="card"><div class="panel"></div>
-          <svg class="art" viewBox="0 0 860 370"><g filter="url(#rough)">
-            <path class="s d11a" pathLength="1" d="M120 40 H740 Q790 40 790 90 V210 Q790 260 740 260 H300 L190 335 L215 260 H170 Q120 260 120 210 V90 Q120 40 170 40 Z" />
-          </g></svg>
-          <div id="sz11-l1" class="lbl center" style="left: 120px; width: 670px; top: 75px; font-size: 96px">Deine</div>
-          <div id="sz11-l2" class="lbl green center" style="left: 120px; width: 670px; top: 165px; font-size: 96px; opacity: 0">Meinung?</div>
-          <div id="sz11-l3" class="lbl green center" style="left: 470px; width: 340px; top: 292px; font-size: 52px; opacity: 0">+ Follow</div>
-        </div>
-      </section>
+    <div id="root" data-composition-id="dhl-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="62.9">
+      <section id="a1" class="card clip" data-start="3.45" data-duration="1.6" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M3 9l1.6-5h14.8L21 9" /><path class="d" pathLength="1" d="M3 9h18a3 3 0 0 1-6 0a3 3 0 0 1-6 0a3 3 0 0 1-6 0" /><path class="d" pathLength="1" d="M5 12v8h14v-8" /><path class="d" pathLength="1" d="M10 20v-5h4v5" /></svg></div><div class="txt"><span class="kicker line" id="a1k" style="opacity:0">DHL 2027</span><span class="head line" id="a1h" style="opacity:0;font-size:67px">Onlinehändler</span></div></section>
+      <section id="a2" class="card clip" data-start="5.05" data-duration="1.5" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M16 7h6v6" /><path class="d" pathLength="1" d="m22 7-8.5 8.5-5-5L2 17" /></svg></div><div class="txt"><span class="kicker line" id="a2k" style="opacity:0">Für Onlinehändler</span><span class="head line" id="a2h" style="opacity:0;font-size:73px">könnte</span><span class="head line" id="a2v" style="opacity:0;font-size:73px"><span class="verlauf">teuer werden</span></span></div></section>
+      <section id="b1" class="card clip" data-start="11.1" data-duration="2.2" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path class="d" pathLength="1" d="M12 22V12" /><path class="d" pathLength="1" d="M3.3 7L12 12l8.7-5" /><path class="d" pathLength="1" d="M7.5 4.27l9 5.15" /></svg></div><div class="txt"><span class="kicker line" id="b1k" style="opacity:0">Geschäftskundenpakete</span><span class="head line" id="b1h" style="opacity:0;font-size:76px">Preise</span><span class="head line" id="b1v" style="opacity:0;font-size:76px"><span class="verlauf">angepasst</span></span></div></section>
+      <section id="c1" class="card clip" data-start="13.3" data-duration="1.55" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M12 2a10 10 0 1 0 0 20a10 10 0 0 0 0-20z" /><path class="d" pathLength="1" d="M9.09 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3" /><path class="d" pathLength="1" d="M12 17h.5" /></svg></div><div class="txt"><span class="kicker line" id="c1k" style="opacity:0">Geschäftskunden</span><span class="head line" id="c1h" style="opacity:0;font-size:76px">Wie viel</span><span class="head line" id="c1v" style="opacity:0;font-size:76px"><span class="verlauf">teurer?</span></span></div></section>
+      <section id="c2" class="card clip" data-start="14.85" data-duration="2.05" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" /><path class="d" pathLength="1" d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg></div><div class="txt"><span class="kicker line" id="c2k" style="opacity:0">Betroffene Händler</span><span class="head line" id="c2h" style="opacity:0;font-size:76px">erfahren es</span><span class="head line" id="c2v" style="opacity:0;font-size:76px"><span class="verlauf">später</span></span></div></section>
+      <section id="d1" class="card clip" data-start="18.75" data-duration="2.8" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path class="d" pathLength="1" d="M12 22V12" /><path class="d" pathLength="1" d="M3.3 7L12 12l8.7-5" /><path class="d" pathLength="1" d="M7.5 4.27l9 5.15" /></svg></div><div class="txt"><span class="kicker line" id="d1k" style="opacity:0">Päckchen</span><span class="head line" id="d1h" style="opacity:0;font-size:76px">Eine</span><span class="head line" id="d1v" style="opacity:0;font-size:76px"><span class="verlauf">Änderung</span></span></div></section>
+      <section id="d2" class="card clip" data-start="21.55" data-duration="1.55" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><path class="d" pathLength="1" d="M12 7a3 3 0 1 0 0 6a3 3 0 0 0 0-6z" /></svg></div><div class="txt"><span class="kicker line" id="d2k" style="opacity:0">Päckchen</span><span class="head line" id="d2h" style="opacity:0;font-size:76px">Sendungs-</span><span class="head line" id="d2v" style="opacity:0;font-size:76px"><span class="verlauf">verfolgung</span></span></div></section>
+      <section id="d3" class="card clip" data-start="23.1" data-duration="1.35" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path class="d" pathLength="1" d="m9 12 2 2 4-4" /></svg></div><div class="txt"><span class="kicker line" id="d3k" style="opacity:0">Haftung</span><span class="head line" id="d3h" style="opacity:0;font-size:76px">bis</span><span class="head line" id="d3v" style="opacity:0;font-size:76px"><span class="verlauf">20 Euro</span></span></div></section>
+      <section id="e1" class="card clip" data-start="24.47" data-duration="2.83" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M12 3v18" /><path class="d" pathLength="1" d="M7 21h10" /><path class="d" pathLength="1" d="M3 7h2c2 0 5-1 7-2c2 1 5 2 7 2h2" /><path class="d" pathLength="1" d="M16 16l3-8l3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z" /><path class="d" pathLength="1" d="M2 16l3-8l3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z" /></svg></div><div class="txt"><span class="kicker line" id="e1k" style="opacity:0">Päckchen</span><span class="head line" id="e1h" style="opacity:0;font-size:76px">maximal</span><span class="head line" id="e1v" style="opacity:0;font-size:76px"><span class="verlauf">1 kg</span></span></div></section>
+      <section id="f1" class="card clip" data-start="27.4" data-duration="4.7" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" /><path class="d" pathLength="1" d="M8 6h8" /><path class="d" pathLength="1" d="M8 10h.5" /><path class="d" pathLength="1" d="M12 10h.5" /><path class="d" pathLength="1" d="M16 10h.5" /><path class="d" pathLength="1" d="M8 14h.5" /><path class="d" pathLength="1" d="M12 14h.5" /><path class="d" pathLength="1" d="M16 14v4" /><path class="d" pathLength="1" d="M8 18h.5" /><path class="d" pathLength="1" d="M12 18h.5" /></svg></div><div class="txt"><span class="kicker line" id="f1k" style="opacity:0">Ich finde</span><span class="head line" id="f1h" style="opacity:0;font-size:48px">wichtig:</span><span class="head line" id="f1v" style="opacity:0;font-size:48px"><span class="verlauf">Versandkalkulation</span></span></div></section>
+      <section id="g1" class="card clip" data-start="32.9" data-duration="2.15" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path class="d" pathLength="1" d="M15 18H9" /><path class="d" pathLength="1" d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><path class="d" pathLength="1" d="M17 16a2 2 0 1 0 0 4a2 2 0 0 0 0-4z" /><path class="d" pathLength="1" d="M7 16a2 2 0 1 0 0 4a2 2 0 0 0 0-4z" /></svg></div><div class="txt"><span class="kicker line" id="g1k" style="opacity:0">Täglich</span><span class="head line" id="g1h" style="opacity:0;font-size:76px">Hunderte</span><span class="head line" id="g1v" style="opacity:0;font-size:76px"><span class="verlauf">Pakete</span></span></div></section>
+      <section id="g2" class="card clip" data-start="35.1" data-duration="2.35" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M4 10h12" /><path class="d" pathLength="1" d="M4 14h9" /><path class="d" pathLength="1" d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2" /></svg></div><div class="txt"><span class="kicker line" id="g2k" style="opacity:0">Schon</span><span class="head line" id="g2h" style="opacity:0;font-size:58px">kleine</span><span class="head line" id="g2v" style="opacity:0;font-size:58px"><span class="verlauf">Preisänderungen</span></span></div></section>
+      <section id="h1" class="card clip" data-start="38.1" data-duration="2.15" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path class="d" pathLength="1" d="M9 18h6" /><path class="d" pathLength="1" d="M10 22h4" /></svg></div><div class="txt"><span class="kicker line" id="h1k" style="opacity:0">Mein Tipp</span><span class="head line" id="h1h" style="opacity:0;font-size:76px">Prüfen</span></div></section>
+      <section id="h2" class="card clip" data-start="40.3" data-duration="1.9" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" /><path class="d" pathLength="1" d="M14 2v4a2 2 0 0 0 2 2h4" /><path class="d" pathLength="1" d="M10 9H8" /><path class="d" pathLength="1" d="M16 13H8" /><path class="d" pathLength="1" d="M16 17H8" /></svg></div><div class="txt"><span class="kicker line" id="h2k" style="opacity:0">Von DHL</span><span class="head line" id="h2h" style="opacity:0;font-size:76px">Versand-</span><span class="head line" id="h2v" style="opacity:0;font-size:76px"><span class="verlauf">verträge</span></span></div></section>
+      <section id="h3" class="card clip" data-start="42.25" data-duration="2.25" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M11 3a8 8 0 1 0 0 16a8 8 0 0 0 0-16z" /><path class="d" pathLength="1" d="m21 21-4.3-4.3" /></svg></div><div class="txt"><span class="kicker line" id="h3k" style="opacity:0">Schau nach</span><span class="head line" id="h3h" style="opacity:0;font-size:76px">bessere</span><span class="head line" id="h3v" style="opacity:0;font-size:76px"><span class="verlauf">Konditionen</span></span></div></section>
+      <section id="i1" class="card clip" data-start="44.6" data-duration="4.6" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="m12 14 4-4" /><path class="d" pathLength="1" d="M3.34 19a10 10 0 1 1 17.32 0" /></svg></div><div class="txt"><span class="kicker line" id="i1k" style="opacity:0">Frage an dich</span><span class="head line" id="i1h" style="opacity:0;font-size:62px">Wie stark</span><span class="head line" id="i1v" style="opacity:0;font-size:62px"><span class="verlauf">Versandkosten?</span></span></div></section>
+      <section id="j1" class="card clip" data-start="49.2" data-duration="3.75" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M12 3v18" /><path class="d" pathLength="1" d="M7 21h10" /><path class="d" pathLength="1" d="M3 7h2c2 0 5-1 7-2c2 1 5 2 7 2h2" /><path class="d" pathLength="1" d="M16 16l3-8l3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z" /><path class="d" pathLength="1" d="M2 16l3-8l3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z" /></svg></div><div class="txt"><span class="kicker line" id="j1k" style="opacity:0">Findest du</span><span class="head line" id="j1h" style="opacity:0;font-size:76px">Die Preise</span><span class="head line" id="j1v" style="opacity:0;font-size:76px"><span class="verlauf">utopisch?</span></span></div></section>
+      <section id="j2" class="card clip" data-start="53.0" data-duration="2.55" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M11 3a8 8 0 1 0 0 16a8 8 0 0 0 0-16z" /><path class="d" pathLength="1" d="m21 21-4.3-4.3" /></svg></div><div class="txt"><span class="kicker line" id="j2k" style="opacity:0">Oder doch</span><span class="head line" id="j2h" style="opacity:0;font-size:76px">Aktuell</span><span class="head line" id="j2v" style="opacity:0;font-size:76px"><span class="verlauf">in Ordnung?</span></span></div></section>
+      <section id="j3" class="card clip" data-start="55.6" data-duration="3.8" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M16 7h6v6" /><path class="d" pathLength="1" d="m22 7-8.5 8.5-5-5L2 17" /></svg></div><div class="txt"><span class="kicker line" id="j3k" style="opacity:0">Aufgrund der</span><span class="head line" id="j3h" style="opacity:0;font-size:76px">jetzigen</span><span class="head line" id="j3v" style="opacity:0;font-size:76px"><span class="verlauf">Entwicklung</span></span></div></section>
+      <section id="k1" class="card clip" data-start="59.45" data-duration="2.3" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" /></svg></div><div class="txt"><span class="kicker line" id="k1k" style="opacity:0">Kommentar</span><span class="head line" id="k1h" style="opacity:0;font-size:76px">Deine</span><span class="head line" id="k1v" style="opacity:0;font-size:76px"><span class="verlauf">Meinung?</span></span></div></section>
+      <section id="k2" class="card clip" data-start="61.75" data-duration="1.15" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><path class="d" pathLength="1" d="M9 3a4 4 0 1 0 0 8a4 4 0 0 0 0-8z" /><path class="d" pathLength="1" d="M19 8v6" /><path class="d" pathLength="1" d="M22 11h-6" /></svg></div><div class="txt"><span class="kicker line" id="k2k" style="opacity:0">Nicht vergessen</span><span class="head line" id="k2h" style="opacity:0;font-size:76px">Jetzt</span><span class="head line" id="k2v" style="opacity:0;font-size:76px"><span class="verlauf">Follow</span></span></div></section>
     </div>
-
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
-      const draw = (sel, at, dur = 0.5) =>
-        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1, opacity: 1 }, { strokeDashoffset: 0, duration: dur, ease: "power2.inOut", stagger: 0.06 }, at);
-      const card = (id, start, end) => {
-        tl.fromTo(`#${id}-card`, { opacity: 0, scale: 0.83, transformOrigin: "50% 0%" }, { opacity: 1, scale: 0.9, duration: 0.28, ease: "back.out(1.6)" }, start);
-        tl.to(`#${id}-card`, { opacity: 0, y: -12, duration: 0.25, ease: "power2.in" }, end - 0.25);
-      };
-      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, at);
-      const show = (sel, at, dur = 0.25) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: dur }, at);
-
-      // 1: Onlinehändler (3.47), teuer (5.12)
-      card("sz1", 3.45, 6.55);
-      draw(".d1a", 3.48, 0.55);
-      pop("#sz1-l1", 3.47);
-      draw(".d1b", 5.1, 0.4);
-      pop("#sz1-l2", 5.12);
-
-      // 2: Preise (11.12), Geschäftskundenpakete (11.68), anpassen (12.90)
-      card("sz2", 11.1, 13.3);
-      draw(".d2a", 11.15, 0.45);
-      pop("#sz2-l1", 11.12);
-      pop("#sz2-l2", 11.66);
-      pop("#sz2-l3", 12.88);
-      draw(".d2b", 12.9, 0.3);
-
-      // 3: Wie viel (13.34) teurer (13.70) konkret (14.2) erfahren (14.88) später (16.46)
-      card("sz3", 13.3, 16.9);
-      draw(".d3a", 13.36, 0.5);
-      pop("#sz3-l1", 13.34);
-      pop("#sz3-l1b", 13.68);
-      draw(".d3b", 14.86, 0.4);
-      pop("#sz3-l2", 14.88);
-      draw(".d3c", 16.44, 0.4);
-      pop("#sz3-l3", 16.46);
-
-      // 4: Päckchen (19.65), Sendungsverfolgung (21.63), Haftung (23.15), 20 Euro (23.73)
-      card("sz4", 18.75, 24.45);
-      draw(".d4a", 18.8, 0.5);
-      pop("#sz4-l0", 19.62);
-      tl.fromTo("#sz4-route", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 21.6);
-      tl.fromTo("#sz4-route", { strokeDashoffset: 80 }, { strokeDashoffset: 0, duration: 1.2, ease: "none" }, 21.6);
-      pop("#sz4-l1", 21.62);
-      tl.fromTo("#sz4-pin", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(2)" }, 22.5);
-      show("#sz4-l2", 23.13);
-      draw("#sz4-shield", 23.15, 0.5);
-      pop("#sz4-l3", 23.71);
-
-      // 5: Dafür (24.53), maximal (26.01), 1 kg (26.71)
-      card("sz5", 24.47, 27.32);
-      draw(".d5a", 24.5, 0.55);
-      show("#sz5-l0", 24.52);
-      pop("#sz5-l1", 26.0);
-      pop("#sz5-l2", 26.69);
-      draw(".d5b", 26.9, 0.3);
-
-      // 6: Ich finde (27.41), wichtig (29.43), Versandkalkulation (30.53), ist (31.97)
-      card("sz6", 27.4, 32.1);
-      draw(".d6a", 27.43, 0.5);
-      draw(".d6b", 28.0, 0.7);
-      show("#sz6-l0", 27.42);
-      pop("#sz6-l1", 29.41);
-      pop("#sz6-l2", 30.51);
-      draw("#sz6-ok", 31.95, 0.25);
-
-      // 7: täglich (33.03), hunderte (33.41), Pakete (33.83), Preisänderungen (35.57), Geld (37.05)
-      card("sz7", 32.11, 37.5);
-      show("#sz7-l0", 32.15);
-      pop("#sz7-l1", 33.39);
-      tl.fromTo("#sz7-grid", { opacity: 0 }, { opacity: 1, duration: 0.1 }, 33.41);
-      tl.fromTo(".pk", { opacity: 0, scale: 0.5, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, stagger: 0.07, ease: "back.out(2)" }, 33.83);
-      draw(".d7b", 35.55, 0.35);
-      show("#sz7-eur", 35.8, 0.2);
-      pop("#sz7-l2", 35.57);
-      tl.fromTo("#sz7-coin", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 37.03);
-      pop("#sz7-l3", 37.05);
-
-      // 8: Tipp (38.13), prüft (38.67), Versandverträge (40.31), DHL (41.19), Konditionen (43.55)
-      card("sz8", 37.5, 44.55);
-      draw(".d8a", 37.55, 0.55);
-      pop("#sz8-l0", 38.11);
-      draw(".d8b", 38.65, 0.4);
-      pop("#sz8-l1", 38.65);
-      pop("#sz8-l2", 40.29);
-      pop("#sz8-l3", 41.17);
-      pop("#sz8-l4", 43.53);
-      draw("#sz8-ok", 43.55, 0.3);
-
-      // 9: wie stark (46.15) belastet (46.6) Versandkosten (47.98)
-      card("sz9", 44.6, 49.2);
-      draw(".d9a", 44.65, 0.6);
-      pop("#sz9-l1", 46.13);
-      tl.set("#sz9-needle", { rotation: -70, svgOrigin: "230 300" }, 0);
-      tl.to("#sz9-needle", { rotation: 55, svgOrigin: "230 300", duration: 0.9, ease: "power2.out" }, 46.6);
-      pop("#sz9-l2", 47.96);
-
-      // 10: Findest du (49.28), Preise (50.46), utopisch (51.22), oder (51.77), in Ordnung (54.0), verständlich (57.54)
-      card("sz10", 49.2, 59.45);
-      show("#sz10-l0", 49.28);
-      pop("#sz10-l1", 50.44);
-      draw(".d10a", 51.2, 0.4);
-      pop("#sz10-a", 51.2);
-      show("#sz10-or", 51.77);
-      draw("#sz10-p2", 53.5, 0.45);
-      pop("#sz10-b", 53.98);
-      draw("#sz10-ok", 57.5, 0.3);
-
-      // 11: Meinung (59.53), Follow (61.79)
-      card("sz11", 59.45, 62.9);
-      draw(".d11a", 59.5, 0.5);
-      pop("#sz11-l1", 59.47);
-      pop("#sz11-l2", 59.55);
-      pop("#sz11-l3", 61.77);
+      // Karte: erster Inhalt (Icon-Kachel, erste Zeile) im selben Frame; Zeilen erscheinen auf ihrem Wort.
+      function karte(id, an, aus, t) {
+        const k = "#" + id;
+        tl.fromTo(k, { opacity: 0, y: 28, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out" }, an);
+        tl.fromTo(k + " .tile", { scale: 0.85 }, { scale: 1, duration: 0.5, ease: "power3.out" }, an + 0.05);
+        tl.fromTo(k + " .d", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut", stagger: 0.08 }, an + 0.12);
+        tl.set(k + " .d", { opacity: 1 }, an + 0.2);
+        for (const [s, key] of [["k", "k"], ["h", "h"], ["v", "v"]]) {
+          if (t[key] === null) continue;
+          const at = Math.max(t[key], an + 0.05);
+          tl.fromTo("#" + id + s, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, at);
+        }
+        if (t.v !== null) tl.fromTo(k + " .verlauf", { backgroundPosition: "-60px 0" }, { backgroundPosition: "0px 0", duration: 0.6, ease: "power2.out" }, Math.max(t.v, an + 0.05));
+        tl.to(k, { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, aus - 0.25);
+      }
+      karte("a1", 3.45, 5.05, {"k": 3.47, "h": 3.47, "v": null});
+      karte("a2", 5.05, 6.55, {"k": 5.07, "h": 5.12, "v": 5.12});
+      karte("b1", 11.1, 13.3, {"k": 11.68, "h": 11.12, "v": 12.88});
+      karte("c1", 13.3, 14.85, {"k": 13.32, "h": 13.34, "v": 13.7});
+      karte("c2", 14.85, 16.9, {"k": 14.88, "h": 14.9, "v": 16.46});
+      karte("d1", 18.75, 21.55, {"k": 19.65, "h": 18.84, "v": 18.9});
+      karte("d2", 21.55, 23.1, {"k": 21.57, "h": 21.6, "v": 21.63});
+      karte("d3", 23.1, 24.45, {"k": 23.12, "h": 23.15, "v": 23.73});
+      karte("e1", 24.47, 27.3, {"k": 24.53, "h": 26.01, "v": 26.71});
+      karte("f1", 27.4, 32.1, {"k": 27.42, "h": 29.43, "v": 30.53});
+      karte("g1", 32.9, 35.05, {"k": 33.03, "h": 33.41, "v": 33.83});
+      karte("g2", 35.1, 37.45, {"k": 34.97, "h": 35.2, "v": 35.57});
+      karte("h1", 38.1, 40.25, {"k": 38.13, "h": 38.67, "v": null});
+      karte("h2", 40.3, 42.2, {"k": 41.19, "h": 40.31, "v": 40.35});
+      karte("h3", 42.25, 44.5, {"k": 42.27, "h": 43.23, "v": 43.55});
+      karte("i1", 44.6, 49.2, {"k": 44.6, "h": 46.15, "v": 47.98});
+      karte("j1", 49.2, 52.95, {"k": 49.28, "h": 50.46, "v": 51.22});
+      karte("j2", 53.0, 55.55, {"k": 53.06, "h": 54.0, "v": 54.49});
+      karte("j3", 55.6, 59.4, {"k": 55.62, "h": 56.27, "v": 56.61});
+      karte("k1", 59.45, 61.75, {"k": 59.47, "h": 59.53, "v": 59.7});
+      karte("k2", 61.75, 62.9, {"k": 61.77, "h": 61.79, "v": 61.8});
 
       tl.seek(0);
       window.__timelines["dhl-skizzen"] = tl;

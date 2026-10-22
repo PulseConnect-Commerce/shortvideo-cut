@@ -5,7 +5,7 @@
  * Keine konkrete Preiserhöhung behauptet; Päckchen-Neuerungen (Tracking, Haftung bis 20 EUR, max. 1 kg) getrennt von Geschäftskundenpreisen.
  *
  * Bild: Augen bei ~900-915 (scale 1.3), sanfte Farbe (nur STIL.gradeSanft, kein zusätzliches brightness), nur ein ruhiges Zoom-in (3 %),
- * kein Zoom-Wechsel. Oben: Hook-Titel (nacht-gruen), Quellenkarte, Skizzen aus HyperFrames (hyperframes/dhl-skizzen), eine Leuchtfarbe #00F090.
+ * kein Zoom-Wechsel. Oben: Hook-Titel (nacht-gruen), Quellenkarte, Skizzen aus HyperFrames (hyperframes/dhl-skizzen, heller Karten-Look), eine Leuchtfarbe #00F090.
  * Untertitel unter dem Kopf (y 1400).
  */
 import type React from "react";
@@ -24,7 +24,7 @@ export const meta = { id: "Dhl", durationInFrames: C.DURATION, fps: C.FPS };
 const F = C.cue;
 
 /** Bildlage: Augen bei ~900-925 (im Take bei ~866); transformOrigin 50 % 0 %, daher x 65 wie bei REWE (Kopf mittig, rechts kein schwarzer Rand) */
-const BILD = { scale: 1.3, hoch: 205, x: 65 };
+const BILD = { scale: 1.3, hoch: 350, x: 65 };
 
 const HOOK_ENDE = C.W("onlinehändler") - 2;
 
@@ -38,11 +38,11 @@ const BETONT = ["dhl", "versandbedingungen", "onlinehändler", "teuer", "meldung
 const FARBIG = ["2027", "20", "kilogramm", "teuer", "geld", "versandkosten"];
 
 /** Sekunden im Video, an denen die Skizzen erscheinen (wie in hyperframes/dhl-skizzen/index.html) */
-const SKIZZEN = [3.45, 11.1, 13.3, 18.75, 24.47, 27.4, 32.11, 37.5, 44.6, 49.2, 59.45];
+const SKIZZEN = [3.45, 11.1, 13.3, 18.75, 24.47, 27.4, 32.9, 38.1, 44.6, 49.2, 59.45];
 /** leise Akzente auf einzelnen Zeichnungen: Datei, Sekunde, Lautstärke (Anteil von STIL.sfx) */
 const AKZENTE: [string, number, number][] = [
   ["tick.mp3", 5.12, 0.3], ["tick.mp3", 16.46, 0.3], ["success.mp3", 23.15, 0.35], ["tick.mp3", 26.71, 0.3],
-  ["success.mp3", 31.97, 0.3], ["tick.mp3", 37.05, 0.3], ["success.mp3", 43.55, 0.3], ["tick.mp3", 46.6, 0.3], ["success.mp3", 57.5, 0.3],
+  ["tick.mp3", 35.2, 0.3], ["success.mp3", 43.55, 0.3], ["tick.mp3", 47.98, 0.3], ["tick.mp3", 54.49, 0.3],
 ];
 
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false };
@@ -102,7 +102,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
         <OffthreadVideo src={staticFile("broll/dhl/skizzen.webm")} transparent muted style={{ position: "absolute", inset: 0, width: 1080, height: 1920 }} />
       </Sequence>
 
-      {untertitel && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} y={1400} />}
+      {untertitel && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} y={1400} farbe="#00E090" />}
 
       {sfx && (
         <>

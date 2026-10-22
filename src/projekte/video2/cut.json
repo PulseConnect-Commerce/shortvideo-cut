@@ -12,6 +12,34 @@
   },
   {
    "src": "video2/t1",
+   "from": 9.965,
+   "to": 19.485,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 42.465,
+   "to": 51.045,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 64.385,
+   "to": 66.8,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 71.1,
+   "to": 74.745,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
    "from": 75.175,
    "to": 87.875,
    "nach": 0.09,
@@ -274,6 +302,360 @@
    "src": "video2/t1",
    "start": 61.21,
    "end": 61.37
+  },
+  {
+   "text": "Ich",
+   "src": "video2/t1",
+   "start": 10.04,
+   "end": 10.1
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 10.14,
+   "end": 10.28
+  },
+  {
+   "text": "über",
+   "src": "video2/t1",
+   "start": 10.36,
+   "end": 10.46
+  },
+  {
+   "text": "10",
+   "src": "video2/t1",
+   "start": 10.64,
+   "end": 10.86
+  },
+  {
+   "text": "Jahre",
+   "src": "video2/t1",
+   "start": 10.9,
+   "end": 11.14
+  },
+  {
+   "text": "E-Commerce-Erfahrung",
+   "src": "video2/t1",
+   "start": 11.22,
+   "end": 11.9
+  },
+  {
+   "text": "gesammelt,",
+   "src": "video2/t1",
+   "start": 11.96,
+   "end": 12.36
+  },
+  {
+   "text": "mehrere",
+   "src": "video2/t1",
+   "start": 12.48,
+   "end": 12.74
+  },
+  {
+   "text": "Unternehmen",
+   "src": "video2/t1",
+   "start": 12.78,
+   "end": 13.12
+  },
+  {
+   "text": "aufgebaut",
+   "src": "video2/t1",
+   "start": 13.18,
+   "end": 13.58
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 13.64,
+   "end": 13.72
+  },
+  {
+   "text": "Anfang",
+   "src": "video2/t1",
+   "start": 13.86,
+   "end": 14.12
+  },
+  {
+   "text": "2026",
+   "src": "video2/t1",
+   "start": 14.22,
+   "end": 15.18
+  },
+  {
+   "text": "eines",
+   "src": "video2/t1",
+   "start": 15.52,
+   "end": 15.74
+  },
+  {
+   "text": "meiner",
+   "src": "video2/t1",
+   "start": 15.78,
+   "end": 15.94
+  },
+  {
+   "text": "E-Commerce-Unternehmen",
+   "src": "video2/t1",
+   "start": 16.04,
+   "end": 16.84
+  },
+  {
+   "text": "verkauft.",
+   "src": "video2/t1",
+   "start": 16.88,
+   "end": 17.22
+  },
+  {
+   "text": "Warum?",
+   "src": "video2/t1",
+   "start": 17.6,
+   "end": 17.9
+  },
+  {
+   "text": "Das",
+   "src": "video2/t1",
+   "start": 18.5,
+   "end": 18.64
+  },
+  {
+   "text": "erkläre",
+   "src": "video2/t1",
+   "start": 18.7,
+   "end": 18.94
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 18.96,
+   "end": 19.02
+  },
+  {
+   "text": "dir",
+   "src": "video2/t1",
+   "start": 19.04,
+   "end": 19.12
+  },
+  {
+   "text": "jetzt.",
+   "src": "video2/t1",
+   "start": 19.16,
+   "end": 19.36
+  },
+  {
+   "text": "Viele",
+   "src": "video2/t1",
+   "start": 42.54,
+   "end": 42.74
+  },
+  {
+   "text": "denken",
+   "src": "video2/t1",
+   "start": 42.82,
+   "end": 43.04
+  },
+  {
+   "text": "beim",
+   "src": "video2/t1",
+   "start": 43.1,
+   "end": 43.2
+  },
+  {
+   "text": "Verkauf",
+   "src": "video2/t1",
+   "start": 43.26,
+   "end": 43.56
+  },
+  {
+   "text": "eines",
+   "src": "video2/t1",
+   "start": 43.64,
+   "end": 43.82
+  },
+  {
+   "text": "Online-Shops",
+   "src": "video2/t1",
+   "start": 43.88,
+   "end": 44.38
+  },
+  {
+   "text": "zählt",
+   "src": "video2/t1",
+   "start": 44.5,
+   "end": 44.72
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 44.78,
+   "end": 44.92
+  },
+  {
+   "text": "vor",
+   "src": "video2/t1",
+   "start": 44.96,
+   "end": 45.04
+  },
+  {
+   "text": "allem",
+   "src": "video2/t1",
+   "start": 45.16,
+   "end": 45.34
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 45.38,
+   "end": 45.46
+  },
+  {
+   "text": "Umsatz.",
+   "src": "video2/t1",
+   "start": 45.52,
+   "end": 45.88
+  },
+  {
+   "text": "Anfang",
+   "src": "video2/t1",
+   "start": 46.54,
+   "end": 46.78
+  },
+  {
+   "text": "2026",
+   "src": "video2/t1",
+   "start": 46.84,
+   "end": 47.74
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 47.78,
+   "end": 47.9
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 47.94,
+   "end": 48.0
+  },
+  {
+   "text": "mein",
+   "src": "video2/t1",
+   "start": 48.06,
+   "end": 48.22
+  },
+  {
+   "text": "E-Commerce-Unternehmen",
+   "src": "video2/t1",
+   "start": 48.28,
+   "end": 48.98
+  },
+  {
+   "text": "verkauft",
+   "src": "video2/t1",
+   "start": 49.0,
+   "end": 49.34
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 49.64,
+   "end": 49.72
+  },
+  {
+   "text": "dabei",
+   "src": "video2/t1",
+   "start": 49.76,
+   "end": 49.98
+  },
+  {
+   "text": "etwas",
+   "src": "video2/t1",
+   "start": 50.12,
+   "end": 50.32
+  },
+  {
+   "text": "anderes",
+   "src": "video2/t1",
+   "start": 50.4,
+   "end": 50.68
+  },
+  {
+   "text": "gelernt.",
+   "src": "video2/t1",
+   "start": 50.72,
+   "end": 51.0
+  },
+  {
+   "text": "Aber",
+   "src": "video2/t1",
+   "start": 64.43,
+   "end": 64.57
+  },
+  {
+   "text": "vielleicht",
+   "src": "video2/t1",
+   "start": 64.65,
+   "end": 64.95
+  },
+  {
+   "text": "fange",
+   "src": "video2/t1",
+   "start": 64.99,
+   "end": 65.19
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 65.25,
+   "end": 65.31
+  },
+  {
+   "text": "dafür",
+   "src": "video2/t1",
+   "start": 72.71,
+   "end": 72.95
+  },
+  {
+   "text": "am",
+   "src": "video2/t1",
+   "start": 72.99,
+   "end": 73.05
+  },
+  {
+   "text": "besten",
+   "src": "video2/t1",
+   "start": 73.07,
+   "end": 73.29
+  },
+  {
+   "text": "erstmal",
+   "src": "video2/t1",
+   "start": 73.33,
+   "end": 73.59
+  },
+  {
+   "text": "ganz",
+   "src": "video2/t1",
+   "start": 73.77,
+   "end": 73.97
+  },
+  {
+   "text": "von",
+   "src": "video2/t1",
+   "start": 74.03,
+   "end": 74.15
+  },
+  {
+   "text": "vorne",
+   "src": "video2/t1",
+   "start": 74.21,
+   "end": 74.41
+  },
+  {
+   "text": "an.",
+   "src": "video2/t1",
+   "start": 74.47,
+   "end": 74.53
   },
   {
    "text": "Ich",
@@ -4946,6 +5328,34 @@
   4,
   2,
   4,
+  3,
+  2,
+  1,
+  1,
+  2,
+  1,
+  3,
+  2,
+  1,
+  1,
+  1,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  1,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
   3,
   2,
   1,

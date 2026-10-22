@@ -15,6 +15,20 @@
   },
   {
    "take": "t1",
+   "ab": 64.2,
+   "ganz": true,
+   "bis": 66.8,
+   "text": "Aber vielleicht fange ich"
+  },
+  {
+   "take": "t1",
+   "ab": 71.0,
+   "ganz": true,
+   "von": 71.1,
+   "text": "dafür am besten erstmal ganz von vorne an."
+  },
+  {
+   "take": "t1",
    "ab": 72.6,
    "text": "Ich habe 2016 mit E-Commerce angefangen. Damals natürlich noch klassisch mit Dropshipping, wie die meisten von euch da draußen. Ich habe unglaublich viel ausprobiert, Fehler gemacht und auch versucht, irgendwie zu verstehen, wie Onlinehandel überhaupt funktioniert."
   },
