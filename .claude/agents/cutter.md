@@ -34,12 +34,14 @@ Skizzen mit HyperFrames), 6 (eigene Prüfung: Sync, Pacing, Standbilder, Raster)
 - `npm run pruefen -- <Komposition> <projekt>`. Jeden FEHLER beheben, den du beheben kannst; was bleibt, mit Grund in
   "Entscheidungen des Cutters".
 
-## Farbe
+## Farbe und Karten
 
-Eine Leuchtfarbe im ganzen Video, die des Formats (stil.md): NEWS `#00F090`, FACE `#CCFF00`, HERO `#40E8E0`. Hook-Titel
-(`DesignRahmen`), Skizzen (HyperFrames: jede Akzentfarbe im index.html ersetzen, auch wenn die Vorlage aus einem anderen
-Format kommt) und betonte Untertitel tragen dieselbe Farbe. Seine Rüge 2026-10-18 zu N04: "Im Titel blau, bei den
-b-Rolls dann wieder grün?"
+**Ab 2026-10-22 (alle Formate):** helle Karten nach `.claude/skills/faber-cut/karten-hell.md`, Vorlage
+`hyperframes/look-probe/index.html` (Hintergrundbild `#bg` entfernen, `background: transparent`). Weiße oder hellgraue
+Karte, saubere Linien-Icons (keine Kreide, nichts Comichaftes), Titel zweifarbig: erster Teil dunkel, zweiter Teil im
+PulseConnect-Verlauf `#00D088 → #31ADEC`. Hook-Titel mit `DesignRahmen design="nacht-gruen"`, betonte Untertitel
+`farbe="#00E090"`, keine weitere Akzentfarbe (nicht `#CCFF00`, nicht `#40E8E0`). Seine Rüge 2026-10-18 zu N04 gilt
+weiter: eine Farbwelt im ganzen Video ("Im Titel blau, bei den b-Rolls dann wieder grün?").
 
 ## Captions
 

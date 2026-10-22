@@ -20,6 +20,10 @@ So gehst du vor:
 - `src/lib/stil.ts` enthält die Zahlen von HERO. Andere Formate bekommen eigene Abweichungen (siehe ihr Skill),
   die HERO-Werte bleiben unverändert.
 
+**Helle Karten ab 2026-10-22 (alle Formate, geht dem Look darunter vor):** Skizzen auf weißer oder hellgrauer
+Karte, saubere Linien-Icons statt Kreide, ruhige Bewegung (Motion-Skill), Titel zweifarbig mit PulseConnect-Verlauf
+Grün → Hellblau statt einer Leuchtfarbe je Format. Details: `karten-hell.md`.
+
 **Freigegebener Look ab 2026-10-17 (alle Formate außer der Serie; "perfekt, genau so gefällt mir das. Bitte so als
 Skill abspeichern für die nächsten Videos"):** Briefing Punkt für Punkt, wenige Schnitte ohne Zoom-Wechsel (nur ein
 ruhiges Zoom-in), sanfte Farbkorrektur (nicht heller, kaum Kontrast: `npm run farbe` und `STIL.gradeSanft`), er steht tiefer im Bild, über dem Kopf Hook-Titel und danach Quelle und

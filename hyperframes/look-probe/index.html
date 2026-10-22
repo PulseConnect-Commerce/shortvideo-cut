@@ -25,7 +25,7 @@
         display: flex; align-items: center; gap: 44px; padding: 0 56px; opacity: 0;
       }
       .tile {
-        flex: none; width: 176px; height: 176px; border-radius: 32px; background: #00f090;
+        flex: none; width: 176px; height: 176px; border-radius: 32px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%);
         display: flex; align-items: center; justify-content: center;
       }
       .d { opacity: 0; }
@@ -34,9 +34,8 @@
       .kicker { font-size: 30px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
       .head { font-size: 76px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; color: #0b0c0e; }
       .sub { font-size: 34px; font-weight: 500; color: #374151; }
-      .mark { position: relative; display: inline-block; }
-      .mark i { position: absolute; left: -6px; right: -6px; bottom: 4px; height: 26px; background: #00f090; border-radius: 6px; z-index: -1; transform-origin: left center; }
-      .mark b { position: relative; font-weight: inherit; }
+      /* zweiter Teil des Titels im PulseConnect-Verlauf: Grün (#00E090) nach Hellblau (#31ADEC) */
+      .verlauf { display: inline-block; padding-bottom: 6px; background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
       .line { display: block; }
     </style>
   </head>
@@ -51,7 +50,7 @@
         <div class="txt">
           <span class="kicker line">DHL ab 2027</span>
           <span class="head line">Onlinehändler</span>
-          <span class="head line"><span class="mark"><i></i><b>teurer?</b></span></span>
+          <span class="head line"><span class="verlauf">teurer?</span></span>
         </div>
       </div>
 
@@ -62,7 +61,7 @@
         <div class="txt">
           <span class="kicker line">Geschäftskundenpakete</span>
           <span class="head line">Preise</span>
-          <span class="head line"><span class="mark"><i></i><b>angepasst</b></span></span>
+          <span class="head line"><span class="verlauf">angepasst</span></span>
         </div>
       </div>
 
@@ -73,7 +72,7 @@
         <div class="txt">
           <span class="kicker line">Päckchen</span>
           <span class="head line">maximal</span>
-          <span class="head line"><span class="mark"><i></i><b><span id="kg">1</span> kg</b></span></span>
+          <span class="head line"><span class="verlauf"><span id="kg">1</span> kg</span></span>
         </div>
       </div>
     </div>
@@ -91,7 +90,7 @@
         tl.fromTo(k + " .d", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut", stagger: 0.08 }, an + 0.12);
         tl.set(k + " .d", { opacity: 1 }, an + 0.2);
         tl.fromTo(k + " .line", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out", stagger: 0.07 }, an + 0.1);
-        tl.fromTo(k + " .mark i", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, an + 0.45);
+        tl.fromTo(k + " .verlauf", { backgroundPosition: "-60px 0" }, { backgroundPosition: "0px 0", duration: 0.6, ease: "power2.out" }, an + 0.2);
         tl.to(k, { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, aus - 0.25);
       }
       karte("k1", 0.2, 2.4);

@@ -5,6 +5,11 @@ description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~4
 
 # Stil NEWS / Reaction
 
+> **HELLE KARTEN ab 2026-10-22 (alle Formate, geht dem freigegebenen Look darunter vor):** die Skizzen über dem Kopf
+> stehen auf **weißer oder hellgrauer Karte** statt dunkler, mit sauberen Linien-Icons statt Kreide-Skizzen, ruhiger
+> Bewegung nach dem Motion-Skill und **zweifarbigem Titel** (zweiter Teil im PulseConnect-Verlauf Grün → Hellblau).
+> Der Verlauf ersetzt die eine Leuchtfarbe des Formats. Alles Weitere: `.claude/skills/faber-cut/karten-hell.md`.
+>
 > **FREIGEGEBENER LOOK ab 2026-10-17 (geht allen Blöcken darunter vor; die sind nur noch Vorgeschichte).**
 > Seine Freigabe nach dem Beispiel REWE × Lieferando: "perfekt, genau so gefällt mir das. Bitte so als Skill
 > abspeichern für die nächsten Videos". Gilt für NEWS/Reaction, FACE und HERO, nicht für die Serie "E-Commerce einfach
