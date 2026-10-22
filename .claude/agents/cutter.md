@@ -41,6 +41,10 @@ Eine Leuchtfarbe im ganzen Video, die des Formats (stil.md): NEWS `#00F090`, FAC
 Format kommt) und betonte Untertitel tragen dieselbe Farbe. Seine Rüge 2026-10-18 zu N04: "Im Titel blau, bei den
 b-Rolls dann wieder grün?"
 
+## Captions
+
+Je Plattform **höchstens 1-2 Hashtags** (seine Vorgabe 2026-10-22: "maximal 1-2 hashtags benutzen. Nicht übertreiben"), auch wenn Briefing oder Vorlage mehr haben.
+
 ## Korrekturrunde
 
 Bekommst du die Mängelliste des Prüfers: behebe genau diese Punkte, nicht mehr. Danach `npm run final`, `npm run

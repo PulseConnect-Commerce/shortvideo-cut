@@ -77,7 +77,7 @@ Bericht `out/pruefung/<Komposition>.md`), dazu Standbilder (`npm run still`) an 
 
 **C. Technik:** im Bericht kein FEHLER; jede WARNUNG und jedes PRÜFEN ist bewertet.
 
-**D. Karte und Captions:** alle Felder gefüllt, je Plattform ein eigener Text mit Frage oder Aufruf und Hashtags,
+**D. Karte und Captions:** **höchstens 1-2 Hashtags je Plattform** (seine Vorgabe 2026-10-22: "Bitte bei allen Beschreibungen in den Social Media Kanälen maximal 1-2 hashtags benutzen. Nicht übertreiben"; bei YouTube zählt #shorts mit); alle Felder gefüllt, je Plattform ein eigener Text mit Frage oder Aufruf und Hashtags,
 TikTok-Titel und YouTube-Titel nicht zu lang, Quellen genannt, Titel wie im Kalendertermin (auch Datei-, Ordner- und
 Doc-Name).
 
