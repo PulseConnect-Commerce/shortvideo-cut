@@ -1,0 +1,55 @@
+{
+ "projekt": "appcode",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 14.93,
+   "text": "Nur weil du deine Shopify App löscht, heißt es nicht gleich, dass automatisch alles weg ist."
+  },
+  {
+   "take": "t1",
+   "ab": 29.15,
+   "text": "Denn manche Apps verändern einfach deine Theme Code."
+  },
+  {
+   "take": "t1",
+   "ab": 32.05,
+   "text": "Diese Änderungen verschwinden halt nicht einfach nur automatisch, nur weil du jetzt diese App deinstallierst."
+  },
+  {
+   "take": "t1",
+   "ab": 37.55,
+   "text": "Deshalb immer mein Tipp, kontrolliere auf jeden Fall immer nach jeder Deinstallation deinen Online-Shop und deinen Theme und schau, ob dort nicht noch irgendwelche restlichen Code-Schnipsel drin sind."
+  },
+  {
+   "take": "t1",
+   "ab": 142.6,
+   "text": "Wenn du natürlich vorher deine Theme-Kopie vorgenommen hast, dann kannst du eigentlich auch in der Regel nichts kaputt machen, denn du hast immer noch deine Theme-Kopie als"
+  },
+  {
+   "take": "t1",
+   "ab": 150.7,
+   "text": "Absicherung."
+  },
+  {
+   "take": "t1",
+   "ab": 179.74,
+   "text": "Du lässt einfach jemanden drüber schauen, der ein bisschen Ahnung davon hat, statt einfach nur wahllos irgendeinen Code selbst zu entfernen."
+  },
+  {
+   "take": "t1",
+   "ab": 14.4,
+   "text": "Denn"
+  }
+ ],
+ "ende": {
+  "bis": 14.8
+ }
+}

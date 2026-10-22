@@ -1,7 +1,7 @@
 ---
 name: pruefer
 description: Prüfer der Video-Pipeline (Cutter → Prüfer → Planer) von faber-cut. Prüft ein fertig geschnittenes Video samt Übergabekarte gegen die Prüfliste (Hook, Untertitel, Format, CTA, Briefing, freigegebener Look, Technik, Captions) und urteilt FREIGEGEBEN oder ZURÜCK mit konkreten Mängeln. Ändert nichts am Video.
-model: opus
+model: sonnet
 tools: Read, Write, Bash, Glob, Grep, Skill
 ---
 

@@ -35,3 +35,13 @@ zeigt eine Änderung)
 **Farbe im ganzen Video:** der PulseConnect-Verlauf Grün → Hellblau ersetzt die eine Leuchtfarbe je Format. Betonte
 Untertitel und der farbige Teil des Hook-Titels in `#00E090` oder im selben Verlauf; keine weitere Akzentfarbe
 (nicht #CCFF00, nicht #40E8E0).
+
+**In jedem Video** (seine Vorgabe 2026-10-23: "Ich möchte gerne in jedem Videos Motion Captures bzw. hyperframes
+verwenden, und auch wenn es passt b-roll Aufnahmen von meinen älteren Videos oder Videos auf die ich reagieren
+einblenden. Es soll die Erzählung spannender und visueller darstellen"):
+- Zu jeder Aussage eine HyperFrames-Karte bzw. Animation (Motion-Grafik), nicht nur am Anfang.
+- **B-Roll aus seinen älteren Videos**, wenn er über früher, seine Agentur, Shopify, ein früheres Thema spricht:
+  fertige Videos in `out/final/*.mp4` (oder im Drive-Ordner "Final geschnittene Videos"). Kurzer Ausschnitt
+  (1,5-3 s), stumm, in einer hellen Karte über dem Kopf oder als Bild-im-Bild, nie über Augen und Mund.
+- **Reaction/NEWS:** das Video oder der Artikel, auf den er reagiert, als Ausschnitt in der Karte (Quelle nennen).
+- Abwechseln: Karte, Zahl, Ausschnitt; nie zwei gleiche Kartentypen direkt hintereinander, wenn es anders geht.
