@@ -1,0 +1,5249 @@
+{
+ "projekt": "video2",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "video2/t1",
+   "from": 55.885,
+   "to": 61.465,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 75.175,
+   "to": 87.875,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 116.355,
+   "to": 122.815,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 134.215,
+   "to": 143.815,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 217.745,
+   "to": 226.595,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 236.625,
+   "to": 241.845,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 267.325,
+   "to": 271.165,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 293.915,
+   "to": 298.085,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 309.065,
+   "to": 339.725,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "video2/t1",
+   "from": 344.405,
+   "to": 354.725,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 439.265,
+   "to": 449.755,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 470.255,
+   "to": 485.285,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 497.395,
+   "to": 515.205,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 528.775,
+   "to": 538.895,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 550.845,
+   "to": 554.505,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 559.615,
+   "to": 576.105,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 577.055,
+   "to": 583.025,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 583.995,
+   "to": 592.965,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 622.235,
+   "to": 633.815,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 641.265,
+   "to": 646.695,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 647.185,
+   "to": 671.495,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 672.195,
+   "to": 693.335,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 703.325,
+   "to": 711.985,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "video2/t1",
+   "from": 713.005,
+   "to": 724.0,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Anfang",
+   "src": "video2/t1",
+   "start": 55.97,
+   "end": 56.21
+  },
+  {
+   "text": "2026",
+   "src": "video2/t1",
+   "start": 56.27,
+   "end": 57.23
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 57.29,
+   "end": 57.43
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 57.47,
+   "end": 57.55
+  },
+  {
+   "text": "mein",
+   "src": "video2/t1",
+   "start": 57.59,
+   "end": 57.75
+  },
+  {
+   "text": "E-Commerce-Unternehmen",
+   "src": "video2/t1",
+   "start": 57.81,
+   "end": 58.57
+  },
+  {
+   "text": "verkauft",
+   "src": "video2/t1",
+   "start": 58.63,
+   "end": 58.99
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 59.19,
+   "end": 59.25
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 59.29,
+   "end": 59.35
+  },
+  {
+   "text": "Grund",
+   "src": "video2/t1",
+   "start": 59.39,
+   "end": 59.57
+  },
+  {
+   "text": "dafür",
+   "src": "video2/t1",
+   "start": 59.59,
+   "end": 59.87
+  },
+  {
+   "text": "war",
+   "src": "video2/t1",
+   "start": 60.23,
+   "end": 60.31
+  },
+  {
+   "text": "nicht,",
+   "src": "video2/t1",
+   "start": 60.37,
+   "end": 60.55
+  },
+  {
+   "text": "dass",
+   "src": "video2/t1",
+   "start": 60.61,
+   "end": 60.73
+  },
+  {
+   "text": "es",
+   "src": "video2/t1",
+   "start": 60.77,
+   "end": 60.83
+  },
+  {
+   "text": "schlecht",
+   "src": "video2/t1",
+   "start": 60.89,
+   "end": 61.15
+  },
+  {
+   "text": "lief.",
+   "src": "video2/t1",
+   "start": 61.21,
+   "end": 61.37
+  },
+  {
+   "text": "Ich",
+   "src": "video2/t1",
+   "start": 75.19,
+   "end": 75.25
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 75.27,
+   "end": 75.39
+  },
+  {
+   "text": "2016",
+   "src": "video2/t1",
+   "start": 75.47,
+   "end": 76.25
+  },
+  {
+   "text": "mit",
+   "src": "video2/t1",
+   "start": 76.29,
+   "end": 76.37
+  },
+  {
+   "text": "E-Commerce",
+   "src": "video2/t1",
+   "start": 76.45,
+   "end": 76.81
+  },
+  {
+   "text": "angefangen.",
+   "src": "video2/t1",
+   "start": 76.85,
+   "end": 77.25
+  },
+  {
+   "text": "Damals",
+   "src": "video2/t1",
+   "start": 77.69,
+   "end": 77.99
+  },
+  {
+   "text": "natürlich",
+   "src": "video2/t1",
+   "start": 78.03,
+   "end": 78.33
+  },
+  {
+   "text": "noch",
+   "src": "video2/t1",
+   "start": 78.41,
+   "end": 78.51
+  },
+  {
+   "text": "klassisch",
+   "src": "video2/t1",
+   "start": 78.59,
+   "end": 78.95
+  },
+  {
+   "text": "mit",
+   "src": "video2/t1",
+   "start": 79.03,
+   "end": 79.13
+  },
+  {
+   "text": "Dropshipping,",
+   "src": "video2/t1",
+   "start": 79.21,
+   "end": 79.69
+  },
+  {
+   "text": "wie",
+   "src": "video2/t1",
+   "start": 80.01,
+   "end": 80.09
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 80.11,
+   "end": 80.17
+  },
+  {
+   "text": "meisten",
+   "src": "video2/t1",
+   "start": 80.21,
+   "end": 80.53
+  },
+  {
+   "text": "von",
+   "src": "video2/t1",
+   "start": 80.55,
+   "end": 80.63
+  },
+  {
+   "text": "euch",
+   "src": "video2/t1",
+   "start": 80.67,
+   "end": 80.75
+  },
+  {
+   "text": "da",
+   "src": "video2/t1",
+   "start": 80.77,
+   "end": 80.81
+  },
+  {
+   "text": "draußen.",
+   "src": "video2/t1",
+   "start": 80.87,
+   "end": 81.17
+  },
+  {
+   "text": "Ich",
+   "src": "video2/t1",
+   "start": 81.55,
+   "end": 81.61
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 81.63,
+   "end": 81.77
+  },
+  {
+   "text": "unglaublich",
+   "src": "video2/t1",
+   "start": 81.83,
+   "end": 82.23
+  },
+  {
+   "text": "viel",
+   "src": "video2/t1",
+   "start": 82.29,
+   "end": 82.39
+  },
+  {
+   "text": "ausprobiert,",
+   "src": "video2/t1",
+   "start": 82.45,
+   "end": 83.07
+  },
+  {
+   "text": "Fehler",
+   "src": "video2/t1",
+   "start": 83.29,
+   "end": 83.53
+  },
+  {
+   "text": "gemacht",
+   "src": "video2/t1",
+   "start": 83.59,
+   "end": 83.91
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 84.03,
+   "end": 84.09
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 84.13,
+   "end": 84.23
+  },
+  {
+   "text": "versucht,",
+   "src": "video2/t1",
+   "start": 84.27,
+   "end": 84.61
+  },
+  {
+   "text": "irgendwie",
+   "src": "video2/t1",
+   "start": 85.07,
+   "end": 85.39
+  },
+  {
+   "text": "zu",
+   "src": "video2/t1",
+   "start": 85.45,
+   "end": 85.53
+  },
+  {
+   "text": "verstehen,",
+   "src": "video2/t1",
+   "start": 85.59,
+   "end": 86.05
+  },
+  {
+   "text": "wie",
+   "src": "video2/t1",
+   "start": 86.11,
+   "end": 86.17
+  },
+  {
+   "text": "Onlinehandel",
+   "src": "video2/t1",
+   "start": 86.25,
+   "end": 86.75
+  },
+  {
+   "text": "überhaupt",
+   "src": "video2/t1",
+   "start": 86.83,
+   "end": 87.23
+  },
+  {
+   "text": "funktioniert.",
+   "src": "video2/t1",
+   "start": 87.27,
+   "end": 87.77
+  },
+  {
+   "text": "Damals",
+   "src": "video2/t1",
+   "start": 116.42,
+   "end": 116.7
+  },
+  {
+   "text": "waren",
+   "src": "video2/t1",
+   "start": 116.76,
+   "end": 116.9
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 116.92,
+   "end": 116.98
+  },
+  {
+   "text": "Werbekosten",
+   "src": "video2/t1",
+   "start": 117.02,
+   "end": 117.5
+  },
+  {
+   "text": "teilweise",
+   "src": "video2/t1",
+   "start": 117.54,
+   "end": 117.88
+  },
+  {
+   "text": "noch",
+   "src": "video2/t1",
+   "start": 117.94,
+   "end": 118.04
+  },
+  {
+   "text": "extrem",
+   "src": "video2/t1",
+   "start": 118.14,
+   "end": 118.62
+  },
+  {
+   "text": "günstig.",
+   "src": "video2/t1",
+   "start": 118.7,
+   "end": 119.12
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 119.88,
+   "end": 119.94
+  },
+  {
+   "text": "es",
+   "src": "video2/t1",
+   "start": 120.16,
+   "end": 120.24
+  },
+  {
+   "text": "waren",
+   "src": "video2/t1",
+   "start": 120.28,
+   "end": 120.48
+  },
+  {
+   "text": "teilweise",
+   "src": "video2/t1",
+   "start": 120.52,
+   "end": 120.86
+  },
+  {
+   "text": "Preise",
+   "src": "video2/t1",
+   "start": 120.94,
+   "end": 121.22
+  },
+  {
+   "text": "unter",
+   "src": "video2/t1",
+   "start": 121.36,
+   "end": 121.6
+  },
+  {
+   "text": "einem",
+   "src": "video2/t1",
+   "start": 121.78,
+   "end": 122.04
+  },
+  {
+   "text": "Cent",
+   "src": "video2/t1",
+   "start": 122.18,
+   "end": 122.4
+  },
+  {
+   "text": "möglich.",
+   "src": "video2/t1",
+   "start": 122.48,
+   "end": 122.78
+  },
+  {
+   "text": "Das",
+   "src": "video2/t1",
+   "start": 134.22,
+   "end": 134.34
+  },
+  {
+   "text": "kann",
+   "src": "video2/t1",
+   "start": 134.38,
+   "end": 134.48
+  },
+  {
+   "text": "man",
+   "src": "video2/t1",
+   "start": 134.5,
+   "end": 134.58
+  },
+  {
+   "text": "mit",
+   "src": "video2/t1",
+   "start": 134.74,
+   "end": 134.82
+  },
+  {
+   "text": "den",
+   "src": "video2/t1",
+   "start": 134.84,
+   "end": 134.94
+  },
+  {
+   "text": "heutigen",
+   "src": "video2/t1",
+   "start": 135.0,
+   "end": 135.28
+  },
+  {
+   "text": "Werbekosten",
+   "src": "video2/t1",
+   "start": 135.34,
+   "end": 135.9
+  },
+  {
+   "text": "überhaupt",
+   "src": "video2/t1",
+   "start": 136.02,
+   "end": 136.38
+  },
+  {
+   "text": "nicht",
+   "src": "video2/t1",
+   "start": 136.4,
+   "end": 136.52
+  },
+  {
+   "text": "vergleichen.",
+   "src": "video2/t1",
+   "start": 136.54,
+   "end": 136.92
+  },
+  {
+   "text": "2018",
+   "src": "video2/t1",
+   "start": 137.48,
+   "end": 138.14
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 138.16,
+   "end": 138.26
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 138.3,
+   "end": 138.36
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 138.38,
+   "end": 138.58
+  },
+  {
+   "text": "meine",
+   "src": "video2/t1",
+   "start": 138.6,
+   "end": 138.74
+  },
+  {
+   "text": "eigene",
+   "src": "video2/t1",
+   "start": 138.86,
+   "end": 139.14
+  },
+  {
+   "text": "Webdesign",
+   "src": "video2/t1",
+   "start": 139.34,
+   "end": 139.84
+  },
+  {
+   "text": "Agentur",
+   "src": "video2/t1",
+   "start": 139.92,
+   "end": 140.2
+  },
+  {
+   "text": "gegründet",
+   "src": "video2/t1",
+   "start": 140.26,
+   "end": 140.68
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 141.12,
+   "end": 141.2
+  },
+  {
+   "text": "mein",
+   "src": "video2/t1",
+   "start": 141.24,
+   "end": 141.36
+  },
+  {
+   "text": "Fokus",
+   "src": "video2/t1",
+   "start": 141.42,
+   "end": 141.72
+  },
+  {
+   "text": "lag",
+   "src": "video2/t1",
+   "start": 141.78,
+   "end": 141.92
+  },
+  {
+   "text": "dabei",
+   "src": "video2/t1",
+   "start": 141.98,
+   "end": 142.16
+  },
+  {
+   "text": "anfangs",
+   "src": "video2/t1",
+   "start": 142.26,
+   "end": 142.6
+  },
+  {
+   "text": "direkt",
+   "src": "video2/t1",
+   "start": 142.66,
+   "end": 142.96
+  },
+  {
+   "text": "auf",
+   "src": "video2/t1",
+   "start": 143.04,
+   "end": 143.14
+  },
+  {
+   "text": "Onlineshops.",
+   "src": "video2/t1",
+   "start": 143.04,
+   "end": 143.66
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 217.81,
+   "end": 217.87
+  },
+  {
+   "text": "2019",
+   "src": "video2/t1",
+   "start": 217.91,
+   "end": 218.73
+  },
+  {
+   "text": "haben",
+   "src": "video2/t1",
+   "start": 218.79,
+   "end": 218.95
+  },
+  {
+   "text": "wir",
+   "src": "video2/t1",
+   "start": 218.99,
+   "end": 219.07
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 219.11,
+   "end": 219.25
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 219.29,
+   "end": 219.39
+  },
+  {
+   "text": "zusammen",
+   "src": "video2/t1",
+   "start": 219.43,
+   "end": 219.69
+  },
+  {
+   "text": "mit",
+   "src": "video2/t1",
+   "start": 219.71,
+   "end": 219.77
+  },
+  {
+   "text": "einem",
+   "src": "video2/t1",
+   "start": 219.79,
+   "end": 219.91
+  },
+  {
+   "text": "Geschäftspartner",
+   "src": "video2/t1",
+   "start": 219.95,
+   "end": 220.55
+  },
+  {
+   "text": "eine",
+   "src": "video2/t1",
+   "start": 220.59,
+   "end": 220.71
+  },
+  {
+   "text": "eigene",
+   "src": "video2/t1",
+   "start": 220.79,
+   "end": 220.99
+  },
+  {
+   "text": "Marke",
+   "src": "video2/t1",
+   "start": 221.05,
+   "end": 221.31
+  },
+  {
+   "text": "für",
+   "src": "video2/t1",
+   "start": 221.39,
+   "end": 221.47
+  },
+  {
+   "text": "personalisierte",
+   "src": "video2/t1",
+   "start": 221.55,
+   "end": 222.21
+  },
+  {
+   "text": "Produkte",
+   "src": "video2/t1",
+   "start": 222.27,
+   "end": 222.63
+  },
+  {
+   "text": "auf",
+   "src": "video2/t1",
+   "start": 223.03,
+   "end": 223.13
+  },
+  {
+   "text": "Shopify",
+   "src": "video2/t1",
+   "start": 223.19,
+   "end": 223.59
+  },
+  {
+   "text": "getestet.",
+   "src": "video2/t1",
+   "start": 223.65,
+   "end": 224.09
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 224.55,
+   "end": 224.63
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 224.67,
+   "end": 224.75
+  },
+  {
+   "text": "lief",
+   "src": "video2/t1",
+   "start": 224.81,
+   "end": 224.93
+  },
+  {
+   "text": "tatsächlich",
+   "src": "video2/t1",
+   "start": 225.01,
+   "end": 225.47
+  },
+  {
+   "text": "eigentlich",
+   "src": "video2/t1",
+   "start": 225.55,
+   "end": 225.83
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 225.89,
+   "end": 225.97
+  },
+  {
+   "text": "ziemlich",
+   "src": "video2/t1",
+   "start": 226.03,
+   "end": 226.27
+  },
+  {
+   "text": "gut.",
+   "src": "video2/t1",
+   "start": 226.31,
+   "end": 226.47
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 236.69,
+   "end": 236.77
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 236.79,
+   "end": 236.95
+  },
+  {
+   "text": "kam",
+   "src": "video2/t1",
+   "start": 236.99,
+   "end": 237.13
+  },
+  {
+   "text": "leider",
+   "src": "video2/t1",
+   "start": 237.19,
+   "end": 237.39
+  },
+  {
+   "text": "2020.",
+   "src": "video2/t1",
+   "start": 237.51,
+   "end": 238.33
+  },
+  {
+   "text": "Jeder",
+   "src": "video2/t1",
+   "start": 238.55,
+   "end": 238.73
+  },
+  {
+   "text": "von",
+   "src": "video2/t1",
+   "start": 238.79,
+   "end": 238.89
+  },
+  {
+   "text": "euch",
+   "src": "video2/t1",
+   "start": 238.93,
+   "end": 239.07
+  },
+  {
+   "text": "weiß,",
+   "src": "video2/t1",
+   "start": 239.09,
+   "end": 239.17
+  },
+  {
+   "text": "was",
+   "src": "video2/t1",
+   "start": 239.33,
+   "end": 239.43
+  },
+  {
+   "text": "2020",
+   "src": "video2/t1",
+   "start": 239.47,
+   "end": 240.19
+  },
+  {
+   "text": "war.",
+   "src": "video2/t1",
+   "start": 240.25,
+   "end": 240.37
+  },
+  {
+   "text": "Ganz",
+   "src": "video2/t1",
+   "start": 240.85,
+   "end": 241.03
+  },
+  {
+   "text": "klar",
+   "src": "video2/t1",
+   "start": 241.07,
+   "end": 241.25
+  },
+  {
+   "text": "Corona.",
+   "src": "video2/t1",
+   "start": 241.37,
+   "end": 241.71
+  },
+  {
+   "text": "Plötzlich",
+   "src": "video2/t1",
+   "start": 267.39,
+   "end": 267.75
+  },
+  {
+   "text": "hatten",
+   "src": "video2/t1",
+   "start": 267.79,
+   "end": 267.97
+  },
+  {
+   "text": "wir",
+   "src": "video2/t1",
+   "start": 267.99,
+   "end": 268.07
+  },
+  {
+   "text": "auf",
+   "src": "video2/t1",
+   "start": 268.09,
+   "end": 268.15
+  },
+  {
+   "text": "einmal",
+   "src": "video2/t1",
+   "start": 268.19,
+   "end": 268.35
+  },
+  {
+   "text": "Lieferengpässe.",
+   "src": "video2/t1",
+   "start": 268.37,
+   "end": 269.07
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 269.17,
+   "end": 269.27
+  },
+  {
+   "text": "bestellte",
+   "src": "video2/t1",
+   "start": 269.39,
+   "end": 269.79
+  },
+  {
+   "text": "Ware",
+   "src": "video2/t1",
+   "start": 269.85,
+   "end": 270.13
+  },
+  {
+   "text": "wurde",
+   "src": "video2/t1",
+   "start": 270.21,
+   "end": 270.37
+  },
+  {
+   "text": "storniert.",
+   "src": "video2/t1",
+   "start": 270.45,
+   "end": 270.97
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 293.94,
+   "end": 294.0
+  },
+  {
+   "text": "dazu",
+   "src": "video2/t1",
+   "start": 294.04,
+   "end": 294.26
+  },
+  {
+   "text": "kam",
+   "src": "video2/t1",
+   "start": 294.34,
+   "end": 294.46
+  },
+  {
+   "text": "natürlich",
+   "src": "video2/t1",
+   "start": 294.5,
+   "end": 294.7
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 294.72,
+   "end": 294.82
+  },
+  {
+   "text": "eine",
+   "src": "video2/t1",
+   "start": 294.86,
+   "end": 294.98
+  },
+  {
+   "text": "sehr",
+   "src": "video2/t1",
+   "start": 295.08,
+   "end": 295.24
+  },
+  {
+   "text": "große",
+   "src": "video2/t1",
+   "start": 295.28,
+   "end": 295.54
+  },
+  {
+   "text": "Unsicherheit",
+   "src": "video2/t1",
+   "start": 295.66,
+   "end": 296.26
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 296.46,
+   "end": 296.62
+  },
+  {
+   "text": "Kunden",
+   "src": "video2/t1",
+   "start": 297.44,
+   "end": 298.04
+  },
+  {
+   "text": "rund",
+   "src": "video2/t1",
+   "start": 309.08,
+   "end": 309.24
+  },
+  {
+   "text": "um",
+   "src": "video2/t1",
+   "start": 309.32,
+   "end": 309.38
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 309.42,
+   "end": 309.52
+  },
+  {
+   "text": "Thema",
+   "src": "video2/t1",
+   "start": 309.58,
+   "end": 309.84
+  },
+  {
+   "text": "Corona",
+   "src": "video2/t1",
+   "start": 310.36,
+   "end": 310.74
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 310.92,
+   "end": 311.02
+  },
+  {
+   "text": "keiner",
+   "src": "video2/t1",
+   "start": 311.12,
+   "end": 311.38
+  },
+  {
+   "text": "wollte",
+   "src": "video2/t1",
+   "start": 311.44,
+   "end": 311.64
+  },
+  {
+   "text": "mehr",
+   "src": "video2/t1",
+   "start": 311.7,
+   "end": 311.8
+  },
+  {
+   "text": "Lieferungen",
+   "src": "video2/t1",
+   "start": 311.82,
+   "end": 312.18
+  },
+  {
+   "text": "aus",
+   "src": "video2/t1",
+   "start": 312.22,
+   "end": 312.3
+  },
+  {
+   "text": "Asien",
+   "src": "video2/t1",
+   "start": 312.44,
+   "end": 312.7
+  },
+  {
+   "text": "annehmen.",
+   "src": "video2/t1",
+   "start": 312.76,
+   "end": 313.04
+  },
+  {
+   "text": "Wir",
+   "src": "video2/t1",
+   "start": 313.58,
+   "end": 313.68
+  },
+  {
+   "text": "hatten",
+   "src": "video2/t1",
+   "start": 313.7,
+   "end": 313.88
+  },
+  {
+   "text": "immer",
+   "src": "video2/t1",
+   "start": 313.92,
+   "end": 314.06
+  },
+  {
+   "text": "mehr",
+   "src": "video2/t1",
+   "start": 314.12,
+   "end": 314.22
+  },
+  {
+   "text": "Stornierungen",
+   "src": "video2/t1",
+   "start": 314.24,
+   "end": 314.84
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 314.98,
+   "end": 315.08
+  },
+  {
+   "text": "Retouren",
+   "src": "video2/t1",
+   "start": 315.14,
+   "end": 315.56
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 316.18,
+   "end": 316.3
+  },
+  {
+   "text": "auf",
+   "src": "video2/t1",
+   "start": 316.36,
+   "end": 316.46
+  },
+  {
+   "text": "einmal",
+   "src": "video2/t1",
+   "start": 316.56,
+   "end": 316.78
+  },
+  {
+   "text": "bestand",
+   "src": "video2/t1",
+   "start": 316.84,
+   "end": 317.14
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 317.18,
+   "end": 317.3
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 317.32,
+   "end": 317.44
+  },
+  {
+   "text": "ein",
+   "src": "video2/t1",
+   "start": 317.46,
+   "end": 317.54
+  },
+  {
+   "text": "großer",
+   "src": "video2/t1",
+   "start": 317.58,
+   "end": 317.86
+  },
+  {
+   "text": "Teil",
+   "src": "video2/t1",
+   "start": 317.9,
+   "end": 318.04
+  },
+  {
+   "text": "unserer",
+   "src": "video2/t1",
+   "start": 318.1,
+   "end": 318.3
+  },
+  {
+   "text": "Arbeit",
+   "src": "video2/t1",
+   "start": 318.36,
+   "end": 318.58
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 318.62,
+   "end": 318.7
+  },
+  {
+   "text": "daraus",
+   "src": "video2/t1",
+   "start": 318.74,
+   "end": 319.02
+  },
+  {
+   "text": "Probleme",
+   "src": "video2/t1",
+   "start": 319.1,
+   "end": 319.52
+  },
+  {
+   "text": "zu",
+   "src": "video2/t1",
+   "start": 319.6,
+   "end": 319.68
+  },
+  {
+   "text": "lösen,",
+   "src": "video2/t1",
+   "start": 319.74,
+   "end": 320.0
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 320.04,
+   "end": 320.12
+  },
+  {
+   "text": "wir",
+   "src": "video2/t1",
+   "start": 320.17,
+   "end": 320.27
+  },
+  {
+   "text": "vorher",
+   "src": "video2/t1",
+   "start": 320.59,
+   "end": 320.81
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 320.87,
+   "end": 321.09
+  },
+  {
+   "text": "in",
+   "src": "video2/t1",
+   "start": 321.13,
+   "end": 321.17
+  },
+  {
+   "text": "dieser",
+   "src": "video2/t1",
+   "start": 321.19,
+   "end": 321.35
+  },
+  {
+   "text": "Form",
+   "src": "video2/t1",
+   "start": 321.39,
+   "end": 321.55
+  },
+  {
+   "text": "gar",
+   "src": "video2/t1",
+   "start": 321.63,
+   "end": 321.73
+  },
+  {
+   "text": "nicht",
+   "src": "video2/t1",
+   "start": 321.81,
+   "end": 321.93
+  },
+  {
+   "text": "kannten",
+   "src": "video2/t1",
+   "start": 321.97,
+   "end": 322.31
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 322.47,
+   "end": 322.57
+  },
+  {
+   "text": "für",
+   "src": "video2/t1",
+   "start": 322.93,
+   "end": 323.01
+  },
+  {
+   "text": "alle",
+   "src": "video2/t1",
+   "start": 323.11,
+   "end": 323.25
+  },
+  {
+   "text": "war",
+   "src": "video2/t1",
+   "start": 323.33,
+   "end": 323.43
+  },
+  {
+   "text": "es",
+   "src": "video2/t1",
+   "start": 323.45,
+   "end": 323.49
+  },
+  {
+   "text": "eher",
+   "src": "video2/t1",
+   "start": 323.57,
+   "end": 323.67
+  },
+  {
+   "text": "Neuland.",
+   "src": "video2/t1",
+   "start": 323.73,
+   "end": 324.05
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 324.71,
+   "end": 324.79
+  },
+  {
+   "text": "am",
+   "src": "video2/t1",
+   "start": 324.81,
+   "end": 324.89
+  },
+  {
+   "text": "Ende",
+   "src": "video2/t1",
+   "start": 324.93,
+   "end": 325.07
+  },
+  {
+   "text": "haben",
+   "src": "video2/t1",
+   "start": 325.11,
+   "end": 325.21
+  },
+  {
+   "text": "wir",
+   "src": "video2/t1",
+   "start": 325.25,
+   "end": 325.31
+  },
+  {
+   "text": "uns",
+   "src": "video2/t1",
+   "start": 325.33,
+   "end": 325.39
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 325.43,
+   "end": 325.61
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 325.63,
+   "end": 325.77
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 325.85,
+   "end": 325.93
+  },
+  {
+   "text": "dazu",
+   "src": "video2/t1",
+   "start": 325.95,
+   "end": 326.15
+  },
+  {
+   "text": "entschieden,",
+   "src": "video2/t1",
+   "start": 326.19,
+   "end": 326.51
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 326.53,
+   "end": 326.59
+  },
+  {
+   "text": "Marke",
+   "src": "video2/t1",
+   "start": 326.61,
+   "end": 326.83
+  },
+  {
+   "text": "doch",
+   "src": "video2/t1",
+   "start": 326.91,
+   "end": 327.03
+  },
+  {
+   "text": "zu",
+   "src": "video2/t1",
+   "start": 327.07,
+   "end": 327.15
+  },
+  {
+   "text": "verkaufen.",
+   "src": "video2/t1",
+   "start": 327.19,
+   "end": 327.65
+  },
+  {
+   "text": "Zum",
+   "src": "video2/t1",
+   "start": 328.03,
+   "end": 328.13
+  },
+  {
+   "text": "Glück",
+   "src": "video2/t1",
+   "start": 328.17,
+   "end": 328.33
+  },
+  {
+   "text": "konnten",
+   "src": "video2/t1",
+   "start": 328.35,
+   "end": 328.55
+  },
+  {
+   "text": "wir",
+   "src": "video2/t1",
+   "start": 328.59,
+   "end": 328.65
+  },
+  {
+   "text": "damals",
+   "src": "video2/t1",
+   "start": 328.73,
+   "end": 329.09
+  },
+  {
+   "text": "noch",
+   "src": "video2/t1",
+   "start": 329.17,
+   "end": 329.27
+  },
+  {
+   "text": "einen",
+   "src": "video2/t1",
+   "start": 329.35,
+   "end": 329.57
+  },
+  {
+   "text": "recht",
+   "src": "video2/t1",
+   "start": 329.95,
+   "end": 330.13
+  },
+  {
+   "text": "guten",
+   "src": "video2/t1",
+   "start": 330.17,
+   "end": 330.41
+  },
+  {
+   "text": "Preis",
+   "src": "video2/t1",
+   "start": 330.45,
+   "end": 330.69
+  },
+  {
+   "text": "dafür",
+   "src": "video2/t1",
+   "start": 330.73,
+   "end": 330.91
+  },
+  {
+   "text": "erzielen",
+   "src": "video2/t1",
+   "start": 330.95,
+   "end": 331.31
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 331.83,
+   "end": 331.93
+  },
+  {
+   "text": "gleichzeitig",
+   "src": "video2/t1",
+   "start": 332.01,
+   "end": 332.43
+  },
+  {
+   "text": "passierte",
+   "src": "video2/t1",
+   "start": 332.47,
+   "end": 332.79
+  },
+  {
+   "text": "aber",
+   "src": "video2/t1",
+   "start": 332.85,
+   "end": 333.01
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 333.07,
+   "end": 333.21
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 333.25,
+   "end": 333.33
+  },
+  {
+   "text": "etwas",
+   "src": "video2/t1",
+   "start": 333.39,
+   "end": 333.57
+  },
+  {
+   "text": "anderes,",
+   "src": "video2/t1",
+   "start": 333.67,
+   "end": 333.99
+  },
+  {
+   "text": "denn",
+   "src": "video2/t1",
+   "start": 334.93,
+   "end": 335.79
+  },
+  {
+   "text": "2020",
+   "src": "video2/t1",
+   "start": 334.58,
+   "end": 335.34
+  },
+  {
+   "text": "begann",
+   "src": "video2/t1",
+   "start": 335.34,
+   "end": 337.94
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 337.93,
+   "end": 338.03
+  },
+  {
+   "text": "erst",
+   "src": "video2/t1",
+   "start": 338.07,
+   "end": 338.19
+  },
+  {
+   "text": "mal",
+   "src": "video2/t1",
+   "start": 338.21,
+   "end": 338.31
+  },
+  {
+   "text": "so",
+   "src": "video2/t1",
+   "start": 338.33,
+   "end": 338.39
+  },
+  {
+   "text": "richtig",
+   "src": "video2/t1",
+   "start": 338.45,
+   "end": 338.75
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 338.83,
+   "end": 338.91
+  },
+  {
+   "text": "E-Commerce-Boom.",
+   "src": "video2/t1",
+   "start": 339.03,
+   "end": 339.725
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 344.46,
+   "end": 344.54
+  },
+  {
+   "text": "bei",
+   "src": "video2/t1",
+   "start": 344.58,
+   "end": 344.66
+  },
+  {
+   "text": "meiner",
+   "src": "video2/t1",
+   "start": 344.7,
+   "end": 344.88
+  },
+  {
+   "text": "Agentur",
+   "src": "video2/t1",
+   "start": 344.94,
+   "end": 345.32
+  },
+  {
+   "text": "kamen",
+   "src": "video2/t1",
+   "start": 345.44,
+   "end": 345.66
+  },
+  {
+   "text": "natürlich",
+   "src": "video2/t1",
+   "start": 345.68,
+   "end": 346.0
+  },
+  {
+   "text": "teilweise",
+   "src": "video2/t1",
+   "start": 346.04,
+   "end": 346.42
+  },
+  {
+   "text": "täglich",
+   "src": "video2/t1",
+   "start": 346.52,
+   "end": 346.86
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 346.92,
+   "end": 347.14
+  },
+  {
+   "text": "neue",
+   "src": "video2/t1",
+   "start": 347.22,
+   "end": 347.4
+  },
+  {
+   "text": "Anfragen",
+   "src": "video2/t1",
+   "start": 347.5,
+   "end": 347.96
+  },
+  {
+   "text": "von",
+   "src": "video2/t1",
+   "start": 348.02,
+   "end": 348.12
+  },
+  {
+   "text": "Unternehmen",
+   "src": "video2/t1",
+   "start": 348.18,
+   "end": 348.56
+  },
+  {
+   "text": "rein,",
+   "src": "video2/t1",
+   "start": 348.6,
+   "end": 348.8
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 349.26,
+   "end": 349.36
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 349.48,
+   "end": 349.64
+  },
+  {
+   "text": "gerne",
+   "src": "video2/t1",
+   "start": 349.9,
+   "end": 350.16
+  },
+  {
+   "text": "mit",
+   "src": "video2/t1",
+   "start": 350.4,
+   "end": 350.5
+  },
+  {
+   "text": "einem",
+   "src": "video2/t1",
+   "start": 350.52,
+   "end": 350.68
+  },
+  {
+   "text": "eigenen",
+   "src": "video2/t1",
+   "start": 350.8,
+   "end": 351.08
+  },
+  {
+   "text": "Onlineshop",
+   "src": "video2/t1",
+   "start": 351.14,
+   "end": 351.5
+  },
+  {
+   "text": "starten",
+   "src": "video2/t1",
+   "start": 351.58,
+   "end": 351.92
+  },
+  {
+   "text": "wollten,",
+   "src": "video2/t1",
+   "start": 351.96,
+   "end": 352.3
+  },
+  {
+   "text": "um",
+   "src": "video2/t1",
+   "start": 352.72,
+   "end": 352.8
+  },
+  {
+   "text": "ihr",
+   "src": "video2/t1",
+   "start": 352.9,
+   "end": 352.98
+  },
+  {
+   "text": "bestehenden",
+   "src": "video2/t1",
+   "start": 353.02,
+   "end": 353.5
+  },
+  {
+   "text": "Shop",
+   "src": "video2/t1",
+   "start": 353.58,
+   "end": 353.76
+  },
+  {
+   "text": "zu",
+   "src": "video2/t1",
+   "start": 353.86,
+   "end": 353.92
+  },
+  {
+   "text": "verbessern.",
+   "src": "video2/t1",
+   "start": 353.98,
+   "end": 354.48
+  },
+  {
+   "text": "Deshalb",
+   "src": "video2/t1",
+   "start": 439.29,
+   "end": 439.55
+  },
+  {
+   "text": "haben",
+   "src": "video2/t1",
+   "start": 439.61,
+   "end": 439.77
+  },
+  {
+   "text": "wir",
+   "src": "video2/t1",
+   "start": 439.81,
+   "end": 439.87
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 439.89,
+   "end": 439.97
+  },
+  {
+   "text": "nach",
+   "src": "video2/t1",
+   "start": 440.03,
+   "end": 440.19
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 440.25,
+   "end": 440.33
+  },
+  {
+   "text": "nach",
+   "src": "video2/t1",
+   "start": 440.37,
+   "end": 440.57
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 440.65,
+   "end": 440.73
+  },
+  {
+   "text": "eigene",
+   "src": "video2/t1",
+   "start": 440.83,
+   "end": 441.07
+  },
+  {
+   "text": "Elektronikmarke",
+   "src": "video2/t1",
+   "start": 441.11,
+   "end": 441.91
+  },
+  {
+   "text": "aufgebaut.",
+   "src": "video2/t1",
+   "start": 441.99,
+   "end": 442.45
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 442.59,
+   "end": 442.71
+  },
+  {
+   "text": "wer",
+   "src": "video2/t1",
+   "start": 443.11,
+   "end": 443.21
+  },
+  {
+   "text": "schon",
+   "src": "video2/t1",
+   "start": 443.25,
+   "end": 443.35
+  },
+  {
+   "text": "einmal",
+   "src": "video2/t1",
+   "start": 443.39,
+   "end": 443.53
+  },
+  {
+   "text": "Elektronik",
+   "src": "video2/t1",
+   "start": 443.57,
+   "end": 444.07
+  },
+  {
+   "text": "von",
+   "src": "video2/t1",
+   "start": 444.11,
+   "end": 444.19
+  },
+  {
+   "text": "euch",
+   "src": "video2/t1",
+   "start": 444.27,
+   "end": 444.35
+  },
+  {
+   "text": "verkauft",
+   "src": "video2/t1",
+   "start": 444.41,
+   "end": 444.83
+  },
+  {
+   "text": "hat,",
+   "src": "video2/t1",
+   "start": 444.85,
+   "end": 444.99
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 445.03,
+   "end": 445.11
+  },
+  {
+   "text": "weiß",
+   "src": "video2/t1",
+   "start": 445.15,
+   "end": 445.25
+  },
+  {
+   "text": "leider",
+   "src": "video2/t1",
+   "start": 445.41,
+   "end": 445.59
+  },
+  {
+   "text": "auch,",
+   "src": "video2/t1",
+   "start": 445.65,
+   "end": 445.75
+  },
+  {
+   "text": "dass",
+   "src": "video2/t1",
+   "start": 445.79,
+   "end": 445.93
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 445.97,
+   "end": 446.09
+  },
+  {
+   "text": "nicht",
+   "src": "video2/t1",
+   "start": 446.21,
+   "end": 446.37
+  },
+  {
+   "text": "unbedingt",
+   "src": "video2/t1",
+   "start": 446.47,
+   "end": 446.83
+  },
+  {
+   "text": "immer",
+   "src": "video2/t1",
+   "start": 446.87,
+   "end": 447.03
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 447.37,
+   "end": 447.97
+  },
+  {
+   "text": "einfachste",
+   "src": "video2/t1",
+   "start": 448.05,
+   "end": 448.45
+  },
+  {
+   "text": "Produktkategorie",
+   "src": "video2/t1",
+   "start": 448.83,
+   "end": 449.51
+  },
+  {
+   "text": "ist.",
+   "src": "video2/t1",
+   "start": 449.55,
+   "end": 449.65
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 470.28,
+   "end": 470.34
+  },
+  {
+   "text": "wir",
+   "src": "video2/t1",
+   "start": 470.38,
+   "end": 470.46
+  },
+  {
+   "text": "haben",
+   "src": "video2/t1",
+   "start": 470.5,
+   "end": 470.62
+  },
+  {
+   "text": "uns",
+   "src": "video2/t1",
+   "start": 470.66,
+   "end": 470.76
+  },
+  {
+   "text": "da",
+   "src": "video2/t1",
+   "start": 470.8,
+   "end": 470.84
+  },
+  {
+   "text": "natürlich",
+   "src": "video2/t1",
+   "start": 470.94,
+   "end": 471.22
+  },
+  {
+   "text": "durchgearbeitet",
+   "src": "video2/t1",
+   "start": 471.26,
+   "end": 471.94
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 472.0,
+   "end": 472.08
+  },
+  {
+   "text": "unsere",
+   "src": "video2/t1",
+   "start": 472.14,
+   "end": 472.42
+  },
+  {
+   "text": "Produkte",
+   "src": "video2/t1",
+   "start": 472.5,
+   "end": 472.84
+  },
+  {
+   "text": "sowohl",
+   "src": "video2/t1",
+   "start": 472.92,
+   "end": 473.18
+  },
+  {
+   "text": "auf",
+   "src": "video2/t1",
+   "start": 473.24,
+   "end": 473.34
+  },
+  {
+   "text": "Marktplätzen",
+   "src": "video2/t1",
+   "start": 473.42,
+   "end": 473.98
+  },
+  {
+   "text": "als",
+   "src": "video2/t1",
+   "start": 474.06,
+   "end": 474.18
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 474.24,
+   "end": 474.36
+  },
+  {
+   "text": "über",
+   "src": "video2/t1",
+   "start": 475.14,
+   "end": 475.26
+  },
+  {
+   "text": "einen",
+   "src": "video2/t1",
+   "start": 475.3,
+   "end": 475.4
+  },
+  {
+   "text": "eigenen",
+   "src": "video2/t1",
+   "start": 475.46,
+   "end": 475.7
+  },
+  {
+   "text": "Onlineshop",
+   "src": "video2/t1",
+   "start": 475.76,
+   "end": 476.1
+  },
+  {
+   "text": "verkauft.",
+   "src": "video2/t1",
+   "start": 476.14,
+   "end": 476.52
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 476.76,
+   "end": 476.84
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 476.86,
+   "end": 477.0
+  },
+  {
+   "text": "hat",
+   "src": "video2/t1",
+   "start": 477.02,
+   "end": 477.1
+  },
+  {
+   "text": "sich",
+   "src": "video2/t1",
+   "start": 477.16,
+   "end": 477.26
+  },
+  {
+   "text": "2024",
+   "src": "video2/t1",
+   "start": 477.3,
+   "end": 478.22
+  },
+  {
+   "text": "mein",
+   "src": "video2/t1",
+   "start": 478.28,
+   "end": 478.4
+  },
+  {
+   "text": "Leben",
+   "src": "video2/t1",
+   "start": 478.42,
+   "end": 478.64
+  },
+  {
+   "text": "ziemlich",
+   "src": "video2/t1",
+   "start": 478.76,
+   "end": 479.02
+  },
+  {
+   "text": "verändert.",
+   "src": "video2/t1",
+   "start": 479.04,
+   "end": 479.36
+  },
+  {
+   "text": "Ich",
+   "src": "video2/t1",
+   "start": 479.86,
+   "end": 479.94
+  },
+  {
+   "text": "bin",
+   "src": "video2/t1",
+   "start": 479.98,
+   "end": 480.08
+  },
+  {
+   "text": "Papa",
+   "src": "video2/t1",
+   "start": 480.14,
+   "end": 480.32
+  },
+  {
+   "text": "geworden.",
+   "src": "video2/t1",
+   "start": 480.4,
+   "end": 480.68
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 481.22,
+   "end": 481.34
+  },
+  {
+   "text": "damit",
+   "src": "video2/t1",
+   "start": 481.68,
+   "end": 481.9
+  },
+  {
+   "text": "haben",
+   "src": "video2/t1",
+   "start": 481.94,
+   "end": 482.1
+  },
+  {
+   "text": "sich",
+   "src": "video2/t1",
+   "start": 482.14,
+   "end": 482.2
+  },
+  {
+   "text": "natürlich",
+   "src": "video2/t1",
+   "start": 482.28,
+   "end": 482.6
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 482.7,
+   "end": 482.88
+  },
+  {
+   "text": "meine",
+   "src": "video2/t1",
+   "start": 483.56,
+   "end": 483.8
+  },
+  {
+   "text": "Prioritäten",
+   "src": "video2/t1",
+   "start": 483.9,
+   "end": 484.56
+  },
+  {
+   "text": "stark",
+   "src": "video2/t1",
+   "start": 484.62,
+   "end": 484.82
+  },
+  {
+   "text": "verändert.",
+   "src": "video2/t1",
+   "start": 484.86,
+   "end": 485.2
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 497.42,
+   "end": 497.5
+  },
+  {
+   "text": "dazu",
+   "src": "video2/t1",
+   "start": 497.54,
+   "end": 497.78
+  },
+  {
+   "text": "kam",
+   "src": "video2/t1",
+   "start": 497.86,
+   "end": 498.02
+  },
+  {
+   "text": "es",
+   "src": "video2/t1",
+   "start": 498.08,
+   "end": 498.14
+  },
+  {
+   "text": "natürlich",
+   "src": "video2/t1",
+   "start": 498.18,
+   "end": 498.5
+  },
+  {
+   "text": "auch,",
+   "src": "video2/t1",
+   "start": 498.56,
+   "end": 498.68
+  },
+  {
+   "text": "dass",
+   "src": "video2/t1",
+   "start": 498.72,
+   "end": 498.86
+  },
+  {
+   "text": "leider",
+   "src": "video2/t1",
+   "start": 498.92,
+   "end": 499.14
+  },
+  {
+   "text": "eine",
+   "src": "video2/t1",
+   "start": 499.36,
+   "end": 499.5
+  },
+  {
+   "text": "unserer",
+   "src": "video2/t1",
+   "start": 499.58,
+   "end": 499.78
+  },
+  {
+   "text": "Mitarbeiterinnen",
+   "src": "video2/t1",
+   "start": 499.82,
+   "end": 500.38
+  },
+  {
+   "text": "uns",
+   "src": "video2/t1",
+   "start": 500.4,
+   "end": 500.48
+  },
+  {
+   "text": "damals",
+   "src": "video2/t1",
+   "start": 500.5,
+   "end": 500.76
+  },
+  {
+   "text": "verlassen",
+   "src": "video2/t1",
+   "start": 500.8,
+   "end": 501.14
+  },
+  {
+   "text": "hat,",
+   "src": "video2/t1",
+   "start": 501.2,
+   "end": 501.32
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 501.82,
+   "end": 501.9
+  },
+  {
+   "text": "uns",
+   "src": "video2/t1",
+   "start": 501.96,
+   "end": 502.04
+  },
+  {
+   "text": "im",
+   "src": "video2/t1",
+   "start": 502.1,
+   "end": 502.16
+  },
+  {
+   "text": "Tagesgeschäft",
+   "src": "video2/t1",
+   "start": 502.24,
+   "end": 502.94
+  },
+  {
+   "text": "leider",
+   "src": "video2/t1",
+   "start": 503.0,
+   "end": 503.24
+  },
+  {
+   "text": "sehr",
+   "src": "video2/t1",
+   "start": 503.66,
+   "end": 503.82
+  },
+  {
+   "text": "stark",
+   "src": "video2/t1",
+   "start": 503.9,
+   "end": 504.12
+  },
+  {
+   "text": "natürlich",
+   "src": "video2/t1",
+   "start": 504.2,
+   "end": 504.52
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 504.56,
+   "end": 504.64
+  },
+  {
+   "text": "unterstützt",
+   "src": "video2/t1",
+   "start": 504.66,
+   "end": 505.1
+  },
+  {
+   "text": "hat.",
+   "src": "video2/t1",
+   "start": 505.14,
+   "end": 505.26
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 505.78,
+   "end": 505.86
+  },
+  {
+   "text": "irgendwann",
+   "src": "video2/t1",
+   "start": 505.92,
+   "end": 506.24
+  },
+  {
+   "text": "stand",
+   "src": "video2/t1",
+   "start": 506.32,
+   "end": 506.56
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 506.66,
+   "end": 506.76
+  },
+  {
+   "text": "natürlich",
+   "src": "video2/t1",
+   "start": 506.82,
+   "end": 507.16
+  },
+  {
+   "text": "vor",
+   "src": "video2/t1",
+   "start": 507.22,
+   "end": 507.3
+  },
+  {
+   "text": "einer",
+   "src": "video2/t1",
+   "start": 507.38,
+   "end": 507.52
+  },
+  {
+   "text": "Entscheidung.",
+   "src": "video2/t1",
+   "start": 507.56,
+   "end": 507.94
+  },
+  {
+   "text": "Entweder",
+   "src": "video2/t1",
+   "start": 508.08,
+   "end": 508.46
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 508.82,
+   "end": 508.9
+  },
+  {
+   "text": "mache",
+   "src": "video2/t1",
+   "start": 508.94,
+   "end": 509.12
+  },
+  {
+   "text": "jetzt",
+   "src": "video2/t1",
+   "start": 509.16,
+   "end": 509.3
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 509.32,
+   "end": 509.4
+  },
+  {
+   "text": "Ganze",
+   "src": "video2/t1",
+   "start": 509.46,
+   "end": 509.72
+  },
+  {
+   "text": "selbst",
+   "src": "video2/t1",
+   "start": 509.8,
+   "end": 510.1
+  },
+  {
+   "text": "weiter,",
+   "src": "video2/t1",
+   "start": 510.16,
+   "end": 510.48
+  },
+  {
+   "text": "suche",
+   "src": "video2/t1",
+   "start": 511.04,
+   "end": 511.22
+  },
+  {
+   "text": "nach",
+   "src": "video2/t1",
+   "start": 511.26,
+   "end": 511.36
+  },
+  {
+   "text": "einer",
+   "src": "video2/t1",
+   "start": 511.38,
+   "end": 511.52
+  },
+  {
+   "text": "neuen",
+   "src": "video2/t1",
+   "start": 511.6,
+   "end": 511.74
+  },
+  {
+   "text": "Mitarbeiterin,",
+   "src": "video2/t1",
+   "start": 511.78,
+   "end": 512.4
+  },
+  {
+   "text": "investiere",
+   "src": "video2/t1",
+   "start": 512.78,
+   "end": 513.28
+  },
+  {
+   "text": "da",
+   "src": "video2/t1",
+   "start": 513.34,
+   "end": 513.4
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 513.44,
+   "end": 513.64
+  },
+  {
+   "text": "deutlich",
+   "src": "video2/t1",
+   "start": 513.7,
+   "end": 514.0
+  },
+  {
+   "text": "mehr",
+   "src": "video2/t1",
+   "start": 514.06,
+   "end": 514.2
+  },
+  {
+   "text": "Zeit",
+   "src": "video2/t1",
+   "start": 514.32,
+   "end": 514.54
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 514.62,
+   "end": 514.7
+  },
+  {
+   "text": "Geld.",
+   "src": "video2/t1",
+   "start": 514.76,
+   "end": 515.0
+  },
+  {
+   "text": "Oder",
+   "src": "video2/t1",
+   "start": 528.83,
+   "end": 529.05
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 529.21,
+   "end": 529.29
+  },
+  {
+   "text": "verkaufe",
+   "src": "video2/t1",
+   "start": 529.33,
+   "end": 529.65
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 529.69,
+   "end": 529.87
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 529.93,
+   "end": 530.03
+  },
+  {
+   "text": "Unternehmen",
+   "src": "video2/t1",
+   "start": 530.09,
+   "end": 530.47
+  },
+  {
+   "text": "inklusive",
+   "src": "video2/t1",
+   "start": 530.57,
+   "end": 530.99
+  },
+  {
+   "text": "aller",
+   "src": "video2/t1",
+   "start": 531.15,
+   "end": 531.35
+  },
+  {
+   "text": "aufgebauten",
+   "src": "video2/t1",
+   "start": 531.55,
+   "end": 532.03
+  },
+  {
+   "text": "Prozesse,",
+   "src": "video2/t1",
+   "start": 532.07,
+   "end": 532.51
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 533.29,
+   "end": 533.37
+  },
+  {
+   "text": "Marktplatzkonten",
+   "src": "video2/t1",
+   "start": 533.41,
+   "end": 534.37
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 534.61,
+   "end": 534.71
+  },
+  {
+   "text": "des",
+   "src": "video2/t1",
+   "start": 534.77,
+   "end": 534.87
+  },
+  {
+   "text": "eigenen",
+   "src": "video2/t1",
+   "start": 534.95,
+   "end": 535.23
+  },
+  {
+   "text": "Online-Shops.",
+   "src": "video2/t1",
+   "start": 535.29,
+   "end": 535.75
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 536.51,
+   "end": 536.59
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 536.61,
+   "end": 536.67
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 536.71,
+   "end": 536.83
+  },
+  {
+   "text": "mich",
+   "src": "video2/t1",
+   "start": 536.91,
+   "end": 537.01
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 537.05,
+   "end": 537.19
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 537.21,
+   "end": 537.35
+  },
+  {
+   "text": "doch",
+   "src": "video2/t1",
+   "start": 537.39,
+   "end": 537.51
+  },
+  {
+   "text": "für",
+   "src": "video2/t1",
+   "start": 537.59,
+   "end": 537.69
+  },
+  {
+   "text": "zweiteres",
+   "src": "video2/t1",
+   "start": 537.79,
+   "end": 538.21
+  },
+  {
+   "text": "entschieden",
+   "src": "video2/t1",
+   "start": 538.27,
+   "end": 538.65
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 550.91,
+   "end": 550.99
+  },
+  {
+   "text": "deshalb",
+   "src": "video2/t1",
+   "start": 551.01,
+   "end": 551.17
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 551.19,
+   "end": 551.29
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 551.33,
+   "end": 551.39
+  },
+  {
+   "text": "mich",
+   "src": "video2/t1",
+   "start": 551.41,
+   "end": 551.63
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 551.67,
+   "end": 551.91
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 552.21,
+   "end": 552.57
+  },
+  {
+   "text": "nach",
+   "src": "video2/t1",
+   "start": 552.09,
+   "end": 552.13
+  },
+  {
+   "text": "harten",
+   "src": "video2/t1",
+   "start": 552.11,
+   "end": 554.505
+  },
+  {
+   "text": "zwei",
+   "src": "video2/t1",
+   "start": 562.51,
+   "end": 562.69
+  },
+  {
+   "text": "Jahren",
+   "src": "video2/t1",
+   "start": 562.77,
+   "end": 563.05
+  },
+  {
+   "text": "weiter",
+   "src": "video2/t1",
+   "start": 563.13,
+   "end": 563.39
+  },
+  {
+   "text": "kämpfen,",
+   "src": "video2/t1",
+   "start": 563.45,
+   "end": 563.83
+  },
+  {
+   "text": "Anfang",
+   "src": "video2/t1",
+   "start": 564.15,
+   "end": 564.37
+  },
+  {
+   "text": "2026",
+   "src": "video2/t1",
+   "start": 564.43,
+   "end": 565.37
+  },
+  {
+   "text": "dazu",
+   "src": "video2/t1",
+   "start": 565.41,
+   "end": 565.61
+  },
+  {
+   "text": "entschieden,",
+   "src": "video2/t1",
+   "start": 565.67,
+   "end": 566.05
+  },
+  {
+   "text": "mein",
+   "src": "video2/t1",
+   "start": 566.35,
+   "end": 566.49
+  },
+  {
+   "text": "Unternehmen",
+   "src": "video2/t1",
+   "start": 566.57,
+   "end": 567.01
+  },
+  {
+   "text": "zu",
+   "src": "video2/t1",
+   "start": 567.23,
+   "end": 567.31
+  },
+  {
+   "text": "verkaufen.",
+   "src": "video2/t1",
+   "start": 567.35,
+   "end": 567.75
+  },
+  {
+   "text": "Nicht",
+   "src": "video2/t1",
+   "start": 568.67,
+   "end": 568.83
+  },
+  {
+   "text": "nur",
+   "src": "video2/t1",
+   "start": 568.89,
+   "end": 568.97
+  },
+  {
+   "text": "weil",
+   "src": "video2/t1",
+   "start": 569.37,
+   "end": 569.49
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 569.14,
+   "end": 570.74
+  },
+  {
+   "text": "keine",
+   "src": "video2/t1",
+   "start": 570.75,
+   "end": 570.93
+  },
+  {
+   "text": "Lust",
+   "src": "video2/t1",
+   "start": 570.97,
+   "end": 571.13
+  },
+  {
+   "text": "mehr",
+   "src": "video2/t1",
+   "start": 571.15,
+   "end": 571.23
+  },
+  {
+   "text": "auf",
+   "src": "video2/t1",
+   "start": 571.25,
+   "end": 571.33
+  },
+  {
+   "text": "E-Commerce",
+   "src": "video2/t1",
+   "start": 571.37,
+   "end": 571.73
+  },
+  {
+   "text": "hatte,",
+   "src": "video2/t1",
+   "start": 571.75,
+   "end": 571.93
+  },
+  {
+   "text": "sondern",
+   "src": "video2/t1",
+   "start": 572.01,
+   "end": 572.29
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 572.69,
+   "end": 572.91
+  },
+  {
+   "text": "weil",
+   "src": "video2/t1",
+   "start": 572.95,
+   "end": 573.07
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 573.11,
+   "end": 573.19
+  },
+  {
+   "text": "mich",
+   "src": "video2/t1",
+   "start": 573.23,
+   "end": 573.33
+  },
+  {
+   "text": "stärker",
+   "src": "video2/t1",
+   "start": 573.37,
+   "end": 573.65
+  },
+  {
+   "text": "auf",
+   "src": "video2/t1",
+   "start": 573.67,
+   "end": 573.75
+  },
+  {
+   "text": "meine",
+   "src": "video2/t1",
+   "start": 573.79,
+   "end": 573.93
+  },
+  {
+   "text": "Familie",
+   "src": "video2/t1",
+   "start": 573.99,
+   "end": 574.31
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 574.35,
+   "end": 574.43
+  },
+  {
+   "text": "meine",
+   "src": "video2/t1",
+   "start": 574.45,
+   "end": 574.59
+  },
+  {
+   "text": "Agentur",
+   "src": "video2/t1",
+   "start": 574.67,
+   "end": 575.03
+  },
+  {
+   "text": "fokussieren",
+   "src": "video2/t1",
+   "start": 575.21,
+   "end": 575.69
+  },
+  {
+   "text": "wollte.",
+   "src": "video2/t1",
+   "start": 575.73,
+   "end": 575.95
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 577.09,
+   "end": 577.25
+  },
+  {
+   "text": "weil",
+   "src": "video2/t1",
+   "start": 577.37,
+   "end": 577.49
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 577.53,
+   "end": 577.59
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 577.63,
+   "end": 577.83
+  },
+  {
+   "text": "über",
+   "src": "video2/t1",
+   "start": 577.89,
+   "end": 577.99
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 578.03,
+   "end": 578.11
+  },
+  {
+   "text": "Jahre",
+   "src": "video2/t1",
+   "start": 578.15,
+   "end": 578.35
+  },
+  {
+   "text": "gelernt",
+   "src": "video2/t1",
+   "start": 578.41,
+   "end": 578.67
+  },
+  {
+   "text": "habe,",
+   "src": "video2/t1",
+   "start": 578.69,
+   "end": 578.81
+  },
+  {
+   "text": "dass",
+   "src": "video2/t1",
+   "start": 578.83,
+   "end": 578.95
+  },
+  {
+   "text": "man",
+   "src": "video2/t1",
+   "start": 578.99,
+   "end": 579.11
+  },
+  {
+   "text": "nicht",
+   "src": "video2/t1",
+   "start": 579.19,
+   "end": 579.35
+  },
+  {
+   "text": "jedes",
+   "src": "video2/t1",
+   "start": 579.43,
+   "end": 579.65
+  },
+  {
+   "text": "Unternehmen",
+   "src": "video2/t1",
+   "start": 579.73,
+   "end": 580.23
+  },
+  {
+   "text": "für",
+   "src": "video2/t1",
+   "start": 580.85,
+   "end": 581.03
+  },
+  {
+   "text": "sich",
+   "src": "video2/t1",
+   "start": 581.25,
+   "end": 581.35
+  },
+  {
+   "text": "selbst",
+   "src": "video2/t1",
+   "start": 581.39,
+   "end": 581.73
+  },
+  {
+   "text": "weiterführen",
+   "src": "video2/t1",
+   "start": 582.11,
+   "end": 582.63
+  },
+  {
+   "text": "muss.",
+   "src": "video2/t1",
+   "start": 582.67,
+   "end": 582.85
+  },
+  {
+   "text": "Was",
+   "src": "video2/t1",
+   "start": 584.01,
+   "end": 584.13
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 584.17,
+   "end": 584.23
+  },
+  {
+   "text": "bei",
+   "src": "video2/t1",
+   "start": 584.27,
+   "end": 584.33
+  },
+  {
+   "text": "dem",
+   "src": "video2/t1",
+   "start": 584.37,
+   "end": 584.45
+  },
+  {
+   "text": "Verkauf",
+   "src": "video2/t1",
+   "start": 584.51,
+   "end": 584.71
+  },
+  {
+   "text": "besonders",
+   "src": "video2/t1",
+   "start": 584.77,
+   "end": 585.17
+  },
+  {
+   "text": "spannend",
+   "src": "video2/t1",
+   "start": 585.23,
+   "end": 585.55
+  },
+  {
+   "text": "fand,",
+   "src": "video2/t1",
+   "start": 585.63,
+   "end": 585.79
+  },
+  {
+   "text": "ist,",
+   "src": "video2/t1",
+   "start": 585.87,
+   "end": 585.97
+  },
+  {
+   "text": "dass",
+   "src": "video2/t1",
+   "start": 586.01,
+   "end": 586.15
+  },
+  {
+   "text": "beim",
+   "src": "video2/t1",
+   "start": 586.71,
+   "end": 586.81
+  },
+  {
+   "text": "Verkauf",
+   "src": "video2/t1",
+   "start": 586.87,
+   "end": 587.17
+  },
+  {
+   "text": "eines",
+   "src": "video2/t1",
+   "start": 587.21,
+   "end": 587.37
+  },
+  {
+   "text": "E-Commerce",
+   "src": "video2/t1",
+   "start": 587.47,
+   "end": 587.79
+  },
+  {
+   "text": "Unternehmens",
+   "src": "video2/t1",
+   "start": 587.87,
+   "end": 588.39
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 589.21,
+   "end": 589.37
+  },
+  {
+   "text": "nicht",
+   "src": "video2/t1",
+   "start": 589.43,
+   "end": 589.59
+  },
+  {
+   "text": "immer",
+   "src": "video2/t1",
+   "start": 589.67,
+   "end": 589.87
+  },
+  {
+   "text": "nur",
+   "src": "video2/t1",
+   "start": 589.97,
+   "end": 590.11
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 590.45,
+   "end": 590.57
+  },
+  {
+   "text": "Umsatz",
+   "src": "video2/t1",
+   "start": 590.69,
+   "end": 591.01
+  },
+  {
+   "text": "zählt.",
+   "src": "video2/t1",
+   "start": 591.09,
+   "end": 591.33
+  },
+  {
+   "text": "Es",
+   "src": "video2/t1",
+   "start": 591.43,
+   "end": 591.51
+  },
+  {
+   "text": "geht",
+   "src": "video2/t1",
+   "start": 591.85,
+   "end": 591.99
+  },
+  {
+   "text": "darüber",
+   "src": "video2/t1",
+   "start": 592.03,
+   "end": 592.31
+  },
+  {
+   "text": "hinaus.",
+   "src": "video2/t1",
+   "start": 592.39,
+   "end": 592.79
+  },
+  {
+   "text": "Aber",
+   "src": "video2/t1",
+   "start": 622.3,
+   "end": 622.4
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 622.44,
+   "end": 622.5
+  },
+  {
+   "text": "Kunde",
+   "src": "video2/t1",
+   "start": 622.56,
+   "end": 622.76
+  },
+  {
+   "text": "schaut",
+   "src": "video2/t1",
+   "start": 622.8,
+   "end": 623.04
+  },
+  {
+   "text": "sich",
+   "src": "video2/t1",
+   "start": 623.1,
+   "end": 623.22
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 623.28,
+   "end": 623.42
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 623.48,
+   "end": 623.6
+  },
+  {
+   "text": "an,",
+   "src": "video2/t1",
+   "start": 623.68,
+   "end": 623.82
+  },
+  {
+   "text": "wie",
+   "src": "video2/t1",
+   "start": 623.98,
+   "end": 624.08
+  },
+  {
+   "text": "profitabel",
+   "src": "video2/t1",
+   "start": 624.2,
+   "end": 624.8
+  },
+  {
+   "text": "ist",
+   "src": "video2/t1",
+   "start": 624.84,
+   "end": 624.92
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 625.2,
+   "end": 625.3
+  },
+  {
+   "text": "Geschäft,",
+   "src": "video2/t1",
+   "start": 625.38,
+   "end": 625.8
+  },
+  {
+   "text": "wie",
+   "src": "video2/t1",
+   "start": 625.94,
+   "end": 626.08
+  },
+  {
+   "text": "funktionieren",
+   "src": "video2/t1",
+   "start": 626.48,
+   "end": 627.0
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 627.02,
+   "end": 627.1
+  },
+  {
+   "text": "Prozesse",
+   "src": "video2/t1",
+   "start": 627.12,
+   "end": 627.58
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 627.64,
+   "end": 627.72
+  },
+  {
+   "text": "wie",
+   "src": "video2/t1",
+   "start": 627.76,
+   "end": 627.84
+  },
+  {
+   "text": "abhängig",
+   "src": "video2/t1",
+   "start": 628.0,
+   "end": 628.36
+  },
+  {
+   "text": "ist",
+   "src": "video2/t1",
+   "start": 628.44,
+   "end": 628.5
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 628.54,
+   "end": 628.74
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 628.76,
+   "end": 628.84
+  },
+  {
+   "text": "Shop",
+   "src": "video2/t1",
+   "start": 628.88,
+   "end": 629.06
+  },
+  {
+   "text": "von",
+   "src": "video2/t1",
+   "start": 629.4,
+   "end": 629.5
+  },
+  {
+   "text": "einzelnen",
+   "src": "video2/t1",
+   "start": 629.6,
+   "end": 629.98
+  },
+  {
+   "text": "Personen",
+   "src": "video2/t1",
+   "start": 630.06,
+   "end": 630.54
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 630.62,
+   "end": 630.74
+  },
+  {
+   "text": "wie",
+   "src": "video2/t1",
+   "start": 631.2,
+   "end": 631.28
+  },
+  {
+   "text": "gut",
+   "src": "video2/t1",
+   "start": 631.34,
+   "end": 631.5
+  },
+  {
+   "text": "ist",
+   "src": "video2/t1",
+   "start": 631.54,
+   "end": 631.64
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 631.66,
+   "end": 631.76
+  },
+  {
+   "text": "Ganze",
+   "src": "video2/t1",
+   "start": 631.82,
+   "end": 632.06
+  },
+  {
+   "text": "überhaupt,",
+   "src": "video2/t1",
+   "start": 632.14,
+   "end": 632.56
+  },
+  {
+   "text": "es",
+   "src": "video2/t1",
+   "start": 632.94,
+   "end": 633.02
+  },
+  {
+   "text": "weiterzuführen.",
+   "src": "video2/t1",
+   "start": 633.08,
+   "end": 633.72
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 641.28,
+   "end": 641.36
+  },
+  {
+   "text": "genau",
+   "src": "video2/t1",
+   "start": 641.4,
+   "end": 641.6
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 641.68,
+   "end": 641.86
+  },
+  {
+   "text": "war",
+   "src": "video2/t1",
+   "start": 641.92,
+   "end": 641.98
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 642.02,
+   "end": 642.1
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 642.12,
+   "end": 642.34
+  },
+  {
+   "text": "für",
+   "src": "video2/t1",
+   "start": 642.38,
+   "end": 642.46
+  },
+  {
+   "text": "mich",
+   "src": "video2/t1",
+   "start": 642.54,
+   "end": 642.68
+  },
+  {
+   "text": "noch",
+   "src": "video2/t1",
+   "start": 642.76,
+   "end": 642.86
+  },
+  {
+   "text": "einmal",
+   "src": "video2/t1",
+   "start": 642.98,
+   "end": 643.28
+  },
+  {
+   "text": "eine",
+   "src": "video2/t1",
+   "start": 643.38,
+   "end": 643.56
+  },
+  {
+   "text": "ziemlich",
+   "src": "video2/t1",
+   "start": 643.76,
+   "end": 644.1
+  },
+  {
+   "text": "wichtige",
+   "src": "video2/t1",
+   "start": 644.2,
+   "end": 644.5
+  },
+  {
+   "text": "Erfahrung,",
+   "src": "video2/t1",
+   "start": 644.54,
+   "end": 644.94
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 645.36,
+   "end": 645.44
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 645.52,
+   "end": 645.64
+  },
+  {
+   "text": "für",
+   "src": "video2/t1",
+   "start": 645.82,
+   "end": 645.9
+  },
+  {
+   "text": "mich",
+   "src": "video2/t1",
+   "start": 645.96,
+   "end": 646.06
+  },
+  {
+   "text": "gelernt",
+   "src": "video2/t1",
+   "start": 646.12,
+   "end": 646.36
+  },
+  {
+   "text": "habe.",
+   "src": "video2/t1",
+   "start": 646.38,
+   "end": 646.56
+  },
+  {
+   "text": "Denn",
+   "src": "video2/t1",
+   "start": 647.2,
+   "end": 647.32
+  },
+  {
+   "text": "ein",
+   "src": "video2/t1",
+   "start": 647.36,
+   "end": 647.46
+  },
+  {
+   "text": "Online-Shop,",
+   "src": "video2/t1",
+   "start": 647.56,
+   "end": 648.06
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 648.52,
+   "end": 648.62
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 648.66,
+   "end": 648.86
+  },
+  {
+   "text": "viel",
+   "src": "video2/t1",
+   "start": 648.94,
+   "end": 649.06
+  },
+  {
+   "text": "Umsatz",
+   "src": "video2/t1",
+   "start": 649.12,
+   "end": 649.44
+  },
+  {
+   "text": "macht,",
+   "src": "video2/t1",
+   "start": 649.52,
+   "end": 649.66
+  },
+  {
+   "text": "ist",
+   "src": "video2/t1",
+   "start": 649.74,
+   "end": 649.8
+  },
+  {
+   "text": "natürlich",
+   "src": "video2/t1",
+   "start": 649.82,
+   "end": 650.06
+  },
+  {
+   "text": "nicht",
+   "src": "video2/t1",
+   "start": 650.12,
+   "end": 650.22
+  },
+  {
+   "text": "automatisch",
+   "src": "video2/t1",
+   "start": 650.28,
+   "end": 650.8
+  },
+  {
+   "text": "ein",
+   "src": "video2/t1",
+   "start": 650.88,
+   "end": 650.98
+  },
+  {
+   "text": "Unternehmen,",
+   "src": "video2/t1",
+   "start": 651.06,
+   "end": 651.56
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 651.86,
+   "end": 652.0
+  },
+  {
+   "text": "sich",
+   "src": "video2/t1",
+   "start": 652.06,
+   "end": 652.16
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 652.22,
+   "end": 652.32
+  },
+  {
+   "text": "sehr",
+   "src": "video2/t1",
+   "start": 652.38,
+   "end": 652.5
+  },
+  {
+   "text": "gut",
+   "src": "video2/t1",
+   "start": 652.54,
+   "end": 652.64
+  },
+  {
+   "text": "verkaufen",
+   "src": "video2/t1",
+   "start": 652.7,
+   "end": 653.12
+  },
+  {
+   "text": "lässt.",
+   "src": "video2/t1",
+   "start": 653.14,
+   "end": 653.32
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 653.94,
+   "end": 654.02
+  },
+  {
+   "text": "vielleicht",
+   "src": "video2/t1",
+   "start": 654.04,
+   "end": 654.32
+  },
+  {
+   "text": "ist",
+   "src": "video2/t1",
+   "start": 654.36,
+   "end": 654.44
+  },
+  {
+   "text": "das",
+   "src": "video2/t1",
+   "start": 654.48,
+   "end": 654.6
+  },
+  {
+   "text": "eben",
+   "src": "video2/t1",
+   "start": 654.68,
+   "end": 654.82
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 654.9,
+   "end": 655.04
+  },
+  {
+   "text": "einer",
+   "src": "video2/t1",
+   "start": 655.58,
+   "end": 655.78
+  },
+  {
+   "text": "der",
+   "src": "video2/t1",
+   "start": 655.84,
+   "end": 655.92
+  },
+  {
+   "text": "Gründe,",
+   "src": "video2/t1",
+   "start": 655.98,
+   "end": 656.24
+  },
+  {
+   "text": "warum",
+   "src": "video2/t1",
+   "start": 656.32,
+   "end": 656.5
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 656.56,
+   "end": 656.62
+  },
+  {
+   "text": "jetzt",
+   "src": "video2/t1",
+   "start": 656.66,
+   "end": 656.84
+  },
+  {
+   "text": "mehr",
+   "src": "video2/t1",
+   "start": 657.06,
+   "end": 657.22
+  },
+  {
+   "text": "Content",
+   "src": "video2/t1",
+   "start": 657.3,
+   "end": 657.62
+  },
+  {
+   "text": "auf",
+   "src": "video2/t1",
+   "start": 657.66,
+   "end": 657.74
+  },
+  {
+   "text": "Social",
+   "src": "video2/t1",
+   "start": 657.8,
+   "end": 657.96
+  },
+  {
+   "text": "Media",
+   "src": "video2/t1",
+   "start": 658.02,
+   "end": 658.22
+  },
+  {
+   "text": "mache,",
+   "src": "video2/t1",
+   "start": 658.3,
+   "end": 658.5
+  },
+  {
+   "text": "denn",
+   "src": "video2/t1",
+   "start": 658.62,
+   "end": 658.78
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 659.26,
+   "end": 659.32
+  },
+  {
+   "text": "sehe",
+   "src": "video2/t1",
+   "start": 659.38,
+   "end": 659.5
+  },
+  {
+   "text": "immer",
+   "src": "video2/t1",
+   "start": 659.56,
+   "end": 659.72
+  },
+  {
+   "text": "wieder",
+   "src": "video2/t1",
+   "start": 659.8,
+   "end": 659.98
+  },
+  {
+   "text": "Videos,",
+   "src": "video2/t1",
+   "start": 660.08,
+   "end": 660.54
+  },
+  {
+   "text": "bei",
+   "src": "video2/t1",
+   "start": 661.77,
+   "end": 661.85
+  },
+  {
+   "text": "denen",
+   "src": "video2/t1",
+   "start": 661.91,
+   "end": 662.09
+  },
+  {
+   "text": "es",
+   "src": "video2/t1",
+   "start": 662.13,
+   "end": 662.19
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 662.23,
+   "end": 662.39
+  },
+  {
+   "text": "erklärt",
+   "src": "video2/t1",
+   "start": 662.43,
+   "end": 662.81
+  },
+  {
+   "text": "wird,",
+   "src": "video2/t1",
+   "start": 662.87,
+   "end": 663.01
+  },
+  {
+   "text": "wie",
+   "src": "video2/t1",
+   "start": 663.11,
+   "end": 663.19
+  },
+  {
+   "text": "du",
+   "src": "video2/t1",
+   "start": 663.25,
+   "end": 663.31
+  },
+  {
+   "text": "mit",
+   "src": "video2/t1",
+   "start": 663.39,
+   "end": 663.49
+  },
+  {
+   "text": "Shopify",
+   "src": "video2/t1",
+   "start": 663.55,
+   "end": 664.05
+  },
+  {
+   "text": "oder",
+   "src": "video2/t1",
+   "start": 664.15,
+   "end": 664.23
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 664.25,
+   "end": 664.33
+  },
+  {
+   "text": "KI",
+   "src": "video2/t1",
+   "start": 664.39,
+   "end": 664.67
+  },
+  {
+   "text": "in",
+   "src": "video2/t1",
+   "start": 664.81,
+   "end": 664.89
+  },
+  {
+   "text": "kürzester",
+   "src": "video2/t1",
+   "start": 665.27,
+   "end": 665.73
+  },
+  {
+   "text": "Zeit",
+   "src": "video2/t1",
+   "start": 665.85,
+   "end": 666.09
+  },
+  {
+   "text": "schnell",
+   "src": "video2/t1",
+   "start": 666.27,
+   "end": 666.53
+  },
+  {
+   "text": "reich",
+   "src": "video2/t1",
+   "start": 666.59,
+   "end": 666.77
+  },
+  {
+   "text": "werden",
+   "src": "video2/t1",
+   "start": 666.83,
+   "end": 667.01
+  },
+  {
+   "text": "kannst.",
+   "src": "video2/t1",
+   "start": 667.05,
+   "end": 667.27
+  },
+  {
+   "text": "Aber",
+   "src": "video2/t1",
+   "start": 667.75,
+   "end": 667.91
+  },
+  {
+   "text": "so",
+   "src": "video2/t1",
+   "start": 668.03,
+   "end": 668.09
+  },
+  {
+   "text": "funktioniert",
+   "src": "video2/t1",
+   "start": 668.19,
+   "end": 668.65
+  },
+  {
+   "text": "leider",
+   "src": "video2/t1",
+   "start": 668.71,
+   "end": 668.89
+  },
+  {
+   "text": "Unternehmertum",
+   "src": "video2/t1",
+   "start": 668.95,
+   "end": 669.51
+  },
+  {
+   "text": "nicht.",
+   "src": "video2/t1",
+   "start": 669.55,
+   "end": 669.73
+  },
+  {
+   "text": "Aus",
+   "src": "video2/t1",
+   "start": 670.21,
+   "end": 670.29
+  },
+  {
+   "text": "meiner",
+   "src": "video2/t1",
+   "start": 670.37,
+   "end": 670.61
+  },
+  {
+   "text": "Sicht",
+   "src": "video2/t1",
+   "start": 670.69,
+   "end": 670.85
+  },
+  {
+   "text": "zumindest",
+   "src": "video2/t1",
+   "start": 670.89,
+   "end": 671.23
+  },
+  {
+   "text": "nicht.",
+   "src": "video2/t1",
+   "start": 671.27,
+   "end": 671.41
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 672.31,
+   "end": 672.43
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 672.47,
+   "end": 672.53
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 672.57,
+   "end": 672.69
+  },
+  {
+   "text": "in",
+   "src": "video2/t1",
+   "start": 672.73,
+   "end": 672.77
+  },
+  {
+   "text": "den",
+   "src": "video2/t1",
+   "start": 672.81,
+   "end": 672.89
+  },
+  {
+   "text": "letzten",
+   "src": "video2/t1",
+   "start": 672.91,
+   "end": 673.23
+  },
+  {
+   "text": "zehn",
+   "src": "video2/t1",
+   "start": 673.33,
+   "end": 673.53
+  },
+  {
+   "text": "Jahren",
+   "src": "video2/t1",
+   "start": 673.59,
+   "end": 673.83
+  },
+  {
+   "text": "unglaublich",
+   "src": "video2/t1",
+   "start": 673.95,
+   "end": 674.45
+  },
+  {
+   "text": "viel",
+   "src": "video2/t1",
+   "start": 674.57,
+   "end": 674.73
+  },
+  {
+   "text": "ausprobiert.",
+   "src": "video2/t1",
+   "start": 674.83,
+   "end": 675.43
+  },
+  {
+   "text": "Manches",
+   "src": "video2/t1",
+   "start": 675.85,
+   "end": 676.19
+  },
+  {
+   "text": "hat",
+   "src": "video2/t1",
+   "start": 676.25,
+   "end": 676.35
+  },
+  {
+   "text": "funktioniert,",
+   "src": "video2/t1",
+   "start": 676.39,
+   "end": 676.93
+  },
+  {
+   "text": "manches",
+   "src": "video2/t1",
+   "start": 677.07,
+   "end": 677.39
+  },
+  {
+   "text": "leider",
+   "src": "video2/t1",
+   "start": 677.45,
+   "end": 677.61
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 677.63,
+   "end": 677.71
+  },
+  {
+   "text": "überhaupt",
+   "src": "video2/t1",
+   "start": 677.73,
+   "end": 678.07
+  },
+  {
+   "text": "nicht.",
+   "src": "video2/t1",
+   "start": 678.15,
+   "end": 678.31
+  },
+  {
+   "text": "Ich",
+   "src": "video2/t1",
+   "start": 678.79,
+   "end": 678.85
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 678.89,
+   "end": 679.01
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 679.07,
+   "end": 679.15
+  },
+  {
+   "text": "Fehler",
+   "src": "video2/t1",
+   "start": 679.21,
+   "end": 679.45
+  },
+  {
+   "text": "gemacht,",
+   "src": "video2/t1",
+   "start": 679.51,
+   "end": 679.83
+  },
+  {
+   "text": "habe",
+   "src": "video2/t1",
+   "start": 680.07,
+   "end": 680.21
+  },
+  {
+   "text": "Marken",
+   "src": "video2/t1",
+   "start": 680.27,
+   "end": 680.55
+  },
+  {
+   "text": "aufgebaut,",
+   "src": "video2/t1",
+   "start": 680.61,
+   "end": 681.13
+  },
+  {
+   "text": "Unternehmen",
+   "src": "video2/t1",
+   "start": 681.21,
+   "end": 681.63
+  },
+  {
+   "text": "verkauft",
+   "src": "video2/t1",
+   "start": 681.67,
+   "end": 682.09
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 682.49,
+   "end": 682.57
+  },
+  {
+   "text": "immer",
+   "src": "video2/t1",
+   "start": 682.67,
+   "end": 682.87
+  },
+  {
+   "text": "wieder",
+   "src": "video2/t1",
+   "start": 682.93,
+   "end": 683.13
+  },
+  {
+   "text": "etwas",
+   "src": "video2/t1",
+   "start": 683.23,
+   "end": 683.45
+  },
+  {
+   "text": "Neues",
+   "src": "video2/t1",
+   "start": 683.57,
+   "end": 683.83
+  },
+  {
+   "text": "dazu",
+   "src": "video2/t1",
+   "start": 684.07,
+   "end": 684.29
+  },
+  {
+   "text": "gelernt.",
+   "src": "video2/t1",
+   "start": 684.33,
+   "end": 684.61
+  },
+  {
+   "text": "Genau",
+   "src": "video2/t1",
+   "start": 685.37,
+   "end": 685.55
+  },
+  {
+   "text": "diese",
+   "src": "video2/t1",
+   "start": 685.63,
+   "end": 685.91
+  },
+  {
+   "text": "Erfahrung",
+   "src": "video2/t1",
+   "start": 685.89,
+   "end": 686.29
+  },
+  {
+   "text": "möchte",
+   "src": "video2/t1",
+   "start": 686.39,
+   "end": 686.59
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 686.63,
+   "end": 686.71
+  },
+  {
+   "text": "hier",
+   "src": "video2/t1",
+   "start": 686.75,
+   "end": 686.85
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 686.91,
+   "end": 687.13
+  },
+  {
+   "text": "mit",
+   "src": "video2/t1",
+   "start": 687.19,
+   "end": 687.29
+  },
+  {
+   "text": "dir",
+   "src": "video2/t1",
+   "start": 687.31,
+   "end": 687.41
+  },
+  {
+   "text": "teilen.",
+   "src": "video2/t1",
+   "start": 687.45,
+   "end": 687.67
+  },
+  {
+   "text": "Und",
+   "src": "video2/t1",
+   "start": 688.59,
+   "end": 688.69
+  },
+  {
+   "text": "ohne",
+   "src": "video2/t1",
+   "start": 688.95,
+   "end": 689.11
+  },
+  {
+   "text": "irgendwelche",
+   "src": "video2/t1",
+   "start": 689.17,
+   "end": 689.55
+  },
+  {
+   "text": "schnell",
+   "src": "video2/t1",
+   "start": 689.67,
+   "end": 689.95
+  },
+  {
+   "text": "Reichwerden",
+   "src": "video2/t1",
+   "start": 690.05,
+   "end": 690.55
+  },
+  {
+   "text": "versprechen,",
+   "src": "video2/t1",
+   "start": 690.61,
+   "end": 691.05
+  },
+  {
+   "text": "weil",
+   "src": "video2/t1",
+   "start": 691.11,
+   "end": 691.27
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 691.73,
+   "end": 691.85
+  },
+  {
+   "text": "siehst",
+   "src": "video2/t1",
+   "start": 691.93,
+   "end": 692.05
+  },
+  {
+   "text": "du",
+   "src": "video2/t1",
+   "start": 692.07,
+   "end": 692.13
+  },
+  {
+   "text": "da",
+   "src": "video2/t1",
+   "start": 692.17,
+   "end": 692.21
+  },
+  {
+   "text": "draußen",
+   "src": "video2/t1",
+   "start": 692.29,
+   "end": 692.63
+  },
+  {
+   "text": "mehr",
+   "src": "video2/t1",
+   "start": 692.73,
+   "end": 692.85
+  },
+  {
+   "text": "als",
+   "src": "video2/t1",
+   "start": 692.91,
+   "end": 693.01
+  },
+  {
+   "text": "genug.",
+   "src": "video2/t1",
+   "start": 693.05,
+   "end": 693.27
+  },
+  {
+   "text": "Sondern",
+   "src": "video2/t1",
+   "start": 703.43,
+   "end": 703.73
+  },
+  {
+   "text": "ich",
+   "src": "video2/t1",
+   "start": 703.77,
+   "end": 703.83
+  },
+  {
+   "text": "möchte",
+   "src": "video2/t1",
+   "start": 703.89,
+   "end": 704.11
+  },
+  {
+   "text": "es",
+   "src": "video2/t1",
+   "start": 704.15,
+   "end": 704.21
+  },
+  {
+   "text": "hier",
+   "src": "video2/t1",
+   "start": 704.25,
+   "end": 704.37
+  },
+  {
+   "text": "lieber",
+   "src": "video2/t1",
+   "start": 704.39,
+   "end": 704.55
+  },
+  {
+   "text": "mit",
+   "src": "video2/t1",
+   "start": 704.61,
+   "end": 704.71
+  },
+  {
+   "text": "ehrlichen",
+   "src": "video2/t1",
+   "start": 704.83,
+   "end": 705.19
+  },
+  {
+   "text": "Einblicken",
+   "src": "video2/t1",
+   "start": 705.31,
+   "end": 705.71
+  },
+  {
+   "text": "in",
+   "src": "video2/t1",
+   "start": 705.75,
+   "end": 705.79
+  },
+  {
+   "text": "Shopify,",
+   "src": "video2/t1",
+   "start": 705.85,
+   "end": 706.25
+  },
+  {
+   "text": "E-Commerce,",
+   "src": "video2/t1",
+   "start": 706.41,
+   "end": 706.95
+  },
+  {
+   "text": "Marketing",
+   "src": "video2/t1",
+   "start": 707.19,
+   "end": 707.71
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 708.17,
+   "end": 708.25
+  },
+  {
+   "text": "auch",
+   "src": "video2/t1",
+   "start": 708.29,
+   "end": 708.37
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 708.41,
+   "end": 708.49
+  },
+  {
+   "text": "Dinge,",
+   "src": "video2/t1",
+   "start": 708.55,
+   "end": 708.75
+  },
+  {
+   "text": "die",
+   "src": "video2/t1",
+   "start": 708.89,
+   "end": 708.97
+  },
+  {
+   "text": "im",
+   "src": "video2/t1",
+   "start": 709.07,
+   "end": 709.13
+  },
+  {
+   "text": "Alltag",
+   "src": "video2/t1",
+   "start": 709.25,
+   "end": 709.55
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 709.63,
+   "end": 709.83
+  },
+  {
+   "text": "eines",
+   "src": "video2/t1",
+   "start": 709.89,
+   "end": 710.07
+  },
+  {
+   "text": "Unternehmers",
+   "src": "video2/t1",
+   "start": 710.13,
+   "end": 710.67
+  },
+  {
+   "text": "wirklich",
+   "src": "video2/t1",
+   "start": 710.85,
+   "end": 711.17
+  },
+  {
+   "text": "passieren",
+   "src": "video2/t1",
+   "start": 711.23,
+   "end": 711.63
+  },
+  {
+   "text": "machen.",
+   "src": "video2/t1",
+   "start": 711.67,
+   "end": 711.89
+  },
+  {
+   "text": "Wenn",
+   "src": "video2/t1",
+   "start": 713.12,
+   "end": 713.26
+  },
+  {
+   "text": "du",
+   "src": "video2/t1",
+   "start": 713.3,
+   "end": 713.36
+  },
+  {
+   "text": "mich",
+   "src": "video2/t1",
+   "start": 713.42,
+   "end": 713.54
+  },
+  {
+   "text": "auf",
+   "src": "video2/t1",
+   "start": 713.58,
+   "end": 713.66
+  },
+  {
+   "text": "dieser",
+   "src": "video2/t1",
+   "start": 713.72,
+   "end": 713.92
+  },
+  {
+   "text": "Reise",
+   "src": "video2/t1",
+   "start": 713.98,
+   "end": 714.3
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 714.82,
+   "end": 714.88
+  },
+  {
+   "text": "meinem",
+   "src": "video2/t1",
+   "start": 714.94,
+   "end": 715.14
+  },
+  {
+   "text": "weiteren",
+   "src": "video2/t1",
+   "start": 715.2,
+   "end": 715.6
+  },
+  {
+   "text": "Weg",
+   "src": "video2/t1",
+   "start": 715.68,
+   "end": 715.82
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 715.88,
+   "end": 716.1
+  },
+  {
+   "text": "begleiten",
+   "src": "video2/t1",
+   "start": 716.14,
+   "end": 716.54
+  },
+  {
+   "text": "möchtest,",
+   "src": "video2/t1",
+   "start": 716.58,
+   "end": 716.92
+  },
+  {
+   "text": "dann",
+   "src": "video2/t1",
+   "start": 716.96,
+   "end": 717.12
+  },
+  {
+   "text": "würde",
+   "src": "video2/t1",
+   "start": 717.18,
+   "end": 717.4
+  },
+  {
+   "text": "mich",
+   "src": "video2/t1",
+   "start": 717.42,
+   "end": 717.5
+  },
+  {
+   "text": "hier",
+   "src": "video2/t1",
+   "start": 717.52,
+   "end": 717.62
+  },
+  {
+   "text": "selber",
+   "src": "video2/t1",
+   "start": 717.66,
+   "end": 717.94
+  },
+  {
+   "text": "ein",
+   "src": "video2/t1",
+   "start": 717.96,
+   "end": 718.02
+  },
+  {
+   "text": "Like",
+   "src": "video2/t1",
+   "start": 718.04,
+   "end": 718.28
+  },
+  {
+   "text": "und",
+   "src": "video2/t1",
+   "start": 718.7,
+   "end": 718.78
+  },
+  {
+   "text": "ein",
+   "src": "video2/t1",
+   "start": 718.8,
+   "end": 718.88
+  },
+  {
+   "text": "Follow",
+   "src": "video2/t1",
+   "start": 718.96,
+   "end": 719.2
+  },
+  {
+   "text": "von",
+   "src": "video2/t1",
+   "start": 719.22,
+   "end": 719.34
+  },
+  {
+   "text": "dir",
+   "src": "video2/t1",
+   "start": 719.36,
+   "end": 719.44
+  },
+  {
+   "text": "freuen,",
+   "src": "video2/t1",
+   "start": 719.5,
+   "end": 719.72
+  },
+  {
+   "text": "damit",
+   "src": "video2/t1",
+   "start": 720.14,
+   "end": 720.32
+  },
+  {
+   "text": "du",
+   "src": "video2/t1",
+   "start": 720.36,
+   "end": 720.4
+  },
+  {
+   "text": "einfach",
+   "src": "video2/t1",
+   "start": 720.42,
+   "end": 720.66
+  },
+  {
+   "text": "in",
+   "src": "video2/t1",
+   "start": 720.7,
+   "end": 720.74
+  },
+  {
+   "text": "Zukunft",
+   "src": "video2/t1",
+   "start": 720.8,
+   "end": 721.18
+  },
+  {
+   "text": "alle",
+   "src": "video2/t1",
+   "start": 721.34,
+   "end": 721.46
+  },
+  {
+   "text": "meine",
+   "src": "video2/t1",
+   "start": 721.52,
+   "end": 721.7
+  },
+  {
+   "text": "weiteren",
+   "src": "video2/t1",
+   "start": 721.78,
+   "end": 722.12
+  },
+  {
+   "text": "Videos",
+   "src": "video2/t1",
+   "start": 722.16,
+   "end": 722.44
+  },
+  {
+   "text": "nicht",
+   "src": "video2/t1",
+   "start": 722.54,
+   "end": 722.68
+  },
+  {
+   "text": "mehr",
+   "src": "video2/t1",
+   "start": 722.7,
+   "end": 722.78
+  },
+  {
+   "text": "verpasst.",
+   "src": "video2/t1",
+   "start": 722.82,
+   "end": 723.18
+  }
+ ],
+ "pages": [
+  2,
+  3,
+  1,
+  1,
+  4,
+  2,
+  4,
+  3,
+  2,
+  1,
+  2,
+  2,
+  2,
+  3,
+  4,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  1,
+  1,
+  2,
+  4,
+  2,
+  1,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  1,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  4,
+  3,
+  3,
+  4,
+  2,
+  3,
+  2,
+  4,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  4,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  1,
+  2,
+  3,
+  3,
+  4,
+  3,
+  2,
+  1,
+  1,
+  1,
+  3,
+  3,
+  2,
+  4,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  1,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  4,
+  3,
+  2,
+  4,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  4,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  1,
+  3,
+  4,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  1,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  2,
+  1,
+  2,
+  4,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  1,
+  4,
+  3,
+  3,
+  1,
+  2,
+  4,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  1,
+  4,
+  3,
+  1,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  4,
+  2,
+  2,
+  4,
+  2,
+  4,
+  2,
+  3,
+  3,
+  2,
+  4,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  2,
+  4,
+  3,
+  4,
+  3,
+  2,
+  1,
+  3,
+  2,
+  4,
+  2,
+  4,
+  4,
+  3,
+  3,
+  3,
+  1,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  1,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  4,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3
+ ]
+}
