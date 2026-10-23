@@ -17,7 +17,7 @@ zurückgeht und was Paul sieht.
    Projektname, Titel wie im Kalendertermin. Den Briefing-Termin aus dem Google Kalender mit der ganzen Beschreibung als
    Text nach `src/projekte/<projekt>/briefing.md` schreiben (Titel, Datum, Beschreibung; HTML zu Text). Cutter und
    Prüfer lesen das Briefing dort, sie brauchen keinen Kalender.
-1. **Cutter** (`cutter`, Modell **Sonnet**; seine Vorgabe 2026-10-23 nach dem FBA-Video: "Diesmal aber mitte mit Sonnet schneiden. Heiku Qualität ist zu schlecht"; Haiku nicht mehr zum Schneiden). Immer nur **ein** Cutter gleichzeitig (Token sparen, keine Porträts im Stau). Der Auftrag nennt: Projekt,
+1. **Cutter** (`cutter`, Modell **Sonnet**; seine Vorgabe 2026-10-23: "in Zukunft nur noch sonnet und Opus schneiden lassen. Opus kann ruhig den motion skill für die Animationen erstellen, während Sonnet die Videos schneidet"; Haiku nie mehr). **Aufteilung:** Sonnet schneidet (Intake, schnitt.json, Farbe, Porträt, Untertitel, Ton, Final); die HyperFrames-Karten und Animationen baut parallel ein zweiter Agent mit `model: "opus"` nach `karten-hell.md` und dem Motion-Skill (`.claude/skills/motion/`), auf die Wortzeiten aus `cut.json`, und rendert `skizzen.webm`; der Cutter baut sie danach ein. Immer nur **ein** Cutter gleichzeitig (Token sparen, keine Porträts im Stau). Der Auftrag nennt: Projekt,
    Clips, Format, Titel, `briefing.md`, Termin (wenn bekannt), Pauls Wünsche aus dem Chat. Er liefert die Vollversion
    `out/final/<Komposition>.mp4` (mit `-post` und `-chat`), die ausgefüllte Übergabekarte
    `src/projekte/<projekt>/uebergabe.md` und den Bericht von `npm run pruefen`.

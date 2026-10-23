@@ -65,3 +65,10 @@ uebergabe` (erneuert den technischen Block), `npm run pruefen`, und in der Karte
 
 Komposition und Dateien, Länge, Fazit von `npm run pruefen` (und welche FEHLER bleiben, warum), offene Fragen an Paul,
 Abweichungen vom Briefing oder Stil.
+
+## Ende sauber schneiden
+
+Seine Rüge 2026-10-23 (FBA): "dass das Ende abgeschnitten wurde. Man sieht, wie ich noch die Kamera ausmache. Beim
+nächsten Mal bitte richtig schneiden." Das Video endet höchstens ~0,4-0,6 s nach dem letzten Wort, **bevor** er sich
+zur Kamera bewegt, wegschaut oder die Aufnahme stoppt. `ende.bis` nie verlängern, um eine Ziellänge (z. B. 60 s) zu
+erreichen; eine Ziellänge ist ein Höchstwert, kein Muss. Die letzten 2 s immer als Standbilder (alle 0,2 s) ansehen.
