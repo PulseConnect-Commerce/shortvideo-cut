@@ -1,0 +1,14 @@
+{
+  "hinweis": "Sekunden im geschnittenen Video (cut.json, 59,7 s). start = 2 Frames vor dem Wort. sfx: Ton-Offsets in Sekunden (absolut), mindestens 1,5 s Abstand außer bei Häkchen. Gebaut in hyperframes/billbee-skizzen/index.html.",
+  "karten": [
+    { "id": "reihe", "wort": "das (Thema Buchhaltung)", "text": "Reihe: Eine Shopify-App, ein Problem", "start": 5.45, "ende": 9.85, "sfx": [{ "datei": "whoosh.mp3", "at": 5.45, "volume": 0.12 }] },
+    { "id": "kette", "wort": "Shopify", "text": "Automatisiert: Shopify-Bestellung → Billbee-Rechnung → Lexware Office", "start": 14.33, "ende": 22.6, "punkte": { "shopify": 14.33, "rechnungen": 18.61, "lexware": 21.26 }, "sfx": [{ "datei": "whoosh.mp3", "at": 14.33, "volume": 0.12 }, { "datei": "tick.mp3", "at": 18.9, "volume": 0.1 }] },
+    { "id": "billbee", "wort": "Billbee", "text": "AUFTRAGSABWICKLUNG: BILLBEE (Billbee markiert)", "start": 22.7, "ende": 25.5, "sfx": [{ "datei": "whoosh.mp3", "at": 22.7, "volume": 0.12 }] },
+    { "id": "lexware", "wort": "Lexware", "text": "BUCHHALTUNG: LEXWARE OFFICE (Lexware Office markiert)", "start": 25.61, "ende": 28.75, "sfx": [{ "datei": "whoosh.mp3", "at": 25.61, "volume": 0.12 }] },
+    { "id": "blind", "wort": "nicht", "text": "Das funktioniert: Nicht blind per Mausklick", "start": 29.81, "ende": 32.41, "punkte": { "mausklick": 31.41 }, "sfx": [{ "datei": "whoosh.mp3", "at": 29.81, "volume": 0.12 }, { "datei": "tick.mp3", "at": 31.5, "volume": 0.1 }] },
+    { "id": "check", "wort": "Steuersätze", "text": "Muss zu deinem Unternehmen passen: Steuersätze, OSS, Rechnungsstatus, Zahlungsabgleich", "start": 32.82, "ende": 40.6, "punkte": { "steuersaetze": 32.89, "oss": 33.76, "rechnungsstatus": 34.36, "zahlungsabgleich": 35.44 }, "sfx": [{ "datei": "tick.mp3", "at": 33.19, "volume": 0.1 }, { "datei": "tick.mp3", "at": 34.06, "volume": 0.1 }, { "datei": "tick.mp3", "at": 34.66, "volume": 0.1 }, { "datei": "tick.mp3", "at": 35.74, "volume": 0.1 }] },
+    { "id": "tipp", "wort": "Mein", "text": "Mein Tipp: Erst mit Testbestellungen", "start": 40.73, "ende": 47.35, "punkte": { "testbestellungen": 44.38, "pruefe": 45.45 }, "sfx": [{ "datei": "whoosh.mp3", "at": 40.73, "volume": 0.12 }, { "datei": "tick.mp3", "at": 45.6, "volume": 0.1 }] },
+    { "id": "pruefen", "wort": "Buchhaltung", "text": "Ergebnis prüfen: Mit Buchhaltung & Steuerberatung", "start": 47.53, "ende": 51.85, "sfx": [{ "datei": "whoosh.mp3", "at": 47.53, "volume": 0.12 }] },
+    { "id": "daten", "wort": "Automatisierung", "text": "Automatisierung spart nur Zeit, wenn die Daten stimmen", "start": 52.03, "ende": 55.85, "punkte": { "korrekt": 55.24 }, "sfx": [{ "datei": "whoosh.mp3", "at": 52.03, "volume": 0.12 }] }
+  ]
+}

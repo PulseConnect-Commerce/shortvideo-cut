@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Billbee Lexware – helle Karten</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <!-- HERO A01 "Billbee + Lexware Office" (A-Reihe "Eine Shopify-App, ein Problem"), heller Karten-Look (karten-hell.md).
+         Zeiten = Sekunden im geschnittenen Video (cut.json, 59,7 s), Liste in src/projekte/billbee/karten.json (Töne).
+         Keine Firmenlogos, keine Oberflächen: nur Lucide-Icons (ISC) und Text. Karten nicht tiefer als y ~560. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; }
+      .card {
+        position: absolute; left: 110px; top: 285px; width: 860px; height: 240px;
+        border-radius: 36px; background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
+        display: flex; align-items: center; gap: 44px; padding: 0 56px; opacity: 0;
+      }
+      .card.wide { left: 90px; width: 900px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; padding: 0 44px; }
+      .card.mitte { align-items: center; }
+      .tile {
+        position: relative; flex: none; width: 150px; height: 150px; border-radius: 28px;
+        background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center;
+      }
+      .tile svg { width: 88px; height: 88px; fill: none; stroke: #0b0c0e; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      .tile svg.b { position: absolute; left: 31px; top: 31px; opacity: 0; }
+      .d { opacity: 0; }
+      .txt { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+      .mitte .txt { align-items: center; gap: 4px; }
+      .kicker { font-size: 30px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .head { position: relative; font-size: 66px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.02; color: #0b0c0e; white-space: nowrap; }
+      .verlauf { display: inline-block; padding-bottom: 6px; background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .line { display: block; }
+
+      /* Reihen-Einblendung: kleine Kicker-Karte */
+      .card.reihe { left: 0; right: 0; margin: 0 auto; width: fit-content; height: 132px; top: 300px; padding: 0 40px 0 26px; gap: 24px; border-radius: 32px; }
+      .card.reihe .tile { width: 84px; height: 84px; border-radius: 22px; }
+      .card.reihe .tile svg { width: 48px; height: 48px; stroke-width: 1.8; }
+      .card.reihe .txt { gap: 2px; }
+      .card.reihe .kicker { font-size: 22px; }
+      .card.reihe .head { font-size: 46px; }
+
+      /* Kette: drei Glieder mit Pfeilen */
+      .kette { display: flex; width: 100%; align-items: flex-start; justify-content: space-between; margin-top: 8px; }
+      .glied { width: 230px; display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; }
+      .dot { position: relative; width: 84px; height: 84px; border-radius: 24px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
+      .dot svg { width: 48px; height: 48px; fill: none; stroke: #0b0c0e; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      .glied b { font-size: 31px; line-height: 1.08; font-weight: 800; color: #0b0c0e; letter-spacing: -0.01em; text-align: center; white-space: nowrap; }
+      .pfeil { flex: none; width: 70px; height: 84px; display: flex; align-items: center; justify-content: center; }
+      .pfeil svg { width: 56px; height: 56px; fill: none; stroke: #31adec; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+
+      /* Markierung hinter einem Wort */
+      .mark { position: relative; display: inline-flex; align-items: center; gap: 18px; }
+      .mark .dot { width: 76px; height: 76px; border-radius: 22px; }
+      .mark .dot svg { width: 44px; height: 44px; }
+      .marker { position: absolute; left: -14px; right: -14px; bottom: 2px; height: 22px; border-radius: 11px; background: linear-gradient(90deg, rgba(0, 224, 144, 0.28), rgba(49, 173, 236, 0.28)); transform: scaleX(0); transform-origin: 0 50%; z-index: -1; }
+      .unter { position: absolute; left: 0; bottom: 0; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #00e090, #31adec); transform: scaleX(0); transform-origin: 0 50%; }
+
+      /* Checkliste 2x2 */
+      .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; width: 100%; }
+      .chip { display: flex; align-items: center; gap: 12px; height: 62px; padding: 0 20px 0 14px; border-radius: 18px; background: #f2f3f5; font-size: 31px; white-space: nowrap; font-weight: 700; color: #9ca3af; }
+      .box { position: relative; flex: none; width: 38px; height: 38px; border-radius: 11px; border: 2.5px solid #d1d5db; }
+      .box .fill { position: absolute; inset: -2.5px; border-radius: 11px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); opacity: 0; }
+      .box svg { position: absolute; inset: 3px; width: 27px; height: 27px; fill: none; stroke: #0b0c0e; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="billbee-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="59.733">
+
+      <!-- 1 Reihen-Einblendung -->
+      <section id="reihe" class="card reihe clip" data-start="5.45" data-duration="4.4" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><rect class="d" pathLength="1" width="7" height="7" x="14" y="3" rx="1" /><path class="d" pathLength="1" d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" /></svg></div><div class="txt"><span class="kicker line">Die Reihe</span><span class="head line">Eine Shopify-App, <span class="verlauf">ein Problem</span></span></div></section>
+
+      <!-- 2 Kette Shopify-Bestellung → Billbee-Rechnung → Lexware Office -->
+      <section id="kette" class="card wide clip" data-start="14.33" data-duration="8.27" data-track-index="0"><span class="kicker line">Automatisiert</span><div class="kette">
+        <div class="glied" id="g1"><div class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="d" pathLength="1" d="M3 6h18" /><path class="d" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div><b>Shopify-<br />Bestellung</b></div>
+        <div class="pfeil"><svg viewBox="0 0 24 24"><path class="p" id="p1" pathLength="1" d="M4 12h15" /><path class="p" id="p1k" pathLength="1" d="m13 6 6 6-6 6" /></svg></div>
+        <div class="glied" id="g2"><div class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" /><path class="d" pathLength="1" d="M8 8h8" /><path class="d" pathLength="1" d="M8 12h8" /><path class="d" pathLength="1" d="M8 16h5" /></svg></div><b>Billbee-<br />Rechnung</b></div>
+        <div class="pfeil"><svg viewBox="0 0 24 24"><path class="p" id="p2" pathLength="1" d="M4 12h15" /><path class="p" id="p2k" pathLength="1" d="m13 6 6 6-6 6" /></svg></div>
+        <div class="glied" id="g3"><div class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M12 7v14" /><path class="d" pathLength="1" d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg></div><b>Lexware<br />Office</b></div>
+      </div></section>
+
+      <!-- 3 AUFTRAGSABWICKLUNG: BILLBEE -->
+      <section id="billbee" class="card wide mitte clip" data-start="22.7" data-duration="2.8" data-track-index="0"><div class="txt"><span class="head line" style="font-size:62px">AUFTRAGSABWICKLUNG:</span><span class="line mark"><span class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><path class="d" pathLength="1" d="M3.27 6.96L12 12.01l8.73-5.05" /><path class="d" pathLength="1" d="M12 22.08V12" /></svg></span><span class="head" style="font-size:84px"><span class="verlauf">BILLBEE</span><span class="marker" id="m1"></span></span></span></div></section>
+
+      <!-- 4 BUCHHALTUNG: LEXWARE OFFICE -->
+      <section id="lexware" class="card wide mitte clip" data-start="25.61" data-duration="3.14" data-track-index="0"><div class="txt"><span class="head line" style="font-size:62px">BUCHHALTUNG:</span><span class="line mark"><span class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M12 7v14" /><path class="d" pathLength="1" d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg></span><span class="head" style="font-size:84px"><span class="verlauf">LEXWARE OFFICE</span><span class="marker" id="m2"></span></span></span></div></section>
+
+      <!-- 5 Nicht blind per Mausklick -->
+      <section id="blind" class="card clip" data-start="29.81" data-duration="2.6" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" /><g id="klick"><path pathLength="1" d="M14 4.1 12 6" /><path pathLength="1" d="m5.1 8-2.9-.8" /><path pathLength="1" d="m6 12-1.9 2" /><path pathLength="1" d="M7.2 2.2 8 5.1" /></g></svg></div><div class="txt"><span class="kicker line">Das funktioniert</span><span class="head line">Nicht blind</span><span class="head line"><span class="verlauf">per Mausklick</span></span></div></section>
+
+      <!-- 6 Checkliste -->
+      <section id="check" class="card wide clip" data-start="32.82" data-duration="7.78" data-track-index="0"><span class="kicker line">Muss zu deinem Unternehmen passen</span><div class="chips line">
+        <div class="chip" id="c1"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Steuersätze</div>
+        <div class="chip" id="c2"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>OSS</div>
+        <div class="chip" id="c3"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Rechnungsstatus</div>
+        <div class="chip" id="c4"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Zahlungsabgleich</div>
+      </div></section>
+
+      <!-- 7 Mein Tipp: Erst mit Testbestellungen (Icon wird auf "prüfe" zum Klemmbrett mit Haken) -->
+      <section id="tipp" class="card clip" data-start="40.73" data-duration="6.62" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24" id="tp-a"><path class="d" pathLength="1" d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /><path class="d" pathLength="1" d="M6.453 15h11.094" /><path class="d" pathLength="1" d="M8.5 2h7" /></svg><svg viewBox="0 0 24 24" class="b" id="tp-b"><rect width="8" height="4" x="8" y="2" rx="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="m9 14 2 2 4-4" /></svg></div><div class="txt"><span class="kicker line">Mein Tipp</span><span class="head line">Erst mit</span><span class="head line" style="font-size:58px"><span style="position:relative;display:inline-block"><span class="verlauf">Testbestellungen</span><span class="unter" id="u1" style="width:100%"></span></span></span></div></section>
+
+      <!-- 8 Mit Buchhaltung und Steuerberatung prüfen -->
+      <section id="pruefen" class="card clip" data-start="47.53" data-duration="4.32" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle class="d" pathLength="1" cx="9" cy="7" r="4" /><path class="d" pathLength="1" d="M22 21v-2a4 4 0 0 0-3-3.87" /><path class="d" pathLength="1" d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></div><div class="txt"><span class="kicker line">Ergebnis prüfen</span><span class="head line" style="font-size:56px">Mit Buchhaltung &amp;</span><span class="head line" style="font-size:56px"><span class="verlauf">Steuerberatung</span></span></div></section>
+
+      <!-- 9 Automatisierung spart nur Zeit, wenn die Daten stimmen -->
+      <section id="daten" class="card clip" data-start="52.03" data-duration="3.82" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><ellipse class="d" pathLength="1" cx="12" cy="5" rx="9" ry="3" /><path class="d" pathLength="1" d="M3 5V19A9 3 0 0 0 21 19V5" /><path class="d" pathLength="1" d="M3 12A9 3 0 0 0 21 12" /></svg></div><div class="txt"><span class="kicker line" style="font-size:25px;letter-spacing:0.04em">Automatisierung spart nur Zeit,</span><span class="head line">wenn die Daten</span><span class="head line"><span style="position:relative;display:inline-block"><span class="verlauf">stimmen</span><span class="unter" id="u2" style="width:100%"></span></span></span></div></section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Pfad zeichnet sich (erst sichtbar, wenn ein Stück gezeichnet ist)
+      function zeichne(sel, t, dauer = 0.6, stagger = 0.08) {
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dauer, ease: "power2.inOut", stagger }, t);
+        tl.set(sel, { opacity: 1 }, t + 0.08);
+      }
+      // Karte: Fläche gleitet weich herein, Icon zeichnet sich, Kicker und Titel kommen mit (Versatz 0,07 s). Raus kurz und leise.
+      function karte(id, an, aus) {
+        const k = "#" + id;
+        const hat = (sel) => document.querySelector(k + " " + sel);
+        tl.fromTo(k, { opacity: 0, y: 28, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out" }, an);
+        if (hat(".tile")) {
+          tl.fromTo(k + " .tile", { scale: 0.85 }, { scale: 1, duration: 0.5, ease: "power3.out" }, an + 0.05);
+          if (hat(".tile .d")) zeichne(k + " .tile .d", an + 0.12);
+        }
+        if (hat(".mark .d")) zeichne(k + " .mark .d", an + 0.12);
+        if (hat(".line")) tl.fromTo(k + " .line", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out", stagger: 0.07 }, an + 0.03);
+        if (hat(".verlauf")) tl.fromTo(k + " .verlauf", { backgroundPosition: "-60px 0" }, { backgroundPosition: "0px 0", duration: 0.6, ease: "power2.out" }, an + 0.2);
+        tl.to(k, { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, aus - 0.25);
+      }
+      // Icon wechselt auf dem Wort (alt blendet aus, neu blendet ein)
+      const wechsel = (a, b, t) => {
+        tl.to(a, { opacity: 0, scale: 0.9, duration: 0.25, ease: "power2.in", transformOrigin: "50% 50%" }, t);
+        tl.fromTo(b, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out", transformOrigin: "50% 50%" }, t + 0.15);
+      };
+      // Glied der Kette kommt auf seinem Wort, Icon zeichnet sich
+      const glied = (id, t) => {
+        tl.fromTo(id, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t);
+        tl.fromTo(id + " .dot", { scale: 0.85 }, { scale: 1, duration: 0.45, ease: "power3.out" }, t);
+        zeichne(id + " .d", t + 0.1);
+      };
+      gsap.set(".p", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
+      const pfeil = (a, b, t) => {
+        tl.set([a, b], { opacity: 1 }, t + 0.04);
+        tl.to(a, { strokeDashoffset: 0, duration: 0.35, ease: "power2.inOut" }, t);
+        tl.to(b, { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, t + 0.3);
+      };
+
+      // 1 Reihen-Einblendung ("das Thema Buchhaltung")
+      karte("reihe", 5.45, 9.85);
+
+      // 2 Kette: Shopify (14,40) -> Rechnungen (18,68) -> Lexware Office (21,33)
+      karte("kette", 14.33, 22.6);
+      glied("#g1", 14.33);
+      pfeil("#p1", "#p1k", 18.2);
+      glied("#g2", 18.61);
+      pfeil("#p2", "#p2k", 20.85);
+      glied("#g3", 21.26);
+
+      // 3 Billbee (22,77), Marker unter BILLBEE kurz danach
+      karte("billbee", 22.7, 25.5);
+      tl.to("#m1", { scaleX: 1, duration: 0.45, ease: "power2.inOut" }, 23.0);
+
+      // 4 Lexware (25,68)
+      karte("lexware", 25.61, 28.75);
+      tl.to("#m2", { scaleX: 1, duration: 0.5, ease: "power2.inOut" }, 25.9);
+
+      // 5 nicht (29,88) ... Mausklick (31,48): Klickstrahlen auf dem Wort
+      karte("blind", 29.81, 32.41);
+      gsap.set("#klick path", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
+      tl.set("#klick path", { opacity: 1 }, 31.45);
+      tl.to("#klick path", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out", stagger: 0.04 }, 31.41);
+
+      // 6 Häkchen je auf dem Wort: Steuersätze 32,89 / OSS 33,76 / Rechnungsstatus 34,36 / Zahlungsabgleich 35,44
+      karte("check", 32.82, 40.6);
+      [32.89, 33.76, 34.36, 35.44].forEach((t, i) => {
+        const c = "#c" + (i + 1);
+        tl.to(c + " .fill", { opacity: 1, duration: 0.2, ease: "power2.out" }, t);
+        tl.set(c + " .d", { opacity: 1 }, t + 0.08);
+        tl.fromTo(c + " .d", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, t + 0.05);
+        tl.to(c, { color: "#0b0c0e", duration: 0.25 }, t);
+      });
+
+      // 7 Mein Tipp (40,80), Testbestellungen unterstrichen (44,38), auf "prüfe" (45,48) Klemmbrett mit Haken
+      karte("tipp", 40.73, 47.35);
+      tl.to("#u1", { scaleX: 1, duration: 0.45, ease: "power2.inOut" }, 44.38);
+      wechsel("#tp-a", "#tp-b", 45.45);
+
+      // 8 Buchhaltung (47,60) ... Steuerberater (48,48)
+      karte("pruefen", 47.53, 51.85);
+
+      // 9 Automatisierung (52,10), "stimmen" unterstrichen auf "korrekt" (55,26)
+      karte("daten", 52.03, 55.85);
+      tl.to("#u2", { scaleX: 1, duration: 0.35, ease: "power2.inOut" }, 55.24);
+
+      tl.seek(0);
+      window.__timelines["billbee-skizzen"] = tl;
+    </script>
+  </body>
+</html>
