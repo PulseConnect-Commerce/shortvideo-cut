@@ -12,20 +12,6 @@
   },
   {
    "src": "video2/t1",
-   "from": 64.385,
-   "to": 65.555,
-   "nach": 0.0,
-   "vor": 0.09
-  },
-  {
-   "src": "video2/t1",
-   "from": 71.1,
-   "to": 74.745,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "video2/t1",
    "from": 75.175,
    "to": 87.875,
    "nach": 0.09,
@@ -69,15 +55,22 @@
   {
    "src": "video2/t1",
    "from": 293.915,
-   "to": 298.085,
-   "nach": 0.09,
+   "to": 295.635,
+   "nach": 0.0,
    "vor": 0.09
   },
   {
    "src": "video2/t1",
-   "from": 309.065,
-   "to": 339.725,
+   "from": 307.905,
+   "to": 334.3,
    "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "video2/t1",
+   "from": 336.5,
+   "to": 339.725,
+   "nach": 0.0,
    "vor": 0.0
   },
   {
@@ -90,8 +83,15 @@
   {
    "src": "video2/t1",
    "from": 439.265,
-   "to": 449.755,
+   "to": 447.08,
    "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "video2/t1",
+   "from": 447.86,
+   "to": 449.755,
+   "nach": 0.0,
    "vor": 0.09
   },
   {
@@ -281,78 +281,6 @@
    "src": "video2/t1",
    "start": 61.21,
    "end": 61.37
-  },
-  {
-   "text": "Aber",
-   "src": "video2/t1",
-   "start": 64.43,
-   "end": 64.57
-  },
-  {
-   "text": "vielleicht",
-   "src": "video2/t1",
-   "start": 64.65,
-   "end": 64.95
-  },
-  {
-   "text": "fange",
-   "src": "video2/t1",
-   "start": 64.99,
-   "end": 65.19
-  },
-  {
-   "text": "ich",
-   "src": "video2/t1",
-   "start": 65.25,
-   "end": 65.31
-  },
-  {
-   "text": "dafür",
-   "src": "video2/t1",
-   "start": 72.71,
-   "end": 72.95
-  },
-  {
-   "text": "am",
-   "src": "video2/t1",
-   "start": 72.99,
-   "end": 73.05
-  },
-  {
-   "text": "besten",
-   "src": "video2/t1",
-   "start": 73.07,
-   "end": 73.29
-  },
-  {
-   "text": "erstmal",
-   "src": "video2/t1",
-   "start": 73.33,
-   "end": 73.59
-  },
-  {
-   "text": "ganz",
-   "src": "video2/t1",
-   "start": 73.77,
-   "end": 73.97
-  },
-  {
-   "text": "von",
-   "src": "video2/t1",
-   "start": 74.03,
-   "end": 74.15
-  },
-  {
-   "text": "vorne",
-   "src": "video2/t1",
-   "start": 74.21,
-   "end": 74.41
-  },
-  {
-   "text": "an.",
-   "src": "video2/t1",
-   "start": 74.47,
-   "end": 74.53
   },
   {
    "text": "Ich",
@@ -1209,20 +1137,20 @@
   {
    "text": "Unsicherheit",
    "src": "video2/t1",
-   "start": 295.66,
-   "end": 296.26
+   "start": 307.94,
+   "end": 308.46
   },
   {
    "text": "der",
    "src": "video2/t1",
-   "start": 296.46,
-   "end": 296.62
+   "start": 308.5,
+   "end": 308.58
   },
   {
    "text": "Kunden",
    "src": "video2/t1",
-   "start": 297.44,
-   "end": 298.04
+   "start": 308.64,
+   "end": 308.96
   },
   {
    "text": "rund",
@@ -1761,20 +1689,20 @@
   {
    "text": "denn",
    "src": "video2/t1",
-   "start": 334.93,
-   "end": 335.79
+   "start": 336.55,
+   "end": 337.05
   },
   {
    "text": "2020",
    "src": "video2/t1",
-   "start": 334.58,
-   "end": 335.34
+   "start": 336.75,
+   "end": 337.25
   },
   {
    "text": "begann",
    "src": "video2/t1",
-   "start": 335.34,
-   "end": 337.94
+   "start": 337.3,
+   "end": 337.8
   },
   {
    "text": "dann",
@@ -2169,8 +2097,8 @@
   {
    "text": "die",
    "src": "video2/t1",
-   "start": 447.37,
-   "end": 447.97
+   "start": 447.9,
+   "end": 448.4
   },
   {
    "text": "einfachste",
@@ -4965,11 +4893,6 @@
   4,
   2,
   4,
-  2,
-  2,
-  3,
-  2,
-  3,
   3,
   2,
   1,
@@ -5026,9 +4949,9 @@
   2,
   4,
   3,
-  3,
-  3,
   2,
+  3,
+  3,
   3,
   3,
   3,

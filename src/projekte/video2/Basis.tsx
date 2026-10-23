@@ -13,7 +13,7 @@ import type { createCut } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
 
 type Cut = ReturnType<typeof createCut>;
-const BILD = { scale: 1.3, hoch: 255, x: 0 };
+const BILD = { scale: 1.3, hoch: 395, x: 0 };
 const FARBE = "#00E090";
 const BETONT = ["2026", "verkauft", "verkaufen", "umsatz", "dropshipping", "2016", "cent", "corona", "papa", "lieferengpässe", "profitabel", "prozesse", "personen", "follow", "10"];
 const FARBIG = ["2026", "verkauft", "verkaufen", "umsatz", "2016", "corona", "papa", "profitabel", "follow"];
@@ -35,7 +35,7 @@ const karten = (C: Cut): { von: number; ab: number; dauer: number; ton: number[]
 
 export const makeVideo = (C: Cut, hook: { line1: string; line2: string }): React.FC<Props> => {
   const K = karten(C);
-  const HOOK_ENDE = C.cue("aber");
+  const HOOK_ENDE = C.cue("2016");
   const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, untertitel = true, musik = "puls.mp3" }) => {
     const fr = useCurrentFrame();
     const push = interpolate(fr, [0, 90], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
