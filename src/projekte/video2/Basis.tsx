@@ -13,7 +13,7 @@ import type { createCut } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
 
 type Cut = ReturnType<typeof createCut>;
-const BILD = { scale: 1.3, hoch: 395, x: 0 };
+const BILD = { scale: 1.3, hoch: 395, x: 65 };
 const FARBE = "#00E090";
 const BETONT = ["2026", "verkauft", "verkaufen", "umsatz", "dropshipping", "2016", "cent", "corona", "papa", "lieferengpässe", "profitabel", "prozesse", "personen", "follow", "10"];
 const FARBIG = ["2026", "verkauft", "verkaufen", "umsatz", "2016", "corona", "papa", "profitabel", "follow"];

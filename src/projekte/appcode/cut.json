@@ -34,7 +34,7 @@
   {
    "src": "appcode/t1",
    "from": 142.605,
-   "to": 149.195,
+   "to": 148.97,
    "nach": 0.0,
    "vor": 0.09
   },
@@ -622,14 +622,14 @@
   {
    "text": "als",
    "src": "appcode/t1",
-   "start": 149.03,
-   "end": 149.13
+   "start": 150.8,
+   "end": 150.98
   },
   {
    "text": "Absicherung.",
    "src": "appcode/t1",
-   "start": 150.84,
-   "end": 151.63
+   "start": 151.0,
+   "end": 151.6
   },
   {
    "text": "du",
