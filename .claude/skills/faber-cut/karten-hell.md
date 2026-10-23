@@ -41,7 +41,8 @@ Untertitel und der farbige Teil des Hook-Titels in `#00E090` oder im selben Verl
 verwenden, und auch wenn es passt b-roll Aufnahmen von meinen älteren Videos oder Videos auf die ich reagieren
 einblenden. Es soll die Erzählung spannender und visueller darstellen"):
 - Zu jeder Aussage eine HyperFrames-Karte bzw. Animation (Motion-Grafik), nicht nur am Anfang.
-- **B-Roll aus seinen älteren Videos**, wenn er über früher, seine Agentur, Shopify, ein früheres Thema spricht:
+- **B-Roll aus seinen älteren Videos NUR ohne eingebrannte alte Grafiken** (seine Rüge 2026-10-23 zu P01: "Weshalb ist in dem Video ein Ausschnitt aus einem älteren Video von mir eingeblendet worden? … Titel ist in grün in der Hook, Motion captions im Farbverlauf und dann ein Ausschnitt der alten [Hook] in hellgrün"): kein alter Hook-Titel, keine alten Karten, keine alten Untertitel, keine fremde Leuchtfarbe im Ausschnitt; im Zweifel den Rohclip bzw. den Take ohne Overlays nehmen oder ganz weglassen. Nur wenn es inhaltlich wirklich passt (gleiches Thema), sonst keine B-Roll. Die Prüfung schaut jeden Ausschnitt als Standbild an.
+- Wenn das passt: B-Roll aus seinen älteren Videos, wenn er über früher, seine Agentur, Shopify, ein früheres Thema spricht:
   fertige Videos in `out/final/*.mp4` (oder im Drive-Ordner "Final geschnittene Videos"). Kurzer Ausschnitt
   (1,5-3 s), stumm, in einer hellen Karte über dem Kopf oder als Bild-im-Bild, nie über Augen und Mund.
 - **Reaction/NEWS:** das Video oder der Artikel, auf den er reagiert, als Ausschnitt in der Karte (Quelle nennen).
