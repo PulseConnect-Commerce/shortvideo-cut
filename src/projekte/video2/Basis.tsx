@@ -98,7 +98,7 @@ export const makeVideo = (C: Cut, hook: { line1: string; line2: string }): React
     );
   };
   const Video: React.FC<Props> = (p) => (
-    <DesignRahmen design="nacht-gruen">
+    <DesignRahmen design="verlauf">
       <Inhalt {...p} />
     </DesignRahmen>
   );

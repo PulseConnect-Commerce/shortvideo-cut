@@ -10,8 +10,9 @@
  "saetze": [
   {
    "take": "t1",
-   "ab": 12.3,
-   "text": "auch Amazon den Versand für Händler schon wieder teurer. Und diesmal betrifft es eben leider auch Deutschland."
+   "ab": 9.9,
+   "von": 9.93,
+   "text": "Nach der Preisanpassung von DHL macht tatsächlich auch Amazon den Versand für Händler schon wieder teurer. Und diesmal betrifft es eben leider auch Deutschland."
   },
   {
    "take": "t1",
@@ -35,8 +36,8 @@
   },
   {
    "take": "t1",
-   "ab": 56.7,
-   "text": "Bestellungen aus deinem eigenen Online-Shop, die Amazon für dich verschickt."
+   "ab": 56.15,
+   "text": "Also zum Beispiel auch Bestellungen aus deinem eigenen Online-Shop, die Amazon für dich verschickt."
   },
   {
    "take": "t1",
@@ -71,17 +72,17 @@
   },
   {
    "take": "t1",
-   "ab": 105.1,
-   "text": "Wenn auch alle anderen die Preise anheben und alles teurer wird, muss natürlich auch Amazon hinterher."
+   "ab": 105.2,
+   "text": "Und wenn auch alle anderen die Preise anheben und alles teurer wird, muss natürlich auch Amazon hinterher."
   },
   {
    "take": "t1",
-   "ab": 112.35,
-   "text": "Wenn ihr weitere solcher Kurznews in Zukunft nicht verpassen wollt, dann lasst mich gerne ein Follow da."
+   "ab": 114.6,
+   "text": "Wenn ihr weitere solcher Kurznews in Zukunft nicht verpassen wollt, dann lasst mich hier gerne ein Follow da."
   }
  ],
  "ende": {
-  "bis": 119.0
+  "bis": 119.8
  },
  "korrekturen": [
   [
@@ -100,7 +101,13 @@
    "t1",
    97.95,
    "annehmen,",
-   "anheben."
+   "anheben?"
+  ],
+  [
+   "t1",
+   97.0,
+   "Amazon",
+   "Amazon wohl"
   ]
  ]
 }

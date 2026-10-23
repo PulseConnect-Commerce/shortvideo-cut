@@ -28,13 +28,13 @@ const BILD = { scale: 1.3, hoch: 350, x: 65 };
 const GRADE = `brightness(0.82) ${STIL.gradeSanft}`;
 
 const fs = (s: number) => Math.round(s * C.FPS);
-/** Hook bis kurz vor der ersten Karte (Quelle bei 6,95 s) */
-const HOOK_ENDE = fs(6.15);
+/** Hook bis kurz vor der ersten Karte (Screenshot-Karte bei 7,95 s) */
+const HOOK_ENDE = fs(7.6);
 /** Punch-in 1,15 auf die Pointe "auch Amazon hinterher" (Karte Frage endet vorher bei 47,2 s) */
-const PUNCH = { ein: fs(46.63), voll: fs(47.65), aus: fs(49.45), ende: fs(50.05) };
+const PUNCH = { ein: fs(49.92), voll: fs(50.94), aus: fs(52.74), ende: fs(53.34) };
 
 /** Skizzen-Overlay (hyperframes/fba-skizzen): Zeiten der Karten, Akzente auf dem Wort */
-const KARTEN = [6.2, 9.85, 13.55, 16.7, 19.95, 23.85, 30.55, 38.45, 43.95];
+const KARTEN = [7.95, 12.3, 14.25, 18.85, 22.6, 27.15, 33.9, 41.8, 47.3];
 
 const BETONT = ["amazon", "fba", "mcf", "2%", "versandgebühr", "verkaufspreis", "cent", "november", "relevant", "tipp", "follow", "preise", "teurer", "deutschland"];
 const FARBIG = ["2%", "1", "5", "cent", "02.11", "19", "november", "2"];
@@ -67,7 +67,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
       </AbsoluteFill>
 
       {/* Hook im Titel-Stil; die Marke vorne (Erfolgsformel NEWS, Vorgabe 2026-10-23) */}
-      <DesignRahmen design="nacht-gruen">
+      <DesignRahmen design="verlauf">
         <AbsoluteFill style={{ transform: "translateY(40px) scale(0.9)", transformOrigin: "50% 0%" }}>
           <HookTitle fr={fr} line1="AMAZON ERHÖHT" line2="FBA-KOSTEN!" outAt={HOOK_ENDE} />
         </AbsoluteFill>
