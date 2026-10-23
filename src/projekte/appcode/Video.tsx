@@ -19,7 +19,7 @@ import cut from "./cut.json";
 const C = createCut(cut);
 export const meta = { id: "AppCode", durationInFrames: C.DURATION, fps: C.FPS };
 
-const BILD = { scale: 1.3, hoch: 350, x: 65 };
+const BILD = { scale: 1.5, hoch: 530, x: 75 };
 const HOOK_ENDE = C.WE("ist");
 
 const BETONT = ["shopify", "app", "weg", "apps", "theme-code", "automatisch", "kontrolliere", "deinstallation", "code-schnipsel", "theme-kopie", "absicherung", "jemanden", "wahllos"];

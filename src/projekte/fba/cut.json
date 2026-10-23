@@ -96,7 +96,7 @@
   },
   {
    "src": "fba/t1",
-   "from": 112.285,
+   "from": 112.445,
    "to": 119.0,
    "nach": 0.09,
    "vor": 0.09
@@ -1133,79 +1133,79 @@
    "text": "Kurznews",
    "src": "fba/t1",
    "start": 113.61,
-   "end": 114.09
+   "end": 114.2
   },
   {
    "text": "in",
    "src": "fba/t1",
-   "start": 116.18,
-   "end": 116.2
+   "start": 114.8,
+   "end": 115.1
   },
   {
    "text": "Zukunft",
    "src": "fba/t1",
-   "start": 116.25,
-   "end": 116.57
+   "start": 115.14,
+   "end": 115.44
   },
   {
    "text": "nicht",
    "src": "fba/t1",
-   "start": 116.63,
-   "end": 116.73
+   "start": 115.48,
+   "end": 115.78
   },
   {
    "text": "verpassen",
    "src": "fba/t1",
-   "start": 116.77,
-   "end": 117.15
+   "start": 115.82,
+   "end": 116.12
   },
   {
    "text": "wollt,",
    "src": "fba/t1",
-   "start": 117.19,
-   "end": 117.37
+   "start": 116.16,
+   "end": 116.46
   },
   {
    "text": "dann",
    "src": "fba/t1",
-   "start": 117.39,
-   "end": 117.51
+   "start": 116.5,
+   "end": 116.8
   },
   {
    "text": "lasst",
    "src": "fba/t1",
-   "start": 117.81,
-   "end": 117.99
+   "start": 116.84,
+   "end": 117.14
   },
   {
    "text": "mich",
    "src": "fba/t1",
-   "start": 118.03,
-   "end": 118.11
+   "start": 117.18,
+   "end": 117.48
   },
   {
    "text": "gerne",
    "src": "fba/t1",
-   "start": 118.25,
-   "end": 118.41
+   "start": 117.52,
+   "end": 117.82
   },
   {
    "text": "ein",
    "src": "fba/t1",
-   "start": 118.43,
-   "end": 118.49
+   "start": 117.86,
+   "end": 118.16
   },
   {
    "text": "Follow",
    "src": "fba/t1",
-   "start": 118.53,
-   "end": 118.73
+   "start": 118.2,
+   "end": 118.5
   },
   {
    "text": "da.",
    "src": "fba/t1",
-   "start": 118.77,
-   "end": 118.85
+   "start": 118.54,
+   "end": 118.84
   }
  ],
  "pages": [
