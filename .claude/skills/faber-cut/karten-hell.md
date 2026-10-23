@@ -55,3 +55,9 @@ Abschnittswechesel, Einblenden, usw. Es soll dabei aber nicht zu übertrieben au
 - Zahl zählt hoch oder Kernaussage: `pop.mp3` oder `success.mp3` (~0,10), höchstens 2-3 Mal im Video.
 - Nie `impact`, `riser`, `stamp`, `glitzer` im hellen Look (zu laut, zu verspielt). Kein Effekt auf jedem Wort;
   mindestens 1,5 s Abstand zwischen zwei Effekten; Effekte immer leiser als die Stimme (checks --stems).
+
+**Hook-Titel** (seine Vorgabe 2026-10-23, Referenz easyJet-Video youtube.com/shorts/DXlUyWNQnzQ: "die Hook in der
+Schriftart und Größe machen wie im verlinkten Video von uns … mit der neuen Verlauffarbe, statt dem knalligen
+Grünton"): `<DesignRahmen design="verlauf">` (src/lib/design.tsx). Erste Zeile groß, weiß, Anton mit dunkler Kontur
+(z. B. "AMAZON BEKOMMT"), zweite Zeile kleiner auf einem Balken im Verlauf #00E090 → #31ADEC mit dunkler Schrift
+("KONKURRENZ VON EASYJET!"). Die bekannte Marke gehört in die erste Zeile.

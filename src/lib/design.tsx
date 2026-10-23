@@ -221,7 +221,16 @@ const nacht = (name: keyof typeof LEUCHT): Design => {
   };
 };
 
-export const DESIGNS = { pulse: PULSE, nacht: nacht("nacht"), "nacht-gruen": nacht("nacht-gruen"), "nacht-mint": nacht("nacht-mint") } satisfies Record<
+/** Hook im easyJet-Stil (seine Vorgabe 2026-10-23: "die Hook in der Schriftart und Größe machen wie im verlinkten Video …
+ * Nur eben diesmal mit der neuen Verlauffarbe, statt dem knalligen Grünton"): erste Zeile groß und weiß (Anton), die
+ * zweite kleiner auf einem Balken im PulseConnect-Verlauf Grün → Hellblau, dunkle Schrift. Sonst wie nacht-gruen. */
+const VERLAUF = "linear-gradient(90deg, #00E090 0%, #31ADEC 100%)";
+const verlauf = (): Design => {
+  const d = nacht("nacht-gruen");
+  return { ...d, hook: { ...d.hook!, z1: { ...d.hook!.z1, max: 120 }, z2: { ...d.hook!.z2, flaeche: VERLAUF, max: 76, schatten: "0 10px 30px rgb(0 0 0 / 0.35)" } } };
+};
+
+export const DESIGNS = { pulse: PULSE, nacht: nacht("nacht"), "nacht-gruen": nacht("nacht-gruen"), "nacht-mint": nacht("nacht-mint"), verlauf: verlauf() } satisfies Record<
   string,
   Design
 >;
