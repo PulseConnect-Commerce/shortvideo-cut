@@ -45,3 +45,6 @@ Paul sprechen, mehr als zwei Renders gleichzeitig starten.
 ## Antwort an die Regie
 
 Das Urteil, wie es in der Datei steht.
+
+
+**Ton immer komplett anhören** (FBA 2026-10-23: unter Zeitdruck nur Anfang und Ende angehört, Doppler und Versprecher rutschten durch und gingen online): das ganze Video in Stücken von ~20 s mit faster_whisper transkribieren und Wort für Wort gegen den Untertiteltext der Karte lesen; jede Wiederholung, jeden Fehlstart, jedes abgebrochene Wort melden. Auch bei Eile nie auslassen.

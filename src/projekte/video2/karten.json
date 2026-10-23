@@ -1,0 +1,138 @@
+[
+ {
+  "cue": "2016",
+  "nach": null,
+  "ab": 0.0,
+  "dauer": 4.4,
+  "ton": []
+ },
+ {
+  "cue": "preise",
+  "nach": null,
+  "ab": 4.8,
+  "dauer": 4.0,
+  "ton": []
+ },
+ {
+  "cue": "2018",
+  "nach": null,
+  "ab": 9.2,
+  "dauer": 6.0,
+  "ton": []
+ },
+ {
+  "cue": "2019",
+  "nach": null,
+  "ab": 15.6,
+  "dauer": 6.2,
+  "ton": []
+ },
+ {
+  "cue": "2020",
+  "nach": null,
+  "ab": 22.2,
+  "dauer": 5.8,
+  "ton": []
+ },
+ {
+  "cue": "stornierungen",
+  "nach": null,
+  "ab": 28.4,
+  "dauer": 4.6,
+  "ton": []
+ },
+ {
+  "cue": "entschieden",
+  "nach": null,
+  "ab": 33.4,
+  "dauer": 5.0,
+  "ton": []
+ },
+ {
+  "cue": "begann",
+  "nach": null,
+  "ab": 38.8,
+  "dauer": 3.4,
+  "ton": []
+ },
+ {
+  "cue": "elektronikmarke",
+  "nach": null,
+  "ab": 42.6,
+  "dauer": 5.0,
+  "ton": []
+ },
+ {
+  "cue": "2024",
+  "nach": null,
+  "ab": 48.0,
+  "dauer": 5.0,
+  "ton": []
+ },
+ {
+  "cue": "mitarbeiterinnen",
+  "nach": null,
+  "ab": 53.4,
+  "dauer": 4.6,
+  "ton": []
+ },
+ {
+  "cue": "entscheidung",
+  "nach": null,
+  "ab": 58.4,
+  "dauer": 8.2,
+  "ton": []
+ },
+ {
+  "cue": "zweiteres",
+  "nach": null,
+  "ab": 67.0,
+  "dauer": 5.8,
+  "ton": []
+ },
+ {
+  "cue": "umsatz",
+  "nach": "spannend",
+  "ab": 73.2,
+  "dauer": 3.8,
+  "ton": []
+ },
+ {
+  "cue": "profitabel",
+  "nach": null,
+  "ab": 77.4,
+  "dauer": 8.4,
+  "ton": [
+   2.2,
+   4.3
+  ]
+ },
+ {
+  "cue": "onlineshop",
+  "nach": "erfahrung",
+  "ab": 86.2,
+  "dauer": 6.0,
+  "ton": []
+ },
+ {
+  "cue": "schnell",
+  "nach": "kürzester",
+  "ab": 92.6,
+  "dauer": 5.2,
+  "ton": []
+ },
+ {
+  "cue": "ehrlichen",
+  "nach": null,
+  "ab": 98.2,
+  "dauer": 5.6,
+  "ton": []
+ },
+ {
+  "cue": "like",
+  "nach": null,
+  "ab": 104.2,
+  "dauer": 4.6,
+  "ton": []
+ }
+]

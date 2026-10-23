@@ -10,6 +10,7 @@ import { DesignRahmen } from "../../lib/design";
 import { EditorialUntertitel } from "../../lib/editorial";
 import { Raster } from "../../lib/raster";
 import type { createCut } from "../../lib/schnitt";
+import kartenSpec from "./karten.json";
 import { STIL } from "../../lib/stil";
 
 type Cut = ReturnType<typeof createCut>;
@@ -20,26 +21,33 @@ const FARBIG = ["2026", "verkauft", "verkaufen", "umsatz", "2016", "corona", "pa
 
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false };
 
-/** Karten: [Startframe, Sekunden in skizzen.webm, Dauer in s, Ton-Offsets (s ab Kartenstart)] */
-const karten = (C: Cut): { von: number; ab: number; dauer: number; ton: number[] }[] => {
-  const i = (x: number) => Math.round(x);
-  const k5 = C.cue("umsatz", C.W("spannend"));
-  return [
-    { von: C.cue("2016"), ab: 0, dauer: 6.2, ton: [] },
-    { von: C.cue("corona"), ab: 7, dauer: 10, ton: [] },
-    { von: C.cue("2024"), ab: 18, dauer: 7.2, ton: [] },
-    { von: C.cue("alles", C.W("möglichkeit")), ab: 26, dauer: 6.8, ton: [] },
-    { von: i(k5), ab: 34, dauer: 13, ton: [4.3, 7.2, 10.1] },
-  ];
-};
+/** Karten aus karten.json (cue = Wort, auf dem die Karte erscheint); skizzen.webm spielt die Karten nacheinander ab */
+const karten = (C: Cut): { von: number; ab: number; dauer: number; ton: number[] }[] =>
+  (kartenSpec as { cue: string; nach: string | null; ab: number; dauer: number; ton: number[] }[]).map((k) => ({
+    von: Math.round(C.cue(k.cue, k.nach ? C.W(k.nach) : 0)),
+    ab: k.ab,
+    dauer: k.dauer,
+    ton: k.ton,
+  }));
+
+/** B-Roll aus älteren Videos (stumm, in heller Karte über dem Kopf) */
+const BROLL = [
+  { file: "b1.mp4", cue: "onlinehandel", nach: "", dauer: 2.6, text: "Aus meinem Video: Shop-Check" },
+  { file: "b3.mp4", cue: "shopify", nach: "videos", dauer: 2.2, text: "Aus meinem Video über Shopify-Apps" },
+];
+/** Zoom-Schnitte (Sekunden im Video, jeweils auf einem Schnitt) */
+const ZOOM = [[184.3, 189.7], [243.8, 999]];
 
 export const makeVideo = (C: Cut, hook: { line1: string; line2: string }): React.FC<Props> => {
   const K = karten(C);
+  const B = BROLL.map((b) => ({ ...b, von: Math.round(C.cue(b.cue, b.nach ? C.W(b.nach) : 0)) }));
   const HOOK_ENDE = C.cue("2016");
   const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, untertitel = true, musik = "puls.mp3" }) => {
     const fr = useCurrentFrame();
     const push = interpolate(fr, [0, 90], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
-    const zoom = 1 + 0.03 * (0.45 * push + 0.55 * (fr / C.DURATION));
+    const zoom0 = 1 + 0.03 * (0.45 * push + 0.55 * (fr / C.DURATION));
+    const zi = ZOOM.reduce((m, [a, b]) => (fr >= a * C.FPS && fr < b * C.FPS ? interpolate(fr, [a * C.FPS, a * C.FPS + 8], [1, 1.15], { ...clamp, easing: Easing.out(Easing.cubic) }) : m), 1);
+    const zoom = zoom0 * zi;
     return (
       <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
         <AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: "540px 740px" }}>
@@ -59,10 +67,25 @@ export const makeVideo = (C: Cut, hook: { line1: string; line2: string }): React
             />
           </Sequence>
         ))}
+        {B.map((b) => {
+          const o = interpolate(fr, [b.von, b.von + 8, b.von + b.dauer * C.FPS - 8, b.von + b.dauer * C.FPS], [0, 1, 1, 0], clamp);
+          return o > 0 ? (
+            <div key={b.file}>
+              <div style={{ position: "absolute", left: 110, top: 285, width: 860, height: 240, borderRadius: 36, overflow: "hidden", background: "#fff", boxShadow: "0 24px 60px rgba(0,0,0,0.22), 0 2px 6px rgba(0,0,0,0.08)", opacity: o, transform: `translateY(${(1 - o) * 28}px)` }}>
+                <Sequence from={b.von} layout="none">
+                  <OffthreadVideo src={staticFile(`broll/video2/${b.file}`)} muted style={{ width: 860, height: 240, objectFit: "cover" }} />
+                </Sequence>
+              </div>
+              <div style={{ position: "absolute", left: 110, top: 540, opacity: o, fontFamily: "Geist, sans-serif", fontWeight: 600, fontSize: 30, color: "#0B0C0E", background: "rgba(255,255,255,0.96)", borderRadius: 999, padding: "8px 24px" }}>{b.text}</div>
+            </div>
+          ) : null;
+        })}
         {untertitel && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} farbe={FARBE} y={1400} />}
         {sfx && (
           <>
-            <Sfx file="wusch-gross.mp3" at={HOOK_ENDE} volume={0.12} />
+            {B.map((b) => (
+              <Sfx key={`b${b.file}`} file="wusch-gross.mp3" at={b.von} volume={0.12} />
+            ))}
             {K.map((k) => (
               <Sfx key={`p${k.von}`} file="whoosh.mp3" at={k.von + 2} volume={0.12} />
             ))}
