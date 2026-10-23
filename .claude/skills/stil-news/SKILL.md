@@ -18,7 +18,7 @@ description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~4
 > 1. **Briefing** im Kalender Punkt für Punkt umsetzen, Checkliste mit Rohschnitt und Vorschau (Regel 00 im Skill
 >    faber-cut).
 > 2. **Schnitt:** wenige Schnitte, ganze Sätze, je Satz der letzte saubere Anlauf; Tempo wie im easyJet-Video.
->    **Kein** Wechsel weit/eng bei jedem Schnitt, keine Punch-ins, nur ein ruhiges Zoom-in (3 % über das ganze Video).
+>    Grundlage ist ein ruhiges Zoom-in (3 % über das ganze Video). **Ab 2026-10-23 erlaubt: ein paar Zoom-Schnitte, wo sie Sinn machen** (seine Vorgabe: "Es können durchaus mal ein paar Zoom Schnitte rein, wenn durchaus auch Sinn macht"): ein Punch-in (~1,15-fach) auf eine Kernaussage, eine Zahl, eine Pointe oder einen Abschnittswechsel, auf einem Schnitt, nie mitten im Satz; zurück auf weit beim nächsten Schnitt. Etwa alle 15-25 s höchstens einer, nicht bei jedem Schnitt, nie wenn oben eine Karte steht und der Zoom sie verdecken würde.
 > 3. **Bild:** Farbkorrektur `npm run farbe` vor dem Porträt, **sanft** (nicht heller, nicht kontrastreicher; seine
 >    Vorgabe 2026-10-18: "zu kontrastreich und zu hell", dann "optimieren und abschwächen", Regel 5b in faber-cut),
 >    im Video `<Takes … grade={STIL.gradeSanft} />` statt des Design-Grades, leichter Porträt-Modus (Hintergrund weich). Er steht
