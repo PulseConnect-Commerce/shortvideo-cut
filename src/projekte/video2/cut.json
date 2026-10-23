@@ -117,8 +117,8 @@
   },
   {
    "src": "video2/t1",
-   "from": 568.545,
-   "to": 576.105,
+   "from": 570.145,
+   "to": 576.115,
    "nach": 0.09,
    "vor": 0.09
   },
@@ -3003,25 +3003,25 @@
   {
    "text": "Nicht",
    "src": "video2/t1",
-   "start": 568.67,
-   "end": 568.83
+   "start": 570.27,
+   "end": 570.43
   },
   {
    "text": "nur",
    "src": "video2/t1",
-   "start": 568.89,
-   "end": 568.97
+   "start": 570.45,
+   "end": 570.55
   },
   {
    "text": "weil",
    "src": "video2/t1",
-   "start": 569.37,
-   "end": 569.49
+   "start": 570.57,
+   "end": 570.65
   },
   {
    "text": "ich",
    "src": "video2/t1",
-   "start": 569.14,
+   "start": 570.66,
    "end": 570.74
   },
   {

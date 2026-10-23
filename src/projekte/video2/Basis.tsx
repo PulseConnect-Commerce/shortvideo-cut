@@ -62,10 +62,11 @@ export const makeVideo = (C: Cut, hook: { line1: string; line2: string }): React
         {untertitel && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} farbe={FARBE} y={1400} />}
         {sfx && (
           <>
+            <Sfx file="wusch-gross.mp3" at={HOOK_ENDE} volume={0.12} />
             {K.map((k) => (
-              <Sfx key={`p${k.von}`} file="pop.mp3" at={k.von + 3} volume={STIL.sfx * 0.4} />
+              <Sfx key={`p${k.von}`} file="whoosh.mp3" at={k.von + 2} volume={0.12} />
             ))}
-            {K.flatMap((k) => k.ton.map((t) => <Sfx key={`t${k.von}${t}`} file="tick.mp3" at={k.von + Math.round(t * C.FPS)} volume={STIL.sfx * 0.3} />))}
+            {K.flatMap((k) => k.ton.map((t) => <Sfx key={`t${k.von}${t}`} file="tick.mp3" at={k.von + Math.round(t * C.FPS)} volume={0.1} />))}
           </>
         )}
         {musik && <Musik C={C} datei={musik} />}
