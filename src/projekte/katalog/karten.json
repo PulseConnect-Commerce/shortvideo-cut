@@ -1,0 +1,19 @@
+{
+  "hinweis": "Sekunden im geschnittenen Video (cut.json, 108,3 s). start = 2 Frames vor dem Wort. sfx: Ton-Offsets in Sekunden (absolut). Gebaut in hyperframes/katalog-skizzen/index.html.",
+  "karten": [
+    { "id": "q", "wort": "Denn", "text": "Quelle: The Verge, 13.10.2026 (Screenshot)", "start": 4.1, "ende": 7.45, "sfx": [{ "datei": "wusch-gross.mp3", "at": 4.1, "volume": 0.14 }] },
+    { "id": "katalog", "wort": "KI-Agenten", "text": "Produktkatalog offen für KI-Agenten", "start": 7.55, "ende": 11.35, "sfx": [{ "datei": "whoosh.mp3", "at": 7.55, "volume": 0.12 }] },
+    { "id": "suchen", "wort": "suchen", "text": "Suchen · Vergleichen · Einkauf per Shop Pay vorbereiten", "start": 11.55, "ende": 17.4, "punkte": { "suchen": 11.55, "vergleichen": 13.17, "einkauf": 14.85, "shoppay": 15.99 }, "sfx": [{ "datei": "whoosh.mp3", "at": 11.55, "volume": 0.12 }] },
+    { "id": "kunde", "wort": "Kunde", "text": "Kunde schließt selbst ab", "start": 17.67, "ende": 21.85, "sfx": [{ "datei": "whoosh.mp3", "at": 17.67, "volume": 0.12 }] },
+    { "id": "google", "wort": "Google", "text": "Statt Google und 10 Shops", "start": 24.6, "ende": 28.7, "punkte": { "shops": 26.19, "zehn": 27.07 }, "sfx": [{ "datei": "whoosh.mp3", "at": 24.6, "volume": 0.12 }] },
+    { "id": "chat", "wort": "such", "text": "KI-Chat: Such mir einen wasserdichten Rucksack für 100 € / Antwort: Passende Produkte gefunden und verglichen", "start": 31.12, "ende": 40.2, "punkte": { "antwort": 34.92, "verglichen": 36.96 }, "sfx": [{ "datei": "whoosh.mp3", "at": 31.12, "volume": 0.12 }] },
+    { "id": "haendler", "wort": "bedeutet", "text": "Was heißt das für Händler?", "start": 40.58, "ende": 46.3, "sfx": [{ "datei": "whoosh.mp3", "at": 40.58, "volume": 0.12 }] },
+    { "id": "startseite", "wort": "Startseite", "text": "Startseite → KI-Chat", "start": 48.32, "ende": 55.55, "punkte": { "kichat": 52.23 }, "sfx": [{ "datei": "whoosh.mp3", "at": 48.32, "volume": 0.12 }] },
+    { "id": "produktdaten", "wort": "Produktdaten", "text": "PRODUKTDATEN WERDEN WICHTIGER", "start": 55.8, "ende": 57.8, "sfx": [{ "datei": "whoosh.mp3", "at": 55.8, "volume": 0.12 }] },
+    { "id": "check", "wort": "Produkttitel", "text": "Checkliste: Produkttitel, Beschreibungen, Eigenschaften, Preise, Verfügbarkeit", "start": 57.97, "ende": 64.6, "punkte": { "produkttitel": 58.04, "beschreibungen": 59.17, "eigenschaften": 60.6, "preise": 62.16, "verfuegbarkeit": 63.16 }, "sfx": [{ "datei": "tick.mp3", "at": 58.34, "volume": 0.1 }, { "datei": "tick.mp3", "at": 59.47, "volume": 0.1 }, { "datei": "tick.mp3", "at": 60.9, "volume": 0.1 }, { "datei": "tick.mp3", "at": 62.46, "volume": 0.1 }, { "datei": "tick.mp3", "at": 63.46, "volume": 0.1 }] },
+    { "id": "versteht", "wort": "versteht", "text": "KI versteht dein Produkt nicht → schlechte Empfehlung", "start": 66.28, "ende": 71.5, "punkte": { "schlecht": 70.44 }, "sfx": [{ "datei": "whoosh.mp3", "at": 66.28, "volume": 0.12 }] },
+    { "id": "morgen", "wort": "nicht", "text": "Nicht ab morgen alle Kunden", "start": 77.92, "ende": 81.45, "sfx": [{ "datei": "whoosh.mp3", "at": 77.92, "volume": 0.12 }] },
+    { "id": "reagieren", "wort": "Fazit", "text": "Mein Fazit: Nicht erst reagieren, wenn KI-Shopping Alltag ist", "start": 81.86, "ende": 89.0, "sfx": [{ "datei": "whoosh.mp3", "at": 81.86, "volume": 0.12 }] },
+    { "id": "fazit", "wort": "Produktdaten", "text": "Produktdaten für Menschen und KI", "start": 89.35, "ende": 94.45, "punkte": { "menschen": 91.54, "ki": 93.08 }, "sfx": [{ "datei": "whoosh.mp3", "at": 89.35, "volume": 0.12 }] }
+  ]
+}

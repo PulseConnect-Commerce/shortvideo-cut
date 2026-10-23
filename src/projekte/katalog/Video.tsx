@@ -4,18 +4,19 @@
  *
  * Bild wie DHL: scale 1.3, hoch 450, x 25 (Augen ~800-830), sanfte Farbe (gradeSanft), nur ruhiges Zoom-in (3 %), kein Zoom-Wechsel.
  * Hook: DesignRahmen "verlauf" (line1 groß weiß, line2 auf Verlaufsbalken). Untertitel unter dem Kopf (y 1400), Akzent #00E090.
- * Karten (HyperFrames, hell): Platzhalter unten, auskommentiert, bis hyperframes/katalog-skizzen -> public/broll/katalog/skizzen.webm existiert.
+ * Karten (HyperFrames, hell): hyperframes/katalog-skizzen -> public/broll/katalog/skizzen.webm, 14 Karten, Zeiten und Töne in karten.json.
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
-// import { OffthreadVideo, Sequence, staticFile } from "remotion";
-import { clamp, HookTitle, Musik, Takes } from "../../lib/bausteine";
+import { OffthreadVideo, Sequence, staticFile } from "remotion";
+import { clamp, HookTitle, Musik, Sfx, Takes } from "../../lib/bausteine";
 import { DesignRahmen } from "../../lib/design";
 import { EditorialUntertitel } from "../../lib/editorial";
 import { Raster } from "../../lib/raster";
 import { createCut } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
 import cut from "./cut.json";
+import karten from "./karten.json";
 
 const C = createCut(cut);
 export const meta = { id: "Katalog", durationInFrames: C.DURATION, fps: C.FPS };
@@ -25,6 +26,9 @@ const BILD = { scale: 1.3, hoch: 450, x: 25 };
 
 /** Hook bis "Denn Shopify öffnet" (~4,1 s); danach Quelle The Verge oben (Karten-Agentin) */
 const HOOK_ENDE = C.W("denn") - 2;
+
+/** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json): whoosh pro Karte, tick pro Häkchen, wusch-gross auf der Quelle */
+const TOENE = karten.karten.flatMap((k) => k.sfx);
 
 const BETONT = ["shopify", "krass", "produktkatalog", "ki-agenten", "einkauf", "shoppay", "10", "rucksack", "100", "euro", "produktdaten", "empfehlen", "richtung", "fazit", "meinung", "folge"];
 const FARBIG = ["10", "100", "euro"];
@@ -37,7 +41,7 @@ export const Video: React.FC<Props> = (p) => (
   </DesignRahmen>
 );
 
-const Inhalt: React.FC<Props> = ({ voice = true, raster = false, untertitel = true, musik = "news.mp3" }) => {
+const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, untertitel = true, musik = "news.mp3" }) => {
   const fr = useCurrentFrame();
   const push = interpolate(fr, [0, 90], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
   const zoom = 1 + 0.03 * (0.45 * push + 0.55 * (fr / C.DURATION));
@@ -60,10 +64,11 @@ const Inhalt: React.FC<Props> = ({ voice = true, raster = false, untertitel = tr
         </AbsoluteFill>
       </DesignRahmen>
 
-      {/* Karten aus HyperFrames (Quelle The Verge, Skizzen, "PRODUKTDATEN WERDEN WICHTIGER"): erst einschalten, wenn die Datei da ist
+      {/* Karten aus HyperFrames (Quelle The Verge, Skizzen, "PRODUKTDATEN WERDEN WICHTIGER") */}
       <Sequence from={0} durationInFrames={C.DURATION} layout="none">
         <OffthreadVideo src={staticFile("broll/katalog/skizzen.webm")} transparent muted style={{ position: "absolute", inset: 0, width: 1080, height: 1920 }} />
-      </Sequence> */}
+      </Sequence>
+      {sfx && TOENE.map((t, i) => <Sfx key={i} file={t.datei} at={t.at * C.FPS} volume={t.volume} />)}
 
       {untertitel && <EditorialUntertitel C={C} fr={fr} betont={BETONT} farbig={FARBIG} y={1400} farbe="#00E090" />}
 

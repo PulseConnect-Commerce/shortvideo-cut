@@ -1,0 +1,73 @@
+{
+ "projekt": "billbee",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.3,
+  "pre": 0.05,
+  "post": 0.08
+ },
+ "start": {
+  "ab": 2.5
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 2.5,
+   "text": "Diese zwei Shopify Apps sollte jeder Shopify Handler unbedingt nach dem Schirm haben, wenn es um das Thema Buchhaltung geht und wenn du sie noch manuell vorbereitest."
+  },
+  {
+   "take": "t1",
+   "ab": 11.95,
+   "text": "Denn dann kann nämlich die Kombination aus Billbee und Lexware sehr interessant für dich sein."
+  },
+  {
+   "take": "t1",
+   "ab": 40.95,
+   "text": "Billbee sammelt hier dabei deine Bestellungen aus Shopify und auch weiteren Verkaufskanälen wie Marktplätzen und kann dann daraus automatisiert Rechnungen erzeugen und diese dann eben anschließend an Lexware Office übertragen."
+  },
+  {
+   "take": "t1",
+   "ab": 52.5,
+   "text": "Billbee übernimmt dann dabei also die Auftragsabwicklung. Lexware ist dann aber ein klassisches eigentliches Buchhaltungssystem."
+  },
+  {
+   "take": "t1",
+   "ab": 60.6,
+   "text": "Das funktioniert natürlich nicht einfach nur blind per Mausklick, sondern Steuersätze, OSS, Rechnungsstatus und auch Zahlungsabgleich müssen natürlich zu deinem Unternehmen passen und auch sauber vorher in der App eingerichtet sein."
+  },
+  {
+   "take": "t1",
+   "ab": 86.4,
+   "von": 86.5,
+   "text": "Mein Tipp hier ist, teste unbedingt die Verbindung vorher in wenigen Testbestellungen und prüfe das Ergebnis erstmal gemeinsam mit deiner Buchhaltung und deinem Steuerberater, bevor du hier überhaupt das Ganze auf live setzt."
+  },
+  {
+   "take": "t1",
+   "ab": 147.2,
+   "text": "Denn Automatisierung spart dir natürlich nur dann Zeit, wenn auch die Daten am Ende korrekt sind und stimmen."
+  },
+  {
+   "take": "t1",
+   "ab": 156.4,
+   "text": "Und für weitere solcher Tipps für E-Commerce und Shopify folge mir hier gerne."
+  }
+ ],
+ "ende": {
+  "bis": 152.4
+ },
+ "korrekturen": [
+  [
+   "t1",
+   5.53,
+   "Handler",
+   "Händler"
+  ],
+  [
+   "t1",
+   6.31,
+   "nach",
+   "auf"
+  ]
+ ]
+}
