@@ -17,10 +17,7 @@ zurückgeht und was Paul sieht.
    Projektname, Titel wie im Kalendertermin. Den Briefing-Termin aus dem Google Kalender mit der ganzen Beschreibung als
    Text nach `src/projekte/<projekt>/briefing.md` schreiben (Titel, Datum, Beschreibung; HTML zu Text). Cutter und
    Prüfer lesen das Briefing dort, sie brauchen keinen Kalender.
-1. **Cutter** (`cutter`, Modell Haiku; seine Vorgabe 2026-10-23: "Wenn die Qualität des Schnitts mit Haiku genauso
-   gut ist, dann können wir auch Heiku zum Schneiden und Publishen verwenden und Sonnet oder maximal Opus Niedrig zur
-   QM"). Mit `model: "sonnet"` nur, wenn Haiku beim selben Video scheitert oder der Prüfer zweimal dieselbe Sache
-   zurückgibt. Immer nur **ein** Cutter gleichzeitig (Token sparen, keine Porträts im Stau). Der Auftrag nennt: Projekt,
+1. **Cutter** (`cutter`, Modell **Sonnet**; seine Vorgabe 2026-10-23 nach dem FBA-Video: "Diesmal aber mitte mit Sonnet schneiden. Heiku Qualität ist zu schlecht"; Haiku nicht mehr zum Schneiden). Immer nur **ein** Cutter gleichzeitig (Token sparen, keine Porträts im Stau). Der Auftrag nennt: Projekt,
    Clips, Format, Titel, `briefing.md`, Termin (wenn bekannt), Pauls Wünsche aus dem Chat. Er liefert die Vollversion
    `out/final/<Komposition>.mp4` (mit `-post` und `-chat`), die ausgefüllte Übergabekarte
    `src/projekte/<projekt>/uebergabe.md` und den Bericht von `npm run pruefen`.
