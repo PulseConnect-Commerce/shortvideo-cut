@@ -1,12 +1,12 @@
 # Übergabekarte: Amazon erhöht FBA-Zuschlag auf 2 %
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **zurück, Runde 1** (Prüfer) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): Amazon erhöht FBA-Zuschlag auf 2 %
-- **Format / Design:** NEWS / …
+- **Format / Design:** NEWS / helle Karten (karten-hell.md)
 - **Plattformen:** TikTok, Instagram Reel, YouTube Short
-- **Termin laut Kalender:** … (Termin-Titel und Datum/Uhrzeit aus dem VERÖFFENTLICHUNGSPLAN; "keiner" wenn es keinen gibt)
-- **Briefing:** … (Titel des Kalendertermins)
+- **Termin:** Kalender "23.10.26 16:00 Uhr"; Paul im Chat: "News zu 15 Uhr reicht mir" → Fr 23.10.2026 15:00 (bzw. nächstmöglich nach Prüfung)
+- **Briefing:** E-COMMERCE-NEWS | Amazon erhöht FBA-Zuschlag auf 2 %
 
 <!-- auto:start (npm run uebergabe) -->
 - **Projekt / Komposition:** `fba` / `Fba`
@@ -35,43 +35,71 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 
 ## Briefing-Checkliste
 
-<!-- jeder Punkt des Briefings eine Zeile: [x] umgesetzt (wo, Sekunde) oder [ ] nicht umgesetzt (warum) -->
-- [ ] …
+- [x] Hook "AMAZON ERHÖHT FBA-KOSTEN!" (0-4 s)
+- [x] Fachartikel OnlinehändlerNews mit Medium/Datum (8 s)
+- [x] 1,5 % → 2 % (12 s), FBA ab 02.11. (16 s), MCF ab 19.11. (20 s)
+- [x] "2 % der Versandgebühr, nicht des Verkaufspreises" groß (28 s)
+- [x] Ø +0,02 €/Einheit (Amazon-Angabe) (32 s)
+- [x] Tipp und Zuschauerfrage (40 s / 44 s), Follow-Aufruf am Ende
+- [x] Keine erfundenen Zahlen, keine 2 %-auf-Umsatz-Grafik
 
 ## Entscheidungen des Cutters
 
-<!-- Variante (A/B/C), was weggelassen oder umgestellt ist, Sätze mit "ganz", Takes, Musik, Abweichungen vom Stil -->
-- …
+- Take-Wechsel bei ca. 34 s (Hintergrund leicht anders), siehe Urteil.
 
 ## Offene Fragen an Paul
 
-<!-- unsichere Wörter, Regieanweisungen, fehlendes Material; "keine", wenn es keine gibt -->
-- …
+- keine
 
 ## Captions
 
-TikTok-Titel (max. 90 Zeichen): …
+TikTok-Titel (max. 90 Zeichen): Amazon erhöht die FBA-Gebühren – was Händler jetzt wissen müssen
 
 ### TikTok
 
 ```
-…
+Amazon macht den Versand für Händler schon wieder teurer 📦
+
+Der Kraftstoff- und Logistikzuschlag steigt von 1,5 auf 2 % – ab 02.11. für FBA, ab 19.11. für Multi-Channel-Fulfillment. Wichtig: Die 2 % gelten auf die Versandgebühr, nicht auf deinen Verkaufspreis. Laut Amazon im Schnitt ca. 2 Cent mehr pro Einheit.
+
+Wie oft darf Amazon noch an der Gebührenschraube drehen? 👇
+
+#amazonfba #ecommerce
 ```
 
 ### Instagram (Reels)
 
 ```
-…
+Amazon erhöht schon wieder die Versandkosten für Händler 📦
+
+✅ Kraftstoff- und Logistikzuschlag: 1,5 % → 2 %
+✅ FBA in Deutschland und weiteren EU-Ländern: ab 02.11.
+✅ Multi-Channel-Fulfillment: ab 19.11.
+
+Wichtig: Die 2 % werden auf die Versandgebühr gerechnet, nicht auf deinen Verkaufspreis. Amazon spricht im Schnitt von ca. 2 Cent Mehrkosten pro Einheit – klingt wenig, aber bei tausenden Bestellungen und knapper Marge wird das relevant.
+
+Mein Tipp: FBA-Gebühren checken und Bestseller neu kalkulieren.
+
+Wie oft darf Amazon noch an der Gebührenschraube drehen? 👇
+
+Quelle: OnlinehändlerNews, Amazon Seller Forums
+
+#amazonfba #ecommerce
 ```
 
 ### YouTube (Shorts)
 
-Titel (max. 100 Zeichen): …
+Titel (max. 100 Zeichen): Amazon erhöht FBA-Zuschlag auf 2 % – was das für Händler bedeutet
 
 ```
-…
+Amazon hebt den Kraftstoff- und Logistikzuschlag von 1,5 auf 2 % an: ab 02.11. für FBA, ab 19.11. für Multi-Channel-Fulfillment. Die 2 % gelten auf die Versandgebühr, nicht auf den Verkaufspreis – laut Amazon im Schnitt ca. 2 Cent mehr pro Einheit. Wie oft darf Amazon noch an der Gebührenschraube drehen?
+
+Quelle: OnlinehändlerNews, Amazon Seller Forums
+
+#shorts #amazonfba
 ```
 
 ## Quellen
 
-- …
+- OnlinehändlerNews / Händlerbund, 19.10.2026: https://ohn.haendlerbund.de/amazon/logistik/amazon-erhoeht-logistik-zuschlag
+- Amazon Seller Forums, "Update to FBA and MCF EU fuel and logistics-related surcharge": https://sellercentral-europe.amazon.com/seller-forums/discussions/t/7273b612-67c1-44db-bfba-24eb6f3a46d9
