@@ -45,3 +45,12 @@ einblenden. Es soll die Erzählung spannender und visueller darstellen"):
   (1,5-3 s), stumm, in einer hellen Karte über dem Kopf oder als Bild-im-Bild, nie über Augen und Mund.
 - **Reaction/NEWS:** das Video oder der Artikel, auf den er reagiert, als Ausschnitt in der Karte (Quelle nennen).
 - Abwechseln: Karte, Zahl, Ausschnitt; nie zwei gleiche Kartentypen direkt hintereinander, wenn es anders geht.
+
+**Soundeffekte** (seine Vorgabe 2026-10-23: "es fehlen noch die kurzen Soundeffekte bei Szenenwechsel,
+Abschnittswechesel, Einblenden, usw. Es soll dabei aber nicht zu übertrieben aussehen"): `<Sfx>` aus
+`src/lib/bausteine.tsx`, Dateien in `public/sfx/`, auf den Frame der Bewegung gelegt.
+- Karte erscheint: `whoosh.mp3` leise (Volume ~0,10-0,14); Icon/Häkchen fertig: `tick.mp3` (~0,10).
+- Neuer Abschnitt / Szenenwechsel / B-Roll-Ausschnitt rein: `wusch-gross.mp3` oder `whoosh.mp3` (~0,14).
+- Zahl zählt hoch oder Kernaussage: `pop.mp3` oder `success.mp3` (~0,10), höchstens 2-3 Mal im Video.
+- Nie `impact`, `riser`, `stamp`, `glitzer` im hellen Look (zu laut, zu verspielt). Kein Effekt auf jedem Wort;
+  mindestens 1,5 s Abstand zwischen zwei Effekten; Effekte immer leiser als die Stimme (checks --stems).

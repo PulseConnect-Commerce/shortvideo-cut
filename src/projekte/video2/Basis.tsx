@@ -15,8 +15,8 @@ import { STIL } from "../../lib/stil";
 type Cut = ReturnType<typeof createCut>;
 const BILD = { scale: 1.3, hoch: 255, x: 0 };
 const FARBE = "#00E090";
-const BETONT = ["2026", "verkauft", "umsatz", "dropshipping", "2016", "cent", "corona", "papa", "lieferengpässe", "profitabel", "prozesse", "personen", "follow", "10"];
-const FARBIG = ["2026", "verkauft", "umsatz", "2016", "corona", "papa", "profitabel", "follow"];
+const BETONT = ["2026", "verkauft", "verkaufen", "umsatz", "dropshipping", "2016", "cent", "corona", "papa", "lieferengpässe", "profitabel", "prozesse", "personen", "follow", "10"];
+const FARBIG = ["2026", "verkauft", "verkaufen", "umsatz", "2016", "corona", "papa", "profitabel", "follow"];
 
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false };
 
@@ -28,7 +28,7 @@ const karten = (C: Cut): { von: number; ab: number; dauer: number; ton: number[]
     { von: C.cue("2016"), ab: 0, dauer: 6.2, ton: [] },
     { von: C.cue("corona"), ab: 7, dauer: 10, ton: [] },
     { von: C.cue("2024"), ab: 18, dauer: 7.2, ton: [] },
-    { von: C.cue("2026", C.W("kämpfen")), ab: 26, dauer: 6.8, ton: [] },
+    { von: C.cue("alles", C.W("möglichkeit")), ab: 26, dauer: 6.8, ton: [] },
     { von: i(k5), ab: 34, dauer: 13, ton: [4.3, 7.2, 10.1] },
   ];
 };

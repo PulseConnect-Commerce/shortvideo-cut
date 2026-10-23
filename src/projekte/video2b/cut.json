@@ -13,8 +13,8 @@
   {
    "src": "video2/t1",
    "from": 64.385,
-   "to": 66.8,
-   "nach": 0.09,
+   "to": 65.555,
+   "nach": 0.0,
    "vor": 0.09
   },
   {
@@ -111,20 +111,13 @@
   {
    "src": "video2/t1",
    "from": 528.775,
-   "to": 538.895,
+   "to": 543.475,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "video2/t1",
-   "from": 550.845,
-   "to": 554.505,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "video2/t1",
-   "from": 559.615,
+   "from": 568.545,
    "to": 576.105,
    "nach": 0.09,
    "vor": 0.09
@@ -2978,130 +2971,70 @@
    "end": 538.65
   },
   {
-   "text": "Und",
+   "text": "und",
    "src": "video2/t1",
-   "start": 550.91,
-   "end": 550.99
+   "start": 539.03,
+   "end": 539.11
   },
   {
-   "text": "deshalb",
+   "text": "mir",
    "src": "video2/t1",
-   "start": 551.01,
-   "end": 551.17
+   "start": 539.17,
+   "end": 539.27
   },
   {
-   "text": "habe",
+   "text": "da",
    "src": "video2/t1",
-   "start": 551.19,
-   "end": 551.29
+   "start": 539.33,
+   "end": 539.39
   },
   {
-   "text": "ich",
+   "text": "eben",
    "src": "video2/t1",
-   "start": 551.33,
-   "end": 551.39
+   "start": 539.53,
+   "end": 539.69
   },
   {
-   "text": "mich",
+   "text": "die",
    "src": "video2/t1",
-   "start": 551.41,
-   "end": 551.63
+   "start": 539.87,
+   "end": 539.95
   },
   {
-   "text": "dann",
+   "text": "Möglichkeit",
    "src": "video2/t1",
-   "start": 551.67,
-   "end": 551.91
+   "start": 539.99,
+   "end": 540.45
   },
   {
-   "text": "auch",
+   "text": "gegeben,",
    "src": "video2/t1",
-   "start": 552.21,
-   "end": 552.57
+   "start": 540.53,
+   "end": 540.87
   },
   {
-   "text": "nach",
+   "text": "alles",
    "src": "video2/t1",
-   "start": 552.09,
-   "end": 552.13
+   "start": 541.65,
+   "end": 541.87
   },
   {
-   "text": "harten",
+   "text": "einmal",
    "src": "video2/t1",
-   "start": 552.11,
-   "end": 554.505
-  },
-  {
-   "text": "zwei",
-   "src": "video2/t1",
-   "start": 562.51,
-   "end": 562.69
-  },
-  {
-   "text": "Jahren",
-   "src": "video2/t1",
-   "start": 562.77,
-   "end": 563.05
-  },
-  {
-   "text": "weiter",
-   "src": "video2/t1",
-   "start": 563.13,
-   "end": 563.39
-  },
-  {
-   "text": "kämpfen,",
-   "src": "video2/t1",
-   "start": 563.45,
-   "end": 563.83
-  },
-  {
-   "text": "Anfang",
-   "src": "video2/t1",
-   "start": 564.15,
-   "end": 564.37
-  },
-  {
-   "text": "2026",
-   "src": "video2/t1",
-   "start": 564.43,
-   "end": 565.37
-  },
-  {
-   "text": "dazu",
-   "src": "video2/t1",
-   "start": 565.41,
-   "end": 565.61
-  },
-  {
-   "text": "entschieden,",
-   "src": "video2/t1",
-   "start": 565.67,
-   "end": 566.05
-  },
-  {
-   "text": "mein",
-   "src": "video2/t1",
-   "start": 566.35,
-   "end": 566.49
-  },
-  {
-   "text": "Unternehmen",
-   "src": "video2/t1",
-   "start": 566.57,
-   "end": 567.01
+   "start": 542.27,
+   "end": 542.57
   },
   {
    "text": "zu",
    "src": "video2/t1",
-   "start": 567.23,
-   "end": 567.31
+   "start": 542.93,
+   "end": 543.01
   },
   {
    "text": "verkaufen.",
    "src": "video2/t1",
-   "start": 567.35,
-   "end": 567.75
+   "start": 543.07,
+   "end": 543.47
   },
   {
    "text": "Nicht",
@@ -5243,14 +5176,9 @@
   2,
   2,
   4,
-  3,
-  2,
-  1,
-  2,
   4,
+  2,
   3,
-  2,
-  2,
   2,
   2,
   2,
