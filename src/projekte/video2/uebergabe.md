@@ -1,6 +1,6 @@
 # Übergabekarte: Video 2 – Meine E-Commerce-Story
 
-Status: **eingeplant** – Fr 23.10.2026 10:00 (Europe/Berlin), Fassung A (Hook A), von Paul freigegeben ("Bitte zu 10
+Status: **eingeplant** – Fr 23.10.2026 13:00 (Europe/Berlin; erst 10:00, nach seinen Korrekturen verschoben), Fassung A, final 1BWI55dr-PbUSAdHqH_GeT_YppHQ3iy5J; Posts TikTok 404028411, Instagram 404028488, YouTube 404028563. Ursprünglich ("Bitte zu 10
 Uhr einplanen"). Metricool: TikTok 403869190, Instagram Reel 403869514, YouTube 403869588 (als normales Video, nicht
 Short: 4:23 ist länger als 3 min). Drive: Ordner "Video 2 – Meine E-Commerce-Story" (1WpqhUpqZD1UbyTYOhmvGVGoSgrACgXi7),
 Video 1dbiJAopapX8VP7DdBN79EhRoVi6Yus_W.
