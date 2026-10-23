@@ -1,6 +1,6 @@
 # Übergabekarte: P01 · App gelöscht – Code bleibt?
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** – Fr 23.10.2026 17:00 (Paul: "P01 OK", 16-18 Uhr). Metricool: TikTok 404086970, Instagram 404087058, YouTube Short 404087281. Drive: Ordner 1LAQlhrmCNrPOY_7v35eBv8PFVLHQ3kzL, Video 1wZbO70NgAHtFvHa0z8_A8MJYX5HmOlvX.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): P01 · App gelöscht – Code bleibt?
 - **Format / Design:** HERO / nacht-gruen nur im Hook-Titel, heller Karten-Look (karten-hell.md, Verlauf Grün → Hellblau)
