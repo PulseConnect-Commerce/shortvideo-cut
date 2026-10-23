@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>P01 App gelöscht – helle Karten</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <!-- P01 App gelöscht, heller Karten-Look (karten-hell.md). Zeiten = Sekunden im geschnittenen Video (cut.json). Lucide-Icons (ISC). -->
+    <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("assets/Geist-Variable.woff2") format("woff2");
+        font-weight: 100 900;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; }
+      .card {
+        position: absolute; left: 110px; top: 300px; width: 860px; height: 300px;
+        border-radius: 36px; background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
+        display: flex; align-items: center; gap: 44px; padding: 0 56px; opacity: 0;
+      }
+      .tile {
+        flex: none; width: 176px; height: 176px; border-radius: 32px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%);
+        display: flex; align-items: center; justify-content: center;
+      }
+      .d { opacity: 0; }
+      .tile svg { width: 104px; height: 104px; fill: none; stroke: #0b0c0e; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      .txt { display: flex; flex-direction: column; gap: 10px; }
+      .kicker { font-size: 30px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
+      .head { font-size: 76px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; color: #0b0c0e; }
+      .sub { font-size: 34px; font-weight: 500; color: #374151; }
+      /* zweiter Teil des Titels im PulseConnect-Verlauf: Grün (#00E090) nach Hellblau (#31ADEC) */
+      .verlauf { display: inline-block; padding-bottom: 6px; background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .line { display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="appcode-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="34.55">
+      <section id="c1" class="card clip" data-start="4.55" data-duration="2.07" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M10 12.5 8 15l2 2.5"/><path class="d" pathLength="1" d="m14 12.5 2 2.5-2 2.5"/><path class="d" pathLength="1" d="M14 2v4a2 2 0 0 0 2 2h4"/><path class="d" pathLength="1" d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/></svg></div><div class="txt"><span class="kicker line" id="c1k" style="opacity:0">Manche Apps</span><span class="head line" id="c1h" style="opacity:0">verändern</span><span class="head line" id="c1v" style="opacity:0"><span class="verlauf">Theme-Code</span></span></div></section>
+      <section id="c2" class="card clip" data-start="6.95" data-duration="2.6" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M3 6h18"/><path class="d" pathLength="1" d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path class="d" pathLength="1" d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><path class="d" pathLength="1" d="M10 11v6"/><path class="d" pathLength="1" d="M14 11v6"/></svg></div><div class="txt"><span class="kicker line" id="c2k" style="opacity:0">Nach dem Löschen</span><span class="head line" id="c2h" style="opacity:0">nicht immer</span><span class="head line" id="c2v" style="opacity:0"><span class="verlauf" style="font-size:68px">automatisch</span></span></div></section>
+      <section id="c4" class="card clip" data-start="13.05" data-duration="3.45" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><circle class="d" pathLength="1" cx="11" cy="11" r="8"/><path class="d" pathLength="1" d="m21 21-4.3-4.3"/></svg></div><div class="txt"><span class="kicker line" id="c4k" style="opacity:0">Nach jeder Deinstallation</span><span class="head line" id="c4h" style="opacity:0" style="font-size:68px">Shop &amp; Theme</span><span class="head line" id="c4v" style="opacity:0"><span class="verlauf" style="font-size:68px">prüfen</span></span></div></section>
+      <section id="c5" class="card clip" data-start="16.6" data-duration="4.0" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M14 2v4a2 2 0 0 0 2 2h4"/><path class="d" pathLength="1" d="M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><circle class="d" pathLength="1" cx="5" cy="14" r="3"/><path class="d" pathLength="1" d="m7 16 1.5 1.5"/></svg></div><div class="txt"><span class="kicker line" id="c5k" style="opacity:0">Im Theme</span><span class="head line" id="c5h" style="opacity:0">Code-Reste</span><span class="head line" id="c5v" style="opacity:0"><span class="verlauf">finden</span></span></div></section>
+      <section id="c6" class="card clip" data-start="20.75" data-duration="3.6" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><rect class="d" pathLength="1" x="8" y="8" width="14" height="14" rx="2"/><path class="d" pathLength="1" d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></div><div class="txt"><span class="kicker line" id="c6k" style="opacity:0">Vor Änderungen</span><span class="head line" id="c6h" style="opacity:0">Theme</span><span class="head line" id="c6v" style="opacity:0"><span class="verlauf">kopieren</span></span></div></section>
+      <section id="c7" class="card clip" data-start="24.5" data-duration="3.75" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path class="d" pathLength="1" d="m9 12 2 2 4-4"/></svg></div><div class="txt"><span class="kicker line" id="c7k" style="opacity:0">Meist nichts kaputt</span><span class="head line" id="c7h" style="opacity:0">Kopie =</span><span class="head line" id="c7v" style="opacity:0"><span class="verlauf" style="font-size:68px">Absicherung</span></span></div></section>
+      <section id="c8" class="card clip" data-start="28.3" data-duration="3.35" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle class="d" pathLength="1" cx="9" cy="7" r="4"/><path class="d" pathLength="1" d="M22 21v-2a4 4 0 0 0-3-3.87"/><path class="d" pathLength="1" d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="txt"><span class="kicker line" id="c8k" style="opacity:0">Unsicher?</span><span class="head line" id="c8h" style="opacity:0">Jemand</span><span class="head line" id="c8v" style="opacity:0"><span class="verlauf" style="font-size:58px">schaut drüber</span></span></div></section>
+      <section id="c9" class="card clip" data-start="31.75" data-duration="2.3" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><circle class="d" pathLength="1" cx="12" cy="12" r="10"/><path class="d" pathLength="1" d="m4.9 4.9 14.2 14.2"/></svg></div><div class="txt"><span class="kicker line" id="c9k" style="opacity:0">Code entfernen</span><span class="head line" id="c9h" style="opacity:0">Nicht</span><span class="head line" id="c9v" style="opacity:0"><span class="verlauf">wahllos</span></span></div></section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // Karte, Kicker und Titel kommen gemeinsam (karten-hell.md); Zeiten = Sekunden im geschnittenen Video
+      function karte(id, an, aus) {
+        const k = "#" + id;
+        tl.fromTo(k, { opacity: 0, y: 28, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out" }, an);
+        tl.fromTo(k + " .tile", { scale: 0.85 }, { scale: 1, duration: 0.5, ease: "power3.out" }, an + 0.05);
+        tl.fromTo(k + " .d", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut", stagger: 0.08 }, an + 0.12);
+        tl.set(k + " .d", { opacity: 1 }, an + 0.2);
+        tl.fromTo(k + " .line", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out", stagger: 0.07 }, an + 0.03);
+        tl.fromTo(k + " .verlauf", { backgroundPosition: "-60px 0" }, { backgroundPosition: "0px 0", duration: 0.6, ease: "power2.out" }, an + 0.2);
+        tl.to(k, { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, aus - 0.25);
+      }
+      karte("c1", 4.55, 6.62);
+      karte("c2", 6.95, 9.55);
+      karte("c4", 13.05, 16.5);
+      karte("c5", 16.6, 20.6);
+      karte("c6", 20.75, 24.35);
+      karte("c7", 24.5, 28.25);
+      karte("c8", 28.3, 31.65);
+      karte("c9", 31.75, 34.05);
+
+      tl.seek(0);
+      window.__timelines["appcode-skizzen"] = tl;
+    </script>
+  </body>
+</html>
