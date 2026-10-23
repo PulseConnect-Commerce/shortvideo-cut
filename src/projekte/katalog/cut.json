@@ -1,0 +1,2478 @@
+{
+ "projekt": "katalog",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "katalog/t1",
+   "from": 1.025,
+   "to": 5.045,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 9.785,
+   "to": 14.125,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 14.815,
+   "to": 28.395,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 31.735,
+   "to": 44.225,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 45.585,
+   "to": 51.485,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 68.585,
+   "to": 71.125,
+   "nach": 0.04,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 71.535,
+   "to": 78.095,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "katalog/t1",
+   "from": 84.765,
+   "to": 89.445,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 94.585,
+   "to": 104.665,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 117.195,
+   "to": 124.605,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 162.205,
+   "to": 183.295,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 186.535,
+   "to": 193.005,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 193.555,
+   "to": 201.345,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 255.395,
+   "to": 267.4,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Shopify",
+   "src": "katalog/t1",
+   "start": 1.11,
+   "end": 1.55
+  },
+  {
+   "text": "macht",
+   "src": "katalog/t1",
+   "start": 1.65,
+   "end": 1.81
+  },
+  {
+   "text": "gerade",
+   "src": "katalog/t1",
+   "start": 1.85,
+   "end": 2.09
+  },
+  {
+   "text": "etwas,",
+   "src": "katalog/t1",
+   "start": 2.19,
+   "end": 2.45
+  },
+  {
+   "text": "das",
+   "src": "katalog/t1",
+   "start": 2.51,
+   "end": 2.67
+  },
+  {
+   "text": "den",
+   "src": "katalog/t1",
+   "start": 2.73,
+   "end": 2.85
+  },
+  {
+   "text": "Onlinehandel",
+   "src": "katalog/t1",
+   "start": 2.93,
+   "end": 3.43
+  },
+  {
+   "text": "ziemlich",
+   "src": "katalog/t1",
+   "start": 3.61,
+   "end": 3.91
+  },
+  {
+   "text": "krass",
+   "src": "katalog/t1",
+   "start": 3.97,
+   "end": 4.19
+  },
+  {
+   "text": "verändern",
+   "src": "katalog/t1",
+   "start": 4.25,
+   "end": 4.61
+  },
+  {
+   "text": "könnte.",
+   "src": "katalog/t1",
+   "start": 4.65,
+   "end": 4.91
+  },
+  {
+   "text": "Denn",
+   "src": "katalog/t1",
+   "start": 9.85,
+   "end": 9.97
+  },
+  {
+   "text": "Shopify",
+   "src": "katalog/t1",
+   "start": 10.03,
+   "end": 10.47
+  },
+  {
+   "text": "öffnet",
+   "src": "katalog/t1",
+   "start": 10.65,
+   "end": 10.91
+  },
+  {
+   "text": "gerade",
+   "src": "katalog/t1",
+   "start": 10.97,
+   "end": 11.17
+  },
+  {
+   "text": "seinen",
+   "src": "katalog/t1",
+   "start": 11.25,
+   "end": 11.51
+  },
+  {
+   "text": "riesigen",
+   "src": "katalog/t1",
+   "start": 11.61,
+   "end": 11.97
+  },
+  {
+   "text": "Produktkatalog",
+   "src": "katalog/t1",
+   "start": 11.99,
+   "end": 12.65
+  },
+  {
+   "text": "jetzt",
+   "src": "katalog/t1",
+   "start": 12.77,
+   "end": 12.97
+  },
+  {
+   "text": "auch",
+   "src": "katalog/t1",
+   "start": 13.05,
+   "end": 13.17
+  },
+  {
+   "text": "für",
+   "src": "katalog/t1",
+   "start": 13.23,
+   "end": 13.33
+  },
+  {
+   "text": "KI-Agenten.",
+   "src": "katalog/t1",
+   "start": 13.41,
+   "end": 14.125
+  },
+  {
+   "text": "Und",
+   "src": "katalog/t1",
+   "start": 14.88,
+   "end": 14.94
+  },
+  {
+   "text": "das",
+   "src": "katalog/t1",
+   "start": 14.98,
+   "end": 15.08
+  },
+  {
+   "text": "bedeutet",
+   "src": "katalog/t1",
+   "start": 15.12,
+   "end": 15.48
+  },
+  {
+   "text": "nämlich",
+   "src": "katalog/t1",
+   "start": 15.52,
+   "end": 15.68
+  },
+  {
+   "text": "auch,",
+   "src": "katalog/t1",
+   "start": 15.74,
+   "end": 15.84
+  },
+  {
+   "text": "dass",
+   "src": "katalog/t1",
+   "start": 15.88,
+   "end": 16.02
+  },
+  {
+   "text": "die",
+   "src": "katalog/t1",
+   "start": 16.04,
+   "end": 16.12
+  },
+  {
+   "text": "KI-Assistenten",
+   "src": "katalog/t1",
+   "start": 16.18,
+   "end": 17.02
+  },
+  {
+   "text": "Produkte",
+   "src": "katalog/t1",
+   "start": 17.06,
+   "end": 17.42
+  },
+  {
+   "text": "eigenständig",
+   "src": "katalog/t1",
+   "start": 17.56,
+   "end": 18.08
+  },
+  {
+   "text": "suchen",
+   "src": "katalog/t1",
+   "start": 18.1,
+   "end": 18.34
+  },
+  {
+   "text": "können,",
+   "src": "katalog/t1",
+   "start": 18.4,
+   "end": 18.62
+  },
+  {
+   "text": "diese",
+   "src": "katalog/t1",
+   "start": 19.08,
+   "end": 19.26
+  },
+  {
+   "text": "miteinander",
+   "src": "katalog/t1",
+   "start": 19.3,
+   "end": 19.64
+  },
+  {
+   "text": "vergleichen",
+   "src": "katalog/t1",
+   "start": 19.72,
+   "end": 20.18
+  },
+  {
+   "text": "können",
+   "src": "katalog/t1",
+   "start": 20.22,
+   "end": 20.42
+  },
+  {
+   "text": "und",
+   "src": "katalog/t1",
+   "start": 20.46,
+   "end": 20.52
+  },
+  {
+   "text": "sogar",
+   "src": "katalog/t1",
+   "start": 20.58,
+   "end": 20.76
+  },
+  {
+   "text": "einen",
+   "src": "katalog/t1",
+   "start": 20.84,
+   "end": 20.96
+  },
+  {
+   "text": "eigenen",
+   "src": "katalog/t1",
+   "start": 21.08,
+   "end": 21.32
+  },
+  {
+   "text": "Einkauf",
+   "src": "katalog/t1",
+   "start": 21.4,
+   "end": 21.72
+  },
+  {
+   "text": "über",
+   "src": "katalog/t1",
+   "start": 21.92,
+   "end": 22.06
+  },
+  {
+   "text": "den",
+   "src": "katalog/t1",
+   "start": 22.12,
+   "end": 22.22
+  },
+  {
+   "text": "ShopPay",
+   "src": "katalog/t1",
+   "start": 22.54,
+   "end": 22.84
+  },
+  {
+   "text": "vorbereiten",
+   "src": "katalog/t1",
+   "start": 22.94,
+   "end": 23.38
+  },
+  {
+   "text": "können.",
+   "src": "katalog/t1",
+   "start": 23.44,
+   "end": 23.64
+  },
+  {
+   "text": "Der",
+   "src": "katalog/t1",
+   "start": 24.06,
+   "end": 24.16
+  },
+  {
+   "text": "Kunde",
+   "src": "katalog/t1",
+   "start": 24.22,
+   "end": 24.42
+  },
+  {
+   "text": "selbst",
+   "src": "katalog/t1",
+   "start": 24.48,
+   "end": 24.76
+  },
+  {
+   "text": "muss",
+   "src": "katalog/t1",
+   "start": 24.82,
+   "end": 25.04
+  },
+  {
+   "text": "natürlich",
+   "src": "katalog/t1",
+   "start": 25.12,
+   "end": 25.48
+  },
+  {
+   "text": "schon",
+   "src": "katalog/t1",
+   "start": 25.54,
+   "end": 25.7
+  },
+  {
+   "text": "am",
+   "src": "katalog/t1",
+   "start": 25.76,
+   "end": 25.84
+  },
+  {
+   "text": "Ende",
+   "src": "katalog/t1",
+   "start": 25.88,
+   "end": 26.04
+  },
+  {
+   "text": "den",
+   "src": "katalog/t1",
+   "start": 26.42,
+   "end": 26.52
+  },
+  {
+   "text": "Kauf",
+   "src": "katalog/t1",
+   "start": 26.58,
+   "end": 26.8
+  },
+  {
+   "text": "auch",
+   "src": "katalog/t1",
+   "start": 26.9,
+   "end": 27.0
+  },
+  {
+   "text": "eigenständig",
+   "src": "katalog/t1",
+   "start": 27.14,
+   "end": 27.64
+  },
+  {
+   "text": "abschließen.",
+   "src": "katalog/t1",
+   "start": 27.7,
+   "end": 28.2
+  },
+  {
+   "text": "Aber",
+   "src": "katalog/t1",
+   "start": 31.77,
+   "end": 31.87
+  },
+  {
+   "text": "stell",
+   "src": "katalog/t1",
+   "start": 31.93,
+   "end": 32.09
+  },
+  {
+   "text": "dir",
+   "src": "katalog/t1",
+   "start": 32.17,
+   "end": 32.23
+  },
+  {
+   "text": "jetzt",
+   "src": "katalog/t1",
+   "start": 32.25,
+   "end": 32.35
+  },
+  {
+   "text": "mal",
+   "src": "katalog/t1",
+   "start": 32.37,
+   "end": 32.49
+  },
+  {
+   "text": "vor,",
+   "src": "katalog/t1",
+   "start": 32.59,
+   "end": 32.75
+  },
+  {
+   "text": "du",
+   "src": "katalog/t1",
+   "start": 32.95,
+   "end": 32.99
+  },
+  {
+   "text": "suchst",
+   "src": "katalog/t1",
+   "start": 33.07,
+   "end": 33.31
+  },
+  {
+   "text": "in",
+   "src": "katalog/t1",
+   "start": 33.35,
+   "end": 33.41
+  },
+  {
+   "text": "Zukunft",
+   "src": "katalog/t1",
+   "start": 33.47,
+   "end": 33.85
+  },
+  {
+   "text": "nicht",
+   "src": "katalog/t1",
+   "start": 33.93,
+   "end": 34.07
+  },
+  {
+   "text": "mehr",
+   "src": "katalog/t1",
+   "start": 34.11,
+   "end": 34.21
+  },
+  {
+   "text": "bei",
+   "src": "katalog/t1",
+   "start": 34.25,
+   "end": 34.35
+  },
+  {
+   "text": "Google",
+   "src": "katalog/t1",
+   "start": 34.47,
+   "end": 34.73
+  },
+  {
+   "text": "nach",
+   "src": "katalog/t1",
+   "start": 34.79,
+   "end": 34.89
+  },
+  {
+   "text": "einem",
+   "src": "katalog/t1",
+   "start": 34.95,
+   "end": 35.13
+  },
+  {
+   "text": "Produkt",
+   "src": "katalog/t1",
+   "start": 35.17,
+   "end": 35.51
+  },
+  {
+   "text": "und",
+   "src": "katalog/t1",
+   "start": 35.85,
+   "end": 35.93
+  },
+  {
+   "text": "klickst",
+   "src": "katalog/t1",
+   "start": 35.99,
+   "end": 36.25
+  },
+  {
+   "text": "dich",
+   "src": "katalog/t1",
+   "start": 36.29,
+   "end": 36.39
+  },
+  {
+   "text": "dann",
+   "src": "katalog/t1",
+   "start": 36.41,
+   "end": 36.51
+  },
+  {
+   "text": "eben",
+   "src": "katalog/t1",
+   "start": 36.53,
+   "end": 36.63
+  },
+  {
+   "text": "durch",
+   "src": "katalog/t1",
+   "start": 36.67,
+   "end": 36.79
+  },
+  {
+   "text": "10",
+   "src": "katalog/t1",
+   "start": 36.87,
+   "end": 37.03
+  },
+  {
+   "text": "verschiedene",
+   "src": "katalog/t1",
+   "start": 37.09,
+   "end": 37.43
+  },
+  {
+   "text": "Online-Shops",
+   "src": "katalog/t1",
+   "start": 37.49,
+   "end": 37.89
+  },
+  {
+   "text": "durch.",
+   "src": "katalog/t1",
+   "start": 37.95,
+   "end": 38.17
+  },
+  {
+   "text": "Stattdessen",
+   "src": "katalog/t1",
+   "start": 38.63,
+   "end": 39.11
+  },
+  {
+   "text": "sagst",
+   "src": "katalog/t1",
+   "start": 39.19,
+   "end": 39.47
+  },
+  {
+   "text": "du",
+   "src": "katalog/t1",
+   "start": 39.51,
+   "end": 39.57
+  },
+  {
+   "text": "einfach",
+   "src": "katalog/t1",
+   "start": 39.63,
+   "end": 39.85
+  },
+  {
+   "text": "nur",
+   "src": "katalog/t1",
+   "start": 39.91,
+   "end": 39.99
+  },
+  {
+   "text": "der",
+   "src": "katalog/t1",
+   "start": 40.03,
+   "end": 40.11
+  },
+  {
+   "text": "KI,",
+   "src": "katalog/t1",
+   "start": 40.15,
+   "end": 40.37
+  },
+  {
+   "text": "such",
+   "src": "katalog/t1",
+   "start": 40.99,
+   "end": 41.13
+  },
+  {
+   "text": "mir",
+   "src": "katalog/t1",
+   "start": 41.19,
+   "end": 41.29
+  },
+  {
+   "text": "einen",
+   "src": "katalog/t1",
+   "start": 41.35,
+   "end": 41.55
+  },
+  {
+   "text": "guten",
+   "src": "katalog/t1",
+   "start": 41.87,
+   "end": 42.13
+  },
+  {
+   "text": "wasserdichten",
+   "src": "katalog/t1",
+   "start": 42.17,
+   "end": 42.61
+  },
+  {
+   "text": "Rucksack",
+   "src": "katalog/t1",
+   "start": 42.67,
+   "end": 43.05
+  },
+  {
+   "text": "für",
+   "src": "katalog/t1",
+   "start": 43.15,
+   "end": 43.23
+  },
+  {
+   "text": "100",
+   "src": "katalog/t1",
+   "start": 43.47,
+   "end": 43.67
+  },
+  {
+   "text": "Euro.",
+   "src": "katalog/t1",
+   "start": 43.77,
+   "end": 43.97
+  },
+  {
+   "text": "die",
+   "src": "katalog/t1",
+   "start": 45.65,
+   "end": 45.73
+  },
+  {
+   "text": "KI",
+   "src": "katalog/t1",
+   "start": 45.79,
+   "end": 45.97
+  },
+  {
+   "text": "findet",
+   "src": "katalog/t1",
+   "start": 46.07,
+   "end": 46.31
+  },
+  {
+   "text": "dir",
+   "src": "katalog/t1",
+   "start": 46.35,
+   "end": 46.41
+  },
+  {
+   "text": "dann",
+   "src": "katalog/t1",
+   "start": 46.45,
+   "end": 46.55
+  },
+  {
+   "text": "automatisch",
+   "src": "katalog/t1",
+   "start": 46.65,
+   "end": 47.15
+  },
+  {
+   "text": "passende",
+   "src": "katalog/t1",
+   "start": 47.19,
+   "end": 47.51
+  },
+  {
+   "text": "Produkte,",
+   "src": "katalog/t1",
+   "start": 47.57,
+   "end": 47.95
+  },
+  {
+   "text": "vergleicht",
+   "src": "katalog/t1",
+   "start": 48.11,
+   "end": 48.47
+  },
+  {
+   "text": "sie",
+   "src": "katalog/t1",
+   "start": 48.49,
+   "end": 48.57
+  },
+  {
+   "text": "miteinander",
+   "src": "katalog/t1",
+   "start": 48.61,
+   "end": 49.09
+  },
+  {
+   "text": "und",
+   "src": "katalog/t1",
+   "start": 49.43,
+   "end": 49.51
+  },
+  {
+   "text": "hilft",
+   "src": "katalog/t1",
+   "start": 49.55,
+   "end": 49.75
+  },
+  {
+   "text": "dir",
+   "src": "katalog/t1",
+   "start": 49.77,
+   "end": 49.85
+  },
+  {
+   "text": "dann",
+   "src": "katalog/t1",
+   "start": 49.89,
+   "end": 50.03
+  },
+  {
+   "text": "eben",
+   "src": "katalog/t1",
+   "start": 50.05,
+   "end": 50.15
+  },
+  {
+   "text": "komplett",
+   "src": "katalog/t1",
+   "start": 50.25,
+   "end": 50.65
+  },
+  {
+   "text": "beim",
+   "src": "katalog/t1",
+   "start": 50.75,
+   "end": 50.89
+  },
+  {
+   "text": "Einkauf.",
+   "src": "katalog/t1",
+   "start": 51.09,
+   "end": 51.41
+  },
+  {
+   "text": "Und",
+   "src": "katalog/t1",
+   "start": 68.62,
+   "end": 68.7
+  },
+  {
+   "text": "was",
+   "src": "katalog/t1",
+   "start": 68.72,
+   "end": 68.84
+  },
+  {
+   "text": "bedeutet",
+   "src": "katalog/t1",
+   "start": 68.9,
+   "end": 69.24
+  },
+  {
+   "text": "das",
+   "src": "katalog/t1",
+   "start": 69.28,
+   "end": 69.38
+  },
+  {
+   "text": "jetzt",
+   "src": "katalog/t1",
+   "start": 69.42,
+   "end": 69.62
+  },
+  {
+   "text": "für",
+   "src": "katalog/t1",
+   "start": 69.66,
+   "end": 69.76
+  },
+  {
+   "text": "Dich",
+   "src": "katalog/t1",
+   "start": 69.82,
+   "end": 69.96
+  },
+  {
+   "text": "als",
+   "src": "katalog/t1",
+   "start": 70.1,
+   "end": 70.24
+  },
+  {
+   "text": "Onlinehändler?",
+   "src": "katalog/t1",
+   "start": 70.34,
+   "end": 70.9
+  },
+  {
+   "text": "ich",
+   "src": "katalog/t1",
+   "start": 71.52,
+   "end": 71.58
+  },
+  {
+   "text": "glaube",
+   "src": "katalog/t1",
+   "start": 71.62,
+   "end": 71.82
+  },
+  {
+   "text": "schon,",
+   "src": "katalog/t1",
+   "start": 71.88,
+   "end": 72.08
+  },
+  {
+   "text": "dass",
+   "src": "katalog/t1",
+   "start": 72.12,
+   "end": 72.26
+  },
+  {
+   "text": "wir",
+   "src": "katalog/t1",
+   "start": 72.36,
+   "end": 72.46
+  },
+  {
+   "text": "uns",
+   "src": "katalog/t1",
+   "start": 72.54,
+   "end": 72.64
+  },
+  {
+   "text": "langsam",
+   "src": "katalog/t1",
+   "start": 72.74,
+   "end": 73.06
+  },
+  {
+   "text": "von",
+   "src": "katalog/t1",
+   "start": 73.14,
+   "end": 73.22
+  },
+  {
+   "text": "der",
+   "src": "katalog/t1",
+   "start": 73.26,
+   "end": 73.34
+  },
+  {
+   "text": "Vorstellung",
+   "src": "katalog/t1",
+   "start": 73.4,
+   "end": 73.84
+  },
+  {
+   "text": "verabschieden",
+   "src": "katalog/t1",
+   "start": 73.92,
+   "end": 74.4
+  },
+  {
+   "text": "müssen,",
+   "src": "katalog/t1",
+   "start": 74.44,
+   "end": 74.72
+  },
+  {
+   "text": "dass",
+   "src": "katalog/t1",
+   "start": 75.16,
+   "end": 75.3
+  },
+  {
+   "text": "jeder",
+   "src": "katalog/t1",
+   "start": 75.34,
+   "end": 75.54
+  },
+  {
+   "text": "Kunde",
+   "src": "katalog/t1",
+   "start": 75.6,
+   "end": 75.8
+  },
+  {
+   "text": "einfach",
+   "src": "katalog/t1",
+   "start": 75.9,
+   "end": 76.16
+  },
+  {
+   "text": "nur",
+   "src": "katalog/t1",
+   "start": 76.26,
+   "end": 76.34
+  },
+  {
+   "text": "zuerst",
+   "src": "katalog/t1",
+   "start": 76.4,
+   "end": 76.72
+  },
+  {
+   "text": "auf",
+   "src": "katalog/t1",
+   "start": 76.78,
+   "end": 76.86
+  },
+  {
+   "text": "die",
+   "src": "katalog/t1",
+   "start": 76.92,
+   "end": 77.0
+  },
+  {
+   "text": "Startseite",
+   "src": "katalog/t1",
+   "start": 77.06,
+   "end": 77.54
+  },
+  {
+   "text": "landet,",
+   "src": "katalog/t1",
+   "start": 77.6,
+   "end": 77.94
+  },
+  {
+   "text": "vielleicht",
+   "src": "katalog/t1",
+   "start": 84.83,
+   "end": 85.13
+  },
+  {
+   "text": "entdeckt",
+   "src": "katalog/t1",
+   "start": 85.17,
+   "end": 85.43
+  },
+  {
+   "text": "er",
+   "src": "katalog/t1",
+   "start": 85.47,
+   "end": 85.53
+  },
+  {
+   "text": "dann",
+   "src": "katalog/t1",
+   "start": 85.57,
+   "end": 85.69
+  },
+  {
+   "text": "dein",
+   "src": "katalog/t1",
+   "start": 85.71,
+   "end": 85.83
+  },
+  {
+   "text": "Produkt",
+   "src": "katalog/t1",
+   "start": 85.89,
+   "end": 86.11
+  },
+  {
+   "text": "künftig",
+   "src": "katalog/t1",
+   "start": 86.15,
+   "end": 86.53
+  },
+  {
+   "text": "direkt",
+   "src": "katalog/t1",
+   "start": 86.61,
+   "end": 86.93
+  },
+  {
+   "text": "einfach",
+   "src": "katalog/t1",
+   "start": 86.99,
+   "end": 87.21
+  },
+  {
+   "text": "über",
+   "src": "katalog/t1",
+   "start": 87.29,
+   "end": 87.43
+  },
+  {
+   "text": "den",
+   "src": "katalog/t1",
+   "start": 87.49,
+   "end": 87.57
+  },
+  {
+   "text": "KI-Chat",
+   "src": "katalog/t1",
+   "start": 87.63,
+   "end": 88.11
+  },
+  {
+   "text": "statt",
+   "src": "katalog/t1",
+   "start": 88.21,
+   "end": 88.39
+  },
+  {
+   "text": "über",
+   "src": "katalog/t1",
+   "start": 88.45,
+   "end": 88.57
+  },
+  {
+   "text": "die",
+   "src": "katalog/t1",
+   "start": 88.61,
+   "end": 88.69
+  },
+  {
+   "text": "Landingpage,",
+   "src": "katalog/t1",
+   "start": 88.73,
+   "end": 89.31
+  },
+  {
+   "text": "Und",
+   "src": "katalog/t1",
+   "start": 94.65,
+   "end": 94.71
+  },
+  {
+   "text": "dann",
+   "src": "katalog/t1",
+   "start": 94.75,
+   "end": 94.87
+  },
+  {
+   "text": "wird",
+   "src": "katalog/t1",
+   "start": 94.93,
+   "end": 95.03
+  },
+  {
+   "text": "es",
+   "src": "katalog/t1",
+   "start": 95.07,
+   "end": 95.11
+  },
+  {
+   "text": "ihm",
+   "src": "katalog/t1",
+   "start": 95.17,
+   "end": 95.25
+  },
+  {
+   "text": "extrem",
+   "src": "katalog/t1",
+   "start": 95.31,
+   "end": 95.57
+  },
+  {
+   "text": "wichtig,",
+   "src": "katalog/t1",
+   "start": 95.63,
+   "end": 95.85
+  },
+  {
+   "text": "dass",
+   "src": "katalog/t1",
+   "start": 95.91,
+   "end": 96.03
+  },
+  {
+   "text": "deine",
+   "src": "katalog/t1",
+   "start": 96.07,
+   "end": 96.27
+  },
+  {
+   "text": "Produktdaten",
+   "src": "katalog/t1",
+   "start": 96.35,
+   "end": 96.93
+  },
+  {
+   "text": "stimmen.",
+   "src": "katalog/t1",
+   "start": 96.99,
+   "end": 97.25
+  },
+  {
+   "text": "Also",
+   "src": "katalog/t1",
+   "start": 97.81,
+   "end": 97.95
+  },
+  {
+   "text": "vernünftige",
+   "src": "katalog/t1",
+   "start": 98.01,
+   "end": 98.45
+  },
+  {
+   "text": "Produkttitel,",
+   "src": "katalog/t1",
+   "start": 98.52,
+   "end": 99.12
+  },
+  {
+   "text": "klare",
+   "src": "katalog/t1",
+   "start": 99.32,
+   "end": 99.58
+  },
+  {
+   "text": "Beschreibungen,",
+   "src": "katalog/t1",
+   "start": 99.66,
+   "end": 100.36
+  },
+  {
+   "text": "vollständige",
+   "src": "katalog/t1",
+   "start": 100.46,
+   "end": 101.0
+  },
+  {
+   "text": "Eigenschaften,",
+   "src": "katalog/t1",
+   "start": 101.08,
+   "end": 101.74
+  },
+  {
+   "text": "aktuelle",
+   "src": "katalog/t1",
+   "start": 102.28,
+   "end": 102.6
+  },
+  {
+   "text": "Preise",
+   "src": "katalog/t1",
+   "start": 102.64,
+   "end": 103.0
+  },
+  {
+   "text": "und",
+   "src": "katalog/t1",
+   "start": 103.2,
+   "end": 103.3
+  },
+  {
+   "text": "eben",
+   "src": "katalog/t1",
+   "start": 103.38,
+   "end": 103.46
+  },
+  {
+   "text": "auch",
+   "src": "katalog/t1",
+   "start": 103.5,
+   "end": 103.6
+  },
+  {
+   "text": "Verfügbarkeiten.",
+   "src": "katalog/t1",
+   "start": 103.64,
+   "end": 104.46
+  },
+  {
+   "text": "Denn",
+   "src": "katalog/t1",
+   "start": 117.26,
+   "end": 117.4
+  },
+  {
+   "text": "wenn",
+   "src": "katalog/t1",
+   "start": 117.44,
+   "end": 117.54
+  },
+  {
+   "text": "deine",
+   "src": "katalog/t1",
+   "start": 117.56,
+   "end": 117.84
+  },
+  {
+   "text": "KI",
+   "src": "katalog/t1",
+   "start": 118.04,
+   "end": 118.32
+  },
+  {
+   "text": "zum",
+   "src": "katalog/t1",
+   "start": 118.52,
+   "end": 118.62
+  },
+  {
+   "text": "Beispiel",
+   "src": "katalog/t1",
+   "start": 118.64,
+   "end": 118.94
+  },
+  {
+   "text": "nicht",
+   "src": "katalog/t1",
+   "start": 119.02,
+   "end": 119.2
+  },
+  {
+   "text": "versteht,",
+   "src": "katalog/t1",
+   "start": 119.38,
+   "end": 119.86
+  },
+  {
+   "text": "was",
+   "src": "katalog/t1",
+   "start": 119.92,
+   "end": 120.04
+  },
+  {
+   "text": "du",
+   "src": "katalog/t1",
+   "start": 120.1,
+   "end": 120.16
+  },
+  {
+   "text": "da",
+   "src": "katalog/t1",
+   "start": 120.22,
+   "end": 120.28
+  },
+  {
+   "text": "überhaupt",
+   "src": "katalog/t1",
+   "start": 120.34,
+   "end": 120.58
+  },
+  {
+   "text": "gerade",
+   "src": "katalog/t1",
+   "start": 120.6,
+   "end": 120.8
+  },
+  {
+   "text": "verkaufst,",
+   "src": "katalog/t1",
+   "start": 120.88,
+   "end": 121.44
+  },
+  {
+   "text": "dann",
+   "src": "katalog/t1",
+   "start": 121.5,
+   "end": 121.64
+  },
+  {
+   "text": "wird",
+   "src": "katalog/t1",
+   "start": 121.7,
+   "end": 121.84
+  },
+  {
+   "text": "sie",
+   "src": "katalog/t1",
+   "start": 121.9,
+   "end": 121.98
+  },
+  {
+   "text": "dein",
+   "src": "katalog/t1",
+   "start": 122.02,
+   "end": 122.12
+  },
+  {
+   "text": "Produkt",
+   "src": "katalog/t1",
+   "start": 122.18,
+   "end": 122.44
+  },
+  {
+   "text": "vermutlich",
+   "src": "katalog/t1",
+   "start": 122.5,
+   "end": 122.98
+  },
+  {
+   "text": "auch",
+   "src": "katalog/t1",
+   "start": 123.06,
+   "end": 123.18
+  },
+  {
+   "text": "schlecht",
+   "src": "katalog/t1",
+   "start": 123.54,
+   "end": 123.84
+  },
+  {
+   "text": "empfehlen",
+   "src": "katalog/t1",
+   "start": 123.9,
+   "end": 124.2
+  },
+  {
+   "text": "können.",
+   "src": "katalog/t1",
+   "start": 124.26,
+   "end": 124.605
+  },
+  {
+   "text": "aber",
+   "src": "katalog/t1",
+   "start": 162.27,
+   "end": 162.39
+  },
+  {
+   "text": "ganz",
+   "src": "katalog/t1",
+   "start": 162.45,
+   "end": 162.61
+  },
+  {
+   "text": "wichtig",
+   "src": "katalog/t1",
+   "start": 162.67,
+   "end": 162.91
+  },
+  {
+   "text": "dabei",
+   "src": "katalog/t1",
+   "start": 162.97,
+   "end": 163.17
+  },
+  {
+   "text": "ist",
+   "src": "katalog/t1",
+   "start": 163.25,
+   "end": 163.37
+  },
+  {
+   "text": "es",
+   "src": "katalog/t1",
+   "start": 163.43,
+   "end": 163.49
+  },
+  {
+   "text": "zu",
+   "src": "katalog/t1",
+   "start": 163.53,
+   "end": 163.59
+  },
+  {
+   "text": "verstehen,",
+   "src": "katalog/t1",
+   "start": 163.65,
+   "end": 164.11
+  },
+  {
+   "text": "dass",
+   "src": "katalog/t1",
+   "start": 164.17,
+   "end": 164.29
+  },
+  {
+   "text": "natürlich",
+   "src": "katalog/t1",
+   "start": 164.41,
+   "end": 164.79
+  },
+  {
+   "text": "nur",
+   "src": "katalog/t1",
+   "start": 164.95,
+   "end": 165.03
+  },
+  {
+   "text": "weil",
+   "src": "katalog/t1",
+   "start": 165.05,
+   "end": 165.13
+  },
+  {
+   "text": "Shopify",
+   "src": "katalog/t1",
+   "start": 165.19,
+   "end": 165.53
+  },
+  {
+   "text": "jetzt",
+   "src": "katalog/t1",
+   "start": 165.57,
+   "end": 165.67
+  },
+  {
+   "text": "diese",
+   "src": "katalog/t1",
+   "start": 165.69,
+   "end": 165.83
+  },
+  {
+   "text": "Möglichkeiten",
+   "src": "katalog/t1",
+   "start": 165.91,
+   "end": 166.55
+  },
+  {
+   "text": "schafft,",
+   "src": "katalog/t1",
+   "start": 166.61,
+   "end": 166.89
+  },
+  {
+   "text": "heißt",
+   "src": "katalog/t1",
+   "start": 167.55,
+   "end": 167.73
+  },
+  {
+   "text": "das",
+   "src": "katalog/t1",
+   "start": 167.75,
+   "end": 167.85
+  },
+  {
+   "text": "natürlich",
+   "src": "katalog/t1",
+   "start": 167.87,
+   "end": 168.15
+  },
+  {
+   "text": "noch",
+   "src": "katalog/t1",
+   "start": 168.19,
+   "end": 168.29
+  },
+  {
+   "text": "lange",
+   "src": "katalog/t1",
+   "start": 168.35,
+   "end": 168.55
+  },
+  {
+   "text": "nicht,",
+   "src": "katalog/t1",
+   "start": 168.63,
+   "end": 168.79
+  },
+  {
+   "text": "dass",
+   "src": "katalog/t1",
+   "start": 168.83,
+   "end": 168.95
+  },
+  {
+   "text": "ab",
+   "src": "katalog/t1",
+   "start": 169.03,
+   "end": 169.13
+  },
+  {
+   "text": "morgen",
+   "src": "katalog/t1",
+   "start": 169.23,
+   "end": 169.47
+  },
+  {
+   "text": "jetzt",
+   "src": "katalog/t1",
+   "start": 169.51,
+   "end": 169.67
+  },
+  {
+   "text": "auf",
+   "src": "katalog/t1",
+   "start": 169.69,
+   "end": 169.79
+  },
+  {
+   "text": "einmal",
+   "src": "katalog/t1",
+   "start": 169.81,
+   "end": 169.97
+  },
+  {
+   "text": "alle",
+   "src": "katalog/t1",
+   "start": 170.15,
+   "end": 170.33
+  },
+  {
+   "text": "Kunden",
+   "src": "katalog/t1",
+   "start": 170.79,
+   "end": 171.07
+  },
+  {
+   "text": "so",
+   "src": "katalog/t1",
+   "start": 171.11,
+   "end": 171.19
+  },
+  {
+   "text": "einkaufen",
+   "src": "katalog/t1",
+   "start": 171.29,
+   "end": 171.75
+  },
+  {
+   "text": "werden.",
+   "src": "katalog/t1",
+   "start": 171.81,
+   "end": 172.07
+  },
+  {
+   "text": "Aber",
+   "src": "katalog/t1",
+   "start": 172.71,
+   "end": 172.93
+  },
+  {
+   "text": "die",
+   "src": "katalog/t1",
+   "start": 173.23,
+   "end": 173.29
+  },
+  {
+   "text": "Richtung",
+   "src": "katalog/t1",
+   "start": 173.35,
+   "end": 173.59
+  },
+  {
+   "text": "ist",
+   "src": "katalog/t1",
+   "start": 173.67,
+   "end": 173.73
+  },
+  {
+   "text": "natürlich",
+   "src": "katalog/t1",
+   "start": 173.77,
+   "end": 174.01
+  },
+  {
+   "text": "ganz",
+   "src": "katalog/t1",
+   "start": 174.05,
+   "end": 174.21
+  },
+  {
+   "text": "klar,",
+   "src": "katalog/t1",
+   "start": 174.27,
+   "end": 174.49
+  },
+  {
+   "text": "dass",
+   "src": "katalog/t1",
+   "start": 174.55,
+   "end": 174.69
+  },
+  {
+   "text": "es",
+   "src": "katalog/t1",
+   "start": 174.73,
+   "end": 174.79
+  },
+  {
+   "text": "immer",
+   "src": "katalog/t1",
+   "start": 174.95,
+   "end": 175.15
+  },
+  {
+   "text": "mehr",
+   "src": "katalog/t1",
+   "start": 175.27,
+   "end": 175.43
+  },
+  {
+   "text": "Richtung",
+   "src": "katalog/t1",
+   "start": 175.57,
+   "end": 175.85
+  },
+  {
+   "text": "KI",
+   "src": "katalog/t1",
+   "start": 175.91,
+   "end": 176.09
+  },
+  {
+   "text": "geht.",
+   "src": "katalog/t1",
+   "start": 176.21,
+   "end": 176.37
+  },
+  {
+   "text": "Mein",
+   "src": "katalog/t1",
+   "start": 176.97,
+   "end": 177.13
+  },
+  {
+   "text": "Fazit",
+   "src": "katalog/t1",
+   "start": 177.19,
+   "end": 177.51
+  },
+  {
+   "text": "für",
+   "src": "katalog/t1",
+   "start": 177.57,
+   "end": 177.65
+  },
+  {
+   "text": "Onlinehändler",
+   "src": "katalog/t1",
+   "start": 177.69,
+   "end": 178.27
+  },
+  {
+   "text": "ist,",
+   "src": "katalog/t1",
+   "start": 178.35,
+   "end": 178.45
+  },
+  {
+   "text": "dass",
+   "src": "katalog/t1",
+   "start": 178.67,
+   "end": 178.85
+  },
+  {
+   "text": "man",
+   "src": "katalog/t1",
+   "start": 179.13,
+   "end": 179.31
+  },
+  {
+   "text": "nicht",
+   "src": "katalog/t1",
+   "start": 179.85,
+   "end": 180.01
+  },
+  {
+   "text": "erst",
+   "src": "katalog/t1",
+   "start": 180.11,
+   "end": 180.27
+  },
+  {
+   "text": "reagieren",
+   "src": "katalog/t1",
+   "start": 180.31,
+   "end": 180.77
+  },
+  {
+   "text": "soll,",
+   "src": "katalog/t1",
+   "start": 180.79,
+   "end": 180.91
+  },
+  {
+   "text": "wenn",
+   "src": "katalog/t1",
+   "start": 180.95,
+   "end": 181.07
+  },
+  {
+   "text": "KI-Shopping",
+   "src": "katalog/t1",
+   "start": 181.27,
+   "end": 182.09
+  },
+  {
+   "text": "schon",
+   "src": "katalog/t1",
+   "start": 182.11,
+   "end": 182.25
+  },
+  {
+   "text": "längst",
+   "src": "katalog/t1",
+   "start": 182.29,
+   "end": 182.55
+  },
+  {
+   "text": "Alltag",
+   "src": "katalog/t1",
+   "start": 182.65,
+   "end": 182.95
+  },
+  {
+   "text": "ist,",
+   "src": "katalog/t1",
+   "start": 183.03,
+   "end": 183.19
+  },
+  {
+   "text": "sondern",
+   "src": "katalog/t1",
+   "start": 186.6,
+   "end": 186.84
+  },
+  {
+   "text": "man",
+   "src": "katalog/t1",
+   "start": 186.84,
+   "end": 187.0
+  },
+  {
+   "text": "sollte",
+   "src": "katalog/t1",
+   "start": 187.0,
+   "end": 187.5
+  },
+  {
+   "text": "viel",
+   "src": "katalog/t1",
+   "start": 187.5,
+   "end": 187.76
+  },
+  {
+   "text": "mehr",
+   "src": "katalog/t1",
+   "start": 187.76,
+   "end": 187.92
+  },
+  {
+   "text": "Produktdaten",
+   "src": "katalog/t1",
+   "start": 187.92,
+   "end": 188.42
+  },
+  {
+   "text": "jetzt",
+   "src": "katalog/t1",
+   "start": 188.45,
+   "end": 188.61
+  },
+  {
+   "text": "schon",
+   "src": "katalog/t1",
+   "start": 188.65,
+   "end": 188.77
+  },
+  {
+   "text": "so",
+   "src": "katalog/t1",
+   "start": 188.83,
+   "end": 188.89
+  },
+  {
+   "text": "aufstellen,",
+   "src": "katalog/t1",
+   "start": 188.99,
+   "end": 189.39
+  },
+  {
+   "text": "dass",
+   "src": "katalog/t1",
+   "start": 189.41,
+   "end": 189.53
+  },
+  {
+   "text": "sie",
+   "src": "katalog/t1",
+   "start": 189.55,
+   "end": 189.63
+  },
+  {
+   "text": "nicht",
+   "src": "katalog/t1",
+   "start": 189.67,
+   "end": 189.79
+  },
+  {
+   "text": "nur",
+   "src": "katalog/t1",
+   "start": 189.83,
+   "end": 189.91
+  },
+  {
+   "text": "von",
+   "src": "katalog/t1",
+   "start": 189.95,
+   "end": 190.05
+  },
+  {
+   "text": "Menschen,",
+   "src": "katalog/t1",
+   "start": 190.11,
+   "end": 190.45
+  },
+  {
+   "text": "sondern",
+   "src": "katalog/t1",
+   "start": 190.89,
+   "end": 191.15
+  },
+  {
+   "text": "auch",
+   "src": "katalog/t1",
+   "start": 191.25,
+   "end": 191.35
+  },
+  {
+   "text": "von",
+   "src": "katalog/t1",
+   "start": 191.39,
+   "end": 191.49
+  },
+  {
+   "text": "der",
+   "src": "katalog/t1",
+   "start": 191.53,
+   "end": 191.61
+  },
+  {
+   "text": "KI",
+   "src": "katalog/t1",
+   "start": 191.65,
+   "end": 191.85
+  },
+  {
+   "text": "abgefangen",
+   "src": "katalog/t1",
+   "start": 191.99,
+   "end": 192.43
+  },
+  {
+   "text": "werden",
+   "src": "katalog/t1",
+   "start": 192.47,
+   "end": 192.63
+  },
+  {
+   "text": "können.",
+   "src": "katalog/t1",
+   "start": 192.67,
+   "end": 192.87
+  },
+  {
+   "text": "Aber",
+   "src": "katalog/t1",
+   "start": 193.65,
+   "end": 193.77
+  },
+  {
+   "text": "mich",
+   "src": "katalog/t1",
+   "start": 193.85,
+   "end": 193.97
+  },
+  {
+   "text": "würde",
+   "src": "katalog/t1",
+   "start": 194.01,
+   "end": 194.13
+  },
+  {
+   "text": "mal",
+   "src": "katalog/t1",
+   "start": 194.15,
+   "end": 194.21
+  },
+  {
+   "text": "deine",
+   "src": "katalog/t1",
+   "start": 194.27,
+   "end": 194.41
+  },
+  {
+   "text": "Meinung",
+   "src": "katalog/t1",
+   "start": 194.47,
+   "end": 194.67
+  },
+  {
+   "text": "dazu",
+   "src": "katalog/t1",
+   "start": 194.73,
+   "end": 194.91
+  },
+  {
+   "text": "interessieren,",
+   "src": "katalog/t1",
+   "start": 194.95,
+   "end": 195.37
+  },
+  {
+   "text": "wie",
+   "src": "katalog/t1",
+   "start": 195.41,
+   "end": 195.49
+  },
+  {
+   "text": "siehst",
+   "src": "katalog/t1",
+   "start": 195.53,
+   "end": 195.69
+  },
+  {
+   "text": "du",
+   "src": "katalog/t1",
+   "start": 195.73,
+   "end": 195.79
+  },
+  {
+   "text": "das",
+   "src": "katalog/t1",
+   "start": 195.87,
+   "end": 195.99
+  },
+  {
+   "text": "Ganze?",
+   "src": "katalog/t1",
+   "start": 196.05,
+   "end": 196.37
+  },
+  {
+   "text": "Willst",
+   "src": "katalog/t1",
+   "start": 197.25,
+   "end": 197.43
+  },
+  {
+   "text": "du",
+   "src": "katalog/t1",
+   "start": 197.49,
+   "end": 197.55
+  },
+  {
+   "text": "der",
+   "src": "katalog/t1",
+   "start": 197.65,
+   "end": 197.73
+  },
+  {
+   "text": "KI",
+   "src": "katalog/t1",
+   "start": 197.79,
+   "end": 198.01
+  },
+  {
+   "text": "in",
+   "src": "katalog/t1",
+   "start": 198.43,
+   "end": 198.49
+  },
+  {
+   "text": "Zukunft",
+   "src": "katalog/t1",
+   "start": 198.55,
+   "end": 198.93
+  },
+  {
+   "text": "auch",
+   "src": "katalog/t1",
+   "start": 199.07,
+   "end": 199.21
+  },
+  {
+   "text": "komplett",
+   "src": "katalog/t1",
+   "start": 199.41,
+   "end": 199.75
+  },
+  {
+   "text": "deinem",
+   "src": "katalog/t1",
+   "start": 199.81,
+   "end": 200.07
+  },
+  {
+   "text": "Einkauf",
+   "src": "katalog/t1",
+   "start": 200.15,
+   "end": 200.43
+  },
+  {
+   "text": "übergeben?",
+   "src": "katalog/t1",
+   "start": 200.53,
+   "end": 201.19
+  },
+  {
+   "text": "Und",
+   "src": "katalog/t1",
+   "start": 255.47,
+   "end": 255.53
+  },
+  {
+   "text": "wenn",
+   "src": "katalog/t1",
+   "start": 255.55,
+   "end": 255.69
+  },
+  {
+   "text": "du",
+   "src": "katalog/t1",
+   "start": 255.75,
+   "end": 255.83
+  },
+  {
+   "text": "auch",
+   "src": "katalog/t1",
+   "start": 255.95,
+   "end": 256.05
+  },
+  {
+   "text": "in",
+   "src": "katalog/t1",
+   "start": 256.09,
+   "end": 256.15
+  },
+  {
+   "text": "Zukunft",
+   "src": "katalog/t1",
+   "start": 256.21,
+   "end": 256.53
+  },
+  {
+   "text": "weiterhin",
+   "src": "katalog/t1",
+   "start": 256.57,
+   "end": 256.93
+  },
+  {
+   "text": "wissen",
+   "src": "katalog/t1",
+   "start": 256.99,
+   "end": 257.23
+  },
+  {
+   "text": "willst,",
+   "src": "katalog/t1",
+   "start": 257.25,
+   "end": 257.47
+  },
+  {
+   "text": "wie",
+   "src": "katalog/t1",
+   "start": 257.53,
+   "end": 257.61
+  },
+  {
+   "text": "Shopify",
+   "src": "katalog/t1",
+   "start": 257.67,
+   "end": 258.07
+  },
+  {
+   "text": "und",
+   "src": "katalog/t1",
+   "start": 258.15,
+   "end": 258.21
+  },
+  {
+   "text": "KI",
+   "src": "katalog/t1",
+   "start": 258.23,
+   "end": 258.47
+  },
+  {
+   "text": "den",
+   "src": "katalog/t1",
+   "start": 258.57,
+   "end": 258.65
+  },
+  {
+   "text": "E-Commerce",
+   "src": "katalog/t1",
+   "start": 258.69,
+   "end": 259.13
+  },
+  {
+   "text": "verändert,",
+   "src": "katalog/t1",
+   "start": 259.15,
+   "end": 259.53
+  },
+  {
+   "text": "dann",
+   "src": "katalog/t1",
+   "start": 259.91,
+   "end": 260.05
+  },
+  {
+   "text": "folge",
+   "src": "katalog/t1",
+   "start": 260.11,
+   "end": 260.33
+  },
+  {
+   "text": "mir",
+   "src": "katalog/t1",
+   "start": 260.37,
+   "end": 260.47
+  },
+  {
+   "text": "ja",
+   "src": "katalog/t1",
+   "start": 260.49,
+   "end": 260.55
+  },
+  {
+   "text": "gerne",
+   "src": "katalog/t1",
+   "start": 260.61,
+   "end": 260.79
+  },
+  {
+   "text": "auf",
+   "src": "katalog/t1",
+   "start": 260.81,
+   "end": 260.89
+  },
+  {
+   "text": "dem",
+   "src": "katalog/t1",
+   "start": 260.93,
+   "end": 261.03
+  },
+  {
+   "text": "Kanal,",
+   "src": "katalog/t1",
+   "start": 261.07,
+   "end": 261.37
+  },
+  {
+   "text": "denn",
+   "src": "katalog/t1",
+   "start": 261.45,
+   "end": 261.57
+  },
+  {
+   "text": "ich",
+   "src": "katalog/t1",
+   "start": 262.01,
+   "end": 262.09
+  },
+  {
+   "text": "werde",
+   "src": "katalog/t1",
+   "start": 262.13,
+   "end": 262.29
+  },
+  {
+   "text": "dir",
+   "src": "katalog/t1",
+   "start": 262.39,
+   "end": 262.49
+  },
+  {
+   "text": "in",
+   "src": "katalog/t1",
+   "start": 262.57,
+   "end": 262.63
+  },
+  {
+   "text": "Zukunft",
+   "src": "katalog/t1",
+   "start": 262.71,
+   "end": 263.05
+  },
+  {
+   "text": "weitere",
+   "src": "katalog/t1",
+   "start": 263.11,
+   "end": 263.47
+  },
+  {
+   "text": "solcher",
+   "src": "katalog/t1",
+   "start": 263.55,
+   "end": 263.81
+  },
+  {
+   "text": "Tipps",
+   "src": "katalog/t1",
+   "start": 263.87,
+   "end": 264.11
+  },
+  {
+   "text": "und",
+   "src": "katalog/t1",
+   "start": 264.41,
+   "end": 264.49
+  },
+  {
+   "text": "Infos",
+   "src": "katalog/t1",
+   "start": 264.55,
+   "end": 264.87
+  },
+  {
+   "text": "zu",
+   "src": "katalog/t1",
+   "start": 265.05,
+   "end": 265.15
+  },
+  {
+   "text": "KI",
+   "src": "katalog/t1",
+   "start": 265.25,
+   "end": 265.49
+  },
+  {
+   "text": "und",
+   "src": "katalog/t1",
+   "start": 265.63,
+   "end": 265.71
+  },
+  {
+   "text": "Shopify",
+   "src": "katalog/t1",
+   "start": 265.77,
+   "end": 266.17
+  },
+  {
+   "text": "mitgeben.",
+   "src": "katalog/t1",
+   "start": 266.55,
+   "end": 266.89
+  }
+ ],
+ "pages": [
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  1,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  4,
+  1,
+  4,
+  3,
+  3,
+  2,
+  1,
+  2,
+  3,
+  3,
+  2,
+  3,
+  4,
+  2,
+  3,
+  4,
+  3,
+  2,
+  3,
+  4,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  2,
+  2,
+  2,
+  1,
+  2,
+  1,
+  1,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  2,
+  2,
+  3,
+  2,
+  1,
+  2,
+  4,
+  4,
+  3,
+  4,
+  2,
+  3,
+  3,
+  4,
+  3,
+  1,
+  3,
+  3,
+  4,
+  4,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  4,
+  3,
+  2,
+  2,
+  4,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  1,
+  3,
+  3,
+  4,
+  4,
+  1
+ ]
+}
