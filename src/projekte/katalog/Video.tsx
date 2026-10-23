@@ -53,7 +53,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           voice={voice}
           transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
           transformOrigin="50% 0%"
-          grade={STIL.gradeSanft}
+          grade={`${STIL.gradeSanft} brightness(0.88)`}
         />
       </AbsoluteFill>
 
