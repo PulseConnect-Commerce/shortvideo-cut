@@ -18,8 +18,8 @@
   },
   {
    "take": "t1",
-   "ab": 11.95,
-   "text": "Denn dann kann nämlich die Kombination aus Billbee und Lexware sehr interessant für dich sein."
+   "ab": 12.4,
+   "text": "Dann kann nämlich die Kombination aus Billbee und Lexware sehr interessant für dich sein."
   },
   {
    "take": "t1",
@@ -40,12 +40,12 @@
    "take": "t1",
    "ab": 86.4,
    "von": 86.5,
-   "text": "Mein Tipp hier ist, teste unbedingt die Verbindung vorher in wenigen Testbestellungen und prüfe das Ergebnis erstmal gemeinsam mit deiner Buchhaltung und deinem Steuerberater, bevor du hier überhaupt das Ganze auf live setzt."
+   "text": "Mein Tipp hier ist, teste unbedingt die Verbindung vorher in wenigen Testbestellungen und prüfe das Ergebnis gemeinsam mit deiner Buchhaltung und deinem Steuerberater, bevor du hier überhaupt das Ganze auf live setzt."
   },
   {
    "take": "t1",
    "ab": 147.2,
-   "text": "Denn Automatisierung spart dir natürlich nur dann Zeit, wenn auch die Daten am Ende korrekt sind und stimmen."
+   "text": "Denn Automatisierung spart dir nur dann Zeit, wenn auch die Daten am Ende korrekt sind."
   },
   {
    "take": "t1",
@@ -54,7 +54,7 @@
   }
  ],
  "ende": {
-  "bis": 152.4
+  "bis": 160.45
  },
  "korrekturen": [
   [
