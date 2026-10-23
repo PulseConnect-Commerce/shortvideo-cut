@@ -10,6 +10,18 @@ description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~4
 > Bewegung nach dem Motion-Skill und **zweifarbigem Titel** (zweiter Teil im PulseConnect-Verlauf Grün → Hellblau).
 > Der Verlauf ersetzt die eine Leuchtfarbe des Formats. Alles Weitere: `.claude/skills/faber-cut/karten-hell.md`.
 >
+> **ERFOLGSFORMEL NEWS (ab 2026-10-23, wenn es inhaltlich Sinn macht):** Die bisher besten Videos waren "easyShop im
+> Händlercheck" und "REWE liefert in 45 Minuten". Seine Vorgabe: "Ja, bitte deinen Vorschlag zu den NEWS Videos immer
+> berücksichtigen, wenn es natürlich Sinn macht. Vor allem ist mir aufgefallen, dass große bekannte Markennamen wie
+> REWE, OTTO, AMAZON, LIDL, DHL usw. immer besser ziehen und in der Hook erwähnt werden sollten".
+> 1. **Bekannte Marke in den Hook:** geht es um REWE, OTTO, Amazon, Lidl, DHL, Shopify, Temu …, steht der Name im
+>    Hook-Titel (möglichst vorne, in Versalien) und im ersten Satz; auch im TikTok-/YouTube-Titel und in der
+>    ersten Caption-Zeile.
+> 2. **Konkrete Zahl oder Frage im Hook** ("in 45 Minuten", "1,5 % → 2 %", "Lohnt sich …?").
+> 3. **Die echte Quelle im Bild** (Artikel-Kopf oder Video, auf das er reagiert), früh in den ersten ~8 s.
+> 4. **Klarer Nutzen für Händler** (was heißt das für deinen Shop?) und am Ende eine Frage an die Community.
+> 5. **Loop**, wenn das Transkript es hergibt: der letzte Satz läuft nahtlos in den ersten.
+>
 > **CTA (ab 2026-10-23, alle Formate):** der Aufruf (Folgen, Speichern, Kommentieren) darf auch am Anfang oder in der
 > Mitte stehen, wenn er im Transkript inhaltlich dort passt ("CTA kann auch ruhig mal gegen Anfang oder in der Mitte
 > des Videos kommen, wenn es inhaltlich im Transkript dazu passt"). Nicht künstlich ans Ende verschieben.
