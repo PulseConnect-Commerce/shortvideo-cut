@@ -2,24 +2,115 @@
  "projekt": "katalog",
  "sprache": "de",
  "fps": 30,
- "pausen": {"min_gap": 0.8, "pre": 0.06, "post": 0.1},
+ "pausen": {
+  "min_gap": 0.8,
+  "pre": 0.06,
+  "post": 0.1
+ },
  "saetze": [
-  {"take": "t1", "ab": 1.0, "text": "Shopify macht gerade etwas, das den Onlinehandel ziemlich krass verändern könnte. Denn Shopify öffnet gerade seinen riesigen Produktkatalog jetzt auch für KI-Agenten. Und das bedeutet nämlich auch, dass die KI-Assistenten Produkte eigenständig suchen können, diese miteinander vergleichen können und sogar einen eigenen Einkauf über den ShopPay vorbereiten können. Der Kunde selbst musste natürlich schon am Ende den Kauf auch eigenständig abschließen."},
-  {"take": "t1", "ab": 31.7, "text": "Aber stell dir jetzt mal vor, du suchst in Zukunft nicht mehr bei Google nach einem Produkt und klickst dich dann eben durch 10 verschiedene Online-Shops durch. Stattdessen sagst du einfach nur der KI, such mir einen guten wasserdichten Rucksack für 100 Euro. die KI findet dir dann automatisch passende Produkte, vergleicht sie miteinander und hilft dir dann eben komplett beim Einkauf."},
-  {"take": "t1", "ab": 68.55, "text": "Und was bedeutet das jetzt für Dich als Onlinehändler? ich glaube schon, dass wir uns langsam von der Vorstellung verabschieden müssen, dass jeder Kunde einfach nur zuerst auf die Startseite landet,"},
-  {"take": "t1", "ab": 84.75, "text": "vielleicht entdeckt er dann sein Produkt künftig direkt einfach über den KI-Chat statt über die Landingpage,"},
-  {"take": "t1", "ab": 94.6, "text": "Und dann wird es ihm extrem wichtig, dass deine Produktdaten stimmen. Also vernünftige Produkttitel, klare Beschreibungen, vollständige Eigenschaften, aktuelle Preise und eben auch Verfügbarkeiten."},
-  {"take": "t1", "ab": 117.2, "text": "Denn wenn deine KI zum Beispiel nicht versteht, was du da überhaupt gerade verkaufst, dann wird sie dein Produkt vermutlich auch schlecht empfehlen können."},
-  {"take": "t1", "ab": 162.2, "text": "aber ganz wichtig dabei ist es zu verstehen, dass natürlich nur bei Shopify jetzt diese Möglichkeiten schafft, heißt das natürlich noch lange nicht, dass ab morgen jetzt auf einmal alle Kunden so einkaufen werden. Aber die Richtung ist natürlich ganz klar, dass es immer mehr Richtung KI geht. Mein Fazit für Onlinehändler ist, dass man nicht erst reagieren soll, wenn KI-Shopping schon längst Alltag ist,"},
-  {"take": "t1", "ab": 186.55, "text": "sondern man sollte viel mehr Produktdaten jetzt schon so aufstellen, dass sie nicht nur von Menschen, sondern auch von der KI abgefangen werden können."},
-  {"take": "t1", "ab": 193.6, "text": "Aber mich würde mal deine Meinung dazu interessieren, wie siehst du das Ganze? Willst du der KI in Zukunft auch komplett deinem Einkauf übergeben?"},
-  {"take": "t1", "ab": 255.4, "text": "Und wenn du auch in Zukunft weiterhin wissen willst, wie Shopify und KI den E-Commerce verändert, dann folge mich ja gerne auf dem Kanal, denn ich werde dir in Zukunft weitere solcher Tipps und Infos zu KI und Shopify mitgeben."}
+  {
+   "take": "t1",
+   "ab": 1.0,
+   "text": "Shopify macht gerade etwas, das den Onlinehandel ziemlich krass verändern könnte. Denn Shopify öffnet gerade seinen riesigen Produktkatalog jetzt auch für KI-Agenten. Und das bedeutet nämlich auch, dass die KI-Assistenten Produkte eigenständig suchen können, diese miteinander vergleichen können und sogar einen eigenen Einkauf über den ShopPay vorbereiten können. Der Kunde selbst musste natürlich schon am Ende den Kauf auch eigenständig abschließen."
+  },
+  {
+   "take": "t1",
+   "ab": 31.7,
+   "text": "Aber stell dir jetzt mal vor, du suchst in Zukunft nicht mehr bei Google nach einem Produkt und klickst dich dann eben durch 10 verschiedene Online-Shops durch. Stattdessen sagst du einfach nur der KI, such mir einen guten wasserdichten Rucksack für 100 Euro. die KI findet dir dann automatisch passende Produkte, vergleicht sie miteinander und hilft dir dann eben komplett beim Einkauf.",
+   "stumm": [
+    [
+     41.6,
+     41.78
+    ]
+   ]
+  },
+  {
+   "take": "t1",
+   "ab": 68.55,
+   "text": "Und was bedeutet das jetzt für Dich als Onlinehändler? ich glaube schon, dass wir uns langsam von der Vorstellung verabschieden müssen, dass jeder Kunde einfach nur zuerst auf die Startseite landet,"
+  },
+  {
+   "take": "t1",
+   "ab": 84.75,
+   "text": "vielleicht entdeckt er dann sein Produkt künftig direkt einfach über den KI-Chat statt über die Landingpage,"
+  },
+  {
+   "take": "t1",
+   "ab": 94.6,
+   "text": "Und dann wird es ihm extrem wichtig, dass deine Produktdaten stimmen. Also vernünftige Produkttitel, klare Beschreibungen, vollständige Eigenschaften, aktuelle Preise und eben auch Verfügbarkeiten."
+  },
+  {
+   "take": "t1",
+   "ab": 117.2,
+   "text": "Denn wenn deine KI zum Beispiel nicht versteht, was du da überhaupt gerade verkaufst, dann wird sie dein Produkt vermutlich auch schlecht empfehlen können."
+  },
+  {
+   "take": "t1",
+   "ab": 162.2,
+   "text": "aber ganz wichtig dabei ist es zu verstehen, dass natürlich nur bei Shopify jetzt diese Möglichkeiten schafft, heißt das natürlich noch lange nicht, dass ab morgen jetzt auf einmal alle Kunden so einkaufen werden. Mein Fazit für Onlinehändler ist, dass man nicht erst reagieren soll, wenn KI-Shopping schon längst Alltag ist,",
+   "stumm": [
+    [
+     173.0,
+     173.18
+    ],
+    [
+     181.5,
+     181.73
+    ]
+   ]
+  },
+  {
+   "take": "t1",
+   "ab": 186.55,
+   "text": "sondern man sollte viel mehr Produktdaten jetzt schon so aufstellen, dass sie nicht nur von Menschen, sondern auch von der KI abgefangen werden können."
+  },
+  {
+   "take": "t1",
+   "ab": 193.6,
+   "text": "Aber mich würde mal deine Meinung dazu interessieren, wie siehst du das Ganze? Willst du der KI in Zukunft auch komplett deinem Einkauf übergeben?",
+   "stumm": [
+    [
+     198.07,
+     198.3
+    ]
+   ]
+  },
+  {
+   "take": "t1",
+   "ab": 255.4,
+   "text": "Und wenn du auch in Zukunft weiterhin wissen willst, wie Shopify und KI den E-Commerce verändert, dann folge mich ja gerne auf dem Kanal."
+  }
  ],
- "ende": {"bis": 267.4},
  "korrekturen": [
-  ["t1", 24.82, "musste", "muss"],
-  ["t1", 85.71, "sein", "dein"],
-  ["t1", 165.05, "bei", "weil"],
-  ["t1", 260.37, "mich", "mir"]
+  [
+   "t1",
+   24.82,
+   "musste",
+   "muss"
+  ],
+  [
+   "t1",
+   85.71,
+   "sein",
+   "dein"
+  ],
+  [
+   "t1",
+   165.05,
+   "bei",
+   "weil"
+  ],
+  [
+   "t1",
+   260.37,
+   "mich",
+   "mir"
+  ],
+  [
+   "t1",
+   261.07,
+   "Kanal,",
+   "Kanal."
+  ]
  ]
 }

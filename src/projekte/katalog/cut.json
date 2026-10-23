@@ -28,6 +28,12 @@
    "src": "katalog/t1",
    "from": 31.735,
    "to": 44.225,
+   "stumm": [
+    [
+     41.6,
+     41.78
+    ]
+   ],
    "nach": 0.09,
    "vor": 0.09
   },
@@ -76,7 +82,20 @@
   {
    "src": "katalog/t1",
    "from": 162.205,
+   "to": 172.295,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "katalog/t1",
+   "from": 176.925,
    "to": 183.295,
+   "stumm": [
+    [
+     181.5,
+     181.73
+    ]
+   ],
    "nach": 0.09,
    "vor": 0.09
   },
@@ -91,14 +110,20 @@
    "src": "katalog/t1",
    "from": 193.555,
    "to": 201.345,
+   "stumm": [
+    [
+     198.07,
+     198.3
+    ]
+   ],
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "katalog/t1",
    "from": 255.395,
-   "to": 267.4,
-   "nach": 0.09,
+   "to": 261.425,
+   "nach": 0.0,
    "vor": 0.09
   }
  ],
@@ -1616,90 +1641,6 @@
    "end": 172.07
   },
   {
-   "text": "Aber",
-   "src": "katalog/t1",
-   "start": 172.71,
-   "end": 172.93
-  },
-  {
-   "text": "die",
-   "src": "katalog/t1",
-   "start": 173.23,
-   "end": 173.29
-  },
-  {
-   "text": "Richtung",
-   "src": "katalog/t1",
-   "start": 173.35,
-   "end": 173.59
-  },
-  {
-   "text": "ist",
-   "src": "katalog/t1",
-   "start": 173.67,
-   "end": 173.73
-  },
-  {
-   "text": "natürlich",
-   "src": "katalog/t1",
-   "start": 173.77,
-   "end": 174.01
-  },
-  {
-   "text": "ganz",
-   "src": "katalog/t1",
-   "start": 174.05,
-   "end": 174.21
-  },
-  {
-   "text": "klar,",
-   "src": "katalog/t1",
-   "start": 174.27,
-   "end": 174.49
-  },
-  {
-   "text": "dass",
-   "src": "katalog/t1",
-   "start": 174.55,
-   "end": 174.69
-  },
-  {
-   "text": "es",
-   "src": "katalog/t1",
-   "start": 174.73,
-   "end": 174.79
-  },
-  {
-   "text": "immer",
-   "src": "katalog/t1",
-   "start": 174.95,
-   "end": 175.15
-  },
-  {
-   "text": "mehr",
-   "src": "katalog/t1",
-   "start": 175.27,
-   "end": 175.43
-  },
-  {
-   "text": "Richtung",
-   "src": "katalog/t1",
-   "start": 175.57,
-   "end": 175.85
-  },
-  {
-   "text": "KI",
-   "src": "katalog/t1",
-   "start": 175.91,
-   "end": 176.09
-  },
-  {
-   "text": "geht.",
-   "src": "katalog/t1",
-   "start": 176.21,
-   "end": 176.37
-  },
-  {
    "text": "Mein",
    "src": "katalog/t1",
    "start": 176.97,
@@ -2228,106 +2169,10 @@
    "end": 261.03
   },
   {
-   "text": "Kanal,",
+   "text": "Kanal.",
    "src": "katalog/t1",
    "start": 261.07,
    "end": 261.37
-  },
-  {
-   "text": "denn",
-   "src": "katalog/t1",
-   "start": 261.45,
-   "end": 261.57
-  },
-  {
-   "text": "ich",
-   "src": "katalog/t1",
-   "start": 262.01,
-   "end": 262.09
-  },
-  {
-   "text": "werde",
-   "src": "katalog/t1",
-   "start": 262.13,
-   "end": 262.29
-  },
-  {
-   "text": "dir",
-   "src": "katalog/t1",
-   "start": 262.39,
-   "end": 262.49
-  },
-  {
-   "text": "in",
-   "src": "katalog/t1",
-   "start": 262.57,
-   "end": 262.63
-  },
-  {
-   "text": "Zukunft",
-   "src": "katalog/t1",
-   "start": 262.71,
-   "end": 263.05
-  },
-  {
-   "text": "weitere",
-   "src": "katalog/t1",
-   "start": 263.11,
-   "end": 263.47
-  },
-  {
-   "text": "solcher",
-   "src": "katalog/t1",
-   "start": 263.55,
-   "end": 263.81
-  },
-  {
-   "text": "Tipps",
-   "src": "katalog/t1",
-   "start": 263.87,
-   "end": 264.11
-  },
-  {
-   "text": "und",
-   "src": "katalog/t1",
-   "start": 264.41,
-   "end": 264.49
-  },
-  {
-   "text": "Infos",
-   "src": "katalog/t1",
-   "start": 264.55,
-   "end": 264.87
-  },
-  {
-   "text": "zu",
-   "src": "katalog/t1",
-   "start": 265.05,
-   "end": 265.15
-  },
-  {
-   "text": "KI",
-   "src": "katalog/t1",
-   "start": 265.25,
-   "end": 265.49
-  },
-  {
-   "text": "und",
-   "src": "katalog/t1",
-   "start": 265.63,
-   "end": 265.71
-  },
-  {
-   "text": "Shopify",
-   "src": "katalog/t1",
-   "start": 265.77,
-   "end": 266.17
-  },
-  {
-   "text": "mitgeben.",
-   "src": "katalog/t1",
-   "start": 266.55,
-   "end": 266.89
   }
  ],
  "pages": [
@@ -2430,10 +2275,6 @@
   3,
   1,
   3,
-  3,
-  4,
-  4,
-  3,
   2,
   3,
   2,
@@ -2467,12 +2308,6 @@
   2,
   3,
   2,
-  3,
-  1,
-  3,
-  3,
-  4,
-  4,
-  1
+  3
  ]
 }
