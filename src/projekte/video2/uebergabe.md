@@ -1,6 +1,6 @@
 # Übergabekarte: Video 2 – Meine E-Commerce-Story
 
-Status: **eingeplant** – Fr 23.10.2026 23:05 (Paul: "Jetzt sofort bitte"), Fassung A mit 19 Karten. Metricool: TikTok 404554107, Instagram 404554172, YouTube 404554234 (normales Video). Drive 1QmaAWI0ccIuwLCPF6KOhdNGC279T-6GG.
+Status: **Entwurf** – Sa 24.10.2026 19:00 (wartet auf Pauls OK), Fassung A ohne alte B-Rolls. Metricool-Entwürfe: TikTok 404614524, Instagram 404614590, YouTube 404614646. Drive: Hook A 1nh2ktWLI7_tRwxAODak_vbfDAYuwJaQN, Hook B 1xiHEnyIOX67W89ZG3GK31tQ6bg0rDV2i, Hook C 1Px3FOOdqwf4arxdUXVrw6FWAh8jNUfkW (B/C plant Paul selbst).
 Uhr einplanen"). Metricool: TikTok 403869190, Instagram Reel 403869514, YouTube 403869588 (als normales Video, nicht
 Short: 4:23 ist länger als 3 min). Drive: Ordner "Video 2 – Meine E-Commerce-Story" (1WpqhUpqZD1UbyTYOhmvGVGoSgrACgXi7),
 Video 1dbiJAopapX8VP7DdBN79EhRoVi6Yus_W.
