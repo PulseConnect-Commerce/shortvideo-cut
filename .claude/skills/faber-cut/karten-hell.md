@@ -42,6 +42,13 @@ verwenden, und auch wenn es passt b-roll Aufnahmen von meinen älteren Videos od
 einblenden. Es soll die Erzählung spannender und visueller darstellen"):
 - Zu jeder Aussage eine HyperFrames-Karte bzw. Animation (Motion-Grafik), nicht nur am Anfang.
 - **B-Roll aus seinen älteren Videos NUR ohne eingebrannte alte Grafiken** (seine Rüge 2026-10-23 zu P01: "Weshalb ist in dem Video ein Ausschnitt aus einem älteren Video von mir eingeblendet worden? … Titel ist in grün in der Hook, Motion captions im Farbverlauf und dann ein Ausschnitt der alten [Hook] in hellgrün"): kein alter Hook-Titel, keine alten Karten, keine alten Untertitel, keine fremde Leuchtfarbe im Ausschnitt; im Zweifel den Rohclip bzw. den Take ohne Overlays nehmen oder ganz weglassen. Nur wenn es inhaltlich wirklich passt (gleiches Thema), sonst keine B-Roll. Die Prüfung schaut jeden Ausschnitt als Standbild an.
+**Was eine B-Roll ist** (seine Klarstellung 2026-10-23: "Ein B-Roll ist ja eigentlich ein kompletter Ausschnitt eines
+alten Videos, welches nur in klein dargestellt wird, kein kleiner Ausschnitt aus einem Videos"): das **ganze Bild**
+des alten Videos (9:16, nichts beschnitten), **verkleinert** als Bild-im-Bild, z. B. ~300x533 px in einer hellen Karte
+mit Radius und Schatten, über dem Kopf oder seitlich neben dem Kopf (nicht in den Tabu-Zonen, nie über Augen/Mund),
+mit kleiner Zeile "Aus meinem Video: <Titel>". Kein Streifen, kein Crop auf den alten Hook-Titel. Zeitlich eine
+zusammenhängende Szene (2-4 s), stumm. Weil es erkennbar ein Zitat des alten Videos ist, dürfen dessen alte Grafiken
+im kleinen Bild zu sehen sein, aber nie groß als Streifen über dem Kopf.
 - Wenn das passt: B-Roll aus seinen älteren Videos, wenn er über früher, seine Agentur, Shopify, ein früheres Thema spricht:
   fertige Videos in `out/final/*.mp4` (oder im Drive-Ordner "Final geschnittene Videos"). Kurzer Ausschnitt
   (1,5-3 s), stumm, in einer hellen Karte über dem Kopf oder als Bild-im-Bild, nie über Augen und Mund.
