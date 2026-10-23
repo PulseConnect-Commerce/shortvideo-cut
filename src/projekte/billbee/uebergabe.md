@@ -10,8 +10,8 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 
 <!-- auto:start (npm run uebergabe) -->
 - **Projekt / Komposition:** `billbee` / `Billbee`
-- **Datei:** `out/final/Billbee.mp4` fehlt noch (erst `npm run final -- Billbee`)
-- **Technik:** laut cut.json ca. 59.6 s
+- **Datei:** `out/final/Billbee.mp4` (Master), `-post.mp4` (Plattformen), `-chat.mp4` (Chat)
+- **Technik:** 1080x1920, 30 fps, 59.8 s
 - **Wörter im Video:** 177
 
 ### Untertiteltext (so steht er im Video)
@@ -43,8 +43,8 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 
 ## Entscheidungen des Cutters
 
-- Variante A (Originalsprechtext) nach seinem gesprochenen Wortlaut: Er hat den Text mehrfach neu angesetzt (162 s Rohclip). Genommen je Satz der letzte saubere, vollständige Anlauf: Hook (2,6-11,0 s im Take), "Dann kann nämlich …" (12,5-16,1), "Billbee sammelt …" (41,1-51,9), "Billbee übernimmt … Buchhaltungssystem" (52,5-58,7), "Das funktioniert nicht … eingerichtet sein" (60,7-73,1), "Mein Tipp …" (86,5-98,0), "Denn Automatisierung …" (147,2-151,6), Aufruf (156,5-160,5)
-- Weggelassen: alle Fehlstarts und Wiederholungen ("Denn Billbee sammelt …" 18-35 s, "Mein Tipp …" 73-82 s und 120-139 s, zwei weitere Schlussanläufe), im Hook "Denn" vor "dann kann nämlich", "Wichtig dabei zu verstehen ist" und "erstmal"; im Schluss "natürlich" und "und stimmen / und du das Ganze … übergeben kannst" (Länge)
+- Variante A (Originalsprechtext) nach seinem gesprochenen Wortlaut: Er hat den Text mehrfach neu angesetzt (162 s Rohclip). Genommen je Satz der letzte saubere, vollständige Anlauf: Hook (2,6-11,0 s im Take), "Dann kann nämlich ..." (12,5-16,1), "Billbee sammelt ..." (41,1-51,9), "Billbee übernimmt ... Buchhaltungssystem" (52,5-58,7), "Das funktioniert nicht ... eingerichtet sein" (60,7-73,1), "Mein Tipp ..." (86,5-98,0), "Denn Automatisierung ..." (147,2-151,6), Aufruf (156,5-160,5)
+- Weggelassen: alle Fehlstarts und Wiederholungen ("Denn Billbee sammelt ..." 18-35 s, "Mein Tipp ..." 73-82 s und 120-139 s, zwei weitere Schlussanläufe), im Hook "Denn" vor "dann kann nämlich", "Wichtig dabei zu verstehen ist" und "erstmal"; im Schluss "natürlich" und "und stimmen / und du das Ganze ... übergeben kannst" (Länge)
 - Whisper-Verhörer korrigiert (Ton gegengehört): "nach dem Schirm" ist "auf dem Schirm", "Handler" ist "Händler", "-Commerce" ist "E-Commerce"; "Steuerbata" kommt nicht mehr vor (Satz gekürzt)
 - Aufruf ("Und für weitere solcher Tipps für E-Commerce und Shopify folge mir hier gerne") steht nicht im Teleprompter, ist aber seine gesprochene Fassung und der einzige CTA im Video, nicht doppelt
 - Ende: 0,35 s nach "gerne" (Pegel am Wort-Ende bei 160,1 s), `ende.bis` 160,45 s, nicht verlängert, davor kein Griff zur Kamera im Bild
