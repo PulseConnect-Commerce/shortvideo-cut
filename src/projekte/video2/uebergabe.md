@@ -9,6 +9,26 @@ Video 1dbiJAopapX8VP7DdBN79EhRoVi6Yus_W.
 - Hashtags je Plattform: #ecommerce #unternehmertum
 - Korrektur Fassung A (Stand 23.10. Nachmittag): 19 helle Karten (5,7 s bis 252 s, jede auf ihrem Wort, nur Sprechtext), 2 B-Roll-Ausschnitte stumm aus älteren Videos (Shopcheck 5-7,6 s bei "Onlinehandel", ShopifyApps 0,2-2,8 s bei "Shopify"; Ausschnitt aus Pauls eigenen Videos, die Lime-Farbe dort ist Altmaterial), leise Soundeffekte (whoosh je Karte, wusch-gross je B-Roll, tick im Wechsel Profitabilität/Prozesse/Abhängigkeit), 2 Zoom-Schnitte 1,15 bei 184,3 s und ab 243,8 s, Atemzug-Korrektur bei 24,7 s, Hook design "verlauf". Kontrolle 96 %. Farbkorrektur (npm run farbe) nicht angewandt: Messwerte fast neutral (Gain ~1, Gamma 1,04), 12-min-Take zu groß für Zeit/Platz. B und C noch ohne diese Karten
 
+## Captions (Fassung A; nur Fakten aus Sprechtext und Briefing, höchstens 2 Hashtags)
+
+TikTok-Titel (max. 90 Zeichen): Warum ich mein E-Commerce-Unternehmen verkauft habe
+
+### TikTok
+```
+Anfang 2026 habe ich mein E-Commerce-Unternehmen verkauft – und nicht, weil es schlecht lief. Meine ganze Story von 2016 bis heute: Dropshipping, eigene Agentur, Corona, Elektronikmarke und die Entscheidung zum Verkauf. Folge mir für ehrliche Einblicke ohne Schnell-reich-Versprechen. #ecommerce #unternehmertum
+```
+
+### Instagram
+```
+Anfang 2026 habe ich mein E-Commerce-Unternehmen verkauft. Der Grund war nicht, dass es schlecht lief. Hier ist meine Story seit 2016 und was ich beim Verkauf gelernt habe: Umsatz ist nicht alles, auch Profitabilität, Prozesse und Abhängigkeiten zählen. Was war für dich beim Gründen die größte Lehre? Schreib es in die Kommentare und folge mir für mehr ehrliche Einblicke. #ecommerce #unternehmertum
+```
+
+### YouTube
+Titel (max. 100 Zeichen): Warum ich mein E-Commerce-Unternehmen verkauft habe – meine Story
+```
+Anfang 2026 habe ich mein E-Commerce-Unternehmen verkauft, und der Grund war nicht, dass es schlecht lief. In diesem Video erzähle ich meine Story seit 2016: Dropshipping, Webdesign-Agentur, eigene Marke auf Shopify, Corona, Elektronikmarke, Familie und die Entscheidung zum Verkauf. Dazu: Was beim Verkauf eines Onlineshops mehr zählt als Umsatz. Folge mir für ehrliche Einblicke in Shopify, E-Commerce und Marketing. #ecommerce #unternehmertum
+```
+
 <!-- auto:start (npm run uebergabe) -->
 - **Projekt / Komposition:** `video2` / `Video2A`
 - **Datei:** `out/final/Video2A.mp4` (Master), `-post.mp4` (Plattformen), `-chat.mp4` (Chat)
