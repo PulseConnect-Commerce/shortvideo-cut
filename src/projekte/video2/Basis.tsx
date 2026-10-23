@@ -31,10 +31,8 @@ const karten = (C: Cut): { von: number; ab: number; dauer: number; ton: number[]
   }));
 
 /** B-Roll aus älteren Videos (stumm, in heller Karte über dem Kopf) */
-const BROLL = [
-  { file: "b1.mp4", cue: "onlinehandel", nach: "", dauer: 2.6, text: "Aus meinem Video: Shop-Check" },
-  { file: "b3.mp4", cue: "shopify", nach: "videos", dauer: 2.2, text: "Aus meinem Video über Shopify-Apps" },
-];
+// beide Ausschnitte raus (seine Rüge 2026-10-23: alte Grafiken im Ausschnitt, alte Leuchtfarbe passt nicht zum Look)
+const BROLL: { file: string; cue: string; nach: string; dauer: number; text: string }[] = [];
 /** Zoom-Schnitte (Sekunden im Video, jeweils auf einem Schnitt) */
 const ZOOM = [[184.3, 189.7], [243.8, 999]];
 
