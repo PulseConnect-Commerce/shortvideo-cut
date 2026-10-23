@@ -9,6 +9,7 @@ PulseConnect Design", "Lass uns die nächsten nun erst einmal alle mit weißem o
 Vorlage: `hyperframes/look-probe/index.html` (kopieren, Hintergrundbild `#bg` entfernen, Zeiten aus `cut.json`).
 
 **Karte**
+- **Schlank und hoch über dem Kopf** (seine Frage 2026-10-23: "Können die Captioneinblendungen nicht etwas höher über dem Kopf gesetzt werden"): top 285 (Tabu oben bis 280), Höhe 240, Kachel 150, Titel 66 px, damit zwischen Karte und Haar Luft bleibt.
 - Weiß oder Hellgrau (`rgba(255,255,255,0.96)` bzw. `#F2F3F5`), Radius 36 px, weicher Schatten
   (`0 24px 60px rgb(0 0 0 / .22)`), über dem Kopf (x 110-970, y ~300-600), nichts in den Tabu-Zonen.
 - Links eine Icon-Kachel (176 px, Radius 32) im **PulseConnect-Verlauf** `linear-gradient(135deg, #00E090, #31ADEC)`,

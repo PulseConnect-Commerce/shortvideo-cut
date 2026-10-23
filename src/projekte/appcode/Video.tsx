@@ -74,12 +74,12 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
       {/* B-Roll aus dem älteren Video, stumm, in heller Karte über dem Kopf */}
       {o > 0 && (
         <>
-          <div style={{ position: "absolute", left: 110, top: 300, width: 860, height: 300, borderRadius: 36, overflow: "hidden", background: "#fff", boxShadow: "0 24px 60px rgba(0,0,0,0.22), 0 2px 6px rgba(0,0,0,0.08)", opacity: o, transform: `translateY(${(1 - o) * 28}px)` }}>
+          <div style={{ position: "absolute", left: 110, top: 285, width: 860, height: 240, borderRadius: 36, overflow: "hidden", background: "#fff", boxShadow: "0 24px 60px rgba(0,0,0,0.22), 0 2px 6px rgba(0,0,0,0.08)", opacity: o, transform: `translateY(${(1 - o) * 28}px)` }}>
             <Sequence from={Math.round(BROLL.von * C.FPS)} layout="none">
-              <OffthreadVideo src={staticFile("broll/appcode/shopifyapps-clip.mp4")} muted style={{ width: 860, height: 300 }} />
+              <OffthreadVideo src={staticFile("broll/appcode/shopifyapps-clip.mp4")} muted style={{ width: 860, height: 240, objectFit: "cover" }} />
             </Sequence>
           </div>
-          <div style={{ position: "absolute", left: 110, top: 616, opacity: o, fontFamily: "Geist, sans-serif", fontWeight: 600, fontSize: 30, color: "#0B0C0E", background: "rgba(255,255,255,0.96)", borderRadius: 999, padding: "8px 24px" }}>
+          <div style={{ position: "absolute", left: 110, top: 540, opacity: o, fontFamily: "Geist, sans-serif", fontWeight: 600, fontSize: 30, color: "#0B0C0E", background: "rgba(255,255,255,0.96)", borderRadius: 999, padding: "8px 24px" }}>
             Aus meinem Video über zu viele Shopify-Apps
           </div>
         </>
