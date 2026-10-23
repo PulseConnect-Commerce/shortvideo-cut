@@ -72,3 +72,9 @@ Seine Rüge 2026-10-23 (FBA): "dass das Ende abgeschnitten wurde. Man sieht, wie
 nächsten Mal bitte richtig schneiden." Das Video endet höchstens ~0,4-0,6 s nach dem letzten Wort, **bevor** er sich
 zur Kamera bewegt, wegschaut oder die Aufnahme stoppt. `ende.bis` nie verlängern, um eine Ziellänge (z. B. 60 s) zu
 erreichen; eine Ziellänge ist ein Höchstwert, kein Muss. Die letzten 2 s immer als Standbilder (alle 0,2 s) ansehen.
+
+## Porträt-Modus nie vergessen
+
+Seine Rüge 2026-10-23 (FBA): "es sieht so aus, als ob der Hintergrund nicht entschärft wurde". `npm run portrait --
+<projekt>` läuft bei jedem Video nach Schnitt und Farbe (legt `<take>.orig.mp4` an); `npm run pruefen` meldet sonst
+FEHLER "Porträt-Modus". Nach jeder Schnittänderung, die neue Stellen nutzt, noch einmal laufen lassen.

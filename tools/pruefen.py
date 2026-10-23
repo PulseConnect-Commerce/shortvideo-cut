@@ -121,6 +121,15 @@ def frame(t, w=540, h=960):
     return np.frombuffer(raw, np.uint8).reshape(h, w, 3).copy() if len(raw) == w * h * 3 else None
 
 
+# 3b. Porträt-Modus (Hintergrund weich): npm run portrait legt <take>.orig.mp4 an; fehlt die Datei, lief er nicht
+# (seine Rüge 2026-10-23 beim FBA-Video: "es sieht so aus, als ob der Hintergrund nicht entschärft wurde")
+tdir = os.path.join(ROOT, "public", "projekte", o.projekt, "takes")
+if os.path.isdir(tdir):
+    takes = [t for t in os.listdir(tdir) if t.endswith(".mp4") and "." not in t[:-4]]
+    ohne = [t for t in takes if not os.path.exists(os.path.join(tdir, t[:-4] + ".orig.mp4"))]
+    punkt("Bild", "Porträt-Modus", "FEHLER" if ohne else "OK",
+          ("ohne weichen Hintergrund: " + ", ".join(ohne) + f" (npm run portrait -- {o.projekt})") if ohne else "alle Takes freigestellt")
+
 # 4. Helligkeit des Gesichts
 werte = []
 if os.path.exists(MODEL):
