@@ -61,7 +61,10 @@ Bericht `out/pruefung/<Komposition>.md`), dazu Standbilder (`npm run still`) an 
 2. **Untertitel** sind vorhanden, richtig geschrieben (Namen, Zahlen) und passen zum Ton: `kontrolle` im Bericht,
    jede Meldung anhören; Untertiteltext der Karte gegen den Originalsprechtext im Briefing.
 3. **Format:** 9:16, 1080x1920, Länge im Rahmen des Formats (Bericht).
-4. **CTA** eindeutig am Ende (Frage oder Aufruf, nicht abgeschnitten, kurze Schluss-Pause, keine Outro-Tafel).
+4. **CTA** eindeutig (Frage oder Aufruf, nicht abgeschnitten, keine Outro-Tafel). Er steht dort, wo er im Transkript
+   inhaltlich passt: am Ende, oder auch am Anfang oder in der Mitte (seine Vorgabe 2026-10-23: "CTA kann auch ruhig mal
+   gegen Anfang oder in der Mitte des Videos kommen, wenn es inhaltlich im Transkript dazu passt"); nie künstlich
+   ans Ende verschieben, wenn er im Satzfluss weiter vorne steht. Endet das Video ohne CTA, dann mit Frage, Pointe oder Loop.
    Produktionsweg und Wettbewerbsvergleich aus `video` entscheidet die Planung vor dem Dreh, nicht der Schnitt.
 
 **B. Briefing und Stil:**

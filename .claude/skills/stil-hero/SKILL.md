@@ -10,6 +10,10 @@ description: Schnittstil HERO von PulseConnect für Erklär- und Expertenvideos 
 > Bewegung nach dem Motion-Skill und **zweifarbigem Titel** (zweiter Teil im PulseConnect-Verlauf Grün → Hellblau).
 > Der Verlauf ersetzt die eine Leuchtfarbe des Formats. Alles Weitere: `.claude/skills/faber-cut/karten-hell.md`.
 >
+> **CTA (ab 2026-10-23, alle Formate):** der Aufruf (Folgen, Speichern, Kommentieren) darf auch am Anfang oder in der
+> Mitte stehen, wenn er im Transkript inhaltlich dort passt ("CTA kann auch ruhig mal gegen Anfang oder in der Mitte
+> des Videos kommen, wenn es inhaltlich im Transkript dazu passt"). Nicht künstlich ans Ende verschieben.
+>
 > **FREIGEGEBENER LOOK ab 2026-10-17 (geht allen Blöcken darunter vor; die sind nur noch Vorgeschichte).**
 > Seine Freigabe nach dem Beispiel REWE × Lieferando: "perfekt, genau so gefällt mir das. Bitte so als Skill
 > abspeichern für die nächsten Videos". Gilt für NEWS/Reaction, FACE und HERO, nicht für die Serie "E-Commerce einfach
