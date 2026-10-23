@@ -22,7 +22,7 @@ description: Schnittstil HERO von PulseConnect für Erklär- und Expertenvideos 
 > 3. **Bild:** Farbkorrektur `npm run farbe` vor dem Porträt, **sanft** (nicht heller, nicht kontrastreicher; seine
 >    Vorgabe 2026-10-18: "zu kontrastreich und zu hell", dann "optimieren und abschwächen", Regel 5b in faber-cut),
 >    im Video `<Takes … grade={STIL.gradeSanft} />` statt des Design-Grades, leichter Porträt-Modus (Hintergrund weich). Er steht
->    **tiefer im Bild** (Augen bei ~900-915; REWE: `scale 1.3`, `hoch 190`), damit oben Platz ist.
+>    **mittig und nicht zu tief** (Augen bei ~800-830, Kopf und Körper waagrecht mittig; seine Rüge 2026-10-23: "Ich bin zu weit unten mit dem Gesicht" und "nicht zentriert, sondern leicht rechts versetzt"; DHL: `scale 1.3`, `hoch 350`, `x 65`), oben bleibt Platz für Titel und Karten.
 > 4. **Oben über dem Kopf:** während der Hook der Hook-Titel im alten Titel-Stil (`HookTitle`, nacht-gruen), danach
 >    die B-Rolls: Quellen-Screenshot (Breite ~560 ab y 300, Quellenzeile direkt darunter) und **Skizzen, Icons und
 >    Animationen aus HyperFrames** auf dunkler Karte (x 153-927, y 290-623), jede auf ihrem Wort. Jede Aussage und
