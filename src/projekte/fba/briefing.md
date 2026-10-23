@@ -2,7 +2,7 @@
 
 Kalendertermin: {'dateTime': '2026-10-22T09:00:00+02:00', 'timeZone': 'Europe/Berlin'}
 
-VIDEOIDEE FÜR PAUL – Veröffentlichung: 20.10.26 18:00 Uhr
+VIDEO FINAL GEDREHT – Veröffentlichung: 23.10.26 16:00 Uhr (Kalender, Stand 23.10.)
 Recherchiert: 20.10.2026, 08:44 Uhr (Europe/Berlin)
 THEMA: Amazon erhöht FBA- und Multi-Channel-Fulfillment-Logistikzuschlag in Deutschland und weiteren europäischen Märkten.
 
