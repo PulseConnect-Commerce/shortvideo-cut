@@ -1,6 +1,6 @@
 # Übergabekarte: Amazon erhöht FBA-Zuschlag auf 2 %
 
-Status: **zurück, Runde 1** (Prüfer) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** – Fr 23.10.2026 14:52 (Paul: "JETZT veröffentlichen", Stand vor Korrekturrunde 1: Anfang "macht tatsächlich…" und Untertitel "annehmen, Wenn" bei 0:44 noch drin). Metricool: TikTok 404136607, Instagram 404136697, YouTube Short 404136773. Drive 1MHM0in5wOs2LZjxLWxU5BfRP4FNjAaUI.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): Amazon erhöht FBA-Zuschlag auf 2 %
 - **Format / Design:** NEWS / helle Karten (karten-hell.md)
