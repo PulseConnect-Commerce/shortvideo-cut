@@ -10,8 +10,8 @@
  "saetze": [
   {
    "take": "t1",
-   "ab": 11.6,
-   "text": "macht tatsächlich auch Amazon den Versand für Händler schon wieder teurer. Und diesmal betrifft es eben leider auch Deutschland."
+   "ab": 12.3,
+   "text": "auch Amazon den Versand für Händler schon wieder teurer. Und diesmal betrifft es eben leider auch Deutschland."
   },
   {
    "take": "t1",
@@ -95,6 +95,12 @@
    33.89,
    ",5",
    ""
+  ],
+  [
+   "t1",
+   97.95,
+   "annehmen,",
+   "anheben."
   ]
  ]
 }

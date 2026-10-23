@@ -5,7 +5,7 @@
  "keeps": [
   {
    "src": "fba/t1",
-   "from": 11.775,
+   "from": 12.535,
    "to": 17.825,
    "nach": 0.09,
    "vor": 0.0
@@ -103,18 +103,6 @@
   }
  ],
  "words": [
-  {
-   "text": "macht",
-   "src": "fba/t1",
-   "start": 11.84,
-   "end": 12.02
-  },
-  {
-   "text": "tatsächlich",
-   "src": "fba/t1",
-   "start": 12.06,
-   "end": 12.52
-  },
   {
    "text": "auch",
    "src": "fba/t1",
@@ -1004,7 +992,7 @@
    "end": 97.84
   },
   {
-   "text": "annehmen,",
+   "text": "anheben.",
    "src": "fba/t1",
    "start": 97.9,
    "end": 98.4
@@ -1209,10 +1197,9 @@
   }
  ],
  "pages": [
-  3,
-  3,
-  3,
   2,
+  4,
+  3,
   3,
   3,
   2,

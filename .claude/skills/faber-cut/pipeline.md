@@ -109,7 +109,7 @@ gibt, ist ein Hinweis für Paul, kein Mangel.
 2. **Termin**, in dieser Reihenfolge: was Paul im Chat gesagt hat (gibt die Regie mit) → ein schon angelegter
    Metricool-Post für dieses Video (dann nichts doppelt anlegen) → der Kalender: im Briefing-Termin der
    "VERÖFFENTLICHUNGSPLAN" bzw. "Veröffentlichung", oder ein eigener Termin "📅 Geplanter Post" bzw. "📣 GEPLANT" mit dem
-   Titel. Gibt es keinen Termin: Metricool `getBestTimeToPostByNetwork` (nächste 7 Tage, TikTok, Instagram, YouTube),
+   Titel. Gibt es keinen Termin: die feste Hauptzeit der Kategorie (09:00 News, 14:00 E-/S-/A-Reihe, 19:00 P-/M-/B-Reihe; seine Vorgabe 2026-10-23), der nächste freie Tag; nur wenn auch das nicht passt Metricool `getBestTimeToPostByNetwork` (nächste 7 Tage, TikTok, Instagram, YouTube),
    den besten freien Platz als **Vorschlag** an die Regie, nicht anlegen; sie fragt Paul. Nie still eine andere Zeit
    als die vorgegebene nehmen.
 3. **Kollisionen:** `getScheduledPosts` für den Tag; liegt schon ein anderes Video in derselben Stunde, nicht anlegen,

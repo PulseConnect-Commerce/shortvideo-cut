@@ -29,12 +29,12 @@ const GRADE = `brightness(0.82) ${STIL.gradeSanft}`;
 
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook bis kurz vor der ersten Karte (Quelle bei 6,95 s) */
-const HOOK_ENDE = fs(6.9);
+const HOOK_ENDE = fs(6.15);
 /** Punch-in 1,15 auf die Pointe "auch Amazon hinterher" (Karte Frage endet vorher bei 47,2 s) */
-const PUNCH = { ein: fs(47.38), voll: fs(48.4), aus: fs(50.2), ende: fs(50.8) };
+const PUNCH = { ein: fs(46.63), voll: fs(47.65), aus: fs(49.45), ende: fs(50.05) };
 
 /** Skizzen-Overlay (hyperframes/fba-skizzen): Zeiten der Karten, Akzente auf dem Wort */
-const KARTEN = [6.95, 10.6, 14.3, 17.45, 20.7, 24.6, 31.3, 39.2, 44.7];
+const KARTEN = [6.2, 9.85, 13.55, 16.7, 19.95, 23.85, 30.55, 38.45, 43.95];
 
 const BETONT = ["amazon", "fba", "mcf", "2%", "versandgebühr", "verkaufspreis", "cent", "november", "relevant", "tipp", "follow", "preise", "teurer", "deutschland"];
 const FARBIG = ["2%", "1", "5", "cent", "02.11", "19", "november", "2"];
