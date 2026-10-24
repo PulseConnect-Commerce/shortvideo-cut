@@ -3,99 +3,50 @@
  "sprache": "de",
  "fps": 30,
  "pausen": {
-  "min_gap": 0.4,
+  "min_gap": 1.0,
   "pre": 0.06,
   "post": 0.1
- },
- "start": {
-  "ab": 7.5
  },
  "saetze": [
   {
    "take": "t1",
-   "ab": 7.5,
-   "text": "Einer der wichtigsten Apps, die jeder Onlinehandler kennen sollte, der wissen will, wo seine Kunden im Onlineshop hängen bleiben."
+   "ab": 7.4,
+   "von": 7.46,
+   "text": "Einer der wichtigsten Apps, die jeder Onlinehändler nämlich kennen sollte, der wissen will, wo seine Kunden im Onlineshop hängen bleiben. Und diese wichtige App nennt sich Microsoft Clarity. Und bei Microsoft Clarity kannst du dir Heatmaps und anonymisierte Sitzungsaufzeichnungen ansehen. Du erkennst zum Beispiel, wo Besucher draufklicken, wie weit sie scrollen oder auch immer an welchen Stellen sie frustriert mehrfach klicken. und für Shopify gibt es eben dafür eine eigene Clarity App."
   },
   {
    "take": "t1",
-   "ab": 14.1,
-   "text": "Und diese wichtige App nennt sich Microsoft Clarity. Und bei Microsoft Clarity kannst du dir Heatmaps und anonymisierte Sitzungsaufzeichnungen ansehen. Du erkennst zum Beispiel, wo Besucher draufklicken, wie weit sie scrollen oder auch immer an welchen Stellen sie frustriert mehrfach klicken."
+   "ab": 76.4,
+   "von": 76.46,
+   "bis": 80.86,
+   "text": "und das kann nämlich helfen, Probleme auf Produktseiten oder auch auf Landingpages zu entdecken,"
   },
   {
    "take": "t1",
-   "ab": 29.5,
-   "text": "und für Shopify gibt es eben dafür eine eigene Clarity App."
-  },
-  {
-   "take": "t1",
-   "ab": 46.0,
-   "von": 46.05,
-   "text": "Und das kann dir eben auch dabei helfen Probleme auf Produktseiten oder auch auf Landingpages zu entdecken, die du dann eben mit normalen Kennzahlen vielleicht übersehen wirst."
-  },
-  {
-   "take": "t1",
-   "ab": 87.65,
-   "text": "Aber wichtig dabei zu verstehen ist, dass eine Heatmap dir natürlich nicht automatisch sagt, warum jemand dich kauft."
-  },
-  {
-   "take": "t1",
-   "ab": 93.8,
-   "text": "Und auch bei einem Analyse-Tool musst du natürlich Datenschutz, Seinwilligung"
+   "ab": 84.1,
+   "von": 84.18,
+   "bis": 97.88,
+   "text": "die du vielleicht selber mit normalen Kennzahlen komplett übersehen wirst. Aber wichtig dabei zu verstehen ist, dass eine Heatmap dir natürlich nicht automatisch sagt, warum jemand nicht kauft. Und auch bei einem Analyse-Tool musst du natürlich Datenschutz, Einwilligung"
   },
   {
    "take": "t1",
    "ab": 99.7,
+   "von": 99.76,
    "text": "und auch natürlich deine konkrete Konfiguration prüfen."
   },
   {
    "take": "t1",
-   "ab": 116.2,
-   "text": "deswegen ein wichtiger Tipp von mir, schau dir unbedingt zuerst eine wichtige Produktseite auf deinem Handy an und suche dann eben nach einem wiederkehrenden Problem."
-  },
-  {
-   "take": "t1",
-   "ab": 125.1,
-   "text": "Denn Optimierung beginnt nämlich nicht nur bei der Vermutung, sondern bei echtem Nutzerverhalten."
-  },
-  {
-   "take": "t1",
-   "ab": 130.2,
-   "text": "Und wenn du mehr zu der Shopify App wissen willst, dann folgt mich hier gerne, dann stelle ich dir auch gerne einmal die App vor."
+   "ab": 116.1,
+   "von": 116.16,
+   "text": "deswegen ein wichtiger Tipp von mir, schau dir unbedingt zuerst eine wichtige Produktseite auf deinem Handy an und suche dann eben nach einem wiederkehrenden Problem. Denn Optimierung beginnt nämlich nicht nur bei der Vermutung, sondern bei echtem Nutzerverhalten. Und wenn du mehr zu der Shopify App wissen willst, dann folgt mir hier gerne, dann stelle ich dir auch gerne einmal die App vor."
   }
  ],
  "ende": {
-  "bis": 136.3
+  "bis": 136.06
  },
  "korrekturen": [
-  [
-   "t1",
-   9.11,
-   "Onlinehandler",
-   "Onlinehändler"
-  ],
-  [
-   "t1",
-   92.63,
-   "dich",
-   "nicht"
-  ],
-  [
-   "t1",
-   97.11,
-   "Seinwilligung",
-   "Einwilligung"
-  ],
-  [
-   "t1",
-   132.97,
-   "folgt",
-   "folge"
-  ],
-  [
-   "t1",
-   133.19,
-   "mich",
-   "mir"
-  ]
+  ["t1", 29.57, "und", "Und"],
+  ["t1", 76.59, "und", "Und"],
+  ["t1", 116.25, "deswegen", "Deswegen"]
  ]
 }

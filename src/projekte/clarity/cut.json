@@ -5,70 +5,21 @@
  "keeps": [
   {
    "src": "clarity/t1",
-   "from": 7.5,
-   "to": 9.615,
-   "nach": 0.0,
-   "vor": 0.09
-  },
-  {
-   "src": "clarity/t1",
-   "from": 9.925,
-   "to": 13.645,
-   "nach": 0.09,
-   "vor": 0.02
-  },
-  {
-   "src": "clarity/t1",
-   "from": 14.095,
-   "to": 17.195,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "clarity/t1",
-   "from": 17.445,
-   "to": 22.345,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "clarity/t1",
-   "from": 22.685,
-   "to": 28.965,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "clarity/t1",
-   "from": 29.535,
+   "from": 7.46,
    "to": 32.745,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "clarity/t1",
-   "from": 46.05,
-   "to": 50.99,
+   "from": 76.46,
+   "to": 80.86,
    "nach": 0.09,
    "vor": 0.09
   },
   {
    "src": "clarity/t1",
-   "from": 51.23,
-   "to": 54.2,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "clarity/t1",
-   "from": 87.715,
-   "to": 93.225,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "clarity/t1",
-   "from": 93.715,
+   "from": 84.18,
    "to": 97.925,
    "nach": 0.09,
    "vor": 0.09
@@ -82,22 +33,8 @@
   },
   {
    "src": "clarity/t1",
-   "from": 116.245,
-   "to": 124.745,
-   "nach": 0.09,
-   "vor": 0.0
-  },
-  {
-   "src": "clarity/t1",
-   "from": 125.215,
-   "to": 129.915,
-   "nach": 0.09,
-   "vor": 0.09
-  },
-  {
-   "src": "clarity/t1",
-   "from": 130.255,
-   "to": 136.3,
+   "from": 116.16,
+   "to": 136.06,
    "nach": 0.09,
    "vor": 0.09
   }
@@ -144,6 +81,12 @@
    "src": "clarity/t1",
    "start": 9.11,
    "end": 9.59
+  },
+  {
+   "text": "nämlich",
+   "src": "clarity/t1",
+   "start": 9.65,
+   "end": 9.87
   },
   {
    "text": "kennen",
@@ -464,7 +407,7 @@
    "end": 28.83
   },
   {
-   "text": "und",
+   "text": "Und",
    "src": "clarity/t1",
    "start": 29.57,
    "end": 29.67
@@ -532,164 +475,146 @@
   {
    "text": "Und",
    "src": "clarity/t1",
-   "start": 46.08,
-   "end": 46.19
+   "start": 76.59,
+   "end": 76.67
   },
   {
    "text": "das",
    "src": "clarity/t1",
-   "start": 46.19,
-   "end": 46.42
+   "start": 76.69,
+   "end": 76.81
   },
   {
    "text": "kann",
    "src": "clarity/t1",
-   "start": 46.42,
-   "end": 46.66
+   "start": 76.87,
+   "end": 76.99
   },
   {
-   "text": "dir",
+   "text": "nämlich",
    "src": "clarity/t1",
-   "start": 46.66,
-   "end": 46.84
-  },
-  {
-   "text": "eben",
-   "src": "clarity/t1",
-   "start": 46.84,
-   "end": 46.9
-  },
-  {
-   "text": "auch",
-   "src": "clarity/t1",
-   "start": 46.9,
-   "end": 47.08
-  },
-  {
-   "text": "dabei",
-   "src": "clarity/t1",
-   "start": 47.08,
-   "end": 47.26
+   "start": 77.01,
+   "end": 77.31
   },
   {
    "text": "helfen,",
    "src": "clarity/t1",
-   "start": 47.26,
-   "end": 48.02
+   "start": 77.35,
+   "end": 77.59
   },
   {
    "text": "Probleme",
    "src": "clarity/t1",
-   "start": 48.08,
-   "end": 48.28
+   "start": 77.67,
+   "end": 78.17
   },
   {
    "text": "auf",
    "src": "clarity/t1",
-   "start": 48.28,
-   "end": 48.46
+   "start": 78.43,
+   "end": 78.51
   },
   {
    "text": "Produktseiten",
    "src": "clarity/t1",
-   "start": 48.46,
-   "end": 48.96
+   "start": 78.59,
+   "end": 79.17
   },
   {
    "text": "oder",
    "src": "clarity/t1",
-   "start": 49.06,
-   "end": 49.28
+   "start": 79.19,
+   "end": 79.27
   },
   {
    "text": "auch",
    "src": "clarity/t1",
-   "start": 49.28,
-   "end": 49.4
+   "start": 79.29,
+   "end": 79.37
   },
   {
    "text": "auf",
    "src": "clarity/t1",
-   "start": 49.4,
-   "end": 49.54
+   "start": 79.41,
+   "end": 79.49
   },
   {
    "text": "Landingpages",
    "src": "clarity/t1",
-   "start": 49.54,
-   "end": 50.04
+   "start": 79.53,
+   "end": 80.13
   },
   {
    "text": "zu",
    "src": "clarity/t1",
-   "start": 50.2,
-   "end": 50.46
+   "start": 80.17,
+   "end": 80.23
   },
   {
    "text": "entdecken,",
    "src": "clarity/t1",
-   "start": 50.46,
-   "end": 50.96
+   "start": 80.29,
+   "end": 80.61
   },
   {
    "text": "die",
    "src": "clarity/t1",
-   "start": 51.38,
-   "end": 51.5
+   "start": 84.25,
+   "end": 84.33
   },
   {
    "text": "du",
    "src": "clarity/t1",
-   "start": 51.5,
-   "end": 51.7
-  },
-  {
-   "text": "dann",
-   "src": "clarity/t1",
-   "start": 51.7,
-   "end": 51.9
-  },
-  {
-   "text": "eben",
-   "src": "clarity/t1",
-   "start": 51.9,
-   "end": 52.1
-  },
-  {
-   "text": "mit",
-   "src": "clarity/t1",
-   "start": 52.1,
-   "end": 52.16
-  },
-  {
-   "text": "normalen",
-   "src": "clarity/t1",
-   "start": 52.16,
-   "end": 52.66
-  },
-  {
-   "text": "Kennzahlen",
-   "src": "clarity/t1",
-   "start": 52.7,
-   "end": 53.1
+   "start": 84.39,
+   "end": 84.45
   },
   {
    "text": "vielleicht",
    "src": "clarity/t1",
-   "start": 53.1,
-   "end": 53.46
+   "start": 84.53,
+   "end": 84.75
+  },
+  {
+   "text": "selber",
+   "src": "clarity/t1",
+   "start": 84.79,
+   "end": 84.99
+  },
+  {
+   "text": "mit",
+   "src": "clarity/t1",
+   "start": 85.05,
+   "end": 85.13
+  },
+  {
+   "text": "normalen",
+   "src": "clarity/t1",
+   "start": 85.19,
+   "end": 85.53
+  },
+  {
+   "text": "Kennzahlen",
+   "src": "clarity/t1",
+   "start": 85.57,
+   "end": 86.03
+  },
+  {
+   "text": "komplett",
+   "src": "clarity/t1",
+   "start": 86.09,
+   "end": 86.43
   },
   {
    "text": "übersehen",
    "src": "clarity/t1",
-   "start": 53.46,
-   "end": 53.88
+   "start": 86.47,
+   "end": 86.81
   },
   {
    "text": "wirst.",
    "src": "clarity/t1",
-   "start": 53.88,
-   "end": 54.2
+   "start": 86.85,
+   "end": 87.11
   },
   {
    "text": "Aber",
@@ -791,7 +716,7 @@
    "text": "nicht",
    "src": "clarity/t1",
    "start": 92.63,
-   "end": 92.75
+   "end": 92.79
   },
   {
    "text": "kauft.",
@@ -856,19 +781,19 @@
   {
    "text": "Einwilligung",
    "src": "clarity/t1",
-   "start": 97.11,
+   "start": 97.17,
    "end": 97.73
   },
   {
    "text": "und",
    "src": "clarity/t1",
    "start": 99.81,
-   "end": 99.89
+   "end": 99.91
   },
   {
    "text": "auch",
    "src": "clarity/t1",
-   "start": 99.95,
+   "start": 99.97,
    "end": 100.05
   },
   {
@@ -880,7 +805,7 @@
   {
    "text": "deine",
    "src": "clarity/t1",
-   "start": 100.37,
+   "start": 100.35,
    "end": 100.55
   },
   {
@@ -899,10 +824,10 @@
    "text": "prüfen.",
    "src": "clarity/t1",
    "start": 101.89,
-   "end": 102.17
+   "end": 102.15
   },
   {
-   "text": "deswegen",
+   "text": "Deswegen",
    "src": "clarity/t1",
    "start": 116.25,
    "end": 116.67
@@ -1196,7 +1121,7 @@
    "end": 132.67
   },
   {
-   "text": "folge",
+   "text": "folgt",
    "src": "clarity/t1",
    "start": 132.97,
    "end": 133.17
@@ -1205,12 +1130,12 @@
    "text": "mir",
    "src": "clarity/t1",
    "start": 133.19,
-   "end": 133.27
+   "end": 133.25
   },
   {
    "text": "hier",
    "src": "clarity/t1",
-   "start": 133.29,
+   "start": 133.27,
    "end": 133.37
   },
   {
@@ -1284,7 +1209,7 @@
   1,
   3,
   3,
-  2,
+  3,
   3,
   3,
   2,
@@ -1312,7 +1237,6 @@
   3,
   3,
   2,
-  3,
   3,
   2,
   1,

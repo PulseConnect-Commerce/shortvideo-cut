@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1080, height=1920" />
-    <title>Clarity – helle Karten</title>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-    <!-- FACE A02 "Microsoft Clarity" (A-Reihe "Eine Shopify-App, ein Problem"), heller Karten-Look (karten-hell.md).
-         Zeiten = Sekunden im geschnittenen Video (cut.json, 62.7 s), Liste und Töne in src/projekte/clarity/karten.json.
-         Keine Oberflächen, keine Heatmap-Bilder, keine Logos: nur Lucide-Icons (ISC) und Text. Karten nicht tiefer als y ~560.
-         Erzeugt mit gen_karten.py (Scratchpad), nicht von Hand ändern. -->
+    <title>Microsoft Clarity – helle Karten</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- FACE A02 "Microsoft Clarity" (A-Reihe "Eine Shopify-App, ein Problem"), heller Karten-Look (karten-hell.md),
+         Aufbau wie A01 (hyperframes/billbee-skizzen). Zeiten = Sekunden im geschnittenen Video (cut.json, 65,9 s),
+         Liste mit Tönen in src/projekte/clarity/karten.json. Keine Logos, keine nachgebauten Clarity-Oberflächen,
+         keine erfundenen Heatmaps: nur Lucide-Icons (ISC) und Text. Karten zwischen y 285 und 525. -->
     <style>
       @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
       * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -18,7 +18,7 @@
         position: absolute; left: 110px; top: 285px; width: 860px; height: 240px;
         border-radius: 36px; background: rgba(255, 255, 255, 0.96);
         box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
-        display: flex; align-items: center; gap: 44px; padding: 0 56px; opacity: 0;
+        display: flex; align-items: center; gap: 44px; padding: 0 56px; opacity: 0; isolation: isolate;
       }
       .card.wide { left: 90px; width: 900px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; padding: 0 44px; }
       .card.mitte { align-items: center; }
@@ -27,7 +27,6 @@
         background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center;
       }
       .tile svg { width: 88px; height: 88px; fill: none; stroke: #0b0c0e; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
-      .tile svg.b { position: absolute; left: 31px; top: 31px; opacity: 0; }
       .d { opacity: 0; }
       .txt { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
       .mitte .txt { align-items: center; gap: 4px; }
@@ -36,7 +35,7 @@
       .verlauf { display: inline-block; padding-bottom: 6px; background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
       .line { display: block; }
 
-      /* Reihen-Einblendung: kleine Kicker-Karte */
+      /* Reihen-Einblendung: kleine Kicker-Karte (wie A01) */
       .card.reihe { left: 0; right: 0; margin: 0 auto; width: fit-content; height: 132px; top: 300px; padding: 0 40px 0 26px; gap: 24px; border-radius: 32px; }
       .card.reihe .tile { width: 84px; height: 84px; border-radius: 22px; }
       .card.reihe .tile svg { width: 48px; height: 48px; stroke-width: 1.8; }
@@ -44,99 +43,120 @@
       .card.reihe .kicker { font-size: 22px; }
       .card.reihe .head { font-size: 46px; }
 
-      /* Kette: drei Glieder mit Pfeilen */
-      .kette { display: flex; width: 100%; align-items: flex-start; justify-content: space-between; margin-top: 8px; }
-      .glied { width: 230px; display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; }
-      .dot { position: relative; width: 84px; height: 84px; border-radius: 24px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
-      .dot svg { width: 48px; height: 48px; fill: none; stroke: #0b0c0e; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
-      .glied b { font-size: 31px; line-height: 1.08; font-weight: 800; color: #0b0c0e; letter-spacing: -0.01em; text-align: center; white-space: nowrap; }
-      .pfeil { flex: none; width: 70px; height: 84px; display: flex; align-items: center; justify-content: center; }
-      .pfeil svg { width: 56px; height: 56px; fill: none; stroke: #31adec; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      /* kleine Verlaufs-Kachel vor einer Zeile */
+      .dot { position: relative; flex: none; width: 76px; height: 76px; border-radius: 22px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
+      .dot.grau { background: #e5e7eb; }
+      .dot svg { width: 44px; height: 44px; fill: none; stroke: #0b0c0e; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
 
-      /* Markierung hinter einem Wort */
-      .mark { position: relative; display: inline-flex; align-items: center; gap: 18px; }
-      .mark .dot { width: 76px; height: 76px; border-radius: 22px; }
-      .mark .dot svg { width: 44px; height: 44px; }
-      .marker { position: absolute; left: -14px; right: -14px; bottom: 2px; height: 22px; border-radius: 11px; background: linear-gradient(90deg, rgba(0, 224, 144, 0.28), rgba(49, 173, 236, 0.28)); transform: scaleX(0); transform-origin: 0 50%; z-index: -1; }
+      /* Zeilen mit Kachel (Heatmaps / Session Recordings, Vermutung / Nutzerverhalten) */
+      .reihen { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+      .zeile { position: relative; display: flex; align-items: center; gap: 22px; align-self: flex-start; }
+      .zeile .head { font-size: 54px; }
+      .strich { position: absolute; left: 96px; right: -8px; top: 50%; height: 6px; margin-top: -3px; border-radius: 3px; background: #0b0c0e; transform: scaleX(0); transform-origin: 0 50%; }
+
+      /* drei Spalten (Klicks, Scrolltiefe, Rage Clicks) */
+      .spalten { display: flex; width: 100%; justify-content: space-around; margin-top: 12px; }
+      .spalte { width: 250px; display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: 0; }
+      .spalte .dot { width: 84px; height: 84px; border-radius: 24px; }
+      .spalte .dot svg { width: 48px; height: 48px; }
+      .spalte b { font-size: 38px; line-height: 1.05; font-weight: 800; color: #0b0c0e; letter-spacing: -0.01em; white-space: nowrap; }
+
+      /* Chips (Produktseiten / Landingpages, Checkliste) */
+      .chips { display: flex; gap: 14px; margin-top: 14px; }
+      .chip { display: flex; align-items: center; gap: 14px; height: 66px; padding: 0 26px 0 14px; border-radius: 18px; background: #f2f3f5; font-size: 36px; white-space: nowrap; font-weight: 700; color: #0b0c0e; opacity: 0; }
+      .chip .mini { flex: none; width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
+      .chip .mini svg { width: 28px; height: 28px; fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .liste { display: grid; grid-template-columns: auto auto; gap: 12px 14px; margin-top: 14px; }
+      .liste .chip { opacity: 1; color: #9ca3af; }
+      .box { position: relative; flex: none; width: 40px; height: 40px; border-radius: 11px; border: 2.5px solid #d1d5db; }
+      .box .fill { position: absolute; inset: -2.5px; border-radius: 11px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); opacity: 0; }
+      .box svg { position: absolute; inset: 3px; width: 29px; height: 29px; fill: none; stroke: #0b0c0e; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Markierung hinter einem Wort, Unterstrich */
+      .marker { position: absolute; left: -10px; right: -10px; bottom: 4px; height: 20px; border-radius: 10px; background: linear-gradient(90deg, rgba(0, 224, 144, 0.3), rgba(49, 173, 236, 0.3)); transform: scaleX(0); transform-origin: 0 50%; z-index: -1; }
       .unter { position: absolute; left: 0; bottom: 0; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #00e090, #31adec); transform: scaleX(0); transform-origin: 0 50%; }
 
-      .chips.drei, .chips.zwei { display: flex; gap: 12px; margin-top: 14px; width: 100%; }
-      .chips.drei .chip, .chips.zwei .chip { height: 66px; padding: 0 18px 0 12px; font-size: 29px; flex: none; }
-      .chips.drei .box, .chips.zwei .box { width: 34px; height: 34px; }
-      .chips.drei .box svg, .chips.zwei .box svg { width: 24px; height: 24px; }
-      .unter.durch { left: -6px; right: -6px; width: auto; top: 50%; bottom: auto; height: 7px; border-radius: 4px; background: #0b0c0e; }
-      .card.mitte .txt { align-items: flex-start; }
-      /* Checkliste 2x2 */
-      .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; width: 100%; }
-      .chip { display: flex; align-items: center; gap: 12px; height: 62px; padding: 0 20px 0 14px; border-radius: 18px; background: #f2f3f5; font-size: 31px; white-space: nowrap; font-weight: 700; color: #6b7280; }
-      .box { position: relative; flex: none; width: 38px; height: 38px; border-radius: 11px; border: 2.5px solid #d1d5db; }
-      .box .fill { position: absolute; inset: -2.5px; border-radius: 11px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); opacity: 0; }
-      .box svg { position: absolute; inset: 3px; width: 27px; height: 27px; fill: none; stroke: #0b0c0e; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+      /* Folgen-Knopf */
+      .knopf { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 12px; height: 64px; width: 250px; border-radius: 32px; background: #0b0c0e; color: #fff; font-size: 34px; font-weight: 700; margin-top: 4px; }
+      .knopf span { position: absolute; display: inline-flex; align-items: center; gap: 12px; }
+      .knopf svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+      .knopf .nach { opacity: 0; color: #0b0c0e; }
+      .knopf .flaeche { position: absolute; inset: 0; border-radius: 32px; background: linear-gradient(90deg, #00e090, #31adec); opacity: 0; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="clarity-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="62.740">
+    <div id="root" data-composition-id="clarity-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="65.9">
 
-      <!-- Reihe: Eine Shopify-App, ein Problem -->
-      <section id="reihe" class="card reihe clip" data-start="5.85" data-duration="1.81" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><rect class="d" pathLength="1" width="7" height="7" x="14" y="3" rx="1" /><path class="d" pathLength="1" d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" /></svg></div><div class="txt"><span class="kicker line">Die Reihe</span><span class="head line ">Eine Shopify-App, <span class="verlauf">ein Problem</span></span></div></section>
+      <!-- 1 Reihen-Einblendung (nach dem Hook, "Und diese wichtige App") -->
+      <section id="reihe" class="card reihe clip" data-start="6.5" data-duration="1.95" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><rect class="d" pathLength="1" width="7" height="7" x="14" y="3" rx="1" /><path class="d" pathLength="1" d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" /></svg></div><div class="txt"><span class="kicker line">Die Reihe</span><span class="head line">Eine Shopify-App, <span class="verlauf">ein Problem</span></span></div></section>
 
-      <!-- Die App: Microsoft Clarity -->
-      <section id="clarity" class="card clip" data-start="7.73" data-duration="2.72" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle class="d" pathLength="1" cx="12" cy="12" r="3" /></svg></div><div class="txt"><span class="kicker line">Die App</span><span class="head line ">Microsoft</span><span class="head line "><span class="verlauf">Clarity</span></span></div></section>
+      <!-- 2 Die App: Microsoft Clarity ("Microsoft" 8,59) -->
+      <section id="app" class="card clip" data-start="8.52" data-duration="3.03" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M3 7V5a2 2 0 0 1 2-2h2" /><path class="d" pathLength="1" d="M17 3h2a2 2 0 0 1 2 2v2" /><path class="d" pathLength="1" d="M21 17v2a2 2 0 0 1-2 2h-2" /><path class="d" pathLength="1" d="M7 21H5a2 2 0 0 1-2-2v-2" /><circle class="d" pathLength="1" cx="12" cy="12" r="1" /><path class="d" pathLength="1" d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0" /></svg></div><div class="txt"><span class="kicker line">Die App</span><span class="head line">Microsoft</span><span class="head line"><span class="verlauf">Clarity</span></span></div></section>
 
-      <!-- HEATMAPS -->
-      <section id="heat" class="card clip" data-start="10.58" data-duration="1.42" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg></div><div class="txt"><span class="kicker line">Du siehst</span><span class="head line "><span class="verlauf">HEATMAPS</span></span></div></section>
+      <!-- 3 HEATMAPS ("Heatmaps" 11,69) / SESSION RECORDINGS ("Sitzungsaufzeichnungen" 13,17) -->
+      <section id="zeigt" class="card wide clip" data-start="11.62" data-duration="4.83" data-track-index="0"><span class="kicker line">Das siehst du in Clarity</span><div class="reihen">
+        <div class="zeile line" id="z1"><div class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg></div><span class="head">HEATMAPS</span></div>
+        <div class="zeile" id="z2" style="opacity:0"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect class="e" pathLength="1" x="2" y="6" width="14" height="12" rx="2" /></svg></div><span class="head"><span class="verlauf">SESSION RECORDINGS</span></span></div>
+      </div></section>
 
-      <!-- SESSION RECORDINGS (anonymisiert) -->
-      <section id="session" class="card clip" data-start="12.06" data-duration="1.74" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect class="d" pathLength="1" x="2" y="6" width="14" height="12" rx="2" /></svg></div><div class="txt"><span class="kicker line">Anonymisierte</span><span class="head line " style="font-size:60px">SESSION</span><span class="head line " style="font-size:60px"><span class="verlauf">RECORDINGS</span></span></div></section>
+      <!-- 4 Du erkennst: Klicks ("draufklicken" 16,73), Scrolltiefe ("scrollen" 18,25), RAGE CLICKS ("frustriert" 20,11) -->
+      <section id="erkennt" class="card wide clip" data-start="16.6" data-duration="5.35" data-track-index="0"><span class="kicker line">Du erkennst zum Beispiel</span><div class="spalten">
+        <div class="spalte" id="s1"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" /><path class="e" pathLength="1" d="M14 4.1 12 6" /><path class="e" pathLength="1" d="m5.1 8-2.9-.8" /><path class="e" pathLength="1" d="m6 12-1.9 2" /><path class="e" pathLength="1" d="M7.2 2.2 8 5.1" /></svg></div><b>Klicks</b></div>
+        <div class="spalte" id="s2"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M12 17V3" /><path class="e" pathLength="1" d="m6 11 6 6 6-6" /><path class="e" pathLength="1" d="M19 21H5" /></svg></div><b>Scrolltiefe</b></div>
+        <div class="spalte" id="s3"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg></div><b><span class="verlauf">RAGE CLICKS</span></b></div>
+      </div></section>
 
-      <!-- Du erkennst: KLICKS, SCROLLTIEFE, RAGE CLICKS -->
-      <section id="erkennt" class="card wide clip" data-start="13.84" data-duration="6.21" data-track-index="0"><span class="kicker line">Du erkennst zum Beispiel</span><div class="chips drei line"><div class="chip" id="e1"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>KLICKS</div><div class="chip" id="e2"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>SCROLLTIEFE</div><div class="chip" id="e3"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>RAGE CLICKS</div></div></section>
+      <!-- 5 Für Shopify: eigene Clarity-App ("Shopify" 22,41) -->
+      <section id="shopify" class="card clip" data-start="22.34" data-duration="3.96" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="d" pathLength="1" d="M3 6h18" /><path class="d" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div><div class="txt"><span class="kicker line">Für Shopify gibt es</span><span class="head line">eine eigene</span><span class="head line"><span class="verlauf">Clarity-App</span></span></div></section>
 
-      <!-- Eigene Clarity-App für Shopify -->
-      <section id="shopify" class="card clip" data-start="20.25" data-duration="3.00" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="d" pathLength="1" d="M3 6h18" /><path class="d" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div><div class="txt"><span class="kicker line">Eigene Clarity-App</span><span class="head line ">Für <span class="verlauf">Shopify</span></span></div></section>
+      <!-- 6 Probleme entdecken ("Probleme" 26,48): Produktseiten (27,40), Landingpages (28,34) -->
+      <section id="probleme" class="card wide clip" data-start="26.41" data-duration="4.49" data-track-index="0"><span class="kicker line">Das kann helfen</span><span class="head line" style="font-size:58px">Probleme <span class="verlauf">entdecken</span></span><div class="chips">
+        <div class="chip" id="p1"><span class="mini"><svg viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r="1" /></svg></span>auf Produktseiten</div>
+        <div class="chip" id="p2"><span class="mini"><svg viewBox="0 0 24 24"><rect width="18" height="7" x="3" y="3" rx="1" /><rect width="9" height="7" x="3" y="14" rx="1" /><rect width="5" height="7" x="16" y="14" rx="1" /></svg></span>Landingpages</div>
+      </div></section>
 
-      <!-- Das kann dir helfen: Probleme entdecken (Produktseiten, Landingpages) -->
-      <section id="probleme" class="card wide clip" data-start="23.30" data-duration="5.00" data-track-index="0"><span class="kicker line">Das kann dir helfen</span><span class="head line " style="font-size:62px">Probleme <span class="verlauf">entdecken</span></span><div class="chips zwei line"><div class="chip" id="p1"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Produktseiten</div><div class="chip" id="p2"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Landingpages</div></div></section>
+      <!-- 7 In normalen Kennzahlen komplett übersehen ("Kennzahlen" 31,06) -->
+      <section id="kennzahlen" class="card clip" data-start="30.99" data-duration="2.11" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /><path class="d" pathLength="1" d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /><path class="d" pathLength="1" d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /><path class="d" pathLength="1" d="m2 2 20 20" /></svg></div><div class="txt"><span class="kicker line">In normalen Kennzahlen</span><span class="head line">komplett</span><span class="head line"><span class="verlauf">übersehen</span></span></div></section>
 
-      <!-- In normalen Kennzahlen vielleicht übersehen -->
-      <section id="kennzahlen" class="card clip" data-start="28.36" data-duration="2.79" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /><path class="d" pathLength="1" d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /><path class="d" pathLength="1" d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /><path class="d" pathLength="1" d="m2 2 20 20" /></svg></div><div class="txt"><span class="kicker line">In normalen Kennzahlen</span><span class="head line ">Vielleicht</span><span class="head line "><span class="verlauf">übersehen</span></span></div></section>
+      <!-- 8 Aber wichtig: Heatmap sagt nicht, warum jemand nicht kauft ("Aber" 33,24; "Heatmap" 35,18; "warum" 37,44) -->
+      <section id="warum" class="card wide mitte clip" data-start="33.17" data-duration="6.03" data-track-index="0"><div class="txt"><span class="kicker line">Aber wichtig</span><span class="head line" style="font-size:56px">Eine <span style="position:relative;display:inline-block">Heatmap<span class="marker" id="m1"></span></span> sagt nicht,</span><span class="head line" style="font-size:56px"><span style="position:relative;display:inline-block"><span class="verlauf">warum jemand nicht kauft</span><span class="unter" id="u1" style="width:100%"></span></span></span></div></section>
 
-      <!-- Aber wichtig: Heatmap sagt nicht automatisch -->
-      <section id="aber" class="card clip" data-start="31.21" data-duration="4.14" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path class="d" pathLength="1" d="M12 9v4" /><path class="d" pathLength="1" d="M12 17h.01" /></svg></div><div class="txt"><span class="kicker line">Aber wichtig</span><span class="head line " style="font-size:56px">Heatmap sagt dir</span><span class="head line " style="font-size:56px"><span class="verlauf">nicht automatisch</span></span></div></section>
+      <!-- 9 Checkliste beim Analyse-Tool ("Analyse-Tool" 40,38): Datenschutz 41,92 / Einwilligung 42,66 / Konfiguration 44,86 -->
+      <section id="pruefen" class="card wide clip" data-start="40.31" data-duration="5.64" data-track-index="0"><span class="kicker line">Auch beim Analyse-Tool prüfen</span><div class="liste line">
+        <div class="chip" id="c1"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Datenschutz</div>
+        <div class="chip" id="c2"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Einwilligung</div>
+        <div class="chip" id="c3"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>deine Konfiguration</div>
+      </div></section>
 
-      <!-- ... warum jemand nicht kauft -->
-      <section id="warum" class="card clip" data-start="35.41" data-duration="1.44" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><circle class="d" pathLength="1" cx="12" cy="12" r="10" /><path class="d" pathLength="1" d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path class="d" pathLength="1" d="M12 17h.01" /></svg></div><div class="txt"><span class="kicker line">Heatmap sagt nicht</span><span class="head line " style="font-size:56px">warum jemand</span><span class="head line " style="font-size:56px"><span class="verlauf">nicht kauft</span></span></div></section>
+      <!-- 10 Tipp: wichtige Produktseite auf dem Handy ("Deswegen" 46,09; "Produktseite" 50,19; "Handy" 51,15) -->
+      <section id="tipp" class="card clip" data-start="46.02" data-duration="6.13" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><rect class="d" pathLength="1" width="14" height="20" x="5" y="2" rx="2" ry="2" /><path class="d" pathLength="1" d="M12 18h.01" /><path class="e" pathLength="1" d="M8.5 6h7" /><path class="e" pathLength="1" d="M8.5 9h7" /><path class="e" pathLength="1" d="M8.5 12h4" /></svg></div><div class="txt"><span class="kicker line">Ein wichtiger Tipp</span><span class="head line" style="font-size:62px">Produktseite</span><span class="head line" style="font-size:62px"><span style="position:relative;display:inline-block"><span class="verlauf">auf dem Handy</span><span class="unter" id="u2" style="width:100%"></span></span></span></div></section>
 
-      <!-- Beim Analyse-Tool prüfen: Datenschutz, Einwilligung, Konfiguration -->
-      <section id="analyse" class="card wide clip" data-start="37.15" data-duration="6.20" data-track-index="0"><span class="kicker line">Bei einem Analyse-Tool</span><span class="head line " style="font-size:60px">Das musst du <span class="verlauf">prüfen</span></span><div class="chips drei line"><div class="chip" id="a1"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Datenschutz</div><div class="chip" id="a2"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Einwilligung</div><div class="chip" id="a3"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Konfiguration</div></div></section>
+      <!-- 11 Wiederkehrendes Problem suchen ("suche" 52,33; "wiederkehrenden" 53,41) -->
+      <section id="problem" class="card clip" data-start="52.26" data-duration="2.69" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="m17 2 4 4-4 4" /><path class="d" pathLength="1" d="M3 11v-1a4 4 0 0 1 4-4h14" /><path class="d" pathLength="1" d="m7 22-4-4 4-4" /><path class="d" pathLength="1" d="M21 13v1a4 4 0 0 1-4 4H3" /></svg></div><div class="txt"><span class="kicker line">Dann suche nach einem</span><span class="head line" style="font-size:60px">wiederkehrenden</span><span class="head line" style="font-size:60px"><span class="verlauf">Problem</span></span></div></section>
 
-      <!-- Mein Tipp: wichtige Produktseite auf dem Handy -->
-      <section id="tipp" class="card clip" data-start="43.44" data-duration="6.16" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24" id="tp-a"><path class="d" pathLength="1" d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path class="d" pathLength="1" d="M9 18h6" /><path class="d" pathLength="1" d="M10 22h4" /></svg><svg viewBox="0 0 24 24" class="b" id="tp-b"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></svg></div><div class="txt"><span class="kicker line">Mein Tipp: zuerst</span><span class="head line ">eine wichtige</span><span class="head line " style="font-size:60px"><span class="verlauf">Produktseite</span></span></div></section>
+      <!-- 12 Optimierung beginnt bei: Vermutung (gestrichen auf "sondern" 57,97) / echtem Nutzerverhalten -->
+      <section id="vermutung" class="card wide clip" data-start="55.26" data-duration="3.69" data-track-index="0"><span class="kicker line">Optimierung beginnt bei</span><div class="reihen">
+        <div class="zeile line" id="v1"><div class="dot grau"><svg viewBox="0 0 24 24"><circle class="d" pathLength="1" cx="12" cy="12" r="10" /><path class="d" pathLength="1" d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path class="d" pathLength="1" d="M12 17h.01" /></svg></div><span class="head">Vermutung</span><span class="strich" id="st1"></span></div>
+        <div class="zeile" id="v2" style="opacity:0"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle class="e" pathLength="1" cx="9" cy="7" r="4" /><path class="e" pathLength="1" d="M22 21v-2a4 4 0 0 0-3-3.87" /><path class="e" pathLength="1" d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></div><span class="head"><span class="verlauf">echtem Nutzerverhalten</span></span></div>
+      </div></section>
 
-      <!-- Suche ein wiederkehrendes Problem -->
-      <section id="problem" class="card clip" data-start="49.66" data-duration="2.29" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="m17 2 4 4-4 4" /><path class="d" pathLength="1" d="M3 11v-1a4 4 0 0 1 4-4h14" /><path class="d" pathLength="1" d="m7 22-4-4 4-4" /><path class="d" pathLength="1" d="M21 13v1a4 4 0 0 1-4 4H3" /></svg></div><div class="txt"><span class="kicker line">Dann suchen nach</span><span class="head line " style="font-size:54px">Wiederkehrendem</span><span class="head line "><span class="verlauf">Problem</span></span></div></section>
+      <!-- 13 ERST BEOBACHTEN, DANN OPTIMIEREN ("Nutzerverhalten" 59,03) -->
+      <section id="beobachten" class="card wide mitte clip" data-start="58.96" data-duration="2.74" data-track-index="0"><div class="txt"><span class="line zeile" style="gap:18px"><span class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle class="d" pathLength="1" cx="12" cy="12" r="3" /></svg></span><span class="head" style="font-size:64px">ERST BEOBACHTEN,</span></span><span class="head line" style="font-size:64px"><span class="verlauf">DANN OPTIMIEREN</span></span></div></section>
 
-      <!-- Optimierung beginnt nicht bei der Vermutung -->
-      <section id="vermutung" class="card clip" data-start="52.02" data-duration="2.78" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><circle class="d" pathLength="1" cx="12" cy="12" r="10" /><path class="d" pathLength="1" d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path class="d" pathLength="1" d="M12 17h.01" /></svg></div><div class="txt"><span class="kicker line">Optimierung beginnt nicht bei</span><span class="head line" style="font-size:62px"><span style="position:relative;display:inline-block">der <span class="verlauf">Vermutung</span><span class="unter durch" id="u1"></span></span></span></div></section>
-
-      <!-- ERST BEOBACHTEN, DANN OPTIMIEREN -->
-      <section id="beobachten" class="card wide mitte clip" data-start="54.86" data-duration="2.24" data-track-index="0"><div class="txt"><span class="head line " style="font-size:62px">ERST BEOBACHTEN,</span><span class="line mark"><span class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle class="d" pathLength="1" cx="12" cy="12" r="3" /></svg></span><span class="head" style="font-size:70px"><span class="verlauf">DANN OPTIMIEREN</span><span class="marker" id="m1"></span></span></span></div></section>
-
-      <!-- Mehr zur Shopify-App wissen? -->
-      <section id="mehr" class="card clip" data-start="57.45" data-duration="1.85" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><rect class="d" pathLength="1" x="2" y="4" width="20" height="16" rx="2" /><path class="d" pathLength="1" d="M10 4v4" /><path class="d" pathLength="1" d="M2 8h20" /><path class="d" pathLength="1" d="M6 4v4" /></svg></div><div class="txt"><span class="kicker line">Mehr wissen?</span><span class="head line " style="font-size:60px">Zur <span class="verlauf">Shopify-App</span></span></div></section>
-
-      <!-- Folge mir -->
-      <section id="folge" class="card clip" data-start="59.36" data-duration="3.24" data-track-index="0"><div class="tile" id="ft"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M2 21a8 8 0 0 1 13.292-6" /><circle class="d" pathLength="1" cx="10" cy="8" r="5" /><path class="d" pathLength="1" d="M19 16v6" /><path class="d" pathLength="1" d="M22 19h-6" /></svg></div><div class="txt"><span class="kicker line">Zur Shopify-App</span><span class="head line ">Folge <span class="verlauf">mir</span></span></div></section>
+      <!-- 14 Folgen ("wissen" 61,77; Knopf auf "gerne" 63,27), bleibt bis zum Ende -->
+      <section id="folgen" class="card clip" data-start="61.7" data-duration="4.2" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle class="d" pathLength="1" cx="9" cy="7" r="4" /><path class="d" pathLength="1" d="M19 8v6" /><path class="d" pathLength="1" d="M22 11h-6" /></svg></div><div class="txt"><span class="kicker line">Mehr zur App wissen?</span><span class="head line">Folge <span class="verlauf">mir</span></span><span class="line"><span class="knopf" id="knopf"><span class="flaeche" id="kf"></span><span class="vor" id="kv"><svg viewBox="0 0 24 24"><path d="M12 5v14" /><path d="M5 12h14" /></svg>Folgen</span><span class="nach" id="kn"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>Gefolgt</span></span></span></div></section>
     </div>
 
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
+      // Pfad zeichnet sich (erst sichtbar, wenn ein Stück gezeichnet ist)
       function zeichne(sel, t, dauer = 0.6, stagger = 0.08) {
         tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dauer, ease: "power2.inOut", stagger }, t);
         tl.set(sel, { opacity: 1 }, t + 0.08);
       }
+      gsap.set(".e", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
       // Karte: Fläche gleitet weich herein, Icon zeichnet sich, Kicker und Titel kommen mit (Versatz 0,07 s). Raus kurz und leise.
       function karte(id, an, aus) {
         const k = "#" + id;
@@ -144,54 +164,79 @@
         tl.fromTo(k, { opacity: 0, y: 28, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out" }, an);
         if (hat(".tile")) {
           tl.fromTo(k + " .tile", { scale: 0.85 }, { scale: 1, duration: 0.5, ease: "power3.out" }, an + 0.05);
-          if (hat(".tile .d")) zeichne(k + " .tile .d", an + 0.12);
         }
-        if (hat(".mark .d")) zeichne(k + " .mark .d", an + 0.12);
+        if (hat(".d")) zeichne(k + " .d", an + 0.12);
         if (hat(".line")) tl.fromTo(k + " .line", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out", stagger: 0.07 }, an + 0.03);
         if (hat(".verlauf")) tl.fromTo(k + " .verlauf", { backgroundPosition: "-60px 0" }, { backgroundPosition: "0px 0", duration: 0.6, ease: "power2.out" }, an + 0.2);
-        tl.to(k, { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, aus - 0.25);
+        if (aus) tl.to(k, { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, aus - 0.25);
       }
-      const wechsel = (a, b, t) => {
-        tl.to(a, { opacity: 0, scale: 0.9, duration: 0.25, ease: "power2.in", transformOrigin: "50% 50%" }, t);
-        tl.fromTo(b, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out", transformOrigin: "50% 50%" }, t + 0.15);
-      };
-      // Chip wird auf seinem Wort abgehakt
-      const chipAn = (c, t) => {
-        tl.to(c + " .fill", { opacity: 1, duration: 0.2, ease: "power2.out" }, t);
-        tl.set(c + " .d", { opacity: 1 }, t + 0.08);
-        tl.fromTo(c + " .d", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, t + 0.05);
-        tl.to(c, { color: "#0b0c0e", duration: 0.25 }, t);
-      };
+      // Ein Teil kommt auf seinem Wort: weich herein, sein Icon zeichnet sich
+      function teil(sel, t) {
+        tl.fromTo(sel, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t);
+        if (document.querySelector(sel + " .dot")) tl.fromTo(sel + " .dot", { scale: 0.85 }, { scale: 1, duration: 0.45, ease: "power3.out" }, t);
+        if (document.querySelector(sel + " .e")) {
+          tl.set(sel + " .e", { opacity: 1 }, t + 0.1);
+          tl.to(sel + " .e", { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut", stagger: 0.06 }, t + 0.06);
+        }
+      }
+      // Häkchen auf dem Wort
+      function haken(sel, t) {
+        tl.to(sel + " .fill", { opacity: 1, duration: 0.2, ease: "power2.out" }, t);
+        tl.set(sel + " .e", { opacity: 1 }, t + 0.08);
+        tl.to(sel + " .e", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, t + 0.05);
+        tl.to(sel, { color: "#0b0c0e", duration: 0.25 }, t);
+      }
 
-      karte("reihe", 5.85, 7.66);
-      karte("clarity", 7.73, 10.45);
-      karte("heat", 10.58, 12.0);
-      karte("session", 12.06, 13.8);
-      karte("erkennt", 13.84, 20.05);
-      chipAn("#e1", 15.27);
-      chipAn("#e2", 16.79);
-      chipAn("#e3", 18.66);
-      karte("shopify", 20.25, 23.25);
-      karte("probleme", 23.3, 28.3);
-      chipAn("#p1", 25.67);
-      chipAn("#p2", 26.74);
-      karte("kennzahlen", 28.36, 31.15);
-      karte("aber", 31.21, 35.35);
-      karte("warum", 35.41, 36.85);
-      karte("analyse", 37.15, 43.35);
-      chipAn("#a1", 39.4);
-      chipAn("#a2", 40.08);
-      chipAn("#a3", 42.32);
-      karte("tipp", 43.44, 49.6);
-      wechsel("#tp-a", "#tp-b", 48.5);
-      karte("problem", 49.66, 51.95);
-      karte("vermutung", 52.02, 54.8);
-      tl.to("#u1", { scaleX: 1, duration: 0.45, ease: "power2.inOut" }, 54.09);
-      karte("beobachten", 54.86, 57.1);
-      tl.to("#m1", { scaleX: 1, duration: 0.45, ease: "power2.inOut" }, 55.3);
-      karte("mehr", 57.45, 59.3);
-      karte("folge", 59.36, 62.6);
-      tl.fromTo("#ft", { scale: 1 }, { scale: 1.12, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 1, transformOrigin: "50% 50%" }, 59.41);
+      // 1 Reihe (nach dem Hook)
+      karte("reihe", 6.5, 8.45);
+      // 2 Microsoft Clarity
+      karte("app", 8.52, 11.55);
+      // 3 HEATMAPS mit der Karte, SESSION RECORDINGS auf "Sitzungsaufzeichnungen"
+      karte("zeigt", 11.62, 16.45);
+      teil("#z2", 13.1);
+      // 4 Klicks / Scrolltiefe / RAGE CLICKS
+      karte("erkennt", 16.6, 21.95);
+      teil("#s1", 16.66);
+      teil("#s2", 18.18);
+      teil("#s3", 20.04);
+      // 5 eigene Clarity-App für Shopify
+      karte("shopify", 22.34, 26.3);
+      // 6 Probleme entdecken: Produktseiten, Landingpages
+      karte("probleme", 26.41, 30.9);
+      teil("#p1", 27.33);
+      teil("#p2", 28.27);
+      // 7 komplett übersehen
+      karte("kennzahlen", 30.99, 33.1);
+      // 8 Aber wichtig: Markierung auf "Heatmap", Unterstrich auf "warum"
+      karte("warum", 33.17, 39.2);
+      tl.to("#m1", { scaleX: 1, duration: 0.45, ease: "power2.inOut" }, 35.11);
+      tl.to("#u1", { scaleX: 1, duration: 0.5, ease: "power2.inOut" }, 37.37);
+      // 9 Checkliste: Datenschutz, Einwilligung, Konfiguration
+      karte("pruefen", 40.31, 45.95);
+      haken("#c1", 41.85);
+      haken("#c2", 42.59);
+      haken("#c3", 44.79);
+      // 10 Tipp: Bildschirm füllt sich auf "Produktseite", Unterstrich auf "Handy"
+      karte("tipp", 46.02, 52.15);
+      tl.set("#tipp .e", { opacity: 1 }, 50.2);
+      tl.to("#tipp .e", { strokeDashoffset: 0, duration: 0.45, ease: "power2.inOut", stagger: 0.08 }, 50.12);
+      tl.to("#u2", { scaleX: 1, duration: 0.45, ease: "power2.inOut" }, 51.08);
+      // 11 wiederkehrendes Problem
+      karte("problem", 52.26, 54.95);
+      // 12 Vermutung gestrichen, echtes Nutzerverhalten auf "sondern"
+      karte("vermutung", 55.26, 58.9);
+      tl.to("#st1", { scaleX: 1, duration: 0.35, ease: "power2.inOut" }, 57.9);
+      tl.to("#v1", { opacity: 0.45, duration: 0.3, ease: "power2.out" }, 58.0);
+      teil("#v2", 57.9);
+      // 13 ERST BEOBACHTEN, DANN OPTIMIEREN
+      karte("beobachten", 58.96, 61.65);
+      // 14 Folgen, Knopf wird auf "gerne" angetippt, Karte bleibt bis zum Ende
+      karte("folgen", 61.7, null);
+      tl.to("#knopf", { scale: 0.94, duration: 0.1, ease: "power2.in" }, 63.27);
+      tl.to("#knopf", { scale: 1, duration: 0.2, ease: "power2.out" }, 63.37);
+      tl.to("#kf", { opacity: 1, duration: 0.2, ease: "power2.out" }, 63.3);
+      tl.to("#kv", { opacity: 0, duration: 0.15, ease: "power2.in" }, 63.3);
+      tl.to("#kn", { opacity: 1, duration: 0.2, ease: "power2.out" }, 63.38);
 
       tl.seek(0);
       window.__timelines["clarity-skizzen"] = tl;
