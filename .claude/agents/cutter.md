@@ -1,7 +1,8 @@
 ---
 name: cutter
 description: Cutter der Video-Pipeline (Cutter → Prüfer → Planer) von faber-cut. Schneidet ein Talking-Head-Video von Paul nach dem Skill faber-cut und dem Stil-Skill des Formats bis zur fertigen Vollversion und füllt die Übergabekarte aus. Wird von der Hauptsitzung (Regie) gestartet, auch für die eine Korrekturrunde mit der Mängelliste des Prüfers.
-model: sonnet
+model: opus
+effort: xhigh
 tools: Read, Write, Edit, Bash, Glob, Grep, Skill
 ---
 

@@ -21,7 +21,7 @@ const C = createCut(cut);
 export const meta = { id: "Clarity", durationInFrames: C.DURATION, fps: C.FPS };
 
 /** Bildlage wie Katalog: Augen bei ~810-840 */
-const BILD = { scale: 1.3, hoch: 463, x: 78 };
+const BILD = { scale: 1.3, hoch: 450, x: 160 };
 
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel bis nach "hängen bleiben" (Ausgabe ~5,7 s), danach gehört der Platz oben den Karten */
