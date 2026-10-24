@@ -1,0 +1,1998 @@
+{
+ "projekt": "waterdrop",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "waterdrop/t1",
+   "from": 1.0,
+   "to": 13.475,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 31.415,
+   "to": 37.745,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 42.375,
+   "to": 59.725,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 73.265,
+   "to": 80.295,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 97.875,
+   "to": 103.225,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 111.715,
+   "to": 115.135,
+   "nach": 0.02,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 138.9,
+   "to": 159.855,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 166.075,
+   "to": 168.075,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 182.515,
+   "to": 186.305,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 190.905,
+   "to": 197.725,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 200.8,
+   "to": 209.765,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "waterdrop/t1",
+   "from": 248.805,
+   "to": 255.83,
+   "nach": 0.09,
+   "vor": 0.06
+  }
+ ],
+ "words": [
+  {
+   "text": "Ganze",
+   "src": "waterdrop/t1",
+   "start": 1.13,
+   "end": 1.35
+  },
+  {
+   "text": "140",
+   "src": "waterdrop/t1",
+   "start": 1.49,
+   "end": 2.31
+  },
+  {
+   "text": "Millionen",
+   "src": "waterdrop/t1",
+   "start": 2.41,
+   "end": 2.79
+  },
+  {
+   "text": "Euro",
+   "src": "waterdrop/t1",
+   "start": 2.87,
+   "end": 3.01
+  },
+  {
+   "text": "Umsatz",
+   "src": "waterdrop/t1",
+   "start": 3.09,
+   "end": 3.39
+  },
+  {
+   "text": "mit",
+   "src": "waterdrop/t1",
+   "start": 3.45,
+   "end": 3.55
+  },
+  {
+   "text": "kleinen",
+   "src": "waterdrop/t1",
+   "start": 3.63,
+   "end": 4.03
+  },
+  {
+   "text": "Würfeln,",
+   "src": "waterdrop/t1",
+   "start": 4.11,
+   "end": 4.45
+  },
+  {
+   "text": "die",
+   "src": "waterdrop/t1",
+   "start": 4.75,
+   "end": 4.85
+  },
+  {
+   "text": "du",
+   "src": "waterdrop/t1",
+   "start": 4.97,
+   "end": 5.05
+  },
+  {
+   "text": "in",
+   "src": "waterdrop/t1",
+   "start": 5.23,
+   "end": 5.29
+  },
+  {
+   "text": "Wasser",
+   "src": "waterdrop/t1",
+   "start": 5.35,
+   "end": 5.53
+  },
+  {
+   "text": "auflösen",
+   "src": "waterdrop/t1",
+   "start": 5.57,
+   "end": 5.87
+  },
+  {
+   "text": "kannst.",
+   "src": "waterdrop/t1",
+   "start": 5.91,
+   "end": 6.17
+  },
+  {
+   "text": "Das",
+   "src": "waterdrop/t1",
+   "start": 6.87,
+   "end": 7.01
+  },
+  {
+   "text": "ist",
+   "src": "waterdrop/t1",
+   "start": 7.07,
+   "end": 7.15
+  },
+  {
+   "text": "die",
+   "src": "waterdrop/t1",
+   "start": 7.21,
+   "end": 7.27
+  },
+  {
+   "text": "Geschichte",
+   "src": "waterdrop/t1",
+   "start": 7.33,
+   "end": 7.71
+  },
+  {
+   "text": "von",
+   "src": "waterdrop/t1",
+   "start": 7.89,
+   "end": 8.07
+  },
+  {
+   "text": "waterdrop.",
+   "src": "waterdrop/t1",
+   "start": 8.15,
+   "end": 8.59
+  },
+  {
+   "text": "Und",
+   "src": "waterdrop/t1",
+   "start": 9.11,
+   "end": 9.19
+  },
+  {
+   "text": "bevor",
+   "src": "waterdrop/t1",
+   "start": 9.23,
+   "end": 9.51
+  },
+  {
+   "text": "jetzt",
+   "src": "waterdrop/t1",
+   "start": 9.61,
+   "end": 9.77
+  },
+  {
+   "text": "jemand",
+   "src": "waterdrop/t1",
+   "start": 9.83,
+   "end": 10.05
+  },
+  {
+   "text": "fragt,",
+   "src": "waterdrop/t1",
+   "start": 10.11,
+   "end": 10.41
+  },
+  {
+   "text": "die",
+   "src": "waterdrop/t1",
+   "start": 10.59,
+   "end": 10.67
+  },
+  {
+   "text": "Zahl",
+   "src": "waterdrop/t1",
+   "start": 10.77,
+   "end": 10.95
+  },
+  {
+   "text": "bezieht",
+   "src": "waterdrop/t1",
+   "start": 11.03,
+   "end": 11.33
+  },
+  {
+   "text": "sich",
+   "src": "waterdrop/t1",
+   "start": 11.37,
+   "end": 11.49
+  },
+  {
+   "text": "auf",
+   "src": "waterdrop/t1",
+   "start": 11.59,
+   "end": 11.69
+  },
+  {
+   "text": "das",
+   "src": "waterdrop/t1",
+   "start": 11.75,
+   "end": 11.87
+  },
+  {
+   "text": "Jahr",
+   "src": "waterdrop/t1",
+   "start": 11.93,
+   "end": 12.07
+  },
+  {
+   "text": "2024.",
+   "src": "waterdrop/t1",
+   "start": 12.65,
+   "end": 13.41
+  },
+  {
+   "text": "waterdrop",
+   "src": "waterdrop/t1",
+   "start": 31.45,
+   "end": 31.85
+  },
+  {
+   "text": "wurde",
+   "src": "waterdrop/t1",
+   "start": 31.91,
+   "end": 32.05
+  },
+  {
+   "text": "nämlich",
+   "src": "waterdrop/t1",
+   "start": 32.13,
+   "end": 32.33
+  },
+  {
+   "text": "schon",
+   "src": "waterdrop/t1",
+   "start": 32.35,
+   "end": 32.47
+  },
+  {
+   "text": "2016",
+   "src": "waterdrop/t1",
+   "start": 32.53,
+   "end": 33.17
+  },
+  {
+   "text": "gegründet",
+   "src": "waterdrop/t1",
+   "start": 33.21,
+   "end": 33.65
+  },
+  {
+   "text": "und",
+   "src": "waterdrop/t1",
+   "start": 33.99,
+   "end": 34.07
+  },
+  {
+   "text": "ist",
+   "src": "waterdrop/t1",
+   "start": 34.13,
+   "end": 34.21
+  },
+  {
+   "text": "mit",
+   "src": "waterdrop/t1",
+   "start": 34.27,
+   "end": 34.37
+  },
+  {
+   "text": "einem",
+   "src": "waterdrop/t1",
+   "start": 34.47,
+   "end": 34.67
+  },
+  {
+   "text": "ziemlich",
+   "src": "waterdrop/t1",
+   "start": 34.77,
+   "end": 35.07
+  },
+  {
+   "text": "einfachen",
+   "src": "waterdrop/t1",
+   "start": 35.19,
+   "end": 35.59
+  },
+  {
+   "text": "und",
+   "src": "waterdrop/t1",
+   "start": 35.65,
+   "end": 35.73
+  },
+  {
+   "text": "verständlichen",
+   "src": "waterdrop/t1",
+   "start": 35.77,
+   "end": 36.37
+  },
+  {
+   "text": "Produktversprechen",
+   "src": "waterdrop/t1",
+   "start": 36.45,
+   "end": 37.21
+  },
+  {
+   "text": "gestartet.",
+   "src": "waterdrop/t1",
+   "start": 37.27,
+   "end": 37.67
+  },
+  {
+   "text": "Statt",
+   "src": "waterdrop/t1",
+   "start": 42.47,
+   "end": 42.67
+  },
+  {
+   "text": "nämlich",
+   "src": "waterdrop/t1",
+   "start": 42.71,
+   "end": 42.91
+  },
+  {
+   "text": "eine",
+   "src": "waterdrop/t1",
+   "start": 42.95,
+   "end": 43.07
+  },
+  {
+   "text": "fertige",
+   "src": "waterdrop/t1",
+   "start": 43.19,
+   "end": 43.55
+  },
+  {
+   "text": "Flasche",
+   "src": "waterdrop/t1",
+   "start": 43.63,
+   "end": 43.85
+  },
+  {
+   "text": "Getränk",
+   "src": "waterdrop/t1",
+   "start": 43.89,
+   "end": 44.15
+  },
+  {
+   "text": "zu",
+   "src": "waterdrop/t1",
+   "start": 44.21,
+   "end": 44.27
+  },
+  {
+   "text": "verkaufen,",
+   "src": "waterdrop/t1",
+   "start": 44.33,
+   "end": 44.79
+  },
+  {
+   "text": "bekommst",
+   "src": "waterdrop/t1",
+   "start": 45.17,
+   "end": 45.53
+  },
+  {
+   "text": "du",
+   "src": "waterdrop/t1",
+   "start": 45.57,
+   "end": 45.63
+  },
+  {
+   "text": "kleine",
+   "src": "waterdrop/t1",
+   "start": 45.71,
+   "end": 46.05
+  },
+  {
+   "text": "Microdrinks,",
+   "src": "waterdrop/t1",
+   "start": 46.21,
+   "end": 46.89
+  },
+  {
+   "text": "die",
+   "src": "waterdrop/t1",
+   "start": 47.23,
+   "end": 47.31
+  },
+  {
+   "text": "du",
+   "src": "waterdrop/t1",
+   "start": 47.39,
+   "end": 47.47
+  },
+  {
+   "text": "selbst",
+   "src": "waterdrop/t1",
+   "start": 47.69,
+   "end": 47.99
+  },
+  {
+   "text": "in",
+   "src": "waterdrop/t1",
+   "start": 48.07,
+   "end": 48.13
+  },
+  {
+   "text": "deinem",
+   "src": "waterdrop/t1",
+   "start": 48.17,
+   "end": 48.33
+  },
+  {
+   "text": "Wasser",
+   "src": "waterdrop/t1",
+   "start": 48.35,
+   "end": 48.53
+  },
+  {
+   "text": "auflösen",
+   "src": "waterdrop/t1",
+   "start": 48.57,
+   "end": 48.87
+  },
+  {
+   "text": "kannst.",
+   "src": "waterdrop/t1",
+   "start": 48.91,
+   "end": 49.15
+  },
+  {
+   "text": "Das",
+   "src": "waterdrop/t1",
+   "start": 49.89,
+   "end": 50.03
+  },
+  {
+   "text": "ist",
+   "src": "waterdrop/t1",
+   "start": 50.07,
+   "end": 50.15
+  },
+  {
+   "text": "halt",
+   "src": "waterdrop/t1",
+   "start": 50.19,
+   "end": 50.33
+  },
+  {
+   "text": "nicht",
+   "src": "waterdrop/t1",
+   "start": 50.43,
+   "end": 50.59
+  },
+  {
+   "text": "nur",
+   "src": "waterdrop/t1",
+   "start": 50.65,
+   "end": 50.73
+  },
+  {
+   "text": "eine",
+   "src": "waterdrop/t1",
+   "start": 50.85,
+   "end": 51.01
+  },
+  {
+   "text": "Produktidee,",
+   "src": "waterdrop/t1",
+   "start": 51.07,
+   "end": 51.69
+  },
+  {
+   "text": "es",
+   "src": "waterdrop/t1",
+   "start": 51.95,
+   "end": 52.01
+  },
+  {
+   "text": "beeinflusst",
+   "src": "waterdrop/t1",
+   "start": 52.07,
+   "end": 52.51
+  },
+  {
+   "text": "tatsächlich",
+   "src": "waterdrop/t1",
+   "start": 52.55,
+   "end": 52.93
+  },
+  {
+   "text": "auch",
+   "src": "waterdrop/t1",
+   "start": 53.05,
+   "end": 53.19
+  },
+  {
+   "text": "den",
+   "src": "waterdrop/t1",
+   "start": 53.27,
+   "end": 53.37
+  },
+  {
+   "text": "Vertrieb.",
+   "src": "waterdrop/t1",
+   "start": 53.43,
+   "end": 53.73
+  },
+  {
+   "text": "Denn",
+   "src": "waterdrop/t1",
+   "start": 54.45,
+   "end": 54.63
+  },
+  {
+   "text": "wenn",
+   "src": "waterdrop/t1",
+   "start": 54.89,
+   "end": 55.01
+  },
+  {
+   "text": "du",
+   "src": "waterdrop/t1",
+   "start": 55.05,
+   "end": 55.09
+  },
+  {
+   "text": "so",
+   "src": "waterdrop/t1",
+   "start": 55.17,
+   "end": 55.25
+  },
+  {
+   "text": "etwas",
+   "src": "waterdrop/t1",
+   "start": 55.37,
+   "end": 55.59
+  },
+  {
+   "text": "noch",
+   "src": "waterdrop/t1",
+   "start": 55.67,
+   "end": 55.77
+  },
+  {
+   "text": "nie",
+   "src": "waterdrop/t1",
+   "start": 55.89,
+   "end": 56.01
+  },
+  {
+   "text": "probiert",
+   "src": "waterdrop/t1",
+   "start": 56.07,
+   "end": 56.43
+  },
+  {
+   "text": "hast,",
+   "src": "waterdrop/t1",
+   "start": 56.47,
+   "end": 56.71
+  },
+  {
+   "text": "dann",
+   "src": "waterdrop/t1",
+   "start": 56.99,
+   "end": 57.13
+  },
+  {
+   "text": "möchtest",
+   "src": "waterdrop/t1",
+   "start": 57.17,
+   "end": 57.51
+  },
+  {
+   "text": "du",
+   "src": "waterdrop/t1",
+   "start": 57.53,
+   "end": 57.59
+  },
+  {
+   "text": "vielleicht",
+   "src": "waterdrop/t1",
+   "start": 57.63,
+   "end": 57.91
+  },
+  {
+   "text": "erst",
+   "src": "waterdrop/t1",
+   "start": 57.97,
+   "end": 58.09
+  },
+  {
+   "text": "mal",
+   "src": "waterdrop/t1",
+   "start": 58.13,
+   "end": 58.21
+  },
+  {
+   "text": "wissen,",
+   "src": "waterdrop/t1",
+   "start": 58.25,
+   "end": 58.47
+  },
+  {
+   "text": "wie",
+   "src": "waterdrop/t1",
+   "start": 58.81,
+   "end": 58.89
+  },
+  {
+   "text": "es",
+   "src": "waterdrop/t1",
+   "start": 58.93,
+   "end": 58.99
+  },
+  {
+   "text": "dir",
+   "src": "waterdrop/t1",
+   "start": 59.01,
+   "end": 59.09
+  },
+  {
+   "text": "überhaupt",
+   "src": "waterdrop/t1",
+   "start": 59.13,
+   "end": 59.35
+  },
+  {
+   "text": "schmeckt.",
+   "src": "waterdrop/t1",
+   "start": 59.37,
+   "end": 59.63
+  },
+  {
+   "text": "Und",
+   "src": "waterdrop/t1",
+   "start": 73.33,
+   "end": 73.39
+  },
+  {
+   "text": "genau",
+   "src": "waterdrop/t1",
+   "start": 73.43,
+   "end": 73.63
+  },
+  {
+   "text": "deshalb",
+   "src": "waterdrop/t1",
+   "start": 73.71,
+   "end": 73.99
+  },
+  {
+   "text": "hat",
+   "src": "waterdrop/t1",
+   "start": 74.03,
+   "end": 74.15
+  },
+  {
+   "text": "nämlich",
+   "src": "waterdrop/t1",
+   "start": 74.17,
+   "end": 74.37
+  },
+  {
+   "text": "waterdrop",
+   "src": "waterdrop/t1",
+   "start": 74.41,
+   "end": 74.79
+  },
+  {
+   "text": "neben",
+   "src": "waterdrop/t1",
+   "start": 74.91,
+   "end": 75.11
+  },
+  {
+   "text": "seinem",
+   "src": "waterdrop/t1",
+   "start": 75.15,
+   "end": 75.35
+  },
+  {
+   "text": "Onlineshop",
+   "src": "waterdrop/t1",
+   "start": 75.41,
+   "end": 75.79
+  },
+  {
+   "text": "auch",
+   "src": "waterdrop/t1",
+   "start": 75.91,
+   "end": 76.01
+  },
+  {
+   "text": "eigene",
+   "src": "waterdrop/t1",
+   "start": 76.17,
+   "end": 76.49
+  },
+  {
+   "text": "Stores",
+   "src": "waterdrop/t1",
+   "start": 76.69,
+   "end": 76.97
+  },
+  {
+   "text": "aufgebaut,",
+   "src": "waterdrop/t1",
+   "start": 77.03,
+   "end": 77.45
+  },
+  {
+   "text": "in",
+   "src": "waterdrop/t1",
+   "start": 77.79,
+   "end": 77.85
+  },
+  {
+   "text": "denen",
+   "src": "waterdrop/t1",
+   "start": 77.89,
+   "end": 78.11
+  },
+  {
+   "text": "Menschen",
+   "src": "waterdrop/t1",
+   "start": 78.17,
+   "end": 78.51
+  },
+  {
+   "text": "die",
+   "src": "waterdrop/t1",
+   "start": 78.57,
+   "end": 78.65
+  },
+  {
+   "text": "Produkte",
+   "src": "waterdrop/t1",
+   "start": 78.71,
+   "end": 79.11
+  },
+  {
+   "text": "selbst",
+   "src": "waterdrop/t1",
+   "start": 79.23,
+   "end": 79.53
+  },
+  {
+   "text": "erleben",
+   "src": "waterdrop/t1",
+   "start": 79.71,
+   "end": 79.97
+  },
+  {
+   "text": "können.",
+   "src": "waterdrop/t1",
+   "start": 80.01,
+   "end": 80.21
+  },
+  {
+   "text": "Eine",
+   "src": "waterdrop/t1",
+   "start": 97.95,
+   "end": 98.09
+  },
+  {
+   "text": "Fallstudie",
+   "src": "waterdrop/t1",
+   "start": 98.21,
+   "end": 98.69
+  },
+  {
+   "text": "beschreibt",
+   "src": "waterdrop/t1",
+   "start": 98.75,
+   "end": 99.05
+  },
+  {
+   "text": "nämlich",
+   "src": "waterdrop/t1",
+   "start": 99.09,
+   "end": 99.29
+  },
+  {
+   "text": "mehr",
+   "src": "waterdrop/t1",
+   "start": 99.37,
+   "end": 99.49
+  },
+  {
+   "text": "als",
+   "src": "waterdrop/t1",
+   "start": 99.55,
+   "end": 99.65
+  },
+  {
+   "text": "40",
+   "src": "waterdrop/t1",
+   "start": 99.75,
+   "end": 100.05
+  },
+  {
+   "text": "Stores",
+   "src": "waterdrop/t1",
+   "start": 100.09,
+   "end": 100.33
+  },
+  {
+   "text": "weltweit",
+   "src": "waterdrop/t1",
+   "start": 100.39,
+   "end": 100.79
+  },
+  {
+   "text": "und",
+   "src": "waterdrop/t1",
+   "start": 101.17,
+   "end": 101.25
+  },
+  {
+   "text": "die",
+   "src": "waterdrop/t1",
+   "start": 101.29,
+   "end": 101.35
+  },
+  {
+   "text": "Verbindung",
+   "src": "waterdrop/t1",
+   "start": 101.39,
+   "end": 101.77
+  },
+  {
+   "text": "zum",
+   "src": "waterdrop/t1",
+   "start": 101.89,
+   "end": 102.03
+  },
+  {
+   "text": "Shopify",
+   "src": "waterdrop/t1",
+   "start": 102.19,
+   "end": 102.63
+  },
+  {
+   "text": "POS.",
+   "src": "waterdrop/t1",
+   "start": 102.69,
+   "end": 103.07
+  },
+  {
+   "text": "Diese",
+   "src": "waterdrop/t1",
+   "start": 111.78,
+   "end": 111.96
+  },
+  {
+   "text": "Zahl",
+   "src": "waterdrop/t1",
+   "start": 112.06,
+   "end": 112.22
+  },
+  {
+   "text": "stammt",
+   "src": "waterdrop/t1",
+   "start": 112.28,
+   "end": 112.52
+  },
+  {
+   "text": "nämlich",
+   "src": "waterdrop/t1",
+   "start": 112.56,
+   "end": 112.78
+  },
+  {
+   "text": "aus",
+   "src": "waterdrop/t1",
+   "start": 112.84,
+   "end": 112.94
+  },
+  {
+   "text": "dem",
+   "src": "waterdrop/t1",
+   "start": 112.98,
+   "end": 113.08
+  },
+  {
+   "text": "damaligen",
+   "src": "waterdrop/t1",
+   "start": 113.16,
+   "end": 113.58
+  },
+  {
+   "text": "Quellenstand,",
+   "src": "waterdrop/t1",
+   "start": 113.62,
+   "end": 114.08
+  },
+  {
+   "text": "leider",
+   "src": "waterdrop/t1",
+   "start": 114.22,
+   "end": 114.44
+  },
+  {
+   "text": "nicht",
+   "src": "waterdrop/t1",
+   "start": 114.5,
+   "end": 114.62
+  },
+  {
+   "text": "von",
+   "src": "waterdrop/t1",
+   "start": 114.64,
+   "end": 114.74
+  },
+  {
+   "text": "heute.",
+   "src": "waterdrop/t1",
+   "start": 114.78,
+   "end": 115.0
+  },
+  {
+   "text": "Aber",
+   "src": "waterdrop/t1",
+   "start": 138.96,
+   "end": 139.08
+  },
+  {
+   "text": "was",
+   "src": "waterdrop/t1",
+   "start": 139.14,
+   "end": 139.26
+  },
+  {
+   "text": "ich",
+   "src": "waterdrop/t1",
+   "start": 139.38,
+   "end": 139.48
+  },
+  {
+   "text": "jetzt",
+   "src": "waterdrop/t1",
+   "start": 139.52,
+   "end": 139.68
+  },
+  {
+   "text": "persönlich",
+   "src": "waterdrop/t1",
+   "start": 139.72,
+   "end": 140.14
+  },
+  {
+   "text": "für",
+   "src": "waterdrop/t1",
+   "start": 140.22,
+   "end": 140.3
+  },
+  {
+   "text": "einen",
+   "src": "waterdrop/t1",
+   "start": 140.42,
+   "end": 140.58
+  },
+  {
+   "text": "E-Commerce-Shop",
+   "src": "waterdrop/t1",
+   "start": 140.66,
+   "end": 141.24
+  },
+  {
+   "text": "mitnehmen",
+   "src": "waterdrop/t1",
+   "start": 141.36,
+   "end": 141.68
+  },
+  {
+   "text": "würde?",
+   "src": "waterdrop/t1",
+   "start": 141.72,
+   "end": 141.92
+  },
+  {
+   "text": "Erstens,",
+   "src": "waterdrop/t1",
+   "start": 142.55,
+   "end": 142.97
+  },
+  {
+   "text": "dein",
+   "src": "waterdrop/t1",
+   "start": 143.31,
+   "end": 143.45
+  },
+  {
+   "text": "Produktversprechen",
+   "src": "waterdrop/t1",
+   "start": 143.49,
+   "end": 144.23
+  },
+  {
+   "text": "sollte",
+   "src": "waterdrop/t1",
+   "start": 144.33,
+   "end": 144.59
+  },
+  {
+   "text": "so",
+   "src": "waterdrop/t1",
+   "start": 144.73,
+   "end": 144.83
+  },
+  {
+   "text": "klar",
+   "src": "waterdrop/t1",
+   "start": 144.97,
+   "end": 145.21
+  },
+  {
+   "text": "sein,",
+   "src": "waterdrop/t1",
+   "start": 145.27,
+   "end": 145.47
+  },
+  {
+   "text": "dass",
+   "src": "waterdrop/t1",
+   "start": 145.89,
+   "end": 146.01
+  },
+  {
+   "text": "einfach",
+   "src": "waterdrop/t1",
+   "start": 146.05,
+   "end": 146.27
+  },
+  {
+   "text": "innerhalb",
+   "src": "waterdrop/t1",
+   "start": 146.41,
+   "end": 146.81
+  },
+  {
+   "text": "von",
+   "src": "waterdrop/t1",
+   "start": 146.87,
+   "end": 146.97
+  },
+  {
+   "text": "weniger",
+   "src": "waterdrop/t1",
+   "start": 147.07,
+   "end": 147.43
+  },
+  {
+   "text": "Sekunden",
+   "src": "waterdrop/t1",
+   "start": 147.51,
+   "end": 147.99
+  },
+  {
+   "text": "es",
+   "src": "waterdrop/t1",
+   "start": 148.21,
+   "end": 148.29
+  },
+  {
+   "text": "jeder",
+   "src": "waterdrop/t1",
+   "start": 148.37,
+   "end": 148.57
+  },
+  {
+   "text": "verstehen",
+   "src": "waterdrop/t1",
+   "start": 148.61,
+   "end": 148.95
+  },
+  {
+   "text": "kann.",
+   "src": "waterdrop/t1",
+   "start": 148.99,
+   "end": 149.11
+  },
+  {
+   "text": "Zweitens,",
+   "src": "waterdrop/t1",
+   "start": 149.81,
+   "end": 150.23
+  },
+  {
+   "text": "überlege",
+   "src": "waterdrop/t1",
+   "start": 150.45,
+   "end": 150.81
+  },
+  {
+   "text": "dir,",
+   "src": "waterdrop/t1",
+   "start": 150.87,
+   "end": 150.95
+  },
+  {
+   "text": "welches",
+   "src": "waterdrop/t1",
+   "start": 151.05,
+   "end": 151.37
+  },
+  {
+   "text": "Erlebnis",
+   "src": "waterdrop/t1",
+   "start": 151.45,
+   "end": 151.95
+  },
+  {
+   "text": "Kunden",
+   "src": "waterdrop/t1",
+   "start": 152.25,
+   "end": 152.55
+  },
+  {
+   "text": "brauchen,",
+   "src": "waterdrop/t1",
+   "start": 152.59,
+   "end": 152.93
+  },
+  {
+   "text": "bevor",
+   "src": "waterdrop/t1",
+   "start": 152.97,
+   "end": 153.25
+  },
+  {
+   "text": "sie",
+   "src": "waterdrop/t1",
+   "start": 153.35,
+   "end": 153.43
+  },
+  {
+   "text": "tatsächlich",
+   "src": "waterdrop/t1",
+   "start": 153.47,
+   "end": 153.85
+  },
+  {
+   "text": "das",
+   "src": "waterdrop/t1",
+   "start": 154.11,
+   "end": 154.21
+  },
+  {
+   "text": "erste",
+   "src": "waterdrop/t1",
+   "start": 154.33,
+   "end": 154.55
+  },
+  {
+   "text": "Mal",
+   "src": "waterdrop/t1",
+   "start": 154.61,
+   "end": 154.71
+  },
+  {
+   "text": "bei",
+   "src": "waterdrop/t1",
+   "start": 154.73,
+   "end": 154.81
+  },
+  {
+   "text": "dir",
+   "src": "waterdrop/t1",
+   "start": 154.83,
+   "end": 154.93
+  },
+  {
+   "text": "bestellen.",
+   "src": "waterdrop/t1",
+   "start": 154.97,
+   "end": 155.29
+  },
+  {
+   "text": "Denn",
+   "src": "waterdrop/t1",
+   "start": 155.67,
+   "end": 155.79
+  },
+  {
+   "text": "vielleicht",
+   "src": "waterdrop/t1",
+   "start": 155.81,
+   "end": 156.13
+  },
+  {
+   "text": "reicht",
+   "src": "waterdrop/t1",
+   "start": 156.17,
+   "end": 156.69
+  },
+  {
+   "text": "dafür",
+   "src": "waterdrop/t1",
+   "start": 156.45,
+   "end": 156.69
+  },
+  {
+   "text": "einfach",
+   "src": "waterdrop/t1",
+   "start": 156.75,
+   "end": 156.97
+  },
+  {
+   "text": "ein",
+   "src": "waterdrop/t1",
+   "start": 157.01,
+   "end": 157.09
+  },
+  {
+   "text": "kurzes",
+   "src": "waterdrop/t1",
+   "start": 157.13,
+   "end": 157.41
+  },
+  {
+   "text": "Video,",
+   "src": "waterdrop/t1",
+   "start": 157.47,
+   "end": 157.73
+  },
+  {
+   "text": "vielleicht",
+   "src": "waterdrop/t1",
+   "start": 158.09,
+   "end": 158.37
+  },
+  {
+   "text": "brauchst",
+   "src": "waterdrop/t1",
+   "start": 158.41,
+   "end": 158.63
+  },
+  {
+   "text": "du",
+   "src": "waterdrop/t1",
+   "start": 158.65,
+   "end": 158.69
+  },
+  {
+   "text": "auch",
+   "src": "waterdrop/t1",
+   "start": 158.73,
+   "end": 158.83
+  },
+  {
+   "text": "Produktpakete",
+   "src": "waterdrop/t1",
+   "start": 158.87,
+   "end": 159.59
+  },
+  {
+   "text": "oder",
+   "src": "waterdrop/t1",
+   "start": 166.13,
+   "end": 166.27
+  },
+  {
+   "text": "auch",
+   "src": "waterdrop/t1",
+   "start": 166.31,
+   "end": 166.39
+  },
+  {
+   "text": "einfach",
+   "src": "waterdrop/t1",
+   "start": 166.45,
+   "end": 166.67
+  },
+  {
+   "text": "nur",
+   "src": "waterdrop/t1",
+   "start": 166.75,
+   "end": 166.83
+  },
+  {
+   "text": "einen",
+   "src": "waterdrop/t1",
+   "start": 166.95,
+   "end": 167.15
+  },
+  {
+   "text": "anderen",
+   "src": "waterdrop/t1",
+   "start": 167.23,
+   "end": 167.51
+  },
+  {
+   "text": "Einstieg.",
+   "src": "waterdrop/t1",
+   "start": 167.59,
+   "end": 167.93
+  },
+  {
+   "text": "Und",
+   "src": "waterdrop/t1",
+   "start": 182.58,
+   "end": 182.68
+  },
+  {
+   "text": "drittens,",
+   "src": "waterdrop/t1",
+   "start": 182.76,
+   "end": 183.18
+  },
+  {
+   "text": "denk",
+   "src": "waterdrop/t1",
+   "start": 183.46,
+   "end": 183.62
+  },
+  {
+   "text": "bei",
+   "src": "waterdrop/t1",
+   "start": 183.68,
+   "end": 183.8
+  },
+  {
+   "text": "Verbrauchsprodukten",
+   "src": "waterdrop/t1",
+   "start": 183.84,
+   "end": 184.78
+  },
+  {
+   "text": "nicht",
+   "src": "waterdrop/t1",
+   "start": 184.86,
+   "end": 185.06
+  },
+  {
+   "text": "nur",
+   "src": "waterdrop/t1",
+   "start": 185.14,
+   "end": 185.24
+  },
+  {
+   "text": "an",
+   "src": "waterdrop/t1",
+   "start": 185.32,
+   "end": 185.4
+  },
+  {
+   "text": "die",
+   "src": "waterdrop/t1",
+   "start": 185.44,
+   "end": 185.52
+  },
+  {
+   "text": "erste",
+   "src": "waterdrop/t1",
+   "start": 185.62,
+   "end": 185.84
+  },
+  {
+   "text": "Bestellung,",
+   "src": "waterdrop/t1",
+   "start": 185.9,
+   "end": 186.24
+  },
+  {
+   "text": "und",
+   "src": "waterdrop/t1",
+   "start": 190.97,
+   "end": 191.05
+  },
+  {
+   "text": "frag",
+   "src": "waterdrop/t1",
+   "start": 191.11,
+   "end": 191.29
+  },
+  {
+   "text": "dich",
+   "src": "waterdrop/t1",
+   "start": 191.41,
+   "end": 191.51
+  },
+  {
+   "text": "immer,",
+   "src": "waterdrop/t1",
+   "start": 191.57,
+   "end": 191.77
+  },
+  {
+   "text": "wie",
+   "src": "waterdrop/t1",
+   "start": 192.49,
+   "end": 192.63
+  },
+  {
+   "text": "du",
+   "src": "waterdrop/t1",
+   "start": 192.77,
+   "end": 192.83
+  },
+  {
+   "text": "den",
+   "src": "waterdrop/t1",
+   "start": 192.91,
+   "end": 193.01
+  },
+  {
+   "text": "zweiten",
+   "src": "waterdrop/t1",
+   "start": 193.11,
+   "end": 193.51
+  },
+  {
+   "text": "und",
+   "src": "waterdrop/t1",
+   "start": 193.59,
+   "end": 193.67
+  },
+  {
+   "text": "den",
+   "src": "waterdrop/t1",
+   "start": 193.73,
+   "end": 193.81
+  },
+  {
+   "text": "dritten",
+   "src": "waterdrop/t1",
+   "start": 193.89,
+   "end": 194.17
+  },
+  {
+   "text": "Kauf",
+   "src": "waterdrop/t1",
+   "start": 194.23,
+   "end": 194.41
+  },
+  {
+   "text": "vor",
+   "src": "waterdrop/t1",
+   "start": 194.47,
+   "end": 194.57
+  },
+  {
+   "text": "allem",
+   "src": "waterdrop/t1",
+   "start": 194.61,
+   "end": 194.77
+  },
+  {
+   "text": "einfacher",
+   "src": "waterdrop/t1",
+   "start": 194.93,
+   "end": 195.25
+  },
+  {
+   "text": "machen",
+   "src": "waterdrop/t1",
+   "start": 195.27,
+   "end": 195.45
+  },
+  {
+   "text": "kannst.",
+   "src": "waterdrop/t1",
+   "start": 195.49,
+   "end": 195.71
+  },
+  {
+   "text": "Denn",
+   "src": "waterdrop/t1",
+   "start": 196.13,
+   "end": 196.25
+  },
+  {
+   "text": "da",
+   "src": "waterdrop/t1",
+   "start": 196.33,
+   "end": 196.43
+  },
+  {
+   "text": "steckt",
+   "src": "waterdrop/t1",
+   "start": 196.61,
+   "end": 196.83
+  },
+  {
+   "text": "nachher",
+   "src": "waterdrop/t1",
+   "start": 196.87,
+   "end": 197.11
+  },
+  {
+   "text": "die",
+   "src": "waterdrop/t1",
+   "start": 197.17,
+   "end": 197.23
+  },
+  {
+   "text": "Marge.",
+   "src": "waterdrop/t1",
+   "start": 197.29,
+   "end": 197.55
+  },
+  {
+   "text": "Denn",
+   "src": "waterdrop/t1",
+   "start": 200.86,
+   "end": 200.98
+  },
+  {
+   "text": "eine",
+   "src": "waterdrop/t1",
+   "start": 201.04,
+   "end": 201.18
+  },
+  {
+   "text": "bekannte",
+   "src": "waterdrop/t1",
+   "start": 201.24,
+   "end": 201.64
+  },
+  {
+   "text": "Marke",
+   "src": "waterdrop/t1",
+   "start": 201.72,
+   "end": 201.98
+  },
+  {
+   "text": "entsteht",
+   "src": "waterdrop/t1",
+   "start": 202.04,
+   "end": 202.5
+  },
+  {
+   "text": "nämlich",
+   "src": "waterdrop/t1",
+   "start": 202.56,
+   "end": 202.8
+  },
+  {
+   "text": "nicht",
+   "src": "waterdrop/t1",
+   "start": 202.9,
+   "end": 203.1
+  },
+  {
+   "text": "nur",
+   "src": "waterdrop/t1",
+   "start": 203.18,
+   "end": 203.3
+  },
+  {
+   "text": "durch",
+   "src": "waterdrop/t1",
+   "start": 203.38,
+   "end": 203.52
+  },
+  {
+   "text": "eine",
+   "src": "waterdrop/t1",
+   "start": 203.6,
+   "end": 203.76
+  },
+  {
+   "text": "gute",
+   "src": "waterdrop/t1",
+   "start": 203.86,
+   "end": 204.1
+  },
+  {
+   "text": "Idee,",
+   "src": "waterdrop/t1",
+   "start": 204.16,
+   "end": 204.38
+  },
+  {
+   "text": "sondern",
+   "src": "waterdrop/t1",
+   "start": 204.76,
+   "end": 205.04
+  },
+  {
+   "text": "nämlich",
+   "src": "waterdrop/t1",
+   "start": 205.08,
+   "end": 205.28
+  },
+  {
+   "text": "auch",
+   "src": "waterdrop/t1",
+   "start": 205.32,
+   "end": 205.42
+  },
+  {
+   "text": "dadurch,",
+   "src": "waterdrop/t1",
+   "start": 205.5,
+   "end": 205.82
+  },
+  {
+   "text": "dass",
+   "src": "waterdrop/t1",
+   "start": 205.9,
+   "end": 206.04
+  },
+  {
+   "text": "sie",
+   "src": "waterdrop/t1",
+   "start": 206.08,
+   "end": 206.16
+  },
+  {
+   "text": "tatsächlich",
+   "src": "waterdrop/t1",
+   "start": 206.22,
+   "end": 206.66
+  },
+  {
+   "text": "ein",
+   "src": "waterdrop/t1",
+   "start": 206.92,
+   "end": 207.0
+  },
+  {
+   "text": "Einkaufserlebnis",
+   "src": "waterdrop/t1",
+   "start": 207.12,
+   "end": 207.8
+  },
+  {
+   "text": "rund",
+   "src": "waterdrop/t1",
+   "start": 207.9,
+   "end": 208.08
+  },
+  {
+   "text": "um",
+   "src": "waterdrop/t1",
+   "start": 208.2,
+   "end": 208.28
+  },
+  {
+   "text": "diese",
+   "src": "waterdrop/t1",
+   "start": 208.4,
+   "end": 208.58
+  },
+  {
+   "text": "Idee",
+   "src": "waterdrop/t1",
+   "start": 208.66,
+   "end": 208.88
+  },
+  {
+   "text": "funktioniert.",
+   "src": "waterdrop/t1",
+   "start": 209.18,
+   "end": 209.64
+  },
+  {
+   "text": "Und",
+   "src": "waterdrop/t1",
+   "start": 248.87,
+   "end": 248.93
+  },
+  {
+   "text": "wenn",
+   "src": "waterdrop/t1",
+   "start": 248.95,
+   "end": 249.07
+  },
+  {
+   "text": "du",
+   "src": "waterdrop/t1",
+   "start": 249.09,
+   "end": 249.13
+  },
+  {
+   "text": "weitere",
+   "src": "waterdrop/t1",
+   "start": 249.19,
+   "end": 249.51
+  },
+  {
+   "text": "solche",
+   "src": "waterdrop/t1",
+   "start": 249.57,
+   "end": 249.77
+  },
+  {
+   "text": "E-Commerce-Stories",
+   "src": "waterdrop/t1",
+   "start": 249.89,
+   "end": 250.63
+  },
+  {
+   "text": "sehen",
+   "src": "waterdrop/t1",
+   "start": 250.71,
+   "end": 250.91
+  },
+  {
+   "text": "willst,",
+   "src": "waterdrop/t1",
+   "start": 250.95,
+   "end": 251.19
+  },
+  {
+   "text": "dann",
+   "src": "waterdrop/t1",
+   "start": 251.23,
+   "end": 251.41
+  },
+  {
+   "text": "drück",
+   "src": "waterdrop/t1",
+   "start": 251.97,
+   "end": 252.13
+  },
+  {
+   "text": "hier",
+   "src": "waterdrop/t1",
+   "start": 252.15,
+   "end": 252.25
+  },
+  {
+   "text": "gerne",
+   "src": "waterdrop/t1",
+   "start": 252.27,
+   "end": 252.47
+  },
+  {
+   "text": "das",
+   "src": "waterdrop/t1",
+   "start": 252.53,
+   "end": 252.63
+  },
+  {
+   "text": "Plus",
+   "src": "waterdrop/t1",
+   "start": 252.69,
+   "end": 252.87
+  },
+  {
+   "text": "weg,",
+   "src": "waterdrop/t1",
+   "start": 252.91,
+   "end": 253.07
+  },
+  {
+   "text": "um",
+   "src": "waterdrop/t1",
+   "start": 253.17,
+   "end": 253.23
+  },
+  {
+   "text": "weitere",
+   "src": "waterdrop/t1",
+   "start": 253.31,
+   "end": 253.63
+  },
+  {
+   "text": "solcher",
+   "src": "waterdrop/t1",
+   "start": 253.71,
+   "end": 253.93
+  },
+  {
+   "text": "Videos",
+   "src": "waterdrop/t1",
+   "start": 253.95,
+   "end": 254.23
+  },
+  {
+   "text": "in",
+   "src": "waterdrop/t1",
+   "start": 254.35,
+   "end": 254.41
+  },
+  {
+   "text": "Zukunft",
+   "src": "waterdrop/t1",
+   "start": 254.45,
+   "end": 254.81
+  },
+  {
+   "text": "nicht",
+   "src": "waterdrop/t1",
+   "start": 254.87,
+   "end": 255.01
+  },
+  {
+   "text": "zu",
+   "src": "waterdrop/t1",
+   "start": 255.03,
+   "end": 255.09
+  },
+  {
+   "text": "verpassen.",
+   "src": "waterdrop/t1",
+   "start": 255.15,
+   "end": 255.51
+  }
+ ],
+ "pages": [
+  3,
+  2,
+  3,
+  4,
+  2,
+  4,
+  2,
+  3,
+  2,
+  4,
+  3,
+  1,
+  2,
+  2,
+  2,
+  4,
+  2,
+  2,
+  1,
+  1,
+  2,
+  3,
+  3,
+  1,
+  3,
+  3,
+  3,
+  2,
+  4,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  4,
+  3,
+  1,
+  2,
+  2,
+  1,
+  4,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  4,
+  3,
+  2,
+  2,
+  1,
+  2,
+  4,
+  4,
+  4,
+  4,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  4,
+  1,
+  1,
+  2,
+  1,
+  3,
+  3,
+  3,
+  3,
+  3
+ ]
+}

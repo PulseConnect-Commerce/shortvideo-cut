@@ -1,0 +1,10 @@
+Quelle: Shopify, Fallstudie "Wie waterdrop® weltweit über 40 Stores mit Shopify POS verwaltet"
+https://www.shopify.com/de/case-studies/waterdrop-retail
+Abgerufen am 24.10.2026 mit Playwright (Chromium, 1100 px breit, 3-fach), nur zugeschnitten, nichts verändert:
+- kopf.png: Seitenkopf mit waterdrop-Logo und Titel
+- liste.png: "Seit 2016 hat waterdrop® folgendes erreicht" (Mehr als 40 Stores, 40 % Wachstum, 140 Mio. Euro Umsatz im Jahr 2024)
+- zahlen.png: Ergebnis-Zahlen unten auf der Seite (40+ stores, 40 %, €140m revenue in 2024)
+- pos.png: Abschnitt "Shopify POS" (Verkostungsstation "Cenote")
+- intro.png: Einleitung (2016, Microdrinks im kleinen Würfel, mehr als 40 Stores von Europa bis Australien)
+- store-foto.jpg: Vorschaubild des Videos auf der Fallstudienseite (Store mit Kasse, Flasche im Regal), ohne Play-Knopf
+Stand der Store-Zahl: laut Fallstudie (historisch), nicht heute.

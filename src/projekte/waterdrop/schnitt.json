@@ -1,0 +1,86 @@
+{
+ "projekt": "waterdrop",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 0.9,
+   "von": 1.0,
+   "text": "Ganze 140 Millionen Euro Umsatz mit kleinen Würfeln, die du in Wasser auflösen kannst. Das ist die Geschichte von waterdrop. Und bevor jetzt jemand fragt, die Zahl bezieht sich auf das Jahr 2024."
+  },
+  {
+   "take": "t1",
+   "ab": 31.3,
+   "text": "waterdrop wurde nämlich schon 2016 gegründet und ist mit einem ziemlich einfachen und verständlichen Produktversprechen gestartet."
+  },
+  {
+   "take": "t1",
+   "ab": 42.3,
+   "text": "Statt nämlich eine fertige Flasche Getränk zu verkaufen, bekommst du kleine Microdrinks, die du selbst in deinem Wasser auflösen kannst. Das ist halt nicht nur eine Produktidee, es beeinflusst tatsächlich auch den Vertrieb. Denn wenn du so etwas noch nie probiert hast, dann möchtest du vielleicht erst mal wissen, wie es dir überhaupt schmeckt."
+  },
+  {
+   "take": "t1",
+   "ab": 73.2,
+   "text": "Und genau deshalb hat nämlich waterdrop neben seinem Onlineshop auch eigene Stores aufgebaut, in denen Menschen die Produkte selbst erleben können."
+  },
+  {
+   "take": "t1",
+   "ab": 97.8,
+   "text": "Eine Fallstudie beschreibt nämlich mehr als 40 Stores weltweit und die Verbindung zum Shopify POS."
+  },
+  {
+   "take": "t1",
+   "ab": 111.6,
+   "text": "Diese Zahl stammt nämlich aus dem damaligen Quellenstand, leider nicht von heute."
+  },
+  {
+   "take": "t1",
+   "ab": 138.8,
+   "text": "Aber was ich jetzt persönlich für einen E-Commerce-Shop mitnehmen würde? Erstens, dein Produktversprechen sollte so klar sein, dass einfach innerhalb von weniger Sekunden es jeder verstehen kann. Zweitens, überlege dir, welches Erlebnis Kunden brauchen, bevor sie tatsächlich das erste Mal bei dir bestellen. Denn vielleicht reicht dafür einfach ein kurzes Video, vielleicht brauchst du auch Produktpakete.",
+   "von": 138.9
+  },
+  {
+   "take": "t1",
+   "ab": 166.0,
+   "text": "oder auch einfach nur einen anderen Einstieg."
+  },
+  {
+   "take": "t1",
+   "ab": 182.5,
+   "text": "Und drittens, denk bei Verbrauchsprodukten nicht nur an die erste Bestellung,"
+  },
+  {
+   "take": "t1",
+   "ab": 190.8,
+   "text": "und frag dich immer, wie du den zweiten und den dritten Kauf vor allem einfacher machen kannst. Denn da steckt nachher die Marge."
+  },
+  {
+   "take": "t1",
+   "ab": 200.7,
+   "text": "Denn eine bekannte Marke entsteht nämlich nicht nur durch eine gute Idee, sondern nämlich auch dadurch, dass sie tatsächlich ein Einkaufserlebnis rund um diese Idee funktioniert.",
+   "von": 200.8
+  },
+  {
+   "take": "t1",
+   "ab": 248.7,
+   "text": "Und wenn du weitere solche E-Commerce-Stories sehen willst, dann drück hier gerne das Plus weg, um weitere solcher Videos in Zukunft nicht zu verpassen."
+  }
+ ],
+ "ende": {
+  "bis": 255.83
+ },
+ "korrekturen": [
+  [
+   "t1",
+   158.87,
+   "Produktpakete.",
+   "Produktpakete"
+  ]
+ ]
+}
