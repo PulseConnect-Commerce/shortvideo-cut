@@ -3,240 +3,298 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1080, height=1920" />
-    <title>Microsoft Clarity – helle Karten</title>
+    <title>Microsoft Clarity – Aufbau-Karten (Probe)</title>
     <script src="assets/gsap.min.js"></script>
-    <!-- FACE A02 "Microsoft Clarity" (A-Reihe "Eine Shopify-App, ein Problem"), heller Karten-Look (karten-hell.md),
-         Aufbau wie A01 (hyperframes/billbee-skizzen). Zeiten = Sekunden im geschnittenen Video (cut.json, 65,9 s),
-         Liste mit Tönen in src/projekte/clarity/karten.json. Keine Logos, keine nachgebauten Clarity-Oberflächen,
-         keine erfundenen Heatmaps: nur Lucide-Icons (ISC) und Text. Karten zwischen y 285 und 525. -->
+    <!-- FACE A02 "Microsoft Clarity" (A-Reihe "Eine Shopify-App, ein Problem"). PROBE nach karten-aufbau.md (2026-10-24):
+         eine helle Aufbau-Karte pro Gedanke auf Brusthöhe (x 80-900, ab y 1130), Kacheln kommen auf ihrem Wort dazu,
+         Zustände wechseln (✓, ✕, Durchstreichen, ≠), Schlusszeile; zwei Sticker-Wörter neben dem Kopf; Umfrage-Karte
+         als CTA. Farben und Schrift nach karten-hell.md. Zeiten = Sekunden im geschnittenen Video (cut.json, 65,9 s),
+         Liste mit Tönen in src/projekte/clarity/karten.json. Keine Logos, keine nachgebauten Clarity-Oberflächen, keine
+         erfundenen Heatmaps oder Daten: nur Lucide-Icons (ISC) und Text. -->
     <style>
       @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
-      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; }
-      .card {
-        position: absolute; left: 110px; top: 285px; width: 860px; height: 240px;
-        border-radius: 36px; background: rgba(255, 255, 255, 0.96);
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
-        display: flex; align-items: center; gap: 44px; padding: 0 56px; opacity: 0; isolation: isolate;
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      /* Aufbau-Karte auf Brusthöhe (Tabu rechts ab x 900, unten ab y 1560) */
+      .karte {
+        position: absolute; left: 80px; top: 1130px; width: 820px; height: 258px; opacity: 0; isolation: isolate;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
       }
-      .card.wide { left: 90px; width: 900px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; padding: 0 44px; }
-      .card.mitte { align-items: center; }
-      .tile {
-        position: relative; flex: none; width: 150px; height: 150px; border-radius: 28px;
-        background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center;
+      .karte.lang { height: 312px; }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .reihe { position: absolute; left: 30px; right: 30px; top: 64px; height: 172px; display: flex; align-items: center; gap: 14px; }
+      .schluss { position: absolute; left: 32px; bottom: 26px; font-size: 34px; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; opacity: 0; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+      /* Kachel: weißes Feld, Icon in der Verlaufskachel, Label, Unterzeile */
+      .kachel {
+        position: relative; flex: none; width: 200px; height: 172px; border-radius: 24px; background: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07); border: 1px solid #e5e7eb;
+        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 0 10px; opacity: 0;
       }
-      .tile svg { width: 88px; height: 88px; fill: none; stroke: #0b0c0e; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
-      .d { opacity: 0; }
-      .txt { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
-      .mitte .txt { align-items: center; gap: 4px; }
-      .kicker { font-size: 30px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
-      .head { position: relative; font-size: 66px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.02; color: #0b0c0e; white-space: nowrap; }
-      .verlauf { display: inline-block; padding-bottom: 6px; background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-      .line { display: block; }
+      .ico { flex: none; width: 66px; height: 66px; border-radius: 19px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
+      .ico.grau { background: #e5e7eb; }
+      .ico svg { width: 40px; height: 40px; fill: none; stroke: #0b0c0e; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      .lab { font-size: 26px; font-weight: 800; line-height: 1.05; text-align: center; letter-spacing: -0.01em; }
+      .sub { font-size: 18px; font-weight: 600; color: #6b7280; text-align: center; line-height: 1.1; white-space: nowrap; }
+      .platz { border: 3px dashed #cbd5e1; background: rgba(255, 255, 255, 0.5); box-shadow: none; }
+      .platz .frage { font-size: 76px; font-weight: 800; color: #9ca3af; line-height: 1; }
+      .platz .lab { color: #9ca3af; }
 
-      /* Reihen-Einblendung: kleine Kicker-Karte (wie A01) */
-      .card.reihe { left: 0; right: 0; margin: 0 auto; width: fit-content; height: 132px; top: 300px; padding: 0 40px 0 26px; gap: 24px; border-radius: 32px; }
-      .card.reihe .tile { width: 84px; height: 84px; border-radius: 22px; }
-      .card.reihe .tile svg { width: 48px; height: 48px; stroke-width: 1.8; }
-      .card.reihe .txt { gap: 2px; }
-      .card.reihe .kicker { font-size: 22px; }
-      .card.reihe .head { font-size: 46px; }
+      /* Zustände */
+      .badge { position: absolute; top: -12px; right: -12px; width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18); opacity: 0; }
+      .badge svg { width: 24px; height: 24px; fill: none; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+      .badge.ok { background: linear-gradient(135deg, #00e090, #31adec); }
+      .badge.ok svg { stroke: #0b0c0e; }
+      .badge.nein { background: #ef4444; }
+      .badge.nein svg { stroke: #fff; }
+      .streich { position: absolute; left: 14px; right: 14px; top: 50%; height: 7px; margin-top: -3px; border-radius: 4px; background: #ef4444; transform: rotate(-14deg) scaleX(0); transform-origin: 0 50%; }
+      .pfeil { flex: none; width: 44px; height: 44px; opacity: 0; }
+      .pfeil svg { width: 44px; height: 44px; fill: none; stroke: #31adec; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+      .zeichen { flex: none; width: 70px; text-align: center; font-size: 76px; font-weight: 800; line-height: 1; opacity: 0; }
+      .ring { position: absolute; left: 50%; top: 52px; width: 66px; height: 66px; margin-left: -33px; margin-top: -33px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
 
-      /* kleine Verlaufs-Kachel vor einer Zeile */
-      .dot { position: relative; flex: none; width: 76px; height: 76px; border-radius: 22px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
-      .dot.grau { background: #e5e7eb; }
-      .dot svg { width: 44px; height: 44px; fill: none; stroke: #0b0c0e; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      /* Lupe auf der Verbindung (Probleme entdecken) */
+      .lupe { flex: none; width: 70px; display: flex; flex-direction: column; align-items: center; gap: 6px; opacity: 0; }
+      .lupe .ico { width: 54px; height: 54px; border-radius: 16px; }
+      .lupe .ico svg { width: 32px; height: 32px; }
+      .lupe svg.lin { width: 64px; height: 20px; fill: none; stroke: #31adec; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
 
-      /* Zeilen mit Kachel (Heatmaps / Session Recordings, Vermutung / Nutzerverhalten) */
-      .reihen { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
-      .zeile { position: relative; display: flex; align-items: center; gap: 22px; align-self: flex-start; }
-      .zeile .head { font-size: 54px; }
-      .strich { position: absolute; left: 96px; right: -8px; top: 50%; height: 6px; margin-top: -3px; border-radius: 3px; background: #0b0c0e; transform: scaleX(0); transform-origin: 0 50%; }
+      /* Fluss: Kachel -> sich verzweigende Linie -> Ziel-Pillen */
+      .fluss { position: relative; flex: none; width: 110px; height: 172px; }
+      .fluss svg { width: 110px; height: 172px; fill: none; stroke: #31adec; stroke-width: 2.6; stroke-linecap: round; }
+      .ziele { flex: none; display: flex; flex-direction: column; gap: 10px; }
+      .ziel { display: flex; align-items: center; gap: 12px; height: 50px; padding: 0 22px 0 10px; border-radius: 14px; background: #fff; border: 1px solid #e5e7eb; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); font-size: 27px; font-weight: 700; white-space: nowrap; opacity: 0; }
+      .box { position: relative; flex: none; width: 32px; height: 32px; border-radius: 9px; border: 2.5px solid #d1d5db; }
+      .box .fill { position: absolute; inset: -2.5px; border-radius: 9px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); opacity: 0; }
+      .box svg { position: absolute; inset: 2px; width: 24px; height: 24px; fill: none; stroke: #0b0c0e; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
 
-      /* drei Spalten (Klicks, Scrolltiefe, Rage Clicks) */
-      .spalten { display: flex; width: 100%; justify-content: space-around; margin-top: 12px; }
-      .spalte { width: 250px; display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: 0; }
-      .spalte .dot { width: 84px; height: 84px; border-radius: 24px; }
-      .spalte .dot svg { width: 48px; height: 48px; }
-      .spalte b { font-size: 38px; line-height: 1.05; font-weight: 800; color: #0b0c0e; letter-spacing: -0.01em; white-space: nowrap; }
+      /* Umfrage */
+      .frage-titel { position: absolute; left: 30px; top: 56px; display: flex; align-items: center; gap: 16px; font-size: 42px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .frage-titel .ico { width: 54px; height: 54px; border-radius: 16px; }
+      .frage-titel .ico svg { width: 32px; height: 32px; }
+      .optionen { position: absolute; left: 30px; right: 30px; top: 128px; display: flex; flex-direction: column; gap: 10px; }
+      .option { position: relative; display: flex; align-items: center; gap: 14px; height: 54px; padding: 0 18px; border-radius: 15px; background: #fff; border: 1px solid #e5e7eb; font-size: 28px; font-weight: 700; opacity: 0; overflow: hidden; }
+      .option .tint { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 224, 144, 0.22), rgba(49, 173, 236, 0.22)); opacity: 0; }
+      .option .kreis { position: relative; flex: none; width: 34px; height: 34px; border-radius: 17px; display: flex; align-items: center; justify-content: center; }
+      .option .kreis svg { width: 20px; height: 20px; fill: none; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+      .option span { position: relative; }
+      .zeiger { position: absolute; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
 
-      /* Chips (Produktseiten / Landingpages, Checkliste) */
-      .chips { display: flex; gap: 14px; margin-top: 14px; }
-      .chip { display: flex; align-items: center; gap: 14px; height: 66px; padding: 0 26px 0 14px; border-radius: 18px; background: #f2f3f5; font-size: 36px; white-space: nowrap; font-weight: 700; color: #0b0c0e; opacity: 0; }
-      .chip .mini { flex: none; width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
-      .chip .mini svg { width: 28px; height: 28px; fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-      .liste { display: grid; grid-template-columns: auto auto; gap: 12px 14px; margin-top: 14px; }
-      .liste .chip { opacity: 1; color: #9ca3af; }
-      .box { position: relative; flex: none; width: 40px; height: 40px; border-radius: 11px; border: 2.5px solid #d1d5db; }
-      .box .fill { position: absolute; inset: -2.5px; border-radius: 11px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); opacity: 0; }
-      .box svg { position: absolute; inset: 3px; width: 29px; height: 29px; fill: none; stroke: #0b0c0e; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+      /* Reihen-Einblendung oben (wie A01) */
+      .reihenkarte { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 300px; height: 132px; display: flex; align-items: center; gap: 24px; padding: 0 40px 0 26px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .reihenkarte .ico { width: 84px; height: 84px; border-radius: 22px; }
+      .reihenkarte .ico svg { width: 48px; height: 48px; }
+      .reihenkarte .k2 { font-size: 22px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
+      .reihenkarte .t2 { font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
 
-      /* Markierung hinter einem Wort, Unterstrich */
-      .marker { position: absolute; left: -10px; right: -10px; bottom: 4px; height: 20px; border-radius: 10px; background: linear-gradient(90deg, rgba(0, 224, 144, 0.3), rgba(49, 173, 236, 0.3)); transform: scaleX(0); transform-origin: 0 50%; z-index: -1; }
-      .unter { position: absolute; left: 0; bottom: 0; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #00e090, #31adec); transform: scaleX(0); transform-origin: 0 50%; }
+      /* Sticker-Wort neben dem Kopf */
+      .sticker { position: absolute; right: 196px; top: 470px; padding: 8px 20px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 50px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(4deg); transform-origin: 100% 50%; }
 
-      /* Folgen-Knopf */
-      .knopf { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 12px; height: 64px; width: 250px; border-radius: 32px; background: #0b0c0e; color: #fff; font-size: 34px; font-weight: 700; margin-top: 4px; }
-      .knopf span { position: absolute; display: inline-flex; align-items: center; gap: 12px; }
-      .knopf svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
-      .knopf .nach { opacity: 0; color: #0b0c0e; }
-      .knopf .flaeche { position: absolute; inset: 0; border-radius: 32px; background: linear-gradient(90deg, #00e090, #31adec); opacity: 0; }
+      .d, .e { opacity: 0; }
     </style>
   </head>
   <body>
     <div id="root" data-composition-id="clarity-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="65.9">
 
-      <!-- 1 Reihen-Einblendung (nach dem Hook, "Und diese wichtige App") -->
-      <section id="reihe" class="card reihe clip" data-start="6.5" data-duration="1.95" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><rect class="d" pathLength="1" width="7" height="7" x="14" y="3" rx="1" /><path class="d" pathLength="1" d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" /></svg></div><div class="txt"><span class="kicker line">Die Reihe</span><span class="head line">Eine Shopify-App, <span class="verlauf">ein Problem</span></span></div></section>
+      <!-- Reihen-Einblendung oben nach dem Hook -->
+      <section id="reihe" class="reihenkarte clip" data-start="6.5" data-duration="3.9" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><rect class="d" pathLength="1" width="7" height="7" x="14" y="3" rx="1" /><path class="d" pathLength="1" d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" /></svg></div><div><div class="k2">Die Reihe</div><div class="t2">Eine Shopify-App, <span class="verlauf">ein Problem</span></div></div></section>
 
-      <!-- 2 Die App: Microsoft Clarity ("Microsoft" 8,59) -->
-      <section id="app" class="card clip" data-start="8.52" data-duration="3.03" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M3 7V5a2 2 0 0 1 2-2h2" /><path class="d" pathLength="1" d="M17 3h2a2 2 0 0 1 2 2v2" /><path class="d" pathLength="1" d="M21 17v2a2 2 0 0 1-2 2h-2" /><path class="d" pathLength="1" d="M7 21H5a2 2 0 0 1-2-2v-2" /><circle class="d" pathLength="1" cx="12" cy="12" r="1" /><path class="d" pathLength="1" d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0" /></svg></div><div class="txt"><span class="kicker line">Die App</span><span class="head line">Microsoft</span><span class="head line"><span class="verlauf">Clarity</span></span></div></section>
-
-      <!-- 3 HEATMAPS ("Heatmaps" 11,69) / SESSION RECORDINGS ("Sitzungsaufzeichnungen" 13,17) -->
-      <section id="zeigt" class="card wide clip" data-start="11.62" data-duration="4.83" data-track-index="0"><span class="kicker line">Das siehst du in Clarity</span><div class="reihen">
-        <div class="zeile line" id="z1"><div class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg></div><span class="head">HEATMAPS</span></div>
-        <div class="zeile" id="z2" style="opacity:0"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect class="e" pathLength="1" x="2" y="6" width="14" height="12" rx="2" /></svg></div><span class="head"><span class="verlauf">SESSION RECORDINGS</span></span></div>
+      <!-- A: die App und was sie zeigt. Microsoft 8,59 / Heatmaps 11,69 / Sitzungsaufzeichnungen 13,17 -->
+      <section id="kA" class="karte clip" data-start="8.45" data-duration="7.85" data-track-index="1"><div class="kicker">Die App</div><div class="reihe">
+        <div class="kachel" id="a1"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M3 7V5a2 2 0 0 1 2-2h2" /><path class="e" pathLength="1" d="M17 3h2a2 2 0 0 1 2 2v2" /><path class="e" pathLength="1" d="M21 17v2a2 2 0 0 1-2 2h-2" /><path class="e" pathLength="1" d="M7 21H5a2 2 0 0 1-2-2v-2" /><circle class="e" pathLength="1" cx="12" cy="12" r="1" /><path class="e" pathLength="1" d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0" /></svg></div><div class="lab">Microsoft<br />Clarity</div></div>
+        <div class="pfeil" id="a1p"><svg viewBox="0 0 24 24"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></div>
+        <div class="kachel" id="a2"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg></div><div class="lab">HEATMAPS</div></div>
+        <div class="kachel" id="a3" style="width:230px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect class="e" pathLength="1" x="2" y="6" width="14" height="12" rx="2" /></svg></div><div class="lab">SESSION<br />RECORDINGS</div><div class="sub">anonymisiert</div></div>
       </div></section>
 
-      <!-- 4 Du erkennst: Klicks ("draufklicken" 16,73), Scrolltiefe ("scrollen" 18,25), RAGE CLICKS ("frustriert" 20,11) -->
-      <section id="erkennt" class="card wide clip" data-start="16.6" data-duration="5.35" data-track-index="0"><span class="kicker line">Du erkennst zum Beispiel</span><div class="spalten">
-        <div class="spalte" id="s1"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" /><path class="e" pathLength="1" d="M14 4.1 12 6" /><path class="e" pathLength="1" d="m5.1 8-2.9-.8" /><path class="e" pathLength="1" d="m6 12-1.9 2" /><path class="e" pathLength="1" d="M7.2 2.2 8 5.1" /></svg></div><b>Klicks</b></div>
-        <div class="spalte" id="s2"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M12 17V3" /><path class="e" pathLength="1" d="m6 11 6 6 6-6" /><path class="e" pathLength="1" d="M19 21H5" /></svg></div><b>Scrolltiefe</b></div>
-        <div class="spalte" id="s3"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg></div><b><span class="verlauf">RAGE CLICKS</span></b></div>
+      <!-- B: was du erkennst. draufklicken 16,73 / scrollen 18,25 / frustriert 20,11, mehrfach klicken 20,69 -->
+      <section id="kB" class="karte clip" data-start="16.45" data-duration="5.5" data-track-index="1"><div class="kicker">Du erkennst zum Beispiel</div><div class="reihe">
+        <div class="kachel" id="b1" style="width:232px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" /><path class="e" pathLength="1" d="M14 4.1 12 6" /><path class="e" pathLength="1" d="m5.1 8-2.9-.8" /><path class="e" pathLength="1" d="m6 12-1.9 2" /><path class="e" pathLength="1" d="M7.2 2.2 8 5.1" /></svg></div><div class="lab">Klicks</div><div class="sub">wo Besucher klicken</div></div>
+        <div class="kachel" id="b2" style="width:232px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M12 17V3" /><path class="e" pathLength="1" d="m6 11 6 6 6-6" /><path class="e" pathLength="1" d="M19 21H5" /></svg></div><div class="lab">Scrolltiefe</div><div class="sub">wie weit sie scrollen</div></div>
+        <div class="kachel" id="b3" style="width:250px"><div class="ring" id="r1"></div><div class="ring" id="r2"></div><div class="ring" id="r3"></div><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg></div><div class="lab">RAGE CLICKS</div><div class="sub">frustriert, mehrfach</div></div>
       </div></section>
 
-      <!-- 5 Für Shopify: eigene Clarity-App ("Shopify" 22,41) -->
-      <section id="shopify" class="card clip" data-start="22.34" data-duration="3.96" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="d" pathLength="1" d="M3 6h18" /><path class="d" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div><div class="txt"><span class="kicker line">Für Shopify gibt es</span><span class="head line">eine eigene</span><span class="head line"><span class="verlauf">Clarity-App</span></span></div></section>
+      <!-- C: eigene Shopify-App, Probleme entdecken. Shopify 22,41 / helfen 26,16 / Probleme 26,48 / Produktseiten 27,40 / Landingpages 28,34 / Kennzahlen 31,06 -->
+      <section id="kC" class="karte lang clip" data-start="22.3" data-duration="10.8" data-track-index="1"><div class="kicker">Eigene Clarity-App für Shopify</div><div class="reihe">
+        <div class="kachel" id="c1" style="width:186px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="e" pathLength="1" d="M3 6h18" /><path class="e" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div><div class="lab">Shopify</div><div class="sub">eigene App</div></div>
+        <div class="lupe" id="c1l"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></div><svg class="lin" viewBox="0 0 64 20"><path class="e" pathLength="1" d="M4 10h52" /><path class="e" pathLength="1" d="m48 3 8 7-8 7" /></svg></div>
+        <div class="kachel" id="c2" style="width:222px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle class="e" pathLength="1" cx="7.5" cy="7.5" r="1" /></svg></div><div class="lab">Produktseiten</div><div class="sub">Probleme entdecken</div></div>
+        <div class="kachel" id="c3" style="width:222px"><div class="ico"><svg viewBox="0 0 24 24"><rect class="e" pathLength="1" width="18" height="7" x="3" y="3" rx="1" /><rect class="e" pathLength="1" width="9" height="7" x="3" y="14" rx="1" /><rect class="e" pathLength="1" width="5" height="7" x="16" y="14" rx="1" /></svg></div><div class="lab">Landingpages</div><div class="sub">Probleme entdecken</div></div>
+      </div><div class="schluss" id="c4">Was du in Kennzahlen <span class="verlauf">übersiehst.</span></div></section>
 
-      <!-- 6 Probleme entdecken ("Probleme" 26,48): Produktseiten (27,40), Landingpages (28,34) -->
-      <section id="probleme" class="card wide clip" data-start="26.41" data-duration="4.49" data-track-index="0"><span class="kicker line">Das kann helfen</span><span class="head line" style="font-size:58px">Probleme <span class="verlauf">entdecken</span></span><div class="chips">
-        <div class="chip" id="p1"><span class="mini"><svg viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r="1" /></svg></span>auf Produktseiten</div>
-        <div class="chip" id="p2"><span class="mini"><svg viewBox="0 0 24 24"><rect width="18" height="7" x="3" y="3" rx="1" /><rect width="9" height="7" x="3" y="14" rx="1" /><rect width="5" height="7" x="16" y="14" rx="1" /></svg></span>Landingpages</div>
+      <!-- Sticker "ABER." ("Aber" 33,24) -->
+      <div id="st1" class="sticker clip" data-start="33.17" data-duration="2.55" data-track-index="2">ABER.</div>
+
+      <!-- D1: Heatmap ≠ Kaufgrund. Heatmap 35,18 / nicht (automatisch) 36,12 / warum 37,44 / kauft 38,32 -->
+      <section id="kD" class="karte lang clip" data-start="35.0" data-duration="4.2" data-track-index="1"><div class="kicker">Aber wichtig</div><div class="reihe">
+        <div class="kachel" id="d1" style="width:250px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg></div><div class="lab">Heatmap</div><div class="sub">zeigt, wo geklickt wird</div></div>
+        <div class="zeichen verlauf" id="d2">≠</div>
+        <div class="kachel platz" id="d3" style="width:250px"><div class="frage">?</div><div class="lab">Warum?</div><div class="sub">kauft jemand nicht</div></div>
+      </div><div class="schluss" id="d4">Sie sagt dir nicht <span class="verlauf">automatisch, warum.</span></div></section>
+
+      <!-- D2: beim Analyse-Tool prüfen. Analyse-Tool 40,38 / Datenschutz 41,92 / Einwilligung 42,66 / Konfiguration 44,86 -->
+      <section id="kE" class="karte clip" data-start="40.25" data-duration="5.7" data-track-index="1"><div class="kicker">Auch beim Analyse-Tool prüfen</div><div class="reihe">
+        <div class="kachel" id="e1" style="width:210px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M3 3v16a2 2 0 0 0 2 2h16" /><path class="e" pathLength="1" d="M18 17V9" /><path class="e" pathLength="1" d="M13 17V5" /><path class="e" pathLength="1" d="M8 17v-3" /></svg></div><div class="lab">Analyse-Tool</div></div>
+        <div class="fluss"><svg viewBox="0 0 110 172"><path class="e" id="fl1" pathLength="1" d="M4 86 C 50 86, 50 26, 106 26" /><path class="e" id="fl2" pathLength="1" d="M4 86 H 106" /><path class="e" id="fl3" pathLength="1" d="M4 86 C 50 86, 50 146, 106 146" /></svg></div>
+        <div class="ziele">
+          <div class="ziel" id="e2"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Datenschutz</div>
+          <div class="ziel" id="e3"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Einwilligung</div>
+          <div class="ziel" id="e4"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>deine Konfiguration</div>
+        </div>
       </div></section>
 
-      <!-- 7 In normalen Kennzahlen komplett übersehen ("Kennzahlen" 31,06) -->
-      <section id="kennzahlen" class="card clip" data-start="30.99" data-duration="2.11" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /><path class="d" pathLength="1" d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /><path class="d" pathLength="1" d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /><path class="d" pathLength="1" d="m2 2 20 20" /></svg></div><div class="txt"><span class="kicker line">In normalen Kennzahlen</span><span class="head line">komplett</span><span class="head line"><span class="verlauf">übersehen</span></span></div></section>
-
-      <!-- 8 Aber wichtig: Heatmap sagt nicht, warum jemand nicht kauft ("Aber" 33,24; "Heatmap" 35,18; "warum" 37,44) -->
-      <section id="warum" class="card wide mitte clip" data-start="33.17" data-duration="6.03" data-track-index="0"><div class="txt"><span class="kicker line">Aber wichtig</span><span class="head line" style="font-size:56px">Eine <span style="position:relative;display:inline-block">Heatmap<span class="marker" id="m1"></span></span> sagt nicht,</span><span class="head line" style="font-size:56px"><span style="position:relative;display:inline-block"><span class="verlauf">warum jemand nicht kauft</span><span class="unter" id="u1" style="width:100%"></span></span></span></div></section>
-
-      <!-- 9 Checkliste beim Analyse-Tool ("Analyse-Tool" 40,38): Datenschutz 41,92 / Einwilligung 42,66 / Konfiguration 44,86 -->
-      <section id="pruefen" class="card wide clip" data-start="40.31" data-duration="5.64" data-track-index="0"><span class="kicker line">Auch beim Analyse-Tool prüfen</span><div class="liste line">
-        <div class="chip" id="c1"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Datenschutz</div>
-        <div class="chip" id="c2"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>Einwilligung</div>
-        <div class="chip" id="c3"><span class="box"><span class="fill"></span><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M20 6 9 17l-5-5" /></svg></span>deine Konfiguration</div>
+      <!-- E: Tipp. Deswegen 46,09 (Platzhalter) / Produktseite 50,19 (Auflösung) / Handy 51,15 / wiederkehrenden 53,41 -->
+      <section id="kF" class="karte clip" data-start="46.02" data-duration="10.88" data-track-index="1"><div class="kicker">Mein Tipp</div><div class="reihe" style="gap:10px">
+        <div style="position:relative;flex:none;width:206px;height:172px">
+          <div class="kachel platz" id="f0" style="position:absolute;inset:0;width:206px;opacity:0"><div class="frage">?</div><div class="lab">Tipp</div></div>
+          <div class="kachel" id="f1" style="position:absolute;inset:0;width:206px;opacity:0"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path class="e" pathLength="1" d="M14 2v4a2 2 0 0 0 2 2h4" /><path class="e" pathLength="1" d="M16 13H8" /><path class="e" pathLength="1" d="M16 17H8" /></svg></div><div class="lab">Produktseite</div><div class="sub">eine wichtige</div></div>
+        </div>
+        <div class="pfeil" id="f2p"><svg viewBox="0 0 24 24"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></div>
+        <div class="kachel" id="f2" style="width:200px"><div class="ico"><svg viewBox="0 0 24 24"><rect class="e" pathLength="1" width="14" height="20" x="5" y="2" rx="2" ry="2" /><path class="e" pathLength="1" d="M12 18h.01" /></svg></div><div class="lab">auf dem Handy</div><div class="sub">anschauen</div></div>
+        <div class="pfeil" id="f3p"><svg viewBox="0 0 24 24"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></div>
+        <div class="kachel" id="f3" style="width:220px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="m17 2 4 4-4 4" /><path class="e" pathLength="1" d="M3 11v-1a4 4 0 0 1 4-4h14" /><path class="e" pathLength="1" d="m7 22-4-4 4-4" /><path class="e" pathLength="1" d="M21 13v1a4 4 0 0 1-4 4H3" /></svg></div><div class="lab">Problem suchen</div><div class="sub">das wiederkehrt</div></div>
       </div></section>
 
-      <!-- 10 Tipp: wichtige Produktseite auf dem Handy ("Deswegen" 46,09; "Produktseite" 50,19; "Handy" 51,15) -->
-      <section id="tipp" class="card clip" data-start="46.02" data-duration="6.13" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><rect class="d" pathLength="1" width="14" height="20" x="5" y="2" rx="2" ry="2" /><path class="d" pathLength="1" d="M12 18h.01" /><path class="e" pathLength="1" d="M8.5 6h7" /><path class="e" pathLength="1" d="M8.5 9h7" /><path class="e" pathLength="1" d="M8.5 12h4" /></svg></div><div class="txt"><span class="kicker line">Ein wichtiger Tipp</span><span class="head line" style="font-size:62px">Produktseite</span><span class="head line" style="font-size:62px"><span style="position:relative;display:inline-block"><span class="verlauf">auf dem Handy</span><span class="unter" id="u2" style="width:100%"></span></span></span></div></section>
+      <!-- Sticker "ZUERST." ("zuerst" 48,71) -->
+      <div id="st2" class="sticker clip" data-start="48.64" data-duration="2.0" data-track-index="2">ZUERST.</div>
 
-      <!-- 11 Wiederkehrendes Problem suchen ("suche" 52,33; "wiederkehrenden" 53,41) -->
-      <section id="problem" class="card clip" data-start="52.26" data-duration="2.69" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="m17 2 4 4-4 4" /><path class="d" pathLength="1" d="M3 11v-1a4 4 0 0 1 4-4h14" /><path class="d" pathLength="1" d="m7 22-4-4 4-4" /><path class="d" pathLength="1" d="M21 13v1a4 4 0 0 1-4 4H3" /></svg></div><div class="txt"><span class="kicker line">Dann suche nach einem</span><span class="head line" style="font-size:60px">wiederkehrenden</span><span class="head line" style="font-size:60px"><span class="verlauf">Problem</span></span></div></section>
+      <!-- F: Vermutung vs. Nutzerverhalten. Vermutung 57,17 / sondern 57,97 / echtem 58,51 / Nutzerverhalten 59,03 -->
+      <section id="kG" class="karte lang clip" data-start="57.03" data-duration="4.62" data-track-index="1"><div class="kicker">Optimierung beginnt bei</div><div class="reihe" style="gap:28px">
+        <div class="kachel" id="g1" style="width:240px"><div class="ico grau"><svg viewBox="0 0 24 24"><circle class="e" pathLength="1" cx="12" cy="12" r="10" /><path class="e" pathLength="1" d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path class="e" pathLength="1" d="M12 17h.01" /></svg></div><div class="lab">Vermutung</div><span class="streich" id="g1s"></span><div class="badge nein" id="g1b"><svg viewBox="0 0 24 24"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></div></div>
+        <div class="kachel" id="g2" style="width:290px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle class="e" pathLength="1" cx="9" cy="7" r="4" /><path class="e" pathLength="1" d="M22 21v-2a4 4 0 0 0-3-3.87" /><path class="e" pathLength="1" d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></div><div class="lab">echtem<br />Nutzerverhalten</div><div class="badge ok" id="g2b"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+      </div><div class="schluss" id="g3">ERST <span class="verlauf">BEOBACHTEN,</span> DANN <span class="verlauf">OPTIMIEREN.</span></div></section>
 
-      <!-- 12 Optimierung beginnt bei: Vermutung (gestrichen auf "sondern" 57,97) / echtem Nutzerverhalten -->
-      <section id="vermutung" class="card wide clip" data-start="55.26" data-duration="3.69" data-track-index="0"><span class="kicker line">Optimierung beginnt bei</span><div class="reihen">
-        <div class="zeile line" id="v1"><div class="dot grau"><svg viewBox="0 0 24 24"><circle class="d" pathLength="1" cx="12" cy="12" r="10" /><path class="d" pathLength="1" d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path class="d" pathLength="1" d="M12 17h.01" /></svg></div><span class="head">Vermutung</span><span class="strich" id="st1"></span></div>
-        <div class="zeile" id="v2" style="opacity:0"><div class="dot"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle class="e" pathLength="1" cx="9" cy="7" r="4" /><path class="e" pathLength="1" d="M22 21v-2a4 4 0 0 0-3-3.87" /><path class="e" pathLength="1" d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></div><span class="head"><span class="verlauf">echtem Nutzerverhalten</span></span></div>
-      </div></section>
-
-      <!-- 13 ERST BEOBACHTEN, DANN OPTIMIEREN ("Nutzerverhalten" 59,03) -->
-      <section id="beobachten" class="card wide mitte clip" data-start="58.96" data-duration="2.74" data-track-index="0"><div class="txt"><span class="line zeile" style="gap:18px"><span class="dot"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle class="d" pathLength="1" cx="12" cy="12" r="3" /></svg></span><span class="head" style="font-size:64px">ERST BEOBACHTEN,</span></span><span class="head line" style="font-size:64px"><span class="verlauf">DANN OPTIMIEREN</span></span></div></section>
-
-      <!-- 14 Folgen ("wissen" 61,77; Knopf auf "gerne" 63,27), bleibt bis zum Ende -->
-      <section id="folgen" class="card clip" data-start="61.7" data-duration="4.2" data-track-index="0"><div class="tile"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle class="d" pathLength="1" cx="9" cy="7" r="4" /><path class="d" pathLength="1" d="M19 8v6" /><path class="d" pathLength="1" d="M22 11h-6" /></svg></div><div class="txt"><span class="kicker line">Mehr zur App wissen?</span><span class="head line">Folge <span class="verlauf">mir</span></span><span class="line"><span class="knopf" id="knopf"><span class="flaeche" id="kf"></span><span class="vor" id="kv"><svg viewBox="0 0 24 24"><path d="M12 5v14" /><path d="M5 12h14" /></svg>Folgen</span><span class="nach" id="kn"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>Gefolgt</span></span></span></div></section>
+      <!-- G: Umfrage als CTA. wissen 61,77 / folgt 62,81 / gerne 63,27 / stelle 64,07 -->
+      <section id="kH" class="karte lang clip" data-start="61.7" data-duration="4.2" data-track-index="1"><div class="kicker">Deine Meinung</div>
+        <div class="frage-titel" id="h0"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg></div>Mehr zur App wissen?</div>
+        <div class="optionen">
+          <div class="option" id="h1"><span class="tint" id="h1t"></span><span class="kreis" style="background:linear-gradient(135deg,#00e090,#31adec)"><svg viewBox="0 0 24 24" style="stroke:#0b0c0e"><path d="M20 6 9 17l-5-5" /></svg></span><span>Ja – ich folge dir</span></div>
+          <div class="option" id="h2"><span class="kreis" style="background:#ef4444"><svg viewBox="0 0 24 24" style="stroke:#fff"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></span><span>Nein, danke</span></div>
+        </div>
+        <div class="zeiger" id="h3"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+        <div class="schluss" id="h4" style="font-size:30px">Dann stelle ich dir <span class="verlauf">die App vor.</span></div>
+      </section>
     </div>
 
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
+      gsap.set(".e, .d", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
+      gsap.set("#f0, #f1", { opacity: 0 });
 
-      // Pfad zeichnet sich (erst sichtbar, wenn ein Stück gezeichnet ist)
-      function zeichne(sel, t, dauer = 0.6, stagger = 0.08) {
-        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dauer, ease: "power2.inOut", stagger }, t);
-        tl.set(sel, { opacity: 1 }, t + 0.08);
+      // Pfade zeichnen sich (erst sichtbar, wenn ein Stück gezeichnet ist)
+      function zeichne(sel, t, dauer = 0.5, stagger = 0.06) {
+        tl.set(sel, { opacity: 1 }, t + 0.06);
+        tl.to(sel, { strokeDashoffset: 0, duration: dauer, ease: "power2.inOut", stagger }, t);
       }
-      gsap.set(".e", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
-      // Karte: Fläche gleitet weich herein, Icon zeichnet sich, Kicker und Titel kommen mit (Versatz 0,07 s). Raus kurz und leise.
+      // Karte kommt mit dem Kicker (leer höchstens ~0,2 s bis zum ersten Teil), raus weich mit Blur und Fade
       function karte(id, an, aus) {
-        const k = "#" + id;
-        const hat = (sel) => document.querySelector(k + " " + sel);
-        tl.fromTo(k, { opacity: 0, y: 28, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "expo.out" }, an);
-        if (hat(".tile")) {
-          tl.fromTo(k + " .tile", { scale: 0.85 }, { scale: 1, duration: 0.5, ease: "power3.out" }, an + 0.05);
-        }
-        if (hat(".d")) zeichne(k + " .d", an + 0.12);
-        if (hat(".line")) tl.fromTo(k + " .line", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out", stagger: 0.07 }, an + 0.03);
-        if (hat(".verlauf")) tl.fromTo(k + " .verlauf", { backgroundPosition: "-60px 0" }, { backgroundPosition: "0px 0", duration: 0.6, ease: "power2.out" }, an + 0.2);
-        if (aus) tl.to(k, { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, aus - 0.25);
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        tl.fromTo(id + " .kicker", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
       }
-      // Ein Teil kommt auf seinem Wort: weich herein, sein Icon zeichnet sich
-      function teil(sel, t) {
-        tl.fromTo(sel, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t);
-        if (document.querySelector(sel + " .dot")) tl.fromTo(sel + " .dot", { scale: 0.85 }, { scale: 1, duration: 0.45, ease: "power3.out" }, t);
-        if (document.querySelector(sel + " .e")) {
-          tl.set(sel + " .e", { opacity: 1 }, t + 0.1);
-          tl.to(sel + " .e", { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut", stagger: 0.06 }, t + 0.06);
-        }
+      // Kachel kommt auf ihrem Wort: Scale 0.9 -> 1 und Fade, 0,3 s, ohne Überschwingen; ihr Icon zeichnet sich
+      function kachel(sel, t) {
+        tl.fromTo(sel, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, t);
+        if (document.querySelector(sel + " .e")) zeichne(sel + " .e", t + 0.08);
       }
-      // Häkchen auf dem Wort
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
       function haken(sel, t) {
         tl.to(sel + " .fill", { opacity: 1, duration: 0.2, ease: "power2.out" }, t);
-        tl.set(sel + " .e", { opacity: 1 }, t + 0.08);
-        tl.to(sel + " .e", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, t + 0.05);
-        tl.to(sel, { color: "#0b0c0e", duration: 0.25 }, t);
+        zeichne(sel + " .box .e", t + 0.05, 0.3, 0);
       }
 
-      // 1 Reihe (nach dem Hook)
-      karte("reihe", 6.5, 8.45);
-      // 2 Microsoft Clarity
-      karte("app", 8.52, 11.55);
-      // 3 HEATMAPS mit der Karte, SESSION RECORDINGS auf "Sitzungsaufzeichnungen"
-      karte("zeigt", 11.62, 16.45);
-      teil("#z2", 13.1);
-      // 4 Klicks / Scrolltiefe / RAGE CLICKS
-      karte("erkennt", 16.6, 21.95);
-      teil("#s1", 16.66);
-      teil("#s2", 18.18);
-      teil("#s3", 20.04);
-      // 5 eigene Clarity-App für Shopify
-      karte("shopify", 22.34, 26.3);
-      // 6 Probleme entdecken: Produktseiten, Landingpages
-      karte("probleme", 26.41, 30.9);
-      teil("#p1", 27.33);
-      teil("#p2", 28.27);
-      // 7 komplett übersehen
-      karte("kennzahlen", 30.99, 33.1);
-      // 8 Aber wichtig: Markierung auf "Heatmap", Unterstrich auf "warum"
-      karte("warum", 33.17, 39.2);
-      tl.to("#m1", { scaleX: 1, duration: 0.45, ease: "power2.inOut" }, 35.11);
-      tl.to("#u1", { scaleX: 1, duration: 0.5, ease: "power2.inOut" }, 37.37);
-      // 9 Checkliste: Datenschutz, Einwilligung, Konfiguration
-      karte("pruefen", 40.31, 45.95);
-      haken("#c1", 41.85);
-      haken("#c2", 42.59);
-      haken("#c3", 44.79);
-      // 10 Tipp: Bildschirm füllt sich auf "Produktseite", Unterstrich auf "Handy"
-      karte("tipp", 46.02, 52.15);
-      tl.set("#tipp .e", { opacity: 1 }, 50.2);
-      tl.to("#tipp .e", { strokeDashoffset: 0, duration: 0.45, ease: "power2.inOut", stagger: 0.08 }, 50.12);
-      tl.to("#u2", { scaleX: 1, duration: 0.45, ease: "power2.inOut" }, 51.08);
-      // 11 wiederkehrendes Problem
-      karte("problem", 52.26, 54.95);
-      // 12 Vermutung gestrichen, echtes Nutzerverhalten auf "sondern"
-      karte("vermutung", 55.26, 58.9);
-      tl.to("#st1", { scaleX: 1, duration: 0.35, ease: "power2.inOut" }, 57.9);
-      tl.to("#v1", { opacity: 0.45, duration: 0.3, ease: "power2.out" }, 58.0);
-      teil("#v2", 57.9);
-      // 13 ERST BEOBACHTEN, DANN OPTIMIEREN
-      karte("beobachten", 58.96, 61.65);
-      // 14 Folgen, Knopf wird auf "gerne" angetippt, Karte bleibt bis zum Ende
-      karte("folgen", 61.7, null);
-      tl.to("#knopf", { scale: 0.94, duration: 0.1, ease: "power2.in" }, 63.27);
-      tl.to("#knopf", { scale: 1, duration: 0.2, ease: "power2.out" }, 63.37);
-      tl.to("#kf", { opacity: 1, duration: 0.2, ease: "power2.out" }, 63.3);
-      tl.to("#kv", { opacity: 0, duration: 0.15, ease: "power2.in" }, 63.3);
-      tl.to("#kn", { opacity: 1, duration: 0.2, ease: "power2.out" }, 63.38);
+      // Reihe oben (nach dem Hook)
+      tl.fromTo("#reihe", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 6.5);
+      zeichne("#reihe .d", 6.62, 0.6, 0.08);
+      tl.to("#reihe", { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, 10.15);
+
+      // A: Microsoft Clarity -> Heatmaps, Session Recordings
+      karte("#kA", 8.45, 16.3);
+      kachel("#a1", 8.52);
+      ein("#a1p", 11.5, 0.25);
+      kachel("#a2", 11.62);
+      kachel("#a3", 13.1);
+
+      // B: Klicks, Scrolltiefe, Rage Clicks (Ringe auf "mehrfach klicken")
+      karte("#kB", 16.45, 21.95);
+      kachel("#b1", 16.66);
+      kachel("#b2", 18.18);
+      kachel("#b3", 20.04);
+      ["#r1", "#r2", "#r3"].forEach((r, i) => tl.fromTo(r, { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.45, ease: "power2.out" }, 20.62 + i * 0.18));
+
+      // C: Shopify -> (Lupe) -> Produktseiten, Landingpages; Schlusszeile auf "Kennzahlen"
+      karte("#kC", 22.3, 33.1);
+      kachel("#c1", 22.34);
+      ein("#c1l", 26.09, 0.3);
+      zeichne("#c1l .e", 26.12, 0.4, 0.1);
+      kachel("#c2", 27.33);
+      kachel("#c3", 28.27);
+      ein("#c4", 30.99, 0.35);
+
+      // Sticker ABER.
+      tl.fromTo("#st1", { opacity: 0, scale: 0.7, rotation: 4 }, { opacity: 1, scale: 1, rotation: 4, duration: 0.2, ease: "power2.out" }, 33.17);
+      tl.to("#st1", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 35.52);
+
+      // D1: Heatmap ≠ ? ; Schlusszeile auf "kauft"
+      karte("#kD", 35.0, 39.2);
+      kachel("#d1", 35.11);
+      tl.fromTo("#d2", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 36.05);
+      kachel("#d3", 37.37);
+      ein("#d4", 38.25, 0.35);
+
+      // D2: Analyse-Tool -> Datenschutz, Einwilligung, Konfiguration (Linie verzweigt sich, Häkchen auf dem Wort)
+      karte("#kE", 40.25, 45.95);
+      kachel("#e1", 40.31);
+      [["#fl1", "#e2", 41.85], ["#fl2", "#e3", 42.59], ["#fl3", "#e4", 44.79]].forEach(([l, z, t]) => {
+        zeichne(l, t - 0.12, 0.35, 0);
+        ein(z, t, 0.3);
+        haken(z, t + 0.12);
+      });
+
+      // E: Platzhalter "?" -> Produktseite, Handy, Problem
+      karte("#kF", 46.02, 56.9);
+      kachel("#f0", 46.09);
+      tl.to("#f0", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 50.08);
+      kachel("#f1", 50.12);
+      ein("#f2p", 51.0, 0.25);
+      kachel("#f2", 51.08);
+      ein("#f3p", 53.26, 0.25);
+      kachel("#f3", 53.34);
+
+      // Sticker ZUERST.
+      tl.fromTo("#st2", { opacity: 0, scale: 0.7, rotation: 4 }, { opacity: 1, scale: 1, rotation: 4, duration: 0.2, ease: "power2.out" }, 48.64);
+      tl.to("#st2", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 50.44);
+
+      // F: Vermutung (gestrichen, ✕) / echtem Nutzerverhalten (✓); Schlusszeile ERST BEOBACHTEN, DANN OPTIMIEREN
+      karte("#kG", 57.03, 61.65);
+      kachel("#g1", 57.1);
+      tl.to("#g1s", { scaleX: 1, duration: 0.35, ease: "power2.inOut" }, 57.9);
+      badge("#g1b", 57.95);
+      tl.to("#g1 .ico, #g1 .lab", { opacity: 0.45, duration: 0.3 }, 58.0);
+      kachel("#g2", 58.44);
+      badge("#g2b", 58.96);
+      ein("#g3", 59.65, 0.35);
+
+      // G: Umfrage. Titel mit der Karte, Ja auf "folgt", Nein auf "gerne", Zeiger klickt Ja, Schlusszeile auf "stelle"
+      karte("#kH", 61.7, null);
+      ein("#h0", 61.74, 0.3);
+      zeichne("#h0 .e", 61.8, 0.4, 0);
+      ein("#h1", 62.74, 0.3);
+      ein("#h2", 63.2, 0.3);
+      tl.fromTo("#h3", { opacity: 0, x: 640, y: 250 }, { opacity: 1, x: 620, y: 240, duration: 0.15, ease: "power2.out" }, 63.3);
+      tl.to("#h3", { x: 470, y: 150, duration: 0.35, ease: "power2.inOut" }, 63.38);
+      tl.to("#h3", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 63.72);
+      tl.to("#h3", { scale: 1, duration: 0.15, ease: "power2.out" }, 63.8);
+      tl.to("#h1t", { opacity: 1, duration: 0.2, ease: "power2.out" }, 63.75);
+      tl.to("#h1", { borderColor: "#31adec", duration: 0.2 }, 63.75);
+      ein("#h4", 64.0, 0.35);
 
       tl.seek(0);
       window.__timelines["clarity-skizzen"] = tl;
