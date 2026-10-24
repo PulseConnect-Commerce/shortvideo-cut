@@ -1,0 +1,302 @@
+{
+ "hinweis": "Sekunden im geschnittenen Video (cut.json, 62.7 s). start = 2 Frames vor dem Wort. sfx: Ton-Offsets in Sekunden (absolut), mindestens 1,5 s Abstand außer bei Häkchen. Gebaut in hyperframes/clarity-skizzen/index.html.",
+ "karten": [
+  {
+   "id": "reihe",
+   "wort": "Und (diese)",
+   "text": "Reihe: Eine Shopify-App, ein Problem",
+   "start": 5.85,
+   "ende": 7.66,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.85,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "clarity",
+   "wort": "Microsoft",
+   "text": "Die App: Microsoft Clarity",
+   "start": 7.73,
+   "ende": 10.45,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 7.73,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "heat",
+   "wort": "Heatmaps",
+   "text": "HEATMAPS",
+   "start": 10.58,
+   "ende": 12.0,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 10.58,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "session",
+   "wort": "Sitzungsaufzeichnungen",
+   "text": "SESSION RECORDINGS (anonymisiert)",
+   "start": 12.06,
+   "ende": 13.8,
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 12.06,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "erkennt",
+   "wort": "Besucher",
+   "text": "Du erkennst: KLICKS, SCROLLTIEFE, RAGE CLICKS",
+   "start": 13.84,
+   "ende": 20.05,
+   "punkte": {
+    "klicks": 15.27,
+    "scrolltiefe": 16.79,
+    "rage": 18.66
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 13.84,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 15.27,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 16.79,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 18.66,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "shopify",
+   "wort": "Shopify",
+   "text": "Eigene Clarity-App für Shopify",
+   "start": 20.25,
+   "ende": 23.25,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 20.25,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "probleme",
+   "wort": "helfen",
+   "text": "Das kann dir helfen: Probleme entdecken (Produktseiten, Landingpages)",
+   "start": 23.3,
+   "ende": 28.3,
+   "punkte": {
+    "produktseiten": 25.67,
+    "landingpages": 26.74
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 23.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 25.67,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 26.74,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "kennzahlen",
+   "wort": "Kennzahlen",
+   "text": "In normalen Kennzahlen vielleicht übersehen",
+   "start": 28.36,
+   "ende": 31.15,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 28.36,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "aber",
+   "wort": "Aber",
+   "text": "Aber wichtig: Heatmap sagt nicht automatisch",
+   "start": 31.21,
+   "ende": 35.35,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 31.21,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "warum",
+   "wort": "warum",
+   "text": "... warum jemand nicht kauft",
+   "start": 35.41,
+   "ende": 36.85,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 35.41,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "analyse",
+   "wort": "auch bei",
+   "text": "Beim Analyse-Tool prüfen: Datenschutz, Einwilligung, Konfiguration",
+   "start": 37.15,
+   "ende": 43.35,
+   "punkte": {
+    "datenschutz": 39.4,
+    "einwilligung": 40.08,
+    "konfiguration": 42.32
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 37.15,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 39.4,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 40.08,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 42.32,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "tipp",
+   "wort": "Tipp",
+   "text": "Mein Tipp: wichtige Produktseite auf dem Handy",
+   "start": 43.44,
+   "ende": 49.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 43.44,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 48.52,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "wort": "suche",
+   "text": "Suche ein wiederkehrendes Problem",
+   "start": 49.66,
+   "ende": 51.95,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 49.66,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "vermutung",
+   "wort": "Optimierung",
+   "text": "Optimierung beginnt nicht bei der Vermutung",
+   "start": 52.02,
+   "ende": 54.8,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 52.02,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "beobachten",
+   "wort": "sondern",
+   "text": "ERST BEOBACHTEN, DANN OPTIMIEREN",
+   "start": 54.86,
+   "ende": 57.1,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 54.86,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "mehr",
+   "wort": "Shopify",
+   "text": "Mehr zur Shopify-App wissen?",
+   "start": 57.45,
+   "ende": 59.3,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 57.45,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "folge",
+   "wort": "folge",
+   "text": "Folge mir",
+   "start": 59.36,
+   "ende": 62.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 59.36,
+     "volume": 0.12
+    }
+   ]
+  }
+ ]
+}

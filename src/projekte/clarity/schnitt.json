@@ -1,0 +1,101 @@
+{
+ "projekt": "clarity",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.4,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "start": {
+  "ab": 7.5
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 7.5,
+   "text": "Einer der wichtigsten Apps, die jeder Onlinehandler kennen sollte, der wissen will, wo seine Kunden im Onlineshop hängen bleiben."
+  },
+  {
+   "take": "t1",
+   "ab": 14.1,
+   "text": "Und diese wichtige App nennt sich Microsoft Clarity. Und bei Microsoft Clarity kannst du dir Heatmaps und anonymisierte Sitzungsaufzeichnungen ansehen. Du erkennst zum Beispiel, wo Besucher draufklicken, wie weit sie scrollen oder auch immer an welchen Stellen sie frustriert mehrfach klicken."
+  },
+  {
+   "take": "t1",
+   "ab": 29.5,
+   "text": "und für Shopify gibt es eben dafür eine eigene Clarity App."
+  },
+  {
+   "take": "t1",
+   "ab": 46.0,
+   "von": 46.05,
+   "text": "Und das kann dir eben auch dabei helfen Probleme auf Produktseiten oder auch auf Landingpages zu entdecken, die du dann eben mit normalen Kennzahlen vielleicht übersehen wirst."
+  },
+  {
+   "take": "t1",
+   "ab": 87.65,
+   "text": "Aber wichtig dabei zu verstehen ist, dass eine Heatmap dir natürlich nicht automatisch sagt, warum jemand dich kauft."
+  },
+  {
+   "take": "t1",
+   "ab": 93.8,
+   "text": "Und auch bei einem Analyse-Tool musst du natürlich Datenschutz, Seinwilligung"
+  },
+  {
+   "take": "t1",
+   "ab": 99.7,
+   "text": "und auch natürlich deine konkrete Konfiguration prüfen."
+  },
+  {
+   "take": "t1",
+   "ab": 116.2,
+   "text": "deswegen ein wichtiger Tipp von mir, schau dir unbedingt zuerst eine wichtige Produktseite auf deinem Handy an und suche dann eben nach einem wiederkehrenden Problem."
+  },
+  {
+   "take": "t1",
+   "ab": 125.1,
+   "text": "Denn Optimierung beginnt nämlich nicht nur bei der Vermutung, sondern bei echtem Nutzerverhalten."
+  },
+  {
+   "take": "t1",
+   "ab": 130.2,
+   "text": "Und wenn du mehr zu der Shopify App wissen willst, dann folgt mich hier gerne, dann stelle ich dir auch gerne einmal die App vor."
+  }
+ ],
+ "ende": {
+  "bis": 136.3
+ },
+ "korrekturen": [
+  [
+   "t1",
+   9.11,
+   "Onlinehandler",
+   "Onlinehändler"
+  ],
+  [
+   "t1",
+   92.63,
+   "dich",
+   "nicht"
+  ],
+  [
+   "t1",
+   97.11,
+   "Seinwilligung",
+   "Einwilligung"
+  ],
+  [
+   "t1",
+   132.97,
+   "folgt",
+   "folge"
+  ],
+  [
+   "t1",
+   133.19,
+   "mich",
+   "mir"
+  ]
+ ]
+}

@@ -1,0 +1,1366 @@
+{
+ "projekt": "clarity",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "clarity/t1",
+   "from": 7.5,
+   "to": 9.615,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 9.925,
+   "to": 13.645,
+   "nach": 0.09,
+   "vor": 0.02
+  },
+  {
+   "src": "clarity/t1",
+   "from": 14.095,
+   "to": 17.195,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 17.445,
+   "to": 22.345,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 22.685,
+   "to": 28.965,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 29.535,
+   "to": 32.745,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 46.05,
+   "to": 50.99,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 51.23,
+   "to": 54.2,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 87.715,
+   "to": 93.225,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 93.715,
+   "to": 97.925,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 99.745,
+   "to": 102.285,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 116.245,
+   "to": 124.745,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "clarity/t1",
+   "from": 125.215,
+   "to": 129.915,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clarity/t1",
+   "from": 130.255,
+   "to": 136.3,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Einer",
+   "src": "clarity/t1",
+   "start": 7.59,
+   "end": 7.77
+  },
+  {
+   "text": "der",
+   "src": "clarity/t1",
+   "start": 7.81,
+   "end": 7.89
+  },
+  {
+   "text": "wichtigsten",
+   "src": "clarity/t1",
+   "start": 7.95,
+   "end": 8.37
+  },
+  {
+   "text": "Apps,",
+   "src": "clarity/t1",
+   "start": 8.43,
+   "end": 8.59
+  },
+  {
+   "text": "die",
+   "src": "clarity/t1",
+   "start": 8.63,
+   "end": 8.71
+  },
+  {
+   "text": "jeder",
+   "src": "clarity/t1",
+   "start": 8.79,
+   "end": 9.03
+  },
+  {
+   "text": "Onlinehändler",
+   "src": "clarity/t1",
+   "start": 9.11,
+   "end": 9.59
+  },
+  {
+   "text": "kennen",
+   "src": "clarity/t1",
+   "start": 9.95,
+   "end": 10.21
+  },
+  {
+   "text": "sollte,",
+   "src": "clarity/t1",
+   "start": 10.27,
+   "end": 10.53
+  },
+  {
+   "text": "der",
+   "src": "clarity/t1",
+   "start": 10.61,
+   "end": 10.71
+  },
+  {
+   "text": "wissen",
+   "src": "clarity/t1",
+   "start": 10.79,
+   "end": 11.03
+  },
+  {
+   "text": "will,",
+   "src": "clarity/t1",
+   "start": 11.09,
+   "end": 11.23
+  },
+  {
+   "text": "wo",
+   "src": "clarity/t1",
+   "start": 11.61,
+   "end": 11.69
+  },
+  {
+   "text": "seine",
+   "src": "clarity/t1",
+   "start": 11.81,
+   "end": 12.01
+  },
+  {
+   "text": "Kunden",
+   "src": "clarity/t1",
+   "start": 12.11,
+   "end": 12.37
+  },
+  {
+   "text": "im",
+   "src": "clarity/t1",
+   "start": 12.41,
+   "end": 12.47
+  },
+  {
+   "text": "Onlineshop",
+   "src": "clarity/t1",
+   "start": 12.53,
+   "end": 12.91
+  },
+  {
+   "text": "hängen",
+   "src": "clarity/t1",
+   "start": 12.99,
+   "end": 13.19
+  },
+  {
+   "text": "bleiben.",
+   "src": "clarity/t1",
+   "start": 13.25,
+   "end": 13.53
+  },
+  {
+   "text": "Und",
+   "src": "clarity/t1",
+   "start": 14.17,
+   "end": 14.27
+  },
+  {
+   "text": "diese",
+   "src": "clarity/t1",
+   "start": 14.67,
+   "end": 14.89
+  },
+  {
+   "text": "wichtige",
+   "src": "clarity/t1",
+   "start": 14.97,
+   "end": 15.27
+  },
+  {
+   "text": "App",
+   "src": "clarity/t1",
+   "start": 15.39,
+   "end": 15.51
+  },
+  {
+   "text": "nennt",
+   "src": "clarity/t1",
+   "start": 15.59,
+   "end": 15.77
+  },
+  {
+   "text": "sich",
+   "src": "clarity/t1",
+   "start": 15.81,
+   "end": 15.93
+  },
+  {
+   "text": "Microsoft",
+   "src": "clarity/t1",
+   "start": 16.05,
+   "end": 16.55
+  },
+  {
+   "text": "Clarity.",
+   "src": "clarity/t1",
+   "start": 16.63,
+   "end": 17.05
+  },
+  {
+   "text": "Und",
+   "src": "clarity/t1",
+   "start": 17.51,
+   "end": 17.59
+  },
+  {
+   "text": "bei",
+   "src": "clarity/t1",
+   "start": 17.63,
+   "end": 17.69
+  },
+  {
+   "text": "Microsoft",
+   "src": "clarity/t1",
+   "start": 17.75,
+   "end": 18.15
+  },
+  {
+   "text": "Clarity",
+   "src": "clarity/t1",
+   "start": 18.19,
+   "end": 18.55
+  },
+  {
+   "text": "kannst",
+   "src": "clarity/t1",
+   "start": 18.65,
+   "end": 18.81
+  },
+  {
+   "text": "du",
+   "src": "clarity/t1",
+   "start": 18.83,
+   "end": 18.89
+  },
+  {
+   "text": "dir",
+   "src": "clarity/t1",
+   "start": 18.95,
+   "end": 19.09
+  },
+  {
+   "text": "Heatmaps",
+   "src": "clarity/t1",
+   "start": 19.15,
+   "end": 19.59
+  },
+  {
+   "text": "und",
+   "src": "clarity/t1",
+   "start": 19.69,
+   "end": 19.77
+  },
+  {
+   "text": "anonymisierte",
+   "src": "clarity/t1",
+   "start": 19.89,
+   "end": 20.53
+  },
+  {
+   "text": "Sitzungsaufzeichnungen",
+   "src": "clarity/t1",
+   "start": 20.63,
+   "end": 21.77
+  },
+  {
+   "text": "ansehen.",
+   "src": "clarity/t1",
+   "start": 21.89,
+   "end": 22.25
+  },
+  {
+   "text": "Du",
+   "src": "clarity/t1",
+   "start": 22.75,
+   "end": 22.79
+  },
+  {
+   "text": "erkennst",
+   "src": "clarity/t1",
+   "start": 22.85,
+   "end": 23.13
+  },
+  {
+   "text": "zum",
+   "src": "clarity/t1",
+   "start": 23.15,
+   "end": 23.23
+  },
+  {
+   "text": "Beispiel,",
+   "src": "clarity/t1",
+   "start": 23.27,
+   "end": 23.57
+  },
+  {
+   "text": "wo",
+   "src": "clarity/t1",
+   "start": 23.63,
+   "end": 23.67
+  },
+  {
+   "text": "Besucher",
+   "src": "clarity/t1",
+   "start": 23.75,
+   "end": 24.07
+  },
+  {
+   "text": "draufklicken,",
+   "src": "clarity/t1",
+   "start": 24.19,
+   "end": 24.81
+  },
+  {
+   "text": "wie",
+   "src": "clarity/t1",
+   "start": 25.19,
+   "end": 25.27
+  },
+  {
+   "text": "weit",
+   "src": "clarity/t1",
+   "start": 25.33,
+   "end": 25.51
+  },
+  {
+   "text": "sie",
+   "src": "clarity/t1",
+   "start": 25.57,
+   "end": 25.65
+  },
+  {
+   "text": "scrollen",
+   "src": "clarity/t1",
+   "start": 25.71,
+   "end": 26.13
+  },
+  {
+   "text": "oder",
+   "src": "clarity/t1",
+   "start": 26.19,
+   "end": 26.31
+  },
+  {
+   "text": "auch",
+   "src": "clarity/t1",
+   "start": 26.35,
+   "end": 26.45
+  },
+  {
+   "text": "immer",
+   "src": "clarity/t1",
+   "start": 26.51,
+   "end": 26.63
+  },
+  {
+   "text": "an",
+   "src": "clarity/t1",
+   "start": 26.67,
+   "end": 26.73
+  },
+  {
+   "text": "welchen",
+   "src": "clarity/t1",
+   "start": 26.77,
+   "end": 26.99
+  },
+  {
+   "text": "Stellen",
+   "src": "clarity/t1",
+   "start": 27.07,
+   "end": 27.37
+  },
+  {
+   "text": "sie",
+   "src": "clarity/t1",
+   "start": 27.43,
+   "end": 27.51
+  },
+  {
+   "text": "frustriert",
+   "src": "clarity/t1",
+   "start": 27.57,
+   "end": 28.07
+  },
+  {
+   "text": "mehrfach",
+   "src": "clarity/t1",
+   "start": 28.15,
+   "end": 28.47
+  },
+  {
+   "text": "klicken.",
+   "src": "clarity/t1",
+   "start": 28.55,
+   "end": 28.83
+  },
+  {
+   "text": "und",
+   "src": "clarity/t1",
+   "start": 29.57,
+   "end": 29.67
+  },
+  {
+   "text": "für",
+   "src": "clarity/t1",
+   "start": 29.73,
+   "end": 29.83
+  },
+  {
+   "text": "Shopify",
+   "src": "clarity/t1",
+   "start": 29.87,
+   "end": 30.25
+  },
+  {
+   "text": "gibt",
+   "src": "clarity/t1",
+   "start": 30.35,
+   "end": 30.49
+  },
+  {
+   "text": "es",
+   "src": "clarity/t1",
+   "start": 30.55,
+   "end": 30.63
+  },
+  {
+   "text": "eben",
+   "src": "clarity/t1",
+   "start": 30.69,
+   "end": 30.83
+  },
+  {
+   "text": "dafür",
+   "src": "clarity/t1",
+   "start": 30.87,
+   "end": 31.17
+  },
+  {
+   "text": "eine",
+   "src": "clarity/t1",
+   "start": 31.35,
+   "end": 31.49
+  },
+  {
+   "text": "eigene",
+   "src": "clarity/t1",
+   "start": 31.67,
+   "end": 31.95
+  },
+  {
+   "text": "Clarity",
+   "src": "clarity/t1",
+   "start": 32.03,
+   "end": 32.45
+  },
+  {
+   "text": "App.",
+   "src": "clarity/t1",
+   "start": 32.53,
+   "end": 32.65
+  },
+  {
+   "text": "Und",
+   "src": "clarity/t1",
+   "start": 46.08,
+   "end": 46.19
+  },
+  {
+   "text": "das",
+   "src": "clarity/t1",
+   "start": 46.19,
+   "end": 46.42
+  },
+  {
+   "text": "kann",
+   "src": "clarity/t1",
+   "start": 46.42,
+   "end": 46.66
+  },
+  {
+   "text": "dir",
+   "src": "clarity/t1",
+   "start": 46.66,
+   "end": 46.84
+  },
+  {
+   "text": "eben",
+   "src": "clarity/t1",
+   "start": 46.84,
+   "end": 46.9
+  },
+  {
+   "text": "auch",
+   "src": "clarity/t1",
+   "start": 46.9,
+   "end": 47.08
+  },
+  {
+   "text": "dabei",
+   "src": "clarity/t1",
+   "start": 47.08,
+   "end": 47.26
+  },
+  {
+   "text": "helfen,",
+   "src": "clarity/t1",
+   "start": 47.26,
+   "end": 48.02
+  },
+  {
+   "text": "Probleme",
+   "src": "clarity/t1",
+   "start": 48.08,
+   "end": 48.28
+  },
+  {
+   "text": "auf",
+   "src": "clarity/t1",
+   "start": 48.28,
+   "end": 48.46
+  },
+  {
+   "text": "Produktseiten",
+   "src": "clarity/t1",
+   "start": 48.46,
+   "end": 48.96
+  },
+  {
+   "text": "oder",
+   "src": "clarity/t1",
+   "start": 49.06,
+   "end": 49.28
+  },
+  {
+   "text": "auch",
+   "src": "clarity/t1",
+   "start": 49.28,
+   "end": 49.4
+  },
+  {
+   "text": "auf",
+   "src": "clarity/t1",
+   "start": 49.4,
+   "end": 49.54
+  },
+  {
+   "text": "Landingpages",
+   "src": "clarity/t1",
+   "start": 49.54,
+   "end": 50.04
+  },
+  {
+   "text": "zu",
+   "src": "clarity/t1",
+   "start": 50.2,
+   "end": 50.46
+  },
+  {
+   "text": "entdecken,",
+   "src": "clarity/t1",
+   "start": 50.46,
+   "end": 50.96
+  },
+  {
+   "text": "die",
+   "src": "clarity/t1",
+   "start": 51.38,
+   "end": 51.5
+  },
+  {
+   "text": "du",
+   "src": "clarity/t1",
+   "start": 51.5,
+   "end": 51.7
+  },
+  {
+   "text": "dann",
+   "src": "clarity/t1",
+   "start": 51.7,
+   "end": 51.9
+  },
+  {
+   "text": "eben",
+   "src": "clarity/t1",
+   "start": 51.9,
+   "end": 52.1
+  },
+  {
+   "text": "mit",
+   "src": "clarity/t1",
+   "start": 52.1,
+   "end": 52.16
+  },
+  {
+   "text": "normalen",
+   "src": "clarity/t1",
+   "start": 52.16,
+   "end": 52.66
+  },
+  {
+   "text": "Kennzahlen",
+   "src": "clarity/t1",
+   "start": 52.7,
+   "end": 53.1
+  },
+  {
+   "text": "vielleicht",
+   "src": "clarity/t1",
+   "start": 53.1,
+   "end": 53.46
+  },
+  {
+   "text": "übersehen",
+   "src": "clarity/t1",
+   "start": 53.46,
+   "end": 53.88
+  },
+  {
+   "text": "wirst.",
+   "src": "clarity/t1",
+   "start": 53.88,
+   "end": 54.2
+  },
+  {
+   "text": "Aber",
+   "src": "clarity/t1",
+   "start": 87.75,
+   "end": 87.87
+  },
+  {
+   "text": "wichtig",
+   "src": "clarity/t1",
+   "start": 87.93,
+   "end": 88.19
+  },
+  {
+   "text": "dabei",
+   "src": "clarity/t1",
+   "start": 88.27,
+   "end": 88.47
+  },
+  {
+   "text": "zu",
+   "src": "clarity/t1",
+   "start": 88.57,
+   "end": 88.63
+  },
+  {
+   "text": "verstehen",
+   "src": "clarity/t1",
+   "start": 88.69,
+   "end": 89.09
+  },
+  {
+   "text": "ist,",
+   "src": "clarity/t1",
+   "start": 89.15,
+   "end": 89.23
+  },
+  {
+   "text": "dass",
+   "src": "clarity/t1",
+   "start": 89.25,
+   "end": 89.37
+  },
+  {
+   "text": "eine",
+   "src": "clarity/t1",
+   "start": 89.45,
+   "end": 89.59
+  },
+  {
+   "text": "Heatmap",
+   "src": "clarity/t1",
+   "start": 89.69,
+   "end": 90.03
+  },
+  {
+   "text": "dir",
+   "src": "clarity/t1",
+   "start": 90.09,
+   "end": 90.19
+  },
+  {
+   "text": "natürlich",
+   "src": "clarity/t1",
+   "start": 90.23,
+   "end": 90.55
+  },
+  {
+   "text": "nicht",
+   "src": "clarity/t1",
+   "start": 90.63,
+   "end": 90.75
+  },
+  {
+   "text": "automatisch",
+   "src": "clarity/t1",
+   "start": 90.81,
+   "end": 91.33
+  },
+  {
+   "text": "sagt,",
+   "src": "clarity/t1",
+   "start": 91.37,
+   "end": 91.61
+  },
+  {
+   "text": "warum",
+   "src": "clarity/t1",
+   "start": 91.95,
+   "end": 92.21
+  },
+  {
+   "text": "jemand",
+   "src": "clarity/t1",
+   "start": 92.27,
+   "end": 92.53
+  },
+  {
+   "text": "nicht",
+   "src": "clarity/t1",
+   "start": 92.63,
+   "end": 92.75
+  },
+  {
+   "text": "kauft.",
+   "src": "clarity/t1",
+   "start": 92.83,
+   "end": 93.15
+  },
+  {
+   "text": "Und",
+   "src": "clarity/t1",
+   "start": 93.85,
+   "end": 93.95
+  },
+  {
+   "text": "auch",
+   "src": "clarity/t1",
+   "start": 94.15,
+   "end": 94.27
+  },
+  {
+   "text": "bei",
+   "src": "clarity/t1",
+   "start": 94.31,
+   "end": 94.41
+  },
+  {
+   "text": "einem",
+   "src": "clarity/t1",
+   "start": 94.51,
+   "end": 94.71
+  },
+  {
+   "text": "Analyse-Tool",
+   "src": "clarity/t1",
+   "start": 94.89,
+   "end": 95.69
+  },
+  {
+   "text": "musst",
+   "src": "clarity/t1",
+   "start": 95.77,
+   "end": 95.95
+  },
+  {
+   "text": "du",
+   "src": "clarity/t1",
+   "start": 95.99,
+   "end": 96.03
+  },
+  {
+   "text": "natürlich",
+   "src": "clarity/t1",
+   "start": 96.09,
+   "end": 96.37
+  },
+  {
+   "text": "Datenschutz,",
+   "src": "clarity/t1",
+   "start": 96.43,
+   "end": 97.07
+  },
+  {
+   "text": "Einwilligung",
+   "src": "clarity/t1",
+   "start": 97.11,
+   "end": 97.73
+  },
+  {
+   "text": "und",
+   "src": "clarity/t1",
+   "start": 99.81,
+   "end": 99.89
+  },
+  {
+   "text": "auch",
+   "src": "clarity/t1",
+   "start": 99.95,
+   "end": 100.05
+  },
+  {
+   "text": "natürlich",
+   "src": "clarity/t1",
+   "start": 100.07,
+   "end": 100.33
+  },
+  {
+   "text": "deine",
+   "src": "clarity/t1",
+   "start": 100.37,
+   "end": 100.55
+  },
+  {
+   "text": "konkrete",
+   "src": "clarity/t1",
+   "start": 100.63,
+   "end": 101.09
+  },
+  {
+   "text": "Konfiguration",
+   "src": "clarity/t1",
+   "start": 101.17,
+   "end": 101.83
+  },
+  {
+   "text": "prüfen.",
+   "src": "clarity/t1",
+   "start": 101.89,
+   "end": 102.17
+  },
+  {
+   "text": "deswegen",
+   "src": "clarity/t1",
+   "start": 116.25,
+   "end": 116.67
+  },
+  {
+   "text": "ein",
+   "src": "clarity/t1",
+   "start": 116.73,
+   "end": 116.81
+  },
+  {
+   "text": "wichtiger",
+   "src": "clarity/t1",
+   "start": 116.91,
+   "end": 117.25
+  },
+  {
+   "text": "Tipp",
+   "src": "clarity/t1",
+   "start": 117.31,
+   "end": 117.45
+  },
+  {
+   "text": "von",
+   "src": "clarity/t1",
+   "start": 117.47,
+   "end": 117.59
+  },
+  {
+   "text": "mir,",
+   "src": "clarity/t1",
+   "start": 117.63,
+   "end": 117.77
+  },
+  {
+   "text": "schau",
+   "src": "clarity/t1",
+   "start": 117.93,
+   "end": 118.13
+  },
+  {
+   "text": "dir",
+   "src": "clarity/t1",
+   "start": 118.23,
+   "end": 118.31
+  },
+  {
+   "text": "unbedingt",
+   "src": "clarity/t1",
+   "start": 118.39,
+   "end": 118.83
+  },
+  {
+   "text": "zuerst",
+   "src": "clarity/t1",
+   "start": 118.87,
+   "end": 119.21
+  },
+  {
+   "text": "eine",
+   "src": "clarity/t1",
+   "start": 119.29,
+   "end": 119.43
+  },
+  {
+   "text": "wichtige",
+   "src": "clarity/t1",
+   "start": 119.57,
+   "end": 119.91
+  },
+  {
+   "text": "Produktseite",
+   "src": "clarity/t1",
+   "start": 120.35,
+   "end": 120.89
+  },
+  {
+   "text": "auf",
+   "src": "clarity/t1",
+   "start": 120.95,
+   "end": 121.03
+  },
+  {
+   "text": "deinem",
+   "src": "clarity/t1",
+   "start": 121.05,
+   "end": 121.27
+  },
+  {
+   "text": "Handy",
+   "src": "clarity/t1",
+   "start": 121.31,
+   "end": 121.55
+  },
+  {
+   "text": "an",
+   "src": "clarity/t1",
+   "start": 121.67,
+   "end": 121.79
+  },
+  {
+   "text": "und",
+   "src": "clarity/t1",
+   "start": 122.35,
+   "end": 122.43
+  },
+  {
+   "text": "suche",
+   "src": "clarity/t1",
+   "start": 122.49,
+   "end": 122.71
+  },
+  {
+   "text": "dann",
+   "src": "clarity/t1",
+   "start": 122.77,
+   "end": 122.91
+  },
+  {
+   "text": "eben",
+   "src": "clarity/t1",
+   "start": 122.97,
+   "end": 123.11
+  },
+  {
+   "text": "nach",
+   "src": "clarity/t1",
+   "start": 123.13,
+   "end": 123.23
+  },
+  {
+   "text": "einem",
+   "src": "clarity/t1",
+   "start": 123.31,
+   "end": 123.49
+  },
+  {
+   "text": "wiederkehrenden",
+   "src": "clarity/t1",
+   "start": 123.57,
+   "end": 124.19
+  },
+  {
+   "text": "Problem.",
+   "src": "clarity/t1",
+   "start": 124.23,
+   "end": 124.57
+  },
+  {
+   "text": "Denn",
+   "src": "clarity/t1",
+   "start": 125.23,
+   "end": 125.35
+  },
+  {
+   "text": "Optimierung",
+   "src": "clarity/t1",
+   "start": 125.49,
+   "end": 126.01
+  },
+  {
+   "text": "beginnt",
+   "src": "clarity/t1",
+   "start": 126.11,
+   "end": 126.41
+  },
+  {
+   "text": "nämlich",
+   "src": "clarity/t1",
+   "start": 126.47,
+   "end": 126.71
+  },
+  {
+   "text": "nicht",
+   "src": "clarity/t1",
+   "start": 126.79,
+   "end": 126.93
+  },
+  {
+   "text": "nur",
+   "src": "clarity/t1",
+   "start": 126.97,
+   "end": 127.07
+  },
+  {
+   "text": "bei",
+   "src": "clarity/t1",
+   "start": 127.09,
+   "end": 127.17
+  },
+  {
+   "text": "der",
+   "src": "clarity/t1",
+   "start": 127.21,
+   "end": 127.29
+  },
+  {
+   "text": "Vermutung,",
+   "src": "clarity/t1",
+   "start": 127.33,
+   "end": 127.77
+  },
+  {
+   "text": "sondern",
+   "src": "clarity/t1",
+   "start": 128.13,
+   "end": 128.37
+  },
+  {
+   "text": "bei",
+   "src": "clarity/t1",
+   "start": 128.41,
+   "end": 128.49
+  },
+  {
+   "text": "echtem",
+   "src": "clarity/t1",
+   "start": 128.67,
+   "end": 128.97
+  },
+  {
+   "text": "Nutzerverhalten.",
+   "src": "clarity/t1",
+   "start": 129.19,
+   "end": 129.87
+  },
+  {
+   "text": "Und",
+   "src": "clarity/t1",
+   "start": 130.27,
+   "end": 130.33
+  },
+  {
+   "text": "wenn",
+   "src": "clarity/t1",
+   "start": 130.37,
+   "end": 130.49
+  },
+  {
+   "text": "du",
+   "src": "clarity/t1",
+   "start": 130.53,
+   "end": 130.57
+  },
+  {
+   "text": "mehr",
+   "src": "clarity/t1",
+   "start": 130.63,
+   "end": 130.77
+  },
+  {
+   "text": "zu",
+   "src": "clarity/t1",
+   "start": 130.83,
+   "end": 130.89
+  },
+  {
+   "text": "der",
+   "src": "clarity/t1",
+   "start": 130.97,
+   "end": 131.05
+  },
+  {
+   "text": "Shopify",
+   "src": "clarity/t1",
+   "start": 131.11,
+   "end": 131.47
+  },
+  {
+   "text": "App",
+   "src": "clarity/t1",
+   "start": 131.57,
+   "end": 131.67
+  },
+  {
+   "text": "wissen",
+   "src": "clarity/t1",
+   "start": 131.93,
+   "end": 132.17
+  },
+  {
+   "text": "willst,",
+   "src": "clarity/t1",
+   "start": 132.21,
+   "end": 132.45
+  },
+  {
+   "text": "dann",
+   "src": "clarity/t1",
+   "start": 132.51,
+   "end": 132.67
+  },
+  {
+   "text": "folge",
+   "src": "clarity/t1",
+   "start": 132.97,
+   "end": 133.17
+  },
+  {
+   "text": "mir",
+   "src": "clarity/t1",
+   "start": 133.19,
+   "end": 133.27
+  },
+  {
+   "text": "hier",
+   "src": "clarity/t1",
+   "start": 133.29,
+   "end": 133.37
+  },
+  {
+   "text": "gerne,",
+   "src": "clarity/t1",
+   "start": 133.43,
+   "end": 133.67
+  },
+  {
+   "text": "dann",
+   "src": "clarity/t1",
+   "start": 133.77,
+   "end": 133.95
+  },
+  {
+   "text": "stelle",
+   "src": "clarity/t1",
+   "start": 134.23,
+   "end": 134.43
+  },
+  {
+   "text": "ich",
+   "src": "clarity/t1",
+   "start": 134.47,
+   "end": 134.53
+  },
+  {
+   "text": "dir",
+   "src": "clarity/t1",
+   "start": 134.55,
+   "end": 134.61
+  },
+  {
+   "text": "auch",
+   "src": "clarity/t1",
+   "start": 134.63,
+   "end": 134.71
+  },
+  {
+   "text": "gerne",
+   "src": "clarity/t1",
+   "start": 134.75,
+   "end": 134.95
+  },
+  {
+   "text": "einmal",
+   "src": "clarity/t1",
+   "start": 135.03,
+   "end": 135.25
+  },
+  {
+   "text": "die",
+   "src": "clarity/t1",
+   "start": 135.31,
+   "end": 135.37
+  },
+  {
+   "text": "App",
+   "src": "clarity/t1",
+   "start": 135.47,
+   "end": 135.59
+  },
+  {
+   "text": "vor.",
+   "src": "clarity/t1",
+   "start": 135.67,
+   "end": 135.83
+  }
+ ],
+ "pages": [
+  1,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  1,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  1,
+  1,
+  2,
+  2,
+  1,
+  2,
+  4,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  1,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  1,
+  2,
+  3,
+  3,
+  3,
+  3,
+  1,
+  4,
+  3,
+  2,
+  2,
+  1,
+  2,
+  3,
+  4,
+  3,
+  1,
+  4,
+  3,
+  3,
+  3,
+  2,
+  4,
+  3,
+  3
+ ]
+}
