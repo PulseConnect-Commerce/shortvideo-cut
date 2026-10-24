@@ -6,7 +6,7 @@
  * Bild: Gesicht mittig, Augen bei ~815 (Augen im Take x 604, y 951 → scale 1.3, hoch 421, x 83), sanfter Grade,
  * ein ruhiges Zoom-in (3 %), kein Punch-in (oben stehen durchgehend Karten).
  * PROBE nach .claude/skills/faber-cut/karten-aufbau.md (Pauls Referenz 2026-10-24): helle Aufbau-Karten auf
- * Brusthöhe (x 80-900, ab y 1130), Kacheln auf ihrem Wort, Zustände (✓, ✕, Durchstreichen, ≠), Schlusszeilen, zwei
+ * Brusthöhe (x 80-900, ab y 1100), Kacheln auf ihrem Wort, Zustände (✓, ✕, Durchstreichen, ≠), Schlusszeilen, zwei
  * Sticker-Wörter, Umfrage-Karte als CTA; Untertitel als dunkle Pillen (src/lib/pillen.tsx) direkt über der Karte.
  * Karten kommen als transparentes WebM aus hyperframes/clarity-skizzen (public/broll/clarity/skizzen.webm), Zeiten
  * und Töne in karten.json. Keine Clarity-Oberflächen (kein echtes Material), nur Icons und Text.
@@ -35,8 +35,8 @@ const HOOK_ENDE = fs(6.3);
 /** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json): whoosh pro Kartenwechsel, tick pro Kachel */
 const TOENE = karten.karten.flatMap((k) => k.sfx);
 
-/** Pill-Untertitel: Mitte über der Aufbau-Karte (Karte x 80-900, oben bei y 1130) */
-const PILLE = { x: 490, y: 1075 };
+/** Pill-Untertitel: Mitte über der Aufbau-Karte (Karte x 80-900, oben bei y 1100) */
+const PILLE = { x: 490, y: 1050 };
 
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false };
 
