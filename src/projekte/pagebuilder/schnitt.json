@@ -1,0 +1,51 @@
+{
+ "projekt": "pagebuilder",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 1.2,
+   "text": "Bevor du für Shopify einen Page Builder installierst, würde ich heute erst einmal die KI ausprobieren. Denn viele Shopbetreiber installieren zunächst einmal Apps, weil sie einfach eine individuelle Produktseite oder eine Landingpage bauen wollen. Dabei bietet Shopify allerdings mit seinem eigenen Theme-Editor bereits Sektionen, Blöcke und auch unterschiedliche Seitenvorlagen. Und inzwischen kannst du auch einfach mit Shopify Sidekick bzw. Shopify Magic sogar eigene Theme-Blöcke per KI generieren lassen."
+  },
+  {
+   "take": "t1",
+   "ab": 32.0,
+   "text": "Du beschreibst nämlich, was du brauchst, und die KI erstellt einfach einen komplett passenden Block. Und das kann eben für einfache Anpassungen richtig praktisch sein. Aber jetzt kommt der wichtige Teil."
+  },
+  {
+   "take": "t1",
+   "ab": 46.75,
+   "text": "Denn KI-generierter Code ist einfach nicht automatisch fehlerfrei. Denn es kann ja auch durchaus zu Problemen bei der Darstellung, der Geschwindigkeit oder auch eben der Barrierefreiheit verursachen."
+  },
+  {
+   "take": "t1",
+   "ab": 76.0,
+   "text": "Deshalb würde ich bei solchen Anpassungen immer zunächst einmal eine Theme-Kopie erstellen lassen und gerade dann eben auch auf dem Smartphone."
+  },
+  {
+   "take": "t1",
+   "ab": 96.9,
+   "text": "Und für wirklich komplexere Landingpages kann natürlich auch durchaus ein Page Builder sinnvoll sein."
+  },
+  {
+   "take": "t1",
+   "ab": 113.3,
+   "text": "Aber nicht jede neue Seite braucht natürlich immer direkt so ein Monatsabo zusätzlich."
+  },
+  {
+   "take": "t1",
+   "ab": 127.3,
+   "text": "Und wenn ihr weitere solche Tipps nicht mehr verpassen wollt, dann folgt mir hier gerne den Kanal und drückt mal das Plus weg."
+  }
+ ],
+ "ende": {
+  "bis": 132.8
+ },
+ "korrekturen": []
+}

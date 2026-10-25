@@ -1,0 +1,1329 @@
+{
+ "projekt": "pagebuilder",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "pagebuilder/t1",
+   "from": 1.295,
+   "to": 13.415,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "pagebuilder/t1",
+   "from": 16.385,
+   "to": 29.425,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "pagebuilder/t1",
+   "from": 31.985,
+   "to": 41.815,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "pagebuilder/t1",
+   "from": 46.805,
+   "to": 55.795,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "pagebuilder/t1",
+   "from": 76.205,
+   "to": 82.795,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "pagebuilder/t1",
+   "from": 97.325,
+   "to": 102.105,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "pagebuilder/t1",
+   "from": 113.305,
+   "to": 117.545,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "pagebuilder/t1",
+   "from": 127.405,
+   "to": 132.8,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Bevor",
+   "src": "pagebuilder/t1",
+   "start": 1.31,
+   "end": 1.63
+  },
+  {
+   "text": "du",
+   "src": "pagebuilder/t1",
+   "start": 1.71,
+   "end": 1.75
+  },
+  {
+   "text": "für",
+   "src": "pagebuilder/t1",
+   "start": 1.81,
+   "end": 1.91
+  },
+  {
+   "text": "Shopify",
+   "src": "pagebuilder/t1",
+   "start": 1.97,
+   "end": 2.41
+  },
+  {
+   "text": "einen",
+   "src": "pagebuilder/t1",
+   "start": 2.53,
+   "end": 2.67
+  },
+  {
+   "text": "Page",
+   "src": "pagebuilder/t1",
+   "start": 2.73,
+   "end": 2.95
+  },
+  {
+   "text": "Builder",
+   "src": "pagebuilder/t1",
+   "start": 3.01,
+   "end": 3.21
+  },
+  {
+   "text": "installierst,",
+   "src": "pagebuilder/t1",
+   "start": 3.25,
+   "end": 3.73
+  },
+  {
+   "text": "würde",
+   "src": "pagebuilder/t1",
+   "start": 4.07,
+   "end": 4.23
+  },
+  {
+   "text": "ich",
+   "src": "pagebuilder/t1",
+   "start": 4.29,
+   "end": 4.35
+  },
+  {
+   "text": "heute",
+   "src": "pagebuilder/t1",
+   "start": 4.43,
+   "end": 4.65
+  },
+  {
+   "text": "erst",
+   "src": "pagebuilder/t1",
+   "start": 4.79,
+   "end": 4.95
+  },
+  {
+   "text": "einmal",
+   "src": "pagebuilder/t1",
+   "start": 5.01,
+   "end": 5.23
+  },
+  {
+   "text": "die",
+   "src": "pagebuilder/t1",
+   "start": 5.35,
+   "end": 5.43
+  },
+  {
+   "text": "KI",
+   "src": "pagebuilder/t1",
+   "start": 5.49,
+   "end": 5.73
+  },
+  {
+   "text": "ausprobieren.",
+   "src": "pagebuilder/t1",
+   "start": 5.83,
+   "end": 6.29
+  },
+  {
+   "text": "Denn",
+   "src": "pagebuilder/t1",
+   "start": 6.93,
+   "end": 7.07
+  },
+  {
+   "text": "viele",
+   "src": "pagebuilder/t1",
+   "start": 7.17,
+   "end": 7.35
+  },
+  {
+   "text": "Shopbetreiber",
+   "src": "pagebuilder/t1",
+   "start": 7.43,
+   "end": 8.01
+  },
+  {
+   "text": "installieren",
+   "src": "pagebuilder/t1",
+   "start": 8.11,
+   "end": 8.61
+  },
+  {
+   "text": "zunächst",
+   "src": "pagebuilder/t1",
+   "start": 8.67,
+   "end": 8.97
+  },
+  {
+   "text": "einmal",
+   "src": "pagebuilder/t1",
+   "start": 9.01,
+   "end": 9.23
+  },
+  {
+   "text": "Apps,",
+   "src": "pagebuilder/t1",
+   "start": 9.37,
+   "end": 9.57
+  },
+  {
+   "text": "weil",
+   "src": "pagebuilder/t1",
+   "start": 9.95,
+   "end": 10.07
+  },
+  {
+   "text": "sie",
+   "src": "pagebuilder/t1",
+   "start": 10.09,
+   "end": 10.17
+  },
+  {
+   "text": "einfach",
+   "src": "pagebuilder/t1",
+   "start": 10.19,
+   "end": 10.41
+  },
+  {
+   "text": "eine",
+   "src": "pagebuilder/t1",
+   "start": 10.47,
+   "end": 10.59
+  },
+  {
+   "text": "individuelle",
+   "src": "pagebuilder/t1",
+   "start": 10.67,
+   "end": 11.23
+  },
+  {
+   "text": "Produktseite",
+   "src": "pagebuilder/t1",
+   "start": 11.29,
+   "end": 11.83
+  },
+  {
+   "text": "oder",
+   "src": "pagebuilder/t1",
+   "start": 11.91,
+   "end": 12.05
+  },
+  {
+   "text": "eine",
+   "src": "pagebuilder/t1",
+   "start": 12.09,
+   "end": 12.21
+  },
+  {
+   "text": "Landingpage",
+   "src": "pagebuilder/t1",
+   "start": 12.29,
+   "end": 12.87
+  },
+  {
+   "text": "bauen",
+   "src": "pagebuilder/t1",
+   "start": 12.91,
+   "end": 13.11
+  },
+  {
+   "text": "wollen.",
+   "src": "pagebuilder/t1",
+   "start": 13.15,
+   "end": 13.35
+  },
+  {
+   "text": "Dabei",
+   "src": "pagebuilder/t1",
+   "start": 16.45,
+   "end": 16.65
+  },
+  {
+   "text": "bietet",
+   "src": "pagebuilder/t1",
+   "start": 16.75,
+   "end": 17.01
+  },
+  {
+   "text": "Shopify",
+   "src": "pagebuilder/t1",
+   "start": 17.07,
+   "end": 17.49
+  },
+  {
+   "text": "allerdings",
+   "src": "pagebuilder/t1",
+   "start": 17.63,
+   "end": 17.97
+  },
+  {
+   "text": "mit",
+   "src": "pagebuilder/t1",
+   "start": 18.03,
+   "end": 18.11
+  },
+  {
+   "text": "seinem",
+   "src": "pagebuilder/t1",
+   "start": 18.15,
+   "end": 18.33
+  },
+  {
+   "text": "eigenen",
+   "src": "pagebuilder/t1",
+   "start": 18.43,
+   "end": 18.73
+  },
+  {
+   "text": "Theme-Editor",
+   "src": "pagebuilder/t1",
+   "start": 18.85,
+   "end": 19.39
+  },
+  {
+   "text": "bereits",
+   "src": "pagebuilder/t1",
+   "start": 19.45,
+   "end": 19.71
+  },
+  {
+   "text": "Sektionen,",
+   "src": "pagebuilder/t1",
+   "start": 19.75,
+   "end": 20.23
+  },
+  {
+   "text": "Blöcke",
+   "src": "pagebuilder/t1",
+   "start": 20.29,
+   "end": 20.61
+  },
+  {
+   "text": "und",
+   "src": "pagebuilder/t1",
+   "start": 20.77,
+   "end": 20.85
+  },
+  {
+   "text": "auch",
+   "src": "pagebuilder/t1",
+   "start": 20.91,
+   "end": 21.01
+  },
+  {
+   "text": "unterschiedliche",
+   "src": "pagebuilder/t1",
+   "start": 21.13,
+   "end": 21.67
+  },
+  {
+   "text": "Seitenvorlagen.",
+   "src": "pagebuilder/t1",
+   "start": 21.71,
+   "end": 22.29
+  },
+  {
+   "text": "Und",
+   "src": "pagebuilder/t1",
+   "start": 22.93,
+   "end": 23.01
+  },
+  {
+   "text": "inzwischen",
+   "src": "pagebuilder/t1",
+   "start": 23.05,
+   "end": 23.43
+  },
+  {
+   "text": "kannst",
+   "src": "pagebuilder/t1",
+   "start": 23.51,
+   "end": 23.71
+  },
+  {
+   "text": "du",
+   "src": "pagebuilder/t1",
+   "start": 23.73,
+   "end": 23.77
+  },
+  {
+   "text": "auch",
+   "src": "pagebuilder/t1",
+   "start": 23.79,
+   "end": 23.87
+  },
+  {
+   "text": "einfach",
+   "src": "pagebuilder/t1",
+   "start": 23.89,
+   "end": 24.09
+  },
+  {
+   "text": "mit",
+   "src": "pagebuilder/t1",
+   "start": 24.13,
+   "end": 24.21
+  },
+  {
+   "text": "Shopify",
+   "src": "pagebuilder/t1",
+   "start": 24.27,
+   "end": 24.65
+  },
+  {
+   "text": "Sidekick",
+   "src": "pagebuilder/t1",
+   "start": 24.75,
+   "end": 25.11
+  },
+  {
+   "text": "bzw.",
+   "src": "pagebuilder/t1",
+   "start": 25.19,
+   "end": 25.51
+  },
+  {
+   "text": "Shopify",
+   "src": "pagebuilder/t1",
+   "start": 25.71,
+   "end": 26.07
+  },
+  {
+   "text": "Magic",
+   "src": "pagebuilder/t1",
+   "start": 26.19,
+   "end": 26.53
+  },
+  {
+   "text": "sogar",
+   "src": "pagebuilder/t1",
+   "start": 26.85,
+   "end": 27.03
+  },
+  {
+   "text": "eigene",
+   "src": "pagebuilder/t1",
+   "start": 27.19,
+   "end": 27.55
+  },
+  {
+   "text": "Theme-Blöcke",
+   "src": "pagebuilder/t1",
+   "start": 27.87,
+   "end": 28.33
+  },
+  {
+   "text": "per",
+   "src": "pagebuilder/t1",
+   "start": 28.45,
+   "end": 28.55
+  },
+  {
+   "text": "KI",
+   "src": "pagebuilder/t1",
+   "start": 28.59,
+   "end": 28.77
+  },
+  {
+   "text": "generieren",
+   "src": "pagebuilder/t1",
+   "start": 28.83,
+   "end": 29.15
+  },
+  {
+   "text": "lassen.",
+   "src": "pagebuilder/t1",
+   "start": 29.17,
+   "end": 29.37
+  },
+  {
+   "text": "Du",
+   "src": "pagebuilder/t1",
+   "start": 32.05,
+   "end": 32.11
+  },
+  {
+   "text": "beschreibst",
+   "src": "pagebuilder/t1",
+   "start": 32.15,
+   "end": 32.53
+  },
+  {
+   "text": "nämlich,",
+   "src": "pagebuilder/t1",
+   "start": 32.57,
+   "end": 32.79
+  },
+  {
+   "text": "was",
+   "src": "pagebuilder/t1",
+   "start": 32.87,
+   "end": 33.03
+  },
+  {
+   "text": "du",
+   "src": "pagebuilder/t1",
+   "start": 33.09,
+   "end": 33.15
+  },
+  {
+   "text": "brauchst,",
+   "src": "pagebuilder/t1",
+   "start": 33.21,
+   "end": 33.53
+  },
+  {
+   "text": "und",
+   "src": "pagebuilder/t1",
+   "start": 33.59,
+   "end": 33.67
+  },
+  {
+   "text": "die",
+   "src": "pagebuilder/t1",
+   "start": 33.69,
+   "end": 33.77
+  },
+  {
+   "text": "KI",
+   "src": "pagebuilder/t1",
+   "start": 33.81,
+   "end": 33.99
+  },
+  {
+   "text": "erstellt",
+   "src": "pagebuilder/t1",
+   "start": 34.05,
+   "end": 34.37
+  },
+  {
+   "text": "einfach",
+   "src": "pagebuilder/t1",
+   "start": 34.45,
+   "end": 34.67
+  },
+  {
+   "text": "einen",
+   "src": "pagebuilder/t1",
+   "start": 34.73,
+   "end": 34.89
+  },
+  {
+   "text": "komplett",
+   "src": "pagebuilder/t1",
+   "start": 34.99,
+   "end": 35.31
+  },
+  {
+   "text": "passenden",
+   "src": "pagebuilder/t1",
+   "start": 35.37,
+   "end": 35.73
+  },
+  {
+   "text": "Block.",
+   "src": "pagebuilder/t1",
+   "start": 35.79,
+   "end": 35.97
+  },
+  {
+   "text": "Und",
+   "src": "pagebuilder/t1",
+   "start": 36.73,
+   "end": 36.81
+  },
+  {
+   "text": "das",
+   "src": "pagebuilder/t1",
+   "start": 36.83,
+   "end": 36.95
+  },
+  {
+   "text": "kann",
+   "src": "pagebuilder/t1",
+   "start": 36.99,
+   "end": 37.13
+  },
+  {
+   "text": "eben",
+   "src": "pagebuilder/t1",
+   "start": 37.17,
+   "end": 37.27
+  },
+  {
+   "text": "für",
+   "src": "pagebuilder/t1",
+   "start": 37.29,
+   "end": 37.37
+  },
+  {
+   "text": "einfache",
+   "src": "pagebuilder/t1",
+   "start": 37.45,
+   "end": 37.77
+  },
+  {
+   "text": "Anpassungen",
+   "src": "pagebuilder/t1",
+   "start": 37.95,
+   "end": 38.41
+  },
+  {
+   "text": "richtig",
+   "src": "pagebuilder/t1",
+   "start": 38.53,
+   "end": 38.83
+  },
+  {
+   "text": "praktisch",
+   "src": "pagebuilder/t1",
+   "start": 38.99,
+   "end": 39.33
+  },
+  {
+   "text": "sein.",
+   "src": "pagebuilder/t1",
+   "start": 39.37,
+   "end": 39.51
+  },
+  {
+   "text": "Aber",
+   "src": "pagebuilder/t1",
+   "start": 40.41,
+   "end": 40.53
+  },
+  {
+   "text": "jetzt",
+   "src": "pagebuilder/t1",
+   "start": 40.57,
+   "end": 40.75
+  },
+  {
+   "text": "kommt",
+   "src": "pagebuilder/t1",
+   "start": 40.79,
+   "end": 40.93
+  },
+  {
+   "text": "der",
+   "src": "pagebuilder/t1",
+   "start": 40.95,
+   "end": 41.03
+  },
+  {
+   "text": "wichtige",
+   "src": "pagebuilder/t1",
+   "start": 41.11,
+   "end": 41.43
+  },
+  {
+   "text": "Teil.",
+   "src": "pagebuilder/t1",
+   "start": 41.51,
+   "end": 41.69
+  },
+  {
+   "text": "Denn",
+   "src": "pagebuilder/t1",
+   "start": 46.87,
+   "end": 46.99
+  },
+  {
+   "text": "KI-generierter",
+   "src": "pagebuilder/t1",
+   "start": 47.05,
+   "end": 47.69
+  },
+  {
+   "text": "Code",
+   "src": "pagebuilder/t1",
+   "start": 47.75,
+   "end": 47.99
+  },
+  {
+   "text": "ist",
+   "src": "pagebuilder/t1",
+   "start": 48.05,
+   "end": 48.13
+  },
+  {
+   "text": "einfach",
+   "src": "pagebuilder/t1",
+   "start": 48.17,
+   "end": 48.39
+  },
+  {
+   "text": "nicht",
+   "src": "pagebuilder/t1",
+   "start": 48.49,
+   "end": 48.63
+  },
+  {
+   "text": "automatisch",
+   "src": "pagebuilder/t1",
+   "start": 48.79,
+   "end": 49.33
+  },
+  {
+   "text": "fehlerfrei.",
+   "src": "pagebuilder/t1",
+   "start": 49.37,
+   "end": 49.79
+  },
+  {
+   "text": "Denn",
+   "src": "pagebuilder/t1",
+   "start": 49.89,
+   "end": 50.07
+  },
+  {
+   "text": "es",
+   "src": "pagebuilder/t1",
+   "start": 50.39,
+   "end": 50.45
+  },
+  {
+   "text": "kann",
+   "src": "pagebuilder/t1",
+   "start": 50.51,
+   "end": 50.65
+  },
+  {
+   "text": "ja",
+   "src": "pagebuilder/t1",
+   "start": 50.69,
+   "end": 50.73
+  },
+  {
+   "text": "auch",
+   "src": "pagebuilder/t1",
+   "start": 50.77,
+   "end": 50.87
+  },
+  {
+   "text": "durchaus",
+   "src": "pagebuilder/t1",
+   "start": 51.01,
+   "end": 51.37
+  },
+  {
+   "text": "zu",
+   "src": "pagebuilder/t1",
+   "start": 51.43,
+   "end": 51.49
+  },
+  {
+   "text": "Problemen",
+   "src": "pagebuilder/t1",
+   "start": 51.57,
+   "end": 51.91
+  },
+  {
+   "text": "bei",
+   "src": "pagebuilder/t1",
+   "start": 51.93,
+   "end": 52.01
+  },
+  {
+   "text": "der",
+   "src": "pagebuilder/t1",
+   "start": 52.03,
+   "end": 52.09
+  },
+  {
+   "text": "Darstellung,",
+   "src": "pagebuilder/t1",
+   "start": 52.15,
+   "end": 52.65
+  },
+  {
+   "text": "der",
+   "src": "pagebuilder/t1",
+   "start": 53.03,
+   "end": 53.11
+  },
+  {
+   "text": "Geschwindigkeit",
+   "src": "pagebuilder/t1",
+   "start": 53.15,
+   "end": 53.83
+  },
+  {
+   "text": "oder",
+   "src": "pagebuilder/t1",
+   "start": 53.93,
+   "end": 54.09
+  },
+  {
+   "text": "auch",
+   "src": "pagebuilder/t1",
+   "start": 54.13,
+   "end": 54.23
+  },
+  {
+   "text": "eben",
+   "src": "pagebuilder/t1",
+   "start": 54.27,
+   "end": 54.39
+  },
+  {
+   "text": "der",
+   "src": "pagebuilder/t1",
+   "start": 54.43,
+   "end": 54.51
+  },
+  {
+   "text": "Barrierefreiheit",
+   "src": "pagebuilder/t1",
+   "start": 54.53,
+   "end": 55.25
+  },
+  {
+   "text": "verursachen.",
+   "src": "pagebuilder/t1",
+   "start": 55.31,
+   "end": 55.77
+  },
+  {
+   "text": "Deshalb",
+   "src": "pagebuilder/t1",
+   "start": 76.27,
+   "end": 76.55
+  },
+  {
+   "text": "würde",
+   "src": "pagebuilder/t1",
+   "start": 76.59,
+   "end": 76.73
+  },
+  {
+   "text": "ich",
+   "src": "pagebuilder/t1",
+   "start": 76.77,
+   "end": 76.83
+  },
+  {
+   "text": "bei",
+   "src": "pagebuilder/t1",
+   "start": 76.87,
+   "end": 76.95
+  },
+  {
+   "text": "solchen",
+   "src": "pagebuilder/t1",
+   "start": 77.01,
+   "end": 77.27
+  },
+  {
+   "text": "Anpassungen",
+   "src": "pagebuilder/t1",
+   "start": 77.35,
+   "end": 77.83
+  },
+  {
+   "text": "immer",
+   "src": "pagebuilder/t1",
+   "start": 77.99,
+   "end": 78.17
+  },
+  {
+   "text": "zunächst",
+   "src": "pagebuilder/t1",
+   "start": 78.29,
+   "end": 78.61
+  },
+  {
+   "text": "einmal",
+   "src": "pagebuilder/t1",
+   "start": 78.65,
+   "end": 78.87
+  },
+  {
+   "text": "eine",
+   "src": "pagebuilder/t1",
+   "start": 78.97,
+   "end": 79.13
+  },
+  {
+   "text": "Theme-Kopie",
+   "src": "pagebuilder/t1",
+   "start": 79.23,
+   "end": 79.61
+  },
+  {
+   "text": "erstellen",
+   "src": "pagebuilder/t1",
+   "start": 79.65,
+   "end": 79.97
+  },
+  {
+   "text": "lassen",
+   "src": "pagebuilder/t1",
+   "start": 80.01,
+   "end": 80.27
+  },
+  {
+   "text": "und",
+   "src": "pagebuilder/t1",
+   "start": 80.71,
+   "end": 80.79
+  },
+  {
+   "text": "gerade",
+   "src": "pagebuilder/t1",
+   "start": 80.85,
+   "end": 81.21
+  },
+  {
+   "text": "dann",
+   "src": "pagebuilder/t1",
+   "start": 81.29,
+   "end": 81.45
+  },
+  {
+   "text": "eben",
+   "src": "pagebuilder/t1",
+   "start": 81.47,
+   "end": 81.59
+  },
+  {
+   "text": "auch",
+   "src": "pagebuilder/t1",
+   "start": 81.69,
+   "end": 81.81
+  },
+  {
+   "text": "auf",
+   "src": "pagebuilder/t1",
+   "start": 81.87,
+   "end": 81.97
+  },
+  {
+   "text": "dem",
+   "src": "pagebuilder/t1",
+   "start": 82.01,
+   "end": 82.15
+  },
+  {
+   "text": "Smartphone.",
+   "src": "pagebuilder/t1",
+   "start": 82.23,
+   "end": 82.71
+  },
+  {
+   "text": "Und",
+   "src": "pagebuilder/t1",
+   "start": 97.39,
+   "end": 97.47
+  },
+  {
+   "text": "für",
+   "src": "pagebuilder/t1",
+   "start": 97.51,
+   "end": 97.59
+  },
+  {
+   "text": "wirklich",
+   "src": "pagebuilder/t1",
+   "start": 97.65,
+   "end": 97.93
+  },
+  {
+   "text": "komplexere",
+   "src": "pagebuilder/t1",
+   "start": 97.99,
+   "end": 98.71
+  },
+  {
+   "text": "Landingpages",
+   "src": "pagebuilder/t1",
+   "start": 99.07,
+   "end": 99.65
+  },
+  {
+   "text": "kann",
+   "src": "pagebuilder/t1",
+   "start": 99.71,
+   "end": 99.83
+  },
+  {
+   "text": "natürlich",
+   "src": "pagebuilder/t1",
+   "start": 99.87,
+   "end": 100.15
+  },
+  {
+   "text": "auch",
+   "src": "pagebuilder/t1",
+   "start": 100.17,
+   "end": 100.27
+  },
+  {
+   "text": "durchaus",
+   "src": "pagebuilder/t1",
+   "start": 100.31,
+   "end": 100.59
+  },
+  {
+   "text": "ein",
+   "src": "pagebuilder/t1",
+   "start": 100.63,
+   "end": 100.71
+  },
+  {
+   "text": "Page",
+   "src": "pagebuilder/t1",
+   "start": 100.77,
+   "end": 100.97
+  },
+  {
+   "text": "Builder",
+   "src": "pagebuilder/t1",
+   "start": 101.03,
+   "end": 101.21
+  },
+  {
+   "text": "sinnvoll",
+   "src": "pagebuilder/t1",
+   "start": 101.29,
+   "end": 101.63
+  },
+  {
+   "text": "sein.",
+   "src": "pagebuilder/t1",
+   "start": 101.69,
+   "end": 101.91
+  },
+  {
+   "text": "Aber",
+   "src": "pagebuilder/t1",
+   "start": 113.37,
+   "end": 113.55
+  },
+  {
+   "text": "nicht",
+   "src": "pagebuilder/t1",
+   "start": 113.59,
+   "end": 113.73
+  },
+  {
+   "text": "jede",
+   "src": "pagebuilder/t1",
+   "start": 113.85,
+   "end": 114.07
+  },
+  {
+   "text": "neue",
+   "src": "pagebuilder/t1",
+   "start": 114.17,
+   "end": 114.35
+  },
+  {
+   "text": "Seite",
+   "src": "pagebuilder/t1",
+   "start": 114.41,
+   "end": 114.63
+  },
+  {
+   "text": "braucht",
+   "src": "pagebuilder/t1",
+   "start": 114.73,
+   "end": 114.97
+  },
+  {
+   "text": "natürlich",
+   "src": "pagebuilder/t1",
+   "start": 115.01,
+   "end": 115.35
+  },
+  {
+   "text": "immer",
+   "src": "pagebuilder/t1",
+   "start": 115.37,
+   "end": 115.51
+  },
+  {
+   "text": "direkt",
+   "src": "pagebuilder/t1",
+   "start": 115.57,
+   "end": 115.87
+  },
+  {
+   "text": "so",
+   "src": "pagebuilder/t1",
+   "start": 115.89,
+   "end": 115.93
+  },
+  {
+   "text": "ein",
+   "src": "pagebuilder/t1",
+   "start": 115.97,
+   "end": 116.03
+  },
+  {
+   "text": "Monatsabo",
+   "src": "pagebuilder/t1",
+   "start": 116.11,
+   "end": 116.81
+  },
+  {
+   "text": "zusätzlich.",
+   "src": "pagebuilder/t1",
+   "start": 116.93,
+   "end": 117.49
+  },
+  {
+   "text": "Und",
+   "src": "pagebuilder/t1",
+   "start": 127.47,
+   "end": 127.53
+  },
+  {
+   "text": "wenn",
+   "src": "pagebuilder/t1",
+   "start": 127.55,
+   "end": 127.65
+  },
+  {
+   "text": "ihr",
+   "src": "pagebuilder/t1",
+   "start": 127.69,
+   "end": 127.75
+  },
+  {
+   "text": "weitere",
+   "src": "pagebuilder/t1",
+   "start": 127.79,
+   "end": 128.05
+  },
+  {
+   "text": "solche",
+   "src": "pagebuilder/t1",
+   "start": 128.11,
+   "end": 128.33
+  },
+  {
+   "text": "Tipps",
+   "src": "pagebuilder/t1",
+   "start": 128.41,
+   "end": 128.63
+  },
+  {
+   "text": "nicht",
+   "src": "pagebuilder/t1",
+   "start": 128.79,
+   "end": 128.91
+  },
+  {
+   "text": "mehr",
+   "src": "pagebuilder/t1",
+   "start": 128.93,
+   "end": 129.03
+  },
+  {
+   "text": "verpassen",
+   "src": "pagebuilder/t1",
+   "start": 129.05,
+   "end": 129.41
+  },
+  {
+   "text": "wollt,",
+   "src": "pagebuilder/t1",
+   "start": 129.47,
+   "end": 129.65
+  },
+  {
+   "text": "dann",
+   "src": "pagebuilder/t1",
+   "start": 129.69,
+   "end": 129.85
+  },
+  {
+   "text": "folgt",
+   "src": "pagebuilder/t1",
+   "start": 130.23,
+   "end": 130.43
+  },
+  {
+   "text": "mir",
+   "src": "pagebuilder/t1",
+   "start": 130.47,
+   "end": 130.53
+  },
+  {
+   "text": "hier",
+   "src": "pagebuilder/t1",
+   "start": 130.55,
+   "end": 130.65
+  },
+  {
+   "text": "gerne",
+   "src": "pagebuilder/t1",
+   "start": 130.69,
+   "end": 130.91
+  },
+  {
+   "text": "den",
+   "src": "pagebuilder/t1",
+   "start": 131.01,
+   "end": 131.09
+  },
+  {
+   "text": "Kanal",
+   "src": "pagebuilder/t1",
+   "start": 131.13,
+   "end": 131.41
+  },
+  {
+   "text": "und",
+   "src": "pagebuilder/t1",
+   "start": 131.49,
+   "end": 131.57
+  },
+  {
+   "text": "drückt",
+   "src": "pagebuilder/t1",
+   "start": 131.65,
+   "end": 131.83
+  },
+  {
+   "text": "mal",
+   "src": "pagebuilder/t1",
+   "start": 131.87,
+   "end": 131.95
+  },
+  {
+   "text": "das",
+   "src": "pagebuilder/t1",
+   "start": 131.99,
+   "end": 132.07
+  },
+  {
+   "text": "Plus",
+   "src": "pagebuilder/t1",
+   "start": 132.11,
+   "end": 132.29
+  },
+  {
+   "text": "weg.",
+   "src": "pagebuilder/t1",
+   "start": 132.33,
+   "end": 132.47
+  }
+ ],
+ "pages": [
+  4,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  1,
+  2,
+  2,
+  3,
+  2,
+  1,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  1,
+  1,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  4,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  1,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  2,
+  4,
+  3,
+  3,
+  1,
+  3,
+  3,
+  3,
+  3
+ ]
+}
