@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>P04 · Brauchst du einen Page Builder? – Metaphern-Karten (Probe)</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- HERO P04 "Brauchst du einen Page Builder?". PROBE "Visuelle Metaphern statt Wortkarten" (karten-aufbau.md,
+         2026-10-25): pro Kerngedanke ein Bild, das den Satz ohne Ton erklärt (Weggabelung, App-Stapel, Seite aus Blöcken,
+         KI erzeugt Blöcke, Prompt → Block, Regler einfach/komplex, Code mit Fehlerzeile, Theme dupliziert sich, Abo wird
+         gestrichen), höchstens 1–3 Wörter je Bild, ein handschriftliches Akzentwort (Caveat, OFL, lokal; Blau #31ADEC).
+         Rahmen wie freigegeben: helle Karte unter dem Kopf (x 80-900, ab y 1085; Instagram-Zone unten ab 1500),
+         Pill-Untertitel darüber (Remotion), ruhige Bewegung ohne Überschwingen. Rot nur für Fehler.
+         Echte Quellen: K3 = Vorschaubild des offiziellen Videos "KI-Blockgenerierung" der Shopify Editions Sommer '25
+         (Theme-Editor mit Sektionen, Blöcken, Vorlagen-Auswahl), K5 = Bild "Describe the block you want" aus "BLÖCKE
+         GENERIEREN" (ebd.), K7 = Zitat aus dem Shopify Hilfe-Center. Nur zugeschnitten, gefahren und markiert.
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/pagebuilder/cut.json, 64,93 s), Teile 2 Frames vor
+         ihrem Wort; Liste mit Tönen in src/projekte/pagebuilder/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1085px; width: 820px; height: 360px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .karte.hoch { height: 380px; }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .kicker span { position: absolute; left: 0; top: 0; }
+      .qlabel { position: absolute; left: 30px; top: 22px; display: flex; align-items: center; gap: 9px; font-size: 20px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .qdot { width: 11px; height: 11px; border-radius: 6px; background: linear-gradient(135deg, #00e090, #31adec); }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 300px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #6b7280; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .pille rect { fill: #0b0c0e; }
+      .pille text { fill: #fff; font-size: 28px; font-weight: 700; }
+      .linie { fill: none; stroke: #cbd5e1; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 2 12; }
+      .zug { fill: none; stroke: url(#gv); stroke-width: 7; stroke-linecap: round; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .zeile { fill: #e5e7eb; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Quellen-Bilder */
+      .qbild { position: absolute; border-radius: 18px; overflow: hidden; background: #fff; border: 1px solid #e5e7eb; }
+      .qlage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+      .qlage img { display: block; }
+      .mark { position: absolute; border: 5px solid #00e090; border-radius: 12px; box-shadow: 0 0 0 4px rgba(49, 173, 236, 0.35), 0 0 26px rgba(0, 224, 144, 0.45); opacity: 0; }
+      .quelle-zeile { position: absolute; left: 30px; bottom: 16px; font-size: 17px; font-weight: 600; color: #6b7280; white-space: nowrap; opacity: 0; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Vorgabe 2026-10-25) */
+      .folgekarte { position: absolute; left: 80px; top: 1085px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 42px; height: 42px; border-radius: 21px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 24px; height: 24px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+
+      /* Sticker-Wort links neben dem Kopf */
+      .sticker { position: absolute; left: 96px; top: 500px; padding: 8px 18px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 46px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(-4deg); transform-origin: 0 50%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="pagebuilder-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="64.93">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+        </defs>
+      </svg>
+
+      <!-- K1 Weggabelung: "würde ich heute erst einmal die KI ausprobieren". würde 2,77 / erst 3,50 / KI 4,20 / ausprobieren 4,54 -->
+      <section id="k1" class="karte clip" data-start="2.70" data-duration="2.85" data-track-index="1">
+        <div class="kicker">Bevor du installierst</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <path id="k1-oben" class="linie" d="M86 150 C 210 150, 250 66, 380 66 L 548 66" />
+          <path id="k1-unten" class="linie" d="M86 150 C 210 150, 250 234, 380 234 L 548 234" />
+          <path id="k1-zug" class="zug" pathLength="1" d="M86 150 C 210 150, 250 234, 380 234 L 548 234" style="stroke: url(#gk1)" />
+          <linearGradient id="gk1" gradientUnits="userSpaceOnUse" x1="86" y1="0" x2="548" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <g id="k1-pb">
+            <rect x="560" y="30" width="236" height="72" rx="20" fill="#e5e7eb" />
+            <g transform="translate(578 48) scale(1.5)" class="ico" style="stroke:#6b7280"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z" /></g>
+            <text x="626" y="76" class="lab grau">Page Builder</text>
+          </g>
+          <g id="k1-ki">
+            <rect id="k1-kibox" x="560" y="198" width="236" height="72" rx="20" fill="#fff" stroke="url(#gv)" stroke-width="3" />
+            <rect id="k1-kiglow" x="560" y="198" width="236" height="72" rx="20" fill="url(#gvl)" opacity="0" />
+            <g transform="translate(586 216) scale(1.5)" class="ico"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /></g>
+            <text x="636" y="248" class="lab" style="font-size:36px">KI</text>
+            <g id="k1-ok" opacity="0"><circle cx="790" cy="202" r="21" fill="url(#gvd)" /><path d="M780 202 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          </g>
+          <circle id="k1-punkt" cx="86" cy="150" r="16" fill="#0b0c0e" />
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="226" y="160" width="0" height="80" /></clipPath>
+          <text x="230" y="226" class="hand" style="font-size:58px" clip-path="url(#k1-clip)" transform="rotate(-6 280 210)">erst</text>
+        </svg>
+      </section>
+
+      <!-- K2 App-Stapel: "Denn viele Shopbetreiber installieren zunächst einmal Apps, weil sie einfach eine individuelle Produktseite
+           oder eine Landingpage bauen wollen." Denn 5,63 / Shopbetreiber 6,13 / installieren 6,82 / zunächst 7,38 / Apps 8,07 /
+           individuelle 9,38 / Produktseite 9,99 / Landingpage 10,99 -->
+      <section id="k2" class="karte clip" data-start="5.56" data-duration="6.44" data-track-index="1">
+        <div class="kicker">Der übliche Weg</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k2-shop">
+            <path d="M52 196 h176 l-14 -34 h-148 z" fill="url(#gvd)" />
+            <rect x="60" y="196" width="160" height="92" rx="6" class="rahmen" />
+            <rect x="120" y="234" width="40" height="54" rx="4" fill="#e5e7eb" />
+          </g>
+          <g id="k2-a1" opacity="0"><rect x="98" y="108" width="84" height="48" rx="13" class="rahmen" /><text x="140" y="140" text-anchor="middle" class="klein" style="fill:#0b0c0e">App</text></g>
+          <g id="k2-a2" opacity="0"><rect x="98" y="56" width="84" height="48" rx="13" class="rahmen" /><text x="140" y="88" text-anchor="middle" class="klein" style="fill:#0b0c0e">App</text></g>
+          <g id="k2-a3" opacity="0"><rect x="98" y="4" width="84" height="48" rx="13" class="rahmen" /><text x="140" y="36" text-anchor="middle" class="klein" style="fill:#0b0c0e">App</text></g>
+          <path id="k2-p1" class="zug" pathLength="1" d="M232 150 C 300 150, 330 150, 404 150" style="stroke-width:5" />
+          <path id="k2-p2" class="zug" pathLength="1" d="M232 150 C 320 150, 350 56, 470 56 L 650 56 C 690 56, 702 62, 702 72" style="stroke-width:5;opacity:0" />
+          <g id="k2-seite1" opacity="0">
+            <rect x="412" y="76" width="168" height="186" rx="12" class="rahmen" />
+            <rect x="428" y="92" width="64" height="64" rx="8" fill="url(#gvl)" stroke="#9ad9f2" stroke-width="2" />
+            <rect x="502" y="96" width="62" height="10" rx="5" class="zeile" /><rect x="502" y="114" width="46" height="10" rx="5" class="zeile" />
+            <rect x="502" y="138" width="62" height="18" rx="9" fill="#0b0c0e" />
+            <rect x="428" y="172" width="136" height="10" rx="5" class="zeile" /><rect x="428" y="190" width="110" height="10" rx="5" class="zeile" /><rect x="428" y="208" width="124" height="10" rx="5" class="zeile" />
+            <text x="496" y="296" text-anchor="middle" class="lab" style="font-size:25px">Produktseite</text>
+          </g>
+          <g id="k2-seite2" opacity="0">
+            <rect x="618" y="76" width="168" height="186" rx="12" class="rahmen" />
+            <rect x="630" y="88" width="144" height="58" rx="8" fill="url(#gvl)" stroke="#9ad9f2" stroke-width="2" />
+            <rect x="652" y="108" width="100" height="10" rx="5" fill="#0b0c0e" opacity="0.7" />
+            <rect x="630" y="158" width="42" height="42" rx="6" class="zeile" /><rect x="681" y="158" width="42" height="42" rx="6" class="zeile" /><rect x="732" y="158" width="42" height="42" rx="6" class="zeile" />
+            <rect x="630" y="212" width="144" height="10" rx="5" class="zeile" /><rect x="630" y="230" width="100" height="10" rx="5" class="zeile" />
+            <text x="702" y="296" text-anchor="middle" class="lab" style="font-size:25px">Landingpage</text>
+          </g>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="560" y="-40" width="0" height="76" /></clipPath>
+          <text x="566" y="26" class="hand" style="font-size:54px" clip-path="url(#k2-clip)" transform="rotate(-4 640 20)">individuell</text>
+        </svg>
+      </section>
+
+      <!-- K3 Theme-Editor (echte Quelle + Seite aus Blöcken): "Dabei bietet Shopify allerdings mit seinem eigenen Theme-Editor bereits
+           Sektionen, Blöcke und auch unterschiedliche Seitenvorlagen." Dabei 12,16 / Theme-Editor 14,56 / bereits 15,16 / Sektionen 15,46 /
+           Blöcke 16,00 / Seitenvorlagen 17,43. Bild: Vorschaubild des Videos "KI-Blockgenerierung", Shopify Editions Sommer '25 -->
+      <section id="k3" class="karte clip" data-start="12.09" data-duration="6.36" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>Shopify Editions · Sommer ’25</div>
+        <div class="qbild" style="left:22px;top:62px;width:470px;height:280px">
+          <div class="qlage" id="k3-lage"><img src="assets/editor.jpg" width="1920" height="1080" alt="" />
+            <div class="mark" id="k3-m1" style="left:76px;top:262px;width:372px;height:306px"></div>
+            <div class="mark" id="k3-m2" style="left:104px;top:690px;width:336px;height:176px"></div>
+            <div class="mark" id="k3-m3" style="left:918px;top:8px;width:176px;height:52px"></div>
+          </div>
+        </div>
+        <svg class="buehne" viewBox="0 0 820 300" style="top:56px">
+          <g id="k3-stapel" opacity="0">
+            <rect x="548" y="50" width="130" height="228" rx="12" fill="#f9fafb" stroke="#d1d5db" stroke-width="2" />
+            <rect x="538" y="40" width="130" height="228" rx="12" fill="#fbfbfc" stroke="#d1d5db" stroke-width="2" />
+          </g>
+          <rect id="k3-seite" x="528" y="30" width="130" height="228" rx="12" class="rahmen" />
+          <rect id="k3-s1" x="540" y="44" width="106" height="44" rx="8" fill="url(#gvl)" stroke="#9ad9f2" stroke-width="2" opacity="0" />
+          <rect id="k3-s2" x="540" y="98" width="106" height="88" rx="8" fill="#eef0f3" stroke="#d1d5db" stroke-width="2" opacity="0" />
+          <rect id="k3-s3" x="540" y="196" width="106" height="48" rx="8" fill="#eef0f3" stroke="#d1d5db" stroke-width="2" opacity="0" />
+          <rect id="k3-b1" x="550" y="110" width="40" height="30" rx="6" fill="url(#gvd)" opacity="0" />
+          <rect id="k3-b2" x="596" y="110" width="40" height="30" rx="6" fill="url(#gvd)" opacity="0" />
+          <rect id="k3-b3" x="550" y="146" width="86" height="28" rx="6" fill="url(#gvd)" opacity="0" />
+          <text id="k3-t1" x="690" y="74" class="klein" style="fill:#0b0c0e;font-size:24px" opacity="0">Sektionen</text>
+          <text id="k3-t2" x="690" y="150" class="klein" style="fill:#0b0c0e;font-size:24px" opacity="0">Blöcke</text>
+          <text id="k3-t3" x="690" y="262" class="klein" style="fill:#0b0c0e;font-size:24px" opacity="0">Vorlagen</text>
+          <clipPath id="k3-clip"><rect id="k3-cliprect" x="520" y="-60" width="0" height="80" /></clipPath>
+          <text x="560" y="2" class="hand" style="font-size:46px" clip-path="url(#k3-clip)" transform="rotate(-4 620 -10)">bereits</text>
+        </svg>
+      </section>
+
+      <!-- K4 KI erzeugt Blöcke: "Und inzwischen kannst du auch einfach mit Shopify Sidekick bzw. Shopify Magic sogar eigene Theme-Blöcke
+           per KI generieren lassen." Und 18,64 / Sidekick 20,46 / Magic 21,91 / eigene 22,91 / Theme-Blöcke 23,59 / KI 24,30 / generieren 24,55 -->
+      <section id="k4" class="karte clip" data-start="18.57" data-duration="6.53" data-track-index="1">
+        <div class="kicker">Inzwischen</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <circle id="k4-orb" cx="120" cy="140" r="70" fill="url(#gvd)" />
+          <g transform="translate(84 104) scale(3)" class="ico" style="stroke-width:1.6"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /></g>
+          <g id="k4-p1" class="pille" opacity="0"><rect x="214" y="60" width="160" height="54" rx="27" /><text x="294" y="97" text-anchor="middle">Sidekick</text></g>
+          <g id="k4-p2" class="pille" opacity="0"><rect x="214" y="166" width="160" height="54" rx="27" /><text x="294" y="203" text-anchor="middle">Magic</text></g>
+          <path id="k4-pfeil" class="zug" pathLength="1" d="M392 140 L 470 140" style="stroke-width:5" />
+          <g id="k4-bl">
+            <rect id="k4-b1" x="490" y="40" width="140" height="92" rx="16" fill="#fff" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" opacity="0" />
+            <rect id="k4-b2" x="646" y="40" width="140" height="92" rx="16" fill="#fff" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" opacity="0" />
+            <rect id="k4-b3" x="490" y="146" width="296" height="80" rx="16" fill="#fff" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" opacity="0" />
+            <rect id="k4-f1" x="490" y="40" width="140" height="92" rx="16" fill="url(#gvd)" opacity="0" />
+            <rect id="k4-f2" x="646" y="40" width="140" height="92" rx="16" fill="url(#gvd)" opacity="0" />
+            <rect id="k4-f3" x="490" y="146" width="296" height="80" rx="16" fill="url(#gvd)" opacity="0" />
+          </g>
+          <text id="k4-t" x="638" y="276" text-anchor="middle" class="lab" opacity="0">Theme-Blöcke</text>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="40" y="214" width="0" height="80" /></clipPath>
+          <text x="46" y="276" class="hand" style="font-size:54px" clip-path="url(#k4-clip)" transform="rotate(-4 100 260)">per KI</text>
+        </svg>
+      </section>
+
+      <!-- K5 Prompt → Block: "Du beschreibst nämlich, was du brauchst, und die KI erstellt einfach einen komplett passenden Block."
+           Du 25,20 / brauchst 26,36 / KI 26,96 / erstellt 27,20 / passenden 28,52 / Block 28,94. Bild: "Describe the block you want",
+           Abschnitt "BLÖCKE GENERIEREN", Shopify Editions Sommer '25 -->
+      <section id="k5" class="karte clip" data-start="25.13" data-duration="4.65" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>Shopify Editions · Sommer ’25</div>
+        <div class="qbild" style="left:22px;top:70px;width:420px;height:230px;border:none;background:#fff">
+          <div class="qlage" id="k5-lage"><img src="assets/prompt.png" width="1800" height="900" alt="" /></div>
+          <div class="mark" id="k5-m" style="left:30px;top:34px;width:360px;height:158px;border-radius:18px"></div>
+        </div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="560" y="10" width="236" height="276" rx="16" class="rahmen" />
+          <rect x="576" y="26" width="204" height="52" rx="9" fill="#eef0f3" />
+          <rect id="k5-slot" x="576" y="92" width="204" height="94" rx="12" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+          <rect x="576" y="200" width="204" height="12" rx="6" class="zeile" /><rect x="576" y="222" width="150" height="12" rx="6" class="zeile" /><rect x="576" y="244" width="176" height="12" rx="6" class="zeile" />
+          <g id="k5-funke" opacity="0" transform="translate(470 108)"><g transform="scale(2.2)" class="ico" style="stroke:#31adec;stroke-width:1.8"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /></g></g>
+          <rect id="k5-block" x="576" y="92" width="204" height="94" rx="12" fill="url(#gvd)" opacity="0" />
+          <g id="k5-ok" opacity="0"><circle cx="782" cy="96" r="21" fill="#0b0c0e" /><path d="M772 96 l7 7 l13 -14" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="420" y="220" width="0" height="80" /></clipPath>
+          <text x="426" y="282" class="hand" style="font-size:54px" clip-path="url(#k5-clip)" transform="rotate(-5 480 268)">passend</text>
+        </svg>
+      </section>
+
+      <!-- K6 Regler einfach ↔ komplex (1/2): "Und das kann eben für einfache Anpassungen richtig praktisch sein." Und 29,88 / einfache 30,60 /
+           Anpassungen 31,10 / praktisch 32,14 -->
+      <section id="k6" class="karte clip" data-start="29.81" data-duration="5.04" data-track-index="1">
+        <div class="kicker">Wofür?</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="70" y="150" width="680" height="16" rx="8" fill="#e5e7eb" />
+          <rect id="k6-zone" x="70" y="150" width="300" height="16" rx="8" fill="url(#gv)" opacity="0" />
+          <text x="70" y="216" class="lab">einfach</text>
+          <text x="750" y="216" text-anchor="end" class="lab grau">komplex</text>
+          <g id="k6-ki" opacity="0"><rect x="150" y="64" width="128" height="56" rx="28" fill="#fff" stroke="url(#gv)" stroke-width="3" /><g transform="translate(166 78) scale(1.2)" class="ico"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /></g><text x="236" y="102" text-anchor="middle" class="lab">KI</text></g>
+          <g id="k6-knopf"><circle cx="410" cy="158" r="24" fill="#0b0c0e" /><circle cx="410" cy="158" r="9" fill="#fff" /></g>
+          <g id="k6-ok" opacity="0"><circle cx="298" cy="66" r="19" fill="url(#gvd)" /><path d="M289 66 l6 6 l12 -12" fill="none" stroke="#0b0c0e" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="330" y="40" width="0" height="90" /></clipPath>
+          <text x="336" y="106" class="hand" style="font-size:62px" clip-path="url(#k6-clip)" transform="rotate(-5 400 90)">praktisch</text>
+          <path id="k6-unter" pathLength="1" d="M340 122 C 420 114, 500 114, 580 120" fill="none" stroke="#31adec" stroke-width="5" stroke-linecap="round" />
+        </svg>
+      </section>
+
+      <!-- Sticker "WICHTIG." ("wichtige" 34,26) -->
+      <div id="st1" class="sticker clip" data-start="34.19" data-duration="1.4" data-track-index="2">WICHTIG.</div>
+
+      <!-- K7 KI-Code mit Fehlerzeile und drei Problemen: "Denn KI-generierter Code ist einfach nicht automatisch fehlerfrei. Denn es kann
+           ja auch durchaus zu Problemen bei der Darstellung, der Geschwindigkeit oder auch eben der Barrierefreiheit verursachen."
+           Denn 35,00 / KI-generierter 35,18 / Code 35,88 / nicht 36,62 / automatisch 36,92 / fehlerfrei 37,50 / Problemen 39,70 /
+           Darstellung 40,28 / Geschwindigkeit 41,28 / Barrierefreiheit 42,66. Quelle: Shopify Hilfe-Center -->
+      <section id="k7" class="karte hoch clip" data-start="34.93" data-duration="8.97" data-track-index="1">
+        <div class="kicker">KI-Code</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="22" y="6" width="390" height="262" rx="16" class="rahmen" />
+          <rect x="22" y="6" width="390" height="40" rx="16" fill="#eef0f3" /><rect x="22" y="30" width="390" height="16" fill="#eef0f3" />
+          <circle cx="46" cy="26" r="6" fill="#d1d5db" /><circle cx="66" cy="26" r="6" fill="#d1d5db" /><circle cx="86" cy="26" r="6" fill="#d1d5db" />
+          <g id="k7-ki" opacity="0"><rect x="330" y="12" width="70" height="28" rx="14" fill="url(#gv)" /><text x="365" y="33" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#0b0c0e">KI</text></g>
+          <rect id="k7-fehlerband" x="30" y="148" width="374" height="30" rx="8" fill="#fee2e2" opacity="0" />
+          <g id="k7-code">
+            <rect x="44" y="64" width="150" height="12" rx="6" fill="#9ad9f2" /><rect x="202" y="64" width="90" height="12" rx="6" class="zeile" />
+            <rect x="68" y="90" width="200" height="12" rx="6" class="zeile" /><rect x="276" y="90" width="70" height="12" rx="6" fill="#a7efd2" />
+            <rect x="68" y="116" width="120" height="12" rx="6" fill="#a7efd2" /><rect x="196" y="116" width="150" height="12" rx="6" class="zeile" />
+            <rect id="k7-z4" x="92" y="157" width="230" height="12" rx="6" class="zeile" />
+            <rect x="68" y="184" width="170" height="12" rx="6" class="zeile" /><rect x="246" y="184" width="60" height="12" rx="6" fill="#9ad9f2" />
+            <rect x="44" y="210" width="80" height="12" rx="6" class="zeile" />
+          </g>
+          <g id="k7-x" opacity="0"><circle cx="372" cy="163" r="19" fill="#ef4444" /><path d="M364 155 l16 16 M380 155 l-16 16" stroke="#fff" stroke-width="3.6" stroke-linecap="round" /></g>
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="120" y="200" width="0" height="80" /></clipPath>
+          <text x="126" y="252" class="hand" style="font-size:46px" clip-path="url(#k7-clip)" transform="rotate(-3 200 240)">nicht automatisch</text>
+
+          <!-- drei Probleme (Fehler = Rot): Darstellung verrutscht, Tacho fällt, Barrierefreiheit -->
+          <g id="k7-r1" opacity="0">
+            <rect x="440" y="6" width="356" height="80" rx="16" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+            <rect x="456" y="18" width="70" height="56" rx="8" fill="none" stroke="#9aa3af" stroke-width="2.5" />
+            <rect id="k7-r1b" x="464" y="26" width="54" height="16" rx="4" fill="#9aa3af" />
+            <rect x="464" y="48" width="36" height="16" rx="4" fill="#d1d5db" />
+            <text x="540" y="56" class="lab" style="font-size:27px">Darstellung</text>
+            <g id="k7-w1" opacity="0"><circle cx="790" cy="10" r="17" fill="#ef4444" /><path d="M790 2 v9 M790 17 v0.5" stroke="#fff" stroke-width="3.6" stroke-linecap="round" /></g>
+          </g>
+          <g id="k7-r2" opacity="0">
+            <rect x="440" y="96" width="356" height="80" rx="16" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+            <path d="M460 156 A 30 30 0 0 1 520 156" fill="none" stroke="#9aa3af" stroke-width="5" stroke-linecap="round" />
+            <line id="k7-nadel" x1="490" y1="156" x2="490" y2="128" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" />
+            <circle cx="490" cy="156" r="5" fill="#0b0c0e" />
+            <text x="540" y="146" class="lab" style="font-size:26px">Geschwindigkeit</text>
+            <g id="k7-w2" opacity="0"><circle cx="790" cy="100" r="17" fill="#ef4444" /><path d="M790 92 v9 M790 107 v0.5" stroke="#fff" stroke-width="3.6" stroke-linecap="round" /></g>
+          </g>
+          <g id="k7-r3" opacity="0">
+            <rect x="440" y="186" width="356" height="80" rx="16" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+            <g transform="translate(468 202) scale(2)" class="ico" style="stroke:#0b0c0e"><circle cx="16" cy="4" r="1" /><path d="m18 19 1-7-6 1" /><path d="m5 8 3-3 5.5 3-2.36 3.5" /><path d="M4.24 14.5a5 5 0 0 0 6.88 6" /><path d="M13.76 17.5a5 5 0 0 0-6.88-6" /></g>
+            <text x="540" y="236" class="lab" style="font-size:26px">Barrierefreiheit</text>
+            <g id="k7-w3" opacity="0"><circle cx="790" cy="190" r="17" fill="#ef4444" /><path d="M790 182 v9 M790 197 v0.5" stroke="#fff" stroke-width="3.6" stroke-linecap="round" /></g>
+          </g>
+        </svg>
+        <div class="quelle-zeile" id="k7-q">Shopify Hilfe-Center: „KI-generierter Code ist möglicherweise nicht immer perfekt.“</div>
+      </section>
+
+      <!-- K8 Theme-Kopie und Smartphone: "Deshalb würde ich bei solchen Anpassungen immer zunächst einmal eine Theme-Kopie erstellen lassen und
+           gerade dann eben auch auf dem Smartphone." Deshalb 44,00 / Anpassungen 45,08 / Theme-Kopie 46,96 / erstellen 47,38 / gerade 48,58
+           (Overlay "KI-Code immer testen" aus dem Briefing) / auf 49,60 (Kopie ins Handy) / Smartphone 49,96 (✓); bleibt bis 51,0 -->
+      <section id="k8" class="karte clip" data-start="43.93" data-duration="7.07" data-track-index="1">
+        <div class="kicker">Mein Tipp</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k8-orig">
+            <rect x="60" y="34" width="150" height="196" rx="12" class="rahmen" />
+            <rect x="74" y="48" width="122" height="40" rx="7" fill="#eef0f3" /><rect x="74" y="98" width="122" height="54" rx="7" fill="#eef0f3" />
+            <rect x="74" y="162" width="122" height="10" rx="5" class="zeile" /><rect x="74" y="180" width="90" height="10" rx="5" class="zeile" />
+            <text x="135" y="270" text-anchor="middle" class="lab">Theme</text>
+            <g id="k8-schloss" opacity="0"><circle cx="206" cy="38" r="20" fill="#0b0c0e" /><g transform="translate(196 27) scale(0.85)" class="ico" style="stroke:#fff;stroke-width:2.4"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></g></g>
+          </g>
+          <g id="k8-kopie" opacity="0">
+            <rect x="60" y="34" width="150" height="196" rx="12" class="rahmen" style="stroke:#31adec" />
+            <rect x="74" y="48" width="122" height="40" rx="7" fill="#eef0f3" /><rect x="74" y="98" width="122" height="54" rx="7" fill="#eef0f3" />
+            <rect x="74" y="162" width="122" height="10" rx="5" class="zeile" /><rect x="74" y="180" width="90" height="10" rx="5" class="zeile" />
+            <rect id="k8-ki" x="74" y="98" width="122" height="54" rx="7" fill="url(#gvd)" opacity="0" />
+          </g>
+          <text id="k8-kt" x="405" y="270" text-anchor="middle" class="lab" opacity="0">Kopie</text>
+          <g id="k8-schwebe" opacity="0"><rect x="300" y="-14" width="122" height="54" rx="7" fill="url(#gvd)" /><g transform="translate(346 0) scale(1.1)" class="ico"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /></g></g>
+          <rect id="k8-handy" x="586" y="4" width="176" height="290" rx="30" fill="none" stroke="#0b0c0e" stroke-width="6" pathLength="1" />
+          <rect id="k8-notch" x="648" y="16" width="52" height="10" rx="5" fill="#0b0c0e" opacity="0" />
+          <g id="k8-ok" opacity="0"><circle cx="760" cy="16" r="22" fill="url(#gvd)" /><path d="M749 16 l7 7 l14 -14" fill="none" stroke="#0b0c0e" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="230" y="226" width="0" height="80" /></clipPath>
+          <text x="236" y="286" class="hand" style="font-size:44px" clip-path="url(#k8-clip)" transform="rotate(-3 300 270)">KI-Code immer testen</text>
+        </svg>
+      </section>
+
+      <!-- K9 Regler einfach ↔ komplex (2/2): "Und für wirklich komplexere Landingpages kann natürlich auch durchaus ein Page Builder sinnvoll sein."
+           Karte ab 51,0 (bis dahin steht K8) / komplexere 51,20 / Landingpages 52,28 / Page 53,98 / sinnvoll 54,50 -->
+      <section id="k9" class="karte clip" data-start="51.0" data-duration="4.25" data-track-index="1">
+        <div class="kicker">Wofür?</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="70" y="150" width="680" height="16" rx="8" fill="#e5e7eb" />
+          <rect id="k9-zl" x="70" y="150" width="300" height="16" rx="8" fill="url(#gv)" opacity="0.35" />
+          <rect id="k9-zr" x="450" y="150" width="300" height="16" rx="8" fill="#0b0c0e" opacity="0" />
+          <text x="70" y="216" class="lab grau">einfach</text>
+          <text id="k9-komplex" x="750" y="216" text-anchor="end" class="lab grau">komplex</text>
+          <g opacity="0.45"><rect x="150" y="64" width="128" height="56" rx="28" fill="#fff" stroke="url(#gv)" stroke-width="3" /><g transform="translate(166 78) scale(1.2)" class="ico"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /></g><text x="236" y="102" text-anchor="middle" class="lab">KI</text></g>
+          <g id="k9-lp" opacity="0">
+            <rect x="452" y="6" width="96" height="124" rx="10" class="rahmen" />
+            <rect x="462" y="16" width="76" height="26" rx="5" fill="url(#gvl)" stroke="#9ad9f2" stroke-width="1.5" />
+            <rect x="462" y="48" width="22" height="22" rx="4" class="zeile" /><rect x="489" y="48" width="22" height="22" rx="4" class="zeile" /><rect x="516" y="48" width="22" height="22" rx="4" class="zeile" />
+            <rect x="462" y="76" width="76" height="16" rx="4" class="zeile" /><rect x="462" y="98" width="35" height="22" rx="4" class="zeile" /><rect x="503" y="98" width="35" height="22" rx="4" class="zeile" />
+          </g>
+          <g id="k9-pb" class="pille" opacity="0"><rect x="566" y="40" width="200" height="56" rx="28" /><text x="666" y="78" text-anchor="middle">Page Builder</text></g>
+          <g id="k9-ok" opacity="0"><circle cx="766" cy="44" r="20" fill="url(#gvd)" /><path d="M756 44 l7 7 l13 -13" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="k9-knopf"><circle cx="220" cy="158" r="24" fill="#0b0c0e" /><circle cx="220" cy="158" r="9" fill="#fff" /></g>
+        </svg>
+      </section>
+
+      <!-- K10 Abo wird gestrichen: "Aber nicht jede neue Seite braucht natürlich immer direkt so ein Monatsabo zusätzlich."
+           Aber 55,37 / nicht 55,59 / Seite 56,41 / Monatsabo 58,10 / zusätzlich 58,92 -->
+      <section id="k10" class="karte clip" data-start="55.30" data-duration="4.2" data-track-index="1">
+        <div class="kicker">Monatsabo zusätzlich?</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g opacity="0.55">
+            <rect x="50" y="70" width="104" height="138" rx="10" class="rahmen" /><rect x="62" y="84" width="80" height="30" rx="5" fill="#eef0f3" /><rect x="62" y="124" width="80" height="9" rx="4" class="zeile" /><rect x="62" y="141" width="60" height="9" rx="4" class="zeile" />
+            <rect x="172" y="70" width="104" height="138" rx="10" class="rahmen" /><rect x="184" y="84" width="80" height="30" rx="5" fill="#eef0f3" /><rect x="184" y="124" width="80" height="9" rx="4" class="zeile" /><rect x="184" y="141" width="60" height="9" rx="4" class="zeile" />
+          </g>
+          <g id="k10-neu" opacity="0">
+            <rect x="300" y="60" width="124" height="160" rx="12" class="rahmen" style="stroke:#31adec;stroke-width:3" />
+            <rect x="314" y="76" width="96" height="36" rx="6" fill="url(#gvl)" stroke="#9ad9f2" stroke-width="1.5" /><rect x="314" y="124" width="96" height="10" rx="5" class="zeile" /><rect x="314" y="142" width="70" height="10" rx="5" class="zeile" />
+            <circle cx="420" cy="64" r="18" fill="url(#gvd)" /><path d="M420 56 v16 M412 64 h16" stroke="#0b0c0e" stroke-width="3.4" stroke-linecap="round" />
+            <text x="362" y="262" text-anchor="middle" class="lab">Seite</text>
+          </g>
+          <path id="k10-faden" d="M424 140 C 480 150, 520 150, 560 140" fill="none" stroke="#6b7280" stroke-width="3" stroke-dasharray="6 6" opacity="0" />
+          <g id="k10-abo" opacity="0">
+            <rect x="560" y="102" width="200" height="76" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(578 120) scale(1.7)" class="ico" style="stroke:#0b0c0e"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></g>
+            <text x="630" y="152" class="lab">Abo</text>
+            <path d="M694 128 a 14 14 0 1 1 -4 20" fill="none" stroke="#6b7280" stroke-width="3" stroke-linecap="round" /><path d="M686 142 l4 7 l7 -3" fill="none" stroke="#6b7280" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+          <path id="k10-strich" pathLength="1" d="M548 186 L 772 94" fill="none" stroke="#0b0c0e" stroke-width="7" stroke-linecap="round" />
+          <clipPath id="k10-clip"><rect id="k10-cliprect" x="456" y="200" width="0" height="90" /></clipPath>
+          <text x="462" y="270" class="hand" style="font-size:60px" clip-path="url(#k10-clip)" transform="rotate(-5 540 250)">nicht jede</text>
+        </svg>
+      </section>
+
+      <!-- K11 Folgen (CTA): nur das Folgen-Symbol. Tipps 60,54 (Karte) / folgt 62,36 (Ring) / Plus 64,24 (angetippt, wird zum Haken) -->
+      <section id="k11" class="folgekarte clip" data-start="60.47" data-duration="4.46" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const L = 0.07; // 2 Frames vor dem Wort (Zeiten unten sind schon Cues)
+
+      // Karte rein mit Kicker (leer höchstens ~0,2 s), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker, " + id + " .qlabel");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      // Linie zeichnet sich (pathLength="1")
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
+      }
+      // Schreibschrift erscheint von links nach rechts (Clip-Rechteck wächst)
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.inOut" }, t);
+      }
+      // Punkt läuft auf einem Pfad (deterministisch über den Fortschritt)
+      function laufe(punkt, pfad, t, d) {
+        const p = document.querySelector(pfad), c = document.querySelector(punkt), len = p.getTotalLength(), o = { v: 0 };
+        tl.fromTo(o, { v: 0 }, { v: 1, duration: d, ease: "power2.inOut", immediateRender: false, onUpdate: () => {
+          const q = p.getPointAtLength(o.v * len); c.setAttribute("cx", q.x); c.setAttribute("cy", q.y);
+        } }, t);
+      }
+      gsap.set("#k1-zug, #k2-p1, #k2-p2, #k4-pfeil, #k6-unter, #k10-strich", { strokeDasharray: 1, strokeDashoffset: 1 });
+      gsap.set("#k7-nadel", { rotation: 50, svgOrigin: "490 156" });
+      gsap.set("#k8-handy", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
+
+      // K1 Weggabelung: beide Wege offen, auf "erst" die Schrift, auf "KI" leuchtet der KI-Weg und der Punkt läuft hin
+      karte("#k1", 2.70, 5.55);
+      tl.fromTo("#k1-oben, #k1-unten", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" }, 2.76);
+      pop("#k1-pb", 2.80); pop("#k1-ki", 2.86);
+      schreibe("#k1-cliprect", 150, 3.43);
+      zeichne("#k1-zug", 4.13, 0.55);
+      laufe("#k1-punkt", "#k1-unten", 4.13, 0.6);
+      tl.to("#k1-kiglow", { opacity: 1, duration: 0.3, ease: "power2.out" }, 4.6);
+      tl.to("#k1-pb, #k1-oben", { opacity: 0.35, duration: 0.3, ease: "power2.out" }, 4.2);
+      badge("#k1-ok", 4.47);
+
+      // K2 App-Stapel wächst auf "installieren", "zunächst", "Apps"; Ziele Produktseite, Landingpage; "individuell"
+      karte("#k2", 5.56, 12.0);
+      tl.fromTo("#k2-shop", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 5.62);
+      [["#k2-a1", 6.75], ["#k2-a2", 7.31], ["#k2-a3", 8.0]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0, y: -26 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, t));
+      schreibe("#k2-cliprect", 250, 9.31, 0.5);
+      zeichne("#k2-p1", 9.80, 0.3); pop("#k2-seite1", 9.92);
+      zeichne("#k2-p2", 10.80, 0.3); pop("#k2-seite2", 10.92);
+
+      // K3 Theme-Editor: echtes Bild, Kamerafahrt, Markierung auf dem Wort; rechts baut sich die Seite aus Blöcken
+      const lage = (sel, x, y, s) => gsap.set(sel, { x, y, scale: s });
+      karte("#k3", 12.09, 18.45);
+      lage("#k3-lage", 0, 4, 0.2448);
+      tl.to("#k3-lage", { x: -6, y: -2, scale: 0.26, duration: 2.3, ease: "sine.inOut" }, 12.2);
+      tl.to("#k3-lage", { x: -30, y: -126, scale: 0.6, duration: 0.7, ease: "power2.inOut" }, 14.49);
+      schreibe("#k3-cliprect", 160, 15.09, 0.4);
+      pop("#k3-m1", 15.39, 0.25);
+      [["#k3-s1", 15.39], ["#k3-s2", 15.47], ["#k3-s3", 15.55]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, t));
+      ein("#k3-t1", 15.39);
+      tl.to("#k3-m1", { opacity: 0, duration: 0.2 }, 15.85);
+      tl.to("#k3-lage", { y: -390, duration: 0.5, ease: "power2.inOut" }, 15.80);
+      pop("#k3-m2", 15.93, 0.25);
+      [["#k3-b1", 15.93], ["#k3-b2", 16.01], ["#k3-b3", 16.09]].forEach(([s, t]) => pop(s, t, 0.25));
+      ein("#k3-t2", 15.93);
+      tl.to("#k3-m2", { opacity: 0, duration: 0.2 }, 17.2);
+      tl.to("#k3-lage", { x: -470, y: 6, duration: 0.6, ease: "power2.inOut" }, 17.0);
+      pop("#k3-m3", 17.36, 0.25);
+      tl.fromTo("#k3-stapel", { opacity: 0, x: -10, y: -10 }, { opacity: 1, x: 0, y: 0, duration: 0.35, ease: "power2.out" }, 17.36);
+      ein("#k3-t3", 17.36);
+
+      // K4 KI erzeugt Blöcke: Sidekick, Magic; leere Blöcke auf "Theme-Blöcke", gefüllt auf "generieren"
+      karte("#k4", 18.57, 25.10);
+      tl.fromTo("#k4-orb", { opacity: 0, scale: 0.9, svgOrigin: "120 140" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 18.62);
+      ein("#k4-p1", 20.39); ein("#k4-p2", 21.84);
+      zeichne("#k4-pfeil", 22.84, 0.3);
+      [["#k4-b1", 22.90], ["#k4-b2", 22.98], ["#k4-b3", 23.06]].forEach(([s, t]) => pop(s, t, 0.3));
+      ein("#k4-t", 23.52);
+      schreibe("#k4-cliprect", 170, 24.23, 0.4);
+      [["#k4-f1", 24.23], ["#k4-f2", 24.33], ["#k4-f3", 24.43]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, t));
+
+      // K5 Prompt → Block: echtes Eingabefeld, Markierung auf "brauchst", Funke auf "KI", Block fliegt auf "passenden" in die Lücke
+      karte("#k5", 25.13, 29.78);
+      lage("#k5-lage", -236, -100, 0.49);
+      tl.to("#k5-lage", { x: -244, y: -106, scale: 0.5, duration: 4.4, ease: "sine.inOut" }, 25.2);
+      pop("#k5-m", 26.29, 0.25);
+      pop("#k5-funke", 26.89, 0.3);
+      tl.to("#k5-funke", { rotation: 20, transformOrigin: "50% 50%", duration: 0.6, ease: "power2.out" }, 27.13);
+      tl.fromTo("#k5-block", { opacity: 0, x: -360, y: 40, scale: 0.6, svgOrigin: "678 139" },
+        { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.45, ease: "power2.out" }, 28.45);
+      tl.to("#k5-slot", { opacity: 0, duration: 0.2 }, 28.85);
+      badge("#k5-ok", 28.87);
+      schreibe("#k5-cliprect", 190, 28.50, 0.45);
+
+      // K6 Regler: auf "einfache" gleitet der Knopf nach links (KI-Zone leuchtet), "praktisch" wird geschrieben
+      karte("#k6", 29.81, 34.85);
+      tl.to("#k6-knopf", { x: -190, duration: 0.5, ease: "power2.inOut" }, 30.53);
+      tl.to("#k6-zone", { opacity: 1, duration: 0.3 }, 30.75);
+      pop("#k6-ki", 30.60);
+      badge("#k6-ok", 31.03);
+      schreibe("#k6-cliprect", 280, 32.07, 0.5);
+      zeichne("#k6-unter", 32.45, 0.35);
+
+      // Sticker WICHTIG.
+      tl.fromTo("#st1", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, 34.19);
+      tl.to("#st1", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 35.38);
+
+      // K7 KI-Code: Zeilen erscheinen, eine wird auf "nicht" rot, ✕ auf "fehlerfrei"; drei Probleme auf ihren Wörtern
+      karte("#k7", 34.93, 43.90);
+      badge("#k7-ki", 35.11);
+      gsap.set("#k7-code rect", { scaleX: 0, transformOrigin: "0% 50%" });
+      tl.to("#k7-code rect", { scaleX: 1, duration: 0.3, ease: "power2.out", stagger: 0.05 }, 35.11);
+      tl.to("#k7-fehlerband", { opacity: 1, duration: 0.25 }, 36.55);
+      tl.to("#k7-z4", { fill: "#ef4444", duration: 0.25 }, 36.55);
+      schreibe("#k7-cliprect", 300, 36.85, 0.55);
+      badge("#k7-x", 37.43);
+      ein("#k7-q", 37.6, 0.35);
+      [["#k7-r1", 39.63], ["#k7-r2", 39.71], ["#k7-r3", 39.79]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0, x: 14 }, { opacity: 0.45, x: 0, duration: 0.3, ease: "power2.out" }, t));
+      // Darstellung: Block verrutscht
+      tl.to("#k7-r1", { opacity: 1, duration: 0.2 }, 40.21);
+      tl.to("#k7-r1b", { x: 14, y: 6, rotation: 12, transformOrigin: "50% 50%", fill: "#ef4444", duration: 0.35, ease: "power2.out" }, 40.21);
+      badge("#k7-w1", 40.31);
+      // Geschwindigkeit: Nadel fällt nach links
+      tl.to("#k7-r2", { opacity: 1, duration: 0.2 }, 41.21);
+      tl.to("#k7-nadel", { rotation: -62, duration: 0.5, ease: "power2.inOut", svgOrigin: "490 156" }, 41.21);
+      badge("#k7-w2", 41.4);
+      // Barrierefreiheit
+      tl.to("#k7-r3", { opacity: 1, duration: 0.2 }, 42.59);
+      badge("#k7-w3", 42.65);
+
+      // K8 Theme dupliziert sich, die KI-Anpassung landet auf der Kopie, die Kopie geht aufs Smartphone
+      karte("#k8", 43.93, 51.0);
+      tl.fromTo("#k8-schwebe", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 45.01);
+      tl.set("#k8-kopie", { opacity: 1 }, 46.89);
+      tl.fromTo("#k8-kopie", { x: 0, y: 0 }, { x: 270, y: 0, duration: 0.5, ease: "power2.inOut" }, 46.89);
+      ein("#k8-kt", 47.2);
+      badge("#k8-schloss", 47.25);
+      tl.to("#k8-schwebe", { x: 30, y: 112, opacity: 0, duration: 0.45, ease: "power2.in" }, 47.31);
+      tl.to("#k8-ki", { opacity: 1, duration: 0.2 }, 47.66);
+      // Smartphone
+      tl.to("#k8-kopie", { x: 539, y: 26, scale: 0.92, svgOrigin: "60 34", duration: 0.5, ease: "power2.inOut" }, 49.53);
+      tl.to("#k8-kt", { opacity: 0, duration: 0.2 }, 49.53);
+      zeichne("#k8-handy", 49.53, 0.5);
+      tl.to("#k8-notch", { opacity: 1, duration: 0.2 }, 49.85);
+      badge("#k8-ok", 49.89);
+      schreibe("#k8-cliprect", 360, 48.51, 0.55);
+
+      // K9 Regler: Knopf gleitet auf "komplexere" nach rechts, Landingpage, "Page Builder", ✓ auf "sinnvoll"
+      karte("#k9", 51.0, 55.25);
+      tl.to("#k9-knopf", { x: 400, duration: 0.55, ease: "power2.inOut" }, 51.16);
+      tl.to("#k9-zr", { opacity: 1, duration: 0.3 }, 51.45);
+      tl.to("#k9-komplex", { fill: "#0b0c0e", duration: 0.3 }, 51.45);
+      pop("#k9-lp", 52.21);
+      ein("#k9-pb", 53.91);
+      badge("#k9-ok", 54.43);
+
+      // K10 neue Seite, das Abo hängt sich an und wird auf "zusätzlich" gestrichen
+      karte("#k10", 55.30, 59.50);
+      schreibe("#k10-cliprect", 280, 55.52, 0.5);
+      pop("#k10-neu", 56.34);
+      tl.fromTo("#k10-abo", { opacity: 0, x: 40, rotation: 6, svgOrigin: "560 140" }, { opacity: 1, x: 0, rotation: 0, duration: 0.4, ease: "power2.out" }, 58.03);
+      tl.to("#k10-faden", { opacity: 1, duration: 0.25 }, 58.15);
+      zeichne("#k10-strich", 58.85, 0.3);
+      tl.to("#k10-abo, #k10-faden", { opacity: 0.35, duration: 0.3 }, 59.0);
+
+      // K11 Folgen: Karte auf "Tipps", Ring auf "folgt", Zeiger tippt auf "Plus" das Plus an, es wird zum Haken
+      tl.fromTo("#k11", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 60.47);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 62.29);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 63.5);
+      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.55, ease: "power2.inOut" }, 63.6);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 64.12);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 64.2);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 64.17);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 64.17);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 64.2);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 64.2);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 64.2);
+      tl.to("#fzeiger", { x: 132, y: 128, duration: 0.25, ease: "power2.out" }, 64.38);
+
+      tl.seek(0);
+      window.__timelines["pagebuilder-skizzen"] = tl;
+    </script>
+  </body>
+</html>

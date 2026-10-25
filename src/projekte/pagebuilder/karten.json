@@ -1,0 +1,76 @@
+{
+ "hinweis": "PROBE Visuelle Metaphern (karten-aufbau.md, 2026-10-25) für P04 · Brauchst du einen Page Builder?. Sekunden im geschnittenen Video (cut.json, 64,93 s). Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf ausgewählten Zuständen, pop auf dem Sticker, success auf dem Smartphone-Haken, klick auf dem Plus. Gebaut in hyperframes/pagebuilder-skizzen/index.html. Echte Quellen: Shopify Editions Sommer '25 (K3 Theme-Editor, K5 Eingabefeld 'Describe the block you want'), Shopify Hilfe-Center (K7 Zitat); sonst Lucide-Icons, Formen und höchstens 1-3 Wörter je Bild. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "k1", "wort": "würde", "text": "Weggabelung: Page Builder (grau) / KI (Verlauf); 'erst' handschriftlich, auf 'KI' leuchtet der KI-Weg und der Punkt läuft hin, ✓ auf 'ausprobieren'",
+   "start": 2.7, "ende": 5.55,
+   "teile": { "erst": 3.43, "ki": 4.13, "ausprobieren": 4.47 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 2.7, "volume": 0.12 }, { "datei": "tick.mp3", "at": 4.47, "volume": 0.1 }]
+  },
+  {
+   "id": "k2", "wort": "Denn", "text": "App-Stapel auf dem Shop wächst (installieren, zunächst, Apps); 'individuell' handschriftlich; Wege zu Produktseite und Landingpage",
+   "start": 5.56, "ende": 12.0,
+   "teile": { "installieren": 6.75, "zunaechst": 7.31, "apps": 8.0, "individuelle": 9.31, "produktseite": 9.92, "landingpage": 10.92 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 5.56, "volume": 0.12 }, { "datei": "tick.mp3", "at": 8.0, "volume": 0.1 }, { "datei": "tick.mp3", "at": 10.92, "volume": 0.1 }]
+  },
+  {
+   "id": "k3", "wort": "Dabei", "text": "Quellen-Karte SHOPIFY EDITIONS · SOMMER '25: echter Theme-Editor (Vorschaubild des Videos 'KI-Blockgenerierung'), Kamerafahrt und Markierung auf Sektionen (Template-Liste), Blöcke (Add block), Seitenvorlagen ('Home page'); rechts baut sich eine Seite aus Sektionen und Blöcken, dann Stapel 'Vorlagen'; 'bereits' handschriftlich",
+   "start": 12.09, "ende": 18.45,
+   "teile": { "theme-editor": 14.49, "bereits": 15.09, "sektionen": 15.39, "bloecke": 15.93, "seitenvorlagen": 17.36 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 12.09, "volume": 0.12 }, { "datei": "tick.mp3", "at": 15.39, "volume": 0.1 }, { "datei": "tick.mp3", "at": 17.36, "volume": 0.1 }]
+  },
+  {
+   "id": "k4", "wort": "Und (inzwischen)", "text": "KI-Kugel mit den Pillen Sidekick / Magic, leere Blöcke auf 'eigene', 'Theme-Blöcke', gefüllt auf 'KI'; 'per KI' handschriftlich",
+   "start": 18.57, "ende": 25.1,
+   "teile": { "sidekick": 20.39, "magic": 21.84, "eigene": 22.84, "theme-bloecke": 23.52, "ki": 24.23 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 18.57, "volume": 0.12 }, { "datei": "tick.mp3", "at": 20.39, "volume": 0.1 }, { "datei": "tick.mp3", "at": 24.23, "volume": 0.1 }]
+  },
+  {
+   "id": "k5", "wort": "Du (beschreibst)", "text": "Quelle SHOPIFY EDITIONS · SOMMER '25: echtes Eingabefeld 'Describe the block you want', markiert auf 'brauchst'; KI-Funke; auf 'passenden' fliegt ein Block in die Lücke der Seite, ✓ auf 'Block'; 'passend' handschriftlich",
+   "start": 25.13, "ende": 29.78,
+   "teile": { "brauchst": 26.29, "ki": 26.89, "passenden": 28.45, "block": 28.87 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 25.13, "volume": 0.12 }, { "datei": "tick.mp3", "at": 28.87, "volume": 0.1 }]
+  },
+  {
+   "id": "k6", "wort": "Und (das kann)", "text": "Regler einfach ↔ komplex: Knopf gleitet auf 'einfache' zur KI-Seite, ✓ auf 'Anpassungen', 'praktisch' handschriftlich",
+   "start": 29.81, "ende": 34.85,
+   "teile": { "einfache": 30.53, "anpassungen": 31.03, "praktisch": 32.07 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 29.81, "volume": 0.12 }, { "datei": "tick.mp3", "at": 31.03, "volume": 0.1 }]
+  },
+  {
+   "id": "st1", "wort": "wichtige", "text": "Sticker WICHTIG.",
+   "start": 34.19, "ende": 35.58,
+   "sfx": [{ "datei": "pop.mp3", "at": 34.19, "volume": 0.1 }]
+  },
+  {
+   "id": "k7", "wort": "Denn (KI-generierter)", "text": "Code-Fenster mit KI-Abzeichen, eine Zeile wird auf 'nicht' rot, ✕ auf 'fehlerfrei', 'nicht automatisch' handschriftlich; Quellenzeile Shopify Hilfe-Center; drei Probleme: Darstellung (Block verrutscht), Geschwindigkeit (Tacho fällt), Barrierefreiheit",
+   "start": 34.93, "ende": 43.9,
+   "teile": { "ki-generierter": 35.11, "nicht": 36.55, "automatisch": 36.85, "fehlerfrei": 37.43, "problemen": 39.63, "darstellung": 40.21, "geschwindigkeit": 41.21, "barrierefreiheit": 42.59 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 34.93, "volume": 0.12 }, { "datei": "tick.mp3", "at": 37.43, "volume": 0.1 }, { "datei": "tick.mp3", "at": 40.21, "volume": 0.1 }, { "datei": "tick.mp3", "at": 42.59, "volume": 0.1 }]
+  },
+  {
+   "id": "k8", "wort": "Deshalb", "text": "Theme; KI-Anpassung schwebt auf 'Anpassungen'; auf 'Theme-Kopie' dupliziert sich das Theme (Original mit Schloss), die Anpassung landet auf der Kopie; 'KI-Code immer testen' (Overlay aus dem Briefing) handschriftlich auf 'gerade'; auf 'auf (dem Smartphone)' geht die Kopie ins Handy, ✓ auf 'Smartphone'",
+   "start": 43.93, "ende": 51.0,
+   "teile": { "anpassungen": 45.01, "theme-kopie": 46.89, "erstellen": 47.31, "gerade": 48.51, "auf": 49.53, "smartphone": 49.89 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 43.93, "volume": 0.12 }, { "datei": "tick.mp3", "at": 46.89, "volume": 0.1 }, { "datei": "success.mp3", "at": 49.89, "volume": 0.1 }]
+  },
+  {
+   "id": "k9", "wort": "komplexere", "text": "Regler einfach ↔ komplex: Knopf gleitet auf 'komplexere' zur komplexen Seite, Landingpage, Pille 'Page Builder', ✓ auf 'sinnvoll'",
+   "start": 51.0, "ende": 55.25,
+   "teile": { "komplexere": 51.16, "landingpages": 52.21, "page": 53.91, "sinnvoll": 54.43 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 51.0, "volume": 0.12 }, { "datei": "tick.mp3", "at": 54.43, "volume": 0.1 }]
+  },
+  {
+   "id": "k10", "wort": "Aber", "text": "'nicht jede' handschriftlich auf 'nicht'; neue Seite auf 'Seite'; Abo-Anhänger auf 'Monatsabo', auf 'zusätzlich' durchgestrichen",
+   "start": 55.3, "ende": 59.5,
+   "teile": { "nicht": 55.52, "seite": 56.34, "monatsabo": 58.03, "zusaetzlich": 58.85 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 55.3, "volume": 0.12 }, { "datei": "tick.mp3", "at": 58.85, "volume": 0.1 }]
+  },
+  {
+   "id": "k11", "wort": "Tipps", "text": "Nur das Folgen-Symbol: Karte auf 'Tipps', Ring auf 'folgt', Zeiger tippt auf 'Plus' das Plus an, es wird zum Haken",
+   "start": 60.47, "ende": 64.93,
+   "teile": { "folgt": 62.29, "plus": 64.17 },
+   "sfx": [{ "datei": "whoosh.mp3", "at": 60.47, "volume": 0.12 }, { "datei": "klick.mp3", "at": 64.17, "volume": 0.1 }]
+  }
+ ]
+}
