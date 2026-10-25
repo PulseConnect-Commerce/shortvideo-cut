@@ -57,6 +57,13 @@ genau auf dem gesprochenen Wort dazu oder ändert seinen Zustand. So erklärt di
 7. **Umfrage-Karte als CTA am Ende**
    - Frage als Titel, z. B. „Würdest du so was nutzen?“
    - Zwei Optionen kommen auf ihren Worten: ✓ Ja / ✕ Nein. Ein Mauszeiger fährt hin.
+   - Ruft er nur zum Folgen auf (keine Frage): **nur ein Folgen- bzw. Plus-Symbol als kurze Animation** (Plus wird auf
+     sein Wort angetippt und wird zum Haken). **Keine Folgen-/Episodenliste, keine Seriennummer, kein „E01–E05“**,
+     auch nicht in der Schlusskarte. Seine Vorgabe 2026-10-25: "Am Ende muss nicht extra visualisiert werden, welche
+     Folge diese genau ist und ob noch E01 bis E04 vorher bereits hochgeladen wurden. Teilweise sind auch die
+     Reihenfolgen gar nicht gleich und auf Social Media Short Videos sehen sich die Leute meist sowieso keine Reihen an,
+     sondern nur die FYP. Somit reicht es nur ein Follow Symbol oder ein + Symbol als Animation anzuzeigen". Dasselbe
+     gilt für Captions: keine Folgennummer und keine Liste früherer Folgen.
 
 8. **Pill-Untertitel**
    - Kurze Phrasen von 2–4 Wörtern in einer dunklen, abgerundeten Pille (rgba(10,12,14,0.82), Geist 700, ~44 px,
