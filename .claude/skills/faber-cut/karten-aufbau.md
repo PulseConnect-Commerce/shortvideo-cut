@@ -97,3 +97,18 @@ Gilt für **jede M-Folge (Marken-Story)** und **jedes Video, in dem eine bekannt
 - Zwischen den Hintergrund-Stellen darf er vor seinem weichgezeichneten Zimmer stehen (Hook, Learnings, CTA).
 - Zusätzlich bleiben die Quellen-Karten (Fallstudie, Pressemeldung, App-Store) für Belege.
 - Nur echte, aktuelle Seiten, nichts nachbauen; Datum im Übergabebericht nennen.
+
+## Visuelle Metaphern statt Wortkarten (PROBE ab P04, 2026-10-25)
+
+Er: "Ich möchte gerne den skill eher dazu nutzen, visuell mein Gesprochenes darzustellen anstatt nur die Wörter
+hinzuschreiben." Sein Vorbild: eine Karte "DER START" mit zwei Bahnen ("Die" weit vorne, "Du" am Start, gestrichelte
+Startlinie, handschriftlich "Vorsprung"), die den Gedanken ohne Ton erklärt.
+
+- Für jeden Kerngedanken zuerst die Metapher suchen, dann das Bild: Rennen/Vorsprung, Waage, schrumpfender oder
+  wachsender Balken, Trichter, Fluss/Kette, Vorher/Nachher, Zeitstrahl, Stapel, Thermometer, kleine Szenen mit Objekten
+  (Würfel löst sich im Glas auf, Mauszeiger klickt wütend). Icon-plus-Wort-Kacheln nur noch als Ausnahme.
+- Die Bewegung folgt dem Satz auf das Wort (rollt, kippt, bricht ab, wird rot, verdoppelt sich, wenn er es sagt).
+- Höchstens 1–3 Wörter pro Bild; ein handschriftliches Akzentwort (freie Schreibschrift wie Caveat/Kalam, im
+  PulseConnect-Grün #00E090 oder -Blau #31ADEC; Rot nur für "Fehler").
+- Rahmen bleibt: helle Karte unter dem Kopf, Pill-Untertitel darüber, ruhige Motion nach dem Motion-Skill.
+- Status: Probe in P04 (Page Builder). Erst nach seinem OK fest für alle Videos.
