@@ -2,7 +2,7 @@
 
 Status: **FREIGEGEBEN** für alle neuen Videos (Paul hat A02 und M05 am 24.10. abgenommen und eingeplant).
 
-**Platz der Karten (seine Vorgabe 2026-10-25):** "Bitte bei allen Videos die Motion Captions über dem Kopf anzeigen. So sieht mein Kopf sonst komplett abgeschnitten aus und über dem Kopf ist noch sehr viel Platz" und "Und der Untertitel kann dann eben unter dem Kopf auf der Brust angezeigt werden". Also: **alle Karten** (Aufbau-, Quellen-, Learning-, Umfrage-, Folgen-Karten) **über dem Kopf**, unter der oberen App-Zone und mit Abstand zum Haar, nie auf Brusthöhe. Reicht der Platz nicht, wird die Karte flacher, seine Bildlage (Augen ~800–830) bleibt. Der Hook-Titel und eine Karte stehen nie gleichzeitig oben. **Die Pill-Untertitel stehen unter dem Kopf auf der Brust**, unter dem Kinn und über der Instagram-Zone unten (ab y 1500).
+**Platz von Kopf, Karten und Untertiteln (seine Vorgabe 2026-10-25):** Er fand den Kopf über einer Karte direkt unter dem Kinn "komplett abgeschnitten" und sah über dem Kopf zu viel leeren Platz. Seine Lösung: "Oder du packst meinen Kopf höher und lässt die Motion Captions unter dem Kopf". Also: **er steht höher im Bild** (Kopfoberkante knapp unter der oberen Safe-Zone, etwa y 300–330, Augen grob y 540–600; nur verschieben, nicht weiter zoomen, unten kein Bildrand). Darunter von oben nach unten: Kinn und Hals, **Pill-Untertitel**, **Karte**, alles über der Instagram-Zone unten. Zwischen Kinn und Pille bleibt Luft, Hals und Schultern sind zu sehen. Der Hook-Titel steht an der Kartenposition unter dem Kopf und nie über dem Gesicht. Diese Bildlage ersetzt für Videos mit Aufbau-Karten die alte Regel "Augen bei y 800–830".
 
 Paul (2026-10-24) schickte ein Referenzvideo (deutscher Creator erklärt „Claude Duet“) und fragte: "Kriegst du die
 Motion Captions so eingeblendet, wie im Referenzvideo? Die Farben sollen natürlich immer noch meinem CI entsprechen,
@@ -21,8 +21,8 @@ genau auf dem gesprochenen Wort dazu oder ändert seinen Zustand. So erklärt di
 ## Bausteine
 
 1. **Aufbau-Karte**
-   - Breite helle Karte, etwa 820 px breit (rechte TikTok-Zone frei), so hoch wie der Platz über dem Kopf erlaubt,
-     **über dem Kopf**. Gesicht und Haar bleiben frei.
+   - Breite helle Karte, etwa 820 px breit (rechte TikTok-Zone frei), unter dem Kopf
+     (unter der Pill-Untertitelzeile). Gesicht und Hals bleiben frei.
    - Oben links ein kleiner Kicker in Versalien, grau und gesperrt, z. B. „ASSISTENTEN, DIE SICH SELBST MELDEN“. Er
      nennt das Thema des Gedankens.
    - Die Karte kommt leer mit dem Kicker herein. Kurz danach fliegt das erste Element ein. Leere Karten nie länger als
@@ -62,8 +62,7 @@ genau auf dem gesprochenen Wort dazu oder ändert seinen Zustand. So erklärt di
    - Kurze Phrasen von 2–4 Wörtern in einer dunklen, abgerundeten Pille (rgba(10,12,14,0.82), Geist 700, ~44 px,
      weiß).
    - Das gerade gesprochene Wort leuchtet im PulseConnect-Grün #00E090 (statt Orange wie in der Referenz).
-   - Position **unter dem Kopf auf der Brust** (unter dem Kinn, über der Instagram-Zone ab y 1500), auch wenn eine
-     Karte über dem Kopf steht.
+   - Position unter dem Kinn, direkt über der Karte, über der Instagram-Zone unten.
    - Bei Split-Screen sitzt die Pille auf der Naht.
 
 9. **Split-Screen mit Quelle (NEWS)**
