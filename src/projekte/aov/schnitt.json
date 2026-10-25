@@ -11,7 +11,12 @@
   {
    "take": "t1",
    "ab": 4.0,
-   "text": "AOV, schon mal gehört? Willkommen zu E-Commerce einfach erklärt mit Paul. Heute erkläre ich dir den Average Order Value, also deinen durchschnittlichen Bestellwert."
+   "text": "AOV, schon mal gehört? Willkommen zu E-Commerce einfach erklärt mit Paul."
+  },
+  {
+   "take": "t1",
+   "ab": 9.6,
+   "text": "Heute erkläre ich dir den Average Order Value, also deinen durchschnittlichen Bestellwert."
   },
   {
    "take": "t1",
@@ -31,7 +36,14 @@
   {
    "take": "t1",
    "ab": 143.2,
-   "text": "Dein Vorteil ist, wenn du den AOV steigerst, dann kannst du eben auch bei gleicher Bestellzahl mehr Umsatz machen, ohne eben dabei zusätzlich Besucher gewinnen zu müssen. Achte eben dabei auf die Marge."
+   "von": 143.0,
+   "text": "Dein Vorteil ist,"
+  },
+  {
+   "take": "t1",
+   "ab": 144.5,
+   "von": 144.45,
+   "text": "wenn du den AOV steigerst, dann kannst du eben auch bei gleicher Bestellzahl mehr Umsatz machen, ohne eben dabei zusätzlich Besucher gewinnen zu müssen. Achte eben dabei auf die Marge."
   },
   {
    "take": "t1",

@@ -12,7 +12,7 @@ Der Average Order Value ist dein durchschnittlicher Bestellwert. Beispiel: 10.00
 
 Erhöhe deinen Wissens-AOV und folg mir für weitere Kennzahlen 👇
 
-#ecommerce #aov #bestellwert #onlineshop #ecommerceeinfacherklärt
+#ecommerce #aov
 ```
 
 ## Instagram (Reels)
@@ -28,7 +28,7 @@ Teil der Serie „E-Commerce einfach erklärt“ – jede Woche eine Kennzahl.
 
 Erhöhe deinen Wissens-AOV und folg mir für weitere Kennzahlen 👇
 
-#ecommerce #aov #bestellwert #onlineshop #ecommerceeinfacherklärt
+#ecommerce #aov
 ```
 
 ## YouTube (Shorts)
@@ -48,5 +48,5 @@ Dein Vorteil: Steigerst du deinen AOV, machst du bei gleicher Bestellzahl mehr U
 
 Serie „E-Commerce einfach erklärt“ – jede Woche eine Kennzahl.
 
-#shorts #ecommerce #aov
+#shorts #aov
 ```

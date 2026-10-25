@@ -6,6 +6,13 @@
   {
    "src": "aov/t1",
    "from": 3.915,
+   "to": 8.015,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "aov/t1",
+   "from": 9.705,
    "to": 13.725,
    "nach": 0.09,
    "vor": 0.09
@@ -33,7 +40,14 @@
   },
   {
    "src": "aov/t1",
-   "from": 143.165,
+   "from": 143.0,
+   "to": 143.935,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "aov/t1",
+   "from": 144.45,
    "to": 154.225,
    "nach": 0.09,
    "vor": 0.09
@@ -212,7 +226,7 @@
   {
    "text": "Besucher,",
    "src": "aov/t1",
-   "start": 94.0,
+   "start": 94,
    "end": 94.4
   },
   {
@@ -291,7 +305,7 @@
    "text": "es",
    "src": "aov/t1",
    "start": 98.94,
-   "end": 99.0
+   "end": 99
   },
   {
    "text": "ja",
@@ -351,7 +365,7 @@
    "text": "kaufen",
    "src": "aov/t1",
    "start": 101.66,
-   "end": 102.0
+   "end": 102
   },
   {
    "text": "bei",
