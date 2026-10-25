@@ -31,12 +31,12 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 
 ## Briefing-Checkliste
 
-- [x] Hook-Texteinblendung wörtlich: "DIESE KOSTENLOSE APP ZEIGT," / "WO KUNDEN ABSPRINGEN" (0,0-6,3 s, Design verlauf)
+- [x] Hook-Texteinblendung wörtlich: "DIESE KOSTENLOSE APP ZEIGT," / "WO KUNDEN ABSPRINGEN" (0,0-6,3 s, Design verlauf, unter dem Kopf an der Kartenposition)
 - [x] Direkt starten, kein langes Intro: erstes Wort bei 0,13 s ("Einer der wichtigsten Apps"); sein Einstieg "Wenn du diese Shopify App nicht installiert hast, verlierst du bares Geld" ist raus (Umsatzversprechen, siehe Entscheidungen)
 - [x] Ruhiger, sachlicher Schnitt: 5 Schnittstücke, ganze Sätze ohne Pausenschnitte, kein Zoom-Wechsel
-- [x] Deutsche Untertitel in der Safe Area: dunkle Pillen mit 2-4 Wörtern bei y 1015-1085, x ca. 170-810
+- [x] Deutsche Untertitel in der Safe Area: dunkle Pillen mit 2-4 Wörtern unter dem Kinn bei y ca. 915-985, x ca. 170-810
 - [x] 1080 x 1920, MP4/H.264, 30 fps
-- [x] Reihen-Einblendung "Eine Shopify-App, ein Problem" nach dem Hook (6,5-10,4 s, oben)
+- [x] Reihen-Einblendung "Eine Shopify-App, ein Problem" nach dem Hook (6,5-8,4 s, unter dem Kopf)
 - [x] Bei "Heatmaps" und "Sitzungsaufzeichnungen" echte Clarity-Oberflächen: offizielle Bilder des Shopify-App-Store-Eintrags "Microsoft Clarity: AI Insights", Heatmap ab 8,5 s (Heatmaps 11,6 s), Session Replay ab 13,1 s, Label "MICROSOFT CLARITY · SHOPIFY APP STORE"
 - [x] Keine Conversion-Steigerung versprochen, keine personenbezogenen Besucherdaten (nur Microsofts Demo-Abbildungen)
 - [x] Produktname "Microsoft Clarity" (im Ton richtig gesprochen, Untertitel und Karten richtig geschrieben)
@@ -60,8 +60,8 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 - Untertitel Wort für Wort gegen den Ton geprüft (Whisper in drei Einstellungen und wav2vec2): "warum jemand nicht kauft" (Whisper: "dich"), "Einwilligung" (Whisper: "Seinwilligung"), "Onlinehändler", "mit normalen Kennzahlen komplett übersehen wirst", "Und das kann nämlich helfen" (Whisper ergänzt teils "dir" oder "ihnen", akustisch ohne Pronomen)
 - Sonnet-Stand nicht übernommen: Wortzeiten waren von Hand erfunden, der Satz kam aus dem Anlauf mit "übersehen willst", das Ende lief in den Griff zur Kamera, das Gesicht saß 77 px links
 - Ende bei 136,06 s im Take, 0,16 s nach dem letzten Laut, vor der Bewegung zur Kamera (ab 136,10 s); nicht verlängert
-- Bild: Augen bei x 540 / y 815 (scale 1,3, hoch 421, x 83), sanfter Grade, leicht nachgeschärft (Gesichtsdetail 74 statt ca. 113 bei A01, Regel 0c; Sicherung `takes/sicherung/t1.orig.vor-schaerfe.mp4`), Porträt-Modus für alle 5 Stücke (an 139 Stellen nachgemessen), ein ruhiges Zoom-in, kein Punch-in
-- Grafiken als PROBE nach `karten-aufbau.md` (Pauls Referenz über die Regie): Aufbau-Karten auf Brusthöhe, Pill-Untertitel als neuer Baustein `src/lib/pillen.tsx` (bestehende Projekte unverändert), zwei Sticker ("ABER." 33,2 s, "ZUERST." 48,6 s), Umfrage-Karte als CTA. Abweichungen: Karten 820 statt ca. 1000 px breit (TikTok-Zone rechts ab x 900), unterste Kante bei y 1476 (Instagram-Zone unten ab y 1500)
+- Bild nach Pauls Vorgaben vom 25.10. ("Oder du packst meinen Kopf höher und lässt die Motion Captions unter dem Kopf", "etwas weiter reinzoomen, sodass man mich erst ab Hüfthöhe sieht"): scale 1,62, hoch 931, x 104; Bild endet unten an der Hüfte, Kopfoberkante bei y ca. 300-340 (gemessen in allen Schnittstücken), Augen bei y ca. 609, mittig; Gesichtsdetail im Standbild auf Gesichtsgröße normiert gleich oder besser als A01, deshalb kein weiteres Nachschärfen; sanfter Grade, leicht nachgeschärft (Gesichtsdetail 74 statt ca. 113 bei A01, Regel 0c; Sicherung `takes/sicherung/t1.orig.vor-schaerfe.mp4`), Porträt-Modus für alle 5 Stücke (an 139 Stellen nachgemessen), ein ruhiges Zoom-in, kein Punch-in
+- Grafiken als PROBE nach `karten-aufbau.md` (Pauls Referenz über die Regie): Aufbau-Karten auf Brusthöhe, Pill-Untertitel als neuer Baustein `src/lib/pillen.tsx` (bestehende Projekte unverändert), zwei Sticker ("ABER." 33,2 s, "ZUERST." 48,6 s), Umfrage-Karte als CTA. Abweichungen: Karten 820 statt ca. 1000 px breit (TikTok-Zone rechts ab x 900). Reihenfolge von oben: Gesicht, Kinn (ca. 867), Pill-Untertitel (ca. 950), Hook bzw. Karten ab y 1000, unterste Kante bei y 1376 (Instagram-Zone unten ab y 1500). Sticker links neben dem Kopf
 - Echte Oberflächen nur aus den offiziellen App-Store-Bildern (`public/broll/clarity/appstore/`, Quelle in `QUELLE.txt`), nur zugeschnitten, langsam gefahren, gezoomt und markiert; nichts dazugemalt, kein englischer Werbetext im Bild
 - Umfrage-Karte: "Mehr zur App wissen?", "Ja – ich folge dir" auf "folgt", "Nein, danke" (nicht von ihm gesprochen, zweite Antwort der Umfrage), Zeiger klickt Ja, Schlusszeile "Dann stelle ich dir die App vor."
 - Musik ruhig.mp3 wie A01 (FACE erlaubt ruhig oder puls; Briefing "ruhiger, sachlicher Schnitt"); Soundeffekte leise: whoosh beim Kartenwechsel, tick je Kachel, pop auf den Stickern, success auf "ERST BEOBACHTEN", klick in der Umfrage
