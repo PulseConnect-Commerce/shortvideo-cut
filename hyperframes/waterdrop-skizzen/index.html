@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>M05 · Marken-Story waterdrop – Aufbau-Karten</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- HERO M05 "Marken-Story waterdrop". Grafik-Stil nach karten-aufbau.md (wie A02 Clarity, von Paul abgenommen):
+         eine helle Aufbau-Karte pro Gedanke auf Brusthöhe (x 80-900, ab y 1100; Instagram-Zone unten ab 1500), Kacheln auf
+         ihrem Wort, Zustände (✓, ✕, Durchstreichen), Quellen-Karten mit echten Screenshots der Shopify-Fallstudie
+         (assets/kopf.png, liste.png, store-foto.jpg; Quelle: public/broll/waterdrop/fallstudie/QUELLE.txt), zwei
+         Sticker-Wörter neben dem Kopf, oben zwei kleine Karten während der Punch-ins, am Ende die Folgen-Karte als CTA.
+         Farben und Schrift nach karten-hell.md. Zeiten = Sekunden im geschnittenen Video (cut.json, 101,6 s), Teile 2
+         Frames vor ihrem Wort; Liste mit Tönen in src/projekte/waterdrop/karten.json. Icons: Lucide (ISC). Keine Logos
+         außer dem, was im Screenshot der Fallstudie steht; keine erfundenen Zahlen oder Oberflächen. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      /* Aufbau-Karte auf Brusthöhe (Tabu rechts ab x 900, unten ab y 1500) */
+      .karte {
+        position: absolute; left: 80px; top: 1100px; width: 820px; height: 258px; opacity: 0; isolation: isolate;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .karte.lang { height: 312px; }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .reihe { position: absolute; left: 30px; right: 30px; top: 64px; height: 172px; display: flex; align-items: center; gap: 12px; }
+      .schluss { position: absolute; left: 32px; bottom: 26px; font-size: 34px; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; opacity: 0; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+      /* Kachel: weißes Feld, Icon in der Verlaufskachel, Label, Unterzeile */
+      .kachel {
+        position: relative; flex: none; width: 200px; height: 172px; border-radius: 24px; background: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07); border: 1px solid #e5e7eb;
+        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 0 10px; opacity: 0;
+      }
+      .ico { flex: none; width: 66px; height: 66px; border-radius: 19px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
+      .ico.grau { background: #e5e7eb; }
+      .ico svg { width: 40px; height: 40px; fill: none; stroke: #0b0c0e; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      .lab { font-size: 26px; font-weight: 800; line-height: 1.05; text-align: center; letter-spacing: -0.01em; }
+      .sub { font-size: 18px; font-weight: 600; color: #6b7280; text-align: center; line-height: 1.1; white-space: nowrap; }
+      .sub span { opacity: 0; }
+      .nummer { width: 100px; background: transparent; border: none; box-shadow: none; }
+      .nummer .ziffer { font-size: 104px; font-weight: 900; line-height: 1; letter-spacing: -0.04em; }
+      .platz { border: 3px dashed #cbd5e1; background: rgba(255, 255, 255, 0.5); box-shadow: none; }
+      .platz .frage { font-size: 64px; font-weight: 800; color: #9ca3af; line-height: 1; }
+
+      /* Zustände */
+      .badge { position: absolute; top: -12px; right: -12px; width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18); opacity: 0; }
+      .badge svg { width: 24px; height: 24px; fill: none; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+      .badge.ok { background: linear-gradient(135deg, #00e090, #31adec); }
+      .badge.ok svg { stroke: #0b0c0e; }
+      .badge.nein { background: #ef4444; }
+      .badge.nein svg { stroke: #fff; }
+      .streich { position: absolute; left: 14px; right: 14px; top: 50%; height: 7px; margin-top: -3px; border-radius: 4px; background: #ef4444; transform: rotate(-14deg) scaleX(0); transform-origin: 0 50%; }
+      .pfeil { flex: none; width: 44px; height: 44px; opacity: 0; }
+      .pfeil svg { width: 44px; height: 44px; fill: none; stroke: #31adec; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+      .zeichen { flex: none; width: 56px; text-align: center; font-size: 70px; font-weight: 800; line-height: 1; opacity: 0; }
+      .mini-tag { position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%); padding: 4px 12px; border-radius: 12px; background: linear-gradient(90deg, #00e090, #31adec); font-size: 17px; font-weight: 800; white-space: nowrap; opacity: 0; }
+
+      /* Quellen-Karte breit: oben der Screenshot über die ganze Breite, darunter die Aufbau-Zeile */
+      .karte.qb { height: 392px; }
+      .qlabel { position: absolute; left: 22px; top: 15px; display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7280; white-space: nowrap; opacity: 0; }
+      .qdot { width: 10px; height: 10px; border-radius: 5px; background: linear-gradient(135deg, #00e090, #31adec); }
+      .qkick { position: absolute; right: 24px; top: 15px; font-size: 17px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .qkick.links { right: auto; left: 500px; }
+      .qkick span { position: absolute; right: 0; top: 0; }
+      .qwide { position: absolute; left: 20px; top: 48px; width: 780px; height: 208px; border-radius: 18px; overflow: hidden; background: #fff; border: 1px solid #e5e7eb; }
+      .qlage { position: absolute; left: 0; top: 0; }
+      .qlage img { display: block; }
+      .rahmen { position: absolute; border: 12px solid #00e090; box-shadow: 0 0 0 8px rgba(49, 173, 236, 0.35), 0 0 40px rgba(0, 224, 144, 0.45); border-radius: 30px; opacity: 0; }
+      .qzeile { position: absolute; left: 20px; right: 20px; top: 274px; height: 96px; display: flex; align-items: center; gap: 12px; }
+      .chip { position: relative; flex: none; display: flex; align-items: center; gap: 12px; height: 76px; padding: 0 22px 0 12px; border-radius: 18px; background: #fff; border: 1.5px solid #e5e7eb; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); font-size: 27px; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; opacity: 0; }
+      .chip .mini { flex: none; width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
+      .chip .mini svg { width: 28px; height: 28px; fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .chip.an { background: #eafaf4; border-color: #7fdcc0; }
+      .verbinder { flex: none; width: 92px; height: 40px; }
+      .verbinder svg { width: 92px; height: 40px; fill: none; stroke: #31adec; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Quellen-Karte geteilt (wie A02): links das Foto, rechts die Aufbau-Liste */
+      .karte.qs { height: 376px; }
+      .qbild { position: absolute; left: 20px; top: 46px; width: 460px; height: 300px; border-radius: 18px; overflow: hidden; background: #f7f8fb; border: 1px solid #e5e7eb; }
+      .qliste { position: absolute; left: 500px; top: 46px; width: 300px; height: 300px; display: flex; flex-direction: column; gap: 12px; }
+      .qrow { position: relative; display: flex; align-items: center; gap: 10px; min-height: 62px; padding: 6px 12px 6px 8px; border-radius: 14px; background: #fff; border: 1.5px solid #e5e7eb; opacity: 0; }
+      .qrow .mini { flex: none; width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, #00e090 0%, #31adec 100%); display: flex; align-items: center; justify-content: center; }
+      .qrow .mini svg { width: 24px; height: 24px; fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .qt { font-size: 24px; font-weight: 800; letter-spacing: -0.005em; line-height: 1.08; white-space: nowrap; color: #0b0c0e; }
+      .qt small { display: block; font-size: 17px; font-weight: 600; color: #6b7280; letter-spacing: 0; }
+      .qrow .ok { position: absolute; right: 10px; top: 50%; margin-top: -13px; width: 26px; height: 26px; border-radius: 13px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; opacity: 0; }
+      .qrow .ok svg { width: 15px; height: 15px; fill: none; stroke: #0b0c0e; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Titel in der Karte (Lernpunkte-Übersicht, Folgen-Karte) */
+      .frage-titel { position: absolute; left: 30px; top: 58px; display: flex; align-items: center; gap: 16px; font-size: 42px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; opacity: 0; }
+      .frage-titel .ico { width: 56px; height: 56px; border-radius: 16px; }
+      .frage-titel .ico svg { width: 32px; height: 32px; }
+      .plaetze { position: absolute; left: 30px; right: 30px; top: 140px; display: flex; gap: 16px; }
+      .plaetze .kachel { width: 140px; height: 140px; }
+
+      /* Folgen-Karte */
+      .avatar { position: absolute; left: 34px; top: 120px; width: 128px; height: 128px; border-radius: 64px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; opacity: 0; }
+      .avatar svg { width: 70px; height: 70px; fill: none; stroke: #6b7280; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .plus { position: absolute; left: 50%; bottom: -16px; margin-left: -24px; width: 48px; height: 48px; border-radius: 24px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+      .plus svg { position: absolute; width: 28px; height: 28px; fill: none; stroke: #0b0c0e; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+      .folgen-text { position: absolute; left: 196px; top: 128px; display: flex; flex-direction: column; gap: 10px; }
+      .folgen-text .zeile { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; opacity: 0; }
+      .folgen-text .klein { font-size: 24px; font-weight: 600; color: #6b7280; white-space: nowrap; opacity: 0; }
+      .zeiger { position: absolute; width: 48px; height: 48px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 48px; height: 48px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+
+      /* Karte oben über dem Kopf (Reihe, Punch-in-Stellen) */
+      .oben { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; max-width: 720px; top: 300px; display: flex; align-items: center; gap: 24px; padding: 22px 40px 22px 26px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .oben .ico { width: 84px; height: 84px; border-radius: 22px; }
+      .oben .ico svg { width: 48px; height: 48px; }
+      .oben .k2 { font-size: 22px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .oben .t2 { font-size: 44px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; line-height: 1.12; }
+      .oben .t2 .neu { display: block; opacity: 0; }
+
+      /* Sticker-Wort neben dem Kopf */
+      .sticker { position: absolute; right: 196px; top: 470px; padding: 8px 20px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 50px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(4deg); transform-origin: 100% 50%; }
+
+      .e, .d { opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="waterdrop-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="101.6">
+
+      <!-- Q1: echte Quelle, Seitenkopf der Shopify-Fallstudie (Logo + Titel), auf "Zahl" die Ergebnis-Liste mit
+           "140 Millionen Euro Umsatz im Jahr 2024", Rahmen auf "2024". Das 5,87 / waterdrop 7,15 / Zahl 9,77 / 2024 11,65 -->
+      <section id="q1" class="karte qb clip" data-start="5.8" data-duration="7.65" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>Shopify · Fallstudie waterdrop</div>
+        <div class="qkick">Die Geschichte</div>
+        <div class="qwide">
+          <div class="qlage" id="q1a" data-layout-allow-overflow><img src="assets/kopf.png" width="3141" height="831" alt="" />
+            <div class="rahmen" id="q1logo" style="left:46px;top:46px;width:452px;height:232px"></div>
+          </div>
+          <div class="qlage" id="q1b" style="opacity:0" data-layout-allow-overflow><img src="assets/liste.png" width="1752" height="735" alt="" />
+            <div class="rahmen" id="q1r" style="left:984px;top:567px;width:404px;height:108px;border-width:10px;border-radius:22px"></div>
+          </div>
+        </div>
+        <div class="qzeile">
+          <div class="chip" id="q1c1"><span class="mini"><svg viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" /></svg></span>140 Mio. € Umsatz</div>
+          <div class="chip an" id="q1c2"><span class="mini"><svg viewBox="0 0 24 24"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></svg></span><span class="verlauf">im Jahr 2024</span></div>
+        </div>
+      </section>
+
+      <!-- Reihe oben: Marken-Story ("Geschichte" 6,33) -->
+      <section id="reihe" class="oben clip" data-start="6.26" data-duration="3.4" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M12 7v14" /><path class="d" pathLength="1" d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg></div><div><div class="k2">Die Reihe</div><div class="t2">Marken-Story: <span class="verlauf">waterdrop</span></div></div></section>
+
+      <!-- Sticker "2024." (11,65) -->
+      <div id="st1" class="sticker clip" data-start="11.58" data-duration="1.6" data-track-index="2">2024.</div>
+
+      <!-- K2: Gründung und Produktversprechen. 2016 13,58 / gegründet 14,26 / einfachen 16,24 / verständlichen 16,82 / Produktversprechen 17,50 -->
+      <section id="k2" class="karte clip" data-start="13.51" data-duration="5.24" data-track-index="1"><div class="kicker">Gestartet mit</div><div class="reihe">
+        <div class="kachel" id="k2a" style="width:210px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M8 2v4" /><path class="e" pathLength="1" d="M16 2v4" /><rect class="e" pathLength="1" width="18" height="18" x="3" y="4" rx="2" /><path class="e" pathLength="1" d="M3 10h18" /></svg></div><div class="lab">2016</div><div class="sub"><span id="k2a1">gegründet</span></div></div>
+        <div class="pfeil" id="k2p"><svg viewBox="0 0 24 24"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></div>
+        <div class="kachel" id="k2b" style="width:330px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path class="e" pathLength="1" d="M9 18h6" /><path class="e" pathLength="1" d="M10 22h4" /></svg></div><div class="lab" id="k2bl">Produktversprechen</div><div class="sub"><span id="k2b1">einfach</span> <span id="k2b2">&amp; verständlich</span></div></div>
+      </div></section>
+
+      <!-- K3: statt fertiger Flasche. Flasche 20,06 / bekommst 21,60 / Microdrinks 22,64 / Wasser 24,77 / auflösen 25,00 -->
+      <section id="k3" class="karte clip" data-start="19.99" data-duration="5.96" data-track-index="1"><div class="kicker">Das Produktversprechen</div><div class="reihe">
+        <div class="kachel" id="k3a" style="width:206px"><div class="ico grau"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M8 2h8" /><path class="e" pathLength="1" d="M9 2v2.789a4 4 0 0 1-.672 2.219l-.656.984A4 4 0 0 0 7 10.212V20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-9.789a4 4 0 0 0-.672-2.219l-.656-.984A4 4 0 0 1 15 4.788V2" /><path class="e" pathLength="1" d="M7 15a6.472 6.472 0 0 1 5 0 6.47 6.47 0 0 0 5 0" /></svg></div><div class="lab">fertige Flasche</div><div class="sub">Getränk</div><span class="streich" id="k3as"></span><div class="badge nein" id="k3ab"><svg viewBox="0 0 24 24"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></div></div>
+        <div class="kachel" id="k3b" style="width:214px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path class="e" pathLength="1" d="m3.3 7 8.7 5 8.7-5" /><path class="e" pathLength="1" d="M12 22V12" /></svg></div><div class="lab">Microdrinks</div><div class="sub">kleine Würfel</div></div>
+        <div class="zeichen verlauf" id="k3plus">+</div>
+        <div class="kachel" id="k3c" style="width:214px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M5.116 4.104A1 1 0 0 1 6.11 3h11.78a1 1 0 0 1 .994 1.105L17.19 20.21A2 2 0 0 1 15.2 22H8.8a2 2 0 0 1-2-1.79z" /><path class="e" pathLength="1" d="M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0" /></svg></div><div class="lab">dein Wasser</div><div class="sub">selbst auflösen</div><div class="badge ok" id="k3cb"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+      </div></section>
+
+      <!-- K4a: Produktidee beeinflusst den Vertrieb. Produktidee 27,50 / Vertrieb 29,86 -->
+      <section id="k4a" class="karte clip" data-start="27.43" data-duration="3.37" data-track-index="1"><div class="kicker">Nicht nur eine Produktidee</div><div class="reihe" style="gap:22px">
+        <div class="kachel" id="k4a1" style="width:250px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path class="e" pathLength="1" d="M9 18h6" /><path class="e" pathLength="1" d="M10 22h4" /></svg></div><div class="lab">Produktidee</div></div>
+        <div class="pfeil" id="k4ap"><svg viewBox="0 0 24 24"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></div>
+        <div class="kachel" id="k4a2" style="width:250px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path class="e" pathLength="1" d="M15 18H9" /><path class="e" pathLength="1" d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle class="e" pathLength="1" cx="17" cy="18" r="2" /><circle class="e" pathLength="1" cx="7" cy="18" r="2" /></svg></div><div class="lab"><span class="verlauf">Vertrieb</span></div><div class="sub">wird beeinflusst</div></div>
+      </div></section>
+
+      <!-- K4b: noch nie probiert, wie schmeckt es. noch 32,09 / wie 35,24 -->
+      <section id="k4b" class="karte clip" data-start="32.02" data-duration="4.13" data-track-index="1"><div class="kicker">Noch nie probiert?</div><div class="reihe" style="gap:22px">
+        <div class="kachel" id="k4b1" style="width:260px"><div class="ico grau"><svg viewBox="0 0 24 24"><circle class="e" pathLength="1" cx="12" cy="12" r="10" /><path class="e" pathLength="1" d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path class="e" pathLength="1" d="M12 17h.01" /></svg></div><div class="lab">noch nie probiert</div></div>
+        <div class="pfeil" id="k4bp"><svg viewBox="0 0 24 24"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></div>
+        <div class="kachel" id="k4b2" style="width:260px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.54a2 2 0 0 0 2-1.72L18 8" /><path class="e" pathLength="1" d="M5 8h14" /><path class="e" pathLength="1" d="M7 15a6.47 6.47 0 0 1 5 0 6.47 6.47 0 0 0 5 0" /><path class="e" pathLength="1" d="m12 8 1-6h2" /></svg></div><div class="lab">Wie schmeckt's?</div><div class="sub">erst mal wissen</div></div>
+      </div></section>
+
+      <!-- Q2: echte Store-Fotos von der Fallstudienseite (Vorschaubild des Videos). Und genau 36,23 / Onlineshop 38,31 /
+           eigene 39,07 / Produkte 41,61 -->
+      <section id="q2" class="karte qs clip" data-start="36.16" data-duration="6.99" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>Shopify · Fallstudie waterdrop</div>
+        <div class="qkick links">Neben dem Onlineshop</div>
+        <div class="qbild">
+          <div class="qlage" id="q2a" data-layout-allow-overflow><img src="assets/store-foto.jpg" width="1920" height="1080" alt="" /></div>
+        </div>
+        <div class="qliste">
+          <div class="qrow" id="q2r1"><span class="mini"><svg viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" /></svg></span><span class="qt">Onlineshop</span><span class="ok"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></span></div>
+          <div class="qrow" id="q2r2"><span class="mini"><svg viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></svg></span><span class="qt">eigene Stores</span><span class="ok"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></span></div>
+          <div class="qrow" id="q2r3"><span class="mini"><svg viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /></svg></span><span class="qt"><span class="verlauf">Produkte erleben</span><small>selbst probieren</small></span></div>
+        </div>
+      </section>
+
+      <!-- Q3: echte Quelle, Titel der Fallstudie; auf "40" Zoom und Rahmen auf "über 40 Stores", auf "Verbindung" die Linie,
+           auf "Shopify" Rahmen auf "Shopify POS". Eine 43,27 / 40 45,08 / Verbindung 46,72 / Shopify 47,51 -->
+      <section id="q3" class="karte qb clip" data-start="43.2" data-duration="5.3" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>Shopify · Fallstudie waterdrop</div>
+        <div class="qkick">Stand der Fallstudie</div>
+        <div class="qwide">
+          <div class="qlage" id="q3a" data-layout-allow-overflow><img src="assets/kopf.png" width="3141" height="831" alt="" />
+            <div class="rahmen" id="q3r1" style="left:1600px;top:418px;width:955px;height:206px"></div>
+            <div class="rahmen" id="q3r2" style="left:48px;top:576px;width:820px;height:206px"></div>
+          </div>
+        </div>
+        <div class="qzeile">
+          <div class="chip" id="q3c1"><span class="mini"><svg viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></svg></span>40+ Stores weltweit</div>
+          <div class="verbinder" id="q3v"><svg viewBox="0 0 92 40"><path class="d" pathLength="1" d="M6 20 H86" /><path class="d" pathLength="1" d="M14 12 L6 20 L14 28" /><path class="d" pathLength="1" d="M78 12 L86 20 L78 28" /></svg></div>
+          <div class="chip an" id="q3c2"><span class="mini"><svg viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></svg></span><span class="verlauf">Shopify POS</span></div>
+        </div>
+      </section>
+
+      <!-- Punch-in 1 (48,53-51,95): oben "Damaliger Quellenstand", auf "nicht" (51,35) "nicht von heute". damaligen 50,01 -->
+      <section id="z1" class="oben clip" data-start="49.94" data-duration="2.01" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path class="d" pathLength="1" d="M3 3v5h5" /><path class="d" pathLength="1" d="M12 7v5l4 2" /></svg></div><div><div class="k2">Diese Zahl</div><div class="t2">Damaliger Quellenstand,<span class="neu verlauf" id="z1n">nicht von heute</span></div></div></section>
+
+      <!-- K6: Lernpunkte. E-Commerce-Shop 53,76 / mitnehmen 54,46 -->
+      <section id="k6" class="karte lang clip" data-start="53.69" data-duration="1.86" data-track-index="1"><div class="kicker">Was ich mitnehmen würde</div>
+        <div class="frage-titel" id="k6t"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="e" pathLength="1" d="M3 6h18" /><path class="e" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div>Für deinen <span class="verlauf">E-Commerce-Shop</span></div>
+        <div class="plaetze">
+          <div class="kachel platz" id="k6p1"><div class="frage">1</div></div>
+          <div class="kachel platz" id="k6p2"><div class="frage">2</div></div>
+          <div class="kachel platz" id="k6p3"><div class="frage">3</div></div>
+        </div>
+      </section>
+
+      <!-- K7: Learning 1. Erstens 55,65 / Produktversprechen 56,59 / weniger 60,17 / jeder 61,47 -->
+      <section id="k7" class="karte clip" data-start="55.58" data-duration="7.22" data-track-index="1"><div class="kicker">Learning 1 von 3</div><div class="reihe">
+        <div class="kachel nummer" id="k7n"><div class="ziffer verlauf">1</div></div>
+        <div class="kachel" id="k7a" style="width:204px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path class="e" pathLength="1" d="M9 18h6" /><path class="e" pathLength="1" d="M10 22h4" /></svg></div><div class="lab">Produkt-<br />versprechen</div><div class="sub">so klar</div></div>
+        <div class="kachel" id="k7b" style="width:204px"><div class="ico"><svg viewBox="0 0 24 24"><line class="e" pathLength="1" x1="10" x2="14" y1="2" y2="2" /><line class="e" pathLength="1" x1="12" x2="15" y1="14" y2="11" /><circle class="e" pathLength="1" cx="12" cy="14" r="8" /></svg></div><div class="lab">in wenigen<br />Sekunden</div></div>
+        <div class="kachel" id="k7c" style="width:204px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle class="e" pathLength="1" cx="9" cy="7" r="4" /><path class="e" pathLength="1" d="M22 21v-2a4 4 0 0 0-3-3.87" /><path class="e" pathLength="1" d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></div><div class="lab"><span class="verlauf">jeder</span><br />versteht es</div><div class="badge ok" id="k7cb"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+      </div></section>
+
+      <!-- K8a: Learning 2. Zweitens 62,91 / Erlebnis 64,55 / erste 67,43 -->
+      <section id="k8a" class="karte clip" data-start="62.84" data-duration="5.81" data-track-index="1"><div class="kicker">Learning 2 von 3</div><div class="reihe" style="gap:16px">
+        <div class="kachel nummer" id="k8n"><div class="ziffer verlauf">2</div></div>
+        <div class="kachel" id="k8a1" style="width:250px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path class="e" pathLength="1" d="M20 3v4" /><path class="e" pathLength="1" d="M22 5h-4" /></svg></div><div class="lab">Erlebnis</div><div class="sub">das Kunden brauchen</div></div>
+        <div class="pfeil" id="k8ap"><svg viewBox="0 0 24 24"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></div>
+        <div class="kachel" id="k8a2" style="width:250px"><div class="ico"><svg viewBox="0 0 24 24"><circle class="e" pathLength="1" cx="8" cy="21" r="1" /><circle class="e" pathLength="1" cx="19" cy="21" r="1" /><path class="e" pathLength="1" d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></svg></div><div class="lab"><span class="verlauf">erste</span> Bestellung</div><div class="sub">davor</div></div>
+      </div></section>
+
+      <!-- K8b: Beispiele. kurzes 70,23 / Produktpakete 71,97 / anderen 74,12 -->
+      <section id="k8b" class="karte clip" data-start="70.16" data-duration="4.79" data-track-index="1"><div class="kicker">Zum Beispiel</div><div class="reihe" style="gap:20px">
+        <div class="kachel" id="k8b1" style="width:226px"><div class="ico"><svg viewBox="0 0 24 24"><circle class="e" pathLength="1" cx="12" cy="12" r="10" /><path class="e" pathLength="1" d="M10 8 16 12 10 16Z" /></svg></div><div class="lab">kurzes Video</div></div>
+        <div class="kachel" id="k8b2" style="width:226px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path class="e" pathLength="1" d="M12 22V12" /><path class="e" pathLength="1" d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /><path class="e" pathLength="1" d="m7.5 4.27 9 5.15" /></svg></div><div class="lab">Produktpakete</div></div>
+        <div class="kachel" id="k8b3" style="width:226px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M13 4h3a2 2 0 0 1 2 2v14" /><path class="e" pathLength="1" d="M2 20h3" /><path class="e" pathLength="1" d="M13 20h9" /><path class="e" pathLength="1" d="M10 12v.01" /><path class="e" pathLength="1" d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z" /></svg></div><div class="lab">anderer Einstieg</div></div>
+      </div></section>
+
+      <!-- K9: Learning 3. drittens 75,21 / Verbrauchsprodukten 76,29 / erste 78,07 / zweiten 80,97 / dritten 81,75 / einfacher 82,79 -->
+      <section id="k9" class="karte lang clip" data-start="75.14" data-duration="10.26" data-track-index="1"><div class="kicker">Learning 3 von 3</div><div class="reihe" style="gap:12px">
+        <div class="kachel nummer" id="k9n"><div class="ziffer verlauf">3</div></div>
+        <div class="kachel" id="k9a" style="width:206px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path class="e" pathLength="1" d="M21 3v5h-5" /><path class="e" pathLength="1" d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path class="e" pathLength="1" d="M8 16H3v5" /></svg></div><div class="lab">Verbrauchs-<br />produkte</div></div>
+        <div class="kachel" id="k9k1" style="width:134px"><div class="ico grau"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="e" pathLength="1" d="M3 6h18" /><path class="e" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div><div class="lab">1. Kauf</div></div>
+        <div class="kachel" id="k9k2" style="width:134px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="e" pathLength="1" d="M3 6h18" /><path class="e" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div><div class="lab">2. Kauf</div><div class="badge ok" id="k9b2"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="kachel" id="k9k3" style="width:134px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="e" pathLength="1" d="M3 6h18" /><path class="e" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div><div class="lab">3. Kauf</div><div class="badge ok" id="k9b3"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+      </div><div class="schluss" id="k9s">Den <span class="verlauf">2. und 3. Kauf</span> einfacher machen.</div></section>
+
+      <!-- Sticker "DIE MARGE." (Marge 85,15) -->
+      <div id="st2" class="sticker clip" data-start="85.08" data-duration="1.55" data-track-index="2">DIE MARGE.</div>
+
+      <!-- Punch-in 2 (85,46-94,36): oben die Schlussaussage. gute 88,66 / Einkaufserlebnis 91,92 -->
+      <section id="z2" class="oben clip" data-start="88.59" data-duration="5.71" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle class="d" pathLength="1" cx="12" cy="8" r="6" /></svg></div><div><div class="k2">Eine bekannte Marke braucht</div><div class="t2">gute Idee<span class="neu verlauf" id="z2n">+ Einkaufserlebnis</span></div></div></section>
+
+      <!-- K10: Folgen als CTA. E-Commerce-Stories 95,65 / Plus 98,45 / weg 98,67 / nicht (zu verpassen) 100,63 -->
+      <section id="k10" class="karte lang clip" data-start="95.58" data-duration="6.02" data-track-index="1"><div class="kicker">Folgen</div>
+        <div class="frage-titel" id="k10t"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M12 7v14" /><path class="e" pathLength="1" d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg></div>Weitere <span class="verlauf">E-Commerce-Stories</span></div>
+        <div class="avatar" id="k10av" style="top:140px"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+          <div class="plus" id="k10plus"><svg viewBox="0 0 24 24" id="k10p1"><path d="M5 12h14" /><path d="M12 5v14" /></svg><svg viewBox="0 0 24 24" id="k10p2" style="opacity:0"><path d="M20 6 9 17l-5-5" /></svg></div>
+        </div>
+        <div class="folgen-text" style="top:150px">
+          <div class="zeile" id="k10z1">Plus drücken</div>
+          <div class="klein" id="k10z2">und keine Videos <span class="verlauf" style="font-weight:800">verpassen</span></div>
+        </div>
+        <div class="zeiger" id="k10zg"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      gsap.set(".e, .d", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
+
+      // Pfade zeichnen sich (erst sichtbar, wenn ein Stück gezeichnet ist)
+      function zeichne(sel, t, dauer = 0.5, stagger = 0.06) {
+        tl.set(sel, { opacity: 1 }, t + 0.06);
+        tl.to(sel, { strokeDashoffset: 0, duration: dauer, ease: "power2.inOut", stagger }, t);
+      }
+      // Karte kommt mit dem Kicker und ihrem ersten Teil, raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        if (document.querySelector(id + " .kicker")) tl.fromTo(id + " .kicker", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      // Karte oben über dem Kopf
+      function oben(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, an);
+        zeichne(id + " .d", an + 0.12, 0.6, 0.08);
+        tl.to(id, { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, aus - 0.25);
+      }
+      // Kachel kommt auf ihrem Wort: Scale 0.9 -> 1 und Fade, 0,3 s, ohne Überschwingen; ihr Icon zeichnet sich
+      function kachel(sel, t) {
+        tl.fromTo(sel, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, t);
+        if (document.querySelector(sel + " .e")) zeichne(sel + " .e", t + 0.08);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const auf = (sel, t, d = 0.25) => tl.to(sel, { opacity: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const chip = (sel, t) => tl.fromTo(sel, { opacity: 0, x: 14 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, t);
+      const rahmen = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out", transformOrigin: "50% 50%" }, t);
+      // Bildausschnitt: Lage = translate(x, y) scale(s) mit Ursprung oben links (Bildpixel -> Rahmenpixel)
+      const lage = (sel, x, y, s) => gsap.set(sel, { x, y, scale: s, transformOrigin: "0 0" });
+      function zeile(sel, t, vorige) {
+        tl.fromTo(sel, { opacity: 0, x: 12 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, t);
+        tl.to(sel, { backgroundColor: "#eafaf4", borderColor: "#7fdcc0", duration: 0.25 }, t);
+        if (vorige) {
+          tl.to(vorige, { backgroundColor: "#ffffff", borderColor: "#e5e7eb", duration: 0.25 }, t);
+          tl.to(vorige + " .qt", { color: "#6b7280", duration: 0.25 }, t);
+          tl.fromTo(vorige + " .ok", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t + 0.05);
+        }
+      }
+      const sticker = (sel, an, aus) => {
+        tl.fromTo(sel, { opacity: 0, scale: 0.7, rotation: 4 }, { opacity: 1, scale: 1, rotation: 4, duration: 0.2, ease: "power2.out" }, an);
+        tl.to(sel, { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, aus - 0.2);
+      };
+
+      // Q1: Seitenkopf der Fallstudie, ruhige Fahrt; auf "Zahl" die Ergebnis-Liste, Rahmen auf "im Jahr 2024"
+      karte("#q1", 5.8, 13.45);
+      ein("#q1 .qlabel", 5.84, 0.3);
+      lage("#q1a", 0, 0, 0.2483);
+      tl.to("#q1a", { scale: 0.268, x: -30, y: -6, duration: 3.9, ease: "sine.inOut" }, 5.85);
+      rahmen("#q1logo", 7.08);
+      lage("#q1b", -112, -282, 0.62);
+      tl.to("#q1b", { opacity: 1, duration: 0.35, ease: "power2.out" }, 9.7);
+      tl.to("#q1a", { opacity: 0, duration: 0.35, ease: "power2.out" }, 9.7);
+      tl.to("#q1b", { scale: 0.66, x: -150, y: -310, duration: 3.6, ease: "sine.inOut" }, 9.75);
+      chip("#q1c1", 9.7);
+      rahmen("#q1r", 11.58);
+      chip("#q1c2", 11.58);
+
+      // Reihe oben
+      oben("#reihe", 6.26, 9.66);
+
+      // Sticker 2024.
+      sticker("#st1", 11.58, 13.18);
+
+      // K2: 2016 gegründet -> Produktversprechen (einfach, verständlich)
+      karte("#k2", 13.51, 18.75);
+      kachel("#k2a", 13.51);
+      auf("#k2a1", 14.19);
+      ein("#k2p", 16.1, 0.25);
+      kachel("#k2b", 16.17);
+      auf("#k2b1", 16.17);
+      auf("#k2b2", 16.75);
+      tl.fromTo("#k2bl", { color: "#0b0c0e" }, { color: "#0aa673", duration: 0.25 }, 17.43);
+
+      // K3: fertige Flasche (gestrichen) -> Microdrinks + dein Wasser
+      karte("#k3", 19.99, 25.95);
+      kachel("#k3a", 19.99);
+      tl.to("#k3as", { scaleX: 1, duration: 0.35, ease: "power2.inOut" }, 21.53);
+      badge("#k3ab", 21.58);
+      tl.to("#k3a .ico, #k3a .lab, #k3a .sub", { opacity: 0.45, duration: 0.3 }, 21.65);
+      kachel("#k3b", 22.57);
+      tl.fromTo("#k3plus", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, 24.55);
+      kachel("#k3c", 24.7);
+      badge("#k3cb", 24.93);
+
+      // K4a: Produktidee -> Vertrieb
+      karte("#k4a", 27.43, 30.8);
+      kachel("#k4a1", 27.43);
+      ein("#k4ap", 29.7, 0.25);
+      kachel("#k4a2", 29.79);
+
+      // K4b: noch nie probiert -> wie schmeckt es
+      karte("#k4b", 32.02, 36.15);
+      kachel("#k4b1", 32.02);
+      ein("#k4bp", 35.1, 0.25);
+      kachel("#k4b2", 35.17);
+
+      // Q2: Store-Fotos, links die Theke mit Kasse, auf "Produkte" das rechte Bild (Flasche im Store)
+      karte("#q2", 36.16, 43.15);
+      ein("#q2 .qlabel", 36.2, 0.3);
+      lage("#q2a", 0, -109, 0.48);
+      tl.to("#q2a", { scale: 0.53, x: -60, y: -190, duration: 5.3, ease: "sine.inOut" }, 36.2);
+      zeile("#q2r1", 38.24);
+      zeile("#q2r2", 39.0, "#q2r1");
+      tl.to("#q2a", { x: -520, y: -150, scale: 0.5, duration: 0.7, ease: "power2.inOut" }, 41.5);
+      tl.to("#q2a", { scale: 0.52, x: -560, y: -170, duration: 1.0, ease: "sine.inOut" }, 42.2);
+      zeile("#q2r3", 41.54, "#q2r2");
+
+      // Q3: Titel der Fallstudie; "40" -> Zoom + Rahmen; "Verbindung" -> Linie; "Shopify" -> Rahmen auf Shopify POS
+      karte("#q3", 43.2, 48.5);
+      ein("#q3 .qlabel", 43.24, 0.3);
+      lage("#q3a", 0, 0, 0.2483);
+      tl.to("#q3a", { scale: 0.5, x: -648, y: -157, duration: 0.6, ease: "power2.inOut" }, 44.95);
+      rahmen("#q3r1", 45.3);
+      chip("#q3c1", 45.01);
+      zeichne("#q3v .d", 46.65, 0.45, 0.05);
+      tl.to("#q3a", { x: 0, y: -236, duration: 0.6, ease: "power2.inOut" }, 47.3);
+      tl.to("#q3r1", { opacity: 0, duration: 0.2 }, 47.3);
+      rahmen("#q3r2", 47.6);
+      chip("#q3c2", 47.44);
+
+      // Punch-in 1 oben
+      oben("#z1", 49.94, 51.95);
+      tl.fromTo("#z1n", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 51.28);
+
+      // K6: drei Lernpunkte
+      karte("#k6", 53.69, 55.55);
+      ein("#k6t", 53.72, 0.3);
+      zeichne("#k6t .e", 53.8, 0.4, 0.05);
+      kachel("#k6p1", 54.39);
+      kachel("#k6p2", 54.52);
+      kachel("#k6p3", 54.65);
+
+      // K7: Learning 1
+      karte("#k7", 55.58, 62.8);
+      kachel("#k7n", 55.58);
+      kachel("#k7a", 56.52);
+      kachel("#k7b", 60.1);
+      kachel("#k7c", 61.4);
+      badge("#k7cb", 61.64);
+
+      // K8a: Learning 2
+      karte("#k8a", 62.84, 68.65);
+      kachel("#k8n", 62.84);
+      kachel("#k8a1", 64.48);
+      ein("#k8ap", 67.25, 0.25);
+      kachel("#k8a2", 67.36);
+
+      // K8b: Beispiele
+      karte("#k8b", 70.16, 74.95);
+      kachel("#k8b1", 70.16);
+      kachel("#k8b2", 71.9);
+      kachel("#k8b3", 74.05);
+
+      // K9: Learning 3
+      karte("#k9", 75.14, 85.4);
+      kachel("#k9n", 75.14);
+      kachel("#k9a", 76.22);
+      kachel("#k9k1", 78.0);
+      kachel("#k9k2", 80.9);
+      kachel("#k9k3", 81.68);
+      badge("#k9b2", 82.72);
+      badge("#k9b3", 82.8);
+      ein("#k9s", 82.72, 0.35);
+
+      // Sticker DIE MARGE.
+      sticker("#st2", 85.08, 86.63);
+
+      // Punch-in 2 oben
+      oben("#z2", 88.59, 94.3);
+      tl.fromTo("#z2n", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 91.85);
+
+      // K10: Folgen. Titel mit der Karte, Plus wird auf "Plus" angetippt und auf "weg" zum Haken
+      karte("#k10", 95.58, null);
+      ein("#k10t", 95.62, 0.3);
+      zeichne("#k10t .e", 95.7, 0.4, 0.05);
+      tl.fromTo("#k10av", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 96.9);
+      ein("#k10z1", 97.66, 0.3);
+      tl.fromTo("#k10zg", { opacity: 0, x: 330, y: 300 }, { opacity: 1, x: 310, y: 290, duration: 0.15, ease: "power2.out" }, 97.9);
+      tl.to("#k10zg", { x: 92, y: 252, duration: 0.4, ease: "power2.inOut" }, 97.98);
+      tl.to("#k10zg", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 98.38);
+      tl.to("#k10zg", { scale: 1, duration: 0.15, ease: "power2.out" }, 98.46);
+      tl.to("#k10plus", { scale: 0.88, duration: 0.08, ease: "power2.in" }, 98.38);
+      tl.to("#k10plus", { scale: 1, duration: 0.15, ease: "power2.out" }, 98.46);
+      tl.to("#k10p1", { opacity: 0, duration: 0.15 }, 98.6);
+      tl.to("#k10p2", { opacity: 1, duration: 0.15 }, 98.6);
+      tl.to("#k10zg", { opacity: 0, duration: 0.3 }, 99.2);
+      ein("#k10z2", 100.56, 0.3);
+
+      tl.seek(0);
+      window.__timelines["waterdrop-skizzen"] = tl;
+    </script>
+  </body>
+</html>

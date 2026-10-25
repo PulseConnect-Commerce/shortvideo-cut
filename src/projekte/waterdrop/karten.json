@@ -1,0 +1,480 @@
+{
+ "hinweis": "Grafik-Stil nach karten-aufbau.md (wie A02 Clarity). Sekunden im geschnittenen Video (cut.json, 101,6 s). Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,10-0,12) pro Kartenwechsel (Abstand >= 1,5 s), tick (0,10) pro Kachel, pop auf den zwei Stickern, success auf \"Einkaufserlebnis\", klick auf dem Plus. Gebaut in hyperframes/waterdrop-skizzen/index.html. Echte Bilder nur aus der Shopify-Fallstudie (public/broll/waterdrop/fallstudie/, Quelle in QUELLE.txt), Label \"SHOPIFY · FALLSTUDIE WATERDROP\", nur zugeschnitten, gefahren, gezoomt und markiert; sonst Lucide-Icons und Text. Punch-ins: Schnitt 6 (48,5-52,0) und Schnitt 11 (85,5-94,4), dort keine Karte auf Brusthöhe.",
+ "karten": [
+  {
+   "id": "q1",
+   "wort": "Das (ist die Geschichte)",
+   "text": "Quellen-Karte breit (kopf.png, liste.png): Seitenkopf der Shopify-Fallstudie mit Logo und Titel, Rahmen um das Logo auf \"waterdrop\"; auf \"Zahl\" die Ergebnis-Liste (140 Millionen Euro Umsatz im Jahr 2024), Chip \"140 Mio. € Umsatz\"; auf \"2024\" Rahmen um \"im Jahr 2024\" und Chip \"im Jahr 2024\"",
+   "start": 5.8,
+   "ende": 13.45,
+   "teile": {
+    "waterdrop": 7.08,
+    "zahl": 9.7,
+    "2024": 11.58
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.8,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 9.7,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "reihe",
+   "wort": "Geschichte",
+   "text": "oben: Die Reihe – Marken-Story: waterdrop",
+   "start": 6.26,
+   "ende": 9.66,
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 6.3,
+     "volume": 0.08
+    }
+   ]
+  },
+  {
+   "id": "st1",
+   "wort": "2024",
+   "text": "Sticker 2024. neben dem Kopf",
+   "start": 11.58,
+   "ende": 13.18,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 11.58,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "2016",
+   "text": "GESTARTET MIT: 2016 (gegründet) → Produktversprechen (einfach & verständlich)",
+   "start": 13.51,
+   "ende": 18.75,
+   "teile": {
+    "2016": 13.51,
+    "gegründet": 14.19,
+    "einfachen": 16.17,
+    "verständlichen": 16.75,
+    "produktversprechen": 17.43
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 13.51,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 16.17,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Flasche",
+   "text": "DAS PRODUKTVERSPRECHEN: fertige Flasche (gestrichen, ✕ auf \"bekommst\") · Microdrinks (kleine Würfel) + dein Wasser (selbst auflösen ✓)",
+   "start": 19.99,
+   "ende": 25.95,
+   "teile": {
+    "flasche": 19.99,
+    "bekommst": 21.53,
+    "microdrinks": 22.57,
+    "wasser": 24.7,
+    "auflösen": 24.93
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 19.99,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 21.53,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 22.57,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.7,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4a",
+   "wort": "Produktidee",
+   "text": "NICHT NUR EINE PRODUKTIDEE: Produktidee → Vertrieb (wird beeinflusst)",
+   "start": 27.43,
+   "ende": 30.8,
+   "teile": {
+    "produktidee": 27.43,
+    "vertrieb": 29.79
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 27.43,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 29.79,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4b",
+   "wort": "noch (nie probiert)",
+   "text": "NOCH NIE PROBIERT?: noch nie probiert → Wie schmeckt's? (erst mal wissen)",
+   "start": 32.02,
+   "ende": 36.15,
+   "teile": {
+    "noch": 32.02,
+    "wie": 35.17
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 32.02,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 35.17,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "Und (genau deshalb)",
+   "text": "Quellen-Karte geteilt (store-foto.jpg, Vorschaubild des Videos auf der Fallstudienseite): links Store mit Theke und Kasse, auf \"Produkte\" Fahrt zum rechten Bild (Flasche im Store); rechts Onlineshop ✓ · eigene Stores ✓ · Produkte erleben",
+   "start": 36.16,
+   "ende": 43.15,
+   "teile": {
+    "onlineshop": 38.24,
+    "eigene": 39.0,
+    "produkte": 41.54
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 36.16,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 38.24,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 39.0,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 41.54,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "wort": "Eine (Fallstudie)",
+   "text": "Quellen-Karte breit (kopf.png): Titel \"Wie waterdrop® weltweit über 40 Stores mit Shopify POS verwaltet\"; auf \"40\" Zoom und Rahmen um \"über 40 Stores\", Chip \"40+ Stores weltweit\"; auf \"Verbindung\" Linie; auf \"Shopify\" Rahmen um \"Shopify POS\", Chip \"Shopify POS\" (schematisch: Stores ⇄ POS)",
+   "start": 43.2,
+   "ende": 48.5,
+   "teile": {
+    "40": 45.01,
+    "verbindung": 46.65,
+    "shopify": 47.44
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 43.2,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 45.01,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 47.44,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "z1",
+   "wort": "damaligen",
+   "text": "Punch-in 1,15 (Schnitt 48,5-52,0), oben: DIESE ZAHL – Damaliger Quellenstand, auf \"nicht\" \"nicht von heute\"",
+   "start": 49.94,
+   "ende": 51.95,
+   "teile": {
+    "damaligen": 49.94,
+    "nicht": 51.28
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 49.94,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 51.28,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "E-Commerce-Shop",
+   "text": "WAS ICH MITNEHMEN WÜRDE: Für deinen E-Commerce-Shop, Platzhalter 1 · 2 · 3 auf \"mitnehmen\"",
+   "start": 53.69,
+   "ende": 55.55,
+   "teile": {
+    "e-commerce-shop": 53.69,
+    "mitnehmen": 54.39
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 53.69,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 54.39,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Erstens",
+   "text": "LEARNING 1 VON 3: 1 · Produktversprechen (so klar) · in wenigen Sekunden · jeder versteht es ✓",
+   "start": 55.58,
+   "ende": 62.8,
+   "teile": {
+    "erstens": 55.58,
+    "produktversprechen": 56.52,
+    "weniger": 60.1,
+    "jeder": 61.4
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 55.58,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.52,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 60.1,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 61.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8a",
+   "wort": "Zweitens",
+   "text": "LEARNING 2 VON 3: 2 · Erlebnis (das Kunden brauchen) → erste Bestellung (davor)",
+   "start": 62.84,
+   "ende": 68.65,
+   "teile": {
+    "zweitens": 62.84,
+    "erlebnis": 64.48,
+    "erste": 67.36
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 62.84,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 64.48,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 67.36,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8b",
+   "wort": "kurzes",
+   "text": "ZUM BEISPIEL: kurzes Video · Produktpakete · anderer Einstieg",
+   "start": 70.16,
+   "ende": 74.95,
+   "teile": {
+    "kurzes": 70.16,
+    "produktpakete": 71.9,
+    "anderen": 74.05
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 70.16,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 71.9,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 74.05,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "drittens",
+   "text": "LEARNING 3 VON 3: 3 · Verbrauchsprodukte · 1. Kauf · 2. Kauf · 3. Kauf, auf \"einfacher\" ✓ an 2. und 3. und Schlusszeile \"Den 2. und 3. Kauf einfacher machen.\"",
+   "start": 75.14,
+   "ende": 85.4,
+   "teile": {
+    "drittens": 75.14,
+    "verbrauchsprodukten": 76.22,
+    "erste": 78.0,
+    "zweiten": 80.9,
+    "dritten": 81.68,
+    "einfacher": 82.72
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 75.14,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 76.22,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 78.0,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 80.9,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 81.68,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 82.72,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st2",
+   "wort": "Marge",
+   "text": "Sticker DIE MARGE. neben dem Kopf",
+   "start": 85.08,
+   "ende": 86.63,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 85.08,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "z2",
+   "wort": "gute (Idee)",
+   "text": "Punch-in 1,15 (Schnitt 85,5-94,4), oben: EINE BEKANNTE MARKE BRAUCHT – gute Idee, auf \"Einkaufserlebnis\" + Einkaufserlebnis",
+   "start": 88.59,
+   "ende": 94.3,
+   "teile": {
+    "gute": 88.59,
+    "einkaufserlebnis": 91.85
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 88.59,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 91.85,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "E-Commerce-Stories",
+   "text": "FOLGEN: Weitere E-Commerce-Stories; Profil mit Plus, Zeiger tippt auf \"Plus\", Plus wird auf \"weg\" zum Haken; \"Plus drücken\" / \"und keine Videos verpassen\" auf \"nicht (zu verpassen)\"",
+   "start": 95.58,
+   "ende": 101.6,
+   "teile": {
+    "plus": 98.38,
+    "weg": 98.6,
+    "verpassen": 100.56
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 95.58,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 98.38,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 100.56,
+     "volume": 0.08
+    }
+   ]
+  }
+ ]
+}
