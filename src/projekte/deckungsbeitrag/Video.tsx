@@ -1,5 +1,5 @@
 /**
- * Format FACE, Serie "E-Commerce einfach erklärt", E05 · Deckungsbeitrag (Folge 5). Aktueller Look: helle Karten
+ * Format FACE, Serie "E-Commerce einfach erklärt", E05 · Deckungsbeitrag. Aktueller Look: helle Karten
  * (karten-hell.md) als Aufbau-Karten mit Pill-Untertiteln (karten-aufbau.md, Vorlagen src/projekte/clarity und
  * src/projekte/waterdrop), nicht der alte dunkle Serien-Look von E02-E04. Veröffentlichung laut Kalender Mo 09.11.2026
  * 14:00.
@@ -12,7 +12,8 @@
  * Pill-Untertitel (y 1025), Karte (ab y 1075, Zahlenkarte bis 1483), alles über der Instagram-Zone (ab y 1500).
  * Karten als transparentes WebM aus hyperframes/deckungsbeitrag-skizzen (public/broll/deckungsbeitrag/skizzen.webm),
  * Zeiten und Töne in karten.json. Kein B-Roll aus alten Videos (Briefing über die Regie), Verweis auf E04 nur als Kicker
- * "Letzte Folge: ROAS".
+ * "Im letzten Video: ROAS" (seine Worte). Keine Folgennummern im Bild; zum Schluss nur das Folgen-Symbol
+ * (Pauls Korrektur 2026-10-25).
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";

@@ -1,13 +1,19 @@
 {
- "hinweis": "Aufbau-Karten (karten-aufbau.md) für E05 · Deckungsbeitrag. Sekunden im geschnittenen Video (cut.json, 43,7 s). Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) pro Kachel bzw. Zeile der Zahlenkarte, pop auf dem ersten Sticker, success auf 57 €, klick auf dem Plus. Gebaut in hyperframes/deckungsbeitrag-skizzen/index.html. Nur Lucide-Icons und Text; alle Zahlen sind seine gesprochenen Beispielwerte (Briefing: Zahlenkarte), kein B-Roll aus alten Videos.",
+ "hinweis": "Aufbau-Karten (karten-aufbau.md) für E05 · Deckungsbeitrag. Sekunden im geschnittenen Video (cut.json, 43,7 s). Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) pro Kachel bzw. Zeile der Zahlenkarte, pop auf dem ersten Sticker, success auf 57 €, klick auf dem Plus. Gebaut in hyperframes/deckungsbeitrag-skizzen/index.html. Nur Lucide-Icons und Text; alle Zahlen sind seine gesprochenen Beispielwerte (Briefing: Zahlenkarte), kein B-Roll aus alten Videos, keine Folgennummern.",
  "karten": [
   {
    "id": "reihe",
    "wort": "Willkommen",
-   "text": "Serie: FOLGE 5 · DIE SERIE – E-Commerce einfach erklärt",
+   "text": "Serie: DIE SERIE – E-Commerce einfach erklärt (ohne Folgennummer)",
    "start": 3.63,
    "ende": 6.03,
-   "sfx": [{ "datei": "whoosh.mp3", "at": 3.63, "volume": 0.12 }]
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 3.63,
+     "volume": 0.12
+    }
+   ]
   },
   {
    "id": "kA",
@@ -15,12 +21,36 @@
    "text": "HEUTE RECHNEN WIR: Ein Beispiel · Produkt 100 € verkauft ✓ · ≠ · verdient? 100 € durchgestrichen ✕",
    "start": 6.28,
    "ende": 14.44,
-   "teile": { "rechnen": 6.31, "produkt": 9.11, "100": 9.61, "verkaufst": 10.25, "nicht": 12.07, "verdient": 13.75, "hast": 14.11 },
+   "teile": {
+    "100": 9.61,
+    "rechnen": 6.31,
+    "produkt": 9.11,
+    "verkaufst": 10.25,
+    "nicht": 12.07,
+    "verdient": 13.75,
+    "hast": 14.11
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 6.28, "volume": 0.12 },
-    { "datei": "tick.mp3", "at": 9.11, "volume": 0.1 },
-    { "datei": "tick.mp3", "at": 10.3, "volume": 0.1 },
-    { "datei": "tick.mp3", "at": 13.75, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 6.28,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 9.11,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 10.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 13.75,
+     "volume": 0.1
+    }
    ]
   },
   {
@@ -29,19 +59,43 @@
    "text": "Sticker NICHT.",
    "start": 12.07,
    "ende": 13.82,
-   "sfx": [{ "datei": "pop.mp3", "at": 12.07, "volume": 0.1 }]
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 12.07,
+     "volume": 0.1
+    }
+   ]
   },
   {
    "id": "kB",
    "wort": "ROAS",
-   "text": "LETZTE FOLGE: ROAS – ROAS (Folge 4) · Kosten (schon besprochen ✓) → Jetzt rechnen wir weiter",
+   "text": "IM LETZTEN VIDEO: ROAS (wörtlich: \"beim ROAS im letzten Video\") – ROAS · Kosten (schon besprochen ✓) → Jetzt rechnen wir weiter",
    "start": 14.88,
    "ende": 19.8,
-   "teile": { "roas": 14.92, "kosten": 17.0, "gesprochen": 17.36, "jetzt": 18.22, "weiter": 19.38 },
+   "teile": {
+    "roas": 14.92,
+    "kosten": 17,
+    "gesprochen": 17.36,
+    "jetzt": 18.22,
+    "weiter": 19.38
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 14.88, "volume": 0.12 },
-    { "datei": "tick.mp3", "at": 17.0, "volume": 0.1 },
-    { "datei": "tick.mp3", "at": 18.22, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 14.88,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 17,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 18.22,
+     "volume": 0.1
+    }
    ]
   },
   {
@@ -50,13 +104,45 @@
    "text": "BEISPIELRECHNUNG: 100 € Nettoerlös − 35 € Ware − 5 € Versand − 3 € Zahlungsgebühr, Summenstrich, = 57 € Deckungsbeitrag (hervorgehoben)",
    "start": 19.98,
    "ende": 31.22,
-   "teile": { "100": 19.99, "nettoerloes": 20.66, "35": 22.5, "ware": 23.46, "5": 24.5, "versand": 24.92, "3": 26.02, "zahlungsgebuehr": 26.54, "dann": 27.98, "57": 29.24, "deckungsbeitrag": 30.08 },
+   "teile": {
+    "3": 26.02,
+    "5": 24.5,
+    "35": 22.5,
+    "57": 29.24,
+    "100": 19.99,
+    "nettoerloes": 20.66,
+    "ware": 23.46,
+    "versand": 24.92,
+    "zahlungsgebuehr": 26.54,
+    "dann": 27.98,
+    "deckungsbeitrag": 30.08
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 19.98, "volume": 0.12 },
-    { "datei": "tick.mp3", "at": 22.5, "volume": 0.1 },
-    { "datei": "tick.mp3", "at": 24.5, "volume": 0.1 },
-    { "datei": "tick.mp3", "at": 26.02, "volume": 0.1 },
-    { "datei": "success.mp3", "at": 29.24, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 19.98,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 22.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 26.02,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 29.24,
+     "volume": 0.1
+    }
    ]
   },
   {
@@ -73,10 +159,23 @@
    "text": "DAVON NOCH ZU DECKEN: 57 € Deckungsbeitrag → deckt → ? (unter anderem) → Fixkosten ✓",
    "start": 31.22,
    "ende": 35.4,
-   "teile": { "davon": 31.26, "unter": 31.96, "fixkosten": 33.02, "gedeckt": 33.6 },
+   "teile": {
+    "davon": 31.26,
+    "unter": 31.96,
+    "fixkosten": 33.02,
+    "gedeckt": 33.6
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 31.22, "volume": 0.12 },
-    { "datei": "tick.mp3", "at": 33.02, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 31.22,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 33.02,
+     "volume": 0.1
+    }
    ]
   },
   {
@@ -85,24 +184,50 @@
    "text": "WAS SAGT UNS DAS? Umsatz ≠ Gewinn",
    "start": 35.47,
    "ende": 38.7,
-   "teile": { "umsatz": 35.5, "gewinn": 35.97, "unterschiedliche": 37.61 },
+   "teile": {
+    "umsatz": 35.5,
+    "gewinn": 35.97,
+    "unterschiedliche": 37.61
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 35.47, "volume": 0.12 },
-    { "datei": "tick.mp3", "at": 35.97, "volume": 0.1 },
-    { "datei": "tick.mp3", "at": 37.61, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 35.47,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 35.97,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 37.61,
+     "volume": 0.1
+    }
    ]
   },
   {
    "id": "kF",
-   "wort": "Und (wenn du weitere)",
-   "text": "E-COMMERCE EINFACH ERKLÄRT: Mehr solche Erklärungen? · E01-E05 · Folge mir (+) → Gefolgt ✓",
-   "start": 38.73,
+   "wort": "folge",
+   "text": "Nur das Folgen-Symbol (Pauls Korrektur 2026-10-25): Bild mit Plus und \"Folgen\" auf \"folge\", Zeiger tippt auf \"Plus\" das Plus an, es wird zum Haken",
+   "start": 41.77,
    "ende": 43.7,
-   "teile": { "und": 38.76, "erklaerungen": 39.57, "folge": 41.77, "plus": 43.09 },
+   "teile": {
+    "folge": 41.77,
+    "plus": 43.09
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 38.73, "volume": 0.12 },
-    { "datei": "tick.mp3", "at": 41.77, "volume": 0.1 },
-    { "datei": "klick.mp3", "at": 43.09, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 41.77,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 43.09,
+     "volume": 0.1
+    }
    ]
   }
  ]

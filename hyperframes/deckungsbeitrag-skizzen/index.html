@@ -9,7 +9,7 @@
          nach karten-hell.md: eine helle Karte pro Gedanke unter dem Kopf (x 80-900, ab y 1075; Instagram-Zone unten ab
          1500), Teile kommen auf ihrem Wort dazu, Zustände wechseln (✓, ✕, Durchstreichen, ≠), Kernstück ist die
          Zahlenkarte (100 € − 35 € − 5 € − 3 € = 57 €, Zeile für Zeile auf der gesprochenen Zahl). Zwei Sticker-Wörter
-         links neben dem Kopf, CTA-Karte mit Folgen-Knopf. Zeiten = Sekunden im geschnittenen Video (cut.json, 43,7 s),
+         links neben dem Kopf, zum Schluss nur ein Folgen-Symbol (Plus wird angetippt und zum Haken). Zeiten = Sekunden im geschnittenen Video (cut.json, 43,7 s),
          Teile 2 Frames vor ihrem Wort; Liste mit Tönen in src/projekte/deckungsbeitrag/karten.json. Keine Logos, kein
          B-Roll aus alten Videos, nur Lucide-Icons (ISC) und Text; alle Zahlen sind seine gesprochenen Beispielwerte. -->
     <style>
@@ -87,21 +87,17 @@
       .zl.ergebnis .betrag { font-size: 58px; }
       .zl.ergebnis .zlab { font-weight: 800; color: #0b0c0e; font-size: 40px; }
 
-      /* Folgen (CTA) */
-      .frage-titel { position: absolute; left: 30px; top: 56px; display: flex; align-items: center; gap: 16px; font-size: 42px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
-      .frage-titel .ico { width: 54px; height: 54px; border-radius: 16px; }
-      .frage-titel .ico svg { width: 32px; height: 32px; }
-      .folgen { position: absolute; left: 30px; top: 132px; display: flex; gap: 10px; }
-      .chip { height: 46px; padding: 0 16px; border-radius: 13px; background: #fff; border: 1.5px solid #e5e7eb; display: flex; align-items: center; font-size: 24px; font-weight: 800; letter-spacing: 0.01em; color: #6b7280; opacity: 0; white-space: nowrap; }
-      .chip.jetzt { color: #0b0c0e; border: 2px solid transparent; background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #00e090, #31adec) border-box; }
-      .knopf { position: absolute; left: 30px; top: 196px; height: 72px; display: flex; align-items: center; gap: 18px; padding: 0 26px 0 12px; border-radius: 20px; background: #fff; border: 1.5px solid #e5e7eb; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07); opacity: 0; }
-      .avatar { position: relative; flex: none; width: 52px; height: 52px; border-radius: 26px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
-      .avatar svg { width: 30px; height: 30px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-      .plus { position: absolute; right: -8px; bottom: -8px; width: 30px; height: 30px; border-radius: 15px; background: #0b0c0e; border: 2.5px solid #fff; display: flex; align-items: center; justify-content: center; }
-      .plus svg { position: absolute; width: 18px; height: 18px; stroke: #fff; stroke-width: 3.4; }
+      /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Korrektur 2026-10-25) */
+      .folgekarte { position: absolute; left: 80px; top: 1075px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 42px; height: 42px; border-radius: 21px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 24px; height: 24px; stroke: #fff; stroke-width: 3.4; }
       .plus .haken { opacity: 0; stroke: #0b0c0e; }
-      .knopf .ktext { position: relative; font-size: 34px; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; }
-      .knopf .ktext span { display: inline-block; }
+      .ftext { position: relative; font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .folgekarte .zeiger { left: 0; top: 0; }
       .zeiger { position: absolute; width: 44px; height: 44px; opacity: 0; z-index: 3; }
       .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
 
@@ -115,7 +111,7 @@
     <div id="root" data-composition-id="deckungsbeitrag-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="43.7">
 
       <!-- Serie: "Willkommen zu E-Commerce einfach erklärt" (Willkommen 3,70) -->
-      <section id="reihe" class="reihenkarte clip" data-start="3.63" data-duration="2.4" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path class="d" pathLength="1" d="M22 10v6" /><path class="d" pathLength="1" d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg></div><div><div class="k2">Folge 5 · Die Serie</div><div class="t2">E-Commerce <span class="verlauf">einfach erklärt</span></div></div></section>
+      <section id="reihe" class="reihenkarte clip" data-start="3.63" data-duration="2.4" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path class="d" pathLength="1" d="M22 10v6" /><path class="d" pathLength="1" d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg></div><div><div class="k2">Die Serie</div><div class="t2">E-Commerce <span class="verlauf">einfach erklärt</span></div></div></section>
 
       <!-- A: Beispiel, verkauft ≠ verdient. rechnen 6,35 / Produkt 9,18 / 100 9,68 / verkaufst 10,32 / nicht 12,14 / verdient 13,82 / hast 14,18 -->
       <section id="kA" class="karte hoch clip" data-start="6.28" data-duration="8.16" data-track-index="1"><div class="kicker">Heute rechnen wir</div><div class="reihe">
@@ -128,9 +124,9 @@
       <!-- Sticker "NICHT." ("nicht," 12,14) -->
       <div id="st1" class="sticker clip" data-start="12.07" data-duration="1.75" data-track-index="2">NICHT.</div>
 
-      <!-- B: Letzte Folge ROAS. ROAS 14,95 / Kosten 17,07 / gesprochen 17,43 / Jetzt 18,29 / weiter 19,45 -->
-      <section id="kB" class="karte clip" data-start="14.88" data-duration="4.92" data-track-index="1"><div class="kicker">Letzte Folge: ROAS</div><div class="reihe">
-        <div class="kachel" id="b1" style="width:200px"><div class="ico"><svg viewBox="0 0 24 24"><circle class="e" pathLength="1" cx="12" cy="12" r="10" /><circle class="e" pathLength="1" cx="12" cy="12" r="6" /><circle class="e" pathLength="1" cx="12" cy="12" r="2" /></svg></div><div class="lab">ROAS</div><div class="sub">Folge 4</div></div>
+      <!-- B: Im letzten Video: ROAS (wörtlich "beim ROAS im letzten Video"). ROAS 14,95 / Kosten 17,07 / gesprochen 17,43 / Jetzt 18,29 / weiter 19,45 -->
+      <section id="kB" class="karte clip" data-start="14.88" data-duration="4.92" data-track-index="1"><div class="kicker">Im letzten Video: ROAS</div><div class="reihe">
+        <div class="kachel" id="b1" style="width:200px"><div class="ico"><svg viewBox="0 0 24 24"><circle class="e" pathLength="1" cx="12" cy="12" r="10" /><circle class="e" pathLength="1" cx="12" cy="12" r="6" /><circle class="e" pathLength="1" cx="12" cy="12" r="2" /></svg></div><div class="lab">ROAS</div></div>
         <div class="kachel" id="b2" style="width:226px"><div class="ico"><svg viewBox="0 0 24 24"><circle class="e" pathLength="1" cx="8" cy="8" r="6" /><path class="e" pathLength="1" d="M18.09 10.37A6 6 0 1 1 10.34 18" /><path class="e" pathLength="1" d="M7 6h1v4" /><path class="e" pathLength="1" d="m16.71 13.88.7.71-2.82 2.82" /></svg></div><div class="lab">Kosten</div><div class="sub" id="b2s" style="opacity:0">schon besprochen</div><div class="badge ok" id="b2b"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></div></div>
         <div class="pfeil" id="b3p"><svg viewBox="0 0 24 24"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></div>
         <div class="kachel" id="b3" style="width:226px"><div class="ico"><svg viewBox="0 0 24 24"><rect class="e" pathLength="1" width="16" height="20" x="4" y="2" rx="2" /><path class="e" pathLength="1" d="M8 6h8" /><path class="e" pathLength="1" d="M16 14v4" /><path class="e" pathLength="1" d="M16 10h.01" /><path class="e" pathLength="1" d="M12 10h.01" /><path class="e" pathLength="1" d="M8 10h.01" /><path class="e" pathLength="1" d="M12 14h.01" /><path class="e" pathLength="1" d="M8 14h.01" /><path class="e" pathLength="1" d="M12 18h.01" /><path class="e" pathLength="1" d="M8 18h.01" /></svg></div><div class="lab">Jetzt</div><div class="sub" id="b3s" style="opacity:0">rechnen wir weiter</div></div>
@@ -169,11 +165,10 @@
         <div class="kachel" id="e3" style="width:250px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z" /><path class="e" pathLength="1" d="M2 9v1c0 1.1.9 2 2 2h1" /><path class="e" pathLength="1" d="M16 11h.01" /></svg></div><div class="lab">Gewinn</div></div>
       </div></section>
 
-      <!-- F: Folgen. Und 38,80 (Titel mit der Karte) / Erklärungen 39,64 (Folgen der Serie) / folge 41,84 / Plus 43,16 -->
-      <section id="kF" class="karte hoch clip" data-start="38.73" data-duration="4.97" data-track-index="1"><div class="kicker">E-Commerce einfach erklärt</div>
-        <div class="frage-titel" id="f0"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path class="e" pathLength="1" d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg></div>Mehr solche <span class="verlauf">Erklärungen?</span></div>
-        <div class="folgen"><div class="chip" id="c1">E01</div><div class="chip" id="c2">E02</div><div class="chip" id="c3">E03</div><div class="chip" id="c4">E04</div><div class="chip jetzt" id="c5">E05 · Deckungsbeitrag</div></div>
-        <div class="knopf" id="f1"><div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div><div class="ktext"><span id="ft1">Folge mir</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Gefolgt</span></div></div>
+      <!-- F: nur das Folgen-Symbol. folge 41,84 (Karte kommt, Ring) / Plus 43,16 (angetippt, wird zum Haken) -->
+      <section id="kF" class="folgekarte clip" data-start="41.77" data-duration="1.93" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
         <div class="zeiger" id="f2"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
       </section>
     </div>
@@ -237,7 +232,7 @@
       tl.fromTo("#st1", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, 12.07);
       tl.to("#st1", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 13.6);
 
-      // B: Letzte Folge ROAS -> Kosten (schon besprochen ✓) -> jetzt rechnen wir weiter
+      // B: Im letzten Video: ROAS -> Kosten (schon besprochen ✓) -> jetzt rechnen wir weiter
       karte("#kB", 14.88, 19.8);
       kachel("#b1", 14.92);
       kachel("#b2", 17.0);
@@ -281,22 +276,18 @@
       kachel("#e3", 35.97);
       tl.fromTo("#e2", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 37.61);
 
-      // F: Folgen. Titel mit der Karte, Folgen der Serie auf "Erklärungen", Knopf auf "folge", Zeiger tippt das Plus
-      karte("#kF", 38.73, null);
-      ein("#f0", 38.76, 0.3);
-      zeichne("#f0 .e", 38.82, 0.4, 0);
-      ["#c1", "#c2", "#c3", "#c4", "#c5"].forEach((c, i) => ein(c, 39.57 + i * 0.08, 0.25));
-      ein("#f1", 41.77, 0.3);
-      tl.fromTo("#f2", { opacity: 0, x: 420, y: 300 }, { opacity: 1, x: 400, y: 290, duration: 0.15, ease: "power2.out" }, 42.3);
-      tl.to("#f2", { x: 80, y: 244, duration: 0.55, ease: "power2.inOut" }, 42.45);
+      // F: nur das Folgen-Symbol. Karte auf "folge" (Ring um das Bild), Zeiger tippt auf "Plus" das Plus an, es wird zum Haken
+      tl.fromTo("#kF", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 41.77);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 41.9);
+      tl.fromTo("#f2", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 42.3);
+      tl.to("#f2", { x: 94, y: 92, duration: 0.55, ease: "power2.inOut" }, 42.45);
       tl.to("#f2", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 43.02);
       tl.to("#f2", { scale: 1, duration: 0.15, ease: "power2.out" }, 43.1);
       tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 43.09);
       tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 43.09);
       tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 43.12);
-      tl.to("#ft1", { opacity: 0, duration: 0.15 }, 43.09);
       tl.to("#ft2", { opacity: 1, duration: 0.2 }, 43.12);
-      tl.to("#f1", { borderColor: "#31adec", duration: 0.2 }, 43.09);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 43.12);
 
       tl.seek(0);
       window.__timelines["deckungsbeitrag-skizzen"] = tl;
