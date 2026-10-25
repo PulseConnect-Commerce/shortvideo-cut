@@ -85,3 +85,15 @@ genau auf dem gesprochenen Wort dazu oder ändert seinen Zustand. So erklärt di
 - SFX: leiser Tick (0.10) pro Kachel, Whoosh (0.12) nur beim Kartenwechsel. Abstände ≥ 1,5 s gelten für Whooshes, nicht
   für Ticks.
 - Eine Karte erklärt einen Gedanken: höchstens 4–5 Elemente. Danach kommt eine neue Karte.
+
+## Marken-Shops als Hintergrund (seine Vorgabe 2026-10-25)
+
+Er: "Ich finde wir nutzen derzeit für die Markenstories sowie die Short Videos, bei denen es um bekannte Marken geht, viel zu wenige Ausschnitte aus den eigentlichen Shops der Marken oder Ausschnitte aus deren Websites/Shops als Screenshot für den Hintergrund".
+
+Gilt für **jede M-Folge (Marken-Story)** und **jedes Video, in dem eine bekannte Marke vorkommt** (News mit REWE, OTTO, Amazon, DHL usw.; Hero über eine Marke):
+
+- **Echte Screenshots aus dem Shop bzw. der Website der Marke** (Playwright, Chromium ist vorinstalliert): Startseite, Produktseite, Kategorie, Warenkorb/Abo, Store-Finder, Über-uns, Presse-/Fallstudienseite. Cookie-Banner wegklicken, keine persönlichen Daten, kein Login. Pro Video **mindestens 4–6 verschiedene** Ausschnitte.
+- **Als Hintergrund hinter ihm**: er steht freigestellt vor dem Screenshot statt vor seinem Zimmer (`npm run portrait -- <projekt> --hintergrund public/broll/<projekt>/hg-x.png@<von>-<bis> … --ausschnitt <scale>,<hoch>[,<x>]`, siehe stil-news "In den Take rechnen"; Vorbild: `src/projekte/easyjet`, eins seiner besten Videos). Der Hintergrund wechselt nach Inhalt etwa alle 4–7 s, passend zum Satz (er sagt "Produkt" → Produktseite, "Stores" → Store-Finder). Das Bild ist als 1080x1920 gestaltet (Screenshot groß, leicht abgedunkelt bzw. weichgezeichnet genug, dass er, die Pille und die Karten lesbar bleiben; das Logo/der relevante Teil sichtbar neben oder über ihm, nie hinter dem Gesicht).
+- Zwischen den Hintergrund-Stellen darf er vor seinem weichgezeichneten Zimmer stehen (Hook, Learnings, CTA).
+- Zusätzlich bleiben die Quellen-Karten (Fallstudie, Pressemeldung, App-Store) für Belege.
+- Nur echte, aktuelle Seiten, nichts nachbauen; Datum im Übergabebericht nennen.

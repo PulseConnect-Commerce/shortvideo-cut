@@ -5,6 +5,8 @@ description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~4
 
 # Stil NEWS / Reaction
 
+> **MARKEN-SHOPS ALS HINTERGRUND ab 2026-10-25:** In M-Folgen und allen Videos mit bekannten Marken steht er abschnittsweise freigestellt vor echten Screenshots aus Shop/Website der Marke (mind. 4–6 je Video, Wechsel alle 4–7 s nach Inhalt). Details: `.claude/skills/faber-cut/karten-aufbau.md`, Abschnitt "Marken-Shops als Hintergrund".
+>
 > **AUFBAU-KARTEN ab 2026-10-25 (alle Formate, geht allem darunter vor):** Grafiken nach `.claude/skills/faber-cut/karten-aufbau.md` (Vorlagen: `src/projekte/clarity`, `src/projekte/waterdrop`): eine helle Aufbau-Karte pro Gedanke, die sich Wort für Wort aufbaut, echte Quellen als Quellen-Karte, Pill-Untertitel (`src/lib/pillen.tsx`). **Er steht höher im Bild (Kopf oben knapp unter der Safe-Zone), Untertitel-Pille und Karten darunter** (seine Vorgabe 2026-10-25).
 >
 > **HELLE KARTEN ab 2026-10-22 (alle Formate, geht dem freigegebenen Look darunter vor):** die Skizzen über dem Kopf

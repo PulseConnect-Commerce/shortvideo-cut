@@ -37,6 +37,8 @@ Skizzen mit HyperFrames), 6 (eigene Prüfung: Sync, Pacing, Standbilder, Raster)
 
 ## Farbe und Karten
 
+**Ab 2026-10-25, Marken:** In M-Folgen und Videos mit bekannten Marken echte Shop-/Website-Screenshots der Marke als Hintergrund hinter ihm (`npm run portrait --hintergrund`), siehe karten-aufbau.md "Marken-Shops als Hintergrund".
+
 **Ab 2026-10-25 (alle Formate, geht vor):** Aufbau-Karten und Pill-Untertitel nach `.claude/skills/faber-cut/karten-aufbau.md`; **er steht höher im Bild (Kopfoberkante ~y 300–330), Untertitel-Pille und Karten unter dem Kopf**; das ersetzt dort "Augen bei y 800–830".
 
 **Ab 2026-10-22 (alle Formate):** helle Karten nach `.claude/skills/faber-cut/karten-hell.md`, Vorlage
