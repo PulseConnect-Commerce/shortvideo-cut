@@ -36,7 +36,7 @@ const BROLL: { file: string; cue: string; nach: string; dauer: number; text: str
 /** Zoom-Schnitte (Sekunden im Video, jeweils auf einem Schnitt) */
 const ZOOM = [[184.3, 189.7], [243.8, 999]];
 
-export const makeVideo = (C: Cut, hook: { line1: string; line2: string }): React.FC<Props> => {
+export const makeVideo = (C: Cut, hook: { line1: string; line2: string } | null): React.FC<Props> => {
   const K = karten(C);
   const B = BROLL.map((b) => ({ ...b, von: Math.round(C.cue(b.cue, b.nach ? C.W(b.nach) : 0)) }));
   const HOOK_ENDE = C.cue("2016");
@@ -51,9 +51,11 @@ export const makeVideo = (C: Cut, hook: { line1: string; line2: string }): React
         <AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: "540px 740px" }}>
           <Takes C={C} voice={voice} transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`} transformOrigin="50% 0%" grade={STIL.gradeSanft} />
         </AbsoluteFill>
-        <AbsoluteFill style={{ transform: "translateY(40px) scale(0.9)", transformOrigin: "50% 0%" }}>
-          <HookTitle fr={fr} line1={hook.line1} line2={hook.line2} outAt={HOOK_ENDE} />
-        </AbsoluteFill>
+        {hook && (
+          <AbsoluteFill style={{ transform: "translateY(40px) scale(0.9)", transformOrigin: "50% 0%" }}>
+            <HookTitle fr={fr} line1={hook.line1} line2={hook.line2} outAt={HOOK_ENDE} />
+          </AbsoluteFill>
+        )}
         {K.map((k) => (
           <Sequence key={k.von} from={k.von} durationInFrames={Math.round(k.dauer * C.FPS)} layout="none">
             <OffthreadVideo

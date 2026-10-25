@@ -64,6 +64,8 @@ Abschnittswechesel, Einblenden, usw. Es soll dabei aber nicht zu übertrieben au
 - Nie `impact`, `riser`, `stamp`, `glitzer` im hellen Look (zu laut, zu verspielt). Kein Effekt auf jedem Wort;
   mindestens 1,5 s Abstand zwischen zwei Effekten; Effekte immer leiser als die Stimme (checks --stems).
 
+**Hook-Titel nur, wenn er etwas bringt** (seine Vorgabe 2026-10-25: "können wir mal versuchen nicht in jedem Video eine Hook als Titel mit anzuzeigen? Eine Hook würde zum Beispiel am meisten dann Sinn machen, wenn wir z.B. einen Markennamen verwenden. Oder gerade beim ehrlichen Video 2 … ohne Hook im Titel"): Hook-Titel einblenden bei **Markennamen** (REWE, Amazon, waterdrop, Shopify …), **News** und **einer starken Zahl**; **weglassen** bei persönlichen, ehrlichen Videos (Story, Meinung) und wenn der gesprochene erste Satz allein trägt. Im Zweifel den Cutter entscheiden lassen und es in der Übergabekarte begründen.
+
 **Hook-Titel** (seine Vorgabe 2026-10-23, Referenz easyJet-Video youtube.com/shorts/DXlUyWNQnzQ: "die Hook in der
 Schriftart und Größe machen wie im verlinkten Video von uns … mit der neuen Verlauffarbe, statt dem knalligen
 Grünton"): `<DesignRahmen design="verlauf">` (src/lib/design.tsx). Erste Zeile groß, weiß, Anton mit dunkler Kontur
