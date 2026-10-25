@@ -112,3 +112,20 @@ Startlinie, handschriftlich "Vorsprung"), die den Gedanken ohne Ton erklärt.
   PulseConnect-Grün #00E090 oder -Blau #31ADEC; Rot nur für "Fehler").
 - Rahmen bleibt: helle Karte unter dem Kopf, Pill-Untertitel darüber, ruhige Motion nach dem Motion-Skill.
 - Status: Probe in P04 (Page Builder). Erst nach seinem OK fest für alle Videos.
+
+## Marken-Story im Editorial-Stil (PROBE ab M06, 2026-10-25)
+
+Sein Referenzvideo (Marken-Story Just Spices, fremdes Video, nur Machart): er freigestellt vor ruhigem, hellem Grund;
+**über dem Kopf große, kurze Kennzahlen und Schlagzeilen** in eleganter Serife mit einer Akzentfarbe ("Multimillionär
+ohne Gewinn?", "60 Mio. € Umsatz", "70 % online", "0 € Gewinn", "Investoren: Bitburger + trivago", "2021 · ca. 250 Mio.
+€ · 85 % an Kraft Heinz", Balken "Umsatz 60 → 31 Mio. €", "−13 Mio. € Verlust 2024", "Juni 2026 · Onlineshop
+geschlossen"); **Produktfotos und Gründerfoto** als kleine freigestellte Bilder, die neben dem Kopf aufpoppen; die
+Zahlen kommen genau auf das Wort, ein roter Strich darunter zeichnet sich.
+
+Für unsere M-Folgen:
+- Kennzahl/Schlagzeile (1–5 Wörter) **über dem Kopf**, wenn er höher steht, sonst direkt über dem Kopf in den freien
+  Raum; Serife oder Geist im Wechsel, Akzent im PulseConnect-Verlauf statt Rot (Rot nur für Verlust/Minus).
+- Echte Produkt- und Gründerfotos aus dem Shop / der Presse-Seite der Marke als freigestellte Sticker (Quelle notieren).
+- Marken-Shop-Screenshots als Hintergrund (Abschnitt oben) für die Shop-/Produkt-Passagen.
+- Erklärende Metaphern (Balken schrumpft, Waage …) weiter unter dem Kopf.
+- **Keine Memes aus Filmen/Serien** (SpongeBob usw.): keine Rechte.
