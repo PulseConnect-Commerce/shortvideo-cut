@@ -22,7 +22,7 @@ So gehst du vor:
 
 **Helle Karten ab 2026-10-22 (alle Formate, geht dem Look darunter vor):** Skizzen auf weißer oder hellgrauer
 Karte, saubere Linien-Icons statt Kreide, ruhige Bewegung (Motion-Skill), Titel zweifarbig mit PulseConnect-Verlauf
-Grün → Hellblau statt einer Leuchtfarbe je Format. Details: `karten-hell.md`.
+Grün → Hellblau statt einer Leuchtfarbe je Format. Details: `karten-hell.md`. Ab 2026-10-25 Aufbau-Karten über dem Kopf und Pill-Untertitel auf der Brust: `karten-aufbau.md`.
 
 **Freigegebener Look ab 2026-10-17 (alle Formate außer der Serie; "perfekt, genau so gefällt mir das. Bitte so als
 Skill abspeichern für die nächsten Videos"):** Briefing Punkt für Punkt, wenige Schnitte ohne Zoom-Wechsel (nur ein

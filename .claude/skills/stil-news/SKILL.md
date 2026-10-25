@@ -5,6 +5,8 @@ description: Schnittstil NEWS/Reaction von PulseConnect (News oder Reactions, ~4
 
 # Stil NEWS / Reaction
 
+> **AUFBAU-KARTEN ab 2026-10-25 (alle Formate, geht allem darunter vor):** Grafiken nach `.claude/skills/faber-cut/karten-aufbau.md` (Vorlagen: `src/projekte/clarity`, `src/projekte/waterdrop`): eine helle Aufbau-Karte pro Gedanke, die sich Wort für Wort aufbaut, echte Quellen als Quellen-Karte, Pill-Untertitel (`src/lib/pillen.tsx`). **Karten über dem Kopf, Untertitel unter dem Kopf auf der Brust** (seine Vorgabe 2026-10-25).
+>
 > **HELLE KARTEN ab 2026-10-22 (alle Formate, geht dem freigegebenen Look darunter vor):** die Skizzen über dem Kopf
 > stehen auf **weißer oder hellgrauer Karte** statt dunkler, mit sauberen Linien-Icons statt Kreide-Skizzen, ruhiger
 > Bewegung nach dem Motion-Skill und **zweifarbigem Titel** (zweiter Teil im PulseConnect-Verlauf Grün → Hellblau).

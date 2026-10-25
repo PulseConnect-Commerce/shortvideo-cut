@@ -1,6 +1,8 @@
 # Aufbau-Karten und Pill-Untertitel (Probe nach Pauls Referenz, 2026-10-24)
 
-Status: **PROBE**, zuerst in A02 Clarity. Erst nach Pauls OK in die Stil-Skills übernehmen.
+Status: **FREIGEGEBEN** für alle neuen Videos (Paul hat A02 und M05 am 24.10. abgenommen und eingeplant).
+
+**Platz der Karten (seine Vorgabe 2026-10-25):** "Bitte bei allen Videos die Motion Captions über dem Kopf anzeigen. So sieht mein Kopf sonst komplett abgeschnitten aus und über dem Kopf ist noch sehr viel Platz" und "Und der Untertitel kann dann eben unter dem Kopf auf der Brust angezeigt werden". Also: **alle Karten** (Aufbau-, Quellen-, Learning-, Umfrage-, Folgen-Karten) **über dem Kopf**, unter der oberen App-Zone und mit Abstand zum Haar, nie auf Brusthöhe. Reicht der Platz nicht, wird die Karte flacher, seine Bildlage (Augen ~800–830) bleibt. Der Hook-Titel und eine Karte stehen nie gleichzeitig oben. **Die Pill-Untertitel stehen unter dem Kopf auf der Brust**, unter dem Kinn und über der Instagram-Zone unten (ab y 1500).
 
 Paul (2026-10-24) schickte ein Referenzvideo (deutscher Creator erklärt „Claude Duet“) und fragte: "Kriegst du die
 Motion Captions so eingeblendet, wie im Referenzvideo? Die Farben sollen natürlich immer noch meinem CI entsprechen,
@@ -19,7 +21,8 @@ genau auf dem gesprochenen Wort dazu oder ändert seinen Zustand. So erklärt di
 ## Bausteine
 
 1. **Aufbau-Karte**
-   - Breite helle Karte, etwa 1000 × 260–300 px, auf Brusthöhe unter dem Kinn. Gesicht bleibt frei.
+   - Breite helle Karte, etwa 820 px breit (rechte TikTok-Zone frei), so hoch wie der Platz über dem Kopf erlaubt,
+     **über dem Kopf**. Gesicht und Haar bleiben frei.
    - Oben links ein kleiner Kicker in Versalien, grau und gesperrt, z. B. „ASSISTENTEN, DIE SICH SELBST MELDEN“. Er
      nennt das Thema des Gedankens.
    - Die Karte kommt leer mit dem Kicker herein. Kurz danach fliegt das erste Element ein. Leere Karten nie länger als
@@ -59,7 +62,8 @@ genau auf dem gesprochenen Wort dazu oder ändert seinen Zustand. So erklärt di
    - Kurze Phrasen von 2–4 Wörtern in einer dunklen, abgerundeten Pille (rgba(10,12,14,0.82), Geist 700, ~44 px,
      weiß).
    - Das gerade gesprochene Wort leuchtet im PulseConnect-Grün #00E090 (statt Orange wie in der Referenz).
-   - Position direkt über der Karte, ohne Karte etwa auf Brusthöhe.
+   - Position **unter dem Kopf auf der Brust** (unter dem Kinn, über der Instagram-Zone ab y 1500), auch wenn eine
+     Karte über dem Kopf steht.
    - Bei Split-Screen sitzt die Pille auf der Naht.
 
 9. **Split-Screen mit Quelle (NEWS)**
