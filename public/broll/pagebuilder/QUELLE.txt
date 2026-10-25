@@ -1,0 +1,16 @@
+Hintergründe und Quellen-Bilder für P04 · Brauchst du einen Page Builder? (alle aufgenommen am 25.10.2026, nur zugeschnitten, skaliert, leicht abgedunkelt/weichgezeichnet; nichts dazugemalt)
+
+Hintergründe (1080x1920, gestaltet mit hyperframes/pagebuilder-hg/gestalte.py aus den Screenshots in hyperframes/pagebuilder-hg/screenshots/, Playwright/Chromium, mobile Ansicht):
+- hg-abschnitte.png: Shopify Hilfe-Center "Abschnitte und Blöcke" https://help.shopify.com/de/manual/online-store/themes/theme-structure/sections-and-blocks
+- hg-sidekick.png: Shopify "Sidekick" https://www.shopify.com/de/sidekick ("Das ist Sidekick.")
+- hg-magic.png: Shopify Hilfe-Center "Theme-Blöcke im Theme-Editor automatisch generieren" https://help.shopify.com/de/manual/online-store/themes/customizing-themes/theme-editor/sidekick/generate-blocks (Kopf der Seite; die schwebende Frage-Leiste unten ist abgeschnitten)
+- hg-blockgen.png: Shopify Editions Sommer '25, "BLÖCKE GENERIEREN" https://www.shopify.com/de/editions/summer2025
+- hg-hinweise.png: wie hg-magic, Abschnitt "Wichtige Hinweise zum Generieren von Theme-Blöcken" (Achtung-Kasten)
+- hg-perfekt.png: wie hg-magic, "KI-generierter Code ist möglicherweise nicht immer perfekt …"
+- hg-duplizieren.png: Shopify Hilfe-Center "Themes duplizieren" https://help.shopify.com/de/manual/online-store/themes/managing-themes/duplicating-themes
+Bei den Hilfe-Seiten ist die schwebende Leiste "Frage nach diesem Artikel" per CSS ausgeblendet (wie ein Cookie-Banner), sonst nichts verändert.
+
+Quellen-Bilder (quellen/):
+- editions-ki-blockgenerierung-video.jpg: Vorschaubild des offiziellen Videos im Abschnitt "KI-Blockgenerierung" der Shopify Editions Sommer '25 (Theme-Editor mit Horizon), https://www.shopify.com/de/editions/summer2025
+- editions-blockgen-poster.png: Bild "Describe the block you want" aus dem Abschnitt "BLÖCKE GENERIEREN", ebd.
+- template-selector.png, datasource-selector.png, theme_blocks_folder.png, theme_block_find_file.png: Bilder aus dem Shopify Hilfe-Center (cdn.shopify.com/shopifycloud/help-center/…)
