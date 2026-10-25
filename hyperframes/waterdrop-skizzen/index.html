@@ -9,7 +9,8 @@
          eine helle Aufbau-Karte pro Gedanke auf Brusthöhe (x 80-900, ab y 1100; Instagram-Zone unten ab 1500), Kacheln auf
          ihrem Wort, Zustände (✓, ✕, Durchstreichen), Quellen-Karten mit echten Screenshots der Shopify-Fallstudie
          (assets/kopf.png, liste.png, store-foto.jpg; Quelle: public/broll/waterdrop/fallstudie/QUELLE.txt), zwei
-         Sticker-Wörter neben dem Kopf, oben zwei kleine Karten während der Punch-ins, am Ende die Folgen-Karte als CTA.
+         Sticker-Wörter links neben dem Kopf, am Ende die Folgen-Karte als CTA. Seit 25.10.: er steht höher im Bild (Augen ~612),
+         alle Karten unter dem Kopf ab y 1090 (Pill-Untertitel darüber bei y 1030), Hook-Titel an der Kartenposition.
          Farben und Schrift nach karten-hell.md. Zeiten = Sekunden im geschnittenen Video (cut.json, 101,6 s), Teile 2
          Frames vor ihrem Wort; Liste mit Tönen in src/projekte/waterdrop/karten.json. Icons: Lucide (ISC). Keine Logos
          außer dem, was im Screenshot der Fallstudie steht; keine erfundenen Zahlen oder Oberflächen. -->
@@ -21,7 +22,7 @@
 
       /* Aufbau-Karte auf Brusthöhe (Tabu rechts ab x 900, unten ab y 1500) */
       .karte {
-        position: absolute; left: 80px; top: 1100px; width: 820px; height: 258px; opacity: 0; isolation: isolate;
+        position: absolute; left: 80px; top: 1090px; width: 820px; height: 258px; opacity: 0; isolation: isolate;
         border-radius: 32px; background: rgba(242, 243, 245, 0.97);
         box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
       }
@@ -111,7 +112,7 @@
       .zeiger svg { width: 48px; height: 48px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
 
       /* Karte oben über dem Kopf (Reihe, Punch-in-Stellen) */
-      .oben { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; max-width: 720px; top: 300px; display: flex; align-items: center; gap: 24px; padding: 22px 40px 22px 26px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .oben { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; max-width: 720px; top: 1090px; display: flex; align-items: center; gap: 24px; padding: 22px 40px 22px 26px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
       .oben .ico { width: 84px; height: 84px; border-radius: 22px; }
       .oben .ico svg { width: 48px; height: 48px; }
       .oben .k2 { font-size: 22px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
@@ -119,7 +120,7 @@
       .oben .t2 .neu { display: block; opacity: 0; }
 
       /* Sticker-Wort neben dem Kopf */
-      .sticker { position: absolute; right: 196px; top: 470px; padding: 8px 20px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 50px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(4deg); transform-origin: 100% 50%; }
+      .sticker { position: absolute; left: 96px; top: 470px; padding: 8px 18px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 42px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(-4deg); transform-origin: 0 50%; }
 
       .e, .d { opacity: 0; }
     </style>
@@ -129,9 +130,9 @@
 
       <!-- Q1: echte Quelle, Seitenkopf der Shopify-Fallstudie (Logo + Titel), auf "Zahl" die Ergebnis-Liste mit
            "140 Millionen Euro Umsatz im Jahr 2024", Rahmen auf "2024". Das 5,87 / waterdrop 7,15 / Zahl 9,77 / 2024 11,65 -->
-      <section id="q1" class="karte qb clip" data-start="5.8" data-duration="7.65" data-track-index="1">
+      <section id="q1" class="karte qb clip" data-start="6.0" data-duration="7.45" data-track-index="1">
         <div class="qlabel"><span class="qdot"></span>Shopify · Fallstudie waterdrop</div>
-        <div class="qkick">Die Geschichte</div>
+        <div class="qkick">Marken-Story</div>
         <div class="qwide">
           <div class="qlage" id="q1a" data-layout-allow-overflow><img src="assets/kopf.png" width="3141" height="831" alt="" />
             <div class="rahmen" id="q1logo" style="left:46px;top:46px;width:452px;height:232px"></div>
@@ -146,8 +147,6 @@
         </div>
       </section>
 
-      <!-- Reihe oben: Marken-Story ("Geschichte" 6,33) -->
-      <section id="reihe" class="oben clip" data-start="6.26" data-duration="3.4" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M12 7v14" /><path class="d" pathLength="1" d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg></div><div><div class="k2">Die Reihe</div><div class="t2">Marken-Story: <span class="verlauf">waterdrop</span></div></div></section>
 
       <!-- Sticker "2024." (11,65) -->
       <div id="st1" class="sticker clip" data-start="11.58" data-duration="1.6" data-track-index="2">2024.</div>
@@ -214,8 +213,8 @@
         </div>
       </section>
 
-      <!-- Punch-in 1 (48,53-51,95): oben "Damaliger Quellenstand", auf "nicht" (51,35) "nicht von heute". damaligen 50,01 -->
-      <section id="z1" class="oben clip" data-start="49.94" data-duration="2.01" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path class="d" pathLength="1" d="M3 3v5h5" /><path class="d" pathLength="1" d="M12 7v5l4 2" /></svg></div><div><div class="k2">Diese Zahl</div><div class="t2">Damaliger Quellenstand,<span class="neu verlauf" id="z1n">nicht von heute</span></div></div></section>
+      <!-- Punch-in (48,53-51,95): unter dem Kopf, tiefer gesetzt, "Damaliger Quellenstand", auf "nicht" (51,35) "nicht von heute". damaligen 50,01 -->
+      <section id="z1" class="oben clip" style="top:1150px" data-start="49.94" data-duration="2.01" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path class="d" pathLength="1" d="M3 3v5h5" /><path class="d" pathLength="1" d="M12 7v5l4 2" /></svg></div><div><div class="k2">Diese Zahl</div><div class="t2">Damaliger Quellenstand,<span class="neu verlauf" id="z1n">nicht von heute</span></div></div></section>
 
       <!-- K6: Lernpunkte. E-Commerce-Shop 53,76 / mitnehmen 54,46 -->
       <section id="k6" class="karte lang clip" data-start="53.69" data-duration="1.86" data-track-index="1"><div class="kicker">Was ich mitnehmen würde</div>
@@ -259,10 +258,10 @@
         <div class="kachel" id="k9k3" style="width:134px"><div class="ico"><svg viewBox="0 0 24 24"><path class="e" pathLength="1" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path class="e" pathLength="1" d="M3 6h18" /><path class="e" pathLength="1" d="M16 10a4 4 0 0 1-8 0" /></svg></div><div class="lab">3. Kauf</div><div class="badge ok" id="k9b3"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></div></div>
       </div><div class="schluss" id="k9s">Den <span class="verlauf">2. und 3. Kauf</span> einfacher machen.</div></section>
 
-      <!-- Sticker "DIE MARGE." (Marge 85,15) -->
-      <div id="st2" class="sticker clip" data-start="85.08" data-duration="1.55" data-track-index="2">DIE MARGE.</div>
+      <!-- Sticker "DIE MARGE." (Marge 85,15), nur bis zum Bildschnitt bei 85,70 s: im nächsten Stück steht sein Kopf weiter links -->
+      <div id="st2" class="sticker clip" data-start="85.08" data-duration="0.6" data-track-index="2">DIE MARGE.</div>
 
-      <!-- Punch-in 2 (85,46-94,36): oben die Schlussaussage. gute 88,66 / Einkaufserlebnis 91,92 -->
+      <!-- Schlussaussage unter dem Kopf (kein Punch-in mehr). gute 88,66 / Einkaufserlebnis 91,92 -->
       <section id="z2" class="oben clip" data-start="88.59" data-duration="5.71" data-track-index="0"><div class="ico"><svg viewBox="0 0 24 24"><path class="d" pathLength="1" d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle class="d" pathLength="1" cx="12" cy="8" r="6" /></svg></div><div><div class="k2">Eine bekannte Marke braucht</div><div class="t2">gute Idee<span class="neu verlauf" id="z2n">+ Einkaufserlebnis</span></div></div></section>
 
       <!-- K10: Folgen als CTA. E-Commerce-Stories 95,65 / Plus 98,45 / weg 98,67 / nicht (zu verpassen) 100,63 -->
@@ -323,15 +322,15 @@
         }
       }
       const sticker = (sel, an, aus) => {
-        tl.fromTo(sel, { opacity: 0, scale: 0.7, rotation: 4 }, { opacity: 1, scale: 1, rotation: 4, duration: 0.2, ease: "power2.out" }, an);
+        tl.fromTo(sel, { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, an);
         tl.to(sel, { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, aus - 0.2);
       };
 
       // Q1: Seitenkopf der Fallstudie, ruhige Fahrt; auf "Zahl" die Ergebnis-Liste, Rahmen auf "im Jahr 2024"
-      karte("#q1", 5.8, 13.45);
-      ein("#q1 .qlabel", 5.84, 0.3);
+      karte("#q1", 6.0, 13.45);
+      ein("#q1 .qlabel", 6.04, 0.3);
       lage("#q1a", 0, 0, 0.2483);
-      tl.to("#q1a", { scale: 0.268, x: -30, y: -6, duration: 3.9, ease: "sine.inOut" }, 5.85);
+      tl.to("#q1a", { scale: 0.268, x: -30, y: -6, duration: 3.7, ease: "sine.inOut" }, 6.05);
       rahmen("#q1logo", 7.08);
       lage("#q1b", -112, -282, 0.62);
       tl.to("#q1b", { opacity: 1, duration: 0.35, ease: "power2.out" }, 9.7);
@@ -341,8 +340,6 @@
       rahmen("#q1r", 11.58);
       chip("#q1c2", 11.58);
 
-      // Reihe oben
-      oben("#reihe", 6.26, 9.66);
 
       // Sticker 2024.
       sticker("#st1", 11.58, 13.18);
@@ -449,7 +446,7 @@
       ein("#k9s", 82.72, 0.35);
 
       // Sticker DIE MARGE.
-      sticker("#st2", 85.08, 86.63);
+      sticker("#st2", 85.08, 85.68);
 
       // Punch-in 2 oben
       oben("#z2", 88.59, 94.3);
