@@ -3,7 +3,7 @@
 Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): E05 · Deckungsbeitrag
-- **Format / Design:** FACE (Serie "E-Commerce einfach erklärt", Folge 5) / aktueller Look statt des dunklen Serien-Looks von E02-E04: Hook-Titel im Design verlauf (easyJet-Stil), helle Aufbau-Karten pro Gedanke und Pill-Untertitel nach karten-aufbau.md (aktives Wort `#00E090`, Karten im PulseConnect-Verlauf), Musik ruhig, sanfter Grade, Porträt-Modus
+- **Format / Design:** FACE (Serie "E-Commerce einfach erklärt") / aktueller Look statt des dunklen Serien-Looks von E02-E04: Hook-Titel im Design verlauf (easyJet-Stil), helle Aufbau-Karten pro Gedanke und Pill-Untertitel nach karten-aufbau.md (aktives Wort `#00E090`, Karten im PulseConnect-Verlauf), Musik ruhig, sanfter Grade, Porträt-Modus
 - **Plattformen:** TikTok, Instagram Reel, YouTube Short
 - **Termin laut Kalender:** Veröffentlichung Mo 09.11.2026, 14:00 (Serien-Slot; im Briefing-Text steht noch 16.11.2026, laut Briefing-Kopf am 25.10. auf den 09.11. verschoben)
 - **Briefing:** "🎬 E05 · Deckungsbeitrag", `src/projekte/deckungsbeitrag/briefing.md`; Rohclip Drive "E05 · Deckungsbeitrag" (gedreht 23.10.2026), Dateiname laut Kalender `E05_Deckungsbeitrag.mp4`
@@ -40,9 +40,9 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 - [x] Sprache klar vor leiser Musik: -14 LUFS, Musik beim Sprechen 25,2 dB unter der Stimme, Effekte mindestens 10 dB darunter (checks --stems)
 - [x] Nur 1-3 kurze B-Rolls: die einzige B-Roll im Sinn des Briefings ist die Zahlenkarte (19,98-31,2 s); die übrigen Karten sind Aufbau-Karten (Motion Captions) nach dem aktuellen Look, wie von der Regie verlangt; kein B-Roll aus alten Videos
 - [x] Zahlenkarte "100 € Nettoerlös − 35 € Ware − 5 € Versand − 3 € Zahlungsgebühr = 57 € Deckungsbeitrag": Kicker "BEISPIELRECHNUNG", jeder Betrag auf seiner gesprochenen Zahl (100 bei 20,0 s, 35 bei 22,5 s, 5 bei 24,5 s, 3 bei 26,0 s, 57 bei 29,3 s), jedes Label auf seinem Wort, Summenstrich auf "Dann" (28,0 s), "= 57 €" hervorgehoben (Verlaufsschrift und -rahmen, die Zeilen darüber treten zurück), danach "Fixkosten" (Karte ab 31,2 s, Fixkosten auf dem Wort bei 33,0 s) und "Umsatz ≠ Gewinn" (35,5-38,7 s, ≠ auf "unterschiedliche" bei 37,6 s)
-- [x] Verweis auf ROAS im letzten Video: Kicker "LETZTE FOLGE: ROAS" mit ROAS-Kachel "Folge 4" (14,9 s), "Kosten" auf dem Wort (17,0 s) mit Häkchen "schon besprochen"
+- [x] Verweis auf ROAS im letzten Video: Kicker "IM LETZTEN VIDEO: ROAS" (seine Worte "beim ROAS im letzten Video") mit ROAS-Kachel (14,9 s), keine Folgennummer, "Kosten" auf dem Wort (17,0 s) mit Häkchen "schon besprochen"
 - [x] Keine ungetesteten Funktionen als Praxistest: kein Tool im Video; die Zahlen sind sein Rechenbeispiel und als "Ein Beispiel" bzw. "Beispielrechnung" gekennzeichnet
-- [x] Kein künstlicher Loop: das Video endet mit seinem Aufruf ("folge mir hier gerne und drücke das Plus weg", 38,8-43,5 s)
+- [x] Kein künstlicher Loop: das Video endet mit seinem Aufruf ("folge mir hier gerne und drücke das Plus weg", 38,8-43,5 s); als Grafik dazu nur das Folgen-Symbol (41,8 s), das Plus wird auf "Plus" (43,1 s) angetippt und zum Haken
 - [x] Bei Tutorials nur reale Menüwege oder gekennzeichnete Beispielansichten: kein Tutorial, keine Oberflächen gezeigt
 - [x] Kanäle Instagram Reels, TikTok, YouTube Shorts: Captions unten je Plattform
 - [x] Länge ca. 30-45 s: 43,7 s, nichts gestreckt; Ende 0,17 s nach dem letzten Laut, bevor er zur Kamera greift
@@ -63,15 +63,16 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 - Bild nach Pauls Vorgabe vom 25.10.: scale 1,3, hoch 494, x -33; Kopfoberkante im Median bei y ca. 315 (gemessen in allen Stücken alle 0,25 s, Bereich ca. 269-364), Augen bei ca. 589, mittig; Bild endet unten an der Hüfte (Take y ca. 1857). Weniger Zoom als Clarity (1,62), weil das Gesicht in diesem Take größer ist (276 statt 209 px breit); Gesichtsdetail gemessen etwa doppelt so hoch wie im Clarity-Rohclip, deshalb kein Nachschärfen. Pill-Untertitel bei y 1025 und Karten ab y 1075 (etwas tiefer als bei Clarity), weil er sich mehrmals vorbeugt und das Kinn dann bis y ca. 996 kommt; die Zahlenkarte endet bei y 1483, über der Instagram-Zone
 - Farbe: `npm run farbe` (fast neutral, Gamma 1,042), sanfter Grade, Helligkeit Gesicht 0,552; Höhen der Stimme wie bei Clarity, kein EQ
 - Porträt-Modus für alle 9 Stücke (1593 Frames, Stärke 6); Hintergrund am Anfang, in der Mitte und am Ende jedes Stücks gemessen weich (Laplace-Verhältnis Porträt/Original höchstens 0,02)
-- Karten (`hyperframes/deckungsbeitrag-skizzen/`, Zeiten in `karten.json`): Serien-Karte "Folge 5 · Die Serie – E-Commerce einfach erklärt" (3,6 s), Beispiel-Karte "verkauft ≠ verdient" (Produkt 100 € ✓, "verdient? 100 €" durchgestrichen ✕), ROAS-Karte, Zahlenkarte, Fixkosten-Karte (57 € → deckt → Platzhalter "?" auf "unter anderem" → Fixkosten), Umsatz ≠ Gewinn, CTA-Karte. Labels der Zahlenkarte wie im Briefing ("Ware", "Zahlungsgebühr"), die Untertitel wie gesprochen ("Wareneinsatz", "Zahlungsgebühren"). Keine Beispiele für Fixkosten erfunden (er nennt keine)
+- Karten (`hyperframes/deckungsbeitrag-skizzen/`, Zeiten in `karten.json`): Serien-Karte "Die Serie – E-Commerce einfach erklärt" (3,6 s, ohne Folgennummer), Beispiel-Karte "verkauft ≠ verdient" (Produkt 100 € ✓, "verdient? 100 €" durchgestrichen ✕), ROAS-Karte, Zahlenkarte, Fixkosten-Karte (57 € → deckt → Platzhalter "?" auf "unter anderem" → Fixkosten), Umsatz ≠ Gewinn, Folgen-Symbol. Labels der Zahlenkarte wie im Briefing ("Ware", "Zahlungsgebühr"), die Untertitel wie gesprochen ("Wareneinsatz", "Zahlungsgebühren"). Keine Beispiele für Fixkosten erfunden (er nennt keine)
 - Sticker sparsam: "NICHT." (12,1 s) und "LEDIGLICH." (28,6 s), links neben dem Kopf
-- CTA-Karte: "Mehr solche Erklärungen?" mit den Folgen E01-E05 (E05 hervorgehoben, Liste aus dem Briefing) auf "Erklärungen", Folgen-Knopf auf "folge", Zeiger tippt auf "Plus" das Plus an (wird "Gefolgt"); das Plus dunkel statt TikTok-Rot, damit es bei einer Farbwelt bleibt
+- Schluss: nur das Folgen-Symbol (Profilbild mit Plus und "Folgen") auf "folge" (41,8 s) mit kurzem Ring, der Zeiger tippt auf "Plus" (43,1 s) das Plus an, es wird zum Haken und "Folgen" färbt sich im Verlauf; das Plus dunkel statt TikTok-Rot, damit es bei einer Farbwelt bleibt. Von 38,7 bis 41,8 s (Anfang des Aufrufs) steht keine Karte, nur die Pill-Untertitel
 - Ton: Musik `ruhig.mp3` wie bei Clarity; leise Effekte nach karten-hell.md (whoosh je Kartenwechsel, tick je Kachel bzw. Zeile, pop auf "NICHT.", success auf 57 €, klick auf dem Plus; "LEDIGLICH." ohne Ton, weil 0,6 s später success kommt)
 - Sync am fertigen Video im Kartenbereich gemessen (ohne Pille): jeder Teil erscheint 1-2 Frames vor seinem Wort (57 € ab Frame 878, Wort 879); `npm run sync` meldet CHECK, weil die Pill-Untertitel in seiner Messzone liegen; an Bildstreifen nachgesehen
 - Bilderbogen bei 20,0 s: die Zahlenkarte ist dort mitten im Einblenden (Karte 19,98 s, erste Zeile "100 €" 19,99 s, voll sichtbar ab ca. 20,1 s); keine leere Karte, jede Karte kommt mit ihrem ersten Teil
 - `npm run vorschau` nicht benutzt, weil es zwei Stücke gleichzeitig rendert (Vorgabe der Regie: höchstens ein Render); stattdessen Standbilder und Messungen (sync, pacing, Bilderbogen) an der Vollversion
 - `takes/t1.vor-farbe.orig.mp4` (117 MB) ist eine Kopie, die `npm run portrait` angelegt hat; als Sicherung nicht gelöscht
-- Titel für TikTok und YouTube im Muster der Regie, "#5" ist die Folgennummer; Hashtags je Plattform höchstens 2 (bei YouTube #shorts und #ecommerce)
+- Titel für TikTok und YouTube "Deckungsbeitrag einfach erklärt – E-Commerce einfach erklärt" (ohne Folgennummer); Hashtags je Plattform höchstens 2 (bei YouTube #shorts und #ecommerce)
+- Korrektur nach Pauls Notiz zur Schlusskarte (über die Regie, 25.10.: "Somit reicht es nur ein Follow Symbol oder ein + Symbol als Animation anzuzeigen"): Episodenliste E01-E05, "Mehr solche Erklärungen?" und der Serienkicker "E-Commerce einfach erklärt" auf der Schlusskarte sind raus, dort steht nur noch das Folgen-Symbol (Plus wird auf "Plus" angetippt und zum Haken); "Folge 5" auf der Serien-Karte und "Folge 4" auf der ROAS-Kachel sind raus, der ROAS-Kicker heißt jetzt wörtlich "Im letzten Video: ROAS"; Captions ohne "Folge 5" und ohne Serienliste, Titel ohne "#5"; Karten neu gerendert, Vollversion, checks, kontrolle und pruefen neu
 
 ## Offene Fragen an Paul
 
@@ -82,7 +83,7 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 
 ## Captions
 
-TikTok-Titel (max. 90 Zeichen): Deckungsbeitrag einfach erklärt – E-Commerce einfach erklärt #5
+TikTok-Titel (max. 90 Zeichen): Deckungsbeitrag einfach erklärt – E-Commerce einfach erklärt
 
 ### TikTok
 
@@ -101,13 +102,13 @@ Welche Kennzahl soll ich als Nächstes erklären? 👇
 ### Instagram (Reels)
 
 ```
-E-Commerce einfach erklärt, Folge 5: der Deckungsbeitrag 💶
+E-Commerce einfach erklärt: der Deckungsbeitrag 💶
 
 Was bleibt von deinem Umsatz wirklich übrig? Wir rechnen es an einem Beispiel durch: Bei 100 € Nettoerlös gehen 35 € Wareneinsatz, 5 € Versand und 3 € Zahlungsgebühren ab. Übrig bleiben 57 € Deckungsbeitrag. Und davon müssen unter anderem noch deine Fixkosten gedeckt werden.
 
 Im letzten Video ging es um den ROAS, heute rechnen wir weiter. Merke: Umsatz ist nicht Gewinn.
 
-E-Commerce-Kennzahlen verständlich erklärt – ohne Buzzwords. Folge mir für die nächsten Folgen.
+E-Commerce-Kennzahlen verständlich erklärt – ohne Buzzwords. Folge mir für weitere Erklärungen.
 
 Welche Kennzahl soll ich als Nächstes erklären? Schreib sie in die Kommentare 👇
 
@@ -116,12 +117,12 @@ Welche Kennzahl soll ich als Nächstes erklären? Schreib sie in die Kommentare 
 
 ### YouTube (Shorts)
 
-Titel (max. 100 Zeichen): Deckungsbeitrag einfach erklärt – E-Commerce einfach erklärt #5
+Titel (max. 100 Zeichen): Deckungsbeitrag einfach erklärt – E-Commerce einfach erklärt
 
 ```
 Deckungsbeitrag – was bleibt von deinem Umsatz übrig? Beispiel: Bei 100 € Nettoerlös gehen 35 € Wareneinsatz, 5 € Versand und 3 € Zahlungsgebühren ab. Übrig bleiben 57 € Deckungsbeitrag, und davon müssen unter anderem noch deine Fixkosten gedeckt werden. Umsatz und Gewinn sind also zwei ganz unterschiedliche Dinge.
 
-Folge 5 der Serie „E-Commerce einfach erklärt“ (bisher: Conversion Rate, AOV, CAC, ROAS).
+Aus der Serie „E-Commerce einfach erklärt“: E-Commerce-Kennzahlen verständlich erklärt – ohne Buzzwords.
 
 Welche Kennzahl soll ich als Nächstes erklären? Schreib es in die Kommentare.
 
@@ -131,5 +132,5 @@ Welche Kennzahl soll ich als Nächstes erklären? Schreib es in die Kommentare.
 ## Quellen
 
 - Keine externen Quellen: alle Zahlen sind sein Rechenbeispiel aus dem Teleprompter-Text und der Zahlenkarte im Briefing ("🎬 E05 · Deckungsbeitrag", `src/projekte/deckungsbeitrag/briefing.md`)
-- Verweis auf die vorige Folge: E04 ROAS (`src/projekte/roas/`), nur als Kicker, kein Ausschnitt
+- Verweis auf das vorige Video: ROAS (`src/projekte/roas/`), nur als Kicker "Im letzten Video: ROAS", kein Ausschnitt
 - Musik: eigene Klangsynthese `public/musik/ruhig.mp3` (`public/musik/LIZENZ.txt`), Icons: Lucide (ISC-Lizenz)
