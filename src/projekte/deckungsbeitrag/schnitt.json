@@ -1,0 +1,71 @@
+{
+ "projekt": "deckungsbeitrag",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 2.85,
+   "text": "Deckungsbeitrag, was bleibt dir eigentlich genau von deinem Umsatz übrig? Willkommen zu E-Commerce einfach erklärt.",
+   "von": 2.86
+  },
+  {
+   "take": "t1",
+   "ab": 26.7,
+   "text": "Heute rechnen wir das einmal an einem Beispiel durch."
+  },
+  {
+   "take": "t1",
+   "ab": 33.45,
+   "text": "nur weil du ein Produkt für 100 Euro verkaufst, heißt es natürlich noch lange nicht, dass du auch die 100 Euro verdient hast."
+  },
+  {
+   "take": "t1",
+   "ab": 58.2,
+   "text": "Denn beim ROAS im letzten Video haben wir nämlich schon über die Kosten gesprochen. Jetzt rechnen wir erst einmal weiter."
+  },
+  {
+   "take": "t1",
+   "ab": 68.45,
+   "text": "Bei 100 Euro Nettoerlös gehen dir zum Beispiel 35 Euro Wareneinsatz, 5 Euro Versand und 3 Euro Zahlungsgebühren ab. Dann bleiben dir lediglich noch 57 Euro Deckungsbeitrag übrig."
+  },
+  {
+   "take": "t1",
+   "ab": 90.7,
+   "text": "Davon müssen jetzt unter anderem noch deine Fixkosten gedeckt werden",
+   "von": 90.72
+  },
+  {
+   "take": "t1",
+   "ab": 96.55,
+   "text": "Und was sagt uns das? Umsatz und Gewinn sind also zwei ganz unterschiedliche Paar Schuhe."
+  },
+  {
+   "take": "t1",
+   "ab": 109.45,
+   "text": "Und wenn du weitere solche Erklärungen zum E-Commerce sehen willst, dann folge mir hier gerne und drücke das Plus weg."
+  }
+ ],
+ "ende": {
+  "bis": 114.47
+ },
+ "korrekturen": [
+  [
+   "t1",
+   33.55,
+   "nur",
+   "Nur"
+  ],
+  [
+   "t1",
+   93.48,
+   "werden",
+   "werden."
+  ]
+ ]
+}

@@ -1,0 +1,967 @@
+{
+ "projekt": "deckungsbeitrag",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "deckungsbeitrag/t1",
+   "from": 2.86,
+   "to": 6.485,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "deckungsbeitrag/t1",
+   "from": 8.425,
+   "to": 10.775,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "deckungsbeitrag/t1",
+   "from": 26.705,
+   "to": 29.065,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "deckungsbeitrag/t1",
+   "from": 33.465,
+   "to": 39.585,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "deckungsbeitrag/t1",
+   "from": 58.185,
+   "to": 63.575,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "deckungsbeitrag/t1",
+   "from": 68.465,
+   "to": 79.865,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "deckungsbeitrag/t1",
+   "from": 90.72,
+   "to": 93.915,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "deckungsbeitrag/t1",
+   "from": 96.565,
+   "to": 100.885,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "deckungsbeitrag/t1",
+   "from": 109.485,
+   "to": 114.47,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Deckungsbeitrag,",
+   "src": "deckungsbeitrag/t1",
+   "start": 2.94,
+   "end": 3.79
+  },
+  {
+   "text": "was",
+   "src": "deckungsbeitrag/t1",
+   "start": 4.01,
+   "end": 4.15
+  },
+  {
+   "text": "bleibt",
+   "src": "deckungsbeitrag/t1",
+   "start": 4.23,
+   "end": 4.47
+  },
+  {
+   "text": "dir",
+   "src": "deckungsbeitrag/t1",
+   "start": 4.49,
+   "end": 4.57
+  },
+  {
+   "text": "eigentlich",
+   "src": "deckungsbeitrag/t1",
+   "start": 4.63,
+   "end": 4.91
+  },
+  {
+   "text": "genau",
+   "src": "deckungsbeitrag/t1",
+   "start": 4.97,
+   "end": 5.27
+  },
+  {
+   "text": "von",
+   "src": "deckungsbeitrag/t1",
+   "start": 5.37,
+   "end": 5.49
+  },
+  {
+   "text": "deinem",
+   "src": "deckungsbeitrag/t1",
+   "start": 5.53,
+   "end": 5.75
+  },
+  {
+   "text": "Umsatz",
+   "src": "deckungsbeitrag/t1",
+   "start": 5.81,
+   "end": 6.07
+  },
+  {
+   "text": "übrig?",
+   "src": "deckungsbeitrag/t1",
+   "start": 6.15,
+   "end": 6.37
+  },
+  {
+   "text": "Willkommen",
+   "src": "deckungsbeitrag/t1",
+   "start": 8.49,
+   "end": 8.87
+  },
+  {
+   "text": "zu",
+   "src": "deckungsbeitrag/t1",
+   "start": 8.93,
+   "end": 9.03
+  },
+  {
+   "text": "E-Commerce",
+   "src": "deckungsbeitrag/t1",
+   "start": 9.35,
+   "end": 9.81
+  },
+  {
+   "text": "einfach",
+   "src": "deckungsbeitrag/t1",
+   "start": 9.93,
+   "end": 10.19
+  },
+  {
+   "text": "erklärt.",
+   "src": "deckungsbeitrag/t1",
+   "start": 10.25,
+   "end": 10.63
+  },
+  {
+   "text": "Heute",
+   "src": "deckungsbeitrag/t1",
+   "start": 26.77,
+   "end": 26.99
+  },
+  {
+   "text": "rechnen",
+   "src": "deckungsbeitrag/t1",
+   "start": 27.09,
+   "end": 27.37
+  },
+  {
+   "text": "wir",
+   "src": "deckungsbeitrag/t1",
+   "start": 27.41,
+   "end": 27.49
+  },
+  {
+   "text": "das",
+   "src": "deckungsbeitrag/t1",
+   "start": 27.51,
+   "end": 27.61
+  },
+  {
+   "text": "einmal",
+   "src": "deckungsbeitrag/t1",
+   "start": 27.71,
+   "end": 27.95
+  },
+  {
+   "text": "an",
+   "src": "deckungsbeitrag/t1",
+   "start": 27.99,
+   "end": 28.05
+  },
+  {
+   "text": "einem",
+   "src": "deckungsbeitrag/t1",
+   "start": 28.13,
+   "end": 28.31
+  },
+  {
+   "text": "Beispiel",
+   "src": "deckungsbeitrag/t1",
+   "start": 28.37,
+   "end": 28.71
+  },
+  {
+   "text": "durch.",
+   "src": "deckungsbeitrag/t1",
+   "start": 28.77,
+   "end": 28.95
+  },
+  {
+   "text": "Nur",
+   "src": "deckungsbeitrag/t1",
+   "start": 33.55,
+   "end": 33.65
+  },
+  {
+   "text": "weil",
+   "src": "deckungsbeitrag/t1",
+   "start": 33.69,
+   "end": 33.83
+  },
+  {
+   "text": "du",
+   "src": "deckungsbeitrag/t1",
+   "start": 33.87,
+   "end": 33.95
+  },
+  {
+   "text": "ein",
+   "src": "deckungsbeitrag/t1",
+   "start": 34.11,
+   "end": 34.25
+  },
+  {
+   "text": "Produkt",
+   "src": "deckungsbeitrag/t1",
+   "start": 34.31,
+   "end": 34.59
+  },
+  {
+   "text": "für",
+   "src": "deckungsbeitrag/t1",
+   "start": 34.63,
+   "end": 34.71
+  },
+  {
+   "text": "100",
+   "src": "deckungsbeitrag/t1",
+   "start": 34.81,
+   "end": 35.11
+  },
+  {
+   "text": "Euro",
+   "src": "deckungsbeitrag/t1",
+   "start": 35.19,
+   "end": 35.35
+  },
+  {
+   "text": "verkaufst,",
+   "src": "deckungsbeitrag/t1",
+   "start": 35.45,
+   "end": 35.93
+  },
+  {
+   "text": "heißt",
+   "src": "deckungsbeitrag/t1",
+   "start": 36.19,
+   "end": 36.39
+  },
+  {
+   "text": "es",
+   "src": "deckungsbeitrag/t1",
+   "start": 36.45,
+   "end": 36.51
+  },
+  {
+   "text": "natürlich",
+   "src": "deckungsbeitrag/t1",
+   "start": 36.55,
+   "end": 36.77
+  },
+  {
+   "text": "noch",
+   "src": "deckungsbeitrag/t1",
+   "start": 36.79,
+   "end": 36.95
+  },
+  {
+   "text": "lange",
+   "src": "deckungsbeitrag/t1",
+   "start": 36.99,
+   "end": 37.19
+  },
+  {
+   "text": "nicht,",
+   "src": "deckungsbeitrag/t1",
+   "start": 37.27,
+   "end": 37.43
+  },
+  {
+   "text": "dass",
+   "src": "deckungsbeitrag/t1",
+   "start": 37.75,
+   "end": 37.89
+  },
+  {
+   "text": "du",
+   "src": "deckungsbeitrag/t1",
+   "start": 37.93,
+   "end": 37.99
+  },
+  {
+   "text": "auch",
+   "src": "deckungsbeitrag/t1",
+   "start": 38.07,
+   "end": 38.17
+  },
+  {
+   "text": "die",
+   "src": "deckungsbeitrag/t1",
+   "start": 38.23,
+   "end": 38.31
+  },
+  {
+   "text": "100",
+   "src": "deckungsbeitrag/t1",
+   "start": 38.37,
+   "end": 38.63
+  },
+  {
+   "text": "Euro",
+   "src": "deckungsbeitrag/t1",
+   "start": 38.73,
+   "end": 38.87
+  },
+  {
+   "text": "verdient",
+   "src": "deckungsbeitrag/t1",
+   "start": 38.95,
+   "end": 39.27
+  },
+  {
+   "text": "hast.",
+   "src": "deckungsbeitrag/t1",
+   "start": 39.31,
+   "end": 39.49
+  },
+  {
+   "text": "Denn",
+   "src": "deckungsbeitrag/t1",
+   "start": 58.29,
+   "end": 58.43
+  },
+  {
+   "text": "beim",
+   "src": "deckungsbeitrag/t1",
+   "start": 58.49,
+   "end": 58.63
+  },
+  {
+   "text": "ROAS",
+   "src": "deckungsbeitrag/t1",
+   "start": 58.67,
+   "end": 58.87
+  },
+  {
+   "text": "im",
+   "src": "deckungsbeitrag/t1",
+   "start": 58.95,
+   "end": 59.01
+  },
+  {
+   "text": "letzten",
+   "src": "deckungsbeitrag/t1",
+   "start": 59.05,
+   "end": 59.31
+  },
+  {
+   "text": "Video",
+   "src": "deckungsbeitrag/t1",
+   "start": 59.35,
+   "end": 59.51
+  },
+  {
+   "text": "haben",
+   "src": "deckungsbeitrag/t1",
+   "start": 59.59,
+   "end": 59.71
+  },
+  {
+   "text": "wir",
+   "src": "deckungsbeitrag/t1",
+   "start": 59.73,
+   "end": 59.81
+  },
+  {
+   "text": "nämlich",
+   "src": "deckungsbeitrag/t1",
+   "start": 59.85,
+   "end": 60.09
+  },
+  {
+   "text": "schon",
+   "src": "deckungsbeitrag/t1",
+   "start": 60.13,
+   "end": 60.29
+  },
+  {
+   "text": "über",
+   "src": "deckungsbeitrag/t1",
+   "start": 60.43,
+   "end": 60.57
+  },
+  {
+   "text": "die",
+   "src": "deckungsbeitrag/t1",
+   "start": 60.63,
+   "end": 60.71
+  },
+  {
+   "text": "Kosten",
+   "src": "deckungsbeitrag/t1",
+   "start": 60.79,
+   "end": 61.11
+  },
+  {
+   "text": "gesprochen.",
+   "src": "deckungsbeitrag/t1",
+   "start": 61.15,
+   "end": 61.55
+  },
+  {
+   "text": "Jetzt",
+   "src": "deckungsbeitrag/t1",
+   "start": 62.01,
+   "end": 62.21
+  },
+  {
+   "text": "rechnen",
+   "src": "deckungsbeitrag/t1",
+   "start": 62.25,
+   "end": 62.51
+  },
+  {
+   "text": "wir",
+   "src": "deckungsbeitrag/t1",
+   "start": 62.57,
+   "end": 62.67
+  },
+  {
+   "text": "erst",
+   "src": "deckungsbeitrag/t1",
+   "start": 62.79,
+   "end": 62.93
+  },
+  {
+   "text": "einmal",
+   "src": "deckungsbeitrag/t1",
+   "start": 62.97,
+   "end": 63.13
+  },
+  {
+   "text": "weiter.",
+   "src": "deckungsbeitrag/t1",
+   "start": 63.17,
+   "end": 63.43
+  },
+  {
+   "text": "Bei",
+   "src": "deckungsbeitrag/t1",
+   "start": 68.5,
+   "end": 68.58
+  },
+  {
+   "text": "100",
+   "src": "deckungsbeitrag/t1",
+   "start": 68.68,
+   "end": 68.98
+  },
+  {
+   "text": "Euro",
+   "src": "deckungsbeitrag/t1",
+   "start": 69.1,
+   "end": 69.26
+  },
+  {
+   "text": "Nettoerlös",
+   "src": "deckungsbeitrag/t1",
+   "start": 69.36,
+   "end": 69.9
+  },
+  {
+   "text": "gehen",
+   "src": "deckungsbeitrag/t1",
+   "start": 70.02,
+   "end": 70.26
+  },
+  {
+   "text": "dir",
+   "src": "deckungsbeitrag/t1",
+   "start": 70.34,
+   "end": 70.46
+  },
+  {
+   "text": "zum",
+   "src": "deckungsbeitrag/t1",
+   "start": 70.56,
+   "end": 70.66
+  },
+  {
+   "text": "Beispiel",
+   "src": "deckungsbeitrag/t1",
+   "start": 70.7,
+   "end": 71.02
+  },
+  {
+   "text": "35",
+   "src": "deckungsbeitrag/t1",
+   "start": 71.2,
+   "end": 71.78
+  },
+  {
+   "text": "Euro",
+   "src": "deckungsbeitrag/t1",
+   "start": 71.92,
+   "end": 72.08
+  },
+  {
+   "text": "Wareneinsatz,",
+   "src": "deckungsbeitrag/t1",
+   "start": 72.16,
+   "end": 72.82
+  },
+  {
+   "text": "5",
+   "src": "deckungsbeitrag/t1",
+   "start": 73.2,
+   "end": 73.36
+  },
+  {
+   "text": "Euro",
+   "src": "deckungsbeitrag/t1",
+   "start": 73.42,
+   "end": 73.56
+  },
+  {
+   "text": "Versand",
+   "src": "deckungsbeitrag/t1",
+   "start": 73.62,
+   "end": 73.94
+  },
+  {
+   "text": "und",
+   "src": "deckungsbeitrag/t1",
+   "start": 74.46,
+   "end": 74.58
+  },
+  {
+   "text": "3",
+   "src": "deckungsbeitrag/t1",
+   "start": 74.72,
+   "end": 74.88
+  },
+  {
+   "text": "Euro",
+   "src": "deckungsbeitrag/t1",
+   "start": 74.98,
+   "end": 75.12
+  },
+  {
+   "text": "Zahlungsgebühren",
+   "src": "deckungsbeitrag/t1",
+   "start": 75.24,
+   "end": 75.9
+  },
+  {
+   "text": "ab.",
+   "src": "deckungsbeitrag/t1",
+   "start": 75.94,
+   "end": 76.02
+  },
+  {
+   "text": "Dann",
+   "src": "deckungsbeitrag/t1",
+   "start": 76.68,
+   "end": 76.82
+  },
+  {
+   "text": "bleiben",
+   "src": "deckungsbeitrag/t1",
+   "start": 76.86,
+   "end": 77.12
+  },
+  {
+   "text": "dir",
+   "src": "deckungsbeitrag/t1",
+   "start": 77.16,
+   "end": 77.26
+  },
+  {
+   "text": "lediglich",
+   "src": "deckungsbeitrag/t1",
+   "start": 77.34,
+   "end": 77.74
+  },
+  {
+   "text": "noch",
+   "src": "deckungsbeitrag/t1",
+   "start": 77.8,
+   "end": 77.88
+  },
+  {
+   "text": "57",
+   "src": "deckungsbeitrag/t1",
+   "start": 77.94,
+   "end": 78.52
+  },
+  {
+   "text": "Euro",
+   "src": "deckungsbeitrag/t1",
+   "start": 78.6,
+   "end": 78.72
+  },
+  {
+   "text": "Deckungsbeitrag",
+   "src": "deckungsbeitrag/t1",
+   "start": 78.78,
+   "end": 79.4
+  },
+  {
+   "text": "übrig.",
+   "src": "deckungsbeitrag/t1",
+   "start": 79.48,
+   "end": 79.7
+  },
+  {
+   "text": "Davon",
+   "src": "deckungsbeitrag/t1",
+   "start": 90.78,
+   "end": 91.06
+  },
+  {
+   "text": "müssen",
+   "src": "deckungsbeitrag/t1",
+   "start": 91.1,
+   "end": 91.3
+  },
+  {
+   "text": "jetzt",
+   "src": "deckungsbeitrag/t1",
+   "start": 91.36,
+   "end": 91.48
+  },
+  {
+   "text": "unter",
+   "src": "deckungsbeitrag/t1",
+   "start": 91.52,
+   "end": 91.66
+  },
+  {
+   "text": "anderem",
+   "src": "deckungsbeitrag/t1",
+   "start": 91.74,
+   "end": 92.06
+  },
+  {
+   "text": "noch",
+   "src": "deckungsbeitrag/t1",
+   "start": 92.12,
+   "end": 92.22
+  },
+  {
+   "text": "deine",
+   "src": "deckungsbeitrag/t1",
+   "start": 92.26,
+   "end": 92.48
+  },
+  {
+   "text": "Fixkosten",
+   "src": "deckungsbeitrag/t1",
+   "start": 92.58,
+   "end": 93.12
+  },
+  {
+   "text": "gedeckt",
+   "src": "deckungsbeitrag/t1",
+   "start": 93.16,
+   "end": 93.42
+  },
+  {
+   "text": "werden.",
+   "src": "deckungsbeitrag/t1",
+   "start": 93.48,
+   "end": 93.7
+  },
+  {
+   "text": "Und",
+   "src": "deckungsbeitrag/t1",
+   "start": 96.63,
+   "end": 96.71
+  },
+  {
+   "text": "was",
+   "src": "deckungsbeitrag/t1",
+   "start": 96.73,
+   "end": 96.83
+  },
+  {
+   "text": "sagt",
+   "src": "deckungsbeitrag/t1",
+   "start": 96.87,
+   "end": 97.05
+  },
+  {
+   "text": "uns",
+   "src": "deckungsbeitrag/t1",
+   "start": 97.13,
+   "end": 97.23
+  },
+  {
+   "text": "das?",
+   "src": "deckungsbeitrag/t1",
+   "start": 97.29,
+   "end": 97.45
+  },
+  {
+   "text": "Umsatz",
+   "src": "deckungsbeitrag/t1",
+   "start": 97.71,
+   "end": 98.03
+  },
+  {
+   "text": "und",
+   "src": "deckungsbeitrag/t1",
+   "start": 98.09,
+   "end": 98.15
+  },
+  {
+   "text": "Gewinn",
+   "src": "deckungsbeitrag/t1",
+   "start": 98.21,
+   "end": 98.47
+  },
+  {
+   "text": "sind",
+   "src": "deckungsbeitrag/t1",
+   "start": 98.59,
+   "end": 98.75
+  },
+  {
+   "text": "also",
+   "src": "deckungsbeitrag/t1",
+   "start": 98.87,
+   "end": 99.03
+  },
+  {
+   "text": "zwei",
+   "src": "deckungsbeitrag/t1",
+   "start": 99.17,
+   "end": 99.33
+  },
+  {
+   "text": "ganz",
+   "src": "deckungsbeitrag/t1",
+   "start": 99.55,
+   "end": 99.77
+  },
+  {
+   "text": "unterschiedliche",
+   "src": "deckungsbeitrag/t1",
+   "start": 99.85,
+   "end": 100.37
+  },
+  {
+   "text": "Paar",
+   "src": "deckungsbeitrag/t1",
+   "start": 100.45,
+   "end": 100.55
+  },
+  {
+   "text": "Schuhe.",
+   "src": "deckungsbeitrag/t1",
+   "start": 100.57,
+   "end": 100.77
+  },
+  {
+   "text": "Und",
+   "src": "deckungsbeitrag/t1",
+   "start": 109.55,
+   "end": 109.63
+  },
+  {
+   "text": "wenn",
+   "src": "deckungsbeitrag/t1",
+   "start": 109.65,
+   "end": 109.75
+  },
+  {
+   "text": "du",
+   "src": "deckungsbeitrag/t1",
+   "start": 109.77,
+   "end": 109.81
+  },
+  {
+   "text": "weitere",
+   "src": "deckungsbeitrag/t1",
+   "start": 109.87,
+   "end": 110.15
+  },
+  {
+   "text": "solche",
+   "src": "deckungsbeitrag/t1",
+   "start": 110.19,
+   "end": 110.35
+  },
+  {
+   "text": "Erklärungen",
+   "src": "deckungsbeitrag/t1",
+   "start": 110.39,
+   "end": 110.87
+  },
+  {
+   "text": "zum",
+   "src": "deckungsbeitrag/t1",
+   "start": 110.93,
+   "end": 111.01
+  },
+  {
+   "text": "E-Commerce",
+   "src": "deckungsbeitrag/t1",
+   "start": 111.03,
+   "end": 111.53
+  },
+  {
+   "text": "sehen",
+   "src": "deckungsbeitrag/t1",
+   "start": 111.61,
+   "end": 111.79
+  },
+  {
+   "text": "willst,",
+   "src": "deckungsbeitrag/t1",
+   "start": 111.83,
+   "end": 112.07
+  },
+  {
+   "text": "dann",
+   "src": "deckungsbeitrag/t1",
+   "start": 112.13,
+   "end": 112.31
+  },
+  {
+   "text": "folge",
+   "src": "deckungsbeitrag/t1",
+   "start": 112.59,
+   "end": 112.77
+  },
+  {
+   "text": "mir",
+   "src": "deckungsbeitrag/t1",
+   "start": 112.81,
+   "end": 112.89
+  },
+  {
+   "text": "hier",
+   "src": "deckungsbeitrag/t1",
+   "start": 112.91,
+   "end": 113.01
+  },
+  {
+   "text": "gerne",
+   "src": "deckungsbeitrag/t1",
+   "start": 113.05,
+   "end": 113.29
+  },
+  {
+   "text": "und",
+   "src": "deckungsbeitrag/t1",
+   "start": 113.43,
+   "end": 113.49
+  },
+  {
+   "text": "drücke",
+   "src": "deckungsbeitrag/t1",
+   "start": 113.53,
+   "end": 113.71
+  },
+  {
+   "text": "das",
+   "src": "deckungsbeitrag/t1",
+   "start": 113.79,
+   "end": 113.87
+  },
+  {
+   "text": "Plus",
+   "src": "deckungsbeitrag/t1",
+   "start": 113.91,
+   "end": 114.05
+  },
+  {
+   "text": "weg.",
+   "src": "deckungsbeitrag/t1",
+   "start": 114.11,
+   "end": 114.23
+  }
+ ],
+ "pages": [
+  1,
+  3,
+  2,
+  2,
+  2,
+  1,
+  2,
+  2,
+  2,
+  3,
+  4,
+  1,
+  4,
+  4,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  4,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  4,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2,
+  2,
+  2,
+  4,
+  3,
+  3
+ ]
+}
