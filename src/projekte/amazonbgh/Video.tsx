@@ -9,7 +9,8 @@
  * "DEINEN PREIS BESTIMMEN?", an der Kartenposition unter dem Kopf, bis vor die erste Karte (3,4 s).
  * Bild (Pauls Vorgabe 25.10.: Kopf höher, Untertitel und Karten darunter): scale 1.35, hoch 655, x 27 (Take: Kopfoberkante
  * Median y 720, Augen Median x 560 / y 886, Kinn ~1076, über alle Schnittstücke alle 0,5 s gemessen) → Kopfoberkante ~317,
- * Augen ~541, Kinn ~798, mittig; unten endet das Bild bei Take y ~1907 (kein Rand). Sanfter Grade, ein ruhiges Zoom-in
+ * Augen ~541, Kinn ~798, mittig; unten endet das Bild bei Take y ~1907 (kein Rand). Sanfter Grade plus brightness(0.87) (die
+ * Aufnahme ist hell: Gesicht 0,651 im ersten Render, Soll ~0,55-0,57; wie bei googleads), ein ruhiges Zoom-in
  * (3 %) um die Augen, kein Punch-in. Von oben: Gesicht, Kinn, Pill-Untertitel (y 925), Karte (ab y 995, bis höchstens 1385),
  * alles über der Instagram-Zone (ab y 1500).
  * Hintergründe (karten-aufbau.md, "Marken-Shops als Hintergrund", und stil-news "Quelle als Hintergrund"): an den Stellen
@@ -81,7 +82,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           voice={voice}
           transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
           transformOrigin="50% 0%"
-          grade={STIL.gradeSanft}
+          grade={`${STIL.gradeSanft} brightness(0.87)`}
         />
       </AbsoluteFill>
 

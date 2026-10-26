@@ -88,11 +88,41 @@
   "bis": 223.15
  },
  "korrekturen": [
-  ["t1", 25.58, "ihm", ""],
-  ["t1", 34.42, "Marktplatzhändlern", "Marktplatzhändlern."],
-  ["t1", 79.06, "ihm", ""],
-  ["t1", 95.78, "sechsundzwanzigsten", "26."],
-  ["t1", 144.5, "erstens,", "Erstens,"],
-  ["t1", 150.82, "denn", "Denn"]
+  [
+   "t1",
+   25.58,
+   "ihm",
+   ""
+  ],
+  [
+   "t1",
+   34.42,
+   "Marktplatzhändlern",
+   "Marktplatzhändlern."
+  ],
+  [
+   "t1",
+   79.06,
+   "ihm",
+   ""
+  ],
+  [
+   "t1",
+   95.78,
+   "sechsundzwanzigsten",
+   "26.​"
+  ],
+  [
+   "t1",
+   144.5,
+   "erstens,",
+   "Erstens,"
+  ],
+  [
+   "t1",
+   150.82,
+   "denn",
+   "Denn"
+  ]
  ]
 }
