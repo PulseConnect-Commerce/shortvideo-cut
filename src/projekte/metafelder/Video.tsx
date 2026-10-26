@@ -55,6 +55,10 @@ export const HG: [string, number, number][] = [
   ["hg-vorlage", 183.15, 190.4], // "Denn dann nutzt du eine Produktvorlage … Ist das nicht cool?" (Tutorial, letzter Absatz)
 ];
 
+/** Sanfter Grade plus 12 % dunkler: die Aufnahme ist hell (Gesicht im fertigen Video 0,651 statt ~0,55-0,57, seine Vorgabe
+ *  2026-10-18 "zu hell"; npm run farbe hebt höchstens ±4 %). Mit brightness 0,88 gemessen ~0,57, Weiß nur leicht grauer. */
+const GRADE = `brightness(0.88) ${STIL.gradeSanft}`;
+
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel bis "Information" (~2,6 s), ganz weg bei ~2,85 s; die erste Karte kommt bei 2,90 s ("mühsam") */
 const HOOK_ENDE = fs(2.65);
@@ -86,7 +90,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           voice={voice}
           transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
           transformOrigin="50% 0%"
-          grade={STIL.gradeSanft}
+          grade={GRADE}
         />
       </AbsoluteFill>
 

@@ -1,26 +1,26 @@
 {
- "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlagen P04 und A03) für S02 · Metafelder. Sekunden im geschnittenen Video (cut.json, 97,32 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf ausgewählten Zuständen, pop auf zwei Stickern, success auf 'Text', 'richtigen Inhalt' und 'Onlineshop' (sichtbar), klick auf dem Plus. Gebaut in hyperframes/metafelder-skizzen/index.html. Echte Quellen: offizielles Symbol 'Dynamische Quelle verbinden' (Shopify Help Center) in K7a, Produktbilder aus Pauls Demo-Shop in K2, K6, K8, K11b, K12; Beispielwerte als BEISPIEL gekennzeichnet. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlagen P04 und A03) für S02 · Metafelder. Sekunden im geschnittenen Video (cut.json, 97,32 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf ausgewählten Zuständen, pop auf zwei Stickern, success auf 'Text', 'richtigen Inhalt' und 'Onlineshop' (sichtbar), klick auf dem Plus. Gebaut in hyperframes/metafelder-skizzen/index.html. Echte Quellen: offizielles Symbol 'Dynamische Quelle verbinden' (Shopify Help Center) in K7a, Produktbilder aus Pauls Demo-Shop in K2, K6, K8, K11b, K12; Beispielwerte als BEISPIEL gekennzeichnet. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG). Zeiten auf die Frames der Schnittstücke korrigiert (Versatz je Stück bis 0,085 s, wie T() in index.html).",
  "karten": [
   {
    "id": "k1",
    "wort": "mühsam",
    "text": "Drei Produktseiten, die Beschreibung wird bei jeder neu getippt, 'mühsam' handschriftlich; auf 'Metafelder' ein Etikett 'Metafelder'",
-   "start": 2.9,
-   "ende": 7.25,
+   "start": 2.885,
+   "ende": 7.235,
    "teile": {
-    "muehsam": 2.9,
-    "beschreibung": 3.55,
-    "metafelder": 6.13
+    "muehsam": 2.885,
+    "beschreibung": 3.535,
+    "metafelder": 6.115
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 2.9,
+     "at": 2.885,
      "volume": 0.12
     },
     {
      "datei": "tick.mp3",
-     "at": 6.18,
+     "at": 6.165,
      "volume": 0.1
     }
    ]
@@ -29,25 +29,25 @@
    "id": "k2",
    "wort": "Nehmen (Beispiel)",
    "text": "T-Shirt aus Pauls Demo-Shop (Basic T-Shirt, DEMO-SHOP), Shop-Badge auf 'Onlineshop', Ring auf 'Produkt', Etiketten 'Material' und 'Pflege' auf ihren Wörtern, 'sauber' handschriftlich, Haken auf 'anzeigen'",
-   "start": 7.32,
-   "ende": 15.05,
+   "start": 7.317,
+   "ende": 15.047,
    "teile": {
-    "onlineshop": 8.72,
-    "produkt": 10.68,
-    "material": 11.86,
-    "pflegehinweise": 12.6,
-    "sauber": 13.38,
-    "anzeigen": 14.42
+    "onlineshop": 8.717,
+    "produkt": 10.677,
+    "material": 11.857,
+    "pflegehinweise": 12.597,
+    "sauber": 13.377,
+    "anzeigen": 14.417
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 7.32,
+     "at": 7.317,
      "volume": 0.12
     },
     {
      "datei": "tick.mp3",
-     "at": 11.9,
+     "at": 11.897,
      "volume": 0.1
     }
    ]
@@ -56,24 +56,24 @@
    "id": "k3",
    "wort": "Statt",
    "text": "Produktformular mit Standardfeldern (Titel, Beschreibung); Ring auf 'jedes Mal', Fließtext tippt sich auf 'Fließtext', wird blass auf 'legst'; eigene Felder 'Material' und 'Pflege' kommen dazu, 'eigene Felder' handschriftlich",
-   "start": 15.09,
-   "ende": 20.33,
+   "start": 15.092,
+   "ende": 20.332,
    "teile": {
-    "jedes": 16.1,
-    "fliesstext": 17.15,
-    "legst": 18.09,
-    "eigene": 19.04,
-    "metafelder": 19.35
+    "jedes": 16.102,
+    "fliesstext": 17.152,
+    "legst": 18.092,
+    "eigene": 19.042,
+    "metafelder": 19.352
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 15.09,
+     "at": 15.092,
      "volume": 0.12
     },
     {
      "datei": "tick.mp3",
-     "at": 19.04,
+     "at": 19.042,
      "volume": 0.1
     }
    ]
@@ -82,21 +82,21 @@
    "id": "k4",
    "wort": "In (Shopify)",
    "text": "Weg im Admin: Zahnrad 'Einstellungen' → Daten-Symbol (ohne Beschriftung, siehe offene Frage) → 'Produkte' → neues Feld '+' wird 'Pflegeanleitung' ✓, 'neues Feld' handschriftlich",
-   "start": 20.36,
-   "ende": 29.3,
+   "start": 20.362,
+   "ende": 29.327,
    "teile": {
-    "einstellungen": 22.08,
-    "benutzerdefinierte": 23.34,
-    "dort": 25.24,
-    "produkten": 26.24,
-    "metafeld": 27.26,
-    "pflegeanleitung": 28.22,
-    "anlegen": 28.94
+    "einstellungen": 22.107,
+    "benutzerdefinierte": 23.367,
+    "dort": 25.267,
+    "produkten": 26.267,
+    "metafeld": 27.287,
+    "pflegeanleitung": 28.247,
+    "anlegen": 28.967
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 20.36,
+     "at": 20.362,
      "volume": 0.12
     }
    ]
@@ -105,24 +105,24 @@
    "id": "k5",
    "wort": "Wichtig",
    "text": "Feld 'Pflegeanleitung' mit leerer Fassung; Typen Text, Zahl, Datum auf 'Feldtyp'; 'Text' wandert auf 'Text' in die Fassung ✓, Zahl und Datum grau mit ✕ auf 'irgendeine Datenart'; 'passend' handschriftlich",
-   "start": 29.33,
-   "ende": 35.82,
+   "start": 29.363,
+   "ende": 35.855,
    "teile": {
-    "passenden": 30.75,
-    "feldtyp": 31.33,
-    "beispiel": 32.85,
-    "text": 33.43,
-    "irgendeine": 34.53
+    "passenden": 30.783,
+    "feldtyp": 31.363,
+    "beispiel": 32.885,
+    "text": 33.465,
+    "irgendeine": 34.565
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 29.33,
+     "at": 29.363,
      "volume": 0.12
     },
     {
      "datei": "success.mp3",
-     "at": 33.85,
+     "at": 33.885,
      "volume": 0.1
     }
    ]
@@ -131,33 +131,33 @@
    "id": "k6",
    "wort": "Und (danach)",
    "text": "Zwei Produkte aus dem Demo-Shop (T-Shirt, Wollschal) mit Feld; Cursor auf 'Wert', 'Bei 30 Grad waschen' Wort für Wort, 'Handwäsche' auf 'etwas anderes' (BEISPIEL), 'je Produkt' handschriftlich",
-   "start": 35.85,
-   "ende": 44.88,
+   "start": 35.885,
+   "ende": 44.937,
    "teile": {
-    "produkte": 36.83,
-    "wert": 38.71,
-    "t-shirt": 39.73,
-    "bei": 41.05,
-    "30": 41.21,
-    "grad": 41.59,
-    "waschen": 41.81,
-    "anderen": 42.75,
-    "etwas": 43.93
+    "produkte": 36.887,
+    "wert": 38.767,
+    "t-shirt": 39.787,
+    "bei": 41.107,
+    "30": 41.267,
+    "grad": 41.647,
+    "waschen": 41.867,
+    "anderen": 42.807,
+    "etwas": 43.987
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 35.85,
+     "at": 35.885,
      "volume": 0.12
     },
     {
      "datei": "tick.mp3",
-     "at": 41.21,
+     "at": 41.267,
      "volume": 0.1
     },
     {
      "datei": "tick.mp3",
-     "at": 43.93,
+     "at": 43.987,
      "volume": 0.1
     }
    ]
@@ -166,13 +166,13 @@
    "id": "st1",
    "wort": "praktische",
    "text": "Sticker 'PRAKTISCH.' links neben dem Kopf",
-   "start": 46.42,
-   "ende": 47.92,
+   "start": 46.482,
+   "ende": 47.982,
    "teile": {},
    "sfx": [
     {
      "datei": "pop.mp3",
-     "at": 46.42,
+     "at": 46.482,
      "volume": 0.1
     }
    ]
@@ -181,23 +181,23 @@
    "id": "k7a",
    "wort": "Und (jetzt kommt)",
    "text": "Produktseite (Theme), Ring auf 'Theme', offizielles Symbol 'Dynamische Quelle verbinden' (Shopify Help Center) auf 'dynamische Quellen', ✓ auf 'unterstützt', Rahmen 'Theme-Editor' auf 'Theme-Editor'",
-   "start": 44.9,
-   "ende": 51.48,
+   "start": 44.957,
+   "ende": 51.542,
    "teile": {
-    "theme": 47.8,
-    "dynamische": 48.0,
-    "unterstuetzt": 48.86,
-    "theme-editor": 50.55
+    "theme": 47.862,
+    "dynamische": 48.062,
+    "unterstuetzt": 48.922,
+    "theme-editor": 50.612
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 44.9,
+     "at": 44.957,
      "volume": 0.12
     },
     {
      "datei": "tick.mp3",
-     "at": 48.86,
+     "at": 48.922,
      "volume": 0.1
     }
    ]
@@ -206,23 +206,23 @@
    "id": "k7b",
    "wort": "einen (Block)",
    "text": "Metafeld 'Pflegeanleitung' links, Produktseite rechts; Block auf 'Block', einklappbare Zeile 'Pflege ˅' auf 'einklappbare Zeile', Kabel auf 'Metafeld', ✓ und Wert 'Bei 30 Grad waschen' auf 'verbinden', 'verbinden' handschriftlich",
-   "start": 51.5,
-   "ende": 58.0,
+   "start": 51.562,
+   "ende": 58.067,
    "teile": {
-    "block": 52.18,
-    "einklappbare": 53.44,
-    "metafeld": 55.38,
-    "verbinden": 56.48
+    "block": 52.242,
+    "einklappbare": 53.502,
+    "metafeld": 55.442,
+    "verbinden": 56.542
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 51.5,
+     "at": 51.562,
      "volume": 0.12
     },
     {
      "datei": "tick.mp3",
-     "at": 56.48,
+     "at": 56.542,
      "volume": 0.1
     }
    ]
@@ -231,25 +231,25 @@
    "id": "k8",
    "wort": "eine (Produktvorlage)",
    "text": "Eine Produktvorlage, Ring auf 'Shopify', zwei Seiten (T-Shirt, Wollschal) auf 'jedem Artikel', richtiger Inhalt je Seite ✓ auf 'richtigen Inhalt' (BEISPIEL), 'eine für alle' handschriftlich",
-   "start": 58.03,
-   "ende": 64.74,
+   "start": 58.097,
+   "ende": 64.807,
    "teile": {
-    "produktvorlage": 58.23,
-    "shopify": 59.47,
-    "jedem": 60.91,
-    "artikel": 61.19,
-    "richtigen": 62.07,
-    "inhalt": 62.47
+    "produktvorlage": 58.297,
+    "shopify": 59.537,
+    "jedem": 60.977,
+    "artikel": 61.257,
+    "richtigen": 62.137,
+    "inhalt": 62.537
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 58.03,
+     "at": 58.097,
      "volume": 0.12
     },
     {
      "datei": "success.mp3",
-     "at": 62.12,
+     "at": 62.187,
      "volume": 0.1
     }
    ]
@@ -258,23 +258,23 @@
    "id": "k9",
    "wort": "Das (spart)",
    "text": "Balken 'Pflegeaufwand' schrumpft auf 'Pflegeaufwand', Pfeil nach unten auf 'sondern'; drei schiefe Produktseiten auf 'Produktseiten' richten sich auf 'einheitlicher' aus, 'einheitlich' handschriftlich",
-   "start": 64.77,
-   "ende": 70.12,
+   "start": 64.837,
+   "ende": 70.187,
    "teile": {
-    "pflegeaufwand": 66.05,
-    "sondern": 67.13,
-    "produktseiten": 68.23,
-    "einheitlicher": 69.25
+    "pflegeaufwand": 66.117,
+    "sondern": 67.197,
+    "produktseiten": 68.297,
+    "einheitlicher": 69.317
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 64.77,
+     "at": 64.837,
      "volume": 0.12
     },
     {
      "datei": "tick.mp3",
-     "at": 69.25,
+     "at": 69.317,
      "volume": 0.1
     }
    ]
@@ -283,22 +283,22 @@
    "id": "k10",
    "wort": "Und (was dir)",
    "text": "Folgen-Karte: Ring auf 'Zeit', Zeiger tippt auf 'Follow' das Plus an, es wird zum Haken; Ring auf 'E-Commerce-Tipps'",
-   "start": 70.15,
-   "ende": 76.4,
+   "start": 70.228,
+   "ende": 76.478,
    "teile": {
-    "zeit": 71.19,
-    "follow": 72.83,
-    "tipps": 74.24
+    "zeit": 71.268,
+    "follow": 72.908,
+    "tipps": 74.318
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 70.15,
+     "at": 70.228,
      "volume": 0.12
     },
     {
      "datei": "klick.mp3",
-     "at": 72.83,
+     "at": 72.908,
      "volume": 0.1
     }
    ]
@@ -307,13 +307,13 @@
    "id": "st2",
    "wort": "Tipp",
    "text": "Sticker 'MEIN TIPP' links neben dem Kopf",
-   "start": 76.89,
-   "ende": 78.49,
+   "start": 76.95,
+   "ende": 78.55,
    "teile": {},
    "sfx": [
     {
      "datei": "pop.mp3",
-     "at": 76.89,
+     "at": 76.95,
      "volume": 0.1
     }
    ]
@@ -322,24 +322,24 @@
    "id": "k11a",
    "wort": "einem (einzigen)",
    "text": "Ein Feld ('1 Feld') auf 'einzigen Feld', 'erst eins' handschriftlich, sechs Produkte auf 'vielen Produkten', alle ✓ auf 'gebraucht'",
-   "start": 78.51,
-   "ende": 83.29,
+   "start": 78.57,
+   "ende": 83.35,
    "teile": {
-    "einzigen": 78.81,
-    "erst": 79.37,
-    "vielen": 81.15,
-    "produkten": 81.43,
-    "gebraucht": 82.29
+    "einzigen": 78.87,
+    "erst": 79.43,
+    "vielen": 81.21,
+    "produkten": 81.49,
+    "gebraucht": 82.35
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 78.51,
+     "at": 78.57,
      "volume": 0.12
     },
     {
      "datei": "tick.mp3",
-     "at": 82.29,
+     "at": 82.35,
      "volume": 0.1
     }
    ]
@@ -348,24 +348,24 @@
    "id": "k11b",
    "wort": "und (prüf)",
    "text": "'prüfen' handschriftlich, zwei Handy-Seiten (T-Shirt, Wollschal) auf 'zwei unterschiedliche', Lupe fährt darüber, Pflege-Zeilen ✓ auf 'Frontend' (BEISPIEL)",
-   "start": 83.31,
-   "ende": 87.47,
+   "start": 83.37,
+   "ende": 87.53,
    "teile": {
-    "pruef": 83.45,
-    "zwei": 84.95,
-    "unterschiedliche": 85.23,
-    "produkte": 85.81,
-    "frontend": 86.53
+    "pruef": 83.51,
+    "zwei": 85.01,
+    "unterschiedliche": 85.29,
+    "produkte": 85.87,
+    "frontend": 86.59
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 83.31,
+     "at": 83.37,
      "volume": 0.12
     },
     {
      "datei": "tick.mp3",
-     "at": 86.53,
+     "at": 86.59,
      "volume": 0.1
     }
    ]
@@ -374,8 +374,8 @@
    "id": "st3",
    "wort": "Aber",
    "text": "Sticker 'ABER.' links neben dem Kopf",
-   "start": 87.49,
-   "ende": 88.94,
+   "start": 87.575,
+   "ende": 89.025,
    "teile": {},
    "sfx": []
   },
@@ -383,27 +383,27 @@
    "id": "k12",
    "wort": "Aber",
    "text": "Drei Metafelder ohne Verbindung zur Produktseite, Bruch auf 'herzlich wenig', Auge zu auf 'gar nicht angezeigt', 'unsichtbar'; auf 'nutze' bleibt das gebrauchte Feld, Kabel und Pflege-Zeile ✓ auf 'Onlineshop', 'sichtbar' handschriftlich",
-   "start": 87.49,
+   "start": 87.575,
    "ende": 97.32,
    "teile": {
-    "metafelder": 87.71,
-    "herzlich": 89.41,
-    "gar": 91.35,
-    "angezeigt": 91.71,
-    "nutze": 93.85,
-    "metafelder2": 94.51,
-    "onlineshop": 95.93,
-    "gebrauchen": 96.37
+    "metafelder": 87.795,
+    "herzlich": 89.495,
+    "gar": 91.435,
+    "angezeigt": 91.795,
+    "nutze": 93.935,
+    "metafelder2": 94.595,
+    "onlineshop": 96.015,
+    "gebrauchen": 96.455
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 87.49,
+     "at": 87.575,
      "volume": 0.12
     },
     {
      "datei": "success.mp3",
-     "at": 96.05,
+     "at": 96.135,
      "volume": 0.1
     }
    ]
