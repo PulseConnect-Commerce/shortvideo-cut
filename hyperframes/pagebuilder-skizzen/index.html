@@ -401,16 +401,16 @@
       // Linie zeichnet sich (pathLength="1")
       function zeichne(sel, t, d = 0.5) {
         tl.set(sel, { opacity: 1 }, t);
-        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
       }
       // Schreibschrift erscheint von links nach rechts (Clip-Rechteck wächst)
       function schreibe(sel, breite, t, d = 0.45) {
-        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.inOut" }, t);
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
       }
       // Punkt läuft auf einem Pfad (deterministisch über den Fortschritt)
       function laufe(punkt, pfad, t, d) {
         const p = document.querySelector(pfad), c = document.querySelector(punkt), len = p.getTotalLength(), o = { v: 0 };
-        tl.fromTo(o, { v: 0 }, { v: 1, duration: d, ease: "power2.inOut", immediateRender: false, onUpdate: () => {
+        tl.fromTo(o, { v: 0 }, { v: 1, duration: d, ease: "power2.out", immediateRender: false, onUpdate: () => {
           const q = p.getPointAtLength(o.v * len); c.setAttribute("cx", q.x); c.setAttribute("cy", q.y);
         } }, t);
       }
@@ -441,7 +441,7 @@
       const lage = (sel, x, y, s) => gsap.set(sel, { x, y, scale: s });
       karte("#k3", 12.09, 18.45);
       lage("#k3-lage", 0, 4, 0.2448);
-      tl.to("#k3-lage", { x: -6, y: -2, scale: 0.26, duration: 2.3, ease: "sine.inOut" }, 12.2);
+      tl.to("#k3-lage", { x: -6, y: -2, scale: 0.26, duration: 2.28, ease: "sine.inOut" }, 12.2);
       tl.to("#k3-lage", { x: -30, y: -126, scale: 0.6, duration: 0.7, ease: "power2.inOut" }, 14.49);
       schreibe("#k3-cliprect", 160, 15.09, 0.4);
       pop("#k3-m1", 15.39, 0.25);
@@ -483,7 +483,7 @@
 
       // K6 Regler: auf "einfache" gleitet der Knopf nach links (KI-Zone leuchtet), "praktisch" wird geschrieben
       karte("#k6", 29.81, 34.85);
-      tl.to("#k6-knopf", { x: -190, duration: 0.5, ease: "power2.inOut" }, 30.53);
+      tl.to("#k6-knopf", { x: -190, duration: 0.5, ease: "power2.out" }, 30.53);
       tl.to("#k6-zone", { opacity: 1, duration: 0.3 }, 30.75);
       pop("#k6-ki", 30.60);
       badge("#k6-ok", 31.03);
@@ -527,8 +527,8 @@
       tl.to("#k8-schwebe", { x: 30, y: 112, opacity: 0, duration: 0.45, ease: "power2.in" }, 47.31);
       tl.to("#k8-ki", { opacity: 1, duration: 0.2 }, 47.66);
       // Smartphone
-      tl.to("#k8-kopie", { x: 539, y: 26, scale: 0.92, svgOrigin: "60 34", duration: 0.5, ease: "power2.inOut" }, 49.53);
-      tl.to("#k8-kt", { opacity: 0, duration: 0.2 }, 49.53);
+      tl.to("#k8-kopie", { x: 539, y: 26, scale: 0.92, svgOrigin: "60 34", duration: 0.5, ease: "power2.out" }, 49.53);
+      tl.to("#k8-kt", { opacity: 0, duration: 0.2 }, 48.45);
       zeichne("#k8-handy", 49.53, 0.5);
       tl.to("#k8-notch", { opacity: 1, duration: 0.2 }, 49.85);
       badge("#k8-ok", 49.89);
@@ -536,7 +536,7 @@
 
       // K9 Regler: Knopf gleitet auf "komplexere" nach rechts, Landingpage, "Page Builder", ✓ auf "sinnvoll"
       karte("#k9", 51.0, 55.25);
-      tl.to("#k9-knopf", { x: 400, duration: 0.55, ease: "power2.inOut" }, 51.16);
+      tl.to("#k9-knopf", { x: 400, duration: 0.55, ease: "power2.out" }, 51.16);
       tl.to("#k9-zr", { opacity: 1, duration: 0.3 }, 51.45);
       tl.to("#k9-komplex", { fill: "#0b0c0e", duration: 0.3 }, 51.45);
       pop("#k9-lp", 52.21);
@@ -556,7 +556,7 @@
       tl.fromTo("#k11", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 60.47);
       tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 62.29);
       tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 63.5);
-      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.55, ease: "power2.inOut" }, 63.6);
+      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.47, ease: "power2.inOut" }, 63.65);
       tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 64.12);
       tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 64.2);
       tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 64.17);

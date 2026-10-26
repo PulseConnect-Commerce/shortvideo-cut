@@ -83,9 +83,10 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
         />
       </AbsoluteFill>
 
-      {/* Hook-Titel (Titel des Kalendertermins), easyJet-Stil, an der Kartenposition unter dem Kopf (oben ~1085) */}
+      {/* Hook-Titel (Titel des Kalendertermins), easyJet-Stil, an der Kartenposition unter dem Kopf (oben ~1085), wie Karte und
+          Pille um x 490 zentriert, damit die erste Zeile nicht in die TikTok-Leiste rechts (ab x 900) ragt */}
       <DesignRahmen design="verlauf">
-        <AbsoluteFill style={{ transform: "translateY(833px) scale(0.9)", transformOrigin: "50% 0%" }}>
+        <AbsoluteFill style={{ transform: "translate(-50px, 833px) scale(0.9)", transformOrigin: "50% 0%" }}>
           <HookTitle fr={fr} line1="BRAUCHST DU FÜR SHOPIFY" line2="EINEN PAGE BUILDER?" outAt={HOOK_ENDE} />
         </AbsoluteFill>
       </DesignRahmen>
