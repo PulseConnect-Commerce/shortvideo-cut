@@ -1,0 +1,174 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields/displaying-metafields-on-your-online-store",
+ "datum": "2026-10-26T20:10:16.158Z",
+ "pos": [
+  {
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "t": "Metafelder in deinem Onlineshop anzeigen",
+   "y": 393
+  },
+  {
+   "t": "Nachdem du Metafeld-Definitionen hinzugefügt und Teilen deines Shops M",
+   "y": 659
+  },
+  {
+   "t": "Im Folgenden findest du weitere Beispiele für spezielle Informationen,",
+   "y": 1203
+  },
+  {
+   "t": "Teilenummern",
+   "y": 1397
+  },
+  {
+   "t": "Farbfelder",
+   "y": 1464
+  },
+  {
+   "t": "Produktveröffentlichungsdaten",
+   "y": 1532
+  },
+  {
+   "t": "vorgestellte Produkte oder Varianten",
+   "y": 1599
+  },
+  {
+   "t": "Produkt-Sternebewertung",
+   "y": 1667
+  },
+  {
+   "t": "Dateien zum Herunterladen",
+   "y": 1734
+  },
+  {
+   "t": "Zutatenlisten",
+   "y": 1802
+  },
+  {
+   "t": "Inhalte aus deinen Kategorie-Metafeldern",
+   "y": 1869
+  },
+  {
+   "t": "Wenn du neue benutzerdefinierte Datenstrukturen hinzufügen musst, kann",
+   "y": 1963
+  },
+  {
+   "t": "Auf dieser Seite",
+   "y": 2333
+  },
+  {
+   "t": "Metafelder über den Theme-Editor mit deinem Theme verbinden",
+   "y": 2473
+  },
+  {
+   "t": "Theme-Code bearbeiten, um Metafelder hinzuzufügen",
+   "y": 2590
+  },
+  {
+   "t": "Marken-Assets mit Metafeldern anzeigen",
+   "y": 2708
+  },
+  {
+   "t": "Kategorie-Metafelder in deinem Theme anzeigen",
+   "y": 2775
+  },
+  {
+   "t": "Metafelder über den Theme-Editor mit deinem Theme verbinden",
+   "y": 2945
+  },
+  {
+   "t": "Wenn dein Theme Metafelder unterstützt, kannst du im Theme-Editor ausw",
+   "y": 3289
+  },
+  {
+   "t": "Du kannst Metafelder mit deinem Theme verbinden, indem du Abschnitte o",
+   "y": 3633
+  },
+  {
+   "t": "Nachdem du einen Abschnitt oder Block hinzugefügt hast, kannst du ein ",
+   "y": 3977
+  },
+  {
+   "t": "Symbol „Dynamische Quelle verbinden“",
+   "y": 4287
+  },
+  {
+   "t": "Wenn das Symbol „Dynamische Quelle verbinden“ ein + anzeigt, kannst du",
+   "y": 4709
+  },
+  {
+   "t": "Symbol „Dynamische Quelle einfügen“",
+   "y": 5019
+  },
+  {
+   "t": "Eine schrittweise Anleitung findest du unter Metafelder und dynamische",
+   "y": 5442
+  },
+  {
+   "t": "Du kannst eine Liste von Inhaltstypen mit den Abschnitten und Blöcken ",
+   "y": 5585
+  },
+  {
+   "t": "Theme-Code bearbeiten, um Metafelder hinzuzufügen",
+   "y": 5955
+  },
+  {
+   "t": "Wenn du deinen Theme-Code bearbeiten möchtest, um Metafelder in deinem",
+   "y": 6299
+  },
+  {
+   "t": "Bearbeite deinen Theme-Code nur, wenn du über Programmiererfahrung ver",
+   "y": 6543
+  },
+  {
+   "t": "Mehr Informationen zum Engagieren von Shopify-Partner:innen.",
+   "y": 6837
+  },
+  {
+   "t": "Marken-Assets mit Metafeldern anzeigen",
+   "y": 7057
+  },
+  {
+   "t": "Du kannst Metafelder verwenden, um deine Marken-Assets in deinem Onlin",
+   "y": 7320
+  },
+  {
+   "t": "Einige Themes können deine Marken-Assets in ihren Theme-Einstellungen ",
+   "y": 7664
+  },
+  {
+   "t": "Logoauswahl in den Theme-Einstellungen mit hervorgehobenem Symbol „Dyn",
+   "y": 8124
+  },
+  {
+   "t": "Klicke auf das Marken-Asset, das du in deinem Header verwenden möchtes",
+   "y": 8877
+  },
+  {
+   "t": "Bereich „Dynamische Quelle verbinden“ mit ausgewähltem Standard-Logo.",
+   "y": 9137
+  },
+  {
+   "t": "Wenn die Option zum Verbinden von Marken-Assets nicht vorhanden ist, i",
+   "y": 9735
+  },
+  {
+   "t": "Kategorie-Metafelder in deinem Theme anzeigen",
+   "y": 10005
+  },
+  {
+   "t": "Die meisten Standard-Produktkategorien verfügen über verfügbare Katego",
+   "y": 10269
+  },
+  {
+   "t": "Du kannst Kategorie-Metafelder in deinem Onlineshop verwenden, um dein",
+   "y": 11093
+  },
+  {
+   "t": "Du kannst Metafelder auch mit der Shopify Search & Discovery App verwe",
+   "y": 11487
+  }
+ ]
+}

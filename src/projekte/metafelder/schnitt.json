@@ -1,0 +1,81 @@
+{
+ "projekt": "metafelder",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 6.8,
+   "text": "Wenn du in Shopify bei jedem Produkt immer dieselbe Information mühsam in die Beschreibung schreibst, dann würde ich mir tatsächlich mal die Metafelder anschauen.",
+   "bis": 14.2
+  },
+  {
+   "take": "t1",
+   "ab": 64.8,
+   "text": "Nehmen wir jetzt mal als Beispiel einen Onlineshop für Bekleidung. Beim Produkt möchtest du natürlich Material und Pflegehinweise auch sauber in deinem Onlineshop anzeigen.",
+   "bis": 72.62
+  },
+  {
+   "take": "t1",
+   "ab": 78.8,
+   "text": "Statt dass du jetzt aber dafür jedes Mal einen eigenen Fließtext einbaust, legst du einfach dafür eigene Metafelder an.",
+   "bis": 84.15
+  },
+  {
+   "take": "t1",
+   "ab": 101.3,
+   "text": "In Shopify findest du das Ganze unter Einstellungen und dann in Benutzerdefinierte Daten. Dort kannst du dann bei den Produkten zum Beispiel ein Metafeld für die Pflegeanleitung anlegen. Wichtig dabei ist, dass du einen passenden Feldtyp auswählst.",
+   "bis": 114.32
+  },
+  {
+   "take": "t1",
+   "ab": 118.7,
+   "text": "Also zum Beispiel einen Text und nicht einfach nur irgendeine Datenart.",
+   "bis": 122.15
+  },
+  {
+   "take": "t1",
+   "ab": 132.3,
+   "text": "Und danach gehst du einfach in die Produkte und trägst dort den konkreten Wert ein. Beim T-Shirt also vielleicht, bei 30 Grad waschen, oder beim anderen Produkt steht eben auch etwas anderes.",
+   "bis": 141.4
+  },
+  {
+   "take": "t1",
+   "ab": 153.6,
+   "text": "Und jetzt kommt hier aber der eigentlich praktische Teil. Denn wenn ein Theme dynamische Quellen unterstützt, dann kannst du hier tatsächlich im Theme-Editor einen passenden Block, zum Beispiel eine einklappbare Zeile, mit diesem Metafeld genau eben verbinden.",
+   "bis": 166.1
+  },
+  {
+   "take": "t1",
+   "ab": 183.1,
+   "text": "Denn dann nutzt du eine Produktvorlage, aber Shopify zeigt wiederum bei jedem Artikel einfach den richtigen Inhalt an. Ist das nicht cool? Das spart dir natürlich nicht nur Pflegeaufwand, sondern hält tatsächlich deine Produktseiten auch einheitlicher.",
+   "bis": 196.05
+  },
+  {
+   "take": "t1",
+   "ab": 203.5,
+   "text": "Und was dir definitiv Zeit spart, ist, wenn du mir hier ein Follow hinterlässt, um weitere solche E-Commerce-Tipps in Zukunft nicht zu verpassen.",
+   "bis": 209.98
+  },
+  {
+   "take": "t1",
+   "ab": 215.0,
+   "text": "Und mein Tipp an dich ist jetzt, fang bitte mit einem einzigen Feld erst einmal an, das zum Beispiel bei vielen Produkten wirklich gebraucht wird, und prüf erst einmal nach Einrichtung zwei unterschiedliche Produkte im Frontend aus.",
+   "bis": 226.05
+  },
+  {
+   "take": "t1",
+   "ab": 291.2,
+   "text": "Aber Metafelder anzulegen bringt dir natürlich herzlich wenig, wenn sie am Ende einfach gar nicht angezeigt werden. Deswegen würde ich nur sagen, nutze tatsächlich Metafelder, wenn du sie wirklich im Onlineshop gebrauchen kannst."
+  }
+ ],
+ "ende": {
+  "bis": 301.1
+ },
+ "korrekturen": []
+}

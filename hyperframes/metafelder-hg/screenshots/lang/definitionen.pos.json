@@ -1,0 +1,118 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields/metafield-definitions",
+ "datum": "2026-10-26T20:07:27.659Z",
+ "pos": [
+  {
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "t": "Hinzufügen von Metafeld-Definitionen",
+   "y": 393
+  },
+  {
+   "t": "Metafeld-Definitionen dienen als Vorlagen, die festlegen, für welchen ",
+   "y": 659
+  },
+  {
+   "t": "Wenn du eine Metafeld-Definition hinzufügst, kannst du eine der folgen",
+   "y": 1153
+  },
+  {
+   "t": "eine Standarddefinition auswählen",
+   "y": 1297
+  },
+  {
+   "t": "eine benutzerdefinierte Definition erstellen",
+   "y": 1364
+  },
+  {
+   "t": "Verwende für deine Metafelder nach Möglichkeit eine Standarddefinition",
+   "y": 1458
+  },
+  {
+   "t": "Weitere Informationen findest du unter Shopify-Standard-Metafelder.",
+   "y": 1902
+  },
+  {
+   "t": "Du musst unter den folgenden Umständen eine benutzerdefinierte Definit",
+   "y": 2045
+  },
+  {
+   "t": "Es gibt keine Standarddefinition für die spezialisierten Informationen",
+   "y": 2189
+  },
+  {
+   "t": "Du möchtest bestehende Metafelder zu einer Definition migrieren.",
+   "y": 2307
+  },
+  {
+   "t": "Du fügst Metafeld-Definitionen auf der Seite Metafelder in deinem Shop",
+   "y": 2450
+  },
+  {
+   "t": "mithilfe einer App aus dem Shopify App Store",
+   "y": 2694
+  },
+  {
+   "t": "durch Bearbeiten deines Theme-Codes",
+   "y": 2762
+  },
+  {
+   "t": "Du kannst bis zu 256 Metafeld-Definitionen für jeden Typ haben, wie Pr",
+   "y": 2855
+  },
+  {
+   "t": "In diesem Abschnitt",
+   "y": 3035
+  },
+  {
+   "t": "Bestandteile einer Metafeld-Definition",
+   "y": 3125
+  },
+  {
+   "t": "Bestandteile einer Metafeld-Definition",
+   "y": 3125
+  },
+  {
+   "t": "Inhaltstypen und Werte von Metafeldern",
+   "y": 3193
+  },
+  {
+   "t": "Inhaltstypen und Werte von Metafeldern",
+   "y": 3193
+  },
+  {
+   "t": "Metafeldlisten",
+   "y": 3260
+  },
+  {
+   "t": "Metafeldlisten",
+   "y": 3260
+  },
+  {
+   "t": "Standard-Metafeld-Definitionen hinzufügen",
+   "y": 3328
+  },
+  {
+   "t": "Standard-Metafeld-Definitionen hinzufügen",
+   "y": 3328
+  },
+  {
+   "t": "Benutzerdefinierte Metafeld-Definitionen erstellen",
+   "y": 3395
+  },
+  {
+   "t": "Benutzerdefinierte Metafeld-Definitionen erstellen",
+   "y": 3395
+  },
+  {
+   "t": "Metafelder migrieren",
+   "y": 3463
+  },
+  {
+   "t": "Metafelder migrieren",
+   "y": 3463
+  }
+ ]
+}

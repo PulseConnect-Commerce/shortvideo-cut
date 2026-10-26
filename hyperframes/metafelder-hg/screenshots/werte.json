@@ -1,0 +1,197 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields/adding-values-to-metafields",
+ "datum": "2026-10-26T20:03:20.140Z",
+ "title": "Shopify Help Center | Werte zu Metafeldern hinzufügen",
+ "text": "Hilfe\nEinloggen\nFrage stellen\nDeutsch\nAllgemeine geschäftsbedingungen\nDatenschutzerklärung\nDeine datenschutzoptionen\nInhalt\nHome\n...\nMetafelder\nWerte zu Metafeldern hinzufügen\n\nNachdem du eine Metafeld-Definition hinzugefügt hast, fügst du auf den entsprechenden Seiten in deinem Shopify-Adminbereich Werte für dein Metafeld hinzu. Wenn du beispielsweise eine Metafeld-Definition für das Produktablaufdatum erstellst, gibst du die spezifischen Werte für das Ablaufdatum auf deinen Produktseiten in deinem Shopify-Adminbereich ein. Durch das Hinzufügen von Werten zu deinen Metafeldern kannst du spezielle Informationen für die interne Nachverfolgung oder für die Anzeige in deinem Onlineshop speichern.\n\nAngepinnte Metafelder werden auf den Seiten deines Shopify-Adminbereichs in einer bearbeitbaren Tabelle in derselben Reihenfolge angezeigt, in der sie in deiner Liste der Metafeld-Definitionen aufgeführt sind. Jedes Metafeld zeigt den Namen an, den du beim Erstellen der Metafeld-Definition ausgewählt hast. Du kannst in jede Tabellenzeile klicken, um den Metafeldtyp und die Beschreibung anzuzeigen und anschließend einen Wert einzugeben.\n\nMetafelder akzeptieren nur die für ihren Inhaltstyp unterstützten Werte. Weitere Informationen zu unterstützten Werten für gängige Metafeldtypen findest du unter Inhaltstypen und Werte von Metafeldern.\n\nMit Metafeldlisten kannst du mehrere Werte in einem einzigen Metafeld speichern. Du kannst einer Metafeldliste mehrere einzeilige Textfelder oder Produktreferenzwerte hinzufügen, um große Datensätze zu organisieren, Artikel vorzuschlagen, die gut zusammenpassen, oder um leistungsstärkere Suchfilteroptionen zu erstellen.\n\nSidekick\n\nDu kannst Sidekick bitten, mithilfe einer in natürlicher Sprache verfassten Anfrage Werte in die Metafelder eines Produkts einzugeben. Die Werte bleiben ungespeichert, bis du auf Speichern klickst. Verwende einen Prompt wie Lege für das Metafeld für das Ablaufdatum von Wildflower Honey den 30. Juni 2027 fest. Sidekick kann keine Werte in JSON-Metafelder oder Referenz-Metafelder wie Produktlisten eingeben. Befolge für diese Metafelder die Schritte auf dieser Seite.\n\nAuf dieser Seite\nWerte zu gängigen Metafeldtypen hinzufügen\nNächste Schritte nach dem Hinzufügen von Werten zu Metafeldern\nWerte zu gängigen Metafeldtypen hinzufügen\n\nWelches Verfahren du zum Hinzufügen von Werten zu einem Metafeld befolgst, hängt vom Inhaltstyp dieses Metafelds ab. Beispielsweise verwenden Metafelder für das Produktablaufdatum und das Geburtsdatum von Kund:innen beide den Inhaltstyp Datum.\n\nDie folgenden Beispiele beschreiben die Schritte zum Hinzufügen von Werten zu Metafeldern mit unterschiedlichen Inhaltstypen.\n\nHinweis\n\nNur angepinnte Metafelder werden automatisch auf den Seiten deines Shopify-Adminbereichs angezeigt. Wenn du nicht angepinnte Metafelder hast, musst du auf Alle anzeigen klicken, um diese zusätzlichen Metafelder anzuzeigen. Mehr Informationen zum Anpinnen von Metafeldern.\n\nDesktop\nFarbe\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Farb-Metafeld und anschließend auf Farbe auswählen.\n\nWähle eine Farbe auf eine der folgenden Arten aus:\n\nVerwende die Farbauswahl, um eine Farbe auszuwählen.\nGib einen RGB-Farbwert in das Feld Farbe ein.\n\nKlicke auf Speichern.\n\nDatum\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Datums-Metafeld und wähle anschließend über den Kalender ein Datum aus.\n\nKlicke auf Speichern.\n\nDatum und Uhrzeit\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Metafeld für Datum und Uhrzeit.\n\nKlicke auf den Kalender, um ein Datum auszuwählen, und klicke anschließend auf das Zeitfeld, um eine Uhrzeit auszuwählen.\n\nKlicke auf Speichern.\n\nDimension\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Dimensions-Metafeld und gib dann einen Wert ein.\n\nWähle eine Maßeinheit aus der Liste aus.\n\nKlicke auf Speichern.\n\nGewicht\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Gewichts-Metafeld und gib dann einen Wert ein.\n\nWähle eine Maßeinheit aus der Liste aus.\n\nKlicke auf Speichern.\n\nVolumen\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Volumen-Metafeld und gib dann einen Wert ein.\n\nWähle eine Maßeinheit aus der Liste aus.\n\nKlicke auf Speichern.\n\nZahl\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Zahlen-Metafeld und gib dann einen Wert ein.\n\nKlicke auf Speichern.\n\nBewertung\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Bewertungs-Metafeld und gib dann einen Wert ein.\n\nKlicke auf Speichern.\n\nDateireferenz\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Dateireferenz-Metafeld und anschließend auf Bild auswählen, Video auswählen oder Datei auswählen.\n\nOptional: Um eine Datei von deinem Gerät hochzuladen, klicke auf Bild hochladen, Video hochladen oder Datei hochladen, wähle eine Datei auf deinem Gerät aus und klicke dann auf Öffnen.\n\nWähle die Datei aus, die du hinzufügen möchtest, und klicke dann auf Fertig.\n\nOptional: Um einem Bild einen Alt-Text hinzuzufügen, klicke auf das Vorschaubild, gib eine Beschreibung in das Feld Alt-Text ein und klicke dann auf Fertig.\n\nOptional: Um das Titelbild eines Videos zu bearbeiten, klicke auf Ändern, um das neue Titelbild auszuwählen, und klicke dann auf Fertig.\n\nKlicke auf Speichern.\n\nHinweis\n\nBilder und Videos können in deinem Onlineshop angezeigt oder als herunterladbare Ressource verwendet werden. Allgemeine Dateien sind nur zum Herunterladen bestimmt.\n\nSeitenreferenz\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Seitenreferenz-Metafeld.\n\nKlicke auf Auswählen und wähle dann eine Seite aus deinem Onlineshop aus.\n\nKlicke auf Speichern.\n\nProduktreferenz\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Produktreferenz-Metafeld.\n\nKlicke auf Produkt auswählen und wähle dann ein Produkt aus der Liste aus.\n\nKlicke auf Speichern.\n\nProduktvariantenreferenz\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Produktvariantenreferenz-Metafeld.\n\nKlicke auf Variante auswählen und wähle dann eine Produktvariante aus der Liste aus.\n\nKlicke auf Speichern.\n\nMetaobjektreferenz\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Metaobjektreferenz-Metafeld.\n\nKlicke auf Eintrag auswählen und wähle dann einen Eintrag aus der Liste aus.\n\nKlicke auf Speichern.\n\nKollektionsreferenz\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Kollektionsreferenz-Metafeld.\n\nKlicke auf Kollektion auswählen und wähle dann eine Kollektion aus der Liste aus.\n\nKlicke auf Speichern.\n\nURL\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das URL-Metafeld und gib dann eine gültige URL ein.\n\nKlicke auf Speichern.\n\nEinzeiliger oder mehrzeiliger Text\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Text-Metafeld.\n\nFühre je nachdem, wie du deine Metafeld-Definition konfiguriert hast, einen der folgenden Schritte aus:\n\nGib deinen Text ein.\nKlicke auf Option auswählen und wähle dann eine voreingestellte Option aus der Liste aus.\n\nKlicke auf Speichern.\n\nWahr oder falsch\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das Metafeld für „Wahr“ oder „Falsch“ und wähle dann Wahr oder Falsch aus.\n\nKlicke auf Speichern.\n\nJSON\n\nGehe in deinem Shopify-Adminbereich zu dem Teil deines Shops, in dem du einen Metafeldwert hinzufügen möchtest. Zum Beispiel zu einem bestimmten Produkt, einer Kollektion oder einem:einer Kund:in.\n\nNavigiere zum Abschnitt Metafelder, in dem die entsprechenden Metafeld-Definitionen in einer Liste angezeigt werden.\n\nKlicke auf das JSON-Metafeld und gib dann deine Daten ein.\n\nKlicke auf Speichern.\n\nMobilgerät\nNächste Schritte nach dem Hinzufügen von Werten zu Metafeldern\n\nNachdem du deinen Metafeldern Werte hinzugefügt hast, kannst du deine Metafelder mit deinem Theme verbinden, um deine benutzerdefinierten Informationen in deinem Onlineshop anzuzeigen.\n\nFeedback hinterlassen",
+ "imgs": [],
+ "fixed": [
+  "sticky inset-x-0 top-0 z-30 shrink-0 border-b border-color-border threads_md:sta top0 h65",
+  "fixed transition-all threads_md:hidden h-[calc(100dvh-var(--topbar-h)] threads_m top65 h703",
+  "fixed inset-x-0 top-[var(--topbar-h)+4px] h-[inherit] bg-black/25 transition-opa top65 h703",
+  "sticky bottom-0 z-30 w-full py-4 text-[0] threads_md:has-[[data-conversation-tog top688 h80"
+ ],
+ "links": [
+  "Einloggen => https://help.shopify.com/de/user/login?returnTo=%2Fde%2Fmanual%2Fcustom-data%2Fmetafields%2Fadding-values-to-metafields",
+  "Metafelder => https://help.shopify.com/de/manual/custom-data/metafields",
+  "Metafeld-Definition => https://help.shopify.com/de/manual/custom-data/metafields/metafield-definitions",
+  "Inhaltstypen und Werte von Metafeldern => https://help.shopify.com/de/manual/custom-data/metafields/metafield-definitions/metafield-types",
+  "Werte zu gängigen Metafeldtypen hinzufügen => https://help.shopify.com/de/manual/custom-data/metafields/adding-values-to-metafields#adding-values-to-common-types-of-metafields",
+  "Nächste Schritte nach dem Hinzufügen von Werten zu Metafeldern => https://help.shopify.com/de/manual/custom-data/metafields/adding-values-to-metafields#next-steps",
+  "Anpinnen von Metafeldern => https://help.shopify.com/de/manual/custom-data/metafields/pinning-metafield-definitions",
+  "deine Metafelder mit deinem Theme verbinden => https://help.shopify.com/de/manual/custom-data/metafields/displaying-metafields-on-your-online-store"
+ ],
+ "heads": [
+  {
+   "t": "Werte zu Metafeldern hinzufügen",
+   "y": 157
+  },
+  {
+   "t": "Sidekick",
+   "y": 906
+  },
+  {
+   "t": "Auf dieser Seite",
+   "y": 1192
+  },
+  {
+   "t": "Werte zu gängigen Metafeldtypen hinzufügen",
+   "y": 1363
+  },
+  {
+   "t": "Hinweis",
+   "y": 1675
+  },
+  {
+   "t": "Farbe",
+   "y": 1930
+  },
+  {
+   "t": "Datum",
+   "y": 2347
+  },
+  {
+   "t": "Datum und Uhrzeit",
+   "y": 2656
+  },
+  {
+   "t": "Dimension",
+   "y": 3012
+  },
+  {
+   "t": "Gewicht",
+   "y": 3348
+  },
+  {
+   "t": "Volumen",
+   "y": 3684
+  },
+  {
+   "t": "Zahl",
+   "y": 4020
+  },
+  {
+   "t": "Bewertung",
+   "y": 4329
+  },
+  {
+   "t": "Dateireferenz",
+   "y": 4638
+  },
+  {
+   "t": "Hinweis",
+   "y": 5231
+  },
+  {
+   "t": "Seitenreferenz",
+   "y": 5379
+  },
+  {
+   "t": "Produktreferenz",
+   "y": 5715
+  },
+  {
+   "t": "Produktvariantenreferenz",
+   "y": 6051
+  },
+  {
+   "t": "Metaobjektreferenz",
+   "y": 6387
+  },
+  {
+   "t": "Kollektionsreferenz",
+   "y": 6723
+  },
+  {
+   "t": "URL",
+   "y": 7059
+  },
+  {
+   "t": "Einzeiliger oder mehrzeiliger Text",
+   "y": 7368
+  },
+  {
+   "t": "Wahr oder falsch",
+   "y": 7785
+  },
+  {
+   "t": "JSON",
+   "y": 8094
+  },
+  {
+   "t": "",
+   "y": 8488
+  },
+  {
+   "t": "",
+   "y": 8865
+  },
+  {
+   "t": "",
+   "y": 9181
+  },
+  {
+   "t": "",
+   "y": 9544
+  },
+  {
+   "t": "",
+   "y": 9867
+  },
+  {
+   "t": "",
+   "y": 10190
+  },
+  {
+   "t": "",
+   "y": 10513
+  },
+  {
+   "t": "",
+   "y": 10809
+  },
+  {
+   "t": "",
+   "y": 11105
+  },
+  {
+   "t": "",
+   "y": 11583
+  },
+  {
+   "t": "",
+   "y": 11899
+  },
+  {
+   "t": "",
+   "y": 12215
+  },
+  {
+   "t": "",
+   "y": 12531
+  },
+  {
+   "t": "",
+   "y": 12847
+  },
+  {
+   "t": "",
+   "y": 13163
+  },
+  {
+   "t": "",
+   "y": 13459
+  },
+  {
+   "t": "",
+   "y": 13735
+  },
+  {
+   "t": "",
+   "y": 14004
+  },
+  {
+   "t": "Nächste Schritte nach dem Hinzufügen von Werten zu Metafeldern",
+   "y": 8514
+  }
+ ]
+}

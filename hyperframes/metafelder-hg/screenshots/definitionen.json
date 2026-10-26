@@ -1,0 +1,23 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields/metafield-definitions",
+ "datum": "2026-10-26T19:36:34.743Z",
+ "title": "Shopify Help Center | Hinzufügen von Metafeld-Definitionen",
+ "text": "Hilfe\nEinloggen\nFrage stellen\nDeutsch\nAllgemeine geschäftsbedingungen\nDatenschutzerklärung\nDeine datenschutzoptionen\nInhalt\nHome\n...\nMetafelder\nHinzufügen von Metafeld-Definitionen\n\nMetafeld-Definitionen dienen als Vorlagen, die festlegen, für welchen Teil deines Shops ein Metafeld gilt und welche Werte das Metafeld haben kann. Bevor du Metafeldwerte zu bestimmten Produkten, Bestellungen oder anderen Teilen deines Shops hinzufügen kannst, musst du die Metafeld-Definition für diese Informationen hinzufügen. Das Hinzufügen von Metafeld-Definitionen stellt sicher, dass für jeden Wert, den du für ein bestimmtes Metafeld eingibst, die gleichen Validierungsregeln gelten.\n\nWenn du eine Metafeld-Definition hinzufügst, kannst du eine der folgenden Aktionen ausführen:\n\neine Standarddefinition auswählen\neine benutzerdefinierte Definition erstellen\n\nVerwende für deine Metafelder nach Möglichkeit eine Standarddefinition. Standarddefinitionen werden automatisch für dich konfiguriert und sind so konzipiert, dass sie Shopify-übergreifend universell kompatibel sind. Da Standard-Metafeld-Definitionen Standards befolgen, die in allen Shopify-Shops verwendet werden, werden sie von Apps, Themes und anderen Teilen deines Shops unterstützt.\n\nWeitere Informationen findest du unter Shopify-Standard-Metafelder.\n\nDu musst unter den folgenden Umständen eine benutzerdefinierte Definition erstellen:\n\nEs gibt keine Standarddefinition für die spezialisierten Informationen, die du hinzufügen möchtest.\nDu möchtest bestehende Metafelder zu einer Definition migrieren.\n\nDu fügst Metafeld-Definitionen auf der Seite Metafelder in deinem Shopify-Adminbereich hinzu. Du kannst auf folgende Weisen zusätzliche Arten von Metafeldern hinzufügen:\n\nmithilfe einer App aus dem Shopify App Store\ndurch Bearbeiten deines Theme-Codes\n\nDu kannst bis zu 256 Metafeld-Definitionen für jeden Typ haben, wie Produkte oder Kund:innen.\n\nIn diesem Abschnitt\n\nBestandteile einer Metafeld-Definition\n\nInhaltstypen und Werte von Metafeldern\n\nMetafeldlisten\n\nStandard-Metafeld-Definitionen hinzufügen\n\nBenutzerdefinierte Metafeld-Definitionen erstellen\n\nMetafelder migrieren\n\nFeedback hinterlassen",
+ "imgs": [],
+ "fixed": [
+  "sticky inset-x-0 top-0 z-30 shrink-0 border-b border-color-border threads_md:sta top0 h65",
+  "fixed transition-all threads_md:hidden h-[calc(100dvh-var(--topbar-h)] threads_m top65 h703",
+  "fixed inset-x-0 top-[var(--topbar-h)+4px] h-[inherit] bg-black/25 transition-opa top65 h703",
+  "sticky bottom-0 z-30 w-full py-4 text-[0] threads_md:has-[[data-conversation-tog top688 h80"
+ ],
+ "heads": [
+  {
+   "t": "Hinzufügen von Metafeld-Definitionen",
+   "y": 157
+  },
+  {
+   "t": "In diesem Abschnitt",
+   "y": 1214
+  }
+ ]
+}

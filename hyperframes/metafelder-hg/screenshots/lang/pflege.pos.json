@@ -1,0 +1,282 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields/using-metafields",
+ "datum": "2026-10-26T20:08:04.998Z",
+ "pos": [
+  {
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "t": "Pflegeanweisungen für Produkte mithilfe von Metafeldern hinzufügen",
+   "y": 393
+  },
+  {
+   "t": "Mit Metafeldern kannst du die Funktionalität und das Erscheinungsbild ",
+   "y": 759
+  },
+  {
+   "t": "Im Folgenden findest du einige Beispiele für Metafelder und ihre Verwe",
+   "y": 1103
+  },
+  {
+   "t": "Versandanweisungen für Produkte erstellen, z. B. Informationen zum Ver",
+   "y": 1247
+  },
+  {
+   "t": "Geschätzte Bearbeitungs- oder Versandzeit erstellen, z. B. Versandfert",
+   "y": 1414
+  },
+  {
+   "t": "Füge Farbinformationen für Produkte hinzu, wie z. B. Rot, Schwarz oder",
+   "y": 1582
+  },
+  {
+   "t": "Einige Produktkategorien verfügen über Kategorie-Metafelder für die Fa",
+   "y": 1849
+  },
+  {
+   "t": "Du kannst direkt in deinem Shopify-Adminbereich Metafelder zu deinen P",
+   "y": 2398
+  },
+  {
+   "t": "Wenn du ein Theme hast, das dynamische Quellen unterstützt, kannst du ",
+   "y": 2642
+  },
+  {
+   "t": "Auf dieser Seite",
+   "y": 3212
+  },
+  {
+   "t": "Tutorial zu Pflegeanweisungen für Produkte",
+   "y": 3352
+  },
+  {
+   "t": "Was du lernen wirst",
+   "y": 3419
+  },
+  {
+   "t": "Tutorial zu Pflegeanweisungen für Produkte",
+   "y": 3589
+  },
+  {
+   "t": "In diesem Tutorial erfährst du, wie du ein Metafeld für Pflegeanweisun",
+   "y": 3933
+  },
+  {
+   "t": "Dies ist ein Tutorial in 3 Schritten, das eine Einführung in Metafelde",
+   "y": 4217
+  },
+  {
+   "t": "Was du lernen wirst",
+   "y": 4540
+  },
+  {
+   "t": "Schritt 1: Eine Metafeld-Definition erstellen",
+   "y": 4608
+  },
+  {
+   "t": "Schritt 2: Werte zu Metafeldern hinzufügen",
+   "y": 4675
+  },
+  {
+   "t": "Schritt 3: Dein Metafeld in deinem Shop veröffentlichen",
+   "y": 4743
+  },
+  {
+   "t": "Was du lernen wirst",
+   "y": 4963
+  },
+  {
+   "t": "Nachdem du dieses Tutorial abgeschlossen hast, wirst du Folgendes erre",
+   "y": 5147
+  },
+  {
+   "t": "Eine Metafeld-Definition erstellt",
+   "y": 5290
+  },
+  {
+   "t": "Werte zu Metafeldern hinzugefügt",
+   "y": 5358
+  },
+  {
+   "t": "Deine Metafelder veröffentlicht",
+   "y": 5425
+  },
+  {
+   "t": "Schritt 1: Eine Metafeld-Definition erstellen",
+   "y": 5555
+  },
+  {
+   "t": "Gehe in deinem Shopify-Adminbereich zu Einstellungen > Metafelder und ",
+   "y": 5705
+  },
+  {
+   "t": "Gehe in deinem Shopify-Adminbereich zu Einstellungen > Metafelder und ",
+   "y": 5705
+  },
+  {
+   "t": "Klicke im Abschnitt Metafelder auf Produktmetafelder.",
+   "y": 5823
+  },
+  {
+   "t": "Klicke im Abschnitt Metafelder auf Produktmetafelder.",
+   "y": 5823
+  },
+  {
+   "t": "Klicke auf Definition hinzufügen.",
+   "y": 5940
+  },
+  {
+   "t": "Klicke auf Definition hinzufügen.",
+   "y": 5940
+  },
+  {
+   "t": "Gib im Feld Name Pflegeanleitung ein. Unter dem Feld wird ein Badge fü",
+   "y": 6008
+  },
+  {
+   "t": "Gib im Feld Name Pflegeanleitung ein. Unter dem Feld wird ein Badge fü",
+   "y": 6008
+  },
+  {
+   "t": "Klicke auf Speichern.",
+   "y": 6328
+  },
+  {
+   "t": "Klicke auf Speichern.",
+   "y": 6328
+  },
+  {
+   "t": "Nachdem deine Metafeld-Definition gespeichert wurde, kannst du damit b",
+   "y": 6422
+  },
+  {
+   "t": "Schritt 2: Werte zu Metafeldern hinzufügen",
+   "y": 6652
+  },
+  {
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte.",
+   "y": 6802
+  },
+  {
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte.",
+   "y": 6802
+  },
+  {
+   "t": "Klicke auf ein Produkt, dem du Pflegeanweisungen hinzufügen möchtest.",
+   "y": 6919
+  },
+  {
+   "t": "Klicke auf ein Produkt, dem du Pflegeanweisungen hinzufügen möchtest.",
+   "y": 6919
+  },
+  {
+   "t": "Klicke unter Produktmetafelder auf Pflegeanleitung. Gib die Pflegeanwe",
+   "y": 7037
+  },
+  {
+   "t": "Klicke unter Produktmetafelder auf Pflegeanleitung. Gib die Pflegeanwe",
+   "y": 7037
+  },
+  {
+   "t": "Klicke auf Speichern.",
+   "y": 7154
+  },
+  {
+   "t": "Klicke auf Speichern.",
+   "y": 7154
+  },
+  {
+   "t": "Wiederhole die obigen Schritte, um in anderen Produkten Werte zu deine",
+   "y": 7248
+  },
+  {
+   "t": "Als Nächstes wirst du dein Metafeld in deinem Onlineshop veröffentlich",
+   "y": 7392
+  },
+  {
+   "t": "Schritt 3: Veröffentliche dein Metafeld in deinem Onlineshop",
+   "y": 7572
+  },
+  {
+   "t": "Nachdem du nun Werte zu den Metafeldern deiner Produkte hinzugefügt ha",
+   "y": 7722
+  },
+  {
+   "t": "Nachdem du einen Abschnitt oder einen Block hinzugefügt hast, kannst d",
+   "y": 8065
+  },
+  {
+   "t": "Symbol für dynamische Quelle verbinden",
+   "y": 8325
+  },
+  {
+   "t": "Gehe in deinem Shopify-Adminbereich zu Onlineshop > Themes.",
+   "y": 8748
+  },
+  {
+   "t": "Gehe in deinem Shopify-Adminbereich zu Onlineshop > Themes.",
+   "y": 8748
+  },
+  {
+   "t": "Klicke neben dem Theme, das du bearbeiten möchtest, auf Theme bearbeit",
+   "y": 8865
+  },
+  {
+   "t": "Klicke neben dem Theme, das du bearbeiten möchtest, auf Theme bearbeit",
+   "y": 8865
+  },
+  {
+   "t": "Verwende das Dropdown-Menü oben auf dem Bildschirm, um Produkte > Stan",
+   "y": 8983
+  },
+  {
+   "t": "Verwende das Dropdown-Menü oben auf dem Bildschirm, um Produkte > Stan",
+   "y": 8983
+  },
+  {
+   "t": "Klicke im Abschnitt Produktinformationen auf Block hinzufügen > Einkla",
+   "y": 9200
+  },
+  {
+   "t": "Klicke im Abschnitt Produktinformationen auf Block hinzufügen > Einkla",
+   "y": 9200
+  },
+  {
+   "t": "Gib eine Überschrift ein.",
+   "y": 9318
+  },
+  {
+   "t": "Gib eine Überschrift ein.",
+   "y": 9318
+  },
+  {
+   "t": "Optional: Wähle ein Symbol aus der Liste oder klicke auf Keines, wenn ",
+   "y": 9385
+  },
+  {
+   "t": "Optional: Wähle ein Symbol aus der Liste oder klicke auf Keines, wenn ",
+   "y": 9385
+  },
+  {
+   "t": "Klicke neben Zeileninhalt auf das Symbol Dynamische Quelle verbinden u",
+   "y": 9503
+  },
+  {
+   "t": "Klicke neben Zeileninhalt auf das Symbol Dynamische Quelle verbinden u",
+   "y": 9503
+  },
+  {
+   "t": "Klicke auf Speichern, um deine Pflegeanweisungen für das Produkt zu ve",
+   "y": 9620
+  },
+  {
+   "t": "Klicke auf Speichern, um deine Pflegeanweisungen für das Produkt zu ve",
+   "y": 9620
+  },
+  {
+   "t": "Deine Pflegeanweisungen werden nur bei den Produkten angezeigt, mit de",
+   "y": 9764
+  }
+ ]
+}

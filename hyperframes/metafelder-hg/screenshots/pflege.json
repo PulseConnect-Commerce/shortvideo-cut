@@ -1,0 +1,53 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields/using-metafields",
+ "datum": "2026-10-26T19:37:12.299Z",
+ "title": "Shopify Help Center | Pflegeanweisungen für Produkte mithilfe von Metafeldern hinzufügen",
+ "text": "Hilfe\nEinloggen\nFrage stellen\nDeutsch\nAllgemeine geschäftsbedingungen\nDatenschutzerklärung\nDeine datenschutzoptionen\nInhalt\nHome\n...\nMetafelder\nPflegeanweisungen für Produkte mithilfe von Metafeldern hinzufügen\n\nMit Metafeldern kannst du die Funktionalität und das Erscheinungsbild deines Shopify-Shops anpassen, indem du spezielle Informationen speicherst, die normalerweise nicht im Shopify-Adminbereich erfasst werden. Metafelder können intern in deinem Shopify-Adminbereich verwendet und optional in deinem Onlineshop angezeigt werden.\n\nIm Folgenden findest du einige Beispiele für Metafelder und ihre Verwendungsmöglichkeiten:\n\nVersandanweisungen für Produkte erstellen, z. B. Informationen zum Verpackungsmaterial, für deine Produktseite in deinem Shopify-Adminbereich.\nGeschätzte Bearbeitungs- oder Versandzeit erstellen, z. B. Versandfertig in 1 Tag, und auf deinen Produktseiten in deinem Onlineshop anzeigen.\nFüge Farbinformationen für Produkte hinzu, wie z. B. Rot, Schwarz oder Blau, und zeige diese auf den Produktseiten in deinem Onlineshop an oder verwende sie, um Kollektionen durch Metafelder zu erstellen.\nEinige Produktkategorien verfügen über Kategorie-Metafelder für die Farbe. Nachdem du eine Produktkategorie in einem Produkt ausgewählt hast, kannst du Farbeinträge für das Kategorie-Metafeld der Farbe hinzufügen. Du kannst Farbeinträge mit deinen Variantenoptionen verknüpfen. Wenn du Farbeinträge als Variantenoptionen verwendest, kannst du Variantenoptionen als Farbfelder für Farboptionen auf den Produktseiten deiner Storefront anzeigen. Mehr Informationen über Kategorie-Metafelder.\n\nDu kannst direkt in deinem Shopify-Adminbereich Metafelder zu deinen Produkten, Kollektionen, Kund:innen, Bestellungen, Inventartransfers und anderen Teilen deines Shops hinzufügen.\n\nWenn du ein Theme hast, das dynamische Quellen unterstützt, kannst du die meisten Metafelder über den Theme-Editor mit deinem Theme verbinden. Wenn du Vintage-Themes verwendest oder Metafeldtypen hinzufügen möchtest, die von deinem Theme nicht unterstützt werden, kannst du deinen Theme-Code bearbeiten oder die Hilfe von Shopify-Partner:innen in Anspruch nehmen. Mehr Informationen zum Engagieren von Shopify-Partner:innen.\n\nAuf dieser Seite\nTutorial zu Pflegeanweisungen für Produkte\nWas du lernen wirst\nTutorial zu Pflegeanweisungen für Produkte\n\nIn diesem Tutorial erfährst du, wie du ein Metafeld für Pflegeanweisungen für Produkte erstellst und diese in deinem Onlineshop anzeigst.\n\nHinweis\n\nDies ist ein Tutorial in 3 Schritten, das eine Einführung in Metafelder, das Erstellen von Definitionen, das Hinzufügen von Werten zu Metafeldern und schließlich das Veröffentlichen des Metafelds in deinem Onlineshop bietet.\n\nWas du lernen wirst\nSchritt 1: Eine Metafeld-Definition erstellen\nSchritt 2: Werte zu Metafeldern hinzufügen\nSchritt 3: Dein Metafeld in deinem Shop veröffentlichen\nWas du lernen wirst\n\nNachdem du dieses Tutorial abgeschlossen hast, wirst du Folgendes erreicht haben:\n\nEine Metafeld-Definition erstellt\nWerte zu Metafeldern hinzugefügt\nDeine Metafelder veröffentlicht\nSchritt 1: Eine Metafeld-Definition erstellen\n\nGehe in deinem Shopify-Adminbereich zu Einstellungen > Metafelder und Metaobjekte.\n\nKlicke im Abschnitt Metafelder auf Produktmetafelder.\n\nKlicke auf Definition hinzufügen.\n\nGib im Feld Name Pflegeanleitung ein. Unter dem Feld wird ein Badge für eine vorgeschlagene Standarddefinition angezeigt. Klicke auf das Badge Pflegeanleitung, um die Standarddefinition zu verwenden. Weitere Informationen zu Standarddefinitionen für Metafelder.\n\nKlicke auf Speichern.\n\nNachdem deine Metafeld-Definition gespeichert wurde, kannst du damit beginnen, Werte zu Metafeldern hinzuzufügen.\n\nSchritt 2: Werte zu Metafeldern hinzufügen\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf ein Produkt, dem du Pflegeanweisungen hinzufügen möchtest.\n\nKlicke unter Produktmetafelder auf Pflegeanleitung. Gib die Pflegeanweisungen ein.\n\nKlicke auf Speichern.\n\nWiederhole die obigen Schritte, um in anderen Produkten Werte zu deinem Metafeld hinzuzufügen.\n\nAls Nächstes wirst du dein Metafeld in deinem Onlineshop veröffentlichen.\n\nSchritt 3: Veröffentliche dein Metafeld in deinem Onlineshop\n\nNachdem du nun Werte zu den Metafeldern deiner Produkte hinzugefügt hast, ist es an der Zeit, dein Metafeld in deinem Shop anzuzeigen. In diesem Schritt wird der Theme-Editor verwendet, um die Blöcke und Abschnitte auszuwählen, mit denen dein Metafeld verknüpft wird.\n\nNachdem du einen Abschnitt oder einen Block hinzugefügt hast, kannst du ein Metafeld auswählen, indem du auf das Symbol zum Verbinden dynamischer Quellen klickst:\n\nGehe in deinem Shopify-Adminbereich zu Onlineshop > Themes.\n\nKlicke neben dem Theme, das du bearbeiten möchtest, auf Theme bearbeiten.\n\nVerwende das Dropdown-Menü oben auf dem Bildschirm, um Produkte > Standardprodukt auszuwählen. Dadurch wird die Standard-Produktvorlage im Theme-Editor geladen.\n\nKlicke im Abschnitt Produktinformationen auf Block hinzufügen > Einklappbare Zeile.\n\nGib eine Überschrift ein.\n\nOptional: Wähle ein Symbol aus der Liste oder klicke auf Keines, wenn kein Symbol angezeigt werden soll.\n\nKlicke neben Zeileninhalt auf das Symbol Dynamische Quelle verbinden und wähle Pflegeanleitung aus.\n\nKlicke auf Speichern, um deine Pflegeanweisungen für das Produkt zu veröffentlichen.\n\nDeine Pflegeanweisungen werden nur bei den Produkten angezeigt, mit denen sie verbunden sind, und der Abschnitt wird bei Produkten ohne Wert für dieses Metafeld nicht ausgefüllt. Das bedeutet, dass du eine einzige Produktvorlage einrichten kannst, die für alle deine Produkte funktioniert.\n\nFeedback hinterlassen",
+ "imgs": [
+  {
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/themes/theme-editor/add-datasource-single.png",
+   "alt": "Symbol für dynamische Quelle verbinden",
+   "y": 3330
+  }
+ ],
+ "fixed": [
+  "sticky inset-x-0 top-0 z-30 shrink-0 border-b border-color-border threads_md:sta top0 h65",
+  "fixed transition-all threads_md:hidden h-[calc(100dvh-var(--topbar-h)] threads_m top65 h703",
+  "fixed inset-x-0 top-[var(--topbar-h)+4px] h-[inherit] bg-black/25 transition-opa top65 h703",
+  "sticky bottom-0 z-30 w-full py-4 text-[0] threads_md:has-[[data-conversation-tog top688 h80"
+ ],
+ "heads": [
+  {
+   "t": "Pflegeanweisungen für Produkte mithilfe von Metafeldern hinzufügen",
+   "y": 157
+  },
+  {
+   "t": "Auf dieser Seite",
+   "y": 1285
+  },
+  {
+   "t": "Tutorial zu Pflegeanweisungen für Produkte",
+   "y": 1436
+  },
+  {
+   "t": "Hinweis",
+   "y": 1663
+  },
+  {
+   "t": "Was du lernen wirst",
+   "y": 1985
+  },
+  {
+   "t": "Schritt 1: Eine Metafeld-Definition erstellen",
+   "y": 2222
+  },
+  {
+   "t": "Schritt 2: Werte zu Metafeldern hinzufügen",
+   "y": 2661
+  },
+  {
+   "t": "Schritt 3: Veröffentliche dein Metafeld in deinem Onlineshop",
+   "y": 3029
+  }
+ ]
+}

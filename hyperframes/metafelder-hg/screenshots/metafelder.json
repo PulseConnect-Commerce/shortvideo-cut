@@ -1,0 +1,47 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields",
+ "datum": "2026-10-26T19:37:35.621Z",
+ "title": "Shopify Help Center | Metafelder",
+ "text": "Hilfe\nEinloggen\nFrage stellen\nDeutsch\nAllgemeine geschäftsbedingungen\nDatenschutzerklärung\nDeine datenschutzoptionen\nInhalt\nHome\nBenutzerdefinierte Daten\nMetafelder\n\nMetafelder ermöglichen es dir, ein bestehendes Plattform-Datenmodell, wie Produkte, Kund:innen und Bestellungen, mit deinen eigenen benutzerdefinierten Daten zu erweitern.\n\nAuf dieser Seite\nWarum Metafelder verwenden\nSo verwendest du Metafelder\nWarum Metafelder verwenden\n\nSieh dir diese Beispiele für die Verwendung von Metafeldern in deinem Shop an:\n\nWenn du einen Bekleidungs-Shop hast und Pflegehinweise für deine Produkte hinzufügen möchtest, könntest du ein Produkt-Metafeld namens Pflegehinweise hinzufügen. Du kannst dann unterschiedliche Pflegehinweise für eines oder alle deiner Produkte hinzufügen. Mehr Informationen zum Hinzufügen von Produktpflegehinweisen.\nWenn du einen Spielzeug-Shop hast und Altersempfehlungen sowie mögliche Gefahren für deine Produkte anzeigen möchtest, könntest du die Produkt-Metafelder Altersempfehlung und Mögliche Gefahren hinzufügen. Anstatt diese Informationen zu deiner Produktbeschreibung hinzuzufügen, kannst du jedes Feld in einem eigenen Abschnitt deines Themes anzeigen lassen, mit einzigartigen Werten für jedes Produkt.\nWenn du einen Möbel-Shop hast und detaillierte Maße anzeigen möchtest, könntest du ein Produkt-Metafeld namens Abmessungen hinzufügen. Anstatt die Maße in deine Produktbeschreibung aufzunehmen, kannst du Breite, Höhe und Tiefe in einem speziellen Abschnitt deines Themes anzeigen lassen, mit einzigartigen Werten für jedes Produkt.\nWenn du Bekleidung verkaufst und eine Größentabelle für deine Produkte anzeigen möchtest, könntest du ein Produkt-Metafeld namens Größentabelle hinzufügen. Du kannst die Größentabelle dann als Popup auf deinen Produktseiten anzeigen. Mehr Informationen zum Hinzufügen einer Popup-Größentabelle.\nWenn du ein Treueprogramm betreibst und Prämienstufen für deine Kund:innen nachverfolgen möchtest, könntest du ein Kunden-Metafeld namens Treuestufe hinzufügen. Du kannst dann allen Kund:innen eine individuelle Stufe zuweisen und diese nutzen, um das Einkaufserlebnis in deinem Shop zu personalisieren.\nDu kannst Metafelder als Filter und Dimensionen in deinen Shopify-Analysen und -Berichten verwenden. Du kannst zum Beispiel das Metafeld Material als Dimension zu deinem Gesamtumsatz-Bericht hinzufügen, um deine meistverkauften Produkte nach Material anzuzeigen.\nSidekick\n\nDu kannst Sidekick fragen, wie Metafelder für deine Produkte funktionieren könnten und welche Schritte zu ihrer Einrichtung erforderlich sind. Verwende einen Prompt wie Welche Metafelder würden mir bei der Organisation meiner Produkte helfen?.\n\nSo verwendest du Metafelder\n\nDeine Mitarbeiter:innen können Metafelder hinzufügen, wenn ihnen eine Berechtigung für die entsprechende Ressource zugewiesen wurde. Um beispielsweise Metafeld-Definitionen und -Werte für Produkte hinzuzufügen, zu bearbeiten und zu löschen, benötigen deine Mitarbeiter:innen unter Produkte die Berechtigungen Anzeigen sowie Erstellen und bearbeiten. Weitere Informationen findest du unter Shop-Berechtigungen.\n\nWeitere Informationen zur Verwendung von Metafeldern findest du in der Anleitung zum Hinzufügen von Pflegehinweisen für Produkte.\n\nHinweis\n\nShopify POS zeigt nur angepinnte Kunden-Metafelder und sowohl angepinnte als auch nicht angepinnte Produkt-Metafelder an.\n\nKategorie-Metafelder sind Produktattribute, die einer bestimmten Produktkategorie zugeordnet sind. Kategorie-Metafelder helfen dir, die richtigen Informationen zu deinen Produkten hinzuzufügen, damit sie von Besucher:innen auf deiner Website, auf Marktplätzen und in Suchmaschinen besser gefunden werden.\n\nKategorie-Metafelder haben Standardeinträge, um es dir zu erleichtern, Informationen zu deinem Shop hinzuzufügen. Wenn du beispielsweise die Produktkategorie Bekleidung & Accessoires > Bekleidung > Oberteile > Hemden hinzufügst, kannst du Kategorie-Metafelder für Größe, Ausschnitt, Ärmellängentyp, Oberteillängentyp, Altersgruppe, Stoff, Zielgeschlecht, Bekleidungsmerkmale und Farbe hinzufügen. Kategorie-Metafelder verwenden Metaobjekte und Metaobjekteinträge für die Werte. Beim Kategorie-Metafeld Farbe kannst du beispielsweise Grün, Rot und andere Farbeinträge hinzufügen. Erfahre mehr über Kategorie-Metafelder.\n\nWenn du ein Theme hast, das dynamische Quellen unterstützt, kannst du die meisten Metafelder mit dem Theme-Editor mit deinem Theme verbinden. Wenn du alte Themes verwendest oder Metafeldtypen hinzufügen möchtest, die dein Theme nicht unterstützt, kannst du deinen Theme-Code bearbeiten.\n\nGeschäft ausbauen\n\nDies ist ein Tutorial für Fortgeschrittene. Wenn du Hilfe bei der Einrichtung deiner Metafelder oder deren Verbindung mit deinem Theme benötigst, kannst du eine:n Shopify-Partner:in engagieren. Erfahre mehr über das Engagieren von Shopify-Partner:innen.\n\nDas Einrichten neuer Metafelder umfasst die folgenden Aufgaben:\n\nHinzufügen von Metafeld-Definitionen, um Felder für deine speziellen Informationen zu Seiten in deinem Shopify-Adminbereich hinzuzufügen\nHinzufügen von Metafeldwerten zu Teilen deines Shops, wie z. B. Produkten oder Varianten\nOptional: Verbinden von Metafeldern mit deinem Theme, um spezielle Informationen in deinem Onlineshop anzuzeigen\n\nDu kannst auch bestehende Metafelder zu einer Definition migrieren. Das Hinzufügen von Definitionen für Gruppen von Metafeldern erzwingt Validierungsregeln, um sicherzustellen, dass deine Metafeldwerte konsistent und zuverlässig sind. Wenn deine Metafeldwerte nicht mit den Validierungsregeln für deine Definition übereinstimmen, kannst du nach der Migration ungültige Metafeldwerte korrigieren.\n\nIn diesem Abschnitt\n\nMetafeld-Definitionen hinzufügen\n\nKategorie-Metafelder\n\nMetafeld-Definitionen anheften\n\nWerte zu Metafeldern hinzufügen\n\nMetafeldwerte von Bestellentwürfen in Bestellungen kopieren\n\nProdukte mithilfe von Produkt-Metafeldern filtern\n\nValidierungsfehler bei Metafeldern beheben\n\nMetafelder in deinem Onlineshop anzeigen\n\nMetafelder gebündelt bearbeiten\n\nBenutzerdefinierte Metafeld-Definitionen bearbeiten\n\nKollektionen mit Metafeldern\n\nVarianten mit Metafeldern hinzufügen\n\nMetafelder löschen\n\nPflegeanleitungen für Produkte mithilfe von Metafeldern hinzufügen\n\nPopup-Größentabelle zu Produktseiten hinzufügen\n\nFeedback hinterlassen",
+ "imgs": [],
+ "fixed": [
+  "sticky inset-x-0 top-0 z-30 shrink-0 border-b border-color-border threads_md:sta top0 h65",
+  "fixed transition-all threads_md:hidden h-[calc(100dvh-var(--topbar-h)] threads_m top65 h703",
+  "fixed inset-x-0 top-[var(--topbar-h)+4px] h-[inherit] bg-black/25 transition-opa top65 h703",
+  "sticky bottom-0 z-30 w-full py-4 text-[0] threads_md:has-[[data-conversation-tog top688 h80"
+ ],
+ "heads": [
+  {
+   "t": "Metafelder",
+   "y": 157
+  },
+  {
+   "t": "Auf dieser Seite",
+   "y": 352
+  },
+  {
+   "t": "Warum Metafelder verwenden",
+   "y": 503
+  },
+  {
+   "t": "Sidekick",
+   "y": 1576
+  },
+  {
+   "t": "So verwendest du Metafelder",
+   "y": 1762
+  },
+  {
+   "t": "Hinweis",
+   "y": 2135
+  },
+  {
+   "t": "Geschäft ausbauen",
+   "y": 2863
+  },
+  {
+   "t": "In diesem Abschnitt",
+   "y": 3457
+  }
+ ]
+}

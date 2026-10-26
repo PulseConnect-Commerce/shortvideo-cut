@@ -1,0 +1,74 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields/displaying-metafields-on-your-online-store",
+ "datum": "2026-10-26T20:03:53.817Z",
+ "title": "Shopify Help Center | Metafelder in deinem Onlineshop anzeigen",
+ "text": "Hilfe\nEinloggen\nFrage stellen\nDeutsch\nAllgemeine geschäftsbedingungen\nDatenschutzerklärung\nDeine datenschutzoptionen\nInhalt\nHome\n...\nMetafelder\nMetafelder in deinem Onlineshop anzeigen\n\nNachdem du Metafeld-Definitionen hinzugefügt und Teilen deines Shops Metafeldwerte zugewiesen hast, kannst du Metafelder mit deinem Theme verbinden, um benutzerdefinierte Informationen auf vielfältige Weise in deinem Onlineshop anzuzeigen. So möchten beispielsweise Verkäufer:innen von Kerzen vielleicht eine Brenndauer für Kerzen auf ihren Produktseiten anzeigen, während ein Lebensmittelgeschäft eventuell ein Mindesthaltbarkeitsdatum für Konserven anzeigen möchte.\n\nIm Folgenden findest du weitere Beispiele für spezielle Informationen, die du in deinem Onlineshop anzeigen kannst:\n\nTeilenummern\nFarbfelder\nProduktveröffentlichungsdaten\nvorgestellte Produkte oder Varianten\nProdukt-Sternebewertung\nDateien zum Herunterladen\nZutatenlisten\nInhalte aus deinen Kategorie-Metafeldern\n\nWenn du neue benutzerdefinierte Datenstrukturen hinzufügen musst, kannst du auch Metaobjekte erstellen und sie mit deinem Onlineshop verbinden. Erfahre mehr über das Verbinden von Metaobjekten mit deinem Onlineshop.\n\nAuf dieser Seite\nMetafelder über den Theme-Editor mit deinem Theme verbinden\nTheme-Code bearbeiten, um Metafelder hinzuzufügen\nMarken-Assets mit Metafeldern anzeigen\nKategorie-Metafelder in deinem Theme anzeigen\nMetafelder über den Theme-Editor mit deinem Theme verbinden\n\nWenn dein Theme Metafelder unterstützt, kannst du im Theme-Editor auswählen, wie die Metafelder in deinem Onlineshop angezeigt werden sollen. In der Dokumentation deines Themes oder bei den Entwickler:innen deines Themes erfährst du, welche Metafelder in deinem Theme verfügbar sind.\n\nDu kannst Metafelder mit deinem Theme verbinden, indem du Abschnitte oder Blöcke hinzufügst, die dynamische Quellen unterstützen. Zum Beispiel kann der Abschnitt Produktinformationen Produkt-Metafelder unterstützen und ein Abschnitt Kollektion kann Kollektions-Metafelder unterstützen.\n\nNachdem du einen Abschnitt oder Block hinzugefügt hast, kannst du ein einzelnes Metafeld suchen und auswählen, indem du auf das Symbol „Dynamische Quelle verbinden“ klickst:\n\nWenn das Symbol „Dynamische Quelle verbinden“ ein + anzeigt, kannst du bis zu 20 Metafelder in einer einzigen Vorlage suchen und hinzufügen, indem du auf das Symbol klickst und dann die Metafelder einzeln auswählst:\n\nEine schrittweise Anleitung findest du unter Metafelder und dynamische Quellen verwenden.\n\nDu kannst eine Liste von Inhaltstypen mit den Abschnitten und Blöcken Text oder Rich Text verbinden. Produktreferenzlisten erfordern einen benutzerdefinierten Abschnitt oder ein externes Theme, das Produktlisteneinstellungen verwendet.\n\nTheme-Code bearbeiten, um Metafelder hinzuzufügen\n\nWenn du deinen Theme-Code bearbeiten möchtest, um Metafelder in deinem Onlineshop anzuzeigen, kannst du Liquid verwenden, um in deinen Seitenvorlagen auf Metafelder zu verweisen.\n\nBearbeite deinen Theme-Code nur, wenn du über Programmiererfahrung verfügst. Wenn du Hilfe bei der Bearbeitung deines Theme-Codes benötigst, kannst du eine:n Shopify-Partner:in aus dem Shopify Partner Directory engagieren.\n\nMehr Informationen zum Engagieren von Shopify-Partner:innen.\n\nMarken-Assets mit Metafeldern anzeigen\n\nDu kannst Metafelder verwenden, um deine Marken-Assets in deinem Onlineshop anzuzeigen. Marken-Assets werden als Standardeinstellung verwendet. Das bedeutet, dass sie nach dem Hinzufügen automatisch mit allen Funktionen synchronisiert werden, die die Brand-API verwenden.\n\nEinige Themes können deine Marken-Assets in ihren Theme-Einstellungen verwenden. Du musst deine Marken-Assets manuell verbinden, indem du den Theme-Editor öffnest. Navigiere zu der Theme-Einstellung, für die du die Marken-Assets verwenden möchtest, z. B. das Logo in deinem Shop-Header, und klicke auf das Symbol „Dynamische Quelle verbinden“.\n\nKlicke auf das Marken-Asset, das du in deinem Header verwenden möchtest, um es mit deinem Theme zu verbinden.\n\nWenn die Option zum Verbinden von Marken-Assets nicht vorhanden ist, ist die App, der Kanal oder das Theme möglicherweise nicht in die Brand-API integriert.\n\nKategorie-Metafelder in deinem Theme anzeigen\n\nDie meisten Standard-Produktkategorien verfügen über verfügbare Kategorie-Metafelder. Wenn du beispielsweise die Produktkategorie Bekleidung & Accessoires > Bekleidung > Oberteile > Hemden & Tops hinzufügst, kannst du Kategorie-Metafelder für Größe, Ausschnitt, Ärmellänge, Oberteillänge, Altersgruppe, Stoff, Zielgeschlecht, Kleidungsmerkmale und Farbe hinzufügen. Kategorie-Metafelder haben standardmäßige Metaobjekt-Einträge, die du entweder unverändert verwenden oder weiter anpassen kannst. Wenn beispielsweise die Farbe Schwarz nicht zu deinem Branding passt, kannst du sie in Graphit umbenennen. Mehr Informationen zu Kategorie-Metafeldern.\n\nDu kannst Kategorie-Metafelder in deinem Onlineshop verwenden, um deiner Kundschaft zu helfen, die von ihnen benötigten Produkte und Informationen schneller zu finden. Wenn du beispielsweise Farbeinträge als Variantenoptionen verwendest, kannst du über deine Theme-Optionen die Variantenoptionen als Farbfelder auf den Produktseiten deines Onlineshops anzeigen.\n\nDu kannst Metafelder auch mit der Shopify Search & Discovery App verwenden, um Filter für deinen Produktkatalog zu erstellen. Mehr Informationen zu Filtern für Kategorie-Metafelder.\n\nFeedback hinterlassen",
+ "imgs": [
+  {
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/themes/theme-editor/add-datasource-single.png",
+   "alt": "Symbol „Dynamische Quelle verbinden“",
+   "y": 1715
+  },
+  {
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/themes/theme-editor/add-datasource-multiple.png",
+   "alt": "Symbol „Dynamische Quelle einfügen“",
+   "y": 2008
+  },
+  {
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/metafields/connect-dynamic-source.png",
+   "alt": "Logoauswahl in den Theme-Einstellungen mit hervorgehobenem Symbol „Dynamische Quelle verbinden“.",
+   "y": 3250
+  },
+  {
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/metafields/select-dynamic-source.png",
+   "alt": "Bereich „Dynamische Quelle verbinden“ mit ausgewähltem Standard-Logo.",
+   "y": 3655
+  }
+ ],
+ "fixed": [
+  "sticky inset-x-0 top-0 z-30 shrink-0 border-b border-color-border threads_md:sta top0 h65",
+  "fixed transition-all threads_md:hidden h-[calc(100dvh-var(--topbar-h)] threads_m top65 h703",
+  "fixed inset-x-0 top-[var(--topbar-h)+4px] h-[inherit] bg-black/25 transition-opa top65 h703",
+  "sticky bottom-0 z-30 w-full py-4 text-[0] threads_md:has-[[data-conversation-tog top688 h80"
+ ],
+ "links": [
+  "Einloggen => https://help.shopify.com/de/user/login?returnTo=%2Fde%2Fmanual%2Fcustom-data%2Fmetafields%2Fdisplaying-metafields-on-your-online-store",
+  "Metafelder => https://help.shopify.com/de/manual/custom-data/metafields",
+  "Kategorie-Metafeldern => https://help.shopify.com/de/manual/custom-data/metafields/category-metafields",
+  "Metaobjekte erstellen => https://help.shopify.com/de/manual/custom-data/metaobjects/building-a-metaobject",
+  "Verbinden von Metaobjekten mit deinem Onlineshop => https://help.shopify.com/de/manual/custom-data/metaobjects/connecting-to-your-online-store",
+  "Metafelder über den Theme-Editor mit deinem Theme verbinden => https://help.shopify.com/de/manual/custom-data/metafields/displaying-metafields-on-your-online-store#theme-editor-metafields",
+  "Theme-Code bearbeiten, um Metafelder hinzuzufügen => https://help.shopify.com/de/manual/custom-data/metafields/displaying-metafields-on-your-online-store#edit-code-metafields",
+  "Marken-Assets mit Metafeldern anzeigen => https://help.shopify.com/de/manual/custom-data/metafields/displaying-metafields-on-your-online-store#displaying-brand-assets",
+  "Kategorie-Metafelder in deinem Theme anzeigen => https://help.shopify.com/de/manual/custom-data/metafields/displaying-metafields-on-your-online-store#displaying-category-metafields-on-your-theme",
+  "Liste => https://help.shopify.com/de/manual/custom-data/metafields/metafield-definitions/metafield-lists",
+  "Mehr Informationen zu Kategorie-Metafeldern => https://help.shopify.com/de/manual/custom-data/metafields/category-metafields",
+  "Variantenoptionen als Farbfelder => https://help.shopify.com/de/manual/custom-data/metafields/category-metafields/using-category-metafields"
+ ],
+ "heads": [
+  {
+   "t": "Metafelder in deinem Onlineshop anzeigen",
+   "y": 157
+  },
+  {
+   "t": "Auf dieser Seite",
+   "y": 933
+  },
+  {
+   "t": "Metafelder über den Theme-Editor mit deinem Theme verbinden",
+   "y": 1178
+  },
+  {
+   "t": "Theme-Code bearbeiten, um Metafelder hinzuzufügen",
+   "y": 2382
+  },
+  {
+   "t": "Marken-Assets mit Metafeldern anzeigen",
+   "y": 2823
+  },
+  {
+   "t": "Kategorie-Metafelder in deinem Theme anzeigen",
+   "y": 4002
+  }
+ ]
+}

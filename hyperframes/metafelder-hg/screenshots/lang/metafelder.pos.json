@@ -1,0 +1,242 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields",
+ "datum": "2026-10-26T20:09:18.444Z",
+ "pos": [
+  {
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "t": "Metafelder",
+   "y": 393
+  },
+  {
+   "t": "Metafelder ermöglichen es dir, ein bestehendes Plattform-Datenmodell, ",
+   "y": 559
+  },
+  {
+   "t": "Auf dieser Seite",
+   "y": 879
+  },
+  {
+   "t": "Warum Metafelder verwenden",
+   "y": 1019
+  },
+  {
+   "t": "So verwendest du Metafelder",
+   "y": 1087
+  },
+  {
+   "t": "Warum Metafelder verwenden",
+   "y": 1257
+  },
+  {
+   "t": "Sieh dir diese Beispiele für die Verwendung von Metafeldern in deinem ",
+   "y": 1520
+  },
+  {
+   "t": "Wenn du einen Bekleidungs-Shop hast und Pflegehinweise für deine Produ",
+   "y": 1664
+  },
+  {
+   "t": "Wenn du einen Spielzeug-Shop hast und Altersempfehlungen sowie möglich",
+   "y": 2034
+  },
+  {
+   "t": "Wenn du einen Möbel-Shop hast und detaillierte Maße anzeigen möchtest,",
+   "y": 2507
+  },
+  {
+   "t": "Wenn du Bekleidung verkaufst und eine Größentabelle für deine Produkte",
+   "y": 2877
+  },
+  {
+   "t": "Wenn du ein Treueprogramm betreibst und Prämienstufen für deine Kund:i",
+   "y": 3197
+  },
+  {
+   "t": "Du kannst Metafelder als Filter und Dimensionen in deinen Shopify-Anal",
+   "y": 3567
+  },
+  {
+   "t": "Du kannst Sidekick fragen, wie Metafelder für deine Produkte funktioni",
+   "y": 4000
+  },
+  {
+   "t": "So verwendest du Metafelder",
+   "y": 4405
+  },
+  {
+   "t": "Deine Mitarbeiter:innen können Metafelder hinzufügen, wenn ihnen eine ",
+   "y": 4669
+  },
+  {
+   "t": "Weitere Informationen zur Verwendung von Metafeldern findest du in der",
+   "y": 5113
+  },
+  {
+   "t": "Shopify POS zeigt nur angepinnte Kunden-Metafelder und sowohl angepinn",
+   "y": 5397
+  },
+  {
+   "t": "Kategorie-Metafelder sind Produktattribute, die einer bestimmten Produ",
+   "y": 5620
+  },
+  {
+   "t": "Kategorie-Metafelder haben Standardeinträge, um es dir zu erleichtern,",
+   "y": 5964
+  },
+  {
+   "t": "Wenn du ein Theme hast, das dynamische Quellen unterstützt, kannst du ",
+   "y": 6783
+  },
+  {
+   "t": "Dies ist ein Tutorial für Fortgeschrittene. Wenn du Hilfe bei der Einr",
+   "y": 7217
+  },
+  {
+   "t": "Das Einrichten neuer Metafelder umfasst die folgenden Aufgaben:",
+   "y": 7540
+  },
+  {
+   "t": "Hinzufügen von Metafeld-Definitionen, um Felder für deine speziellen I",
+   "y": 7684
+  },
+  {
+   "t": "Hinzufügen von Metafeldwerten zu Teilen deines Shops, wie z. B. Produk",
+   "y": 7852
+  },
+  {
+   "t": "Optional: Verbinden von Metafeldern mit deinem Theme, um spezielle Inf",
+   "y": 7969
+  },
+  {
+   "t": "Du kannst auch bestehende Metafelder zu einer Definition migrieren. Da",
+   "y": 8163
+  },
+  {
+   "t": "In diesem Abschnitt",
+   "y": 8643
+  },
+  {
+   "t": "Metafeld-Definitionen hinzufügen",
+   "y": 8733
+  },
+  {
+   "t": "Metafeld-Definitionen hinzufügen",
+   "y": 8733
+  },
+  {
+   "t": "Kategorie-Metafelder",
+   "y": 8800
+  },
+  {
+   "t": "Kategorie-Metafelder",
+   "y": 8800
+  },
+  {
+   "t": "Metafeld-Definitionen anheften",
+   "y": 8868
+  },
+  {
+   "t": "Metafeld-Definitionen anheften",
+   "y": 8868
+  },
+  {
+   "t": "Werte zu Metafeldern hinzufügen",
+   "y": 8935
+  },
+  {
+   "t": "Werte zu Metafeldern hinzufügen",
+   "y": 8935
+  },
+  {
+   "t": "Metafeldwerte von Bestellentwürfen in Bestellungen kopieren",
+   "y": 9003
+  },
+  {
+   "t": "Metafeldwerte von Bestellentwürfen in Bestellungen kopieren",
+   "y": 9003
+  },
+  {
+   "t": "Produkte mithilfe von Produkt-Metafeldern filtern",
+   "y": 9120
+  },
+  {
+   "t": "Produkte mithilfe von Produkt-Metafeldern filtern",
+   "y": 9120
+  },
+  {
+   "t": "Validierungsfehler bei Metafeldern beheben",
+   "y": 9188
+  },
+  {
+   "t": "Validierungsfehler bei Metafeldern beheben",
+   "y": 9188
+  },
+  {
+   "t": "Metafelder in deinem Onlineshop anzeigen",
+   "y": 9255
+  },
+  {
+   "t": "Metafelder in deinem Onlineshop anzeigen",
+   "y": 9255
+  },
+  {
+   "t": "Metafelder gebündelt bearbeiten",
+   "y": 9323
+  },
+  {
+   "t": "Metafelder gebündelt bearbeiten",
+   "y": 9323
+  },
+  {
+   "t": "Benutzerdefinierte Metafeld-Definitionen bearbeiten",
+   "y": 9390
+  },
+  {
+   "t": "Benutzerdefinierte Metafeld-Definitionen bearbeiten",
+   "y": 9390
+  },
+  {
+   "t": "Kollektionen mit Metafeldern",
+   "y": 9458
+  },
+  {
+   "t": "Kollektionen mit Metafeldern",
+   "y": 9458
+  },
+  {
+   "t": "Varianten mit Metafeldern hinzufügen",
+   "y": 9525
+  },
+  {
+   "t": "Varianten mit Metafeldern hinzufügen",
+   "y": 9525
+  },
+  {
+   "t": "Metafelder löschen",
+   "y": 9593
+  },
+  {
+   "t": "Metafelder löschen",
+   "y": 9593
+  },
+  {
+   "t": "Pflegeanleitungen für Produkte mithilfe von Metafeldern hinzufügen",
+   "y": 9660
+  },
+  {
+   "t": "Pflegeanleitungen für Produkte mithilfe von Metafeldern hinzufügen",
+   "y": 9660
+  },
+  {
+   "t": "Popup-Größentabelle zu Produktseiten hinzufügen",
+   "y": 9778
+  },
+  {
+   "t": "Popup-Größentabelle zu Produktseiten hinzufügen",
+   "y": 9778
+  }
+ ]
+}

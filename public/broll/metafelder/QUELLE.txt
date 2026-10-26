@@ -1,0 +1,34 @@
+Hintergründe und Quellen-Bilder für S02 · Metafelder (alle aufgenommen bzw. geladen am 26.10.2026; nur zugeschnitten,
+leicht abgedunkelt/weichgezeichnet; nichts dazugemalt)
+
+Hintergründe (1080x1920, gestaltet mit hyperframes/metafelder-hg/gestalte.py aus den Screenshots in
+hyperframes/metafelder-hg/screenshots/, Playwright/Chromium, Handy-Ansicht 432 px, 2,5-fach; oben die Kopfleiste
+"Hilfe" der Seite, darunter der Abschnitt):
+- hg-beispiel.png: Shopify Help Center "Metafelder", Abschnitt "Warum Metafelder verwenden" (Beispiel Bekleidungs-Shop,
+  Pflegehinweise) https://help.shopify.com/de/manual/custom-data/metafields
+- hg-metafelder.png: ebd., Kopf der Seite ("Metafelder ermöglichen es dir, ein bestehendes Plattform-Datenmodell ...
+  zu erweitern.")
+- hg-definitionen.png: Shopify Help Center "Hinzufügen von Metafeld-Definitionen"
+  https://help.shopify.com/de/manual/custom-data/metafields/metafield-definitions
+- hg-schritt1.png: Shopify Help Center "Pflegeanweisungen für Produkte mithilfe von Metafeldern hinzufügen",
+  "Schritt 1: Eine Metafeld-Definition erstellen" https://help.shopify.com/de/manual/custom-data/metafields/using-metafields
+- hg-typen.png: Shopify Help Center "Inhaltstypen und Werte von Metafeldern"
+  https://help.shopify.com/de/manual/custom-data/metafields/metafield-definitions/metafield-types
+- hg-schritt2.png: wie hg-schritt1, "Schritt 2: Werte zu Metafeldern hinzufügen"
+- hg-anzeigen.png: Shopify Help Center "Metafelder in deinem Onlineshop anzeigen", Abschnitt "Metafelder über den
+  Theme-Editor mit deinem Theme verbinden"
+  https://help.shopify.com/de/manual/custom-data/metafields/displaying-metafields-on-your-online-store
+- hg-schritt3.png: wie hg-schritt1, Schritt 3 ("Block hinzufügen > Einklappbare Zeile", "Dynamische Quelle verbinden")
+- hg-vorlage.png: wie hg-schritt1, letzter Absatz ("... dass du eine einzige Produktvorlage einrichten kannst, die für
+  alle deine Produkte funktioniert.")
+Bei den Hilfe-Seiten ist die schwebende Leiste "Frage nach diesem Artikel" per CSS ausgeblendet (wie ein Cookie-Banner),
+sonst nichts verändert.
+
+Quellen-Bilder (quellen/), aus dem Shopify Help Center (cdn.shopify.com/shopifycloud/help-center/...):
+- add-datasource-single.png: Symbol "Dynamische Quelle verbinden" (in Karte K7a)
+- add-datasource-multiple.png, connect-dynamic-source.png, select-dynamic-source.png: geladen, nicht verwendet
+
+Produktbilder (produkte/), aus Pauls Demo-Shop online-store-development-pulseconnect.myshopify.com (products.json, nur
+gelesen): tshirt.png = "Basic T-Shirt Bio-Baumwolle" (Mila & Ben), schal.png = "VELOA Wollschal Milano".
+Die Pflegewerte in den Karten sind Beispiele (als BEISPIEL gekennzeichnet): "Bei 30 Grad waschen" sagt Paul im Video,
+"Handwäsche" stammt aus dem Briefing; im Demo-Shop sind keine Metafelder angelegt.

@@ -1,0 +1,2089 @@
+{
+ "projekt": "metafelder",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "metafelder/t1",
+   "from": 6.885,
+   "to": 14.2,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 64.845,
+   "to": 72.62,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 78.825,
+   "to": 84.15,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 101.375,
+   "to": 110.275,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 111.115,
+   "to": 114.32,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 118.755,
+   "to": 122.15,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 132.405,
+   "to": 141.4,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 153.705,
+   "to": 166.1,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 183.205,
+   "to": 196.05,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 203.595,
+   "to": 209.98,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 215.095,
+   "to": 226.05,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "metafelder/t1",
+   "from": 291.275,
+   "to": 301.1,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Wenn",
+   "src": "metafelder/t1",
+   "start": 6.9,
+   "end": 7.04
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 7.08,
+   "end": 7.14
+  },
+  {
+   "text": "in",
+   "src": "metafelder/t1",
+   "start": 7.2,
+   "end": 7.26
+  },
+  {
+   "text": "Shopify",
+   "src": "metafelder/t1",
+   "start": 7.32,
+   "end": 7.68
+  },
+  {
+   "text": "bei",
+   "src": "metafelder/t1",
+   "start": 7.76,
+   "end": 7.84
+  },
+  {
+   "text": "jedem",
+   "src": "metafelder/t1",
+   "start": 7.96,
+   "end": 8.24
+  },
+  {
+   "text": "Produkt",
+   "src": "metafelder/t1",
+   "start": 8.3,
+   "end": 8.54
+  },
+  {
+   "text": "immer",
+   "src": "metafelder/t1",
+   "start": 8.58,
+   "end": 8.72
+  },
+  {
+   "text": "dieselbe",
+   "src": "metafelder/t1",
+   "start": 8.76,
+   "end": 9.12
+  },
+  {
+   "text": "Information",
+   "src": "metafelder/t1",
+   "start": 9.16,
+   "end": 9.72
+  },
+  {
+   "text": "mühsam",
+   "src": "metafelder/t1",
+   "start": 9.86,
+   "end": 10.26
+  },
+  {
+   "text": "in",
+   "src": "metafelder/t1",
+   "start": 10.32,
+   "end": 10.36
+  },
+  {
+   "text": "die",
+   "src": "metafelder/t1",
+   "start": 10.4,
+   "end": 10.46
+  },
+  {
+   "text": "Beschreibung",
+   "src": "metafelder/t1",
+   "start": 10.5,
+   "end": 10.9
+  },
+  {
+   "text": "schreibst,",
+   "src": "metafelder/t1",
+   "start": 10.94,
+   "end": 11.32
+  },
+  {
+   "text": "dann",
+   "src": "metafelder/t1",
+   "start": 11.84,
+   "end": 11.96
+  },
+  {
+   "text": "würde",
+   "src": "metafelder/t1",
+   "start": 12.0,
+   "end": 12.12
+  },
+  {
+   "text": "ich",
+   "src": "metafelder/t1",
+   "start": 12.14,
+   "end": 12.22
+  },
+  {
+   "text": "mir",
+   "src": "metafelder/t1",
+   "start": 12.26,
+   "end": 12.34
+  },
+  {
+   "text": "tatsächlich",
+   "src": "metafelder/t1",
+   "start": 12.4,
+   "end": 12.78
+  },
+  {
+   "text": "mal",
+   "src": "metafelder/t1",
+   "start": 12.84,
+   "end": 12.94
+  },
+  {
+   "text": "die",
+   "src": "metafelder/t1",
+   "start": 13.0,
+   "end": 13.06
+  },
+  {
+   "text": "Metafelder",
+   "src": "metafelder/t1",
+   "start": 13.08,
+   "end": 13.5
+  },
+  {
+   "text": "anschauen.",
+   "src": "metafelder/t1",
+   "start": 13.52,
+   "end": 13.82
+  },
+  {
+   "text": "Nehmen",
+   "src": "metafelder/t1",
+   "start": 64.92,
+   "end": 65.1
+  },
+  {
+   "text": "wir",
+   "src": "metafelder/t1",
+   "start": 65.12,
+   "end": 65.18
+  },
+  {
+   "text": "jetzt",
+   "src": "metafelder/t1",
+   "start": 65.22,
+   "end": 65.34
+  },
+  {
+   "text": "mal",
+   "src": "metafelder/t1",
+   "start": 65.36,
+   "end": 65.46
+  },
+  {
+   "text": "als",
+   "src": "metafelder/t1",
+   "start": 65.52,
+   "end": 65.62
+  },
+  {
+   "text": "Beispiel",
+   "src": "metafelder/t1",
+   "start": 65.68,
+   "end": 66.02
+  },
+  {
+   "text": "einen",
+   "src": "metafelder/t1",
+   "start": 66.08,
+   "end": 66.26
+  },
+  {
+   "text": "Onlineshop",
+   "src": "metafelder/t1",
+   "start": 66.32,
+   "end": 66.68
+  },
+  {
+   "text": "für",
+   "src": "metafelder/t1",
+   "start": 66.7,
+   "end": 66.78
+  },
+  {
+   "text": "Bekleidung.",
+   "src": "metafelder/t1",
+   "start": 66.82,
+   "end": 67.3
+  },
+  {
+   "text": "Beim",
+   "src": "metafelder/t1",
+   "start": 68.04,
+   "end": 68.24
+  },
+  {
+   "text": "Produkt",
+   "src": "metafelder/t1",
+   "start": 68.28,
+   "end": 68.6
+  },
+  {
+   "text": "möchtest",
+   "src": "metafelder/t1",
+   "start": 68.66,
+   "end": 68.96
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 68.98,
+   "end": 69.02
+  },
+  {
+   "text": "natürlich",
+   "src": "metafelder/t1",
+   "start": 69.08,
+   "end": 69.4
+  },
+  {
+   "text": "Material",
+   "src": "metafelder/t1",
+   "start": 69.46,
+   "end": 69.96
+  },
+  {
+   "text": "und",
+   "src": "metafelder/t1",
+   "start": 70.1,
+   "end": 70.16
+  },
+  {
+   "text": "Pflegehinweise",
+   "src": "metafelder/t1",
+   "start": 70.2,
+   "end": 70.8
+  },
+  {
+   "text": "auch",
+   "src": "metafelder/t1",
+   "start": 70.84,
+   "end": 70.92
+  },
+  {
+   "text": "sauber",
+   "src": "metafelder/t1",
+   "start": 70.98,
+   "end": 71.22
+  },
+  {
+   "text": "in",
+   "src": "metafelder/t1",
+   "start": 71.24,
+   "end": 71.3
+  },
+  {
+   "text": "deinem",
+   "src": "metafelder/t1",
+   "start": 71.32,
+   "end": 71.5
+  },
+  {
+   "text": "Onlineshop",
+   "src": "metafelder/t1",
+   "start": 71.6,
+   "end": 71.96
+  },
+  {
+   "text": "anzeigen.",
+   "src": "metafelder/t1",
+   "start": 72.02,
+   "end": 72.38
+  },
+  {
+   "text": "Statt",
+   "src": "metafelder/t1",
+   "start": 78.89,
+   "end": 79.11
+  },
+  {
+   "text": "dass",
+   "src": "metafelder/t1",
+   "start": 79.15,
+   "end": 79.25
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 79.29,
+   "end": 79.33
+  },
+  {
+   "text": "jetzt",
+   "src": "metafelder/t1",
+   "start": 79.35,
+   "end": 79.47
+  },
+  {
+   "text": "aber",
+   "src": "metafelder/t1",
+   "start": 79.49,
+   "end": 79.63
+  },
+  {
+   "text": "dafür",
+   "src": "metafelder/t1",
+   "start": 79.65,
+   "end": 79.85
+  },
+  {
+   "text": "jedes",
+   "src": "metafelder/t1",
+   "start": 79.91,
+   "end": 80.13
+  },
+  {
+   "text": "Mal",
+   "src": "metafelder/t1",
+   "start": 80.17,
+   "end": 80.29
+  },
+  {
+   "text": "einen",
+   "src": "metafelder/t1",
+   "start": 80.33,
+   "end": 80.53
+  },
+  {
+   "text": "eigenen",
+   "src": "metafelder/t1",
+   "start": 80.61,
+   "end": 80.87
+  },
+  {
+   "text": "Fließtext",
+   "src": "metafelder/t1",
+   "start": 80.95,
+   "end": 81.39
+  },
+  {
+   "text": "einbaust,",
+   "src": "metafelder/t1",
+   "start": 81.43,
+   "end": 81.83
+  },
+  {
+   "text": "legst",
+   "src": "metafelder/t1",
+   "start": 81.89,
+   "end": 82.09
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 82.11,
+   "end": 82.15
+  },
+  {
+   "text": "einfach",
+   "src": "metafelder/t1",
+   "start": 82.19,
+   "end": 82.39
+  },
+  {
+   "text": "dafür",
+   "src": "metafelder/t1",
+   "start": 82.45,
+   "end": 82.71
+  },
+  {
+   "text": "eigene",
+   "src": "metafelder/t1",
+   "start": 82.85,
+   "end": 83.09
+  },
+  {
+   "text": "Metafelder",
+   "src": "metafelder/t1",
+   "start": 83.15,
+   "end": 83.61
+  },
+  {
+   "text": "an.",
+   "src": "metafelder/t1",
+   "start": 83.67,
+   "end": 83.75
+  },
+  {
+   "text": "In",
+   "src": "metafelder/t1",
+   "start": 101.39,
+   "end": 101.45
+  },
+  {
+   "text": "Shopify",
+   "src": "metafelder/t1",
+   "start": 101.51,
+   "end": 101.83
+  },
+  {
+   "text": "findest",
+   "src": "metafelder/t1",
+   "start": 101.95,
+   "end": 102.21
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 102.23,
+   "end": 102.27
+  },
+  {
+   "text": "das",
+   "src": "metafelder/t1",
+   "start": 102.33,
+   "end": 102.43
+  },
+  {
+   "text": "Ganze",
+   "src": "metafelder/t1",
+   "start": 102.49,
+   "end": 102.73
+  },
+  {
+   "text": "unter",
+   "src": "metafelder/t1",
+   "start": 102.81,
+   "end": 102.99
+  },
+  {
+   "text": "Einstellungen",
+   "src": "metafelder/t1",
+   "start": 103.11,
+   "end": 103.73
+  },
+  {
+   "text": "und",
+   "src": "metafelder/t1",
+   "start": 103.93,
+   "end": 104.01
+  },
+  {
+   "text": "dann",
+   "src": "metafelder/t1",
+   "start": 104.05,
+   "end": 104.19
+  },
+  {
+   "text": "in",
+   "src": "metafelder/t1",
+   "start": 104.25,
+   "end": 104.31
+  },
+  {
+   "text": "Benutzerdefinierte",
+   "src": "metafelder/t1",
+   "start": 104.37,
+   "end": 105.31
+  },
+  {
+   "text": "Daten.",
+   "src": "metafelder/t1",
+   "start": 105.39,
+   "end": 105.71
+  },
+  {
+   "text": "Dort",
+   "src": "metafelder/t1",
+   "start": 106.27,
+   "end": 106.45
+  },
+  {
+   "text": "kannst",
+   "src": "metafelder/t1",
+   "start": 106.49,
+   "end": 106.69
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 106.71,
+   "end": 106.75
+  },
+  {
+   "text": "dann",
+   "src": "metafelder/t1",
+   "start": 106.81,
+   "end": 106.93
+  },
+  {
+   "text": "bei",
+   "src": "metafelder/t1",
+   "start": 106.99,
+   "end": 107.07
+  },
+  {
+   "text": "den",
+   "src": "metafelder/t1",
+   "start": 107.13,
+   "end": 107.21
+  },
+  {
+   "text": "Produkten",
+   "src": "metafelder/t1",
+   "start": 107.27,
+   "end": 107.67
+  },
+  {
+   "text": "zum",
+   "src": "metafelder/t1",
+   "start": 107.71,
+   "end": 107.81
+  },
+  {
+   "text": "Beispiel",
+   "src": "metafelder/t1",
+   "start": 107.85,
+   "end": 108.11
+  },
+  {
+   "text": "ein",
+   "src": "metafelder/t1",
+   "start": 108.15,
+   "end": 108.23
+  },
+  {
+   "text": "Metafeld",
+   "src": "metafelder/t1",
+   "start": 108.29,
+   "end": 108.79
+  },
+  {
+   "text": "für",
+   "src": "metafelder/t1",
+   "start": 108.93,
+   "end": 109.07
+  },
+  {
+   "text": "die",
+   "src": "metafelder/t1",
+   "start": 109.13,
+   "end": 109.21
+  },
+  {
+   "text": "Pflegeanleitung",
+   "src": "metafelder/t1",
+   "start": 109.25,
+   "end": 109.91
+  },
+  {
+   "text": "anlegen.",
+   "src": "metafelder/t1",
+   "start": 109.97,
+   "end": 110.25
+  },
+  {
+   "text": "Wichtig",
+   "src": "metafelder/t1",
+   "start": 111.2,
+   "end": 111.46
+  },
+  {
+   "text": "dabei",
+   "src": "metafelder/t1",
+   "start": 111.52,
+   "end": 111.74
+  },
+  {
+   "text": "ist,",
+   "src": "metafelder/t1",
+   "start": 111.82,
+   "end": 111.94
+  },
+  {
+   "text": "dass",
+   "src": "metafelder/t1",
+   "start": 112.0,
+   "end": 112.14
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 112.2,
+   "end": 112.28
+  },
+  {
+   "text": "einen",
+   "src": "metafelder/t1",
+   "start": 112.4,
+   "end": 112.54
+  },
+  {
+   "text": "passenden",
+   "src": "metafelder/t1",
+   "start": 112.62,
+   "end": 113.06
+  },
+  {
+   "text": "Feldtyp",
+   "src": "metafelder/t1",
+   "start": 113.2,
+   "end": 113.56
+  },
+  {
+   "text": "auswählst.",
+   "src": "metafelder/t1",
+   "start": 113.66,
+   "end": 114.08
+  },
+  {
+   "text": "Also",
+   "src": "metafelder/t1",
+   "start": 118.81,
+   "end": 118.95
+  },
+  {
+   "text": "zum",
+   "src": "metafelder/t1",
+   "start": 119.03,
+   "end": 119.11
+  },
+  {
+   "text": "Beispiel",
+   "src": "metafelder/t1",
+   "start": 119.15,
+   "end": 119.45
+  },
+  {
+   "text": "einen",
+   "src": "metafelder/t1",
+   "start": 119.49,
+   "end": 119.67
+  },
+  {
+   "text": "Text",
+   "src": "metafelder/t1",
+   "start": 119.73,
+   "end": 119.99
+  },
+  {
+   "text": "und",
+   "src": "metafelder/t1",
+   "start": 120.05,
+   "end": 120.13
+  },
+  {
+   "text": "nicht",
+   "src": "metafelder/t1",
+   "start": 120.17,
+   "end": 120.27
+  },
+  {
+   "text": "einfach",
+   "src": "metafelder/t1",
+   "start": 120.35,
+   "end": 120.59
+  },
+  {
+   "text": "nur",
+   "src": "metafelder/t1",
+   "start": 120.65,
+   "end": 120.71
+  },
+  {
+   "text": "irgendeine",
+   "src": "metafelder/t1",
+   "start": 120.83,
+   "end": 121.29
+  },
+  {
+   "text": "Datenart.",
+   "src": "metafelder/t1",
+   "start": 121.35,
+   "end": 121.83
+  },
+  {
+   "text": "Und",
+   "src": "metafelder/t1",
+   "start": 132.41,
+   "end": 132.49
+  },
+  {
+   "text": "danach",
+   "src": "metafelder/t1",
+   "start": 132.51,
+   "end": 132.75
+  },
+  {
+   "text": "gehst",
+   "src": "metafelder/t1",
+   "start": 132.83,
+   "end": 132.99
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 133.01,
+   "end": 133.05
+  },
+  {
+   "text": "einfach",
+   "src": "metafelder/t1",
+   "start": 133.07,
+   "end": 133.21
+  },
+  {
+   "text": "in",
+   "src": "metafelder/t1",
+   "start": 133.23,
+   "end": 133.27
+  },
+  {
+   "text": "die",
+   "src": "metafelder/t1",
+   "start": 133.29,
+   "end": 133.35
+  },
+  {
+   "text": "Produkte",
+   "src": "metafelder/t1",
+   "start": 133.39,
+   "end": 133.73
+  },
+  {
+   "text": "und",
+   "src": "metafelder/t1",
+   "start": 133.85,
+   "end": 133.91
+  },
+  {
+   "text": "trägst",
+   "src": "metafelder/t1",
+   "start": 133.95,
+   "end": 134.23
+  },
+  {
+   "text": "dort",
+   "src": "metafelder/t1",
+   "start": 134.39,
+   "end": 134.55
+  },
+  {
+   "text": "den",
+   "src": "metafelder/t1",
+   "start": 134.59,
+   "end": 134.67
+  },
+  {
+   "text": "konkreten",
+   "src": "metafelder/t1",
+   "start": 134.73,
+   "end": 135.23
+  },
+  {
+   "text": "Wert",
+   "src": "metafelder/t1",
+   "start": 135.27,
+   "end": 135.47
+  },
+  {
+   "text": "ein.",
+   "src": "metafelder/t1",
+   "start": 135.53,
+   "end": 135.65
+  },
+  {
+   "text": "Beim",
+   "src": "metafelder/t1",
+   "start": 136.07,
+   "end": 136.23
+  },
+  {
+   "text": "T-Shirt",
+   "src": "metafelder/t1",
+   "start": 136.29,
+   "end": 136.63
+  },
+  {
+   "text": "also",
+   "src": "metafelder/t1",
+   "start": 136.69,
+   "end": 136.83
+  },
+  {
+   "text": "vielleicht,",
+   "src": "metafelder/t1",
+   "start": 136.89,
+   "end": 137.25
+  },
+  {
+   "text": "bei",
+   "src": "metafelder/t1",
+   "start": 137.61,
+   "end": 137.69
+  },
+  {
+   "text": "30",
+   "src": "metafelder/t1",
+   "start": 137.77,
+   "end": 138.11
+  },
+  {
+   "text": "Grad",
+   "src": "metafelder/t1",
+   "start": 138.15,
+   "end": 138.33
+  },
+  {
+   "text": "waschen,",
+   "src": "metafelder/t1",
+   "start": 138.37,
+   "end": 138.67
+  },
+  {
+   "text": "oder",
+   "src": "metafelder/t1",
+   "start": 138.87,
+   "end": 139.01
+  },
+  {
+   "text": "beim",
+   "src": "metafelder/t1",
+   "start": 139.09,
+   "end": 139.23
+  },
+  {
+   "text": "anderen",
+   "src": "metafelder/t1",
+   "start": 139.31,
+   "end": 139.57
+  },
+  {
+   "text": "Produkt",
+   "src": "metafelder/t1",
+   "start": 139.61,
+   "end": 139.87
+  },
+  {
+   "text": "steht",
+   "src": "metafelder/t1",
+   "start": 139.91,
+   "end": 140.13
+  },
+  {
+   "text": "eben",
+   "src": "metafelder/t1",
+   "start": 140.19,
+   "end": 140.31
+  },
+  {
+   "text": "auch",
+   "src": "metafelder/t1",
+   "start": 140.35,
+   "end": 140.43
+  },
+  {
+   "text": "etwas",
+   "src": "metafelder/t1",
+   "start": 140.49,
+   "end": 140.69
+  },
+  {
+   "text": "anderes.",
+   "src": "metafelder/t1",
+   "start": 140.75,
+   "end": 141.05
+  },
+  {
+   "text": "Und",
+   "src": "metafelder/t1",
+   "start": 153.76,
+   "end": 153.84
+  },
+  {
+   "text": "jetzt",
+   "src": "metafelder/t1",
+   "start": 153.88,
+   "end": 154.06
+  },
+  {
+   "text": "kommt",
+   "src": "metafelder/t1",
+   "start": 154.12,
+   "end": 154.3
+  },
+  {
+   "text": "hier",
+   "src": "metafelder/t1",
+   "start": 154.34,
+   "end": 154.44
+  },
+  {
+   "text": "aber",
+   "src": "metafelder/t1",
+   "start": 154.48,
+   "end": 154.6
+  },
+  {
+   "text": "der",
+   "src": "metafelder/t1",
+   "start": 154.64,
+   "end": 154.72
+  },
+  {
+   "text": "eigentlich",
+   "src": "metafelder/t1",
+   "start": 154.84,
+   "end": 155.22
+  },
+  {
+   "text": "praktische",
+   "src": "metafelder/t1",
+   "start": 155.28,
+   "end": 155.66
+  },
+  {
+   "text": "Teil.",
+   "src": "metafelder/t1",
+   "start": 155.74,
+   "end": 155.92
+  },
+  {
+   "text": "Denn",
+   "src": "metafelder/t1",
+   "start": 156.2,
+   "end": 156.32
+  },
+  {
+   "text": "wenn",
+   "src": "metafelder/t1",
+   "start": 156.34,
+   "end": 156.46
+  },
+  {
+   "text": "ein",
+   "src": "metafelder/t1",
+   "start": 156.5,
+   "end": 156.6
+  },
+  {
+   "text": "Theme",
+   "src": "metafelder/t1",
+   "start": 156.66,
+   "end": 156.84
+  },
+  {
+   "text": "dynamische",
+   "src": "metafelder/t1",
+   "start": 156.86,
+   "end": 157.3
+  },
+  {
+   "text": "Quellen",
+   "src": "metafelder/t1",
+   "start": 157.38,
+   "end": 157.66
+  },
+  {
+   "text": "unterstützt,",
+   "src": "metafelder/t1",
+   "start": 157.72,
+   "end": 158.2
+  },
+  {
+   "text": "dann",
+   "src": "metafelder/t1",
+   "start": 158.24,
+   "end": 158.38
+  },
+  {
+   "text": "kannst",
+   "src": "metafelder/t1",
+   "start": 158.42,
+   "end": 158.66
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 158.68,
+   "end": 158.74
+  },
+  {
+   "text": "hier",
+   "src": "metafelder/t1",
+   "start": 158.8,
+   "end": 158.88
+  },
+  {
+   "text": "tatsächlich",
+   "src": "metafelder/t1",
+   "start": 158.92,
+   "end": 159.28
+  },
+  {
+   "text": "im",
+   "src": "metafelder/t1",
+   "start": 159.32,
+   "end": 159.36
+  },
+  {
+   "text": "Theme-Editor",
+   "src": "metafelder/t1",
+   "start": 159.42,
+   "end": 159.98
+  },
+  {
+   "text": "einen",
+   "src": "metafelder/t1",
+   "start": 160.36,
+   "end": 160.52
+  },
+  {
+   "text": "passenden",
+   "src": "metafelder/t1",
+   "start": 160.6,
+   "end": 160.98
+  },
+  {
+   "text": "Block,",
+   "src": "metafelder/t1",
+   "start": 161.04,
+   "end": 161.26
+  },
+  {
+   "text": "zum",
+   "src": "metafelder/t1",
+   "start": 161.42,
+   "end": 161.52
+  },
+  {
+   "text": "Beispiel",
+   "src": "metafelder/t1",
+   "start": 161.56,
+   "end": 161.9
+  },
+  {
+   "text": "eine",
+   "src": "metafelder/t1",
+   "start": 162.1,
+   "end": 162.22
+  },
+  {
+   "text": "einklappbare",
+   "src": "metafelder/t1",
+   "start": 162.3,
+   "end": 162.76
+  },
+  {
+   "text": "Zeile,",
+   "src": "metafelder/t1",
+   "start": 162.86,
+   "end": 163.14
+  },
+  {
+   "text": "mit",
+   "src": "metafelder/t1",
+   "start": 163.7,
+   "end": 163.8
+  },
+  {
+   "text": "diesem",
+   "src": "metafelder/t1",
+   "start": 163.86,
+   "end": 164.14
+  },
+  {
+   "text": "Metafeld",
+   "src": "metafelder/t1",
+   "start": 164.24,
+   "end": 164.72
+  },
+  {
+   "text": "genau",
+   "src": "metafelder/t1",
+   "start": 164.78,
+   "end": 165.06
+  },
+  {
+   "text": "eben",
+   "src": "metafelder/t1",
+   "start": 165.16,
+   "end": 165.3
+  },
+  {
+   "text": "verbinden.",
+   "src": "metafelder/t1",
+   "start": 165.34,
+   "end": 165.7
+  },
+  {
+   "text": "Denn",
+   "src": "metafelder/t1",
+   "start": 183.24,
+   "end": 183.36
+  },
+  {
+   "text": "dann",
+   "src": "metafelder/t1",
+   "start": 183.4,
+   "end": 183.56
+  },
+  {
+   "text": "nutzt",
+   "src": "metafelder/t1",
+   "start": 183.6,
+   "end": 183.84
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 183.88,
+   "end": 183.92
+  },
+  {
+   "text": "eine",
+   "src": "metafelder/t1",
+   "start": 184.0,
+   "end": 184.12
+  },
+  {
+   "text": "Produktvorlage,",
+   "src": "metafelder/t1",
+   "start": 184.2,
+   "end": 184.92
+  },
+  {
+   "text": "aber",
+   "src": "metafelder/t1",
+   "start": 185.22,
+   "end": 185.36
+  },
+  {
+   "text": "Shopify",
+   "src": "metafelder/t1",
+   "start": 185.44,
+   "end": 185.88
+  },
+  {
+   "text": "zeigt",
+   "src": "metafelder/t1",
+   "start": 186.02,
+   "end": 186.22
+  },
+  {
+   "text": "wiederum",
+   "src": "metafelder/t1",
+   "start": 186.38,
+   "end": 186.66
+  },
+  {
+   "text": "bei",
+   "src": "metafelder/t1",
+   "start": 186.7,
+   "end": 186.78
+  },
+  {
+   "text": "jedem",
+   "src": "metafelder/t1",
+   "start": 186.88,
+   "end": 187.1
+  },
+  {
+   "text": "Artikel",
+   "src": "metafelder/t1",
+   "start": 187.16,
+   "end": 187.5
+  },
+  {
+   "text": "einfach",
+   "src": "metafelder/t1",
+   "start": 187.54,
+   "end": 187.76
+  },
+  {
+   "text": "den",
+   "src": "metafelder/t1",
+   "start": 187.84,
+   "end": 187.94
+  },
+  {
+   "text": "richtigen",
+   "src": "metafelder/t1",
+   "start": 188.04,
+   "end": 188.4
+  },
+  {
+   "text": "Inhalt",
+   "src": "metafelder/t1",
+   "start": 188.44,
+   "end": 188.68
+  },
+  {
+   "text": "an.",
+   "src": "metafelder/t1",
+   "start": 188.72,
+   "end": 188.8
+  },
+  {
+   "text": "Ist",
+   "src": "metafelder/t1",
+   "start": 189.32,
+   "end": 189.42
+  },
+  {
+   "text": "das",
+   "src": "metafelder/t1",
+   "start": 189.46,
+   "end": 189.6
+  },
+  {
+   "text": "nicht",
+   "src": "metafelder/t1",
+   "start": 189.66,
+   "end": 189.78
+  },
+  {
+   "text": "cool?",
+   "src": "metafelder/t1",
+   "start": 189.82,
+   "end": 190.0
+  },
+  {
+   "text": "Das",
+   "src": "metafelder/t1",
+   "start": 190.74,
+   "end": 190.82
+  },
+  {
+   "text": "spart",
+   "src": "metafelder/t1",
+   "start": 190.88,
+   "end": 191.16
+  },
+  {
+   "text": "dir",
+   "src": "metafelder/t1",
+   "start": 191.18,
+   "end": 191.26
+  },
+  {
+   "text": "natürlich",
+   "src": "metafelder/t1",
+   "start": 191.28,
+   "end": 191.6
+  },
+  {
+   "text": "nicht",
+   "src": "metafelder/t1",
+   "start": 191.68,
+   "end": 191.82
+  },
+  {
+   "text": "nur",
+   "src": "metafelder/t1",
+   "start": 191.88,
+   "end": 191.98
+  },
+  {
+   "text": "Pflegeaufwand,",
+   "src": "metafelder/t1",
+   "start": 192.02,
+   "end": 192.8
+  },
+  {
+   "text": "sondern",
+   "src": "metafelder/t1",
+   "start": 193.1,
+   "end": 193.34
+  },
+  {
+   "text": "hält",
+   "src": "metafelder/t1",
+   "start": 193.4,
+   "end": 193.54
+  },
+  {
+   "text": "tatsächlich",
+   "src": "metafelder/t1",
+   "start": 193.6,
+   "end": 193.94
+  },
+  {
+   "text": "deine",
+   "src": "metafelder/t1",
+   "start": 193.96,
+   "end": 194.14
+  },
+  {
+   "text": "Produktseiten",
+   "src": "metafelder/t1",
+   "start": 194.2,
+   "end": 194.82
+  },
+  {
+   "text": "auch",
+   "src": "metafelder/t1",
+   "start": 194.98,
+   "end": 195.1
+  },
+  {
+   "text": "einheitlicher.",
+   "src": "metafelder/t1",
+   "start": 195.22,
+   "end": 195.74
+  },
+  {
+   "text": "Und",
+   "src": "metafelder/t1",
+   "start": 203.66,
+   "end": 203.72
+  },
+  {
+   "text": "was",
+   "src": "metafelder/t1",
+   "start": 203.76,
+   "end": 203.88
+  },
+  {
+   "text": "dir",
+   "src": "metafelder/t1",
+   "start": 203.96,
+   "end": 204.08
+  },
+  {
+   "text": "definitiv",
+   "src": "metafelder/t1",
+   "start": 204.14,
+   "end": 204.62
+  },
+  {
+   "text": "Zeit",
+   "src": "metafelder/t1",
+   "start": 204.7,
+   "end": 204.86
+  },
+  {
+   "text": "spart,",
+   "src": "metafelder/t1",
+   "start": 204.9,
+   "end": 205.14
+  },
+  {
+   "text": "ist,",
+   "src": "metafelder/t1",
+   "start": 205.18,
+   "end": 205.26
+  },
+  {
+   "text": "wenn",
+   "src": "metafelder/t1",
+   "start": 205.3,
+   "end": 205.42
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 205.52,
+   "end": 205.58
+  },
+  {
+   "text": "mir",
+   "src": "metafelder/t1",
+   "start": 205.66,
+   "end": 205.74
+  },
+  {
+   "text": "hier",
+   "src": "metafelder/t1",
+   "start": 205.8,
+   "end": 205.92
+  },
+  {
+   "text": "ein",
+   "src": "metafelder/t1",
+   "start": 206.2,
+   "end": 206.28
+  },
+  {
+   "text": "Follow",
+   "src": "metafelder/t1",
+   "start": 206.34,
+   "end": 206.52
+  },
+  {
+   "text": "hinterlässt,",
+   "src": "metafelder/t1",
+   "start": 206.56,
+   "end": 206.94
+  },
+  {
+   "text": "um",
+   "src": "metafelder/t1",
+   "start": 207.0,
+   "end": 207.06
+  },
+  {
+   "text": "weitere",
+   "src": "metafelder/t1",
+   "start": 207.12,
+   "end": 207.42
+  },
+  {
+   "text": "solche",
+   "src": "metafelder/t1",
+   "start": 207.5,
+   "end": 207.68
+  },
+  {
+   "text": "E-Commerce-Tipps",
+   "src": "metafelder/t1",
+   "start": 207.76,
+   "end": 208.4
+  },
+  {
+   "text": "in",
+   "src": "metafelder/t1",
+   "start": 208.5,
+   "end": 208.56
+  },
+  {
+   "text": "Zukunft",
+   "src": "metafelder/t1",
+   "start": 208.6,
+   "end": 208.94
+  },
+  {
+   "text": "nicht",
+   "src": "metafelder/t1",
+   "start": 209.0,
+   "end": 209.12
+  },
+  {
+   "text": "zu",
+   "src": "metafelder/t1",
+   "start": 209.16,
+   "end": 209.22
+  },
+  {
+   "text": "verpassen.",
+   "src": "metafelder/t1",
+   "start": 209.28,
+   "end": 209.64
+  },
+  {
+   "text": "Und",
+   "src": "metafelder/t1",
+   "start": 215.16,
+   "end": 215.24
+  },
+  {
+   "text": "mein",
+   "src": "metafelder/t1",
+   "start": 215.28,
+   "end": 215.46
+  },
+  {
+   "text": "Tipp",
+   "src": "metafelder/t1",
+   "start": 215.52,
+   "end": 215.68
+  },
+  {
+   "text": "an",
+   "src": "metafelder/t1",
+   "start": 215.74,
+   "end": 215.82
+  },
+  {
+   "text": "dich",
+   "src": "metafelder/t1",
+   "start": 215.88,
+   "end": 216.02
+  },
+  {
+   "text": "ist",
+   "src": "metafelder/t1",
+   "start": 216.1,
+   "end": 216.2
+  },
+  {
+   "text": "jetzt,",
+   "src": "metafelder/t1",
+   "start": 216.22,
+   "end": 216.44
+  },
+  {
+   "text": "fang",
+   "src": "metafelder/t1",
+   "start": 216.52,
+   "end": 216.68
+  },
+  {
+   "text": "bitte",
+   "src": "metafelder/t1",
+   "start": 216.76,
+   "end": 216.92
+  },
+  {
+   "text": "mit",
+   "src": "metafelder/t1",
+   "start": 216.98,
+   "end": 217.06
+  },
+  {
+   "text": "einem",
+   "src": "metafelder/t1",
+   "start": 217.14,
+   "end": 217.3
+  },
+  {
+   "text": "einzigen",
+   "src": "metafelder/t1",
+   "start": 217.44,
+   "end": 217.76
+  },
+  {
+   "text": "Feld",
+   "src": "metafelder/t1",
+   "start": 217.78,
+   "end": 217.94
+  },
+  {
+   "text": "erst",
+   "src": "metafelder/t1",
+   "start": 218.0,
+   "end": 218.12
+  },
+  {
+   "text": "einmal",
+   "src": "metafelder/t1",
+   "start": 218.14,
+   "end": 218.34
+  },
+  {
+   "text": "an,",
+   "src": "metafelder/t1",
+   "start": 218.42,
+   "end": 218.54
+  },
+  {
+   "text": "das",
+   "src": "metafelder/t1",
+   "start": 219.06,
+   "end": 219.2
+  },
+  {
+   "text": "zum",
+   "src": "metafelder/t1",
+   "start": 219.24,
+   "end": 219.3
+  },
+  {
+   "text": "Beispiel",
+   "src": "metafelder/t1",
+   "start": 219.34,
+   "end": 219.56
+  },
+  {
+   "text": "bei",
+   "src": "metafelder/t1",
+   "start": 219.58,
+   "end": 219.66
+  },
+  {
+   "text": "vielen",
+   "src": "metafelder/t1",
+   "start": 219.78,
+   "end": 220.0
+  },
+  {
+   "text": "Produkten",
+   "src": "metafelder/t1",
+   "start": 220.06,
+   "end": 220.44
+  },
+  {
+   "text": "wirklich",
+   "src": "metafelder/t1",
+   "start": 220.52,
+   "end": 220.86
+  },
+  {
+   "text": "gebraucht",
+   "src": "metafelder/t1",
+   "start": 220.92,
+   "end": 221.28
+  },
+  {
+   "text": "wird,",
+   "src": "metafelder/t1",
+   "start": 221.34,
+   "end": 221.48
+  },
+  {
+   "text": "und",
+   "src": "metafelder/t1",
+   "start": 221.94,
+   "end": 222.02
+  },
+  {
+   "text": "prüf",
+   "src": "metafelder/t1",
+   "start": 222.08,
+   "end": 222.32
+  },
+  {
+   "text": "erst",
+   "src": "metafelder/t1",
+   "start": 222.44,
+   "end": 222.58
+  },
+  {
+   "text": "einmal",
+   "src": "metafelder/t1",
+   "start": 222.62,
+   "end": 222.8
+  },
+  {
+   "text": "nach",
+   "src": "metafelder/t1",
+   "start": 222.84,
+   "end": 222.92
+  },
+  {
+   "text": "Einrichtung",
+   "src": "metafelder/t1",
+   "start": 223.02,
+   "end": 223.48
+  },
+  {
+   "text": "zwei",
+   "src": "metafelder/t1",
+   "start": 223.58,
+   "end": 223.74
+  },
+  {
+   "text": "unterschiedliche",
+   "src": "metafelder/t1",
+   "start": 223.86,
+   "end": 224.38
+  },
+  {
+   "text": "Produkte",
+   "src": "metafelder/t1",
+   "start": 224.44,
+   "end": 224.82
+  },
+  {
+   "text": "im",
+   "src": "metafelder/t1",
+   "start": 225.02,
+   "end": 225.08
+  },
+  {
+   "text": "Frontend",
+   "src": "metafelder/t1",
+   "start": 225.16,
+   "end": 225.52
+  },
+  {
+   "text": "aus.",
+   "src": "metafelder/t1",
+   "start": 225.58,
+   "end": 225.72
+  },
+  {
+   "text": "Aber",
+   "src": "metafelder/t1",
+   "start": 291.34,
+   "end": 291.44
+  },
+  {
+   "text": "Metafelder",
+   "src": "metafelder/t1",
+   "start": 291.56,
+   "end": 292.02
+  },
+  {
+   "text": "anzulegen",
+   "src": "metafelder/t1",
+   "start": 292.12,
+   "end": 292.5
+  },
+  {
+   "text": "bringt",
+   "src": "metafelder/t1",
+   "start": 292.58,
+   "end": 292.78
+  },
+  {
+   "text": "dir",
+   "src": "metafelder/t1",
+   "start": 292.8,
+   "end": 292.88
+  },
+  {
+   "text": "natürlich",
+   "src": "metafelder/t1",
+   "start": 292.92,
+   "end": 293.22
+  },
+  {
+   "text": "herzlich",
+   "src": "metafelder/t1",
+   "start": 293.26,
+   "end": 293.64
+  },
+  {
+   "text": "wenig,",
+   "src": "metafelder/t1",
+   "start": 293.72,
+   "end": 294.02
+  },
+  {
+   "text": "wenn",
+   "src": "metafelder/t1",
+   "start": 294.34,
+   "end": 294.46
+  },
+  {
+   "text": "sie",
+   "src": "metafelder/t1",
+   "start": 294.48,
+   "end": 294.56
+  },
+  {
+   "text": "am",
+   "src": "metafelder/t1",
+   "start": 294.58,
+   "end": 294.64
+  },
+  {
+   "text": "Ende",
+   "src": "metafelder/t1",
+   "start": 294.72,
+   "end": 294.88
+  },
+  {
+   "text": "einfach",
+   "src": "metafelder/t1",
+   "start": 294.92,
+   "end": 295.12
+  },
+  {
+   "text": "gar",
+   "src": "metafelder/t1",
+   "start": 295.2,
+   "end": 295.32
+  },
+  {
+   "text": "nicht",
+   "src": "metafelder/t1",
+   "start": 295.4,
+   "end": 295.52
+  },
+  {
+   "text": "angezeigt",
+   "src": "metafelder/t1",
+   "start": 295.56,
+   "end": 295.92
+  },
+  {
+   "text": "werden.",
+   "src": "metafelder/t1",
+   "start": 295.96,
+   "end": 296.12
+  },
+  {
+   "text": "Deswegen",
+   "src": "metafelder/t1",
+   "start": 296.56,
+   "end": 296.92
+  },
+  {
+   "text": "würde",
+   "src": "metafelder/t1",
+   "start": 296.94,
+   "end": 297.06
+  },
+  {
+   "text": "ich",
+   "src": "metafelder/t1",
+   "start": 297.08,
+   "end": 297.16
+  },
+  {
+   "text": "nur",
+   "src": "metafelder/t1",
+   "start": 297.18,
+   "end": 297.26
+  },
+  {
+   "text": "sagen,",
+   "src": "metafelder/t1",
+   "start": 297.3,
+   "end": 297.58
+  },
+  {
+   "text": "nutze",
+   "src": "metafelder/t1",
+   "start": 297.7,
+   "end": 297.94
+  },
+  {
+   "text": "tatsächlich",
+   "src": "metafelder/t1",
+   "start": 298.0,
+   "end": 298.3
+  },
+  {
+   "text": "Metafelder,",
+   "src": "metafelder/t1",
+   "start": 298.36,
+   "end": 298.82
+  },
+  {
+   "text": "wenn",
+   "src": "metafelder/t1",
+   "start": 298.88,
+   "end": 299.0
+  },
+  {
+   "text": "du",
+   "src": "metafelder/t1",
+   "start": 299.04,
+   "end": 299.08
+  },
+  {
+   "text": "sie",
+   "src": "metafelder/t1",
+   "start": 299.14,
+   "end": 299.24
+  },
+  {
+   "text": "wirklich",
+   "src": "metafelder/t1",
+   "start": 299.32,
+   "end": 299.62
+  },
+  {
+   "text": "im",
+   "src": "metafelder/t1",
+   "start": 299.68,
+   "end": 299.72
+  },
+  {
+   "text": "Onlineshop",
+   "src": "metafelder/t1",
+   "start": 299.78,
+   "end": 300.16
+  },
+  {
+   "text": "gebrauchen",
+   "src": "metafelder/t1",
+   "start": 300.22,
+   "end": 300.56
+  },
+  {
+   "text": "kannst.",
+   "src": "metafelder/t1",
+   "start": 300.6,
+   "end": 300.82
+  }
+ ],
+ "pages": [
+  4,
+  3,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  2,
+  4,
+  3,
+  3,
+  2,
+  4,
+  3,
+  3,
+  4,
+  3,
+  2,
+  1,
+  4,
+  3,
+  2,
+  2,
+  3,
+  1,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  4,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  4,
+  3,
+  2,
+  4,
+  1,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  4,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  1,
+  4,
+  3,
+  3,
+  1,
+  3,
+  2,
+  3,
+  4,
+  2,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  1,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  1,
+  2,
+  4,
+  2,
+  2
+ ]
+}

@@ -1,0 +1,210 @@
+{
+ "url": "https://help.shopify.com/de/manual/custom-data/metafields/metafield-definitions/metafield-types",
+ "datum": "2026-10-26T20:09:47.407Z",
+ "pos": [
+  {
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "t": "Inhaltstypen und Werte von Metafeldern",
+   "y": 393
+  },
+  {
+   "t": "Jeder Metafeldtyp akzeptiert eine Reihe von unterstützten Werten für v",
+   "y": 659
+  },
+  {
+   "t": "unterstützte Werte für jeden Metafeldtyp",
+   "y": 903
+  },
+  {
+   "t": "Anwendungsbeispiele für jeden Metafeldtyp",
+   "y": 970
+  },
+  {
+   "t": "ob der Inhaltstyp als Metafeldliste verwendet werden kann",
+   "y": 1038
+  },
+  {
+   "t": "Weitere Informationen findest du in der Entwicklerdokumentation für Me",
+   "y": 1182
+  },
+  {
+   "t": "Metafeld-Inhaltstypen werden basierend auf dem Wert des Metafeldtyps n",
+   "y": 1325
+  },
+  {
+   "t": "Datum und Uhrzeit",
+   "y": 1669
+  },
+  {
+   "t": "Messung",
+   "y": 1737
+  },
+  {
+   "t": "Zahl",
+   "y": 1804
+  },
+  {
+   "t": "Text",
+   "y": 1872
+  },
+  {
+   "t": "Referenz",
+   "y": 1939
+  },
+  {
+   "t": "Andere",
+   "y": 2007
+  },
+  {
+   "t": "Erweitert",
+   "y": 2074
+  },
+  {
+   "t": "Deine am häufigsten verwendeten Metafeldtypen sind im Abschnitt Am häu",
+   "y": 2168
+  },
+  {
+   "t": "Auf dieser Seite",
+   "y": 2438
+  },
+  {
+   "t": "Datum und Uhrzeit",
+   "y": 2578
+  },
+  {
+   "t": "Messung",
+   "y": 2645
+  },
+  {
+   "t": "Zahl",
+   "y": 2713
+  },
+  {
+   "t": "Text",
+   "y": 2780
+  },
+  {
+   "t": "Referenz",
+   "y": 2848
+  },
+  {
+   "t": "Andere",
+   "y": 2915
+  },
+  {
+   "t": "Erweitert",
+   "y": 2983
+  },
+  {
+   "t": "Datum und Uhrzeit",
+   "y": 3153
+  },
+  {
+   "t": "Messung",
+   "y": 4804
+  },
+  {
+   "t": "Zahl",
+   "y": 19480
+  },
+  {
+   "t": "Text",
+   "y": 20582
+  },
+  {
+   "t": "Dieser Metafeldtyp unterstützt einfachen Text mit Zeilenumbrüchen.",
+   "y": 20992
+  },
+  {
+   "t": "Du kannst deine Mindest- und Maximallänge sowie Regeln für reguläre Au",
+   "y": 21235
+  },
+  {
+   "t": "Dieser Metafeldtyp unterstützt Text mit Zeilenumbrüchen und Inline-Sty",
+   "y": 21615
+  },
+  {
+   "t": "Kann nur mit Theme-Einstellungen verbunden werden, die mit Rich Text f",
+   "y": 22109
+  },
+  {
+   "t": "Themes wenden das Styling unterschiedlich an, wodurch die hier angewen",
+   "y": 22403
+  },
+  {
+   "t": "Dieser Metafeldtyp unterstützt einfachen Text ohne Zeilenumbrüche.",
+   "y": 23183
+  },
+  {
+   "t": "Du kannst einzeilige Felder auf eine voreingestellte Auswahl beschränk",
+   "y": 23427
+  },
+  {
+   "t": "Referenz",
+   "y": 23963
+  },
+  {
+   "t": "Dieser Metafeldtyp unterstützt das Hochladen einer einzelnen Datei in ",
+   "y": 27428
+  },
+  {
+   "t": "Bilder",
+   "y": 27772
+  },
+  {
+   "t": "Bilder müssen kleiner als 20 MB sein. Akzeptierte Formate: JPEG, PNG, ",
+   "y": 27848
+  },
+  {
+   "t": "Wird bei Verwendung in den Theme-Einstellungen als Bild gerendert.",
+   "y": 28265
+  },
+  {
+   "t": "Videos",
+   "y": 28642
+  },
+  {
+   "t": "Videos müssen kleiner als 1 GB und kürzer als zehn Minuten sein. Akzep",
+   "y": 28718
+  },
+  {
+   "t": "Wird bei Verwendung in Theme-Einstellungen vom Typ „Video“ als Video g",
+   "y": 29235
+  },
+  {
+   "t": "Alle Dateitypen",
+   "y": 30012
+  },
+  {
+   "t": "Generische Dateien müssen kleiner als 20 MB sein.",
+   "y": 30088
+  },
+  {
+   "t": "Wird in Themes als Link zum Herunterladen gerendert.",
+   "y": 30355
+  },
+  {
+   "t": "Informationen zu unterstützten Dateitypen findest du unter Anforderung",
+   "y": 30649
+  },
+  {
+   "t": "Andere",
+   "y": 32320
+  },
+  {
+   "t": "Erweitert",
+   "y": 36979
+  },
+  {
+   "t": "Dieser Metafeldtyp unterstützt Referenzen jeglicher Art.",
+   "y": 37932
+  },
+  {
+   "t": "Entwickler-Support ist erforderlich, um diesen Typ in deiner Storefron",
+   "y": 38225
+  }
+ ]
+}
