@@ -37,6 +37,8 @@ Skizzen mit HyperFrames), 6 (eigene Prüfung: Sync, Pacing, Standbilder, Raster)
 
 ## Farbe und Karten
 
+**Ab 2026-10-26, Erklär-Bilder (freigegeben):** das Gesprochene als Bild mit Bewegung (Metaphern, auf das Wort getimt) statt Wortkarten, Vorlage `src/projekte/pagebuilder`, Regeln in karten-aufbau.md "Visuelle Metaphern".
+
 **Ab 2026-10-25, Hook-Titel nur, wenn er etwas bringt:** bei Markennamen, News oder starker Zahl ja; bei persönlichen/ehrlichen Videos weglassen (karten-hell.md).
 
 **Ab 2026-10-25, Marken:** In M-Folgen und Videos mit bekannten Marken echte Shop-/Website-Screenshots der Marke als Hintergrund hinter ihm (`npm run portrait --hintergrund`), siehe karten-aufbau.md "Marken-Shops als Hintergrund".

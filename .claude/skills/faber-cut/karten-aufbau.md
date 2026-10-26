@@ -98,7 +98,7 @@ Gilt für **jede M-Folge (Marken-Story)** und **jedes Video, in dem eine bekannt
 - Zusätzlich bleiben die Quellen-Karten (Fallstudie, Pressemeldung, App-Store) für Belege.
 - Nur echte, aktuelle Seiten, nichts nachbauen; Datum im Übergabebericht nennen.
 
-## Visuelle Metaphern statt Wortkarten (PROBE ab P04, 2026-10-25)
+## Visuelle Metaphern statt Wortkarten (FREIGEGEBEN 2026-10-26, Vorlage P04 `src/projekte/pagebuilder`)
 
 Er: "Ich möchte gerne den skill eher dazu nutzen, visuell mein Gesprochenes darzustellen anstatt nur die Wörter
 hinzuschreiben." Sein Vorbild: eine Karte "DER START" mit zwei Bahnen ("Die" weit vorne, "Du" am Start, gestrichelte
@@ -111,7 +111,9 @@ Startlinie, handschriftlich "Vorsprung"), die den Gedanken ohne Ton erklärt.
 - Höchstens 1–3 Wörter pro Bild; ein handschriftliches Akzentwort (freie Schreibschrift wie Caveat/Kalam, im
   PulseConnect-Grün #00E090 oder -Blau #31ADEC; Rot nur für "Fehler").
 - Rahmen bleibt: helle Karte unter dem Kopf, Pill-Untertitel darüber, ruhige Motion nach dem Motion-Skill.
-- Status: Probe in P04 (Page Builder). Erst nach seinem OK fest für alle Videos.
+- Status: **freigegeben für alle Videos** (er zu P04 am 26.10.: "Die neuen Bilder sehen richtig gut aus"). Vorlage:
+  `hyperframes/pagebuilder-skizzen/index.html` (Weggabelung, App-Stapel, Prompt → Block, Code mit Fehlerzeile,
+  Theme-Kopie aufs Handy, gestrichenes Abo).
 
 ## Marken-Story im Editorial-Stil (PROBE ab M06, 2026-10-25)
 
