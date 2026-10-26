@@ -1,0 +1,1147 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/collections/manage-sources",
+ "datum": "2026-10-26T22:46:42.367Z",
+ "title": "Shopify Help Center | Kollektionsquellen und Bedingungen verwalten",
+ "pos": [
+  {
+   "tag": "LI",
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "tag": "H1",
+   "t": "Kollektionsquellen und Bedingungen verwalten",
+   "y": 393
+  },
+  {
+   "tag": "P",
+   "t": "Kollektionsquellen geben an, woher deine Kollektionsartikel stammen. Quellen können deine ",
+   "y": 659
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst die Quellen für deine Kollektionen ändern, die in den Quellen Produkte und Varia",
+   "y": 903
+  },
+  {
+   "tag": "H4",
+   "t": "Tipp",
+   "y": 1177
+  },
+  {
+   "tag": "P",
+   "t": "Bevor du eine bestehende Kollektion bearbeitest, solltest du die Kollektionsseite in deine",
+   "y": 1237
+  },
+  {
+   "tag": "H2",
+   "t": "Auf dieser Seite",
+   "y": 1687
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingung für Produkt- oder Variantenauswahl entfernen",
+   "y": 1827
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingung für Produkt- oder Variantenauswahl ändern",
+   "y": 1944
+  },
+  {
+   "tag": "LI",
+   "t": "Manuell hinzugefügte Produkte oder Varianten entfernen",
+   "y": 2062
+  },
+  {
+   "tag": "LI",
+   "t": "Manuell hinzugefügte Produkte oder Varianten ändern",
+   "y": 2179
+  },
+  {
+   "tag": "LI",
+   "t": "Quelle aus einer Kollektion entfernen",
+   "y": 2247
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektion oder App in einer Quelle ändern",
+   "y": 2314
+  },
+  {
+   "tag": "LI",
+   "t": "Ausschlüsse aus einer Produktquelle entfernen",
+   "y": 2382
+  },
+  {
+   "tag": "H2",
+   "t": "Bedingung für Produkt- oder Variantenauswahl entfernen",
+   "y": 2552
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine Bedingung aus einer Produkte- oder Varianten-Quelle entfernen. Durch das En",
+   "y": 2895
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 3167
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 3429
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 3429
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, aus der du eine Bedingung für die Produkt- oder Variantenauswa",
+   "y": 3547
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, aus der du eine Bedingung für die Produkt- oder Variantenauswa",
+   "y": 3547
+  },
+  {
+   "tag": "LI",
+   "t": "Fahre in einer Produkte-Quelle oder Varianten-Quelle mit der Maus über die Bedingung, die ",
+   "y": 3714
+  },
+  {
+   "tag": "P",
+   "t": "Fahre in einer Produkte-Quelle oder Varianten-Quelle mit der Maus über die Bedingung, die ",
+   "y": 3714
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Symbol .",
+   "y": 3882
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf das Symbol .",
+   "y": 3882
+  },
+  {
+   "tag": "IMG",
+   "t": "delete",
+   "y": 3882
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 3954
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 3954
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 4258
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 4258
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 4258
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 4331
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 4331
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 4448
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 4448
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 4616
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 4616
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 4733
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 4733
+  },
+  {
+   "tag": "IMG",
+   "t": "Löschen",
+   "y": 4783
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 4856
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 4856
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 4923
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 4923
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 5041
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 5041
+  },
+  {
+   "tag": "H2",
+   "t": "Auswahlbedingung für Produkte oder Varianten ändern",
+   "y": 4360
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst die Bedingungen in einer Produkte- oder Varianten-Quelle anpassen, um genauer fe",
+   "y": 4703
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 5075
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 5337
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 5337
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, für die du eine Auswahlbedingung für Produkte oder Varianten ä",
+   "y": 5455
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, für die du eine Auswahlbedingung für Produkte oder Varianten ä",
+   "y": 5455
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in einer Produkte-Quelle oder Varianten-Quelle für die Bedingung, die du ändern möcht",
+   "y": 5622
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in einer Produkte-Quelle oder Varianten-Quelle für die Bedingung, die du ändern möcht",
+   "y": 5622
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf die Dropdown-Menüs und triff deine neue Auswahl.",
+   "y": 5798
+  },
+  {
+   "tag": "LI",
+   "t": "Gib je nach deiner Auswahl den Text oder Wert ein, mit dem Produkte oder Varianten überein",
+   "y": 5916
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 6192
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 6192
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 6496
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 6496
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 6496
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 6569
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 6569
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 6686
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 6686
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 6854
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 6854
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 6971
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 6971
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 7098
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 7315
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 7591
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 7591
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 7709
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 7709
+  },
+  {
+   "tag": "H2",
+   "t": "Manuell hinzugefügte Produkte oder Varianten entfernen",
+   "y": 6598
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du einer Kollektion Produkte oder Varianten hinzufügst, kannst du diese später wieder",
+   "y": 6941
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 7313
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 7575
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 7575
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, aus der du manuell hinzugefügte Produkte oder Varianten entfer",
+   "y": 7692
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, aus der du manuell hinzugefügte Produkte oder Varianten entfer",
+   "y": 7692
+  },
+  {
+   "tag": "LI",
+   "t": "Fahre im Abschnitt Kollektionsartikel mit der Maus über ein manuell hinzugefügtes Produkt ",
+   "y": 7860
+  },
+  {
+   "tag": "P",
+   "t": "Fahre im Abschnitt Kollektionsartikel mit der Maus über ein manuell hinzugefügtes Produkt ",
+   "y": 7860
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke beim Produkt oder bei der Variante, die du entfernen möchtest, auf x.",
+   "y": 8077
+  },
+  {
+   "tag": "P",
+   "t": "Klicke beim Produkt oder bei der Variante, die du entfernen möchtest, auf x.",
+   "y": 8077
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 8200
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 8200
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8504
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8504
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 8504
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8577
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8577
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8694
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8694
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8862
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8862
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 9029
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 9029
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 9029
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 9084
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 9157
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 9157
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 9324
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 9324
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 9442
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 9442
+  },
+  {
+   "tag": "H2",
+   "t": "Manuell hinzugefügte Produkte oder Varianten ändern",
+   "y": 8605
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst die Produkte oder Varianten, die du einer Kollektion hinzugefügt hast, aktualisi",
+   "y": 8949
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 9271
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 9533
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 9533
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, für die du die manuell hinzugefügten Produkte oder Varianten ä",
+   "y": 9650
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, für die du die manuell hinzugefügten Produkte oder Varianten ä",
+   "y": 9650
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in einer Produkte-Quelle oder Varianten-Quelle auf das Symbol  oder .",
+   "y": 9818
+  },
+  {
+   "tag": "P",
+   "t": "Klicke in einer Produkte-Quelle oder Varianten-Quelle auf das Symbol  oder .",
+   "y": 9818
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkt",
+   "y": 9868
+  },
+  {
+   "tag": "IMG",
+   "t": "Varianten",
+   "y": 9868
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im Dialogfeld Einzuschließende Produkte auswählen oder Einzuschließende Varianten au",
+   "y": 9940
+  },
+  {
+   "tag": "P",
+   "t": "Wähle im Dialogfeld Einzuschließende Produkte auswählen oder Einzuschließende Varianten au",
+   "y": 9940
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 10158
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 10158
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10462
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10462
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 10462
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10535
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10535
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10652
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10652
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10820
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10820
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10987
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10987
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 10987
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 11042
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 11115
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 11115
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 11282
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 11282
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 11400
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 11400
+  },
+  {
+   "tag": "H2",
+   "t": "Quelle aus einer Kollektion entfernen",
+   "y": 10563
+  },
+  {
+   "tag": "P",
+   "t": "Eine Kollektion kann Artikel aus mehr als einer Quelle enthalten. Wenn du eine Produkte-, ",
+   "y": 10827
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 11099
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 11361
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 11361
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, aus der du eine Quelle entfernen möchtest.",
+   "y": 11478
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, aus der du eine Quelle entfernen möchtest.",
+   "y": 11478
+  },
+  {
+   "tag": "LI",
+   "t": "Fahre mit der Maus über die Produkte-, Varianten-, Kollektion- oder App-Quelle, die du lös",
+   "y": 11596
+  },
+  {
+   "tag": "P",
+   "t": "Fahre mit der Maus über die Produkte-, Varianten-, Kollektion- oder App-Quelle, die du lös",
+   "y": 11596
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Symbol .",
+   "y": 11713
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf das Symbol .",
+   "y": 11713
+  },
+  {
+   "tag": "IMG",
+   "t": "delete",
+   "y": 11713
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 11786
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 11786
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12090
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12090
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 12090
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12163
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12163
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12280
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12280
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12398
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12398
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12515
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12515
+  },
+  {
+   "tag": "IMG",
+   "t": "Horizontales Menü",
+   "y": 12515
+  },
+  {
+   "tag": "IMG",
+   "t": "Vertikales Menü",
+   "y": 12515
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12638
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12638
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12705
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12705
+  },
+  {
+   "tag": "H2",
+   "t": "Kollektion oder App in einer Quelle ändern",
+   "y": 12191
+  },
+  {
+   "tag": "P",
+   "t": "Wenn eine Kollektionsquelle Artikel aus einer anderen Kollektion oder einer App enthält, k",
+   "y": 12455
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 12777
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 13039
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 13039
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, die du bearbeiten möchtest.",
+   "y": 13156
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, die du bearbeiten möchtest.",
+   "y": 13156
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in der Kollektion- oder App-Quelle auf die aktuelle Kollektion oder App.",
+   "y": 13224
+  },
+  {
+   "tag": "P",
+   "t": "Klicke in der Kollektion- oder App-Quelle auf die aktuelle Kollektion oder App.",
+   "y": 13224
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Dialogfeld auf eine andere Kollektion oder wähle eine andere App aus und klicke ",
+   "y": 13341
+  },
+  {
+   "tag": "P",
+   "t": "Klicke im Dialogfeld auf eine andere Kollektion oder wähle eine andere App aus und klicke ",
+   "y": 13341
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 13459
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 13459
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 13763
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 13763
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 13763
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 13835
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 13835
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 13953
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 13953
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 14020
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 14020
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 14188
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 14188
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 14305
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 14305
+  },
+  {
+   "tag": "H2",
+   "t": "Ausschlüsse aus einer Produkte-Quelle entfernen",
+   "y": 13864
+  },
+  {
+   "tag": "P",
+   "t": "Eine Produkte-Quelle kann bestimmte Produkte aus einer Kollektion ausschließen. Wenn du mö",
+   "y": 14128
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 14400
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 14662
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 14662
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, aus der du Produktausschlüsse entfernen möchtest.",
+   "y": 14779
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, aus der du Produktausschlüsse entfernen möchtest.",
+   "y": 14779
+  },
+  {
+   "tag": "LI",
+   "t": "Fahre in der entsprechenden Produkte-Quelle mit der Maus über den Eintrag Ausschließen.",
+   "y": 14897
+  },
+  {
+   "tag": "P",
+   "t": "Fahre in der entsprechenden Produkte-Quelle mit der Maus über den Eintrag Ausschließen.",
+   "y": 14897
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Symbol .",
+   "y": 15014
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf das Symbol .",
+   "y": 15014
+  },
+  {
+   "tag": "IMG",
+   "t": "delete",
+   "y": 15014
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 15087
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 15087
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15391
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15391
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 15391
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15463
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15463
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15581
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15581
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15698
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15698
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15866
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15866
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15933
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15933
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16001
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 16001
+  }
+ ]
+}

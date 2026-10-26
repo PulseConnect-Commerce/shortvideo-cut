@@ -1,0 +1,71 @@
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+Produkte
+Kollektionen
+Hinweis
+
+Ein neues Kollektionsmodell ersetzt das ältere Modell für manuelle und intelligente Kollektionen. Wenn das neue Kollektionsmodell in deinem Shopify-Adminbereich verfügbar ist, wurden alle deine bisherigen Kollektionen automatisch in den neuen Typ konvertiert. Wenn das neue Kollektionsmodell in deinem Shopify-Adminbereich noch nicht verfügbar ist, kannst du weiterhin manuelle Kollektionen und intelligente Kollektionen verwenden.
+
+Wenn du Basic oder einen höheren Plan nutzt oder das Agentic-Abo hast und einen Onlineshop aufbaust, kannst du deine Produkte in Kollektionen gruppieren. So ist es einfacher, Produkte nach Kategorie, Motiv oder Kaufabsicht der Kundschaft zu entdecken. Sieh dir die folgenden Beispiele für Kollektionen an, die du erstellen könntest:
+
+Kleidung für Männer, Frauen oder Kinder.
+Artikel eines bestimmten Typs, wie etwa Lampen, Kissen oder Teppiche.
+Artikel, die im Sale sind.
+Artikel in einer bestimmten Größe oder Farbe.
+Saisonale Produkte, wie zum Beispiel Weihnachtskarten und Dekorationen.
+Varianten-Kollektionen, wie zum Beispiel ausschließlich rote Produkte für den Valentinstag.
+Kollektionen mit mehreren Quellen und mehreren Bedingungen, wie zum Beispiel eine Kollektion für Bio-Kaffee mit Produkten, die als organic getaggt sind und weniger als 50 USD kosten, sowie Produkten, deren Materialien-Metafeld auf ceramic gesetzt ist und die über 30 USD kosten.
+Verschachtelte Kollektionen, wie zum Beispiel die Erstellung einer Kollektion Teegeschirr durch die Kombination deiner bestehenden Kollektionen Teekannen, Teebereiter und Teesiebe zu einer einzigen neuen Kollektion.
+Tipp
+
+Wenn du auf Produktseiten Produktempfehlungen anzeigen möchtest, kannst du dem Theme deines Onlineshops einen Abschnitt für empfohlene Produkte hinzufügen.
+
+Du kannst Kollektionen mehrere unterschiedliche Quellen hinzufügen, mit separaten Bedingungen und mehreren Werten für den Abgleich von Produkten. Du kannst deine eigenen Produkte oder Varianten hinzufügen, Produkte aus von dir verwendeten Drittanbieter-Apps sowie Produkte aus einer anderen bestehenden Kollektion.
+
+Mit den folgenden Methoden kannst du außerdem steuern, welche Produkte in Kollektionen angezeigt werden:
+
+Produkte oder Varianten basierend auf von dir festgelegten Einschlussbedingungen automatisch zu einer Kollektion hinzufügen.
+Ausgewählte spezifische Produkte oder Varianten manuell hinzufügen.
+Produkte basierend auf von dir festgelegten Ausschlussbedingungen automatisch aus einer Kollektion ausschließen.
+Ausgewählte spezifische Produkte manuell ausschließen.
+
+Du kannst Kollektionen auf der Seite Kollektionen in deinem Shopify-Adminbereich sowie in der mobilen Shopify-App anzeigen, erstellen und bearbeiten.
+
+Nachdem du eine Kollektion erstellt hast, kann diese in deinem Onlineshop als Webseite mit einer Galerie der Produkte in der Kollektion angezeigt werden. Deine Kund:innen können dann auf der Kollektionsseite auf ein Produktbild klicken, um die Seite eines bestimmten Produkts aufzurufen. Du kannst deiner Kundschaft helfen, Kollektionen zu finden und anzuzeigen, indem du Links zu den Kollektionen in den Menüs deines Shops hinzufügst.
+
+Du kannst verschiedene Sortieroptionen verwenden, um die Standardreihenfolge festzulegen, in der Produkte auf den einzelnen Kollektionsseiten in deiner Storefront angezeigt werden. Das genaue Layout und das Erscheinungsbild der Kollektionsseiten hängen von dem von dir verwendeten Theme und der Vorlage ab.
+
+Achtung
+
+Wenn du in der mobilen Shopify-App eine neue Kollektion erstellst, aber das neue Kollektionsmodell noch nicht in deinem Shopify-Adminbereich verfügbar ist, kannst du im Shopify-Adminbereich keine Änderungen an den Produkten oder der Sortierung der Kollektion vornehmen. Es wird die Meldung Du kannst diese Kollektion nicht bearbeiten angezeigt.
+
+Solange du das neue Kollektionsmodell in deinem Shopify-Adminbereich nicht hast, kannst du für alle neuen Kollektionen, die du in der mobilen Shopify-App erstellst, in deinem Shopify-Adminbereich nur Titel, Beschreibung, Bild, Veröffentlichung für Vertriebskanäle, Theme-Vorlage, Suchmaschinen-Angebot und Kollektions-Metafelder bearbeiten.
+
+In diesem Abschnitt
+
+Kollektionen erstellen und Produkte hinzufügen
+
+Bedingungen für Kollektionen verstehen
+
+Kollektionsquellen und Bedingungen verwalten
+
+Kollektionsdetails und Layout bearbeiten
+
+Kollektionseinstellungen verwalten
+
+Menülinks für deine Kollektionen hinzufügen
+
+Kollektionsliste durchsuchen und anzeigen
+
+Ältere smarte Kollektionen
+
+Ältere manuelle Kollektionen
+
+Feedback hinterlassen

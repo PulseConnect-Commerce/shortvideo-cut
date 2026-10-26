@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>S03 · Automatische Kollektionen – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- FACE S03 "Automatische Kollektionen" (Serie S). Erklär-Bilder nach karten-aufbau.md "Visuelle Metaphern" (freigegeben
+         2026-10-26, Vorlagen P04 hyperframes/pagebuilder-skizzen und S02 hyperframes/metafelder-skizzen): pro Kerngedanke ein Bild,
+         das den Satz ohne Ton erklärt (Produkte von Hand in die Kollektion ziehen, Beispiel-Shop und Kollektion "Schwarze T-Shirts",
+         jedes neue Produkt von Hand, manuell gegen automatisiert, Weg Produkte → Kollektionen → neue Kollektion, Schalter auf
+         automatisch, Filter-Trichter mit zwei Bedingungen, alle gegen irgendeine, Simulation der Kollektion, einheitliche gegen
+         uneinheitliche Tags, Lupe über der Kollektion, neuer Artikel landet von selbst in der Kollektion, Folgen-Plus), höchstens
+         1–3 Wörter je Bild, ein handschriftliches Akzentwort (Caveat, OFL, lokal; Blau #31ADEC, Grün #00C27C, Rot nur für Fehler).
+         Rahmen: helle Karte unter dem Kopf (x 80-900, ab y 950; Instagram-Zone unten ab 1500), Pill-Untertitel darüber (Remotion,
+         y 895), ruhige Bewegung ohne Überschwingen.
+         Echte Quellen: Produktbilder aus Pauls Demo-Shop (online-store-development-pulseconnect, products.json, nur gelesen):
+         "Basic T-Shirt Bio-Baumwolle" (schwarz), "Rippshirt Tessa" (rot), "Jeans Regular Schwarz", "T-Shirt Relaxed Senf".
+         Beispielwerte (Produkttyp T-Shirt, Tag schwarz/Black/black-shirt, rote T-Shirts, schwarze Hosen) sagt Paul im Video; die
+         Kollektion "Schwarze T-Shirts" und ihr Inhalt sind als BEISPIEL bzw. SIMULATION gekennzeichnet (im Demo-Shop gibt es sie nicht).
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/kollektionen/cut.json, 89,37 s), genau wie Remotion sie rechnet (jedes
+         Schnittstück auf ganze Frames gerundet), schon als Cues (2 Frames vor dem Wort); Liste mit Tönen in
+         src/projekte/kollektionen/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 950px; width: 820px; height: 360px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 22px; display: flex; align-items: center; gap: 10px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .demo { margin-left: 4px; padding: 3px 10px 4px; border-radius: 8px; background: #0b0c0e; color: #fff; font-size: 17px; letter-spacing: 0.12em; }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 300px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #6b7280; }
+      .klein { font-size: 20px; font-weight: 700; fill: #6b7280; letter-spacing: 0.06em; }
+      .wert { font-size: 27px; font-weight: 700; fill: #0b0c0e; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .hand.gruen { fill: #00c27c; }
+      .hand.rot { fill: #e5484d; }
+      .zug { fill: none; stroke: url(#gvu); stroke-width: 6; stroke-linecap: round; }
+      .strich { fill: none; stroke: #9aa3af; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 3 12; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .platz { fill: none; stroke: #b6bec9; stroke-width: 3; stroke-dasharray: 10 8; }
+      .zeile { fill: #d6dae0; }
+      .dunkel { fill: #0b0c0e; opacity: 0.78; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .chip { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .aktiv { fill: none; stroke: url(#gvd); stroke-width: 5; }
+      .pillneu { fill: url(#gvd); }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Vorgabe 2026-10-25) */
+      .folgekarte { position: absolute; left: 80px; top: 950px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 42px; height: 42px; border-radius: 21px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 24px; height: 24px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+
+      /* Sticker-Wort links neben dem Kopf */
+      .sticker { position: absolute; left: 96px; top: 430px; padding: 8px 18px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 50px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(-4deg); transform-origin: 0 50%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="kollektionen-skizzen" data-width="1080" data-height="1920" data-start="0.00" data-duration="89.37">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvu" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="820" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24er Raster -->
+          <g id="tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r="1" /></g>
+          <g id="laden"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="ordner"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /></g>
+          <g id="schichten"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></g>
+          <g id="hand"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" /><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" /><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" /><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" /></g>
+          <g id="zahnrad"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" /></g>
+          <g id="plusico"><path d="M5 12h14" /><path d="M12 5v14" /></g>
+          <g id="glocke"><path d="M10.268 21a2 2 0 0 0 3.464 0" /><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /></g>
+          <g id="loop"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /></g>
+          <g id="filter"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z" /></g>
+          <g id="lupe"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+          <g id="schluessel"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></g>
+          <g id="zeigerico"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+          <!-- Mauszeiger (Spitze bei 0,0) -->
+          <g id="maus"><use href="#zeigerico" transform="translate(-6 -6) scale(2)" style="fill:#0b0c0e;stroke:#fff;stroke-width:1.2;stroke-linejoin:round" /></g>
+          <!-- Haken im Kreis (Verlauf), grauer Kreis mit X, roter Kreis mit X (nur für Fehler) -->
+          <g id="ok"><circle cx="0" cy="0" r="20" fill="url(#gvd)" /><path d="M-10 0 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="nein"><circle cx="0" cy="0" r="18" fill="#9aa3af" /><path d="M-7 -7 L7 7 M7 -7 L-7 7" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" /></g>
+          <g id="fehler"><circle cx="0" cy="0" r="20" fill="#e5484d" /><path d="M-8 -8 L8 8 M8 -8 L-8 8" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" /></g>
+        </defs>
+      </svg>
+
+      <!-- K1 Immer wieder von Hand: "... einfach nicht von der Hand pflegen würde, sind die ständig gleichen Produktkollektionen."
+           Hand 3,63 / pflegen 3,80 / ständig 5,07 / Produktkollektionen 5,87 -->
+      <section id="k1" class="karte clip" data-start="3.467" data-duration="3.700" data-track-index="1">
+        <div class="kicker">Immer wieder von Hand</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <image id="k1-p1" href="assets/tshirt-schwarz.png" x="30" y="20" width="100" height="100" />
+          <image id="k1-p2" href="assets/hose-schwarz.png" x="140" y="20" width="100" height="100" />
+          <image id="k1-p3" href="assets/tshirt-senf.png" x="250" y="20" width="100" height="100" />
+          <g id="k1-stapel" opacity="0">
+            <rect x="464" y="24" width="330" height="226" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" opacity="0.55" />
+            <rect x="452" y="12" width="330" height="226" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" opacity="0.8" />
+          </g>
+          <g id="k1-box">
+            <rect x="440" y="0" width="330" height="226" rx="22" class="rahmen" />
+            <use href="#ordner" class="ico" transform="translate(462 18) scale(1.45)" style="stroke-width:1.8" />
+            <text x="508" y="45" class="lab" style="font-size:28px">Kollektion</text>
+            <rect x="462" y="80" width="90" height="90" rx="14" class="platz" />
+            <rect x="562" y="80" width="90" height="90" rx="14" class="platz" />
+            <rect x="662" y="80" width="90" height="90" rx="14" class="platz" />
+          </g>
+          <image id="k1-m1" href="assets/tshirt-schwarz.png" x="35" y="25" width="90" height="90" opacity="0" />
+          <image id="k1-m2" href="assets/hose-schwarz.png" x="145" y="25" width="90" height="90" opacity="0" />
+          <g id="k1-maus" opacity="0" transform="translate(90 80)"><use href="#maus" /></g>
+          <g id="k1-loop" opacity="0"><circle cx="770" cy="196" r="34" fill="url(#gvd)" /><use href="#loop" class="ico" transform="translate(752 178) scale(1.5)" style="stroke-width:2.2" /></g>
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="34" y="160" width="0" height="100" /></clipPath>
+          <text x="40" y="228" class="hand" style="font-size:66px" clip-path="url(#k1-clip)" transform="rotate(-3 150 210)">von Hand</text>
+        </svg>
+      </section>
+
+      <!-- K2 Beispiel Kleidung: "Denn stell dir vor, du verkaufst jetzt zum Beispiel Kleidung und hast einfach eine Kollektion für schwarze T-Shirts."
+           Denn 7,27 / Kleidung 9,07 / Kollektion 10,20 / schwarze 10,80 / T-Shirts 11,23. Produkte aus Pauls Demo-Shop -->
+      <section id="k2" class="karte clip" data-start="7.200" data-duration="4.500" data-track-index="1">
+        <div class="kicker">Beispiel: Kleidung<span class="demo">DEMO-SHOP</span></div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k2-shop">
+            <rect x="20" y="0" width="400" height="290" rx="22" class="rahmen" />
+            <use href="#laden" class="ico" transform="translate(42 18) scale(1.45)" style="stroke-width:1.8" />
+            <text x="88" y="45" class="lab" style="font-size:28px">Shop</text>
+            <text id="k2-kleidung" x="160" y="45" class="lab grau" style="font-size:28px" opacity="0">· Kleidung</text>
+          </g>
+          <image class="k2-p" href="assets/tshirt-schwarz.png" x="38" y="96" width="86" height="86" opacity="0" />
+          <image class="k2-p" href="assets/shirt-rot.png" x="132" y="96" width="86" height="86" opacity="0" />
+          <image class="k2-p" href="assets/hose-schwarz.png" x="226" y="96" width="86" height="86" opacity="0" />
+          <image class="k2-p" href="assets/tshirt-senf.png" x="320" y="96" width="86" height="86" opacity="0" />
+          <rect id="k2-ring" x="30" y="88" width="102" height="102" rx="18" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <g id="k2-koll" opacity="0">
+            <rect x="450" y="0" width="350" height="226" rx="22" class="rahmen" />
+            <use href="#ordner" class="ico" transform="translate(470 18) scale(1.45)" style="stroke-width:1.8" />
+            <text x="514" y="45" class="lab" style="font-size:27px">Schwarze T-Shirts</text>
+            <rect x="476" y="80" width="96" height="96" rx="14" class="platz" />
+            <rect x="584" y="80" width="96" height="96" rx="14" class="platz" />
+            <rect x="692" y="80" width="96" height="96" rx="14" class="platz" />
+          </g>
+          <image id="k2-m" href="assets/tshirt-schwarz.png" x="38" y="96" width="86" height="86" opacity="0" />
+          <g id="k2-ok" opacity="0"><use href="#ok" transform="translate(568 84)" /></g>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="560" y="226" width="0" height="80" /></clipPath>
+          <text x="566" y="284" class="hand" style="font-size:56px" clip-path="url(#k2-clip)" transform="rotate(-3 650 268)">Kollektion</text>
+          <path id="k2-zeig" pathLength="1" d="M556 248 C 530 248, 520 240, 512 222" fill="none" stroke="#31adec" stroke-width="3.5" stroke-linecap="round" />
+        </svg>
+      </section>
+
+      <!-- K3 Von Hand hinzufügen: "Wenn du jetzt tatsächlich alle Produkte manuell hinzufügst, dann musst du bei jedem neuen Artikel wieder daran denken."
+           Produkte 12,87 / manuell 13,20 / neuen 14,97 / Artikel 15,23 / wieder 15,67 / daran 15,93 / denken 16,33 -->
+      <section id="k3" class="karte clip" data-start="11.733" data-duration="4.900" data-track-index="1">
+        <div class="kicker">Von Hand hinzufügen</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g>
+            <rect x="20" y="0" width="400" height="226" rx="22" class="rahmen" />
+            <use href="#ordner" class="ico" transform="translate(40 18) scale(1.45)" style="stroke-width:1.8" />
+            <text x="84" y="45" class="lab" style="font-size:27px">Schwarze T-Shirts</text>
+            <image href="assets/tshirt-schwarz.png" x="44" y="80" width="110" height="110" />
+            <rect x="166" y="80" width="110" height="110" rx="16" class="platz" />
+            <rect x="288" y="80" width="110" height="110" rx="16" class="platz" />
+          </g>
+          <image id="k3-m" href="assets/tshirt-schwarz.png" x="470" y="80" width="110" height="110" opacity="0" />
+          <g id="k3-maus" opacity="0" transform="translate(540 150)"><use href="#maus" /></g>
+          <g id="k3-neu" opacity="0">
+            <image href="assets/tshirt-schwarz.png" x="610" y="70" width="120" height="120" />
+            <rect x="700" y="56" width="78" height="34" rx="17" class="pillneu" />
+            <text x="739" y="81" text-anchor="middle" style="font-size:21px;font-weight:800;fill:#0b0c0e;letter-spacing:0.06em">NEU</text>
+          </g>
+          <path id="k3-pfeil" pathLength="1" d="M604 132 C 520 132, 470 210, 400 196" fill="none" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" stroke-dasharray="1" />
+          <g id="k3-glocke" opacity="0"><circle cx="760" cy="220" r="36" fill="#0b0c0e" /><use href="#glocke" class="ico" transform="translate(741 201) scale(1.6)" style="stroke:#fff;stroke-width:2.2" /></g>
+          <clipPath id="k3-clip"><rect id="k3-cliprect" x="440" y="222" width="0" height="80" /></clipPath>
+          <text x="446" y="282" class="hand" style="font-size:58px" clip-path="url(#k3-clip)" transform="rotate(-3 540 266)">jedes Mal</text>
+        </svg>
+      </section>
+
+      <!-- K4 Manuell oder automatisiert: "Und in Shopify kannst du einfach stattdessen eine automatisierte Kollektion dafür erstellen."
+           Shopify 16,97 / stattdessen 18,17 / automatisierte 18,90 / Kollektion 19,67 / erstellen 20,37 -->
+      <section id="k4" class="karte clip" data-start="16.667" data-duration="4.033" data-track-index="1">
+        <div class="kicker">Manuell oder automatisch</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k4-links">
+            <rect x="20" y="0" width="360" height="214" rx="22" class="rahmen" />
+            <use href="#hand" class="ico" transform="translate(40 16) scale(1.45)" style="stroke-width:1.8" />
+            <text x="84" y="44" class="lab" style="font-size:28px">manuell</text>
+            <image href="assets/tshirt-schwarz.png" x="40" y="86" width="100" height="100" />
+            <rect x="150" y="86" width="100" height="100" rx="16" class="platz" />
+            <rect x="260" y="86" width="100" height="100" rx="16" class="platz" />
+            <image id="k4-lm" href="assets/tshirt-schwarz.png" x="150" y="86" width="100" height="100" opacity="0" />
+            <g id="k4-maus" opacity="0" transform="translate(240 170)"><use href="#maus" /></g>
+          </g>
+          <path id="k4-pfeil" class="zug" pathLength="1" d="M388 107 L 432 107" style="stroke-width:5" />
+          <g id="k4-rechts">
+            <rect x="440" y="0" width="360" height="214" rx="22" class="rahmen" />
+            <rect id="k4-aktiv" x="440" y="0" width="360" height="214" rx="22" class="aktiv" opacity="0" />
+            <use href="#zahnrad" class="ico" transform="translate(460 16) scale(1.45)" style="stroke-width:1.8" />
+            <text x="504" y="44" class="lab" style="font-size:28px">automatisiert</text>
+            <rect x="460" y="86" width="100" height="100" rx="16" class="platz" />
+            <rect x="570" y="86" width="100" height="100" rx="16" class="platz" />
+            <rect x="680" y="86" width="100" height="100" rx="16" class="platz" />
+            <image class="k4-a" href="assets/tshirt-schwarz.png" x="460" y="86" width="100" height="100" opacity="0" />
+            <image class="k4-a" href="assets/tshirt-schwarz.png" x="570" y="86" width="100" height="100" opacity="0" />
+            <image class="k4-a" href="assets/tshirt-schwarz.png" x="680" y="86" width="100" height="100" opacity="0" />
+          </g>
+          <g id="k4-ok" opacity="0"><use href="#ok" transform="translate(778 22)" /></g>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="300" y="216" width="0" height="84" /></clipPath>
+          <text x="306" y="280" class="hand" style="font-size:58px" clip-path="url(#k4-clip)" transform="rotate(-3 410 262)">stattdessen</text>
+        </svg>
+      </section>
+
+      <!-- K5 Weg im Admin: "Dafür gehst du einfach zuerst zu Produkte, dann zu Kollektionen und legst dann einfach eine neue Kollektion an."
+           Produkte 22,13 / Kollektionen 23,47 / neue 25,13 / Kollektion 25,40 / an 25,90 (Hilfe-Center: "Produkte > Kollektionen", "Kollektion hinzufügen") -->
+      <section id="k5" class="karte clip" data-start="20.733" data-duration="5.767" data-track-index="1">
+        <div class="kicker">Im Shopify-Admin</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <path class="strich" d="M130 96 L 690 96" />
+          <path id="k5-z1" class="zug" pathLength="1" d="M190 96 L 350 96" />
+          <path id="k5-z2" class="zug" pathLength="1" d="M470 96 L 630 96" />
+          <circle cx="130" cy="96" r="58" fill="#fff" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="10 8" />
+          <circle cx="410" cy="96" r="58" fill="#fff" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="10 8" />
+          <circle cx="690" cy="96" r="58" fill="#fff" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="10 8" />
+          <g id="k5-n1" opacity="0"><circle cx="130" cy="96" r="58" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#tag" class="ico" transform="translate(103 69) scale(2.25)" style="stroke-width:1.6" /></g>
+          <text id="k5-l1" x="130" y="196" text-anchor="middle" class="lab" style="font-size:30px" opacity="0">Produkte</text>
+          <g id="k5-n2" opacity="0"><circle cx="410" cy="96" r="58" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#ordner" class="ico" transform="translate(383 69) scale(2.25)" style="stroke-width:1.6" /></g>
+          <text id="k5-l2" x="410" y="196" text-anchor="middle" class="lab" style="font-size:30px" opacity="0">Kollektionen</text>
+          <g id="k5-n3" opacity="0"><circle cx="690" cy="96" r="58" fill="url(#gvd)" /><use href="#plusico" class="ico" transform="translate(663 69) scale(2.25)" style="stroke-width:2.2" /></g>
+          <text id="k5-l3" x="690" y="196" text-anchor="middle" class="lab" style="font-size:30px" opacity="0">neue Kollektion</text>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="570" y="208" width="0" height="90" /></clipPath>
+          <text x="576" y="272" class="hand" style="font-size:58px" clip-path="url(#k5-clip)" transform="rotate(-4 660 256)">anlegen</text>
+        </svg>
+      </section>
+
+      <!-- K6 Automatische Zuordnung: "Dort wählst du dann zum Beispiel die automatische Zuordnung und definierst dann einfach die Bedingungen."
+           automatische 27,73 / Zuordnung 28,33 / definierst 28,93 / Bedingungen 29,97 -->
+      <section id="k6" class="karte clip" data-start="26.533" data-duration="3.867" data-track-index="1">
+        <div class="kicker">Neue Kollektion</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="40" y="0" width="740" height="92" rx="46" fill="#e5e7eb" />
+          <rect id="k6-knopf" x="48" y="8" width="362" height="76" rx="38" fill="#fff" style="filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12))" />
+          <text id="k6-t1" x="229" y="58" text-anchor="middle" class="lab" style="font-size:31px">von Hand</text>
+          <text x="597" y="58" text-anchor="middle" class="lab grau" style="font-size:31px">automatisch</text>
+          <text id="k6-t2" x="597" y="58" text-anchor="middle" class="lab" style="font-size:31px;fill:url(#gv)" opacity="0">automatisch</text>
+          <g id="k6-ok" opacity="0"><use href="#ok" transform="translate(752 46)" /></g>
+          <g id="k6-bed" opacity="0">
+            <rect x="40" y="112" width="740" height="180" rx="24" class="rahmen" />
+            <use href="#filter" class="ico" transform="translate(62 128) scale(1.45)" style="stroke-width:1.8" />
+            <text x="106" y="156" class="lab" style="font-size:28px">Bedingungen</text>
+            <g id="k6-r1" opacity="0"><rect x="62" y="180" width="440" height="44" rx="12" class="platz" /><use href="#plusico" class="ico" transform="translate(70 190) scale(1.05)" style="stroke:#9aa3af;stroke-width:2.6" /><rect x="104" y="196" width="180" height="12" rx="6" class="zeile" /></g>
+            <g id="k6-r2" opacity="0"><rect x="62" y="236" width="440" height="44" rx="12" class="platz" /><use href="#plusico" class="ico" transform="translate(70 246) scale(1.05)" style="stroke:#9aa3af;stroke-width:2.6" /><rect x="104" y="252" width="140" height="12" rx="6" class="zeile" /></g>
+          </g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="520" y="190" width="0" height="96" /></clipPath>
+          <text x="526" y="258" class="hand" style="font-size:56px" clip-path="url(#k6-clip)" transform="rotate(-4 630 242)">definieren</text>
+        </svg>
+      </section>
+
+      <!-- K7 Filter-Trichter: "Zum Beispiel kannst du hier Folgendes verwenden. Produkttyp ist T-Shirt und Produkt-Tag ist dann schwarz."
+           Beispiel 30,57 / Produkttyp 32,30 / T-Shirt 33,17 / Produkt-Tag 34,13 / schwarz 35,23. Danach fallen die Produkte durch den Trichter,
+           nur das schwarze T-Shirt landet in der Kollektion (Beispiel). Bleibt stehen bis "Denn" (39,50) -->
+      <section id="k7" class="karte clip" data-start="30.433" data-duration="8.967" data-track-index="1">
+        <div class="kicker">Bedingungen<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k7-c1" opacity="0">
+            <rect x="20" y="30" width="350" height="70" rx="18" class="chip" />
+            <use href="#schichten" class="ico" transform="translate(36 47) scale(1.4)" style="stroke-width:1.9" />
+            <text x="80" y="76" class="wert" style="font-size:25px"><tspan fill="#6b7280">Produkttyp ist </tspan><tspan id="k7-v1" opacity="0">T-Shirt</tspan></text>
+          </g>
+          <g id="k7-c2" opacity="0">
+            <rect x="20" y="124" width="350" height="70" rx="18" class="chip" />
+            <use href="#tag" class="ico" transform="translate(36 141) scale(1.4)" style="stroke-width:1.9" />
+            <text x="80" y="170" class="wert" style="font-size:25px"><tspan fill="#6b7280">Produkt-Tag ist </tspan><tspan id="k7-v2" opacity="0">schwarz</tspan></text>
+          </g>
+          <path id="k7-z" class="zug" pathLength="1" d="M378 112 C 410 112, 420 112, 448 112" style="stroke-width:5" />
+          <!-- Produkte über dem Trichter -->
+          <image id="k7-p1" href="assets/tshirt-schwarz.png" x="456" y="-6" width="76" height="76" />
+          <image id="k7-p2" href="assets/shirt-rot.png" x="538" y="-6" width="76" height="76" />
+          <image id="k7-p3" href="assets/hose-schwarz.png" x="620" y="-6" width="76" height="76" />
+          <image id="k7-p4" href="assets/tshirt-senf.png" x="702" y="-6" width="76" height="76" />
+          <!-- Trichter -->
+          <path id="k7-trichter" d="M456 78 L 778 78 L 642 168 L 642 196 L 592 196 L 592 168 Z" fill="url(#gvl)" stroke="url(#gvd)" stroke-width="4" stroke-linejoin="round" />
+          <use href="#filter" class="ico" transform="translate(600 100) scale(1.45)" style="stroke-width:1.8" />
+          <!-- Kollektion unten -->
+          <g id="k7-koll">
+            <rect x="500" y="208" width="234" height="84" rx="18" class="rahmen" />
+            <use href="#ordner" class="ico" transform="translate(514 236) scale(1.2)" style="stroke-width:2" />
+            <text x="550" y="258" class="lab" style="font-size:22px">Kollektion</text>
+          </g>
+          <g id="k7-ok" opacity="0"><use href="#ok" transform="translate(734 214)" /></g>
+          <g id="k7-x2" opacity="0"><use href="#nein" transform="translate(576 34)" /></g>
+          <g id="k7-x3" opacity="0"><use href="#nein" transform="translate(658 34)" /></g>
+          <g id="k7-x4" opacity="0"><use href="#nein" transform="translate(740 34)" /></g>
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="40" y="206" width="0" height="90" /></clipPath>
+          <text x="46" y="270" class="hand gruen" style="font-size:58px" clip-path="url(#k7-clip)" transform="rotate(-3 160 254)">automatisch</text>
+        </svg>
+      </section>
+
+      <!-- Sticker "WICHTIG." ("wichtiges" 36,87) -->
+      <div id="st1" class="sticker clip" data-start="36.800" data-duration="1.700" data-track-index="2">WICHTIG.</div>
+
+      <!-- K8 Alle oder irgendeine: "Denn du kannst tatsächlich auch einstellen, ob alle Bedingungen erfüllt sein müssen oder eben nur eine davon.
+           Das geht mit der Und-oder-Bedingung." Denn 39,50 / alle 41,20 / nur 43,40 / eine 43,57 / Und-oder-Bedingung 44,97
+           (Hilfe-Center: "Alle Bedingungen müssen erfüllt sein" / "Irgendeine Bedingung muss erfüllt sein") -->
+      <section id="k8" class="karte clip" data-start="39.433" data-duration="7.067" data-track-index="1">
+        <div class="kicker">Alle oder irgendeine?</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g>
+            <rect x="20" y="20" width="340" height="70" rx="18" class="chip" />
+            <use href="#schichten" class="ico" transform="translate(36 37) scale(1.4)" style="stroke-width:1.9" />
+            <text x="80" y="66" class="wert" style="font-size:25px">Typ: T-Shirt</text>
+            <rect x="20" y="110" width="340" height="70" rx="18" class="chip" />
+            <use href="#tag" class="ico" transform="translate(36 127) scale(1.4)" style="stroke-width:1.9" />
+            <text x="80" y="156" class="wert" style="font-size:25px">Tag: schwarz</text>
+          </g>
+          <g id="k8-a1" opacity="0"><use href="#ok" transform="translate(330 55)" /></g>
+          <g id="k8-a2" opacity="0"><use href="#ok" transform="translate(330 145)" /></g>
+          <g id="k8-b2" opacity="0"><circle cx="330" cy="145" r="18" fill="#fff" stroke="#9aa3af" stroke-width="3.5" /></g>
+          <!-- zwei Optionen -->
+          <g id="k8-o1">
+            <rect x="400" y="10" width="190" height="180" rx="24" class="rahmen" />
+            <text x="495" y="92" text-anchor="middle" class="lab" style="font-size:44px">alle</text>
+            <text x="495" y="128" text-anchor="middle" class="klein" style="font-size:20px;letter-spacing:0.02em">Bedingungen</text>
+            <use href="#ok" transform="translate(470 160) scale(0.62)" /><use href="#ok" transform="translate(520 160) scale(0.62)" />
+          </g>
+          <rect id="k8-r1" x="400" y="10" width="190" height="180" rx="24" class="aktiv" opacity="0" />
+          <g id="k8-o2">
+            <rect x="610" y="10" width="190" height="180" rx="24" class="rahmen" />
+            <text x="705" y="92" text-anchor="middle" class="lab" style="font-size:36px">irgendeine</text>
+            <text x="705" y="128" text-anchor="middle" class="klein" style="font-size:20px;letter-spacing:0.02em">Bedingung</text>
+            <use href="#ok" transform="translate(680 160) scale(0.62)" /><circle cx="730" cy="160" r="11" fill="#fff" stroke="#9aa3af" stroke-width="2.5" />
+          </g>
+          <rect id="k8-r2" x="610" y="10" width="190" height="180" rx="24" class="aktiv" opacity="0" />
+          <clipPath id="k8-clip1"><rect id="k8-cliprect1" x="420" y="200" width="0" height="96" /></clipPath>
+          <text x="438" y="268" class="hand" style="font-size:64px" clip-path="url(#k8-clip1)" transform="rotate(-4 495 250)">und</text>
+          <clipPath id="k8-clip2"><rect id="k8-cliprect2" x="636" y="200" width="0" height="96" /></clipPath>
+          <text x="644" y="268" class="hand gruen" style="font-size:64px" clip-path="url(#k8-clip2)" transform="rotate(-4 705 250)">oder</text>
+        </svg>
+      </section>
+
+      <!-- K9 Simulation: "Wenn du aber bei schwarzen T-Shirts irgendeine auswählst, dann landen womöglich auch rote T-Shirts oder eben auch
+           schwarze Hosen in deiner Kollektion. Und das willst du aber natürlich nicht, oder? Mit allen Bedingungen wird die Auswahl
+           tatsächlich dann noch genauer." schwarzen 47,13 / T-Shirts 47,60 / irgendeine 48,07 / rote 50,43 / T-Shirts 50,80 /
+           schwarze 52,13 / Hosen 52,50 / nicht 55,00 / allen 55,87 / genauer 58,23 -->
+      <section id="k9" class="karte clip" data-start="46.533" data-duration="12.900" data-track-index="1">
+        <div class="kicker">Kollektion: Schwarze T-Shirts<span class="demo">SIMULATION</span></div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <!-- Schalter irgendeine / alle -->
+          <rect x="20" y="10" width="250" height="170" rx="26" fill="#e5e7eb" />
+          <rect id="k9-knopf" x="30" y="20" width="230" height="70" rx="20" fill="#fff" style="filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12))" />
+          <text id="k9-t1" x="145" y="66" text-anchor="middle" class="lab" style="font-size:30px">irgendeine</text>
+          <text id="k9-t2g" x="145" y="146" text-anchor="middle" class="lab grau" style="font-size:30px">alle</text>
+          <text id="k9-t2" x="145" y="146" text-anchor="middle" class="lab" style="font-size:30px;fill:url(#gv)" opacity="0">alle</text>
+          <!-- Kollektion -->
+          <rect x="300" y="0" width="500" height="226" rx="22" class="rahmen" />
+          <use href="#ordner" class="ico" transform="translate(322 18) scale(1.45)" style="stroke-width:1.8" />
+          <text x="366" y="45" class="lab" style="font-size:27px">Schwarze T-Shirts</text>
+          <rect x="326" y="74" width="140" height="140" rx="18" class="platz" />
+          <rect x="482" y="74" width="140" height="140" rx="18" class="platz" />
+          <rect x="638" y="74" width="140" height="140" rx="18" class="platz" />
+          <image id="k9-p1" href="assets/tshirt-schwarz.png" x="330" y="78" width="132" height="132" opacity="0" />
+          <image id="k9-p2" href="assets/shirt-rot.png" x="486" y="78" width="132" height="132" opacity="0" />
+          <image id="k9-p3" href="assets/hose-schwarz.png" x="642" y="78" width="132" height="132" opacity="0" />
+          <g id="k9-ok1" opacity="0"><use href="#ok" transform="translate(456 84)" /></g>
+          <g id="k9-x2" opacity="0"><use href="#fehler" transform="translate(612 84)" /></g>
+          <g id="k9-x3" opacity="0"><use href="#fehler" transform="translate(768 84)" /></g>
+          <g id="k9-okk" opacity="0"><use href="#ok" transform="translate(770 30)" /></g>
+          <clipPath id="k9-clip1"><rect id="k9-cliprect1" x="30" y="196" width="0" height="100" /></clipPath>
+          <text id="k9-falsch" x="40" y="266" class="hand rot" style="font-size:64px" clip-path="url(#k9-clip1)" transform="rotate(-4 130 248)">falsch</text>
+          <clipPath id="k9-clip2"><rect id="k9-cliprect2" x="30" y="196" width="0" height="100" /></clipPath>
+          <text x="40" y="266" class="hand gruen" style="font-size:64px" clip-path="url(#k9-clip2)" transform="rotate(-4 130 248)">genauer</text>
+        </svg>
+      </section>
+
+      <!-- Sticker "TIPP 2" ("zweiter" 59,73) -->
+      <div id="st2" class="sticker clip" data-start="59.600" data-duration="1.700" data-track-index="2">TIPP 2</div>
+
+      <!-- K10 Einheitliche Tags: "Mein zweiter Tipp ist, arbeite immer mit einer einheitlichen Tag-Struktur."
+           arbeite 60,80 / einheitlichen 61,83 / Tag-Struktur 62,43 -->
+      <section id="k10" class="karte clip" data-start="59.467" data-duration="3.633" data-track-index="1">
+        <div class="kicker">Einheitliche Tags<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g class="k10-s" opacity="0"><image href="assets/tshirt-schwarz.png" x="60" y="0" width="110" height="110" /><rect x="30" y="126" width="170" height="60" rx="30" class="chip" /><use href="#tag" class="ico" transform="translate(46 141) scale(1.25)" style="stroke-width:2" /><text x="84" y="166" class="wert" style="font-size:25px">schwarz</text></g>
+          <g class="k10-s" opacity="0"><image href="assets/hose-schwarz.png" x="355" y="0" width="110" height="110" /><rect x="325" y="126" width="170" height="60" rx="30" class="chip" /><use href="#tag" class="ico" transform="translate(341 141) scale(1.25)" style="stroke-width:2" /><text x="379" y="166" class="wert" style="font-size:25px">schwarz</text></g>
+          <g class="k10-s" opacity="0"><image href="assets/tshirt-schwarz.png" x="650" y="0" width="110" height="110" /><rect x="620" y="126" width="170" height="60" rx="30" class="chip" /><use href="#tag" class="ico" transform="translate(636 141) scale(1.25)" style="stroke-width:2" /><text x="674" y="166" class="wert" style="font-size:25px">schwarz</text></g>
+          <g class="k10-r" opacity="0"><rect x="30" y="126" width="170" height="60" rx="30" class="aktiv" /><rect x="325" y="126" width="170" height="60" rx="30" class="aktiv" /><rect x="620" y="126" width="170" height="60" rx="30" class="aktiv" /></g>
+          <g id="k10-gleich" opacity="0"><text x="262" y="170" text-anchor="middle" style="font-size:48px;font-weight:800;fill:url(#gv)">=</text><text x="557" y="170" text-anchor="middle" style="font-size:48px;font-weight:800;fill:url(#gv)">=</text></g>
+          <clipPath id="k10-clip"><rect id="k10-cliprect" x="260" y="198" width="0" height="100" /></clipPath>
+          <text x="268" y="268" class="hand gruen" style="font-size:62px" clip-path="url(#k10-clip)" transform="rotate(-3 400 250)">einheitlich</text>
+        </svg>
+      </section>
+
+      <!-- K11 Uneinheitliche Tags: "Denn wenn du jetzt zum Beispiel bei einem Produkt schwarz hinschreibst, bei dem nächsten dann aber zum Beispiel
+           Black und beim dritten aber black-shirt dasteht, dann wird natürlich die automatische Zuordnung einfach schnell unzuverlässig."
+           Produkt 64,23 / schwarz 64,57 / nächsten 65,73 / Black 66,80 / dritten 67,83 / black-shirt 68,30 / Zuordnung 71,43 / unzuverlässig 72,50 -->
+      <section id="k11" class="karte clip" data-start="63.133" data-duration="9.933" data-track-index="1">
+        <div class="kicker">Uneinheitliche Tags<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k11-p1" opacity="0"><image href="assets/tshirt-schwarz.png" x="30" y="0" width="104" height="104" /></g>
+          <g id="k11-p2" opacity="0"><image href="assets/tshirt-schwarz.png" x="180" y="0" width="104" height="104" /></g>
+          <g id="k11-p3" opacity="0"><image href="assets/tshirt-schwarz.png" x="330" y="0" width="104" height="104" /></g>
+          <g id="k11-t1" opacity="0"><rect x="14" y="118" width="136" height="54" rx="27" class="chip" /><text x="82" y="154" text-anchor="middle" class="wert" style="font-size:24px">schwarz</text></g>
+          <g id="k11-t2" opacity="0"><rect x="164" y="118" width="136" height="54" rx="27" class="chip" /><text x="232" y="154" text-anchor="middle" class="wert" style="font-size:24px">Black</text></g>
+          <g id="k11-t3" opacity="0"><rect x="306" y="118" width="152" height="54" rx="27" class="chip" /><text x="382" y="154" text-anchor="middle" class="wert" style="font-size:24px">black-shirt</text></g>
+          <!-- Regel und Kollektion rechts -->
+          <g id="k11-regel" opacity="0">
+            <rect x="530" y="0" width="270" height="64" rx="18" class="chip" />
+            <use href="#filter" class="ico" transform="translate(546 15) scale(1.4)" style="stroke-width:1.9" />
+            <text x="590" y="42" class="wert" style="font-size:24px">Tag: schwarz</text>
+            <rect x="530" y="96" width="270" height="110" rx="20" class="rahmen" />
+            <use href="#ordner" class="ico" transform="translate(546 116) scale(1.3)" style="stroke-width:1.9" />
+            <text x="586" y="142" class="lab" style="font-size:23px">Kollektion</text>
+            <image id="k11-drin" href="assets/tshirt-schwarz.png" x="560" y="150" width="50" height="50" opacity="0" />
+            <rect x="618" y="150" width="50" height="50" rx="10" class="platz" />
+            <rect x="676" y="150" width="50" height="50" rx="10" class="platz" />
+          </g>
+          <path id="k11-l1" class="zug" pathLength="1" d="M150 145 C 330 205, 440 200, 528 170" style="stroke-width:4.5" />
+          <path id="k11-l2" pathLength="1" d="M300 145 C 380 175, 420 180, 470 176" fill="none" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" stroke-dasharray="1" />
+          <path id="k11-l3" pathLength="1" d="M458 145 C 478 150, 488 156, 498 160" fill="none" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" stroke-dasharray="1" />
+          <g id="k11-ok" opacity="0"><use href="#ok" transform="translate(132 10)" /></g>
+          <g id="k11-x2" opacity="0"><use href="#fehler" transform="translate(282 10)" /></g>
+          <g id="k11-x3" opacity="0"><use href="#fehler" transform="translate(432 10)" /></g>
+          <clipPath id="k11-clip"><rect id="k11-cliprect" x="30" y="196" width="0" height="104" /></clipPath>
+          <text x="40" y="270" class="hand" style="font-size:62px" clip-path="url(#k11-clip)" transform="rotate(-3 200 252)">unzuverlässig</text>
+        </svg>
+      </section>
+
+      <!-- Sticker "+ ERGÄNZUNG" ("wichtige" 73,60) -->
+      <div id="st3" class="sticker clip" data-start="73.533" data-duration="1.600" data-track-index="2">+ ERGÄNZUNG</div>
+
+      <!-- K12 Kontrolle: "Und eine wichtige Ergänzung hier von mir, kontrolliere bitte immer nach dem Einrichten einmal die Produkte der Kollektion,
+           gerade vor allem bei vorhandenen Artikeln." Und 73,17 / kontrolliere 75,03 / Einrichten 76,50 / Produkte 77,40 / Kollektion 77,90 /
+           vorhandenen 79,70 / Artikeln 80,13 -->
+      <section id="k12" class="karte clip" data-start="73.100" data-duration="7.400" data-track-index="1">
+        <div class="kicker">Nach dem Einrichten</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="20" y="0" width="520" height="292" rx="22" class="rahmen" />
+          <use href="#ordner" class="ico" transform="translate(40 16) scale(1.4)" style="stroke-width:1.8" />
+          <text x="84" y="42" class="lab" style="font-size:26px">Schwarze T-Shirts</text>
+          <g class="k12-z" opacity="0"><line x1="40" y1="62" x2="520" y2="62" stroke="#e5e7eb" stroke-width="2" /><image href="assets/tshirt-schwarz.png" x="40" y="68" width="64" height="64" /><rect x="120" y="86" width="180" height="14" rx="7" class="dunkel" /><rect x="120" y="108" width="110" height="11" rx="5" class="zeile" /></g>
+          <g class="k12-z" opacity="0"><line x1="40" y1="138" x2="520" y2="138" stroke="#e5e7eb" stroke-width="2" /><image href="assets/tshirt-schwarz.png" x="40" y="144" width="64" height="64" /><rect x="120" y="162" width="150" height="14" rx="7" class="dunkel" /><rect x="120" y="184" width="130" height="11" rx="5" class="zeile" /></g>
+          <g class="k12-z" opacity="0"><line x1="40" y1="214" x2="520" y2="214" stroke="#e5e7eb" stroke-width="2" /><image href="assets/tshirt-schwarz.png" x="40" y="220" width="64" height="64" /><rect x="120" y="238" width="170" height="14" rx="7" class="dunkel" /><rect x="120" y="260" width="96" height="11" rx="5" class="zeile" /></g>
+          <g id="k12-v" opacity="0">
+            <rect x="372" y="156" width="150" height="40" rx="20" fill="#dcf0fb" /><text x="447" y="183" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#0b6fa3;letter-spacing:0.04em">vorhanden</text>
+            <rect x="372" y="232" width="150" height="40" rx="20" fill="#dcf0fb" /><text x="447" y="259" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#0b6fa3;letter-spacing:0.04em">vorhanden</text>
+          </g>
+          <rect id="k12-ring" x="30" y="140" width="500" height="148" rx="18" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <g class="k12-ok" opacity="0"><use href="#ok" transform="translate(330 100)" /></g>
+          <g class="k12-ok" opacity="0"><use href="#ok" transform="translate(330 176)" /></g>
+          <g class="k12-ok" opacity="0"><use href="#ok" transform="translate(330 252)" /></g>
+          <g id="k12-lupe" opacity="0" transform="translate(600 40)">
+            <circle cx="70" cy="70" r="64" fill="rgba(255,255,255,0.55)" stroke="#0b0c0e" stroke-width="8" />
+            <path d="M118 118 L 160 160" stroke="#0b0c0e" stroke-width="14" stroke-linecap="round" />
+          </g>
+          <clipPath id="k12-clip"><rect id="k12-cliprect" x="586" y="200" width="0" height="100" /></clipPath>
+          <text x="594" y="272" class="hand" style="font-size:62px" clip-path="url(#k12-clip)" transform="rotate(-4 680 254)">prüfen</text>
+        </svg>
+      </section>
+
+      <!-- K13 Neue Artikel: "Denn dann musst du einfach neue Artikel nur noch sauber einpflegen, statt immer jede Kollektion einzeln nachzubessern."
+           neue 81,60 / Artikel 81,90 / sauber 82,73 / einpflegen 83,13 / statt 84,00 / jede 84,50 / Kollektion 84,80 / einzeln 85,37 / nachzubessern 85,67 -->
+      <section id="k13" class="karte clip" data-start="80.533" data-duration="6.300" data-track-index="1">
+        <div class="kicker">Neue Artikel</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k13-neu" opacity="0">
+            <rect x="20" y="0" width="230" height="226" rx="22" class="rahmen" />
+            <image href="assets/tshirt-schwarz.png" x="45" y="14" width="120" height="120" />
+            <rect x="160" y="14" width="78" height="34" rx="17" class="pillneu" />
+            <text x="199" y="39" text-anchor="middle" style="font-size:21px;font-weight:800;fill:#0b0c0e;letter-spacing:0.06em">NEU</text>
+          </g>
+          <g id="k13-tag1" opacity="0"><rect x="34" y="142" width="96" height="36" rx="18" class="chip" /><text x="82" y="167" text-anchor="middle" style="font-size:19px;font-weight:700">T-Shirt</text></g>
+          <g id="k13-tag2" opacity="0"><rect x="136" y="142" width="104" height="36" rx="18" class="chip" /><text x="188" y="167" text-anchor="middle" style="font-size:19px;font-weight:700">schwarz</text></g>
+          <g id="k13-ok1" opacity="0"><use href="#ok" transform="translate(135 200)" /></g>
+          <path id="k13-pfeil" class="zug" pathLength="1" d="M258 110 L 312 110" style="stroke-width:5" />
+          <g>
+            <rect x="320" y="0" width="230" height="226" rx="22" class="rahmen" />
+            <use href="#ordner" class="ico" transform="translate(340 16) scale(1.3)" style="stroke-width:1.9" />
+            <text x="378" y="42" class="lab" style="font-size:22px">Kollektion</text>
+            <image href="assets/tshirt-schwarz.png" x="338" y="68" width="62" height="62" />
+            <image href="assets/tshirt-schwarz.png" x="404" y="68" width="62" height="62" />
+            <rect x="470" y="68" width="62" height="62" rx="12" class="platz" />
+          </g>
+          <image id="k13-m" href="assets/tshirt-schwarz.png" x="45" y="14" width="120" height="120" opacity="0" />
+          <g id="k13-ok2" opacity="0"><use href="#ok" transform="translate(530 150)" /></g>
+          <!-- jede Kollektion einzeln nachbessern (gestrichen) -->
+          <g class="k13-k" opacity="0"><rect x="590" y="6" width="210" height="60" rx="14" class="rahmen" /><use href="#ordner" class="ico" transform="translate(604 21) scale(1.2)" style="stroke-width:2" /><use href="#schluessel" class="ico" transform="translate(760 21) scale(1.2)" style="stroke-width:2" /><rect x="640" y="31" width="100" height="11" rx="5" class="zeile" /></g>
+          <g class="k13-k" opacity="0"><rect x="590" y="78" width="210" height="60" rx="14" class="rahmen" /><use href="#ordner" class="ico" transform="translate(604 93) scale(1.2)" style="stroke-width:2" /><use href="#schluessel" class="ico" transform="translate(760 93) scale(1.2)" style="stroke-width:2" /><rect x="640" y="103" width="90" height="11" rx="5" class="zeile" /></g>
+          <g class="k13-k" opacity="0"><rect x="590" y="150" width="210" height="60" rx="14" class="rahmen" /><use href="#ordner" class="ico" transform="translate(604 165) scale(1.2)" style="stroke-width:2" /><use href="#schluessel" class="ico" transform="translate(760 165) scale(1.2)" style="stroke-width:2" /><rect x="640" y="175" width="104" height="11" rx="5" class="zeile" /></g>
+          <path id="k13-strich" pathLength="1" d="M584 216 L 806 0" fill="none" stroke="#6b7280" stroke-width="6" stroke-linecap="round" />
+          <clipPath id="k13-clip"><rect id="k13-cliprect" x="300" y="226" width="0" height="80" /></clipPath>
+          <text x="308" y="286" class="hand gruen" style="font-size:58px" clip-path="url(#k13-clip)" transform="rotate(-3 400 270)">sauber</text>
+        </svg>
+      </section>
+
+      <!-- K14 Folgen: "Und für weitere solche Tipps drück hier gerne das Plus weg." Und 86,97 / Tipps 87,77 / drück 88,30 / Plus 88,93 / weg 89,13 -->
+      <section id="k14" class="folgekarte clip" data-start="86.867" data-duration="2.500" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // Zeiten sind Sekunden im geschnittenen Video, schon genau wie Remotion (Stücke auf ganze Frames gerundet) und als Cues.
+
+      // Karte rein mit Kicker, raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const auf = (sel, t, d = 0.15) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "none" }, t);
+      const weg = (sel, t, d = 0.2) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      function ring(sel, t) {
+        tl.set(sel, { opacity: 0.95, scale: 1, transformOrigin: "50% 50%" }, t);
+        tl.to(sel, { opacity: 0, scale: 1.08, duration: 0.8, ease: "power2.out" }, t + 0.02);
+      }
+      // Ein Element (Bild oder Gruppe) gleitet um dx/dy, optional mit dem Mauszeiger dran
+      function zieh(sel, t, dx, dy, d = 0.55, maus = null, mx = 0, my = 0) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { x: 0, y: 0 }, { x: dx, y: dy, duration: d, ease: "power2.inOut" }, t);
+        if (maus) {
+          tl.fromTo(maus, { opacity: 0, x: mx, y: my }, { opacity: 1, duration: 0.12, ease: "none" }, t - 0.12);
+          tl.to(maus, { x: mx + dx, y: my + dy, duration: d, ease: "power2.inOut" }, t);
+          tl.to(maus, { opacity: 0, duration: 0.2, ease: "none" }, t + d + 0.15);
+        }
+      }
+      gsap.set("#k2-zeig, #k3-pfeil, #k4-pfeil, #k5-z1, #k5-z2, #k7-z, #k11-l1, #k11-l2, #k11-l3, #k13-pfeil, #k13-strich", { strokeDasharray: 1, strokeDashoffset: 1 });
+
+      // K1 Produkte von Hand in die Kollektion, immer wieder, viele Kollektionen
+      karte("#k1", 3.467, 7.167);
+      schreibe("#k1-cliprect", 270, 3.567, 0.5);
+      zieh("#k1-m1", 3.80, 432, 55, 0.6, "#k1-maus", 95, 85);
+      tl.to("#k1-p1", { opacity: 0.35, duration: 0.2 }, 3.80);
+      pop("#k1-loop", 5.00, 0.3);
+      tl.to("#k1-loop", { rotation: 360, svgOrigin: "770 196", duration: 1.6, ease: "power1.inOut" }, 5.05);
+      zieh("#k1-m2", 5.10, 422, 55, 0.6, "#k1-maus", 205, 85);
+      tl.to("#k1-p2", { opacity: 0.35, duration: 0.2 }, 5.10);
+      auf("#k1-stapel", 5.80, 0.3);
+
+      // K2 Shop mit Kleidung aus dem Demo-Shop, Kollektion "Schwarze T-Shirts", das schwarze T-Shirt wandert hinein
+      karte("#k2", 7.20, 11.70);
+      ein("#k2-kleidung", 9.00);
+      tl.fromTo("#k2 .k2-p", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.08 }, 9.00);
+      pop("#k2-koll", 10.133, 0.35);
+      schreibe("#k2-cliprect", 250, 10.20, 0.45);
+      zeichne("#k2-zeig", 10.55, 0.3);
+      ring("#k2-ring", 10.733);
+      zieh("#k2-m", 10.85, 443, -11, 0.5);
+      badge("#k2-ok", 11.40);
+
+      // K3 Ein weiteres T-Shirt von Hand, dann ein neuer Artikel, wieder von Hand, Glocke "jedes Mal"
+      karte("#k3", 11.733, 16.633);
+      zieh("#k3-m", 13.133, -304, 0, 0.6, "#k3-maus", 540, 150);
+      pop("#k3-neu", 14.90, 0.35);
+      zeichne("#k3-pfeil", 15.60, 0.4);
+      pop("#k3-glocke", 15.867, 0.3);
+      tl.to("#k3-glocke", { rotation: 12, svgOrigin: "760 196", duration: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut" }, 16.0);
+      schreibe("#k3-cliprect", 260, 15.90, 0.5);
+
+      // K4 manuell gegen automatisiert: links zieht die Hand, rechts füllen sich die Plätze von selbst
+      karte("#k4", 16.667, 20.70);
+      zieh("#k4-lm", 16.90, 0, 0, 0.01);
+      tl.fromTo("#k4-lm", { x: 160, y: 40, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.55, ease: "power2.inOut" }, 16.90);
+      tl.fromTo("#k4-maus", { opacity: 0, x: 400, y: 210 }, { opacity: 1, duration: 0.1 }, 16.82);
+      tl.to("#k4-maus", { x: 240, y: 170, duration: 0.55, ease: "power2.inOut" }, 16.90);
+      tl.to("#k4-maus", { opacity: 0, duration: 0.2 }, 17.6);
+      tl.to("#k4-links", { opacity: 0.45, duration: 0.3 }, 18.10);
+      zeichne("#k4-pfeil", 18.10, 0.3);
+      schreibe("#k4-cliprect", 240, 18.15, 0.5);
+      auf("#k4-aktiv", 18.833, 0.25);
+      tl.fromTo("#k4 .k4-a", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.4, ease: "power2.out", stagger: 0.16 }, 18.90);
+      badge("#k4-ok", 19.60);
+
+      // K5 Produkte → Kollektionen → neue Kollektion anlegen
+      karte("#k5", 20.733, 26.50);
+      pop("#k5-n1", 22.067); ein("#k5-l1", 22.067);
+      zeichne("#k5-z1", 23.20, 0.25); pop("#k5-n2", 23.40); ein("#k5-l2", 23.40);
+      zeichne("#k5-z2", 24.85, 0.25); pop("#k5-n3", 25.067); ein("#k5-l3", 25.067);
+      schreibe("#k5-cliprect", 200, 25.833, 0.45);
+
+      // K6 Schalter springt auf automatisch, Bedingungen klappen auf
+      karte("#k6", 26.533, 30.40);
+      tl.to("#k6-knopf", { x: 362, duration: 0.35, ease: "power2.inOut" }, 27.667);
+      tl.to("#k6-t1", { fill: "#6b7280", duration: 0.2 }, 27.667);
+      auf("#k6-t2", 27.80, 0.2);
+      badge("#k6-ok", 28.00);
+      ein("#k6-bed", 28.867, 0.35);
+      ein("#k6-r1", 29.90, 0.25); ein("#k6-r2", 30.00, 0.25);
+      schreibe("#k6-cliprect", 250, 28.95, 0.5);
+
+      // K7 Zwei Bedingungen, Trichter, nur das schwarze T-Shirt fällt in die Kollektion
+      karte("#k7", 30.433, 39.40);
+      ein("#k7-c1", 32.233); auf("#k7-v1", 33.10, 0.12);
+      ein("#k7-c2", 34.067); auf("#k7-v2", 35.167, 0.12);
+      zeichne("#k7-z", 35.20, 0.3);
+      tl.to("#k7-p1", { x: 106, y: 128, scale: 0.7, svgOrigin: "494 32", duration: 0.55, ease: "power2.in" }, 35.40);
+      tl.to("#k7-p1", { y: 212, duration: 0.35, ease: "power2.out" }, 35.95);
+      tl.to("#k7-p1", { opacity: 0, duration: 0.15 }, 36.25);
+      badge("#k7-ok", 36.25);
+      tl.to("#k7-p2, #k7-p3, #k7-p4", { opacity: 0.35, duration: 0.25 }, 35.70);
+      badge("#k7-x2", 35.80); badge("#k7-x3", 35.88); badge("#k7-x4", 35.96);
+      schreibe("#k7-cliprect", 300, 36.30, 0.5);
+
+      // Sticker WICHTIG.
+      tl.fromTo("#st1", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, 36.80);
+      tl.to("#st1", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 38.30);
+
+      // K8 alle (beide ✓) oder irgendeine (eine ✓ reicht), und / oder
+      karte("#k8", 39.433, 46.50);
+      auf("#k8-r1", 41.133, 0.2); badge("#k8-a1", 41.20); badge("#k8-a2", 41.28);
+      tl.to("#k8-r1", { opacity: 0, duration: 0.2 }, 43.333);
+      tl.to("#k8-o1", { opacity: 0.5, duration: 0.25 }, 43.333);
+      auf("#k8-r2", 43.333, 0.2);
+      tl.to("#k8-a2", { opacity: 0, duration: 0.15 }, 43.50); auf("#k8-b2", 43.50, 0.15);
+      tl.to("#k8-o1", { opacity: 1, duration: 0.25 }, 44.80);
+      schreibe("#k8-cliprect1", 130, 44.90, 0.3);
+      schreibe("#k8-cliprect2", 150, 45.15, 0.35);
+
+      // K9 Simulation: irgendeine → rote T-Shirts und schwarze Hosen landen drin; alle → nur schwarze T-Shirts
+      karte("#k9", 46.533, 59.433);
+      tl.fromTo("#k9-p1", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 47.067);
+      badge("#k9-ok1", 47.55);
+      ring("#k9-knopf", 48.00);
+      tl.fromTo("#k9-p2", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 50.367);
+      badge("#k9-x2", 50.85);
+      tl.fromTo("#k9-p3", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 52.067);
+      badge("#k9-x3", 52.55);
+      schreibe("#k9-cliprect1", 190, 54.933, 0.4);
+      tl.to("#k9-knopf", { y: 80, duration: 0.35, ease: "power2.inOut" }, 55.80);
+      tl.to("#k9-t1", { fill: "#6b7280", duration: 0.2 }, 55.80);
+      auf("#k9-t2", 55.95, 0.2);
+      tl.to("#k9-falsch", { opacity: 0, duration: 0.2 }, 55.90);
+      tl.to("#k9-p2, #k9-x2", { opacity: 0, y: -40, duration: 0.35, ease: "power2.in" }, 56.05);
+      tl.to("#k9-p3, #k9-x3", { opacity: 0, y: -40, duration: 0.35, ease: "power2.in" }, 56.20);
+      badge("#k9-okk", 58.167);
+      schreibe("#k9-cliprect2", 230, 58.20, 0.45);
+
+      // Sticker TIPP 2
+      tl.fromTo("#st2", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, 59.60);
+      tl.to("#st2", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 61.10);
+
+      // K10 drei Produkte, dreimal derselbe Tag "schwarz" =
+      karte("#k10", 59.467, 63.10);
+      tl.fromTo("#k10 .k10-s", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.12 }, 60.733);
+      auf("#k10 .k10-r", 61.767, 0.25);
+      pop("#k10-gleich", 61.80, 0.3);
+      schreibe("#k10-cliprect", 300, 62.367, 0.5);
+
+      // K11 schwarz / Black / black-shirt, Regel "Tag: schwarz" erwischt nur das erste
+      karte("#k11", 63.133, 73.067);
+      auf("#k11-p1", 64.167, 0.2); ein("#k11-t1", 64.50);
+      auf("#k11-p2", 65.667, 0.2); ein("#k11-t2", 66.733);
+      auf("#k11-p3", 67.767, 0.2); ein("#k11-t3", 68.233);
+      ein("#k11-regel", 70.833, 0.35);
+      zeichne("#k11-l1", 71.367, 0.6);
+      tl.fromTo("#k11-drin", { opacity: 0, scale: 0.6, svgOrigin: "585 175" }, { opacity: 1, scale: 1, duration: 0.25 }, 71.90);
+      badge("#k11-ok", 71.90);
+      zeichne("#k11-l2", 71.50, 0.45); zeichne("#k11-l3", 71.55, 0.35);
+      badge("#k11-x2", 72.433); badge("#k11-x3", 72.52);
+      schreibe("#k11-cliprect", 400, 72.45, 0.55);
+
+      // Sticker + ERGÄNZUNG
+      tl.fromTo("#st3", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, 73.533);
+      tl.to("#st3", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 74.93);
+
+      // K12 Kollektion nach dem Einrichten mit der Lupe prüfen, vorhandene Artikel
+      karte("#k12", 73.10, 80.50);
+      tl.fromTo("#k12 .k12-z", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.1 }, 73.25);
+      pop("#k12-lupe", 74.967, 0.35);
+      schreibe("#k12-cliprect", 200, 75.05, 0.45);
+      tl.to("#k12-lupe", { x: 260, y: -10, duration: 0.5, ease: "power2.inOut" }, 77.333);
+      tl.fromTo("#k12 .k12-ok", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.out", stagger: 0.25 }, 77.40);
+      tl.to("#k12-lupe", { x: 290, y: 130, duration: 0.5, ease: "power2.inOut" }, 79.633);
+      ein("#k12-v", 79.633, 0.3);
+      ring("#k12-ring", 80.067);
+
+      // K13 neuer Artikel mit sauberen Angaben landet von selbst in der Kollektion; einzeln nachbessern gestrichen
+      karte("#k13", 80.533, 86.833);
+      pop("#k13-neu", 81.533, 0.35);
+      ein("#k13-tag1", 82.667, 0.25); ein("#k13-tag2", 82.80, 0.25);
+      badge("#k13-ok1", 83.067);
+      schreibe("#k13-cliprect", 210, 82.70, 0.45);
+      zeichne("#k13-pfeil", 83.25, 0.25);
+      tl.fromTo("#k13-m", { opacity: 0 }, { opacity: 1, duration: 0.05 }, 83.35);
+      tl.to("#k13-m", { x: 425, y: 54, scale: 0.52, svgOrigin: "45 14", duration: 0.5, ease: "power2.inOut" }, 83.40);
+      badge("#k13-ok2", 83.90);
+      tl.fromTo("#k13 .k13-k", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out", stagger: 0.12 }, 84.433);
+      zeichne("#k13-strich", 85.30, 0.4);
+      tl.to("#k13 .k13-k", { opacity: 0.4, duration: 0.3 }, 85.60);
+
+      // K14 Folgen: Karte auf "Und", Ring auf "Tipps", Zeiger tippt auf "Plus", es wird zum Haken
+      tl.fromTo("#k14", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 86.867);
+      tl.set("#fring", { opacity: 0.9, scale: 1 }, 87.70);
+      tl.to("#fring", { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 87.72);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 88.20);
+      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.47, ease: "power2.inOut" }, 88.35);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 88.82);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 88.90);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 88.867);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 88.867);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 88.90);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 88.90);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 88.90);
+
+      tl.seek(0);
+      window.__timelines["kollektionen-skizzen"] = tl;
+    </script>
+  </body>
+</html>

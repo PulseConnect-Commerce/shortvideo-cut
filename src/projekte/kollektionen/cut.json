@@ -1,0 +1,1934 @@
+{
+ "projekt": "kollektionen",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "kollektionen/t1",
+   "from": 2.895,
+   "to": 14.635,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 23.075,
+   "to": 27.995,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 74.425,
+   "to": 78.485,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 81.295,
+   "to": 91.005,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 94.835,
+   "to": 100.105,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 108.845,
+   "to": 117.335,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 119.425,
+   "to": 129.025,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 131.935,
+   "to": 133.635,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 134.175,
+   "to": 141.795,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 149.495,
+   "to": 159.475,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 181.585,
+   "to": 189.115,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kollektionen/t1",
+   "from": 205.395,
+   "to": 214.17,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Eine",
+   "src": "kollektionen/t1",
+   "start": 3.0,
+   "end": 3.16
+  },
+  {
+   "text": "Sache,",
+   "src": "kollektionen/t1",
+   "start": 3.24,
+   "end": 3.42
+  },
+  {
+   "text": "die",
+   "src": "kollektionen/t1",
+   "start": 3.5,
+   "end": 3.58
+  },
+  {
+   "text": "ich",
+   "src": "kollektionen/t1",
+   "start": 3.64,
+   "end": 3.72
+  },
+  {
+   "text": "besonders",
+   "src": "kollektionen/t1",
+   "start": 3.86,
+   "end": 4.36
+  },
+  {
+   "text": "bei",
+   "src": "kollektionen/t1",
+   "start": 4.42,
+   "end": 4.52
+  },
+  {
+   "text": "größeren",
+   "src": "kollektionen/t1",
+   "start": 4.6,
+   "end": 5.02
+  },
+  {
+   "text": "Shopify-Shops",
+   "src": "kollektionen/t1",
+   "start": 5.08,
+   "end": 5.72
+  },
+  {
+   "text": "einfach",
+   "src": "kollektionen/t1",
+   "start": 5.76,
+   "end": 5.98
+  },
+  {
+   "text": "nicht",
+   "src": "kollektionen/t1",
+   "start": 6.08,
+   "end": 6.26
+  },
+  {
+   "text": "von",
+   "src": "kollektionen/t1",
+   "start": 6.3,
+   "end": 6.4
+  },
+  {
+   "text": "der",
+   "src": "kollektionen/t1",
+   "start": 6.42,
+   "end": 6.48
+  },
+  {
+   "text": "Hand",
+   "src": "kollektionen/t1",
+   "start": 6.52,
+   "end": 6.64
+  },
+  {
+   "text": "pflegen",
+   "src": "kollektionen/t1",
+   "start": 6.68,
+   "end": 6.98
+  },
+  {
+   "text": "würde,",
+   "src": "kollektionen/t1",
+   "start": 7.04,
+   "end": 7.24
+  },
+  {
+   "text": "sind",
+   "src": "kollektionen/t1",
+   "start": 7.68,
+   "end": 7.82
+  },
+  {
+   "text": "die",
+   "src": "kollektionen/t1",
+   "start": 7.86,
+   "end": 7.92
+  },
+  {
+   "text": "ständig",
+   "src": "kollektionen/t1",
+   "start": 7.96,
+   "end": 8.32
+  },
+  {
+   "text": "gleichen",
+   "src": "kollektionen/t1",
+   "start": 8.38,
+   "end": 8.72
+  },
+  {
+   "text": "Produktkollektionen.",
+   "src": "kollektionen/t1",
+   "start": 8.76,
+   "end": 9.46
+  },
+  {
+   "text": "Denn",
+   "src": "kollektionen/t1",
+   "start": 10.16,
+   "end": 10.28
+  },
+  {
+   "text": "stell",
+   "src": "kollektionen/t1",
+   "start": 10.32,
+   "end": 10.5
+  },
+  {
+   "text": "dir",
+   "src": "kollektionen/t1",
+   "start": 10.58,
+   "end": 10.66
+  },
+  {
+   "text": "vor,",
+   "src": "kollektionen/t1",
+   "start": 10.7,
+   "end": 10.82
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 10.86,
+   "end": 10.92
+  },
+  {
+   "text": "verkaufst",
+   "src": "kollektionen/t1",
+   "start": 10.98,
+   "end": 11.36
+  },
+  {
+   "text": "jetzt",
+   "src": "kollektionen/t1",
+   "start": 11.38,
+   "end": 11.54
+  },
+  {
+   "text": "zum",
+   "src": "kollektionen/t1",
+   "start": 11.56,
+   "end": 11.64
+  },
+  {
+   "text": "Beispiel",
+   "src": "kollektionen/t1",
+   "start": 11.66,
+   "end": 11.92
+  },
+  {
+   "text": "Kleidung",
+   "src": "kollektionen/t1",
+   "start": 11.96,
+   "end": 12.32
+  },
+  {
+   "text": "und",
+   "src": "kollektionen/t1",
+   "start": 12.38,
+   "end": 12.46
+  },
+  {
+   "text": "hast",
+   "src": "kollektionen/t1",
+   "start": 12.48,
+   "end": 12.62
+  },
+  {
+   "text": "einfach",
+   "src": "kollektionen/t1",
+   "start": 12.66,
+   "end": 12.88
+  },
+  {
+   "text": "eine",
+   "src": "kollektionen/t1",
+   "start": 12.92,
+   "end": 13.04
+  },
+  {
+   "text": "Kollektion",
+   "src": "kollektionen/t1",
+   "start": 13.1,
+   "end": 13.52
+  },
+  {
+   "text": "für",
+   "src": "kollektionen/t1",
+   "start": 13.58,
+   "end": 13.66
+  },
+  {
+   "text": "schwarze",
+   "src": "kollektionen/t1",
+   "start": 13.7,
+   "end": 14.04
+  },
+  {
+   "text": "T-Shirts.",
+   "src": "kollektionen/t1",
+   "start": 14.12,
+   "end": 14.5
+  },
+  {
+   "text": "Wenn",
+   "src": "kollektionen/t1",
+   "start": 23.14,
+   "end": 23.26
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 23.28,
+   "end": 23.32
+  },
+  {
+   "text": "jetzt",
+   "src": "kollektionen/t1",
+   "start": 23.36,
+   "end": 23.48
+  },
+  {
+   "text": "tatsächlich",
+   "src": "kollektionen/t1",
+   "start": 23.5,
+   "end": 23.86
+  },
+  {
+   "text": "alle",
+   "src": "kollektionen/t1",
+   "start": 24.0,
+   "end": 24.16
+  },
+  {
+   "text": "Produkte",
+   "src": "kollektionen/t1",
+   "start": 24.22,
+   "end": 24.48
+  },
+  {
+   "text": "manuell",
+   "src": "kollektionen/t1",
+   "start": 24.54,
+   "end": 24.88
+  },
+  {
+   "text": "hinzufügst,",
+   "src": "kollektionen/t1",
+   "start": 24.92,
+   "end": 25.44
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 25.48,
+   "end": 25.56
+  },
+  {
+   "text": "musst",
+   "src": "kollektionen/t1",
+   "start": 25.58,
+   "end": 25.7
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 25.74,
+   "end": 25.78
+  },
+  {
+   "text": "bei",
+   "src": "kollektionen/t1",
+   "start": 25.82,
+   "end": 25.9
+  },
+  {
+   "text": "jedem",
+   "src": "kollektionen/t1",
+   "start": 26.0,
+   "end": 26.24
+  },
+  {
+   "text": "neuen",
+   "src": "kollektionen/t1",
+   "start": 26.32,
+   "end": 26.52
+  },
+  {
+   "text": "Artikel",
+   "src": "kollektionen/t1",
+   "start": 26.56,
+   "end": 26.9
+  },
+  {
+   "text": "wieder",
+   "src": "kollektionen/t1",
+   "start": 27.0,
+   "end": 27.18
+  },
+  {
+   "text": "daran",
+   "src": "kollektionen/t1",
+   "start": 27.28,
+   "end": 27.56
+  },
+  {
+   "text": "denken.",
+   "src": "kollektionen/t1",
+   "start": 27.68,
+   "end": 27.98
+  },
+  {
+   "text": "Und",
+   "src": "kollektionen/t1",
+   "start": 74.49,
+   "end": 74.57
+  },
+  {
+   "text": "in",
+   "src": "kollektionen/t1",
+   "start": 74.63,
+   "end": 74.67
+  },
+  {
+   "text": "Shopify",
+   "src": "kollektionen/t1",
+   "start": 74.73,
+   "end": 75.11
+  },
+  {
+   "text": "kannst",
+   "src": "kollektionen/t1",
+   "start": 75.23,
+   "end": 75.49
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 75.53,
+   "end": 75.57
+  },
+  {
+   "text": "einfach",
+   "src": "kollektionen/t1",
+   "start": 75.63,
+   "end": 75.87
+  },
+  {
+   "text": "stattdessen",
+   "src": "kollektionen/t1",
+   "start": 75.93,
+   "end": 76.37
+  },
+  {
+   "text": "eine",
+   "src": "kollektionen/t1",
+   "start": 76.45,
+   "end": 76.57
+  },
+  {
+   "text": "automatisierte",
+   "src": "kollektionen/t1",
+   "start": 76.67,
+   "end": 77.35
+  },
+  {
+   "text": "Kollektion",
+   "src": "kollektionen/t1",
+   "start": 77.43,
+   "end": 77.85
+  },
+  {
+   "text": "dafür",
+   "src": "kollektionen/t1",
+   "start": 77.89,
+   "end": 78.09
+  },
+  {
+   "text": "erstellen.",
+   "src": "kollektionen/t1",
+   "start": 78.13,
+   "end": 78.41
+  },
+  {
+   "text": "Dafür",
+   "src": "kollektionen/t1",
+   "start": 81.31,
+   "end": 81.55
+  },
+  {
+   "text": "gehst",
+   "src": "kollektionen/t1",
+   "start": 81.59,
+   "end": 81.77
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 81.79,
+   "end": 81.83
+  },
+  {
+   "text": "einfach",
+   "src": "kollektionen/t1",
+   "start": 81.99,
+   "end": 82.23
+  },
+  {
+   "text": "zuerst",
+   "src": "kollektionen/t1",
+   "start": 82.27,
+   "end": 82.55
+  },
+  {
+   "text": "zu",
+   "src": "kollektionen/t1",
+   "start": 82.59,
+   "end": 82.65
+  },
+  {
+   "text": "Produkte,",
+   "src": "kollektionen/t1",
+   "start": 82.71,
+   "end": 83.09
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 83.69,
+   "end": 83.83
+  },
+  {
+   "text": "zu",
+   "src": "kollektionen/t1",
+   "start": 83.89,
+   "end": 83.95
+  },
+  {
+   "text": "Kollektionen",
+   "src": "kollektionen/t1",
+   "start": 84.03,
+   "end": 84.59
+  },
+  {
+   "text": "und",
+   "src": "kollektionen/t1",
+   "start": 84.73,
+   "end": 84.79
+  },
+  {
+   "text": "legst",
+   "src": "kollektionen/t1",
+   "start": 84.85,
+   "end": 85.05
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 85.07,
+   "end": 85.19
+  },
+  {
+   "text": "einfach",
+   "src": "kollektionen/t1",
+   "start": 85.23,
+   "end": 85.41
+  },
+  {
+   "text": "eine",
+   "src": "kollektionen/t1",
+   "start": 85.43,
+   "end": 85.59
+  },
+  {
+   "text": "neue",
+   "src": "kollektionen/t1",
+   "start": 85.69,
+   "end": 85.89
+  },
+  {
+   "text": "Kollektion",
+   "src": "kollektionen/t1",
+   "start": 85.97,
+   "end": 86.41
+  },
+  {
+   "text": "an.",
+   "src": "kollektionen/t1",
+   "start": 86.45,
+   "end": 86.49
+  },
+  {
+   "text": "Dort",
+   "src": "kollektionen/t1",
+   "start": 87.15,
+   "end": 87.31
+  },
+  {
+   "text": "wählst",
+   "src": "kollektionen/t1",
+   "start": 87.37,
+   "end": 87.55
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 87.57,
+   "end": 87.63
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 87.69,
+   "end": 87.79
+  },
+  {
+   "text": "zum",
+   "src": "kollektionen/t1",
+   "start": 87.81,
+   "end": 87.89
+  },
+  {
+   "text": "Beispiel",
+   "src": "kollektionen/t1",
+   "start": 87.93,
+   "end": 88.19
+  },
+  {
+   "text": "die",
+   "src": "kollektionen/t1",
+   "start": 88.21,
+   "end": 88.29
+  },
+  {
+   "text": "automatische",
+   "src": "kollektionen/t1",
+   "start": 88.31,
+   "end": 88.81
+  },
+  {
+   "text": "Zuordnung",
+   "src": "kollektionen/t1",
+   "start": 88.91,
+   "end": 89.31
+  },
+  {
+   "text": "und",
+   "src": "kollektionen/t1",
+   "start": 89.41,
+   "end": 89.47
+  },
+  {
+   "text": "definierst",
+   "src": "kollektionen/t1",
+   "start": 89.51,
+   "end": 89.93
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 89.97,
+   "end": 90.09
+  },
+  {
+   "text": "einfach",
+   "src": "kollektionen/t1",
+   "start": 90.11,
+   "end": 90.33
+  },
+  {
+   "text": "die",
+   "src": "kollektionen/t1",
+   "start": 90.39,
+   "end": 90.49
+  },
+  {
+   "text": "Bedingungen.",
+   "src": "kollektionen/t1",
+   "start": 90.53,
+   "end": 90.93
+  },
+  {
+   "text": "Zum",
+   "src": "kollektionen/t1",
+   "start": 94.85,
+   "end": 94.93
+  },
+  {
+   "text": "Beispiel",
+   "src": "kollektionen/t1",
+   "start": 94.97,
+   "end": 95.27
+  },
+  {
+   "text": "kannst",
+   "src": "kollektionen/t1",
+   "start": 95.31,
+   "end": 95.49
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 95.53,
+   "end": 95.57
+  },
+  {
+   "text": "hier",
+   "src": "kollektionen/t1",
+   "start": 95.67,
+   "end": 95.89
+  },
+  {
+   "text": "Folgendes",
+   "src": "kollektionen/t1",
+   "start": 95.95,
+   "end": 96.29
+  },
+  {
+   "text": "verwenden.",
+   "src": "kollektionen/t1",
+   "start": 96.33,
+   "end": 96.63
+  },
+  {
+   "text": "Produkttyp",
+   "src": "kollektionen/t1",
+   "start": 96.69,
+   "end": 97.19
+  },
+  {
+   "text": "ist",
+   "src": "kollektionen/t1",
+   "start": 97.33,
+   "end": 97.47
+  },
+  {
+   "text": "T-Shirt",
+   "src": "kollektionen/t1",
+   "start": 97.57,
+   "end": 98.01
+  },
+  {
+   "text": "und",
+   "src": "kollektionen/t1",
+   "start": 98.43,
+   "end": 98.51
+  },
+  {
+   "text": "Produkt-Tag",
+   "src": "kollektionen/t1",
+   "start": 98.55,
+   "end": 99.11
+  },
+  {
+   "text": "ist",
+   "src": "kollektionen/t1",
+   "start": 99.31,
+   "end": 99.41
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 99.45,
+   "end": 99.57
+  },
+  {
+   "text": "schwarz.",
+   "src": "kollektionen/t1",
+   "start": 99.63,
+   "end": 99.95
+  },
+  {
+   "text": "Und",
+   "src": "kollektionen/t1",
+   "start": 108.87,
+   "end": 108.93
+  },
+  {
+   "text": "ich",
+   "src": "kollektionen/t1",
+   "start": 108.99,
+   "end": 109.07
+  },
+  {
+   "text": "gebe",
+   "src": "kollektionen/t1",
+   "start": 109.13,
+   "end": 109.27
+  },
+  {
+   "text": "dir",
+   "src": "kollektionen/t1",
+   "start": 109.33,
+   "end": 109.41
+  },
+  {
+   "text": "jetzt",
+   "src": "kollektionen/t1",
+   "start": 109.43,
+   "end": 109.55
+  },
+  {
+   "text": "hierbei",
+   "src": "kollektionen/t1",
+   "start": 109.57,
+   "end": 109.73
+  },
+  {
+   "text": "ein",
+   "src": "kollektionen/t1",
+   "start": 109.79,
+   "end": 109.91
+  },
+  {
+   "text": "wichtiges",
+   "src": "kollektionen/t1",
+   "start": 110.01,
+   "end": 110.39
+  },
+  {
+   "text": "Detail,",
+   "src": "kollektionen/t1",
+   "start": 110.43,
+   "end": 110.71
+  },
+  {
+   "text": "das",
+   "src": "kollektionen/t1",
+   "start": 110.75,
+   "end": 110.87
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 110.91,
+   "end": 110.97
+  },
+  {
+   "text": "unbedingt",
+   "src": "kollektionen/t1",
+   "start": 111.09,
+   "end": 111.45
+  },
+  {
+   "text": "beachten",
+   "src": "kollektionen/t1",
+   "start": 111.47,
+   "end": 111.83
+  },
+  {
+   "text": "solltest.",
+   "src": "kollektionen/t1",
+   "start": 111.87,
+   "end": 112.19
+  },
+  {
+   "text": "Denn",
+   "src": "kollektionen/t1",
+   "start": 112.65,
+   "end": 112.77
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 112.79,
+   "end": 112.85
+  },
+  {
+   "text": "kannst",
+   "src": "kollektionen/t1",
+   "start": 112.91,
+   "end": 113.05
+  },
+  {
+   "text": "tatsächlich",
+   "src": "kollektionen/t1",
+   "start": 113.09,
+   "end": 113.43
+  },
+  {
+   "text": "auch",
+   "src": "kollektionen/t1",
+   "start": 113.47,
+   "end": 113.57
+  },
+  {
+   "text": "einstellen,",
+   "src": "kollektionen/t1",
+   "start": 113.65,
+   "end": 114.05
+  },
+  {
+   "text": "ob",
+   "src": "kollektionen/t1",
+   "start": 114.13,
+   "end": 114.21
+  },
+  {
+   "text": "alle",
+   "src": "kollektionen/t1",
+   "start": 114.33,
+   "end": 114.45
+  },
+  {
+   "text": "Bedingungen",
+   "src": "kollektionen/t1",
+   "start": 114.51,
+   "end": 114.97
+  },
+  {
+   "text": "erfüllt",
+   "src": "kollektionen/t1",
+   "start": 115.03,
+   "end": 115.35
+  },
+  {
+   "text": "sein",
+   "src": "kollektionen/t1",
+   "start": 115.39,
+   "end": 115.53
+  },
+  {
+   "text": "müssen",
+   "src": "kollektionen/t1",
+   "start": 115.57,
+   "end": 115.81
+  },
+  {
+   "text": "oder",
+   "src": "kollektionen/t1",
+   "start": 116.17,
+   "end": 116.31
+  },
+  {
+   "text": "eben",
+   "src": "kollektionen/t1",
+   "start": 116.39,
+   "end": 116.53
+  },
+  {
+   "text": "nur",
+   "src": "kollektionen/t1",
+   "start": 116.55,
+   "end": 116.63
+  },
+  {
+   "text": "eine",
+   "src": "kollektionen/t1",
+   "start": 116.71,
+   "end": 116.87
+  },
+  {
+   "text": "davon.",
+   "src": "kollektionen/t1",
+   "start": 116.95,
+   "end": 117.19
+  },
+  {
+   "text": "Das",
+   "src": "kollektionen/t1",
+   "start": 119.45,
+   "end": 119.59
+  },
+  {
+   "text": "geht",
+   "src": "kollektionen/t1",
+   "start": 119.65,
+   "end": 119.77
+  },
+  {
+   "text": "mit",
+   "src": "kollektionen/t1",
+   "start": 119.83,
+   "end": 119.91
+  },
+  {
+   "text": "der",
+   "src": "kollektionen/t1",
+   "start": 119.97,
+   "end": 120.05
+  },
+  {
+   "text": "Und-oder-Bedingung.",
+   "src": "kollektionen/t1",
+   "start": 120.19,
+   "end": 120.97
+  },
+  {
+   "text": "Wenn",
+   "src": "kollektionen/t1",
+   "start": 121.82,
+   "end": 121.94
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 121.98,
+   "end": 122.02
+  },
+  {
+   "text": "aber",
+   "src": "kollektionen/t1",
+   "start": 122.06,
+   "end": 122.16
+  },
+  {
+   "text": "bei",
+   "src": "kollektionen/t1",
+   "start": 122.22,
+   "end": 122.3
+  },
+  {
+   "text": "schwarzen",
+   "src": "kollektionen/t1",
+   "start": 122.36,
+   "end": 122.76
+  },
+  {
+   "text": "T-Shirts",
+   "src": "kollektionen/t1",
+   "start": 122.82,
+   "end": 123.2
+  },
+  {
+   "text": "irgendeine",
+   "src": "kollektionen/t1",
+   "start": 123.3,
+   "end": 123.68
+  },
+  {
+   "text": "auswählst,",
+   "src": "kollektionen/t1",
+   "start": 123.8,
+   "end": 124.32
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 124.36,
+   "end": 124.5
+  },
+  {
+   "text": "landen",
+   "src": "kollektionen/t1",
+   "start": 124.54,
+   "end": 124.8
+  },
+  {
+   "text": "womöglich",
+   "src": "kollektionen/t1",
+   "start": 124.82,
+   "end": 125.28
+  },
+  {
+   "text": "auch",
+   "src": "kollektionen/t1",
+   "start": 125.34,
+   "end": 125.48
+  },
+  {
+   "text": "rote",
+   "src": "kollektionen/t1",
+   "start": 125.66,
+   "end": 125.94
+  },
+  {
+   "text": "T-Shirts",
+   "src": "kollektionen/t1",
+   "start": 126.02,
+   "end": 126.42
+  },
+  {
+   "text": "oder",
+   "src": "kollektionen/t1",
+   "start": 126.84,
+   "end": 127.0
+  },
+  {
+   "text": "eben",
+   "src": "kollektionen/t1",
+   "start": 127.08,
+   "end": 127.2
+  },
+  {
+   "text": "auch",
+   "src": "kollektionen/t1",
+   "start": 127.24,
+   "end": 127.32
+  },
+  {
+   "text": "schwarze",
+   "src": "kollektionen/t1",
+   "start": 127.36,
+   "end": 127.68
+  },
+  {
+   "text": "Hosen",
+   "src": "kollektionen/t1",
+   "start": 127.74,
+   "end": 128.02
+  },
+  {
+   "text": "in",
+   "src": "kollektionen/t1",
+   "start": 128.06,
+   "end": 128.12
+  },
+  {
+   "text": "deiner",
+   "src": "kollektionen/t1",
+   "start": 128.14,
+   "end": 128.32
+  },
+  {
+   "text": "Kollektion.",
+   "src": "kollektionen/t1",
+   "start": 128.36,
+   "end": 128.84
+  },
+  {
+   "text": "Und",
+   "src": "kollektionen/t1",
+   "start": 132.0,
+   "end": 132.08
+  },
+  {
+   "text": "das",
+   "src": "kollektionen/t1",
+   "start": 132.12,
+   "end": 132.22
+  },
+  {
+   "text": "willst",
+   "src": "kollektionen/t1",
+   "start": 132.26,
+   "end": 132.42
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 132.46,
+   "end": 132.5
+  },
+  {
+   "text": "aber",
+   "src": "kollektionen/t1",
+   "start": 132.52,
+   "end": 132.68
+  },
+  {
+   "text": "natürlich",
+   "src": "kollektionen/t1",
+   "start": 132.74,
+   "end": 133.06
+  },
+  {
+   "text": "nicht,",
+   "src": "kollektionen/t1",
+   "start": 133.14,
+   "end": 133.26
+  },
+  {
+   "text": "oder?",
+   "src": "kollektionen/t1",
+   "start": 133.3,
+   "end": 133.46
+  },
+  {
+   "text": "Mit",
+   "src": "kollektionen/t1",
+   "start": 134.22,
+   "end": 134.3
+  },
+  {
+   "text": "allen",
+   "src": "kollektionen/t1",
+   "start": 134.54,
+   "end": 134.72
+  },
+  {
+   "text": "Bedingungen",
+   "src": "kollektionen/t1",
+   "start": 134.78,
+   "end": 135.28
+  },
+  {
+   "text": "wird",
+   "src": "kollektionen/t1",
+   "start": 135.38,
+   "end": 135.5
+  },
+  {
+   "text": "die",
+   "src": "kollektionen/t1",
+   "start": 135.54,
+   "end": 135.6
+  },
+  {
+   "text": "Auswahl",
+   "src": "kollektionen/t1",
+   "start": 135.72,
+   "end": 136.06
+  },
+  {
+   "text": "tatsächlich",
+   "src": "kollektionen/t1",
+   "start": 136.1,
+   "end": 136.48
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 136.5,
+   "end": 136.64
+  },
+  {
+   "text": "noch",
+   "src": "kollektionen/t1",
+   "start": 136.72,
+   "end": 136.84
+  },
+  {
+   "text": "genauer.",
+   "src": "kollektionen/t1",
+   "start": 136.9,
+   "end": 137.22
+  },
+  {
+   "text": "Mein",
+   "src": "kollektionen/t1",
+   "start": 138.24,
+   "end": 138.36
+  },
+  {
+   "text": "zweiter",
+   "src": "kollektionen/t1",
+   "start": 138.42,
+   "end": 138.72
+  },
+  {
+   "text": "Tipp",
+   "src": "kollektionen/t1",
+   "start": 138.78,
+   "end": 138.92
+  },
+  {
+   "text": "ist,",
+   "src": "kollektionen/t1",
+   "start": 138.98,
+   "end": 139.14
+  },
+  {
+   "text": "arbeite",
+   "src": "kollektionen/t1",
+   "start": 139.46,
+   "end": 139.76
+  },
+  {
+   "text": "immer",
+   "src": "kollektionen/t1",
+   "start": 139.84,
+   "end": 140.0
+  },
+  {
+   "text": "mit",
+   "src": "kollektionen/t1",
+   "start": 140.04,
+   "end": 140.14
+  },
+  {
+   "text": "einer",
+   "src": "kollektionen/t1",
+   "start": 140.22,
+   "end": 140.38
+  },
+  {
+   "text": "einheitlichen",
+   "src": "kollektionen/t1",
+   "start": 140.5,
+   "end": 141.04
+  },
+  {
+   "text": "Tag-Struktur.",
+   "src": "kollektionen/t1",
+   "start": 141.1,
+   "end": 141.66
+  },
+  {
+   "text": "Denn",
+   "src": "kollektionen/t1",
+   "start": 149.53,
+   "end": 149.67
+  },
+  {
+   "text": "wenn",
+   "src": "kollektionen/t1",
+   "start": 149.69,
+   "end": 149.81
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 149.85,
+   "end": 149.89
+  },
+  {
+   "text": "jetzt",
+   "src": "kollektionen/t1",
+   "start": 149.93,
+   "end": 150.03
+  },
+  {
+   "text": "zum",
+   "src": "kollektionen/t1",
+   "start": 150.05,
+   "end": 150.11
+  },
+  {
+   "text": "Beispiel",
+   "src": "kollektionen/t1",
+   "start": 150.13,
+   "end": 150.29
+  },
+  {
+   "text": "bei",
+   "src": "kollektionen/t1",
+   "start": 150.31,
+   "end": 150.39
+  },
+  {
+   "text": "einem",
+   "src": "kollektionen/t1",
+   "start": 150.43,
+   "end": 150.59
+  },
+  {
+   "text": "Produkt",
+   "src": "kollektionen/t1",
+   "start": 150.61,
+   "end": 150.87
+  },
+  {
+   "text": "schwarz",
+   "src": "kollektionen/t1",
+   "start": 150.93,
+   "end": 151.27
+  },
+  {
+   "text": "hinschreibst,",
+   "src": "kollektionen/t1",
+   "start": 151.31,
+   "end": 151.81
+  },
+  {
+   "text": "bei",
+   "src": "kollektionen/t1",
+   "start": 151.85,
+   "end": 151.93
+  },
+  {
+   "text": "dem",
+   "src": "kollektionen/t1",
+   "start": 151.97,
+   "end": 152.05
+  },
+  {
+   "text": "nächsten",
+   "src": "kollektionen/t1",
+   "start": 152.11,
+   "end": 152.41
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 152.43,
+   "end": 152.55
+  },
+  {
+   "text": "aber",
+   "src": "kollektionen/t1",
+   "start": 152.61,
+   "end": 152.73
+  },
+  {
+   "text": "zum",
+   "src": "kollektionen/t1",
+   "start": 152.79,
+   "end": 152.85
+  },
+  {
+   "text": "Beispiel",
+   "src": "kollektionen/t1",
+   "start": 152.87,
+   "end": 153.07
+  },
+  {
+   "text": "Black",
+   "src": "kollektionen/t1",
+   "start": 153.15,
+   "end": 153.47
+  },
+  {
+   "text": "und",
+   "src": "kollektionen/t1",
+   "start": 153.93,
+   "end": 154.01
+  },
+  {
+   "text": "beim",
+   "src": "kollektionen/t1",
+   "start": 154.05,
+   "end": 154.17
+  },
+  {
+   "text": "dritten",
+   "src": "kollektionen/t1",
+   "start": 154.21,
+   "end": 154.43
+  },
+  {
+   "text": "aber",
+   "src": "kollektionen/t1",
+   "start": 154.47,
+   "end": 154.59
+  },
+  {
+   "text": "black-shirt",
+   "src": "kollektionen/t1",
+   "start": 154.65,
+   "end": 155.25
+  },
+  {
+   "text": "dasteht,",
+   "src": "kollektionen/t1",
+   "start": 155.47,
+   "end": 155.93
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 156.53,
+   "end": 156.67
+  },
+  {
+   "text": "wird",
+   "src": "kollektionen/t1",
+   "start": 156.75,
+   "end": 156.87
+  },
+  {
+   "text": "natürlich",
+   "src": "kollektionen/t1",
+   "start": 156.93,
+   "end": 157.21
+  },
+  {
+   "text": "die",
+   "src": "kollektionen/t1",
+   "start": 157.25,
+   "end": 157.31
+  },
+  {
+   "text": "automatische",
+   "src": "kollektionen/t1",
+   "start": 157.33,
+   "end": 157.73
+  },
+  {
+   "text": "Zuordnung",
+   "src": "kollektionen/t1",
+   "start": 157.81,
+   "end": 158.15
+  },
+  {
+   "text": "einfach",
+   "src": "kollektionen/t1",
+   "start": 158.19,
+   "end": 158.41
+  },
+  {
+   "text": "schnell",
+   "src": "kollektionen/t1",
+   "start": 158.49,
+   "end": 158.75
+  },
+  {
+   "text": "unzuverlässig.",
+   "src": "kollektionen/t1",
+   "start": 158.85,
+   "end": 159.45
+  },
+  {
+   "text": "Und",
+   "src": "kollektionen/t1",
+   "start": 181.65,
+   "end": 181.71
+  },
+  {
+   "text": "eine",
+   "src": "kollektionen/t1",
+   "start": 181.83,
+   "end": 182.01
+  },
+  {
+   "text": "wichtige",
+   "src": "kollektionen/t1",
+   "start": 182.09,
+   "end": 182.35
+  },
+  {
+   "text": "Ergänzung",
+   "src": "kollektionen/t1",
+   "start": 182.41,
+   "end": 182.83
+  },
+  {
+   "text": "hier",
+   "src": "kollektionen/t1",
+   "start": 182.87,
+   "end": 182.97
+  },
+  {
+   "text": "von",
+   "src": "kollektionen/t1",
+   "start": 183.01,
+   "end": 183.11
+  },
+  {
+   "text": "mir,",
+   "src": "kollektionen/t1",
+   "start": 183.17,
+   "end": 183.31
+  },
+  {
+   "text": "kontrolliere",
+   "src": "kollektionen/t1",
+   "start": 183.53,
+   "end": 184.01
+  },
+  {
+   "text": "bitte",
+   "src": "kollektionen/t1",
+   "start": 184.09,
+   "end": 184.27
+  },
+  {
+   "text": "immer",
+   "src": "kollektionen/t1",
+   "start": 184.31,
+   "end": 184.45
+  },
+  {
+   "text": "nach",
+   "src": "kollektionen/t1",
+   "start": 184.53,
+   "end": 184.71
+  },
+  {
+   "text": "dem",
+   "src": "kollektionen/t1",
+   "start": 184.79,
+   "end": 184.89
+  },
+  {
+   "text": "Einrichten",
+   "src": "kollektionen/t1",
+   "start": 184.99,
+   "end": 185.39
+  },
+  {
+   "text": "einmal",
+   "src": "kollektionen/t1",
+   "start": 185.51,
+   "end": 185.73
+  },
+  {
+   "text": "die",
+   "src": "kollektionen/t1",
+   "start": 185.77,
+   "end": 185.85
+  },
+  {
+   "text": "Produkte",
+   "src": "kollektionen/t1",
+   "start": 185.87,
+   "end": 186.19
+  },
+  {
+   "text": "der",
+   "src": "kollektionen/t1",
+   "start": 186.25,
+   "end": 186.33
+  },
+  {
+   "text": "Kollektion,",
+   "src": "kollektionen/t1",
+   "start": 186.37,
+   "end": 186.77
+  },
+  {
+   "text": "gerade",
+   "src": "kollektionen/t1",
+   "start": 187.29,
+   "end": 187.57
+  },
+  {
+   "text": "vor",
+   "src": "kollektionen/t1",
+   "start": 187.69,
+   "end": 187.77
+  },
+  {
+   "text": "allem",
+   "src": "kollektionen/t1",
+   "start": 187.83,
+   "end": 187.97
+  },
+  {
+   "text": "bei",
+   "src": "kollektionen/t1",
+   "start": 188.03,
+   "end": 188.11
+  },
+  {
+   "text": "vorhandenen",
+   "src": "kollektionen/t1",
+   "start": 188.17,
+   "end": 188.59
+  },
+  {
+   "text": "Artikeln.",
+   "src": "kollektionen/t1",
+   "start": 188.63,
+   "end": 189.01
+  },
+  {
+   "text": "Denn",
+   "src": "kollektionen/t1",
+   "start": 205.39,
+   "end": 205.51
+  },
+  {
+   "text": "dann",
+   "src": "kollektionen/t1",
+   "start": 205.55,
+   "end": 205.69
+  },
+  {
+   "text": "musst",
+   "src": "kollektionen/t1",
+   "start": 205.73,
+   "end": 205.91
+  },
+  {
+   "text": "du",
+   "src": "kollektionen/t1",
+   "start": 205.95,
+   "end": 205.99
+  },
+  {
+   "text": "einfach",
+   "src": "kollektionen/t1",
+   "start": 206.05,
+   "end": 206.31
+  },
+  {
+   "text": "neue",
+   "src": "kollektionen/t1",
+   "start": 206.41,
+   "end": 206.63
+  },
+  {
+   "text": "Artikel",
+   "src": "kollektionen/t1",
+   "start": 206.71,
+   "end": 207.11
+  },
+  {
+   "text": "nur",
+   "src": "kollektionen/t1",
+   "start": 207.21,
+   "end": 207.31
+  },
+  {
+   "text": "noch",
+   "src": "kollektionen/t1",
+   "start": 207.37,
+   "end": 207.47
+  },
+  {
+   "text": "sauber",
+   "src": "kollektionen/t1",
+   "start": 207.53,
+   "end": 207.81
+  },
+  {
+   "text": "einpflegen,",
+   "src": "kollektionen/t1",
+   "start": 207.93,
+   "end": 208.43
+  },
+  {
+   "text": "statt",
+   "src": "kollektionen/t1",
+   "start": 208.81,
+   "end": 209.01
+  },
+  {
+   "text": "immer",
+   "src": "kollektionen/t1",
+   "start": 209.05,
+   "end": 209.21
+  },
+  {
+   "text": "jede",
+   "src": "kollektionen/t1",
+   "start": 209.31,
+   "end": 209.51
+  },
+  {
+   "text": "Kollektion",
+   "src": "kollektionen/t1",
+   "start": 209.59,
+   "end": 210.01
+  },
+  {
+   "text": "einzeln",
+   "src": "kollektionen/t1",
+   "start": 210.15,
+   "end": 210.45
+  },
+  {
+   "text": "nachzubessern.",
+   "src": "kollektionen/t1",
+   "start": 210.47,
+   "end": 211.03
+  },
+  {
+   "text": "Und",
+   "src": "kollektionen/t1",
+   "start": 211.75,
+   "end": 211.81
+  },
+  {
+   "text": "für",
+   "src": "kollektionen/t1",
+   "start": 211.85,
+   "end": 211.93
+  },
+  {
+   "text": "weitere",
+   "src": "kollektionen/t1",
+   "start": 211.97,
+   "end": 212.25
+  },
+  {
+   "text": "solche",
+   "src": "kollektionen/t1",
+   "start": 212.31,
+   "end": 212.49
+  },
+  {
+   "text": "Tipps",
+   "src": "kollektionen/t1",
+   "start": 212.55,
+   "end": 212.79
+  },
+  {
+   "text": "drück",
+   "src": "kollektionen/t1",
+   "start": 213.09,
+   "end": 213.27
+  },
+  {
+   "text": "hier",
+   "src": "kollektionen/t1",
+   "start": 213.29,
+   "end": 213.37
+  },
+  {
+   "text": "gerne",
+   "src": "kollektionen/t1",
+   "start": 213.41,
+   "end": 213.57
+  },
+  {
+   "text": "das",
+   "src": "kollektionen/t1",
+   "start": 213.59,
+   "end": 213.69
+  },
+  {
+   "text": "Plus",
+   "src": "kollektionen/t1",
+   "start": 213.73,
+   "end": 213.89
+  },
+  {
+   "text": "weg.",
+   "src": "kollektionen/t1",
+   "start": 213.93,
+   "end": 214.07
+  }
+ ],
+ "pages": [
+  2,
+  3,
+  2,
+  2,
+  4,
+  2,
+  3,
+  1,
+  1,
+  4,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  1,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  3,
+  2,
+  1,
+  2,
+  4,
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  2,
+  2,
+  1,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  1,
+  2,
+  3,
+  3,
+  3,
+  2,
+  4,
+  1,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  4,
+  1,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2,
+  3,
+  1,
+  4,
+  2,
+  3,
+  2,
+  4,
+  4,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  4,
+  3,
+  3,
+  3,
+  2,
+  4,
+  2,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3
+ ]
+}

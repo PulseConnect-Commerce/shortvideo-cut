@@ -1,0 +1,2597 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/collections/create-collection",
+ "datum": "2026-10-26T22:46:37.597Z",
+ "title": "Shopify Help Center | Kollektionen erstellen und Produkte hinzufügen",
+ "pos": [
+  {
+   "tag": "LI",
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "tag": "H1",
+   "t": "Kollektionen erstellen und Produkte hinzufügen",
+   "y": 393
+  },
+  {
+   "tag": "H4",
+   "t": "Hinweis",
+   "y": 689
+  },
+  {
+   "tag": "P",
+   "t": "Ein neues Kollektionsmodell ersetzt das alte Modell für manuelle und intelligente Kollekti",
+   "y": 749
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst neue Kollektionen erstellen, Produkte zu Kollektionen hinzufügen, bestehende Kol",
+   "y": 1273
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du Produkte zu einer Kollektion hinzufügst oder die Produkte in einer bestehenden Kol",
+   "y": 1517
+  },
+  {
+   "tag": "P",
+   "t": "Um Produkte oder Varianten zu einer Kollektion hinzuzufügen, kannst du Bedingungen verwend",
+   "y": 1960
+  },
+  {
+   "tag": "P",
+   "t": "Um Produkte oder Varianten automatisch zu einer Kollektion hinzuzufügen, legst du Bedingun",
+   "y": 2254
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du Produkte oder Varianten manuell zu einer Kollektion hinzufügst, bleiben diese Prod",
+   "y": 2748
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine Kollektion erstellst, die nur bestimmte Varianten enthält, zeigen die Storefr",
+   "y": 2992
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst Produkte auch automatisch oder manuell aus einer Kollektion ausschließen.",
+   "y": 3235
+  },
+  {
+   "tag": "H4",
+   "t": "Tipp",
+   "y": 3409
+  },
+  {
+   "tag": "P",
+   "t": "Bevor du eine bestehende Kollektion bearbeitest, überprüfe die Kollektionsseite in deinem ",
+   "y": 3469
+  },
+  {
+   "tag": "H2",
+   "t": "Auf dieser Seite",
+   "y": 3869
+  },
+  {
+   "tag": "LI",
+   "t": "Überlegungen zur Erstellung von Kollektionen",
+   "y": 4009
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektion erstellen",
+   "y": 4077
+  },
+  {
+   "tag": "LI",
+   "t": "Quellen und Produkte zu Kollektionen hinzufügen",
+   "y": 4144
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektion bearbeiten",
+   "y": 4212
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektion duplizieren",
+   "y": 4279
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektion löschen",
+   "y": 4347
+  },
+  {
+   "tag": "LI",
+   "t": "Produkt auf dessen Detailseite zu einer Kollektion hinzufügen",
+   "y": 4414
+  },
+  {
+   "tag": "LI",
+   "t": "Produkt auf dessen Detailseite aus einer Kollektion entfernen",
+   "y": 4532
+  },
+  {
+   "tag": "H2",
+   "t": "Hinweise zur Erstellung von Kollektionen",
+   "y": 4752
+  },
+  {
+   "tag": "P",
+   "t": "Bevor du Kollektionen erstellst und Produkte hinzufügst, beachte Folgendes:",
+   "y": 5015
+  },
+  {
+   "tag": "LI",
+   "t": "Dein Shop kann maximal 5.000 Kollektionen haben, die Bedingungen enthalten.",
+   "y": 5159
+  },
+  {
+   "tag": "LI",
+   "t": "Dein Shop kann maximal 50 Kollektionen haben, die eine andere Kollektion enthalten.",
+   "y": 5277
+  },
+  {
+   "tag": "LI",
+   "t": "Dein Shop kann maximal 5 Kollektionen haben, die eine andere Kollektion ausschließen.",
+   "y": 5394
+  },
+  {
+   "tag": "LI",
+   "t": "Eine Produkte-Quelle umfasst ein Produkt mit all seinen Varianten. Verwende daher eine Var",
+   "y": 5512
+  },
+  {
+   "tag": "H4",
+   "t": "Geschäft ausbauen",
+   "y": 5935
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du Hilfe bei der Einrichtung von Kollektionen für deine Produkte benötigst, kannst du",
+   "y": 5995
+  },
+  {
+   "tag": "H2",
+   "t": "Kollektion erstellen",
+   "y": 6345
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst Kollektionen erstellen und diese dann mit dem Navigationsmenü in deinem Onlinesh",
+   "y": 6529
+  },
+  {
+   "tag": "P",
+   "t": "Standardmäßig enthalten neue Kollektionen eine leere Quelle namens Produkte. Du kannst wei",
+   "y": 6673
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 6773
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine Kollektion nicht sofort nach der Erstellung veröffentlichen möchtest, kannst ",
+   "y": 6922
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine Kollektion nur als Eingabe für einen Workflow im Shopify-Adminbereich nutzen ",
+   "y": 7165
+  },
+  {
+   "tag": "LI",
+   "t": "Für eine Gruppe von Produkten, die alle dieselbe Steuerüberschreibung in deinem Shop erfor",
+   "y": 7509
+  },
+  {
+   "tag": "LI",
+   "t": "Für eine Gruppe von Produkten in einer Kollektion, der du einen bestimmten Rabatt zuweist.",
+   "y": 7627
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 7799
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 8060
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 8060
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Kollektion hinzufügen.",
+   "y": 8178
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Kollektion hinzufügen.",
+   "y": 8178
+  },
+  {
+   "tag": "LI",
+   "t": "Um einen Titel hinzuzufügen, klicke auf Titel hinzufügen und gib anschließend einen Titel ",
+   "y": 8245
+  },
+  {
+   "tag": "P",
+   "t": "Um einen Titel hinzuzufügen, klicke auf Titel hinzufügen und gib anschließend einen Titel ",
+   "y": 8245
+  },
+  {
+   "tag": "LI",
+   "t": "Um eine Beschreibung hinzuzufügen, klicke auf Beschreibung hinzufügen und gib dann deine B",
+   "y": 8413
+  },
+  {
+   "tag": "P",
+   "t": "Um eine Beschreibung hinzuzufügen, klicke auf Beschreibung hinzufügen und gib dann deine B",
+   "y": 8413
+  },
+  {
+   "tag": "LI",
+   "t": "Um ein Feature-Bild hinzuzufügen, klicke auf das Symbol , wähle das gewünschte Bild aus un",
+   "y": 8580
+  },
+  {
+   "tag": "P",
+   "t": "Um ein Feature-Bild hinzuzufügen, klicke auf das Symbol , wähle das gewünschte Bild aus un",
+   "y": 8580
+  },
+  {
+   "tag": "IMG",
+   "t": "Hochladen",
+   "y": 8630
+  },
+  {
+   "tag": "LI",
+   "t": "Füge Quellen hinzu, die Produkte, Varianten, Produkte aus einer bestehenden Kollektion ode",
+   "y": 8753
+  },
+  {
+   "tag": "P",
+   "t": "Füge Quellen hinzu, die Produkte, Varianten, Produkte aus einer bestehenden Kollektion ode",
+   "y": 8753
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 8903
+  },
+  {
+   "tag": "LI",
+   "t": "Lege die Sortiermethode fest für die Reihenfolge, in der die Produkte der Kollektion in de",
+   "y": 9025
+  },
+  {
+   "tag": "P",
+   "t": "Lege die Sortiermethode fest für die Reihenfolge, in der die Produkte der Kollektion in de",
+   "y": 9025
+  },
+  {
+   "tag": "LI",
+   "t": "Optional: Lege die Vertriebskanäle fest, in denen die Kollektion verfügbar sein soll.",
+   "y": 9193
+  },
+  {
+   "tag": "P",
+   "t": "Optional: Lege die Vertriebskanäle fest, in denen die Kollektion verfügbar sein soll.",
+   "y": 9193
+  },
+  {
+   "tag": "LI",
+   "t": "Optional: Um Metafelder zu verbinden, mit denen du im Theme-Editor benutzerdefinierte Inha",
+   "y": 9310
+  },
+  {
+   "tag": "P",
+   "t": "Optional: Um Metafelder zu verbinden, mit denen du im Theme-Editor benutzerdefinierte Inha",
+   "y": 9310
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf die Metafeld-Definition, die du verwenden möchtest.",
+   "y": 9537
+  },
+  {
+   "tag": "LI",
+   "t": "Gib einen Wert für dein Metafeld ein oder wähle ihn aus.",
+   "y": 9654
+  },
+  {
+   "tag": "LI",
+   "t": "Optional: Ändere die Theme-Vorlage für die Anzeige der Kollektionsseite.",
+   "y": 9772
+  },
+  {
+   "tag": "P",
+   "t": "Optional: Ändere die Theme-Vorlage für die Anzeige der Kollektionsseite.",
+   "y": 9772
+  },
+  {
+   "tag": "LI",
+   "t": "Optional: Bearbeite den Suchmaschineneintrag für die Kollektion.",
+   "y": 9889
+  },
+  {
+   "tag": "P",
+   "t": "Optional: Bearbeite den Suchmaschineneintrag für die Kollektion.",
+   "y": 9889
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 10007
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 10007
+  },
+  {
+   "tag": "LI",
+   "t": "Füge in den Menüs deines Onlineshops einen Link zu deiner Kollektion hinzu, damit die Kund",
+   "y": 10074
+  },
+  {
+   "tag": "P",
+   "t": "Füge in den Menüs deines Onlineshops einen Link zu deiner Kollektion hinzu, damit die Kund",
+   "y": 10074
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10478
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10478
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 10478
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10551
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10551
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10668
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10668
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 10668
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10741
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10741
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10858
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 10858
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 11026
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 11026
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 11193
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 11193
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 11393
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 11516
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 11516
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 11683
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 11683
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 11801
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 11801
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12077
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12195
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12312
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12312
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12430
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12430
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12547
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12547
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12615
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12615
+  },
+  {
+   "tag": "H2",
+   "t": "Quellen und Produkte zu Kollektionen hinzufügen",
+   "y": 10580
+  },
+  {
+   "tag": "P",
+   "t": "Um Produkte zu einer Kollektion hinzuzufügen, verwendest du die folgenden verschiedenen Ar",
+   "y": 10843
+  },
+  {
+   "tag": "LI",
+   "t": "Produkte: Füge automatisch oder manuell Produkte aus der Produktliste deines Shops ein. Du",
+   "y": 11037
+  },
+  {
+   "tag": "LI",
+   "t": "Varianten: Nur bestimmte Produktvarianten automatisch oder manuell einbeziehen.",
+   "y": 11305
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektion: Die Produkte einer anderen bestehenden Kollektion einbeziehen.",
+   "y": 11422
+  },
+  {
+   "tag": "LI",
+   "t": "App: Produkte aus einer App-Quelle einbeziehen.",
+   "y": 11540
+  },
+  {
+   "tag": "H3",
+   "t": "Produktbedingungen zu einer Kollektion hinzufügen",
+   "y": 11670
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 12001
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 12001
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, zu der du Produkte hinzufügen möchtest.",
+   "y": 12119
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, zu der du Produkte hinzufügen möchtest.",
+   "y": 12119
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in der Standardquelle „Produkte“ oder in einer neuen Quelle „Produkte“, die du hinz",
+   "y": 12236
+  },
+  {
+   "tag": "P",
+   "t": "Klicke in der Standardquelle „Produkte“ oder in einer neuen Quelle „Produkte“, die du hinz",
+   "y": 12236
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 12286
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle ein Produktattribut und anschließend deine Kriterien dafür aus, wie das Produktattri",
+   "y": 12409
+  },
+  {
+   "tag": "P",
+   "t": "Wähle ein Produktattribut und anschließend deine Kriterien dafür aus, wie das Produktattri",
+   "y": 12409
+  },
+  {
+   "tag": "LI",
+   "t": "Abhängig vom ausgewählten Produktattribut:\n\nGib den Text ein, mit dem Produkte abgeglichen",
+   "y": 12576
+  },
+  {
+   "tag": "P",
+   "t": "Abhängig vom ausgewählten Produktattribut:",
+   "y": 12576
+  },
+  {
+   "tag": "LI",
+   "t": "Gib den Text ein, mit dem Produkte abgeglichen werden sollen.",
+   "y": 12653
+  },
+  {
+   "tag": "LI",
+   "t": "Gib einen Wert ein, mit dem Produkte abgeglichen werden sollen.",
+   "y": 12770
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle eine Option aus, mit der Produkte abgeglichen werden sollen. Wenn für das Produktatt",
+   "y": 12888
+  },
+  {
+   "tag": "LI",
+   "t": "Wenn Produkte mit einer der von dir ausgewählten Optionen übereinstimmen können, wähle „OD",
+   "y": 13164
+  },
+  {
+   "tag": "LI",
+   "t": "Wenn Produkte mit allen von dir ausgewählten Optionen übereinstimmen sollen, wähle „UND“ a",
+   "y": 13331
+  },
+  {
+   "tag": "LI",
+   "t": "Optional: Um mehrere Auswahlbedingungen für das automatische Hinzufügen von Produkten zur ",
+   "y": 13508
+  },
+  {
+   "tag": "P",
+   "t": "Optional: Um mehrere Auswahlbedingungen für das automatische Hinzufügen von Produkten zur ",
+   "y": 13508
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Bedingung hinzufügen“ und befolge dann die obigen Schritte 4 und 5.",
+   "y": 13684
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 13684
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle aus, ob Produkte die Option „Irgendeine Bedingung erfüllen“ oder „Alle Bedingungen e",
+   "y": 13811
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 14029
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 14029
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 14333
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 14333
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 14333
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 14406
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 14406
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 14523
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 14523
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 14641
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 14641
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 14641
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 14763
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 14763
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 14763
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 14886
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 14886
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15053
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15053
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15129
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15247
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15364
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15691
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15858
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16034
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 16034
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16211
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 16211
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16338
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16556
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 16556
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16673
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 16673
+  },
+  {
+   "tag": "H3",
+   "t": "Produkte manuell zu einer Kollektion hinzufügen",
+   "y": 14394
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 14726
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 14726
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, zu der du Produkte hinzufügen möchtest",
+   "y": 14843
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, zu der du Produkte hinzufügen möchtest",
+   "y": 14843
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in der Standardquelle „Produkte“ oder in einer neuen Quelle „Produkte“, die du hinz",
+   "y": 14961
+  },
+  {
+   "tag": "P",
+   "t": "Klicke in der Standardquelle „Produkte“ oder in einer neuen Quelle „Produkte“, die du hinz",
+   "y": 14961
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkt",
+   "y": 15011
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im Dialogfeld „Einzubeziehende Produkte auswählen“ die Produkte aus, die du hinzufüg",
+   "y": 15133
+  },
+  {
+   "tag": "P",
+   "t": "Wähle im Dialogfeld „Einzubeziehende Produkte auswählen“ die Produkte aus, die du hinzufüg",
+   "y": 15133
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Hinzufügen“.",
+   "y": 15301
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf „Hinzufügen“.",
+   "y": 15301
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 15368
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 15368
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15673
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15673
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 15673
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15745
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15745
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15863
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15863
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 15980
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 15980
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 15980
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16103
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 16103
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 16103
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16225
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 16225
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16343
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 16343
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 16460
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 16460
+  },
+  {
+   "tag": "H3",
+   "t": "Variantenbedingungen zu einer Kollektion hinzufügen",
+   "y": 15734
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 16066
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 16066
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, zu der du Varianten hinzufügen möchtest.",
+   "y": 16183
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, zu der du Varianten hinzufügen möchtest.",
+   "y": 16183
+  },
+  {
+   "tag": "LI",
+   "t": "Ändere in der Standardquelle oder in einer von dir hinzugefügten neuen Quelle das Dropdown",
+   "y": 16301
+  },
+  {
+   "tag": "P",
+   "t": "Ändere in der Standardquelle oder in einer von dir hinzugefügten neuen Quelle das Dropdown",
+   "y": 16301
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Bedingung hinzufügen“.",
+   "y": 16468
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf „Bedingung hinzufügen“.",
+   "y": 16468
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 16468
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle ein Produktattribut und anschließend deine Kriterien dafür aus, wie das Produktattri",
+   "y": 16541
+  },
+  {
+   "tag": "P",
+   "t": "Wähle ein Produktattribut und anschließend deine Kriterien dafür aus, wie das Produktattri",
+   "y": 16541
+  },
+  {
+   "tag": "LI",
+   "t": "Abhängig vom ausgewählten Produktattribut:\n\nGib den Text ein, mit dem Varianten abgegliche",
+   "y": 16708
+  },
+  {
+   "tag": "P",
+   "t": "Abhängig vom ausgewählten Produktattribut:",
+   "y": 16708
+  },
+  {
+   "tag": "LI",
+   "t": "Gib den Text ein, mit dem Varianten abgeglichen werden sollen.",
+   "y": 16784
+  },
+  {
+   "tag": "LI",
+   "t": "Gib einen Wert ein, mit dem Varianten abgeglichen werden sollen.",
+   "y": 16902
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle eine Option aus, mit der Varianten abgeglichen werden sollen. Wenn für das Produktat",
+   "y": 17019
+  },
+  {
+   "tag": "LI",
+   "t": "Wenn Varianten mit einer der von dir ausgewählten Optionen übereinstimmen können, wähle „O",
+   "y": 17296
+  },
+  {
+   "tag": "LI",
+   "t": "Wenn Varianten mit allen von dir ausgewählten Optionen übereinstimmen sollen, wähle „UND“ ",
+   "y": 17463
+  },
+  {
+   "tag": "LI",
+   "t": "Optional: Um mehrere Auswahlbedingungen für das automatische Hinzufügen von Varianten zur ",
+   "y": 17639
+  },
+  {
+   "tag": "P",
+   "t": "Optional: Um mehrere Auswahlbedingungen für das automatische Hinzufügen von Varianten zur ",
+   "y": 17639
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Bedingung hinzufügen“ und befolge dann die obigen Schritte 5 und 6.",
+   "y": 17816
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 17816
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle aus, ob Varianten die Option „Irgendeine Bedingung erfüllen“ oder „Alle Bedingungen ",
+   "y": 17943
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 18161
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 18161
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 18465
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 18465
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 18465
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 18537
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 18537
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 18655
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 18655
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 18772
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 18772
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 18772
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 18895
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 18895
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 18895
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 19017
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 19017
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 19185
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 19185
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 19261
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 19379
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 19496
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 19772
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 19940
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20116
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 20116
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20292
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 20292
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20420
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20637
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 20637
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20705
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 20705
+  },
+  {
+   "tag": "H3",
+   "t": "Varianten manuell zu einer Kollektion hinzufügen",
+   "y": 18526
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 18858
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 18858
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, zu der du Varianten hinzufügen möchtest.",
+   "y": 18975
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, zu der du Varianten hinzufügen möchtest.",
+   "y": 18975
+  },
+  {
+   "tag": "LI",
+   "t": "Ändere in der Standardquelle oder in einer von dir hinzugefügten neuen Quelle das Dropdown",
+   "y": 19093
+  },
+  {
+   "tag": "P",
+   "t": "Ändere in der Standardquelle oder in einer von dir hinzugefügten neuen Quelle das Dropdown",
+   "y": 19093
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Varianten hinzufügen.",
+   "y": 19260
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Varianten hinzufügen.",
+   "y": 19260
+  },
+  {
+   "tag": "IMG",
+   "t": "Variants",
+   "y": 19260
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im Dialogfeld Einzuschließende Varianten auswählen die Varianten aus, die du hinzufü",
+   "y": 19333
+  },
+  {
+   "tag": "P",
+   "t": "Wähle im Dialogfeld Einzuschließende Varianten auswählen die Varianten aus, die du hinzufü",
+   "y": 19333
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Hinzufügen“.",
+   "y": 19500
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf „Hinzufügen“.",
+   "y": 19500
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 19568
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 19568
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 19872
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 19872
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 19872
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 19945
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 19945
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20062
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 20062
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20180
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 20180
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 20180
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20302
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 20302
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 20302
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20483
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20601
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20727
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20845
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20912
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 20988
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 20988
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 21106
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 21106
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 21173
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 21173
+  },
+  {
+   "tag": "H3",
+   "t": "Kollektion zu einer Kollektion hinzufügen",
+   "y": 19933
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst mehrere bestehende Kollektionen innerhalb einer einzigen neuen Kollektion versch",
+   "y": 20023
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 20405
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 20667
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 20667
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, zu der du eine Kollektion hinzufügen möchtest.",
+   "y": 20785
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, zu der du eine Kollektion hinzufügen möchtest.",
+   "y": 20785
+  },
+  {
+   "tag": "LI",
+   "t": "Ändere entweder in der Standardquelle oder in einer neuen Quelle, die du hinzufügst, das D",
+   "y": 20902
+  },
+  {
+   "tag": "P",
+   "t": "Ändere entweder in der Standardquelle oder in einer neuen Quelle, die du hinzufügst, das D",
+   "y": 20902
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Kollektion verbinden.",
+   "y": 21070
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Kollektion verbinden.",
+   "y": 21070
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Dialogfeld Kollektion auswählen auf die Kollektion, die du hinzufügen möchtest.",
+   "y": 21137
+  },
+  {
+   "tag": "P",
+   "t": "Klicke im Dialogfeld Kollektion auswählen auf die Kollektion, die du hinzufügen möchtest.",
+   "y": 21137
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 21255
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 21255
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 21559
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 21559
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 21658
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 21775
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 21893
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 21893
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 22015
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 22183
+  },
+  {
+   "tag": "H3",
+   "t": "Produkte aus einer App zu einer Kollektion hinzufügen",
+   "y": 21620
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine App verwendest, um Produktkollektionen zu erstellen, wie z. B. Ergänzende Pro",
+   "y": 21770
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 22052
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 22314
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 22314
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, der du Produkte aus einer App hinzufügen möchtest.",
+   "y": 22431
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, der du Produkte aus einer App hinzufügen möchtest.",
+   "y": 22431
+  },
+  {
+   "tag": "LI",
+   "t": "Ändere entweder in der Standardquelle oder in einer neuen Quelle, die du hinzufügst, das D",
+   "y": 22549
+  },
+  {
+   "tag": "P",
+   "t": "Ändere entweder in der Standardquelle oder in einer neuen Quelle, die du hinzufügst, das D",
+   "y": 22549
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf App verbinden.",
+   "y": 22716
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf App verbinden.",
+   "y": 22716
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Dialogfeld App auswählen auf die App-Quelle, aus der du Produkte hinzufügen möch",
+   "y": 22784
+  },
+  {
+   "tag": "P",
+   "t": "Klicke im Dialogfeld App auswählen auf die App-Quelle, aus der du Produkte hinzufügen möch",
+   "y": 22784
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 22951
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 22951
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 23255
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 23255
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 23354
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 23472
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 23589
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 23589
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 23712
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 23879
+  },
+  {
+   "tag": "H3",
+   "t": "Produkte aus einer Kollektion ausschließen",
+   "y": 23317
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine Reihe von Bedingungen festlegst, um nur bestimmte Produkte in eine Kollektion",
+   "y": 23467
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 24039
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 24300
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 24300
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, aus der du Produkte ausschließen möchtest.",
+   "y": 24418
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, aus der du Produkte ausschließen möchtest.",
+   "y": 24418
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke entweder in der Standardquelle Produkte oder in einer neuen Quelle Produkte, die du",
+   "y": 24535
+  },
+  {
+   "tag": "P",
+   "t": "Klicke entweder in der Standardquelle Produkte oder in einer neuen Quelle Produkte, die du",
+   "y": 24535
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 24635
+  },
+  {
+   "tag": "LI",
+   "t": "Um Produkte basierend auf den von dir festgelegten Bedingungen automatisch auszuschließen:",
+   "y": 24767
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Abschnitt Ausschließen auf Bedingung hinzufügen.",
+   "y": 24943
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 24943
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle ein Produktattribut und anschließend deine Kriterien dafür aus, wie das Produktattri",
+   "y": 25065
+  },
+  {
+   "tag": "LI",
+   "t": "Abhängig vom ausgewählten Produktattribut:\nGib den Text ein, mit dem Produkte abgeglichen ",
+   "y": 25233
+  },
+  {
+   "tag": "LI",
+   "t": "Gib den Text ein, mit dem Produkte abgeglichen werden sollen.",
+   "y": 25309
+  },
+  {
+   "tag": "LI",
+   "t": "Gib einen Wert ein, mit dem Produkte abgeglichen werden sollen.",
+   "y": 25427
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle eine Option aus, der Produkte entsprechen sollen. Wenn das Produktattribut die Auswa",
+   "y": 25544
+  },
+  {
+   "tag": "LI",
+   "t": "Optional: Um eine weitere Bedingung für den automatischen Ausschluss von Produkten aus der",
+   "y": 25970
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Bedingung hinzufügen und folge dann den obigen Schritten b und c.",
+   "y": 26147
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 26147
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle aus, ob Produkte Beliebige Bedingungen erfüllen oder Alle Bedingungen erfüllen müsse",
+   "y": 26329
+  },
+  {
+   "tag": "LI",
+   "t": "Um Produkte manuell auszuschließen:\nKlicke im Abschnitt Ausschließen auf Produkte hinzufüg",
+   "y": 26597
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Abschnitt Ausschließen auf Produkte hinzufügen.",
+   "y": 26673
+  },
+  {
+   "tag": "IMG",
+   "t": "product",
+   "y": 26673
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im Dialogfeld Auszuschließende Produkte auswählen die Produkte aus, die du aus der K",
+   "y": 26795
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Hinzufügen“.",
+   "y": 26963
+  },
+  {
+   "tag": "LI",
+   "t": "Um eine weitere bestehende Kollektion auszuschließen:\nKlicke im Abschnitt Ausschließen auf",
+   "y": 27030
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Abschnitt Ausschließen auf das Dropdown-Menü Produkte und wähle dann Kollektion ",
+   "y": 27157
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Kollektion hinzufügen.",
+   "y": 27324
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 27324
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im Dialogfeld Kollektionen hinzufügen die bestehenden Kollektionen aus, die Produkte",
+   "y": 27397
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 27673
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 27673
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 27977
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 27977
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 27977
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 28050
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 28050
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 28167
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 28167
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 28285
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 28285
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 28285
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 28407
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 28407
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 28583
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 28760
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 28760
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 28882
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 29100
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 29176
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 29293
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 29411
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 29837
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30013
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 30013
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30196
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30463
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30540
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 30540
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30662
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30830
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30956
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31123
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 31123
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31196
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31422
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 31422
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31540
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 31540
+  },
+  {
+   "tag": "H2",
+   "t": "Kollektion bearbeiten",
+   "y": 28078
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst das Erscheinungsbild einer Kollektion ändern, indem du ihren Titel, die Beschrei",
+   "y": 28262
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst auch deine Kollektionsquellen und -bedingungen verwalten. Dazu gehört das Entfer",
+   "y": 28556
+  },
+  {
+   "tag": "P",
+   "t": "Um die Vertriebskanal-Verfügbarkeit, die Theme-Vorlage oder das Angebot für Suchmaschinen ",
+   "y": 28800
+  },
+  {
+   "tag": "H2",
+   "t": "Kollektion duplizieren",
+   "y": 29070
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine bestehende Kollektion mitsamt Titel, Beschreibung, Bild und Produktliste du",
+   "y": 29253
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine Kollektion duplizierst, wird dem Titel der neu erstellten Kollektion der Text",
+   "y": 29397
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 29674
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 29936
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 29936
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion, die du duplizieren möchtest.",
+   "y": 30053
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion, die du duplizieren möchtest.",
+   "y": 30053
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Duplizieren.",
+   "y": 30121
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Duplizieren.",
+   "y": 30121
+  },
+  {
+   "tag": "LI",
+   "t": "Nimm in der neuen Kopie der vorherigen Kollektion die erforderlichen Änderungen vor.",
+   "y": 30188
+  },
+  {
+   "tag": "P",
+   "t": "Nimm in der neuen Kopie der vorherigen Kollektion die erforderlichen Änderungen vor.",
+   "y": 30188
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 30306
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 30306
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30610
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 30610
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 30610
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30683
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 30683
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30800
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 30800
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30868
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 30868
+  },
+  {
+   "tag": "IMG",
+   "t": "Horizontales Menü",
+   "y": 30868
+  },
+  {
+   "tag": "IMG",
+   "t": "Vertikales Menü",
+   "y": 30868
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30940
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 30940
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31058
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 31058
+  },
+  {
+   "tag": "H2",
+   "t": "Kollektion löschen",
+   "y": 30711
+  },
+  {
+   "tag": "H4",
+   "t": "Hinweis",
+   "y": 30921
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine Kollektion löschst, wird sie dauerhaft aus deinem Shopify-Adminbereich entfer",
+   "y": 30981
+  },
+  {
+   "tag": "P",
+   "t": "Links zu gelöschten Kollektionen werden automatisch aus allen Onlineshop-Menüs entfernt, z",
+   "y": 31255
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst über eine Sammelaktion auch mehr als eine Kollektion gleichzeitig löschen.",
+   "y": 31449
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 31621
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 31883
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 31883
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle in deiner Kollektionsliste eine Kollektion aus, die du löschen möchtest.",
+   "y": 32000
+  },
+  {
+   "tag": "P",
+   "t": "Wähle in deiner Kollektionsliste eine Kollektion aus, die du löschen möchtest.",
+   "y": 32000
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf  > Kollektion löschen.",
+   "y": 32118
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf  > Kollektion löschen.",
+   "y": 32118
+  },
+  {
+   "tag": "IMG",
+   "t": "Horizontales Menü",
+   "y": 32118
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Löschen.",
+   "y": 32190
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Löschen.",
+   "y": 32190
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32494
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 32494
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 32494
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32567
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 32567
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32684
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 32684
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32752
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 32752
+  },
+  {
+   "tag": "IMG",
+   "t": "Horizontales Menü",
+   "y": 32752
+  },
+  {
+   "tag": "IMG",
+   "t": "Vertikales Menü",
+   "y": 32752
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32824
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 32824
+  },
+  {
+   "tag": "H2",
+   "t": "Produkt auf seiner Detailseite zu einer Kollektion hinzufügen",
+   "y": 32595
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst ein Produkt manuell zu einer bestehenden Kollektion hinzufügen, ohne die Produkt",
+   "y": 32939
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 33261
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte.",
+   "y": 33523
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte.",
+   "y": 33523
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf ein Produkt, das du zu einer Kollektion hinzufügen möchtest.",
+   "y": 33640
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf ein Produkt, das du zu einer Kollektion hinzufügen möchtest.",
+   "y": 33640
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Abschnitt Produktorganisation auf das Symbol  für das Feld Kollektionen.",
+   "y": 33758
+  },
+  {
+   "tag": "P",
+   "t": "Klicke im Abschnitt Produktorganisation auf das Symbol  für das Feld Kollektionen.",
+   "y": 33758
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 33808
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle eine oder mehrere verfügbare Kollektionen aus, zu denen das Produkt hinzugefügt werd",
+   "y": 33880
+  },
+  {
+   "tag": "P",
+   "t": "Wähle eine oder mehrere verfügbare Kollektionen aus, zu denen das Produkt hinzugefügt werd",
+   "y": 33880
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 33998
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 33998
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 34302
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 34302
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 34302
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 34375
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 34375
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 34492
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 34492
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 34560
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 34560
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 34677
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 34677
+  },
+  {
+   "tag": "H2",
+   "t": "Produkt auf seiner Detailseite aus einer Kollektion entfernen",
+   "y": 34403
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst ein Produkt manuell aus einer bestehenden Kollektion entfernen, ohne die Produkt",
+   "y": 34747
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 35269
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte.",
+   "y": 35531
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte.",
+   "y": 35531
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf ein Produkt, das du aus einer Kollektion entfernen möchtest.",
+   "y": 35648
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf ein Produkt, das du aus einer Kollektion entfernen möchtest.",
+   "y": 35648
+  },
+  {
+   "tag": "LI",
+   "t": "Bewege den Mauszeiger im Abschnitt Produktorganisation über die entsprechenden Kollektione",
+   "y": 35766
+  },
+  {
+   "tag": "P",
+   "t": "Bewege den Mauszeiger im Abschnitt Produktorganisation über die entsprechenden Kollektione",
+   "y": 35766
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 35988
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 35988
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 36293
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 36293
+  },
+  {
+   "tag": "IMG",
+   "t": "Produkte",
+   "y": 36293
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 36365
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 36365
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 36483
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 36483
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 36550
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 36550
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 36718
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 36718
+  }
+ ]
+}

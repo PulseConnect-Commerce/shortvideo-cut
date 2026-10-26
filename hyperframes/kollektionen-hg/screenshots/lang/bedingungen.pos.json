@@ -1,0 +1,872 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/collections/conditions",
+ "datum": "2026-10-26T22:46:15.453Z",
+ "title": "Shopify Help Center | Bedingungen für Kollektionen verstehen",
+ "pos": [
+  {
+   "tag": "LI",
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "tag": "H1",
+   "t": "Bedingungen für Kollektionen verstehen",
+   "y": 393
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine oder mehrere Bedingungen für eine Kollektion hinzufügen, um Produkte oder V",
+   "y": 659
+  },
+  {
+   "tag": "P",
+   "t": "Das Festlegen von Bedingungen für Kollektionen kann dabei helfen, Produkte ohne manuelle V",
+   "y": 1003
+  },
+  {
+   "tag": "P",
+   "t": "Alle Bedingungstypen auf dieser Seite gelten für die Festlegung von Bedingungen, um bestim",
+   "y": 1347
+  },
+  {
+   "tag": "H2",
+   "t": "Auf dieser Seite",
+   "y": 1767
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingungen basierend auf Produkttitel, Variantentitel, Typ oder Anbieter festlegen",
+   "y": 1907
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingungen basierend auf Produktkategorie festlegen",
+   "y": 2024
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingungen basierend auf Produkt-Tags festlegen",
+   "y": 2142
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingungen basierend auf Produktstatus festlegen",
+   "y": 2209
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingungen basierend auf Preis, Vergleichspreis, Gewicht oder Lagerbestand festlegen",
+   "y": 2277
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingungen für Metafeld-Definitionen basierend auf Metafeld-Werten festlegen",
+   "y": 2394
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingungen basierend auf Metaobjekt-Referenz-Metafeldern festlegen",
+   "y": 2512
+  },
+  {
+   "tag": "LI",
+   "t": "Mehrere Auswahlbedingungen verwenden",
+   "y": 2629
+  },
+  {
+   "tag": "LI",
+   "t": "Mehrere Bedingungen festlegen, um einen Bereich zu definieren",
+   "y": 2697
+  },
+  {
+   "tag": "LI",
+   "t": "Fehlerbehebung für Kollektionsbedingungen",
+   "y": 2814
+  },
+  {
+   "tag": "H2",
+   "t": "Bedingungen basierend auf Produkttitel, Variantentitel, Typ oder Anbieter festlegen",
+   "y": 2984
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine Bedingung hinzufügen, um ein Produkt oder eine Variante basierend auf dem P",
+   "y": 3328
+  },
+  {
+   "tag": "P",
+   "t": "In der folgenden Tabelle findest du Details dazu, wie Produkte mit dem Bedingungswert abge",
+   "y": 3672
+  },
+  {
+   "tag": "TABLE",
+   "t": "Begriff\tBeschreibung\nist gleich\tDer Produkttitel, Variantentitel, Typ oder Anbieter muss e",
+   "y": 3933
+  },
+  {
+   "tag": "H2",
+   "t": "Bedingungen basierend auf der Produktkategorie festlegen",
+   "y": 5703
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten einzuschließen oder Produk",
+   "y": 6047
+  },
+  {
+   "tag": "P",
+   "t": "So richtest du beispielsweise eine Bedingung ein, die Produkte oder Varianten mit der Prod",
+   "y": 6495
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Produktkateg",
+   "y": 6694
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 6744
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im zweiten Dropdown-Menü die Option ist gleich aus.",
+   "y": 6817
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Feld Kategorie auswählen und wähle dann Elektronik aus.",
+   "y": 6934
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst auch Produkte aus allen Unterkategorien einer Produktkategorie einschließen, ind",
+   "y": 7078
+  },
+  {
+   "tag": "P",
+   "t": "So richtest du beispielsweise eine Bedingung ein, die Produkte oder Varianten der Produktk",
+   "y": 7422
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Produktkateg",
+   "y": 7730
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 7780
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im zweiten Dropdown-Menü die Option ist gleich aus.",
+   "y": 7853
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Feld Kategorie auswählen, wähle im Dropdown-Menü Unterkategorien einschließ",
+   "y": 7970
+  },
+  {
+   "tag": "H2",
+   "t": "Bedingungen basierend auf Produkt-Tags festlegen",
+   "y": 8240
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten einzuschließen oder Produk",
+   "y": 8504
+  },
+  {
+   "tag": "H4",
+   "t": "Hinweis",
+   "y": 8933
+  },
+  {
+   "tag": "P",
+   "t": "Obwohl du Produkt-Tags erstellen kannst, die Sonderzeichen verwenden, funktionieren diese ",
+   "y": 8993
+  },
+  {
+   "tag": "P",
+   "t": "Du hast beispielsweise eine Bedingung für eine Kollektion von Tag > enthält > rot-neu. All",
+   "y": 9334
+  },
+  {
+   "tag": "H3",
+   "t": "Beispiel: Bedingung einrichten, die Produkte mit dem Tag „Accessoires“ einschließt",
+   "y": 9649
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Tag.",
+   "y": 9859
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 9909
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im zweiten Dropdown-Menü die Option enthält aus.",
+   "y": 9981
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Feld Tag auswählen und wähle dann Accessoires aus.",
+   "y": 10099
+  },
+  {
+   "tag": "H3",
+   "t": "Beispiel: Bedingung einrichten, die Produkte mit dem Tag „Accessoires“ ausschließt",
+   "y": 10279
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Tag.",
+   "y": 10489
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 10539
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im zweiten Dropdown-Menü die Option enthält nicht aus.",
+   "y": 10611
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Feld Tag auswählen und wähle dann Accessoires aus.",
+   "y": 10729
+  },
+  {
+   "tag": "P",
+   "t": "Weitere Informationen zu Tags findest du unter Tag-Formate.",
+   "y": 10872
+  },
+  {
+   "tag": "H2",
+   "t": "Bedingungen basierend auf dem Produktstatus festlegen",
+   "y": 11092
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten einzuschließen, die einen ",
+   "y": 11436
+  },
+  {
+   "tag": "P",
+   "t": "Eine Produktstatus-Bedingung kann einer Kollektion nur Produkte oder Varianten hinzufügen ",
+   "y": 11840
+  },
+  {
+   "tag": "H4",
+   "t": "Hinweis",
+   "y": 12414
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du ein Produkt archivierst, wird es nicht aus den Kollektionen entfernt, in denen es ",
+   "y": 12474
+  },
+  {
+   "tag": "P",
+   "t": "So richtest du eine Bedingung ein, die nur deine archivierten Produkte oder Varianten für ",
+   "y": 12897
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Produktstatu",
+   "y": 13141
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 13191
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im zweiten Dropdown-Menü die Option ist gleich aus.",
+   "y": 13264
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Feld Status auswählen und wähle dann Archiviert aus.",
+   "y": 13381
+  },
+  {
+   "tag": "P",
+   "t": "So richtest du eine Bedingung ein, die archivierte Produkte oder Varianten aus einer Kolle",
+   "y": 13525
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Produktstatu",
+   "y": 13669
+  },
+  {
+   "tag": "IMG",
+   "t": "Hinzufügen",
+   "y": 13719
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im zweiten Dropdown-Menü ist nicht gleich aus.",
+   "y": 13791
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Feld Status auswählen und wähle dann Archiviert aus.",
+   "y": 13909
+  },
+  {
+   "tag": "P",
+   "t": "Bedingungen gelten nur für Produkte oder Varianten, die automatisch zugeordnet werden. Wen",
+   "y": 14052
+  },
+  {
+   "tag": "H2",
+   "t": "Bedingungen basierend auf Preis, Vergleichspreis, Gewicht oder Lagerbestand festlegen",
+   "y": 14472
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten basierend auf Preis, Vergl",
+   "y": 14896
+  },
+  {
+   "tag": "P",
+   "t": "In der folgenden Tabelle findest du Details dazu, wie Produkte mit dem Bedingungswert abge",
+   "y": 15090
+  },
+  {
+   "tag": "TABLE",
+   "t": "Begriff\tBeschreibung\nist gleich\tDer entsprechende Wert eines Produkts oder einer Variante ",
+   "y": 15351
+  },
+  {
+   "tag": "P",
+   "t": "Das Verhalten für Vergleichspreis > ist nicht festgelegt und Vergleichspreis > ist festgel",
+   "y": 16862
+  },
+  {
+   "tag": "LI",
+   "t": "Wenn eine Variante einen leeren Vergleichspreis aufweist, erfüllt das Produkt die Bedingun",
+   "y": 17056
+  },
+  {
+   "tag": "LI",
+   "t": "Für die Bedingung ist festgelegt müssen alle Varianten einen Vergleichspreiswert (einschli",
+   "y": 17224
+  },
+  {
+   "tag": "H3",
+   "t": "Bedingungen für Varianten",
+   "y": 17454
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine Produkte-Quelle hast und in der Quelle eine Bedingung einrichtest, die auf ei",
+   "y": 17544
+  },
+  {
+   "tag": "P",
+   "t": "Nimm beispielsweise an, du hast ein Produkt mit 5 Varianten. Vier der Varianten haben Best",
+   "y": 17937
+  },
+  {
+   "tag": "H4",
+   "t": "Hinweis",
+   "y": 18366
+  },
+  {
+   "tag": "P",
+   "t": "Variantentitel basieren auf den Optionswerten für die Variante, getrennt durch Leerzeichen",
+   "y": 18426
+  },
+  {
+   "tag": "H2",
+   "t": "Bedingungen für Metafeld-Definitionen basierend auf Metafeld-Werten festlegen",
+   "y": 18979
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten einzuschließen, die einen ",
+   "y": 19322
+  },
+  {
+   "tag": "P",
+   "t": "Damit dir die Metafelder beim Erstellen von Kollektionen zur Verfügung stehen, musst du di",
+   "y": 19516
+  },
+  {
+   "tag": "P",
+   "t": "Wenn die Quelle einer Kollektion auf Varianten eingestellt ist, grenzen Kategorie-Metafeld",
+   "y": 19860
+  },
+  {
+   "tag": "IMG",
+   "t": "database",
+   "y": 20110
+  },
+  {
+   "tag": "P",
+   "t": "Wenn zum Beispiel die Option Farbe mit dem Kategorie-Metafeld Farbe verbunden ist, schließ",
+   "y": 20209
+  },
+  {
+   "tag": "P",
+   "t": "Wenn eine Option nicht mit einem Kategorie-Metafeld verbunden ist, kann eine Bedingung für",
+   "y": 20462
+  },
+  {
+   "tag": "P",
+   "t": "Beispiel für das Einrichten einer Bedingung, die Produkte mit der Metafeld-Definition Colo",
+   "y": 20756
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Metafeld.",
+   "y": 20960
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 21010
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle Color als Metafeld-Definition aus.",
+   "y": 21082
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf das Feld Wert auswählen und wähle dann #FF0000 aus.",
+   "y": 21150
+  },
+  {
+   "tag": "P",
+   "t": "Weitere Informationen zu Kollektionen nach Metafeldern.",
+   "y": 21294
+  },
+  {
+   "tag": "P",
+   "t": "Metafeld-Typen unterstützen die folgenden Bedingungen.",
+   "y": 21387
+  },
+  {
+   "tag": "TABLE",
+   "t": "Typ der Metafeld-Definition\tBedingungen\nWahr oder falsch\tDer Wahr oder falsch -Metafeld-De",
+   "y": 21499
+  },
+  {
+   "tag": "LI",
+   "t": "ist gleich",
+   "y": 21907
+  },
+  {
+   "tag": "LI",
+   "t": "ist gleich",
+   "y": 22237
+  },
+  {
+   "tag": "LI",
+   "t": "ist größer als",
+   "y": 22305
+  },
+  {
+   "tag": "LI",
+   "t": "ist kleiner als",
+   "y": 22372
+  },
+  {
+   "tag": "LI",
+   "t": "ist gleich",
+   "y": 22702
+  },
+  {
+   "tag": "LI",
+   "t": "ist größer als",
+   "y": 22770
+  },
+  {
+   "tag": "LI",
+   "t": "ist kleiner als",
+   "y": 22837
+  },
+  {
+   "tag": "LI",
+   "t": "ist gleich",
+   "y": 23167
+  },
+  {
+   "tag": "LI",
+   "t": "ist größer als",
+   "y": 23235
+  },
+  {
+   "tag": "LI",
+   "t": "ist kleiner als",
+   "y": 23302
+  },
+  {
+   "tag": "LI",
+   "t": "ist gleich",
+   "y": 23732
+  },
+  {
+   "tag": "H4",
+   "t": "Hinweis",
+   "y": 23940
+  },
+  {
+   "tag": "P",
+   "t": "Kollektionen nach Metafeldern sind sowohl für Produkt- als auch für Varianten-Metafelder v",
+   "y": 24000
+  },
+  {
+   "tag": "H2",
+   "t": "Bedingungen basierend auf Metaobjekt-Referenz-Metafeldern festlegen",
+   "y": 24250
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine Bedingung hinzufügen, um ein Produkt oder eine Variante in eine Kollektion ",
+   "y": 24594
+  },
+  {
+   "tag": "P",
+   "t": "Beispiel für das Einrichten einer Bedingung, die Produkte mit dem Metaobjekt-Referenz-Meta",
+   "y": 24887
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen.",
+   "y": 25091
+  },
+  {
+   "tag": "IMG",
+   "t": "Add",
+   "y": 25141
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Material.",
+   "y": 25214
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im zweiten Dropdown-Menü die Option ist gleich aus.",
+   "y": 25281
+  },
+  {
+   "tag": "LI",
+   "t": "Gib Cotton als Wert ein oder wähle es aus.",
+   "y": 25399
+  },
+  {
+   "tag": "P",
+   "t": "Durch das Festlegen von Bedingungen basierend auf Metaobjekt-Referenz-Metafeldern kannst d",
+   "y": 25497
+  },
+  {
+   "tag": "H2",
+   "t": "Verwendung mehrerer Auswahlbedingungen",
+   "y": 25767
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst mehr als eine Auswahlbedingung festlegen, um zu steuern, welche Produkte oder Va",
+   "y": 26031
+  },
+  {
+   "tag": "P",
+   "t": "Angenommen, du legst die folgenden Bedingungen für eine Kollektion fest:",
+   "y": 26375
+  },
+  {
+   "tag": "LI",
+   "t": "Produkt-Tag ist getaggt mit shirt.",
+   "y": 26519
+  },
+  {
+   "tag": "LI",
+   "t": "Preis ist kleiner als 100,01 USD.",
+   "y": 26591
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du Alle Bedingungen müssen erfüllt sein auswählst, werden Produkte oder Varianten nur",
+   "y": 26690
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du Irgendeine Bedingung muss erfüllt sein auswählst, werden Produkte oder Varianten a",
+   "y": 27039
+  },
+  {
+   "tag": "H2",
+   "t": "Mehrere Bedingungen festlegen, um einen Bereich zu definieren",
+   "y": 27464
+  },
+  {
+   "tag": "P",
+   "t": "Um Produkte oder Varianten mit einem Preis, einem Gewicht oder einem Inventarwert innerhal",
+   "y": 27807
+  },
+  {
+   "tag": "P",
+   "t": "Um beispielsweise eine Kollektion einzurichten, die Produkte oder Varianten zu Preisen im ",
+   "y": 28251
+  },
+  {
+   "tag": "LI",
+   "t": "Preis ist größer als 49,99 USD.",
+   "y": 28495
+  },
+  {
+   "tag": "LI",
+   "t": "Preis ist kleiner als 150,01 USD.",
+   "y": 28567
+  },
+  {
+   "tag": "H2",
+   "t": "Fehlerbehebung bei Kollektionsbedingungen",
+   "y": 28742
+  },
+  {
+   "tag": "P",
+   "t": "Wenn Probleme mit deinen Kollektionsbedingungen auftreten, sieh dir die folgenden Informat",
+   "y": 29006
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 29362
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 29642
+  },
+  {
+   "tag": "H4",
+   "t": "",
+   "y": 29822
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30002
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30120
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30237
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30605
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30672
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30790
+  },
+  {
+   "tag": "H4",
+   "t": "",
+   "y": 30970
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 31150
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31330
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31447
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31615
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31832
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31900
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32017
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32085
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 29590
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30070
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30187
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30305
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30572
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30840
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 29767
+  },
+  {
+   "tag": "H4",
+   "t": "",
+   "y": 29947
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 30077
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30257
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30580
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 30855
+  },
+  {
+   "tag": "H4",
+   "t": "",
+   "y": 31135
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 31265
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31545
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 31715
+  },
+  {
+   "tag": "H4",
+   "t": "",
+   "y": 31897
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 31977
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32157
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32477
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 32845
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 33212
+  },
+  {
+   "tag": "H4",
+   "t": "",
+   "y": 33492
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 33622
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 33952
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 34270
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 34600
+  }
+ ]
+}

@@ -1,0 +1,222 @@
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Kollektionen
+Bedingungen für Kollektionen verstehen
+
+Du kannst eine oder mehrere Bedingungen für eine Kollektion hinzufügen, um Produkte oder Varianten basierend auf vielen Details abzugleichen, einschließlich Titel oder Typ, Tags, Preis oder Lagerbestand. Eine einzelne Kollektion kann insgesamt maximal 60 Bedingungen haben.
+
+Das Festlegen von Bedingungen für Kollektionen kann dabei helfen, Produkte ohne manuelle Verwaltung automatisch zu organisieren, was bei einem wachsenden Katalog Zeit spart. Du kannst Bedingungen für Kollektionen verwenden, die Quellen vom Typ Produkte oder Varianten haben.
+
+Alle Bedingungstypen auf dieser Seite gelten für die Festlegung von Bedingungen, um bestimmte Produkte oder Varianten in deine Kollektionen aufzunehmen. Für den Ausschluss bestimmter Produkte aus einer Kollektion gelten nur die Bedingungstypen Kategorie, Tag, Typ und Anbieter.
+
+Auf dieser Seite
+Bedingungen basierend auf Produkttitel, Variantentitel, Typ oder Anbieter festlegen
+Bedingungen basierend auf Produktkategorie festlegen
+Bedingungen basierend auf Produkt-Tags festlegen
+Bedingungen basierend auf Produktstatus festlegen
+Bedingungen basierend auf Preis, Vergleichspreis, Gewicht oder Lagerbestand festlegen
+Bedingungen für Metafeld-Definitionen basierend auf Metafeld-Werten festlegen
+Bedingungen basierend auf Metaobjekt-Referenz-Metafeldern festlegen
+Mehrere Auswahlbedingungen verwenden
+Mehrere Bedingungen festlegen, um einen Bereich zu definieren
+Fehlerbehebung für Kollektionsbedingungen
+Bedingungen basierend auf Produkttitel, Variantentitel, Typ oder Anbieter festlegen
+
+Du kannst eine Bedingung hinzufügen, um ein Produkt oder eine Variante basierend auf dem Produkttitel, Variantentitel, Typ oder Anbieter in eine Kollektion aufzunehmen. Du kannst auch Typ- oder Anbieter-Bedingungen verwenden, um bestimmte Produkte aus einer Kollektion auszuschließen.
+
+In der folgenden Tabelle findest du Details dazu, wie Produkte mit dem Bedingungswert abgeglichen werden, den du für den Produkttitel, Variantentitel, Typ oder Anbieter festlegst.
+
+Begriff	Beschreibung
+ist gleich	Der Produkttitel, Variantentitel, Typ oder Anbieter muss exakt mit dem gesamten Wert übereinstimmen, den du eingibst oder auswählst.
+ist nicht gleich	Der Produkttitel, Variantentitel, Typ oder Anbieter darf nicht mit dem Wert übereinstimmen, den du eingibst oder auswählst.
+beginnt mit	Der Anfang des Produkttitels, Variantentitels, Typs oder Anbieters stimmt mit dem Wert überein, den du eingibst oder auswählst.
+endet mit	Das Ende des Produkttitels, Variantentitels, Typs oder Anbieters stimmt mit dem Wert überein, den du eingibst oder auswählst.
+enthält	Der Produkttitel, Variantentitel, Typ oder Anbieter enthält den von dir eingegebenen Wert. Du musst einen Wert angeben, der mindestens 3 Zeichen lang ist, und der Wert darf nicht mit Leerzeichen beginnen oder enden.
+enthält nicht	Der Produkttitel, der Variantentitel, der Typ oder der Anbieter enthalten den von dir eingegebenen Wert nicht. Du musst einen Wert angeben, der aus mindestens 3 Zeichen besteht und nicht mit einem Leerzeichen beginnt oder endet.
+Bedingungen basierend auf der Produktkategorie festlegen
+
+Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten einzuschließen oder Produkte auszuschließen, die eine bestimmte Produktkategorie haben oder nicht haben. Der Bedingungstyp Produktkategorie verfügt über die Optionen ist gleich und ist nicht gleich, um zu steuern, wie ein Produkt oder eine Variante mit den von dir ausgewählten Bedingungswerten übereinstimmen muss.
+
+So richtest du beispielsweise eine Bedingung ein, die Produkte oder Varianten mit der Produktkategorie Elektronik auswählt:
+
+Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Produktkategorie.
+Wähle im zweiten Dropdown-Menü die Option ist gleich aus.
+Klicke auf das Feld Kategorie auswählen und wähle dann Elektronik aus.
+
+Du kannst auch Produkte aus allen Unterkategorien einer Produktkategorie einschließen, indem du im Dropdown-Menü Unterkategorien einschließen auswählst. Dadurch werden Produkte für alle Kategorien zurückgegeben, die untergeordnete Kategorien der von dir ausgewählten übergeordneten Produktkategorie sind.
+
+So richtest du beispielsweise eine Bedingung ein, die Produkte oder Varianten der Produktkategorie Spielzeug & Spiele und aller zugehörigen Unterkategorien wie Puzzles, Kartenspiele und Badespielzeug auswählt:
+
+Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Produktkategorie.
+Wähle im zweiten Dropdown-Menü die Option ist gleich aus.
+Klicke auf das Feld Kategorie auswählen, wähle im Dropdown-Menü Unterkategorien einschließen aus und klicke dann auf Spielzeug & Spiele.
+Bedingungen basierend auf Produkt-Tags festlegen
+
+Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten einzuschließen oder Produkte auszuschließen, die ein bestimmtes Produkt-Tag haben oder nicht haben. Der Bedingungstyp Tag verfügt über die Optionen enthält und enthält nicht, um zu steuern, wie ein Produkt oder eine Variante mit den von dir ausgewählten Bedingungswerten übereinstimmen muss.
+
+Hinweis
+
+Obwohl du Produkt-Tags erstellen kannst, die Sonderzeichen verwenden, funktionieren diese bei Suchanfragen oder als Bedingungen in deinen Kollektionen möglicherweise nicht wie erwartet. Sonderzeichen in Tags werden entweder ignoriert oder als gleich behandelt.
+
+Du hast beispielsweise eine Bedingung für eine Kollektion von Tag > enthält > rot-neu. Alle Produkte mit den Tags rot_neu, rot+neu, rot&neu werden ebenfalls in die Kollektion aufgenommen.
+
+Beispiel: Bedingung einrichten, die Produkte mit dem Tag „Accessoires“ einschließt
+Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Tag.
+Wähle im zweiten Dropdown-Menü die Option enthält aus.
+Klicke auf das Feld Tag auswählen und wähle dann Accessoires aus.
+Beispiel: Bedingung einrichten, die Produkte mit dem Tag „Accessoires“ ausschließt
+Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Tag.
+Wähle im zweiten Dropdown-Menü die Option enthält nicht aus.
+Klicke auf das Feld Tag auswählen und wähle dann Accessoires aus.
+
+Weitere Informationen zu Tags findest du unter Tag-Formate.
+
+Bedingungen basierend auf dem Produktstatus festlegen
+
+Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten einzuschließen, die einen bestimmten Produktstatus haben oder nicht haben. Der Bedingungstyp Produktstatus verfügt über die Optionen ist gleich und ist nicht gleich, um zu steuern, wie ein Produkt oder eine Variante mit den von dir ausgewählten Bedingungswerten übereinstimmen muss.
+
+Eine Produktstatus-Bedingung kann einer Kollektion nur Produkte oder Varianten hinzufügen und ist im Abschnitt Ausschließen einer Quelle nicht verfügbar. Wenn eine Quelle Irgendeine Bedingung erfüllen verwendet, fügt eine Produktstatus-Bedingung alle Produkte oder Varianten hinzu, die diesem Status entsprechen, selbst wenn diese Produkte die anderen Bedingungen der Quelle nicht erfüllen. Um eine Kollektion nach dem Produktstatus zu filtern, verwende in der Quelle Alle Bedingungen erfüllen.
+
+Hinweis
+
+Wenn du ein Produkt archivierst, wird es nicht aus den Kollektionen entfernt, in denen es enthalten ist. Archivierte Produkte bleiben in den Kollektionen und werden im Abschnitt Kollektionselemente aufgeführt. Kund:innen können sie jedoch nicht sehen, da archivierte Produkte in deinem Onlineshop ausgeblendet werden.
+
+So richtest du eine Bedingung ein, die nur deine archivierten Produkte oder Varianten für eine Kollektion auswählt, die du unveröffentlicht lässt, um in deinem Shopify-Adminbereich darauf zurückzugreifen:
+
+Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Produktstatus.
+Wähle im zweiten Dropdown-Menü die Option ist gleich aus.
+Klicke auf das Feld Status auswählen und wähle dann Archiviert aus.
+
+So richtest du eine Bedingung ein, die archivierte Produkte oder Varianten aus einer Kollektion ausschließt:
+
+Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Produktstatus.
+Wähle im zweiten Dropdown-Menü ist nicht gleich aus.
+Klicke auf das Feld Status auswählen und wähle dann Archiviert aus.
+
+Bedingungen gelten nur für Produkte oder Varianten, die automatisch zugeordnet werden. Wenn du einer Kollektion Produkte manuell hinzufügst, werden diese durch eine Bedingung nicht entfernt. Um solche Produkte aus der Kollektion zu entfernen, musst du die manuell hinzugefügten Produkte entfernen.
+
+Bedingungen basierend auf Preis, Vergleichspreis, Gewicht oder Lagerbestand festlegen
+
+Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten basierend auf Preis, Vergleichspreis, Gewicht oder Lagerbestand in eine Kollektion aufzunehmen.
+
+In der folgenden Tabelle findest du Details dazu, wie Produkte mit dem Bedingungswert abgeglichen werden, den du für Preis, Vergleichspreis, Gewicht oder Lagerbestand festlegst.
+
+Begriff	Beschreibung
+ist gleich	Der entsprechende Wert eines Produkts oder einer Variante muss exakt mit dem eingegebenen Wert übereinstimmen.
+ist nicht gleich	Der entsprechende Wert eines Produkts oder einer Variante darf nicht mit dem eingegebenen Wert übereinstimmen.
+ist größer als	Der entsprechende Wert eines Produkts oder einer Variante ist größer als der eingegebene Wert.
+ist kleiner als	Der entsprechende Wert eines Produkts oder einer Variante ist kleiner als der eingegebene Wert.
+ist nicht festgelegt	Gilt nur für die Bedingung Vergleichspreis. Ein Produkt stimmt überein, wenn eine seiner Varianten einen leeren Vergleichspreis-Wert aufweist.
+ist festgelegt	Gilt nur für die Bedingung Vergleichspreis. Ein Produkt stimmt überein, wenn alle seine Varianten einen Vergleichspreis-Wert aufweisen. Der Wert kann 0 betragen.
+
+Das Verhalten für Vergleichspreis > ist nicht festgelegt und Vergleichspreis > ist festgelegt basiert auf den Werten aller Varianten eines Produkts wie folgt:
+
+Wenn eine Variante einen leeren Vergleichspreis aufweist, erfüllt das Produkt die Bedingung ist nicht festgelegt.
+Für die Bedingung ist festgelegt müssen alle Varianten einen Vergleichspreiswert (einschließlich 0) aufweisen, damit das Produkt übereinstimmt.
+Bedingungen für Varianten
+
+Wenn du eine Produkte-Quelle hast und in der Quelle eine Bedingung einrichtest, die auf ein Produkt mit Varianten abzielt, ist die Bedingung wahr, wenn eine beliebige Variante die Bedingung erfüllt. Dies gilt unabhängig davon, ob du in der Quelle Alle Bedingungen müssen erfüllt sein oder Mindestens eine Bedingung muss erfüllt sein auswählst.
+
+Nimm beispielsweise an, du hast ein Produkt mit 5 Varianten. Vier der Varianten haben Bestand, aber eine ist nicht vorrätig. Wenn du eine Kollektion hast, die eine Bedingung in einer Produkte-Quelle von Lagerbestand ist größer als 0 aufweist, wird das Produkt in die Kollektion aufgenommen, da mindestens eine der Varianten die Bedingung erfüllt.
+
+Hinweis
+
+Variantentitel basieren auf den Optionswerten für die Variante, getrennt durch Leerzeichen und einen Schrägstrich. Wenn beispielsweise eine T-Shirt-Variante die Optionswerte blue und large hat, lautet ihr Variantentitel blue / large. Achte darauf, die Leerzeichen auf beiden Seiten des Schrägstrichs einzufügen, wenn du einen vollständigen Variantentitel eingibst.
+
+Bedingungen für Metafeld-Definitionen basierend auf Metafeld-Werten festlegen
+
+Du kannst eine Bedingung hinzufügen, um Produkte oder Varianten einzuschließen, die einen bestimmten Metafeld-Wert haben.
+
+Damit dir die Metafelder beim Erstellen von Kollektionen zur Verfügung stehen, musst du die Kollektionseinstellung für die Metafeld-Definition aktivieren. Du kannst die Kollektionseinstellung für maximal 128 Definitionen pro Produkt-Metafeld-Definition und Varianten-Metafeld-Definition aktivieren.
+
+Wenn die Quelle einer Kollektion auf Varianten eingestellt ist, grenzen Kategorie-Metafeld-Bedingungen die Kollektion nur dann auf bestimmte Varianten ein, wenn die zugehörige Produktoption mit einem Kategorie-Metafeld verbunden ist. Verbundene Produktoptionen zeigen das -Symbol auf der Produktdetailseite an.
+
+Wenn zum Beispiel die Option Farbe mit dem Kategorie-Metafeld Farbe verbunden ist, schließt die Bedingung Color is red nur Varianten mit dem Farb-Optionswert red ein.
+
+Wenn eine Option nicht mit einem Kategorie-Metafeld verbunden ist, kann eine Bedingung für dieses Metafeld trotzdem auf das Produkt zutreffen, aber die Bedingung grenzt die Kollektion nicht auf bestimmte Varianten für diese Option ein.
+
+Beispiel für das Einrichten einer Bedingung, die Produkte mit der Metafeld-Definition Color und dem Wert #FF0000 auswählt:
+
+Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen > Metafeld.
+Wähle Color als Metafeld-Definition aus.
+Klicke auf das Feld Wert auswählen und wähle dann #FF0000 aus.
+
+Weitere Informationen zu Kollektionen nach Metafeldern.
+
+Metafeld-Typen unterstützen die folgenden Bedingungen.
+
+Typ der Metafeld-Definition	Bedingungen
+Wahr oder falsch	Der Wahr oder falsch -Metafeld-Definitionstyp unterstützt die folgenden Bedingungen:
+ist gleich
+
+Ganzzahl	Der Ganzzahl -Metafeld-Definitionstyp unterstützt die folgenden Bedingungen:
+ist gleich
+ist größer als
+ist kleiner als
+
+Dezimalzahl	Der Dezimalzahl -Metafeld-Definitionstyp unterstützt die folgenden Bedingungen:
+ist gleich
+ist größer als
+ist kleiner als
+
+Bewertung	Der Bewertung -Metafeld-Definitionstyp unterstützt die folgenden Bedingungen:
+ist gleich
+ist größer als
+ist kleiner als
+
+Einzeiliger Text	Der Einzeiliger Text -Metafeld-Definitionstyp kann ein einzelner Wert oder eine Liste von Werten sein und unterstützt die folgenden Bedingungen:
+ist gleich
+Hinweis
+
+Kollektionen nach Metafeldern sind sowohl für Produkt- als auch für Varianten-Metafelder verfügbar.
+
+Bedingungen basierend auf Metaobjekt-Referenz-Metafeldern festlegen
+
+Du kannst eine Bedingung hinzufügen, um ein Produkt oder eine Variante in eine Kollektion aufzunehmen, die auf dem Wert eines Metaobjekt-Referenz-Metafelds basiert. Du kannst Bedingungen sowohl für Produkt- als auch für Varianten-Metaobjekt-Referenz-Metafelder festlegen.
+
+Beispiel für das Einrichten einer Bedingung, die Produkte mit dem Metaobjekt-Referenz-Metafeld Material auswählt, das den Wert Cotton hat:
+
+Klicke in einer Quelle für Produkte oder Varianten auf Bedingung hinzufügen.
+Klicke auf Material.
+Wähle im zweiten Dropdown-Menü die Option ist gleich aus.
+Gib Cotton als Wert ein oder wähle es aus.
+
+Durch das Festlegen von Bedingungen basierend auf Metaobjekt-Referenz-Metafeldern kannst du Kollektionen erstellen, die auf Standard-Taxonomie-Attributen basieren.
+
+Verwendung mehrerer Auswahlbedingungen
+
+Du kannst mehr als eine Auswahlbedingung festlegen, um zu steuern, welche Produkte oder Varianten in eine Kollektion aufgenommen werden. Du kannst auswählen, ob Produkte oder Varianten alle Bedingungen erfüllen müssen, um in die Kollektion aufgenommen zu werden, oder ob sie nur eine der Bedingungen erfüllen müssen.
+
+Angenommen, du legst die folgenden Bedingungen für eine Kollektion fest:
+
+Produkt-Tag ist getaggt mit shirt.
+Preis ist kleiner als 100,01 USD.
+
+Wenn du Alle Bedingungen müssen erfüllt sein auswählst, werden Produkte oder Varianten nur aufgenommen, wenn sie mit shirt getaggt sind und der Preis bei 100,00 USD oder weniger liegt. Produkte oder Varianten müssen beide Bedingungen erfüllen, um in die Kollektion aufgenommen zu werden.
+
+Wenn du Irgendeine Bedingung muss erfüllt sein auswählst, werden Produkte oder Varianten aufgenommen, wenn sie mit shirt getaggt sind oder der Preis bei 100,00 USD oder weniger liegt. Produkte oder Varianten müssen nur eine Bedingung erfüllen, um in die Kollektion aufgenommen zu werden.
+
+Mehrere Bedingungen festlegen, um einen Bereich zu definieren
+
+Um Produkte oder Varianten mit einem Preis, einem Gewicht oder einem Inventarwert innerhalb eines bestimmten Bereichs einzuschließen, musst du mehr als eine Bedingung festlegen. Der untere Wert des Bereichs wird in einer Bedingung und der obere Wert in einer zweiten Bedingung definiert. Du musst Alle Bedingungen müssen erfüllt sein auswählen, um nur die Produkte oder Varianten einzuschließen, die in den Bereich fallen.
+
+Um beispielsweise eine Kollektion einzurichten, die Produkte oder Varianten zu Preisen im Bereich von 50,00 USD bis 150,00 USD umfasst, legst du die folgenden Bedingungen fest:
+
+Preis ist größer als 49,99 USD.
+Preis ist kleiner als 150,01 USD.
+Fehlerbehebung bei Kollektionsbedingungen
+
+Wenn Probleme mit deinen Kollektionsbedingungen auftreten, sieh dir die folgenden Informationen zur Fehlerbehebung an.
+
+Fehlerbehebung, wenn eine Kollektion falsche Produkte enthält
+Fehlerbehebung: Kollektion wird bei Produkt- oder Variantenänderungen nicht aktualisiert
+Fehlerbehebung: Bedingungsoperatoren verstehen
+Feedback hinterlassen

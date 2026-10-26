@@ -1,0 +1,180 @@
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Frühere intelligente Kollektionen
+Intelligente Kollektionen erstellen und ändern
+Hinweis
+
+Ein neues Kollektionsmodell ersetzt das frühere Modell für manuelle und intelligente Kollektionen. Du kannst manuelle und intelligente Kollektionen weiterhin verwenden, bis das neue Kollektionsmodell in deinem Shopify-Adminbereich verfügbar ist.
+
+Beim Erstellen einer intelligenten Kollektion definierst du Bedingungen, um die Produkte zuzuordnen, die du in der Kollektion haben möchtest. Du kannst auch eine Sortierreihenfolge und andere Details festlegen. Du kannst bis zu 5.000 intelligente Kollektionen erstellen.
+
+Kollektionen können maximal 60 Bedingungen haben.
+
+Auf dieser Seite
+Überlegungen zu den Limits für intelligente Kollektionen
+Intelligente Kollektion erstellen
+Auswahlbedingungen für eine intelligente Kollektion hinzufügen
+Veröffentlichungsdatum einer Kollektion ändern
+Inhalte einer intelligenten Kollektion ändern
+Manuelle Kollektion durch eine intelligente Kollektion ersetzen
+Kollektion duplizieren
+Kollektion löschen
+Überlegungen zu den Limits für intelligente Kollektionen
+
+Das Limit von 5.000 intelligenten Kollektionen gewährleistet eine optimale Leistung. Eine große Anzahl intelligenter Kollektionen kann deinen Shopify-Adminbereich verlangsamen und die Anzeige von Produkten in Kollektionen auf deiner Storefront verzögern, insbesondere bei einem großen Produktkatalog.
+
+Wenn du dich dem Limit näherst, solltest du in Betracht ziehen, nicht verwendete intelligente Kollektionen zu löschen oder einige in manuelle Kollektionen umzuwandeln.
+
+Wenn du bereits eine Kollektion mit mehr als 60 Bedingungen hast, kannst du sie weiterhin verwenden. Du kannst die bestehenden Bedingungen bearbeiten oder löschen, aber keine neuen Bedingungen hinzufügen, wenn das Limit überschritten ist.
+
+Bevor du eine Kollektion aktualisierst, stelle sicher, dass keine anderen Mitarbeiter:innen Änderungen an derselben Kollektion vornehmen.
+
+Intelligente Kollektion erstellen
+
+Automatisierte Kollektionen werden jetzt als intelligente Kollektionen bezeichnet.
+
+Tipp
+
+Weitere Videos findest du auf unserem YouTube-Kanal.
+
+Wenn du die Kollektion nicht sofort nach dem Erstellen veröffentlichen möchtest, kannst du ein bestimmtes Datum festlegen, an dem die Kollektion in deinem Onlineshop veröffentlicht wird. Erfahre mehr über die zukünftige Veröffentlichung.
+
+Du kannst bis zu 5.000 intelligente Kollektionen erstellen.
+
+Du kannst einer früheren intelligenten Kollektion nur ganze Produkte hinzufügen. Varianten können einer Kollektion nur mit dem neuen Kollektionsmodell hinzugefügt werden.
+
+Schritte:
+Desktop
+
+Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.
+
+Klicke auf Kollektion hinzufügen.
+
+Gib einen Titel und eine Beschreibung für die Kollektion ein.
+
+Klicke im Abschnitt Kollektionstyp auf Intelligent:
+
+Wähle aus, ob Produkte allen Bedingungen oder einer beliebigen Bedingung entsprechen müssen, um in die Kollektion aufgenommen zu werden.
+Verwende die Dropdown-Listen, um die Bedingungen für die Kollektion festzulegen.
+
+Klicke auf Speichern. Im angezeigten Abschnitt Produkte werden die Produkte, die den Bedingungen entsprechen, automatisch zur Kollektion hinzugefügt.
+
+Lege die Sortierreihenfolge für die Produkte in deinem Shop fest.
+
+Wähle im Abschnitt Vertriebskanäle die aktiven Vertriebskanäle aus, in denen deine Kollektion verfügbar sein soll.
+
+Klicke im Abschnitt Kollektionsbild auf Bild hochladen, um ein Bild für die Kollektion hinzuzufügen. Informationen zu den Bildgrößen, die du verwenden kannst, findest du unter Bildgrößen.
+
+Optional: Der Abschnitt Suchmaschineneintrag zeigt eine Vorschau an, wie die Kollektion in den Suchergebnissen angezeigt wird. Wenn du diese Informationen bearbeiten möchtest, klicke auf das Stiftsymbol.
+
+Klicke auf Speichern.
+
+Füge in den Menüs deines Onlineshops einen Link zu deiner Kollektion hinzu, damit Kund:innen die Kollektion finden und ansehen können.
+
+Mobil
+Auswahlbedingungen für eine intelligente Kollektion hinzufügen
+
+Wenn du eine intelligente Kollektion erstellst, kannst du im Abschnitt Bedingungen eine oder mehrere Bedingungen dafür hinzufügen. In diesem Abschnitt werden auch alle Bedingungen angezeigt, die du bereits zur Kollektion hinzugefügt hast.
+
+Schritte:
+Desktop
+Wähle in der ersten Dropdown-Liste einen Bedingungstyp aus.
+Wähle in der zweiten Dropdown-Liste aus, wie ein Produkt der Bedingung entsprechen muss, um in die Kollektion aufgenommen zu werden.
+Gib im dritten Feld einen Bedingungswert ein.
+Wenn du mehr als eine Bedingung hinzufügen möchtest, klicke auf Weitere Bedingung hinzufügen und wiederhole die Schritte.
+Klicke auf Speichern, um passende Produkte hinzuzufügen.
+Mobil
+Veröffentlichungsdatum einer Kollektion ändern
+
+Du kannst ein bestimmtes Veröffentlichungsdatum für eine Kollektion festlegen, damit sie in deinem Onlineshop verfügbar wird.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.
+
+Klicke auf eine Kollektion.
+
+Klicke im Abschnitt Vertriebskanäle auf das Kalendersymbol neben Onlineshop.
+
+Lege das Datum und die Uhrzeit fest, zu denen du die Kollektion veröffentlichen möchtest.
+
+Klicke auf Speichern.
+
+Inhalte einer intelligenten Kollektion ändern
+
+Du kannst die Inhalte einer intelligenten Kollektion ändern, indem du die Bedingungen bearbeitest oder ein Produkt so bearbeitest, dass es die Bedingungen nicht mehr erfüllt.
+
+Schritte:
+Desktop
+
+Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.
+
+Klicke auf den Namen der Kollektion, die du bearbeiten möchtest.
+
+Nimm im Abschnitt Bedingungen Änderungen an den Bedingungen vor.
+
+Klicke auf „Speichern“, um passende Produkte hinzuzufügen und Produkte zu entfernen, die nicht passen.
+
+Mobil
+Manuelle Kollektion durch eine intelligente Kollektion ersetzen
+
+Du kannst eine manuelle Kollektion nicht in eine intelligente Kollektion umwandeln, aber du kannst eine neue intelligente Kollektion erstellen, um die bestehende manuelle Kollektion zu ersetzen.
+
+Schritte:
+Allen Produkten in deiner manuellen Kollektion ein Tag hinzufügen.
+Erstelle eine neue intelligente Kollektion und lege den Tag als Bedingung fest.
+Nachdem du die intelligente Kollektion eingerichtet hast, kannst du die ursprüngliche manuelle Kollektion löschen.
+Kollektion duplizieren
+
+Du kannst eine vorhandene intelligente Kollektion duplizieren, einschließlich Titel, Beschreibung, Bild und Produktbedingungen.
+
+Wenn du eine Kollektion duplizierst, wird der neu erstellten Kollektion der Text (Kopie) am Ende des Titels hinzugefügt. Die neue Kollektion wird nicht automatisch in Vertriebskanäle aufgenommen.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.
+
+Klicke auf die Kollektion, die du duplizieren möchtest.
+
+Klicke auf „Duplizieren“.
+
+Bearbeite den Titel der neuen Kollektion.
+
+Optional: Nimm alle erforderlichen Änderungen an der Beschreibung, dem Bild, den Bedingungen oder anderen Teilen der Kollektion vor.
+
+Um die neue Kollektion in deinen Vertriebskanälen zu veröffentlichen, klicke auf das Symbol .
+
+Wähle im Dialogfeld die Vertriebskanäle aus, in denen du die Kollektion veröffentlichen möchtest.
+
+Klicke auf „Fertig“.
+
+Klicke auf Speichern.
+
+Kollektion löschen
+Hinweis
+
+Gelöschte Kollektionen werden dauerhaft aus deinem Shopify-Adminbereich entfernt. Du kannst die Kollektion auch in einem Vertriebskanal ausblenden, ohne sie zu löschen.
+
+Schritte:
+Desktop
+
+Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.
+
+Klicke auf den Namen der Kollektion, die du löschen möchtest.
+
+Klicke auf „Diese Kollektion löschen“.
+
+Klicke im Bestätigungsfeld auf „Löschen“, um die Kollektion zu löschen.
+
+Links zu gelöschten Kollektionen werden automatisch aus den Onlineshop-Menüs entfernt. Du kannst auch mehrere Kollektionen gleichzeitig über eine Massenaktion löschen.
+
+Mobil
+Feedback hinterlassen

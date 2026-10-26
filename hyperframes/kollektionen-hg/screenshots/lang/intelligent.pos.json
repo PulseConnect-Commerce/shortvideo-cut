@@ -1,0 +1,937 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/collections/smart-collections/create",
+ "datum": "2026-10-26T22:46:27.651Z",
+ "title": "Shopify Help Center | Intelligente Kollektionen erstellen und ändern",
+ "pos": [
+  {
+   "tag": "LI",
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "tag": "H1",
+   "t": "Intelligente Kollektionen erstellen und ändern",
+   "y": 393
+  },
+  {
+   "tag": "H4",
+   "t": "Hinweis",
+   "y": 689
+  },
+  {
+   "tag": "P",
+   "t": "Ein neues Kollektionsmodell ersetzt das frühere Modell für manuelle und intelligente Kolle",
+   "y": 749
+  },
+  {
+   "tag": "P",
+   "t": "Beim Erstellen einer intelligenten Kollektion definierst du Bedingungen, um die Produkte z",
+   "y": 1073
+  },
+  {
+   "tag": "P",
+   "t": "Kollektionen können maximal 60 Bedingungen haben.",
+   "y": 1367
+  },
+  {
+   "tag": "H2",
+   "t": "Auf dieser Seite",
+   "y": 1537
+  },
+  {
+   "tag": "LI",
+   "t": "Überlegungen zu den Limits für intelligente Kollektionen",
+   "y": 1677
+  },
+  {
+   "tag": "LI",
+   "t": "Intelligente Kollektion erstellen",
+   "y": 1794
+  },
+  {
+   "tag": "LI",
+   "t": "Auswahlbedingungen für eine intelligente Kollektion hinzufügen",
+   "y": 1862
+  },
+  {
+   "tag": "LI",
+   "t": "Veröffentlichungsdatum einer Kollektion ändern",
+   "y": 1979
+  },
+  {
+   "tag": "LI",
+   "t": "Inhalte einer intelligenten Kollektion ändern",
+   "y": 2047
+  },
+  {
+   "tag": "LI",
+   "t": "Manuelle Kollektion durch eine intelligente Kollektion ersetzen",
+   "y": 2114
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektion duplizieren",
+   "y": 2232
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektion löschen",
+   "y": 2299
+  },
+  {
+   "tag": "H2",
+   "t": "Überlegungen zu den Limits für intelligente Kollektionen",
+   "y": 2469
+  },
+  {
+   "tag": "P",
+   "t": "Das Limit von 5.000 intelligenten Kollektionen gewährleistet eine optimale Leistung. Eine ",
+   "y": 2733
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du dich dem Limit näherst, solltest du in Betracht ziehen, nicht verwendete intellige",
+   "y": 3077
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du bereits eine Kollektion mit mehr als 60 Bedingungen hast, kannst du sie weiterhin ",
+   "y": 3320
+  },
+  {
+   "tag": "P",
+   "t": "Bevor du eine Kollektion aktualisierst, stelle sicher, dass keine anderen Mitarbeiter:inne",
+   "y": 3614
+  },
+  {
+   "tag": "H2",
+   "t": "Intelligente Kollektion erstellen",
+   "y": 3884
+  },
+  {
+   "tag": "P",
+   "t": "Automatisierte Kollektionen werden jetzt als intelligente Kollektionen bezeichnet.",
+   "y": 4148
+  },
+  {
+   "tag": "FIGURE",
+   "t": "",
+   "y": 4402
+  },
+  {
+   "tag": "H4",
+   "t": "Tipp",
+   "y": 5123
+  },
+  {
+   "tag": "P",
+   "t": "Weitere Videos findest du auf unserem YouTube-Kanal.",
+   "y": 5183
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du die Kollektion nicht sofort nach dem Erstellen veröffentlichen möchtest, kannst du",
+   "y": 5357
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst bis zu 5.000 intelligente Kollektionen erstellen.",
+   "y": 5650
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst einer früheren intelligenten Kollektion nur ganze Produkte hinzufügen. Varianten",
+   "y": 5744
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 5966
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 6228
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 6228
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Kollektion hinzufügen.",
+   "y": 6345
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Kollektion hinzufügen.",
+   "y": 6345
+  },
+  {
+   "tag": "LI",
+   "t": "Gib einen Titel und eine Beschreibung für die Kollektion ein.",
+   "y": 6413
+  },
+  {
+   "tag": "P",
+   "t": "Gib einen Titel und eine Beschreibung für die Kollektion ein.",
+   "y": 6413
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Abschnitt Kollektionstyp auf Intelligent:\n\nWähle aus, ob Produkte allen Bedingun",
+   "y": 6530
+  },
+  {
+   "tag": "P",
+   "t": "Klicke im Abschnitt Kollektionstyp auf Intelligent:",
+   "y": 6530
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle aus, ob Produkte allen Bedingungen oder einer beliebigen Bedingung entsprechen müsse",
+   "y": 6607
+  },
+  {
+   "tag": "LI",
+   "t": "Verwende die Dropdown-Listen, um die Bedingungen für die Kollektion festzulegen.",
+   "y": 6774
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern. Im angezeigten Abschnitt Produkte werden die Produkte, die den Bedin",
+   "y": 6892
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern. Im angezeigten Abschnitt Produkte werden die Produkte, die den Bedin",
+   "y": 6892
+  },
+  {
+   "tag": "LI",
+   "t": "Lege die Sortierreihenfolge für die Produkte in deinem Shop fest.",
+   "y": 7059
+  },
+  {
+   "tag": "P",
+   "t": "Lege die Sortierreihenfolge für die Produkte in deinem Shop fest.",
+   "y": 7059
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im Abschnitt Vertriebskanäle die aktiven Vertriebskanäle aus, in denen deine Kollekt",
+   "y": 7177
+  },
+  {
+   "tag": "P",
+   "t": "Wähle im Abschnitt Vertriebskanäle die aktiven Vertriebskanäle aus, in denen deine Kollekt",
+   "y": 7177
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Abschnitt Kollektionsbild auf Bild hochladen, um ein Bild für die Kollektion hin",
+   "y": 7344
+  },
+  {
+   "tag": "P",
+   "t": "Klicke im Abschnitt Kollektionsbild auf Bild hochladen, um ein Bild für die Kollektion hin",
+   "y": 7344
+  },
+  {
+   "tag": "LI",
+   "t": "Optional: Der Abschnitt Suchmaschineneintrag zeigt eine Vorschau an, wie die Kollektion in",
+   "y": 7562
+  },
+  {
+   "tag": "P",
+   "t": "Optional: Der Abschnitt Suchmaschineneintrag zeigt eine Vorschau an, wie die Kollektion in",
+   "y": 7562
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 7829
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 7829
+  },
+  {
+   "tag": "LI",
+   "t": "Füge in den Menüs deines Onlineshops einen Link zu deiner Kollektion hinzu, damit Kund:inn",
+   "y": 7897
+  },
+  {
+   "tag": "P",
+   "t": "Füge in den Menüs deines Onlineshops einen Link zu deiner Kollektion hinzu, damit Kund:inn",
+   "y": 7897
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8301
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8301
+  },
+  {
+   "tag": "IMG",
+   "t": "Menu",
+   "y": 8301
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8373
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8373
+  },
+  {
+   "tag": "IMG",
+   "t": "Pfeil nach unten",
+   "y": 8373
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8496
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8496
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8568
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8568
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8686
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8686
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8803
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8803
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 8871
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 8871
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 9188
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 9188
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 9406
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 9406
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 9473
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 9473
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 9691
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 9691
+  },
+  {
+   "tag": "H2",
+   "t": "Auswahlbedingungen für eine intelligente Kollektion hinzufügen",
+   "y": 8402
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine intelligente Kollektion erstellst, kannst du im Abschnitt Bedingungen eine od",
+   "y": 8746
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 9068
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle in der ersten Dropdown-Liste einen Bedingungstyp aus.",
+   "y": 9330
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle in der zweiten Dropdown-Liste aus, wie ein Produkt der Bedingung entsprechen muss, u",
+   "y": 9447
+  },
+  {
+   "tag": "LI",
+   "t": "Gib im dritten Feld einen Bedingungswert ein.",
+   "y": 9615
+  },
+  {
+   "tag": "LI",
+   "t": "Wenn du mehr als eine Bedingung hinzufügen möchtest, klicke auf Weitere Bedingung hinzufüg",
+   "y": 9682
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern, um passende Produkte hinzuzufügen.",
+   "y": 9850
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10204
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10321
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10389
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10556
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 10624
+  },
+  {
+   "tag": "H2",
+   "t": "Veröffentlichungsdatum einer Kollektion ändern",
+   "y": 10305
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst ein bestimmtes Veröffentlichungsdatum für eine Kollektion festlegen, damit sie i",
+   "y": 10569
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 10791
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 10865
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 10865
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf eine Kollektion.",
+   "y": 10982
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf eine Kollektion.",
+   "y": 10982
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Abschnitt Vertriebskanäle auf das Kalendersymbol neben Onlineshop.",
+   "y": 11050
+  },
+  {
+   "tag": "P",
+   "t": "Klicke im Abschnitt Vertriebskanäle auf das Kalendersymbol neben Onlineshop.",
+   "y": 11050
+  },
+  {
+   "tag": "LI",
+   "t": "Lege das Datum und die Uhrzeit fest, zu denen du die Kollektion veröffentlichen möchtest.",
+   "y": 11167
+  },
+  {
+   "tag": "P",
+   "t": "Lege das Datum und die Uhrzeit fest, zu denen du die Kollektion veröffentlichen möchtest.",
+   "y": 11167
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 11285
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 11285
+  },
+  {
+   "tag": "H2",
+   "t": "Inhalte einer intelligenten Kollektion ändern",
+   "y": 11455
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst die Inhalte einer intelligenten Kollektion ändern, indem du die Bedingungen bear",
+   "y": 11718
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 11940
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 12202
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 12202
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf den Namen der Kollektion, die du bearbeiten möchtest.",
+   "y": 12320
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf den Namen der Kollektion, die du bearbeiten möchtest.",
+   "y": 12320
+  },
+  {
+   "tag": "LI",
+   "t": "Nimm im Abschnitt Bedingungen Änderungen an den Bedingungen vor.",
+   "y": 12437
+  },
+  {
+   "tag": "P",
+   "t": "Nimm im Abschnitt Bedingungen Änderungen an den Bedingungen vor.",
+   "y": 12437
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Speichern“, um passende Produkte hinzuzufügen und Produkte zu entfernen, die n",
+   "y": 12555
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf „Speichern“, um passende Produkte hinzuzufügen und Produkte zu entfernen, die n",
+   "y": 12555
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 12959
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 12959
+  },
+  {
+   "tag": "IMG",
+   "t": "Menu",
+   "y": 12959
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 13031
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 13031
+  },
+  {
+   "tag": "IMG",
+   "t": "Pfeil nach unten",
+   "y": 13031
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 13154
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 13154
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 13271
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 13271
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 13398
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 13398
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 13565
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 13565
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 13683
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 13683
+  },
+  {
+   "tag": "H2",
+   "t": "Manuelle Kollektion durch eine intelligente Kollektion ersetzen",
+   "y": 13060
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine manuelle Kollektion nicht in eine intelligente Kollektion umwandeln, aber d",
+   "y": 13404
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 13676
+  },
+  {
+   "tag": "LI",
+   "t": "Allen Produkten in deiner manuellen Kollektion ein Tag hinzufügen.",
+   "y": 13750
+  },
+  {
+   "tag": "LI",
+   "t": "Erstelle eine neue intelligente Kollektion und lege den Tag als Bedingung fest.",
+   "y": 13867
+  },
+  {
+   "tag": "LI",
+   "t": "Nachdem du die intelligente Kollektion eingerichtet hast, kannst du die ursprüngliche manu",
+   "y": 13985
+  },
+  {
+   "tag": "H2",
+   "t": "Kollektion duplizieren",
+   "y": 14255
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst eine vorhandene intelligente Kollektion duplizieren, einschließlich Titel, Besch",
+   "y": 14439
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du eine Kollektion duplizierst, wird der neu erstellten Kollektion der Text (Kopie) a",
+   "y": 14632
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 14909
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 14983
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 14983
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf die Kollektion, die du duplizieren möchtest.",
+   "y": 15101
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf die Kollektion, die du duplizieren möchtest.",
+   "y": 15101
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Duplizieren“.",
+   "y": 15168
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf „Duplizieren“.",
+   "y": 15168
+  },
+  {
+   "tag": "LI",
+   "t": "Bearbeite den Titel der neuen Kollektion.",
+   "y": 15236
+  },
+  {
+   "tag": "P",
+   "t": "Bearbeite den Titel der neuen Kollektion.",
+   "y": 15236
+  },
+  {
+   "tag": "LI",
+   "t": "Optional: Nimm alle erforderlichen Änderungen an der Beschreibung, dem Bild, den Bedingung",
+   "y": 15303
+  },
+  {
+   "tag": "P",
+   "t": "Optional: Nimm alle erforderlichen Änderungen an der Beschreibung, dem Bild, den Bedingung",
+   "y": 15303
+  },
+  {
+   "tag": "LI",
+   "t": "Um die neue Kollektion in deinen Vertriebskanälen zu veröffentlichen, klicke auf das Symbo",
+   "y": 15471
+  },
+  {
+   "tag": "P",
+   "t": "Um die neue Kollektion in deinen Vertriebskanälen zu veröffentlichen, klicke auf das Symbo",
+   "y": 15471
+  },
+  {
+   "tag": "IMG",
+   "t": "Anpassen",
+   "y": 15521
+  },
+  {
+   "tag": "LI",
+   "t": "Wähle im Dialogfeld die Vertriebskanäle aus, in denen du die Kollektion veröffentlichen mö",
+   "y": 15593
+  },
+  {
+   "tag": "P",
+   "t": "Wähle im Dialogfeld die Vertriebskanäle aus, in denen du die Kollektion veröffentlichen mö",
+   "y": 15593
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Fertig“.",
+   "y": 15711
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf „Fertig“.",
+   "y": 15711
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf Speichern.",
+   "y": 15778
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf Speichern.",
+   "y": 15778
+  },
+  {
+   "tag": "H2",
+   "t": "Kollektion löschen",
+   "y": 15948
+  },
+  {
+   "tag": "H4",
+   "t": "Hinweis",
+   "y": 16158
+  },
+  {
+   "tag": "P",
+   "t": "Gelöschte Kollektionen werden dauerhaft aus deinem Shopify-Adminbereich entfernt. Du kanns",
+   "y": 16218
+  },
+  {
+   "tag": "H4",
+   "t": "Schritte:",
+   "y": 16520
+  },
+  {
+   "tag": "LI",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 16782
+  },
+  {
+   "tag": "P",
+   "t": "Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen.",
+   "y": 16782
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf den Namen der Kollektion, die du löschen möchtest.",
+   "y": 16900
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf den Namen der Kollektion, die du löschen möchtest.",
+   "y": 16900
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke auf „Diese Kollektion löschen“.",
+   "y": 17017
+  },
+  {
+   "tag": "P",
+   "t": "Klicke auf „Diese Kollektion löschen“.",
+   "y": 17017
+  },
+  {
+   "tag": "LI",
+   "t": "Klicke im Bestätigungsfeld auf „Löschen“, um die Kollektion zu löschen.",
+   "y": 17085
+  },
+  {
+   "tag": "P",
+   "t": "Klicke im Bestätigungsfeld auf „Löschen“, um die Kollektion zu löschen.",
+   "y": 17085
+  },
+  {
+   "tag": "P",
+   "t": "Links zu gelöschten Kollektionen werden automatisch aus den Onlineshop-Menüs entfernt. Du ",
+   "y": 17228
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 17659
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 17659
+  },
+  {
+   "tag": "IMG",
+   "t": "Menu",
+   "y": 17659
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 17731
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 17731
+  },
+  {
+   "tag": "IMG",
+   "t": "Pfeil nach unten",
+   "y": 17731
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 17854
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 17854
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 17921
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 17921
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 17994
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 17994
+  },
+  {
+   "tag": "LI",
+   "t": "",
+   "y": 18061
+  },
+  {
+   "tag": "P",
+   "t": "",
+   "y": 18061
+  }
+ ]
+}

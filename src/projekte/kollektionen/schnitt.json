@@ -1,0 +1,119 @@
+{
+ "projekt": "kollektionen",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 2.85,
+   "text": "Eine Sache, die ich besonders bei größeren Shopify-Shops einfach nicht von der Hand pflegen würde, sind die ständig gleichen Produktkollektionen. Denn stell dir vor, du verkaufst jetzt zum Beispiel Kleidung und hast einfach eine Kollektion für schwarze T-Shirts."
+  },
+  {
+   "take": "t1",
+   "ab": 23.0,
+   "text": "Wenn du jetzt tatsächlich alle Produkte manuell hinzufügst, dann musst du bei jedem neuen Artikel wieder daran denken."
+  },
+  {
+   "take": "t1",
+   "ab": 74.3,
+   "text": "Und in Shopify kannst du einfach stattdessen eine automatisierte Kollektion dafür erstellen."
+  },
+  {
+   "take": "t1",
+   "ab": 81.1,
+   "text": "Dafür gehst du einfach zuerst zu Produkte, dann zu Kollektionen und legst dann einfach eine neue Kollektion an. Dort wählst du dann zum Beispiel die automatische Zuordnung und definierst dann einfach die Bedingungen."
+  },
+  {
+   "take": "t1",
+   "ab": 94.7,
+   "text": "Zum Beispiel kannst du hier Folgendes verwenden. Produkttyp ist T-Shirt und Produkt-Tag ist dann schwarz."
+  },
+  {
+   "take": "t1",
+   "ab": 108.7,
+   "text": "Und ich gebe dir jetzt hierbei ein wichtiges Detail, das du unbedingt beachten solltest. Denn du kannst tatsächlich auch einstellen, ob alle Bedingungen erfüllt sein müssen oder eben nur eine davon."
+  },
+  {
+   "take": "t1",
+   "ab": 119.3,
+   "text": "Das geht mit der Und-oder-Bedingung. Wenn du aber bei schwarzen T-Shirts irgendeine auswählst, dann landen womöglich auch rote T-Shirts oder eben auch schwarze Hosen in deiner Kollektion."
+  },
+  {
+   "take": "t1",
+   "ab": 131.9,
+   "text": "Und das willst du aber natürlich nicht, oder?"
+  },
+  {
+   "take": "t1",
+   "ab": 134.1,
+   "text": "Mit allen Bedingungen wird die Auswahl tatsächlich dann noch genauer. Mein zweiter Tipp ist, arbeite immer mit einer einheitlichen Tag-Struktur."
+  },
+  {
+   "take": "t1",
+   "ab": 149.4,
+   "text": "Denn wenn du jetzt zum Beispiel bei einem Produkt Schwarz hinschreibst, bei dem nächsten dann aber zum Beispiel Black und beim dritten aber Black-Shirt dasteht, dann wird natürlich die automatische Zuordnung einfach schnell unzuverlässig."
+  },
+  {
+   "take": "t1",
+   "ab": 181.5,
+   "text": "Und eine wichtige Ergänzung hier von mir, kontrolliere bitte immer nach dem Einrichten einmal die Produkte der Kollektion, gerade vor allem bei vorhandenen Artikeln."
+  },
+  {
+   "take": "t1",
+   "ab": 205.3,
+   "text": "Denn dann musst du einfach neue Artikel nur noch sauber einpflegen, statt immer jede Kollektion einzeln nachzubessern. Und für weitere solche Tipps drück hier gerne das Plus weg."
+  }
+ ],
+ "korrekturen": [
+  [
+   "t1",
+   74.49,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   121.98,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   128.14,
+   "Deiner",
+   "deiner"
+  ],
+  [
+   "t1",
+   132.46,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   150.93,
+   "Schwarz",
+   "schwarz"
+  ],
+  [
+   "t1",
+   154.65,
+   "Black-Shirt",
+   "black-shirt"
+  ],
+  [
+   "t1",
+   188.63,
+   "Artikeln",
+   "Artikeln."
+  ]
+ ],
+ "ende": {
+  "bis": 214.17
+ }
+}

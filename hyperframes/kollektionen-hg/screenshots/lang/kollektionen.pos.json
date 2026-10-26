@@ -1,0 +1,237 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/collections",
+ "datum": "2026-10-26T22:46:32.430Z",
+ "title": "Shopify Help Center | Kollektionen",
+ "pos": [
+  {
+   "tag": "LI",
+   "t": "Frage stellen",
+   "y": 173
+  },
+  {
+   "tag": "H1",
+   "t": "Kollektionen",
+   "y": 393
+  },
+  {
+   "tag": "H4",
+   "t": "Hinweis",
+   "y": 589
+  },
+  {
+   "tag": "P",
+   "t": "Ein neues Kollektionsmodell ersetzt das ältere Modell für manuelle und intelligente Kollek",
+   "y": 649
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du Basic oder einen höheren Plan nutzt oder das Agentic-Abo hast und einen Onlineshop",
+   "y": 1173
+  },
+  {
+   "tag": "LI",
+   "t": "Kleidung für Männer, Frauen oder Kinder.",
+   "y": 1567
+  },
+  {
+   "tag": "LI",
+   "t": "Artikel eines bestimmten Typs, wie etwa Lampen, Kissen oder Teppiche.",
+   "y": 1634
+  },
+  {
+   "tag": "LI",
+   "t": "Artikel, die im Sale sind.",
+   "y": 1752
+  },
+  {
+   "tag": "LI",
+   "t": "Artikel in einer bestimmten Größe oder Farbe.",
+   "y": 1819
+  },
+  {
+   "tag": "LI",
+   "t": "Saisonale Produkte, wie zum Beispiel Weihnachtskarten und Dekorationen.",
+   "y": 1887
+  },
+  {
+   "tag": "LI",
+   "t": "Varianten-Kollektionen, wie zum Beispiel ausschließlich rote Produkte für den Valentinstag",
+   "y": 2004
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektionen mit mehreren Quellen und mehreren Bedingungen, wie zum Beispiel eine Kollekti",
+   "y": 2122
+  },
+  {
+   "tag": "LI",
+   "t": "Verschachtelte Kollektionen, wie zum Beispiel die Erstellung einer Kollektion Teegeschirr ",
+   "y": 2449
+  },
+  {
+   "tag": "H4",
+   "t": "Tipp",
+   "y": 2783
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du auf Produktseiten Produktempfehlungen anzeigen möchtest, kannst du dem Theme deine",
+   "y": 2843
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst Kollektionen mehrere unterschiedliche Quellen hinzufügen, mit separaten Bedingun",
+   "y": 3117
+  },
+  {
+   "tag": "P",
+   "t": "Mit den folgenden Methoden kannst du außerdem steuern, welche Produkte in Kollektionen ang",
+   "y": 3460
+  },
+  {
+   "tag": "LI",
+   "t": "Produkte oder Varianten basierend auf von dir festgelegten Einschlussbedingungen automatis",
+   "y": 3604
+  },
+  {
+   "tag": "LI",
+   "t": "Ausgewählte spezifische Produkte oder Varianten manuell hinzufügen.",
+   "y": 3772
+  },
+  {
+   "tag": "LI",
+   "t": "Produkte basierend auf von dir festgelegten Ausschlussbedingungen automatisch aus einer Ko",
+   "y": 3889
+  },
+  {
+   "tag": "LI",
+   "t": "Ausgewählte spezifische Produkte manuell ausschließen.",
+   "y": 4057
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst Kollektionen auf der Seite Kollektionen in deinem Shopify-Adminbereich sowie in ",
+   "y": 4200
+  },
+  {
+   "tag": "P",
+   "t": "Nachdem du eine Kollektion erstellt hast, kann diese in deinem Onlineshop als Webseite mit",
+   "y": 4394
+  },
+  {
+   "tag": "P",
+   "t": "Du kannst verschiedene Sortieroptionen verwenden, um die Standardreihenfolge festzulegen, ",
+   "y": 4838
+  },
+  {
+   "tag": "H4",
+   "t": "Achtung",
+   "y": 5212
+  },
+  {
+   "tag": "P",
+   "t": "Wenn du in der mobilen Shopify-App eine neue Kollektion erstellst, aber das neue Kollektio",
+   "y": 5272
+  },
+  {
+   "tag": "P",
+   "t": "Solange du das neue Kollektionsmodell in deinem Shopify-Adminbereich nicht hast, kannst du",
+   "y": 5662
+  },
+  {
+   "tag": "H3",
+   "t": "In diesem Abschnitt",
+   "y": 6122
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektionen erstellen und Produkte hinzufügen",
+   "y": 6212
+  },
+  {
+   "tag": "P",
+   "t": "Kollektionen erstellen und Produkte hinzufügen",
+   "y": 6212
+  },
+  {
+   "tag": "LI",
+   "t": "Bedingungen für Kollektionen verstehen",
+   "y": 6280
+  },
+  {
+   "tag": "P",
+   "t": "Bedingungen für Kollektionen verstehen",
+   "y": 6280
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektionsquellen und Bedingungen verwalten",
+   "y": 6347
+  },
+  {
+   "tag": "P",
+   "t": "Kollektionsquellen und Bedingungen verwalten",
+   "y": 6347
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektionsdetails und Layout bearbeiten",
+   "y": 6415
+  },
+  {
+   "tag": "P",
+   "t": "Kollektionsdetails und Layout bearbeiten",
+   "y": 6415
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektionseinstellungen verwalten",
+   "y": 6482
+  },
+  {
+   "tag": "P",
+   "t": "Kollektionseinstellungen verwalten",
+   "y": 6482
+  },
+  {
+   "tag": "LI",
+   "t": "Menülinks für deine Kollektionen hinzufügen",
+   "y": 6550
+  },
+  {
+   "tag": "P",
+   "t": "Menülinks für deine Kollektionen hinzufügen",
+   "y": 6550
+  },
+  {
+   "tag": "LI",
+   "t": "Kollektionsliste durchsuchen und anzeigen",
+   "y": 6617
+  },
+  {
+   "tag": "P",
+   "t": "Kollektionsliste durchsuchen und anzeigen",
+   "y": 6617
+  },
+  {
+   "tag": "LI",
+   "t": "Ältere smarte Kollektionen",
+   "y": 6685
+  },
+  {
+   "tag": "P",
+   "t": "Ältere smarte Kollektionen",
+   "y": 6685
+  },
+  {
+   "tag": "LI",
+   "t": "Ältere manuelle Kollektionen",
+   "y": 6752
+  },
+  {
+   "tag": "P",
+   "t": "Ältere manuelle Kollektionen",
+   "y": 6752
+  }
+ ]
+}
