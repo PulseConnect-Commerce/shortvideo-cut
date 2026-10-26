@@ -1,0 +1,92 @@
+{
+ "projekt": "judgeme",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 3.2,
+   "text": "Eine Shopify-App, die jeder Onlinehändler für mehr Vertrauen in seinem Onlineshop unbedingt kennen sollte."
+  },
+  {
+   "take": "t1",
+   "ab": 11.9,
+   "bis": 20.88,
+   "text": "du hast zufriedene Kunden, aber niemand sieht sie in deinem Onlineshop? Dann pass jetzt auf, denn ich habe eine App, die genau perfekt dafür ist. Die App nennt sich Judge.me",
+   "von": 12.03
+  },
+  {
+   "take": "t1",
+   "ab": 23.4,
+   "text": "Und damit kannst du Kunden einfach nach dem Kauf um eine Produktbewertung bitten. und die Bewertung anschließend direkt in deinem Shopify-Shop anzeigen,"
+  },
+  {
+   "take": "t1",
+   "ab": 47.2,
+   "text": "Zum Beispiel mit den Sternen einfach in der Produktseite direkt oder einfach in einem eigenen Bewertungsbereich. Das ist natürlich besonders interessant, weil viele Kunden einfach deinen Onlineshop häufig oder gar nicht kennen. Und mit den echten Erfahrungen natürlich anderer Kunden kannst du denen dabei helfen, Vertrauen in deinen Onlineshop aufzubauen."
+  },
+  {
+   "take": "t1",
+   "ab": 80.9,
+   "text": "aber wichtig hier zu erwähnen, die Bewertungen sollten natürlich schon ehrlich und authentisch sein."
+  },
+  {
+   "take": "t1",
+   "ab": 95.8,
+   "text": "Und mal ganz ehrlich, du brauchst nicht immer fünf verschiedene Trust-Badges.",
+   "von": 95.82
+  },
+  {
+   "take": "t1",
+   "ab": 105.8,
+   "text": "Oft sind einfach echte Kundenbewertungen viel überzeugender und der echte Vertrauensbringer für deinen Onlineshop.",
+   "von": 105.83
+  },
+  {
+   "take": "t1",
+   "ab": 135.0,
+   "text": "Und wenn du weitere solcher Tipps für E-Commerce erfahren möchtest, dann drücke gern das Plus weg.",
+   "von": 135.0
+  }
+ ],
+ "ende": {
+  "bis": 139.12
+ },
+ "korrekturen": [
+  [
+   "t1",
+   12.07,
+   "du",
+   "Du"
+  ],
+  [
+   "t1",
+   20.33,
+   "Judge.me",
+   "Judge.me."
+  ],
+  [
+   "t1",
+   27.41,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   47.31,
+   "Zum",
+   "zum"
+  ],
+  [
+   "t1",
+   81.01,
+   "aber",
+   "Aber"
+  ]
+ ]
+}

@@ -1,0 +1,304 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlage P04) für A03 · Judge.me. Sekunden im geschnittenen Video (cut.json, 53,73 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf ausgewählten Zuständen, pop auf dem Sticker, success auf 'Vertrauen' und 'überzeugender', klick auf dem Plus. Gebaut in hyperframes/judgeme-skizzen/index.html. Echte Quelle in K5: Demo-Shop von Judge.me (als DEMO gekennzeichnet); K2 zeigt das offizielle App-Icon aus dem App-Store-Eintrag. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "reihe",
+   "wort": "Onlineshop (Hook)",
+   "text": "Reihen-Einblendung 'Eine Shopify-App, ein Problem' nach dem Hook-Titel",
+   "start": 3.36,
+   "ende": 4.92,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 3.36,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "wort": "Du",
+   "text": "Zufriedene Kunden (Smileys) hinter einer Wand, Auge durchgestrichen auf 'sieht', 'unsichtbar' handschriftlich; der Shop mit leeren Sternen auf 'Onlineshop', Ring auf 'auf'",
+   "start": 5.0,
+   "ende": 10.22,
+   "teile": {
+    "zufriedene": 5.3,
+    "aber": 6.17,
+    "sieht": 6.84,
+    "onlineshop": 7.57,
+    "auf": 9.47
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.0,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 7.57,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "eine (App)",
+   "text": "Das fehlende Puzzleteil: Lücke zwischen Kunden und Shop; Teil mit dem offiziellen App-Icon auf 'App', passt auf 'perfekt' (✓, Linien zu Kunden und Shop), 'passt' handschriftlich; Name 'Judge.me' auf 'Judge.me'",
+   "start": 10.27,
+   "ende": 13.85,
+   "teile": {
+    "app": 10.5,
+    "perfekt": 11.27,
+    "dafuer": 11.64,
+    "judge.me": 13.27
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 10.27,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 11.69,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Und (damit)",
+   "text": "Ablauf Kunde → Kauf (✓) → Mail mit Sternen; 'nach dem Kauf' handschriftlich; auf 'bitten' Bogen von der Mail zum Kunden, die Sterne füllen sich",
+   "start": 13.87,
+   "ende": 17.73,
+   "teile": {
+    "kunden": 14.64,
+    "nach": 15.24,
+    "kauf": 15.64,
+    "produktbewertung": 16.2,
+    "bitten": 16.84
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 13.87,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 15.82,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 16.84,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Und (die Bewertung)",
+   "text": "Bewertungskarte auf 'Bewertung', Weg zur Produktseite, 'direkt' handschriftlich, 'Dein Shop' mit Tasche auf 'Shopify-Shop', die Bewertung landet auf 'anzeigen' im Platz unter dem Produkt",
+   "start": 17.77,
+   "ende": 20.99,
+   "teile": {
+    "bewertung": 18.0,
+    "anschliessend": 18.5,
+    "direkt": 19.1,
+    "shopify-shop": 19.94,
+    "anzeigen": 20.54
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 17.77,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 20.54,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "zum (Beispiel)",
+   "text": "Quellen-Karte JUDGE.ME DEMO-SHOP (DEMO): echte Demo-Produktseite 'Cashmere Poncho', Sterne unter dem Titel markiert auf 'Sternen'; Fahrt zum Bewertungsbereich ('4.5 · 107 reviews', Balken) auf 'oder', markiert auf 'Bewertungsbereich'; Liste Sterne / Bewertungsbereich mit Haken",
+   "start": 21.04,
+   "ende": 26.32,
+   "teile": {
+    "sternen": 21.87,
+    "produktseite": 22.64,
+    "oder": 23.64,
+    "bewertungsbereich": 24.84
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 21.04,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 21.87,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.84,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Das",
+   "text": "Ein Besucher vor dem Shop, auf 'viele' drei; Weg zum Shop auf 'Onlineshop'; Fragezeichen auf 'gar nicht', 'unbekannt' handschriftlich",
+   "start": 26.37,
+   "ende": 31.52,
+   "teile": {
+    "viele": 28.07,
+    "onlineshop": 29.14,
+    "gar": 30.24,
+    "nicht": 30.47
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 26.37,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 30.24,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Und (mit den echten)",
+   "text": "Brücke aus Bewertungen über die Lücke zum Shop: Planken auf 'echten', 'Erfahrungen', 'anderer', 'Kunden'; der Besucher geht auf 'helfen' hinüber, 'Vertrauen' handschriftlich (grün), ✓ am Shop auf 'aufzubauen'",
+   "start": 31.57,
+   "ende": 37.12,
+   "teile": {
+    "echten": 32.27,
+    "erfahrungen": 32.57,
+    "anderer": 33.4,
+    "kunden": 33.67,
+    "helfen": 34.97,
+    "vertrauen": 35.34,
+    "aufzubauen": 36.57
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 31.57,
+     "volume": 0.12
+    },
+    {
+     "datei": "success.mp3",
+     "at": 35.37,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st1",
+   "wort": "Aber",
+   "text": "Sticker ABER.",
+   "start": 37.17,
+   "ende": 38.57,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 37.17,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Aber",
+   "text": "Bewertungskarte, Lupe auf 'Bewertungen', fährt auf 'sollten' darüber; Prüfsiegel auf 'ehrlich', 'authentisch' handschriftlich",
+   "start": 37.2,
+   "ende": 41.12,
+   "teile": {
+    "bewertungen": 38.3,
+    "sollten": 38.87,
+    "ehrlich": 39.9,
+    "authentisch": 40.44
+   },
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 39.9,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Und (mal ganz ehrlich)",
+   "text": "Waage: fünf Badges fallen auf 'fünf' in die linke Schale, sie sinkt auf 'Trust-Badges'; 'echt' handschriftlich, eine Bewertung fällt auf 'Kundenbewertungen' in die rechte Schale, die Waage kippt auf 'überzeugender' nach rechts; Leuchten und Schild auf 'Vertrauensbringer'",
+   "start": 41.17,
+   "ende": 49.58,
+   "teile": {
+    "fuenf": 42.87,
+    "trust-badges": 43.5,
+    "echte": 44.86,
+    "kundenbewertungen": 45.2,
+    "ueberzeugender": 46.06,
+    "vertrauensbringer": 47.76
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 41.17,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 43.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 46.06,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 47.76,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Und (wenn du)",
+   "text": "Nur das Folgen-Symbol: Karte auf 'Und', Ring auf 'Tipps', Zeiger tippt auf 'Plus' das Plus an, es wird zum Haken",
+   "start": 49.6,
+   "ende": 53.73,
+   "teile": {
+    "tipps": 50.6,
+    "plus": 52.97
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 49.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 52.97,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

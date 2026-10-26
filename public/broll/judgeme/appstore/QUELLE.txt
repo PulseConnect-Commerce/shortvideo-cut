@@ -1,0 +1,6 @@
+Quelle: offizielle Bilder des Shopify-App-Store-Eintrags "Judge.me Product Reviews App" (Entwickler Judge.me, https://apps.shopify.com/judgeme?locale=de), geladen 2026-10-26 (cdn.shopify.com/app-store/listing_images/8cada0f5da411a64e756606bb036f1ed/...).
+- promo.png: Werbebild "Bewertungen, um Ihr Geschäft von der ersten Skalierung bis zur globalen Expansion zu wachsen."
+- widgets-anzeigen.png: "Zeigen Sie Bewertungen auf Ihrer Website auf unterschiedliche Weise an"
+- bewertungen-sammeln.png: "Sammeln Sie automatisch Bewertungen" (Bewertungsanfrage per E-Mail)
+- icon.png: App-Icon
+Nur zugeschnitten, skaliert, gefahren und markiert; nichts dazugemalt. Die Bewertungen darin sind Judge.mes eigene Demo-Abbildungen.

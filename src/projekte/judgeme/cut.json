@@ -1,0 +1,1158 @@
+{
+ "projekt": "judgeme",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "judgeme/t1",
+   "from": 3.335,
+   "to": 8.365,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "judgeme/t1",
+   "from": 12.03,
+   "to": 20.88,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "judgeme/t1",
+   "from": 23.455,
+   "to": 30.645,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "judgeme/t1",
+   "from": 47.255,
+   "to": 63.395,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "judgeme/t1",
+   "from": 80.905,
+   "to": 84.905,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "judgeme/t1",
+   "from": 95.82,
+   "to": 98.885,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "judgeme/t1",
+   "from": 105.83,
+   "to": 111.185,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "judgeme/t1",
+   "from": 135.0,
+   "to": 139.12,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Eine",
+   "src": "judgeme/t1",
+   "start": 3.39,
+   "end": 3.57
+  },
+  {
+   "text": "Shopify-App,",
+   "src": "judgeme/t1",
+   "start": 3.65,
+   "end": 4.25
+  },
+  {
+   "text": "die",
+   "src": "judgeme/t1",
+   "start": 4.35,
+   "end": 4.43
+  },
+  {
+   "text": "jeder",
+   "src": "judgeme/t1",
+   "start": 4.55,
+   "end": 4.81
+  },
+  {
+   "text": "Onlinehändler",
+   "src": "judgeme/t1",
+   "start": 4.99,
+   "end": 5.55
+  },
+  {
+   "text": "für",
+   "src": "judgeme/t1",
+   "start": 5.61,
+   "end": 5.71
+  },
+  {
+   "text": "mehr",
+   "src": "judgeme/t1",
+   "start": 5.81,
+   "end": 5.95
+  },
+  {
+   "text": "Vertrauen",
+   "src": "judgeme/t1",
+   "start": 6.01,
+   "end": 6.35
+  },
+  {
+   "text": "in",
+   "src": "judgeme/t1",
+   "start": 6.43,
+   "end": 6.47
+  },
+  {
+   "text": "seinem",
+   "src": "judgeme/t1",
+   "start": 6.53,
+   "end": 6.69
+  },
+  {
+   "text": "Onlineshop",
+   "src": "judgeme/t1",
+   "start": 6.77,
+   "end": 7.11
+  },
+  {
+   "text": "unbedingt",
+   "src": "judgeme/t1",
+   "start": 7.23,
+   "end": 7.61
+  },
+  {
+   "text": "kennen",
+   "src": "judgeme/t1",
+   "start": 7.71,
+   "end": 7.93
+  },
+  {
+   "text": "sollte.",
+   "src": "judgeme/t1",
+   "start": 7.97,
+   "end": 8.23
+  },
+  {
+   "text": "Du",
+   "src": "judgeme/t1",
+   "start": 12.07,
+   "end": 12.13
+  },
+  {
+   "text": "hast",
+   "src": "judgeme/t1",
+   "start": 12.19,
+   "end": 12.31
+  },
+  {
+   "text": "zufriedene",
+   "src": "judgeme/t1",
+   "start": 12.35,
+   "end": 12.73
+  },
+  {
+   "text": "Kunden,",
+   "src": "judgeme/t1",
+   "start": 12.81,
+   "end": 13.09
+  },
+  {
+   "text": "aber",
+   "src": "judgeme/t1",
+   "start": 13.21,
+   "end": 13.35
+  },
+  {
+   "text": "niemand",
+   "src": "judgeme/t1",
+   "start": 13.51,
+   "end": 13.83
+  },
+  {
+   "text": "sieht",
+   "src": "judgeme/t1",
+   "start": 13.89,
+   "end": 14.07
+  },
+  {
+   "text": "sie",
+   "src": "judgeme/t1",
+   "start": 14.13,
+   "end": 14.23
+  },
+  {
+   "text": "in",
+   "src": "judgeme/t1",
+   "start": 14.27,
+   "end": 14.33
+  },
+  {
+   "text": "deinem",
+   "src": "judgeme/t1",
+   "start": 14.37,
+   "end": 14.55
+  },
+  {
+   "text": "Onlineshop?",
+   "src": "judgeme/t1",
+   "start": 14.61,
+   "end": 15.01
+  },
+  {
+   "text": "Dann",
+   "src": "judgeme/t1",
+   "start": 15.89,
+   "end": 16.05
+  },
+  {
+   "text": "pass",
+   "src": "judgeme/t1",
+   "start": 16.11,
+   "end": 16.27
+  },
+  {
+   "text": "jetzt",
+   "src": "judgeme/t1",
+   "start": 16.29,
+   "end": 16.43
+  },
+  {
+   "text": "auf,",
+   "src": "judgeme/t1",
+   "start": 16.51,
+   "end": 16.65
+  },
+  {
+   "text": "denn",
+   "src": "judgeme/t1",
+   "start": 16.71,
+   "end": 16.85
+  },
+  {
+   "text": "ich",
+   "src": "judgeme/t1",
+   "start": 17.01,
+   "end": 17.11
+  },
+  {
+   "text": "habe",
+   "src": "judgeme/t1",
+   "start": 17.15,
+   "end": 17.29
+  },
+  {
+   "text": "eine",
+   "src": "judgeme/t1",
+   "start": 17.35,
+   "end": 17.45
+  },
+  {
+   "text": "App,",
+   "src": "judgeme/t1",
+   "start": 17.55,
+   "end": 17.67
+  },
+  {
+   "text": "die",
+   "src": "judgeme/t1",
+   "start": 17.83,
+   "end": 17.91
+  },
+  {
+   "text": "genau",
+   "src": "judgeme/t1",
+   "start": 17.97,
+   "end": 18.27
+  },
+  {
+   "text": "perfekt",
+   "src": "judgeme/t1",
+   "start": 18.33,
+   "end": 18.63
+  },
+  {
+   "text": "dafür",
+   "src": "judgeme/t1",
+   "start": 18.67,
+   "end": 18.85
+  },
+  {
+   "text": "ist.",
+   "src": "judgeme/t1",
+   "start": 18.89,
+   "end": 18.99
+  },
+  {
+   "text": "Die",
+   "src": "judgeme/t1",
+   "start": 19.53,
+   "end": 19.59
+  },
+  {
+   "text": "App",
+   "src": "judgeme/t1",
+   "start": 19.67,
+   "end": 19.77
+  },
+  {
+   "text": "nennt",
+   "src": "judgeme/t1",
+   "start": 19.85,
+   "end": 20.03
+  },
+  {
+   "text": "sich",
+   "src": "judgeme/t1",
+   "start": 20.07,
+   "end": 20.21
+  },
+  {
+   "text": "Judge.me.",
+   "src": "judgeme/t1",
+   "start": 20.33,
+   "end": 20.67
+  },
+  {
+   "text": "Und",
+   "src": "judgeme/t1",
+   "start": 23.52,
+   "end": 23.6
+  },
+  {
+   "text": "damit",
+   "src": "judgeme/t1",
+   "start": 23.62,
+   "end": 23.84
+  },
+  {
+   "text": "kannst",
+   "src": "judgeme/t1",
+   "start": 23.9,
+   "end": 24.12
+  },
+  {
+   "text": "du",
+   "src": "judgeme/t1",
+   "start": 24.16,
+   "end": 24.22
+  },
+  {
+   "text": "Kunden",
+   "src": "judgeme/t1",
+   "start": 24.3,
+   "end": 24.54
+  },
+  {
+   "text": "einfach",
+   "src": "judgeme/t1",
+   "start": 24.58,
+   "end": 24.8
+  },
+  {
+   "text": "nach",
+   "src": "judgeme/t1",
+   "start": 24.88,
+   "end": 25.04
+  },
+  {
+   "text": "dem",
+   "src": "judgeme/t1",
+   "start": 25.1,
+   "end": 25.22
+  },
+  {
+   "text": "Kauf",
+   "src": "judgeme/t1",
+   "start": 25.28,
+   "end": 25.5
+  },
+  {
+   "text": "um",
+   "src": "judgeme/t1",
+   "start": 25.58,
+   "end": 25.62
+  },
+  {
+   "text": "eine",
+   "src": "judgeme/t1",
+   "start": 25.68,
+   "end": 25.8
+  },
+  {
+   "text": "Produktbewertung",
+   "src": "judgeme/t1",
+   "start": 25.84,
+   "end": 26.44
+  },
+  {
+   "text": "bitten.",
+   "src": "judgeme/t1",
+   "start": 26.5,
+   "end": 26.7
+  },
+  {
+   "text": "Und",
+   "src": "judgeme/t1",
+   "start": 27.42,
+   "end": 27.48
+  },
+  {
+   "text": "die",
+   "src": "judgeme/t1",
+   "start": 27.52,
+   "end": 27.6
+  },
+  {
+   "text": "Bewertung",
+   "src": "judgeme/t1",
+   "start": 27.64,
+   "end": 28.0
+  },
+  {
+   "text": "anschließend",
+   "src": "judgeme/t1",
+   "start": 28.14,
+   "end": 28.64
+  },
+  {
+   "text": "direkt",
+   "src": "judgeme/t1",
+   "start": 28.76,
+   "end": 29.12
+  },
+  {
+   "text": "in",
+   "src": "judgeme/t1",
+   "start": 29.16,
+   "end": 29.22
+  },
+  {
+   "text": "deinem",
+   "src": "judgeme/t1",
+   "start": 29.28,
+   "end": 29.52
+  },
+  {
+   "text": "Shopify-Shop",
+   "src": "judgeme/t1",
+   "start": 29.6,
+   "end": 30.12
+  },
+  {
+   "text": "anzeigen,",
+   "src": "judgeme/t1",
+   "start": 30.2,
+   "end": 30.52
+  },
+  {
+   "text": "zum",
+   "src": "judgeme/t1",
+   "start": 47.31,
+   "end": 47.41
+  },
+  {
+   "text": "Beispiel",
+   "src": "judgeme/t1",
+   "start": 47.45,
+   "end": 47.77
+  },
+  {
+   "text": "mit",
+   "src": "judgeme/t1",
+   "start": 47.83,
+   "end": 47.91
+  },
+  {
+   "text": "den",
+   "src": "judgeme/t1",
+   "start": 47.95,
+   "end": 48.05
+  },
+  {
+   "text": "Sternen",
+   "src": "judgeme/t1",
+   "start": 48.15,
+   "end": 48.43
+  },
+  {
+   "text": "einfach",
+   "src": "judgeme/t1",
+   "start": 48.47,
+   "end": 48.67
+  },
+  {
+   "text": "in",
+   "src": "judgeme/t1",
+   "start": 48.73,
+   "end": 48.77
+  },
+  {
+   "text": "der",
+   "src": "judgeme/t1",
+   "start": 48.81,
+   "end": 48.87
+  },
+  {
+   "text": "Produktseite",
+   "src": "judgeme/t1",
+   "start": 48.93,
+   "end": 49.39
+  },
+  {
+   "text": "direkt",
+   "src": "judgeme/t1",
+   "start": 49.47,
+   "end": 49.79
+  },
+  {
+   "text": "oder",
+   "src": "judgeme/t1",
+   "start": 49.93,
+   "end": 50.07
+  },
+  {
+   "text": "einfach",
+   "src": "judgeme/t1",
+   "start": 50.11,
+   "end": 50.33
+  },
+  {
+   "text": "in",
+   "src": "judgeme/t1",
+   "start": 50.45,
+   "end": 50.49
+  },
+  {
+   "text": "einem",
+   "src": "judgeme/t1",
+   "start": 50.55,
+   "end": 50.71
+  },
+  {
+   "text": "eigenen",
+   "src": "judgeme/t1",
+   "start": 50.83,
+   "end": 51.07
+  },
+  {
+   "text": "Bewertungsbereich.",
+   "src": "judgeme/t1",
+   "start": 51.11,
+   "end": 51.79
+  },
+  {
+   "text": "Das",
+   "src": "judgeme/t1",
+   "start": 52.67,
+   "end": 52.79
+  },
+  {
+   "text": "ist",
+   "src": "judgeme/t1",
+   "start": 52.83,
+   "end": 52.91
+  },
+  {
+   "text": "natürlich",
+   "src": "judgeme/t1",
+   "start": 52.93,
+   "end": 53.19
+  },
+  {
+   "text": "besonders",
+   "src": "judgeme/t1",
+   "start": 53.25,
+   "end": 53.63
+  },
+  {
+   "text": "interessant,",
+   "src": "judgeme/t1",
+   "start": 53.67,
+   "end": 54.09
+  },
+  {
+   "text": "weil",
+   "src": "judgeme/t1",
+   "start": 54.13,
+   "end": 54.23
+  },
+  {
+   "text": "viele",
+   "src": "judgeme/t1",
+   "start": 54.35,
+   "end": 54.55
+  },
+  {
+   "text": "Kunden",
+   "src": "judgeme/t1",
+   "start": 54.67,
+   "end": 54.89
+  },
+  {
+   "text": "einfach",
+   "src": "judgeme/t1",
+   "start": 54.91,
+   "end": 55.13
+  },
+  {
+   "text": "deinen",
+   "src": "judgeme/t1",
+   "start": 55.19,
+   "end": 55.39
+  },
+  {
+   "text": "Onlineshop",
+   "src": "judgeme/t1",
+   "start": 55.41,
+   "end": 55.79
+  },
+  {
+   "text": "häufig",
+   "src": "judgeme/t1",
+   "start": 55.85,
+   "end": 56.17
+  },
+  {
+   "text": "oder",
+   "src": "judgeme/t1",
+   "start": 56.27,
+   "end": 56.41
+  },
+  {
+   "text": "gar",
+   "src": "judgeme/t1",
+   "start": 56.53,
+   "end": 56.67
+  },
+  {
+   "text": "nicht",
+   "src": "judgeme/t1",
+   "start": 56.75,
+   "end": 56.87
+  },
+  {
+   "text": "kennen.",
+   "src": "judgeme/t1",
+   "start": 56.93,
+   "end": 57.19
+  },
+  {
+   "text": "Und",
+   "src": "judgeme/t1",
+   "start": 57.87,
+   "end": 57.95
+  },
+  {
+   "text": "mit",
+   "src": "judgeme/t1",
+   "start": 58.15,
+   "end": 58.25
+  },
+  {
+   "text": "den",
+   "src": "judgeme/t1",
+   "start": 58.31,
+   "end": 58.45
+  },
+  {
+   "text": "echten",
+   "src": "judgeme/t1",
+   "start": 58.55,
+   "end": 58.81
+  },
+  {
+   "text": "Erfahrungen",
+   "src": "judgeme/t1",
+   "start": 58.87,
+   "end": 59.37
+  },
+  {
+   "text": "natürlich",
+   "src": "judgeme/t1",
+   "start": 59.41,
+   "end": 59.67
+  },
+  {
+   "text": "anderer",
+   "src": "judgeme/t1",
+   "start": 59.69,
+   "end": 59.91
+  },
+  {
+   "text": "Kunden",
+   "src": "judgeme/t1",
+   "start": 59.95,
+   "end": 60.19
+  },
+  {
+   "text": "kannst",
+   "src": "judgeme/t1",
+   "start": 60.53,
+   "end": 60.75
+  },
+  {
+   "text": "du",
+   "src": "judgeme/t1",
+   "start": 60.77,
+   "end": 60.81
+  },
+  {
+   "text": "denen",
+   "src": "judgeme/t1",
+   "start": 60.87,
+   "end": 61.01
+  },
+  {
+   "text": "dabei",
+   "src": "judgeme/t1",
+   "start": 61.03,
+   "end": 61.21
+  },
+  {
+   "text": "helfen,",
+   "src": "judgeme/t1",
+   "start": 61.27,
+   "end": 61.55
+  },
+  {
+   "text": "Vertrauen",
+   "src": "judgeme/t1",
+   "start": 61.63,
+   "end": 62.05
+  },
+  {
+   "text": "in",
+   "src": "judgeme/t1",
+   "start": 62.09,
+   "end": 62.15
+  },
+  {
+   "text": "deinen",
+   "src": "judgeme/t1",
+   "start": 62.19,
+   "end": 62.33
+  },
+  {
+   "text": "Onlineshop",
+   "src": "judgeme/t1",
+   "start": 62.39,
+   "end": 62.77
+  },
+  {
+   "text": "aufzubauen.",
+   "src": "judgeme/t1",
+   "start": 62.87,
+   "end": 63.33
+  },
+  {
+   "text": "Aber",
+   "src": "judgeme/t1",
+   "start": 81.01,
+   "end": 81.13
+  },
+  {
+   "text": "wichtig",
+   "src": "judgeme/t1",
+   "start": 81.19,
+   "end": 81.41
+  },
+  {
+   "text": "hier",
+   "src": "judgeme/t1",
+   "start": 81.47,
+   "end": 81.59
+  },
+  {
+   "text": "zu",
+   "src": "judgeme/t1",
+   "start": 81.63,
+   "end": 81.69
+  },
+  {
+   "text": "erwähnen,",
+   "src": "judgeme/t1",
+   "start": 81.73,
+   "end": 81.99
+  },
+  {
+   "text": "die",
+   "src": "judgeme/t1",
+   "start": 82.03,
+   "end": 82.09
+  },
+  {
+   "text": "Bewertungen",
+   "src": "judgeme/t1",
+   "start": 82.11,
+   "end": 82.59
+  },
+  {
+   "text": "sollten",
+   "src": "judgeme/t1",
+   "start": 82.67,
+   "end": 82.95
+  },
+  {
+   "text": "natürlich",
+   "src": "judgeme/t1",
+   "start": 82.97,
+   "end": 83.33
+  },
+  {
+   "text": "schon",
+   "src": "judgeme/t1",
+   "start": 83.37,
+   "end": 83.55
+  },
+  {
+   "text": "ehrlich",
+   "src": "judgeme/t1",
+   "start": 83.69,
+   "end": 83.97
+  },
+  {
+   "text": "und",
+   "src": "judgeme/t1",
+   "start": 84.09,
+   "end": 84.17
+  },
+  {
+   "text": "authentisch",
+   "src": "judgeme/t1",
+   "start": 84.23,
+   "end": 84.63
+  },
+  {
+   "text": "sein.",
+   "src": "judgeme/t1",
+   "start": 84.65,
+   "end": 84.81
+  },
+  {
+   "text": "Und",
+   "src": "judgeme/t1",
+   "start": 95.89,
+   "end": 95.97
+  },
+  {
+   "text": "mal",
+   "src": "judgeme/t1",
+   "start": 96.01,
+   "end": 96.11
+  },
+  {
+   "text": "ganz",
+   "src": "judgeme/t1",
+   "start": 96.17,
+   "end": 96.37
+  },
+  {
+   "text": "ehrlich,",
+   "src": "judgeme/t1",
+   "start": 96.43,
+   "end": 96.69
+  },
+  {
+   "text": "du",
+   "src": "judgeme/t1",
+   "start": 96.71,
+   "end": 96.77
+  },
+  {
+   "text": "brauchst",
+   "src": "judgeme/t1",
+   "start": 96.87,
+   "end": 97.15
+  },
+  {
+   "text": "nicht",
+   "src": "judgeme/t1",
+   "start": 97.21,
+   "end": 97.31
+  },
+  {
+   "text": "immer",
+   "src": "judgeme/t1",
+   "start": 97.33,
+   "end": 97.47
+  },
+  {
+   "text": "fünf",
+   "src": "judgeme/t1",
+   "start": 97.59,
+   "end": 97.77
+  },
+  {
+   "text": "verschiedene",
+   "src": "judgeme/t1",
+   "start": 97.83,
+   "end": 98.17
+  },
+  {
+   "text": "Trust-Badges.",
+   "src": "judgeme/t1",
+   "start": 98.23,
+   "end": 98.77
+  },
+  {
+   "text": "Oft",
+   "src": "judgeme/t1",
+   "start": 105.93,
+   "end": 106.05
+  },
+  {
+   "text": "sind",
+   "src": "judgeme/t1",
+   "start": 106.09,
+   "end": 106.21
+  },
+  {
+   "text": "einfach",
+   "src": "judgeme/t1",
+   "start": 106.23,
+   "end": 106.43
+  },
+  {
+   "text": "echte",
+   "src": "judgeme/t1",
+   "start": 106.53,
+   "end": 106.73
+  },
+  {
+   "text": "Kundenbewertungen",
+   "src": "judgeme/t1",
+   "start": 106.85,
+   "end": 107.47
+  },
+  {
+   "text": "viel",
+   "src": "judgeme/t1",
+   "start": 107.57,
+   "end": 107.69
+  },
+  {
+   "text": "überzeugender",
+   "src": "judgeme/t1",
+   "start": 107.73,
+   "end": 108.33
+  },
+  {
+   "text": "und",
+   "src": "judgeme/t1",
+   "start": 108.67,
+   "end": 108.75
+  },
+  {
+   "text": "der",
+   "src": "judgeme/t1",
+   "start": 108.77,
+   "end": 108.85
+  },
+  {
+   "text": "echte",
+   "src": "judgeme/t1",
+   "start": 108.97,
+   "end": 109.21
+  },
+  {
+   "text": "Vertrauensbringer",
+   "src": "judgeme/t1",
+   "start": 109.43,
+   "end": 110.17
+  },
+  {
+   "text": "für",
+   "src": "judgeme/t1",
+   "start": 110.25,
+   "end": 110.35
+  },
+  {
+   "text": "deinen",
+   "src": "judgeme/t1",
+   "start": 110.39,
+   "end": 110.61
+  },
+  {
+   "text": "Onlineshop.",
+   "src": "judgeme/t1",
+   "start": 110.67,
+   "end": 111.07
+  },
+  {
+   "text": "Und",
+   "src": "judgeme/t1",
+   "start": 135.07,
+   "end": 135.13
+  },
+  {
+   "text": "wenn",
+   "src": "judgeme/t1",
+   "start": 135.15,
+   "end": 135.27
+  },
+  {
+   "text": "du",
+   "src": "judgeme/t1",
+   "start": 135.31,
+   "end": 135.35
+  },
+  {
+   "text": "weitere",
+   "src": "judgeme/t1",
+   "start": 135.41,
+   "end": 135.69
+  },
+  {
+   "text": "solcher",
+   "src": "judgeme/t1",
+   "start": 135.77,
+   "end": 135.97
+  },
+  {
+   "text": "Tipps",
+   "src": "judgeme/t1",
+   "start": 136.07,
+   "end": 136.31
+  },
+  {
+   "text": "für",
+   "src": "judgeme/t1",
+   "start": 136.43,
+   "end": 136.51
+  },
+  {
+   "text": "E-Commerce",
+   "src": "judgeme/t1",
+   "start": 136.61,
+   "end": 137.03
+  },
+  {
+   "text": "erfahren",
+   "src": "judgeme/t1",
+   "start": 137.05,
+   "end": 137.33
+  },
+  {
+   "text": "möchtest,",
+   "src": "judgeme/t1",
+   "start": 137.37,
+   "end": 137.65
+  },
+  {
+   "text": "dann",
+   "src": "judgeme/t1",
+   "start": 137.69,
+   "end": 137.83
+  },
+  {
+   "text": "drücke",
+   "src": "judgeme/t1",
+   "start": 137.87,
+   "end": 138.07
+  },
+  {
+   "text": "gern",
+   "src": "judgeme/t1",
+   "start": 138.15,
+   "end": 138.27
+  },
+  {
+   "text": "das",
+   "src": "judgeme/t1",
+   "start": 138.31,
+   "end": 138.37
+  },
+  {
+   "text": "Plus",
+   "src": "judgeme/t1",
+   "start": 138.43,
+   "end": 138.59
+  },
+  {
+   "text": "weg.",
+   "src": "judgeme/t1",
+   "start": 138.63,
+   "end": 138.79
+  }
+ ],
+ "pages": [
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  4,
+  1,
+  4,
+  3,
+  2,
+  3,
+  2,
+  3,
+  4,
+  3,
+  2,
+  1,
+  3,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  1,
+  3,
+  2,
+  3,
+  2,
+  2,
+  4,
+  4,
+  2,
+  3,
+  4,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  4,
+  4,
+  2,
+  1,
+  4,
+  1,
+  2,
+  3,
+  1,
+  3,
+  4,
+  2,
+  2,
+  2,
+  3,
+  3
+ ]
+}

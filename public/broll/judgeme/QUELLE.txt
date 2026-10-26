@@ -1,0 +1,11 @@
+Hintergründe und Quellen-Bilder für A03 · Judge.me (alle aufgenommen bzw. geladen am 26.10.2026; nur zugeschnitten, skaliert, leicht abgedunkelt/weichgezeichnet; nichts dazugemalt)
+
+Hintergründe (1080x1920, gestaltet mit hyperframes/judgeme-hg/gestalte.py):
+- hg-listing.png: Shopify App Store, Eintrag "Judge.me Product Reviews App" (Handy-Ansicht, Playwright/Chromium), https://apps.shopify.com/judgeme?locale=de
+- hg-anfrage.png: offizielles App-Store-Bild "Sammeln Sie automatisch Bewertungen" (appstore/bewertungen-sammeln.png)
+- hg-promo.png: offizielles App-Store-Bild mit Judge.me-Logo (appstore/promo.png)
+- hg-widgets.png: https://judge.me/ (Handy-Ansicht), Abschnitt "16+ widgets / New review widget"
+
+Quellen-Bilder (quellen/):
+- demo-produktseite.png, demo-bewertungsbereich.png: Demo-Shop von Judge.me "Judge.me Demo Store" (Sorelle), verlinkt im App-Store-Eintrag als "Demo-Shop ansehen", Produktseite "Cashmere Poncho" https://judge-me-demo-store-sorelle.myshopify.com/products/cashmere-poncho (Handy-Ansicht). Die Bewertungen dort sind Demo-Bewertungen von Judge.me; im Video als DEMO gekennzeichnet.
+- listing-kopf.png: Kopf des App-Store-Eintrags (App-Icon, Name, "Built for Shopify", Bewertung, Entwickler)
