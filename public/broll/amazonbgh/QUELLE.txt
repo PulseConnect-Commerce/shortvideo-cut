@@ -1,0 +1,13 @@
+Hintergründe und Quellen-Bilder für N06 · Amazon-Preiskontrollen vor dem BGH (alle aufgenommen am 26.10.2026 mit Playwright/Chromium in Handy-Ansicht, 412 px, Faktor 2,62; nur zugeschnitten, skaliert, leicht abgedunkelt/weichgezeichnet; die grünen Markierungen sind <mark>-Hervorhebungen der Sätze, über die er spricht; nichts dazugemalt)
+
+Hintergründe (1080x1920, gestaltet mit hyperframes/amazonbgh-hg/gestalte.py):
+- hg-verkaeufer.png: https://sell.amazon.de/ (Amazon "Verkaufen bei Amazon", Kopf mit Logo und Überschrift "Werden Sie Verkäufer bei Amazon"; ohne die Zeilen mit Gebühren und Rabatten)
+- hg-buybox.png: https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/P2B/artikel.html, Abschnitt "Verfahren des Bundeskartellamts gegen Amazon", markiert: "Bewerten diese Mechanismen die Händlerpreise als zu hoch, werden die entsprechenden Angebote entweder ganz vom Marktplatz entfernt oder sie werden nicht im hervorgehobenen Einkaufsfeld („Buy Box“) angezeigt."
+- hg-kartellamt.png: https://ecommerce-watchblog.de/amazon-preiskontrolle-bgh/ (24.10.2026), markiert: "am 4. Februar 2026 beanstandet und untersagt, Angebote von Fremdhändlern zu deaktivieren oder aus der Buy Box zu nehmen"
+- hg-bgh.png: https://www.bundesgerichtshof.de/SharedDocs/Termine/DE/Termine/KVB13-26.html (Terminhinweis "Verhandlungstermin am 26. Januar 2027 um 9.00 Uhr, Saal E 101, in Sachen KVB 13/26 (Preiskontrollmechanismen auf amazon.de)"), markiert: "Verhandlungstermin am 26. Januar 2027"
+- hg-eil.png: https://ecommerce-watchblog.de/amazon-preiskontrolle-bgh/, markiert: "Vor dem BGH geht es nun zunächst um ein Eilverfahren." und "In der Hauptsache ist noch nicht entschieden."
+
+Quellen-Karte im Video (hyperframes/amazonbgh-skizzen/assets/watchblog.jpg):
+- Kopf des Artikels "Amazon Preiskontrolle: BGH verhandelt über Preisobergrenzen für Händler", ecommerce-watchblog.de (eCommerce Journal), 24.10.2026, https://ecommerce-watchblog.de/amazon-preiskontrolle-bgh/ (Artikelbild "Foto: Amazon" wie auf der Seite)
+
+Nicht verwendet: deutsche-anwalts-zeitung.de (Cloudflare-Prüfseite, kein Abruf möglich) und amazon.de (Bot-Abfrage statt Produktseite); beide Abfragen wurden nicht umgangen.

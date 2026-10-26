@@ -1,0 +1,377 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlage P04) für N06 · Amazon-Preiskontrollen vor dem BGH. Sekunden im geschnittenen Video (cut.json, 84,13 s); Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) beim Kartenwechsel (Abstand >= 1,5 s), kamera (0,12) auf der echten Quelle, tick (0,10) auf ausgewählten Zuständen, pop (0,10) auf den Stickern und auf dem BGH-Termin, klick (0,10) auf dem Plus. Gebaut in hyperframes/amazonbgh-skizzen/index.html. Echte Quelle: ecommerce-watchblog.de (24.10.2026) in Q1; Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "Genau",
+   "text": "Waage: Amazon (Paket) links, Bundeskartellamt (Gebäude) rechts; 'Streit' handschriftlich; auf 'Amazon' sinkt die linke Schale, auf 'Bundeskartellamt' steht die Waage wieder gerade (Streit offen)",
+   "start": 3.4,
+   "ende": 6.93,
+   "teile": {
+    "streiten": 4.07,
+    "amazon": 5.13,
+    "bundeskartellamt": 6.17
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 3.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 5.13,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Und (jetzt geht)",
+   "text": "Echte Quelle: ecommerce-watchblog.de, 24.10.2026, Überschrift 'Amazon Preiskontrolle: BGH verhandelt über Preisobergrenzen für Händler', Markierung auf 'BGH verhandelt' bei 'Bundesgerichtshof'",
+   "start": 6.95,
+   "ende": 9.37,
+   "teile": {
+    "bundesgerichtshof": 8.63
+   },
+   "sfx": [
+    {
+     "datei": "kamera.mp3",
+     "at": 6.95,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Hintergrund",
+   "text": "Amazon (Kachel), Lupe fährt über drei Preisbalken der Händler, gestrichelte 'Amazon-Grenze' auf 'Amazons System', ein Balken wächst auf 'zu hoch' darüber und wird rot, 'zu hoch' handschriftlich",
+   "start": 9.4,
+   "ende": 15.55,
+   "teile": {
+    "amazon": 10.1,
+    "prueft": 10.43,
+    "preise": 11.13,
+    "marktplatzhaendlern": 11.63,
+    "amazons": 13.6,
+    "zu": 14.63
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 9.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 14.63,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2b",
+   "wort": "dann",
+   "text": "Produktseite mit hervorgehobener Buy Box, darin das Angebot (Laden, Preis rot, Warenkorb); auf 'verschwinden' fällt das Angebot aus der Box, auf 'deaktiviert' wird es grau mit Aus-Symbol",
+   "start": 15.55,
+   "ende": 20.5,
+   "teile": {
+    "angebot": 16.3,
+    "buy": 17.77,
+    "verschwinden": 18.17,
+    "deaktiviert": 19.7
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 15.55,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 18.17,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st1",
+   "wort": "riesiges",
+   "text": "Sticker RIESIG.",
+   "start": 22.0,
+   "ende": 23.45,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 22.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Händler",
+   "text": "Titel 'BUY BOX = SICHTBARKEIT' (Overlay aus dem Briefing); Läden 'du' und 'andere', Spotlight auf 'hervorgehobene' auf dir, Kunde geht auf 'dir' zu dir (Warenkorb), auf 'jemand anderem' wechseln Spotlight und Weg zu 'andere'",
+   "start": 21.3,
+   "ende": 30.3,
+   "teile": {
+    "haendler": 21.33,
+    "buy": 23.43,
+    "hervorgehobene": 24.3,
+    "kunde": 27.93,
+    "dir": 28.3,
+    "jemand": 29.67
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 21.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 28.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 29.67,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Und (das Bundeskartellamt)",
+   "text": "Zeitstrahl Teil 1: Bundeskartellamt, Preiskontrolle (Etikett mit Lupe), Knoten 'Feb 2026', ✕ auf 'beanstandet', 'UNTERSAGT' auf 'untersagt'; rechts ein offener Knoten '?'",
+   "start": 30.33,
+   "ende": 36.9,
+   "teile": {
+    "bundeskartellamt": 30.6,
+    "preiskontrolle": 32.5,
+    "februar": 33.3,
+    "beanstandet": 33.77,
+    "untersagt": 36.47
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 30.33,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 33.9,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 36.47,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4b",
+   "wort": "Und (Amazon wehrt)",
+   "text": "Zeitstrahl Teil 2: Amazon mit Schild ('wehrt sich' handschriftlich), Weg zum BGH, Kalender baut sich auf 26 / JAN / 2027, Schlusszeile 'BGH-TERMIN: 26.01.2027' (Overlay aus dem Briefing)",
+   "start": 36.93,
+   "ende": 43.15,
+   "teile": {
+    "amazon": 37.07,
+    "wehrt": 37.43,
+    "bgh": 39.03,
+    "termin": 40.0,
+    "26": 40.6,
+    "januar": 41.43,
+    "2027": 41.73
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 36.93,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 39.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 41.73,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Erst",
+   "text": "Kalender 26.01.2027; 'Eilverfahren' ✓, 'endgültiges Urteil' ✕ und durchgestrichen, 'noch kein Urteil' handschriftlich",
+   "start": 43.2,
+   "ende": 46.78,
+   "teile": {
+    "eilverfahren": 44.53,
+    "endgueltiges": 45.6,
+    "urteil": 46.3
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 43.2,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 44.53,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 46.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st2",
+   "wort": "dich",
+   "text": "Sticker UND DU?",
+   "start": 48.4,
+   "ende": 49.25,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 48.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Erstens",
+   "text": "Balken Umsatz und Marge, Chip 'Sichtbarkeit', Preis-Etikett rutscht auf 'senkst' die Spirale hinab, die Marge schrumpft in Stufen, auf 'Gewinn' fast null und rot, 'kaum Gewinn' handschriftlich",
+   "start": 49.3,
+   "ende": 58.85,
+   "teile": {
+    "umsatz": 51.93,
+    "marge": 53.33,
+    "sichtbarkeit": 54.73,
+    "preis": 55.97,
+    "senkst": 56.27,
+    "gewinn": 58.0
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 49.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 53.33,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 58.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Zweitens",
+   "text": "Marktplatz oben, 'dein Geschäft' hängt auf 'abhängig' an einem Faden; Kunden (Beziehungen) und eigener Shop kommen dazu, 'mehr Spielraum' handschriftlich, auf 'Marktplätzen' wird der Faden grau gestrichelt",
+   "start": 58.87,
+   "ende": 69.37,
+   "teile": {
+    "abhaengig": 60.47,
+    "einzigen": 62.0,
+    "kundenbeziehungen": 63.7,
+    "onlineshop": 65.2,
+    "spielraum": 66.57,
+    "marktplaetzen": 68.47
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 58.87,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 63.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 65.2,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Plattform",
+   "text": "Plattform, Kundenerlebnis ✓; 'wie weit?' handschriftlich; der Arm der Plattform greift auf 'Preisgestaltung' zum Preis-Etikett, Händler-Kachel auf 'unabhängiger', Fragezeichen auf 'mitreden'",
+   "start": 70.55,
+   "ende": 77.5,
+   "teile": {
+    "plattform": 70.6,
+    "kundenerlebnisse": 72.17,
+    "wie": 73.7,
+    "preisgestaltung": 75.03,
+    "unabhaengiger": 76.17,
+    "mitreden": 77.1
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 70.55,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 72.17,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 77.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Wie",
+   "text": "Umfrage 'Darf Amazon mitreden?' mit Ja / Nein, 'Schreib's in die Kommentare'; dann nur das Folgen-Symbol: Ring auf 'folge', Zeiger tippt das Plus an, es wird zum Haken. Keine Folgennummer",
+   "start": 77.53,
+   "ende": 84.13,
+   "teile": {
+    "ja": 77.9,
+    "nein": 78.13,
+    "kommentare": 79.3,
+    "folge": 80.03
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 77.53,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 80.42,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

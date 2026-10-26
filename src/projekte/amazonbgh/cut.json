@@ -1,0 +1,1933 @@
+{
+ "projekt": "amazonbgh",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "amazonbgh/t1",
+   "from": 13.265,
+   "to": 20.275,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 25.025,
+   "to": 27.495,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 32.175,
+   "to": 35.155,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 43.355,
+   "to": 51.505,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 55.655,
+   "to": 65.425,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 77.815,
+   "to": 84.435,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 92.105,
+   "to": 98.335,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 123.625,
+   "to": 127.195,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 141.005,
+   "to": 143.485,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 144.445,
+   "to": 149.005,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 150.775,
+   "to": 155.775,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 156.415,
+   "to": 160.655,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 163.295,
+   "to": 169.555,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 193.175,
+   "to": 197.255,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 198.115,
+   "to": 202.155,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 207.515,
+   "to": 209.845,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "amazonbgh/t1",
+   "from": 218.905,
+   "to": 223.15,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Darf",
+   "src": "amazonbgh/t1",
+   "start": 13.29,
+   "end": 13.43
+  },
+  {
+   "text": "Amazon",
+   "src": "amazonbgh/t1",
+   "start": 13.55,
+   "end": 13.89
+  },
+  {
+   "text": "überhaupt",
+   "src": "amazonbgh/t1",
+   "start": 13.95,
+   "end": 14.23
+  },
+  {
+   "text": "bestimmen,",
+   "src": "amazonbgh/t1",
+   "start": 14.27,
+   "end": 14.63
+  },
+  {
+   "text": "wie",
+   "src": "amazonbgh/t1",
+   "start": 14.67,
+   "end": 14.75
+  },
+  {
+   "text": "teuer",
+   "src": "amazonbgh/t1",
+   "start": 14.79,
+   "end": 15.03
+  },
+  {
+   "text": "du",
+   "src": "amazonbgh/t1",
+   "start": 15.13,
+   "end": 15.19
+  },
+  {
+   "text": "deine",
+   "src": "amazonbgh/t1",
+   "start": 15.31,
+   "end": 15.53
+  },
+  {
+   "text": "Produkte",
+   "src": "amazonbgh/t1",
+   "start": 15.59,
+   "end": 15.89
+  },
+  {
+   "text": "verkaufst?",
+   "src": "amazonbgh/t1",
+   "start": 15.95,
+   "end": 16.37
+  },
+  {
+   "text": "Genau",
+   "src": "amazonbgh/t1",
+   "start": 16.77,
+   "end": 16.99
+  },
+  {
+   "text": "darüber",
+   "src": "amazonbgh/t1",
+   "start": 17.05,
+   "end": 17.37
+  },
+  {
+   "text": "streiten",
+   "src": "amazonbgh/t1",
+   "start": 17.41,
+   "end": 17.71
+  },
+  {
+   "text": "sich",
+   "src": "amazonbgh/t1",
+   "start": 17.77,
+   "end": 17.85
+  },
+  {
+   "text": "nämlich",
+   "src": "amazonbgh/t1",
+   "start": 17.89,
+   "end": 18.09
+  },
+  {
+   "text": "gerade",
+   "src": "amazonbgh/t1",
+   "start": 18.11,
+   "end": 18.31
+  },
+  {
+   "text": "Amazon",
+   "src": "amazonbgh/t1",
+   "start": 18.45,
+   "end": 18.81
+  },
+  {
+   "text": "und",
+   "src": "amazonbgh/t1",
+   "start": 19.15,
+   "end": 19.25
+  },
+  {
+   "text": "das",
+   "src": "amazonbgh/t1",
+   "start": 19.29,
+   "end": 19.39
+  },
+  {
+   "text": "Bundeskartellamt.",
+   "src": "amazonbgh/t1",
+   "start": 19.51,
+   "end": 20.21
+  },
+  {
+   "text": "Und",
+   "src": "amazonbgh/t1",
+   "start": 25.08,
+   "end": 25.16
+  },
+  {
+   "text": "jetzt",
+   "src": "amazonbgh/t1",
+   "start": 25.22,
+   "end": 25.4
+  },
+  {
+   "text": "geht",
+   "src": "amazonbgh/t1",
+   "start": 25.44,
+   "end": 25.56
+  },
+  {
+   "text": "gerade",
+   "src": "amazonbgh/t1",
+   "start": 25.74,
+   "end": 25.96
+  },
+  {
+   "text": "der",
+   "src": "amazonbgh/t1",
+   "start": 26.02,
+   "end": 26.12
+  },
+  {
+   "text": "Fall",
+   "src": "amazonbgh/t1",
+   "start": 26.18,
+   "end": 26.36
+  },
+  {
+   "text": "vor",
+   "src": "amazonbgh/t1",
+   "start": 26.42,
+   "end": 26.52
+  },
+  {
+   "text": "den",
+   "src": "amazonbgh/t1",
+   "start": 26.56,
+   "end": 26.64
+  },
+  {
+   "text": "Bundesgerichtshof.",
+   "src": "amazonbgh/t1",
+   "start": 26.72,
+   "end": 27.44
+  },
+  {
+   "text": "Hintergrund",
+   "src": "amazonbgh/t1",
+   "start": 32.22,
+   "end": 32.62
+  },
+  {
+   "text": "ist,",
+   "src": "amazonbgh/t1",
+   "start": 32.66,
+   "end": 32.74
+  },
+  {
+   "text": "Amazon",
+   "src": "amazonbgh/t1",
+   "start": 32.86,
+   "end": 33.14
+  },
+  {
+   "text": "prüft",
+   "src": "amazonbgh/t1",
+   "start": 33.2,
+   "end": 33.44
+  },
+  {
+   "text": "natürlich",
+   "src": "amazonbgh/t1",
+   "start": 33.48,
+   "end": 33.78
+  },
+  {
+   "text": "die",
+   "src": "amazonbgh/t1",
+   "start": 33.82,
+   "end": 33.88
+  },
+  {
+   "text": "Preise",
+   "src": "amazonbgh/t1",
+   "start": 33.92,
+   "end": 34.2
+  },
+  {
+   "text": "von",
+   "src": "amazonbgh/t1",
+   "start": 34.26,
+   "end": 34.38
+  },
+  {
+   "text": "Marktplatzhändlern.",
+   "src": "amazonbgh/t1",
+   "start": 34.42,
+   "end": 35.12
+  },
+  {
+   "text": "Und",
+   "src": "amazonbgh/t1",
+   "start": 43.39,
+   "end": 43.45
+  },
+  {
+   "text": "wenn",
+   "src": "amazonbgh/t1",
+   "start": 43.49,
+   "end": 43.61
+  },
+  {
+   "text": "ein",
+   "src": "amazonbgh/t1",
+   "start": 43.65,
+   "end": 43.73
+  },
+  {
+   "text": "Preis",
+   "src": "amazonbgh/t1",
+   "start": 43.79,
+   "end": 44.07
+  },
+  {
+   "text": "einfach",
+   "src": "amazonbgh/t1",
+   "start": 44.13,
+   "end": 44.31
+  },
+  {
+   "text": "nach",
+   "src": "amazonbgh/t1",
+   "start": 44.37,
+   "end": 44.49
+  },
+  {
+   "text": "Amazons",
+   "src": "amazonbgh/t1",
+   "start": 44.55,
+   "end": 44.89
+  },
+  {
+   "text": "System",
+   "src": "amazonbgh/t1",
+   "start": 44.93,
+   "end": 45.25
+  },
+  {
+   "text": "gerade",
+   "src": "amazonbgh/t1",
+   "start": 45.31,
+   "end": 45.53
+  },
+  {
+   "text": "zu",
+   "src": "amazonbgh/t1",
+   "start": 45.59,
+   "end": 45.65
+  },
+  {
+   "text": "hoch",
+   "src": "amazonbgh/t1",
+   "start": 45.73,
+   "end": 45.91
+  },
+  {
+   "text": "ist,",
+   "src": "amazonbgh/t1",
+   "start": 46.03,
+   "end": 46.15
+  },
+  {
+   "text": "dann",
+   "src": "amazonbgh/t1",
+   "start": 46.21,
+   "end": 46.35
+  },
+  {
+   "text": "kann",
+   "src": "amazonbgh/t1",
+   "start": 46.41,
+   "end": 46.57
+  },
+  {
+   "text": "tatsächlich",
+   "src": "amazonbgh/t1",
+   "start": 46.61,
+   "end": 47.03
+  },
+  {
+   "text": "ein",
+   "src": "amazonbgh/t1",
+   "start": 47.09,
+   "end": 47.17
+  },
+  {
+   "text": "Angebot",
+   "src": "amazonbgh/t1",
+   "start": 47.27,
+   "end": 47.61
+  },
+  {
+   "text": "einfach",
+   "src": "amazonbgh/t1",
+   "start": 47.67,
+   "end": 47.91
+  },
+  {
+   "text": "aus",
+   "src": "amazonbgh/t1",
+   "start": 47.95,
+   "end": 48.05
+  },
+  {
+   "text": "der",
+   "src": "amazonbgh/t1",
+   "start": 48.09,
+   "end": 48.17
+  },
+  {
+   "text": "sogenannten",
+   "src": "amazonbgh/t1",
+   "start": 48.21,
+   "end": 48.65
+  },
+  {
+   "text": "Buy",
+   "src": "amazonbgh/t1",
+   "start": 48.71,
+   "end": 48.83
+  },
+  {
+   "text": "Box",
+   "src": "amazonbgh/t1",
+   "start": 48.91,
+   "end": 49.03
+  },
+  {
+   "text": "verschwinden",
+   "src": "amazonbgh/t1",
+   "start": 49.13,
+   "end": 49.63
+  },
+  {
+   "text": "oder",
+   "src": "amazonbgh/t1",
+   "start": 50.05,
+   "end": 50.21
+  },
+  {
+   "text": "sogar",
+   "src": "amazonbgh/t1",
+   "start": 50.27,
+   "end": 50.45
+  },
+  {
+   "text": "ganz",
+   "src": "amazonbgh/t1",
+   "start": 50.49,
+   "end": 50.63
+  },
+  {
+   "text": "deaktiviert",
+   "src": "amazonbgh/t1",
+   "start": 50.67,
+   "end": 51.15
+  },
+  {
+   "text": "werden.",
+   "src": "amazonbgh/t1",
+   "start": 51.19,
+   "end": 51.37
+  },
+  {
+   "text": "Und",
+   "src": "amazonbgh/t1",
+   "start": 55.67,
+   "end": 55.73
+  },
+  {
+   "text": "das",
+   "src": "amazonbgh/t1",
+   "start": 55.77,
+   "end": 55.87
+  },
+  {
+   "text": "ist",
+   "src": "amazonbgh/t1",
+   "start": 55.91,
+   "end": 55.97
+  },
+  {
+   "text": "natürlich",
+   "src": "amazonbgh/t1",
+   "start": 56.01,
+   "end": 56.31
+  },
+  {
+   "text": "für",
+   "src": "amazonbgh/t1",
+   "start": 56.35,
+   "end": 56.41
+  },
+  {
+   "text": "Händler",
+   "src": "amazonbgh/t1",
+   "start": 56.47,
+   "end": 56.73
+  },
+  {
+   "text": "immer",
+   "src": "amazonbgh/t1",
+   "start": 56.79,
+   "end": 56.93
+  },
+  {
+   "text": "ein",
+   "src": "amazonbgh/t1",
+   "start": 56.99,
+   "end": 57.09
+  },
+  {
+   "text": "riesiges",
+   "src": "amazonbgh/t1",
+   "start": 57.15,
+   "end": 57.57
+  },
+  {
+   "text": "Thema,",
+   "src": "amazonbgh/t1",
+   "start": 57.61,
+   "end": 57.87
+  },
+  {
+   "text": "denn",
+   "src": "amazonbgh/t1",
+   "start": 58.21,
+   "end": 58.37
+  },
+  {
+   "text": "die",
+   "src": "amazonbgh/t1",
+   "start": 58.43,
+   "end": 58.51
+  },
+  {
+   "text": "Buy",
+   "src": "amazonbgh/t1",
+   "start": 58.55,
+   "end": 58.69
+  },
+  {
+   "text": "Box,",
+   "src": "amazonbgh/t1",
+   "start": 58.77,
+   "end": 58.95
+  },
+  {
+   "text": "also",
+   "src": "amazonbgh/t1",
+   "start": 59.05,
+   "end": 59.19
+  },
+  {
+   "text": "das",
+   "src": "amazonbgh/t1",
+   "start": 59.27,
+   "end": 59.37
+  },
+  {
+   "text": "hervorgehobene",
+   "src": "amazonbgh/t1",
+   "start": 59.41,
+   "end": 60.01
+  },
+  {
+   "text": "Kaufangebot,",
+   "src": "amazonbgh/t1",
+   "start": 60.07,
+   "end": 60.67
+  },
+  {
+   "text": "entscheidet",
+   "src": "amazonbgh/t1",
+   "start": 61.07,
+   "end": 61.49
+  },
+  {
+   "text": "tatsächlich",
+   "src": "amazonbgh/t1",
+   "start": 61.53,
+   "end": 61.89
+  },
+  {
+   "text": "oft",
+   "src": "amazonbgh/t1",
+   "start": 61.95,
+   "end": 62.07
+  },
+  {
+   "text": "darüber,",
+   "src": "amazonbgh/t1",
+   "start": 62.11,
+   "end": 62.45
+  },
+  {
+   "text": "ob",
+   "src": "amazonbgh/t1",
+   "start": 62.69,
+   "end": 62.77
+  },
+  {
+   "text": "ein",
+   "src": "amazonbgh/t1",
+   "start": 62.87,
+   "end": 62.99
+  },
+  {
+   "text": "Kunde",
+   "src": "amazonbgh/t1",
+   "start": 63.05,
+   "end": 63.27
+  },
+  {
+   "text": "bei",
+   "src": "amazonbgh/t1",
+   "start": 63.31,
+   "end": 63.39
+  },
+  {
+   "text": "dir",
+   "src": "amazonbgh/t1",
+   "start": 63.43,
+   "end": 63.49
+  },
+  {
+   "text": "überhaupt",
+   "src": "amazonbgh/t1",
+   "start": 63.51,
+   "end": 63.77
+  },
+  {
+   "text": "kauft",
+   "src": "amazonbgh/t1",
+   "start": 63.83,
+   "end": 64.15
+  },
+  {
+   "text": "oder",
+   "src": "amazonbgh/t1",
+   "start": 64.25,
+   "end": 64.41
+  },
+  {
+   "text": "eben",
+   "src": "amazonbgh/t1",
+   "start": 64.51,
+   "end": 64.65
+  },
+  {
+   "text": "bei",
+   "src": "amazonbgh/t1",
+   "start": 64.69,
+   "end": 64.75
+  },
+  {
+   "text": "jemand",
+   "src": "amazonbgh/t1",
+   "start": 64.79,
+   "end": 64.97
+  },
+  {
+   "text": "anderem.",
+   "src": "amazonbgh/t1",
+   "start": 65.05,
+   "end": 65.33
+  },
+  {
+   "text": "Und",
+   "src": "amazonbgh/t1",
+   "start": 77.85,
+   "end": 77.93
+  },
+  {
+   "text": "das",
+   "src": "amazonbgh/t1",
+   "start": 77.97,
+   "end": 78.03
+  },
+  {
+   "text": "Bundeskartellamt",
+   "src": "amazonbgh/t1",
+   "start": 78.11,
+   "end": 78.87
+  },
+  {
+   "text": "hat",
+   "src": "amazonbgh/t1",
+   "start": 78.89,
+   "end": 78.99
+  },
+  {
+   "text": "jetzt",
+   "src": "amazonbgh/t1",
+   "start": 79.19,
+   "end": 79.39
+  },
+  {
+   "text": "diese",
+   "src": "amazonbgh/t1",
+   "start": 79.45,
+   "end": 79.61
+  },
+  {
+   "text": "Art",
+   "src": "amazonbgh/t1",
+   "start": 79.73,
+   "end": 79.85
+  },
+  {
+   "text": "der",
+   "src": "amazonbgh/t1",
+   "start": 79.91,
+   "end": 79.97
+  },
+  {
+   "text": "Preiskontrolle",
+   "src": "amazonbgh/t1",
+   "start": 80.01,
+   "end": 80.65
+  },
+  {
+   "text": "im",
+   "src": "amazonbgh/t1",
+   "start": 80.69,
+   "end": 80.75
+  },
+  {
+   "text": "Februar",
+   "src": "amazonbgh/t1",
+   "start": 80.83,
+   "end": 81.23
+  },
+  {
+   "text": "beanstandet",
+   "src": "amazonbgh/t1",
+   "start": 81.29,
+   "end": 81.95
+  },
+  {
+   "text": "und",
+   "src": "amazonbgh/t1",
+   "start": 82.09,
+   "end": 82.17
+  },
+  {
+   "text": "Amazon",
+   "src": "amazonbgh/t1",
+   "start": 82.29,
+   "end": 82.63
+  },
+  {
+   "text": "bestimmte",
+   "src": "amazonbgh/t1",
+   "start": 82.69,
+   "end": 83.15
+  },
+  {
+   "text": "Eingriffe",
+   "src": "amazonbgh/t1",
+   "start": 83.27,
+   "end": 83.63
+  },
+  {
+   "text": "einfach",
+   "src": "amazonbgh/t1",
+   "start": 83.69,
+   "end": 83.93
+  },
+  {
+   "text": "untersagt.",
+   "src": "amazonbgh/t1",
+   "start": 83.99,
+   "end": 84.39
+  },
+  {
+   "text": "Und",
+   "src": "amazonbgh/t1",
+   "start": 92.11,
+   "end": 92.19
+  },
+  {
+   "text": "Amazon",
+   "src": "amazonbgh/t1",
+   "start": 92.23,
+   "end": 92.53
+  },
+  {
+   "text": "wehrt",
+   "src": "amazonbgh/t1",
+   "start": 92.59,
+   "end": 92.75
+  },
+  {
+   "text": "sich",
+   "src": "amazonbgh/t1",
+   "start": 92.79,
+   "end": 92.89
+  },
+  {
+   "text": "natürlich",
+   "src": "amazonbgh/t1",
+   "start": 92.91,
+   "end": 93.19
+  },
+  {
+   "text": "dagegen,",
+   "src": "amazonbgh/t1",
+   "start": 93.25,
+   "end": 93.57
+  },
+  {
+   "text": "aber",
+   "src": "amazonbgh/t1",
+   "start": 93.63,
+   "end": 93.75
+  },
+  {
+   "text": "jetzt",
+   "src": "amazonbgh/t1",
+   "start": 93.81,
+   "end": 93.95
+  },
+  {
+   "text": "hat",
+   "src": "amazonbgh/t1",
+   "start": 93.97,
+   "end": 94.07
+  },
+  {
+   "text": "der",
+   "src": "amazonbgh/t1",
+   "start": 94.1,
+   "end": 94.18
+  },
+  {
+   "text": "BGH",
+   "src": "amazonbgh/t1",
+   "start": 94.22,
+   "end": 94.72
+  },
+  {
+   "text": "einen",
+   "src": "amazonbgh/t1",
+   "start": 94.96,
+   "end": 95.14
+  },
+  {
+   "text": "Termin",
+   "src": "amazonbgh/t1",
+   "start": 95.18,
+   "end": 95.48
+  },
+  {
+   "text": "für",
+   "src": "amazonbgh/t1",
+   "start": 95.52,
+   "end": 95.62
+  },
+  {
+   "text": "den",
+   "src": "amazonbgh/t1",
+   "start": 95.66,
+   "end": 95.74
+  },
+  {
+   "text": "26.",
+   "src": "amazonbgh/t1",
+   "start": 95.78,
+   "end": 96.52
+  },
+  {
+   "text": "Januar",
+   "src": "amazonbgh/t1",
+   "start": 96.59,
+   "end": 96.87
+  },
+  {
+   "text": "2027",
+   "src": "amazonbgh/t1",
+   "start": 96.91,
+   "end": 97.79
+  },
+  {
+   "text": "angesetzt.",
+   "src": "amazonbgh/t1",
+   "start": 97.85,
+   "end": 98.25
+  },
+  {
+   "text": "Erst",
+   "src": "amazonbgh/t1",
+   "start": 123.67,
+   "end": 123.81
+  },
+  {
+   "text": "einmal",
+   "src": "amazonbgh/t1",
+   "start": 123.83,
+   "end": 124.01
+  },
+  {
+   "text": "geht",
+   "src": "amazonbgh/t1",
+   "start": 124.07,
+   "end": 124.19
+  },
+  {
+   "text": "es",
+   "src": "amazonbgh/t1",
+   "start": 124.21,
+   "end": 124.25
+  },
+  {
+   "text": "hier",
+   "src": "amazonbgh/t1",
+   "start": 124.27,
+   "end": 124.35
+  },
+  {
+   "text": "natürlich",
+   "src": "amazonbgh/t1",
+   "start": 124.37,
+   "end": 124.65
+  },
+  {
+   "text": "um",
+   "src": "amazonbgh/t1",
+   "start": 124.69,
+   "end": 124.75
+  },
+  {
+   "text": "ein",
+   "src": "amazonbgh/t1",
+   "start": 124.79,
+   "end": 124.87
+  },
+  {
+   "text": "Eilverfahren",
+   "src": "amazonbgh/t1",
+   "start": 124.99,
+   "end": 125.43
+  },
+  {
+   "text": "und",
+   "src": "amazonbgh/t1",
+   "start": 125.49,
+   "end": 125.55
+  },
+  {
+   "text": "nicht",
+   "src": "amazonbgh/t1",
+   "start": 125.57,
+   "end": 125.69
+  },
+  {
+   "text": "um",
+   "src": "amazonbgh/t1",
+   "start": 125.73,
+   "end": 125.79
+  },
+  {
+   "text": "ein",
+   "src": "amazonbgh/t1",
+   "start": 125.85,
+   "end": 125.93
+  },
+  {
+   "text": "endgültiges",
+   "src": "amazonbgh/t1",
+   "start": 126.05,
+   "end": 126.67
+  },
+  {
+   "text": "Urteil.",
+   "src": "amazonbgh/t1",
+   "start": 126.77,
+   "end": 127.07
+  },
+  {
+   "text": "Aber",
+   "src": "amazonbgh/t1",
+   "start": 141.1,
+   "end": 141.26
+  },
+  {
+   "text": "was",
+   "src": "amazonbgh/t1",
+   "start": 141.32,
+   "end": 141.44
+  },
+  {
+   "text": "heißt",
+   "src": "amazonbgh/t1",
+   "start": 141.48,
+   "end": 141.66
+  },
+  {
+   "text": "das",
+   "src": "amazonbgh/t1",
+   "start": 141.68,
+   "end": 141.78
+  },
+  {
+   "text": "jetzt",
+   "src": "amazonbgh/t1",
+   "start": 141.82,
+   "end": 142.02
+  },
+  {
+   "text": "tatsächlich",
+   "src": "amazonbgh/t1",
+   "start": 142.06,
+   "end": 142.48
+  },
+  {
+   "text": "für",
+   "src": "amazonbgh/t1",
+   "start": 142.54,
+   "end": 142.62
+  },
+  {
+   "text": "dich",
+   "src": "amazonbgh/t1",
+   "start": 142.7,
+   "end": 142.86
+  },
+  {
+   "text": "als",
+   "src": "amazonbgh/t1",
+   "start": 142.92,
+   "end": 143.02
+  },
+  {
+   "text": "Händler?",
+   "src": "amazonbgh/t1",
+   "start": 143.06,
+   "end": 143.32
+  },
+  {
+   "text": "Erstens,",
+   "src": "amazonbgh/t1",
+   "start": 144.5,
+   "end": 144.94
+  },
+  {
+   "text": "schau",
+   "src": "amazonbgh/t1",
+   "start": 145.4,
+   "end": 145.58
+  },
+  {
+   "text": "tatsächlich",
+   "src": "amazonbgh/t1",
+   "start": 145.66,
+   "end": 146.04
+  },
+  {
+   "text": "nicht",
+   "src": "amazonbgh/t1",
+   "start": 146.1,
+   "end": 146.2
+  },
+  {
+   "text": "einfach",
+   "src": "amazonbgh/t1",
+   "start": 146.24,
+   "end": 146.48
+  },
+  {
+   "text": "nur",
+   "src": "amazonbgh/t1",
+   "start": 146.54,
+   "end": 146.64
+  },
+  {
+   "text": "auf",
+   "src": "amazonbgh/t1",
+   "start": 146.7,
+   "end": 146.78
+  },
+  {
+   "text": "deinen",
+   "src": "amazonbgh/t1",
+   "start": 146.82,
+   "end": 147.06
+  },
+  {
+   "text": "Umsatz,",
+   "src": "amazonbgh/t1",
+   "start": 147.16,
+   "end": 147.52
+  },
+  {
+   "text": "sondern",
+   "src": "amazonbgh/t1",
+   "start": 147.6,
+   "end": 147.88
+  },
+  {
+   "text": "eben",
+   "src": "amazonbgh/t1",
+   "start": 148.02,
+   "end": 148.14
+  },
+  {
+   "text": "auf",
+   "src": "amazonbgh/t1",
+   "start": 148.18,
+   "end": 148.26
+  },
+  {
+   "text": "deine",
+   "src": "amazonbgh/t1",
+   "start": 148.3,
+   "end": 148.48
+  },
+  {
+   "text": "Marge.",
+   "src": "amazonbgh/t1",
+   "start": 148.54,
+   "end": 148.82
+  },
+  {
+   "text": "Denn",
+   "src": "amazonbgh/t1",
+   "start": 150.82,
+   "end": 150.96
+  },
+  {
+   "text": "wenn",
+   "src": "amazonbgh/t1",
+   "start": 150.98,
+   "end": 151.1
+  },
+  {
+   "text": "du",
+   "src": "amazonbgh/t1",
+   "start": 151.16,
+   "end": 151.22
+  },
+  {
+   "text": "jetzt",
+   "src": "amazonbgh/t1",
+   "start": 151.3,
+   "end": 151.42
+  },
+  {
+   "text": "auch",
+   "src": "amazonbgh/t1",
+   "start": 151.44,
+   "end": 151.52
+  },
+  {
+   "text": "für",
+   "src": "amazonbgh/t1",
+   "start": 151.56,
+   "end": 151.64
+  },
+  {
+   "text": "Sichtbarkeit",
+   "src": "amazonbgh/t1",
+   "start": 151.7,
+   "end": 152.18
+  },
+  {
+   "text": "immer",
+   "src": "amazonbgh/t1",
+   "start": 152.3,
+   "end": 152.46
+  },
+  {
+   "text": "weiter",
+   "src": "amazonbgh/t1",
+   "start": 152.52,
+   "end": 152.74
+  },
+  {
+   "text": "den",
+   "src": "amazonbgh/t1",
+   "start": 152.82,
+   "end": 152.9
+  },
+  {
+   "text": "Preis",
+   "src": "amazonbgh/t1",
+   "start": 152.94,
+   "end": 153.18
+  },
+  {
+   "text": "senkst,",
+   "src": "amazonbgh/t1",
+   "start": 153.24,
+   "end": 153.56
+  },
+  {
+   "text": "kann",
+   "src": "amazonbgh/t1",
+   "start": 153.7,
+   "end": 153.84
+  },
+  {
+   "text": "natürlich",
+   "src": "amazonbgh/t1",
+   "start": 153.88,
+   "end": 154.2
+  },
+  {
+   "text": "am",
+   "src": "amazonbgh/t1",
+   "start": 154.24,
+   "end": 154.3
+  },
+  {
+   "text": "Ende",
+   "src": "amazonbgh/t1",
+   "start": 154.32,
+   "end": 154.48
+  },
+  {
+   "text": "kaum",
+   "src": "amazonbgh/t1",
+   "start": 154.58,
+   "end": 154.74
+  },
+  {
+   "text": "mehr",
+   "src": "amazonbgh/t1",
+   "start": 154.78,
+   "end": 154.88
+  },
+  {
+   "text": "Gewinn",
+   "src": "amazonbgh/t1",
+   "start": 154.96,
+   "end": 155.18
+  },
+  {
+   "text": "übrig",
+   "src": "amazonbgh/t1",
+   "start": 155.24,
+   "end": 155.44
+  },
+  {
+   "text": "bleiben.",
+   "src": "amazonbgh/t1",
+   "start": 155.5,
+   "end": 155.72
+  },
+  {
+   "text": "Zweitens",
+   "src": "amazonbgh/t1",
+   "start": 156.47,
+   "end": 156.93
+  },
+  {
+   "text": "prüfe",
+   "src": "amazonbgh/t1",
+   "start": 157.15,
+   "end": 157.43
+  },
+  {
+   "text": "einfach",
+   "src": "amazonbgh/t1",
+   "start": 157.49,
+   "end": 157.69
+  },
+  {
+   "text": "mal,",
+   "src": "amazonbgh/t1",
+   "start": 157.73,
+   "end": 157.85
+  },
+  {
+   "text": "wie",
+   "src": "amazonbgh/t1",
+   "start": 157.91,
+   "end": 158.01
+  },
+  {
+   "text": "abhängig",
+   "src": "amazonbgh/t1",
+   "start": 158.09,
+   "end": 158.47
+  },
+  {
+   "text": "dein",
+   "src": "amazonbgh/t1",
+   "start": 158.53,
+   "end": 158.73
+  },
+  {
+   "text": "Geschäft",
+   "src": "amazonbgh/t1",
+   "start": 158.79,
+   "end": 159.09
+  },
+  {
+   "text": "von",
+   "src": "amazonbgh/t1",
+   "start": 159.15,
+   "end": 159.25
+  },
+  {
+   "text": "einem",
+   "src": "amazonbgh/t1",
+   "start": 159.31,
+   "end": 159.47
+  },
+  {
+   "text": "einzigen",
+   "src": "amazonbgh/t1",
+   "start": 159.61,
+   "end": 159.97
+  },
+  {
+   "text": "Marktplatz",
+   "src": "amazonbgh/t1",
+   "start": 160.01,
+   "end": 160.35
+  },
+  {
+   "text": "ist.",
+   "src": "amazonbgh/t1",
+   "start": 160.37,
+   "end": 160.56
+  },
+  {
+   "text": "Denn",
+   "src": "amazonbgh/t1",
+   "start": 163.38,
+   "end": 163.5
+  },
+  {
+   "text": "eigene",
+   "src": "amazonbgh/t1",
+   "start": 163.62,
+   "end": 163.84
+  },
+  {
+   "text": "Kundenbeziehungen",
+   "src": "amazonbgh/t1",
+   "start": 163.94,
+   "end": 164.62
+  },
+  {
+   "text": "und",
+   "src": "amazonbgh/t1",
+   "start": 164.72,
+   "end": 164.82
+  },
+  {
+   "text": "ein",
+   "src": "amazonbgh/t1",
+   "start": 164.86,
+   "end": 164.94
+  },
+  {
+   "text": "eigener",
+   "src": "amazonbgh/t1",
+   "start": 165.1,
+   "end": 165.38
+  },
+  {
+   "text": "Onlineshop",
+   "src": "amazonbgh/t1",
+   "start": 165.44,
+   "end": 165.84
+  },
+  {
+   "text": "können",
+   "src": "amazonbgh/t1",
+   "start": 165.88,
+   "end": 166.04
+  },
+  {
+   "text": "einfach",
+   "src": "amazonbgh/t1",
+   "start": 166.06,
+   "end": 166.28
+  },
+  {
+   "text": "dir",
+   "src": "amazonbgh/t1",
+   "start": 166.34,
+   "end": 166.44
+  },
+  {
+   "text": "mehr",
+   "src": "amazonbgh/t1",
+   "start": 166.58,
+   "end": 166.74
+  },
+  {
+   "text": "Spielraum",
+   "src": "amazonbgh/t1",
+   "start": 166.8,
+   "end": 167.2
+  },
+  {
+   "text": "geben,",
+   "src": "amazonbgh/t1",
+   "start": 167.28,
+   "end": 167.48
+  },
+  {
+   "text": "als",
+   "src": "amazonbgh/t1",
+   "start": 167.58,
+   "end": 167.68
+  },
+  {
+   "text": "wenn",
+   "src": "amazonbgh/t1",
+   "start": 167.72,
+   "end": 167.82
+  },
+  {
+   "text": "du",
+   "src": "amazonbgh/t1",
+   "start": 167.84,
+   "end": 167.88
+  },
+  {
+   "text": "einfach",
+   "src": "amazonbgh/t1",
+   "start": 167.96,
+   "end": 168.2
+  },
+  {
+   "text": "nur",
+   "src": "amazonbgh/t1",
+   "start": 168.28,
+   "end": 168.38
+  },
+  {
+   "text": "immer",
+   "src": "amazonbgh/t1",
+   "start": 168.42,
+   "end": 168.52
+  },
+  {
+   "text": "auf",
+   "src": "amazonbgh/t1",
+   "start": 168.54,
+   "end": 168.62
+  },
+  {
+   "text": "Marktplätzen",
+   "src": "amazonbgh/t1",
+   "start": 168.68,
+   "end": 169.1
+  },
+  {
+   "text": "verkaufst.",
+   "src": "amazonbgh/t1",
+   "start": 169.14,
+   "end": 169.5
+  },
+  {
+   "text": "Ich",
+   "src": "amazonbgh/t1",
+   "start": 193.23,
+   "end": 193.31
+  },
+  {
+   "text": "finde",
+   "src": "amazonbgh/t1",
+   "start": 193.41,
+   "end": 193.65
+  },
+  {
+   "text": "natürlich,",
+   "src": "amazonbgh/t1",
+   "start": 193.73,
+   "end": 194.05
+  },
+  {
+   "text": "dass",
+   "src": "amazonbgh/t1",
+   "start": 194.07,
+   "end": 194.19
+  },
+  {
+   "text": "eine",
+   "src": "amazonbgh/t1",
+   "start": 194.23,
+   "end": 194.35
+  },
+  {
+   "text": "Plattform",
+   "src": "amazonbgh/t1",
+   "start": 194.43,
+   "end": 194.79
+  },
+  {
+   "text": "hier",
+   "src": "amazonbgh/t1",
+   "start": 194.85,
+   "end": 194.95
+  },
+  {
+   "text": "auch",
+   "src": "amazonbgh/t1",
+   "start": 195.03,
+   "end": 195.15
+  },
+  {
+   "text": "durchaus",
+   "src": "amazonbgh/t1",
+   "start": 195.23,
+   "end": 195.65
+  },
+  {
+   "text": "gute",
+   "src": "amazonbgh/t1",
+   "start": 195.71,
+   "end": 195.91
+  },
+  {
+   "text": "Kundenerlebnisse",
+   "src": "amazonbgh/t1",
+   "start": 196.01,
+   "end": 196.61
+  },
+  {
+   "text": "fördern",
+   "src": "amazonbgh/t1",
+   "start": 196.69,
+   "end": 196.95
+  },
+  {
+   "text": "darf.",
+   "src": "amazonbgh/t1",
+   "start": 196.99,
+   "end": 197.17
+  },
+  {
+   "text": "Aber",
+   "src": "amazonbgh/t1",
+   "start": 198.19,
+   "end": 198.33
+  },
+  {
+   "text": "wie",
+   "src": "amazonbgh/t1",
+   "start": 198.39,
+   "end": 198.47
+  },
+  {
+   "text": "weit",
+   "src": "amazonbgh/t1",
+   "start": 198.53,
+   "end": 198.69
+  },
+  {
+   "text": "darf",
+   "src": "amazonbgh/t1",
+   "start": 198.73,
+   "end": 198.89
+  },
+  {
+   "text": "sie",
+   "src": "amazonbgh/t1",
+   "start": 198.97,
+   "end": 199.05
+  },
+  {
+   "text": "tatsächlich",
+   "src": "amazonbgh/t1",
+   "start": 199.09,
+   "end": 199.43
+  },
+  {
+   "text": "bei",
+   "src": "amazonbgh/t1",
+   "start": 199.45,
+   "end": 199.53
+  },
+  {
+   "text": "der",
+   "src": "amazonbgh/t1",
+   "start": 199.57,
+   "end": 199.63
+  },
+  {
+   "text": "Preisgestaltung",
+   "src": "amazonbgh/t1",
+   "start": 199.71,
+   "end": 200.45
+  },
+  {
+   "text": "einfach",
+   "src": "amazonbgh/t1",
+   "start": 200.53,
+   "end": 200.75
+  },
+  {
+   "text": "unabhängiger",
+   "src": "amazonbgh/t1",
+   "start": 200.85,
+   "end": 201.43
+  },
+  {
+   "text": "Händler",
+   "src": "amazonbgh/t1",
+   "start": 201.49,
+   "end": 201.73
+  },
+  {
+   "text": "mitreden?",
+   "src": "amazonbgh/t1",
+   "start": 201.77,
+   "end": 202.05
+  },
+  {
+   "text": "Wie",
+   "src": "amazonbgh/t1",
+   "start": 207.58,
+   "end": 207.66
+  },
+  {
+   "text": "siehst",
+   "src": "amazonbgh/t1",
+   "start": 207.7,
+   "end": 207.86
+  },
+  {
+   "text": "du",
+   "src": "amazonbgh/t1",
+   "start": 207.9,
+   "end": 207.94
+  },
+  {
+   "text": "das",
+   "src": "amazonbgh/t1",
+   "start": 208.02,
+   "end": 208.12
+  },
+  {
+   "text": "Ganze?",
+   "src": "amazonbgh/t1",
+   "start": 208.16,
+   "end": 208.42
+  },
+  {
+   "text": "Schreib",
+   "src": "amazonbgh/t1",
+   "start": 208.56,
+   "end": 208.78
+  },
+  {
+   "text": "sie",
+   "src": "amazonbgh/t1",
+   "start": 208.88,
+   "end": 208.94
+  },
+  {
+   "text": "gerne",
+   "src": "amazonbgh/t1",
+   "start": 208.98,
+   "end": 209.12
+  },
+  {
+   "text": "in",
+   "src": "amazonbgh/t1",
+   "start": 209.16,
+   "end": 209.2
+  },
+  {
+   "text": "die",
+   "src": "amazonbgh/t1",
+   "start": 209.22,
+   "end": 209.28
+  },
+  {
+   "text": "Kommentare.",
+   "src": "amazonbgh/t1",
+   "start": 209.3,
+   "end": 209.7
+  },
+  {
+   "text": "Und",
+   "src": "amazonbgh/t1",
+   "start": 218.95,
+   "end": 219.01
+  },
+  {
+   "text": "folge",
+   "src": "amazonbgh/t1",
+   "start": 219.09,
+   "end": 219.31
+  },
+  {
+   "text": "mir",
+   "src": "amazonbgh/t1",
+   "start": 219.37,
+   "end": 219.43
+  },
+  {
+   "text": "natürlich",
+   "src": "amazonbgh/t1",
+   "start": 219.47,
+   "end": 219.81
+  },
+  {
+   "text": "hier",
+   "src": "amazonbgh/t1",
+   "start": 219.83,
+   "end": 219.91
+  },
+  {
+   "text": "gerne",
+   "src": "amazonbgh/t1",
+   "start": 219.97,
+   "end": 220.21
+  },
+  {
+   "text": "für",
+   "src": "amazonbgh/t1",
+   "start": 220.33,
+   "end": 220.43
+  },
+  {
+   "text": "weitere",
+   "src": "amazonbgh/t1",
+   "start": 220.49,
+   "end": 220.77
+  },
+  {
+   "text": "E-Commerce-News",
+   "src": "amazonbgh/t1",
+   "start": 220.85,
+   "end": 221.49
+  },
+  {
+   "text": "mit",
+   "src": "amazonbgh/t1",
+   "start": 221.57,
+   "end": 221.65
+  },
+  {
+   "text": "echtem",
+   "src": "amazonbgh/t1",
+   "start": 221.79,
+   "end": 222.11
+  },
+  {
+   "text": "Händler-Mehrwert.",
+   "src": "amazonbgh/t1",
+   "start": 222.17,
+   "end": 222.73
+  }
+ ],
+ "pages": [
+  2,
+  2,
+  4,
+  2,
+  3,
+  2,
+  2,
+  1,
+  2,
+  4,
+  3,
+  2,
+  2,
+  3,
+  3,
+  1,
+  4,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  4,
+  3,
+  3,
+  4,
+  1,
+  2,
+  1,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  1,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  1,
+  3,
+  2,
+  3,
+  2,
+  3,
+  4,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  1,
+  3,
+  2,
+  3,
+  2,
+  4,
+  2,
+  2,
+  1,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  1,
+  2,
+  1
+ ]
+}

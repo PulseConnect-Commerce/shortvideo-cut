@@ -1,0 +1,98 @@
+{
+ "projekt": "amazonbgh",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 13.2,
+   "text": "Darf Amazon überhaupt bestimmen, wie teuer du deine Produkte verkaufst? Genau darüber streiten sich nämlich gerade Amazon und das Bundeskartellamt."
+  },
+  {
+   "take": "t1",
+   "ab": 25.0,
+   "text": "Und jetzt geht ihm gerade der Fall vor den Bundesgerichtshof."
+  },
+  {
+   "take": "t1",
+   "ab": 32.1,
+   "text": "Hintergrund ist, Amazon prüft natürlich die Preise von Marktplatzhändlern"
+  },
+  {
+   "take": "t1",
+   "ab": 42.8,
+   "text": "Und wenn ein Preis einfach nach Amazons System gerade zu hoch ist, dann kann tatsächlich ein Angebot einfach aus der sogenannten Buy Box verschwinden oder sogar ganz deaktiviert werden."
+  },
+  {
+   "take": "t1",
+   "ab": 55.6,
+   "text": "Und das ist natürlich für Händler immer ein riesiges Thema, denn die Buy Box, also das hervorgehobene Kaufangebot, entscheidet tatsächlich oft darüber, ob ein Kunde bei dir überhaupt kauft oder eben bei jemand anderem."
+  },
+  {
+   "take": "t1",
+   "ab": 77.8,
+   "text": "Und das Bundeskartellamt hat ihm jetzt diese Art der Preiskontrolle im Februar beanstandet und Amazon bestimmte Eingriffe einfach untersagt."
+  },
+  {
+   "take": "t1",
+   "ab": 92.0,
+   "text": "Und Amazon wehrt sich natürlich dagegen, aber jetzt hat der BGH einen Termin für den sechsundzwanzigsten Januar 2027 angesetzt."
+  },
+  {
+   "take": "t1",
+   "ab": 123.4,
+   "text": "Erst einmal geht es hier natürlich um ein Eilverfahren und nicht um ein endgültiges Urteil."
+  },
+  {
+   "take": "t1",
+   "ab": 141.0,
+   "text": "Aber was heißt das jetzt tatsächlich für dich als Händler? erstens, schau tatsächlich nicht einfach nur auf deinen Umsatz, sondern eben auf deine Marge."
+  },
+  {
+   "take": "t1",
+   "ab": 150.7,
+   "text": "denn wenn du jetzt auch für Sichtbarkeit immer weiter den Preis senkst, kann natürlich am Ende kaum mehr Gewinn übrig bleiben."
+  },
+  {
+   "take": "t1",
+   "ab": 156.3,
+   "text": "Zweitens prüfe einfach mal, wie abhängig dein Geschäft von einem einzigen Marktplatz ist."
+  },
+  {
+   "take": "t1",
+   "ab": 163.2,
+   "text": "Denn eigene Kundenbeziehungen und ein eigener Onlineshop können einfach dir mehr Spielraum geben, als wenn du einfach nur immer auf Marktplätzen verkaufst."
+  },
+  {
+   "take": "t1",
+   "ab": 193.1,
+   "text": "Ich finde natürlich, dass eine Plattform hier auch durchaus gute Kundenerlebnisse fördern darf. Aber wie weit darf sie tatsächlich bei der Preisgestaltung einfach unabhängiger Händler mitreden?"
+  },
+  {
+   "take": "t1",
+   "ab": 207.4,
+   "text": "Wie siehst du das Ganze? Schreib sie gerne in die Kommentare."
+  },
+  {
+   "take": "t1",
+   "ab": 218.8,
+   "text": "Und folge mir natürlich hier gerne für weitere E-Commerce-News mit echtem Händler-Mehrwert."
+  }
+ ],
+ "ende": {
+  "bis": 223.15
+ },
+ "korrekturen": [
+  ["t1", 25.58, "ihm", ""],
+  ["t1", 34.42, "Marktplatzhändlern", "Marktplatzhändlern."],
+  ["t1", 79.06, "ihm", ""],
+  ["t1", 95.78, "sechsundzwanzigsten", "26."],
+  ["t1", 144.5, "erstens,", "Erstens,"],
+  ["t1", 150.82, "denn", "Denn"]
+ ]
+}
