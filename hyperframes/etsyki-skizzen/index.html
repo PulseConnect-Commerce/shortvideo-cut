@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>N08 · Etsy: Neue KI-Regeln – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- NEWS N08 "Etsy: Neue KI-Regeln". Erklär-Bilder statt Wortkarten (karten-aufbau.md "Visuelle Metaphern", freigegeben
+         2026-10-26), Aufbau wie N07/N09 (hyperframes/temuwarenkorb-skizzen, hyperframes/ebaykombi-skizzen): Shop mit alten
+         Produktbildern, echte Quellen OnlinehändlerNews/Händlerbund (26.10.2026) und Etsy-Hilfe (help.etsy.com) als
+         Quellen-Karten, "1 ECHTES, UNBEARBEITETES FOTO", weitere Bilder dürfen bearbeitet sein (auch mit KI, solange sie das
+         Produkt korrekt zeigen), "AUSNAHMEN JE NACH PRODUKT" (Beispiele laut Etsy-Hilfe), "KI-ANLEITUNGEN: NICHT ERLAUBT",
+         "BOT-LISTINGS: NICHT ERLAUBT", "AUCH ALTE LISTINGS PRÜFEN", seine Einschätzung (Vertrauen, echte Handarbeit), Tipp
+         (Bilder und Anleitungen prüfen), Umfrage mit Folgen-Plus. Nie "alle KI-Bilder verboten" (Briefing): das Wort
+         "verboten" steht nirgends im Bild. Keine erfundenen Produkte: Artikel nur als neutrale Bild-Platzhalter. Höchstens
+         1-3 Wörter je Bild, ein handschriftliches Akzentwort (Caveat, OFL, lokal; Blau #31ADEC). Rahmen wie freigegeben:
+         helle Karte unter dem Kopf (x 80-900, y 1118-1468/1496; Instagram-Zone unten ab 1500), Pill-Untertitel darüber
+         (Remotion, y 1068), ruhige Bewegung ohne Überschwingen. Rot nur für "nicht erlaubt" (✕). Zeiten = Sekunden im
+         geschnittenen Video (src/projekte/etsyki/cut.json, 62,93 s), Teile 2 Frames vor ihrem Wort; Liste mit Tönen in
+         src/projekte/etsyki/karten.json. Keine Logos. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1118px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .karte.hoch { height: 378px; }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .qlabel { position: absolute; left: 30px; top: 20px; display: flex; align-items: center; gap: 9px; font-size: 20px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .qdot { width: 11px; height: 11px; border-radius: 6px; background: linear-gradient(135deg, #00e090, #31adec); }
+      .fuss { position: absolute; right: 28px; top: 22px; font-size: 20px; font-weight: 700; letter-spacing: 0.06em; color: #6b7280; white-space: nowrap; opacity: 0; }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 300px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 26px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .kachel { fill: #fff; stroke: #e5e7eb; stroke-width: 2; }
+      .titel { position: absolute; left: 30px; top: 52px; font-size: 42px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; opacity: 0; line-height: 1.12; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+      /* Quellen-Bild */
+      .qbild { position: absolute; border-radius: 18px; overflow: hidden; background: #fff; border: 1px solid #e5e7eb; }
+      .qlage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+      .qlage img { display: block; }
+      .mark { position: absolute; border: 7px solid #00e090; border-radius: 14px; box-shadow: 0 0 0 5px rgba(49, 173, 236, 0.35), 0 0 30px rgba(0, 224, 144, 0.45); opacity: 0; }
+
+      /* Umfrage + Folgen */
+      .frage-titel { position: absolute; left: 30px; top: 56px; display: flex; align-items: center; gap: 16px; font-size: 44px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; opacity: 0; }
+      .frage-titel .ico2 { width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; }
+      .frage-titel .ico2 svg { width: 32px; height: 32px; fill: none; stroke: #0b0c0e; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .optionen { position: absolute; left: 30px; right: 30px; top: 132px; display: flex; gap: 14px; }
+      .option { position: relative; flex: 1; display: flex; align-items: center; gap: 14px; height: 64px; padding: 0 20px; border-radius: 16px; background: #fff; border: 1px solid #e5e7eb; font-size: 32px; font-weight: 800; opacity: 0; white-space: nowrap; }
+      .option .kreis { flex: none; width: 38px; height: 38px; border-radius: 19px; display: flex; align-items: center; justify-content: center; }
+      .option .kreis svg { width: 22px; height: 22px; fill: none; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+      .kommentar { position: absolute; left: 30px; top: 214px; display: flex; align-items: center; gap: 12px; font-size: 26px; font-weight: 700; color: #374151; opacity: 0; }
+      .kommentar svg { width: 30px; height: 30px; fill: none; stroke: #31adec; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .folgen { position: absolute; left: 30px; bottom: 20px; display: flex; align-items: center; gap: 22px; height: 92px; padding: 0 34px 0 16px; border-radius: 24px; background: #fff; border: 1px solid #e5e7eb; opacity: 0; }
+      .avatar { position: relative; flex: none; width: 66px; height: 66px; border-radius: 33px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 38px; height: 38px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 38px; height: 38px; border-radius: 19px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 22px; height: 22px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 38px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+
+      /* Sticker-Wort links unter dem Kopf (auf der Schulter, nicht auf dem Gesicht) */
+      .sticker { position: absolute; left: 70px; top: 880px; padding: 8px 18px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 46px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(-4deg); transform-origin: 0 50%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="etsyki-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="62.93">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <!-- Lucide (ISC): image, camera, lock, sparkles, wand-sparkles, sun, crop, scissors, chef-hat, bot, user, shield, hand,
+               clock, file-text, list-checks, package -->
+          <symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></symbol>
+          <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" /><circle cx="12" cy="13" r="3" /></symbol>
+          <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol>
+          <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></symbol>
+          <symbol id="i-wand" viewBox="0 0 24 24"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72" /><path d="m14 7 3 3" /><path d="M5 6v4" /><path d="M19 14v4" /><path d="M10 2v2" /><path d="M7 8H3" /><path d="M21 16h-4" /><path d="M11 3H9" /></symbol>
+          <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></symbol>
+          <symbol id="i-crop" viewBox="0 0 24 24"><path d="M6 2v14a2 2 0 0 0 2 2h14" /><path d="M18 22V8a2 2 0 0 0-2-2H2" /></symbol>
+          <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3" /><path d="M8.12 8.12 12 12" /><path d="M20 4 8.12 15.88" /><circle cx="6" cy="18" r="3" /><path d="M14.8 14.8 20 20" /></symbol>
+          <symbol id="i-chef" viewBox="0 0 24 24"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" /><path d="M6 17h12" /></symbol>
+          <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8" /><rect width="16" height="12" x="4" y="8" rx="2" /><path d="M2 14h2" /><path d="M20 14h2" /><path d="M15 13v2" /><path d="M9 13v2" /></symbol>
+          <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></symbol>
+          <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /></symbol>
+          <symbol id="i-hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" /><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" /><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" /><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" /></symbol>
+          <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></symbol>
+          <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></symbol>
+          <symbol id="i-list" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4" /><path d="m3 7 2 2 4-4" /><path d="M13 6h8" /><path d="M13 12h8" /><path d="M13 18h8" /></symbol>
+          <!-- Artikel-Kachel: neutrales Bild (kein erfundenes Produkt), darunter zwei Textzeilen -->
+          <symbol id="kachel" viewBox="0 0 170 200"><rect x="1" y="1" width="168" height="198" rx="20" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><rect x="12" y="12" width="146" height="116" rx="12" fill="#eef0f3" /><use href="#i-image" x="55" y="40" width="60" height="60" class="ico" style="stroke:#9aa3af" /><rect x="14" y="144" width="110" height="12" rx="6" fill="#d1d5db" /><rect x="14" y="168" width="72" height="12" rx="6" fill="#e5e7eb" /></symbol>
+        </defs>
+      </svg>
+
+      <!-- K0 Shop mit alten Produktbildern: "Und wenn du jetzt dort verkaufst, dann kann es sogar auch deine alten Produktbilder
+           treffen." Und 6,03 (Karte, vier Artikel) / verkaufst 6,82 (Preis-Etiketten) / alten 8,37 (Uhr: alt) / Produktbilder 8,64
+           (Bilder hervorgehoben) / treffen 9,14 ("!" auf den Bildern, "auch alte!") -->
+      <section id="k0" class="karte clip" data-start="5.96" data-duration="3.58" data-track-index="1">
+        <div class="kicker">Dein Etsy-Shop</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k0-kacheln">
+            <use class="k0-k" href="#kachel" x="38" y="4" width="170" height="200" />
+            <use class="k0-k" href="#kachel" x="228" y="4" width="170" height="200" />
+            <use class="k0-k" href="#kachel" x="418" y="4" width="170" height="200" />
+            <use class="k0-k" href="#kachel" x="608" y="4" width="170" height="200" />
+          </g>
+          <g id="k0-preise">
+            <g class="k0-p"><rect x="130" y="146" width="62" height="34" rx="10" fill="#0b0c0e" /><text x="161" y="171" text-anchor="middle" style="font-size:21px;font-weight:900;fill:#fff">€</text></g>
+            <g class="k0-p"><rect x="320" y="146" width="62" height="34" rx="10" fill="#0b0c0e" /><text x="351" y="171" text-anchor="middle" style="font-size:21px;font-weight:900;fill:#fff">€</text></g>
+            <g class="k0-p"><rect x="510" y="146" width="62" height="34" rx="10" fill="#0b0c0e" /><text x="541" y="171" text-anchor="middle" style="font-size:21px;font-weight:900;fill:#fff">€</text></g>
+            <g class="k0-p"><rect x="700" y="146" width="62" height="34" rx="10" fill="#0b0c0e" /><text x="731" y="171" text-anchor="middle" style="font-size:21px;font-weight:900;fill:#fff">€</text></g>
+          </g>
+          <g id="k0-alt">
+            <g class="k0-a"><rect x="58" y="24" width="76" height="34" rx="10" fill="#fff" stroke="#d1d5db" stroke-width="2" /><use href="#i-clock" x="64" y="30" width="22" height="22" class="ico" style="stroke-width:2.4" /><text x="92" y="48" class="klein" style="font-size:19px;fill:#374151">alt</text></g>
+            <g class="k0-a"><rect x="248" y="24" width="76" height="34" rx="10" fill="#fff" stroke="#d1d5db" stroke-width="2" /><use href="#i-clock" x="254" y="30" width="22" height="22" class="ico" style="stroke-width:2.4" /><text x="282" y="48" class="klein" style="font-size:19px;fill:#374151">alt</text></g>
+            <g class="k0-a"><rect x="438" y="24" width="76" height="34" rx="10" fill="#fff" stroke="#d1d5db" stroke-width="2" /><use href="#i-clock" x="444" y="30" width="22" height="22" class="ico" style="stroke-width:2.4" /><text x="472" y="48" class="klein" style="font-size:19px;fill:#374151">alt</text></g>
+            <g class="k0-a"><rect x="628" y="24" width="76" height="34" rx="10" fill="#fff" stroke="#d1d5db" stroke-width="2" /><use href="#i-clock" x="634" y="30" width="22" height="22" class="ico" style="stroke-width:2.4" /><text x="662" y="48" class="klein" style="font-size:19px;fill:#374151">alt</text></g>
+          </g>
+          <g id="k0-hl" opacity="0">
+            <rect x="50" y="16" width="146" height="116" rx="12" fill="none" stroke="url(#gv)" stroke-width="5" />
+            <rect x="240" y="16" width="146" height="116" rx="12" fill="none" stroke="url(#gv)" stroke-width="5" />
+            <rect x="430" y="16" width="146" height="116" rx="12" fill="none" stroke="url(#gv)" stroke-width="5" />
+            <rect x="620" y="16" width="146" height="116" rx="12" fill="none" stroke="url(#gv)" stroke-width="5" />
+          </g>
+          <g id="k0-warn">
+            <g class="k0-w"><circle cx="184" cy="30" r="22" fill="#0b0c0e" /><text x="184" y="40" text-anchor="middle" style="font-size:30px;font-weight:900;fill:#fff">!</text></g>
+            <g class="k0-w"><circle cx="374" cy="30" r="22" fill="#0b0c0e" /><text x="374" y="40" text-anchor="middle" style="font-size:30px;font-weight:900;fill:#fff">!</text></g>
+            <g class="k0-w"><circle cx="564" cy="30" r="22" fill="#0b0c0e" /><text x="564" y="40" text-anchor="middle" style="font-size:30px;font-weight:900;fill:#fff">!</text></g>
+            <g class="k0-w"><circle cx="754" cy="30" r="22" fill="#0b0c0e" /><text x="754" y="40" text-anchor="middle" style="font-size:30px;font-weight:900;fill:#fff">!</text></g>
+          </g>
+          <clipPath id="k0-clip"><rect id="k0-cliprect" x="300" y="206" width="0" height="90" /></clipPath>
+          <text x="306" y="268" class="hand" style="font-size:62px" clip-path="url(#k0-clip)" transform="rotate(-4 400 250)">auch alte!</text>
+        </svg>
+      </section>
+
+      <!-- Q1 echte Quelle OnlinehändlerNews / Händlerbund: "Schaut euch mal diese Meldung hier an. Seit dem 22. Oktober verlangt
+           Etsy bei vielen Angeboten" Schaut 9,63 (Karte, Kamera: Überschrift "Etsy-Shop unter Druck: Neue KI-Regeln zwingen zum
+           Foto-Marathon", 26.10.2026) / Seit 11,51 (Absatz "Seit dem 22. Oktober 2026 gelten neue Regeln …", grün markiert) /
+           22. 11,89 (Rahmen um die Markierung). Bild: ohn.haendlerbund.de, Sandra May, 26.10.2026, Handy-Ansicht, aufgenommen
+           27.10.2026 (ohne das Artikelbild) -->
+      <section id="q1" class="karte clip" data-start="9.50" data-duration="5.22" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>OnlinehändlerNews · Händlerbund · 26.10.2026</div>
+        <div class="qbild" style="left:20px;top:56px;width:780px;height:276px">
+          <div class="qlage" id="q1-kopf"><img src="assets/ohn-kopf.jpg" width="1079" height="483" alt="" /></div>
+          <div class="qlage" id="q1-seit" style="opacity:0"><img src="assets/ohn-seit.jpg" width="1079" height="548" alt="" />
+            <div class="mark" id="q1-m" style="left:62px;top:174px;width:944px;height:370px"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- K1 (Einblendung aus dem Briefing) "1 ECHTES, UNBEARBEITETES FOTO": "mindestens ein echtes und komplett unbearbeitetes
+           Foto von eurem Produkt." mindestens 14,79 (Karte, Titel, Platz 1 als Pflichtfeld) / echtes 15,65 (Kamera) / komplett 16,31
+           (Bearbeiten-Werkzeug) / unbearbeitetes 16,89 (Werkzeug durchgestrichen, Schloss) / Foto 17,57 (Blitz, Häkchen) /
+           Produkt 18,61 ("dein Produkt", "Pflicht") -->
+      <section id="k1" class="karte hoch clip" data-start="14.72" data-duration="4.31" data-track-index="1">
+        <div class="titel" id="k1-titel">1 ECHTES,<br /><span class="verlauf">UNBEARBEITETES FOTO</span></div>
+        <svg class="buehne" viewBox="0 0 820 220" style="top:158px;height:220px">
+          <rect x="30" y="8" width="250" height="196" rx="22" fill="#fff" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+          <text id="k1-eins" x="155" y="130" text-anchor="middle" style="font-size:96px;font-weight:900;fill:#cbd5e1">1</text>
+          <g id="k1-foto" opacity="0">
+            <rect x="30" y="8" width="250" height="196" rx="22" fill="#fff" stroke="url(#gv)" stroke-width="5" />
+            <rect x="46" y="24" width="218" height="124" rx="14" fill="#eef0f3" />
+            <use href="#i-camera" x="117" y="44" width="76" height="76" class="ico" style="stroke-width:1.8" />
+            <text id="k1-prod" x="155" y="186" text-anchor="middle" class="lab" style="font-size:24px;opacity:0">dein Produkt</text>
+          </g>
+          <rect id="k1-blitz" x="30" y="8" width="250" height="196" rx="22" fill="#fff" opacity="0" />
+          <g id="k1-ok" opacity="0"><circle cx="276" cy="14" r="24" fill="url(#gvd)" /><path d="M265 14 l7 7 l14 -15" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="k1-tool" opacity="0">
+            <rect x="320" y="40" width="130" height="130" rx="22" class="kachel" />
+            <use href="#i-wand" x="350" y="70" width="70" height="70" class="ico" style="stroke-width:1.8" />
+          </g>
+          <path id="k1-strich" pathLength="1" d="M326 166 L 444 46" fill="none" stroke="#ef4444" stroke-width="8" stroke-linecap="round" stroke-dasharray="1" />
+          <g id="k1-schloss" opacity="0"><rect x="476" y="70" width="76" height="76" rx="18" fill="#0b0c0e" /><use href="#i-lock" x="490" y="82" width="48" height="48" class="ico" style="stroke:#fff;stroke-width:2.2" /></g>
+          <text id="k1-unb" x="570" y="118" class="lab" style="font-size:26px;opacity:0">unbearbeitet</text>
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="560" y="150" width="0" height="70" /></clipPath>
+          <text x="566" y="200" class="hand" style="font-size:56px" clip-path="url(#k1-clip)" transform="rotate(-5 640 186)">Pflicht</text>
+        </svg>
+      </section>
+
+      <!-- K2 weitere Bilder (Idee aus dem Briefing: "weitere Bilder dürfen bearbeitet sein"): "Das heißt jetzt aber natürlich nicht,
+           dass alle KI-Bilder generell verboten sind. Weitere Bilder dürfen natürlich weiterhin bearbeitet werden, solange sie
+           aber das Produkt korrekt zeigen." Das 19,03 (Karte: Platz 1 echt mit Schloss, drei weitere Plätze) / alle 20,95 (Bilder)
+           / KI-Bilder 21,19 (KI-Funken) / sind 22,49 (Häkchen: erlaubt; das Wort "verboten" steht nirgends) / Weitere 23,27
+           (Plätze 2-4 hervorgehoben) / bearbeitet 24,85 (Licht, Zuschnitt, Hintergrund; die Beispiele nennt die Etsy-Hilfe) /
+           solange 25,65 ("=" zum echten Foto) / korrekt 26,85 ("korrekt!") -->
+      <section id="k2" class="karte clip" data-start="18.96" data-duration="9.00" data-track-index="1">
+        <div class="kicker">Weitere Bilder</div>
+        <div class="fuss" id="k2-fuss">laut Etsy-Hilfe</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <!-- Platz 1: das echte, unbearbeitete Foto -->
+          <rect x="30" y="16" width="160" height="160" rx="20" fill="#fff" stroke="#d1d5db" stroke-width="2" />
+          <rect x="42" y="28" width="136" height="104" rx="12" fill="#eef0f3" />
+          <use href="#i-camera" x="84" y="54" width="52" height="52" class="ico" style="stroke-width:1.9" />
+          <g><rect x="150" y="2" width="48" height="48" rx="14" fill="#0b0c0e" /><use href="#i-lock" x="160" y="11" width="28" height="28" class="ico" style="stroke:#fff;stroke-width:2.4" /></g>
+          <text x="110" y="160" text-anchor="middle" class="klein" style="font-size:21px;fill:#374151">echt</text>
+          <!-- Plätze 2-4 -->
+          <g id="k2-leer">
+            <rect x="240" y="16" width="160" height="160" rx="20" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+            <rect x="430" y="16" width="160" height="160" rx="20" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+            <rect x="620" y="16" width="160" height="160" rx="20" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+          </g>
+          <g id="k2-bilder">
+            <g class="k2-b"><rect x="240" y="16" width="160" height="160" rx="20" class="kachel" /><rect x="252" y="28" width="136" height="104" rx="12" fill="#eef0f3" /><use href="#i-image" x="294" y="54" width="52" height="52" class="ico" style="stroke:#9aa3af" /></g>
+            <g class="k2-b"><rect x="430" y="16" width="160" height="160" rx="20" class="kachel" /><rect x="442" y="28" width="136" height="104" rx="12" fill="#eef0f3" /><use href="#i-image" x="484" y="54" width="52" height="52" class="ico" style="stroke:#9aa3af" /></g>
+            <g class="k2-b"><rect x="620" y="16" width="160" height="160" rx="20" class="kachel" /><rect x="632" y="28" width="136" height="104" rx="12" fill="#eef0f3" /><use href="#i-image" x="674" y="54" width="52" height="52" class="ico" style="stroke:#9aa3af" /></g>
+          </g>
+          <g id="k2-ki">
+            <g class="k2-s"><rect x="252" y="138" width="62" height="30" rx="9" fill="#e8f7fd" stroke="#31adec" stroke-width="2" /><use href="#i-sparkles" x="258" y="142" width="22" height="22" class="ico" style="stroke:#0b0c0e;stroke-width:2.2" /><text x="284" y="160" style="font-size:18px;font-weight:900;fill:#0b0c0e">KI</text></g>
+            <g class="k2-s"><rect x="442" y="138" width="62" height="30" rx="9" fill="#e8f7fd" stroke="#31adec" stroke-width="2" /><use href="#i-sparkles" x="448" y="142" width="22" height="22" class="ico" style="stroke:#0b0c0e;stroke-width:2.2" /><text x="474" y="160" style="font-size:18px;font-weight:900;fill:#0b0c0e">KI</text></g>
+            <g class="k2-s"><rect x="632" y="138" width="62" height="30" rx="9" fill="#e8f7fd" stroke="#31adec" stroke-width="2" /><use href="#i-sparkles" x="638" y="142" width="22" height="22" class="ico" style="stroke:#0b0c0e;stroke-width:2.2" /><text x="664" y="160" style="font-size:18px;font-weight:900;fill:#0b0c0e">KI</text></g>
+          </g>
+          <g id="k2-ok">
+            <g class="k2-o"><circle cx="396" cy="20" r="22" fill="url(#gvd)" /><path d="M386 20 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></g>
+            <g class="k2-o"><circle cx="586" cy="20" r="22" fill="url(#gvd)" /><path d="M576 20 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></g>
+            <g class="k2-o"><circle cx="776" cy="20" r="22" fill="url(#gvd)" /><path d="M766 20 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></g>
+          </g>
+          <g id="k2-hl" opacity="0">
+            <rect x="240" y="16" width="160" height="160" rx="20" fill="none" stroke="url(#gv)" stroke-width="5" />
+            <rect x="430" y="16" width="160" height="160" rx="20" fill="none" stroke="url(#gv)" stroke-width="5" />
+            <rect x="620" y="16" width="160" height="160" rx="20" fill="none" stroke="url(#gv)" stroke-width="5" />
+          </g>
+          <g id="k2-tools">
+            <g class="k2-t"><rect x="246" y="190" width="148" height="40" rx="12" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><use href="#i-sun" x="256" y="198" width="24" height="24" class="ico" style="stroke-width:2.2" /><text x="288" y="218" style="font-size:20px;font-weight:800;fill:#0b0c0e">Licht</text></g>
+            <g class="k2-t"><rect x="436" y="190" width="148" height="40" rx="12" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><use href="#i-crop" x="446" y="198" width="24" height="24" class="ico" style="stroke-width:2.2" /><text x="478" y="218" style="font-size:20px;font-weight:800;fill:#0b0c0e">Zuschnitt</text></g>
+            <g class="k2-t"><rect x="626" y="190" width="148" height="40" rx="12" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><use href="#i-image" x="636" y="198" width="24" height="24" class="ico" style="stroke-width:2.2" /><text x="668" y="218" style="font-size:19px;font-weight:800;fill:#0b0c0e">Hintergrund</text></g>
+          </g>
+          <g id="k2-gleich" opacity="0"><circle cx="215" cy="96" r="20" fill="#fff" stroke="#31adec" stroke-width="3" /><text x="215" y="107" text-anchor="middle" style="font-size:32px;font-weight:900;fill:#0b0c0e">=</text></g>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="24" y="196" width="0" height="100" /></clipPath>
+          <text x="30" y="270" class="hand" style="font-size:60px" clip-path="url(#k2-clip)" transform="rotate(-5 110 252)">korrekt!</text>
+        </svg>
+      </section>
+
+      <!-- K3 (Einblendung aus dem Briefing) "AUSNAHMEN JE NACH PRODUKT": "Und für manche Produkte gibt es tatsächlich sogar auch
+           Ausnahmen." Und 28,09 (Karte, Titel, Regel "1 unbearbeitetes Foto") / manche 28,35 (Abzweig zeichnet sich) / Produkte 28,65
+           (Print-on-Demand) / gibt 29,05 (Digitale Downloads) / tatsächlich 29,33 (Auftragsarbeiten) / sogar 29,93 ("Beispiele laut
+           Etsy-Hilfe") / Ausnahmen 30,55 (Ziele hervorgehoben). Beispiele aus der Etsy-Hilfe und OnlinehändlerNews -->
+      <section id="k3" class="karte hoch clip" data-start="28.02" data-duration="2.95" data-track-index="1">
+        <div class="titel" id="k3-titel">AUSNAHMEN <span class="verlauf">JE NACH PRODUKT</span></div>
+        <svg class="buehne" viewBox="0 0 820 260" style="top:112px;height:260px">
+          <g id="k3-regel">
+            <rect x="30" y="76" width="250" height="96" rx="20" class="kachel" />
+            <use href="#i-camera" x="46" y="100" width="46" height="46" class="ico" style="stroke-width:2" />
+            <text x="102" y="118" class="lab" style="font-size:22px">1 unbearbeitetes</text>
+            <text x="102" y="148" class="lab" style="font-size:22px">Foto</text>
+          </g>
+          <path id="k3-a1" pathLength="1" d="M282 124 C 330 124, 330 40, 384 40" fill="none" stroke="#31adec" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" />
+          <path id="k3-a2" pathLength="1" d="M282 124 L 384 124" fill="none" stroke="#31adec" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" />
+          <path id="k3-a3" pathLength="1" d="M282 124 C 330 124, 330 208, 384 208" fill="none" stroke="#31adec" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" />
+          <g class="k3-z" id="k3-z1"><rect x="390" y="14" width="400" height="54" rx="16" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><text x="412" y="50" class="lab" style="font-size:25px">Print-on-Demand</text></g>
+          <g class="k3-z" id="k3-z2"><rect x="390" y="98" width="400" height="54" rx="16" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><text x="412" y="134" class="lab" style="font-size:25px">Digitale Downloads</text></g>
+          <g class="k3-z" id="k3-z3"><rect x="390" y="182" width="400" height="54" rx="16" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><text x="412" y="218" class="lab" style="font-size:25px">Auftragsarbeiten</text></g>
+          <g id="k3-hl" opacity="0">
+            <rect x="390" y="14" width="400" height="54" rx="16" fill="none" stroke="url(#gv)" stroke-width="4" />
+            <rect x="390" y="98" width="400" height="54" rx="16" fill="none" stroke="url(#gv)" stroke-width="4" />
+            <rect x="390" y="182" width="400" height="54" rx="16" fill="none" stroke="url(#gv)" stroke-width="4" />
+          </g>
+          <text id="k3-fuss" x="30" y="226" class="klein" style="font-size:20px;opacity:0">Beispiele laut Etsy-Hilfe</text>
+        </svg>
+      </section>
+
+      <!-- Q2 echte Quelle Etsy-Hilfe "Was kann ich auf Etsy verkaufen?": "Was aber außerdem neu ist, KI-generierte" Was 31,04 (Karte,
+           Kamera: "Bestimmte Arten von KI-generierten Inhalten sind auf Etsy nicht erlaubt, darunter: Von Bots erstellte Inhalte,
+           KI-generierte Funktionsanleitungen …") / KI-generierte 32,23 (Rahmen um "KI-generierte Funktionsanleitungen, wie zum
+           Beispiel Bastelvorlagen, Rezepte und Anleitungen", grün markiert). Bild: help.etsy.com, aufgenommen 27.10.2026 -->
+      <section id="q2" class="karte clip" data-start="30.97" data-duration="1.95" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>Etsy-Hilfe · help.etsy.com · 27.10.2026</div>
+        <div class="qbild" style="left:20px;top:56px;width:780px;height:276px">
+          <div class="qlage" id="q2-lage"><img src="assets/etsy-liste.jpg" width="1079" height="516" alt="" />
+            <div class="mark" id="q2-m" style="left:124px;top:272px;width:880px;height:204px"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- K4 (Einblendung aus dem Briefing) "KI-ANLEITUNGEN: NICHT ERLAUBT": "Anleitungen, zum Beispiel Schnittmuster oder auch
+           Rezepte, sind nicht mehr erlaubt." Anleitungen 32,99 (Karte, Titel, KI erzeugt zwei Anleitungen, noch leer) / Schnittmuster
+           34,01 (Schnittmuster) / Rezepte 34,99 (Rezept) / nicht 35,77 (rotes ✕ auf beiden) / erlaubt 36,05 ("nicht mehr") -->
+      <section id="k4" class="karte hoch clip" data-start="32.92" data-duration="4.06" data-track-index="1">
+        <div class="titel" id="k4-titel">KI-ANLEITUNGEN:<br /><span class="verlauf">NICHT ERLAUBT</span></div>
+        <svg class="buehne" viewBox="0 0 820 220" style="top:158px;height:220px">
+          <g id="k4-ki"><rect x="24" y="44" width="110" height="110" rx="24" fill="url(#gvd)" /><use href="#i-sparkles" x="49" y="64" width="60" height="60" class="ico" style="stroke-width:1.9" /><text x="79" y="186" text-anchor="middle" class="klein" style="font-size:21px;fill:#374151">KI</text></g>
+          <path id="k4-pfeil" pathLength="1" d="M144 99 H 184" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-dasharray="1" />
+          <g id="k4-platz">
+            <rect x="196" y="10" width="190" height="170" rx="20" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+            <rect x="406" y="10" width="190" height="170" rx="20" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+          </g>
+          <g id="k4-d1" opacity="0">
+            <rect x="196" y="10" width="190" height="170" rx="20" class="kachel" />
+            <path d="M226 42 h70 l30 30 v62 h-100 z" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="8 6" stroke-linejoin="round" />
+            <use href="#i-scissors" x="300" y="98" width="56" height="56" class="ico" style="stroke-width:1.9" />
+            <text x="291" y="208" text-anchor="middle" class="lab" style="font-size:22px">Schnittmuster</text>
+          </g>
+          <g id="k4-d2" opacity="0">
+            <rect x="406" y="10" width="190" height="170" rx="20" class="kachel" />
+            <use href="#i-chef" x="426" y="32" width="64" height="64" class="ico" style="stroke-width:1.8" />
+            <rect x="500" y="44" width="76" height="11" rx="5" fill="#d1d5db" /><rect x="500" y="66" width="58" height="11" rx="5" fill="#e5e7eb" />
+            <rect x="426" y="112" width="150" height="11" rx="5" fill="#d1d5db" /><rect x="426" y="134" width="120" height="11" rx="5" fill="#e5e7eb" />
+            <text x="501" y="208" text-anchor="middle" class="lab" style="font-size:22px">Rezept</text>
+          </g>
+          <g id="k4-x1" opacity="0"><circle cx="382" cy="14" r="24" fill="#ef4444" /><path d="M372 4 l20 20 M392 4 l-20 20" stroke="#fff" stroke-width="5" stroke-linecap="round" /></g>
+          <g id="k4-x2" opacity="0"><circle cx="592" cy="14" r="24" fill="#ef4444" /><path d="M582 4 l20 20 M602 4 l-20 20" stroke="#fff" stroke-width="5" stroke-linecap="round" /></g>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="612" y="40" width="0" height="120" /></clipPath>
+          <text x="616" y="110" class="hand" style="font-size:52px" clip-path="url(#k4-clip)" transform="rotate(-6 700 96)">nicht mehr</text>
+        </svg>
+      </section>
+
+      <!-- K5 (Einblendung aus dem Briefing) "BOT-LISTINGS: NICHT ERLAUBT": "Und komplett automatisch erstellte Angebote ohne
+           menschliche Beteiligung leider auch nicht mehr." Und 37,05 (Karte, Titel, Bot) / automatisch 37,79 (Angebote laufen aus
+           dem Bot) / Angebote 38,93 (Stapel) / ohne 39,40 (Platz für den Menschen, leer) / Beteiligung 40,05 ("ohne Mensch") /
+           nicht 41,15 (rotes ✕ auf dem Stapel) -->
+      <section id="k5" class="karte hoch clip" data-start="36.98" data-duration="4.56" data-track-index="1">
+        <div class="titel" id="k5-titel">BOT-LISTINGS:<br /><span class="verlauf">NICHT ERLAUBT</span></div>
+        <svg class="buehne" viewBox="0 0 820 220" style="top:158px;height:220px">
+          <g id="k5-bot"><rect x="24" y="30" width="130" height="130" rx="26" fill="url(#gvd)" /><use href="#i-bot" x="49" y="52" width="80" height="80" class="ico" style="stroke-width:1.8" /></g>
+          <path id="k5-band" pathLength="1" d="M160 95 H 214" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-dasharray="1" />
+          <g id="k5-stapel">
+            <g class="k5-a"><rect x="226" y="34" width="110" height="130" rx="16" class="kachel" /><rect x="236" y="44" width="90" height="62" rx="9" fill="#eef0f3" /><rect x="236" y="118" width="70" height="10" rx="5" fill="#d1d5db" /><rect x="236" y="138" width="46" height="10" rx="5" fill="#e5e7eb" /></g>
+            <g class="k5-a"><rect x="256" y="22" width="110" height="130" rx="16" class="kachel" /><rect x="266" y="32" width="90" height="62" rx="9" fill="#eef0f3" /><rect x="266" y="106" width="70" height="10" rx="5" fill="#d1d5db" /><rect x="266" y="126" width="46" height="10" rx="5" fill="#e5e7eb" /></g>
+            <g class="k5-a"><rect x="286" y="10" width="110" height="130" rx="16" class="kachel" /><rect x="296" y="20" width="90" height="62" rx="9" fill="#eef0f3" /><rect x="296" y="94" width="70" height="10" rx="5" fill="#d1d5db" /><rect x="296" y="114" width="46" height="10" rx="5" fill="#e5e7eb" /></g>
+          </g>
+          <text id="k5-ang" x="311" y="200" text-anchor="middle" class="lab" style="font-size:22px;opacity:0">Angebote</text>
+          <g id="k5-mensch" opacity="0">
+            <rect x="460" y="30" width="130" height="130" rx="26" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+            <use href="#i-user" x="490" y="58" width="70" height="70" class="ico" style="stroke:#cbd5e1;stroke-width:1.8" />
+          </g>
+          <path id="k5-mstrich" pathLength="1" d="M468 152 L 582 38" fill="none" stroke="#9aa3af" stroke-width="6" stroke-linecap="round" stroke-dasharray="1" />
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="452" y="160" width="0" height="60" /></clipPath>
+          <text x="456" y="206" class="hand" style="font-size:46px" clip-path="url(#k5-clip)" transform="rotate(-4 530 196)">ohne Mensch</text>
+          <g id="k5-x" opacity="0"><circle cx="392" cy="16" r="24" fill="#ef4444" /><path d="M382 6 l20 20 M402 6 l-20 20" stroke="#fff" stroke-width="5" stroke-linecap="round" /></g>
+        </svg>
+      </section>
+
+      <!-- K6 (Einblendung aus dem Briefing) "AUCH ALTE LISTINGS PRÜFEN": "Und das betrifft aber leider nicht nur die neuen Listings,
+           sondern eben auch bestehende Listings." Und 41,59 (Karte, Titel, zwei Plätze "neu") / nicht 43,11 ("+") / neuen 43,85
+           (neue Listings) / bestehende 45,11 (alte Listings mit Uhr) / Listings 45,63 (Lupe über den alten, "auch die!") -->
+      <section id="k6" class="karte hoch clip" data-start="41.52" data-duration="5.03" data-track-index="1">
+        <div class="titel" id="k6-titel">AUCH ALTE <span class="verlauf">LISTINGS PRÜFEN</span></div>
+        <svg class="buehne" viewBox="0 0 820 260" style="top:112px;height:260px">
+          <g id="k6-neu-platz">
+            <rect x="30" y="20" width="120" height="150" rx="18" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+            <rect x="166" y="20" width="120" height="150" rx="18" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+          </g>
+          <g id="k6-neu" opacity="0">
+            <use href="#kachel" x="30" y="20" width="120" height="150" /><use href="#kachel" x="166" y="20" width="120" height="150" />
+            <rect x="40" y="28" width="58" height="28" rx="9" fill="url(#gvd)" /><text x="69" y="49" text-anchor="middle" style="font-size:17px;font-weight:900;fill:#0b0c0e">NEU</text>
+            <rect x="176" y="28" width="58" height="28" rx="9" fill="url(#gvd)" /><text x="205" y="49" text-anchor="middle" style="font-size:17px;font-weight:900;fill:#0b0c0e">NEU</text>
+          </g>
+          <text id="k6-neu-t" x="158" y="206" text-anchor="middle" class="lab" style="font-size:23px;opacity:0">neue</text>
+          <text id="k6-plus" x="322" y="112" text-anchor="middle" opacity="0" style="font-size:52px;font-weight:900;fill:#0b0c0e">+</text>
+          <g id="k6-alt">
+            <g class="k6-a"><use href="#kachel" x="358" y="20" width="120" height="150" /><rect x="366" y="28" width="60" height="28" rx="9" fill="#fff" stroke="#d1d5db" stroke-width="2" /><use href="#i-clock" x="371" y="32" width="20" height="20" class="ico" style="stroke-width:2.4" /><text x="396" y="49" style="font-size:16px;font-weight:800;fill:#374151">alt</text></g>
+            <g class="k6-a"><use href="#kachel" x="494" y="20" width="120" height="150" /><rect x="502" y="28" width="60" height="28" rx="9" fill="#fff" stroke="#d1d5db" stroke-width="2" /><use href="#i-clock" x="507" y="32" width="20" height="20" class="ico" style="stroke-width:2.4" /><text x="532" y="49" style="font-size:16px;font-weight:800;fill:#374151">alt</text></g>
+            <g class="k6-a"><use href="#kachel" x="630" y="20" width="120" height="150" /><rect x="638" y="28" width="60" height="28" rx="9" fill="#fff" stroke="#d1d5db" stroke-width="2" /><use href="#i-clock" x="643" y="32" width="20" height="20" class="ico" style="stroke-width:2.4" /><text x="668" y="49" style="font-size:16px;font-weight:800;fill:#374151">alt</text></g>
+          </g>
+          <text id="k6-alt-t" x="554" y="206" text-anchor="middle" class="lab" style="font-size:23px;opacity:0">bestehende</text>
+          <rect id="k6-hl" x="350" y="12" width="408" height="166" rx="22" fill="none" stroke="url(#gv)" stroke-width="5" opacity="0" />
+          <g id="k6-lupe" opacity="0">
+            <circle cx="0" cy="0" r="40" fill="rgba(255,255,255,0.35)" stroke="#0b0c0e" stroke-width="7" />
+            <path d="M28 28 L56 56" stroke="#0b0c0e" stroke-width="10" stroke-linecap="round" />
+          </g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="610" y="190" width="0" height="70" /></clipPath>
+          <text x="616" y="246" class="hand" style="font-size:52px" clip-path="url(#k6-clip)" transform="rotate(-5 690 232)">auch die!</text>
+        </svg>
+      </section>
+
+      <!-- K7 seine Einschätzung: "Ich finde den Schritt von Etsy hier tatsächlich spannend, weil Etsy damit natürlich Vertrauen in
+           echte Handarbeit stärker unterstützen will." Ich 46,63 (Karte) / Schritt 47,19 (neue Regeln) / spannend 48,65 (Sticker)
+           / weil 49,43 (Pfeil) / Vertrauen 50,53 (Schild, "Vertrauen") / Handarbeit 51,55 (Hand im Schild, "echte Handarbeit") /
+           stärker 52,07 (Schild wird kräftiger) -->
+      <section id="k7" class="karte clip" data-start="46.55" data-duration="6.72" data-track-index="1">
+        <div class="kicker">Meine Einschätzung</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k7-regeln" opacity="0">
+            <rect x="30" y="30" width="200" height="190" rx="24" class="kachel" />
+            <use href="#i-list" x="85" y="52" width="90" height="90" class="ico" style="stroke-width:1.8" />
+            <text x="130" y="178" text-anchor="middle" class="lab" style="font-size:24px">neue Regeln</text>
+            <text x="130" y="206" text-anchor="middle" class="klein" style="font-size:20px">von Etsy</text>
+          </g>
+          <path id="k7-pfeil" pathLength="1" d="M244 125 H 316" fill="none" stroke="#31adec" stroke-width="7" stroke-linecap="round" stroke-dasharray="1" />
+          <path id="k7-spitze" d="M302 110 L 320 125 L 302 140" fill="none" stroke="#31adec" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+          <g id="k7-schild" opacity="0">
+            <use href="#i-shield" x="330" y="6" width="230" height="230" style="fill:#e6faf2;stroke:url(#gv);stroke-width:1.3;stroke-linejoin:round" />
+          </g>
+          <g id="k7-hand" opacity="0"><use href="#i-hand" x="400" y="62" width="90" height="90" class="ico" style="stroke-width:1.9" /></g>
+          <text id="k7-hand-t" x="445" y="276" text-anchor="middle" class="lab" style="font-size:24px;opacity:0">echte Handarbeit</text>
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="572" y="60" width="0" height="120" /></clipPath>
+          <text x="576" y="138" class="hand" style="font-size:64px" clip-path="url(#k7-clip)" transform="rotate(-6 680 120)">Vertrauen</text>
+        </svg>
+      </section>
+
+      <!-- Sticker "SPANNEND." ("spannend" 48,65) links unter dem Kopf auf der Schulter (y 880, nicht auf dem Gesicht) -->
+      <div id="st1" class="sticker clip" data-start="48.58" data-duration="1.10" data-track-index="2">SPANNEND.</div>
+
+      <!-- K8 sein Tipp: "Wenn auch ihr auf Etsy verkauft, dann prüft bitte eure Bilder unbedingt und auch die Anleitungen." Wenn 53,32
+           (Karte, dein Listing mit Bild und Anleitung) / prüft 55,10 (Lupe) / Bilder 55,84 (Lupe aufs Bild, "1 unbearbeitetes Foto?")
+           / unbedingt 56,14 (abgehakt) / Anleitungen 57,50 (Lupe auf die Anleitung, "Anleitung selbst erstellt?", abgehakt).
+           Prüffragen nach dem Briefing (Händlerrelevanz) -->
+      <section id="k8" class="karte clip" data-start="53.25" data-duration="4.87" data-track-index="1">
+        <div class="kicker">Wenn du auf Etsy verkaufst</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k8-listing">
+            <rect x="30" y="10" width="290" height="268" rx="24" class="kachel" />
+            <rect x="46" y="26" width="258" height="132" rx="14" fill="#eef0f3" />
+            <use href="#i-image" x="140" y="56" width="70" height="70" class="ico" style="stroke:#9aa3af" />
+            <rect x="46" y="176" width="258" height="80" rx="14" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2" />
+            <use href="#i-file" x="60" y="190" width="50" height="50" class="ico" style="stroke-width:1.9" />
+            <text x="122" y="224" class="lab" style="font-size:24px">Anleitung</text>
+          </g>
+          <g id="k8-p1" opacity="0">
+            <rect id="k8-box1" x="360" y="40" width="44" height="44" rx="12" fill="#fff" stroke="#9aa3af" stroke-width="3" />
+            <path id="k8-h1" pathLength="1" d="M371 62 l9 9 l15 -18" fill="none" stroke="#0b0c0e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1" />
+            <text x="420" y="58" class="lab" style="font-size:26px">1 unbearbeitetes</text>
+            <text x="420" y="90" class="lab" style="font-size:26px">Foto?</text>
+          </g>
+          <g id="k8-p2" opacity="0">
+            <rect id="k8-box2" x="360" y="160" width="44" height="44" rx="12" fill="#fff" stroke="#9aa3af" stroke-width="3" />
+            <path id="k8-h2" pathLength="1" d="M371 182 l9 9 l15 -18" fill="none" stroke="#0b0c0e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1" />
+            <text x="420" y="178" class="lab" style="font-size:26px">Anleitung selbst</text>
+            <text x="420" y="210" class="lab" style="font-size:26px">erstellt?</text>
+          </g>
+          <g id="k8-lupe" opacity="0">
+            <circle cx="0" cy="0" r="44" fill="rgba(255,255,255,0.35)" stroke="#0b0c0e" stroke-width="7" />
+            <path d="M31 31 L62 62" stroke="#0b0c0e" stroke-width="11" stroke-linecap="round" />
+          </g>
+        </svg>
+      </section>
+
+      <!-- K9 Umfrage + Folgen (Regie: Schluss mit Frage oder Umfrage und Folgen-Plus, keine Folgennummer): "Und wenn ihr weitere
+           solcher News zu E-Commerce nicht verpassen wollt, dann drückt ihr gerne das Plus weg." Und 58,35 (Karte, Frage "Listings
+           schon geprüft?") / weitere 58,71 ("Ja, alle") / News 59,37 ("Noch nicht") / E-Commerce 59,89 ("Schreib's in die
+           Kommentare") / verpassen 60,65 (Folgen) / drückt 61,63 (Zeiger) / Plus 62,33 (Plus angetippt, wird zum Haken) -->
+      <section id="k9" class="karte hoch clip" data-start="58.12" data-duration="4.81" data-track-index="1">
+        <div class="frage-titel" id="k9-frage"><div class="ico2"><svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg></div>Listings schon geprüft?</div>
+        <div class="optionen">
+          <div class="option" id="k9-ja"><span class="kreis" style="background:linear-gradient(135deg,#00e090,#31adec)"><svg viewBox="0 0 24 24" style="stroke:#0b0c0e"><path d="M20 6 9 17l-5-5" /></svg></span>Ja, alle</div>
+          <div class="option" id="k9-nein"><span class="kreis" style="background:#e5e7eb"><svg viewBox="0 0 24 24" style="stroke:#0b0c0e"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></span>Noch nicht</div>
+        </div>
+        <div class="kommentar" id="k9-komm"><svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg>Schreib’s in die Kommentare</div>
+        <div class="folgen" id="k9-folgen">
+          <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+          <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        </div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker (leer höchstens ~0,2 s), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker, " + id + " .qlabel");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      gsap.set("#k1-strich, #k3-a1, #k3-a2, #k3-a3, #k4-pfeil, #k5-band, #k5-mstrich, #k7-pfeil, #k8-h1, #k8-h2", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
+
+      // K0 Shop mit alten Produktbildern
+      karte("#k0", 5.96, 9.54);
+      tl.fromTo(".k0-k", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.07 }, 5.98);
+      tl.fromTo(".k0-p", { opacity: 0, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.out", stagger: 0.05 }, 6.75);
+      tl.fromTo(".k0-a", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out", stagger: 0.05 }, 8.30);
+      tl.fromTo("#k0-hl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 8.57);
+      tl.fromTo(".k0-w", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.out", stagger: 0.04 }, 9.07);
+      schreibe("#k0-cliprect", 260, 9.07, 0.4);
+
+      // Q1 OnlinehändlerNews: Überschrift, dann der Absatz "Seit dem 22. Oktober 2026 …"
+      tl.fromTo("#q1", { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 9.50);
+      tl.fromTo("#q1 .qlabel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 9.54);
+      gsap.set("#q1-kopf", { x: 82, y: 2, scale: 0.57 });
+      tl.to("#q1-kopf", { x: 76, y: -2, scale: 0.585, duration: 1.9, ease: "sine.inOut" }, 9.55);
+      gsap.set("#q1-seit", { x: 66, y: -42, scale: 0.6 });
+      tl.to("#q1-kopf", { opacity: 0, y: -30, duration: 0.3, ease: "power2.in" }, 11.44);
+      tl.fromTo("#q1-seit", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 11.46);
+      pop("#q1-m", 11.82, 0.25);
+      tl.to("#q1-seit", { y: -56, duration: 2.6, ease: "sine.inOut" }, 11.9);
+      tl.to("#q1", { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.25, ease: "power2.in" }, 14.47);
+
+      // K1 1 echtes, unbearbeitetes Foto
+      karte("#k1", 14.72, 19.03);
+      ein("#k1-titel", 14.74, 0.35);
+      tl.to("#k1-eins", { opacity: 0, duration: 0.2 }, 15.58);
+      tl.fromTo("#k1-foto", { opacity: 0, scale: 0.94, transformOrigin: "155px 106px" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 15.58);
+      tl.fromTo("#k1-tool", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, 16.24);
+      zeichne("#k1-strich", 16.82, 0.3);
+      tl.to("#k1-tool", { opacity: 0.45, duration: 0.25 }, 16.9);
+      badge("#k1-schloss", 16.84);
+      ein("#k1-unb", 16.88, 0.3);
+      tl.fromTo("#k1-blitz", { opacity: 0 }, { opacity: 0.9, duration: 0.06 }, 17.50);
+      tl.to("#k1-blitz", { opacity: 0, duration: 0.3, ease: "power2.out" }, 17.56);
+      badge("#k1-ok", 17.52);
+      tl.to("#k1-prod", { opacity: 1, duration: 0.3 }, 18.54);
+      schreibe("#k1-cliprect", 190, 18.54, 0.4);
+
+      // K2 weitere Bilder dürfen bearbeitet sein
+      karte("#k2", 18.96, 27.96);
+      tl.to("#k2-leer", { opacity: 0, duration: 0.2 }, 20.88);
+      tl.fromTo(".k2-b", { opacity: 0, scale: 0.94, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.28, ease: "power2.out", stagger: 0.06 }, 20.88);
+      tl.fromTo(".k2-s", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out", stagger: 0.06 }, 21.12);
+      tl.fromTo(".k2-o", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.06 }, 22.42);
+      tl.fromTo("#k2-hl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 23.20);
+      tl.fromTo(".k2-t", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.28, ease: "power3.out", stagger: 0.12 }, 24.78);
+      tl.fromTo("#k2-fuss", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 24.9);
+      tl.to("#k2-hl", { opacity: 0, duration: 0.25 }, 25.58);
+      badge("#k2-gleich", 25.58);
+      schreibe("#k2-cliprect", 210, 26.78, 0.45);
+
+      // K3 Ausnahmen je nach Produkt
+      karte("#k3", 28.02, 30.97);
+      ein("#k3-titel", 28.04, 0.3);
+      ein("#k3-regel", 28.06, 0.3);
+      zeichne("#k3-a1", 28.28, 0.3);
+      zeichne("#k3-a2", 28.34, 0.3);
+      zeichne("#k3-a3", 28.40, 0.3);
+      tl.fromTo("#k3-z1", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.25, ease: "power2.out" }, 28.58);
+      tl.fromTo("#k3-z2", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.25, ease: "power2.out" }, 28.98);
+      tl.fromTo("#k3-z3", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.25, ease: "power2.out" }, 29.26);
+      tl.to("#k3-fuss", { opacity: 1, duration: 0.3 }, 29.86);
+      tl.fromTo("#k3-hl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 30.48);
+
+      // Q2 Etsy-Hilfe: Liste der nicht erlaubten KI-Inhalte
+      tl.fromTo("#q2", { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 30.97);
+      tl.fromTo("#q2 .qlabel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 31.01);
+      gsap.set("#q2-lage", { x: 45, y: 0, scale: 0.64 });
+      tl.to("#q2-lage", { y: -54, duration: 0.6, ease: "power2.inOut" }, 31.9);
+      pop("#q2-m", 32.16, 0.22);
+      tl.to("#q2", { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.22, ease: "power2.in" }, 32.70);
+
+      // K4 KI-Anleitungen: nicht erlaubt
+      karte("#k4", 32.92, 36.98);
+      ein("#k4-titel", 32.94, 0.3);
+      ein("#k4-ki", 32.96, 0.3);
+      zeichne("#k4-pfeil", 33.10, 0.3);
+      tl.to("#k4-platz rect:nth-child(1)", { opacity: 0, duration: 0.15 }, 33.94);
+      tl.fromTo("#k4-d1", { opacity: 0, scale: 0.94, transformOrigin: "291px 95px" }, { opacity: 1, scale: 1, duration: 0.28, ease: "power2.out" }, 33.94);
+      tl.to("#k4-platz rect:nth-child(2)", { opacity: 0, duration: 0.15 }, 34.92);
+      tl.fromTo("#k4-d2", { opacity: 0, scale: 0.94, transformOrigin: "501px 95px" }, { opacity: 1, scale: 1, duration: 0.28, ease: "power2.out" }, 34.92);
+      badge("#k4-x1", 35.70);
+      badge("#k4-x2", 35.76);
+      tl.to("#k4-d1, #k4-d2", { opacity: 0.5, duration: 0.25 }, 35.74);
+      schreibe("#k4-cliprect", 190, 35.98, 0.45);
+
+      // K5 Bot-Listings: nicht erlaubt
+      karte("#k5", 36.98, 41.54);
+      ein("#k5-titel", 37.00, 0.3);
+      ein("#k5-bot", 37.02, 0.3);
+      zeichne("#k5-band", 37.72, 0.3);
+      tl.fromTo(".k5-a", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out", stagger: 0.2 }, 37.80);
+      tl.to("#k5-ang", { opacity: 1, duration: 0.3 }, 38.86);
+      tl.fromTo("#k5-mensch", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 39.33);
+      zeichne("#k5-mstrich", 39.98, 0.3);
+      schreibe("#k5-cliprect", 230, 39.98, 0.45);
+      badge("#k5-x", 41.08);
+      tl.to("#k5-stapel", { opacity: 0.5, duration: 0.25 }, 41.12);
+
+      // K6 auch alte Listings prüfen
+      karte("#k6", 41.52, 46.55);
+      ein("#k6-titel", 41.54, 0.3);
+      tl.fromTo("#k6-plus", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 43.04);
+      tl.to("#k6-neu-platz", { opacity: 0, duration: 0.2 }, 43.78);
+      tl.fromTo("#k6-neu", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 43.78);
+      tl.to("#k6-neu-t", { opacity: 1, duration: 0.3 }, 43.82);
+      tl.fromTo(".k6-a", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.28, ease: "power3.out", stagger: 0.07 }, 45.04);
+      tl.to("#k6-alt-t", { opacity: 1, duration: 0.3 }, 45.08);
+      tl.fromTo("#k6-hl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 45.56);
+      tl.fromTo("#k6-lupe", { opacity: 0, x: 380, y: 140 }, { opacity: 1, x: 400, y: 120, duration: 0.15 }, 45.56);
+      tl.to("#k6-lupe", { x: 690, y: 96, duration: 0.7, ease: "power2.inOut" }, 45.68);
+      schreibe("#k6-cliprect", 190, 45.80, 0.4);
+
+      // K7 seine Einschätzung: neue Regeln schützen Vertrauen in echte Handarbeit
+      karte("#k7", 46.55, 53.25);
+      tl.fromTo("#k7-regeln", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 46.60);
+      tl.fromTo("#k7-regeln", { scale: 1, transformOrigin: "130px 125px" }, { scale: 1.05, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 }, 47.12);
+      zeichne("#k7-pfeil", 49.36, 0.35);
+      tl.to("#k7-spitze", { opacity: 1, duration: 0.15 }, 49.62);
+      tl.fromTo("#k7-schild", { opacity: 0, scale: 0.9, transformOrigin: "445px 121px" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 50.46);
+      schreibe("#k7-cliprect", 250, 50.50, 0.5);
+      tl.fromTo("#k7-hand", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 51.48);
+      tl.to("#k7-hand-t", { opacity: 1, duration: 0.3 }, 51.52);
+      tl.fromTo("#k7-schild", { scale: 1 }, { scale: 1.07, duration: 0.35, ease: "power2.out" }, 52.00);
+
+      // Sticker SPANNEND.
+      tl.fromTo("#st1", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, 48.58);
+      tl.to("#st1", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 49.48);
+
+      // K8 Tipp: Bilder und Anleitungen prüfen
+      karte("#k8", 53.25, 58.12);
+      tl.fromTo("#k8-listing", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 53.27);
+      tl.fromTo("#k8-lupe", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 320, y: 140, duration: 0.2 }, 55.03);
+      tl.to("#k8-lupe", { x: 175, y: 92, duration: 0.45, ease: "power2.inOut" }, 55.40);
+      ein("#k8-p1", 55.77, 0.3);
+      zeichne("#k8-h1", 56.07, 0.3);
+      tl.to("#k8-box1", { attr: { fill: "#e6faf2", stroke: "#00d088" }, duration: 0.2 }, 56.07);
+      tl.to("#k8-lupe", { x: 85, y: 215, duration: 0.45, ease: "power2.inOut" }, 57.10);
+      ein("#k8-p2", 57.43, 0.3);
+      zeichne("#k8-h2", 57.80, 0.25);
+      tl.to("#k8-box2", { attr: { fill: "#e6faf2", stroke: "#00d088" }, duration: 0.2 }, 57.80);
+
+      // K9 Umfrage: Listings schon geprüft? Ja, alle / Noch nicht, Kommentare, Folgen-Plus wird angetippt
+      karte("#k9", 58.12, null);
+      ein("#k9-frage", 58.14, 0.3);
+      ein("#k9-ja", 58.64, 0.3);
+      ein("#k9-nein", 59.30, 0.3);
+      ein("#k9-komm", 59.82, 0.3);
+      ein("#k9-folgen", 60.58, 0.3);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 360 }, { opacity: 1, x: 310, y: 350, duration: 0.12, ease: "power2.out" }, 61.56);
+      tl.to("#fzeiger", { x: 92, y: 330, duration: 0.5, ease: "power2.inOut" }, 61.70);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.6, ease: "power2.out" }, 62.20);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 62.24);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 62.32);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 62.26);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 62.26);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 62.29);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 62.29);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 62.29);
+      tl.to("#fzeiger", { x: 132, y: 338, duration: 0.25, ease: "power2.out" }, 62.50);
+
+      tl.seek(0);
+      window.__timelines["etsyki-skizzen"] = tl;
+    </script>
+  </body>
+</html>

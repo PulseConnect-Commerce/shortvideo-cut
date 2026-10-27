@@ -58,7 +58,21 @@ const ZIELE = {
     await page.waitForTimeout(1200);
     await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 500) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 120)); } window.scrollTo(0, 0); });
     await page.waitForTimeout(1200);
-    // schwebende Elemente (Cookie-Leiste, Chat, Werbung, Zurück-nach-oben) ausblenden
+    // schwebende Elemente (Cookie-Leiste, Chat, Werbung, Zurück-nach-oben) ausblenden; OnlinehändlerNews blendet nach dem
+    // Scrollen ein Werbe-Pop-up (#mainAdsBannerSection) mit abgedunkeltem Hintergrund (.modal-backdrop) ein: beides aus
+    const aufraeumen = () => {
+      if (!document.getElementById('fc-aus')) {
+        const st = document.createElement('style'); st.id = 'fc-aus';
+        st.textContent = '.modal, .modal-backdrop, #mainAdsBannerSection, [id^="cx-aw"], [id^="hs-web-interactives"] { display: none !important; } body.modal-open { overflow: visible !important; padding-right: 0 !important; }';
+        document.head.appendChild(st);
+      }
+      document.body.classList.remove('modal-open');
+      for (const el of document.querySelectorAll('body *')) {
+        const st = getComputedStyle(el);
+        if (st.position === 'fixed' || (st.position === 'sticky' && el.getBoundingClientRect().top > 40)) el.style.display = 'none';
+      }
+    };
+    await page.evaluate(aufraeumen);
     await page.evaluate(() => {
       for (const el of document.querySelectorAll('body *')) {
         const st = getComputedStyle(el);
@@ -117,6 +131,8 @@ const ZIELE = {
       const top = Math.max(0, ref - (v.vor || 0));
       const hoehe = Math.min((v.vor || 0) + (v.nach || 900), daten.hoehe - top);
       await page.waitForTimeout(300);
+      await page.evaluate(aufraeumen);
+      await page.waitForTimeout(200);
       await page.screenshot({ path: `${out}/${name}-${vname}.png`, fullPage: true, clip: { x: 0, y: top, width: 412, height: hoehe } });
       info[name].varianten[vname] = { clipTop: top, clipHoehe: hoehe, ...daten };
       console.log(name, vname, 'clip', top, hoehe, JSON.stringify(daten.pos), JSON.stringify(daten.ank));

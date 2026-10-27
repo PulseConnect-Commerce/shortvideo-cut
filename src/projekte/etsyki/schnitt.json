@@ -47,5 +47,18 @@
  "ende": {
   "bis": 108.7
  },
- "korrekturen": []
+ "korrekturen": [
+  [
+   "t1",
+   33.03,
+   "22.",
+   "22.​"
+  ],
+  [
+   "t1",
+   100.35,
+   "Anleitungen,",
+   "Anleitungen."
+  ]
+ ]
 }
