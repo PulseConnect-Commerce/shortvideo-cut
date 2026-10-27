@@ -1,6 +1,6 @@
 # Übergabekarte: N07 · Temu-Warenkorb
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** (News ohne Termin → nächster freier 09:00-Slot, Pauls Regel 27.10.) für Do 29.10.2026 09:00 Europe/Berlin, Metricool TikTok 408281517 / Instagram und YouTube siehe getScheduledPosts 29.10., Drive-Final 1fTI9Nl2IOFwT-GS2qNWXxNEWzSdBFg4L.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): N07 · Temu-Warenkorb
 - **Format / Design:** NEWS / Look wie N09 (eBay-Kombirabatte): Hook-Titel im Design verlauf ("TEMU: 59 % TEURER" / "IN DEUTSCHLAND?", klein darunter "ein getesteter Warenkorb") unter dem Kopf, helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten, zwei echte Quellen als Quellen-Karte (neuhandeln.de, Carpathia-Blog), sieben echte Seiten (drei neuhandeln.de, vier Carpathia) als Hintergrund hinter ihm, Musik news, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe
