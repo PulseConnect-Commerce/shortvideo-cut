@@ -1,0 +1,119 @@
+/**
+ * Format HERO, Serie M "Marken-Story", M06 · FIVE Skincare. Veröffentlichung laut Kalender Di 08.12.2026 19:00.
+ * Erste Folge im Editorial-Stil (PROBE ab M06, karten-aufbau.md "Marken-Story im Editorial-Stil"): über dem Kopf große,
+ * kurze Kennzahlen und Schlagzeilen (Instrument Serif und Geist im Wechsel, Akzent im PulseConnect-Verlauf, ein Strich
+ * zeichnet sich auf dem Wort), echte freigestellte Fotos von fiveskincare.de neben dem Kopf (Shea Cream, Anna Pfeiffer
+ * von der Presseseite, Tiegel und Flakon), darunter die Pill-Untertitel und die Erklär-Bilder bzw. die Quellen-Karte
+ * (Shopify-Interview 2020) auf der hellen Karte.
+ * Hook-Titel (Marke FIVE, darum mit Hook; Design "verlauf"): "FIVE SKINCARE:" / "MAX. 5 INHALTSSTOFFE PRO PRODUKT"
+ * (Briefing 0-5 s "MAX. 5 INHALTSSTOFFE", Fakten-Grenze "pro Produkt"), an der Kartenposition unter dem Kopf.
+ * Bild: damit die Kennzahlen über dem Kopf Platz haben, steht er etwas tiefer als in A04/M05 (Regie: "Wo die Kennzahlen
+ * über dem Kopf zu wenig Platz haben, setz ihn etwas tiefer"): scale 1.2, hoch 270, x -26 (Take: Kopfoberkante Median
+ * y 632 mit der Porträt-Maske, Augen Median x 518 / y 828, Kinn ~1030, an 166 Zeitpunkten über alle Stücke gemessen) →
+ * Kopfoberkante ~488 (460-525), Augen ~724, mittig. Von oben: Kennzahl (y ~284-468, auf hellem Schleier), Kopf, Kinn
+ * (~966), Pill-Untertitel (y 1068), Karte (y 1118-1468), alles über der Instagram-Zone (ab 1500). Sanfter Grade, ein
+ * ruhiges Zoom-in (3 %) um die Augen, kein Punch-in (die Kennzahlen über dem Kopf und die Striche auf den
+ * Shop-Hintergründen sitzen fest).
+ * Marken-Hintergründe (karten-aufbau.md "Marken-Shops als Hintergrund"): an zehn Stellen steht er freigestellt vor echten
+ * Seiten von fiveskincare.de (HG unten, in den Take gerechnet von npm run portrait --ausschnitt 1.2,270,-26
+ * --hintergrund …); Hook, Interview, Meinung, Tipp 1 und 3, KI und Aufruf vor seinem weichgezeichneten Zimmer.
+ * Kennzahlen, Fotos und Karten als transparentes WebM aus hyperframes/five-skizzen (public/broll/five/skizzen.webm),
+ * Zeiten und Töne in karten.json.
+ */
+import type React from "react";
+import { AbsoluteFill, Easing, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
+import { clamp, HookTitle, Musik, Sfx, Takes } from "../../lib/bausteine";
+import { DesignRahmen } from "../../lib/design";
+import { PillUntertitel } from "../../lib/pillen";
+import { Raster } from "../../lib/raster";
+import { createCut } from "../../lib/schnitt";
+import { STIL } from "../../lib/stil";
+import cut from "./cut.json";
+import karten from "./karten.json";
+
+const C = createCut(cut);
+export const meta = { id: "Five", durationInFrames: C.DURATION, fps: C.FPS };
+
+/** Augen im Take (Median) bei x 518, y 828 → im Bild x 540, y 724; Haar ~632 → 488; Bildunterkante = Take y ~1825 */
+const BILD = { scale: 1.2, hoch: 270, x: -26 };
+/** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
+const AUGEN_Y = 724;
+
+/** Marken-Hintergründe im Take (Sekunden), wie beim Aufruf von npm run portrait --hintergrund (public/broll/five/) */
+export const HG: [string, number, number][] = [
+  ["hg-home", 10.9, 14.45], // "Denn genau das ist die Story von FIVE Skincare." (Startseite, Folie "Hallo Shea Cream")
+  ["hg-zutaten", 15.2, 19.1], // "Die Marke setzt nämlich auf maximal fünf Inhaltsstoffe pro Produkt." (Shea Cream: "Mit nur 5 Inhaltsstoffen")
+  ["hg-alle", 28.2, 34.35], // "Und der Name erklärt ... das Versprechen ..." (Kategorie "Produkte": FIVE-Flakons)
+  ["hg-story", 45.9, 52.3], // "Die Gründerin Anna Pfeiffer wollte ..." ("Unsere Story")
+  ["hg-presse", 52.3, 56.85], // "... bei „Die Höhle der Löwen“ bekannt." (Presseseite "Auf einen Blick": Sept. 2017)
+  ["hg-usp", 136.6, 142.15], // "Mach den USP im Shop einfach sichtbar. Nicht irgendwo ganz unten ..." (Produktseite: "Nur 5 Inhaltsstoffe")
+  ["hg-favoriten", 142.15, 148.35], // "... wo die Kunden das Produkt zum ersten Mal sehen." (Startseite: "Maximal 5 Inhaltsstoffe" über den Favoriten)
+  ["hg-geheimnisse", 172.45, 177.7], // "... transparente Inhaltsstoffe ..." (5 Gründe: "Keine Geheimnisse")
+  ["hg-shea", 204.1, 208.75], // "... muss natürlich immer auch erst mal das Produkt beweisen." (Produktseite Shea Cream)
+  ["hg-gruende", 213.75, 220.3], // "Weniger kann eine ziemlich starke Positionierung sein." (5 Gründe: "... Wir kommen mit maximal 5 aus.")
+];
+
+/** Sanfter Grade (STIL.gradeSanft); Helligkeit am Gesicht nach dem ersten Render gemessen (Ziel ~0,55-0,57) */
+const GRADE = STIL.gradeSanft;
+
+const fs = (s: number) => Math.round(s * C.FPS);
+/** Hook-Titel bis zum Ende des Hook-Satzes ("weniger?" 6,30-6,7 s); danach die erste Shop-Seite (6,80 s) */
+const HOOK_ENDE = fs(6.5);
+
+/** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json) */
+const TOENE = karten.karten.flatMap((k) => k.sfx);
+
+/** Pill-Untertitel unter dem Kinn, über der Karte (Karte x 80-900, oben bei y 1118) */
+const PILLE = { x: 490, y: 1068 };
+
+type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false };
+
+export const Video: React.FC<Props> = (p) => (
+  <DesignRahmen design="pulse">
+    <Inhalt {...p} />
+  </DesignRahmen>
+);
+
+const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, untertitel = true, musik = "ruhig.mp3" }) => {
+  const fr = useCurrentFrame();
+  // ruhiges Zoom-in über das ganze Video (3 %), kein Punch-in
+  const push = interpolate(fr, [0, 90], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
+  const zoom = 1 + 0.03 * (0.45 * push + 0.55 * (fr / C.DURATION));
+  return (
+    <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
+      <AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: `540px ${AUGEN_Y}px` }}>
+        <Takes
+          C={C}
+          voice={voice}
+          transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
+          transformOrigin="50% 0%"
+          grade={GRADE}
+        />
+      </AbsoluteFill>
+
+      {/* Hook-Titel (Marke FIVE, Text aus dem Briefing), an der Kartenposition unter dem Kopf (oben ~1118), wie Karte
+          und Pille um x 490 zentriert, damit nichts in die TikTok-Leiste rechts (ab x 900) ragt */}
+      <DesignRahmen design="verlauf">
+        <AbsoluteFill style={{ transform: "translate(-50px, 866px) scale(0.9)", transformOrigin: "50% 0%" }}>
+          <HookTitle fr={fr} line1="FIVE SKINCARE:" line2="MAX. 5 INHALTSSTOFFE PRO PRODUKT" outAt={HOOK_ENDE} />
+        </AbsoluteFill>
+      </DesignRahmen>
+
+      {/* Kennzahlen, Fotos und Erklär-Bilder aus HyperFrames (hyperframes/five-skizzen) */}
+      <Sequence from={0} durationInFrames={C.DURATION} layout="none">
+        <OffthreadVideo
+          src={staticFile("broll/five/skizzen.webm")}
+          transparent
+          muted
+          style={{ position: "absolute", inset: 0, width: 1080, height: 1920 }}
+        />
+      </Sequence>
+      {sfx && TOENE.map((t, i) => <Sfx key={i} file={t.datei} at={t.at * C.FPS} volume={t.volume} />)}
+
+      {untertitel && <PillUntertitel C={C} fr={fr} x={PILLE.x} y={PILLE.y} farbe="#00E090" />}
+
+      {musik && <Musik C={C} datei={musik} />}
+      {raster && <Raster />}
+    </AbsoluteFill>
+  );
+};

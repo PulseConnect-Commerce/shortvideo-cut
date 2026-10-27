@@ -1,0 +1,235 @@
+{
+ "projekt": "five",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 1.6,
+   "text": "Was wäre, wenn ich dir sage, dass du bei Kosmetik nicht immer mit mehr Inhaltsstoffen werden sollst, sondern ganz bewusst mal mit weniger?"
+  },
+  {
+   "take": "t1",
+   "ab": 11.0,
+   "text": "Denn genau das ist die Story von FIVE Skincare. Die Marke setzt nämlich auf maximal fünf Inhaltsstoffe pro Produkt.",
+   "bis": 18.95
+  },
+  {
+   "take": "t1",
+   "ab": 28.3,
+   "text": "Und der Name erklärt tatsächlich das Versprechen eigentlich schon von selbst, bevor du überhaupt eine erste Produktbeschreibung gelesen hast."
+  },
+  {
+   "take": "t1",
+   "ab": 45.95,
+   "text": "Die Gründerin Anna Pfeiffer wollte nämlich Hauptpflege entwickeln, bei der tatsächlich Menschen verstehen können, was sie überhaupt verwenden. Mit dieser kleinen Positionierung wurde eben Fife später auch bei Die Höhle der Löwen bekannt."
+  },
+  {
+   "take": "t1",
+   "ab": 59.55,
+   "text": "Und laut einem historischen Shopify-Interview war der Onlineshop nach kurzer Zeit der Ausstrahlung schon tatsächlich fast ausverkauft."
+  },
+  {
+   "take": "t1",
+   "ab": 68.55,
+   "text": "Aber ich finde hier tatsächlich nicht nur den TV-Auftritt am interessantesten, sondern eher sogar die Positionierung davor."
+  },
+  {
+   "take": "t1",
+   "ab": 82.1,
+   "text": "Denn wie du dir schon vermuten kannst, braucht man in einer Produktkategorie mit unzähligen ähnlichen Angeboten natürlich auch einen Grund, warum Kunden sich ausgrennend für dich entscheiden sollen. Und daraus würde ich tatsächlich die folgenden drei Tipps ableiten. Erstens, versuche mal einen USP in nur einem einzigen Satz zu erklären. Wenn das nicht klappt, dann ist vielleicht dein USP noch immer zu kompliziert formuliert."
+  },
+  {
+   "take": "t1",
+   "ab": 136.7,
+   "text": "Zweitens macht den USP im Shop einfach sichtbar. Nicht dass irgendwo ganz unten bei der über uns Seite, sondern dort tatsächlich, wo die Kunden das Produkt zum ersten Mal sehen. Es klingt tatsächlich so einfach, aber das funktioniert."
+  },
+  {
+   "take": "t1",
+   "ab": 157.35,
+   "text": "und drittens ein gutes Versprechen muss tatsächlich das Produkt auch wirklich einlösen. Du kannst nicht immer irgendwas versprechen und dann am Ende die Kunden enttäuschen, wenn sie das Produkt kaufen.",
+   "bis": 166.45
+  },
+  {
+   "take": "t1",
+   "ab": 172.6,
+   "text": "und besonders bei Pflegeprodukten sind natürlich Transparent-Inhaltsstoffe einer der besten Faktoren."
+  },
+  {
+   "take": "t1",
+   "ab": 197.8,
+   "text": "Und natürlich kann dir auch KI dabei helfen, diese verschiedenen Formulierungen für dein Markenversprechen zu testen. Aber ob dieses Versprechen natürlich stimmt, muss natürlich immer auch erst mal das Produkt beweisen."
+  },
+  {
+   "take": "t1",
+   "ab": 213.9,
+   "text": "Das hier ist das wichtigste Learning von Fife für mich gewesen. Weniger kann eine ziemlich starke Positionierung sein"
+  },
+  {
+   "take": "t1",
+   "ab": 235.4,
+   "text": "und wenn du weiterer solcher Learnings und Tipps von mir zu E-Commerce Shops und Marken haben möchtest, dann drücke gerne das Plus weg und weiterer solcher Videos in Zukunft nicht zu verpassen.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 244.48
+ },
+ "korrekturen": [
+  [
+   "t1",
+   5.91,
+   "werden",
+   "werben"
+  ],
+  [
+   "t1",
+   47.87,
+   "Hauptpflege",
+   "Hautpflege"
+  ],
+  [
+   "t1",
+   54.45,
+   "Fife",
+   "FIVE"
+  ],
+  [
+   "t1",
+   55.47,
+   "Die",
+   "„Die"
+  ],
+  [
+   "t1",
+   55.99,
+   "Löwen",
+   "Löwen“"
+  ],
+  [
+   "t1",
+   89.17,
+   "ausgrennend",
+   "ausgerechnet"
+  ],
+  [
+   "t1",
+   136.81,
+   "Zweitens",
+   "Zweitens:"
+  ],
+  [
+   "t1",
+   137.35,
+   "macht",
+   "Mach"
+  ],
+  [
+   "t1",
+   140.01,
+   "dass",
+   ""
+  ],
+  [
+   "t1",
+   141.33,
+   "über",
+   "Über-uns-Seite,"
+  ],
+  [
+   "t1",
+   141.57,
+   "uns",
+   ""
+  ],
+  [
+   "t1",
+   141.79,
+   "Seite,",
+   ""
+  ],
+  [
+   "t1",
+   157.43,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   157.55,
+   "drittens",
+   "drittens:"
+  ],
+  [
+   "t1",
+   158.01,
+   "ein",
+   "Ein"
+  ],
+  [
+   "t1",
+   172.69,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   174.73,
+   "Transparent-Inhaltsstoffe",
+   "transparente Inhaltsstoffe"
+  ],
+  [
+   "t1",
+   215.89,
+   "Fife",
+   "FIVE"
+  ],
+  [
+   "t1",
+   219.87,
+   "sein",
+   "sein."
+  ],
+  [
+   "t1",
+   235.47,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   235.83,
+   "weiterer",
+   "weitere"
+  ],
+  [
+   "t1",
+   238.17,
+   "E-Commerce",
+   "E-Commerce-Shops"
+  ],
+  [
+   "t1",
+   238.61,
+   "Shops",
+   ""
+  ],
+  [
+   "t1",
+   241.83,
+   "und",
+   "um"
+  ],
+  [
+   "t1",
+   241.93,
+   "weiterer",
+   "weitere"
+  ]
+ ]
+}
