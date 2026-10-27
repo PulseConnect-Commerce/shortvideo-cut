@@ -40,19 +40,22 @@ const BILD = { scale: 1.6, hoch: 790, x: 61 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
 const AUGEN_Y = 666;
 
-/** Hintergründe im Take (Sekunden), wie beim Aufruf von npm run portrait --hintergrund (public/broll/temuwarenkorb/) */
+/** Hintergründe im Take (Sekunden), wie beim Aufruf von npm run portrait --hintergrund (public/broll/temuwarenkorb/). Ein Stück
+ * endet im Bild 3 Frames (J-Cut) nach seinem Ton: darum reicht jedes Bild mindestens 0,25 s über das Stückende, sonst blitzt
+ * das Zimmer auf (erster Render: 2 Frames bei 8,6 s, 1 Frame bei 32,5 s) */
 export const HG: [string, number, number][] = [
-  ["hg-nh-kopf", 20.6, 24.9], // "Zumindest bei einem getesteten Warenkorb wurde das hier gefunden. Schaut euch das mal an." (neuhandeln.de, Überschrift)
+  ["hg-nh-kopf", 20.6, 25.15], // "Zumindest bei einem getesteten Warenkorb wurde das hier gefunden. Schaut euch das mal an." (neuhandeln.de, Überschrift)
   ["hg-cp-kopf", 31.0, 36.4], // "Eine Schweizer E-Commerce-Beratung hat tatsächlich dieselben Produkte …" (Carpathia-Blog, Überschrift)
   ["hg-cp-tabelle", 36.4, 43.85], // "Und in Deutschland lag dabei tatsächlich der Preis bei knapp 127 Euro, …" (Carpathia: Tabelle EUR 126.94 / EUR 80.0)
   ["hg-cp-abgaben", 43.85, 46.3], // "Ein Teil davon sind natürlich Einfuhrabgaben." (Carpathia: "EUR 21.42 an Einfuhrabgaben …")
-  ["hg-nh-abgaben", 46.3, 51.1], // "Aber selbst wenn man jetzt trotzdem diese herausrechnet, …" (neuhandeln.de: "… mit 111,94 Euro noch deutlich …")
-  ["hg-nh-ursache", 61.35, 65.25], // "Aber woran das jetzt tatsächlich genau liegt, …" (neuhandeln.de: "Belege für diese Vermutungen liefert der Vergleich allerdings nicht.")
+  ["hg-nh-abgaben", 46.3, 51.3], // "Aber selbst wenn man jetzt trotzdem diese herausrechnet, …" (neuhandeln.de: "… mit 111,94 Euro noch deutlich …")
+  ["hg-nh-ursache", 61.35, 65.5], // "Aber woran das jetzt tatsächlich genau liegt, …" (neuhandeln.de: "Belege für diese Vermutungen liefert der Vergleich allerdings nicht.")
   ["hg-cp-aktion", 72.7, 76.2], // "Es können noch einfach unterschiedliche Aktionspreise eine Rolle spielen." (Carpathia: "Denkbar sind Schweiz-spezifische Aktionspreise")
 ];
 
-/** Sanfter Grade (STIL.gradeSanft); Regie: "Liegt das Gesicht über 0,57, gleich das im Grade aus" */
-const GRADE = `${STIL.gradeSanft}`;
+/** Sanfter Grade (STIL.gradeSanft) plus brightness(0.94): das Gesicht lag in den ersten Standbildern bei 0,598 (Median aus 10,
+ * gemessen wie npm run pruefen); Regie: "Liegt das Gesicht über 0,57, gleich das im Grade aus" → Ziel ~0,56 */
+const GRADE = `${STIL.gradeSanft} brightness(0.94)`;
 
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel bis zum Ende des ersten Satzes ("Schweiz." 3,90-4,2 s), ganz weg bei 4,15 s; die erste Karte kommt bei 4,36 s */
