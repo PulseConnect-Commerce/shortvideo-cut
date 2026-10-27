@@ -1,6 +1,6 @@
 # Briefing: A05 · MyStoreBuddy
 
-Rohclip im Drive: "A05 · MyStoreBuddy" (1mEoj3JebfUfVK8w4v0no9xVXWU9YiRGx), hochgeladen am 27.10.2026. Veröffentlichung: Sa 21.11.2026 14:00 (Serien-Slot; der 📣-Termin heißt im Kalender noch "A05 · Translate & Adapt", Paul hat am 27.10. bestätigt: an diesem Termin kommt A05 MyStoreBuddy). Serie A "Eine Shopify-App, ein Problem".
+Rohclip im Drive: "A05 · MyStoreBuddy" (1mEoj3JebfUfVK8w4v0no9xVXWU9YiRGx), hochgeladen am 27.10.2026. Veröffentlichung laut Kalender: Sa 21.11.2026 14:00 (📣 "A05 · MyStoreBuddy | KI-Produktberater veröffentlichen", Serien-Slot; von Paul am 27.10. bestätigt). Serie A "Eine Shopify-App, ein Problem".
 
 
 🎬 A05 · MyStoreBuddy | KI-Produktberater aufnehmen
