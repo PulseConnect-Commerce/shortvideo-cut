@@ -1,0 +1,1069 @@
+{
+ "projekt": "temuwarenkorb",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "temuwarenkorb/t1",
+   "from": 5.79,
+   "to": 10.185,
+   "nach": 0.09,
+   "vor": 0.01
+  },
+  {
+   "src": "temuwarenkorb/t1",
+   "from": 20.645,
+   "to": 24.885,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temuwarenkorb/t1",
+   "from": 31.045,
+   "to": 51.045,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temuwarenkorb/t1",
+   "from": 61.385,
+   "to": 65.215,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temuwarenkorb/t1",
+   "from": 72.715,
+   "to": 84.325,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temuwarenkorb/t1",
+   "from": 95.315,
+   "to": 98.385,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "temuwarenkorb/t1",
+   "from": 102.315,
+   "to": 109.55,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Temu",
+   "src": "temuwarenkorb/t1",
+   "start": 5.83,
+   "end": 6.07
+  },
+  {
+   "text": "ist",
+   "src": "temuwarenkorb/t1",
+   "start": 6.15,
+   "end": 6.23
+  },
+  {
+   "text": "tatsächlich",
+   "src": "temuwarenkorb/t1",
+   "start": 6.25,
+   "end": 6.61
+  },
+  {
+   "text": "in",
+   "src": "temuwarenkorb/t1",
+   "start": 6.65,
+   "end": 6.71
+  },
+  {
+   "text": "Deutschland",
+   "src": "temuwarenkorb/t1",
+   "start": 6.77,
+   "end": 7.21
+  },
+  {
+   "text": "bis",
+   "src": "temuwarenkorb/t1",
+   "start": 7.29,
+   "end": 7.39
+  },
+  {
+   "text": "zu",
+   "src": "temuwarenkorb/t1",
+   "start": 7.47,
+   "end": 7.53
+  },
+  {
+   "text": "59",
+   "src": "temuwarenkorb/t1",
+   "start": 7.69,
+   "end": 8.37
+  },
+  {
+   "text": "Prozent",
+   "src": "temuwarenkorb/t1",
+   "start": 8.45,
+   "end": 8.81
+  },
+  {
+   "text": "teurer",
+   "src": "temuwarenkorb/t1",
+   "start": 8.85,
+   "end": 9.21
+  },
+  {
+   "text": "als",
+   "src": "temuwarenkorb/t1",
+   "start": 9.35,
+   "end": 9.45
+  },
+  {
+   "text": "in",
+   "src": "temuwarenkorb/t1",
+   "start": 9.49,
+   "end": 9.55
+  },
+  {
+   "text": "der",
+   "src": "temuwarenkorb/t1",
+   "start": 9.59,
+   "end": 9.65
+  },
+  {
+   "text": "Schweiz.",
+   "src": "temuwarenkorb/t1",
+   "start": 9.69,
+   "end": 9.99
+  },
+  {
+   "text": "Zumindest",
+   "src": "temuwarenkorb/t1",
+   "start": 20.67,
+   "end": 21.09
+  },
+  {
+   "text": "bei",
+   "src": "temuwarenkorb/t1",
+   "start": 21.15,
+   "end": 21.25
+  },
+  {
+   "text": "einem",
+   "src": "temuwarenkorb/t1",
+   "start": 21.43,
+   "end": 21.67
+  },
+  {
+   "text": "getesteten",
+   "src": "temuwarenkorb/t1",
+   "start": 21.73,
+   "end": 22.25
+  },
+  {
+   "text": "Warenkorb",
+   "src": "temuwarenkorb/t1",
+   "start": 22.31,
+   "end": 22.79
+  },
+  {
+   "text": "wurde",
+   "src": "temuwarenkorb/t1",
+   "start": 22.89,
+   "end": 23.07
+  },
+  {
+   "text": "das",
+   "src": "temuwarenkorb/t1",
+   "start": 23.17,
+   "end": 23.31
+  },
+  {
+   "text": "hier",
+   "src": "temuwarenkorb/t1",
+   "start": 23.37,
+   "end": 23.47
+  },
+  {
+   "text": "gefunden.",
+   "src": "temuwarenkorb/t1",
+   "start": 23.51,
+   "end": 23.91
+  },
+  {
+   "text": "Schaut",
+   "src": "temuwarenkorb/t1",
+   "start": 23.99,
+   "end": 24.19
+  },
+  {
+   "text": "euch",
+   "src": "temuwarenkorb/t1",
+   "start": 24.23,
+   "end": 24.33
+  },
+  {
+   "text": "das",
+   "src": "temuwarenkorb/t1",
+   "start": 24.37,
+   "end": 24.45
+  },
+  {
+   "text": "mal",
+   "src": "temuwarenkorb/t1",
+   "start": 24.51,
+   "end": 24.59
+  },
+  {
+   "text": "an.",
+   "src": "temuwarenkorb/t1",
+   "start": 24.65,
+   "end": 24.73
+  },
+  {
+   "text": "Eine",
+   "src": "temuwarenkorb/t1",
+   "start": 31.11,
+   "end": 31.23
+  },
+  {
+   "text": "Schweizer",
+   "src": "temuwarenkorb/t1",
+   "start": 31.31,
+   "end": 31.65
+  },
+  {
+   "text": "E-Commerce-Beratung",
+   "src": "temuwarenkorb/t1",
+   "start": 31.73,
+   "end": 32.55
+  },
+  {
+   "text": "hat",
+   "src": "temuwarenkorb/t1",
+   "start": 32.65,
+   "end": 32.73
+  },
+  {
+   "text": "tatsächlich",
+   "src": "temuwarenkorb/t1",
+   "start": 32.79,
+   "end": 33.17
+  },
+  {
+   "text": "dieselben",
+   "src": "temuwarenkorb/t1",
+   "start": 33.21,
+   "end": 33.59
+  },
+  {
+   "text": "Produkte",
+   "src": "temuwarenkorb/t1",
+   "start": 33.61,
+   "end": 33.97
+  },
+  {
+   "text": "in",
+   "src": "temuwarenkorb/t1",
+   "start": 34.09,
+   "end": 34.15
+  },
+  {
+   "text": "beiden",
+   "src": "temuwarenkorb/t1",
+   "start": 34.25,
+   "end": 34.55
+  },
+  {
+   "text": "Temu-Shops",
+   "src": "temuwarenkorb/t1",
+   "start": 34.59,
+   "end": 35.09
+  },
+  {
+   "text": "in",
+   "src": "temuwarenkorb/t1",
+   "start": 35.19,
+   "end": 35.23
+  },
+  {
+   "text": "den",
+   "src": "temuwarenkorb/t1",
+   "start": 35.27,
+   "end": 35.37
+  },
+  {
+   "text": "Warenkorb",
+   "src": "temuwarenkorb/t1",
+   "start": 35.43,
+   "end": 35.81
+  },
+  {
+   "text": "gelegt.",
+   "src": "temuwarenkorb/t1",
+   "start": 35.85,
+   "end": 36.13
+  },
+  {
+   "text": "Und",
+   "src": "temuwarenkorb/t1",
+   "start": 36.61,
+   "end": 36.69
+  },
+  {
+   "text": "in",
+   "src": "temuwarenkorb/t1",
+   "start": 36.73,
+   "end": 36.79
+  },
+  {
+   "text": "Deutschland",
+   "src": "temuwarenkorb/t1",
+   "start": 36.87,
+   "end": 37.31
+  },
+  {
+   "text": "lag",
+   "src": "temuwarenkorb/t1",
+   "start": 37.35,
+   "end": 37.51
+  },
+  {
+   "text": "dabei",
+   "src": "temuwarenkorb/t1",
+   "start": 37.61,
+   "end": 37.83
+  },
+  {
+   "text": "tatsächlich",
+   "src": "temuwarenkorb/t1",
+   "start": 37.91,
+   "end": 38.29
+  },
+  {
+   "text": "der",
+   "src": "temuwarenkorb/t1",
+   "start": 38.31,
+   "end": 38.41
+  },
+  {
+   "text": "Preis",
+   "src": "temuwarenkorb/t1",
+   "start": 38.45,
+   "end": 38.71
+  },
+  {
+   "text": "bei",
+   "src": "temuwarenkorb/t1",
+   "start": 38.77,
+   "end": 38.85
+  },
+  {
+   "text": "knapp",
+   "src": "temuwarenkorb/t1",
+   "start": 38.93,
+   "end": 39.17
+  },
+  {
+   "text": "127",
+   "src": "temuwarenkorb/t1",
+   "start": 39.25,
+   "end": 40.19
+  },
+  {
+   "text": "Euro,",
+   "src": "temuwarenkorb/t1",
+   "start": 40.29,
+   "end": 40.49
+  },
+  {
+   "text": "in",
+   "src": "temuwarenkorb/t1",
+   "start": 41.13,
+   "end": 41.17
+  },
+  {
+   "text": "der",
+   "src": "temuwarenkorb/t1",
+   "start": 41.21,
+   "end": 41.31
+  },
+  {
+   "text": "Schweiz",
+   "src": "temuwarenkorb/t1",
+   "start": 41.35,
+   "end": 41.67
+  },
+  {
+   "text": "hingegen",
+   "src": "temuwarenkorb/t1",
+   "start": 41.69,
+   "end": 42.07
+  },
+  {
+   "text": "nur",
+   "src": "temuwarenkorb/t1",
+   "start": 42.11,
+   "end": 42.19
+  },
+  {
+   "text": "rund",
+   "src": "temuwarenkorb/t1",
+   "start": 42.25,
+   "end": 42.43
+  },
+  {
+   "text": "80",
+   "src": "temuwarenkorb/t1",
+   "start": 42.61,
+   "end": 42.97
+  },
+  {
+   "text": "Euro.",
+   "src": "temuwarenkorb/t1",
+   "start": 43.03,
+   "end": 43.23
+  },
+  {
+   "text": "Ein",
+   "src": "temuwarenkorb/t1",
+   "start": 43.95,
+   "end": 44.05
+  },
+  {
+   "text": "Teil",
+   "src": "temuwarenkorb/t1",
+   "start": 44.09,
+   "end": 44.25
+  },
+  {
+   "text": "davon",
+   "src": "temuwarenkorb/t1",
+   "start": 44.31,
+   "end": 44.57
+  },
+  {
+   "text": "sind",
+   "src": "temuwarenkorb/t1",
+   "start": 44.67,
+   "end": 44.77
+  },
+  {
+   "text": "natürlich",
+   "src": "temuwarenkorb/t1",
+   "start": 44.83,
+   "end": 45.15
+  },
+  {
+   "text": "Einfuhrabgaben.",
+   "src": "temuwarenkorb/t1",
+   "start": 45.27,
+   "end": 45.99
+  },
+  {
+   "text": "Aber",
+   "src": "temuwarenkorb/t1",
+   "start": 46.61,
+   "end": 46.71
+  },
+  {
+   "text": "selbst",
+   "src": "temuwarenkorb/t1",
+   "start": 46.77,
+   "end": 46.95
+  },
+  {
+   "text": "wenn",
+   "src": "temuwarenkorb/t1",
+   "start": 46.99,
+   "end": 47.11
+  },
+  {
+   "text": "man",
+   "src": "temuwarenkorb/t1",
+   "start": 47.15,
+   "end": 47.25
+  },
+  {
+   "text": "jetzt",
+   "src": "temuwarenkorb/t1",
+   "start": 47.29,
+   "end": 47.45
+  },
+  {
+   "text": "trotzdem",
+   "src": "temuwarenkorb/t1",
+   "start": 47.47,
+   "end": 47.81
+  },
+  {
+   "text": "diese",
+   "src": "temuwarenkorb/t1",
+   "start": 47.89,
+   "end": 48.07
+  },
+  {
+   "text": "herausrechnet,",
+   "src": "temuwarenkorb/t1",
+   "start": 48.15,
+   "end": 48.81
+  },
+  {
+   "text": "bleibt",
+   "src": "temuwarenkorb/t1",
+   "start": 48.87,
+   "end": 49.09
+  },
+  {
+   "text": "natürlich",
+   "src": "temuwarenkorb/t1",
+   "start": 49.17,
+   "end": 49.49
+  },
+  {
+   "text": "immer",
+   "src": "temuwarenkorb/t1",
+   "start": 49.53,
+   "end": 49.69
+  },
+  {
+   "text": "noch",
+   "src": "temuwarenkorb/t1",
+   "start": 49.75,
+   "end": 49.83
+  },
+  {
+   "text": "ein",
+   "src": "temuwarenkorb/t1",
+   "start": 49.89,
+   "end": 49.95
+  },
+  {
+   "text": "deutlicher",
+   "src": "temuwarenkorb/t1",
+   "start": 50.03,
+   "end": 50.47
+  },
+  {
+   "text": "Unterschied.",
+   "src": "temuwarenkorb/t1",
+   "start": 50.53,
+   "end": 50.93
+  },
+  {
+   "text": "Aber",
+   "src": "temuwarenkorb/t1",
+   "start": 61.41,
+   "end": 61.53
+  },
+  {
+   "text": "woran",
+   "src": "temuwarenkorb/t1",
+   "start": 61.59,
+   "end": 61.81
+  },
+  {
+   "text": "das",
+   "src": "temuwarenkorb/t1",
+   "start": 61.85,
+   "end": 61.95
+  },
+  {
+   "text": "jetzt",
+   "src": "temuwarenkorb/t1",
+   "start": 62.01,
+   "end": 62.23
+  },
+  {
+   "text": "tatsächlich",
+   "src": "temuwarenkorb/t1",
+   "start": 62.27,
+   "end": 62.71
+  },
+  {
+   "text": "genau",
+   "src": "temuwarenkorb/t1",
+   "start": 62.77,
+   "end": 63.05
+  },
+  {
+   "text": "liegt,",
+   "src": "temuwarenkorb/t1",
+   "start": 63.15,
+   "end": 63.37
+  },
+  {
+   "text": "ist",
+   "src": "temuwarenkorb/t1",
+   "start": 63.43,
+   "end": 63.53
+  },
+  {
+   "text": "hier",
+   "src": "temuwarenkorb/t1",
+   "start": 63.57,
+   "end": 63.67
+  },
+  {
+   "text": "natürlich",
+   "src": "temuwarenkorb/t1",
+   "start": 63.71,
+   "end": 64.03
+  },
+  {
+   "text": "nicht",
+   "src": "temuwarenkorb/t1",
+   "start": 64.09,
+   "end": 64.21
+  },
+  {
+   "text": "abschließend",
+   "src": "temuwarenkorb/t1",
+   "start": 64.25,
+   "end": 64.69
+  },
+  {
+   "text": "geklärt.",
+   "src": "temuwarenkorb/t1",
+   "start": 64.75,
+   "end": 65.13
+  },
+  {
+   "text": "Es",
+   "src": "temuwarenkorb/t1",
+   "start": 72.79,
+   "end": 72.85
+  },
+  {
+   "text": "können",
+   "src": "temuwarenkorb/t1",
+   "start": 72.93,
+   "end": 73.13
+  },
+  {
+   "text": "noch",
+   "src": "temuwarenkorb/t1",
+   "start": 73.17,
+   "end": 73.27
+  },
+  {
+   "text": "einfach",
+   "src": "temuwarenkorb/t1",
+   "start": 73.31,
+   "end": 73.51
+  },
+  {
+   "text": "unterschiedliche",
+   "src": "temuwarenkorb/t1",
+   "start": 73.59,
+   "end": 74.13
+  },
+  {
+   "text": "Aktionspreise",
+   "src": "temuwarenkorb/t1",
+   "start": 74.21,
+   "end": 74.85
+  },
+  {
+   "text": "eine",
+   "src": "temuwarenkorb/t1",
+   "start": 74.91,
+   "end": 75.03
+  },
+  {
+   "text": "Rolle",
+   "src": "temuwarenkorb/t1",
+   "start": 75.07,
+   "end": 75.21
+  },
+  {
+   "text": "spielen.",
+   "src": "temuwarenkorb/t1",
+   "start": 75.27,
+   "end": 75.51
+  },
+  {
+   "text": "Wichtig",
+   "src": "temuwarenkorb/t1",
+   "start": 76.29,
+   "end": 76.59
+  },
+  {
+   "text": "zu",
+   "src": "temuwarenkorb/t1",
+   "start": 76.67,
+   "end": 76.73
+  },
+  {
+   "text": "erwähnen",
+   "src": "temuwarenkorb/t1",
+   "start": 76.79,
+   "end": 77.09
+  },
+  {
+   "text": "ist",
+   "src": "temuwarenkorb/t1",
+   "start": 77.13,
+   "end": 77.23
+  },
+  {
+   "text": "aber,",
+   "src": "temuwarenkorb/t1",
+   "start": 77.25,
+   "end": 77.43
+  },
+  {
+   "text": "das",
+   "src": "temuwarenkorb/t1",
+   "start": 77.65,
+   "end": 77.79
+  },
+  {
+   "text": "war",
+   "src": "temuwarenkorb/t1",
+   "start": 77.85,
+   "end": 77.97
+  },
+  {
+   "text": "tatsächlich",
+   "src": "temuwarenkorb/t1",
+   "start": 78.03,
+   "end": 78.45
+  },
+  {
+   "text": "ein",
+   "src": "temuwarenkorb/t1",
+   "start": 78.51,
+   "end": 78.61
+  },
+  {
+   "text": "einzelner",
+   "src": "temuwarenkorb/t1",
+   "start": 78.77,
+   "end": 79.15
+  },
+  {
+   "text": "Test,",
+   "src": "temuwarenkorb/t1",
+   "start": 79.19,
+   "end": 79.45
+  },
+  {
+   "text": "nicht",
+   "src": "temuwarenkorb/t1",
+   "start": 80.05,
+   "end": 80.21
+  },
+  {
+   "text": "der",
+   "src": "temuwarenkorb/t1",
+   "start": 80.27,
+   "end": 80.35
+  },
+  {
+   "text": "Beweis",
+   "src": "temuwarenkorb/t1",
+   "start": 80.39,
+   "end": 80.73
+  },
+  {
+   "text": "unbedingt,",
+   "src": "temuwarenkorb/t1",
+   "start": 80.77,
+   "end": 81.05
+  },
+  {
+   "text": "dass",
+   "src": "temuwarenkorb/t1",
+   "start": 81.07,
+   "end": 81.17
+  },
+  {
+   "text": "alle",
+   "src": "temuwarenkorb/t1",
+   "start": 81.33,
+   "end": 81.49
+  },
+  {
+   "text": "Temu-Produkte",
+   "src": "temuwarenkorb/t1",
+   "start": 81.59,
+   "end": 82.23
+  },
+  {
+   "text": "hier",
+   "src": "temuwarenkorb/t1",
+   "start": 82.35,
+   "end": 82.53
+  },
+  {
+   "text": "59",
+   "src": "temuwarenkorb/t1",
+   "start": 82.91,
+   "end": 83.43
+  },
+  {
+   "text": "Prozent",
+   "src": "temuwarenkorb/t1",
+   "start": 83.49,
+   "end": 83.79
+  },
+  {
+   "text": "teurer",
+   "src": "temuwarenkorb/t1",
+   "start": 83.83,
+   "end": 84.07
+  },
+  {
+   "text": "sind.",
+   "src": "temuwarenkorb/t1",
+   "start": 84.11,
+   "end": 84.25
+  },
+  {
+   "text": "Für",
+   "src": "temuwarenkorb/t1",
+   "start": 95.38,
+   "end": 95.48
+  },
+  {
+   "text": "uns",
+   "src": "temuwarenkorb/t1",
+   "start": 95.54,
+   "end": 95.62
+  },
+  {
+   "text": "Onlinehändler",
+   "src": "temuwarenkorb/t1",
+   "start": 95.76,
+   "end": 96.28
+  },
+  {
+   "text": "ist",
+   "src": "temuwarenkorb/t1",
+   "start": 96.36,
+   "end": 96.46
+  },
+  {
+   "text": "das",
+   "src": "temuwarenkorb/t1",
+   "start": 96.5,
+   "end": 96.62
+  },
+  {
+   "text": "hier",
+   "src": "temuwarenkorb/t1",
+   "start": 96.68,
+   "end": 96.8
+  },
+  {
+   "text": "tatsächlich",
+   "src": "temuwarenkorb/t1",
+   "start": 96.96,
+   "end": 97.44
+  },
+  {
+   "text": "trotzdem",
+   "src": "temuwarenkorb/t1",
+   "start": 97.52,
+   "end": 97.92
+  },
+  {
+   "text": "spannend.",
+   "src": "temuwarenkorb/t1",
+   "start": 97.98,
+   "end": 98.3
+  },
+  {
+   "text": "Denn",
+   "src": "temuwarenkorb/t1",
+   "start": 102.32,
+   "end": 102.42
+  },
+  {
+   "text": "ich",
+   "src": "temuwarenkorb/t1",
+   "start": 102.5,
+   "end": 102.58
+  },
+  {
+   "text": "würde",
+   "src": "temuwarenkorb/t1",
+   "start": 102.62,
+   "end": 102.8
+  },
+  {
+   "text": "jetzt",
+   "src": "temuwarenkorb/t1",
+   "start": 102.84,
+   "end": 103.02
+  },
+  {
+   "text": "bei",
+   "src": "temuwarenkorb/t1",
+   "start": 103.06,
+   "end": 103.14
+  },
+  {
+   "text": "den",
+   "src": "temuwarenkorb/t1",
+   "start": 103.18,
+   "end": 103.28
+  },
+  {
+   "text": "eigenen",
+   "src": "temuwarenkorb/t1",
+   "start": 103.4,
+   "end": 103.68
+  },
+  {
+   "text": "Wettbewerbsprodukten",
+   "src": "temuwarenkorb/t1",
+   "start": 103.74,
+   "end": 104.62
+  },
+  {
+   "text": "genauer",
+   "src": "temuwarenkorb/t1",
+   "start": 104.68,
+   "end": 105.08
+  },
+  {
+   "text": "hinschauen,",
+   "src": "temuwarenkorb/t1",
+   "start": 105.14,
+   "end": 105.52
+  },
+  {
+   "text": "statt",
+   "src": "temuwarenkorb/t1",
+   "start": 105.76,
+   "end": 105.94
+  },
+  {
+   "text": "einfach",
+   "src": "temuwarenkorb/t1",
+   "start": 106.06,
+   "end": 106.32
+  },
+  {
+   "text": "nur",
+   "src": "temuwarenkorb/t1",
+   "start": 106.38,
+   "end": 106.48
+  },
+  {
+   "text": "davon",
+   "src": "temuwarenkorb/t1",
+   "start": 106.5,
+   "end": 106.7
+  },
+  {
+   "text": "auszugehen,",
+   "src": "temuwarenkorb/t1",
+   "start": 106.76,
+   "end": 107.16
+  },
+  {
+   "text": "dass",
+   "src": "temuwarenkorb/t1",
+   "start": 107.18,
+   "end": 107.28
+  },
+  {
+   "text": "Temu",
+   "src": "temuwarenkorb/t1",
+   "start": 107.34,
+   "end": 107.54
+  },
+  {
+   "text": "immer",
+   "src": "temuwarenkorb/t1",
+   "start": 107.74,
+   "end": 107.94
+  },
+  {
+   "text": "unschlagbar",
+   "src": "temuwarenkorb/t1",
+   "start": 108.04,
+   "end": 108.56
+  },
+  {
+   "text": "günstig",
+   "src": "temuwarenkorb/t1",
+   "start": 108.6,
+   "end": 108.92
+  },
+  {
+   "text": "ist.",
+   "src": "temuwarenkorb/t1",
+   "start": 108.98,
+   "end": 109.08
+  }
+ ],
+ "pages": [
+  3,
+  3,
+  3,
+  2,
+  3,
+  1,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  1,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  4,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  1,
+  4,
+  2,
+  2,
+  3,
+  2,
+  2,
+  4,
+  3,
+  4,
+  2,
+  4,
+  1,
+  1,
+  3,
+  3,
+  2,
+  3,
+  3,
+  1,
+  3,
+  2,
+  2,
+  4,
+  3,
+  4,
+  2,
+  4,
+  3,
+  1,
+  2,
+  3,
+  2,
+  3,
+  3
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "projekt": "temuwarenkorb",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.85,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "start": {
+  "ab": 5.79
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 5.7,
+   "text": "Temu ist tatsächlich in Deutschland bis zu 59 Prozent teurer als in der Schweiz."
+  },
+  {
+   "take": "t1",
+   "ab": 20.5,
+   "text": "Zumindest bei einem getesteten Warenkorb wurde das hier gefunden. Schaut euch das mal an."
+  },
+  {
+   "take": "t1",
+   "ab": 31,
+   "text": "Eine Schweizer E-Commerce-Beratung hat tatsächlich dieselben Produkte in beiden Temu-Shops in den Warenkorb gelegt. Und in Deutschland lag dabei tatsächlich der Preis bei knapp 127 Euro, in der Schweiz hingegen nur rund 80 Euro. Ein Teil davon sind natürlich Einfuhrabgaben. Aber selbst wenn man jetzt trotzdem diese herausrechnet, bleibt natürlich immer noch ein deutlicher Unterschied."
+  },
+  {
+   "take": "t1",
+   "ab": 61.3,
+   "text": "Aber woran das jetzt tatsächlich genau liegt, ist hier natürlich nicht abschließend geklärt."
+  },
+  {
+   "take": "t1",
+   "ab": 72.7,
+   "text": "Es können noch einfach unterschiedliche Aktionspreise eine Rolle spielen. Wichtig zu erwähnen ist aber, das war tatsächlich ein einzelner Test, nicht der Beweis unbedingt, dass alle Temu-Produkte hier 59 Prozent teurer sind."
+  },
+  {
+   "take": "t1",
+   "ab": 95.3,
+   "text": "Für uns Onlinehändler ist das hier tatsächlich trotzdem spannend."
+  },
+  {
+   "take": "t1",
+   "ab": 102.2,
+   "text": "Denn ich würde jetzt bei den eigenen Wettbewerbsprodukten genauer hinschauen, statt einfach nur davon auszugehen, dass Temu immer unschlagbar günstig ist."
+  }
+ ],
+ "ende": {
+  "bis": 109.55
+ },
+ "korrekturen": []
+}

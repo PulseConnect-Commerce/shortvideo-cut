@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>N07 · Temu-Warenkorb – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- NEWS N07 "Temu-Warenkorb". Erklär-Bilder statt Wortkarten (karten-aufbau.md "Visuelle Metaphern", freigegeben
+         2026-10-26), Aufbau wie N09 (hyperframes/ebaykombi-skizzen): echte Quellen neuhandeln.de (26.10.2026) und Carpathia-Blog
+         (25.10.2026) als Quellen-Karten, zwei Warenkörbe DE 126,94 € gegen CH ~80 €, "EINFUHRABGABEN ERKLÄREN NUR EINEN TEIL"
+         (21,42 €, davon trägt Temu 6,42 €, netto 15 €, ohne sie 111,94 €), Puzzle "Woran liegt's?" mit Aktionspreisen als
+         offener Vermutung, "EIN TEST – KEINE GESAMTSTUDIE" (ein Warenkorb, nicht das ganze Sortiment), Tipp: eigene
+         Wettbewerbsprodukte und ihre Endpreise prüfen, Umfrage "Temu immer am günstigsten?" mit Folgen-Plus. Zahlen nur aus
+         seinem Text und den zwei Quellen. Höchstens 1-3 Wörter je Bild, ein handschriftliches Akzentwort (Caveat, OFL, lokal;
+         Blau #31ADEC). Rahmen wie freigegeben: helle Karte unter dem Kopf (x 80-900, y 1118-1468; Instagram-Zone unten ab
+         1500), Pill-Untertitel darüber (Remotion, y 1068), ruhige Bewegung ohne Überschwingen. Rot nur für den Fehlschluss
+         (Durchstreichen). Zeiten = Sekunden im geschnittenen Video (src/projekte/temuwarenkorb/cut.json, 54,47 s), Teile
+         2 Frames vor ihrem Wort; Liste mit Tönen in src/projekte/temuwarenkorb/karten.json. Keine Logos, Flaggen nur als
+         einfache Farbflächen. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1118px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .karte.hoch { height: 378px; }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .qlabel { position: absolute; left: 30px; top: 20px; display: flex; align-items: center; gap: 9px; font-size: 20px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .qdot { width: 11px; height: 11px; border-radius: 6px; background: linear-gradient(135deg, #00e090, #31adec); }
+      .quelle { position: absolute; right: 28px; top: 22px; font-size: 20px; font-weight: 700; letter-spacing: 0.06em; color: #6b7280; white-space: nowrap; opacity: 0; }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 300px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #6b7280; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .kachel { fill: #fff; stroke: #e5e7eb; stroke-width: 2; }
+      .titel { position: absolute; left: 30px; top: 52px; font-size: 42px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; opacity: 0; line-height: 1.12; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+      /* Quellen-Bild */
+      .qbild { position: absolute; border-radius: 18px; overflow: hidden; background: #fff; border: 1px solid #e5e7eb; }
+      .qlage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+      .qlage img { display: block; }
+      .mark { position: absolute; border: 7px solid #00e090; border-radius: 14px; box-shadow: 0 0 0 5px rgba(49, 173, 236, 0.35), 0 0 30px rgba(0, 224, 144, 0.45); opacity: 0; }
+
+      /* Umfrage + Folgen */
+      .frage-titel { position: absolute; left: 30px; top: 56px; display: flex; align-items: center; gap: 16px; font-size: 44px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; opacity: 0; }
+      .frage-titel .ico2 { width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; }
+      .frage-titel .ico2 svg { width: 32px; height: 32px; fill: none; stroke: #0b0c0e; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .optionen { position: absolute; left: 30px; right: 30px; top: 132px; display: flex; gap: 14px; }
+      .option { position: relative; flex: 1; display: flex; align-items: center; gap: 14px; height: 64px; padding: 0 20px; border-radius: 16px; background: #fff; border: 1px solid #e5e7eb; font-size: 32px; font-weight: 800; opacity: 0; white-space: nowrap; }
+      .option .kreis { flex: none; width: 38px; height: 38px; border-radius: 19px; display: flex; align-items: center; justify-content: center; }
+      .option .kreis svg { width: 22px; height: 22px; fill: none; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+      .kommentar { position: absolute; left: 30px; top: 214px; display: flex; align-items: center; gap: 12px; font-size: 26px; font-weight: 700; color: #374151; opacity: 0; }
+      .kommentar svg { width: 30px; height: 30px; fill: none; stroke: #31adec; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .folgen { position: absolute; left: 30px; bottom: 20px; display: flex; align-items: center; gap: 22px; height: 92px; padding: 0 34px 0 16px; border-radius: 24px; background: #fff; border: 1px solid #e5e7eb; opacity: 0; }
+      .avatar { position: relative; flex: none; width: 66px; height: 66px; border-radius: 33px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 38px; height: 38px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 38px; height: 38px; border-radius: 19px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 22px; height: 22px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 38px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+
+      /* Sticker-Wort links unter dem Kopf (auf der Schulter, nicht auf dem Gesicht) */
+      .sticker { position: absolute; left: 70px; top: 880px; padding: 8px 18px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 46px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(-4deg); transform-origin: 0 50%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="temuwarenkorb-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="54.47">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <!-- Flaggen nur als einfache Farbflächen (keine Logos) -->
+          <symbol id="flag-de" viewBox="0 0 54 36"><rect width="54" height="12" fill="#111" /><rect y="12" width="54" height="12" fill="#dd0000" /><rect y="24" width="54" height="12" fill="#ffce00" /></symbol>
+          <symbol id="flag-ch" viewBox="0 0 36 36"><rect width="36" height="36" rx="3" fill="#da291c" /><rect x="15" y="7" width="6" height="22" fill="#fff" /><rect x="7" y="15" width="22" height="6" fill="#fff" /></symbol>
+          <!-- Warenkorb (Linien wie Lucide shopping-cart, vergrößert) -->
+          <symbol id="wagen" viewBox="0 0 240 190"><path d="M8 8 h34 l30 132 a9 9 0 0 0 9 7 h120 a9 9 0 0 0 9 -7 l20 -84 H55" fill="none" stroke="#0b0c0e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" /><circle cx="96" cy="174" r="12" fill="#0b0c0e" /><circle cx="190" cy="174" r="12" fill="#0b0c0e" /></symbol>
+        </defs>
+      </svg>
+
+      <!-- Q1 echte Quelle neuhandeln.de: "Zumindest bei einem getesteten Warenkorb wurde das hier gefunden. Schaut euch das mal an."
+           Zumindest 4,43 (Karte, Kamera) / Warenkorb 6,06 (Markierung auf "Ein identischer Warenkorb … 59 Prozent mehr als in der
+           Schweiz.") / Schaut 7,74 (Fahrt zu "Die Untersuchung basiert auf einem Warenkorbvergleich vom 23. Oktober 2026.", Markierung)
+           Bild: neuhandeln.de, Dominik Grollmann, 26.10.2026, Handy-Ansicht, aufgenommen 27.10.2026 -->
+      <section id="q1" class="karte clip" data-start="4.36" data-duration="4.30" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>neuhandeln.de · Dominik Grollmann · 26.10.2026</div>
+        <div class="qbild" style="left:20px;top:56px;width:780px;height:276px">
+          <div class="qlage" id="q1-lage"><img src="assets/nh-zitat.jpg" width="1079" height="950" alt="" />
+            <div class="mark" id="q1-m1" style="left:52px;top:88px;width:960px;height:212px"></div>
+            <div class="mark" id="q1-m2" style="left:52px;top:662px;width:900px;height:196px"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Q2 echte Quelle Carpathia-Blog: "Eine Schweizer E-Commerce-Beratung hat tatsächlich" Eine 8,73 (Karte, Kamera) /
+           E-Commerce-Beratung 9,35 (Markierung auf "… einen identischen Warenkorb mit Topsellern aus verschiedenen Produktkategorien
+           zusammengestellt.") Bild: Carpathia Digital Business Blog, David Morant, 25.10.2026, aufgenommen 27.10.2026 -->
+      <section id="q2" class="karte clip" data-start="8.66" data-duration="2.10" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>Carpathia · Digital Business Blog · 25.10.2026</div>
+        <div class="qbild" style="left:20px;top:56px;width:780px;height:276px">
+          <div class="qlage" id="q2-lage"><img src="assets/cp-test.jpg" width="1079" height="740" alt="" />
+            <div class="mark" id="q2-m" style="left:40px;top:278px;width:1000px;height:282px"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- K1 zwei Warenkörbe (Idee aus dem Briefing): "dieselben Produkte in beiden Temu-Shops in den Warenkorb gelegt. Und in
+           Deutschland lag dabei tatsächlich der Preis bei knapp 127 Euro, in der Schweiz hingegen nur rund 80 Euro."
+           dieselben 10,83 (Karte, zwei leere Wagen DE / CH) / Produkte 11,23 (drei gleiche Artikel über beiden) / Temu-Shops 12,21
+           (Flaggen) / Warenkorb 13,05 (Artikel fallen in beide Wagen) / Deutschland 14,49 (DE hervor) / Preis 16,07 → 127 16,87
+           (126,94 € zählt hoch) / Schweiz 18,97 (CH hervor) / nur 19,73 → 80 20,23 (~80 € zählt hoch) / Euro 20,65 ("+59 %") -->
+      <section id="k1" class="karte clip" data-start="10.76" data-duration="10.74" data-track-index="1">
+        <div class="kicker">Gleicher Warenkorb</div>
+        <div class="quelle" id="k1-quelle">Test: Carpathia, 23.10.2026</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect id="k1-de-bg" x="24" y="0" width="372" height="290" rx="24" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+          <rect id="k1-ch-bg" x="424" y="0" width="372" height="290" rx="24" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+          <g id="k1-de-kopf"><use href="#flag-de" x="48" y="18" width="48" height="32" /><text x="108" y="44" class="lab" style="font-size:27px">Temu DE</text></g>
+          <g id="k1-ch-kopf"><use href="#flag-ch" x="448" y="16" width="34" height="34" /><text x="494" y="44" class="lab" style="font-size:27px">Temu CH</text></g>
+          <!-- drei gleiche Artikel je Seite (neutrale Pakete: welche Topseller es waren, sagt die Quelle nicht), erst über dem Wagen, dann im Wagen -->
+          <g id="k1-de-art" opacity="0">
+            <g transform="translate(94 66)"><rect width="48" height="44" rx="8" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="3" /><path d="M0 16 h48 M24 0 v44" stroke="#0b0c0e" stroke-width="3" /></g>
+            <g transform="translate(156 66)"><rect width="48" height="44" rx="8" fill="#fff" stroke="#0b0c0e" stroke-width="3" /><path d="M0 16 h48 M24 0 v44" stroke="#0b0c0e" stroke-width="3" /></g>
+            <g transform="translate(218 66)"><rect width="48" height="44" rx="8" fill="#dcf0fb" stroke="#0b0c0e" stroke-width="3" /><path d="M0 16 h48 M24 0 v44" stroke="#0b0c0e" stroke-width="3" /></g>
+          </g>
+          <g id="k1-ch-art" opacity="0">
+            <g transform="translate(494 66)"><rect width="48" height="44" rx="8" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="3" /><path d="M0 16 h48 M24 0 v44" stroke="#0b0c0e" stroke-width="3" /></g>
+            <g transform="translate(556 66)"><rect width="48" height="44" rx="8" fill="#fff" stroke="#0b0c0e" stroke-width="3" /><path d="M0 16 h48 M24 0 v44" stroke="#0b0c0e" stroke-width="3" /></g>
+            <g transform="translate(618 66)"><rect width="48" height="44" rx="8" fill="#dcf0fb" stroke="#0b0c0e" stroke-width="3" /><path d="M0 16 h48 M24 0 v44" stroke="#0b0c0e" stroke-width="3" /></g>
+          </g>
+          <use href="#wagen" x="78" y="104" width="160" height="127" />
+          <use href="#wagen" x="478" y="104" width="160" height="127" />
+          <g id="k1-gleich" opacity="0"><text x="410" y="96" text-anchor="middle" style="font-size:44px;font-weight:900;fill:#0b0c0e">=</text></g>
+          <text id="k1-de-preis" x="210" y="274" text-anchor="middle" opacity="0" style="font-size:46px;font-weight:900;fill:#0b0c0e;letter-spacing:-0.02em">126,94 €</text>
+          <text id="k1-ch-preis" x="610" y="274" text-anchor="middle" opacity="0" style="font-size:46px;font-weight:900;fill:#0b0c0e;letter-spacing:-0.02em">~80 €</text>
+          <rect id="k1-de-hl" x="24" y="0" width="372" height="290" rx="24" fill="none" stroke="url(#gv)" stroke-width="5" opacity="0" />
+          <rect id="k1-ch-hl" x="424" y="0" width="372" height="290" rx="24" fill="none" stroke="url(#gv)" stroke-width="5" opacity="0" />
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="250" y="110" width="0" height="80" /></clipPath>
+          <text x="256" y="168" class="hand" style="font-size:60px" clip-path="url(#k1-clip)" transform="rotate(-6 320 150)">+59 %</text>
+        </svg>
+      </section>
+
+      <!-- K2 (Einblendung aus dem Briefing) "EINFUHRABGABEN ERKLÄREN NUR EINEN TEIL": "Ein Teil davon sind natürlich Einfuhrabgaben.
+           Aber selbst wenn man jetzt trotzdem diese herausrechnet, bleibt natürlich immer noch ein deutlicher Unterschied."
+           Ein 21,57 (Karte, Titel, Balken DE 126,94 € / CH ~80 €) / Einfuhrabgaben 22,89 (Stück am Ende: "Einfuhrabgaben 21,42 €") /
+           Aber 24,23 ("davon trägt Temu 6,42 €", das Stück wird 15 €) / herausrechnet 25,77 (Stück raus, DE 111,94 €) /
+           deutlicher 27,65 (Abstand zu CH bleibt, "bleibt!"). Zahlen: neuhandeln.de und Carpathia -->
+      <section id="k2" class="karte hoch clip" data-start="21.50" data-duration="7.12" data-track-index="1">
+        <div class="titel" id="k2-titel">EINFUHRABGABEN<br /><span class="verlauf">ERKLÄREN NUR EINEN TEIL</span></div>
+        <svg class="buehne" viewBox="0 0 820 220" style="top:158px;height:220px">
+          <use href="#flag-de" x="30" y="22" width="48" height="32" />
+          <rect id="k2-de" x="96" y="12" width="584" height="54" rx="12" fill="url(#gv)" />
+          <text id="k2-de-t" x="114" y="50" style="font-size:30px;font-weight:900;fill:#0b0c0e">126,94 €</text>
+          <text id="k2-de-t2" x="114" y="50" opacity="0" style="font-size:30px;font-weight:900;fill:#0b0c0e">111,94 €</text>
+          <!-- Einfuhrabgaben: 21,42 € = 99 px am Ende des Balkens; netto 15 € = 69 px -->
+          <g id="k2-abg" opacity="0">
+            <rect id="k2-abg-r" x="581" y="12" width="99" height="54" rx="10" fill="#fff" stroke="#0b0c0e" stroke-width="3" stroke-dasharray="7 5" />
+            <text id="k2-abg-t" x="680" y="96" text-anchor="end" style="font-size:24px;font-weight:800;fill:#0b0c0e">Einfuhrabgaben 21,42 €</text>
+          </g>
+          <text id="k2-temu-t" x="680" y="96" text-anchor="end" opacity="0" style="font-size:24px;font-weight:800;fill:#0b0c0e">davon trägt Temu 6,42 € → 15 €</text>
+          <use href="#flag-ch" x="36" y="140" width="34" height="34" />
+          <rect id="k2-ch" x="96" y="130" width="368" height="54" rx="12" fill="#d1d5db" />
+          <text x="114" y="168" style="font-size:30px;font-weight:900;fill:#0b0c0e">~80 €</text>
+          <g id="k2-gap" opacity="0">
+            <line x1="468" y1="122" x2="468" y2="192" stroke="#31adec" stroke-width="4" stroke-dasharray="6 6" />
+            <line x1="611" y1="70" x2="611" y2="192" stroke="#31adec" stroke-width="4" stroke-dasharray="6 6" />
+            <path d="M472 160 H607" stroke="#31adec" stroke-width="4" stroke-linecap="round" />
+          </g>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="620" y="110" width="0" height="90" /></clipPath>
+          <text x="626" y="176" class="hand" style="font-size:58px" clip-path="url(#k2-clip)" transform="rotate(-6 690 160)">bleibt!</text>
+        </svg>
+      </section>
+
+      <!-- K3 Puzzle "Woran liegt's?": "Aber woran das jetzt tatsächlich genau liegt, ist hier natürlich nicht abschließend geklärt.
+           Es können noch einfach unterschiedliche Aktionspreise eine Rolle spielen." Aber 28,69 (Karte: Preisunterschied, Teil
+           "Abgaben" sitzt, der Rest ist ein "?") / genau 30,05 ("?" pulsiert) / geklärt 32,03 ("offen") / Aktionspreise 33,96
+           (Etikett "Aktionspreise?" mit CH-Flagge) / Rolle 34,82 (Etikett schwebt zur Lücke, rastet nicht ein: nur Vermutung) -->
+      <section id="k3" class="karte clip" data-start="28.62" data-duration="7.35" data-track-index="1">
+        <div class="kicker">Woran liegt's?</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <text x="30" y="22" class="klein" style="font-size:22px">Preisunterschied DE / CH</text>
+          <rect x="30" y="36" width="540" height="170" rx="22" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+          <!-- Puzzleteil "Abgaben" (sitzt) -->
+          <path d="M46 52 h160 v50 a18 18 0 0 1 0 36 v52 h-160 z" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="3" stroke-linejoin="round" />
+          <text x="124" y="128" text-anchor="middle" style="font-size:26px;font-weight:800;fill:#0b0c0e">Abgaben</text>
+          <!-- Lücke -->
+          <g id="k3-luecke"><path d="M216 52 h338 v138 h-338 v-52 a18 18 0 0 0 0 -36 z" fill="#f3f4f6" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" stroke-linejoin="round" /></g>
+          <text id="k3-frage" x="390" y="150" text-anchor="middle" style="font-size:84px;font-weight:900;fill:#9aa3af">?</text>
+          <clipPath id="k3-clip"><rect id="k3-cliprect" x="300" y="206" width="0" height="90" /></clipPath>
+          <text x="306" y="272" class="hand" style="font-size:64px" clip-path="url(#k3-clip)" transform="rotate(-5 380 256)">offen</text>
+          <!-- Etikett Aktionspreise (Lucide tag) mit CH-Flagge: nur Vermutung, gestrichelt -->
+          <g id="k3-tag" opacity="0">
+            <rect x="598" y="40" width="196" height="166" rx="22" fill="#fff" stroke="#31adec" stroke-width="3" stroke-dasharray="9 7" />
+            <g transform="translate(626 60) scale(2.6)" class="ico" style="stroke-width:1.8"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r=".5" fill="#0b0c0e" /></g>
+            <use href="#flag-ch" x="740" y="56" width="32" height="32" />
+            <text x="696" y="186" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">Aktionspreise?</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K4 (Einblendung aus dem Briefing) "EIN TEST – KEINE GESAMTSTUDIE": "Wichtig zu erwähnen ist aber, das war tatsächlich ein
+           einzelner Test, nicht der Beweis unbedingt, dass alle Temu-Produkte hier 59 Prozent teurer sind." Wichtig 36,04 (Karte,
+           Titel) / einzelner 38,52 (ein Warenkorb, "1 Test" ✓) / nicht 39,80 (Rahmen "ganzes Sortiment" mit "?") / alle 41,08
+           (viele Artikel füllen ihn) / 59 42,66 (Stempel "+59 %" auf allem) / Prozent 43,24 (durchgestrichen, ✕) / teurer 43,58
+           ("nicht alle") -->
+      <section id="k4" class="karte hoch clip" data-start="35.97" data-duration="8.12" data-track-index="1">
+        <div class="titel" id="k4-titel">EIN TEST – <span class="verlauf">KEINE GESAMTSTUDIE</span></div>
+        <svg class="buehne" viewBox="0 0 820 260" style="top:112px;height:260px">
+          <g id="k4-test" opacity="0">
+            <rect x="30" y="16" width="220" height="200" rx="24" class="kachel" />
+            <use href="#wagen" x="62" y="40" width="150" height="119" />
+            <text x="140" y="196" text-anchor="middle" class="lab" style="font-size:26px">1 Warenkorb</text>
+            <g id="k4-ok" opacity="0"><circle cx="244" cy="22" r="24" fill="url(#gvd)" /><path d="M233 22 l7 7 l14 -15" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></g>
+          </g>
+          <g id="k4-rahmen" opacity="0">
+            <rect x="290" y="16" width="500" height="200" rx="24" fill="#fff" stroke="#9aa3af" stroke-width="3" stroke-dasharray="10 8" />
+            <text id="k4-rfrage" x="540" y="140" text-anchor="middle" style="font-size:72px;font-weight:900;fill:#cbd5e1">?</text>
+            <text x="540" y="250" text-anchor="middle" class="klein" style="font-size:22px">alle Temu-Produkte</text>
+          </g>
+          <g id="k4-kacheln"></g>
+          <g id="k4-stempel" opacity="0"><g transform="rotate(-8 540 116)"><rect x="440" y="80" width="200" height="72" rx="14" fill="#fff" stroke="#0b0c0e" stroke-width="4" /><text x="540" y="132" text-anchor="middle" style="font-size:44px;font-weight:900;fill:#0b0c0e">+59 %</text></g></g>
+          <path id="k4-strich" pathLength="1" d="M420 170 L 660 62" fill="none" stroke="#ef4444" stroke-width="9" stroke-linecap="round" stroke-dasharray="1" />
+          <g id="k4-x" opacity="0"><circle cx="784" cy="22" r="24" fill="#ef4444" /><path d="M774 12 l20 20 M794 12 l-20 20" stroke="#fff" stroke-width="5" stroke-linecap="round" /></g>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="596" y="150" width="0" height="80" /></clipPath>
+          <text x="600" y="206" class="hand" style="font-size:50px" clip-path="url(#k4-clip)" transform="rotate(-6 680 190)">nicht alle</text>
+        </svg>
+      </section>
+
+      <!-- K5 Tipp für Onlinehändler: "Für uns Onlinehändler ist das hier tatsächlich trotzdem spannend. Denn ich würde jetzt bei den
+           eigenen Wettbewerbsprodukten genauer hinschauen," Für 44,16 (Karte, "Dein Shop") / eigenen 48,29 (dein Produkt) /
+           Wettbewerbsprodukten 48,63 (Wettbewerbsprodukt mit Preis "? €") / genauer 49,57 (Lupe fährt auf den Preis: "Endpreis")
+           / hinschauen 50,02 ("genau prüfen"). Briefing: Konkurrenzprodukte und tatsächliche Endpreise im eigenen Segment prüfen -->
+      <section id="k5" class="karte clip" data-start="44.09" data-duration="6.49" data-track-index="1">
+        <div class="kicker">Mein Tipp für Onlinehändler</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k5-shop">
+            <rect x="30" y="20" width="190" height="180" rx="24" fill="url(#gvd)" />
+            <g transform="translate(89 40) scale(3)" class="ico" style="stroke-width:1.7"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+            <text x="125" y="180" text-anchor="middle" class="lab" style="font-size:26px">Dein Shop</text>
+          </g>
+          <g id="k5-eigen" opacity="0">
+            <rect x="250" y="20" width="240" height="180" rx="24" class="kachel" />
+            <g transform="translate(296 38) scale(2.2)" class="ico" style="stroke-width:1.8"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /></g>
+            <rect x="370" y="52" width="96" height="44" rx="12" fill="#0b0c0e" /><text x="418" y="83" text-anchor="middle" style="font-size:24px;font-weight:900;fill:#fff">? €</text>
+            <text x="370" y="180" text-anchor="middle" class="lab" style="font-size:25px">dein Produkt</text>
+          </g>
+          <g id="k5-wett" opacity="0">
+            <rect x="520" y="20" width="270" height="180" rx="24" class="kachel" />
+            <g transform="translate(566 38) scale(2.2)" class="ico" style="stroke-width:1.8"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /></g>
+            <g id="k5-preis"><rect x="640" y="52" width="126" height="44" rx="12" fill="#0b0c0e" /><text id="k5-preis-t" x="703" y="83" text-anchor="middle" style="font-size:24px;font-weight:900;fill:#fff">? €</text></g>
+            <text x="655" y="180" text-anchor="middle" class="lab" style="font-size:25px">Wettbewerb</text>
+          </g>
+          <g id="k5-endpreis" opacity="0"><rect x="604" y="104" width="172" height="40" rx="12" fill="#e6faf2" stroke="#00d088" stroke-width="2.5" /><text x="690" y="132" text-anchor="middle" style="font-size:22px;font-weight:800;fill:#0b0c0e">Endpreis?</text></g>
+          <g id="k5-lupe" opacity="0" transform="translate(720 110)">
+            <circle cx="0" cy="0" r="44" fill="rgba(255,255,255,0.35)" stroke="#0b0c0e" stroke-width="7" />
+            <path d="M31 31 L62 62" stroke="#0b0c0e" stroke-width="11" stroke-linecap="round" />
+          </g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="246" y="206" width="0" height="90" /></clipPath>
+          <text x="252" y="268" class="hand" style="font-size:58px" clip-path="url(#k5-clip)" transform="rotate(-4 400 252)">genau hinschauen</text>
+        </svg>
+      </section>
+
+      <!-- Sticker "SPANNEND." ("spannend" 46,77) links unter dem Kopf auf der Schulter (y 880, nicht auf dem Gesicht) -->
+      <div id="st1" class="sticker clip" data-start="46.70" data-duration="1.15" data-track-index="2">SPANNEND.</div>
+
+      <!-- K6 Umfrage + Folgen (Regie: Schluss mit Umfrage und Folgen-Plus, keine Folgennummer): "statt einfach nur davon auszugehen,
+           dass Temu immer unschlagbar günstig ist." statt 50,65 (Karte, Frage "Temu immer am günstigsten?") / auszugehen 51,65
+           ("Schreib's in die Kommentare") / dass 52,07 (Folgen) / immer 52,63 ("Ja, immer") / günstig 53,48 ("Nicht immer") /
+           ist 53,87 (Plus angetippt, wird zum Haken) -->
+      <section id="k6" class="karte hoch clip" data-start="50.58" data-duration="3.89" data-track-index="1">
+        <div class="frage-titel" id="k6-frage"><div class="ico2"><svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg></div>Temu immer am günstigsten?</div>
+        <div class="optionen">
+          <div class="option" id="k6-ja"><span class="kreis" style="background:linear-gradient(135deg,#00e090,#31adec)"><svg viewBox="0 0 24 24" style="stroke:#0b0c0e"><path d="M20 6 9 17l-5-5" /></svg></span>Ja, immer</div>
+          <div class="option" id="k6-nein"><span class="kreis" style="background:#e5e7eb"><svg viewBox="0 0 24 24" style="stroke:#0b0c0e"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></span>Nicht immer</div>
+        </div>
+        <div class="kommentar" id="k6-komm"><svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg>Schreib’s in die Kommentare</div>
+        <div class="folgen" id="k6-folgen">
+          <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+          <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        </div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // K4: 32 kleine Artikel im Rahmen "alle Temu-Produkte" (4 Reihen x 8)
+      (function () {
+        const g = document.getElementById("k4-kacheln");
+        let html = "";
+        for (let r = 0; r < 4; r++) for (let c = 0; c < 8; c++) {
+          const x = 310 + c * 59, y = 30 + r * 44;
+          const f = (r + c) % 3 === 0 ? "#dcf0fb" : (r + c) % 3 === 1 ? "#e6faf2" : "#e5e7eb";
+          html += `<rect class="k4-k" x="${x}" y="${y}" width="49" height="36" rx="8" fill="${f}" stroke="#d1d5db" stroke-width="1.5" opacity="0" />`;
+        }
+        g.innerHTML = html;
+      })();
+
+      // Karte rein mit Kicker (leer höchstens ~0,2 s), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker, " + id + " .qlabel");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      // Zahl zählt hoch und landet auf ihrem Wort (deutsches Komma)
+      function zaehle(sel, bis, t0, t1, fmt) {
+        const el = document.querySelector(sel);
+        const o = { v: 0 };
+        tl.set(sel, { opacity: 1 }, t0);
+        tl.fromTo(o, { v: 0 }, { v: bis, duration: t1 - t0, ease: "power2.out", onUpdate: () => { el.textContent = fmt(o.v); } }, t0);
+      }
+      gsap.set("#k4-strich", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
+
+      // Q1 neuhandeln.de: Zitat markiert, dann Fahrt zum Testdatum
+      tl.fromTo("#q1", { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 4.36);
+      tl.fromTo("#q1 .qlabel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 4.40);
+      gsap.set("#q1-lage", { x: -2, y: -40, scale: 0.72 });
+      tl.to("#q1-lage", { y: -52, duration: 3.2, ease: "sine.inOut" }, 4.4);
+      pop("#q1-m1", 5.99, 0.25);
+      tl.to("#q1-lage", { y: -452, duration: 0.7, ease: "power2.inOut" }, 7.62);
+      tl.to("#q1-m1", { opacity: 0, duration: 0.2 }, 7.62);
+      pop("#q1-m2", 8.0, 0.25);
+      tl.to("#q1", { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.25, ease: "power2.in" }, 8.41);
+
+      // Q2 Carpathia-Blog: Markierung auf dem Satz zum identischen Warenkorb
+      tl.fromTo("#q2", { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 8.66);
+      tl.fromTo("#q2 .qlabel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 8.70);
+      gsap.set("#q2-lage", { x: -2, y: -150, scale: 0.72 });
+      tl.to("#q2-lage", { y: -172, duration: 2.0, ease: "sine.inOut" }, 8.7);
+      pop("#q2-m", 9.28, 0.25);
+      tl.to("#q2", { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.22, ease: "power2.in" }, 10.54);
+
+      // K1 zwei Warenkörbe: gleiche Artikel, rein in beide Wagen, Preise zählen hoch
+      karte("#k1", 10.76, 21.50);
+      ein("#k1-de-art", 11.16);
+      ein("#k1-ch-art", 11.16);
+      pop("#k1-gleich", 11.20, 0.25);
+      tl.fromTo("#k1-de-kopf, #k1-ch-kopf", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.08, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 }, 12.14);
+      tl.to("#k1-de-art, #k1-ch-art", { y: 78, duration: 0.45, ease: "power2.in" }, 12.98);
+      tl.to("#k1-gleich", { opacity: 0, duration: 0.2 }, 12.98);
+      tl.fromTo("#k1-de-hl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 14.42);
+      tl.fromTo("#k1-quelle", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 16.0);
+      zaehle("#k1-de-preis", 126.94, 16.00, 16.80, (v) => v.toFixed(2).replace(".", ",") + " €");
+      tl.to("#k1-de-hl", { opacity: 0, duration: 0.25 }, 18.90);
+      tl.fromTo("#k1-ch-hl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 18.90);
+      zaehle("#k1-ch-preis", 80, 19.66, 20.16, (v) => "~" + Math.round(v) + " €");
+      schreibe("#k1-cliprect", 150, 20.58, 0.4);
+
+      // K2 Einfuhrabgaben erklären nur einen Teil
+      karte("#k2", 21.50, 28.62);
+      ein("#k2-titel", 21.52, 0.35);
+      tl.fromTo("#k2-abg", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 22.82);
+      tl.fromTo("#k2-abg-r", { scaleY: 1.3, transformOrigin: "50% 50%" }, { scaleY: 1, duration: 0.3, ease: "power2.out" }, 22.82);
+      tl.to("#k2-abg-t", { opacity: 0, duration: 0.15 }, 24.16);
+      ein("#k2-temu-t", 24.18, 0.3);
+      tl.to("#k2-abg-r", { attr: { x: 611, width: 69 }, duration: 0.45, ease: "power2.inOut" }, 24.16);
+      tl.to("#k2-abg-r", { x: 60, opacity: 0, duration: 0.45, ease: "power2.in" }, 25.70);
+      tl.to("#k2-de", { attr: { width: 515 }, duration: 0.45, ease: "power2.inOut" }, 25.70);
+      tl.to("#k2-temu-t", { opacity: 0, duration: 0.2 }, 25.70);
+      tl.to("#k2-de-t", { opacity: 0, duration: 0.15 }, 25.90);
+      tl.to("#k2-de-t2", { opacity: 1, duration: 0.2 }, 25.95);
+      tl.fromTo("#k2-gap", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 27.58);
+      schreibe("#k2-cliprect", 170, 27.62, 0.4);
+
+      // K3 Puzzle: Abgaben sitzen, der Rest ist offen, Aktionspreise nur Vermutung
+      karte("#k3", 28.62, 35.97);
+      tl.fromTo("#k3-frage", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.15, duration: 0.22, ease: "power2.out", yoyo: true, repeat: 1 }, 29.98);
+      schreibe("#k3-cliprect", 190, 31.96, 0.45);
+      tl.fromTo("#k3-tag", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 33.89);
+      tl.to("#k3-tag", { x: -70, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 1 }, 34.75);
+
+      // K4 Ein Test, keine Gesamtstudie
+      karte("#k4", 35.97, 44.09);
+      ein("#k4-titel", 35.99, 0.35);
+      ein("#k4-test", 38.45);
+      badge("#k4-ok", 38.87);
+      tl.fromTo("#k4-rahmen", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 39.73);
+      tl.to("#k4-rfrage", { opacity: 0, duration: 0.2 }, 41.01);
+      tl.fromTo(".k4-k", { opacity: 0, scale: 0.7, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.out", stagger: 0.012 }, 41.01);
+      tl.fromTo("#k4-stempel", { opacity: 0, scale: 1.2, transformOrigin: "540px 116px" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.out" }, 42.59);
+      zeichne("#k4-strich", 43.17, 0.3);
+      badge("#k4-x", 43.17);
+      tl.to("#k4-kacheln", { opacity: 0.55, duration: 0.25 }, 43.2);
+      schreibe("#k4-cliprect", 190, 43.51, 0.4);
+
+      // K5 Tipp: eigene Wettbewerbsprodukte, Lupe auf den Endpreis
+      karte("#k5", 44.09, 50.58);
+      ein("#k5-eigen", 48.22);
+      ein("#k5-wett", 48.56);
+      tl.fromTo("#k5-lupe", { opacity: 0, x: 790, y: 250 }, { opacity: 1, x: 760, y: 220, duration: 0.15 }, 49.50);
+      tl.to("#k5-lupe", { x: 703, y: 74, duration: 0.45, ease: "power2.inOut" }, 49.55);
+      ein("#k5-endpreis", 49.95, 0.3);
+      schreibe("#k5-cliprect", 470, 49.95, 0.5);
+
+      // Sticker SPANNEND.
+      tl.fromTo("#st1", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, 46.70);
+      tl.to("#st1", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 47.65);
+
+      // K6 Umfrage: Temu immer am günstigsten? Ja, immer / Nicht immer, Kommentare, Folgen-Plus wird angetippt
+      karte("#k6", 50.58, null);
+      ein("#k6-frage", 50.60, 0.3);
+      ein("#k6-komm", 51.58, 0.3);
+      ein("#k6-folgen", 52.00, 0.3);
+      ein("#k6-ja", 52.56, 0.3);
+      ein("#k6-nein", 53.41, 0.3);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.6, ease: "power2.out" }, 53.30);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 360 }, { opacity: 1, x: 310, y: 350, duration: 0.12, ease: "power2.out" }, 53.40);
+      tl.to("#fzeiger", { x: 92, y: 330, duration: 0.36, ease: "power2.inOut" }, 53.43);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 53.78);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 53.86);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 53.80);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 53.80);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 53.83);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 53.83);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 53.83);
+      tl.to("#fzeiger", { x: 132, y: 338, duration: 0.25, ease: "power2.out" }, 54.05);
+
+      tl.seek(0);
+      window.__timelines["temuwarenkorb-skizzen"] = tl;
+    </script>
+  </body>
+</html>

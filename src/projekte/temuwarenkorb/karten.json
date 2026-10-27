@@ -1,0 +1,95 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Aufbau wie N09) für N07 · Temu-Warenkorb. Sekunden im geschnittenen Video (cut.json, 54,47 s); Teile kommen 2 Frames vor ihrem Wort. sfx: kamera (0,12) auf den echten Quellen, whoosh (0,12) beim Kartenwechsel, pop (0,10) auf dem Preis und dem Sticker, tick (0,10) auf ausgewählten Zuständen, klick (0,10) auf dem Plus; Abstand zwischen zwei Effekten >= 1,5 s. Gebaut in hyperframes/temuwarenkorb-skizzen/index.html. Echte Quellen: neuhandeln.de (26.10.2026) in Q1, Carpathia-Blog (25.10.2026) in Q2; Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "q1",
+   "wort": "Zumindest (bei einem getesteten Warenkorb)",
+   "text": "Echte Quelle: neuhandeln.de, Dominik Grollmann, 26.10.2026; Markierung auf 'Ein identischer Warenkorb kostet beim Online-Marktplatz Temu in Deutschland 59 Prozent mehr als in der Schweiz.' (Warenkorb), dann auf 'Die Untersuchung basiert auf einem Warenkorbvergleich vom 23. Oktober 2026.' (Schaut)",
+   "start": 4.36,
+   "ende": 8.66,
+   "teile": { "warenkorb": 6.06, "schaut": 7.74 },
+   "sfx": [{ "datei": "kamera.mp3", "at": 4.36, "volume": 0.12 }]
+  },
+  {
+   "id": "q2",
+   "wort": "Eine (Schweizer E-Commerce-Beratung)",
+   "text": "Echte Quelle: Carpathia Digital Business Blog, 25.10.2026; Markierung auf '… einen identischen Warenkorb mit Topsellern aus verschiedenen Produktkategorien zusammengestellt.'",
+   "start": 8.66,
+   "ende": 10.76,
+   "teile": { "e-commerce-beratung": 9.35 },
+   "sfx": [{ "datei": "kamera.mp3", "at": 8.66, "volume": 0.12 }]
+  },
+  {
+   "id": "k1",
+   "wort": "dieselben (Produkte in beiden Temu-Shops)",
+   "text": "Zwei Warenkörbe (Briefing-Idee): Temu DE / Temu CH, drei gleiche Artikel fallen in beide Wagen, DE 126,94 € zählt hoch auf '127', CH ~80 € auf '80', '+59 %'; Quelle 'Test: Carpathia, 23.10.2026'",
+   "start": 10.76,
+   "ende": 21.5,
+   "teile": { "dieselben": 10.83, "produkte": 11.23, "temu-shops": 12.21, "warenkorb": 13.05, "deutschland": 14.49, "127": 16.87, "schweiz": 18.97, "80": 20.23, "euro": 20.65 },
+   "sfx": [
+    { "datei": "whoosh.mp3", "at": 10.76, "volume": 0.12 },
+    { "datei": "pop.mp3", "at": 16.8, "volume": 0.1 }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Ein (Teil davon sind natürlich Einfuhrabgaben)",
+   "text": "Einblendung aus dem Briefing 'EINFUHRABGABEN ERKLÄREN NUR EINEN TEIL': Balken DE 126,94 € / CH ~80 €, Stück 'Einfuhrabgaben 21,42 €' (Einfuhrabgaben), 'davon trägt Temu 6,42 € → 15 €' (Aber), Stück raus, DE 111,94 € (herausrechnet), Abstand bleibt, 'bleibt!' (deutlicher)",
+   "start": 21.5,
+   "ende": 28.62,
+   "teile": { "einfuhrabgaben": 22.89, "aber": 24.23, "herausrechnet": 25.77, "deutlicher": 27.65 },
+   "sfx": [
+    { "datei": "whoosh.mp3", "at": 21.5, "volume": 0.12 },
+    { "datei": "tick.mp3", "at": 25.7, "volume": 0.1 }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Aber (woran das jetzt tatsächlich genau liegt)",
+   "text": "Puzzle 'Woran liegt's?': Teil 'Abgaben' sitzt, der Rest ist ein '?' (genau), 'offen' (geklärt), Etikett 'Aktionspreise?' mit CH-Flagge schwebt zur Lücke, rastet nicht ein (Aktionspreise, Rolle)",
+   "start": 28.62,
+   "ende": 35.97,
+   "teile": { "genau": 30.05, "geklaert": 32.03, "aktionspreise": 33.96, "rolle": 34.82 },
+   "sfx": [
+    { "datei": "whoosh.mp3", "at": 28.62, "volume": 0.12 },
+    { "datei": "tick.mp3", "at": 33.89, "volume": 0.1 }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Wichtig (zu erwähnen ist aber)",
+   "text": "Einblendung aus dem Briefing 'EIN TEST – KEINE GESAMTSTUDIE': '1 Warenkorb' ✓ (einzelner), Rahmen 'alle Temu-Produkte' mit '?' (nicht), viele Artikel (alle), Stempel '+59 %' (59), durchgestrichen ✕ (Prozent), 'nicht alle' (teurer)",
+   "start": 35.97,
+   "ende": 44.09,
+   "teile": { "einzelner": 38.52, "nicht": 39.8, "alle": 41.08, "59": 42.66, "prozent": 43.24, "teurer": 43.58 },
+   "sfx": [
+    { "datei": "whoosh.mp3", "at": 35.97, "volume": 0.12 },
+    { "datei": "tick.mp3", "at": 42.55, "volume": 0.1 }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Für (uns Onlinehändler)",
+   "text": "Tipp (Briefing-Idee 'eigene Wettbewerbsprodukte prüfen'): 'Dein Shop', 'dein Produkt' (eigenen), 'Wettbewerb' mit Preis '? €' (Wettbewerbsprodukten), Lupe auf den Preis, 'Endpreis?' (genauer), 'genau hinschauen' (hinschauen); Sticker 'SPANNEND.' (spannend) auf der Schulter",
+   "start": 44.09,
+   "ende": 50.58,
+   "teile": { "spannend": 46.77, "eigenen": 48.29, "wettbewerbsprodukten": 48.63, "genauer": 49.57, "hinschauen": 50.02 },
+   "sfx": [
+    { "datei": "whoosh.mp3", "at": 44.09, "volume": 0.12 },
+    { "datei": "pop.mp3", "at": 46.7, "volume": 0.1 }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "statt (einfach nur davon auszugehen)",
+   "text": "Umfrage (Regie: Schluss mit Umfrage und Folgen-Plus): 'Temu immer am günstigsten?', 'Schreib's in die Kommentare' (auszugehen), Folgen (dass), 'Ja, immer' (immer), 'Nicht immer' (günstig), Plus angetippt und zum Haken (ist)",
+   "start": 50.58,
+   "ende": 54.47,
+   "teile": { "auszugehen": 51.65, "dass": 52.07, "immer": 52.63, "guenstig": 53.48, "ist": 53.87 },
+   "sfx": [
+    { "datei": "whoosh.mp3", "at": 50.58, "volume": 0.12 },
+    { "datei": "klick.mp3", "at": 53.8, "volume": 0.1 }
+   ]
+  }
+ ]
+}
