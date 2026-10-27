@@ -69,7 +69,9 @@ if not os.path.exists(MODELL):
 cut_path = os.path.join(ROOT, "src", "projekte", projekt, "cut.json")
 cut = json.load(open(cut_path, encoding="utf-8")) if os.path.exists(cut_path) else {"keeps": []}
 takes_dir = os.path.join(PROJEKTE, projekt, "takes")
-takes = sorted(f[:-4] for f in os.listdir(takes_dir) if f.endswith(".mp4") and not f.endswith(".orig.mp4"))
+# Sicherungen wie <take>.vor-farbe.mp4 sind keine Takes
+takes = sorted(f[:-4] for f in os.listdir(takes_dir)
+               if f.endswith(".mp4") and not f.endswith(".orig.mp4") and ".vor-" not in f)
 if not takes:
     sys.exit(f"Keine Takes in {takes_dir}")
 
