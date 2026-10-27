@@ -279,3 +279,13 @@ Keine HeyGen-Dienste (Sprecher, Musik, Soundeffekte über `media-use`) mit seine
 oder die Quelle belegt; keine fremden Logos oder Markenfotos ohne Rechte.
 
 **Drive aufräumen nach dem Veröffentlichen** (seine Vorgabe 2026-10-26: "Bitte lösche alle finalen und Rohclip Videos, sobald die Videos veröffentlicht wurden aus dem Google Drive Ordner, um Platz im Speicher freizumachen"): Sobald ein Video auf allen Kanälen PUBLISHED ist (in Metricool prüfen), kommen sein Rohclip (Ordner Rohclips) und alle Fassungen im Ordner "Final geschnittene Videos" in den Papierkorb (`trash_file`); überholte Zwischenfassungen (v1, alte Hooks) gleich mit. Nicht löschen: noch geplante oder unveröffentlichte Videos und Fassungen (z. B. Video 2 B/C), die Beschreibungs-Docs. Metricool hat beim Einplanen eine eigene Kopie, der Drive-Link wird danach nicht mehr gebraucht. Der Papierkorb belegt weiter Speicher, bis er geleert wird (oder nach 30 Tagen); das sagt man ihm.
+
+**Grüner Drehtermin = Startsignal** (seine Vorgabe 2026-10-27: "Sobald im Kalender ein Videotermin von braun auf grün
+wechselt, bedeutet es für dich, dass das Video von mir gedreht und in Google Drive in Rohclips hochgeladen wurde. Das
+ist für dich ein Signal zum automatischen Start des Cutting-Prozesses"): Die 🎬-Termine im Kalender stehen erst in
+der Kalenderfarbe (braun, kein `colorId`). Färbt er einen grün (`colorId` 10 Basilikum, auch 2 Salbei), ist der Clip
+gedreht und liegt im Drive-Ordner "Rohclips". Dann ohne Rückfrage: Clip mit gleichem Kürzel im Ordner suchen, Briefing
+aus dem 🎬-Termin und den 📣-Termin anlegen, nach Veröffentlichungstermin in die Warteschlange und schneiden (Cutter
+Opus "Extra Hoch", immer nur einer). Eingeplant wird weiter erst nach seinem OK. Der 2-Stunden-Check prüft beides:
+grüne 🎬-Termine ohne fertiges Video und neue Clips im Ordner. Ist ein Termin grün, aber kein Clip da, oder liegt ein
+Clip da, dessen Termin noch braun ist, schneidet man den Clip trotzdem und sagt es ihm kurz.
