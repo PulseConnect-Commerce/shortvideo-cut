@@ -18,7 +18,7 @@ import numpy as np
 
 HIER = os.path.dirname(os.path.abspath(__file__))
 SS = os.path.join(HIER, "screenshots")
-BILD = dict(scale=1.2, hoch=355, x=20)   # wie in src/projekte/gymshark/Video.tsx
+BILD = dict(scale=1.3, hoch=425, x=22)   # wie in src/projekte/gymshark/Video.tsx (ab Hüfthöhe, Pauls Regel 2026-10-27)
 KOPF = 275                               # Kopfleiste: Hinweiszeile und Logo-Zeile (css 0-110)
 HG = ["story", "about", "neu", "g66", "popup", "sulek", "athlet", "regent", "stores"]
 

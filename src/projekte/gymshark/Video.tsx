@@ -6,13 +6,16 @@
  * die Pill-Untertitel und die Erklär-Bilder bzw. die Quellen-Karte (Shopify-Blog, 1. März 2026) auf der hellen Karte.
  * Hook-Titel (Marke Gymshark, darum mit Hook; Design "verlauf"): "GYMSHARK" / "MEHR ALS NUR EIN SHOP" (sein Schlusssatz
  * aus dem Skript), an der Kartenposition unter dem Kopf.
- * Bild: wie bei M06 steht er etwas tiefer, damit die Kennzahlen über dem Kopf Platz haben: scale 1.2, hoch 355, x 20
- * (Take: Kopfoberkante Median y 704 mit der Porträt-Maske, Augen Median x 557 / y 882, Kinn ~1081, an 82 Zeitpunkten über
- * alle Stücke gemessen) → Kopfoberkante ~490 (470-509), Augen ~703, mittig, Kinn ~942. Von oben: Kennzahl (y ~284-468, auf
+ * Bild: wie bei M06 steht er etwas tiefer, damit die Kennzahlen über dem Kopf Platz haben, und nach Pauls Regel
+ * (2026-10-27: "erst ab Hüfthöhe bei einer sitzenden Aufnahme erst zu zeigen. Alles unterhalb der Hüfthöhe sollte
+ * abgeschnitten werden") endet das Bild über der Hüfte: scale 1.3, hoch 425, x 22 (Take: Kopfoberkante Median y 704 mit der
+ * Porträt-Maske, Augen Median x 557 / y 882, Kinn ~1081, an 82 Zeitpunkten über alle Stücke gemessen; Hüftlinie im Take bei
+ * y ~1830, darunter der helle Bund) → Kopfoberkante ~490 (470-511), Augen ~722, mittig, Kinn ~980; der untere Bildrand
+ * zeigt Take-y 1804 (mit dem Zoom-in 1790-1800), also ~30-40 px über der Hüftlinie. Von oben: Kennzahl (y ~284-468, auf
  * hellem Schleier), Kopf, Kinn, Pill-Untertitel (y 1068), Karte (y 1118-1468), alles über der Instagram-Zone (ab 1500).
  * Sanfter Grade, ein ruhiges Zoom-in (3 %) um die Augen, kein Punch-in (Kennzahlen und Shop-Hintergründe sitzen fest).
  * Marken-Hintergründe (karten-aufbau.md "Marken-Shops als Hintergrund"): an neun Stellen steht er freigestellt vor echten
- * Seiten von gymshark.com (HG unten, in den Take gerechnet von npm run portrait --ausschnitt 1.2,355,20 --hintergrund …);
+ * Seiten von gymshark.com (HG unten, in den Take gerechnet von npm run portrait --ausschnitt 1.3,425,22 --hintergrund …);
  * Hook, Learning 1, Anfang Learning 2, Knopfdruck, KI und Aufruf vor seinem weichgezeichneten Zimmer.
  * Kennzahlen, Fotos und Karten als transparentes WebM aus hyperframes/gymshark-skizzen (public/broll/gymshark/skizzen.webm),
  * Zeiten und Töne in karten.json.
@@ -31,10 +34,11 @@ import karten from "./karten.json";
 const C = createCut(cut);
 export const meta = { id: "Gymshark", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Augen im Take (Median) bei x 557, y 882 → im Bild x 540, y 703; Haar ~704 → 490; Bildunterkante = Take y ~1896 */
-const BILD = { scale: 1.2, hoch: 355, x: 20 };
+/** Augen im Take (Median) bei x 557, y 882 → im Bild x 540, y 722; Haar ~704 → 490; Bildunterkante = Take y ~1804
+ * (Hüftlinie im Take ~1830: alles darunter bleibt draußen, Pauls Regel 2026-10-27) */
+const BILD = { scale: 1.3, hoch: 425, x: 22 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
-const AUGEN_Y = 703;
+const AUGEN_Y = 722;
 
 /** Marken-Hintergründe im Take (Sekunden), wie beim Aufruf von npm run portrait --hintergrund (public/broll/gymshark/) */
 export const HG: [string, number, number][] = [
