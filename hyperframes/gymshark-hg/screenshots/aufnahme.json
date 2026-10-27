@@ -1,0 +1,905 @@
+{
+ "ziele": {
+  "story": {
+   "url": "https://de.gymshark.com/blog/article/the-official-gymshark-story",
+   "titel": "Die Gymshark Geschichte | Gymshark Central",
+   "abschnitt_css_y": 190,
+   "sichtbar": [
+    [
+     20,
+     "Erklärung zur Barrierefreiheit"
+    ],
+    [
+     55,
+     "Hilfe"
+    ],
+    [
+     91,
+     "Unser Newsletter"
+    ],
+    [
+     162,
+     "DE & AT"
+    ],
+    [
+     157,
+     "Australia and New Zealand"
+    ],
+    [
+     205,
+     "Bahrain"
+    ],
+    [
+     253,
+     "Canada"
+    ],
+    [
+     301,
+     "Danmark"
+    ],
+    [
+     349,
+     "Deutschland & Österreich"
+    ],
+    [
+     397,
+     "Europe"
+    ],
+    [
+     445,
+     "Finland"
+    ],
+    [
+     493,
+     "France"
+    ],
+    [
+     541,
+     "Kuwait"
+    ],
+    [
+     589,
+     "Nederland"
+    ],
+    [
+     637,
+     "Norge"
+    ],
+    [
+     81,
+     "Gymshark"
+    ],
+    [
+     125,
+     "Die Gymshark Geschichte"
+    ],
+    [
+     178,
+     "06.04.23"
+    ],
+    [
+     178,
+     "/"
+    ],
+    [
+     178,
+     "Zuletzt bearbeitet 06.04.23"
+    ],
+    [
+     222,
+     "Harry Foley"
+    ]
+   ]
+  },
+  "about": {
+   "url": "https://de.gymshark.com/pages/about-us",
+   "titel": "About us | Gymshark",
+   "abschnitt_css_y": 330,
+   "sichtbar": [
+    [
+     22,
+     "DE & AT"
+    ],
+    [
+     17,
+     "Australia and New Zealand"
+    ],
+    [
+     65,
+     "Bahrain"
+    ],
+    [
+     113,
+     "Canada"
+    ],
+    [
+     161,
+     "Danmark"
+    ],
+    [
+     209,
+     "Deutschland & Österreich"
+    ],
+    [
+     257,
+     "Europe"
+    ],
+    [
+     305,
+     "Finland"
+    ],
+    [
+     353,
+     "France"
+    ],
+    [
+     401,
+     "Kuwait"
+    ],
+    [
+     449,
+     "Nederland"
+    ],
+    [
+     497,
+     "Norge"
+    ],
+    [
+     545,
+     "Oman"
+    ],
+    [
+     593,
+     "Qatar"
+    ],
+    [
+     641,
+     "Rest of World"
+    ],
+    [
+     172,
+     "ÜBER UNS"
+    ],
+    [
+     205,
+     "Gymshark ist Hersteller & Online-Händler für Sport & Fitness Bekleidung und Accessoires mit Sitz im Vereinigten Königreich und wird von mehr als 12 Millionen en"
+    ],
+    [
+     397,
+     "Diese Entwicklung ist zum einen der leidenschaftlichen Hingabe an die Kreation von innovativer, effizienter Performance Bekleidung und einer stetig wachsenden S"
+    ],
+    [
+     531,
+     "Hinter jeder Handlung steht die Idee."
+    ],
+    [
+     567,
+     "Wir existieren, um Menschen das Werkzeug an die Hand zu geben, welches es ihnen ermöglicht, ihr ganzes Potential auszuschöpfen."
+    ],
+    [
+     641,
+     "Sei all das, wovon du immer geträumt hast. Be a Visionary. Gymshark wird geleitet von:"
+    ]
+   ]
+  },
+  "neu": {
+   "url": "https://de.gymshark.com/collections/new-releases",
+   "titel": "Neuheiten",
+   "abschnitt_css_y": 1060,
+   "sichtbar": [
+    [
+     7,
+     "Schweiz"
+    ],
+    [
+     55,
+     "Sverige"
+    ],
+    [
+     103,
+     "United Arab Emirates"
+    ],
+    [
+     151,
+     "United Kingdom"
+    ],
+    [
+     199,
+     "United States"
+    ],
+    [
+     134,
+     "Neu"
+    ],
+    [
+     170,
+     "Gymshark x Sam Sulek Tank"
+    ],
+    [
+     193,
+     "oversized fit"
+    ],
+    [
+     193,
+     "Black/Wash"
+    ],
+    [
+     229,
+     "35 €"
+    ],
+    [
+     134,
+     "Neu"
+    ],
+    [
+     172,
+     "5"
+    ],
+    [
+     191,
+     "Gymshark x Sam Sulek Shorts"
+    ],
+    [
+     215,
+     "oversized fit"
+    ],
+    [
+     215,
+     "Rust Red"
+    ],
+    [
+     250,
+     "58 €"
+    ],
+    [
+     542,
+     "Neu"
+    ],
+    [
+     577,
+     "Gymshark x Sam Sulek Tank"
+    ],
+    [
+     601,
+     "oversized fit"
+    ],
+    [
+     621,
+     "Shadow Blue/Wash"
+    ],
+    [
+     656,
+     "35 €"
+    ],
+    [
+     542,
+     "Neu"
+    ],
+    [
+     579,
+     "5"
+    ],
+    [
+     599,
+     "Gymshark x Sam Sulek Shorts"
+    ],
+    [
+     623,
+     "oversized fit"
+    ],
+    [
+     623,
+     "Black"
+    ]
+   ]
+  },
+  "g66": {
+   "url": "https://de.gymshark.com/blog/article/what-is-the-gymshark-66-challenge",
+   "titel": "Was ist #Gymshark66? | Gymshark Central",
+   "abschnitt_css_y": 190,
+   "sichtbar": [
+    [
+     20,
+     "Erklärung zur Barrierefreiheit"
+    ],
+    [
+     55,
+     "Hilfe"
+    ],
+    [
+     91,
+     "Unser Newsletter"
+    ],
+    [
+     162,
+     "DE & AT"
+    ],
+    [
+     157,
+     "Australia and New Zealand"
+    ],
+    [
+     205,
+     "Bahrain"
+    ],
+    [
+     253,
+     "Canada"
+    ],
+    [
+     301,
+     "Danmark"
+    ],
+    [
+     349,
+     "Deutschland & Österreich"
+    ],
+    [
+     397,
+     "Europe"
+    ],
+    [
+     445,
+     "Finland"
+    ],
+    [
+     493,
+     "France"
+    ],
+    [
+     541,
+     "Kuwait"
+    ],
+    [
+     589,
+     "Nederland"
+    ],
+    [
+     637,
+     "Norge"
+    ],
+    [
+     81,
+     "Gymshark"
+    ],
+    [
+     125,
+     "Was ist #Gymshark66?"
+    ],
+    [
+     178,
+     "12.12.19"
+    ],
+    [
+     178,
+     "/"
+    ],
+    [
+     178,
+     "Zuletzt bearbeitet 28.12.25"
+    ],
+    [
+     222,
+     "Madeleine Rhodes"
+    ]
+   ]
+  },
+  "popup": {
+   "url": "https://www.gymshark.com/blog/article/the-next-gymshark-pop-up-is",
+   "titel": "The Next Gymshark Pop-Up Is... | Gymshark Central",
+   "abschnitt_css_y": 540,
+   "sichtbar": [
+    [
+     34,
+     "Deutschland & Österreich"
+    ],
+    [
+     82,
+     "Europe"
+    ],
+    [
+     130,
+     "Finland"
+    ],
+    [
+     178,
+     "France"
+    ],
+    [
+     226,
+     "Kuwait"
+    ],
+    [
+     274,
+     "Nederland"
+    ],
+    [
+     322,
+     "Norge"
+    ],
+    [
+     370,
+     "Oman"
+    ],
+    [
+     418,
+     "Qatar"
+    ],
+    [
+     466,
+     "Rest of World"
+    ],
+    [
+     514,
+     "Saudi"
+    ],
+    [
+     562,
+     "Schweiz"
+    ],
+    [
+     610,
+     "Sverige"
+    ],
+    [
+     455,
+     "STICK THE KETTLE ON & LET THE QUEEN KNOW"
+    ],
+    [
+     512,
+     "GYMSHARK ARE BACK IN THE U.K."
+    ],
+    [
+     569,
+     "13-14TH JULY"
+    ],
+    [
+     626,
+     "#WeLiftTheCity"
+    ]
+   ]
+  },
+  "sulek": {
+   "url": "https://de.gymshark.com/pages/sam-sulek-collab",
+   "titel": "Sam Sulek - Gymshark",
+   "abschnitt_css_y": 3300,
+   "sichtbar": [
+    [
+     88,
+     "Neu: Gymshark x Sam Sulek"
+    ],
+    [
+     87,
+     "Alle ansehen"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     461,
+     "Gymshark x Sam Sulek Tank"
+    ],
+    [
+     484,
+     "oversized fit"
+    ],
+    [
+     484,
+     "Black/Wash"
+    ],
+    [
+     520,
+     "35 €"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     461,
+     "Gymshark x Sam Sulek Tank"
+    ],
+    [
+     484,
+     "oversized fit"
+    ],
+    [
+     484,
+     "Shadow Blue/Wash"
+    ],
+    [
+     520,
+     "35 €"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     463,
+     "5"
+    ],
+    [
+     482,
+     "Gymshark x Sam Sulek Shorts"
+    ],
+    [
+     506,
+     "oversized fit"
+    ],
+    [
+     506,
+     "Rust Red"
+    ],
+    [
+     542,
+     "58 €"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     463,
+     "5"
+    ],
+    [
+     482,
+     "Gymshark x Sam Sulek Shorts"
+    ],
+    [
+     506,
+     "oversized fit"
+    ],
+    [
+     506,
+     "Black"
+    ],
+    [
+     542,
+     "58 €"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     463,
+     "5"
+    ],
+    [
+     482,
+     "Gymshark x Sam Sulek Shorts"
+    ],
+    [
+     506,
+     "oversized fit"
+    ],
+    [
+     506,
+     "Shadow Blue"
+    ],
+    [
+     542,
+     "58 €"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     463,
+     "3.9"
+    ],
+    [
+     482,
+     "Power Cut Off Tank"
+    ],
+    [
+     506,
+     "oversized fit"
+    ],
+    [
+     506,
+     "Bros Earth Green Marl"
+    ],
+    [
+     542,
+     "30 €"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     463,
+     "4"
+    ],
+    [
+     482,
+     "Power T-Shirt"
+    ],
+    [
+     506,
+     "oversized fit"
+    ],
+    [
+     506,
+     "Lifestyle Brown"
+    ],
+    [
+     542,
+     "35 €"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     463,
+     "4"
+    ],
+    [
+     482,
+     "Power T-Shirt"
+    ],
+    [
+     506,
+     "oversized fit"
+    ],
+    [
+     506,
+     "Cherry Purple"
+    ],
+    [
+     542,
+     "35 €"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     463,
+     "4"
+    ],
+    [
+     482,
+     "Power T-Shirt"
+    ],
+    [
+     506,
+     "oversized fit"
+    ],
+    [
+     506,
+     "Onyx Grey/Sprint Green"
+    ],
+    [
+     542,
+     "35 €"
+    ],
+    [
+     417,
+     "Neu"
+    ],
+    [
+     463,
+     "3.9"
+    ],
+    [
+     482,
+     "Power Cut Off Tank"
+    ],
+    [
+     506,
+     "oversized fit"
+    ],
+    [
+     506,
+     "Cherry Purple"
+    ],
+    [
+     542,
+     "30 €"
+    ]
+   ]
+  },
+  "athlet": {
+   "url": "https://de.gymshark.com/blog/article/how-to-become-a-gymshark-athlete",
+   "titel": "Wie man zum/zur Gymshark-Athlet:in wird | Gymshark Central",
+   "abschnitt_css_y": 190,
+   "sichtbar": [
+    [
+     1,
+     "Meld dich für den Newsletter an & erhalte 15 %"
+    ],
+    [
+     35,
+     "Erklärung zur Barrierefreiheit"
+    ],
+    [
+     70,
+     "Hilfe"
+    ],
+    [
+     106,
+     "Unser Newsletter"
+    ],
+    [
+     177,
+     "DE & AT"
+    ],
+    [
+     172,
+     "Australia and New Zealand"
+    ],
+    [
+     220,
+     "Bahrain"
+    ],
+    [
+     268,
+     "Canada"
+    ],
+    [
+     316,
+     "Danmark"
+    ],
+    [
+     364,
+     "Deutschland & Österreich"
+    ],
+    [
+     412,
+     "Europe"
+    ],
+    [
+     460,
+     "Finland"
+    ],
+    [
+     508,
+     "France"
+    ],
+    [
+     556,
+     "Kuwait"
+    ],
+    [
+     604,
+     "Nederland"
+    ],
+    [
+     652,
+     "Norge"
+    ],
+    [
+     81,
+     "Gymshark"
+    ],
+    [
+     125,
+     "Wie man zum/zur Gymshark-Athlet:in wird"
+    ],
+    [
+     208,
+     "18.12.24"
+    ],
+    [
+     208,
+     "/"
+    ],
+    [
+     208,
+     "Zuletzt bearbeitet 28.12.25"
+    ],
+    [
+     251,
+     "Alex Kirkup-Lee"
+    ]
+   ]
+  },
+  "regent": {
+   "url": "https://www.gymshark.com/blog/article/the-gymshark-london-store",
+   "titel": "Gymshark London Regent Street | Flagship Store & Free Workout Classes | Gymshark Central",
+   "abschnitt_css_y": 3650,
+   "sichtbar": [
+    [
+     17,
+     "compound lifts"
+    ],
+    [
+     17,
+     "squat"
+    ],
+    [
+     17,
+     "bench"
+    ],
+    [
+     17,
+     "deadlifts"
+    ],
+    [
+     52,
+     "A 30-minute METCON-style session designed to improve cardiovascular and respiratory fitness. These high-energy workouts help prepare you for endurance events li"
+    ],
+    [
+     111,
+     "HYROX,"
+    ],
+    [
+     111,
+     "5"
+    ],
+    [
+     52,
+     "–10 Ks, and functional fitness competitions."
+    ],
+    [
+     53,
+     "Mobility"
+    ],
+    [
+     127,
+     "A 45-minute rest and recovery-focused class aimed at improving joint mobility and muscle flexibility. Often scheduled for midday, it’s a popular lunch-break res"
+    ],
+    [
+     478,
+     "Sweat Masterclasses"
+    ],
+    [
+     535,
+     "Alongside the weekly timetable, Gymshark Regent.St also hosts specialist"
+    ],
+    [
+     561,
+     "Sweat Masterclasses"
+    ],
+    [
+     535,
+     ", offering something a little deeper for those looking to develop new skills or explore different training styles:"
+    ]
+   ]
+  },
+  "stores": {
+   "url": "https://de.gymshark.com/pages/stores",
+   "titel": "Gymshark Stores - Address, Opening Hours & More",
+   "abschnitt_css_y": 1330,
+   "sichtbar": [
+    [
+     211,
+     "Regent Street"
+    ],
+    [
+     234,
+     "Gymshark Regent St. ist mehr als nur ein Geschäft."
+    ],
+    [
+     254,
+     "Mit Workouts, Hangouts, Events und Ernährungsangeboten ist es eine Heimat für die Fitness-Community."
+    ],
+    [
+     389,
+     "Ground Floor, Westfield Stratford City, London"
+    ],
+    [
+     653,
+     "Stratford Westfield, London"
+    ],
+    [
+     389,
+     "Westfield London Shopping Centre, West London"
+    ],
+    [
+     653,
+     "WHITE CITY, LONDON"
+    ]
+   ]
+  }
+ },
+ "datum": "2026-10-27T12:40:25.165Z",
+ "viewport": "432x768 @2.5"
+}

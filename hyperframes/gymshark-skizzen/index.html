@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>M07 · Gymshark – Kennzahlen, Sticker, Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- HERO M07 "Gymshark" (Serie M "Marken-Story"), Editorial-Stil wie M06 FIVE (karten-aufbau.md "Marken-Story im
+         Editorial-Stil"): ÜBER DEM KOPF große, kurze Kennzahlen und Schlagzeilen (1-3 Wörter), Instrument Serif (OFL) und
+         Geist im Wechsel, Akzent im PulseConnect-Verlauf #00E090 → #31ADEC, ein Strich zeichnet sich auf dem Wort, auf einem
+         hellen Schleier (y ~280-470; der Kopf beginnt bei ~490). NEBEN DEM KOPF im Hook zwei echte, freigestellte
+         Produktfotos aus dem Gymshark-Shop (Cap, 700-ml-Flasche; hyperframes/gymshark-hg/freistellen.py). UNTER DEM KOPF die
+         Pill-Untertitel (Remotion, y 1068) und die Erklär-Bilder auf der hellen Karte (x 80-900, y 1118-1468, über der
+         Instagram-Zone ab 1500), dazu die Quellen-Karte aus dem Shopify-Blog (1. März 2026, Quelle im Briefing).
+         Rot nur für Verlust/Minus (hier nicht gebraucht). Nur, was er sagt oder die Quellen belegen (mit Datum).
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/gymshark/cut.json, 102,83 s), schon als Cues (2 Frames vor
+         dem Wort); Liste mit Tönen in src/projekte/gymshark/karten.json. Lucide-Icons (ISC), Schriften Geist, Instrument
+         Serif, Caveat (OFL), lokal. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      /* heller Schleier hinter den Kennzahlen über dem Kopf */
+      .schleier { position: absolute; left: 0; top: 226px; width: 1080px; height: 330px; opacity: 0;
+        background: radial-gradient(ellipse 50% 50% at 46% 50%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 58%, rgba(255, 255, 255, 0) 100%); }
+
+      /* Kennzahl / Schlagzeile über dem Kopf */
+      .kopf { position: absolute; left: 80px; top: 284px; width: 820px; height: 184px; opacity: 0; }
+      .kopf .kk { position: absolute; left: 0; right: 0; top: 0; text-align: center; font-size: 25px; font-weight: 650; letter-spacing: 0.16em; text-transform: uppercase; color: #4b5563; white-space: nowrap; }
+      .kopf .kz { position: absolute; left: 0; right: 0; top: 40px; height: 140px; display: flex; align-items: center; justify-content: center; gap: 22px; white-space: nowrap; opacity: 0; }
+      .serif { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 124px; line-height: 1; letter-spacing: -0.005em; }
+      .it { font-style: italic; }
+      .geist { font-family: "Geist", sans-serif; font-weight: 800; font-size: 86px; line-height: 1; letter-spacing: -0.035em; }
+      .grau { color: #6b7280; }
+      .klein { font-family: "Geist", sans-serif; font-weight: 600; font-size: 30px; line-height: 1.15; color: #374151; text-align: left; letter-spacing: -0.01em; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 0.04em; }
+      .ak { position: relative; display: inline-block; }
+      .ak > svg.strich { position: absolute; left: -3%; width: 106%; bottom: -10px; height: 20px; overflow: visible; }
+      svg.strich path { fill: none; stroke: url(#gvs); stroke-width: 7; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+      .durch { position: absolute; left: -2%; width: 104%; top: 52%; height: 6px; border-radius: 3px; background: #0b0c0e; }
+
+      /* Karte unter dem Kopf */
+      .karte { position: absolute; left: 80px; top: 1118px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 50px; width: 820px; height: 300px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 30px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .labg { font-size: 26px; font-weight: 600; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .hand.gruen { fill: #00c27c; }
+      .linie { fill: none; stroke: #cbd5e1; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 2 12; }
+      .zug { fill: none; stroke: url(#gvu); stroke-width: 6; stroke-linecap: round; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .platz { fill: none; stroke: #9aa3af; stroke-width: 3; stroke-dasharray: 11 9; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .bild { position: absolute; display: block; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Vorgabe 2026-10-25) */
+      .folgekarte { position: absolute; left: 80px; top: 1118px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 42px; height: 42px; border-radius: 21px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 24px; height: 24px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+
+      /* echte, freigestellte Produktfotos neben dem Kopf (Sticker: weiße Kante, weicher Schatten) */
+      .foto { position: absolute; opacity: 0; transform-origin: 50% 80%; }
+      .foto img { display: block; width: 100%; height: auto;
+        filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 14px 22px rgba(0, 0, 0, 0.32)); }
+      .foto .name { position: absolute; left: 50%; bottom: -18px; transform: translateX(-50%) rotate(-2deg); padding: 8px 16px 9px; border-radius: 12px; background: #fff; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22); white-space: nowrap; text-align: center; }
+      .foto .name b { display: block; font-size: 26px; font-weight: 800; letter-spacing: -0.01em; }
+      .foto .name span { display: block; font-size: 19px; font-weight: 600; color: #6b7280; letter-spacing: 0.08em; text-transform: uppercase; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="gymshark-skizzen" data-width="1080" data-height="1920" data-start="0.00" data-duration="102.83">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvu" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="820" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24er Raster -->
+          <g id="person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="leute"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></g>
+          <g id="hantel"><path d="M14.4 14.4 9.6 9.6" /><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" /><path d="m21.5 21.5-1.4-1.4" /><path d="M3.9 3.9 2.5 2.5" /><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z" /></g>
+          <g id="handy"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></g>
+          <g id="kamera"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect x="2" y="6" width="14" height="12" rx="2" /></g>
+          <g id="kurve"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></g>
+          <g id="herz"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></g>
+          <g id="achtung"><circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" /></g>
+          <g id="ziel"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+          <g id="kalender"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></g>
+          <g id="balken"><path d="M3 3v18h18" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" /></g>
+          <g id="funkeln"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /></g>
+          <g id="wagen"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></g>
+          <g id="ticket"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" /><path d="M13 5v2" /><path d="M13 17v2" /><path d="M13 11v2" /></g>
+          <g id="megafon"><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></g>
+          <!-- Haken im Kreis (Verlauf), Kreuz im Kreis (Tinte; Rot nur für Verlust) -->
+          <g id="ok"><circle cx="0" cy="0" r="20" fill="url(#gvd)" /><path d="M-10 0 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="nein"><circle cx="0" cy="0" r="20" fill="#0b0c0e" /><path d="M-7 -7 L7 7 M7 -7 L-7 7" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" /></g>
+          <g id="zeigerform"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+        </defs>
+      </svg>
+
+      <!-- heller Schleier hinter den Kennzahlen (ab der ersten Kennzahl bis zum Schluss) -->
+      <div id="schleier" class="schleier clip" data-start="0.90" data-duration="101.93" data-track-index="4"></div>
+
+      <!-- ============ KENNZAHLEN ÜBER DEM KOPF (Spur 0) ============ -->
+
+      <!-- Z0 Hook: "Gymshark hat nicht nur Sportbekleidung verkauft. Die Marke hat einfach früh verstanden, wie wichtig
+           Menschen rund um das ganze Produkt sind." nur 0,97 / verkauft 1,77 / früh 3,20 / Menschen 4,57 / Produkt 5,87 -->
+      <section id="z0" class="kopf clip" data-start="0.90" data-duration="6.17" data-track-index="0">
+        <div class="kk" id="z0-k1">Gymshark</div>
+        <div class="kk" id="z0-k2" style="opacity:0">Früh verstanden</div>
+        <div class="kk" id="z0-k3" style="opacity:0">Rund ums Produkt</div>
+        <div class="kz" id="z0-a"><span class="ak geist grau">nur Kleidung?<i class="durch" id="z0-durch"></i></span></div>
+        <div class="kz" id="z0-b"><span class="ak serif it verlauf">Menschen.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z0-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z1 "Die Gründer haben nämlich die Fitness-Athleten und Creatorn einfach zusammengebracht." Gründer 7,27 /
+           Fitness-Athleten 8,27 / Creatorn 9,43. 2012, Ben Francis und Schulfreunde: Über-uns-Seite gymshark.com -->
+      <section id="z1" class="kopf clip" data-start="7.20" data-duration="3.73" data-track-index="0">
+        <div class="kk" id="z1-k1">Gegründet · laut Gymshark</div>
+        <div class="kk" id="z1-k2" style="opacity:0">Die Gründer brachten zusammen</div>
+        <div class="kz" id="z1-a"><span class="ak serif verlauf">2012<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z1-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span><span class="klein">Ben Francis<br />&amp; Schulfreunde</span></div>
+        <div class="kz" id="z1-b"><span class="geist">Athleten</span><span class="serif">+</span><span class="ak serif it verlauf" id="z1-c" style="opacity:0">Creator<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z1-s2" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z2 "Und zwar noch lange bevor viele traditionelle Marken einfach Social Media wirklich ernst genommen haben."
+           lange 11,57 / Social 13,83. Heute: "mehr als 12 Millionen engagierten Social Media Followern und Kunden" (Über
+           uns, gymshark.com, abgerufen 27.10.2026) -->
+      <section id="z2" class="kopf clip" data-start="11.50" data-duration="4.77" data-track-index="0">
+        <div class="kk" id="z2-k1">Social Media</div>
+        <div class="kk" id="z2-k2" style="opacity:0">Heute · laut Gymshark</div>
+        <div class="kz" id="z2-a"><span class="serif">lange</span><span class="ak serif it verlauf">vorher.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z2-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+        <div class="kz" id="z2-b"><span class="ak serif verlauf">12 Mio.+<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z2-s2" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span><span class="klein">Social-Media-Follower<br />&amp; Kunden</span></div>
+      </section>
+
+      <!-- Z3 "Und statt eben einfach nur Produktfotos zu veröffentlichen, ging es hier tatsächlich um Training, Fortschritte
+           und einfach eine Community, die sich mit demselben Lebensstil identifizieren konnte." Produktfotos 17,57 /
+           ging 19,37 / Community 22,77 / Lebensstil 24,47 -->
+      <section id="z3" class="kopf clip" data-start="17.50" data-duration="8.40" data-track-index="0">
+        <div class="kk" id="z3-k1">Statt nur</div>
+        <div class="kk" id="z3-k2" style="opacity:0">Training · Fortschritt</div>
+        <div class="kk" id="z3-k3" style="opacity:0">Derselbe</div>
+        <div class="kz" id="z3-a"><span class="ak geist grau">Produktfotos?<i class="durch" id="z3-durch"></i></span></div>
+        <div class="kz" id="z3-b"><span class="ak serif it verlauf">Community.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z3-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+        <div class="kz" id="z3-c"><span class="ak serif it verlauf">Lebensstil.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z3-s2" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z4 "Später hat dann Gymshark einfach diese Verbindungen auch mit Events und persönlichen Treffen gestärkt."
+           Events 28,73 / persönlichen 29,27. Lift Frankfurt im Mai 2019: "Die Gymshark Geschichte" (Gymshark-Blog, 06.04.2023) -->
+      <section id="z4" class="kopf clip" data-start="28.66" data-duration="2.11" data-track-index="0">
+        <div class="kk">Z. B. Lift Frankfurt · Mai 2019</div>
+        <div class="kz" id="z4-a"><span class="geist">Events</span></div>
+        <div class="kz" id="z4-b"><span class="ak serif it verlauf">persönlich.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z4-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z5 "... dass die Creator nicht einfach nur irgendwelche austauschbaren Werbeflächen waren." Creator 32,80 /
+           Werbeflächen 35,33 / waren 35,83. Hintergrund: Kollektion Gymshark X Sam Sulek (gymshark.com) -->
+      <section id="z5" class="kopf clip" data-start="32.73" data-duration="3.62" data-track-index="0">
+        <div class="kk" id="z5-k1">Z. B. Gymshark × Sam Sulek</div>
+        <div class="kk" id="z5-k2" style="opacity:0">Nicht austauschbar</div>
+        <div class="kz" id="z5-a"><span class="ak serif it verlauf">Creator<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z5-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+        <div class="kz" id="z5-b"><span class="ak geist grau">Werbefläche?<i class="durch" id="z5-durch"></i></span></div>
+      </section>
+
+      <!-- Z6 "Sie haben tatsächlich dazu beigetragen, dass die Marke in konkreter Zielgruppe bekannt wird." Marke 38,30 /
+           Zielgruppe 39,30 / bekannt 40,03 -->
+      <section id="z6" class="kopf clip" data-start="38.23" data-duration="3.20" data-track-index="0">
+        <div class="kk">Bekannt in einer konkreten</div>
+        <div class="kz" id="z6-a"><span class="ak serif it verlauf">Zielgruppe.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z6-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z7 "Und für E-Commerce-Händler steckt da natürlich sehr viel drin." E-Commerce-Händler 41,77 / drin 43,73 -->
+      <section id="z7" class="kopf clip" data-start="41.70" data-duration="2.33" data-track-index="0">
+        <div class="kk">Für E-Commerce-Händler</div>
+        <div class="kz" id="z7-a"><span class="ak serif it verlauf">Learnings<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z7-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z8 Learning 1: "definiere bitte die Zielgruppen genauer und nicht nur nach Alter und Geschlecht. Welche Interessen
+           haben sie, welche Probleme und welche Ziele verbindet diese Menschen?" Mein 44,03 / genauer 46,93 / nicht 47,87 /
+           Welche 49,77 -->
+      <section id="z8" class="kopf clip" data-start="44.03" data-duration="9.54" data-track-index="0">
+        <div class="kk" id="z8-k1">Mein erstes</div>
+        <div class="kk" id="z8-k2" style="opacity:0">Zielgruppe · nicht nur Alter &amp; Geschlecht</div>
+        <div class="kk" id="z8-k3" style="opacity:0">Interessen · Probleme · Ziele</div>
+        <div class="kz" id="z8-a"><span class="serif">Learning</span><span class="ak serif verlauf" style="font-size:150px">1<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z8-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+        <div class="kz" id="z8-b"><span class="ak serif it verlauf">genauer.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z8-s2" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z9 Learning 2: "wenn du ... mit Creatorn zusammenarbeitest, dann schau nicht einfach nur nach irgendwelchen
+           Followerzahlen. Achte einfach mal darauf, ob sie ... zur Marke passen und bei ihrer Community auch wirklich
+           Vertrauen genießen." zweite 53,83 / Followerzahlen 59,10 / Marke 62,20 / Vertrauen 65,03 -->
+      <section id="z9" class="kopf clip" data-start="53.57" data-duration="12.62" data-track-index="0">
+        <div class="kk" id="z9-k1">Mit Creatorn arbeiten</div>
+        <div class="kk" id="z9-k2" style="opacity:0">Nicht nur</div>
+        <div class="kk" id="z9-k3" style="opacity:0">Passen sie</div>
+        <div class="kk" id="z9-k4" style="opacity:0">Bei ihrer Community</div>
+        <div class="kz" id="z9-a"><span class="serif">Learning</span><span class="ak serif verlauf" style="font-size:150px">2<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z9-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+        <div class="kz" id="z9-b"><span class="ak geist grau">Followerzahl?<i class="durch" id="z9-durch"></i></span></div>
+        <div class="kz" id="z9-c"><span class="serif">zur</span><span class="ak serif it verlauf">Marke?<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z9-s2" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+        <div class="kz" id="z9-d"><span class="ak serif it verlauf">Vertrauen.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z9-s3" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z10 Learning 3: "denk einfach langfristiger als einfach nur bis zum nächsten Posting. Denn gute Kooperationen und
+           eigene Community-Formate können ... wertvoller sein, als ... ständig neue einzelne Werbeaktionen." drittens 66,57 /
+           langfristiger 67,87 / Community-Formate 73,03 / einzelne 77,10. Beispiel im Hintergrund: Gymshark London, Regent
+           St., "50+ completely free classes every week" (Gymshark-Blog, zuletzt bearbeitet 9. Jan. 2026) -->
+      <section id="z10" class="kopf clip" data-start="66.43" data-duration="12.01" data-track-index="0">
+        <div class="kk" id="z10-k1">Mein drittes</div>
+        <div class="kk" id="z10-k2" style="opacity:0">Weiter als bis zum nächsten Posting</div>
+        <div class="kk" id="z10-k3" style="opacity:0">Z. B. Gymshark London · Gratis-Kurse</div>
+        <div class="kk" id="z10-k4" style="opacity:0">Statt einzelner Werbeaktionen</div>
+        <div class="kz" id="z10-a"><span class="serif">Learning</span><span class="ak serif verlauf" style="font-size:150px">3<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z10-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+        <div class="kz" id="z10-b"><span class="ak serif it verlauf">langfristig.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z10-s2" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+        <div class="kz" id="z10-c"><span class="serif" style="font-size:108px">eigene</span><span class="ak serif it verlauf" style="font-size:108px">Formate.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z10-s3" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z11 "Und ganz besonders wichtig finde ich tatsächlich, dass die Community sich nicht nur auf Knopfdruck kaufen
+           lässt." Community 81,33 / Knopfdruck 82,70 / kaufen 83,20 -->
+      <section id="z11" class="kopf clip" data-start="81.26" data-duration="2.91" data-track-index="0">
+        <div class="kk" id="z11-k1">Ganz wichtig</div>
+        <div class="kk" id="z11-k2" style="opacity:0">Community kaufen per</div>
+        <div class="kz" id="z11-a"><span class="ak serif it verlauf">Community<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z11-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+        <div class="kz" id="z11-b"><span class="ak geist grau">Knopfdruck?<i class="durch" id="z11-durch"></i></span></div>
+      </section>
+
+      <!-- Z12 "Und KI kann dir hier vielleicht tatsächlich bei deiner Content-Planung und bei deiner Auswertung helfen. Die
+           Verbindung zwischen Menschen musst du aber tatsächlich doch selbst noch aufbauen." KI 84,33 / Verbindung 88,53 /
+           selbst 91,20 / aufbauen 91,63 -->
+      <section id="z12" class="kopf clip" data-start="84.26" data-duration="7.77" data-track-index="0">
+        <div class="kk" id="z12-k1">Content-Planung &amp; Auswertung</div>
+        <div class="kk" id="z12-k2" style="opacity:0">Die Verbindung zwischen Menschen</div>
+        <div class="kz" id="z12-a"><span class="ak serif it verlauf">KI</span><span class="geist">hilft.</span></div>
+        <div class="kz" id="z12-b"><span class="ak serif it verlauf" style="font-size:100px">selbst aufbauen.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z12-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z13 "Gymshark zeigt dir für mich besonders, warum tatsächlich starke Marken oft eben mehr als nur einen
+           funktionierenden Onlineshop haben." mehr 96,07 / Onlineshop 97,60 -->
+      <section id="z13" class="kopf clip" data-start="96.00" data-duration="2.33" data-track-index="0">
+        <div class="kk">Starke Marken haben</div>
+        <div class="kz" id="z13-a"><span class="serif" style="font-size:100px">mehr als</span><span class="ak serif it verlauf" id="z13-v" style="font-size:100px;opacity:0">einen Shop.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z13-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- Z14 Aufruf: "Und wenn du solche Videos in Zukunft nicht mehr verpassen möchtest, dann drück einfach mal das Plus
+           weg." verpassen 100,37 -->
+      <section id="z14" class="kopf clip" data-start="100.30" data-duration="2.53" data-track-index="0">
+        <div class="kk">Solche Videos</div>
+        <div class="kz" id="z14-a"><span class="serif" style="font-size:100px">nicht</span><span class="ak serif it verlauf" style="font-size:100px">verpassen.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z14-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
+      </section>
+
+      <!-- ============ ECHTE PRODUKTFOTOS NEBEN DEM KOPF (Spur 2), nur im Hook ============ -->
+      <!-- Gymshark Essentials Cap (Shop, Caps) auf "Sportbekleidung" 1,10; 700ml Metal Insulated Straw Bottle (Shop,
+           Flaschen & Shaker) auf "verkauft" 1,77; beide raus vor der ersten Shop-Seite (6,60) -->
+      <div id="f1" class="foto clip" data-start="1.10" data-duration="5.50" data-track-index="2" style="left:70px;top:548px;width:268px"><img src="assets/cap.png" alt="" /></div>
+      <div id="f2" class="foto clip" data-start="1.77" data-duration="4.83" data-track-index="3" style="left:752px;top:520px;width:118px"><img src="assets/flasche.png" alt="" /></div>
+
+      <!-- ============ KARTEN UNTER DEM KOPF (Spur 1) ============ -->
+
+      <!-- K1 Athleten und Creator zusammengebracht: Die 7,17 / Fitness-Athleten 8,27 / Creatorn 9,43 /
+           zusammengebracht 10,17; bis vor "Und zwar" 10,93 -->
+      <section id="k1" class="karte clip" data-start="7.17" data-duration="3.76" data-track-index="1">
+        <div class="kicker">Die Gründer bringen zusammen</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k1-mitte"><rect x="300" y="78" width="220" height="104" rx="26" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><text x="410" y="142" text-anchor="middle" class="lab" style="font-size:36px">Gymshark</text></g>
+          <path id="k1-l1" class="zug" pathLength="1" d="M190 70 C 240 80, 260 110, 296 122" />
+          <path id="k1-l2" class="zug" pathLength="1" d="M190 196 C 240 186, 262 152, 296 138" />
+          <path id="k1-r1" class="zug" pathLength="1" d="M630 70 C 580 80, 560 110, 524 122" />
+          <path id="k1-r2" class="zug" pathLength="1" d="M630 196 C 580 186, 558 152, 524 138" />
+          <g id="k1-ath" opacity="0">
+            <g transform="translate(130 70)"><circle r="42" fill="#fff" stroke="#9aa3af" stroke-width="3" /><use href="#hantel" class="ico" transform="translate(-21 -21) scale(1.75)" style="stroke-width:1.6" /></g>
+            <g transform="translate(130 196)"><circle r="42" fill="#fff" stroke="#9aa3af" stroke-width="3" /><use href="#person" class="ico" transform="translate(-21 -21) scale(1.75)" style="stroke-width:1.6" /></g>
+            <text x="130" y="276" text-anchor="middle" class="lab" style="font-size:28px">Athleten</text>
+          </g>
+          <g id="k1-cre" opacity="0">
+            <g transform="translate(690 70)"><circle r="42" fill="#fff" stroke="#9aa3af" stroke-width="3" /><use href="#kamera" class="ico" transform="translate(-21 -21) scale(1.75)" style="stroke-width:1.6" /></g>
+            <g transform="translate(690 196)"><circle r="42" fill="#fff" stroke="#9aa3af" stroke-width="3" /><use href="#handy" class="ico" transform="translate(-21 -21) scale(1.75)" style="stroke-width:1.6" /></g>
+            <text x="690" y="276" text-anchor="middle" class="lab" style="font-size:28px">Creator</text>
+          </g>
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="320" y="190" width="0" height="100" /></clipPath>
+          <text x="330" y="254" class="hand gruen" style="font-size:56px" clip-path="url(#k1-clip)" transform="rotate(-3 400 240)">zusammen</text>
+        </svg>
+      </section>
+
+      <!-- K2 Vorsprung (Rennen, wie P04): lange 11,57 / traditionelle 12,57 / Social 13,83 / ernst 15,07 / haben 15,57;
+           bis vor "Und statt" 16,27 -->
+      <section id="k2" class="karte clip" data-start="10.93" data-duration="5.34" data-track-index="1">
+        <div class="kicker" id="k2-kick">Social Media · der Start</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <path d="M40 110 L 780 110 M40 230 L 780 230" stroke="#e5e7eb" stroke-width="40" stroke-linecap="round" />
+          <path d="M150 64 L 150 276" class="platz" style="stroke-width:3" />
+          <text x="150" y="40" text-anchor="middle" class="labg" style="font-size:22px">Start</text>
+          <g id="k2-a"><rect id="k2-a-chip" x="76" y="88" width="160" height="44" rx="22" fill="url(#gvd)" /><text id="k2-a-txt" x="156" y="119" text-anchor="middle" style="font-size:24px;font-weight:800">Gymshark</text></g>
+          <g id="k2-b" opacity="0"><rect x="30" y="208" width="250" height="44" rx="22" fill="#fff" stroke="#9aa3af" stroke-width="2.5" /><text x="155" y="239" text-anchor="middle" class="labg" style="font-size:22px;font-weight:700;fill:#374151">traditionelle Marken</text></g>
+          <g id="k2-sm" opacity="0"><use href="#handy" class="ico" transform="translate(720 20) scale(1.4)" style="stroke-width:1.8" /><text x="712" y="46" text-anchor="end" class="lab" style="font-size:26px">Social Media</text></g>
+          <path id="k2-pfeil" d="M300 170 L 590 170" class="zug" pathLength="1" />
+          <path id="k2-spitze" d="M574 158 L 592 170 L 574 182" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="330" y="128" width="0" height="80" /></clipPath>
+          <text x="340" y="160" class="hand gruen" style="font-size:52px" clip-path="url(#k2-clip)" transform="rotate(-3 400 150)">Vorsprung</text>
+        </svg>
+      </section>
+
+      <!-- K3 Produktfoto → Training, Fortschritt, Community → Lebensstil: Produktfotos 17,57 / ging 19,37 / Training 20,57 /
+           Fortschritte 21,50 / Community 22,77 / Lebensstil 24,47; bis vor "Später" 25,90 -->
+      <section id="k3" class="karte clip" data-start="17.50" data-duration="8.40" data-track-index="1">
+        <div class="kicker" id="k3-kick">Statt nur Produktfotos</div>
+        <div class="kicker" id="k3-kick2" style="opacity:0">Eine Community mit demselben Lebensstil</div>
+        <div id="k3-post" style="position:absolute;left:34px;top:66px;width:196px;height:250px;border-radius:22px;background:#fff;box-shadow:0 0 0 2.5px #d1d5db">
+          <img class="bild" src="assets/cap.png" alt="" style="left:22px;top:40px;width:152px" />
+          <div style="position:absolute;left:0;right:0;bottom:16px;text-align:center;font-size:24px;font-weight:700;color:#6b7280">Produktfoto</div>
+        </div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <use id="k3-nein" href="#nein" transform="translate(222 30)" opacity="0" />
+          <g id="k3-t1" opacity="0"><rect x="270" y="20" width="160" height="170" rx="24" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#hantel" class="ico" transform="translate(320 46) scale(2.5)" style="stroke-width:1.5" /><text x="350" y="166" text-anchor="middle" class="lab" style="font-size:26px">Training</text></g>
+          <g id="k3-t2" opacity="0"><rect x="450" y="20" width="160" height="170" rx="24" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#kurve" class="ico" transform="translate(500 46) scale(2.5)" style="stroke-width:1.5" /><text x="530" y="166" text-anchor="middle" class="lab" style="font-size:26px">Fortschritt</text></g>
+          <g id="k3-t3" opacity="0"><rect x="630" y="20" width="160" height="170" rx="24" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#leute" class="ico" transform="translate(680 46) scale(2.5)" style="stroke-width:1.5" /><text x="710" y="166" text-anchor="middle" class="lab" style="font-size:26px">Community</text></g>
+          <path id="k3-klammer" class="zug" pathLength="1" d="M276 214 Q 276 232 300 232 L 760 232 Q 784 232 784 214" />
+          <clipPath id="k3-clip"><rect id="k3-cliprect" x="420" y="226" width="0" height="80" /></clipPath>
+          <text x="430" y="284" class="hand gruen" style="font-size:52px" clip-path="url(#k3-clip)" transform="rotate(-3 500 270)">Lebensstil</text>
+        </svg>
+      </section>
+
+      <!-- K4 Quellen-Karte, Shopify-Blog "14 Fitness-E-Commerce-Websites: So wächst dein Business" (1. März 2026, Quelle im
+           Briefing), Abschnitt "Gymshark: von der URL zur Realität" (nur zugeschnitten): Später 25,93 / Events 28,73
+           ("Pop-up-Shops") / persönlichen 29,27 ("Treffen mit ... Influencer:innen"); bis vor "Und das" 30,77 -->
+      <section id="k4" class="karte clip" data-start="25.93" data-duration="4.84" data-track-index="1" style="background:#fff">
+        <div class="kicker">Quelle · Shopify-Blog, 1. März 2026</div>
+        <div style="position:absolute;left:100px;top:60px;width:600px;height:283px">
+          <div id="k4-mark" style="position:absolute;left:393px;top:133px;width:160px;height:26px;border-radius:6px;background:linear-gradient(90deg,rgba(0,224,144,.42),rgba(49,173,236,.42))"></div>
+          <img class="bild" src="assets/quelle-shopify.png" alt="" style="left:0;top:0;width:600px;height:auto;mix-blend-mode:multiply" />
+          <svg style="position:absolute;left:0;top:0;width:600px;height:283px;overflow:visible" viewBox="0 0 600 283">
+            <path id="k4-u1" pathLength="1" d="M420 188 L 534 188" fill="none" stroke="url(#gvu)" stroke-width="4.5" stroke-linecap="round" />
+            <path id="k4-u2" pathLength="1" d="M22 222 L 536 222" fill="none" stroke="url(#gvu)" stroke-width="4.5" stroke-linecap="round" />
+            <path id="k4-u3" pathLength="1" d="M22 256 L 186 256" fill="none" stroke="url(#gvu)" stroke-width="4.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- K5 Creator ≠ Werbefläche: Creator 32,80 / austauschbaren 34,57 / waren 35,83; bis zum Satzende 36,35 -->
+      <section id="k5" class="karte clip" data-start="32.73" data-duration="3.62" data-track-index="1">
+        <div class="kicker">Creator statt Werbefläche</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k5-c"><circle cx="150" cy="122" r="70" fill="#fff" stroke="url(#gvd)" stroke-width="5" /><use href="#person" class="ico" transform="translate(114 86) scale(3)" style="stroke-width:1.4" /><g transform="translate(196 170)"><circle r="26" fill="#0b0c0e" /><use href="#handy" transform="translate(-14 -14) scale(1.17)" style="fill:none;stroke:#fff;stroke-width:2" /></g><text x="150" y="262" text-anchor="middle" class="lab">Creator</text></g>
+          <g id="k5-gl" opacity="0"><path d="M276 106 L 334 106 M276 138 L 334 138" stroke="#0b0c0e" stroke-width="8" stroke-linecap="round" /></g>
+          <path id="k5-durch" d="M290 160 L 322 84" stroke="#0b0c0e" stroke-width="8" stroke-linecap="round" pathLength="1" fill="none" />
+          <g id="k5-w" opacity="0">
+            <g class="k5-tafel"><rect x="380" y="34" width="120" height="84" rx="10" fill="#e5e7eb" stroke="#9aa3af" stroke-width="2.5" /><use href="#megafon" class="ico" transform="translate(422 58) scale(1.5)" style="stroke:#6b7280;stroke-width:1.8" /><path d="M440 118 L 440 150" stroke="#9aa3af" stroke-width="5" /></g>
+            <g class="k5-tafel"><rect x="520" y="34" width="120" height="84" rx="10" fill="#e5e7eb" stroke="#9aa3af" stroke-width="2.5" /><use href="#megafon" class="ico" transform="translate(562 58) scale(1.5)" style="stroke:#6b7280;stroke-width:1.8" /><path d="M580 118 L 580 150" stroke="#9aa3af" stroke-width="5" /></g>
+            <g class="k5-tafel"><rect x="660" y="34" width="120" height="84" rx="10" fill="#e5e7eb" stroke="#9aa3af" stroke-width="2.5" /><use href="#megafon" class="ico" transform="translate(702 58) scale(1.5)" style="stroke:#6b7280;stroke-width:1.8" /><path d="M720 118 L 720 150" stroke="#9aa3af" stroke-width="5" /></g>
+            <text x="580" y="200" text-anchor="middle" class="labg">Werbeflächen</text>
+            <text x="580" y="236" text-anchor="middle" class="labg" style="font-size:22px">austauschbar</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K6 Creator → konkrete Zielgruppe: Sie 36,40 / beigetragen 37,43 / Marke 38,30 / Zielgruppe 39,30 / bekannt 40,03;
+           bis vor "Und für" 41,43 -->
+      <section id="k6" class="karte clip" data-start="36.37" data-duration="5.06" data-track-index="1">
+        <div class="kicker">Die Marke in einer Zielgruppe</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g><circle cx="120" cy="130" r="62" fill="#fff" stroke="url(#gvd)" stroke-width="5" /><use href="#person" class="ico" transform="translate(88 98) scale(2.67)" style="stroke-width:1.5" /><text x="120" y="242" text-anchor="middle" class="lab">Creator</text></g>
+          <path id="k6-zug" class="zug" pathLength="1" d="M196 130 L 506 130" />
+          <path id="k6-spitze" d="M490 118 L 508 130 L 490 142" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+          <g id="k6-chip" opacity="0"><rect x="268" y="84" width="160" height="40" rx="20" fill="url(#gvd)" /><text x="348" y="112" text-anchor="middle" style="font-size:22px;font-weight:800">Gymshark</text></g>
+          <g id="k6-ziel" opacity="0">
+            <circle cx="650" cy="130" r="118" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <circle cx="650" cy="130" r="78" fill="none" stroke="#d1d5db" stroke-width="2.5" />
+            <circle cx="650" cy="130" r="38" fill="url(#gvd)" />
+            <use href="#person" class="ico" transform="translate(632 112) scale(1.5)" style="stroke-width:2" />
+            <use href="#person" class="ico" transform="translate(568 96) scale(1.25)" style="stroke:#6b7280;stroke-width:2" />
+            <use href="#person" class="ico" transform="translate(702 96) scale(1.25)" style="stroke:#6b7280;stroke-width:2" />
+            <use href="#person" class="ico" transform="translate(636 186) scale(1.25)" style="stroke:#6b7280;stroke-width:2" />
+          </g>
+          <circle id="k6-ring" cx="650" cy="130" r="120" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="230" y="170" width="0" height="100" /></clipPath>
+          <text x="240" y="236" class="hand" style="font-size:56px" clip-path="url(#k6-clip)" transform="rotate(-4 300 220)">bekannt</text>
+        </svg>
+      </section>
+
+      <!-- K7 Drei Learnings, drei leere Plätze: E-Commerce-Händler 41,77; bis vor "Mein" 44,03 -->
+      <section id="k7" class="karte clip" data-start="41.70" data-duration="2.33" data-track-index="1">
+        <div class="kicker">Learnings für deinen Shop</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g class="tp"><rect x="60" y="30" width="200" height="200" rx="28" class="platz" /><text x="160" y="160" text-anchor="middle" style="font-size:96px;font-weight:800;fill:#9aa3af">1</text></g>
+          <g class="tp"><rect x="310" y="30" width="200" height="200" rx="28" class="platz" /><text x="410" y="160" text-anchor="middle" style="font-size:96px;font-weight:800;fill:#9aa3af">2</text></g>
+          <g class="tp"><rect x="560" y="30" width="200" height="200" rx="28" class="platz" /><text x="660" y="160" text-anchor="middle" style="font-size:96px;font-weight:800;fill:#9aa3af">3</text></g>
+        </svg>
+      </section>
+
+      <!-- K8 Learning 1, Zielgruppe genauer: Mein 44,03 / Alter 48,43 / Geschlecht 48,83 / Welche 49,77 / Interessen 50,00 /
+           Probleme 50,97 / Ziele 51,97 / verbindet 52,60; bis vor "Und das zweite" 53,57 -->
+      <section id="k8" class="karte clip" data-start="44.03" data-duration="9.54" data-track-index="1">
+        <div class="kicker">Learning 1 · Zielgruppe genauer</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g><circle cx="110" cy="120" r="72" fill="#fff" stroke="#9aa3af" stroke-width="3" /><use href="#person" class="ico" transform="translate(74 84) scale(3)" style="stroke-width:1.4" /><text x="110" y="238" text-anchor="middle" class="labg">Zielgruppe</text></g>
+          <g id="k8-alt" opacity="0"><rect x="226" y="6" width="130" height="44" rx="22" fill="#fff" stroke="#9aa3af" stroke-width="2.5" /><text x="291" y="36" text-anchor="middle" class="labg" style="font-size:22px;font-weight:700">Alter</text></g>
+          <g id="k8-ges" opacity="0"><rect x="368" y="6" width="170" height="44" rx="22" fill="#fff" stroke="#9aa3af" stroke-width="2.5" /><text x="453" y="36" text-anchor="middle" class="labg" style="font-size:22px;font-weight:700">Geschlecht</text></g>
+          <text id="k8-nur" x="556" y="36" class="labg" style="font-size:22px" opacity="0">reicht nicht</text>
+          <g id="k8-t1" opacity="0"><rect x="226" y="72" width="176" height="150" rx="22" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#herz" class="ico" transform="translate(284 88) scale(2.5)" style="stroke-width:1.5" /><text x="314" y="196" text-anchor="middle" class="lab" style="font-size:25px">Interessen</text></g>
+          <g id="k8-t2" opacity="0"><rect x="418" y="72" width="176" height="150" rx="22" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#achtung" class="ico" transform="translate(476 88) scale(2.5)" style="stroke-width:1.5" /><text x="506" y="196" text-anchor="middle" class="lab" style="font-size:25px">Probleme</text></g>
+          <g id="k8-t3" opacity="0"><rect x="610" y="72" width="176" height="150" rx="22" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#ziel" class="ico" transform="translate(668 88) scale(2.5)" style="stroke-width:1.5" /><text x="698" y="196" text-anchor="middle" class="lab" style="font-size:25px">Ziele</text></g>
+          <path id="k8-klammer" class="zug" pathLength="1" d="M232 238 Q 232 254 256 254 L 756 254 Q 780 254 780 238" />
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="420" y="236" width="0" height="80" /></clipPath>
+          <text x="430" y="296" class="hand gruen" style="font-size:48px" clip-path="url(#k8-clip)" transform="rotate(-3 500 280)">verbindet</text>
+        </svg>
+      </section>
+
+      <!-- K9 Learning 2, Creator auswählen: zweite 53,83 / Followerzahlen 59,10 / passen 62,50 / Vertrauen 65,03;
+           bis vor "Und drittens" 66,43 -->
+      <section id="k9" class="karte clip" data-start="53.57" data-duration="12.86" data-track-index="1">
+        <div class="kicker">Learning 2 · welcher Creator?</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k9-a">
+            <circle cx="110" cy="74" r="50" fill="#fff" stroke="#9aa3af" stroke-width="3" /><use href="#person" class="ico" transform="translate(86 50) scale(2)" style="stroke-width:1.6" />
+            <text x="180" y="66" class="lab" style="font-size:28px">Creator A</text><text x="180" y="98" class="labg" style="font-size:22px">Follower</text>
+            <rect x="60" y="140" width="320" height="26" rx="13" fill="#e5e7eb" /><rect id="k9-bar-a" x="60" y="140" width="0" height="26" rx="13" fill="#9aa3af" />
+          </g>
+          <g id="k9-b">
+            <circle cx="490" cy="74" r="50" fill="#fff" stroke="#9aa3af" stroke-width="3" id="k9-b-kreis" /><use href="#person" class="ico" transform="translate(466 50) scale(2)" style="stroke-width:1.6" />
+            <text x="560" y="66" class="lab" style="font-size:28px">Creator B</text><text x="560" y="98" class="labg" style="font-size:22px">Follower</text>
+            <rect x="440" y="140" width="320" height="26" rx="13" fill="#e5e7eb" /><rect id="k9-bar-b" x="440" y="140" width="0" height="26" rx="13" fill="#9aa3af" />
+          </g>
+          <g id="k9-pa" opacity="0"><rect x="60" y="190" width="230" height="44" rx="22" fill="#fff" stroke="#9aa3af" stroke-width="2.5" /><text x="175" y="220" text-anchor="middle" class="labg" style="font-size:22px;font-weight:700">passt zur Marke?</text></g>
+          <g id="k9-pb" opacity="0"><rect x="440" y="190" width="250" height="44" rx="22" fill="url(#gvd)" /><text x="565" y="220" text-anchor="middle" style="font-size:22px;font-weight:800">✓ passt zur Marke</text></g>
+          <g id="k9-vb" opacity="0"><use href="#herz" class="ico" transform="translate(704 194) scale(1.5)" style="stroke:#00c27c;stroke-width:2.2" /></g>
+          <circle id="k9-ring" cx="490" cy="74" r="56" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <g id="k9-zeiger" opacity="0"><use href="#zeigerform" transform="scale(2)" style="fill:#0b0c0e;stroke:#fff;stroke-width:1.2" /></g>
+          <clipPath id="k9-clip"><rect id="k9-cliprect" x="436" y="236" width="0" height="70" /></clipPath>
+          <text x="446" y="290" class="hand gruen" style="font-size:46px" clip-path="url(#k9-clip)" transform="rotate(-3 520 276)">Vertrauen</text>
+        </svg>
+      </section>
+
+      <!-- K10 Learning 3, langfristig: drittens 66,57 / nächsten 69,37 / Kooperationen 71,80 / Community-Formate 73,03 /
+           wertvoller 74,90 / ständig 76,37 / neue 76,80 / einzelne 77,10 / Werbeaktionen 77,47; bis 78,44 -->
+      <section id="k10" class="karte clip" data-start="66.43" data-duration="12.01" data-track-index="1">
+        <div class="kicker">Learning 3 · langfristig denken</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <path d="M50 262 L 790 262" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" />
+          <text x="790" y="292" text-anchor="end" class="labg" style="font-size:20px">Zeit</text>
+          <path id="k10-p1" pathLength="1" d="M100 262 L 130 150 L 160 262" fill="none" stroke="#9aa3af" stroke-width="5" stroke-linejoin="round" />
+          <text id="k10-p1t" x="130" y="136" text-anchor="middle" class="labg" style="font-size:20px" opacity="0">Posting</text>
+          <path id="k10-lang" class="zug" pathLength="1" d="M200 250 C 330 236, 420 200, 520 150 S 690 52, 770 34" />
+          <text id="k10-langt" x="604" y="168" class="lab" style="font-size:22px" opacity="0"><tspan x="604">Kooperationen &amp;</tspan><tspan x="604" dy="27">eigene Formate</tspan></text>
+          <g id="k10-w" opacity="0">
+            <path class="k10-sp" pathLength="1" d="M290 262 L 316 176 L 342 262" fill="none" stroke="#9aa3af" stroke-width="5" stroke-linejoin="round" />
+            <path class="k10-sp" pathLength="1" d="M410 262 L 436 182 L 462 262" fill="none" stroke="#9aa3af" stroke-width="5" stroke-linejoin="round" />
+            <path class="k10-sp" pathLength="1" d="M530 262 L 556 186 L 582 262" fill="none" stroke="#9aa3af" stroke-width="5" stroke-linejoin="round" />
+          </g>
+          <text id="k10-wt" x="436" y="292" text-anchor="middle" class="labg" style="font-size:20px" opacity="0">einzelne Werbeaktionen</text>
+          <clipPath id="k10-clip"><rect id="k10-cliprect" x="560" y="40" width="0" height="80" /></clipPath>
+          <text x="566" y="98" class="hand gruen" style="font-size:46px" clip-path="url(#k10-clip)" transform="rotate(-4 620 84)">wertvoller</text>
+        </svg>
+      </section>
+
+      <!-- K11 Community auf Knopfdruck? wichtig 79,77 / Knopfdruck 82,70 / kaufen 83,20 / lässt 83,47; bis 84,17 -->
+      <section id="k11" class="karte clip" data-start="79.70" data-duration="4.47" data-track-index="1">
+        <div class="kicker">Ganz wichtig</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k11-knopf"><rect id="k11-feld" x="190" y="60" width="440" height="110" rx="55" fill="#0b0c0e" /><use href="#leute" transform="translate(244 91) scale(2)" style="fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" /><text x="452" y="128" text-anchor="middle" style="font-size:36px;font-weight:800;fill:#fff">Community kaufen</text></g>
+          <path id="k11-durch" pathLength="1" d="M200 116 L 620 116" stroke="#0b0c0e" stroke-width="8" stroke-linecap="round" fill="none" />
+          <g id="k11-zeiger" opacity="0"><use href="#zeigerform" transform="scale(2.2)" style="fill:#0b0c0e;stroke:#fff;stroke-width:1.2" /></g>
+          <clipPath id="k11-clip"><rect id="k11-cliprect" x="270" y="188" width="0" height="100" /></clipPath>
+          <text x="280" y="256" class="hand" style="font-size:58px" clip-path="url(#k11-clip)" transform="rotate(-3 380 240)">nicht kaufbar</text>
+        </svg>
+      </section>
+
+      <!-- K12 KI hilft, die Verbindung baust du selbst: KI 84,33 / Content-Planung 86,20 / Auswertung 87,30 / Verbindung
+           88,53 / Menschen 89,23 / selbst 91,20; bis vor "Gymshark zeigt" 92,03 -->
+      <section id="k12" class="karte clip" data-start="84.26" data-duration="7.77" data-track-index="1">
+        <div class="kicker" id="k12-kick">KI hilft bei</div>
+        <div class="kicker" id="k12-kick2" style="opacity:0">Die Verbindung zwischen Menschen</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k12-ki"><rect x="34" y="20" width="120" height="120" rx="28" fill="url(#gvd)" /><use href="#funkeln" class="ico" transform="translate(58 44) scale(3)" style="stroke-width:1.4" /><text x="94" y="178" text-anchor="middle" class="lab" style="font-size:30px">KI</text></g>
+          <g id="k12-c1" opacity="0"><rect x="190" y="20" width="290" height="64" rx="20" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><use href="#kalender" class="ico" transform="translate(206 34) scale(1.5)" style="stroke-width:1.8" /><text x="252" y="62" class="lab" style="font-size:24px">Content-Planung</text><use href="#ok" transform="translate(458 52) scale(0.7)" /></g>
+          <g id="k12-c2" opacity="0"><rect x="190" y="98" width="290" height="64" rx="20" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><use href="#balken" class="ico" transform="translate(206 112) scale(1.5)" style="stroke-width:1.8" /><text x="252" y="140" class="lab" style="font-size:24px">Auswertung</text><use href="#ok" transform="translate(458 130) scale(0.7)" /></g>
+          <g id="k12-p1" opacity="0"><circle cx="560" cy="100" r="50" fill="#fff" stroke="#9aa3af" stroke-width="3" /><use href="#person" class="ico" transform="translate(536 76) scale(2)" style="stroke-width:1.6" /></g>
+          <g id="k12-p2" opacity="0"><circle cx="740" cy="100" r="50" fill="#fff" stroke="#9aa3af" stroke-width="3" /><use href="#person" class="ico" transform="translate(716 76) scale(2)" style="stroke-width:1.6" /></g>
+          <path id="k12-band" class="zug" pathLength="1" d="M612 100 C 640 70, 662 70, 688 100" />
+          <g id="k12-herz" opacity="0"><use href="#herz" class="ico" transform="translate(638 112) scale(1.5)" style="stroke:#00c27c;stroke-width:2.2" /></g>
+          <clipPath id="k12-clip"><rect id="k12-cliprect" x="540" y="170" width="0" height="100" /></clipPath>
+          <text x="560" y="236" class="hand gruen" style="font-size:56px" clip-path="url(#k12-clip)" transform="rotate(-3 620 220)">selbst</text>
+        </svg>
+      </section>
+
+      <!-- K13 Mehr als ein Shop: Gymshark 92,03 / starke 94,90 / mehr 96,07 / Onlineshop 97,60 / haben 98,00; bis 98,33 -->
+      <section id="k13" class="karte clip" data-start="92.03" data-duration="6.30" data-track-index="1">
+        <div class="kicker">Gymshark · mehr als ein Shop</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k13-shop"><rect x="300" y="40" width="220" height="150" rx="26" fill="#fff" stroke="#9aa3af" stroke-width="3" /><use href="#wagen" class="ico" transform="translate(380 62) scale(2.5)" style="stroke-width:1.5" /><text x="410" y="170" text-anchor="middle" class="lab" style="font-size:26px">Onlineshop</text></g>
+          <g id="k13-a" opacity="0"><rect x="40" y="40" width="220" height="60" rx="30" fill="url(#gvd)" /><use href="#leute" class="ico" transform="translate(56 54) scale(1.35)" style="stroke-width:2" /><text x="166" y="80" text-anchor="middle" style="font-size:24px;font-weight:800">Community</text></g>
+          <g id="k13-b" opacity="0"><rect x="560" y="40" width="220" height="60" rx="30" fill="url(#gvd)" /><use href="#handy" class="ico" transform="translate(578 54) scale(1.35)" style="stroke-width:2" /><text x="686" y="80" text-anchor="middle" style="font-size:24px;font-weight:800">Creator</text></g>
+          <g id="k13-c" opacity="0"><rect x="560" y="130" width="220" height="60" rx="30" fill="url(#gvd)" /><use href="#ticket" class="ico" transform="translate(578 144) scale(1.35)" style="stroke-width:2" /><text x="686" y="170" text-anchor="middle" style="font-size:24px;font-weight:800">Events</text></g>
+          <g id="k13-d" opacity="0"><rect x="40" y="130" width="220" height="60" rx="30" fill="url(#gvd)" /><use href="#herz" class="ico" transform="translate(56 144) scale(1.35)" style="stroke-width:2" /><text x="166" y="170" text-anchor="middle" style="font-size:24px;font-weight:800">Vertrauen</text></g>
+          <clipPath id="k13-clip"><rect id="k13-cliprect" x="290" y="200" width="0" height="100" /></clipPath>
+          <text x="300" y="268" class="hand gruen" style="font-size:58px" clip-path="url(#k13-clip)" transform="rotate(-3 380 250)">starke Marke</text>
+        </svg>
+      </section>
+
+      <!-- K14 Folgen: Karte auf "Und wenn" 98,43, Ring auf "Videos" 99,13, Zeiger tippt auf "Plus" 102,10 das Plus an,
+           es wird zum Haken -->
+      <section id="k14" class="folgekarte clip" data-start="98.43" data-duration="4.40" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker, raus weich mit Blur und Fade (Zeiten sind schon Cues: 2 Frames vor dem Wort)
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      // Kennzahl über dem Kopf: Block rein (Kicker und erste Zeile gemeinsam), raus mit Blur
+      function kopf(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 16, filter: "blur(6px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.42, ease: "expo.out" }, an);
+        if (aus) tl.to(id, { opacity: 0, y: -8, filter: "blur(8px)", duration: 0.28, ease: "power2.in" }, aus - 0.28);
+      }
+      const zeige = (sel, t) => tl.fromTo(sel, { opacity: 0, y: 18, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, t);
+      const weg = (sel, t) => tl.to(sel, { opacity: 0, y: -14, filter: "blur(6px)", duration: 0.22, ease: "power2.in" }, t - 0.2);
+      const tausche = (alt, neu, t) => { weg(alt, t); zeige(neu, t); };
+      function strich(sel, t, d = 0.45) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const schreibe = (sel, breite, t, d = 0.45) => tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      const kicker2 = (alt, neu, t) => { tl.to(alt, { opacity: 0, duration: 0.18 }, t - 0.16); tl.fromTo(neu, { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, t); };
+      const durch = (sel, t) => tl.fromTo(sel, { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.28, ease: "power2.out" }, t);
+      function foto(id, an, aus, rot) {
+        tl.fromTo(id, { opacity: 0, scale: 0.86, rotation: rot, y: 14 }, { opacity: 1, scale: 1, rotation: rot, y: 0, duration: 0.35, ease: "power2.out" }, an);
+        tl.to(id, { opacity: 0, scale: 0.94, duration: 0.25, ease: "power2.in" }, aus - 0.25);
+      }
+      gsap.set("svg.strich path, #k1-l1, #k1-l2, #k1-r1, #k1-r2, #k2-pfeil, #k3-klammer, #k4-u1, #k4-u2, #k4-u3, #k5-durch, #k6-zug, #k8-klammer, #k10-p1, #k10-lang, .k10-sp, #k11-durch, #k12-band", { strokeDasharray: 1, strokeDashoffset: 1 });
+
+      // Schleier hinter den Kennzahlen: vor dem Zimmer leicht, vor den Shop-Seiten (in den Take gerechnet) kräftig
+      tl.fromTo("#schleier", { opacity: 0 }, { opacity: 0.55, duration: 0.4, ease: "power2.out" }, 0.90);
+      [[7.07, 1], [36.35, 0.55], [60.09, 1], [66.19, 0.55], [71.19, 1], [78.44, 0.55], [92.03, 1], [98.33, 0.55]]
+        .forEach(([t, o]) => tl.to("#schleier", { opacity: o, duration: 0.12, ease: "none" }, t));
+
+      // Z0 Hook: "nur Kleidung?" wird durchgestrichen, "Menschen." kommt
+      kopf("#z0", 0.90, 7.07); zeige("#z0-a", 0.94);
+      durch("#z0-durch", 1.77);
+      kicker2("#z0-k1", "#z0-k2", 3.20);
+      tausche("#z0-a", "#z0-b", 4.57); strich("#z0-s", 4.67);
+      kicker2("#z0-k2", "#z0-k3", 5.87);
+      // Z1 2012 → Athleten + Creator
+      kopf("#z1", 7.20, 10.93); zeige("#z1-a", 7.22); strich("#z1-s", 7.40);
+      tausche("#z1-a", "#z1-b", 8.27); kicker2("#z1-k1", "#z1-k2", 8.27);
+      ein("#z1-c", 9.43); strich("#z1-s2", 9.53);
+      // Z2 lange vorher → 12 Mio.+
+      kopf("#z2", 11.50, 16.27); zeige("#z2-a", 11.54); strich("#z2-s", 11.67);
+      tausche("#z2-a", "#z2-b", 13.83); strich("#z2-s2", 13.95); kicker2("#z2-k1", "#z2-k2", 13.83);
+      // Z3 Produktfotos? → Community. → Lebensstil.
+      kopf("#z3", 17.50, 25.90); zeige("#z3-a", 17.54);
+      durch("#z3-durch", 19.37);
+      kicker2("#z3-k1", "#z3-k2", 20.57);
+      tausche("#z3-a", "#z3-b", 22.77); strich("#z3-s", 22.87);
+      tausche("#z3-b", "#z3-c", 24.47); strich("#z3-s2", 24.57); kicker2("#z3-k2", "#z3-k3", 24.47);
+      // Z4 Events → persönlich.
+      kopf("#z4", 28.66, 30.77); tl.set("#z4-a", { opacity: 1 }, 28.66);
+      tausche("#z4-a", "#z4-b", 29.27); strich("#z4-s", 29.40);
+      // Z5 Creator → Werbefläche? (durchgestrichen)
+      kopf("#z5", 32.73, 36.35); tl.set("#z5-a", { opacity: 1 }, 32.73); strich("#z5-s", 32.90);
+      tausche("#z5-a", "#z5-b", 35.33); kicker2("#z5-k1", "#z5-k2", 35.33);
+      durch("#z5-durch", 35.83);
+      // Z6 Zielgruppe.
+      kopf("#z6", 38.23, 41.43); tl.set("#z6-a", { opacity: 1 }, 38.23); strich("#z6-s", 39.30);
+      // Z7 Learnings
+      kopf("#z7", 41.70, 44.03); tl.set("#z7-a", { opacity: 1 }, 41.70); strich("#z7-s", 43.73);
+      // Z8 Learning 1 → genauer.
+      kopf("#z8", 44.03, 53.57); tl.set("#z8-a", { opacity: 1 }, 44.03); strich("#z8-s", 44.57);
+      tausche("#z8-a", "#z8-b", 46.93); strich("#z8-s2", 47.03); kicker2("#z8-k1", "#z8-k2", 46.93);
+      kicker2("#z8-k2", "#z8-k3", 49.77);
+      // Z9 Learning 2 → Followerzahl? → zur Marke? → Vertrauen.
+      kopf("#z9", 53.57, 66.19); tl.set("#z9-a", { opacity: 1 }, 53.57); strich("#z9-s", 54.20);
+      tausche("#z9-a", "#z9-b", 58.60); kicker2("#z9-k1", "#z9-k2", 58.60);
+      durch("#z9-durch", 59.40);
+      tausche("#z9-b", "#z9-c", 62.20); strich("#z9-s2", 62.50); kicker2("#z9-k2", "#z9-k3", 62.20);
+      tausche("#z9-c", "#z9-d", 65.03); strich("#z9-s3", 65.13); kicker2("#z9-k3", "#z9-k4", 65.03);
+      // Z10 Learning 3 → langfristig. → eigene Formate.
+      kopf("#z10", 66.43, 78.44); tl.set("#z10-a", { opacity: 1 }, 66.43); strich("#z10-s", 66.57);
+      tausche("#z10-a", "#z10-b", 67.87); strich("#z10-s2", 67.97); kicker2("#z10-k1", "#z10-k2", 67.87);
+      tausche("#z10-b", "#z10-c", 73.03); strich("#z10-s3", 73.13); kicker2("#z10-k2", "#z10-k3", 73.03);
+      kicker2("#z10-k3", "#z10-k4", 77.10);
+      // Z11 Community → Knopfdruck? (durchgestrichen)
+      kopf("#z11", 81.26, 84.17); tl.set("#z11-a", { opacity: 1 }, 81.26); strich("#z11-s", 81.40);
+      tausche("#z11-a", "#z11-b", 82.70); kicker2("#z11-k1", "#z11-k2", 82.70);
+      durch("#z11-durch", 83.20);
+      // Z12 KI hilft. → selbst aufbauen.
+      kopf("#z12", 84.26, 92.03); tl.set("#z12-a", { opacity: 1 }, 84.26);
+      kicker2("#z12-k1", "#z12-k2", 88.53);
+      tausche("#z12-a", "#z12-b", 91.20); strich("#z12-s", 91.63);
+      // Z13 mehr als einen Shop.
+      kopf("#z13", 96.00, 98.33); tl.set("#z13-a", { opacity: 1 }, 96.00);
+      ein("#z13-v", 97.60); strich("#z13-s", 97.70);
+      // Z14 nicht verpassen.
+      kopf("#z14", 100.30, 102.83); tl.set("#z14-a", { opacity: 1 }, 100.30); strich("#z14-s", 100.40);
+
+      // Produktfotos neben dem Kopf (Hook)
+      foto("#f1", 1.10, 6.60, -5);
+      foto("#f2", 1.77, 6.60, 4);
+
+      // K1 Athleten + Creator → Gymshark
+      karte("#k1", 7.17, 10.93);
+      pop("#k1-ath", 8.27); pop("#k1-cre", 9.43);
+      strich("#k1-l1", 10.17, 0.35); strich("#k1-l2", 10.17, 0.35); strich("#k1-r1", 10.20, 0.35); strich("#k1-r2", 10.20, 0.35);
+      tl.fromTo("#k1-mitte", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.06, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 }, 10.45);
+      schreibe("#k1-cliprect", 240, 10.30, 0.45);
+
+      // K2 Vorsprung
+      karte("#k2", 10.93, 16.27);
+      tl.to("#k2-a", { x: 470, duration: 0.8, ease: "power2.inOut" }, 11.57);
+      pop("#k2-b", 12.57);
+      pop("#k2-sm", 13.83);
+      tl.to("#k2-b", { x: 40, duration: 0.6, ease: "power2.inOut" }, 15.07);
+      strich("#k2-pfeil", 15.30, 0.4); tl.to("#k2-spitze", { opacity: 1, duration: 0.15 }, 15.62);
+      schreibe("#k2-cliprect", 240, 15.30, 0.45);
+
+      // K3 Produktfoto → Training, Fortschritt, Community → Lebensstil
+      karte("#k3", 17.50, 25.90);
+      tl.to("#k3-post", { opacity: 0.4, duration: 0.3 }, 19.37); badge("#k3-nein", 19.40);
+      pop("#k3-t1", 20.57); pop("#k3-t2", 21.50); pop("#k3-t3", 22.77);
+      kicker2("#k3-kick", "#k3-kick2", 24.47);
+      strich("#k3-klammer", 24.47, 0.45); schreibe("#k3-cliprect", 230, 24.60, 0.45);
+
+      // K4 Quellen-Karte Shopify: Pop-up-Shops markiert, Treffen mit Expert:innen und Influencer:innen unterstrichen
+      karte("#k4", 25.93, 30.77);
+      tl.fromTo("#k4-mark", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.45, ease: "power2.out" }, 28.73);
+      strich("#k4-u1", 29.27, 0.18); strich("#k4-u2", 29.43, 0.45); strich("#k4-u3", 29.86, 0.2);
+
+      // K5 Creator ≠ Werbefläche
+      karte("#k5", 32.73, 36.35);
+      ein("#k5-gl", 34.50);
+      tl.fromTo("#k5-w .k5-tafel", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out", stagger: 0.1 }, 34.57);
+      tl.set("#k5-w", { opacity: 1 }, 34.57);
+      strich("#k5-durch", 35.83, 0.25);
+      tl.to("#k5-w", { opacity: 0.4, duration: 0.3 }, 35.90);
+
+      // K6 Creator → konkrete Zielgruppe
+      karte("#k6", 36.37, 41.43);
+      strich("#k6-zug", 37.43, 0.5); tl.to("#k6-spitze", { opacity: 1, duration: 0.15 }, 37.88);
+      pop("#k6-chip", 38.30);
+      pop("#k6-ziel", 39.30);
+      tl.fromTo("#k6-ring", { opacity: 0.9, scale: 0.8, svgOrigin: "650 130" }, { opacity: 0, scale: 1.25, duration: 0.7, ease: "power2.out" }, 40.03);
+      schreibe("#k6-cliprect", 220, 40.03, 0.4);
+
+      // K7 drei leere Plätze
+      karte("#k7", 41.70, 44.03);
+      tl.fromTo("#k7 .tp", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.12 }, 41.77);
+
+      // K8 Zielgruppe genauer
+      karte("#k8", 44.03, 53.57);
+      ein("#k8-alt", 48.43); ein("#k8-ges", 48.83);
+      tl.to("#k8-alt, #k8-ges", { opacity: 0.45, duration: 0.3 }, 49.77); ein("#k8-nur", 49.77);
+      pop("#k8-t1", 50.00); pop("#k8-t2", 50.97); pop("#k8-t3", 51.97);
+      strich("#k8-klammer", 52.60, 0.45); schreibe("#k8-cliprect", 220, 52.70, 0.45);
+
+      // K9 Creator A und B
+      karte("#k9", 53.57, 66.43);
+      tl.to("#k9-bar-a", { attr: { width: 300 }, duration: 0.6, ease: "power2.out" }, 59.10);
+      tl.to("#k9-bar-b", { attr: { width: 150 }, duration: 0.6, ease: "power2.out" }, 59.20);
+      ein("#k9-pa", 62.50); pop("#k9-pb", 62.50);
+      tl.to("#k9-a", { opacity: 0.45, duration: 0.3 }, 65.03);
+      tl.to("#k9-pa", { opacity: 0.45, duration: 0.3 }, 65.03);
+      badge("#k9-vb", 65.03);
+      tl.fromTo("#k9-zeiger", { opacity: 0, x: 700, y: 150 }, { opacity: 1, x: 690, y: 140, duration: 0.15 }, 64.60);
+      tl.to("#k9-zeiger", { x: 500, y: 86, duration: 0.35, ease: "power2.inOut" }, 64.75);
+      tl.to("#k9-zeiger", { scale: 0.85, duration: 0.08, transformOrigin: "0 0" }, 65.10);
+      tl.to("#k9-zeiger", { scale: 1, duration: 0.15 }, 65.18);
+      tl.set("#k9-ring", { opacity: 1 }, 65.10);
+      tl.fromTo("#k9-ring", { scale: 0.85, svgOrigin: "490 74" }, { scale: 1, duration: 0.3, ease: "power2.out" }, 65.10);
+      schreibe("#k9-cliprect", 220, 65.20, 0.45);
+
+      // K10 Posting-Ausschlag vs. langfristige Linie vs. einzelne Werbeaktionen
+      karte("#k10", 66.43, 78.44);
+      strich("#k10-p1", 69.37, 0.45); ein("#k10-p1t", 69.45);
+      strich("#k10-lang", 71.80, 2.2); ein("#k10-langt", 73.03);
+      schreibe("#k10-cliprect", 230, 74.90, 0.45);
+      tl.set("#k10-w", { opacity: 1 }, 76.37);
+      gsap.utils.toArray("#k10-w .k10-sp").forEach((p, i) => strich(p, [76.37, 76.80, 77.10][i], 0.3));
+      ein("#k10-wt", 77.47);
+
+      // K11 Community kaufen per Knopfdruck? nicht kaufbar
+      karte("#k11", 79.70, 84.17);
+      tl.fromTo("#k11-zeiger", { opacity: 0, x: 700, y: 200 }, { opacity: 1, x: 690, y: 190, duration: 0.15 }, 82.15);
+      tl.to("#k11-zeiger", { x: 520, y: 120, duration: 0.38, ease: "power2.inOut" }, 82.30);
+      tl.to("#k11-zeiger", { scale: 0.85, duration: 0.08, transformOrigin: "0 0" }, 82.70);
+      tl.to("#k11-zeiger", { scale: 1, duration: 0.15 }, 82.78);
+      tl.to("#k11-feld", { attr: { fill: "#9aa3af" }, duration: 0.25 }, 83.20);
+      strich("#k11-durch", 83.20, 0.3);
+      schreibe("#k11-cliprect", 330, 83.47, 0.5);
+
+      // K12 KI → Planung und Auswertung ✓ → Verbindung zwischen Menschen selbst
+      karte("#k12", 84.26, 92.03);
+      pop("#k12-c1", 86.20); pop("#k12-c2", 87.30);
+      kicker2("#k12-kick", "#k12-kick2", 88.53);
+      tl.to("#k12-ki, #k12-c1, #k12-c2", { opacity: 0.35, duration: 0.3 }, 88.43);
+      pop("#k12-p1", 88.53); pop("#k12-p2", 88.70);
+      strich("#k12-band", 89.23, 0.45); badge("#k12-herz", 89.60);
+      schreibe("#k12-cliprect", 200, 91.20, 0.45);
+
+      // K13 Onlineshop + mehr
+      karte("#k13", 92.03, 98.33);
+      pop("#k13-a", 96.07); pop("#k13-b", 96.25); pop("#k13-c", 96.43); pop("#k13-d", 96.61);
+      schreibe("#k13-cliprect", 300, 96.85, 0.45);
+
+      // K14 Folgen
+      tl.fromTo("#k14", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 98.43);
+      tl.set("#fring", { opacity: 0.9, scale: 1 }, 99.13);
+      tl.to("#fring", { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 99.15);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 101.48);
+      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.47, ease: "power2.inOut" }, 101.63);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 102.10);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 102.18);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 102.13);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 102.13);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 102.16);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 102.16);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 102.16);
+      tl.to("#fzeiger", { x: 132, y: 128, duration: 0.25, ease: "power2.out" }, 102.36);
+
+      tl.seek(0);
+      window.__timelines["gymshark-skizzen"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,308 @@
+{
+ "hinweis": "M07 · Gymshark, Marken-Story im Editorial-Stil wie M06 (karten-aufbau.md): Kennzahlen/Schlagzeilen über dem Kopf (z*), im Hook zwei echte freigestellte Produktfotos aus dem Gymshark-Shop (f1), Erklär-Bilder und Quellen-Karte unter dem Kopf (k*). Sekunden im geschnittenen Video (cut.json, 102,83 s), schon als Cues (2 Frames vor dem Wort). Gebaut in hyperframes/gymshark-skizzen/index.html. sfx: whoosh (0,10) beim Kartenwechsel, tick (0,10) auf ausgewählten Zuständen, pop (0,10) auf den Fotos und den Chips, success (0,10) auf 'wertvoller' und 'starke Marke', klick (0,10) auf Quelle, Zeiger und Plus; zwischen Whooshes mindestens 1,5 s. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "f1",
+   "wort": "Sportbekleidung / verkauft",
+   "text": "Fotos Gymshark Essentials Cap (Shop, Caps) links und 700ml Metal Insulated Straw Bottle (Shop, Flaschen & Shaker) rechts neben dem Kopf; dazu Hook-Titel GYMSHARK / MEHR ALS NUR EIN SHOP (Remotion, bis 6,6 s)",
+   "start": 1.1,
+   "ende": 6.6,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 1.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "z0",
+   "wort": "nur / verkauft / Menschen / Produkt",
+   "text": "Kennzahl 'nur Kleidung?' (grau), durchgestrichen auf 'verkauft', dann 'Menschen.' im Verlauf mit Strich, Kicker 'Früh verstanden' / 'Rund ums Produkt'",
+   "start": 0.9,
+   "ende": 7.07,
+   "sfx": []
+  },
+  {
+   "id": "k1",
+   "wort": "Gründer / Fitness-Athleten / Creatorn / zusammengebracht",
+   "text": "Kennzahl '2012' + 'Ben Francis & Schulfreunde' (Über uns) → 'Athleten + Creator'; Karte: Athleten und Creator, Linien zu 'Gymshark', handschriftlich 'zusammen'; Hintergrund 'Die Gymshark Geschichte'",
+   "start": 7.17,
+   "ende": 10.93,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 7.17,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "lange / traditionelle Marken / Social Media / ernst genommen",
+   "text": "Kennzahl 'lange vorher.' → '12 Mio.+ Social-Media-Follower & Kunden' (heute, laut Gymshark); Karte: zwei Bahnen, Gymshark weit vorne, traditionelle Marken am Start, handschriftlich 'Vorsprung'; Hintergrund 'Über uns'",
+   "start": 10.93,
+   "ende": 16.27,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 10.93,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 15.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Produktfotos / ging / Training / Fortschritte / Community / Lebensstil",
+   "text": "Kennzahl 'Produktfotos?' durchgestrichen → 'Community.' → 'Lebensstil.'; Karte: Produktfoto (Cap) wird blass mit X, dann Training, Fortschritt, Community, Klammer + handschriftlich 'Lebensstil'; Hintergründe 'Neuheiten', '#Gymshark66'",
+   "start": 17.5,
+   "ende": 25.9,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 17.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 19.4,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 22.77,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Später / Events / persönlichen Treffen",
+   "text": "Quellen-Karte Shopify-Blog (1. März 2026), Abschnitt 'Gymshark: von der URL zur Realität': 'Pop-up-Shops' markiert, 'Treffen mit ... Fitness-Expert:innen und Influencer:innen' unterstrichen; Kennzahl 'Events' → 'persönlich.' (Kicker 'Z. B. Lift Frankfurt · Mai 2019'); Hintergrund Event-Foto 'The Next Gymshark Pop-Up Is...'",
+   "start": 25.93,
+   "ende": 30.77,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 25.93,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 28.73,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Creator / austauschbaren Werbeflächen / waren",
+   "text": "Kennzahl 'Creator' (Kicker 'Z. B. Gymshark × Sam Sulek') → 'Werbefläche?' durchgestrichen; Karte: Creator = drei Werbetafeln, das = wird zu ≠; Hintergrund Kollektion 'Gymshark X Sam Sulek'",
+   "start": 32.73,
+   "ende": 36.35,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 32.73,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "beigetragen / Marke / Zielgruppe / bekannt",
+   "text": "Kennzahl 'Zielgruppe.'; Karte: Creator → Pfeil mit 'Gymshark' → Zielscheibe mit Menschen, Ring, handschriftlich 'bekannt'",
+   "start": 36.37,
+   "ende": 41.43,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 36.37,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 40.03,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "E-Commerce-Händler / drin",
+   "text": "Kennzahl 'Learnings'; Karte: drei leere Plätze 1 2 3",
+   "start": 41.7,
+   "ende": 44.03,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 41.7,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Learning / genauer / Alter / Geschlecht / Interessen / Probleme / Ziele / verbindet",
+   "text": "Kennzahl 'Learning 1' → 'genauer.'; Karte: Zielgruppe, 'Alter' und 'Geschlecht' grau ('reicht nicht'), dann Interessen, Probleme, Ziele, Klammer + handschriftlich 'verbindet'",
+   "start": 44.03,
+   "ende": 53.57,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 44.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 50.0,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 51.97,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "zweite / Followerzahlen / passen / Vertrauen",
+   "text": "Kennzahl 'Learning 2' → 'Followerzahl?' durchgestrichen → 'zur Marke?' → 'Vertrauen.'; Karte: Creator A (längerer Follower-Balken, ohne Zahl) und B; B passt zur Marke, Herz, Zeiger wählt B, handschriftlich 'Vertrauen'; Hintergrund 'Wie man zum/zur Gymshark-Athlet:in wird'",
+   "start": 53.57,
+   "ende": 66.43,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 53.57,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 62.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 65.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "drittens / langfristiger / Posting / Kooperationen / Community-Formate / wertvoller / einzelne Werbeaktionen",
+   "text": "Kennzahl 'Learning 3' → 'langfristig.' → 'eigene Formate.' (Kicker 'Z. B. Gymshark London · Gratis-Kurse'); Karte: ein Ausschlag 'Posting', wachsende Linie 'Kooperationen & eigene Formate', handschriftlich 'wertvoller', dann drei Ausschläge 'einzelne Werbeaktionen'; Hintergrund Gymshark London Regent St. (Sweat Room)",
+   "start": 66.43,
+   "ende": 78.44,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 66.43,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 69.37,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 74.9,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "wichtig / Community / Knopfdruck / kaufen",
+   "text": "Kennzahl 'Community' → 'Knopfdruck?' durchgestrichen; Karte: Knopf 'Community kaufen', Zeiger drückt, Knopf grau und durchgestrichen, handschriftlich 'nicht kaufbar'",
+   "start": 79.7,
+   "ende": 84.17,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 79.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 82.7,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "KI / Content-Planung / Auswertung / Verbindung / Menschen / selbst",
+   "text": "Kennzahl 'KI hilft.' → 'selbst aufbauen.'; Karte: KI, Content-Planung und Auswertung mit Haken, dann zwei Menschen mit Verbindung und Herz, handschriftlich 'selbst'",
+   "start": 84.26,
+   "ende": 92.03,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 84.26,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 86.2,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 87.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 89.23,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k13",
+   "wort": "Gymshark / mehr / Onlineshop / haben",
+   "text": "Kennzahl 'mehr als einen Shop.'; Karte: Onlineshop, darum Community, Creator, Events, Vertrauen, handschriftlich 'starke Marke'; Hintergrund Stores-Seite (Regent Street: 'mehr als nur ein Geschäft')",
+   "start": 92.03,
+   "ende": 98.33,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 92.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 96.07,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k14",
+   "wort": "Und wenn / Videos / verpassen / Plus",
+   "text": "Folgen-Karte, Ring auf 'Videos', Zeiger tippt auf 'Plus', Plus wird zum Haken; Kennzahl 'nicht verpassen.'",
+   "start": 98.43,
+   "ende": 102.83,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 98.43,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 102.1,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2025 @@
+{
+ "projekt": "gymshark",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "gymshark/t1",
+   "from": 2.515,
+   "to": 13.445,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "gymshark/t1",
+   "from": 18.715,
+   "to": 31.375,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "gymshark/t1",
+   "from": 34.205,
+   "to": 36.515,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "gymshark/t1",
+   "from": 53.045,
+   "to": 57.905,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "gymshark/t1",
+   "from": 63.765,
+   "to": 77.035,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "gymshark/t1",
+   "from": 97.255,
+   "to": 106.785,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "gymshark/t1",
+   "from": 123.785,
+   "to": 154.4,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "gymshark/t1",
+   "from": 156.065,
+   "to": 163.925,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "gymshark/t1",
+   "from": 197.545,
+   "to": 203.825,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "gymshark/t1",
+   "from": 206.185,
+   "to": 210.7,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Gymshark",
+   "src": "gymshark/t1",
+   "start": 2.58,
+   "end": 3.0
+  },
+  {
+   "text": "hat",
+   "src": "gymshark/t1",
+   "start": 3.06,
+   "end": 3.18
+  },
+  {
+   "text": "nicht",
+   "src": "gymshark/t1",
+   "start": 3.34,
+   "end": 3.52
+  },
+  {
+   "text": "nur",
+   "src": "gymshark/t1",
+   "start": 3.56,
+   "end": 3.66
+  },
+  {
+   "text": "Sportbekleidung",
+   "src": "gymshark/t1",
+   "start": 3.68,
+   "end": 4.3
+  },
+  {
+   "text": "verkauft.",
+   "src": "gymshark/t1",
+   "start": 4.36,
+   "end": 4.72
+  },
+  {
+   "text": "Die",
+   "src": "gymshark/t1",
+   "start": 5.02,
+   "end": 5.08
+  },
+  {
+   "text": "Marke",
+   "src": "gymshark/t1",
+   "start": 5.12,
+   "end": 5.34
+  },
+  {
+   "text": "hat",
+   "src": "gymshark/t1",
+   "start": 5.36,
+   "end": 5.44
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 5.48,
+   "end": 5.68
+  },
+  {
+   "text": "früh",
+   "src": "gymshark/t1",
+   "start": 5.78,
+   "end": 5.94
+  },
+  {
+   "text": "verstanden,",
+   "src": "gymshark/t1",
+   "start": 6.02,
+   "end": 6.48
+  },
+  {
+   "text": "wie",
+   "src": "gymshark/t1",
+   "start": 6.54,
+   "end": 6.62
+  },
+  {
+   "text": "wichtig",
+   "src": "gymshark/t1",
+   "start": 6.72,
+   "end": 7.04
+  },
+  {
+   "text": "Menschen",
+   "src": "gymshark/t1",
+   "start": 7.14,
+   "end": 7.48
+  },
+  {
+   "text": "rund",
+   "src": "gymshark/t1",
+   "start": 7.58,
+   "end": 7.78
+  },
+  {
+   "text": "um",
+   "src": "gymshark/t1",
+   "start": 7.9,
+   "end": 7.98
+  },
+  {
+   "text": "das",
+   "src": "gymshark/t1",
+   "start": 8.02,
+   "end": 8.12
+  },
+  {
+   "text": "ganze",
+   "src": "gymshark/t1",
+   "start": 8.16,
+   "end": 8.4
+  },
+  {
+   "text": "Produkt",
+   "src": "gymshark/t1",
+   "start": 8.46,
+   "end": 8.72
+  },
+  {
+   "text": "sind.",
+   "src": "gymshark/t1",
+   "start": 8.76,
+   "end": 8.9
+  },
+  {
+   "text": "Die",
+   "src": "gymshark/t1",
+   "start": 9.74,
+   "end": 9.82
+  },
+  {
+   "text": "Gründer",
+   "src": "gymshark/t1",
+   "start": 9.84,
+   "end": 10.1
+  },
+  {
+   "text": "haben",
+   "src": "gymshark/t1",
+   "start": 10.16,
+   "end": 10.32
+  },
+  {
+   "text": "nämlich",
+   "src": "gymshark/t1",
+   "start": 10.36,
+   "end": 10.6
+  },
+  {
+   "text": "die",
+   "src": "gymshark/t1",
+   "start": 10.64,
+   "end": 10.72
+  },
+  {
+   "text": "Fitness-Athleten",
+   "src": "gymshark/t1",
+   "start": 10.86,
+   "end": 11.64
+  },
+  {
+   "text": "und",
+   "src": "gymshark/t1",
+   "start": 11.8,
+   "end": 11.9
+  },
+  {
+   "text": "Creatorn",
+   "src": "gymshark/t1",
+   "start": 12.0,
+   "end": 12.46
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 12.5,
+   "end": 12.7
+  },
+  {
+   "text": "zusammengebracht.",
+   "src": "gymshark/t1",
+   "start": 12.76,
+   "end": 13.4
+  },
+  {
+   "text": "Und",
+   "src": "gymshark/t1",
+   "start": 18.78,
+   "end": 18.86
+  },
+  {
+   "text": "zwar",
+   "src": "gymshark/t1",
+   "start": 18.9,
+   "end": 19.06
+  },
+  {
+   "text": "noch",
+   "src": "gymshark/t1",
+   "start": 19.12,
+   "end": 19.24
+  },
+  {
+   "text": "lange",
+   "src": "gymshark/t1",
+   "start": 19.4,
+   "end": 19.7
+  },
+  {
+   "text": "bevor",
+   "src": "gymshark/t1",
+   "start": 19.8,
+   "end": 20.04
+  },
+  {
+   "text": "viele",
+   "src": "gymshark/t1",
+   "start": 20.14,
+   "end": 20.32
+  },
+  {
+   "text": "traditionelle",
+   "src": "gymshark/t1",
+   "start": 20.4,
+   "end": 20.94
+  },
+  {
+   "text": "Marken",
+   "src": "gymshark/t1",
+   "start": 21.02,
+   "end": 21.32
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 21.38,
+   "end": 21.6
+  },
+  {
+   "text": "Social",
+   "src": "gymshark/t1",
+   "start": 21.68,
+   "end": 21.96
+  },
+  {
+   "text": "Media",
+   "src": "gymshark/t1",
+   "start": 21.98,
+   "end": 22.24
+  },
+  {
+   "text": "wirklich",
+   "src": "gymshark/t1",
+   "start": 22.4,
+   "end": 22.82
+  },
+  {
+   "text": "ernst",
+   "src": "gymshark/t1",
+   "start": 22.9,
+   "end": 23.1
+  },
+  {
+   "text": "genommen",
+   "src": "gymshark/t1",
+   "start": 23.14,
+   "end": 23.38
+  },
+  {
+   "text": "haben.",
+   "src": "gymshark/t1",
+   "start": 23.4,
+   "end": 23.54
+  },
+  {
+   "text": "Und",
+   "src": "gymshark/t1",
+   "start": 24.43,
+   "end": 24.49
+  },
+  {
+   "text": "statt",
+   "src": "gymshark/t1",
+   "start": 24.57,
+   "end": 24.79
+  },
+  {
+   "text": "eben",
+   "src": "gymshark/t1",
+   "start": 24.87,
+   "end": 24.95
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 25.01,
+   "end": 25.25
+  },
+  {
+   "text": "nur",
+   "src": "gymshark/t1",
+   "start": 25.29,
+   "end": 25.37
+  },
+  {
+   "text": "Produktfotos",
+   "src": "gymshark/t1",
+   "start": 25.43,
+   "end": 26.07
+  },
+  {
+   "text": "zu",
+   "src": "gymshark/t1",
+   "start": 26.11,
+   "end": 26.19
+  },
+  {
+   "text": "veröffentlichen,",
+   "src": "gymshark/t1",
+   "start": 26.25,
+   "end": 26.77
+  },
+  {
+   "text": "ging",
+   "src": "gymshark/t1",
+   "start": 27.21,
+   "end": 27.37
+  },
+  {
+   "text": "es",
+   "src": "gymshark/t1",
+   "start": 27.43,
+   "end": 27.49
+  },
+  {
+   "text": "hier",
+   "src": "gymshark/t1",
+   "start": 27.53,
+   "end": 27.63
+  },
+  {
+   "text": "tatsächlich",
+   "src": "gymshark/t1",
+   "start": 27.67,
+   "end": 28.15
+  },
+  {
+   "text": "um",
+   "src": "gymshark/t1",
+   "start": 28.25,
+   "end": 28.33
+  },
+  {
+   "text": "Training,",
+   "src": "gymshark/t1",
+   "start": 28.43,
+   "end": 28.89
+  },
+  {
+   "text": "Fortschritte",
+   "src": "gymshark/t1",
+   "start": 29.35,
+   "end": 29.87
+  },
+  {
+   "text": "und",
+   "src": "gymshark/t1",
+   "start": 30.01,
+   "end": 30.09
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 30.15,
+   "end": 30.37
+  },
+  {
+   "text": "eine",
+   "src": "gymshark/t1",
+   "start": 30.41,
+   "end": 30.53
+  },
+  {
+   "text": "Community,",
+   "src": "gymshark/t1",
+   "start": 30.63,
+   "end": 31.15
+  },
+  {
+   "text": "die",
+   "src": "gymshark/t1",
+   "start": 34.27,
+   "end": 34.37
+  },
+  {
+   "text": "sich",
+   "src": "gymshark/t1",
+   "start": 34.41,
+   "end": 34.51
+  },
+  {
+   "text": "mit",
+   "src": "gymshark/t1",
+   "start": 34.55,
+   "end": 34.63
+  },
+  {
+   "text": "demselben",
+   "src": "gymshark/t1",
+   "start": 34.67,
+   "end": 34.75
+  },
+  {
+   "text": "Lebensstil",
+   "src": "gymshark/t1",
+   "start": 35.13,
+   "end": 35.61
+  },
+  {
+   "text": "identifizieren",
+   "src": "gymshark/t1",
+   "start": 35.65,
+   "end": 36.19
+  },
+  {
+   "text": "konnte.",
+   "src": "gymshark/t1",
+   "start": 36.23,
+   "end": 36.45
+  },
+  {
+   "text": "Später",
+   "src": "gymshark/t1",
+   "start": 53.13,
+   "end": 53.49
+  },
+  {
+   "text": "hat",
+   "src": "gymshark/t1",
+   "start": 53.51,
+   "end": 53.59
+  },
+  {
+   "text": "dann",
+   "src": "gymshark/t1",
+   "start": 53.63,
+   "end": 53.73
+  },
+  {
+   "text": "Gymshark",
+   "src": "gymshark/t1",
+   "start": 53.81,
+   "end": 54.21
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 54.29,
+   "end": 54.49
+  },
+  {
+   "text": "diese",
+   "src": "gymshark/t1",
+   "start": 54.57,
+   "end": 54.77
+  },
+  {
+   "text": "Verbindungen",
+   "src": "gymshark/t1",
+   "start": 54.85,
+   "end": 55.35
+  },
+  {
+   "text": "auch",
+   "src": "gymshark/t1",
+   "start": 55.53,
+   "end": 55.67
+  },
+  {
+   "text": "mit",
+   "src": "gymshark/t1",
+   "start": 55.77,
+   "end": 55.87
+  },
+  {
+   "text": "Events",
+   "src": "gymshark/t1",
+   "start": 55.95,
+   "end": 56.29
+  },
+  {
+   "text": "und",
+   "src": "gymshark/t1",
+   "start": 56.35,
+   "end": 56.41
+  },
+  {
+   "text": "persönlichen",
+   "src": "gymshark/t1",
+   "start": 56.49,
+   "end": 57.09
+  },
+  {
+   "text": "Treffen",
+   "src": "gymshark/t1",
+   "start": 57.13,
+   "end": 57.39
+  },
+  {
+   "text": "gestärkt.",
+   "src": "gymshark/t1",
+   "start": 57.43,
+   "end": 57.87
+  },
+  {
+   "text": "Und",
+   "src": "gymshark/t1",
+   "start": 63.83,
+   "end": 63.89
+  },
+  {
+   "text": "das",
+   "src": "gymshark/t1",
+   "start": 63.93,
+   "end": 64.03
+  },
+  {
+   "text": "besonders",
+   "src": "gymshark/t1",
+   "start": 64.11,
+   "end": 64.45
+  },
+  {
+   "text": "Spannende",
+   "src": "gymshark/t1",
+   "start": 64.51,
+   "end": 64.91
+  },
+  {
+   "text": "hieran",
+   "src": "gymshark/t1",
+   "start": 64.97,
+   "end": 65.25
+  },
+  {
+   "text": "ist",
+   "src": "gymshark/t1",
+   "start": 65.29,
+   "end": 65.37
+  },
+  {
+   "text": "eben,",
+   "src": "gymshark/t1",
+   "start": 65.41,
+   "end": 65.51
+  },
+  {
+   "text": "dass",
+   "src": "gymshark/t1",
+   "start": 65.53,
+   "end": 65.65
+  },
+  {
+   "text": "die",
+   "src": "gymshark/t1",
+   "start": 65.69,
+   "end": 65.77
+  },
+  {
+   "text": "Creator",
+   "src": "gymshark/t1",
+   "start": 65.85,
+   "end": 66.25
+  },
+  {
+   "text": "nicht",
+   "src": "gymshark/t1",
+   "start": 66.31,
+   "end": 66.43
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 66.53,
+   "end": 66.79
+  },
+  {
+   "text": "nur",
+   "src": "gymshark/t1",
+   "start": 66.85,
+   "end": 66.91
+  },
+  {
+   "text": "irgendwelche",
+   "src": "gymshark/t1",
+   "start": 66.89,
+   "end": 67.21
+  },
+  {
+   "text": "austauschbaren",
+   "src": "gymshark/t1",
+   "start": 67.63,
+   "end": 68.35
+  },
+  {
+   "text": "Werbeflächen",
+   "src": "gymshark/t1",
+   "start": 68.41,
+   "end": 68.87
+  },
+  {
+   "text": "waren.",
+   "src": "gymshark/t1",
+   "start": 68.91,
+   "end": 69.09
+  },
+  {
+   "text": "Sie",
+   "src": "gymshark/t1",
+   "start": 69.47,
+   "end": 69.55
+  },
+  {
+   "text": "haben",
+   "src": "gymshark/t1",
+   "start": 69.59,
+   "end": 69.73
+  },
+  {
+   "text": "tatsächlich",
+   "src": "gymshark/t1",
+   "start": 69.79,
+   "end": 70.13
+  },
+  {
+   "text": "dazu",
+   "src": "gymshark/t1",
+   "start": 70.17,
+   "end": 70.41
+  },
+  {
+   "text": "beigetragen,",
+   "src": "gymshark/t1",
+   "start": 70.49,
+   "end": 71.05
+  },
+  {
+   "text": "dass",
+   "src": "gymshark/t1",
+   "start": 71.09,
+   "end": 71.21
+  },
+  {
+   "text": "die",
+   "src": "gymshark/t1",
+   "start": 71.25,
+   "end": 71.33
+  },
+  {
+   "text": "Marke",
+   "src": "gymshark/t1",
+   "start": 71.37,
+   "end": 71.61
+  },
+  {
+   "text": "in",
+   "src": "gymshark/t1",
+   "start": 71.67,
+   "end": 71.71
+  },
+  {
+   "text": "konkreter",
+   "src": "gymshark/t1",
+   "start": 71.77,
+   "end": 72.27
+  },
+  {
+   "text": "Zielgruppe",
+   "src": "gymshark/t1",
+   "start": 72.37,
+   "end": 72.79
+  },
+  {
+   "text": "bekannt",
+   "src": "gymshark/t1",
+   "start": 73.09,
+   "end": 73.43
+  },
+  {
+   "text": "wird.",
+   "src": "gymshark/t1",
+   "start": 73.49,
+   "end": 73.65
+  },
+  {
+   "text": "Und",
+   "src": "gymshark/t1",
+   "start": 74.55,
+   "end": 74.63
+  },
+  {
+   "text": "für",
+   "src": "gymshark/t1",
+   "start": 74.67,
+   "end": 74.75
+  },
+  {
+   "text": "E-Commerce-Händler",
+   "src": "gymshark/t1",
+   "start": 74.83,
+   "end": 75.51
+  },
+  {
+   "text": "steckt",
+   "src": "gymshark/t1",
+   "start": 75.57,
+   "end": 75.83
+  },
+  {
+   "text": "da",
+   "src": "gymshark/t1",
+   "start": 75.87,
+   "end": 75.91
+  },
+  {
+   "text": "natürlich",
+   "src": "gymshark/t1",
+   "start": 76.01,
+   "end": 76.35
+  },
+  {
+   "text": "sehr",
+   "src": "gymshark/t1",
+   "start": 76.43,
+   "end": 76.57
+  },
+  {
+   "text": "viel",
+   "src": "gymshark/t1",
+   "start": 76.63,
+   "end": 76.77
+  },
+  {
+   "text": "drin.",
+   "src": "gymshark/t1",
+   "start": 76.81,
+   "end": 76.99
+  },
+  {
+   "text": "Mein",
+   "src": "gymshark/t1",
+   "start": 97.33,
+   "end": 97.47
+  },
+  {
+   "text": "erstes",
+   "src": "gymshark/t1",
+   "start": 97.53,
+   "end": 97.77
+  },
+  {
+   "text": "Learning",
+   "src": "gymshark/t1",
+   "start": 97.87,
+   "end": 98.13
+  },
+  {
+   "text": "daraus",
+   "src": "gymshark/t1",
+   "start": 98.17,
+   "end": 98.43
+  },
+  {
+   "text": "ist,",
+   "src": "gymshark/t1",
+   "start": 98.49,
+   "end": 98.59
+  },
+  {
+   "text": "definiere",
+   "src": "gymshark/t1",
+   "start": 98.65,
+   "end": 99.13
+  },
+  {
+   "text": "bitte",
+   "src": "gymshark/t1",
+   "start": 99.19,
+   "end": 99.35
+  },
+  {
+   "text": "die",
+   "src": "gymshark/t1",
+   "start": 99.43,
+   "end": 99.53
+  },
+  {
+   "text": "Zielgruppen",
+   "src": "gymshark/t1",
+   "start": 99.69,
+   "end": 100.17
+  },
+  {
+   "text": "genauer",
+   "src": "gymshark/t1",
+   "start": 100.23,
+   "end": 100.67
+  },
+  {
+   "text": "und",
+   "src": "gymshark/t1",
+   "start": 101.03,
+   "end": 101.11
+  },
+  {
+   "text": "nicht",
+   "src": "gymshark/t1",
+   "start": 101.15,
+   "end": 101.29
+  },
+  {
+   "text": "nur",
+   "src": "gymshark/t1",
+   "start": 101.33,
+   "end": 101.41
+  },
+  {
+   "text": "nach",
+   "src": "gymshark/t1",
+   "start": 101.45,
+   "end": 101.55
+  },
+  {
+   "text": "Alter",
+   "src": "gymshark/t1",
+   "start": 101.71,
+   "end": 101.95
+  },
+  {
+   "text": "und",
+   "src": "gymshark/t1",
+   "start": 101.99,
+   "end": 102.07
+  },
+  {
+   "text": "Geschlecht.",
+   "src": "gymshark/t1",
+   "start": 102.11,
+   "end": 102.49
+  },
+  {
+   "text": "Welche",
+   "src": "gymshark/t1",
+   "start": 103.07,
+   "end": 103.23
+  },
+  {
+   "text": "Interessen",
+   "src": "gymshark/t1",
+   "start": 103.29,
+   "end": 103.67
+  },
+  {
+   "text": "haben",
+   "src": "gymshark/t1",
+   "start": 103.69,
+   "end": 103.87
+  },
+  {
+   "text": "sie,",
+   "src": "gymshark/t1",
+   "start": 103.91,
+   "end": 103.97
+  },
+  {
+   "text": "welche",
+   "src": "gymshark/t1",
+   "start": 103.99,
+   "end": 104.17
+  },
+  {
+   "text": "Probleme",
+   "src": "gymshark/t1",
+   "start": 104.25,
+   "end": 104.71
+  },
+  {
+   "text": "und",
+   "src": "gymshark/t1",
+   "start": 104.77,
+   "end": 104.85
+  },
+  {
+   "text": "welche",
+   "src": "gymshark/t1",
+   "start": 104.87,
+   "end": 105.09
+  },
+  {
+   "text": "Ziele",
+   "src": "gymshark/t1",
+   "start": 105.27,
+   "end": 105.53
+  },
+  {
+   "text": "verbindet",
+   "src": "gymshark/t1",
+   "start": 105.89,
+   "end": 106.25
+  },
+  {
+   "text": "diese",
+   "src": "gymshark/t1",
+   "start": 106.29,
+   "end": 106.43
+  },
+  {
+   "text": "Menschen?",
+   "src": "gymshark/t1",
+   "start": 106.47,
+   "end": 106.73
+  },
+  {
+   "text": "Und",
+   "src": "gymshark/t1",
+   "start": 123.85,
+   "end": 123.93
+  },
+  {
+   "text": "das",
+   "src": "gymshark/t1",
+   "start": 123.97,
+   "end": 124.05
+  },
+  {
+   "text": "zweite",
+   "src": "gymshark/t1",
+   "start": 124.11,
+   "end": 124.43
+  },
+  {
+   "text": "Learning",
+   "src": "gymshark/t1",
+   "start": 124.49,
+   "end": 124.77
+  },
+  {
+   "text": "ist,",
+   "src": "gymshark/t1",
+   "start": 124.83,
+   "end": 124.97
+  },
+  {
+   "text": "wenn",
+   "src": "gymshark/t1",
+   "start": 125.51,
+   "end": 125.65
+  },
+  {
+   "text": "du",
+   "src": "gymshark/t1",
+   "start": 125.69,
+   "end": 125.73
+  },
+  {
+   "text": "tatsächlich",
+   "src": "gymshark/t1",
+   "start": 125.81,
+   "end": 126.21
+  },
+  {
+   "text": "jetzt",
+   "src": "gymshark/t1",
+   "start": 126.27,
+   "end": 126.43
+  },
+  {
+   "text": "schon",
+   "src": "gymshark/t1",
+   "start": 126.47,
+   "end": 126.57
+  },
+  {
+   "text": "mit",
+   "src": "gymshark/t1",
+   "start": 126.61,
+   "end": 126.67
+  },
+  {
+   "text": "Creatorn",
+   "src": "gymshark/t1",
+   "start": 126.75,
+   "end": 127.03
+  },
+  {
+   "text": "zusammenarbeitest,",
+   "src": "gymshark/t1",
+   "start": 127.13,
+   "end": 127.65
+  },
+  {
+   "text": "dann",
+   "src": "gymshark/t1",
+   "start": 127.67,
+   "end": 127.79
+  },
+  {
+   "text": "schau",
+   "src": "gymshark/t1",
+   "start": 127.85,
+   "end": 128.05
+  },
+  {
+   "text": "nicht",
+   "src": "gymshark/t1",
+   "start": 128.15,
+   "end": 128.27
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 128.33,
+   "end": 128.59
+  },
+  {
+   "text": "nur",
+   "src": "gymshark/t1",
+   "start": 128.67,
+   "end": 128.77
+  },
+  {
+   "text": "nach",
+   "src": "gymshark/t1",
+   "start": 128.81,
+   "end": 128.91
+  },
+  {
+   "text": "irgendwelchen",
+   "src": "gymshark/t1",
+   "start": 128.95,
+   "end": 129.27
+  },
+  {
+   "text": "Followerzahlen.",
+   "src": "gymshark/t1",
+   "start": 129.37,
+   "end": 129.97
+  },
+  {
+   "text": "Achte",
+   "src": "gymshark/t1",
+   "start": 130.61,
+   "end": 130.79
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 130.87,
+   "end": 131.05
+  },
+  {
+   "text": "mal",
+   "src": "gymshark/t1",
+   "start": 131.09,
+   "end": 131.19
+  },
+  {
+   "text": "darauf,",
+   "src": "gymshark/t1",
+   "start": 131.21,
+   "end": 131.47
+  },
+  {
+   "text": "ob",
+   "src": "gymshark/t1",
+   "start": 131.61,
+   "end": 131.69
+  },
+  {
+   "text": "sie",
+   "src": "gymshark/t1",
+   "start": 131.77,
+   "end": 131.85
+  },
+  {
+   "text": "tatsächlich",
+   "src": "gymshark/t1",
+   "start": 131.91,
+   "end": 132.31
+  },
+  {
+   "text": "zur",
+   "src": "gymshark/t1",
+   "start": 132.35,
+   "end": 132.45
+  },
+  {
+   "text": "Marke",
+   "src": "gymshark/t1",
+   "start": 132.47,
+   "end": 132.71
+  },
+  {
+   "text": "passen",
+   "src": "gymshark/t1",
+   "start": 132.77,
+   "end": 133.09
+  },
+  {
+   "text": "und",
+   "src": "gymshark/t1",
+   "start": 133.67,
+   "end": 133.79
+  },
+  {
+   "text": "bei",
+   "src": "gymshark/t1",
+   "start": 134.21,
+   "end": 134.29
+  },
+  {
+   "text": "ihrer",
+   "src": "gymshark/t1",
+   "start": 134.33,
+   "end": 134.47
+  },
+  {
+   "text": "Community",
+   "src": "gymshark/t1",
+   "start": 134.51,
+   "end": 134.85
+  },
+  {
+   "text": "auch",
+   "src": "gymshark/t1",
+   "start": 134.87,
+   "end": 134.95
+  },
+  {
+   "text": "wirklich",
+   "src": "gymshark/t1",
+   "start": 135.01,
+   "end": 135.29
+  },
+  {
+   "text": "Vertrauen",
+   "src": "gymshark/t1",
+   "start": 135.33,
+   "end": 135.63
+  },
+  {
+   "text": "genießen.",
+   "src": "gymshark/t1",
+   "start": 135.67,
+   "end": 135.97
+  },
+  {
+   "text": "Und",
+   "src": "gymshark/t1",
+   "start": 136.71,
+   "end": 136.79
+  },
+  {
+   "text": "drittens,",
+   "src": "gymshark/t1",
+   "start": 136.85,
+   "end": 137.23
+  },
+  {
+   "text": "denk",
+   "src": "gymshark/t1",
+   "start": 137.66,
+   "end": 137.82
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 137.88,
+   "end": 138.1
+  },
+  {
+   "text": "langfristiger",
+   "src": "gymshark/t1",
+   "start": 138.16,
+   "end": 138.76
+  },
+  {
+   "text": "als",
+   "src": "gymshark/t1",
+   "start": 138.82,
+   "end": 138.94
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 139.0,
+   "end": 139.2
+  },
+  {
+   "text": "nur",
+   "src": "gymshark/t1",
+   "start": 139.22,
+   "end": 139.3
+  },
+  {
+   "text": "bis",
+   "src": "gymshark/t1",
+   "start": 139.34,
+   "end": 139.44
+  },
+  {
+   "text": "zum",
+   "src": "gymshark/t1",
+   "start": 139.5,
+   "end": 139.6
+  },
+  {
+   "text": "nächsten",
+   "src": "gymshark/t1",
+   "start": 139.66,
+   "end": 139.94
+  },
+  {
+   "text": "Posting.",
+   "src": "gymshark/t1",
+   "start": 140.0,
+   "end": 140.96
+  },
+  {
+   "text": "Denn",
+   "src": "gymshark/t1",
+   "start": 141.64,
+   "end": 141.76
+  },
+  {
+   "text": "gute",
+   "src": "gymshark/t1",
+   "start": 141.84,
+   "end": 142.02
+  },
+  {
+   "text": "Kooperationen",
+   "src": "gymshark/t1",
+   "start": 142.08,
+   "end": 142.74
+  },
+  {
+   "text": "und",
+   "src": "gymshark/t1",
+   "start": 142.84,
+   "end": 142.9
+  },
+  {
+   "text": "eigene",
+   "src": "gymshark/t1",
+   "start": 143.0,
+   "end": 143.24
+  },
+  {
+   "text": "Community-Formate",
+   "src": "gymshark/t1",
+   "start": 143.32,
+   "end": 144.42
+  },
+  {
+   "text": "können",
+   "src": "gymshark/t1",
+   "start": 144.56,
+   "end": 144.76
+  },
+  {
+   "text": "tatsächlich",
+   "src": "gymshark/t1",
+   "start": 144.8,
+   "end": 145.16
+  },
+  {
+   "text": "wertvoller",
+   "src": "gymshark/t1",
+   "start": 145.2,
+   "end": 145.56
+  },
+  {
+   "text": "sein,",
+   "src": "gymshark/t1",
+   "start": 145.62,
+   "end": 145.78
+  },
+  {
+   "text": "als",
+   "src": "gymshark/t1",
+   "start": 146.14,
+   "end": 146.24
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 146.28,
+   "end": 146.48
+  },
+  {
+   "text": "nur",
+   "src": "gymshark/t1",
+   "start": 146.5,
+   "end": 146.58
+  },
+  {
+   "text": "ständig",
+   "src": "gymshark/t1",
+   "start": 146.64,
+   "end": 146.96
+  },
+  {
+   "text": "neue",
+   "src": "gymshark/t1",
+   "start": 147.1,
+   "end": 147.26
+  },
+  {
+   "text": "einzelne",
+   "src": "gymshark/t1",
+   "start": 147.38,
+   "end": 147.68
+  },
+  {
+   "text": "Werbeaktionen.",
+   "src": "gymshark/t1",
+   "start": 147.74,
+   "end": 148.24
+  },
+  {
+   "text": "Und",
+   "src": "gymshark/t1",
+   "start": 149.05,
+   "end": 149.15
+  },
+  {
+   "text": "ganz",
+   "src": "gymshark/t1",
+   "start": 149.31,
+   "end": 149.57
+  },
+  {
+   "text": "besonders",
+   "src": "gymshark/t1",
+   "start": 149.63,
+   "end": 149.99
+  },
+  {
+   "text": "wichtig",
+   "src": "gymshark/t1",
+   "start": 150.05,
+   "end": 150.33
+  },
+  {
+   "text": "finde",
+   "src": "gymshark/t1",
+   "start": 150.39,
+   "end": 150.53
+  },
+  {
+   "text": "ich",
+   "src": "gymshark/t1",
+   "start": 150.55,
+   "end": 150.61
+  },
+  {
+   "text": "tatsächlich,",
+   "src": "gymshark/t1",
+   "start": 150.65,
+   "end": 151.09
+  },
+  {
+   "text": "dass",
+   "src": "gymshark/t1",
+   "start": 151.29,
+   "end": 151.43
+  },
+  {
+   "text": "die",
+   "src": "gymshark/t1",
+   "start": 151.47,
+   "end": 151.55
+  },
+  {
+   "text": "Community",
+   "src": "gymshark/t1",
+   "start": 151.61,
+   "end": 152.05
+  },
+  {
+   "text": "sich",
+   "src": "gymshark/t1",
+   "start": 152.17,
+   "end": 152.29
+  },
+  {
+   "text": "nicht",
+   "src": "gymshark/t1",
+   "start": 152.41,
+   "end": 152.59
+  },
+  {
+   "text": "nur",
+   "src": "gymshark/t1",
+   "start": 152.67,
+   "end": 152.75
+  },
+  {
+   "text": "auf",
+   "src": "gymshark/t1",
+   "start": 152.79,
+   "end": 152.89
+  },
+  {
+   "text": "Knopfdruck",
+   "src": "gymshark/t1",
+   "start": 152.97,
+   "end": 153.41
+  },
+  {
+   "text": "kaufen",
+   "src": "gymshark/t1",
+   "start": 153.47,
+   "end": 153.73
+  },
+  {
+   "text": "lässt.",
+   "src": "gymshark/t1",
+   "start": 153.75,
+   "end": 153.95
+  },
+  {
+   "text": "Und",
+   "src": "gymshark/t1",
+   "start": 156.13,
+   "end": 156.21
+  },
+  {
+   "text": "KI",
+   "src": "gymshark/t1",
+   "start": 156.29,
+   "end": 156.45
+  },
+  {
+   "text": "kann",
+   "src": "gymshark/t1",
+   "start": 156.59,
+   "end": 156.71
+  },
+  {
+   "text": "dir",
+   "src": "gymshark/t1",
+   "start": 156.73,
+   "end": 156.81
+  },
+  {
+   "text": "hier",
+   "src": "gymshark/t1",
+   "start": 156.85,
+   "end": 156.95
+  },
+  {
+   "text": "vielleicht",
+   "src": "gymshark/t1",
+   "start": 157.01,
+   "end": 157.35
+  },
+  {
+   "text": "tatsächlich",
+   "src": "gymshark/t1",
+   "start": 157.39,
+   "end": 157.75
+  },
+  {
+   "text": "bei",
+   "src": "gymshark/t1",
+   "start": 157.77,
+   "end": 157.85
+  },
+  {
+   "text": "deiner",
+   "src": "gymshark/t1",
+   "start": 157.89,
+   "end": 158.07
+  },
+  {
+   "text": "Content-Planung",
+   "src": "gymshark/t1",
+   "start": 158.15,
+   "end": 158.73
+  },
+  {
+   "text": "und",
+   "src": "gymshark/t1",
+   "start": 158.79,
+   "end": 158.85
+  },
+  {
+   "text": "bei",
+   "src": "gymshark/t1",
+   "start": 158.89,
+   "end": 158.97
+  },
+  {
+   "text": "deiner",
+   "src": "gymshark/t1",
+   "start": 159.01,
+   "end": 159.17
+  },
+  {
+   "text": "Auswertung",
+   "src": "gymshark/t1",
+   "start": 159.25,
+   "end": 159.65
+  },
+  {
+   "text": "helfen.",
+   "src": "gymshark/t1",
+   "start": 159.71,
+   "end": 159.95
+  },
+  {
+   "text": "Die",
+   "src": "gymshark/t1",
+   "start": 160.39,
+   "end": 160.47
+  },
+  {
+   "text": "Verbindung",
+   "src": "gymshark/t1",
+   "start": 160.51,
+   "end": 160.83
+  },
+  {
+   "text": "zwischen",
+   "src": "gymshark/t1",
+   "start": 160.89,
+   "end": 161.13
+  },
+  {
+   "text": "Menschen",
+   "src": "gymshark/t1",
+   "start": 161.19,
+   "end": 161.59
+  },
+  {
+   "text": "musst",
+   "src": "gymshark/t1",
+   "start": 161.93,
+   "end": 162.13
+  },
+  {
+   "text": "du",
+   "src": "gymshark/t1",
+   "start": 162.19,
+   "end": 162.25
+  },
+  {
+   "text": "aber",
+   "src": "gymshark/t1",
+   "start": 162.31,
+   "end": 162.43
+  },
+  {
+   "text": "tatsächlich",
+   "src": "gymshark/t1",
+   "start": 162.49,
+   "end": 162.87
+  },
+  {
+   "text": "doch",
+   "src": "gymshark/t1",
+   "start": 162.93,
+   "end": 163.03
+  },
+  {
+   "text": "selbst",
+   "src": "gymshark/t1",
+   "start": 163.15,
+   "end": 163.41
+  },
+  {
+   "text": "noch",
+   "src": "gymshark/t1",
+   "start": 163.45,
+   "end": 163.53
+  },
+  {
+   "text": "aufbauen.",
+   "src": "gymshark/t1",
+   "start": 163.59,
+   "end": 163.91
+  },
+  {
+   "text": "Gymshark",
+   "src": "gymshark/t1",
+   "start": 197.61,
+   "end": 198.01
+  },
+  {
+   "text": "zeigt",
+   "src": "gymshark/t1",
+   "start": 198.13,
+   "end": 198.37
+  },
+  {
+   "text": "dir",
+   "src": "gymshark/t1",
+   "start": 198.39,
+   "end": 198.49
+  },
+  {
+   "text": "für",
+   "src": "gymshark/t1",
+   "start": 198.53,
+   "end": 198.61
+  },
+  {
+   "text": "mich",
+   "src": "gymshark/t1",
+   "start": 198.67,
+   "end": 198.81
+  },
+  {
+   "text": "besonders,",
+   "src": "gymshark/t1",
+   "start": 198.89,
+   "end": 199.45
+  },
+  {
+   "text": "warum",
+   "src": "gymshark/t1",
+   "start": 199.53,
+   "end": 199.83
+  },
+  {
+   "text": "tatsächlich",
+   "src": "gymshark/t1",
+   "start": 199.97,
+   "end": 200.41
+  },
+  {
+   "text": "starke",
+   "src": "gymshark/t1",
+   "start": 200.47,
+   "end": 200.77
+  },
+  {
+   "text": "Marken",
+   "src": "gymshark/t1",
+   "start": 200.83,
+   "end": 201.09
+  },
+  {
+   "text": "oft",
+   "src": "gymshark/t1",
+   "start": 201.19,
+   "end": 201.37
+  },
+  {
+   "text": "eben",
+   "src": "gymshark/t1",
+   "start": 201.41,
+   "end": 201.53
+  },
+  {
+   "text": "mehr",
+   "src": "gymshark/t1",
+   "start": 201.63,
+   "end": 201.79
+  },
+  {
+   "text": "als",
+   "src": "gymshark/t1",
+   "start": 201.83,
+   "end": 201.95
+  },
+  {
+   "text": "nur",
+   "src": "gymshark/t1",
+   "start": 202.03,
+   "end": 202.13
+  },
+  {
+   "text": "einen",
+   "src": "gymshark/t1",
+   "start": 202.27,
+   "end": 202.47
+  },
+  {
+   "text": "funktionierenden",
+   "src": "gymshark/t1",
+   "start": 202.55,
+   "end": 203.11
+  },
+  {
+   "text": "Onlineshop",
+   "src": "gymshark/t1",
+   "start": 203.17,
+   "end": 203.55
+  },
+  {
+   "text": "haben.",
+   "src": "gymshark/t1",
+   "start": 203.57,
+   "end": 203.825
+  },
+  {
+   "text": "Und",
+   "src": "gymshark/t1",
+   "start": 206.42,
+   "end": 206.48
+  },
+  {
+   "text": "wenn",
+   "src": "gymshark/t1",
+   "start": 206.5,
+   "end": 206.62
+  },
+  {
+   "text": "du",
+   "src": "gymshark/t1",
+   "start": 206.64,
+   "end": 206.7
+  },
+  {
+   "text": "solche",
+   "src": "gymshark/t1",
+   "start": 206.74,
+   "end": 206.98
+  },
+  {
+   "text": "Videos",
+   "src": "gymshark/t1",
+   "start": 207.04,
+   "end": 207.3
+  },
+  {
+   "text": "in",
+   "src": "gymshark/t1",
+   "start": 207.36,
+   "end": 207.4
+  },
+  {
+   "text": "Zukunft",
+   "src": "gymshark/t1",
+   "start": 207.46,
+   "end": 207.84
+  },
+  {
+   "text": "nicht",
+   "src": "gymshark/t1",
+   "start": 208.0,
+   "end": 208.12
+  },
+  {
+   "text": "mehr",
+   "src": "gymshark/t1",
+   "start": 208.14,
+   "end": 208.24
+  },
+  {
+   "text": "verpassen",
+   "src": "gymshark/t1",
+   "start": 208.28,
+   "end": 208.64
+  },
+  {
+   "text": "möchtest,",
+   "src": "gymshark/t1",
+   "start": 208.68,
+   "end": 208.96
+  },
+  {
+   "text": "dann",
+   "src": "gymshark/t1",
+   "start": 209.0,
+   "end": 209.16
+  },
+  {
+   "text": "drück",
+   "src": "gymshark/t1",
+   "start": 209.36,
+   "end": 209.56
+  },
+  {
+   "text": "einfach",
+   "src": "gymshark/t1",
+   "start": 209.6,
+   "end": 209.76
+  },
+  {
+   "text": "mal",
+   "src": "gymshark/t1",
+   "start": 209.78,
+   "end": 209.88
+  },
+  {
+   "text": "das",
+   "src": "gymshark/t1",
+   "start": 209.92,
+   "end": 209.98
+  },
+  {
+   "text": "Plus",
+   "src": "gymshark/t1",
+   "start": 210.02,
+   "end": 210.2
+  },
+  {
+   "text": "weg.",
+   "src": "gymshark/t1",
+   "start": 210.22,
+   "end": 210.34
+  }
+ ],
+ "pages": [
+  3,
+  2,
+  1,
+  4,
+  2,
+  3,
+  4,
+  2,
+  2,
+  2,
+  2,
+  3,
+  1,
+  4,
+  3,
+  3,
+  3,
+  2,
+  4,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  4,
+  1,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  1,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  1,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  4,
+  3,
+  2,
+  2,
+  2,
+  3,
+  1,
+  2,
+  3,
+  2,
+  3,
+  4,
+  1,
+  3,
+  2,
+  2,
+  1,
+  2,
+  2,
+  3,
+  3,
+  1,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  1,
+  2,
+  1,
+  2,
+  2,
+  3,
+  3,
+  1,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  1,
+  3,
+  2,
+  2,
+  2,
+  1,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  3,
+  2,
+  2,
+  4,
+  3,
+  2,
+  2,
+  4,
+  3
+ ]
+}

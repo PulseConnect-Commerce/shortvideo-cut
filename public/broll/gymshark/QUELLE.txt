@@ -1,0 +1,44 @@
+Hintergründe und Fotos für M07 · Gymshark (alle am 27.10.2026 mit Playwright/Chromium ohne Login aufgenommen bzw.
+geladen; Handy-Ansicht 432 css-px, 2,5-fach; deutsche Seiten de.gymshark.com, wo es sie gibt, sonst www.gymshark.com;
+nur zugeschnitten bzw. Kopfleiste und Abschnitt übereinandergelegt, leicht weichgezeichnet und leicht abgedunkelt;
+nichts dazugemalt). Aufnahme: hyperframes/gymshark-hg/aufnahme.cjs (Liste der sichtbaren Texte je Aufnahme:
+hyperframes/gymshark-hg/screenshots/aufnahme.json), gestaltet mit hyperframes/gymshark-hg/gestalte.py. Oben jeweils die
+Kopfleiste der Seite mit dem GYMSHARK-Logo.
+
+- hg-story.png: Gymshark-Blog "Die Gymshark Geschichte" (Harry Foley, 06.04.2023), Kopf mit Titel und Titelbild
+  https://de.gymshark.com/blog/article/the-official-gymshark-story
+- hg-about.png: "Über uns" ("Gymshark ist Hersteller & Online-Händler ... von mehr als 12 Millionen engagierten Social
+  Media Followern und Kunden in mehr als 179 Ländern unterstützt. Im Jahr 2012 wurde Gymshark von dem damaligen Teenager
+  Ben Francis und einer Gruppe seiner Schulfreunde ins Leben gerufen.") https://de.gymshark.com/pages/about-us
+- hg-neu.png: Kategorie "Neuheiten" (Produktkacheln, u. a. Gymshark X Sam Sulek Tank)
+  https://de.gymshark.com/collections/new-releases
+- hg-g66.png: Gymshark-Blog "Was ist #Gymshark66?" (12.12.19, zuletzt bearbeitet 28.12.25), Kopf mit Titel
+  https://de.gymshark.com/blog/article/what-is-the-gymshark-66-challenge
+- hg-popup.png: Gymshark-Blog "The Next Gymshark Pop-Up Is..." (12.12.19), Event-Foto (Pop-up-Event mit Publikum)
+  https://www.gymshark.com/blog/article/the-next-gymshark-pop-up-is (keine deutsche Fassung)
+- hg-sulek.png: Kollektion "Gymshark X Sam Sulek" ("Neu: Gymshark X Sam Sulek", Produktkacheln)
+  https://de.gymshark.com/pages/sam-sulek-collab
+- hg-athlet.png: Gymshark-Blog "Wie man zum/zur Gymshark-Athlet:in wird" (18.12.24, zuletzt bearbeitet 28.12.25), Kopf
+  https://de.gymshark.com/blog/article/how-to-become-a-gymshark-athlete
+- hg-regent.png: Gymshark-Blog "Gymshark London Regent Street | Flagship Store & Free Workout Classes" (08.17.20,
+  zuletzt bearbeitet 01.09.26), Abschnitt Sweat Room ("50+ completely free classes every week")
+  https://www.gymshark.com/blog/article/the-gymshark-london-store (keine deutsche Fassung)
+- hg-stores.png: "Gymshark Stores", Regent Street ("Gymshark Regent St. ist mehr als nur ein Geschäft. Mit Workouts,
+  Hangouts, Events und Ernährungsangeboten ...") https://de.gymshark.com/pages/stores
+
+Quellen-Karte im Video (hyperframes/gymshark-skizzen/assets/quelle-shopify.png, nur zugeschnitten mit
+hyperframes/gymshark-hg/quelle.py aus screenshots/shopify-gymshark.png):
+- Shopify-Blog "14 Fitness-E-Commerce-Websites: So wächst dein Business" (1. März 2026), Abschnitt "Gymshark: von der
+  URL zur Realität": "Gymshark hat die Kunst des Online-to-Offline-Handels (O2O) durch internationale Pop-up-Shops
+  gemeistert. Diese Pop-ups beinhalten Treffen mit einigen der beliebtesten Fitness-Expert:innen und Influencer:innen ..."
+  https://www.shopify.com/de/blog/fitness-e-commerce-websites (Quelle im Briefing)
+
+Fotos neben dem Kopf und in den Karten (hyperframes/gymshark-skizzen/assets/, freigestellt mit
+hyperframes/gymshark-hg/freistellen.py, Originale in hyperframes/gymshark-hg/fotos/):
+- cap.png: "Gymshark Essentials Cap" (Black), Produktbild aus dem Shop, Kategorie "Caps"
+  https://de.gymshark.com/collections/caps (Bild cdn.shopify.com/s/files/1/1693/6215/files/GymsharkEssentialsCapGSBlackGSBlackI2C9J_BDKQ_0197.jpg)
+- flasche.png: "700ml Metal Insulated Straw Bottle" (Black), Produktbild aus dem Shop, Kategorie "Flaschen & Shaker"
+  https://de.gymshark.com/collections/bottles (Bild cdn.shopify.com/s/files/1/1693/6215/files/700ml_Bottle_GS_Black_I2C9C_BB2J_3.jpg)
+
+Kein Gründerfoto: auf gymshark.com (Über uns, Story, Karriere) gibt es kein Foto mit Bildunterschrift "Ben Francis";
+das Titelbild der Story zeigt einen Mann ohne Namensangabe, darum nicht als Gründer gezeigt.

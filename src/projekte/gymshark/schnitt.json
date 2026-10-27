@@ -1,0 +1,172 @@
+{
+ "projekt": "gymshark",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 2.4,
+   "text": "Gymshark hat nicht eine Sportbekleidung verkauft. Die Marke hat einfach früh verstanden, wie wichtig Menschen rund um das ganze Produkt sind. Die Gründe haben nämlich die Fitnessathleten und Creatorn einfach zusammengebracht."
+  },
+  {
+   "take": "t1",
+   "ab": 18.6,
+   "text": "Und zwar noch lange bevor viele traditionelle Marken einfach Social Media wirklich ernst genommen haben. Und statt eben einfach nur Produktfotos zu veröffentlichen, ging es hier tatsächlich um Training... Fortschritte und einfach eine Community,",
+   "bis": 31.3
+  },
+  {
+   "take": "t1",
+   "ab": 34.1,
+   "text": "die sich mit den selben Lebensziele identifizieren konnte."
+  },
+  {
+   "take": "t1",
+   "ab": 53.0,
+   "text": "Später hat dann Gymshark einfach diese Verbindungen auch mit Events und persönlichen Treffen gestärkt"
+  },
+  {
+   "take": "t1",
+   "ab": 63.75,
+   "text": "und das besonders spannende hieran ist eben, dass die Creator nicht einfach nur irgendwelche austauschbaren Werbeflächen waren. Sie haben tatsächlich dazu beigetragen, dass die Marke in konkreter Zielgruppe bekannt wird. Und für E-Commerce-Händler steckt da natürlich sehr viel drin,"
+  },
+  {
+   "take": "t1",
+   "ab": 97.25,
+   "text": "Mein erstes Learning daraus ist, definiere bitte die Zielgruppen genauer und nicht nur nach Alter und Geschlecht. Welche Interessen haben sie, welche Probleme und welche Ziele verbindet diese Menschen?"
+  },
+  {
+   "take": "t1",
+   "ab": 123.75,
+   "text": "Und das zweite Learning ist, wenn du tatsächlich jetzt schon mit Creator und Summerarbeitest, dann schau nicht einfach nur nach irgendwelchen Followerzahlen. Achte einfach mal darauf, ob sie tatsächlich zur Marke passen und bei ihrer Community auch wirklich Vertrauen genießen. Und drittens, denk einfach langfristiger als einfach nur bis zum nächsten Posting. Denn gute Kooperation und eigene Community-Formate können tatsächlich wertvoller sein, als einfach nur ständig neue einzelne Werbeaktionen. Und ganz besonders wichtig finde ich tatsächlich, dass die Community sich nicht nur auf Knopfdruck kaufen lässt.",
+   "bis": 154.4
+  },
+  {
+   "take": "t1",
+   "ab": 155.9,
+   "text": "Und KI kann dir hier vielleicht tatsächlich bei deiner Content-Planung und bei deiner Auswertung helfen. Die Verbindung zwischen Menschen musst Du aber tatsächlich doch selbst noch aufbauen."
+  },
+  {
+   "take": "t1",
+   "ab": 197.5,
+   "text": "Gymshark zeigt dir für mich besonders, warum tatsächlich starke Marken oft eben mehr als nur einen funktionierenden Onlineshop haben."
+  },
+  {
+   "take": "t1",
+   "ab": 206.3,
+   "text": "Und wenn du solche Videos in Zukunft nicht mehr verpassen möchtest, dann drücke einfach mal das Plus weg.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 210.7
+ },
+ "korrekturen": [
+  [
+   "t1",
+   3.56,
+   "eine",
+   "nur"
+  ],
+  [
+   "t1",
+   9.84,
+   "Gründe",
+   "Gründer"
+  ],
+  [
+   "t1",
+   10.86,
+   "Fitnessathleten",
+   "Fitness-Athleten"
+  ],
+  [
+   "t1",
+   28.43,
+   "Training...",
+   "Training,"
+  ],
+  [
+   "t1",
+   34.67,
+   "den",
+   "demselben"
+  ],
+  [
+   "t1",
+   34.83,
+   "selben",
+   ""
+  ],
+  [
+   "t1",
+   35.13,
+   "Lebensziele",
+   "Lebensstil"
+  ],
+  [
+   "t1",
+   57.43,
+   "gestärkt",
+   "gestärkt."
+  ],
+  [
+   "t1",
+   63.83,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   64.51,
+   "spannende",
+   "Spannende"
+  ],
+  [
+   "t1",
+   76.81,
+   "drin,",
+   "drin."
+  ],
+  [
+   "t1",
+   126.75,
+   "Creator",
+   "Creatorn"
+  ],
+  [
+   "t1",
+   127.05,
+   "und",
+   ""
+  ],
+  [
+   "t1",
+   127.13,
+   "Summerarbeitest,",
+   "zusammenarbeitest,"
+  ],
+  [
+   "t1",
+   142.08,
+   "Kooperation",
+   "Kooperationen"
+  ],
+  [
+   "t1",
+   162.19,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   209.36,
+   "drücke",
+   "drück"
+  ]
+ ]
+}
