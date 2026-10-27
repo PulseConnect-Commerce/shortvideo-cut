@@ -1,0 +1,316 @@
+{
+ "datum": "2026-10-27T06:18:07.940Z",
+ "viewport": "432x768 @2.5",
+ "ziele": {
+  "app": {
+   "url": "https://apps.shopify.com/klaviyo-email-marketing?locale=de",
+   "scrollY": 0,
+   "sichtbar": [
+    [
+     80,
+     ""
+    ],
+    [
+     113,
+     ""
+    ],
+    [
+     145,
+     ""
+    ],
+    [
+     177,
+     ""
+    ],
+    [
+     209,
+     ""
+    ],
+    [
+     241,
+     ""
+    ],
+    [
+     274,
+     ""
+    ],
+    [
+     354,
+     ""
+    ],
+    [
+     426,
+     ""
+    ],
+    [
+     522,
+     ""
+    ],
+    [
+     655,
+     ""
+    ],
+    [
+     706,
+     ""
+    ],
+    [
+     100,
+     "Klaviyo E‑Mail‑Marketing & SMS"
+    ],
+    [
+     325,
+     ""
+    ],
+    [
+     325,
+     ""
+    ],
+    [
+     325,
+     ""
+    ],
+    [
+     325,
+     ""
+    ],
+    [
+     325,
+     ""
+    ],
+    [
+     325,
+     ""
+    ],
+    [
+     325,
+     ""
+    ],
+    [
+     543,
+     "Erstelle KI-gestützte E-Mail-, SMS- und WhatsApp-Kampagnen, um deinen E-Commerce-Umsatz zu steigern"
+    ],
+    [
+     686,
+     "Nutze Echtzeitdaten aus Shopify und 350+ Apps über die gesamte Journey hinweg."
+    ],
+    [
+     730,
+     "Nutze den Composer zur Website-Analyse und Erstellung von Kampagnen."
+    ]
+   ]
+  },
+  "daten": {
+   "url": "https://www.klaviyo.com/de/integrate/shopify",
+   "scrollY": 4595,
+   "sichtbar": [
+    [
+     24,
+     "Registrieren"
+    ],
+    [
+     84,
+     "Alle Daten, die du benötigst. Alles an einem Ort."
+    ],
+    [
+     557,
+     "Erhalte alle Daten und Erkenntnisse, die du benötigst, um das Marketing und den Service für deinen Shopify-Shop zu verbessern, in einer Single Source of Truth."
+    ],
+    [
+     669,
+     "Profitiere von der Klaviyo Data Platform als Grundlage für dein Marketing, deinen Kundenservice und für Auswertungen zu deinem Shop."
+    ]
+   ]
+  },
+  "segment": {
+   "url": "https://www.klaviyo.com/de/features/segmentation",
+   "scrollY": 1443,
+   "sichtbar": [
+    [
+     24,
+     "Registrieren"
+    ],
+    [
+     84,
+     "Es war noch nie so leicht, deine ideale Zielgruppe zu erreichen"
+    ],
+    [
+     519,
+     "Nutze KI und maschinelles Lernen Lasse Klaviyo AI Segmente für dich erstellen – mithilfe von Predictive Analytics wie z. B. zum Abwanderungsrisiko, zum Customer"
+    ],
+    [
+     703,
+     "Teile Segments AI mit, wen du erreichen möchtest Du beschreibst die Kund*innen, die du ansprechen möchtest. Klaviyo Segments AI generiert das Segment für dich. "
+    ]
+   ]
+  },
+  "welcome": {
+   "url": "https://help.klaviyo.com/hc/de-de/articles/115002775172",
+   "scrollY": 4267,
+   "sichtbar": [
+    [
+     24,
+     "Kontaktiere uns"
+    ],
+    [
+     -43,
+     ""
+    ],
+    [
+     133,
+     ""
+    ],
+    [
+     -19,
+     "Klicke im Flow-Builder auf eine Nachricht."
+    ],
+    [
+     21,
+     "Bearbeite im Detailbereich bei Bedarf den Betreff und die Absenderdetails."
+    ],
+    [
+     405,
+     "Klicke im Abschnitt Vorlage auf Bearbeiten, um die E-Mail-Vorlage zu bearbeiten."
+    ],
+    [
+     469,
+     "Verwende den E-Mail-Vorlagen-Editor, um den Inhalt der Nachricht so zu ändern, dass er zu deinem Branding passt."
+    ],
+    [
+     557,
+     "Wiederhole diese Schritte für die anderen Nachrichten im Flow."
+    ],
+    [
+     621,
+     "Ein Welcome-Serie-Flow ist eine großartige Möglichkeit, dich vorzustellen, nachdem sich jemand für deine E-Mail-Liste angemeldet hat. Die oben gezeigte Welcome-"
+    ],
+    [
+     733,
+     "E-Mail Nr. 1, sofort senden Stelle neuen Abonnent*innen deine Marke vor und erfasse ihre E-Mail-Präferenzen. Damit Abonnent*innen sofort nach dem Opt-in eine E-"
+    ]
+   ]
+  },
+  "kauf": {
+   "url": "https://www.klaviyo.com/de/integrate/shopify",
+   "scrollY": 2151,
+   "sichtbar": [
+    [
+     24,
+     "Registrieren"
+    ],
+    [
+     445,
+     "Kundenbewertungen für echte Ergebnisse"
+    ],
+    [
+     521,
+     "Sende Bewertungsanfragen automatisch per E-Mail und SMS an deine Kund*innen, zeige die besten Bewertungen auf deiner Website an und erstelle Segmente basierend "
+    ]
+   ]
+  },
+  "optin": {
+   "url": "https://help.klaviyo.com/hc/de-de/articles/115005251108",
+   "scrollY": 122,
+   "sichtbar": [
+    [
+     24,
+     "Kontaktiere uns"
+    ],
+    [
+     84,
+     "Grundlegendes zum Double-Opt-in-Verfahren"
+    ],
+    [
+     283,
+     "KI-Übersicht"
+    ],
+    [
+     317,
+     "Um saubere, rechtssichere E-Mail- und SMS-Verteiler aufzubauen, solltest du das Double-Opt-in-Verfahren gezielt einsetzen. Beim Double Opt-in bestätigen neue Ab"
+    ],
+    [
+     399,
+     "Nutze Double Opt-in, wenn du sicherstellen willst, dass nur bestätigte E-Mail- und SMS-Abonnent*innen in deine Listen aufgenommen werden; sie erhalten nach der "
+    ],
+    [
+     428,
+     "Beachte, dass Double Opt-in auf Listenebene gesteuert wird: Jede Liste kann separat auf Double oder Single Opt-in eingestellt werden, und nur bestätigte Kontakt"
+    ],
+    [
+     457,
+     "Verwalte Double Opt-in für SMS-Keywords separat: Wenn sich jemand über ein SMS-Schlüsselwort anmeldet, gelten die Opt-in-Einstellungen des Keywords und haben Vo"
+    ],
+    [
+     486,
+     "Verwende bei gebrandeten Absender-IDs standardmäßig Smart Opt-in, da diese IDs keine Antworten empfangen können und der klassische Double-Opt-in-Bestätigungstex"
+    ],
+    [
+     515,
+     "Unterscheide zwischen SMS-Transaktionsnachrichten und Werbe-SMS: Für reine Transaktions-SMS gibt es kein Double Opt-in, die Einwilligung wird sofort im Profil g"
+    ],
+    [
+     544,
+     "Setze Double Opt-in ein, um Spam, Bots und falsche Kontaktdaten zu reduzieren und so deine Reputation bei E-Mail-Providern zu schützen; eine saubere Liste mit a"
+    ],
+    [
+     573,
+     "Stelle bei Bedarf auf Single Opt-in um, wenn du bereits an anderer Stelle ein Double Opt-in verwendest (z. B. über ein Drittanbieter-Formular), damit Kund*innen"
+    ],
+    [
+     602,
+     "Behalte im Blick, dass neue Listen immer mit der aktuellen Standard-Opt-in-Einstellung deines Kontos erstellt werden, bestehende Listen sich aber nicht automati"
+    ],
+    [
+     631,
+     "Konfiguriere SMS-Keywords über Einstellungen → SMS → Automatisierungen: Wähle im Bereich „Schlüsselwörter zum Abonnieren“ das gewünschte Keyword, klicke auf „Be"
+    ],
+    [
+     660,
+     "Beachte bei der API-Nutzung, dass das Opt-in-Verhalten davon abhängt, ob du ein Profil mit oder ohne Liste anmeldest: Gibst du eine Liste an, gelten deren Opt-i"
+    ],
+    [
+     689,
+     "Verstehe, was passiert, wenn Abonnent*innen nicht bestätigen: Bei Anmeldungen über eine Double-Opt-in-Aboseite wird erst nach Bestätigung ein Profil erstellt; b"
+    ],
+    [
+     399,
+     "Diese Antwort ist KI-generiert und kann Fehler enthalten."
+    ],
+    [
+     477,
+     "Übersicht"
+    ],
+    [
+     517,
+     "In diesem Artikel erfährst du, worin sich Single Opt-in und Double Opt-in unterscheiden. Wir erklären, warum Double Opt-in für SMS und E-Mails wichtig ist und w"
+    ],
+    [
+     653,
+     "Was ist Double Opt-in?"
+    ],
+    [
+     693,
+     "Beim Double Opt-in müssen neue Abonnent*innen das Abonnement bestätigen, bevor sie in eine bestimmte Liste aufgenommen werden. Dies gilt für E-Mail- und SMS-Abo"
+    ]
+   ]
+  },
+  "gezielt": {
+   "url": "https://www.klaviyo.com/de/features/segmentation",
+   "scrollY": 99,
+   "sichtbar": [
+    [
+     24,
+     "Registrieren"
+    ],
+    [
+     84,
+     "Maßgeschneidertes Marketing dank detaillierter Kunden- segmentierung"
+    ],
+    [
+     275,
+     "Noch besser: Lasse Klaviyo AI Kundensegmente für dich erstellen."
+    ]
+   ]
+  }
+ }
+}

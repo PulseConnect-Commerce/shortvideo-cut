@@ -1,0 +1,25 @@
+Hintergründe für A04 · Klaviyo (alle am 27.10.2026 mit Playwright/Chromium ohne Login aufgenommen; Handy-Ansicht 432 px,
+2,5-fach; nur zugeschnitten, leicht weichgezeichnet und leicht abgedunkelt; nichts dazugemalt)
+
+Gestaltet mit hyperframes/klaviyo-hg/gestalte.py aus den Screenshots in hyperframes/klaviyo-hg/screenshots/ (Liste der
+sichtbaren Texte je Aufnahme: screenshots/aufnahme.json). Oben jeweils die Kopfleiste der Seite mit dem Logo.
+
+- hg-app.png: Shopify App Store, Eintrag "Klaviyo E-Mail-Marketing & SMS" (Kostenlose Installation, Bewertung 4,7 (3.414),
+  Entwickler Klaviyo, Video "Klaviyo for Shopify: Step-by-Step"), Kopf der Seite
+  https://apps.shopify.com/klaviyo-email-marketing?locale=de
+- hg-daten.png: klaviyo.com, Shopify-Integration, Abschnitt "Alle Daten, die du benötigst. Alles an einem Ort." (Bild
+  "Datensynchronisierung Shopify") https://www.klaviyo.com/de/integrate/shopify
+- hg-segment.png: klaviyo.com, Segmentierung, Abschnitt "Es war noch nie so leicht, deine ideale Zielgruppe zu erreichen"
+  (Bild "Segment > Ehemalige VIPs" und "Segment-Builder"); die drei Beispiel-Namen der Segment-Liste sind unkenntlich
+  gemacht (Briefing: Kontakte und Profilinformationen anonymisieren) https://www.klaviyo.com/de/features/segmentation
+- hg-welcome.png: Klaviyo Help Center, "So erstellst du eine E-Mail-Welcome-Serie", Bild des Flow-Builders mit der
+  Welcome-Serie (Welcome Series Email #1, Wait 3 days, ...) https://help.klaviyo.com/hc/de-de/articles/115002775172
+- hg-kauf.png: klaviyo.com, Shopify-Integration, Bild über "Kundenbewertungen für echte Ergebnisse" (Flow "Einmal bestellt"
+  → "Dem Empfang von SMS zugestimmt?" → "Bewertung abgeben") https://www.klaviyo.com/de/integrate/shopify
+- hg-optin.png: Klaviyo Help Center, "Grundlegendes zum Double-Opt-in-Verfahren", Kopf der Seite
+  https://help.klaviyo.com/hc/de-de/articles/115005251108
+- hg-gezielt.png: klaviyo.com, Segmentierung, Kopf "Maßgeschneidertes Marketing dank detaillierter Kundensegmentierung";
+  Konto-Name und E-Mail im Segment-Builder-Bild unten unkenntlich gemacht https://www.klaviyo.com/de/features/segmentation
+
+Karten (skizzen.webm): eigene Zeichnungen aus hyperframes/klaviyo-skizzen (Lucide-Icons, ISC-Lizenz; Schrift Geist und
+Caveat, OFL). Keine Logos, keine Kundendaten.

@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>A04 · Klaviyo – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- FACE A04 "Klaviyo" (A-Reihe "Eine Shopify-App, ein Problem"). Erklär-Bilder nach karten-aufbau.md "Visuelle
+         Metaphern" (freigegeben 2026-10-26, Vorlagen P04 hyperframes/pagebuilder-skizzen, A03 judgeme-skizzen, S04
+         shopifyflow-skizzen): pro Kerngedanke ein Bild, das den Satz ohne Ton erklärt (Besucher sieht ein Produkt und geht
+         wieder, Klaviyo verbindet Shop-Daten mit E-Mail, Anmeldungen werden gesammelt und in Gruppen sortiert, E-Mail-Strecke
+         als Kette = Willkommensserie, passende Nachricht nach dem Kauf, E-Mail nur mit Einwilligung, Automation-Schalter ohne
+         automatischen Verkaufssprung, gezielt statt an alle), höchstens 1–3 Wörter je Bild, ein handschriftliches Akzentwort
+         (Caveat, OFL, lokal; Blau #31ADEC bzw. Grün). Nur, was er sagt: keine Zahlen, keine Kundendaten, keine Logos.
+         Rahmen: helle Karte unter dem Kopf (x 80-900, ab y 950; Instagram-Zone unten ab 1500), Pill-Untertitel darüber
+         (Remotion, y 895), ruhige Bewegung ohne Überschwingen. Rot nur für Fehler (hier nicht gebraucht).
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/klaviyo/cut.json, 50,57 s), schon als Cues (2 Frames vor dem
+         Wort); Liste mit Tönen in src/projekte/klaviyo/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 950px; width: 820px; height: 360px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 300px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .hand.gruen { fill: #00c27c; }
+      .linie { fill: none; stroke: #cbd5e1; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 2 12; }
+      .zug { fill: none; stroke: url(#gvu); stroke-width: 6; stroke-linecap: round; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .platz { fill: none; stroke: #9aa3af; stroke-width: 3; stroke-dasharray: 11 9; }
+      .zeile { fill: #e5e7eb; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Reihen-Einblendung nach dem Hook (wie A01-A03) */
+      .reihenkarte { position: absolute; left: 80px; width: fit-content; top: 950px; height: 132px; display: flex; align-items: center; gap: 24px; padding: 0 40px 0 26px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .reihenkarte .rico { width: 84px; height: 84px; border-radius: 22px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; }
+      .reihenkarte .rico svg { width: 48px; height: 48px; fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .reihenkarte .k2 { font-size: 22px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
+      .reihenkarte .t2 { font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Vorgabe 2026-10-25) */
+      .folgekarte { position: absolute; left: 80px; top: 950px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 42px; height: 42px; border-radius: 21px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 24px; height: 24px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+
+      /* Sticker-Wort links neben dem Kopf */
+      .sticker { position: absolute; left: 96px; top: 430px; padding: 8px 18px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 50px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(-4deg); transform-origin: 0 50%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="klaviyo-skizzen" data-width="1080" data-height="1920" data-start="0.00" data-duration="50.57">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvu" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="820" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24er Raster -->
+          <g id="laden"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.830 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="personplus"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M19 8v6" /><path d="M22 11h-6" /></g>
+          <g id="mail"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></g>
+          <g id="tasche"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></g>
+          <g id="herz"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></g>
+          <g id="tuer"><path d="M11 20H2" /><path d="M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z" /><path d="M11 4H8a2 2 0 0 0-2 2v14" /><path d="M14 12h.01" /><path d="M22 20h-3" /></g>
+          <g id="blitz"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></g>
+          <g id="korb"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></g>
+          <g id="etikett"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r=".5" /></g>
+          <g id="senden"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /><path d="m21.854 2.147-10.94 10.939" /></g>
+          <g id="funkeln"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /></g>
+          <!-- Haken im Kreis (Verlauf) -->
+          <g id="ok"><circle cx="0" cy="0" r="20" fill="url(#gvd)" /><path d="M-10 0 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <!-- Brief klein (für fliegende Briefe) -->
+          <g id="brief"><rect x="-24" y="-17" width="48" height="34" rx="6" fill="#fff" stroke="#0b0c0e" stroke-width="2.4" /><path d="M-22 -13 L0 3 L22 -13" fill="none" stroke="#0b0c0e" stroke-width="2.4" stroke-linejoin="round" /></g>
+        </defs>
+      </svg>
+
+      <!-- Reihen-Einblendung nach dem Hook: "unbedingt" 3,70 bis "sollte" (Ende 4,76) -->
+      <section id="reihe" class="reihenkarte clip" data-start="3.67" data-duration="1.30" data-track-index="0">
+        <div class="rico"><svg viewBox="0 0 24 24"><rect width="7" height="7" x="14" y="3" rx="1" /><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" /></svg></div>
+        <div><div class="k2">Die Reihe</div><div class="t2">Eine Shopify-App, <span class="verlauf">ein Problem</span></div></div>
+      </section>
+
+      <!-- K1 Besucher sieht ein Produkt und geht wieder: "Aber was passiert eigentlich mit den Menschen, die sich für deine
+           Produkte interessieren und deinen Onlineshop einfach wieder verlassen?" Aber 5,03 / Menschen 6,23 / Produkte 7,33 /
+           interessieren 7,67 / Onlineshop 8,53 / verlassen 9,40; bleibt bis vor "Klaviyo" (11,40) -->
+      <section id="k1" class="karte clip" data-start="5.03" data-duration="6.37" data-track-index="1">
+        <div class="kicker">Besucher in deinem Shop</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="24" y="8" width="572" height="262" rx="26" class="rahmen" />
+          <use href="#laden" class="ico" transform="translate(48 26) scale(1.3)" style="stroke:#6b7280;stroke-width:1.8" />
+          <text x="90" y="52" class="lab grau" style="font-size:24px">Dein Shop</text>
+          <g id="k1-prod">
+            <rect id="k1-prodr" x="64" y="82" width="172" height="166" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <rect x="80" y="98" width="140" height="92" rx="12" fill="url(#gvl)" stroke="#9ad9f2" stroke-width="2" />
+            <use href="#tasche" class="ico" transform="translate(126 120) scale(2)" style="stroke-width:1.6" />
+            <rect x="80" y="204" width="96" height="12" rx="6" fill="#0b0c0e" opacity="0.75" /><rect x="80" y="224" width="62" height="10" rx="5" class="zeile" />
+          </g>
+          <g id="k1-herz" opacity="0"><circle cx="232" cy="86" r="26" fill="url(#gvd)" /><use href="#herz" class="ico" transform="translate(220 74) scale(1)" style="stroke-width:2.4" /></g>
+          <path id="k1-blick" class="linie" d="M366 160 L 252 160" opacity="0" />
+          <g id="k1-gast" opacity="0"><circle cx="420" cy="160" r="46" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#person" class="ico" transform="translate(398 138) scale(1.85)" style="stroke-width:1.6" /></g>
+          <g id="k1-tuer" opacity="0"><circle cx="596" cy="196" r="34" fill="#0b0c0e" /><use href="#tuer" class="ico" transform="translate(580 180) scale(1.34)" style="stroke:#fff;stroke-width:2" /></g>
+          <g id="k1-frage" opacity="0"><rect x="704" y="58" width="56" height="62" rx="17" fill="#0b0c0e" /><text x="732" y="103" text-anchor="middle" style="font-size:42px;font-weight:900;fill:#fff">?</text></g>
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="640" y="226" width="0" height="90" /></clipPath>
+          <text x="646" y="288" class="hand" style="font-size:64px" clip-path="url(#k1-clip)" transform="rotate(-5 700 270)">weg?</text>
+        </svg>
+      </section>
+
+      <!-- K2 Klaviyo verbindet Shop-Daten mit E-Mail: "Genau hier kann Klaviyo interessant werden. Denn die App verbindet
+           E-Mail-Marketing mit Daten aus deinem Shopify-Shop." Klaviyo 11,47 / verbindet 13,37 / E-Mail-Marketing 13,73 /
+           Daten 14,80 / Shopify-Shop 15,80; bleibt bis vor "Newsletter-Anmeldungen" (17,90) -->
+      <section id="k2" class="karte clip" data-start="11.47" data-duration="6.43" data-track-index="1">
+        <div class="kicker">Die App</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="44" y="62" width="160" height="150" rx="26" class="platz" />
+          <rect x="616" y="62" width="160" height="150" rx="26" class="platz" />
+          <path id="k2-l1" class="zug" pathLength="1" d="M210 137 L 312 137" />
+          <path id="k2-l2" class="zug" pathLength="1" d="M508 137 L 610 137" />
+          <g id="k2-mitte"><rect x="318" y="52" width="184" height="170" rx="30" fill="#fff" stroke="url(#gvd)" stroke-width="5" /><text x="410" y="152" text-anchor="middle" class="lab" style="font-size:40px">Klaviyo</text></g>
+          <g id="k2-mail" opacity="0"><rect x="616" y="62" width="160" height="150" rx="26" class="rahmen" /><use href="#mail" class="ico" transform="translate(656 97) scale(3.3)" style="stroke-width:1.5" /></g>
+          <text id="k2-mailt" x="696" y="262" text-anchor="middle" class="lab" style="font-size:26px" opacity="0">E-Mail</text>
+          <g id="k2-shop" opacity="0"><rect x="44" y="62" width="160" height="150" rx="26" class="rahmen" /><use href="#laden" class="ico" transform="translate(84 97) scale(3.3)" style="stroke-width:1.5" /></g>
+          <text id="k2-shopt" x="124" y="262" text-anchor="middle" class="lab" style="font-size:26px" opacity="0">Shopify-Shop</text>
+          <g id="k2-d1" opacity="0"><circle cx="0" cy="0" r="22" fill="url(#gvd)" /><use href="#korb" class="ico" transform="translate(-12 -12)" style="stroke-width:2.2" /></g>
+          <g id="k2-d2" opacity="0"><circle cx="0" cy="0" r="22" fill="url(#gvd)" /><use href="#etikett" class="ico" transform="translate(-12 -12)" style="stroke-width:2.2" /></g>
+          <g id="k2-d3" opacity="0"><circle cx="0" cy="0" r="22" fill="url(#gvd)" /><use href="#person" class="ico" transform="translate(-12 -12)" style="stroke-width:2.2" /></g>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="300" y="226" width="0" height="80" /></clipPath>
+          <text x="306" y="280" class="hand" style="font-size:54px" clip-path="url(#k2-clip)" transform="rotate(-3 400 266)">verbunden</text>
+        </svg>
+      </section>
+
+      <!-- K3 Anmeldungen sammeln, in Gruppen sortieren: "Newsletter-Anmeldungen sammeln, Zielgruppen segmentieren"
+           Newsletter-Anmeldungen 17,97 / sammeln 18,97 / Zielgruppen 19,37 / segmentieren 19,80; bis vor "Automatisierungs-" (21,10) -->
+      <section id="k3" class="karte clip" data-start="17.97" data-duration="3.13" data-track-index="1">
+        <div class="kicker">Newsletter &amp; Zielgruppen</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k3-form">
+            <rect x="24" y="10" width="252" height="232" rx="22" class="rahmen" />
+            <text x="48" y="54" class="lab" style="font-size:27px">Newsletter</text>
+            <rect x="48" y="80" width="204" height="52" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2.5" />
+            <use href="#mail" class="ico" transform="translate(62 94) scale(1)" style="stroke:#9aa3af" />
+            <rect x="100" y="100" width="120" height="12" rx="6" class="zeile" />
+            <rect x="48" y="150" width="204" height="54" rx="27" fill="#0b0c0e" />
+            <text x="150" y="186" text-anchor="middle" style="font-size:23px;font-weight:700;fill:#fff">Anmelden</text>
+          </g>
+          <rect id="k3-liste" x="318" y="22" width="150" height="220" rx="20" class="platz" opacity="0" />
+          <rect id="k3-ga" x="540" y="8" width="252" height="112" rx="26" fill="none" stroke="#00c27c" stroke-width="3.5" stroke-dasharray="11 9" opacity="0" />
+          <rect id="k3-gb" x="540" y="140" width="252" height="112" rx="26" fill="none" stroke="#31adec" stroke-width="3.5" stroke-dasharray="11 9" opacity="0" />
+          <g id="k3-p">
+            <circle class="pp" cx="0" cy="0" r="17" fill="#fff" stroke="#6b7280" stroke-width="3" opacity="0" />
+            <circle class="pp" cx="0" cy="0" r="17" fill="#fff" stroke="#6b7280" stroke-width="3" opacity="0" />
+            <circle class="pp" cx="0" cy="0" r="17" fill="#fff" stroke="#6b7280" stroke-width="3" opacity="0" />
+            <circle class="pp" cx="0" cy="0" r="17" fill="#fff" stroke="#6b7280" stroke-width="3" opacity="0" />
+            <circle class="pp" cx="0" cy="0" r="17" fill="#fff" stroke="#6b7280" stroke-width="3" opacity="0" />
+            <circle class="pp" cx="0" cy="0" r="17" fill="#fff" stroke="#6b7280" stroke-width="3" opacity="0" />
+          </g>
+          <clipPath id="k3-clip"><rect id="k3-cliprect" x="300" y="248" width="0" height="70" /></clipPath>
+          <text x="306" y="294" class="hand gruen" style="font-size:48px" clip-path="url(#k3-clip)" transform="rotate(-3 400 280)">segmentiert</text>
+        </svg>
+      </section>
+
+      <!-- K4 E-Mail-Strecke = Willkommensserie: "und auch einfach Automatisierungs-E-Mail-Strecken aufbauen. Zum Beispiel eine
+           Willkommensserie für neue Newsletter-Abonnenten." Strecken 21,17 / aufbauen 22,97 / Willkommensserie 24,27 / neue 25,23 /
+           Newsletter-Abonnenten 25,67; bis vor "Oder" (26,70) -->
+      <section id="k4" class="karte clip" data-start="21.17" data-duration="5.53" data-track-index="1">
+        <div class="kicker">E-Mail-Strecken</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <path class="linie" d="M110 104 L 700 104" />
+          <path id="k4-z1" class="zug" pathLength="1" d="M128 104 L 214 104" />
+          <path id="k4-z2" class="zug" pathLength="1" d="M310 104 L 404 104" />
+          <path id="k4-z3" class="zug" pathLength="1" d="M500 104 L 594 104" />
+          <g id="k4-start"><circle cx="76" cy="104" r="50" fill="#fff" stroke="url(#gvd)" stroke-width="4" />
+            <g id="k4-blitz"><use href="#blitz" class="ico" transform="translate(52 80) scale(2)" style="stroke-width:1.6" /></g>
+            <g id="k4-neu" opacity="0"><use href="#personplus" class="ico" transform="translate(50 78) scale(2.1)" style="stroke-width:1.5" /></g>
+          </g>
+          <g id="k4-neub" opacity="0"><rect x="34" y="20" width="84" height="38" rx="19" fill="url(#gvd)" /><text x="76" y="47" text-anchor="middle" style="font-size:23px;font-weight:800;fill:#0b0c0e">neu</text></g>
+          <g id="k4-m1" opacity="0"><rect x="218" y="56" width="96" height="96" rx="22" class="rahmen" /><use href="#mail" class="ico" transform="translate(242 80) scale(2)" style="stroke-width:1.6" /></g>
+          <g id="k4-m2" opacity="0"><rect x="408" y="56" width="96" height="96" rx="22" class="rahmen" /><use href="#mail" class="ico" transform="translate(432 80) scale(2)" style="stroke-width:1.6" /></g>
+          <g id="k4-m3" opacity="0"><rect x="598" y="56" width="96" height="96" rx="22" class="rahmen" /><use href="#mail" class="ico" transform="translate(622 80) scale(2)" style="stroke-width:1.6" /></g>
+          <text x="266" y="186" text-anchor="middle" class="lab grau" style="font-size:24px" id="k4-n1" opacity="0">1</text>
+          <text x="456" y="186" text-anchor="middle" class="lab grau" style="font-size:24px" id="k4-n2" opacity="0">2</text>
+          <text x="646" y="186" text-anchor="middle" class="lab grau" style="font-size:24px" id="k4-n3" opacity="0">3</text>
+          <g id="k4-ok" opacity="0"><use href="#ok" transform="translate(694 58)" /></g>
+          <text id="k4-titel" x="30" y="262" class="lab" style="font-size:40px" opacity="0">Willkommens<tspan fill="url(#gvu)">serie</tspan></text>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="470" y="214" width="0" height="80" /></clipPath>
+          <text x="476" y="268" class="hand" style="font-size:54px" clip-path="url(#k4-clip)" transform="rotate(-4 560 252)">Willkommen!</text>
+        </svg>
+      </section>
+
+      <!-- K5 Passende Nachricht nach dem Kauf: "Oder einfach passende Nachrichten direkt an Kunden, die bereits etwas bei dir
+           gekauft haben, schicken." Oder 26,73 / passende 27,17 / Nachrichten 27,53 / Kunden 28,53 / gekauft 29,90 / schicken 30,40;
+           bis vor "Natürlich" (31,60) -->
+      <section id="k5" class="karte clip" data-start="26.73" data-duration="4.87" data-track-index="1">
+        <div class="kicker">Nach dem Kauf</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <path id="k5-weg" class="linie" d="M598 128 L 222 128" />
+          <g id="k5-kunde"><circle cx="150" cy="128" r="62" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(118 96) scale(2.66)" style="stroke-width:1.5" /></g>
+          <text id="k5-kundet" x="150" y="238" text-anchor="middle" class="lab" style="font-size:26px" opacity="0">Kunde</text>
+          <g id="k5-tasche" opacity="0"><circle cx="208" cy="78" r="30" fill="#0b0c0e" /><use href="#tasche" class="ico" transform="translate(194 64) scale(1.17)" style="stroke:#fff;stroke-width:2.2" /></g>
+          <g id="k5-tok" opacity="0"><use href="#ok" transform="translate(238 52) scale(0.85)" /></g>
+          <g id="k5-msg" opacity="0">
+            <rect x="584" y="62" width="150" height="132" rx="24" fill="#fff" stroke="url(#gvd)" stroke-width="4" />
+            <use href="#mail" class="ico" transform="translate(623 92) scale(3)" style="stroke-width:1.5" />
+            <g transform="translate(700 50)"><circle cx="0" cy="0" r="22" fill="url(#gvd)" /><use href="#funkeln" class="ico" transform="translate(-12 -12)" style="stroke-width:2" /></g>
+          </g>
+          <g id="k5-flug" opacity="0"><use href="#brief" /></g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="560" y="214" width="0" height="80" /></clipPath>
+          <text x="566" y="268" class="hand gruen" style="font-size:56px" clip-path="url(#k5-clip)" transform="rotate(-4 640 252)">passend</text>
+        </svg>
+      </section>
+
+      <!-- K6 Nur mit Einwilligung: "Natürlich musst du dabei immer auf die richtigen Einwilligungen achten."
+           Natürlich 31,63 / Einwilligungen 33,77 / achten 34,53; bis vor "Und nur weil" (35,00) -->
+      <section id="k6" class="karte clip" data-start="31.63" data-duration="3.62" data-track-index="1">
+        <div class="kicker">Wichtig</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <path class="linie" d="M150 112 L 670 112" />
+          <path id="k6-zug" class="zug" pathLength="1" d="M150 112 L 670 112" />
+          <g id="k6-brief" transform="translate(110 112)"><use href="#brief" transform="scale(1.5)" /></g>
+          <g id="k6-tor">
+            <rect x="282" y="52" width="262" height="120" rx="22" class="rahmen" />
+            <rect id="k6-box" x="304" y="88" width="48" height="48" rx="11" fill="#fff" stroke="#6b7280" stroke-width="3.2" />
+            <path id="k6-haken" d="M315 112 l10 10 l18 -20" fill="none" stroke="#0b0c0e" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+            <text x="368" y="122" class="lab" style="font-size:27px">Einwilligung</text>
+          </g>
+          <g id="k6-kunde"><circle cx="720" cy="112" r="56" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(692 84) scale(2.33)" style="stroke-width:1.5" /></g>
+          <g id="k6-ok" opacity="0"><use href="#ok" transform="translate(766 66)" /></g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="300" y="200" width="0" height="90" /></clipPath>
+          <text x="306" y="262" class="hand" style="font-size:58px" clip-path="url(#k6-clip)" transform="rotate(-4 380 246)">achten!</text>
+        </svg>
+      </section>
+
+      <!-- K7 Automation an, aber kein automatischer Sprung: "Und nur weil du eine Automation einrichtest, verkauft natürlich dein
+           Onlineshop nicht plötzlich automatisch mehr." nur 35,20 / Automation 35,97 / einrichtest 36,60 / verkauft 37,17 /
+           nicht 38,43 / plötzlich 38,60 / automatisch 39,07 / mehr 39,57; bis vor "Aber" (40,20) -->
+      <section id="k7" class="karte clip" data-start="35.20" data-duration="5.00" data-track-index="1">
+        <div class="kicker">Automation</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k7-schalter">
+            <rect id="k7-bahn" x="56" y="70" width="170" height="86" rx="43" fill="#d1d5db" />
+            <circle id="k7-knopf" cx="99" cy="113" r="34" fill="#fff" stroke="#9aa3af" stroke-width="2" />
+            <text x="141" y="206" text-anchor="middle" class="lab" style="font-size:27px">Automation</text>
+          </g>
+          <path d="M330 24 L 330 236 L 790 236" fill="none" stroke="#9aa3af" stroke-width="3" stroke-linecap="round" />
+          <text x="560" y="276" text-anchor="middle" class="lab grau" style="font-size:24px">Verkäufe</text>
+          <g id="k7-bars" opacity="0">
+            <rect x="366" y="166" width="66" height="70" rx="10" fill="#0b0c0e" opacity="0.8" />
+            <rect x="462" y="160" width="66" height="76" rx="10" fill="#0b0c0e" opacity="0.8" />
+            <rect x="558" y="168" width="66" height="68" rx="10" fill="#0b0c0e" opacity="0.8" />
+          </g>
+          <rect id="k7-traum" x="654" y="164" width="66" height="72" rx="10" fill="none" stroke="#31adec" stroke-width="4" stroke-dasharray="10 8" opacity="0" />
+          <path id="k7-strich" d="M640 64 L 734 30" stroke="#0b0c0e" stroke-width="6" stroke-linecap="round" opacity="0" />
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="30" y="232" width="0" height="80" /></clipPath>
+          <text x="36" y="288" class="hand" style="font-size:50px" clip-path="url(#k7-clip)" transform="rotate(-3 180 272)">nicht automatisch</text>
+        </svg>
+      </section>
+
+      <!-- Sticker "ABER." ("Aber" 40,23) -->
+      <div id="st1" class="sticker clip" data-start="40.20" data-duration="1.40" data-track-index="2">ABER.</div>
+
+      <!-- K8 Gezielt statt an alle: "Aber du kannst natürlich deine Kunden deutlich gezielter ansprechen. Und genau darum geht es
+           natürlich auch in einem guten E-Mail-Marketing." Aber 40,23 / Kunden 41,30 / gezielter 41,90 / ansprechen 42,37 /
+           guten 44,97 / E-Mail-Marketing 45,33; bis vor "Wenn" (46,20) -->
+      <section id="k8" class="karte clip" data-start="40.23" data-duration="5.97" data-track-index="1">
+        <div class="kicker">Gezielt ansprechen</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k8-sender"><rect x="34" y="40" width="140" height="130" rx="24" class="rahmen" /><use href="#mail" class="ico" transform="translate(68 69) scale(3)" style="stroke-width:1.5" /></g>
+          <g id="k8-leute">
+            <g class="lp"><circle cx="400" cy="62" r="30" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(386 48) scale(1.17)" style="stroke-width:2" /></g>
+            <g class="lp"><circle cx="480" cy="62" r="30" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(466 48) scale(1.17)" style="stroke-width:2" /></g>
+            <g class="lp ziel"><circle cx="560" cy="62" r="30" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(546 48) scale(1.17)" style="stroke-width:2" /></g>
+            <g class="lp ziel"><circle cx="640" cy="62" r="30" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(626 48) scale(1.17)" style="stroke-width:2" /></g>
+            <g class="lp"><circle cx="720" cy="62" r="30" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(706 48) scale(1.17)" style="stroke-width:2" /></g>
+            <g class="lp"><circle cx="400" cy="146" r="30" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(386 132) scale(1.17)" style="stroke-width:2" /></g>
+            <g class="lp ziel"><circle cx="600" cy="146" r="30" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(586 132) scale(1.17)" style="stroke-width:2" /></g>
+            <g class="lp"><circle cx="480" cy="146" r="30" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(466 132) scale(1.17)" style="stroke-width:2" /></g>
+            <g class="lp"><circle cx="720" cy="146" r="30" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(706 132) scale(1.17)" style="stroke-width:2" /></g>
+          </g>
+          <rect id="k8-ring" x="522" y="24" width="156" height="160" rx="30" fill="none" stroke="url(#gvd)" stroke-width="5" opacity="0" />
+          <path id="k8-bahn" class="zug" pathLength="1" d="M180 104 C 300 104, 420 196, 516 112" />
+          <g id="k8-flug" opacity="0"><use href="#brief" /></g>
+          <g id="k8-ok" opacity="0"><use href="#ok" transform="translate(676 28)" /></g>
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="196" y="164" width="0" height="80" /></clipPath>
+          <text x="202" y="218" class="hand gruen" style="font-size:56px" clip-path="url(#k8-clip)" transform="rotate(-4 280 202)">gezielt</text>
+          <g id="k8-schluss" opacity="0">
+            <g transform="translate(54 262)"><use href="#ok" transform="scale(0.8)" /></g>
+            <text x="86" y="274" class="lab" style="font-size:34px">Gutes <tspan fill="url(#gvu)">E-Mail-Marketing</tspan></text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K9 Folgen (CTA): nur das Folgen-Symbol. Wenn 46,23 (Karte) / Tipps 46,93 (Ring) / Plus 49,77 (angetippt, wird zum Haken) -->
+      <section id="k9" class="folgekarte clip" data-start="46.23" data-duration="4.34" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker, raus weich mit Blur und Fade (Zeiten sind schon Cues: 2 Frames vor dem Wort)
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      gsap.set("#k2-l1, #k2-l2, #k4-z1, #k4-z2, #k4-z3, #k6-zug, #k8-bahn", { strokeDasharray: 1, strokeDashoffset: 1 });
+
+      // Reihe
+      tl.fromTo("#reihe", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 3.67);
+      tl.to("#reihe", { opacity: 0, y: -10, duration: 0.25, ease: "power2.in" }, 4.72);
+
+      // K1 Besucher, Produkt, Herz, Tür, er geht, "?", "einfach weg?"
+      karte("#k1", 5.03, 11.40);
+      pop("#k1-gast", 6.23);
+      tl.to("#k1-prodr", { attr: { stroke: "#31adec", "stroke-width": 4 }, duration: 0.25 }, 7.33);
+      badge("#k1-herz", 7.67);
+      tl.to("#k1-blick", { opacity: 1, duration: 0.25 }, 7.67);
+      pop("#k1-tuer", 8.53);
+      tl.to("#k1-blick", { opacity: 0, duration: 0.2 }, 9.40);
+      tl.to("#k1-gast", { x: 300, duration: 0.8, ease: "power2.inOut" }, 9.40);
+      tl.to("#k1-gast", { opacity: 0.5, duration: 0.4 }, 9.80);
+      badge("#k1-frage", 9.90);
+      schreibe("#k1-cliprect", 140, 9.40, 0.4);
+
+      // K2 Klaviyo in der Mitte, Verbindung, E-Mail, Daten fließen aus dem Shop, "verbunden"
+      karte("#k2", 11.47, 17.90);
+      tl.fromTo("#k2-mitte", { scale: 0.92, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.45, ease: "power3.out" }, 11.47);
+      zeichne("#k2-l1", 13.37, 0.4); zeichne("#k2-l2", 13.37, 0.4);
+      schreibe("#k2-cliprect", 240, 13.37, 0.5);
+      pop("#k2-mail", 13.73); ein("#k2-mailt", 13.73);
+      pop("#k2-shop", 14.80);
+      [["#k2-d1", 14.80], ["#k2-d2", 15.05], ["#k2-d3", 15.30]].forEach(([s, t]) => {
+        tl.set(s, { x: 124, y: 137 }, 0);
+        tl.fromTo(s, { opacity: 0, x: 124, y: 137 }, { opacity: 1, duration: 0.15 }, t);
+        tl.to(s, { x: 410, duration: 0.7, ease: "power2.inOut" }, t + 0.1);
+        tl.to(s, { opacity: 0, duration: 0.15 }, t + 0.7);
+      });
+      ein("#k2-shopt", 15.80);
+
+      // K3 Formular, Anmeldungen fallen in die Liste, zwei Gruppen, sortieren, "segmentiert"
+      karte("#k3", 17.97, 21.10);
+      const pp = gsap.utils.toArray("#k3-p .pp");
+      const liste = [[360, 62], [426, 62], [360, 132], [426, 132], [360, 202], [426, 202]];
+      const ziel = [[586, 64], [666, 64], [746, 64], [586, 196], [666, 196], [746, 196]];
+      pp.forEach((p, i) => {
+        gsap.set(p, { x: 150, y: 177 });
+        tl.fromTo(p, { opacity: 0, x: 150, y: 177 }, { opacity: 1, x: liste[i][0], y: liste[i][1], duration: 0.45, ease: "power2.out" }, 18.97 + i * 0.07);
+        tl.to(p, { x: ziel[i][0], y: ziel[i][1], duration: 0.5, ease: "power2.inOut" }, 19.80 + i * 0.05);
+        tl.to(p, { attr: { stroke: i < 3 ? "#00c27c" : "#31adec", fill: i < 3 ? "#d9f9ec" : "#dcf0fb" }, duration: 0.3 }, 20.10 + i * 0.05);
+      });
+      tl.to("#k3-liste", { opacity: 1, duration: 0.25 }, 18.97);
+      tl.to("#k3-liste", { opacity: 0, duration: 0.3 }, 20.20);
+      pop("#k3-ga", 19.37); pop("#k3-gb", 19.45);
+      schreibe("#k3-cliprect", 260, 19.80, 0.5);
+
+      // K4 Strecke aus E-Mails, Haken, "Willkommensserie", neue Abonnenten, "Willkommen!"
+      karte("#k4", 21.17, 26.70);
+      zeichne("#k4-z1", 21.25, 0.3); pop("#k4-m1", 21.45); ein("#k4-n1", 21.45);
+      zeichne("#k4-z2", 21.70, 0.3); pop("#k4-m2", 21.90); ein("#k4-n2", 21.90);
+      zeichne("#k4-z3", 22.15, 0.3); pop("#k4-m3", 22.35); ein("#k4-n3", 22.35);
+      badge("#k4-ok", 22.97);
+      ein("#k4-titel", 24.27);
+      schreibe("#k4-cliprect", 300, 24.27, 0.55);
+      tl.to("#k4-blitz", { opacity: 0, duration: 0.2 }, 25.23);
+      tl.to("#k4-neu", { opacity: 1, duration: 0.25 }, 25.23);
+      badge("#k4-neub", 25.67);
+
+      // K5 Kunde, passende Nachricht, Kauf mit Haken, die Nachricht fliegt zum Kunden
+      karte("#k5", 26.73, 31.60);
+      schreibe("#k5-cliprect", 200, 27.17, 0.45);
+      pop("#k5-msg", 27.53);
+      ein("#k5-kundet", 28.53);
+      tl.to("#k5-kunde circle", { attr: { stroke: "#00c27c" }, duration: 0.3 }, 28.53);
+      badge("#k5-tasche", 29.90); badge("#k5-tok", 30.05);
+      gsap.set("#k5-flug", { x: 590, y: 128 });
+      tl.fromTo("#k5-flug", { opacity: 0, x: 590, y: 128 }, { opacity: 1, duration: 0.15 }, 30.40);
+      tl.to("#k5-flug", { x: 232, duration: 0.6, ease: "power2.inOut" }, 30.45);
+      tl.to("#k5-flug", { opacity: 0, duration: 0.15 }, 31.05);
+      tl.to("#k5-weg", { opacity: 0.2, duration: 0.3 }, 30.95);
+
+      // K6 Brief wartet vor dem Tor, Haken bei Einwilligung, Brief geht durch, "achten!"
+      karte("#k6", 31.63, 35.25);
+      tl.to("#k6-box", { attr: { fill: "#00e090", stroke: "#00c27c" }, duration: 0.2 }, 33.77);
+      tl.to("#k6-haken", { opacity: 1, duration: 0.15 }, 33.80);
+      zeichne("#k6-zug", 33.85, 0.45);
+      tl.to("#k6-brief", { x: 650, duration: 0.55, ease: "power2.inOut" }, 33.98);
+      badge("#k6-ok", 34.53);
+      schreibe("#k6-cliprect", 200, 34.53, 0.35);
+
+      // K7 Schalter an, Balken, Traum-Balken schießt hoch, wird gestrichen, fällt zurück, "nicht automatisch"
+      karte("#k7", 35.20, 40.20);
+      tl.to("#k7-bahn", { attr: { fill: "#00d088" }, duration: 0.25 }, 36.60);
+      tl.to("#k7-knopf", { attr: { cx: 183 }, duration: 0.3, ease: "power2.inOut" }, 36.60);
+      tl.fromTo("#k7-bars", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 37.17);
+      tl.set("#k7-traum", { opacity: 1 }, 38.60);
+      tl.fromTo("#k7-traum", { attr: { y: 164, height: 72 } }, { attr: { y: 30, height: 206 }, duration: 0.4, ease: "power2.out" }, 38.60);
+      schreibe("#k7-cliprect", 330, 38.43, 0.55);
+      tl.set("#k7-strich", { opacity: 1 }, 39.07);
+      tl.fromTo("#k7-strich", { strokeDasharray: 110, strokeDashoffset: 110 }, { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, 39.07);
+      tl.to("#k7-strich", { opacity: 0, duration: 0.2 }, 39.57);
+      tl.to("#k7-traum", { attr: { y: 164, height: 72 }, duration: 0.45, ease: "power2.inOut" }, 39.57);
+
+      // Sticker ABER.
+      tl.fromTo("#st1", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, 40.20);
+      tl.to("#st1", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 41.40);
+
+      // K8 Sender, viele Kunden, Ring um eine Gruppe, Brief fliegt gezielt dorthin, Schlusszeile
+      karte("#k8", 40.23, 46.20);
+      gsap.set("#k8-leute .lp", { opacity: 0 });
+      tl.fromTo("#k8-leute .lp", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out", stagger: 0.04 }, 40.35);
+      tl.to("#k8-leute .lp circle", { attr: { stroke: "#9aa3af" }, duration: 0.2, stagger: 0.03 }, 41.30);
+      tl.to("#k8-leute .lp:not(.ziel)", { opacity: 0.32, duration: 0.3 }, 41.90);
+      tl.to("#k8-leute .ziel circle", { attr: { stroke: "#00c27c" }, duration: 0.3 }, 41.90);
+      tl.set("#k8-ring", { opacity: 1 }, 41.90);
+      tl.fromTo("#k8-ring", { strokeDasharray: 700, strokeDashoffset: 700 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 41.90);
+      schreibe("#k8-cliprect", 200, 41.90, 0.45);
+      zeichne("#k8-bahn", 42.37, 0.45);
+      tl.set("#k8-flug", { x: 180, y: 104 }, 0);
+      tl.fromTo("#k8-flug", { opacity: 0, x: 180, y: 104 }, { opacity: 1, duration: 0.12 }, 42.37);
+      tl.to("#k8-flug", { x: 600, y: 104, duration: 0.55, ease: "power2.inOut" }, 42.40);
+      tl.to("#k8-flug", { opacity: 0, duration: 0.15 }, 42.95);
+      badge("#k8-ok", 42.97);
+      tl.fromTo("#k8-schluss", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 44.97);
+
+      // K9 Folgen: Karte auf "Wenn", Ring auf "Tipps", Zeiger tippt auf "Plus" das Plus an, es wird zum Haken
+      tl.fromTo("#k9", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 46.23);
+      tl.set("#fring", { opacity: 0.9, scale: 1 }, 46.93);
+      tl.to("#fring", { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 46.95);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 49.10);
+      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.47, ease: "power2.inOut" }, 49.25);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 49.72);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 49.80);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 49.77);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 49.77);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 49.80);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 49.80);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 49.80);
+      tl.to("#fzeiger", { x: 132, y: 128, duration: 0.25, ease: "power2.out" }, 49.98);
+
+      tl.seek(0);
+      window.__timelines["klaviyo-skizzen"] = tl;
+    </script>
+  </body>
+</html>

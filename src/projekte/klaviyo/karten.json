@@ -1,0 +1,236 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlagen P04, A03, S04) für A04 · Klaviyo. Sekunden im geschnittenen Video (cut.json, 50,57 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,10; mit 0,12 nur 5,8 dB unter der Stimme) beim Kartenwechsel, tick (0,10) auf ausgewählten Zuständen, pop auf dem Sticker, success auf 'Einwilligungen' und 'E-Mail-Marketing', klick auf dem Plus; zwischen zwei Effekten mindestens 1,5 s. Gebaut in hyperframes/klaviyo-skizzen/index.html. Keine Logos, keine Kundendaten, keine Zahlen. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "reihe",
+   "wort": "unbedingt (Hook)",
+   "text": "Reihen-Einblendung 'Eine Shopify-App, ein Problem' nach dem Hook-Titel",
+   "start": 3.67,
+   "ende": 4.97,
+   "sfx": []
+  },
+  {
+   "id": "k1",
+   "wort": "Aber",
+   "text": "Dein Shop mit einem Produkt (mit der Karte): ein Besucher auf 'Menschen', das Produkt leuchtet auf 'Produkte', Herz und Blick auf 'interessieren', die Tür auf 'Onlineshop'; auf 'verlassen' geht er aus dem Shop, '?' und handschriftlich 'weg?'",
+   "start": 5.03,
+   "ende": 11.4,
+   "teile": {
+    "menschen": 6.23,
+    "produkte": 7.33,
+    "interessieren": 7.67,
+    "onlineshop": 8.53,
+    "verlassen": 9.4
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 9.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Klaviyo",
+   "text": "Klaviyo in der Mitte zwischen zwei leeren Plätzen; auf 'verbindet' zeichnen sich beide Verbindungen und handschriftlich 'verbunden', auf 'E-Mail-Marketing' die E-Mail rechts, auf 'Daten' der Shop links und drei Daten-Punkte (Warenkorb, Produkt, Kunde) fließen in Klaviyo, auf 'Shopify-Shop' das Etikett",
+   "start": 11.47,
+   "ende": 17.9,
+   "teile": {
+    "verbindet": 13.37,
+    "e-mail-marketing": 13.73,
+    "daten": 14.8,
+    "shopify-shop": 15.8
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 11.47,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 14.8,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Newsletter-Anmeldungen",
+   "text": "Anmeldeformular 'Newsletter'; auf 'sammeln' fallen sechs Anmeldungen in die Liste, auf 'Zielgruppen' zwei Gruppen, auf 'segmentieren' werden sie einsortiert (grün/blau), handschriftlich 'segmentiert'",
+   "start": 17.97,
+   "ende": 21.1,
+   "teile": {
+    "sammeln": 18.97,
+    "zielgruppen": 19.37,
+    "segmentieren": 19.8
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 17.97,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Automatisierungs-E-Mail-Strecken",
+   "text": "Strecke: Auslöser (Blitz) und drei E-Mails, die nacheinander dazukommen (1, 2, 3), Haken auf 'aufbauen'; auf 'Willkommensserie' der Titel 'Willkommensserie' und handschriftlich 'Willkommen!', auf 'neue' wird der Auslöser zur neuen Anmeldung, Plakette 'neu' auf 'Newsletter-Abonnenten'",
+   "start": 21.17,
+   "ende": 26.7,
+   "teile": {
+    "aufbauen": 22.97,
+    "willkommensserie": 24.27,
+    "neue": 25.23,
+    "newsletter-abonnenten": 25.67
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 21.17,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 22.97,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Oder",
+   "text": "Kunde links; handschriftlich 'passend' auf 'passende', die passende Nachricht rechts auf 'Nachrichten', 'Kunde' auf 'Kunden', Einkaufstasche mit Haken auf 'gekauft', auf 'schicken' fliegt die Nachricht zum Kunden",
+   "start": 26.73,
+   "ende": 31.6,
+   "teile": {
+    "passende": 27.17,
+    "nachrichten": 27.53,
+    "kunden": 28.53,
+    "gekauft": 29.9,
+    "schicken": 30.4
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 26.73,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 29.9,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Natürlich",
+   "text": "E-Mail wartet vor dem Kästchen 'Einwilligung'; auf 'Einwilligungen' wird es angehakt und der Weg frei, die E-Mail geht zum Kunden, Haken und handschriftlich 'achten!' auf 'achten'",
+   "start": 31.63,
+   "ende": 35.25,
+   "teile": {
+    "einwilligungen": 33.77,
+    "achten": 34.53
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 31.63,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 33.77,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "nur",
+   "text": "Schalter 'Automation' springt auf 'einrichtest' an; auf 'verkauft' drei gleich hohe Balken 'Verkäufe'; auf 'plötzlich' schießt ein gestrichelter Wunsch-Balken hoch, auf 'automatisch' wird er gestrichen, auf 'mehr' fällt er zurück; handschriftlich 'nicht automatisch' auf 'nicht'",
+   "start": 35.2,
+   "ende": 40.2,
+   "teile": {
+    "einrichtest": 36.6,
+    "verkauft": 37.17,
+    "nicht": 38.43,
+    "ploetzlich": 38.6,
+    "automatisch": 39.07,
+    "mehr": 39.57
+   },
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 36.6,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st1",
+   "wort": "Aber",
+   "text": "Sticker 'ABER.' links neben dem Kopf",
+   "start": 40.2,
+   "ende": 41.6,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 40.2,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Aber",
+   "text": "Absender (E-Mail) links und viele Kunden rechts (mit der Karte), auf 'Kunden' werden sie deutlicher, auf 'gezielter' Ring um eine Gruppe, die anderen werden blass, handschriftlich 'gezielt'; auf 'ansprechen' fliegt die E-Mail genau dorthin, Haken; Schlusszeile 'Gutes E-Mail-Marketing' auf 'guten'",
+   "start": 40.23,
+   "ende": 46.2,
+   "teile": {
+    "kunden": 41.3,
+    "gezielter": 41.9,
+    "ansprechen": 42.37,
+    "guten": 44.97
+   },
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 42.37,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 44.97,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Wenn",
+   "text": "Folgen-Plus: Karte auf 'Wenn', Ring auf 'Tipps', der Zeiger tippt auf 'Plus' das Plus an, es wird zum Haken",
+   "start": 46.23,
+   "ende": 50.57,
+   "teile": {
+    "tipps": 46.93,
+    "plus": 49.77
+   },
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 49.77,
+     "volume": 0.12
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "projekt": "klaviyo",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 7.0,
+   "von": 7.06,
+   "text": "eine Shopify-App, die jeder Onlinehändler für automatisiertes E-Mail-Marketing unbedingt kennen sollte.",
+   "bis": 12.05
+  },
+  {
+   "take": "t1",
+   "ab": 12.8,
+   "von": 12.9,
+   "text": "Aber was passiert eigentlich mit den Menschen, die sich für deine Produkte interessieren und deinen Online-Shop einfach wieder verlassen? Genau hier kann Klaviyo interessant werden. Denn die App verbindet E-Mail-Marketing mit Daten aus deinem Shopify-Shop.",
+   "stumm": [
+    [
+     19.28,
+     19.4
+    ]
+   ]
+  },
+  {
+   "take": "t1",
+   "ab": 28.4,
+   "text": "und du kannst damit beispielsweise Newsletter-Anmeldungen sammeln, Zielgruppen segmentieren und auch einfach Automatisierungs-E-Mail-Strecken aufbauen.",
+   "bis": 35.5
+  },
+  {
+   "take": "t1",
+   "ab": 66.3,
+   "text": "Zum Beispiel eine Willkommensserie für neue Newsletter-Abonnenten.",
+   "bis": 69.55
+  },
+  {
+   "take": "t1",
+   "ab": 70.4,
+   "text": "Oder einfach passende Nachrichten direkt an Kunden, die bereits etwas bei dir gekauft haben schicken. Natürlich musst du dabei immer auf die richtigen Einwilligungen achten.",
+   "bis": 78.85
+  },
+  {
+   "take": "t1",
+   "ab": 106.9,
+   "text": "Und nur weil du eine Automation einrichtest, verkauft natürlich dein Online-Shop nicht plötzlich automatisch mehr. Aber du kannst natürlich deine Kunden deutlich gezielter ansprechen"
+  },
+  {
+   "take": "t1",
+   "ab": 119.6,
+   "text": "Und genau darum geht es natürlich auch in einem guten E-Mail-Marketing.",
+   "von": 119.4
+  },
+  {
+   "take": "t1",
+   "ab": 130.4,
+   "text": "wenn du weitere solcher Tipps in Zukunft nicht mehr verpassen möchtest, dann drücke gerne das Plus weg.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 134.92
+ },
+ "korrekturen": [
+  [
+   "t1",
+   7.15,
+   "eine",
+   "Eine"
+  ],
+  [
+   "t1",
+   16.51,
+   "Online-Shop",
+   "Onlineshop"
+  ],
+  [
+   "t1",
+   28.49,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   74.14,
+   "haben",
+   "haben,"
+  ],
+  [
+   "t1",
+   109.96,
+   "Online-Shop",
+   "Onlineshop"
+  ],
+  [
+   "t1",
+   114.3,
+   "ansprechen",
+   "ansprechen."
+  ],
+  [
+   "t1",
+   130.65,
+   "wenn",
+   "Wenn"
+  ]
+ ]
+}
