@@ -9,7 +9,7 @@
          ÜBER DEM KOPF große, kurze Kennzahlen und Schlagzeilen (1-5 Wörter), Instrument Serif (OFL) und Geist im Wechsel,
          Akzent im PulseConnect-Verlauf #00E090 → #31ADEC, ein Strich zeichnet sich auf dem Wort darunter, auf einem hellen
          Schleier (y ~280-470; der Kopf beginnt bei ~490). NEBEN DEM KOPF echte, freigestellte Fotos von fiveskincare.de
-         (Shea Cream, Tiegel und Flakon, Porträt Anna Pfeiffer von der Presseseite; hyperframes/five-hg/freistellen.py).
+         (Shea Cream, Porträt Anna Pfeiffer von der Presseseite; hyperframes/five-hg/freistellen.py).
          UNTER DEM KOPF die Pill-Untertitel (Remotion, y 1068) und die Erklär-Bilder auf der hellen Karte (x 80-900,
          y 1118-1468, über der Instagram-Zone ab 1500), dazu die Quellen-Karte mit Ausschnitten aus dem Shopify-Interview
          (1. Sept. 2020). Auf den Shop-Hintergründen (in den Take gerechnet, hyperframes/five-hg) zeichnet sich der Strich
@@ -28,8 +28,8 @@
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
 
       /* heller Schleier hinter den Kennzahlen über dem Kopf */
-      .schleier { position: absolute; left: 20px; top: 250px; width: 940px; height: 250px; opacity: 0;
-        background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 0.62) 52%, rgba(255, 255, 255, 0) 100%); }
+      .schleier { position: absolute; left: 0; top: 226px; width: 1080px; height: 330px; opacity: 0;
+        background: radial-gradient(ellipse 50% 50% at 46% 50%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 58%, rgba(255, 255, 255, 0) 100%); }
 
       /* Kennzahl / Schlagzeile über dem Kopf */
       .kopf { position: absolute; left: 80px; top: 284px; width: 820px; height: 184px; opacity: 0; }
@@ -191,10 +191,10 @@
         <div class="kz" id="z8-b"><span class="serif">ein</span><span class="ak serif it verlauf">Grund.<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z8-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span></div>
       </section>
 
-      <!-- Z9 "... die folgenden drei Tipps ableiten." drei 52,20 -->
-      <section id="z9" class="kopf clip" data-start="52.13" data-duration="1.40" data-track-index="0">
-        <div class="kk">Für deinen Shop</div>
-        <div class="kz" style="opacity:1"><span class="ak serif verlauf" style="font-size:150px">3<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z9-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span><span class="serif">Tipps</span></div>
+      <!-- Z9 "Und daraus würde ich tatsächlich die folgenden drei Tipps ableiten." Und 50,27 / drei 52,20 -->
+      <section id="z9" class="kopf clip" data-start="50.27" data-duration="3.26" data-track-index="0">
+        <div class="kk">Was ich daraus ableite</div>
+        <div class="kz" id="z9-a"><span class="ak serif verlauf" style="font-size:150px">3<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z9-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span><span class="serif">Tipps</span></div>
       </section>
 
       <!-- Z10 Tipp 1: "versuche mal einen USP in nur einem einzigen Satz zu erklären. Wenn das nicht klappt, dann ist
@@ -248,7 +248,8 @@
       <!-- Z15 "Das hier ist das wichtigste Learning von FIVE für mich gewesen. Weniger kann eine ziemlich starke
            Positionierung sein." wichtigste 97,20 / Weniger 99,83 / starke 101,30 -->
       <section id="z15" class="kopf clip" data-start="97.13" data-duration="5.60" data-track-index="0">
-        <div class="kk">Das Learning von FIVE</div>
+        <div class="kk">Das wichtigste Learning</div>
+        <div class="kz" id="z15-0"><span class="serif it">von FIVE</span></div>
         <div class="kz" id="z15-a"><span class="ak serif it verlauf">Weniger<svg class="strich" viewBox="0 0 100 20" preserveAspectRatio="none"><path id="z15-s" pathLength="1" d="M2 12 C 30 6, 70 6, 98 10" /></svg></span><span class="serif" id="z15-r" style="opacity:0">= stark.</span></div>
       </section>
 
@@ -264,8 +265,6 @@
       <div id="f1" class="foto clip" data-start="1.73" data-duration="4.97" data-track-index="2" style="left:92px;top:560px;width:236px"><img src="assets/shea-cream.png" alt="" /></div>
       <!-- Anna Pfeiffer (Porträt von der Presseseite fiveskincare.de/pages/presse) auf "Anna" 19,93 -->
       <div id="f2" class="foto clip" data-start="19.93" data-duration="5.87" data-track-index="2" style="left:66px;top:500px;width:270px"><img src="assets/anna-pfeiffer.png" alt="" /><div class="name"><b>Anna Pfeiffer</b><span>Gründerin</span></div></div>
-      <!-- Tiegel und Flakon (Bild "Keine Geheimnisse" aus dem Shop) beim Learning, auf "FIVE" 98,43 -->
-      <div id="f3" class="foto clip" data-start="98.43" data-duration="4.27" data-track-index="2" style="left:70px;top:600px;width:280px"><img src="assets/tiegel-und-flakon.png" alt="" /></div>
 
       <!-- ============ STRICH UNTER DEM ECHTEN USP AUF DEM SHOP-HINTERGRUND (Spur 3) ============
            Produktseite Shea Cream: "Nur 5 Inhaltsstoffe" (Screenshot x 130-435, Unterkante y ~930), Startseite: "Maximal 5
@@ -574,7 +573,10 @@
       gsap.set("svg.strich path, #m1-p, #m2-p, #k2-zug, #k4-zug, #k6-zug, #k12-zug, #k5-strich", { strokeDasharray: 1, strokeDashoffset: 1 });
 
       // Schleier hinter den Kennzahlen
-      tl.fromTo("#schleier", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 3.20);
+      // vor dem Zimmer leicht, vor den Shop-Seiten (in den Take gerechnet, Wechsel an den Schnitten) kräftig
+      tl.fromTo("#schleier", { opacity: 0 }, { opacity: 0.55, duration: 0.4, ease: "power2.out" }, 3.20);
+      [[6.80, 1], [30.03, 0.55], [61.57, 1], [72.93, 0.55], [82.00, 1], [86.90, 0.55], [92.23, 1], [102.77, 0.55]]
+        .forEach(([t, o]) => tl.to("#schleier", { opacity: o, duration: 0.12, ease: "none" }, t));
 
       // Z0 Hook: "mehr Inhaltsstoffe?" wird durchgestrichen, "weniger." kommt
       kopf("#z0", 3.20, 6.80);
@@ -607,7 +609,7 @@
       kopf("#z8", 44.00, 50.27); zeige("#z8-a", 44.97);
       tausche("#z8-a", "#z8-b", 47.37); strich("#z8-s", 47.47); kicker2("#z8-k1", "#z8-k2", 48.57);
       // Z9 3 Tipps
-      kopf("#z9", 52.13, 53.53); strich("#z9-s", 52.25);
+      kopf("#z9", 50.27, 53.53); zeige("#z9-a", 52.20); strich("#z9-s", 52.30);
       // Z10 dein USP → in 1 Satz.
       kopf("#z10", 53.53, 61.53); zeige("#z10-a", 55.20);
       tausche("#z10-a", "#z10-b", 56.57); strich("#z10-s", 56.67); kicker2("#z10-k1", "#z10-k2", 60.60);
@@ -626,9 +628,8 @@
       kicker2("#z14-k1", "#z14-k2", 93.70);
       tausche("#z14-a", "#z14-b", 95.67); strich("#z14-s2", 96.00);
       // Z15 Weniger = stark.
-      kopf("#z15", 97.13, 102.73); tl.set("#z15-a", { opacity: 1 }, 97.13);
-      tl.set("#z15-a > .ak", { opacity: 0 }, 97.13);
-      zeige("#z15-a > .ak", 99.83); strich("#z15-s", 99.93);
+      kopf("#z15", 97.13, 102.73); zeige("#z15-0", 97.20);
+      tausche("#z15-0", "#z15-a", 99.83); strich("#z15-s", 99.93);
       ein("#z15-r", 101.30);
       // Z16 Learnings & Tipps
       kopf("#z16", 103.87, 111.80);
@@ -636,7 +637,6 @@
       // Fotos neben dem Kopf
       foto("#f1", 1.73, 6.70, -4);
       foto("#f2", 19.93, 25.80, -3);
-      foto("#f3", 98.43, 102.70, -4);
 
       // Strich unter dem echten USP auf dem Shop-Hintergrund
       strich("#m1-p", 63.40, 0.55); tl.to("#m1", { opacity: 0, duration: 0.25 }, 66.65);
@@ -700,7 +700,9 @@
         u.setAttribute("href", "#tiegel");
         g.appendChild(u); huelle.appendChild(g); regal.appendChild(huelle);
       }
-      tl.fromTo("#k7-regal .tg", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out", stagger: 0.07 }, 44.97);
+      const tg = gsap.utils.toArray("#k7-regal .tg");
+      tl.fromTo(tg.slice(0, 7), { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out", stagger: 0.05 }, 44.10);
+      tl.fromTo(tg.slice(7), { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out", stagger: 0.07 }, 44.97);
       pop("#k7-tag", 47.37);
       tl.set("#k7-ring", { opacity: 1 }, 47.37);
       tl.fromTo("#k7-ring", { scale: 0.9, svgOrigin: "516 96" }, { scale: 1, duration: 0.3, ease: "power2.out" }, 47.37);
@@ -717,7 +719,7 @@
 
       // K9 Tipp 1: lange Zeilen → ein Satz → zu kompliziert
       karte("#k9", 53.60, 61.53);
-      tl.fromTo("#k9-lang rect", { opacity: 0, scaleX: 0.3, transformOrigin: "0 50%" }, { opacity: 1, scaleX: 1, duration: 0.3, ease: "power2.out", stagger: 0.08 }, 54.40);
+      tl.fromTo("#k9-lang rect", { opacity: 0, scaleX: 0.3, transformOrigin: "0 50%" }, { opacity: 1, scaleX: 1, duration: 0.3, ease: "power2.out", stagger: 0.08 }, 53.66);
       tl.to("#k9-lang", { opacity: 0, scaleY: 0.2, transformOrigin: "50% 50%", duration: 0.3, ease: "power2.in" }, 56.40);
       pop("#k9-satz", 56.57); badge("#k9-ok", 56.83);
       tl.to("#k9-satz, #k9-ok", { y: -18, duration: 0.3, ease: "power2.inOut" }, 57.63);

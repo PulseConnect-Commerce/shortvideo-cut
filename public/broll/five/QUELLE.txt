@@ -1,0 +1,39 @@
+Hintergründe und Fotos für M06 · FIVE Skincare (alle am 27.10.2026 mit Playwright/Chromium ohne Login aufgenommen bzw.
+geladen; Handy-Ansicht 432 px, 2,5-fach; nur zugeschnitten, leicht weichgezeichnet und leicht abgedunkelt; nichts
+dazugemalt). Gestaltet mit hyperframes/five-hg/gestalte.py aus den Screenshots in hyperframes/five-hg/screenshots/ (Liste
+der sichtbaren Texte je Aufnahme: screenshots/aufnahme.json). Oben jeweils die Kopfleiste der Seite mit dem Logo.
+
+- hg-home.png: Startseite, Folie "Adieu trockene Haut im Winter! Hallo Shea Cream" https://fiveskincare.de/
+- hg-zutaten.png: Produktseite FIVE Shea Cream, aufgeklappt "Mit nur 5 Inhaltsstoffen" (Sheabutter (bio), Jojobaöl
+  (bio), Arganöl (bio), Vitamin E, Ätherisches Neroliöl (bio)) https://fiveskincare.de/products/sheabutter-creme
+- hg-alle.png: Kategorie "Produkte" (FIVE Make-up Entferner, FIVE Gesichtsserum) https://fiveskincare.de/collections/all
+- hg-story.png: "Unsere Story", «Weniger ist oft mehr – besonders in der Hautpflege.» Anna Pfeiffer, Gründerin FIVE
+  https://fiveskincare.de/pages/unsere-story
+- hg-presse.png: Presseseite, "Auf einen Blick": "Im September 2017 erfolgreiche Teilnahme bei der deutschen TV-Show
+  „Die Höhle der Löwen“, gleichzeitig offizieller Launch der Marke FIVE in DACH" https://fiveskincare.de/pages/presse
+- hg-usp.png: Produktseite FIVE Shea Cream, "Nur 5 Inhaltsstoffe" direkt unter dem Namen
+  https://fiveskincare.de/products/sheabutter-creme
+- hg-favoriten.png: Startseite, "Maximal 5 Inhaltsstoffe · Vegane Naturkosmetik · Glas ohne Umverpackung" über "Eure
+  Favoriten" https://fiveskincare.de/
+- hg-geheimnisse.png: "5 Gründe für FIVE", "4. Keine Geheimnisse" (Inhaltsstoffe gross auf Tiegel und Flakons)
+  https://fiveskincare.de/pages/fuenf-gruende
+- hg-shea.png: Produktseite FIVE Shea Cream (Kopf mit Produktfoto) https://fiveskincare.de/products/sheabutter-creme
+- hg-gruende.png: "5 Gründe für FIVE": "Durchschnittlich bestehen Cremes aus circa 30 Inhaltsstoffen. Wir kommen mit
+  maximal 5 aus." https://fiveskincare.de/pages/fuenf-gruende
+
+Fotos neben dem Kopf und in den Karten (hyperframes/five-skizzen/assets/, freigestellt mit hyperframes/five-hg/freistellen.py,
+Originale in hyperframes/five-hg/fotos/):
+- shea-cream.png, gesichtsserum.png, make-up-entferner.png: Produktfotos aus dem Shop (fiveskincare.de/cdn/shop/files/
+  FIVE-Shea-Cream-2025.jpg, FIVE-Gesichtsserum-2025.jpg, FIVE-Make-up-Entferner-2025.jpg; im Shop-Feed products.json)
+- tiegel-und-flakon.png: Bild "Five-keine-Geheimnisse" von der Seite "5 Gründe für FIVE"
+- anna-pfeiffer.png: Porträt "Five-Anna-Pfeiffer-Portrait" von der Presseseite https://fiveskincare.de/pages/presse
+  (dort "Bildmaterial" zum Download für die Presse)
+- lupe-etikett.png: Ausschnitt des Etiketts aus FIVE-Shea-Cream-2025.jpg
+
+Quellen-Karte (hyperframes/five-hg/quelle.py): Ausschnitte aus Shopify-Blog/Podcast, "High Five für Naturkosmetik: So
+schuf FIVE Skincare vegane Kosmetik, die jeder versteht, und überzeugte bei DHDL", Manuel Fritsch, 1. Sept. 2020:
+https://www.shopify.com/de/blog/five-skincare-naturkosmetik (Titel mit Autor und Datum; die Stelle "Wir waren nach 24
+Stunden Out of Stock" und das Zitat "Ich habe nicht damit gerechnet, dass wir gleich ausverkauft sind.")
+
+Kennzahlen und Karten (skizzen.webm): eigene Gestaltung aus hyperframes/five-skizzen (Lucide-Icons, ISC-Lizenz; Schriften
+Geist, Instrument Serif und Caveat, OFL). Die KI-Formulierungen A/B/C sind ausdrücklich Beispiele, keine Aussagen von FIVE.

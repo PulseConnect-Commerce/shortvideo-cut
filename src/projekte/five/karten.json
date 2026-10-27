@@ -1,23 +1,346 @@
 {
  "hinweis": "M06 · FIVE Skincare, erste Marken-Story im Editorial-Stil (PROBE ab M06, karten-aufbau.md): Kennzahlen/Schlagzeilen über dem Kopf (z*), echte freigestellte Fotos von fiveskincare.de neben dem Kopf (f*), Strich unter dem echten USP auf dem Shop-Hintergrund (m*), Erklär-Bilder und Quellen-Karte unter dem Kopf (k*). Sekunden im geschnittenen Video (cut.json, 111,80 s), schon als Cues (2 Frames vor dem Wort). Gebaut in hyperframes/five-skizzen/index.html. sfx: whoosh (0,10) beim Kartenwechsel, tick (0,10) auf ausgewählten Zuständen, pop (0,10) auf den Fotos, success (0,10) auf '5/5' und 'beweist', klick (0,10) auf Quelle, Zeiger und Plus; zwischen zwei Effekten mindestens ~0,9 s, zwischen Whooshes mindestens 1,5 s. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
  "karten": [
-  {"id": "f1", "wort": "Kosmetik", "text": "Foto FIVE Shea Cream (Shop) neben dem Kopf", "start": 1.73, "ende": 6.7, "sfx": [{"datei": "pop.mp3", "at": 1.73, "volume": 0.1}]},
-  {"id": "z0", "wort": "mehr / weniger", "text": "Kennzahl 'mehr Inhaltsstoffe?' (grau), wird auf 'weniger' durchgestrichen, dann 'weniger.' im Verlauf mit Strich", "start": 3.2, "ende": 6.8, "sfx": []},
-  {"id": "z1", "wort": "Denn / FIVE", "text": "Kennzahl 'FIVE Skincare', Kicker 'Marken-Story · fiveskincare.de', Strich unter FIVE; Hintergrund Startseite fiveskincare.de", "start": 6.8, "ende": 10.03, "sfx": [{"datei": "whoosh.mp3", "at": 6.8, "volume": 0.1}]},
-  {"id": "k1", "wort": "Die / maximal / fünf / pro", "text": "Kennzahl 'max. 5' (Strich auf 'fünf', Kicker 'Inhaltsstoffe pro Produkt'); Karte: die 5 Inhaltsstoffe der Shea Cream laut Shop, 5/5 mit Haken, handschriftlich 'pro Produkt'; Hintergrund Produktseite 'Mit nur 5 Inhaltsstoffen'", "start": 10.03, "ende": 13.6, "sfx": [{"datei": "whoosh.mp3", "at": 10.03, "volume": 0.1}, {"datei": "success.mp3", "at": 11.93, "volume": 0.1}]},
-  {"id": "k2", "wort": "Name / Versprechen / selbst / Produktbeschreibung", "text": "Kennzahl 'FIVE = max. 5'; Karte: Flakon (Foto) mit Etikett 'max. 5 Inhaltsst.', handschriftlich 'sofort klar', die Beschreibung blass daneben; Hintergrund Kategorie 'Produkte'", "start": 13.83, "ende": 19.37, "sfx": [{"datei": "whoosh.mp3", "at": 13.83, "volume": 0.1}, {"datei": "tick.mp3", "at": 15.4, "volume": 0.1}]},
-  {"id": "k3", "wort": "Anna / Hautpflege / verstehen", "text": "Foto Anna Pfeiffer (Presseseite) mit Namensschild; Kennzahl 'Anna Pfeiffer' → 'verstehen.'; Karte: Etikett mit vielen winzigen Zeilen (Ø Creme ca. 30 laut FIVE) mit '?' gegen 5 klare Zeilen 'FIVE: max. 5' mit Haken; Hintergrund 'Unsere Story'", "start": 19.93, "ende": 25.8, "sfx": [{"datei": "pop.mp3", "at": 19.93, "volume": 0.1}, {"datei": "whoosh.mp3", "at": 21.1, "volume": 0.1}, {"datei": "tick.mp3", "at": 23.63, "volume": 0.1}]},
-  {"id": "k4", "wort": "Positionierung / FIVE / Die Höhle der Löwen / bekannt", "text": "Kennzahl 'später bekannt' → 'Sept. 2017' (Presseseite und Interview); Karte: Positionierung → TV 'Die Höhle der Löwen', handschriftlich 'bekannt'; Hintergrund Presseseite 'Auf einen Blick'", "start": 26.5, "ende": 30.0, "sfx": [{"datei": "whoosh.mp3", "at": 26.5, "volume": 0.1}, {"datei": "tick.mp3", "at": 28.77, "volume": 0.1}]},
-  {"id": "k5", "wort": "Und laut / kurzer / ausverkauft", "text": "Kennzahl 'nach der Show' → '24 Std. bis „Out of Stock“' (Interview 1.9.2020); Quellen-Karte: Titel und Datum des Shopify-Interviews, dann die Stelle 'nach 24 Stunden Out of Stock' markiert und 'gleich ausverkauft' unterstrichen", "start": 30.0, "ende": 35.74, "sfx": [{"datei": "klick.mp3", "at": 30.0, "volume": 0.1}, {"datei": "tick.mp3", "at": 33.1, "volume": 0.1}]},
-  {"id": "k6", "wort": "TV-Auftritt / Positionierung / davor", "text": "Kennzahl 'TV-Auftritt?' (durchgestrichen) → 'die Positionierung'; Karte: Zeitstrahl TV 2017 rechts, Positionierung links, Pfeil zurück, handschriftlich 'davor!'", "start": 37.33, "ende": 44.0, "sfx": [{"datei": "whoosh.mp3", "at": 37.33, "volume": 0.1}, {"datei": "tick.mp3", "at": 40.47, "volume": 0.1}]},
-  {"id": "k7", "wort": "Produktkategorie / unzähligen / Grund / ausgerechnet / dich", "text": "Kennzahl 'unzählige Angebote' → 'ein Grund.', Kicker 'Warum ausgerechnet du?'; Karte: Regal mit 14 gleichen Tiegeln, einer bekommt den 'Grund', die anderen blass, der Zeiger wählt ihn", "start": 44.07, "ende": 50.27, "sfx": [{"datei": "whoosh.mp3", "at": 44.07, "volume": 0.1}, {"datei": "tick.mp3", "at": 47.37, "volume": 0.1}, {"datei": "klick.mp3", "at": 49.23, "volume": 0.1}]},
-  {"id": "k8", "wort": "drei", "text": "Kennzahl '3 Tipps'; Karte: drei leere Plätze 1 2 3", "start": 52.13, "ende": 53.6, "sfx": [{"datei": "pop.mp3", "at": 52.2, "volume": 0.1}]},
-  {"id": "k9", "wort": "Erstens / versuche / Satz / klappt / kompliziert", "text": "Kennzahl 'dein USP' → 'in 1 Satz.'; Karte: lange Zeilen fallen zu einem Satz zusammen, Beispiel FIVE 'Naturkosmetik aus maximal 5 Inhaltsstoffen' (Startseite), dann wirre Zeilen mit '?' und handschriftlich 'zu kompliziert'", "start": 53.6, "ende": 61.53, "sfx": [{"datei": "whoosh.mp3", "at": 53.6, "volume": 0.1}, {"datei": "tick.mp3", "at": 56.57, "volume": 0.1}]},
-  {"id": "k10", "wort": "Zweitens / sichtbar / Über-uns-Seite / dort / Produkt", "text": "Kennzahl 'sichtbar.' → 'beim Produkt.'; Strich unter dem echten 'Nur 5 Inhaltsstoffe' auf der Produktseite (Hintergrund) und unter 'Maximal 5 Inhaltsstoffe' auf der Startseite; Karte: Handy-Seite, der USP-Chip liegt ganz unten bei 'Über uns' und wandert hoch zum Produkt, '✕ ganz unten' / '✓ direkt beim Produkt', handschriftlich 'das funktioniert'", "start": 61.53, "ende": 72.93, "sfx": [{"datei": "whoosh.mp3", "at": 61.53, "volume": 0.1}, {"datei": "tick.mp3", "at": 63.4, "volume": 0.1}, {"datei": "tick.mp3", "at": 68.53, "volume": 0.1}]},
-  {"id": "k11", "wort": "drittens / Versprechen / Produkt / einlösen / irgendwas / enttäuschen", "text": "Kennzahl 'das Versprechen' → 'einlösen.'; Karte: Waage Versprechen/Produkt im Gleichgewicht mit Haken, dann '+ + +' auf dem Versprechen, die Waage kippt, enttäuschter Kunde mit rotem Minus", "start": 72.93, "ende": 82.0, "sfx": [{"datei": "whoosh.mp3", "at": 72.93, "volume": 0.1}, {"datei": "tick.mp3", "at": 76.33, "volume": 0.1}, {"datei": "pop.mp3", "at": 80.4, "volume": 0.1}]},
-  {"id": "k12", "wort": "Pflegeprodukten / transparente", "text": "Kennzahl 'Inhaltsstoffe' → 'transparent.'; Karte: Foto Shea Cream, Lupe auf das Etikett 'Nur 5 Inhaltsstoffe ...'; Hintergrund 5 Gründe 'Keine Geheimnisse'", "start": 82.0, "ende": 86.87, "sfx": [{"datei": "whoosh.mp3", "at": 82.0, "volume": 0.1}, {"datei": "tick.mp3", "at": 84.2, "volume": 0.1}]},
-  {"id": "k13", "wort": "KI / verschiedenen / testen / Versprechen / stimmt / Produkt / beweisen", "text": "Kennzahl 'KI testet' → 'das Produkt beweist.'; Karte 'KI-Textvergleich · nur Beispiele': drei Beispiel-Formulierungen A/B/C, der Zeiger testet, C wird gewählt, '?', dann das Produkt mit Haken, handschriftlich 'beweist es'; Hintergrund Produktseite Shea Cream", "start": 87.87, "ende": 96.57, "sfx": [{"datei": "whoosh.mp3", "at": 87.87, "volume": 0.1}, {"datei": "klick.mp3", "at": 91.8, "volume": 0.1}, {"datei": "success.mp3", "at": 96.0, "volume": 0.1}]},
-  {"id": "k14", "wort": "wichtigste / FIVE / Weniger / starke", "text": "Foto Tiegel und Flakon (Shop) neben dem Kopf; Kennzahl 'Weniger = stark.'; Karte: Balken Inhaltsstoffe schrumpft von ca. 30 (Ø Creme laut FIVE) auf max. 5, Balken Positionierung wächst, handschriftlich 'stark'; Hintergrund 5 Gründe", "start": 97.13, "ende": 102.73, "sfx": [{"datei": "whoosh.mp3", "at": 97.13, "volume": 0.1}, {"datei": "pop.mp3", "at": 98.43, "volume": 0.1}, {"datei": "tick.mp3", "at": 99.83, "volume": 0.1}]},
-  {"id": "k15", "wort": "wenn / Tipps / Plus", "text": "Kennzahl 'Learnings & Tipps'; Folgen-Plus, auf 'Plus' angetippt, wird zum Haken (keine Folgennummer)", "start": 102.83, "ende": 111.8, "sfx": [{"datei": "whoosh.mp3", "at": 102.83, "volume": 0.1}, {"datei": "klick.mp3", "at": 108.47, "volume": 0.1}]}
+  {
+   "id": "f1",
+   "wort": "Kosmetik",
+   "text": "Foto FIVE Shea Cream (Shop) neben dem Kopf",
+   "start": 1.73,
+   "ende": 6.7,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 1.73,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "z0",
+   "wort": "mehr / weniger",
+   "text": "Kennzahl 'mehr Inhaltsstoffe?' (grau), wird auf 'weniger' durchgestrichen, dann 'weniger.' im Verlauf mit Strich",
+   "start": 3.2,
+   "ende": 6.8,
+   "sfx": []
+  },
+  {
+   "id": "z1",
+   "wort": "Denn / FIVE",
+   "text": "Kennzahl 'FIVE Skincare', Kicker 'Marken-Story · fiveskincare.de', Strich unter FIVE; Hintergrund Startseite fiveskincare.de",
+   "start": 6.8,
+   "ende": 10.03,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 6.8,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "wort": "Die / maximal / fünf / pro",
+   "text": "Kennzahl 'max. 5' (Strich auf 'fünf', Kicker 'Inhaltsstoffe pro Produkt'); Karte: die 5 Inhaltsstoffe der Shea Cream laut Shop, 5/5 mit Haken, handschriftlich 'pro Produkt'; Hintergrund Produktseite 'Mit nur 5 Inhaltsstoffen'",
+   "start": 10.03,
+   "ende": 13.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 10.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 11.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Name / Versprechen / selbst / Produktbeschreibung",
+   "text": "Kennzahl 'FIVE = max. 5'; Karte: Flakon (Foto) mit Etikett 'max. 5 Inhaltsst.', handschriftlich 'sofort klar', die Beschreibung blass daneben; Hintergrund Kategorie 'Produkte'",
+   "start": 13.83,
+   "ende": 19.37,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 13.83,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 15.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Anna / Hautpflege / verstehen",
+   "text": "Foto Anna Pfeiffer (Presseseite) mit Namensschild; Kennzahl 'Anna Pfeiffer' → 'verstehen.'; Karte: Etikett mit vielen winzigen Zeilen (Ø Creme ca. 30 laut FIVE) mit '?' gegen 5 klare Zeilen 'FIVE: max. 5' mit Haken; Hintergrund 'Unsere Story'",
+   "start": 19.93,
+   "ende": 25.8,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 19.93,
+     "volume": 0.1
+    },
+    {
+     "datei": "whoosh.mp3",
+     "at": 21.1,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 23.63,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Positionierung / FIVE / Die Höhle der Löwen / bekannt",
+   "text": "Kennzahl 'später bekannt' → 'Sept. 2017' (Presseseite und Interview); Karte: Positionierung → TV 'Die Höhle der Löwen', handschriftlich 'bekannt'; Hintergrund Presseseite 'Auf einen Blick'",
+   "start": 26.5,
+   "ende": 30.0,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 26.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 28.77,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Und laut / kurzer / ausverkauft",
+   "text": "Kennzahl 'nach der Show' → '24 Std. bis „Out of Stock“' (Interview 1.9.2020); Quellen-Karte: Titel und Datum des Shopify-Interviews, dann die Stelle 'nach 24 Stunden Out of Stock' markiert und 'gleich ausverkauft' unterstrichen",
+   "start": 30.0,
+   "ende": 35.74,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 30.0,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 33.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "TV-Auftritt / Positionierung / davor",
+   "text": "Kennzahl 'TV-Auftritt?' (durchgestrichen) → 'die Positionierung'; Karte: Zeitstrahl TV 2017 rechts, Positionierung links, Pfeil zurück, handschriftlich 'davor!'",
+   "start": 37.33,
+   "ende": 44.0,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 37.33,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 40.47,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Produktkategorie / unzähligen / Grund / ausgerechnet / dich",
+   "text": "Kennzahl 'unzählige Angebote' → 'ein Grund.', Kicker 'Warum ausgerechnet du?'; Karte: Regal mit 14 gleichen Tiegeln, einer bekommt den 'Grund', die anderen blass, der Zeiger wählt ihn",
+   "start": 44.07,
+   "ende": 50.27,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 44.07,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 47.37,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 49.23,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "drei",
+   "text": "Kennzahl '3 Tipps'; Karte: drei leere Plätze 1 2 3",
+   "start": 52.13,
+   "ende": 53.6,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 52.2,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Erstens / versuche / Satz / klappt / kompliziert",
+   "text": "Kennzahl 'dein USP' → 'in 1 Satz.'; Karte: lange Zeilen fallen zu einem Satz zusammen, Beispiel FIVE 'Naturkosmetik aus maximal 5 Inhaltsstoffen' (Startseite), dann wirre Zeilen mit '?' und handschriftlich 'zu kompliziert'",
+   "start": 53.6,
+   "ende": 61.53,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 53.6,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.57,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Zweitens / sichtbar / Über-uns-Seite / dort / Produkt",
+   "text": "Kennzahl 'sichtbar.' → 'beim Produkt.'; Strich unter dem echten 'Nur 5 Inhaltsstoffe' auf der Produktseite (Hintergrund) und unter 'Maximal 5 Inhaltsstoffe' auf der Startseite; Karte: Handy-Seite, der USP-Chip liegt ganz unten bei 'Über uns' und wandert hoch zum Produkt, '✕ ganz unten' / '✓ direkt beim Produkt', handschriftlich 'das funktioniert'",
+   "start": 61.53,
+   "ende": 72.93,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 61.53,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 63.4,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 68.53,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "drittens / Versprechen / Produkt / einlösen / irgendwas / enttäuschen",
+   "text": "Kennzahl 'das Versprechen' → 'einlösen.'; Karte: Waage Versprechen/Produkt im Gleichgewicht mit Haken, dann '+ + +' auf dem Versprechen, die Waage kippt, enttäuschter Kunde mit rotem Minus",
+   "start": 72.93,
+   "ende": 82.0,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 72.93,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 76.33,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 80.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Pflegeprodukten / transparente",
+   "text": "Kennzahl 'Inhaltsstoffe' → 'transparent.'; Karte: Foto Shea Cream, Lupe auf das Etikett 'Nur 5 Inhaltsstoffe ...'; Hintergrund 5 Gründe 'Keine Geheimnisse'",
+   "start": 82.0,
+   "ende": 86.87,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 82.0,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 84.2,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k13",
+   "wort": "KI / verschiedenen / testen / Versprechen / stimmt / Produkt / beweisen",
+   "text": "Kennzahl 'KI testet' → 'das Produkt beweist.'; Karte 'KI-Textvergleich · nur Beispiele': drei Beispiel-Formulierungen A/B/C, der Zeiger testet, C wird gewählt, '?', dann das Produkt mit Haken, handschriftlich 'beweist es'; Hintergrund Produktseite Shea Cream",
+   "start": 87.87,
+   "ende": 96.57,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 87.87,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 91.8,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 96.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k14",
+   "wort": "wichtigste / FIVE / Weniger / starke",
+   "text": "Kennzahl 'Weniger = stark.'; Karte: Balken Inhaltsstoffe schrumpft von ca. 30 (Ø Creme laut FIVE) auf max. 5, Balken Positionierung wächst, handschriftlich 'stark'; Hintergrund 5 Gründe",
+   "start": 97.13,
+   "ende": 102.73,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 97.13,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 99.83,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k15",
+   "wort": "wenn / Tipps / Plus",
+   "text": "Kennzahl 'Learnings & Tipps'; Folgen-Plus, auf 'Plus' angetippt, wird zum Haken (keine Folgennummer)",
+   "start": 102.83,
+   "ende": 111.8,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 102.83,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 108.47,
+     "volume": 0.1
+    }
+   ]
+  }
  ]
 }

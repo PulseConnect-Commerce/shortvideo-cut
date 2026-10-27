@@ -2,8 +2,8 @@
  * Format HERO, Serie M "Marken-Story", M06 · FIVE Skincare. Veröffentlichung laut Kalender Di 08.12.2026 19:00.
  * Erste Folge im Editorial-Stil (PROBE ab M06, karten-aufbau.md "Marken-Story im Editorial-Stil"): über dem Kopf große,
  * kurze Kennzahlen und Schlagzeilen (Instrument Serif und Geist im Wechsel, Akzent im PulseConnect-Verlauf, ein Strich
- * zeichnet sich auf dem Wort), echte freigestellte Fotos von fiveskincare.de neben dem Kopf (Shea Cream, Anna Pfeiffer
- * von der Presseseite, Tiegel und Flakon), darunter die Pill-Untertitel und die Erklär-Bilder bzw. die Quellen-Karte
+ * zeichnet sich auf dem Wort), echte freigestellte Fotos von fiveskincare.de neben dem Kopf (Shea Cream im Hook, Anna Pfeiffer
+ * von der Presseseite), darunter die Pill-Untertitel und die Erklär-Bilder bzw. die Quellen-Karte
  * (Shopify-Interview 2020) auf der hellen Karte.
  * Hook-Titel (Marke FIVE, darum mit Hook; Design "verlauf"): "FIVE SKINCARE:" / "MAX. 5 INHALTSSTOFFE PRO PRODUKT"
  * (Briefing 0-5 s "MAX. 5 INHALTSSTOFFE", Fakten-Grenze "pro Produkt"), an der Kartenposition unter dem Kopf.
