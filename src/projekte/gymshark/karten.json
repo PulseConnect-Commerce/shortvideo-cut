@@ -197,18 +197,13 @@
   {
    "id": "k10",
    "wort": "drittens / langfristiger / Posting / Kooperationen / Community-Formate / wertvoller / einzelne Werbeaktionen",
-   "text": "Kennzahl 'Learning 3' → 'langfristig.' → 'eigene Formate.' (Kicker 'Z. B. Gymshark London · Gratis-Kurse'); Karte: ein Ausschlag 'Posting', wachsende Linie 'Kooperationen & eigene Formate', handschriftlich 'wertvoller', dann drei Ausschläge 'einzelne Werbeaktionen'; Hintergrund Gymshark London Regent St. (Sweat Room)",
-   "start": 66.43,
+   "text": "Kennzahl 'Learning 3' → 'langfristig.' → 'eigene Formate.' (Kicker 'Z. B. Gymshark London · Gratis-Kurse'); Karte (erst auf 'nächsten', mit dem ersten Inhalt): ein Ausschlag 'Posting', wachsende Linie 'Kooperationen & eigene Formate', handschriftlich 'wertvoller', dann drei Ausschläge 'einzelne Werbeaktionen'; Hintergrund Gymshark London Regent St. (Sweat Room)",
+   "start": 69.3,
    "ende": 78.44,
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 66.43,
-     "volume": 0.1
-    },
-    {
-     "datei": "tick.mp3",
-     "at": 69.37,
+     "at": 69.3,
      "volume": 0.1
     },
     {
