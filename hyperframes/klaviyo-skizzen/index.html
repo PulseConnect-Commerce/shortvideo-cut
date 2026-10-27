@@ -367,8 +367,8 @@
       [["#k2-d1", 14.80], ["#k2-d2", 15.05], ["#k2-d3", 15.30]].forEach(([s, t]) => {
         tl.set(s, { x: 124, y: 137 }, 0);
         tl.fromTo(s, { opacity: 0, x: 124, y: 137 }, { opacity: 1, duration: 0.15 }, t);
-        tl.to(s, { x: 410, duration: 0.7, ease: "power2.inOut" }, t + 0.1);
-        tl.to(s, { opacity: 0, duration: 0.15 }, t + 0.7);
+        tl.to(s, { x: 312, duration: 0.55, ease: "power2.inOut" }, t + 0.1);
+        tl.to(s, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%", duration: 0.15 }, t + 0.55);
       });
       ein("#k2-shopt", 15.80);
 

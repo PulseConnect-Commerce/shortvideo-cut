@@ -10,8 +10,8 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 
 <!-- auto:start (npm run uebergabe) -->
 - **Projekt / Komposition:** `klaviyo` / `Klaviyo`
-- **Datei:** `out/final/Klaviyo.mp4` fehlt noch (erst `npm run final -- Klaviyo`)
-- **Technik:** laut cut.json ca. 50.6 s
+- **Datei:** `out/final/Klaviyo.mp4` (Master), `-post.mp4` (Plattformen), `-chat.mp4` (Chat)
+- **Technik:** 1080x1920, 30 fps, 50.6 s
 - **Wörter im Video:** 144
 
 ### Untertiteltext (so steht er im Video)
@@ -50,7 +50,7 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 - [x] B-ROLL SEGMENT (2 s, Demo-Segment oder Listenübersicht, anonymisiert): Segment-Builder mit der Liste "Ehemalige VIPs" von klaviyo.com als Hintergrund 16,5–23,6 s; die drei Beispiel-Namen der Liste sind unkenntlich gemacht, keine E-Mails, Umsätze oder Profildaten sichtbar
 - [x] HINTERGRUND "leicht unscharfer Flow Builder oder Demo-E-Mail-Vorschau, keine echten Empfänger- oder Kampagnendaten": Flow-Builder (Help Center, 23,6–26,8 s) und Flow "Einmal bestellt → Dem Empfang von SMS zugestimmt? → Bewertung abgeben" (klaviyo.com, 26,8–31,7 s) stärker weichgezeichnet; nur Demo-Darstellungen von Klaviyo
 - [x] NICHT ZEIGEN/BEHAUPTEN: keine Kontakte ohne Einwilligung (die Karte 31,6–35,3 s zeigt: die E-Mail geht erst nach dem Haken bei "Einwilligung"), keine echten Kundendaten (Namen und Konto-Daten in den Screenshots unkenntlich), keine garantierten Umsatz- oder Zustellraten (die Karte 35,2–40,2 s zeigt ausdrücklich keinen automatischen Verkaufssprung; Captions ohne Zahlen)
-- [x] Cover-Text "Shopify-Kunden kommen nicht zurück?" als TikTok-Titel und Einstieg der TikTok-Caption; kein eigenes Cover-Bild gerendert
+- [x] Cover-Text "Shopify-Kunden kommen nicht zurück?" als Titel für TikTok und Einstieg der TikTok-Caption; kein eigenes Cover-Bild gerendert
 - [x] Caption-Vorschlag aus dem Briefing in der Instagram-Caption übernommen, Hashtags auf höchstens 2 je Plattform gekürzt (Pauls Vorgabe 22.10.)
 - [x] Quelle laut Briefing "https://apps.shopify.com/klaviyo-" (abgeschnitten): der Eintrag heißt https://apps.shopify.com/klaviyo-email-marketing; zusätzlich klaviyo.com und Klaviyo Help Center (Quellen unten)
 - [ ] Länge "bei Storys 35–65 s, sonst ca. 30–45 s": 50,6 s (alle Skript-Sätze in ganzen Sätzen plus sein Folgen-Aufruf; im FACE-Rahmen 40–75 s, wie A01 59,8 s, A02 65,9 s, A03 53,7 s); nichts gestreckt; Kürzung unter offenen Fragen
@@ -79,6 +79,8 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 - Musik ruhig.mp3 wie A01–A03 (eigene Musik), Soundeffekte leise: whoosh (0,10) je Kartenwechsel, tick (0,10) auf ausgewählten Zuständen, pop auf dem Sticker, success auf "Einwilligungen" und "guten", klick auf dem Plus; zwischen zwei Effekten mindestens 1,7 s. Mit whoosh 0,12 lagen drei Effekte nur 5,8 dB unter der Stimme (checks), darum 0,10 und neu gerendert
 - Eigene Prüfung am Master: `npm run sync` an 32 Stichwörtern; die CHECK-Zeilen sind das Ausblenden der vorigen Karte 0,3 s vor der neuen bzw. Bewegungen seiner Hände im Messfeld, an den Streifen um "Menschen" und "Nachrichten" nachgesehen: die Elemente kommen 0–2 Frames vor dem Wort. `pacing`: keine Strecke über 2 s ohne Bildänderung, längste Sprechpause 1,0 s vor "Natürlich" (Themenwechsel, Karte und Hintergrund wechseln dort). Standbilder an jeder Karte (`out/klaviyo/standbilder.jpg`): nichts überlappt, nichts auf dem Gesicht, Karten erscheinen mit Inhalt
 - Speicher: der heruntergeladene Rohclip in `eingang/klaviyo/` ist nach dem Intake gelöscht (das Original liegt im Drive, das Bild steckt unverändert in `takes/sicherung/t1.vor-farbe.mp4`), ebenso der Rohschnitt und Zwischendateien; nichts von anderen Projekten angefasst
+- Daten-Punkte in der Karte "Die App" enden am Rand des Klaviyo-Feldes (nicht über dem Wort "Klaviyo"), nach dem Bilderbogen nachgebessert und neu gerendert
+- `npm run pruefen -- Klaviyo klaviyo` (voller Lauf, auf dem endgültigen Master): TECHNIK OK, kein FEHLER, keine WARNUNG; Länge 50,6 s (FACE 40–75 s), Post-Fassung 29,2 MB, Helligkeit Gesicht 0,566, `checks --stems` OK (-14,0 LUFS, True Peak -1,0 dB, keine Ausreißer, keine Tonlöcher, lautester Effekt 6,3 dB unter der Stimme, Musik 20,9 dB darunter). PRÜFEN Bilderbogen (angesehen: Hook bei 0,5/1,5/2,9 s lesbar, keine leere Karte, nichts in den Zonen von TikTok und Instagram, nichts auf dem Gesicht) und PRÜFEN kontrolle (86 %; die vier Meldungen ZUSÄTZLICH sind nur die getrennte Schreibweise von "E-Mail-Marketing" bzw. "Automatisierungs-E-Mail-Strecken", kein Doppler, kein Anlauf, nichts fehlt)
 
 ## Offene Fragen an Paul
 
