@@ -1,0 +1,239 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlagen P04 und S03) für P09 · Zu viele KI-Tools. Sekunden im geschnittenen Video (cut.json, 57,10 s), genau wie Remotion sie rechnet (Stücke auf ganze Frames gerundet), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 2,1 s), tick (0,10) auf ausgewählten Zuständen, pop auf Engpass und KI-Chip, success auf dem Haken am Schluss. Gebaut in hyperframes/kitools-skizzen/index.html. Keine echten Tool-Logos (nur Lucide-Linien-Icons). Beispiele (an/aus in der Berechtigungsmaske, Prozess 1-3 und ihre Balken) sind als BEISPIEL gekennzeichnet. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "Du (bewirkst)",
+   "text": "zehn KI-Tools (Kacheln) und ein Tacho, der kurz steigt und auf 'Gegenteil' ins Minus fällt; handschriftlich 'Gegenteil'",
+   "start": 4.2,
+   "ende": 6.533,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 4.2,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 5.333,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Und (erinnert)",
+   "text": "Shop, an den immer mehr Apps (Puzzle-Kacheln, keine Logos) andocken: 2 auf 'Und', 2 auf 'Problem', 8 auf 'zu vielen'; handschriftlich 'zu viele'",
+   "start": 6.533,
+   "ende": 11.067,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 6.533,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 9.2,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Tool",
+   "text": "Browser mit einem Tab je Tool: Produkttexte, Bilder, Kundenservice, Automatisierungen auf ihren Wörtern; auf 'zu viel' werden die Tabs schmal und sechs weitere drängen hinein; handschriftlich 'zu viel'",
+   "start": 11.067,
+   "ende": 18.067,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 11.067,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 13.833,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Natürlich",
+   "text": "Waage: der Block 'Zeit' (Uhr) landet links und zieht die Waage nach unten, auf 'ziemlich viel' noch mehr; rechts 'Aufwand' leer; handschriftlich 'Zeitersparnis'",
+   "start": 18.067,
+   "ende": 21.867,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 18.067,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 20.367,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Aber",
+   "text": "drei Tool-Fenster (Texte, Bilder, Service): der Zeiger springt auf 'ständig … wechseln' hin und her, Wechsel-Pfeile; auf 'Ergebnisse manuell überprüfst' Lupe und Haken; auf 'Daten hin und her kopierst' wandert eine Daten-Karte hin und zurück, Kopie; handschriftlich 'hin und her'",
+   "start": 21.867,
+   "ende": 28.667,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 21.867,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.233,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 26.433,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "kann",
+   "text": "dieselbe Waage: Wechseln, Prüfen, Kopieren landen auf 'Aufwand', auf 'mehr Arbeit' kippt sie nach rechts; handschriftlich 'mehr Arbeit'",
+   "start": 28.667,
+   "ende": 30.767,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 28.667,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 29.767,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Und (kritischer)",
+   "text": "Dein Shop (Produktseite); auf 'KI' erscheint der KI-Bot, auf 'selbstständig' führt ein Weg zum Shop, auf 'Änderungen' / 'durchführt' werden Titel, Text, Preis und Bild neu (Stift); auf 'ohne dass du es merkst' 'Du' mit geschlossenem Auge; handschriftlich 'unbemerkt'; Sticker 'KRITISCH.' auf 'kritischer' (31,10-32,80 s, ohne Ton)",
+   "start": 30.767,
+   "ende": 38.4,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 30.767,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 32.567,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 36.033,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "festlegen",
+   "text": "Berechtigungsmaske 'KI-Zugriff festlegen' (BEISPIEL): Daten Produkte / Bestellungen / Kund:innen (Datenarten aus der Quelle), auf 'verwenden darf' springt Produkte auf an; Aktionen Lesen ✓ und Ändern mit Schloss auf 'Freigabe'; handschriftlich 'Freigabe'",
+   "start": 38.4,
+   "ende": 44.4,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 38.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 40.1,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 42.533,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "fragen",
+   "text": "Sprechblase 'Wie viele KI-Tools?', vier KI-Kacheln, auf 'integrieren' ein Kabel zum Shop, auf 'kann' wird die Frage gestrichen; handschriftlich 'falsche Frage'",
+   "start": 44.4,
+   "ende": 47.8,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 44.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 46.467,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "welcher",
+   "text": "Zeit pro Prozess (BEISPIEL, keine Messwerte): drei Balken wachsen auf 'Prozess', auf 'meiste' wird Prozess 2 zum Engpass (Verlauf, Stoppuhr); handschriftlich 'meiste Zeit'",
+   "start": 47.8,
+   "ende": 51.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 47.8,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 49.933,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "und (dann)",
+   "text": "nur noch Prozess 2: auf 'Ablauf' ein Ring, auf 'verbessern' wird der Balken kürzer (gestrichelt die alte Länge), auf 'eine KI' dockt ein KI-Chip an, auf 'einsetzen' ✓; bleibt bis zum letzten Frame (Loop in den Hook); handschriftlich 'eine KI'",
+   "start": 51.6,
+   "ende": 57.1,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 51.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 53.833,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 55.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 56.333,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

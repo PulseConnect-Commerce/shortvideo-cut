@@ -1,0 +1,93 @@
+{
+ "projekt": "kitools",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 1.2,
+   "text": "10 KI-Tools machen leider deinen Online-Shop nicht automatisch effizienter. Du bewegst damit eher das Gegenteil. Und das erinnert mich leider immer stark an das Problem mit zu vielen Shopify-Apps. Denn ein Tool für Produkttexte, eins für Bilder, eins für Kundenservice und dann noch eins für Automatisierungen sind einfach ein bisschen zu viel."
+  },
+  {
+   "take": "t1",
+   "ab": 41.6,
+   "text": "Natürlich klingt es zunächst einmal stark nach ziemlich viel Zeitersparnis."
+  },
+  {
+   "take": "t1",
+   "ab": 60.5,
+   "text": "Aber wenn du ständig zwischen diesen verschiedenen Tools wechseln musst und dann natürlich auch Ergebnisse manuell überprüfst und Daten hin und her kopierst,"
+  },
+  {
+   "take": "t1",
+   "ab": 69.9,
+   "text": "kann natürlich auch daraus schnell mehr Arbeit entstehen."
+  },
+  {
+   "take": "t1",
+   "ab": 76.1,
+   "text": "und noch kritischer wird es aber, wenn ihm die KI selbstständig Änderungen an deinem Shop durchführt, ohne dass du es überhaupt merkst. Denn dann solltest du genau festlegen,"
+  },
+  {
+   "take": "t1",
+   "ab": 90.8,
+   "text": "welche Daten sie verwenden darf und welche Aktionen ihm überhaupt die Freigabe brauchen.",
+   "stumm": [
+    [
+     93.7,
+     93.85
+    ]
+   ]
+  },
+  {
+   "take": "t1",
+   "ab": 95.9,
+   "text": "Ich würde deshalb nicht fragen, wie viele KI-Tools ich integrieren kann,"
+  },
+  {
+   "take": "t1",
+   "ab": 105.9,
+   "text": "sondern welcher konkrete Prozess mich tatsächlich aktuell die meiste Zeit kostet und dann natürlich kann ich genau diesen Ablauf verbessern und dafür eben eine KI in dem Shop einsetzen."
+  }
+ ],
+ "ende": {
+  "bis": 116.08
+ },
+ "korrekturen": [
+  [
+   "t1",
+   5.63,
+   "bewegst",
+   "bewirkst"
+  ],
+  [
+   "t1",
+   76.23,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   77.79,
+   "ihm",
+   ""
+  ],
+  [
+   "t1",
+   93.72,
+   "ihm",
+   ""
+  ],
+  [
+   "t1",
+   44.78,
+   "Zeitersparnis,",
+   "Zeitersparnis."
+  ]
+ ]
+}

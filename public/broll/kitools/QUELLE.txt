@@ -1,0 +1,26 @@
+Hintergründe für P09 · Zu viele KI-Tools (alle aufgenommen am 27.10.2026; nur zugeschnitten, leicht abgedunkelt und
+minimal weichgezeichnet, der Satz, über den er spricht, dezent grün unterlegt wie mit einem Textmarker; sonst nichts dazugemalt)
+
+Offizielle Quelle laut Briefing: Shopify Help Center "AI-powered tools", https://help.shopify.com/en/manual/ai-powered-tools
+Im Video steht die deutsche Fassung derselben Seite ("KI-gestützte Tools"), weil das Video deutsch ist:
+https://help.shopify.com/de/manual/ai-powered-tools
+Die englische Seite ist ebenfalls aufgenommen (hyperframes/kitools-hg/screenshots/en-kopf.png), nicht im Video.
+
+Gestaltet mit hyperframes/kitools-hg/gestalte.py aus den Screenshots in hyperframes/kitools-hg/screenshots/ (Playwright/
+Chromium, Handy-Ansicht 360 css-px, 3-fach = 1080x1920; oben die Kopfleiste "Hilfe" mit dem Shopify-Zeichen, darunter der
+Abschnitt; Positionen der markierten Sätze in screenshots/aufnahme.json):
+- hg-kopf.png: Seitenkopf "KI-gestützte Tools", markiert "Du kannst KI-gestützte Tools nutzen, um deinen Shopify-Shop
+  aufzubauen, zu verwalten und auszubauen."
+- hg-bessere.png: "Bessere Ergebnisse mit KI-gestützten Tools erzielen", markiert "Änderungen überprüfen, bevor du sie
+  übernimmst"
+- hg-vorsicht.png: Hinweis "Vorsicht – KI-Ergebnisse können Fehler enthalten.", markiert "Überprüfe daher alles, was ein
+  Tool erstellt oder ändert."
+- hg-kontrolle.png: markiert "Du kontrollierst, worauf jedes Tool in deinem Shop zugreifen darf und welche Aktionen es
+  ausführen kann."
+- hg-extern.png: "Externe KI-Tools verbinden", markiert "Du kannst deinen Shop mit externen KI-Tools verbinden"
+
+Beim ersten Abruf zeigte die Seite eine Verbindungsprüfung ("Deine Verbindung muss verifiziert werden"); sie wurde nicht
+umgangen, der zweite Abruf kam normal. Kein Login, keine persönlichen Daten.
+
+skizzen.webm: Erklär-Bilder aus hyperframes/kitools-skizzen (eigene Zeichnungen, Lucide-Icons ISC, Schriften Geist und
+Caveat OFL), keine fremden Logos.

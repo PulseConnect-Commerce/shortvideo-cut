@@ -1,0 +1,1169 @@
+{
+ "projekt": "kitools",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "kitools/t1",
+   "from": 1.235,
+   "to": 19.375,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kitools/t1",
+   "from": 41.695,
+   "to": 45.495,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "kitools/t1",
+   "from": 60.595,
+   "to": 67.395,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kitools/t1",
+   "from": 69.965,
+   "to": 72.075,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kitools/t1",
+   "from": 76.215,
+   "to": 84.475,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "kitools/t1",
+   "from": 90.855,
+   "to": 95.305,
+   "stumm": [
+    [
+     93.7,
+     93.85
+    ]
+   ],
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "kitools/t1",
+   "from": 95.965,
+   "to": 99.345,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "kitools/t1",
+   "from": 105.875,
+   "to": 116.08,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "10",
+   "src": "kitools/t1",
+   "start": 1.35,
+   "end": 1.55
+  },
+  {
+   "text": "KI-Tools",
+   "src": "kitools/t1",
+   "start": 1.61,
+   "end": 2.19
+  },
+  {
+   "text": "machen",
+   "src": "kitools/t1",
+   "start": 2.27,
+   "end": 2.47
+  },
+  {
+   "text": "leider",
+   "src": "kitools/t1",
+   "start": 2.51,
+   "end": 2.71
+  },
+  {
+   "text": "deinen",
+   "src": "kitools/t1",
+   "start": 2.75,
+   "end": 2.91
+  },
+  {
+   "text": "Online-Shop",
+   "src": "kitools/t1",
+   "start": 2.95,
+   "end": 3.35
+  },
+  {
+   "text": "nicht",
+   "src": "kitools/t1",
+   "start": 3.47,
+   "end": 3.63
+  },
+  {
+   "text": "automatisch",
+   "src": "kitools/t1",
+   "start": 3.73,
+   "end": 4.19
+  },
+  {
+   "text": "effizienter.",
+   "src": "kitools/t1",
+   "start": 4.27,
+   "end": 4.81
+  },
+  {
+   "text": "Du",
+   "src": "kitools/t1",
+   "start": 5.51,
+   "end": 5.57
+  },
+  {
+   "text": "bewirkst",
+   "src": "kitools/t1",
+   "start": 5.63,
+   "end": 5.93
+  },
+  {
+   "text": "damit",
+   "src": "kitools/t1",
+   "start": 5.97,
+   "end": 6.15
+  },
+  {
+   "text": "eher",
+   "src": "kitools/t1",
+   "start": 6.27,
+   "end": 6.43
+  },
+  {
+   "text": "das",
+   "src": "kitools/t1",
+   "start": 6.49,
+   "end": 6.59
+  },
+  {
+   "text": "Gegenteil.",
+   "src": "kitools/t1",
+   "start": 6.63,
+   "end": 7.05
+  },
+  {
+   "text": "Und",
+   "src": "kitools/t1",
+   "start": 7.83,
+   "end": 7.95
+  },
+  {
+   "text": "das",
+   "src": "kitools/t1",
+   "start": 8.35,
+   "end": 8.47
+  },
+  {
+   "text": "erinnert",
+   "src": "kitools/t1",
+   "start": 8.51,
+   "end": 8.77
+  },
+  {
+   "text": "mich",
+   "src": "kitools/t1",
+   "start": 8.81,
+   "end": 8.91
+  },
+  {
+   "text": "leider",
+   "src": "kitools/t1",
+   "start": 8.95,
+   "end": 9.11
+  },
+  {
+   "text": "immer",
+   "src": "kitools/t1",
+   "start": 9.15,
+   "end": 9.29
+  },
+  {
+   "text": "stark",
+   "src": "kitools/t1",
+   "start": 9.37,
+   "end": 9.63
+  },
+  {
+   "text": "an",
+   "src": "kitools/t1",
+   "start": 9.71,
+   "end": 9.77
+  },
+  {
+   "text": "das",
+   "src": "kitools/t1",
+   "start": 9.79,
+   "end": 9.87
+  },
+  {
+   "text": "Problem",
+   "src": "kitools/t1",
+   "start": 9.91,
+   "end": 10.25
+  },
+  {
+   "text": "mit",
+   "src": "kitools/t1",
+   "start": 10.31,
+   "end": 10.39
+  },
+  {
+   "text": "zu",
+   "src": "kitools/t1",
+   "start": 10.51,
+   "end": 10.61
+  },
+  {
+   "text": "vielen",
+   "src": "kitools/t1",
+   "start": 10.73,
+   "end": 10.95
+  },
+  {
+   "text": "Shopify-Apps.",
+   "src": "kitools/t1",
+   "start": 11.01,
+   "end": 11.63
+  },
+  {
+   "text": "Denn",
+   "src": "kitools/t1",
+   "start": 11.69,
+   "end": 11.83
+  },
+  {
+   "text": "ein",
+   "src": "kitools/t1",
+   "start": 12.21,
+   "end": 12.33
+  },
+  {
+   "text": "Tool",
+   "src": "kitools/t1",
+   "start": 12.39,
+   "end": 12.57
+  },
+  {
+   "text": "für",
+   "src": "kitools/t1",
+   "start": 12.63,
+   "end": 12.73
+  },
+  {
+   "text": "Produkttexte,",
+   "src": "kitools/t1",
+   "start": 12.77,
+   "end": 13.45
+  },
+  {
+   "text": "eins",
+   "src": "kitools/t1",
+   "start": 13.69,
+   "end": 13.89
+  },
+  {
+   "text": "für",
+   "src": "kitools/t1",
+   "start": 13.95,
+   "end": 14.05
+  },
+  {
+   "text": "Bilder,",
+   "src": "kitools/t1",
+   "start": 14.09,
+   "end": 14.41
+  },
+  {
+   "text": "eins",
+   "src": "kitools/t1",
+   "start": 14.81,
+   "end": 14.97
+  },
+  {
+   "text": "für",
+   "src": "kitools/t1",
+   "start": 15.01,
+   "end": 15.09
+  },
+  {
+   "text": "Kundenservice",
+   "src": "kitools/t1",
+   "start": 15.15,
+   "end": 15.69
+  },
+  {
+   "text": "und",
+   "src": "kitools/t1",
+   "start": 15.73,
+   "end": 15.79
+  },
+  {
+   "text": "dann",
+   "src": "kitools/t1",
+   "start": 15.83,
+   "end": 15.95
+  },
+  {
+   "text": "noch",
+   "src": "kitools/t1",
+   "start": 16.03,
+   "end": 16.15
+  },
+  {
+   "text": "eins",
+   "src": "kitools/t1",
+   "start": 16.21,
+   "end": 16.37
+  },
+  {
+   "text": "für",
+   "src": "kitools/t1",
+   "start": 16.41,
+   "end": 16.49
+  },
+  {
+   "text": "Automatisierungen",
+   "src": "kitools/t1",
+   "start": 16.53,
+   "end": 17.27
+  },
+  {
+   "text": "sind",
+   "src": "kitools/t1",
+   "start": 17.67,
+   "end": 17.79
+  },
+  {
+   "text": "einfach",
+   "src": "kitools/t1",
+   "start": 17.87,
+   "end": 18.13
+  },
+  {
+   "text": "ein",
+   "src": "kitools/t1",
+   "start": 18.25,
+   "end": 18.31
+  },
+  {
+   "text": "bisschen",
+   "src": "kitools/t1",
+   "start": 18.51,
+   "end": 18.85
+  },
+  {
+   "text": "zu",
+   "src": "kitools/t1",
+   "start": 18.91,
+   "end": 18.99
+  },
+  {
+   "text": "viel.",
+   "src": "kitools/t1",
+   "start": 19.07,
+   "end": 19.23
+  },
+  {
+   "text": "Natürlich",
+   "src": "kitools/t1",
+   "start": 41.74,
+   "end": 42.08
+  },
+  {
+   "text": "klingt",
+   "src": "kitools/t1",
+   "start": 42.12,
+   "end": 42.36
+  },
+  {
+   "text": "es",
+   "src": "kitools/t1",
+   "start": 42.42,
+   "end": 42.5
+  },
+  {
+   "text": "zunächst",
+   "src": "kitools/t1",
+   "start": 42.58,
+   "end": 42.92
+  },
+  {
+   "text": "einmal",
+   "src": "kitools/t1",
+   "start": 42.98,
+   "end": 43.24
+  },
+  {
+   "text": "stark",
+   "src": "kitools/t1",
+   "start": 43.44,
+   "end": 43.7
+  },
+  {
+   "text": "nach",
+   "src": "kitools/t1",
+   "start": 43.8,
+   "end": 43.9
+  },
+  {
+   "text": "ziemlich",
+   "src": "kitools/t1",
+   "start": 43.98,
+   "end": 44.3
+  },
+  {
+   "text": "viel",
+   "src": "kitools/t1",
+   "start": 44.36,
+   "end": 44.52
+  },
+  {
+   "text": "Zeitersparnis.",
+   "src": "kitools/t1",
+   "start": 44.78,
+   "end": 45.42
+  },
+  {
+   "text": "Aber",
+   "src": "kitools/t1",
+   "start": 60.61,
+   "end": 60.73
+  },
+  {
+   "text": "wenn",
+   "src": "kitools/t1",
+   "start": 60.77,
+   "end": 60.87
+  },
+  {
+   "text": "du",
+   "src": "kitools/t1",
+   "start": 60.91,
+   "end": 60.95
+  },
+  {
+   "text": "ständig",
+   "src": "kitools/t1",
+   "start": 61.05,
+   "end": 61.47
+  },
+  {
+   "text": "zwischen",
+   "src": "kitools/t1",
+   "start": 61.59,
+   "end": 61.87
+  },
+  {
+   "text": "diesen",
+   "src": "kitools/t1",
+   "start": 61.93,
+   "end": 62.11
+  },
+  {
+   "text": "verschiedenen",
+   "src": "kitools/t1",
+   "start": 62.15,
+   "end": 62.55
+  },
+  {
+   "text": "Tools",
+   "src": "kitools/t1",
+   "start": 62.63,
+   "end": 62.91
+  },
+  {
+   "text": "wechseln",
+   "src": "kitools/t1",
+   "start": 62.97,
+   "end": 63.27
+  },
+  {
+   "text": "musst",
+   "src": "kitools/t1",
+   "start": 63.31,
+   "end": 63.53
+  },
+  {
+   "text": "und",
+   "src": "kitools/t1",
+   "start": 63.61,
+   "end": 63.67
+  },
+  {
+   "text": "dann",
+   "src": "kitools/t1",
+   "start": 63.71,
+   "end": 63.83
+  },
+  {
+   "text": "natürlich",
+   "src": "kitools/t1",
+   "start": 63.87,
+   "end": 64.15
+  },
+  {
+   "text": "auch",
+   "src": "kitools/t1",
+   "start": 64.17,
+   "end": 64.27
+  },
+  {
+   "text": "Ergebnisse",
+   "src": "kitools/t1",
+   "start": 64.31,
+   "end": 64.73
+  },
+  {
+   "text": "manuell",
+   "src": "kitools/t1",
+   "start": 64.81,
+   "end": 65.13
+  },
+  {
+   "text": "überprüfst",
+   "src": "kitools/t1",
+   "start": 65.17,
+   "end": 65.69
+  },
+  {
+   "text": "und",
+   "src": "kitools/t1",
+   "start": 66.03,
+   "end": 66.11
+  },
+  {
+   "text": "Daten",
+   "src": "kitools/t1",
+   "start": 66.15,
+   "end": 66.41
+  },
+  {
+   "text": "hin",
+   "src": "kitools/t1",
+   "start": 66.45,
+   "end": 66.53
+  },
+  {
+   "text": "und",
+   "src": "kitools/t1",
+   "start": 66.57,
+   "end": 66.65
+  },
+  {
+   "text": "her",
+   "src": "kitools/t1",
+   "start": 66.67,
+   "end": 66.79
+  },
+  {
+   "text": "kopierst,",
+   "src": "kitools/t1",
+   "start": 66.85,
+   "end": 67.27
+  },
+  {
+   "text": "kann",
+   "src": "kitools/t1",
+   "start": 69.97,
+   "end": 70.08
+  },
+  {
+   "text": "natürlich",
+   "src": "kitools/t1",
+   "start": 70.1,
+   "end": 70.3
+  },
+  {
+   "text": "auch",
+   "src": "kitools/t1",
+   "start": 70.3,
+   "end": 70.42
+  },
+  {
+   "text": "daraus",
+   "src": "kitools/t1",
+   "start": 70.46,
+   "end": 70.7
+  },
+  {
+   "text": "schnell",
+   "src": "kitools/t1",
+   "start": 70.72,
+   "end": 70.97
+  },
+  {
+   "text": "mehr",
+   "src": "kitools/t1",
+   "start": 71.07,
+   "end": 71.21
+  },
+  {
+   "text": "Arbeit",
+   "src": "kitools/t1",
+   "start": 71.27,
+   "end": 71.51
+  },
+  {
+   "text": "entstehen.",
+   "src": "kitools/t1",
+   "start": 71.55,
+   "end": 71.91
+  },
+  {
+   "text": "Und",
+   "src": "kitools/t1",
+   "start": 76.23,
+   "end": 76.31
+  },
+  {
+   "text": "noch",
+   "src": "kitools/t1",
+   "start": 76.35,
+   "end": 76.47
+  },
+  {
+   "text": "kritischer",
+   "src": "kitools/t1",
+   "start": 76.55,
+   "end": 77.01
+  },
+  {
+   "text": "wird",
+   "src": "kitools/t1",
+   "start": 77.11,
+   "end": 77.23
+  },
+  {
+   "text": "es",
+   "src": "kitools/t1",
+   "start": 77.29,
+   "end": 77.35
+  },
+  {
+   "text": "aber,",
+   "src": "kitools/t1",
+   "start": 77.41,
+   "end": 77.53
+  },
+  {
+   "text": "wenn",
+   "src": "kitools/t1",
+   "start": 77.61,
+   "end": 77.73
+  },
+  {
+   "text": "die",
+   "src": "kitools/t1",
+   "start": 77.91,
+   "end": 77.99
+  },
+  {
+   "text": "KI",
+   "src": "kitools/t1",
+   "start": 78.03,
+   "end": 78.23
+  },
+  {
+   "text": "selbstständig",
+   "src": "kitools/t1",
+   "start": 78.33,
+   "end": 78.91
+  },
+  {
+   "text": "Änderungen",
+   "src": "kitools/t1",
+   "start": 78.97,
+   "end": 79.39
+  },
+  {
+   "text": "an",
+   "src": "kitools/t1",
+   "start": 79.45,
+   "end": 79.51
+  },
+  {
+   "text": "deinem",
+   "src": "kitools/t1",
+   "start": 79.55,
+   "end": 79.77
+  },
+  {
+   "text": "Shop",
+   "src": "kitools/t1",
+   "start": 79.83,
+   "end": 80.01
+  },
+  {
+   "text": "durchführt,",
+   "src": "kitools/t1",
+   "start": 80.09,
+   "end": 80.45
+  },
+  {
+   "text": "ohne",
+   "src": "kitools/t1",
+   "start": 80.55,
+   "end": 80.73
+  },
+  {
+   "text": "dass",
+   "src": "kitools/t1",
+   "start": 80.79,
+   "end": 80.93
+  },
+  {
+   "text": "du",
+   "src": "kitools/t1",
+   "start": 80.95,
+   "end": 81.01
+  },
+  {
+   "text": "es",
+   "src": "kitools/t1",
+   "start": 81.05,
+   "end": 81.09
+  },
+  {
+   "text": "überhaupt",
+   "src": "kitools/t1",
+   "start": 81.15,
+   "end": 81.43
+  },
+  {
+   "text": "merkst.",
+   "src": "kitools/t1",
+   "start": 81.47,
+   "end": 81.77
+  },
+  {
+   "text": "Denn",
+   "src": "kitools/t1",
+   "start": 82.53,
+   "end": 82.67
+  },
+  {
+   "text": "dann",
+   "src": "kitools/t1",
+   "start": 82.71,
+   "end": 82.89
+  },
+  {
+   "text": "solltest",
+   "src": "kitools/t1",
+   "start": 82.95,
+   "end": 83.25
+  },
+  {
+   "text": "du",
+   "src": "kitools/t1",
+   "start": 83.29,
+   "end": 83.33
+  },
+  {
+   "text": "genau",
+   "src": "kitools/t1",
+   "start": 83.41,
+   "end": 83.73
+  },
+  {
+   "text": "festlegen,",
+   "src": "kitools/t1",
+   "start": 83.85,
+   "end": 84.37
+  },
+  {
+   "text": "welche",
+   "src": "kitools/t1",
+   "start": 90.86,
+   "end": 91.12
+  },
+  {
+   "text": "Daten",
+   "src": "kitools/t1",
+   "start": 91.24,
+   "end": 91.58
+  },
+  {
+   "text": "sie",
+   "src": "kitools/t1",
+   "start": 91.78,
+   "end": 91.86
+  },
+  {
+   "text": "verwenden",
+   "src": "kitools/t1",
+   "start": 91.92,
+   "end": 92.36
+  },
+  {
+   "text": "darf",
+   "src": "kitools/t1",
+   "start": 92.42,
+   "end": 92.68
+  },
+  {
+   "text": "und",
+   "src": "kitools/t1",
+   "start": 92.86,
+   "end": 92.98
+  },
+  {
+   "text": "welche",
+   "src": "kitools/t1",
+   "start": 93.06,
+   "end": 93.3
+  },
+  {
+   "text": "Aktionen",
+   "src": "kitools/t1",
+   "start": 93.36,
+   "end": 93.66
+  },
+  {
+   "text": "überhaupt",
+   "src": "kitools/t1",
+   "start": 93.88,
+   "end": 94.16
+  },
+  {
+   "text": "die",
+   "src": "kitools/t1",
+   "start": 94.2,
+   "end": 94.28
+  },
+  {
+   "text": "Freigabe",
+   "src": "kitools/t1",
+   "start": 94.34,
+   "end": 94.8
+  },
+  {
+   "text": "brauchen.",
+   "src": "kitools/t1",
+   "start": 94.88,
+   "end": 95.22
+  },
+  {
+   "text": "Ich",
+   "src": "kitools/t1",
+   "start": 96.02,
+   "end": 96.1
+  },
+  {
+   "text": "würde",
+   "src": "kitools/t1",
+   "start": 96.14,
+   "end": 96.28
+  },
+  {
+   "text": "deshalb",
+   "src": "kitools/t1",
+   "start": 96.38,
+   "end": 96.64
+  },
+  {
+   "text": "nicht",
+   "src": "kitools/t1",
+   "start": 96.74,
+   "end": 96.88
+  },
+  {
+   "text": "fragen,",
+   "src": "kitools/t1",
+   "start": 96.94,
+   "end": 97.24
+  },
+  {
+   "text": "wie",
+   "src": "kitools/t1",
+   "start": 97.3,
+   "end": 97.38
+  },
+  {
+   "text": "viele",
+   "src": "kitools/t1",
+   "start": 97.5,
+   "end": 97.72
+  },
+  {
+   "text": "KI-Tools",
+   "src": "kitools/t1",
+   "start": 97.8,
+   "end": 98.28
+  },
+  {
+   "text": "ich",
+   "src": "kitools/t1",
+   "start": 98.36,
+   "end": 98.44
+  },
+  {
+   "text": "integrieren",
+   "src": "kitools/t1",
+   "start": 98.48,
+   "end": 98.9
+  },
+  {
+   "text": "kann,",
+   "src": "kitools/t1",
+   "start": 98.96,
+   "end": 99.12
+  },
+  {
+   "text": "sondern",
+   "src": "kitools/t1",
+   "start": 105.96,
+   "end": 106.34
+  },
+  {
+   "text": "welcher",
+   "src": "kitools/t1",
+   "start": 106.44,
+   "end": 106.74
+  },
+  {
+   "text": "konkrete",
+   "src": "kitools/t1",
+   "start": 106.8,
+   "end": 107.24
+  },
+  {
+   "text": "Prozess",
+   "src": "kitools/t1",
+   "start": 107.32,
+   "end": 107.68
+  },
+  {
+   "text": "mich",
+   "src": "kitools/t1",
+   "start": 107.74,
+   "end": 107.84
+  },
+  {
+   "text": "tatsächlich",
+   "src": "kitools/t1",
+   "start": 107.9,
+   "end": 108.34
+  },
+  {
+   "text": "aktuell",
+   "src": "kitools/t1",
+   "start": 108.5,
+   "end": 108.84
+  },
+  {
+   "text": "die",
+   "src": "kitools/t1",
+   "start": 108.88,
+   "end": 108.94
+  },
+  {
+   "text": "meiste",
+   "src": "kitools/t1",
+   "start": 108.98,
+   "end": 109.32
+  },
+  {
+   "text": "Zeit",
+   "src": "kitools/t1",
+   "start": 109.42,
+   "end": 109.62
+  },
+  {
+   "text": "kostet",
+   "src": "kitools/t1",
+   "start": 109.7,
+   "end": 110.06
+  },
+  {
+   "text": "und",
+   "src": "kitools/t1",
+   "start": 110.64,
+   "end": 110.72
+  },
+  {
+   "text": "dann",
+   "src": "kitools/t1",
+   "start": 110.76,
+   "end": 110.92
+  },
+  {
+   "text": "natürlich",
+   "src": "kitools/t1",
+   "start": 110.96,
+   "end": 111.36
+  },
+  {
+   "text": "kann",
+   "src": "kitools/t1",
+   "start": 111.52,
+   "end": 111.66
+  },
+  {
+   "text": "ich",
+   "src": "kitools/t1",
+   "start": 111.7,
+   "end": 111.78
+  },
+  {
+   "text": "genau",
+   "src": "kitools/t1",
+   "start": 111.82,
+   "end": 112.08
+  },
+  {
+   "text": "diesen",
+   "src": "kitools/t1",
+   "start": 112.18,
+   "end": 112.44
+  },
+  {
+   "text": "Ablauf",
+   "src": "kitools/t1",
+   "start": 112.54,
+   "end": 112.82
+  },
+  {
+   "text": "verbessern",
+   "src": "kitools/t1",
+   "start": 112.88,
+   "end": 113.34
+  },
+  {
+   "text": "und",
+   "src": "kitools/t1",
+   "start": 113.64,
+   "end": 113.72
+  },
+  {
+   "text": "dafür",
+   "src": "kitools/t1",
+   "start": 113.76,
+   "end": 114
+  },
+  {
+   "text": "eben",
+   "src": "kitools/t1",
+   "start": 114.08,
+   "end": 114.26
+  },
+  {
+   "text": "eine",
+   "src": "kitools/t1",
+   "start": 114.34,
+   "end": 114.48
+  },
+  {
+   "text": "KI",
+   "src": "kitools/t1",
+   "start": 114.56,
+   "end": 114.78
+  },
+  {
+   "text": "in",
+   "src": "kitools/t1",
+   "start": 114.88,
+   "end": 114.94
+  },
+  {
+   "text": "dem",
+   "src": "kitools/t1",
+   "start": 114.98,
+   "end": 115.06
+  },
+  {
+   "text": "Shop",
+   "src": "kitools/t1",
+   "start": 115.14,
+   "end": 115.28
+  },
+  {
+   "text": "einsetzen.",
+   "src": "kitools/t1",
+   "start": 115.38,
+   "end": 115.78
+  }
+ ],
+ "pages": [
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  1,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  3,
+  3,
+  4,
+  2,
+  2,
+  4,
+  2,
+  3,
+  3,
+  2,
+  4,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  1,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  3,
+  2,
+  3,
+  3,
+  4
+ ]
+}

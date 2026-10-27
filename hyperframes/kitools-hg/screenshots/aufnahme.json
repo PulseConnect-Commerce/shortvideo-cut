@@ -1,0 +1,162 @@
+{
+ "datum": "2026-10-27T02:06:49.566Z",
+ "viewport": "360x640 @3",
+ "ziele": {
+  "kopf": {
+   "url": "https://help.shopify.com/de/manual/ai-powered-tools",
+   "kopf_css": 65,
+   "satz": "Du kannst KI-gestützte Tools nutzen, um deinen Shopify-Shop aufzubauen, zu verwalten und auszubauen.",
+   "rects_css": [
+    [
+     20,
+     224.65625,
+     319.359375,
+     17
+    ],
+    [
+     20,
+     244.65625,
+     296.953125,
+     17
+    ],
+    [
+     20,
+     264.65625,
+     85.46875,
+     17
+    ]
+   ],
+   "scrollY": 0
+  },
+  "kontrolle": {
+   "url": "https://help.shopify.com/de/manual/ai-powered-tools",
+   "kopf_css": 65,
+   "satz": "Du kontrollierst, worauf jedes Tool in deinem Shop zugreifen darf und welche Aktionen es ausführen kann.",
+   "rects_css": [
+    [
+     75.203125,
+     75.15625,
+     242.75,
+     17
+    ],
+    [
+     20,
+     95.15625,
+     265.8125,
+     17
+    ],
+    [
+     20,
+     115.15625,
+     189.953125,
+     17
+    ]
+   ],
+   "scrollY": 327
+  },
+  "vorsicht": {
+   "url": "https://help.shopify.com/de/manual/ai-powered-tools",
+   "kopf_css": 65,
+   "satz": "Überprüfe daher alles, was ein Tool erstellt oder ändert.",
+   "rects_css": [
+    [
+     56,
+     136.65625,
+     264.4375,
+     16
+    ],
+    [
+     56,
+     156.65625,
+     76.015625,
+     16
+    ]
+   ],
+   "scrollY": 400
+  },
+  "bessere": {
+   "url": "https://help.shopify.com/de/manual/ai-powered-tools",
+   "kopf_css": 65,
+   "satz": "Änderungen überprüfen, bevor du sie übernimmst",
+   "rects_css": [
+    [
+     49.140625,
+     239.65625,
+     227.109375,
+     17
+    ],
+    [
+     20,
+     259.65625,
+     102.28125,
+     17
+    ]
+   ],
+   "scrollY": 540
+  },
+  "extern": {
+   "url": "https://help.shopify.com/de/manual/ai-powered-tools",
+   "kopf_css": 65,
+   "satz": "Du kannst deinen Shop mit externen KI-Tools verbinden",
+   "rects_css": [
+    [
+     20,
+     116.15625,
+     70.625,
+     17
+    ],
+    [
+     90.625,
+     116.15625,
+     230.09375,
+     17
+    ],
+    [
+     20,
+     136.15625,
+     67.546875,
+     17
+    ],
+    [
+     90.625,
+     116.15625,
+     230.09375,
+     17
+    ],
+    [
+     20,
+     136.15625,
+     67.546875,
+     17
+    ],
+    [
+     87.546875,
+     136.15625,
+     0,
+     17
+    ]
+   ],
+   "scrollY": 2666
+  },
+  "en-kopf": {
+   "url": "https://help.shopify.com/en/manual/ai-powered-tools",
+   "kopf_css": 65,
+   "satz": "You control what each tool can access and do in your store.",
+   "rects_css": [
+    [
+     20,
+     382.15625,
+     305.765625,
+     17
+    ],
+    [
+     20,
+     402.15625,
+     87.15625,
+     17
+    ]
+   ],
+   "scrollY": 0
+  }
+ }
+}
