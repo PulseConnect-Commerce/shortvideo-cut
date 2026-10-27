@@ -1,0 +1,54 @@
+https://help.shopify.com/de/manual/shopify-flow/getting-started
+status 200 final https://help.shopify.com/de/manual/shopify-flow/getting-started
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+Shopify Flow
+Erste Schritte mit Shopify Flow
+
+Shopify Flow ist eine kostenlose App, mit der du automatisierte Workflows in deinem Shopify-Adminbereich erstellen und ausführen kannst. Mit automatisierten Workflows kannst du mühsame und repetitive Aufgaben vermeiden, das Risiko menschlicher Fehler reduzieren und mehr Zeit für die strategische Arbeit bei der Führung deines Geschäfts aufwenden.
+
+Shopify Flow verwendet einen Drag-&-Drop-Workflow-Editor, mit dem du 3 verschiedene Arten von Schritten – Trigger, Bedingungen und Aktionen – in einer Sequenz platzieren kannst, die als Workflow bezeichnet wird, und anpassen kannst, wie sie zueinander in Beziehung stehen:
+
+Trigger sind Ereignisse, die einen Workflow starten.
+Bedingungen definieren, welche Daten ausgewertet werden, um zu bestimmen, wie ein Workflow fortfahren soll.
+Aktionen sind die Aufgaben, die der Workflow ausführen soll, z. B. Änderungen an deinem Shop vornehmen oder eine Benachrichtigung senden, je nachdem, ob die vorherigen Bedingungen erfüllt wurden oder nicht.
+
+Du möchtest zum Beispiel alle Kunden im Blick behalten, die mehr als 500 USD in einer einzigen Bestellung ausgeben, indem du sie als VIPs taggst. Anstatt jede Bestellung manuell zu überprüfen, um festzustellen, ob sie deine VIP-Kriterien erfüllt, kann Shopify Flow bei Eingang jeder Bestellung diese für dich analysieren und den entsprechenden Kunden taggen. Du kannst diese Aufgabe auf folgende Weise einrichten:
+
+Trigger: Starte den Workflow mit dem Trigger Bestellung erstellt. Das bedeutet, dass der Workflow immer dann startet, wenn eine neue Bestellung erstellt wird, und die Bestellinformationen überprüft.
+Bedingungen: Stelle fest, ob die Bestellung die Mindestausgabenkriterien von 500 USD erfüllt oder überschreitet.
+Aktionen: Wenn die Bedingung erfüllt ist, kann die Aktion Kunden-Tags hinzufügen deinen benutzerdefinierten VIP-Tag anwenden. Wenn die Bedingung nicht erfüllt ist, führt der Workflow keine Aktion aus.
+
+Jeder Schritt in einem Workflow ist mit anderen Schritten verbunden, die bestimmen, welche Aktionen in welcher Reihenfolge ausgeführt werden. Alle Workflows beginnen mit einem Trigger-Schritt und sind dann mit Bedingungs- oder Aktionsschritten verbunden, je nachdem, wie dein Workflow funktionieren soll.
+
+Das Erstellen von Workflows mag auf den ersten Blick einschüchternd und technisch erscheinen, aber du kannst diese Leitfäden verwenden, um zu verstehen, wie Workflows funktionieren, und um Inspiration dafür zu erhalten, welche Aufgaben du zur Unterstützung deines Geschäfts automatisieren könntest.
+
+In diesem Abschnitt
+
+Grundlagen zu Triggern in Shopify Flow
+
+Grundlagen zu Bedingungen in Shopify Flow
+
+Grundlagen zu Aktionen in Shopify Flow
+
+Beispiele für Workflows in Shopify Flow
+
+Fortgeschrittene Konzepte in Shopify Flow
+
+Feedback hinterlassen
+
+LINKS
+https://help.shopify.com/de/manual/shopify-flow
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-triggers
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-actions
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts

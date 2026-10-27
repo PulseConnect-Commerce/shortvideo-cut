@@ -1,0 +1,48 @@
+Hintergründe und Bilder für S04 · Shopify Flow (alle aufgenommen bzw. geladen am 27.10.2026; nur zugeschnitten, leicht
+abgedunkelt/weichgezeichnet; nichts dazugemalt)
+
+Hintergründe (1080x1920, gestaltet mit hyperframes/shopifyflow-hg/gestalte.py aus den Screenshots in
+hyperframes/shopifyflow-hg/screenshots/, Playwright/Chromium, Handy-Ansicht 432 px, 2,5-fach; oben die Kopfleiste "Hilfe"
+der Seite, darunter der Abschnitt):
+- hg-aufgaben.png: Shopify Help Center "Erste Schritte mit Shopify Flow", Kopf ("... mühsame und repetitive Aufgaben
+  vermeiden ...") https://help.shopify.com/de/manual/shopify-flow/getting-started
+- hg-drei.png: ebd., "Shopify Flow verwendet einen Drag-&-Drop-Workflow-Editor, mit dem du 3 verschiedene Arten von
+  Schritten – Trigger, Bedingungen und Aktionen – ..."
+- hg-beispiel.png: Shopify Help Center "Beispiele für Workflows in Shopify Flow", Abschnitt "Workflows für Bestellungen"
+  ("... dein Team zu benachrichtigen, wenn du Bestellungen erhältst, die besondere Aufmerksamkeit erfordern ...")
+  https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples
+- hg-trigger.png: Shopify Help Center, Trigger "Bestellung erstellt"
+  https://help.shopify.com/de/manual/shopify-flow/reference/triggers/order-created
+- hg-bedingung.png: Shopify Help Center "Bedingungen in Shopify Flow verstehen", Kopf (Wahr / Falsch)
+  https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions
+- hg-aktion.png: Shopify Help Center "Aktionen in Shopify Flow verstehen", Kategorien ("Kommunikationsaktionen: ... das
+  Senden einer E-Mail an dich selbst oder dein Team ...")
+  https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-actions
+- hg-flow.png: Shopify Help Center "Shopify Flow", Kopf ("... indem du Workflows erstellst und dabei Auslöser, Bedingungen
+  und Aktionen verwendest.") https://help.shopify.com/de/manual/shopify-flow
+- hg-plan.png: ebd., Kasten "Plananforderung" ("Shops mit den Plänen Grow, Advanced und Plus können die Aktion
+  HTTP-Anfrage senden verwenden."); unterhalb des Kastens abgeschnitten (dort folgt ein eingebettetes YouTube-Video)
+- hg-vorlage.png: Shopify Help Center "Workflows manuell oder anhand einer Vorlage erstellen", Abschnitt "Einen Workflow
+  mithilfe einer Vorlage erstellen" https://help.shopify.com/de/manual/shopify-flow/create/create-workflow
+- hg-ki.png: ebd., Abschnitt "Einen Workflow mit Sidekick generieren"
+- hg-ki-pruefen.png: ebd., "Du solltest den generierten Workflow gründlich überprüfen und testen ..."
+- hg-testen.png: Shopify Help Center "Einen Workflow in Shopify Flow testen", Kopf ("Du kannst einen Workflow testen,
+  bevor du ihn aktivierst.") https://help.shopify.com/de/manual/shopify-flow/manage/test-workflow
+- hg-testbestellung.png: ebd., "Ereignisse aufzeichnen: ... z. B. selbst eine echte Bestellung erstellen, um den Trigger
+  Bestellung erstellt zu testen."
+- hg-aktionen.png: Shopify Help Center "Aktionen in Shopify Flow" (Referenz; "... HTTP-Anfragen an externe Dienste
+  senden") https://help.shopify.com/de/manual/shopify-flow/reference/actions
+Bei den Hilfe-Seiten sind schwebende Leisten unten (z. B. "Frage nach diesem Artikel") per CSS ausgeblendet (wie ein
+Cookie-Banner), sonst nichts verändert.
+
+Produktbilder (produkte/, auch in hyperframes/shopifyflow-skizzen/assets/), aus Pauls Demo-Shop
+online-store-development-pulseconnect (products.json, nur gelesen, Bild mit &width=400):
+- stiefel-bordeaux.png: "LUNAVIA Langschaftstiefel Bordeaux" (LUNAVIA), 159,90 €
+- mantel-ingrid.png: "Wool Coat Ingrid" (Nordwind), 149,90 €
+Summe 309,80 €: die Beispiel-Bestellung (Kicker "BEISPIEL") und die Testbestellung (Kicker "DEMO") im Video; es gibt
+keine echte Bestellung und keine Kundendaten.
+
+Begriffe in den Karten aus dem Shopify Help Center: Trigger "Bestellung erstellt", Aktion "Interne E-Mail senden",
+Button "Workflow aktivieren", Vorlagenbeispiele "B2B-Bestellungen taggen", "Bestellungen nach Versandart taggen", "Über
+ungewöhnlich große Bestellmengen benachrichtigt werden", "Mit Geschenkkarte bezahlte Bestellungen taggen",
+"Benachrichtigung bei niedrigem Produktinventar".

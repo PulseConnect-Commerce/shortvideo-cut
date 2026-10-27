@@ -1,0 +1,85 @@
+{
+ "projekt": "shopifyflow",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 2.3,
+   "text": "Bei Shopify Flow würde ich tatsächlich nicht mit der eigenen komplizierten KI-Automatisierung anfangen."
+  },
+  {
+   "take": "t1",
+   "ab": 12.1,
+   "text": "Ich würde hier erst einmal eine Aufgabe nehmen, die im Shop dann tatsächlich wirklich regelmäßig anfängt."
+  },
+  {
+   "take": "t1",
+   "ab": 37.1,
+   "text": "Nehmen wir mal ein kleines Beispiel dazu. Du möchtest zum Beispiel intern einfach eine Nachricht bekommen, wenn mal eine Bestellung über 300 Euro reinkommt."
+  },
+  {
+   "take": "t1",
+   "ab": 74.85,
+   "text": "Und genau für dieses Beispiel brauchst Du jetzt im Grunde genommen nur drei Dinge. Einmal den Auslöser, zum Beispiel eine Bestellung wird erstellt."
+  },
+  {
+   "take": "t1",
+   "ab": 87.3,
+   "text": "Dann als zweites natürlich die Bedingung, also der Bestellwert liegt eben in dem Fall über 300 Euro. Und dann natürlich auch noch die Aktion. Also was soll Shopify danach machen? Shopify verschickt also intern Benachrichtigungen an Dein Team."
+  },
+  {
+   "take": "t1",
+   "ab": 102.6,
+   "text": "und genau aus solchen Auslösern, Bedingungen und Aktionen besteht eben auch Shopify Flow."
+  },
+  {
+   "take": "t1",
+   "ab": 108.35,
+   "text": "Du kannst eben dafür auch einfach mit fertigen Workflow-Vorlagen starten, statt immer alles von Null aufzubauen. Da gibt es in Shopify ja auch genug Möglichkeiten zu. Aber bei Flow ist mir eben ein Punkt besonders wichtig aufgefallen. Nicht nur einfach aktivieren und davon ausgehen, dass es eben schon funktioniert."
+  },
+  {
+   "take": "t1",
+   "ab": 187.35,
+   "text": "Ich würde hier aber zunächst einmal mit einer Testbestellung starten und prüfen, ob hier die Nachricht tatsächlich auch bei dir unter den richtigen Bedingungen ankommt."
+  },
+  {
+   "take": "t1",
+   "ab": 237.2,
+   "text": "Denn bei Abläufen, die dann auch tatsächlich Bestellungen verändern, Zahlungsinformation betreffen oder auch einfach Kundendaten an andere Dienste schicken, wäre ich tatsächlich immer etwas vorsichtiger. KI kann dir natürlich auch dabei helfen, diesen Workflow so zu planen.",
+   "stumm": [[243.06, 243.245]]
+  },
+  {
+   "take": "t1",
+   "ab": 265.75,
+   "text": "Trotzdem kann ich dir aber erst einmal empfehlen, hier genauestens zu verstehen, welche Aktion am Ende auch genau ausgeführt wird."
+  },
+  {
+   "take": "t1",
+   "ab": 288.25,
+   "text": "daher mein Tipp an dich, automatisiere hier zunächst einmal eine kleine risikoarme Aufgabe und wenn diese dann natürlich zuverlässig läuft, dann kannst du natürlich auch die nächsten Prozesse angehen und was du auf jeden Fall angehen solltest, ist hier das Pluszeug zu drücken.",
+   "ganz": true
+  }
+ ],
+ "korrekturen": [
+  ["t1", 16.49, "anfängt.", "anfällt."],
+  ["t1", 76.35, "Du", "du"],
+  ["t1", 99.35, "Dein", "dein"],
+  ["t1", 102.76, "und", "Und"],
+  ["t1", 102.9, "genau", "genau immer"],
+  ["t1", 104.96, "und", "oder"],
+  ["t1", 113.14, "Null", "null"],
+  ["t1", 114.66, "ja", ""],
+  ["t1", 240.04, "Zahlungsinformation", "Zahlungsinformationen"],
+  ["t1", 288.34, "daher", "Daher"],
+  ["t1", 301.0, "Pluszeug", "Plus"]
+ ],
+ "ende": {
+  "bis": 302.0
+ }
+}

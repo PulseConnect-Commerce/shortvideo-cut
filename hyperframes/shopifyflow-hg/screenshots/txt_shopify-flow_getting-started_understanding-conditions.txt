@@ -1,0 +1,147 @@
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions
+status 200 final https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Erste Schritte mit Shopify Flow
+Bedingungen in Shopify Flow verstehen
+
+Eine Bedingung ist ein Schritt in einem Workflow, in dem basierend darauf, ob eine Reihe von Kriterien erfüllt wurde, eine Entscheidung über das weitere Vorgehen getroffen wird. Jeder Bedingungsschritt hat zwei Möglichkeiten: Wahr, wenn die Kriterien erfüllt wurden, und Falsch, wenn die Kriterien nicht erfüllt wurden. Wenn du für keine der beiden Möglichkeiten einen nächsten Schritt definierst, indem du eine weitere Bedingung oder Aktion auswählst, wird der Workflow-Durchlauf angehalten.
+
+Wenn dein Workflow beispielsweise durch die Erstellung einer Bestellung ausgelöst wird, könnte eine Bedingung prüfen, ob ein bestimmter AFFILIATE10-Rabattcode für die Bestellung verwendet wurde. Wenn ja, könnte die Option „Wahr“ zu einer Aktion führen, die eine E-Mail an den Affiliate sendet, um ihn darüber zu informieren, dass sein Code verwendet wurde. Wenn nicht, könnte die Option „Falsch“ leer sein, was bedeutet, dass nichts weiter passiert und der Workflow-Durchlauf endet.
+
+Ein Workflow kann je nach Komplexität eine beliebige Anzahl von Bedingungen haben. Bedingungen können auch mit anderen Bedingungen oder Aktionen verknüpft werden, je nachdem, was dein Workflow tun soll. Bedingungen können so eingerichtet werden, dass sie nacheinander verknüpft werden (z. B. wenn Bedingung A wahr ist, dann auf Bedingung B prüfen; wenn A falsch ist, dann auf C prüfen), oder du kannst sie so einrichten, dass sie gleichzeitig als Teil desselben Schritts auftreten (z. B. prüfen, ob A oder B oder C wahr ist).
+
+Sidekick
+
+Du kannst Sidekick bitten, eine Bedingung zu schreiben. Beschreibe die Prüfung in einfacher Sprache, und Sidekick erstellt sie mithilfe der Bedingungssyntax von Flow, einschließlich der erforderlichen logischen Operatoren und Variablenpfade. Verwende einen Prompt wie Nur fortfahren, wenn die Bestellung über 100 USD liegt und die Kund:in mit VIP getaggt ist.
+
+Auf dieser Seite
+Bedingungen für deinen Workflow formulieren
+Variablen in Bedingungen verstehen
+Logische Operatoren in Bedingungen verstehen
+Bedingungen für deinen Workflow formulieren
+
+Anders als ein Trigger oder eine Aktion, die du aus einer voreingestellten Liste verfügbarer Optionen in Shopify Flow auswählen kannst, werden Bedingungen von Grund auf neu formuliert, indem Variablen, logische Operatoren und Werte ausgewählt werden, um die bedingte Anweisung zu erstellen:
+
+Eine Variable ist ein Platzhalter, der die Daten definiert, die von der Bedingung verwendet werden. Wenn eine Bedingung beispielsweise nach einem bestimmten Rabattcode für eine Bestellung suchen soll, wäre die Variable order.discountCode. Variablen verwenden die Punktnotation der GraphQL Admin API.
+Ein logischer Operator gibt an, wie der Workflow bestimmen soll, ob die Bedingung erfüllt ist. Logische Operatoren können auf Variablenebene oder dann gelten, wenn mehrere Variablen als Teil der allgemeinen Bedingungskriterien enthalten sind:
+Zu den Optionen auf Variablenebene gehören Feldebenen-Operatoren wie Größer als oder Beginnt mit oder Listen-Operatoren wie Mindestens einer von oder Alle von.
+Zu den Optionen auf Bedingungsebene gehören UND, was bedeutet, dass alle Variablen wahr sein müssen, damit die Bedingung insgesamt als wahr angesehen wird, oder ODER, was bedeutet, dass mindestens eine Variable wahr sein muss, damit die Bedingung insgesamt als wahr angesehen wird.
+Ein Wert ist die tatsächliche Information, nach der die Variable sucht. Wenn beispielsweise der spezifische order.discountCode, den der Workflow prüfen soll, AFFILIATE10 ist, dann wäre das der Wert, der als Teil der Bedingung einzuschließen ist.
+
+Wenn du deine Variablen und Operatoren auswählst, wird der Bedingungsschritt im Workflow-Editor von Shopify Flow aktualisiert, um deine bedingte Anweisung in einfacher Sprache wiederzugeben. So kannst du überprüfen, ob die von dir erstellte Bedingung richtig formatiert ist. Du kannst auf Beschreibung hinzufügen klicken, um die standardmäßige bedingte Anweisung mit deiner eigenen Beschreibung zu überschreiben.
+
+Weitere Informationen zu den Elementen von Bedingungen in Shopify Flow.
+
+Variablen in Bedingungen verstehen
+
+Wenn du einen Bedingungsschritt in einem Workflow formulierst, wirst du als Erstes aufgefordert, eine Variable hinzuzufügen. Aber was ist eine Variable?
+
+In Shopify Flow ist eine Variable ein Platzhalter, der die Daten angibt, die von der Bedingung im Workflow verwendet werden. Wenn eine Bedingung „Wenn A größer als 10 ist ...“ lautet, ist der Teil A die Variable. Die Auswahl einer Variable für eine Bedingung teilt der Bedingung im Wesentlichen mit, welche Daten sie spezifisch auswerten soll.
+
+Variablen werden mit der Punktnotation der GraphQL Admin API formatiert. Du musst nicht mit der API vertraut sein, um Workflows mit der Flow-App zu erstellen, aber ein grundlegendes Verständnis der Variablennamen und ihrer Definitionen kann dir helfen, die spezifische Workflow-Logik zu erstellen, die du möchtest.
+
+Um zu verstehen, welche Daten eine Variable darstellt, beachte die folgenden Informationen zu Variablen:
+
+Anleitung zum Lesen der Punktnotation von Variablen.
+Grundlagen zu Datenanforderungen für Variablen.
+Die richtige Variable während einer Suche finden.
+Tipp: Hilfe zu Variablen vom Dev Docs Assistant erhalten
+
+Wenn du dir nicht sicher bist, welche Variable du beim Erstellen deiner Bedingung auswählen sollst, dann frage den Shopify Dev Docs Assistant um Rat. Der Dev Docs Assistant hat Zugriff auf die gesamte Dokumentation zur GraphQL Admin API und kann Vorschläge machen, wie eine Bedingung in Shopify Flow zu formatieren ist:
+
+Gehe zu Shopify Dev Docs.
+Klicke auf „Assistent fragen“, um das Chatfenster zu öffnen.
+Gib deine Anfrage in das Nachrichtenfeld ein, z. B. „Welche Variable soll ich in Shopify Flow verwenden, um auf die Daten der Kundschafts-Tags zuzugreifen, wenn mein Trigger mit „Bestellung erstellt“ beginnt?“.
+Drücke die Eingabetaste oder klicke auf .
+Lesen der Punktnotation von Variablen
+
+Bei der Auswahl von Variablen wirst du feststellen, dass sie als durch Punkte getrennte Keywords formatiert sind, z. B. order.customer.tag. Dieses Format gibt die Schritte an, die die API durchführt, um zu den Daten zu gelangen, die du verwenden möchtest. Jeder Schritt einer Variable ist durch einen Punkt getrennt und der Pfad zu den Daten wird von links nach rechts gelesen. Die Länge von Variablen kann variieren, je nachdem, wo die Daten in der API gespeichert sind und welchen Pfad der Workflow benötigt, um dorthin zu gelangen.
+
+Beispiel:
+
+order.email: Prüft die E-Mail-Adresse, die dem/der Kund:in für die Bestellung zugeordnet ist. Das ist so ähnlich, wie wenn du auf eine Bestellung klickst und dann die E-Mail-Adresse in den Bestelldetails überprüfst.
+refunds_item.staffMember.name: Prüft die Bestellung auf eine Artikelrückerstattung, ruft die Informationen zu dem/der mit dieser Rückerstattung verknüpften Mitarbeiter:in auf und prüft den vollständigen Namen diese:r Mitarbeiter:in.
+
+Überlege bei der Auswahl einer Variable, wie du im Shopify-Adminbereich navigieren würdest, um die gewünschten Informationen zu finden. Es ist wahrscheinlich, dass die API einen ähnlichen Pfad nehmen muss. Dies kann dir helfen festzustellen, wie deine Variable formatiert sein könnte.
+
+Wenn du beispielsweise eine neue Bestellung überprüfst und wissen möchtest, in welcher RFM-Gruppe sich der/die zugehörige Kund:in befindet, könntest du auf den Kundennamen in der Bestellung klicken, um zur Kundendetailseite im Shopify-Adminbereich weitergeleitet zu werden. Anschließend könntest du die Analyseübersicht des/der Kund:in überprüfen, um zu sehen, welcher Wert in der Spalte RFM-Gruppe angezeigt wird.
+
+Die Variable, die du verwenden würdest, um dieselben Daten in Shopify Flow zurückzugeben, würde einen ähnlichen Pfad verwenden: order.customer.statistics.rfmGroup.
+
+Datenanforderungen für Variablen
+
+Variablen benötigen Daten. Wenn die richtigen Daten für die Variable nicht verfügbar sind, funktioniert die Bedingung nicht und der Workflow schlägt fehl. Je nachdem, welchen Trigger du als Start deines Workflows ausgewählt hast, ändern sich die Optionen für die Variablen, die du zu deinen Bedingungen hinzufügen kannst, um die möglichen Optionen auf der Grundlage der verfügbaren Daten widerzuspiegeln.
+
+Wenn dein Workflow beispielsweise mit dem Trigger „Produkt erstellt“ beginnt, sind die Bedingungen, die du aus diesem Trigger erstellst, auf die Variablen beschränkt, die aus dem Produkt-Datensatz verfügbar sind. Daher stehen Variablen wie product.category.name, product.vendor und variants_item.displayName alle als Teil der Bedingung zur Verfügung. Im Gegensatz dazu werden Variablen wie customer.verifiedEmail oder subscriptionContracts_item.status nicht als Optionen angezeigt, da diese nicht mit dem Produkt-Datensatz verknüpft sind.
+
+Das bedeutet jedoch nicht zwangsläufig, dass in anderen Datensätzen enthaltene Daten völlig unzugänglich sind. Auf einige Daten kann über mehrere Pfade in der API zugegriffen werden, so wie du im Shopify-Adminbereich auf verschiedene Links klicken kannst, um zur selben Seite zu gelangen. In der Praxis bedeutet das, dass verschiedene Trigger eine unterschiedliche Variablennotation erfordern, um dieselben Informationen zurückzugeben.
+
+Du möchtest beispielsweise, dass dein Workflow die Tags in einem Kundenprofil überprüft. Wenn dein Workflow mit dem Trigger „Bestellung erstellt“ beginnt, lautet die Variable order.customer.tags, da der Workflow mit den Bestelldaten beginnt, dann die Kund:inneninformationen in der Bestellung prüft und anschließend die Tags dieses/dieser Kund:in überprüft. Wenn dein Workflow mit dem Trigger „Kund:in erstellt“ beginnt, lautet die Variable einfach customer.tags, da der Workflow mit den Kund:innendaten beginnt und somit direkt die Tags im Kundenprofil überprüfen kann.
+
+Hinweis
+
+Eine fortgeschrittenere Methode, um auf Daten zuzugreifen, die nicht vom Trigger bereitgestellt werden, ist die Verwendung einer Aktion zum Abrufen von Daten, um Informationen abzurufen. Mehr Informationen über Zeitpläne, den Datenabruf und Looping-Workflows in Shopify Flow.
+
+Den Pfad einer Variable bei der Suche nach Keywords überprüfen
+
+Aufgrund der Punktnotation in Shopify Flow kann die Suche nach Variablen für eine Bedingung anhand von Keywords mehrere Ergebnisse liefern. Es ist wichtig zu verstehen, was der Pfad der Variable anzeigt, um zu bestimmen, welche Variable du bei der Erstellung deiner Bedingung auswählen solltest.
+
+Dein Workflow verwendet beispielsweise den Trigger „Bestellung erstellt“ und du suchst mit dem Keyword tags nach einer Variable. Deine Suche könnte die folgenden Ergebnisse liefern, die unterschiedliche Informationen in der Bestellung prüfen:
+
+order.tags: Die Tags, die auf die Bestellung selbst angewendet werden. Zum Beispiel #Eilbestellung oder #Geschenk.
+order.customer.tags: Die Tags, die für den/die Kund:in gelten, der/die die Bestellung aufgegeben hat. Zum Beispiel #VIP oder #Partner.
+order.lineItems.product.tags: Die Tags, die für die in der Bestellung gekauften Produkte gelten. Zum Beispiel #zerbrechlich oder #Ausweispflicht.
+
+Je nachdem, welche Art von Tags der Workflow prüfen soll, musst du die richtige Variable auswählen, damit deine Bedingung wie erwartet funktioniert.
+
+Tipp
+
+Um mehr über ein bestimmtes Element einer Variable zu erfahren, klicke im Dialogfeld „Variable hinzufügen“ auf das Symbol , um den entsprechenden Artikel in den Shopify dev docs zu öffnen.
+
+Logische Operatoren in Bedingungen verstehen
+
+Logische Operatoren definieren, wie deine Bedingung angewendet wird, und führen dazu, dass eine Aussage entweder wahr oder falsch ist. Wenn eine Bedingung lautet „Wenn A größer als 10 ist ...“, ist der Teil ist größer als der logische Operator. Die Auswahl eines logischen Operators für eine Bedingung teilt der Bedingung im Wesentlichen mit, wie die Variable ausgewertet werden soll.
+
+In Shopify Flow-Workflows gibt es 3 Arten von logischen Operatoren:
+
+Operatoren auf Feldebene, z. B. Größer als oder Beginnt mit.
+Listenoperatoren, z. B. Mindestens einer von oder Alle von.
+Operatoren auf Bedingungsebene, z. B. AND oder OR.
+
+Operatoren auf Feldebene und Listenoperatoren werden auf Variablenebene angewendet. Operatoren auf Bedingungsebene gelten für die gesamte Bedingung und können verwendet werden, um mehrere Variablen zu einer einzigen Bedingung zu kombinieren.
+
+Operatoren auf Feldebene sind die häufigsten Arten von Operatoren und werden in jeder Art von Variablenanweisung verwendet. Mit Operatoren auf Feldebene kannst du bedingte Anweisungen erstellen, z. B. „Wenn A größer als 10 ist, dann führe X aus“ oder „Wenn B ‚VIP‘ enthält, dann führe X aus“, um eine größere Kontrolle darüber zu haben, welche Werte einer Variable ein wahres Ergebnis zurückgeben. Gleich ist der standardmäßige logische Operator.
+
+Listenoperatoren können nur auf Variablen angewendet werden, die eine Ergebnisliste zurückgeben können. Beispielsweise gibt die Variable lineItems_item.variant.price den Preis für eine Produktvariante in der Bestellung zurück. Dies kann eine Ergebnisliste ergeben, wenn der/die Kund:in mehrere Produkte in derselben Bestellung gekauft hat. Das bedeutet, dass du einen Listenoperator wie Mindestens einer von anwenden könntest, wenn du möchtest, dass eine bedingte Anweisung wie „lineItems_item.variant.price ist größer als 10 $“ wahr ist, wenn es in der Bestellung mindestens eine Produktvariante gibt, die mehr als 10 $ kostet. Im Gegensatz dazu werden Listenoperatoren nicht für Variablen angezeigt, die jeweils nur ein Ergebnis zurückgeben können. Beispielsweise gibt es nur einen möglichen Wert für eine Variable wie order.createdAt, da eine Bestellung nur einmal erstellt werden kann. Daher werden Listenoperatoren nicht als Optionen zur Änderung der Anweisung mit dieser Variable angezeigt.
+
+Mit Operatoren auf Bedingungsebene wie AND und OR kannst du mehrere Variablen in derselben Bedingung verwenden. Anstatt einer einfachen bedingten Anweisung wie „Wenn A gleich 5 ist, dann führe X aus“, kannst du beispielsweise komplexere Bedingungen erstellen, wie „Wenn A gleich 5 ist und B größer als 10 ist, dann führe X aus“, wobei sowohl die Variable A als auch die Variable B wahr sein müssen, oder „Wenn A gleich 5 ist oder B größer als 10 ist oder C kleiner als 1 ist, dann führe X aus“, wobei es ausreicht, dass nur eine der Variablen A, B oder C wahr ist. Verwende AND, wenn alles in einem Workflow wahr sein muss; verwende OR, wenn es ausreicht, dass ein beliebiges Kriterium erfüllt ist, damit die Bedingung wahr ist.
+
+Warum das wichtig ist: Wenn du verstehst, wie logische Operatoren in Bedingungen funktionieren, kannst du Workflows erstellen, die genau die von dir gewünschten Kriterien prüfen. Mit den 3 Arten von logischen Operatoren kannst du detaillierte und komplexe bedingte Anweisungen formulieren, um Workflows zu erstellen, die auf sehr spezifische Bedingungen prüfen.
+
+Erfahre mehr über logische Operatoren in Bedingungen.
+
+Feedback hinterlassen
+
+LINKS
+https://help.shopify.com/de/manual/shopify-flow/getting-started
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions#crafting-conditions-for-your-workflow
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions#variables
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions#understanding-logical-operators-in-conditions
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/admin-api
+https://help.shopify.com/de/manual/shopify-flow/reference/conditions
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions#variable-dot-notation
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions#variable-data
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions#variable-search
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-order-data
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/advanced-workflows
+https://help.shopify.com/de/manual/shopify-flow/reference/conditions#logical-operators

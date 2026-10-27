@@ -1,0 +1,357 @@
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-internal-email
+status 200 final https://help.shopify.com/de/manual/shopify-flow/reference/actions
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Referenz
+Aktionen in Shopify Flow
+
+Aktionen können Änderungen in deinem Shop vornehmen, Daten im Workflow beeinflussen oder eine Aktion mit einer externen App oder einem externen Dienst ausführen. Aktionen können Änderungen an deinem Shop vornehmen, z. B. Bestell-Tags hinzufügen, Kunden-Tags entfernen oder Fulfillment-Aufträge anhalten. Aktionen können auch E-Mails oder Slack-Nachrichten senden oder HTTP-Anfragen an externe Dienste senden. Erfahre mehr über die Grundlagen von Aktionen.
+
+Aktionen benötigen Daten, um zu funktionieren. Wenn du eine Aktion auswählst, für die nicht die erforderlichen Daten vom Trigger oder von einer Daten abrufen-Aktion bereitgestellt werden, wird der Workflow nicht ausgeführt und eine Fehlermeldung angezeigt. Beispielsweise importiert ein Workflow, der mit einem Kund:in erstellt-Trigger beginnt, Kundendaten in den Workflow. Wenn auf diesen Trigger eine Bestell-Tags hinzufügen-Aktion folgt, die Bestelldaten und keine Kundendaten erfordert, führt der Workflow zu einem Fehler wegen fehlender Daten.
+
+Aktionen verwenden die GraphQL Admin API, um Änderungen an deinem Shopify-Shop vorzunehmen. Die Aktion „Bestell-Tags hinzufügen“ verwendet beispielsweise die tagsAdd-Mutation. Die Aktion „Admin API-Anfrage senden“ kann die meisten Mutationen verwenden, einschließlich derer, die in Flow noch nicht als Aktionen verfügbar sind.
+
+In diesem Abschnitt
+
+Katalog zu Unternehmenssitz hinzufügen
+
+Kund:innen-Tags hinzufügen
+
+Bestellentwurfs-Tags hinzufügen
+
+Bestellposition hinzufügen
+
+Bestell-Tags hinzufügen
+
+Produkt-Tags hinzufügen
+
+Produkt zu Kollektionen hinzufügen
+
+Bestellung archivieren
+
+Bestellung stornieren
+
+Rückgabe stornieren
+
+Zahlung erfassen
+
+Rückgabe schließen
+
+Zählen
+
+Metafelddefinition erstellen
+
+Bestellrisikobewertung erstellen
+
+Weiterleitungs-URL erstellen
+
+Unternehmen löschen
+
+Kund:in löschen
+
+Produkt löschen
+
+Produktvariante löschen
+
+Weiterleitungs-URLs löschen
+
+Workflow-Ausführung als fehlgeschlagen markieren
+
+For-Each-Schleife (iterieren)
+
+Daten zu abgebrochenen Checkouts abrufen
+
+Artikeldaten abrufen
+
+Kassensitzungsdaten abrufen
+
+Katalogdaten abrufen
+
+Kollektionsdaten abrufen
+
+Unternehmensdaten abrufen
+
+Daten zum Unternehmenssitz abrufen
+
+Kund:innendaten abrufen
+
+Rabattdaten abrufen
+
+Bestellentwurfsdaten abrufen
+
+Daten des Fulfillment-Auftrags abrufen
+
+Gutscheindaten abrufen
+
+Inventarartikeldaten abrufen
+
+Standortdaten abrufen
+
+Marktdaten abrufen
+
+Metaobjekt-Einträge abrufen
+
+Metaobjekt-Eintrag abrufen
+
+Bestelldaten abrufen
+
+Seitendaten abrufen
+
+Produktdaten abrufen
+
+Produktvariantendaten abrufen
+
+Daten der Verkaufsplangruppe abrufen
+
+Daten zum Abonnement-Abrechnungsversuch abrufen
+
+Abonnementvertragsdaten abrufen
+
+Daten zum Workflow-Durchlauf abrufen
+
+Fulfillment-Auftrag zurückstellen
+
+Ausgabe protokollieren
+
+Kund:in in Segment suchen
+
+Fulfillment-Auftrag als ausgeführt markieren
+
+Bestellung als bezahlt markieren
+
+Fulfillment-Auftrag verschieben
+
+Produkt veröffentlichen
+
+Produktvariante veröffentlichen
+
+Versandetikett kaufen
+
+Zurückstellungen für Fulfillment-Auftrag aufheben
+
+Katalog aus Unternehmenssitz entfernen
+
+Kollektions-Metafeld entfernen
+
+Metafeld des Unternehmenssitzes entfernen
+
+Unternehmens-Metafeld entfernen
+
+Kund:innen-Metafeld entfernen
+
+Kund:innen-Tags entfernen
+
+Bestellentwurfs-Metafeld entfernen
+
+Bestellentwurfs-Tags entfernen
+
+Bestell-Metafeld entfernen
+
+Bestell-Tags entfernen
+
+Produkt aus Kollektion entfernen
+
+Produkt-Metafeld entfernen
+
+Produkt-Tags entfernen
+
+Produktvarianten-Metafeld entfernen
+
+Shop-Metafeld entfernen
+
+Rückgabe erneut öffnen
+
+Code ausführen
+
+Admin API-Anfrage senden
+
+B2B-Zugangs-E-Mail senden
+
+Rechnung für Bestellentwurf senden
+
+HTTP-Anfrage senden
+
+Interne E-Mail senden
+
+Bestellrechnung senden
+
+Zahlungserinnerung senden
+
+Shopify-Benachrichtigung bei Fehlern senden
+
+Fulfillment-Stornierungsanfrage einreichen
+
+Fulfillment-Anfrage einreichen
+
+Summieren
+
+Bestellung dearchivieren
+
+Produktveröffentlichung aufheben
+
+Veröffentlichung von Produktvariante aufheben
+
+Checkout-Entwurf für Unternehmenssitz aktualisieren
+
+Kollektions-Metafeld aktualisieren
+
+Metafeld für Unternehmenssitz aktualisieren
+
+Notiz für Unternehmenssitz aktualisieren
+
+Zahlungsbedingungen für Unternehmenssitz aktualisieren
+
+Unternehmens-Metafeld aktualisieren
+
+Unternehmensnotiz aktualisieren
+
+Kunden-Metafeld aktualisieren
+
+Kundennotiz aktualisieren
+
+Bestellentwurfs-Metafeld aktualisieren
+
+Bestellentwurfs-Notiz aktualisieren
+
+Bearbeitbare Lieferadresse für Unternehmenssitz aktualisieren
+
+Bestellungs-Metafeld aktualisieren
+
+Bestellnotiz aktualisieren
+
+Produkt-Metafeld aktualisieren
+
+Produktstatus aktualisieren
+
+Produktvarianten-Metafeld aktualisieren
+
+Shop-Metafeld aktualisieren
+
+Warten
+
+Feedback hinterlassen
+
+LINKS
+https://help.shopify.com/de/manual/shopify-flow/reference
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-actions
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/advanced-workflows#actions
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/customer-created
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-order-tags
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/admin-api
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-admin-api-request
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-catalog-to-company-location
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-customer-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-draft-order-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-order-line-item
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-product-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-product-to-collections
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/archive-order
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/cancel-order
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/cancel-return
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/capture-payment
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/close-return
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/count
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/create-metafield-definition
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/create-order-risk-assessment
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/create-redirect-url
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/delete-company
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/delete-customer
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/delete-product
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/delete-product-variant
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/delete-redirect-urls
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/fail-workflow-run
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/for-each
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-abandoned-checkout-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-article-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-cash-tracking-session-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-catalog-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-collection-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-company-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-company-location-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-customer-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-discount-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-draft-order-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-fulfillment-order-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-gift-card-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-inventory-item-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-location-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-market-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-metaobject-entries
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-metaobject-entry
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-order-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-page-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-product-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-product-variant-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-selling-plan-group-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-subscription-billing-attempt-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-subscription-contract-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-workflow-run-data
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/hold-fulfillment
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/log-output
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/look-up-customer-segment-membership
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/fulfillment-order-mark-as-fulfilled
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/mark-order-as-paid
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/fulfillment-order-move
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/publish-product
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/publish-product-variant
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/purchase-shipping-label
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/release-fulfillment-hold
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-catalog-from-company-location
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-collection-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-company-location-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-company-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-customer-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-customer-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-draft-order-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-draft-order-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-order-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-order-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-product-from-collections
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-product-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-product-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-product-variant-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-shop-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/reopen-return
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/run-code
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-b2b-access-email
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-draft-order-invoice
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-http-request
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-email
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-order-invoice
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-payment-reminder
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-shopify-alert-for-errors
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/fulfillment-order-submit-cancellation-request
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/fulfillment-order-submit-fulfillment-request
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/sum
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/unarchive-order
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/unpublish-product
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/unpublish-product-variant
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-checkout-to-draft-for-company-location
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-collection-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-company-location-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-company-location-note
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-company-location-payment-terms
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-company-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-company-note
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-customer-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-customer-note
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-draft-order-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-draft-order-note
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-editable-shipping-address-for-company-location
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-order-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-order-note
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-product-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-product-status
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-product-variant-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-shop-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/wait

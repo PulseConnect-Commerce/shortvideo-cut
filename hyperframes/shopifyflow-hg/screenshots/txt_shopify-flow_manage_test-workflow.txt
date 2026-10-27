@@ -1,0 +1,147 @@
+https://help.shopify.com/de/manual/shopify-flow/manage/test-workflow
+status 200 final https://help.shopify.com/de/manual/shopify-flow/manage/test-workflow
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Workflows verwalten
+Einen Workflow in Shopify Flow testen
+
+Du kannst einen Workflow testen, bevor du ihn aktivierst. So kannst du deine Workflow-Logik überprüfen und bestätigen, dass deine Variablen und Parameter korrekt sind, bevor du den Workflow so aktivierst, dass er selbstständig ausgeführt wird. Ein Workflow-Test führt keine Aktionen aus, wie etwa das Senden von Benachrichtigungen, das Aktualisieren von Bestellungen oder Produkten oder das Vornehmen von Änderungen an den Daten in deinem aktiven Shop. Du kannst einen Workflow in Shopify Flow jederzeit testen.
+
+Jeder Test beginnt mit Daten zu einem Trigger-Ereignis. Es gibt drei Möglichkeiten, Trigger-Ereignisdaten in Shopify Flow zu erhalten, je nachdem, ob du reale oder simulierte Shop-Daten verwenden möchtest:
+
+Ereignisse aufzeichnen: Diese Option aktiviert einen Testmodus, der nach Live-Ereignissen sucht, die in deinem Shop auf natürliche Weise auftreten und den Workflow auslösen würden. In diesem Modus kannst du auch einen neuen Browser-Tab öffnen, um manuell eine Live-Aktion auszuführen, die ein Testereignis mit echten Daten generieren würde, z. B. selbst eine echte Bestellung erstellen, um den Trigger Bestellung erstellt zu testen.
+Ereignisse erstellen: Mit dieser Option kannst du simulierte Ereignisse manuell mithilfe echter Daten aus deinem Shop erstellen, die den Workflow auslösen würden, ohne dass tatsächlich Änderungen an deinem Shop vorgenommen werden. Du kannst beispielsweise eine bestehende Bestellung in deinem Adminbereich auswählen und ihre echten Daten als Testereignis für einen Trigger vom Typ Bestellung erstellt verwenden, obwohl die Bestellung bereits erstellt wurde.
+Ereignisse generieren: Ähnlich wie bei der manuellen Erstellung eines Testereignisses lässt diese Option Sidekick simulierte Testereignisse für dich generieren. Beispielsweise kann Sidekick zwei Testereignisse (eine erfüllte Bedingung und eine nicht erfüllte Bedingung) generieren, um einen Workflow vom Typ Bestellung erstellt mit vorhandenen Bestelldaten in deinem Shop zu testen. Du kannst diese Testereignisse dann je nach deinen Testpräferenzen verwenden, bearbeiten oder entfernen.
+Auf dieser Seite
+Überlegungen zum Testen eines Workflows in Shopify Flow
+Reale aufgezeichnete Ereignisse verwenden, um einen Workflow in Shopify Flow zu testen
+Simulierte Ereignisse erstellen, um einen Workflow in Shopify Flow zu testen
+Gespeicherte Testereignisse in Shopify Flow bearbeiten
+Überprüfung deines Workflow-Tests
+Überlegungen zum Testen eines Workflows in Shopify Flow
+
+Bevor du einen Workflow testest, lies dir die folgenden Überlegungen durch:
+
+Workflows im Testmodus verwenden deine echten Shop-Daten, um Liquid-Variablen zurückzugeben und die Workflow-Logik zu bestimmen, führen aber keine Aktionen aus und nehmen keine Änderungen an deinem Shop vor. Ein Testdurchlauf wird bei der ersten Aktion angehalten, die versucht, eine Änderung in der Workflow-Logik vorzunehmen, um unbeabsichtigte Änderungen zu verhindern.
+Du kannst einen Workflow in jeder Phase der Erstellung testen. Ein Workflow muss nicht vollständig sein, um deine aktuelle Version zu testen, aber alle Schritte im Workflow müssen gültig sein. Unvollständige oder falsch konfigurierte Schritte können nicht in einem Test verwendet werden.
+Die Liste der Letzten Durchläufe des Workflows enthält keine Test-Workflow-Durchläufe.
+Aktionen in einem Workflow, die mit externen Services verbunden sind, wie z. B. HTTP-Anfrage senden, zeigen während eines Tests Konfigurationsvorschauen an, geben aber anstelle von tatsächlichen Daten die Meldung Diese Aktion kann nicht simuliert werden als zurückgegebenen Datenwert aus.
+Um einen Workflow zu testen, benötigst du die Berechtigung, die Shop-Daten und Apps anzuzeigen, die der Workflow verwendet. Wenn der Workflow Secrets verwendet, benötigst du außerdem die Berechtigung Verbindungen und Secrets verwalten. Mehr Informationen zu Mitarbeiterberechtigungen für Shopify Flow.
+Reale aufgezeichnete Ereignisse verwenden, um einen Workflow in Shopify Flow zu testen
+
+Beim Aufzeichnen von Ereignissen verwendet dein Workflow echte Shop-Daten basierend auf dem von dir festgelegten Trigger, um eine Liste von Testereignissen zu erstellen. Abhängig vom jeweiligen Trigger-Ereignis musst du die Aktion möglicherweise manuell ausführen, um ein Testereignis zu generieren. Wenn du beispielsweise das Ereignis Kollektion erstellt testest, musst du manuell eine Kollektion im Shopify-Adminbereich erstellen, damit der Workflow das Ereignis zu Testzwecken aufzeichnet.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zu Apps > Flow.
+
+Klicke im Abschnitt Workflows auf den Workflow, den du testen möchtest.
+
+Klicke auf Bearbeiten, um den Workflow-Editor zu öffnen.
+
+Klicke beim Trigger des Workflows auf Deinen Workflow testen.
+
+Klicke im Dialogfenster Deinen Workflow testen auf + Ereignis hinzufügen > Ereignisse aufzeichnen, um den Testmodus des Workflows zu aktivieren.
+
+Optional: Wenn auf natürliche Weise keine Testereignisse generiert werden, öffne einen neuen Browser-Tab und erstelle manuell ein Ereignis, das den Trigger zum Starten des Test-Workflows veranlasst.
+
+Im Dialogfenster für das Testereignis werden alle ausgelösten Testereignisse in der Liste Ereignisse aufzeichnen angezeigt. Wähle das Testereignis aus, für das du den Test-Workflow ausführen möchtest.
+
+Der Workflow hebt bestimmte Bedingungen und Aktionen hervor, um den vom Workflow verwendeten Logikpfad basierend auf dem von dir ausgewählten Trigger-Ereignis visuell darzustellen. Du kannst die folgenden Aktionen ausführen:
+
+Klicke auf einen Bedingungs- oder Aktionsschritt im Workflow und dann auf den Tab Vorschau, um eine Vorschau der zutreffenden Ausgabe basierend auf den Daten aus dem Testereignis anzuzeigen. Dies kann eine nützliche Methode sein, um zu bestätigen, dass alle Variablen die richtigen Daten anzeigen.
+Um ein anderes Testereignis auszuwählen, wähle ein neues Testereignis aus der Liste Ereignisse aufzeichnen aus.
+Um die Testergebnisse des Workflows zu aktualisieren, klicke im Workflow-Trigger auf  Test neu starten.
+Um das Testereignis zu speichern, klicke auf  und dann auf Speichern. Nach dem Speichern des Testereignisses kannst du die Testdaten nach Bedarf ändern.
+
+Optional: Klicke auf Aufzeichnung stoppen, um den Überwachungsmodus zu beenden. Du kannst die Überwachung auf Live-Testereignisse wieder fortsetzen, indem du auf Aufzeichnung starten klickst.
+
+Simulierte Ereignisse erstellen, um einen Workflow in Shopify Flow zu testen
+
+Beim Erstellen simulierter Ereignisse (entweder manuell oder mit Sidekick) stellst du Ereignisdaten basierend auf dem von dir festgelegten Trigger bereit, um eine Liste von Testereignissen zu erstellen. Diese simulierten Ereignisse verwenden echte Shop-Daten, wie z. B. tatsächlich vorhandene Produkt- und Kollektionsinformationen in deinem Shop, nehmen jedoch keine tatsächlichen Änderungen an deinem Shop vor. Du kannst den Workflow dann dieses simulierte Ereignis verwenden lassen, um den Test des Workflows auszuführen.
+
+Welche Daten du bei der Ereigniserstellung auswählst, hängt von der Art des Triggers ab, der den Workflow startet. Bei einem Workflow, der beispielsweise mit dem Trigger Bestellung erstellt beginnt, musst du lediglich eine vorhandene Bestellung auswählen, die als Testereignis verwendet wird. Für den Trigger Berechtigung für Unternehmenskontakt zugewiesen musst du jedoch einen Unternehmenssitz, einen Kontakt für dieses Unternehmen und eine Berechtigungsstufe auswählen, um das Testereignis zu erstellen.
+
+Wenn du die Daten zur Erstellung eines Testereignisses nicht selbst auswählen möchtest, kann Sidekick eine Reihe von Testereignissen für dich generieren.
+
+Schritte:
+Ereignisdaten manuell erstellen
+
+Gehe in deinem Shopify-Adminbereich zu Apps > Flow.
+
+Klicke im Abschnitt Workflows auf den Workflow, den du testen möchtest.
+
+Klicke auf Bearbeiten, um den Workflow-Editor zu öffnen.
+
+Klicke beim Trigger des Workflows auf Deinen Workflow testen.
+
+Klicke im Dialogfenster Deinen Workflow testen auf + Ereignis hinzufügen > Ereignis erstellen.
+
+Füge im Dialogfenster Ereignis erstellen Informationen zum Testereignis hinzu:
+
+Wähle die Shop-Daten aus, die du als dein Testereignis verwenden möchtest, basierend auf den erforderlichen Feldern für den Trigger.
+Optional: Gib deinem Testereignis im Feld Ereignisname einen kurzen, aussagekräftigen Namen.
+Klicke auf Speichern.
+
+Der Workflow hebt bestimmte Bedingungen und Aktionen hervor, um den vom Workflow verwendeten Logikpfad basierend auf deinem neuen Testereignis visuell darzustellen. Du kannst die folgenden Aktionen ausführen:
+
+Klicke auf einen Bedingungs- oder Aktionsschritt im Workflow und dann auf den Tab Vorschau, um eine Vorschau der zutreffenden Ausgabe basierend auf den Daten aus dem Testereignis anzuzeigen. Dies kann eine nützliche Methode sein, um zu bestätigen, dass alle Variablen die richtigen Daten anzeigen.
+Um ein anderes Testereignis auszuwählen, wähle ein neues Testereignis aus der Liste Gespeicherte Ereignisse oder Ereignisverlauf aus.
+Um die Testergebnisse des Workflows zu aktualisieren, klicke im Workflow-Trigger auf  Test neu starten.
+Ereignisdaten mit Sidekick generieren
+Gespeicherte Testereignisse in Shopify Flow bearbeiten
+
+Du kannst den Inhalt gespeicherter Testereignisse für deinen Workflow jederzeit bearbeiten. Du kannst außerdem gespeicherte Testereignisse vollständig entfernen.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zu Apps > Flow.
+
+Klicke im Abschnitt Workflows auf den Workflow, den du testen möchtest.
+
+Klicke auf Bearbeiten, um den Workflow-Editor zu öffnen.
+
+Klicke beim Trigger des Workflows auf Deinen Workflow testen.
+
+Fahre in der Liste Gespeichertes Ereignis mit dem Mauszeiger über das Testereignis, das du bearbeiten möchtest, und klicke dann auf  > Bearbeiten.
+
+Aktualisiere den Inhalt der Felder im Testereignis. Du musst möglicherweise auf X klicken, um Daten zu entfernen, bevor du neue Daten auswählen kannst.
+
+Klicke auf Speichern.
+
+Optional: Um das gespeicherte Testereignis zu löschen, fahre mit dem Mauszeiger über das zu löschende Testereignis und klicke dann auf  > Entfernen.
+
+Überprüfung deines Workflow-Tests
+
+Wenn du einen Workflow in Shopify Flow testest, überprüfe die folgenden Informationen, um sicherzustellen, dass sich dein Workflow basierend auf dem Test-Trigger-Ereignis erwartungsgemäß verhält:
+
+Folgt die Gesamtlogik des Workflows deinen Erwartungen? Folgt der Workflow beispielsweise dem Logikpfad für die erfüllte Bedingung, wenn die Bedingung eines Testereignisses wahr ist?
+Verwendet der Workflow die richtigen Variablen in allen Bedingungen und Aktionen? Du hast den Workflow beispielsweise möglicherweise angewiesen, die Variable fulfillments_item.totalQuantity zu überprüfen, die die Summe aller Positionenmengen für ein Fulfillment zurückgibt, anstatt der Variable order.fulfillmentsCount.count, die die Anzahl der Fulfillments einer Bestellung zurückgibt.
+Verwendet der Workflow die richtigen Operatoren in allen Bedingungen und Variablen?
+Bestätige die UND/ODER-Logik. Überprüft beispielsweise eine Bedingung mit mehreren Elementen, ob beide Elemente wahr sind (A UND B) oder nur eines (A ODER B)?
+Bestätige ggf. die Logik Keine von/Mindestens eine von/Alle von.
+Bestätige ggf. die Korrektheit der Operatoren deiner Variablen, wie z. B. die Logik Gleich, Nicht gleich, Existiert nicht, Existiert, Größer als, Kleiner als und Ist mindestens eine von.
+Werden die Bedingungen und Aktionen des Workflows in der richtigen Reihenfolge ausgeführt? Dein Workflow könnte beispielsweise so eingestellt sein, dass er mehrere verschiedene Bedingungen gleichzeitig prüft, anstatt eine Bedingung zu prüfen, bevor er basierend auf dem Ergebnis zur nächsten übergeht.
+
+Wenn sich ein Test-Workflow unerwartet verhält, lies die Informationen zur Fehlerbehebung bei Fehlern in Shopify Flow-Workflows.
+
+Feedback hinterlassen
+
+LINKS
+https://help.shopify.com/de/manual/shopify-flow/manage
+https://help.shopify.com/de/manual/shopify-flow/manage/test-workflow#considerations
+https://help.shopify.com/de/manual/shopify-flow/manage/test-workflow#record-events
+https://help.shopify.com/de/manual/shopify-flow/manage/test-workflow#create-events
+https://help.shopify.com/de/manual/shopify-flow/manage/test-workflow#edit-saved-events
+https://help.shopify.com/de/manual/shopify-flow/manage/test-workflow#reviewing-your-workflow-test
+https://help.shopify.com/de/manual/shopify-flow/getting-started/staff-permissions#workflow-permissions
+https://help.shopify.com/de/manual/shopify-flow/create/troubleshoot

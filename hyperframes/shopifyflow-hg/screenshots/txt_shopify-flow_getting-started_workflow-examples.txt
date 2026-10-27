@@ -1,0 +1,240 @@
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples
+status 200 final https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Erste Schritte mit Shopify Flow
+Beispiele für Workflows in Shopify Flow
+
+Da Workflows und Variablen in Shopify Flow anpassbar sind, sind die Möglichkeiten zur Automatisierung von Aufgaben nur durch das begrenzt, was mit der GraphQL Admin API erreicht werden kann. Es kann überfordernd sein, zu entscheiden, mit welchen Aufgaben du bei der Automatisierung in Shopify Flow beginnen sollst. Sieh dir daher die Beispiele auf dieser Seite an, um Ideen zu erhalten, wie Flow deine geschäftlichen Anforderungen unterstützen kann.
+
+Die Vorlagenbibliothek von Shopify Flow bietet Hunderte von Beispielen, die die Verwendung von Flow demonstrieren. Nachfolgend findest du einige Beispielvorlagen, die dir den Einstieg erleichtern und nach Kategorien geordnet sind. Einige Vorlagen passen möglicherweise in mehrere Kategorien.
+
+Tipp
+
+Du kannst in der Vorlagenbibliothek über die Suchleiste nach vorgefertigten Workflow-Vorlagen suchen. Beschreibe, was du automatisieren möchtest. Alle relevanten Vorlagen, die deiner Beschreibung entsprechen, werden dann als Suchergebnisse angezeigt.
+
+Wenn für die Aufgabe, die du automatisieren möchtest, keine Vorlage verfügbar ist, kannst du in der Referenzliste der Aktionen nach Ideen suchen, welche spezifischen Aktionen ein Workflow ausführen kann. Dies kann dir Aufschluss darüber geben, was in einem benutzerdefinierten Workflow automatisiert werden könnte.
+
+Auf dieser Seite
+B2B-Workflows
+Workflows für das Kauferlebnis
+Workflows für benutzerdefinierte Daten
+Workflows für Kund:innen
+Workflows zur Fehlerüberwachung
+Fulfillment-Workflows
+Inventar- und Merchandising-Workflows
+Workflows zur Kundenbindung
+Workflows für Bestellungen
+Workflows für Zahlungserinnerungen
+Workflows für Werbeaktionen
+Risiko-Workflows
+Workflows mit Connector-Apps
+B2B-Workflows
+
+B2B-Workflows helfen dir dabei, Konfigurationen von Unternehmenssitzen wie Kataloge und Zahlungsbedingungen zu aktualisieren, interne und externe Benachrichtigungen zu automatisieren und B2B-Bestellungen zu verwalten.
+
+Plananforderung
+
+B2B-Workflow-Vorlagen stehen allen zur Verfügung, die Shopify Flow nutzen. B2B-Unternehmen, die in B2B-Workflows verwendet werden, sind in den Plänen Basic, Grow, Advanced und Shopify Plus verfügbar.
+
+Vorlagenbeispiele:
+
+Benachrichtigung erhalten und Unternehmen einrichten, die über Anfragen für Unternehmenskonten erstellt wurden
+B2B-Bestellungen taggen
+Interne E-Mail senden, wenn eine B2B-Bestellung aufgegeben wird
+Rechnung für B2B-Bestellung an mehrere E-Mail-Adressen senden
+E-Mail für B2B-Zugang an genehmigte Kund:innen senden
+Bestellungen für Unternehmen zulassen, die über Anfragen für Unternehmenskonten erstellt wurden
+D2C-Kund:innen entfernen, wenn sie nicht innerhalb von 3 Tagen zu einem Unternehmen hinzugefügt werden
+Workflows für das Kauferlebnis
+
+Workflows für das Kauferlebnis können die Bestellungen deiner Kund:innen taggen oder interne Benachrichtigungen senden, damit du mehr über ihr Kauferlebnis in deinem Shop erfährst.
+
+Vorlagenbeispiele:
+
+Bestellungen taggen, bei denen die Landing-Page des ersten Besuchs einen bestimmten URL-Pfad enthält
+Bestellungen nach Versandart taggen
+Workflows für benutzerdefinierte Daten
+
+Workflows für benutzerdefinierte Daten können dir dabei helfen, deine Shop-Daten zu verwalten, indem sie Metafelder als Speichermethode verwenden.
+
+Vorlagenbeispiele:
+
+Shop-Metafelder erstellen und initialisieren
+Bei jeder neuen Bestellung die Bestellsumme in einem Kunden-Metafeld speichern
+Tags mit einem Präfix mithilfe der Aktion „Code ausführen“ in ein Produkt-Metafeld umwandeln
+Workflows für Kund:innen
+
+Workflows für Kund:innen können dir helfen, deine Kund:innen zu taggen, wenn sie erstellt werden, eine Bestellung aufgeben oder wenn du ihre Bestellung stornierst. Du kannst Kund:innen anhand ihrer Merkmale wie Postleitzahl, E-Mail-Adresse und Bestellhistorie taggen.
+
+Vorlagenbeispiele:
+
+Kund:innen für Bildungsrabatt basierend auf E-Mail-Adresse taggen
+Kund:innen nach Gesamtausgaben in Stufen einteilen
+Kund:innen eine E-Mail senden, wenn ein Artikel auf der Wunschliste im Angebot ist
+Handgeschriebene Notiz senden, nachdem Kund:innen ihre zweite Bestellung aufgegeben haben
+Workflows zur Fehlerüberwachung
+
+Workflows zur Fehlerüberwachung können dich benachrichtigen, wenn in einem Workflow in Shopify Flow ein Problem auftritt.
+
+Vorlagenbeispiele:
+
+Per E-Mail benachrichtigt werden, wenn Fehler bei der Workflow-Ausführung erkannt werden
+Shopify-Benachrichtigung erhalten, wenn Fehler bei der Workflow-Ausführung erkannt werden
+Fulfillment-Workflows
+
+Fulfillment-Workflows können dir helfen, die Fulfillments deiner Bestellungen basierend auf dem Standort oder den Bestelldetails zu verwalten. Du kannst Flow beispielsweise verwenden, um das Fulfillment basierend auf dem Risikolevel einer Bestellung zurückzuhalten, Entwürfe für Versandetiketten vorzubereiten oder Benachrichtigungen über große Bestellmengen zu erhalten.
+
+Vorlagenbeispiele:
+
+Fulfillments basierend auf ausgewählten Kriterien anfordern oder zurückhalten
+Über ungewöhnlich große Bestellmengen benachrichtigt werden
+Inventar- und Merchandising-Workflows
+
+Inventar- und Merchandising-Workflows können dir helfen, dein Inventar zu verwalten und zu steuern, wie deine Produkte deinen Kund:innen angezeigt werden. Du kannst beispielsweise Workflows verwenden, um eine Kollektion von Produkten mit niedrigem Lagerbestand zu erstellen, deine Produkt-Tags zu standardisieren oder Benachrichtigungen zu erhalten, wenn eine Produktvariante nicht mehr vorrätig ist.
+
+Inventar- und Merchandising-Workflows verwenden die folgenden Bedingungen und Aktionen:
+
+Der Trigger Inventarmenge geändert, der Änderungen am Inventar verfolgt.
+Die Bedingungen Inventarmenge der Produktvariante und Vorherige Inventarmenge der Produktvariante stellen sicher, dass der Workflow nur beim ersten Mal ausgeführt wird, wenn deine Bedingungen erfüllt sind.
+
+Wenn du diese Art von Workflow erstellst, muss die Bedingung die Mengen sowohl vor als auch nach den Inventaränderungen überprüfen. Um beispielsweise benachrichtigt zu werden, wenn die Inventarmenge einer Variante weniger als 5 beträgt, setze die Inventarmenge der Produktvariante auf 5 und die vorherige Inventarmenge der Produktvariante auf weniger als 5. In deinem Shop gibt es 7 T-Shirts und Jose bestellt 2 davon. Die Inventarmenge beträgt jetzt 5, daher wird eine E-Mail zur Nachbestellung gesendet. Später bestellt Karim 1 T-Shirt. Die Inventarmenge beträgt nun 4, aber es wird keine E-Mail zur Nachbestellung gesendet. Wenn du nur die aktuelle Inventarmenge überprüfst, wird deine E-Mail zur Nachbestellung jedes Mal gesendet, wenn das Produkt bestellt wird, bis es wieder aufgefüllt wurde.
+
+Vorlagenbeispiele:
+
+Benachrichtigung bei niedrigem Produktinventar
+Produkte basierend auf dem Inventarbestand ausblenden und erneut veröffentlichen
+Produkte mit niedrigem Lagerbestand bewerben und ausblenden, wenn sie nicht vorrätig sind
+Benachrichtigung bei steigender Nachfrage nach nicht vorrätigen Produkten
+Workflows für die Kundentreue
+
+Workflows für die Kundentreue können dir dabei helfen, Rabattcodes zu verfolgen und deine Kund:innen für ihre Unterstützung zu belohnen. Viele Treue-Apps haben Flow-Connectors, mit denen du deine Kund:innen basierend auf ihren Ausgaben und Aktivitäten in deinem Shop belohnen kannst. Du kannst beispielsweise Kund:innen für die Bestellung eines bestimmten Produkts oder das Erstellen einer positiven Bewertung Treuepunkte geben oder sie mit Geburtstags-Tags versehen.
+
+Vorlagenbeispiele:
+
+Benachrichtigung über hohe Rabatte auf neue Bestellungen
+Benachrichtigung bei Verwendung eines bestimmten Rabattcodes
+Treuepunkte vergeben und Kund:innen taggen, die ein Trinkgeld geben
+Workflows für Bestellungen
+
+Bestell-Workflows können dir dabei helfen, eine Bestellung zu taggen, dein Team zu benachrichtigen, wenn du Bestellungen erhältst, die besondere Aufmerksamkeit erfordern, oder Details an eine App zu senden. In deinem Workflow kannst du Bedingungen basierend auf den Merkmalen der Bestellung oder der Kundschaft, die die Bestellung aufgegeben hat, erstellen.
+
+Vorlagenbeispiele:
+
+Logistikteam per E-Mail benachrichtigen, wenn Bestellungen beschleunigt werden müssen
+Über ungewöhnlich große Bestellmengen benachrichtigt werden
+Mit Geschenkkarte bezahlte Bestellungen taggen
+
+Wenn du deine Bestellungen automatisch ausführst, kannst du diese Bestellungen auch von Flow archivieren lassen.
+
+Workflows für Zahlungserinnerungen
+
+Workflows für Zahlungserinnerungen helfen dir, die Kommunikation mit deinen Kund:innen zu automatisieren, wenn eine geplante Zahlung versäumt wurde oder fällig ist.
+
+Vorlagenbeispiele:
+
+Zahlungserinnerung nach Fälligkeitsdatum senden
+Zahlungserinnerung am Fälligkeitsdatum senden
+Workflows für Werbeaktionen
+
+Workflows für Werbeaktionen können dir helfen, Bestellungen mit angewendeten Rabatten zu verwalten sowie einige Marketingaufgaben zu automatisieren, z. B. abgebrochene Checkouts wiederherzustellen oder neue Abonnent:innen zu begrüßen.
+
+Vorlagenbeispiele:
+
+Abgebrochenen Checkout wiederherstellen
+Neue Abonnent:innen mit einer Rabatt-E-Mail begrüßen
+Kund:innen nach dem ersten Kauf ein Upselling anbieten
+Benachrichtigung über hohe Rabatte auf neue Bestellungen
+Risiko-Workflows
+
+Risiko-Workflows können dir bei der Verwaltung von Bestellungen mit hohem Risiko helfen. Du kannst Flow beispielsweise verwenden, um dich benachrichtigen zu lassen, wenn du eine Bestellung mit hohem Risiko erhältst. Verwende in deinem Workflow den Trigger Bestellrisiko analysiert, um das Risikoniveau einer Bestellung zu überprüfen. Dieser Trigger verwendet die Ergebnisse der Shopify-Risikoanalyse. Risikoergebnisse von Drittanbieter-Apps werden nicht verwendet.
+
+Wenn du eine Bestellung mit hohem Risiko erhältst, kannst du Flow die folgenden Aufgaben ausführen lassen:
+
+Die Bestellung taggen, damit sie später bearbeitet werden kann, und dein Team benachrichtigen oder die Bestelldetails an eine App senden.
+Verhindern, dass die Zahlung verarbeitet wird, wenn dein Shop für die manuelle Zahlungserfassung eingerichtet ist.
+Die Bestellung stornieren, wenn die Bestellung für die manuelle Ausführung eingerichtet ist.
+
+Wenn dein Shop so eingerichtet ist, dass du Zahlungen manuell erfasst, kannst du mit Flow verhindern, dass die Zahlung für Bestellungen mit hohem Risiko erfasst wird. Erstelle einen Workflow, der die Risikostufe der Bestellung prüft und die Zahlung nur dann erfasst, wenn das Risiko niedrig oder mittel ist. Verwende in deinem Workflow die Aktion Zahlung erfassen, um die Zahlung zu erfassen.
+
+Wenn dein Shop Zahlungen automatisch erfasst und Bestellungen manuell ausgeführt werden, kannst du Flow verwenden, um die Bestellung zu stornieren. In diesem Fall kannst du nicht verhindern, dass die Zahlung erfasst wird. Verwende in deinem Workflow die Aktion Bestellung stornieren, um die Bestellung zu stornieren.
+
+Du kannst Bestellungen auch anhand anderer Kriterien stornieren, z. B. der E-Mail- oder IP-Adresse der Kundschaft.
+
+Um Bestellungen zu verfolgen, die Flow storniert, kannst du einem Workflow Aktionen hinzufügen, die Folgendes bewirken:
+
+Die stornierten Bestellungen taggen.
+Eine Nachricht senden oder das Problem in einer App protokollieren, z. B. in Google Sheets oder Trello.
+
+Vorlagenbeispiele:
+
+Zahlung erfassen, wenn die Bestellung kein hohes Risiko aufweist
+Bestellungen mit hohem Risiko stornieren und zum Lagerbestand zurückführen
+Workflows mit Connector-Apps
+
+Einige von Shopify entwickelte Apps und Drittanbieter-Apps lassen sich als Connectors in Shopify Flow integrieren. Das bedeutet, dass du mit diesen Connector-Apps einige Aufgaben automatisieren kannst, da Flow Daten mit der App austauscht.
+
+Nachfolgend sind einige Beispiele für Workflows aufgeführt, die gängige Shopify-Apps wie Collabs, Shopify Messaging und Shop verwenden.
+
+Collabs
+
+Steigere deine Affiliate-Umsätze mit weniger Aufwand. Verwende die App Shopify Collabs, um sich wiederholende Aufgaben im Affiliate-Programm mit vorgefertigten Shopify Flow-Vorlagen zu automatisieren.
+
+Vorlagenbeispiele:
+
+Bewerber:innen automatisch genehmigen
+Angenommene Creators nach Klaviyo exportieren
+Bei einem Geschenk nachhaken
+Glückwünsche zum ersten Verkauf
+Shopify Messaging
+
+Eine Reihe von Workflows sind in Shopify Messaging integriert, damit du automatisch Marketing-E-Mails mit Branding versenden kannst, die du in der Shopify Messaging-App entworfen hast.
+
+Hinweis
+
+E-Mails von Shopify Messaging-Marketingautomatisierungen werden auf deine 10.000 kostenlosen E-Mails pro Kalendermonat angerechnet. Automatisierungen für abgebrochene Checkouts werden jedoch nicht angerechnet und sind immer kostenlos.
+
+Vorlagenbeispiele:
+
+Kund:innen auf der Warteliste per E-Mail benachrichtigen, wenn ein Produkt wieder vorrätig ist
+Online-Kund:innen zu nahegelegenen Einzelhandelsstandorten leiten
+Shop
+
+Du kannst einige Aufgaben bezüglich deines Shops in Shop automatisieren.
+
+Vorlagenbeispiele:
+
+Eine interne E-Mail senden, wenn eine negative Shop-Bewertung eingeht
+Feedback hinterlassen
+
+LINKS
+https://help.shopify.com/de/manual/shopify-flow/getting-started
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/admin-api
+https://help.shopify.com/de/manual/shopify-flow/reference/actions
+https://help.shopify.com/de/manual/shopify-flow/create
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#b2b
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#buyer-experience
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#custom-data
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#customers
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#error-monitoring
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#fulfillment
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#inventory-and-merch
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#loyalty
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#orders
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#payment-reminders
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#promotion
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#risk
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples#connectors
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/product-variant-inventory-quantity-changed
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-order-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-email
+https://help.shopify.com/de/manual/shopify-flow/reference/connectors

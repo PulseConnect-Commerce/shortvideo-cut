@@ -1,0 +1,151 @@
+https://help.shopify.com/de/manual/shopify-flow/create/create-workflow
+status 200 final https://help.shopify.com/de/manual/shopify-flow/create/create-workflow
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Workflows erstellen
+Workflows manuell oder anhand einer Vorlage erstellen
+
+Um Shopify Flow zu verwenden, erstelle einen Workflow. Du kannst einen neuen Workflow manuell oder mithilfe einer vorgefertigten Vorlage erstellen.
+
+Tipp
+
+Weitere Videos findest du auf unserem YouTube-Kanal.
+
+Auf dieser Seite
+Überlegungen zum Erstellen eines Workflows
+Einen neuen Workflow erstellen
+Einen Workflow mithilfe einer Vorlage erstellen
+Einen Workflow mit Sidekick generieren
+Überlegungen zum Erstellen eines Workflows
+
+Bevor du einen Workflow erstellst, beachte die folgenden Überlegungen:
+
+Workflows werden so bald wie möglich ausgeführt. Es kann jedoch zu einer Verzögerung zwischen dem Start eines Workflows durch einen Trigger und dem Abschluss seiner Aktionen kommen. Es gibt keine definierte Zeitspanne für die Fertigstellung eines Workflows.
+Bestellungen und Bestellentwürfe werden von Flow getrennt behandelt. Aktionen und Trigger, die sich auf Bestellungen auswirken, wirken sich nicht auf Bestellentwürfe aus, und Aktionen und Trigger, die sich auf Bestellentwürfe auswirken, wirken sich nicht auf Bestellungen aus. Wenn ein Bestellentwurf in eine Bestellung umgewandelt wird, gelten deine Workflows, die sich auf Bestellungen beziehen.
+Workflows mit Bedingungen, die Tags beinhalten, funktionieren möglicherweise nicht, wenn mit der Bestellung, dem Produkt oder der Kundschaft mehr als 250 Tags verknüpft sind.
+Alle Workflows müssen mit einem Trigger von Shopify Flow oder einer App beginnen.
+Einige Felder in der GraphQL Admin API werden asynchron ausgefüllt, insbesondere bei Bestellungen. Da diese Felder möglicherweise noch nicht ausgefüllt sind, wenn dein Workflow ausgeführt wird, stehen die Daten für Shopify Flow eventuell nicht zur Verfügung und können zu unerwarteten Ergebnissen führen, z. B. bei Fulfillments, UTM-Parametern oder Risikostufen. Bevor du einen Workflow aktivierst, teste ihn, um zu überprüfen, ob die Daten deinen Erwartungen entsprechen.
+
+Verwende nach Möglichkeit einen Trigger, der Workflows startet, wenn eine andere Bedingung als die Erstellung einer Bestellung erfüllt ist. Um beispielsweise einen Workflow zu erstellen, der Aktionen basierend auf der Risikostufe einer Bestellung ausführt, verwende den Trigger Bestellrisiko analysiert anstelle von Bestellung erstellt.
+
+Einen neuen Workflow erstellen
+
+Shopify Flow verwendet einen Workflow-Editor in freier Form, in dem du einen Workflow über eine Drag-&-Drop-Oberfläche erstellen kannst. Diese Schritte beschreiben, wie du einen einfachen Workflow erstellst, indem du einen Trigger, eine Bedingung und eine Aktion hinzufügst. Du kannst komplexere Workflows erstellen, indem du weitere Bedingungen und Aktionen hinzufügst oder erweiterte Trigger und Aktionen verwendest.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zu Apps > Flow.
+
+Klicke auf Workflow erstellen.
+
+Klicke auf Trigger auswählen und wähle dann den Trigger aus, der den Workflow startet.
+
+Klicke auf +, um einen neuen Schritt zu erstellen. Klicke auf Bedingung und definiere dann die Bedingung, die erfüllt sein muss, bevor Aktionen ausgeführt werden können.
+
+Klicke bei der Option Wahr auf + > Aktion, um die Aktion auszuwählen, die ausgeführt werden soll, wenn die Bedingung als wahr ausgewertet wird.
+
+Optional: Um deinem Workflow Schritte hinzuzufügen, wenn die Bedingung als falsch ausgewertet wird, klicke bei der Option Falsch auf +. Du kannst zusätzliche Bedingungen oder Aktionen hinzufügen.
+
+Optional: Um eine Workflow-Notiz mit zusätzlichen Details oder Anweisungen zum Workflow hinzuzufügen, klicke auf Weitere Aktionen > Notiz hinzufügen.
+
+Klicke auf Neuer Workflow und gib einen Titel für deinen Workflow ein.
+
+Um deinen Workflow zu aktivieren, klicke auf Workflow aktivieren.
+
+Tipp
+
+Wenn eine der Bedingungen in deinem Workflow von einer Aktion getrennt wird, musst du sie nicht komplett neu erstellen. Klicke auf das +-Symbol neben Dann bei der Bedingung und ziehe es dann auf den blauen Punkt bei der getrennten Aktion, um die beiden Schritte mit einem Pfeil wieder zu verbinden.
+
+Einen Workflow mithilfe einer Vorlage erstellen
+
+Eine Vorlage ist ein von Shopify erstellter, vorgefertigter Workflow, den du anpassen und verwenden kannst.
+
+Hinweis
+
+Viele Vorlagen verwenden Trigger und Aktionen, die Apps nutzen. Um einen App-Trigger oder eine App-Aktion zu verwenden, muss der Connector installiert sein.
+
+Vorlagen verwenden Trigger, Bedingungen und Aktionen, die mit Platzhalterdaten gefüllt sind. Bevor du deinen Workflow aktivierst, bearbeite den Workflow und füge die Werte ein, die du verwenden möchtest. Zum Beispiel:
+
+Wenn ein Workflow Tags zu Kund:innen oder Bestellungen hinzufügt, überprüfe, ob diese Tags die sind, die du verwenden möchtest.
+Wenn ein Workflow Nachrichten sendet, stelle sicher, dass du die Empfängerinformationen, wie z. B. die E-Mail-Adresse, änderst.
+Wenn ein Workflow eine App verwendet, die du nicht installieren möchtest, kannst du möglicherweise eine ähnliche Funktion ersetzen, z. B. eine Aktion, die eine Nachricht in Slack sendet, durch eine Aktion ersetzen, die eine E-Mail sendet.
+Wenn ein Workflow eine Notiz des Typs Über diesen Workflow enthält, kannst du den vorhandenen Inhalt überprüfen und die Notiz nach deinen Anforderungen aktualisieren.
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zu Apps > Flow.
+
+Klicke auf Workflow erstellen.
+
+Klicke auf Vorlagen durchsuchen und wähle dann eine Vorlage aus.
+
+Überprüfe die Vorlage, um sicherzustellen, dass sie deinen Anforderungen entspricht. Du kannst den Workflow nach der Installation anpassen.
+
+Klicke auf Installieren.
+
+Bearbeite die Vorlage nach Bedarf.
+
+Optional: Klicke auf den Namen des Workflows und bearbeite dann den Titel.
+
+Optional: Teste deinen Workflow basierend auf einem Test-Trigger-Ereignis.
+
+Um deinen Workflow zu aktivieren, klicke auf Workflow aktivieren.
+
+Auf der Seite mit Beispielen findest du Beispiele für verfügbare Workflow-Vorlagen.
+
+Einen Workflow mit Sidekick generieren
+
+Du kannst Sidekick verwenden, um einen Workflow in Shopify Flow zu erstellen, der auf einer Beschreibung des gewünschten Workflows basiert. Du kannst deine Workflow-Idee in einfacher Sprache beschreiben, zum Beispiel: Ich möchte einen Workflow erstellen, der Bestellungen mit weniger als 3 Positionen als „klein“ taggt. oder Hilf mir, einen Workflow zu erstellen, der eine E-Mail mit dem Titel „Willkommen in der Gold-Stufe!“ sendet, wenn die Gesamtausgaben von Kund:innen 1.000 USD übersteigen., und Sidekick kann die Workflow-Elemente für dich generieren, damit du sie bei Bedarf überprüfen und ändern kannst.
+
+Bevor du einen Workflow mit Sidekick generierst, beachte die folgenden Überlegungen:
+
+Du musst ein Desktop-Gerät verwenden, um Workflows mit Sidekick zu generieren.
+Workflows, die von Sidekick generiert werden, sind standardmäßig inaktiv. Du musst den von Sidekick generierten Workflow manuell aktivieren, um ihn zu verwenden.
+Workflows, die von Sidekick generiert werden, werden automatisch mit dem Tag sidekick versehen. Mehr Informationen zum Organisieren von Workflows mit Tags.
+Du solltest den generierten Workflow gründlich überprüfen und testen, um sicherzustellen, dass er funktionsfähig und vollständig ist. Sidekick lässt bei komplexen Workflows möglicherweise geschäftsspezifische Logik aus, die du anpassen musst, bevor du den Workflow verwendest. Mehr Informationen zum Testen von Workflows.
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zu Apps > Flow.
+
+Klicke auf , um Sidekick zu öffnen.
+
+Beschreibe in einfachen Worten die Art des automatisierten Workflows, den du möchtest.
+
+Drücke die Eingabetaste oder klicke auf , um deine Nachricht zu senden. Basierend auf deiner Nachricht erstellt Sidekick den Workflow und gibt einen Überblick über seine Funktionsweise.
+
+Klicke auf die Schaltfläche am Ende der Antwort von Sidekick, um den erstellten Workflow zu öffnen.
+
+Überprüfe und teste den Workflow, um zu bestätigen, dass er wie erwartet funktioniert.
+
+Optional: Wenn Aktualisierungen am Workflow erforderlich sind, kannst du den Workflow manuell bearbeiten oder deine Konversation mit Sidekick fortsetzen, damit Sidekick den Workflow für dich aktualisiert. Wenn Sidekick Änderungen vornimmt, klicke auf Änderungen anwenden oder Änderungen verwerfen, um die Änderungen an deinem Workflow zu übernehmen oder abzulehnen.
+
+Um deinen Workflow zu aktivieren, klicke auf Workflow aktivieren.
+
+Feedback hinterlassen
+
+LINKS
+https://help.shopify.com/de/manual/shopify-flow/create
+https://help.shopify.com/de/manual/shopify-flow/create/create-workflow#create-new-workflow
+https://help.shopify.com/de/manual/shopify-flow/create/create-workflow#create-workflow-using-template
+https://help.shopify.com/de/manual/shopify-flow/create/create-workflow#considerations-for-creating-a-workflow
+https://help.shopify.com/de/manual/shopify-flow/create/create-workflow#sidekick
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/order-risk-analyzed
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/order-created
+https://help.shopify.com/de/manual/shopify-flow/create/workflow-editor
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers
+https://help.shopify.com/de/manual/shopify-flow/reference/conditions
+https://help.shopify.com/de/manual/shopify-flow/reference/actions
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/advanced-workflows
+https://help.shopify.com/de/manual/shopify-flow/manage/manage#add-note
+https://help.shopify.com/de/manual/shopify-flow/reference/connectors
+https://help.shopify.com/de/manual/shopify-flow/manage/test-workflow
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples
+https://help.shopify.com/de/manual/shopify-flow/manage/organize-workflows

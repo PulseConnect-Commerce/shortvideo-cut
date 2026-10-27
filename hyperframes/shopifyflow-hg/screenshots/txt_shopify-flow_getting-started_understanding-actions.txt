@@ -1,0 +1,98 @@
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-actions
+status 200 final https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-actions
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Erste Schritte mit Shopify Flow
+Aktionen in Shopify Flow verstehen
+
+In einem Workflow sind Aktionen die Aufgaben, die Flow ausführt, wenn die Bedingungen eines Workflows erfüllt sind. Häufige Aktionen sind das Hinzufügen von Tags zu Bestellungen oder Kund:innen, das Senden von E-Mails oder Slack-Benachrichtigungen, das Aktualisieren des Inventars, das Zurückhalten des Fulfillments, das Stornieren von Bestellungen und das Erstellen von Bestellentwürfen. Du kannst auch Aktionen in externen Connector-Apps automatisieren, die du installiert hast, wie z. B. das Senden von Daten an Google Sheets, Klaviyo oder ShipStation.
+
+Aktionen können mit jeder anderen Art von Schritt in einem Workflow verbunden werden, z. B. mit einem Trigger, einer Bedingung oder einer anderen Aktion. Ein Workflow kann eine beliebige Anzahl von Aktionen enthalten und jeder Schritt kann für ein einzelnes Ergebnis mit einer beliebigen Anzahl von Aktionen verbunden werden. Wenn beispielsweise eine Bedingung erfüllt ist, kannst du 5 separate Aktionsschritte verbinden, wenn der Workflow bei erfüllter Bedingung 5 Dinge gleichzeitig ausführen soll.
+
+Sidekick
+
+Du kannst Sidekick bitten, einem Workflow Aktionen hinzuzufügen. Beschreibe, was der Workflow tun soll, und Sidekick durchsucht die verfügbaren Aktionen von Flow und füllt die Konfigurationsfelder für jede Aktion aus. Verwende einen Prompt wie Wenn die Bestellsumme über 200 USD liegt, füge das Tag high-value hinzu und sende mir eine Slack-Nachricht.
+
+Auf dieser Seite
+Aktionen für deinen Workflow auswählen
+Variablen in Aktionen hinzufügen, um dynamische Daten zurückzugeben
+Aktionen für deinen Workflow auswählen
+
+Es gibt viele verschiedene Aktionen zur Auswahl, um eine Aufgabe während eines Workflows auszuführen. Wenn du verstehst, welche spezifischen Aufgaben in Shopify Flow automatisiert werden können, kannst du sicherstellen, dass dein Workflow korrekt funktioniert.
+
+Aktionen werden in die folgenden Kategorien unterteilt:
+
+Shop-Aktionen: Diese Aktionen ändern etwas in deinem Shopify-Shop, z. B. das Hinzufügen von Tags, das Aktualisieren des Inventars oder das Stornieren von Bestellungen.
+Kommunikationsaktionen: Diese Aktionen senden anpassbare Benachrichtigungen über eine Plattform deiner Wahl, z. B. das Senden einer E-Mail an dich selbst oder dein Team, das Posten einer Nachricht in Slack oder das Senden einer Marketing-E-Mail an deine Kundschaft.
+App-Aktionen: Diese Aktionen führen eine Aufgabe in einer verbundenen App aus. Die verfügbaren Optionen hängen davon ab, welche App-Connectors in deinem Shop installiert sind. Nicht alle Apps haben einen zugehörigen Connector für Shopify Flow.
+Erweiterte Aktionen: Diese Aktionen ändern das Verhalten oder die Daten des Workflows und umfassen die folgenden Typen:
+Aktionen zum Abrufen von Daten: Diese Aktionen rufen eine Liste zusätzlicher Daten aus deinem Shop ab, die nicht standardmäßig im Workflow-Trigger bereitgestellt werden, um sie in deinem Workflow zu verwenden. Diese Aktionen rufen eine Abfrage mit einer Reihe von Filtern auf, z. B. das Abrufen einer Liste von Produktdaten, die am letzten Tag aktualisiert wurden.
+Aggregationsaktionen: Diese Aktionen führen Berechnungen für Listendaten in einem Workflow durch, wie Anzahl oder Summe.
+Aktion „For-each-Schleife“ (Iterieren): Diese Aktion ermöglicht es dir, eine Aufgabe für jedes in einer Liste zurückgegebene Element in einer Schleife auszuführen.
+Aktion „Anfrage senden“: Diese Aktionen dienen zum Senden und Empfangen von Daten von der Shopify GraphQL Admin API oder externen APIs.
+Aktion „Warten“: Ein einzigartiger Aktionstyp, der den Workflow daran hindert, den nächsten Schritt auszuführen, bis eine festgelegte Zeitdauer verstrichen ist.
+
+Wenn du einen Workflow erstellst, solltest du bei der Implementierung deiner Aktion die folgenden Punkte beachten, je nach der Aufgabe, die der Workflow automatisieren soll:
+
+Überprüfen, welche Daten dein Workflow bereitstellt.
+Das Timing der Aktionen in einem Workflow überprüfen.
+Überprüfen, welche Daten dein Workflow bereitstellt
+
+Aktionen benötigen Daten, um zu funktionieren. Diese Daten müssen der Aktion entweder durch den Trigger oder durch das Einfügen einer Aktion zum Abrufen von Daten während des Workflows bereitgestellt werden. Wenn du eine Aktion auswählst, die nicht die erforderlichen Daten erhält, wird der Workflow nicht ausgeführt und eine Fehlermeldung angezeigt. Beispielsweise importiert ein Workflow, der mit dem Trigger Kund:in erstellt beginnt, Kundendaten in den Workflow. Wenn auf diesen Trigger eine Aktion Bestell-Tags hinzufügen folgt, die Bestelldaten und keine Kundendaten benötigt, führt der Workflow zu einem Fehler wegen fehlender Daten.
+
+Warum das wichtig ist: Dies ist ein häufiger Grund, warum benutzerdefinierte Workflows fehlerhaft sind oder gar nicht erst funktionieren. Bevor du deinen Workflow fertigstellst, überlege, welche Informationen deine Aktion benötigt, um die Aufgabe abzuschließen, und stelle sicher, dass der Datensatz, der in den vorhergehenden Schritten importiert wird, diese Daten bereitstellen kann.
+
+Das Timing der Aktionen in einem Workflow überprüfen
+
+Workflows funktionieren als eine Reihe von Schritten. Da der Workflow-Editor Drag-and-Drop verwendet, kannst du einen Workflow entwerfen, der mehrere Aktionen gleichzeitig ausführt, oder ihn so organisieren, dass Aktionen nacheinander stattfinden. Wenn zum Beispiel Bedingung A erfüllt ist, kannst du den Workflow die Aktionen X und Y gleichzeitig ausführen lassen. Alternativ kannst du den Workflow erst Aktion X und danach Aktion Y ausführen lassen. Dies kann relevant sein, wenn bestimmte Bedingungen oder Aktionen voraussetzen, dass zuvor im Workflow andere Aktionen ausgeführt wurden.
+
+Aktionen finden in der Regel sofort statt, wenn eine Bedingung erfüllt ist und der Aktionsschritt der nächste im Workflow ist. Du kannst aber auch mit der Aktion „Warten“ steuern, wann eine Aktion stattfindet. Das kann für Workflows hilfreich sein, die die Kundenkommunikation automatisieren, z. B. um einen Tag zu warten, bevor eine Marketing-E-Mail an neue Kund:innen gesendet wird. Es liegt bei dir, wie du organisierst, wann Aktionen während des Workflows stattfinden.
+
+Warum das wichtig ist: Das Timing der Aktionen bestimmt, wann Aufgaben in deinem Workflow ausgeführt werden. Wenn du Aktionen so organisierst, dass sie gleichzeitig oder nacheinander stattfinden, wird sichergestellt, dass deine automatisierten Aufgaben in der richtigen Reihenfolge ablaufen und deine Anforderungen erfüllen. Mithilfe der Aktion „Warten“ kannst du beispielsweise das Timing von Kundenbenachrichtigungen oder anderen Folgeaufgaben an deine Bedürfnisse anpassen.
+
+Hinzufügen von Variablen in Aktionen zur Rückgabe dynamischer Daten
+
+Variablen können in Aktionsschritten verwendet werden, um dynamische Daten in benutzerdefinierten Text einzufügen, z. B. in Kunden-E-Mails. Diese Variablen werden in derselben Punktnotation der GraphQL Admin API wie in Bedingungen formatiert und in doppelte geschweifte Klammern {{ }} eingeschlossen. Bei der Verwendung in Aktionen fungieren Variablen als Platzhalter, der den spezifischen Wert der Variable basierend auf den während des Workflows bereitgestellten Daten zurückgibt.
+
+Beispielsweise enthält in der Aktion „Bestellrechnung senden“ das Feld „Betreff“ für die E-Mail standardmäßig die Variable order.name und ist als „Rechnung {{order.name}}“ formatiert. Das bedeutet, dass beim Senden der E-Mail die Betreffzeile der endgültigen E-Mail „Rechnung #1000“ lautet bzw. die jeweilige Bestellnummer, die auf dem Wert für die Bestellung basiert.
+
+Falls zutreffend, kannst du auf „Variable hinzufügen“ klicken, um in einem Feld in einer Aktion nach verfügbaren Variablen zu suchen. Damit kannst du den Inhalt eines beliebigen Feldes mithilfe von Liquid basierend auf den für diese Aktion verfügbaren Variablen anpassen. Du kannst auch bedingte Anweisungen in Liquid-Code mithilfe der Variable hinzufügen, um anzupassen, wann Inhalte angezeigt werden.
+
+Beispielsweise könntest du in derselben Aktion „Bestellrechnung senden“ im Feld „Benutzerdefinierte Nachricht“ die folgenden Inhalte hinzufügen, die mehrere Variablen enthalten, die dynamische Werte basierend auf den vom Workflow bereitgestellten Daten enthalten:
+
+Hello {{order.customer.firstName}}! This is the invoice for order {{order.name}}, which you placed on {{order.createdAt}}.
+
+{% if order.fullyPaid = 'false' %}
+     Please complete any outstanding payments in the next 5 business days.
+{% endif %}
+
+Weitere Informationen findest du unter using variables to display or transform data in Shopify Flow.
+
+Feedback hinterlassen
+
+LINKS
+https://help.shopify.com/de/manual/shopify-flow/getting-started
+https://help.shopify.com/de/manual/shopify-flow/create/create-workflow#sidekick
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-actions#choosing-actions-for-your-workflow
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-actions#variables
+https://help.shopify.com/de/manual/shopify-flow/reference/actions
+https://help.shopify.com/de/manual/shopify-flow/reference/connectors
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/advanced-workflows#actions
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/advanced-workflows#aggregation-actions
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/advanced-workflows#loops
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-admin-api-request
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/send-http-request
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/wait
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-actions#data
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-actions#timing
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-conditions#variable-dot-notation
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/variables

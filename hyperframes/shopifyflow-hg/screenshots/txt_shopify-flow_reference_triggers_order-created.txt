@@ -1,0 +1,375 @@
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/order-created
+status 200 final https://help.shopify.com/de/manual/shopify-flow/reference/triggers/order-created
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Trigger
+Bestellung erstellt
+
+Der Trigger „Bestellung erstellt“ startet einen Workflow, wenn ein:e Kund:in eine Bestellung aufgibt oder wenn ein Bestellentwurf als bezahlt markiert und in eine Bestellung umgewandelt wird.
+
+Auf dieser Seite
+Bereitgestellte Daten
+Den Trigger testen
+Aktionen
+Vorlagen
+Bereitgestellte Daten
+
+Die folgenden Daten werden für Workflows bereitgestellt, die mit dem Trigger „Bestellung erstellt“ starten.
+
+Daten	Beschreibung
+order	Die Bestellung, die erstellt wurde. Ermöglicht den Zugriff auf Daten des Order-Objekts der GraphQL Admin API.
+Den Trigger testen
+
+Um einen aktiven Workflow zu testen, der mit diesem Trigger startet, hast du folgende Möglichkeiten:
+
+Eine Bestellung über die Storefront erstellen
+Einen Bestellentwurf erstellen und als bezahlt markieren
+Wähle eine bestehende Bestellung im Adminbereich aus und verwende die Option Flow-Automatisierung ausführen.
+Aktionen
+
+Dieser Trigger stellt eine Bestellung bereit, sodass du alle Aktionen verwenden kannst, die eine Bestellung erfordern, einschließlich:
+
+Bestellposition hinzufügen
+Bestell-Tags hinzufügen
+Bestellung archivieren
+Bestellung stornieren
+Zahlung erfassen
+Fulfillment anhalten
+Bestellung als bezahlt markieren
+
+Bestellungen ermöglichen dir den Zugriff auf andere Daten, z. B. von Kund:innen. Somit kannst du auch Aktionen für Kund:innen verwenden. Dazu gehören:
+
+Kunden-Tags hinzufügen
+Kunden-Metafeld entfernen
+Kunden-Tags entfernen
+Kunden-Metafeld aktualisieren
+Kundennotiz aktualisieren
+
+Bestellungen enthalten auch Datenlisten, wie z. B. Positionen. Mit einer Für jede-Aktion kannst du diese Listen durchlaufen und Aktionen für jedes Element ausführen. Du kannst beispielsweise die Positionen durchlaufen und jedem Produkt einen Tag hinzufügen.
+
+Vorlagen
+Bestell-Tag für Bestellungen von Segment-Mitgliedern hinzufügen
+
+Prüft bei Erstellung einer Bestellung, ob ein Mitglied in einem Segment ist, und fügt dann einen Bestell-Tag hinzu. Verwendet die Aktion „Kund:in in Segment suchen“. Vorlage ansehen
+
+Kunden-Tags für alle Produkt-Tags der Bestellung hinzufügen
+
+Fügt bei Erstellung einer Bestellung Kunden-Tags für alle Produkt-Tags der Positionen in der Bestellung hinzu. Vorlage ansehen
+
+Daten (Handle) von jedem Produkt in einer Bestellung als Bestell-Tag hinzufügen
+
+Durchläuft die Positionen in einer Bestellung, um für jedes Produkt einen Tag hinzuzufügen. Vorlage ansehen
+
+Kostenlosen (100 % rabattierten) Artikel zu neuen Bestellungen hinzufügen
+
+Diese Vorlage fügt neuen Bestellungen einen kostenlosen, rabattierten Artikel hinzu, sofern der Artikel vorrätig ist. Sie prüft den Lagerbestand, gewährt einen Rabatt von 100 % und aktualisiert die Bestellung, ohne die Kund:innen darüber zu benachrichtigen. Diese Automatisierung ist nützlich, um (1) die Zufriedenheit der Kundschaft durch einen kostenlosen Überraschungsartikel in der Bestellung zu steigern, (2) neue oder weniger bekannte Produkte durch kostenlose Proben in Bestellungen zu bewerben oder (3) Werbeaktionen durch die Automatisierung des Hinzufügens und Rabattierens von kostenlosen Artikeln zu optimieren. Vorlage ansehen
+
+Internationale Bestellungen zu einer Tabelle hinzufügen
+
+Fügt für jede neue internationale Bestellung eine Zeile zu einem Google Sheet hinzu. Vorlage ansehen
+
+Positionen zu Google Sheets-Zeilen hinzufügen, wenn eine neue Bestellung aufgegeben wird
+
+Wenn eine neue Bestellung erstellt wird, durchläuft ein „Für jede“-Schritt in einem Workflow jede Position, um die Produktdaten zu einer Google Sheet-Zeile hinzuzufügen. Vorlage ansehen
+
+Bestellungen von E-Mail-Adressen auf der Sperrliste stornieren und taggen
+
+Storniert und taggt Bestellungen von E-Mail-Adressen, die mit betrügerischen Aktivitäten in Verbindung stehen. Der Workflow gleicht die Daten mit einer von dir bereitgestellten Liste unseriöser E-Mail-Adressen und Domains ab und wendet auf die entsprechenden Bestellungen Stornierungs- und Tagging-Aktionen an. Vorlage ansehen
+
+Bestellungen von Kund:innen mit häufigen Rückgaben stornieren
+
+Storniert Bestellungen von Kund:innen, die in den letzten sechs Monaten fünf oder mehr Rückgaben hatten. Der Workflow ruft Bestelldaten ab, zählt die Rückgaben, storniert die aktuelle Bestellung, veranlasst eine Rückerstattung und lagert die Artikel wieder ein. Diese Vorlage kann verwendet werden, um Verluste durch Kund:innen mit übermäßig vielen Rückgaben zu reduzieren, die Bestellverwaltung durch die präventive Bearbeitung potenzieller Rückgaben zu optimieren und die Rentabilität durch die Unterbindung exzessiver Rückgaben zu sichern. Vorlage ansehen
+
+Bestellungen stornieren, wenn Kund:innen heute mehr als 5 Bestellungen aufgegeben haben
+
+Storniert Bestellungen, wenn Kund:innen innerhalb eines Tages mehr als fünf Bestellungen aufgeben. Der Workflow prüft die Anzahl der Bestellungen von Kund:innen in den letzten 24 Stunden, storniert alle Bestellungen, die dieses Limit überschreiten, und taggt die betreffenden Kund:innen wegen potenziellen Betrugs. Vorlage ansehen
+
+Prüfen, ob eine Bestellung einen Gutschein enthält
+
+Prüft, ob eines der Produkte in einer Bestellung ein Shopify-Gutschein ist. Vorlage ansehen
+
+Prüfen, ob eine Bestellung mit einem Gutschein bezahlt wurde
+
+Prüft, ob eines der für eine Bestellung verwendeten Zahlungs-Gateways ein Gutschein war. Vorlage ansehen
+
+Produkt-Metafeld-Werte bei einer Bestellung prüfen
+
+Prüft Produkt-Metafelder bei Positionen in einer Bestellung. Vorlage ansehen
+
+Bestellungen über 100 $ bearbeiten und kostenloses Geschenk hinzufügen
+
+Bearbeitet Bestellungen über einem bestimmten Betrag mit der Funktion „Bestellung bearbeiten“ und fügt ein kostenloses Geschenk hinzu. Vorlage ansehen
+
+Bestellung basierend auf Rabattcode bearbeiten und kostenloses Produkt hinzufügen
+
+Bearbeitet eine Bestellung und fügt ein kostenloses Produkt hinzu, wenn ein bestimmter Rabattcode verwendet wird. Vorlage ansehen
+
+Benachrichtigung bei ungewöhnlich großen Bestellmengen erhalten
+
+Erhält eine E-Mail-Benachrichtigung, wenn eine Bestellung einen festgelegten Schwellenwert für die Artikelmenge überschreitet. Vorlage ansehen
+
+Benachrichtigung bei hohen Rabatten auf neue Bestellungen erhalten
+
+Erhält eine E-Mail, wenn ein ungewöhnlich hoher Rabatt auf eine Bestellung angewendet wird. Vorlage ansehen
+
+Benachrichtigung bei Bestellungen von einer bestimmten Domain erhalten
+
+Erhält eine E-Mail, wenn eine Bestellung von einer bestimmten E-Mail-Domain aus aufgegeben wird. Vorlage ansehen
+
+Benachrichtigung erhalten, wenn ein bestimmter Rabattcode verwendet wird
+
+Erhält eine E-Mail, wenn bei einer Bestellung ein bestimmter Rabattcode verwendet wird. Vorlage ansehen
+
+Fulfillments anhalten, wenn Kund:innen innerhalb von 24 Stunden mehrere Bestellungen aufgeben
+
+Prüft, ob Kund:innen innerhalb von 24 Stunden mehrere Bestellungen aufgegeben haben. Wenn ja, werden die Fulfillments angehalten und der Versand konsolidiert. Vorlage ansehen
+
+Bestellung anhalten und Bestell-Tag hinzufügen, wenn Kund:innen einen bestimmten Tag haben
+
+Wenn eine neue Bestellung eingeht, wird nach einem Kunden-Tag wie „hohes Risiko“ oder „verdächtig“ gesucht. Wenn ein solcher Tag vorhanden ist, wird die Bestellung angehalten und der Tag „hohes Risiko“ hinzugefügt. Vorlage ansehen
+
+Bestellungen anhalten, wenn Kund:innen in den letzten 24 Stunden mehr als 1 Bestellung aufgegeben haben
+
+Wenn eine Bestellung erstellt wird, wird geprüft, ob der/die Kund:in in den letzten 24 Stunden weitere Bestellungen aufgegeben hat. Wenn ja, werden alle Bestellungen angehalten. Vorlage ansehen
+
+Gutschein für Kund:innen nach der 3. Bestellung ausstellen
+
+Nach der 3. Bestellung eines/einer Kund:in einen Gutschein mit Rise.ai ausstellen und per E-Mail versenden. Vorlage ansehen
+
+Kundenservice-Team benachrichtigen, wenn innerhalb von 7 Tagen eine Rückbuchung erfolgt
+
+Dieser Workflow wartet 7 Tage nach der Erstellung einer Bestellung, um zu prüfen, ob eine Rückbuchung bearbeitet wird. Wenn ja, wird eine E-Mail gesendet, um dein Kundenservice-Team zu benachrichtigen. Beachte, dass dieser Ansatz nicht funktioniert, wenn eine Rückbuchung nach 7 Tagen erfolgt. Vorlage ansehen
+
+Kund:innen nach Stufen der Gesamtausgaben organisieren
+
+Kunden-Tags basierend auf den Stufen der Gesamtausgaben für gezielte Kundenbindungs- und Marketingmitteilungen hinzufügen. Vorlage ansehen
+
+Kund:innen nach Stufen der Bestellanzahl organisieren
+
+Kunden-Tags basierend auf den Stufen der Bestellanzahl für gezielte Kundenbindungs- und Marketingmitteilungen hinzufügen. Vorlage ansehen
+
+Shop-Erlebnis für VIP-Kund:innen personalisieren
+
+Kund:innen einem Personalisierungssegment von Nosto hinzufügen, wenn sie einen bestimmten Schwellenwert überschreiten. Vorlage ansehen
+
+Alle Bestell-Tags bei Erstellung der Bestellung entfernen
+
+Tags bereinigen, indem alle Tags einer Bestellung entfernt werden. Dieselbe Idee kann auch für andere Tagging-Aktionen verwendet werden. Vorlage ansehen
+
+Treuepunkte vergeben und Kund:innen bei verspäteten Zustellungen benachrichtigen
+
+Treuepunkte in Yotpo vergeben und Kund:innen per SMSBump benachrichtigen, wenn sich Zustellungen verzögern. Vorlage ansehen
+
+Treuepunkte vergeben und Kund:innen taggen, die ein Trinkgeld geben
+
+Über LoyaltyLion Treuepunkte hinzufügen und Kund:innen taggen, die ihrer Bestellung ein Trinkgeld hinzufügen. Vorlage ansehen
+
+Treuepunkte für Stammkund:innen vergeben
+
+Treuepunkte in Marsello an Kund:innen vergeben, die 3 oder mehr Bestellungen aufgegeben haben. Vorlage ansehen
+
+Kund:innen nach Kaufverhalten segmentieren
+
+Tagge Kund:innen anhand ihrer Kaufpräferenzen für die Personalisierung und für gezieltes Marketing. Vorlage ansehen
+
+Rechnung für B2B-Bestellung an mehrere E-Mail-Adressen senden
+
+Rechnungen für B2B-Bestellungen an mehrere E-Mail-Adressen senden. Hierfür werden die E-Mail-Adressen verwendet, die als Metafelder in einem Unternehmenssitz gespeichert sind (sofern vorhanden). Andernfalls werden zunächst drei Metafelder erstellt: extra_invoice_recipient.email1, .email2 und .email3. Vorlage ansehen
+
+Bestellung und Positionen an Google Sheets senden
+
+Jede Bestellposition mithilfe der „For Each“-Aktion in eine Zeile in Google Sheets ausgeben. Vorlage ansehen
+
+Benachrichtigung bei abgeschlossenem Kauf senden
+
+Eine Line-Benachrichtigung senden, wenn ein Kauf abgeschlossen ist. Vorlage ansehen
+
+Dankesnachricht senden und Kund:innen taggen, die ein Trinkgeld geben
+
+Eine SMSBump-Benachrichtigung senden und Kund:innen taggen, die ihrer Bestellung ein Trinkgeld hinzufügen. Vorlage ansehen
+
+Browser-Push-Benachrichtigung nach der 2. Bestellung von Kund:innen senden
+
+Eine Browser-Push-Benachrichtigung an eine:n PushOwl-Abonnent:in nach der zweiten Bestellung senden, um zu weiteren Wiederholungskäufen anzuregen. Vorlage ansehen
+
+Handschriftliche Notiz nach der zweiten Bestellung eines/einer Kund:in senden
+
+Eine handschriftliche Notiz per Post mit Scribeless senden, nachdem ein:e Kund:in die zweite Bestellung aufgegeben hat. Vorlage ansehen
+
+Interne E-Mail bei Aufgabe einer B2B-Bestellung senden
+
+Eine interne E-Mail mit Details zu Bestellungen senden, die von einem B2B-Unternehmen aufgegeben wurden. Vorlage ansehen
+
+Benachrichtigung senden, wenn ein:e Kund:in mehrere Varianten eines Produkts bestellt
+
+Eine E-Mail-Benachrichtigung erhalten, wenn ein:e Kund:in mehrere Varianten desselben Produkts bestellt. Vorlage ansehen
+
+Benachrichtigung senden, wenn die Bestellung ein Bundle enthält
+
+Dieser Workflow beginnt, wenn eine Bestellung erstellt wird, und prüft, ob eines der Produkte in der Bestellung als Teil eines Bundles gekauft wurde. Wenn ja, wird eine interne E-Mail mit den Bundle-Details gesendet. Zusätzlich kannst du diesen Workflow als Ausgangspunkt für jeden Anwendungsfall verwenden, bei dem das Vorhandensein eines Bundles in einer Bestellung erkannt werden muss. Vorlage ansehen
+
+B2B-Bestellungen taggen
+
+B2B-Bestellungen bei ihrer Erstellung mit einem Tag versehen. Das Tag kann angepasst werden. Vorlage ansehen
+
+Die erste Bestellung von Kund:innen taggen
+
+Füge der ersten Bestellung eine:r Kund:in einen Tag hinzu. Vorlage ansehen
+
+Alle Kund:innen mit ihrem POS-Standort taggen
+
+Wenn ein Kauf eines/einer Kund:in über die Point of Sale (POS)-App erfasst wird, wird ein Tag mit dem Standortnamen hinzugefügt. Das kann für gezielte Marketing-Kampagnen nützlich sein. Vorlage ansehen
+
+Conversion von Kund:innen, die Muster bestellen, taggen und verfolgen
+
+Kund:innen segmentieren, die ein Muster bestellt haben, und verfolgen, ob sie zu einem späteren Zeitpunkt einen Kauf zum vollen Preis getätigt haben. Vorlage ansehen
+
+Kund:in und Bestellung bei Erstellung aus einem Bestellentwurf taggen
+
+Wenn eine neue Bestellung erstellt wird und diese aus der App „Bestellentwürfe“ stammt, wird der Bestellung und dem/der Kund:in ein Entwurfs-Tag hinzugefügt. Vorlage ansehen
+
+Kund:innen taggen und Treuepunkte vergeben, wenn sie in Raten zahlen
+
+Kund:innen taggen und in Swell Treuepunkte an Kund:innen vergeben, die über die Shop Pay-Ratenzahlung bezahlen. Vorlage ansehen
+
+Kund:innen nach bevorzugter Währung taggen
+
+Kund:innen bei jeder neuen Bestellung mit dem Code der verwendeten Zahlungswährung taggen. Vorlage ansehen
+
+Kund:innen taggen, die persönlich eingekauft haben
+
+Ein Tag zu Kund:innen hinzufügen, die eine Bestellung persönlich mit Shopify POS aufgegeben haben. Vorlage ansehen
+
+Kund:innen mit den Einzelhandelsstandorten taggen, an denen sie eingekauft haben
+
+Den Namen jedes Einzelhandelsstandorts, an dem ein:e Kund:in eingekauft hat, als Kunden-Tag hinzufügen, um die Segmentierung zu erleichtern. Vorlage ansehen
+
+Erstkund:innen mit ihrem POS-Standort taggen
+
+Wenn der Kauf eines/einer Erstkund:in über die Point of Sale (POS)-App erfasst wird, wird ein Tag mit dem Standortnamen hinzugefügt. Dies kann für gezielte Marketing-Kampagnen nützlich sein. Vorlage ansehen
+
+Bestellungen nach Währung taggen
+
+Neue Bestellungen mit dem von dem/der Kund:in verwendeten Code der Zahlungswährung taggen. Vorlage ansehen
+
+Bestellungen nach Zahlungs-Gateway taggen
+
+Taggt neue Bestellungen, wenn sie vom angegebenen Zahlungs-Gateway stammen. Dieser Workflow wird ausgeführt, wenn eine Bestellung erstellt wird. Er verwendet eine Bedingung, um das angegebene Zahlungs-Gateway zu überprüfen. Bei einer Übereinstimmung fügt der Workflow der Bestellung den bzw. die Tags hinzu. Vorlage ansehen
+
+Bestellungen nach Vertriebskanal taggen
+
+Taggt neue Bestellungen mit dem Namen des Vertriebskanals, über den sie eingegangen sind. Vorlage ansehen
+
+Bestellungen nach Versandart taggen
+
+Taggt jede Bestellung basierend auf der ausgewählten Versandart. Vorlage ansehen
+
+Bestellungen taggen, die im Adminbereich oder über den Onlineshop erstellt wurden
+
+Wenn eine Bestellung erstellt wird, wird geprüft, ob die Bestellung aus der App „Onlineshop“ oder „Bestellentwürfe“ stammt. Ist das der Fall, werden die Bestellungen getaggt. Hinweis: Bestellungen, die aus einer anderen Quelle dupliziert werden, scheinen aus der App der ursprünglichen Bestellung zu stammen. Vorlage ansehen
+
+Über Point of Sale (POS) erstellte Bestellungen taggen
+
+Erfahre, wie du prüfen kannst, ob eine Bestellung über eine Point of Sale-App erstellt wurde. Vorlage ansehen
+
+Bestellungen taggen, die Produkte mit bestimmten Produkt-Tags enthalten
+
+Möchtest du wissen, wann eine Bestellung bestimmte Produkttypen enthält? Mit dieser Automatisierung kannst du Bestellungen basierend auf den Tags taggen, die für das Produkt der jeweiligen Position vorhanden sind. Vorlage ansehen
+
+Bestellungen taggen, die bestimmte Produkte enthalten
+
+Fügt Bestellungen, die in einer der Bestellpositionen ein bestimmtes Produkt enthalten, einen benutzerdefinierten Tag hinzu. Vorlage ansehen
+
+Bestellungen mit kostenlosem Versand taggen
+
+Taggt neue Bestellungen, für die beim Checkout kostenloser Versand verfügbar war. Vorlage ansehen
+
+Bestellungen mit einer bestimmten Versandart taggen
+
+Fügt Bestellungen mit einem bestimmten Namen für die Versandart einen benutzerdefinierten Tag hinzu. Vorlage ansehen
+
+Bestellungen taggen, bei denen die Landing-Page des ersten Besuchs einen bestimmten URL-Pfad enthält
+
+Fügt Bestell-Tags hinzu, wenn eine Bestellung erstellt wird und die Landing-Page-URL der Kundschaft einen bestimmten String („fr“) enthält. Die Automatisierung nutzt den Schritt „Warten“, damit die `firstVisit`-Daten verfügbar sind. Vorlage ansehen
+
+Bestellungen mit zugehöriger UTM-Kampagne taggen
+
+Fügt Bestellungen Tags mit den Namen aller zugehörigen UTM-Kampagnen hinzu. Vorlage ansehen
+
+Rabattcode nach der zweiten Bestellung per Textnachricht senden
+
+Sendet eine Textnachricht mit SMSBump, nachdem ein:e Kund:in 2 Bestellungen aufgegeben hat. Vorlage ansehen
+
+Kund:innen nach ihrem Kauf danken
+
+Sendet Kund:innen nach ihrem ersten und zweiten Kauf eine andere Dankes-E-Mail. Einen Tag, nachdem ein:e Kund:in eine Bestellung aufgibt, prüft diese Automatisierung die Anzahl der Bestellungen, die von dieser Person getätigt wurden.
+
+Handelt es sich um die erste Bestellung, wird eine Marketing-E-Mail gesendet, um die Person willkommen zu heißen und ihr für den Kauf zu danken. Handelt es sich um die zweite Bestellung, wird eine andere Marketing-E-Mail gesendet, um die Wertschätzung für die fortgesetzte Unterstützung auszudrücken. Vorlage ansehen
+
+Bestellungen nachverfolgen und Nachricht senden, wenn sie nicht innerhalb von 2 Tagen versendet werden
+
+Verfolgt eine Bestellung in Google Sheets nach und sendet eine Slack-Nachricht, wenn die Bestellung nicht innerhalb von 2 Tagen versendet wird. Vorlage ansehen
+
+Kund:innen ohne Konten in einer Tabelle nachverfolgen
+
+Fügt Kund:innen, die kein Shop-Konto erstellt haben, einer Google-Tabelle hinzu. Vorlage ansehen
+
+Käufe aus dem Schlussverkauf nachverfolgen
+
+Identifiziert Artikel aus dem Schlussverkauf per Produkt-Tag und verfolgt Käufe dieser Artikel in einer Tabelle nach. Vorlage ansehen
+
+Umsatzstarke Kund:innen im Treueprogramm nachverfolgen
+
+Sendet eine Aktivität an Smile, wenn ein:e Kund:in die 3. Bestellung aufgibt. Vorlage ansehen
+
+Vorbestellungen nachverfolgen und E-Mail-Marketingkampagnen starten
+
+Verfolgt Vorbestellungen in einer Tabelle nach und startet eine E-Mail-Marketingkampagne in Klaviyo. Vorlage ansehen
+
+Sonderbestellungen basierend auf komplexen Bedingungen nachverfolgen
+
+Verfolgt Sonderbestellungen, taggt sie und sendet bei ihrer Erstellung eine E-Mail. Vorlage ansehen
+
+Käufe bestimmter Produkte im Treueprogramm nachverfolgen
+
+Sendet eine Aktivität an Smile, wenn ein:e Kund:in ein bestimmtes Produkt kauft. Vorlage ansehen
+
+Kund:innen anhand ihrer Bestellungen der letzten 6 Monate mit Tags segmentieren
+
+Wenn eine neue Bestellung erstellt wird, werden die Gesamtbestellsumme und die Bestellanzahl der Kundschaft für die letzten 6 Monate abgerufen und der Person anschließend Tags hinzugefügt. Hierbei werden die Aktionen „Bestelldaten abrufen“, „Anzahl“ und „Summe“ verwendet. Vorlage ansehen
+
+Verwendung von `customAttributes` (auch Positionseigenschaften genannt) in Bedingungen und Aktionen
+
+Prüfe Eigenschaften/benutzerdefinierte Attribute in deinen Bedingungen und verwende sie in Tags und Bestellnotizen. Vorlage ansehen
+
+Feedback hinterlassen
+
+LINKS
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/order-created#data
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/order-created#testing
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/order-created#actions
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/order-created#templates
+https://help.shopify.com/de/manual/shopify-flow/manage/manual
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-order-line-item
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-order-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/archive-order
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/cancel-order
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/capture-payment
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/hold-fulfillment
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/mark-order-as-paid
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/add-customer-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-customer-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/remove-customer-tags
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-customer-metafield
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/update-customer-note
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/for-each

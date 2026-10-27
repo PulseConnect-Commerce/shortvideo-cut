@@ -1,0 +1,111 @@
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-triggers
+status 200 final https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-triggers
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Erste Schritte mit Shopify Flow
+Trigger in Shopify Flow verstehen
+
+Ein Trigger ist das Ereignis, das den Workflow startet. Er stellt den anfänglichen Datensatz dar, den der Workflow als Grundlage für seine Bedingungen verwendet. Im Wesentlichen ist es der erste Schritt bzw. das auslösende Ereignis, das die Automatisierung startet.
+
+Jeder Workflow kann nur einen Trigger-Schritt haben.
+
+Auf dieser Seite
+Einen Trigger für deinen Workflow auswählen
+Beispiele für Trigger für gängige Workflows
+Einen Trigger für deinen Workflow auswählen
+
+Es stehen viele verschiedene Trigger zur Auswahl, um deinen Workflow zu starten. Die Auswahl des am besten geeigneten Triggers stellt daher sicher, dass dein Workflow mit der größten Wahrscheinlichkeit erfolgreich ausgeführt wird.
+
+Beachte bei der Auswahl eines Triggers für den Start eines Workflows die folgenden Überlegungen, je nachdem, welche Aufgabe der Workflow automatisieren soll:
+
+Überlege, wann der Workflow starten soll: nach Ereignis oder nach Zeitplan.
+Überprüfe die Definition des Triggers, den du in Betracht ziehst.
+Überlege, welche Daten der Workflow überprüfen soll.
+Sidekick
+
+Wenn du dir nicht sicher bist, welchen Trigger du verwenden sollst, kannst du Sidekick bitten, einen für dich auszuwählen. Beschreibe das Ereignis, das deine Automatisierung starten soll. Sidekick durchsucht daraufhin die in Flow verfügbaren Trigger, wählt einen aus, der die für deinen Workflow benötigten Daten bereitstellt, und erstellt den Workflow basierend darauf. Verwende beispielsweise einen Prompt wie Starte einen Workflow, wenn eine Bestellung als ausgeführt markiert wird, und benachrichtige mein Lager.
+
+Überlege, wann der Workflow starten soll: nach Ereignis oder nach Zeitplan
+
+Fast alle Workflow-Trigger basieren auf bestimmten Ereignissen, die in deinem Shop stattfinden. Diese Ereignisse haben keinen festen Zeitplan und können je nach Aktivität deines Shops mehrmals täglich auftreten. Wenn du beispielsweise normalerweise alle deine Bestellungen am selben Wochentag ausführst, kann ein Workflow, der mit dem Trigger Bestellung ausgeführt startet, fast eine Woche lang gar nicht und dann an dem Tag, an dem du mit der Ausführung deiner Bestellungen beginnst, mehrmals ausgeführt werden. Für viele Aufgaben sind ereignisbasierte Trigger die richtige Wahl, da sie nur dann ausgeführt werden, wenn das entsprechende Ereignis eintritt.
+
+Möglicherweise möchtest du jedoch eine Aufgabe automatisieren, die nach einem festgelegten Zeitplan anstelle eines bestimmten Ereignisses auftritt. In diesen Fällen musst du den Trigger Geplante Zeit verwenden. Dies ist ein einzigartiger Trigger, der einen Workflow zu einem von dir angegebenen Zeitpunkt und Datum startet. Du kannst den Workflow auch so planen, dass er stündlich, täglich, wöchentlich oder monatlich wiederholt wird. Diese Art von Trigger kann nützlich sein, um zeitplanbasierte Automatisierungen einzurichten, z. B. um eine tägliche Liste aller deiner nicht vorrätigen Produkte zu erstellen und eine E-Mail an deine:n Inventarmanager:in zu senden.
+
+Hinweis
+
+Der Trigger Geplante Zeit erfordert eine erweiterte Konfiguration, da beim Starten eines Workflows zu einer geplanten Zeit dem Workflow standardmäßig keine Daten zur Verfügung stehen. Er muss mit der Aktion Daten abrufen gekoppelt werden, um Informationen abzurufen, die der Workflow verwenden kann. Mehr Informationen zu Zeitplänen, dem Abrufen von Daten und sich wiederholenden Workflows in Shopify Flow.
+
+Warum das wichtig ist: Die Wahl des richtigen Zeitpunkts für deinen Workflow ist entscheidend, da so sichergestellt wird, dass die Automatisierung nur dann aktiviert wird, wenn sie für deine Geschäftsanforderungen relevant ist. Wenn du einen ereignisbasierten Trigger auswählst, startet dein Workflow als direkte Reaktion auf eine Aktion in deinem Shop, z. B. wenn ein:e Kund:in eine Bestellung aufgibt. Wenn du einen zeitplanbasierten Trigger verwendest, wird dein Workflow zu von dir gewählten Zeiten ausgeführt, sodass du Aufgaben in regelmäßigen Abständen automatisieren kannst.
+
+Überprüfe die Definition des Triggers, den du in Betracht ziehst
+
+In Shopify Flow sind Trigger sehr wörtlich zu nehmen und haben starre Definitionen. Zum Beispiel könnten die Trigger Bestellung erstellt und Bestelltransaktion erstellt scheinbar dasselbe bedeuten, aber sie beziehen sich tatsächlich auf völlig unterschiedliche Bestellereignisse: Bestellung erstellt wird ausgelöst, wenn eine Bestellung in deinem Shop erstellt wird, während Bestelltransaktion erstellt ausgelöst wird, wenn eine zahlungsbezogene Transaktion für eine bestehende Bestellung erstellt wird, z. B. die manuelle Erfassung einer Zahlung für eine unbezahlte Bestellung oder die Ausstellung einer Rückerstattung an eine:n Kund:in.
+
+Warum das wichtig ist: Da der Trigger das erste ist, worauf der Workflow achtet, bevor der restliche Durchlauf beginnt, stellt der richtige Trigger sicher, dass dein Workflow beim richtigen Ereignis startet. Gehe nicht einfach davon aus, worauf sich ein Trigger-Name bezieht. Wenn 2 Trigger ähnlich erscheinen, gibt es definitiv einen wesentlichen Unterschied zwischen ihnen, der maßgeblich beeinflussen kann, welcher der richtige für deinen Workflow ist.
+
+Überlege, welche Daten der Workflow überprüfen soll
+
+Trigger bestimmen den anfänglichen Datensatz, den der Workflow bei der Ausführung seiner Bedingungen verwenden kann. Wenn ein Workflow beispielsweise mit dem Trigger Kund:in erstellt beginnt, hat der Workflow Zugriff auf die Informationen der neuen Kundschaft, wie z. B. deren Kontaktdaten, die Bestellhistorie und ob sie dem Erhalt von Marketingmaterial per E-Mail zugestimmt hat. Er hätte jedoch keinen Zugriff auf andere Datentypen, wie z. B. die für die letzte Bestellung ausgewählte Versandart, da diese Art von Informationen im Bestelldatensatz und nicht im Kundendatensatz gespeichert ist.
+
+Trigger bestimmen außerdem direkt, welche Bedingungen, Aktionen und Variablen im Rest des Workflows zur Verwendung verfügbar sind. Wenn eine Variable oder Aktion nicht verfügbar ist, wird sie nicht als auswählbare Option angezeigt.
+
+Es ist auch zu bedenken, dass einige Daten nicht sofort verfügbar sind, wenn ein Trigger auftritt. Wenn dein Workflow beispielsweise in den meisten Fällen mit dem Trigger Bestellung erstellt startet und versucht, die Variable order.fulfillmentOrders zu verwenden, schlägt der Workflow möglicherweise fehl, weil die Bestellung noch keine Fulfillments hat, da sie gerade erst erstellt wurde. Der Trigger Fulfillment-Ereignis erstellt könnte stattdessen besser geeignet sein.
+
+Warum das wichtig ist: Der Erfolg oder Misserfolg von Workflows kann von den Daten abhängen, die über den Trigger verfügbar sind. Der von dir gewählte Trigger bestimmt genau, auf welche Details in deinem Shop die Bedingungen und Aktionen des Workflows zur Überprüfung zugreifen können. Wenn die benötigten Daten nicht im Datensatz des Triggers vorhanden sind, kann dein Workflow nicht auf diese Informationen für Automatisierungen oder Entscheidungen zugreifen oder sie verwenden. Bevor du deinen Workflow fertigstellst, solltest du bestätigen, dass der Trigger alle notwendigen Informationen bereitstellt, um deine Automatisierungsziele zu erreichen.
+
+Beispiele für Trigger für gängige Workflows
+
+Die folgende Tabelle enthält Beispiele für gängige Trigger und wie du sie in Shopify Flow-Workflows verwenden kannst.
+
+Du kannst dir auch andere Beispiele für Workflows in Shopify Flow ansehen, die als Vorlagen verfügbar sind.
+
+Trigger	Anwendungsbeispiele für Workflows
+Bestellung erstellt	
+VIP-Kundschaft taggen
+Bestellungen mit hohem Risiko kennzeichnen
+Fulfillment weiterleiten
+
+Bestellung bezahlt	
+Bestimmte Zahlungen erfassen
+Bestätigungen senden
+Externe Systeme aktualisieren
+
+Inventarmenge der Produktvariante geändert	
+Benachrichtigung bei niedrigem Lagerbestand senden
+
+Produkt erstellt	
+Neue Produkte automatisch taggen
+Neue Produkte in Vertriebskanälen veröffentlichen
+
+Kund:in erstellt	
+Kundschaft zu Segmenten hinzufügen
+Willkommensnachricht senden
+
+Geplante Zeit	
+Täglichen Verkaufsbericht senden
+Wöchentliche Inventarprüfungen erstellen
+Monatliche Bereinigungsaufgaben durchführen
+Feedback hinterlassen
+
+LINKS
+https://help.shopify.com/de/manual/shopify-flow/getting-started
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-triggers#choosing-a-trigger-for-your-workflow
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-triggers#examples-of-triggers-used-for-common-workflows
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-triggers#event-vs-schedule
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-triggers#definitions
+https://help.shopify.com/de/manual/shopify-flow/getting-started/understanding-triggers#datasets
+https://help.shopify.com/de/manual/shopify-flow/create/create-workflow#sidekick
+https://help.shopify.com/de/manual/shopify-flow/reference/triggers/scheduled-time
+https://help.shopify.com/de/manual/shopify-flow/reference/actions/get-order-data
+https://help.shopify.com/de/manual/shopify-flow/getting-started/concepts/advanced-workflows
+https://help.shopify.com/de/manual/shopify-flow/getting-started/workflow-examples

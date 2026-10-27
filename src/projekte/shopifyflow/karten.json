@@ -1,0 +1,321 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlagen P04, S02 und S03) für S04 · Shopify Flow. Sekunden im geschnittenen Video (cut.json, 94,17 s), genau wie Remotion sie rechnet (Stücke auf ganze Frames gerundet), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 5 s), tick (0,10) auf ausgewählten Zuständen, pop auf den Stickern, success auf 'ankommt' und 'ausgeführt', klick auf dem Plus. Gebaut in hyperframes/shopifyflow-skizzen/index.html. Echte Quellen: Begriffe aus dem Shopify Help Center (Trigger 'Bestellung erstellt', Aktion 'Interne E-Mail senden', Button 'Workflow aktivieren', Vorlagenbeispiele), Produktbilder und Preise aus Pauls Demo-Shop (products.json, nur gelesen); Beispielwerte als BEISPIEL bzw. DEMO gekennzeichnet. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "KI-Automatisierung",
+   "text": "komplizierte KI-Automatisierung (Netz) ✕ gegen eine Aufgabe ✓, Schleife; handschriftlich 'regelmäßig'",
+   "start": 3.6,
+   "ende": 9.7,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 3.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 4.533,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 9.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Nehmen (Beispiel)",
+   "text": "BEISPIEL: neue Bestellung (Produkte und Preise aus Pauls Demo-Shop, 309,80 €), 'über 300 €', Nachricht fliegt ans Team, Glocke; handschriftlich 'intern'",
+   "start": 9.7,
+   "ende": 18.233,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 9.7,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 14.867,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 15.95,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "drei",
+   "text": "drei Bausteine als Kette: 1 Auslöser 'Bestellung erstellt' (Trigger-Name aus dem Help Center) → 2 Bedingung 'Bestellwert > 300 €' → 3 noch leer; handschriftlich 'nur drei'",
+   "start": 18.233,
+   "ende": 27.333,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 18.233,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 19.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 23.2,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Und dann (Aktion)",
+   "text": "Schritt 3 Aktion: Fragezeichen auf 'machen?', E-Mail fliegt ans Team, Aktion 'Interne E-Mail senden' (Help Center); handschriftlich 'intern'",
+   "start": 27.333,
+   "ende": 35.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 27.333,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 28.367,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 34.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Auslösern",
+   "text": "Zahnräder Auslöser, Bedingung, Aktion greifen ineinander und drehen auf 'Shopify Flow'; handschriftlich 'wenn … dann'",
+   "start": 35.6,
+   "ende": 40.733,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 35.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 38.467,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "fertigen",
+   "text": "Vorlagen-Liste mit echten Vorlagenbeispielen aus dem Help Center, Klick → fertige Kette ✓, 'von null' ✕, Liste scrollt auf 'Möglichkeiten'; handschriftlich 'fertig'",
+   "start": 40.733,
+   "ende": 46.967,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 40.733,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 42.2,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 44.167,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st1",
+   "wort": "wichtig",
+   "text": "Sticker 'WICHTIG.'",
+   "start": 49.0,
+   "ende": 50.4,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 49.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Nicht",
+   "text": "Schalter 'Workflow aktivieren' (Button-Name aus dem Help Center) wird angeklickt, Fragezeichen über der Kette; handschriftlich 'funktioniert?'",
+   "start": 50.4,
+   "ende": 55.533,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 50.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 51.067,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Testbestellung",
+   "text": "dreiteilige Grafik Testen → Prüfen → Aktivieren (DEMO): Testbestellung 309,80 €, Lupe, Nachricht, 'über 300 €' ✓, Nachricht ✓; Aktivieren danach; handschriftlich 'prüfen'",
+   "start": 55.533,
+   "ende": 62.733,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 55.533,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.8,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 60.8,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Bestellungen",
+   "text": "Vorsicht bei Abläufen, die Bestellungen verändern, Zahlungsinformationen betreffen, Kundendaten an andere Dienste schicken; Warnzeichen; handschriftlich 'vorsichtiger'",
+   "start": 62.733,
+   "ende": 71.033,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 62.733,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 63.8,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 65.967,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 69.833,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "KI",
+   "text": "KI entwirft den Workflow (gestrichelt), auf 'Trotzdem' fest, Lupe über der Aktion, 'Interne E-Mail senden', ausgeführt ▶; handschriftlich 'verstehen'",
+   "start": 71.033,
+   "ende": 80.433,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 71.033,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 74.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 78.533,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 79.733,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st2",
+   "wort": "Tipp",
+   "text": "Sticker 'TIPP'",
+   "start": 80.933,
+   "ende": 82.433,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 80.933,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "automatisiere",
+   "text": "Treppe: kleine Aufgabe (Tacho niedrig), läuft zuverlässig ✓✓✓, dann die nächsten Prozesse; handschriftlich 'risikoarm'",
+   "start": 81.5,
+   "ende": 90.833,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 81.5,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 83.267,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 86.433,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 89.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "und (Folgen)",
+   "text": "Folgen-Plus: Ring auf 'angehen', Zeiger tippt auf 'Plus', es wird zum Haken",
+   "start": 90.833,
+   "ende": 94.167,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 90.833,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 93.1,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}
