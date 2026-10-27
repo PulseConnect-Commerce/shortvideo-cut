@@ -1,6 +1,6 @@
 # Übergabekarte: N06 · Amazon-Preiskontrollen vor dem BGH
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **veröffentlicht** am Di 27.10.2026 auf Pauls Wunsch („sofort … nächstmöglicher Termin heute“): TikTok und Instagram 14:00, YouTube 14:16 (Instagram-Anfrage hing bis nach 14:00). Metricool-IDs 407775120 (TikTok), 407775349 (Instagram), 407809243 (YouTube); Drive-Final 1cw0-43lQ7lsjCPRxUff-tINWKmpBcQmU <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): N06 · Amazon-Preiskontrollen vor dem BGH
 - **Format / Design:** NEWS / aktueller Look: Hook-Titel im Design verlauf (easyJet-Stil) unter dem Kopf, helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlage P04), echte Quelle als Quellen-Karte, echte Seiten (Amazon, Bundesnetzagentur, ecommerce-watchblog.de, Bundesgerichtshof) als Hintergrund hinter ihm, Musik news, sanfter Grade, Porträt-Modus
