@@ -14,6 +14,7 @@ Gibt am Ende OK oder die Liste der Probleme aus (Exit-Code 1).
 import argparse
 import os
 import re
+import shutil
 import subprocess
 import tempfile
 
@@ -91,6 +92,7 @@ if o.stems:
     # Hintergrundmusik (seine Vorgabe 2026-10-17: "so, dass man mich immer noch sehr gut versteht"): während er
     # spricht mindestens 18 dB unter der Stimme
     m = load(os.path.join(tmp, "musik.wav"))
+    shutil.rmtree(tmp, ignore_errors=True)  # die drei Stems belegen sonst je Lauf ~100 MB in /tmp
     nm = min(n, len(m) // win)
     mdb = np.array([20 * np.log10(np.sqrt(np.mean(m[i * win:(i + 1) * win] ** 2)) + 1e-9) for i in range(nm)])
     sprechen = [i for i in range(nm) if vdb[i] > speech - 10]
