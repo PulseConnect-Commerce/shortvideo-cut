@@ -50,8 +50,9 @@ export const HG: [string, number, number][] = [
   ["hg-stores", 197.0, 204.3], // "... warum ... starke Marken oft eben mehr als nur einen funktionierenden Onlineshop haben." (Stores: Regent Street "mehr als nur ein Geschäft")
 ];
 
-/** Sanfter Grade (STIL.gradeSanft); Helligkeit am Gesicht nach dem ersten Render gemessen (Ziel ~0,55-0,57) */
-const GRADE = STIL.gradeSanft;
+/** Sanfter Grade (STIL.gradeSanft) plus brightness(0.93): das Gesicht lag nach Farbe und Porträt bei ~0,61 (gemessen wie
+ * npm run pruefen, 12 Zeitpunkte), Regie: "Liegt das Gesicht über 0,57, gleich das im Grade aus" → ~0,57 */
+const GRADE = `${STIL.gradeSanft} brightness(0.93)`;
 
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel bis nach dem Hook-Satz ("sind." 6,17-6,4 s); danach die erste Shop-Seite (7,07 s) */
