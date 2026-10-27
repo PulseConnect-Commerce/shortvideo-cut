@@ -1,0 +1,41 @@
+Hintergründe und Bilder für S03 · Automatische Kollektionen (alle aufgenommen bzw. geladen am 26.10.2026; nur
+zugeschnitten, leicht abgedunkelt/weichgezeichnet; nichts dazugemalt)
+
+Hintergründe (1080x1920, gestaltet mit hyperframes/kollektionen-hg/gestalte.py aus den Screenshots in
+hyperframes/kollektionen-hg/screenshots/, Playwright/Chromium, Handy-Ansicht 432 px, 2,5-fach; oben die Kopfleiste
+"Hilfe" der Seite, darunter der Abschnitt):
+- hg-beispiele.png: Shopify Help Center "Kollektionen", Beispiele ("Kleidung für Männer, Frauen oder Kinder", "Artikel
+  in einer bestimmten Größe oder Farbe" ...) https://help.shopify.com/de/manual/products/collections
+- hg-manuell.png: ebd., "Mit den folgenden Methoden kannst du außerdem steuern, welche Produkte in Kollektionen
+  angezeigt werden" (automatisch hinzufügen / manuell hinzufügen)
+- hg-intelligent.png: Shopify Help Center "Intelligente Kollektionen erstellen und ändern", "Intelligente Kollektion
+  erstellen" ("Automatisierte Kollektionen werden jetzt als intelligente Kollektionen bezeichnet.")
+  https://help.shopify.com/de/manual/products/collections/smart-collections/create
+- hg-schritte.png: ebd., Schritte ("Gehe in deinem Shopify-Adminbereich zu Produkte > Kollektionen", "Klicke auf
+  Kollektion hinzufügen")
+- hg-typ.png: ebd., "Klicke im Abschnitt Kollektionstyp auf Intelligent", "Wähle aus, ob Produkte allen Bedingungen
+  oder einer beliebigen Bedingung entsprechen müssen"
+- hg-speichern.png: ebd., "Klicke auf Speichern. Im angezeigten Abschnitt Produkte werden die Produkte, die den
+  Bedingungen entsprechen, automatisch zur Kollektion hinzugefügt."
+- hg-bedingungen.png: Shopify Help Center "Bedingungen für Kollektionen verstehen", Kopf der Seite
+  https://help.shopify.com/de/manual/products/collections/conditions
+- hg-mehrere.png: ebd., "Verwendung mehrerer Auswahlbedingungen"
+- hg-irgendeine.png: ebd., "Wenn du Irgendeine Bedingung muss erfüllt sein auswählst ..."
+- hg-alle.png: ebd., "Wenn du Alle Bedingungen müssen erfüllt sein auswählst ..."
+- hg-tags.png: ebd., "Bedingungen basierend auf Produkt-Tags festlegen" ("Der Bedingungstyp Tag verfügt über die
+  Optionen enthält und enthält nicht")
+- hg-hinweis.png: ebd., Hinweis zu Sonderzeichen in Produkt-Tags
+- hg-zeit.png: ebd., "Das Festlegen von Bedingungen für Kollektionen kann dabei helfen, Produkte ohne manuelle
+  Verwaltung automatisch zu organisieren, was bei einem wachsenden Katalog Zeit spart."
+Bei den Hilfe-Seiten ist die schwebende Leiste "Frage nach diesem Artikel" per CSS ausgeblendet (wie ein Cookie-Banner),
+sonst nichts verändert.
+
+Produktbilder (produkte/, auch in hyperframes/kollektionen-skizzen/assets/), aus Pauls Demo-Shop
+online-store-development-pulseconnect (products.json, nur gelesen, Bild mit &width=400):
+- tshirt-schwarz.png: "Basic T-Shirt Bio-Baumwolle" (Mila & Ben)
+- shirt-rot.png: "Rippshirt Tessa" (Nordwind)
+- hose-schwarz.png: "Jeans Regular Schwarz" (Kiesel & Korn)
+- tshirt-senf.png: "T-Shirt Relaxed Senf" (Mila & Ben)
+- tshirt-grau.png, tshirt-weiss.png: geladen, nicht verwendet
+Die Kollektion "Schwarze T-Shirts" und ihr Inhalt sind im Video als BEISPIEL bzw. SIMULATION gekennzeichnet (im
+Demo-Shop gibt es sie nicht).

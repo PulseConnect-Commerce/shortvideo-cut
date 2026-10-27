@@ -1,0 +1,311 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlagen P04 und S02) für S03 · Automatische Kollektionen. Sekunden im geschnittenen Video (cut.json, 89,37 s), genau wie Remotion sie rechnet (Stücke auf ganze Frames gerundet), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 3,6 s), tick (0,10) auf ausgewählten Zuständen, pop auf dem ersten Sticker, success auf 'genauer' und dem neuen Artikel, der von selbst in der Kollektion landet, klick auf dem Plus. Gebaut in hyperframes/kollektionen-skizzen/index.html. Echte Quellen: Produktbilder aus Pauls Demo-Shop (products.json, nur gelesen), Begriffe aus dem Shopify Help Center (Kollektionstyp Manuell/Intelligent, 'Typ ... ist gleich', 'Tag ... enthält', alle / irgendeine Bedingung); Beispielwerte als BEISPIEL bzw. SIMULATION gekennzeichnet. Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "Hand",
+   "text": "Produkte werden von Hand in die Kollektion gezogen, immer wieder (Schleife), viele Kollektionen; handschriftlich 'von Hand'",
+   "start": 3.467,
+   "ende": 7.167,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 3.467,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 4.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Denn (Kleidung)",
+   "text": "Shop mit Kleidung aus Pauls Demo-Shop (DEMO-SHOP), Kollektion 'Schwarze T-Shirts' (BEISPIEL), das schwarze T-Shirt wandert hinein; handschriftlich 'Kollektion'",
+   "start": 7.2,
+   "ende": 11.7,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 7.2,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 11.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Wenn (manuell)",
+   "text": "ein T-Shirt von Hand hinzufügen, neuer Artikel 'NEU', wieder von Hand, Glocke; handschriftlich 'jedes Mal'",
+   "start": 11.733,
+   "ende": 16.633,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 11.733,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 15.867,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Und (Shopify)",
+   "text": "manuell gegen automatisiert: links zieht die Hand, rechts füllen sich die Plätze von selbst ✓; handschriftlich 'stattdessen'",
+   "start": 16.667,
+   "ende": 21.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 16.667,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 19.6,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "zuerst (Produkte)",
+   "text": "Weg im Admin: Produkte → Kollektionen → neue Kollektion (Hilfe-Center: 'Produkte > Kollektionen', 'Kollektion hinzufügen'); handschriftlich 'anlegen'",
+   "start": 21.6,
+   "ende": 26.5,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 21.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 25.067,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "automatische",
+   "text": "Kollektionstyp: Schalter springt von 'Manuell' auf 'Intelligent' ✓ (Hilfe-Center: 'Klicke im Abschnitt Kollektionstyp auf Intelligent'), Bedingungen klappen auf; handschriftlich 'definieren'",
+   "start": 26.533,
+   "ende": 30.4,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 26.533,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 28.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Zum (Beispiel)",
+   "text": "BEISPIEL: Bedingungen 'Typ ist gleich T-Shirt' und 'Tag enthält schwarz' (Operatoren aus dem Hilfe-Center), Trichter, nur das schwarze T-Shirt fällt in die Kollektion; handschriftlich 'automatisch'",
+   "start": 30.433,
+   "ende": 39.4,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 30.433,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 36.25,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st1",
+   "wort": "wichtiges",
+   "text": "Sticker 'WICHTIG.'",
+   "start": 36.8,
+   "ende": 38.5,
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 36.8,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Denn (alle)",
+   "text": "alle (beide ✓) oder irgendeine (eine ✓ reicht); handschriftlich 'und' / 'oder' auf 'Und-oder-Bedingung'",
+   "start": 39.433,
+   "ende": 46.5,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 39.433,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 41.2,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 43.333,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Wenn (irgendeine)",
+   "text": "SIMULATION Kollektion 'Schwarze T-Shirts': mit 'irgendeine' landen rotes T-Shirt und schwarze Hose drin (rot ✕, 'falsch'), Schalter auf 'alle' → nur das schwarze T-Shirt ✓, handschriftlich 'genauer'",
+   "start": 46.533,
+   "ende": 59.433,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 46.533,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 50.85,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 58.167,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st2",
+   "wort": "zweiter",
+   "text": "Sticker 'TIPP 2' (kein eigener Ton, Abstand zu 'genauer' und zum Whoosh der nächsten Karte)",
+   "start": 59.6,
+   "ende": 61.3,
+   "sfx": []
+  },
+  {
+   "id": "k10",
+   "wort": "arbeite",
+   "text": "BEISPIEL: drei Produkte, dreimal derselbe Tag 'schwarz' '='; handschriftlich 'einheitlich'",
+   "start": 60.6,
+   "ende": 64.067,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 60.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 61.8,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "Produkt",
+   "text": "BEISPIEL: Tags 'schwarz', 'Black', 'black-shirt' auf ihren Wörtern; Regel 'Tag: schwarz' erwischt nur das erste ✓, die anderen ✕; handschriftlich 'unzuverlässig'",
+   "start": 64.1,
+   "ende": 73.067,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 64.1,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 71.9,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st3",
+   "wort": "wichtige",
+   "text": "Sticker 'ERGÄNZUNG' (kein eigener Ton, Whoosh der Karte 0,43 s davor)",
+   "start": 73.533,
+   "ende": 75.133,
+   "sfx": []
+  },
+  {
+   "id": "k12",
+   "wort": "Und (Ergänzung)",
+   "text": "Kollektion nach dem Einrichten mit der Lupe prüfen, ✓ je Produkt, 'vorhanden' markiert; handschriftlich 'prüfen'",
+   "start": 73.1,
+   "ende": 80.5,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 73.1,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 77.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k13",
+   "wort": "Denn (neue Artikel)",
+   "text": "neuer Artikel mit sauberen Angaben (T-Shirt, schwarz ✓) landet von selbst in der Kollektion ✓; 'jede Kollektion einzeln nachbessern' wird gestrichen; handschriftlich 'sauber'",
+   "start": 80.533,
+   "ende": 86.833,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 80.533,
+     "volume": 0.12
+    },
+    {
+     "datei": "success.mp3",
+     "at": 83.9,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k14",
+   "wort": "Und (Tipps)",
+   "text": "Folgen-Symbol: Ring auf 'Tipps', Zeiger tippt das Plus auf 'Plus', es wird zum Haken",
+   "start": 86.867,
+   "ende": 89.367,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 86.867,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 88.867,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}
