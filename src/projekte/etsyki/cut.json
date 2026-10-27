@@ -1,0 +1,1248 @@
+{
+ "projekt": "etsyki",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "etsyki/t1",
+   "from": 18.075,
+   "to": 27.635,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "etsyki/t1",
+   "from": 30.705,
+   "to": 40.155,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "etsyki/t1",
+   "from": 44.665,
+   "to": 56.635,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "etsyki/t1",
+   "from": 58.895,
+   "to": 69.475,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "etsyki/t1",
+   "from": 82.005,
+   "to": 93.685,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "etsyki/t1",
+   "from": 96.115,
+   "to": 101.005,
+   "nach": 0.04,
+   "vor": 0.09
+  },
+  {
+   "src": "etsyki/t1",
+   "from": 103.925,
+   "to": 108.7,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Etsy-Händler",
+   "src": "etsyki/t1",
+   "start": 18.11,
+   "end": 18.73
+  },
+  {
+   "text": "aufgepasst!",
+   "src": "etsyki/t1",
+   "start": 18.89,
+   "end": 19.39
+  },
+  {
+   "text": "Etsy",
+   "src": "etsyki/t1",
+   "start": 20.15,
+   "end": 20.43
+  },
+  {
+   "text": "zieht",
+   "src": "etsyki/t1",
+   "start": 20.63,
+   "end": 20.81
+  },
+  {
+   "text": "jetzt",
+   "src": "etsyki/t1",
+   "start": 20.87,
+   "end": 21.07
+  },
+  {
+   "text": "bei",
+   "src": "etsyki/t1",
+   "start": 21.09,
+   "end": 21.21
+  },
+  {
+   "text": "KI",
+   "src": "etsyki/t1",
+   "start": 21.29,
+   "end": 21.55
+  },
+  {
+   "text": "tatsächlich",
+   "src": "etsyki/t1",
+   "start": 21.71,
+   "end": 22.19
+  },
+  {
+   "text": "ziemlich",
+   "src": "etsyki/t1",
+   "start": 22.31,
+   "end": 22.63
+  },
+  {
+   "text": "klare",
+   "src": "etsyki/t1",
+   "start": 22.69,
+   "end": 23.01
+  },
+  {
+   "text": "Grenzen.",
+   "src": "etsyki/t1",
+   "start": 23.07,
+   "end": 23.43
+  },
+  {
+   "text": "Und",
+   "src": "etsyki/t1",
+   "start": 24.1,
+   "end": 24.16
+  },
+  {
+   "text": "wenn",
+   "src": "etsyki/t1",
+   "start": 24.18,
+   "end": 24.32
+  },
+  {
+   "text": "du",
+   "src": "etsyki/t1",
+   "start": 24.36,
+   "end": 24.42
+  },
+  {
+   "text": "jetzt",
+   "src": "etsyki/t1",
+   "start": 24.48,
+   "end": 24.68
+  },
+  {
+   "text": "dort",
+   "src": "etsyki/t1",
+   "start": 24.72,
+   "end": 24.86
+  },
+  {
+   "text": "verkaufst,",
+   "src": "etsyki/t1",
+   "start": 24.9,
+   "end": 25.36
+  },
+  {
+   "text": "dann",
+   "src": "etsyki/t1",
+   "start": 25.38,
+   "end": 25.52
+  },
+  {
+   "text": "kann",
+   "src": "etsyki/t1",
+   "start": 25.58,
+   "end": 25.74
+  },
+  {
+   "text": "es",
+   "src": "etsyki/t1",
+   "start": 25.78,
+   "end": 25.82
+  },
+  {
+   "text": "sogar",
+   "src": "etsyki/t1",
+   "start": 25.88,
+   "end": 26.02
+  },
+  {
+   "text": "auch",
+   "src": "etsyki/t1",
+   "start": 26.04,
+   "end": 26.12
+  },
+  {
+   "text": "deine",
+   "src": "etsyki/t1",
+   "start": 26.16,
+   "end": 26.32
+  },
+  {
+   "text": "alten",
+   "src": "etsyki/t1",
+   "start": 26.44,
+   "end": 26.66
+  },
+  {
+   "text": "Produktbilder",
+   "src": "etsyki/t1",
+   "start": 26.72,
+   "end": 27.18
+  },
+  {
+   "text": "treffen.",
+   "src": "etsyki/t1",
+   "start": 27.22,
+   "end": 27.5
+  },
+  {
+   "text": "Schaut",
+   "src": "etsyki/t1",
+   "start": 30.77,
+   "end": 30.97
+  },
+  {
+   "text": "euch",
+   "src": "etsyki/t1",
+   "start": 31.01,
+   "end": 31.11
+  },
+  {
+   "text": "mal",
+   "src": "etsyki/t1",
+   "start": 31.13,
+   "end": 31.23
+  },
+  {
+   "text": "diese",
+   "src": "etsyki/t1",
+   "start": 31.31,
+   "end": 31.51
+  },
+  {
+   "text": "Meldung",
+   "src": "etsyki/t1",
+   "start": 31.57,
+   "end": 31.81
+  },
+  {
+   "text": "hier",
+   "src": "etsyki/t1",
+   "start": 31.85,
+   "end": 31.97
+  },
+  {
+   "text": "an.",
+   "src": "etsyki/t1",
+   "start": 32.01,
+   "end": 32.05
+  },
+  {
+   "text": "Seit",
+   "src": "etsyki/t1",
+   "start": 32.65,
+   "end": 32.81
+  },
+  {
+   "text": "dem",
+   "src": "etsyki/t1",
+   "start": 32.85,
+   "end": 32.95
+  },
+  {
+   "text": "22.",
+   "src": "etsyki/t1",
+   "start": 33.03,
+   "end": 33.59
+  },
+  {
+   "text": "Oktober",
+   "src": "etsyki/t1",
+   "start": 33.73,
+   "end": 34.07
+  },
+  {
+   "text": "verlangt",
+   "src": "etsyki/t1",
+   "start": 34.15,
+   "end": 34.49
+  },
+  {
+   "text": "Etsy",
+   "src": "etsyki/t1",
+   "start": 34.57,
+   "end": 34.81
+  },
+  {
+   "text": "bei",
+   "src": "etsyki/t1",
+   "start": 34.89,
+   "end": 34.99
+  },
+  {
+   "text": "vielen",
+   "src": "etsyki/t1",
+   "start": 35.11,
+   "end": 35.33
+  },
+  {
+   "text": "Angeboten",
+   "src": "etsyki/t1",
+   "start": 35.41,
+   "end": 35.83
+  },
+  {
+   "text": "mindestens",
+   "src": "etsyki/t1",
+   "start": 35.93,
+   "end": 36.39
+  },
+  {
+   "text": "ein",
+   "src": "etsyki/t1",
+   "start": 36.55,
+   "end": 36.69
+  },
+  {
+   "text": "echtes",
+   "src": "etsyki/t1",
+   "start": 36.79,
+   "end": 37.13
+  },
+  {
+   "text": "und",
+   "src": "etsyki/t1",
+   "start": 37.29,
+   "end": 37.37
+  },
+  {
+   "text": "komplett",
+   "src": "etsyki/t1",
+   "start": 37.45,
+   "end": 37.89
+  },
+  {
+   "text": "unbearbeitetes",
+   "src": "etsyki/t1",
+   "start": 38.03,
+   "end": 38.65
+  },
+  {
+   "text": "Foto",
+   "src": "etsyki/t1",
+   "start": 38.71,
+   "end": 38.93
+  },
+  {
+   "text": "von",
+   "src": "etsyki/t1",
+   "start": 39.31,
+   "end": 39.41
+  },
+  {
+   "text": "eurem",
+   "src": "etsyki/t1",
+   "start": 39.51,
+   "end": 39.73
+  },
+  {
+   "text": "Produkt.",
+   "src": "etsyki/t1",
+   "start": 39.75,
+   "end": 40.05
+  },
+  {
+   "text": "Das",
+   "src": "etsyki/t1",
+   "start": 44.66,
+   "end": 44.76
+  },
+  {
+   "text": "heißt",
+   "src": "etsyki/t1",
+   "start": 44.82,
+   "end": 45.02
+  },
+  {
+   "text": "jetzt",
+   "src": "etsyki/t1",
+   "start": 45.04,
+   "end": 45.22
+  },
+  {
+   "text": "aber",
+   "src": "etsyki/t1",
+   "start": 45.28,
+   "end": 45.4
+  },
+  {
+   "text": "natürlich",
+   "src": "etsyki/t1",
+   "start": 45.46,
+   "end": 45.8
+  },
+  {
+   "text": "nicht,",
+   "src": "etsyki/t1",
+   "start": 45.92,
+   "end": 46.16
+  },
+  {
+   "text": "dass",
+   "src": "etsyki/t1",
+   "start": 46.22,
+   "end": 46.36
+  },
+  {
+   "text": "alle",
+   "src": "etsyki/t1",
+   "start": 46.58,
+   "end": 46.74
+  },
+  {
+   "text": "KI-Bilder",
+   "src": "etsyki/t1",
+   "start": 46.82,
+   "end": 47.28
+  },
+  {
+   "text": "generell",
+   "src": "etsyki/t1",
+   "start": 47.36,
+   "end": 47.68
+  },
+  {
+   "text": "verboten",
+   "src": "etsyki/t1",
+   "start": 47.72,
+   "end": 48.08
+  },
+  {
+   "text": "sind.",
+   "src": "etsyki/t1",
+   "start": 48.12,
+   "end": 48.24
+  },
+  {
+   "text": "Weitere",
+   "src": "etsyki/t1",
+   "start": 48.9,
+   "end": 49.18
+  },
+  {
+   "text": "Bilder",
+   "src": "etsyki/t1",
+   "start": 49.22,
+   "end": 49.42
+  },
+  {
+   "text": "dürfen",
+   "src": "etsyki/t1",
+   "start": 49.5,
+   "end": 49.74
+  },
+  {
+   "text": "natürlich",
+   "src": "etsyki/t1",
+   "start": 49.78,
+   "end": 50.1
+  },
+  {
+   "text": "weiterhin",
+   "src": "etsyki/t1",
+   "start": 50.14,
+   "end": 50.44
+  },
+  {
+   "text": "bearbeitet",
+   "src": "etsyki/t1",
+   "start": 50.48,
+   "end": 50.9
+  },
+  {
+   "text": "werden,",
+   "src": "etsyki/t1",
+   "start": 50.96,
+   "end": 51.18
+  },
+  {
+   "text": "solange",
+   "src": "etsyki/t1",
+   "start": 51.28,
+   "end": 51.64
+  },
+  {
+   "text": "sie",
+   "src": "etsyki/t1",
+   "start": 51.72,
+   "end": 51.82
+  },
+  {
+   "text": "aber",
+   "src": "etsyki/t1",
+   "start": 51.88,
+   "end": 52.0
+  },
+  {
+   "text": "das",
+   "src": "etsyki/t1",
+   "start": 52.02,
+   "end": 52.1
+  },
+  {
+   "text": "Produkt",
+   "src": "etsyki/t1",
+   "start": 52.16,
+   "end": 52.44
+  },
+  {
+   "text": "korrekt",
+   "src": "etsyki/t1",
+   "start": 52.48,
+   "end": 52.78
+  },
+  {
+   "text": "zeigen.",
+   "src": "etsyki/t1",
+   "start": 52.82,
+   "end": 53.02
+  },
+  {
+   "text": "Und",
+   "src": "etsyki/t1",
+   "start": 53.72,
+   "end": 53.78
+  },
+  {
+   "text": "für",
+   "src": "etsyki/t1",
+   "start": 53.84,
+   "end": 53.92
+  },
+  {
+   "text": "manche",
+   "src": "etsyki/t1",
+   "start": 53.98,
+   "end": 54.22
+  },
+  {
+   "text": "Produkte",
+   "src": "etsyki/t1",
+   "start": 54.28,
+   "end": 54.56
+  },
+  {
+   "text": "gibt",
+   "src": "etsyki/t1",
+   "start": 54.68,
+   "end": 54.84
+  },
+  {
+   "text": "es",
+   "src": "etsyki/t1",
+   "start": 54.86,
+   "end": 54.9
+  },
+  {
+   "text": "tatsächlich",
+   "src": "etsyki/t1",
+   "start": 54.96,
+   "end": 55.48
+  },
+  {
+   "text": "sogar",
+   "src": "etsyki/t1",
+   "start": 55.56,
+   "end": 55.8
+  },
+  {
+   "text": "auch",
+   "src": "etsyki/t1",
+   "start": 55.9,
+   "end": 56.02
+  },
+  {
+   "text": "Ausnahmen.",
+   "src": "etsyki/t1",
+   "start": 56.18,
+   "end": 56.58
+  },
+  {
+   "text": "Was",
+   "src": "etsyki/t1",
+   "start": 58.93,
+   "end": 59.09
+  },
+  {
+   "text": "aber",
+   "src": "etsyki/t1",
+   "start": 59.15,
+   "end": 59.25
+  },
+  {
+   "text": "außerdem",
+   "src": "etsyki/t1",
+   "start": 59.33,
+   "end": 59.67
+  },
+  {
+   "text": "neu",
+   "src": "etsyki/t1",
+   "start": 59.73,
+   "end": 59.87
+  },
+  {
+   "text": "ist,",
+   "src": "etsyki/t1",
+   "start": 59.93,
+   "end": 60.05
+  },
+  {
+   "text": "KI-generierte",
+   "src": "etsyki/t1",
+   "start": 60.13,
+   "end": 60.79
+  },
+  {
+   "text": "Anleitungen,",
+   "src": "etsyki/t1",
+   "start": 60.89,
+   "end": 61.37
+  },
+  {
+   "text": "zum",
+   "src": "etsyki/t1",
+   "start": 61.41,
+   "end": 61.51
+  },
+  {
+   "text": "Beispiel",
+   "src": "etsyki/t1",
+   "start": 61.55,
+   "end": 61.85
+  },
+  {
+   "text": "Schnittmuster",
+   "src": "etsyki/t1",
+   "start": 61.91,
+   "end": 62.53
+  },
+  {
+   "text": "oder",
+   "src": "etsyki/t1",
+   "start": 62.63,
+   "end": 62.77
+  },
+  {
+   "text": "auch",
+   "src": "etsyki/t1",
+   "start": 62.79,
+   "end": 62.87
+  },
+  {
+   "text": "Rezepte,",
+   "src": "etsyki/t1",
+   "start": 62.89,
+   "end": 63.35
+  },
+  {
+   "text": "sind",
+   "src": "etsyki/t1",
+   "start": 63.45,
+   "end": 63.59
+  },
+  {
+   "text": "nicht",
+   "src": "etsyki/t1",
+   "start": 63.67,
+   "end": 63.79
+  },
+  {
+   "text": "mehr",
+   "src": "etsyki/t1",
+   "start": 63.83,
+   "end": 63.93
+  },
+  {
+   "text": "erlaubt.",
+   "src": "etsyki/t1",
+   "start": 63.95,
+   "end": 64.17
+  },
+  {
+   "text": "Und",
+   "src": "etsyki/t1",
+   "start": 64.95,
+   "end": 65.03
+  },
+  {
+   "text": "komplett",
+   "src": "etsyki/t1",
+   "start": 65.09,
+   "end": 65.53
+  },
+  {
+   "text": "automatisch",
+   "src": "etsyki/t1",
+   "start": 65.69,
+   "end": 66.23
+  },
+  {
+   "text": "erstellte",
+   "src": "etsyki/t1",
+   "start": 66.39,
+   "end": 66.75
+  },
+  {
+   "text": "Angebote",
+   "src": "etsyki/t1",
+   "start": 66.83,
+   "end": 67.17
+  },
+  {
+   "text": "ohne",
+   "src": "etsyki/t1",
+   "start": 67.29,
+   "end": 67.47
+  },
+  {
+   "text": "menschliche",
+   "src": "etsyki/t1",
+   "start": 67.53,
+   "end": 67.91
+  },
+  {
+   "text": "Beteiligung",
+   "src": "etsyki/t1",
+   "start": 67.95,
+   "end": 68.41
+  },
+  {
+   "text": "leider",
+   "src": "etsyki/t1",
+   "start": 68.51,
+   "end": 68.73
+  },
+  {
+   "text": "auch",
+   "src": "etsyki/t1",
+   "start": 68.87,
+   "end": 68.99
+  },
+  {
+   "text": "nicht",
+   "src": "etsyki/t1",
+   "start": 69.05,
+   "end": 69.19
+  },
+  {
+   "text": "mehr.",
+   "src": "etsyki/t1",
+   "start": 69.23,
+   "end": 69.37
+  },
+  {
+   "text": "Und",
+   "src": "etsyki/t1",
+   "start": 82.03,
+   "end": 82.09
+  },
+  {
+   "text": "das",
+   "src": "etsyki/t1",
+   "start": 82.13,
+   "end": 82.25
+  },
+  {
+   "text": "betrifft",
+   "src": "etsyki/t1",
+   "start": 82.33,
+   "end": 82.71
+  },
+  {
+   "text": "aber",
+   "src": "etsyki/t1",
+   "start": 82.79,
+   "end": 82.97
+  },
+  {
+   "text": "leider",
+   "src": "etsyki/t1",
+   "start": 83.17,
+   "end": 83.43
+  },
+  {
+   "text": "nicht",
+   "src": "etsyki/t1",
+   "start": 83.55,
+   "end": 83.73
+  },
+  {
+   "text": "nur",
+   "src": "etsyki/t1",
+   "start": 83.81,
+   "end": 83.93
+  },
+  {
+   "text": "die",
+   "src": "etsyki/t1",
+   "start": 84.11,
+   "end": 84.21
+  },
+  {
+   "text": "neuen",
+   "src": "etsyki/t1",
+   "start": 84.29,
+   "end": 84.49
+  },
+  {
+   "text": "Listings,",
+   "src": "etsyki/t1",
+   "start": 84.53,
+   "end": 84.87
+  },
+  {
+   "text": "sondern",
+   "src": "etsyki/t1",
+   "start": 84.91,
+   "end": 85.17
+  },
+  {
+   "text": "eben",
+   "src": "etsyki/t1",
+   "start": 85.25,
+   "end": 85.37
+  },
+  {
+   "text": "auch",
+   "src": "etsyki/t1",
+   "start": 85.41,
+   "end": 85.49
+  },
+  {
+   "text": "bestehende",
+   "src": "etsyki/t1",
+   "start": 85.55,
+   "end": 85.99
+  },
+  {
+   "text": "Listings.",
+   "src": "etsyki/t1",
+   "start": 86.07,
+   "end": 86.43
+  },
+  {
+   "text": "Ich",
+   "src": "etsyki/t1",
+   "start": 87.07,
+   "end": 87.15
+  },
+  {
+   "text": "finde",
+   "src": "etsyki/t1",
+   "start": 87.21,
+   "end": 87.39
+  },
+  {
+   "text": "den",
+   "src": "etsyki/t1",
+   "start": 87.47,
+   "end": 87.55
+  },
+  {
+   "text": "Schritt",
+   "src": "etsyki/t1",
+   "start": 87.63,
+   "end": 87.89
+  },
+  {
+   "text": "von",
+   "src": "etsyki/t1",
+   "start": 87.97,
+   "end": 88.07
+  },
+  {
+   "text": "Etsy",
+   "src": "etsyki/t1",
+   "start": 88.17,
+   "end": 88.39
+  },
+  {
+   "text": "hier",
+   "src": "etsyki/t1",
+   "start": 88.47,
+   "end": 88.57
+  },
+  {
+   "text": "tatsächlich",
+   "src": "etsyki/t1",
+   "start": 88.61,
+   "end": 89.03
+  },
+  {
+   "text": "spannend,",
+   "src": "etsyki/t1",
+   "start": 89.09,
+   "end": 89.45
+  },
+  {
+   "text": "weil",
+   "src": "etsyki/t1",
+   "start": 89.87,
+   "end": 89.99
+  },
+  {
+   "text": "Etsy",
+   "src": "etsyki/t1",
+   "start": 90.05,
+   "end": 90.25
+  },
+  {
+   "text": "damit",
+   "src": "etsyki/t1",
+   "start": 90.33,
+   "end": 90.55
+  },
+  {
+   "text": "natürlich",
+   "src": "etsyki/t1",
+   "start": 90.61,
+   "end": 90.93
+  },
+  {
+   "text": "Vertrauen",
+   "src": "etsyki/t1",
+   "start": 90.97,
+   "end": 91.39
+  },
+  {
+   "text": "in",
+   "src": "etsyki/t1",
+   "start": 91.47,
+   "end": 91.53
+  },
+  {
+   "text": "echte",
+   "src": "etsyki/t1",
+   "start": 91.67,
+   "end": 91.91
+  },
+  {
+   "text": "Handarbeit",
+   "src": "etsyki/t1",
+   "start": 91.99,
+   "end": 92.43
+  },
+  {
+   "text": "stärker",
+   "src": "etsyki/t1",
+   "start": 92.51,
+   "end": 92.87
+  },
+  {
+   "text": "unterstützen",
+   "src": "etsyki/t1",
+   "start": 92.91,
+   "end": 93.39
+  },
+  {
+   "text": "will.",
+   "src": "etsyki/t1",
+   "start": 93.45,
+   "end": 93.59
+  },
+  {
+   "text": "Wenn",
+   "src": "etsyki/t1",
+   "start": 96.17,
+   "end": 96.31
+  },
+  {
+   "text": "auch",
+   "src": "etsyki/t1",
+   "start": 96.37,
+   "end": 96.49
+  },
+  {
+   "text": "ihr",
+   "src": "etsyki/t1",
+   "start": 96.61,
+   "end": 96.71
+  },
+  {
+   "text": "auf",
+   "src": "etsyki/t1",
+   "start": 96.77,
+   "end": 96.87
+  },
+  {
+   "text": "Etsy",
+   "src": "etsyki/t1",
+   "start": 96.95,
+   "end": 97.17
+  },
+  {
+   "text": "verkauft,",
+   "src": "etsyki/t1",
+   "start": 97.27,
+   "end": 97.67
+  },
+  {
+   "text": "dann",
+   "src": "etsyki/t1",
+   "start": 97.71,
+   "end": 97.87
+  },
+  {
+   "text": "prüft",
+   "src": "etsyki/t1",
+   "start": 97.95,
+   "end": 98.21
+  },
+  {
+   "text": "bitte",
+   "src": "etsyki/t1",
+   "start": 98.25,
+   "end": 98.39
+  },
+  {
+   "text": "eure",
+   "src": "etsyki/t1",
+   "start": 98.47,
+   "end": 98.63
+  },
+  {
+   "text": "Bilder",
+   "src": "etsyki/t1",
+   "start": 98.69,
+   "end": 98.91
+  },
+  {
+   "text": "unbedingt",
+   "src": "etsyki/t1",
+   "start": 98.99,
+   "end": 99.41
+  },
+  {
+   "text": "und",
+   "src": "etsyki/t1",
+   "start": 99.79,
+   "end": 99.87
+  },
+  {
+   "text": "auch",
+   "src": "etsyki/t1",
+   "start": 99.95,
+   "end": 100.07
+  },
+  {
+   "text": "die",
+   "src": "etsyki/t1",
+   "start": 100.13,
+   "end": 100.21
+  },
+  {
+   "text": "Anleitungen,",
+   "src": "etsyki/t1",
+   "start": 100.35,
+   "end": 100.87
+  },
+  {
+   "text": "Und",
+   "src": "etsyki/t1",
+   "start": 104.11,
+   "end": 104.19
+  },
+  {
+   "text": "wenn",
+   "src": "etsyki/t1",
+   "start": 104.21,
+   "end": 104.33
+  },
+  {
+   "text": "ihr",
+   "src": "etsyki/t1",
+   "start": 104.37,
+   "end": 104.43
+  },
+  {
+   "text": "weitere",
+   "src": "etsyki/t1",
+   "start": 104.47,
+   "end": 104.77
+  },
+  {
+   "text": "solcher",
+   "src": "etsyki/t1",
+   "start": 104.85,
+   "end": 105.07
+  },
+  {
+   "text": "News",
+   "src": "etsyki/t1",
+   "start": 105.13,
+   "end": 105.35
+  },
+  {
+   "text": "zu",
+   "src": "etsyki/t1",
+   "start": 105.49,
+   "end": 105.55
+  },
+  {
+   "text": "E-Commerce",
+   "src": "etsyki/t1",
+   "start": 105.65,
+   "end": 106.11
+  },
+  {
+   "text": "nicht",
+   "src": "etsyki/t1",
+   "start": 106.23,
+   "end": 106.37
+  },
+  {
+   "text": "verpassen",
+   "src": "etsyki/t1",
+   "start": 106.41,
+   "end": 106.75
+  },
+  {
+   "text": "wollt,",
+   "src": "etsyki/t1",
+   "start": 106.79,
+   "end": 106.95
+  },
+  {
+   "text": "dann",
+   "src": "etsyki/t1",
+   "start": 106.97,
+   "end": 107.11
+  },
+  {
+   "text": "drückt",
+   "src": "etsyki/t1",
+   "start": 107.39,
+   "end": 107.57
+  },
+  {
+   "text": "ihr",
+   "src": "etsyki/t1",
+   "start": 107.59,
+   "end": 107.67
+  },
+  {
+   "text": "gerne",
+   "src": "etsyki/t1",
+   "start": 107.69,
+   "end": 107.89
+  },
+  {
+   "text": "das",
+   "src": "etsyki/t1",
+   "start": 107.97,
+   "end": 108.05
+  },
+  {
+   "text": "Plus",
+   "src": "etsyki/t1",
+   "start": 108.09,
+   "end": 108.27
+  },
+  {
+   "text": "weg.",
+   "src": "etsyki/t1",
+   "start": 108.29,
+   "end": 108.43
+  }
+ ],
+ "pages": [
+  1,
+  1,
+  3,
+  3,
+  3,
+  4,
+  2,
+  4,
+  3,
+  2,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  1,
+  4,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  1,
+  1,
+  2,
+  1,
+  3,
+  4,
+  2,
+  2,
+  2,
+  1,
+  3,
+  2,
+  3,
+  4,
+  3,
+  3,
+  2,
+  4,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2,
+  3,
+  2,
+  4,
+  3
+ ]
+}

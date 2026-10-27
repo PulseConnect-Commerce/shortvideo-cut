@@ -1,0 +1,247 @@
+{
+ "ziele": {
+  "ohn": {
+   "url": "https://ohn.haendlerbund.de/themen/marktplaetze/etsy-shop-druck-neue-ki-regeln",
+   "status": 200,
+   "titel": "Etsy-Shop unter Druck: Neue KI-Regeln zwingen zum Foto-Marathon",
+   "varianten": {
+    "kopf": {
+     "clipTop": 0,
+     "clipHoehe": 1500,
+     "pos": {
+      "Wer auf Etsy verkauft, muss seine Listings prüfen – auch die bestehenden.": [
+       1066,
+       133
+      ]
+     },
+     "ank": {
+      "Etsy-Shop unter Druck": 157,
+      "Die wichtigsten Neuerungen im Überblick": 1827,
+      "Ausnahmen je nach Produktart": 4765,
+      "Gute Idee, aber viel Arbeit": 7678
+     },
+     "bilder": [
+      [
+       "App-Symbol „Sell on Etsy“ mit orangefarbenem Etsy-Schriftzug zwischen weiteren Apps auf einem Bildschirm.",
+       314,
+       232,
+       412
+      ],
+      [
+       "Sandra May",
+       9499,
+       90,
+       90
+      ]
+     ],
+     "hoehe": 13230
+    },
+    "seit": {
+     "clipTop": 581,
+     "clipHoehe": 900,
+     "pos": {
+      "Seit dem 22. Oktober 2026 gelten neue Regeln für Produktfotos, KI-generierte Anleitungen und automatisch erstellte Angebote.": [
+       961,
+       133
+      ]
+     },
+     "ank": {
+      "Etsy-Shop unter Druck": 157,
+      "Die wichtigsten Neuerungen im Überblick": 1792,
+      "Ausnahmen je nach Produktart": 4730,
+      "Gute Idee, aber viel Arbeit": 7643
+     },
+     "bilder": [
+      [
+       "App-Symbol „Sell on Etsy“ mit orangefarbenem Etsy-Schriftzug zwischen weiteren Apps auf einem Bildschirm.",
+       314,
+       232,
+       412
+      ],
+      [
+       "Sandra May",
+       9464,
+       90,
+       90
+      ]
+     ],
+     "hoehe": 13195
+    },
+    "pflicht": {
+     "clipTop": 1711,
+     "clipHoehe": 900,
+     "pos": {
+      "Jedes Angebot braucht künftig mindestens ein Foto des echten Artikels vor einem echten Hintergrund.": [
+       2011,
+       133
+      ]
+     },
+     "ank": {
+      "Etsy-Shop unter Druck": 157,
+      "Die wichtigsten Neuerungen im Überblick": 1792,
+      "Ausnahmen je nach Produktart": 4730,
+      "Gute Idee, aber viel Arbeit": 7643
+     },
+     "bilder": [
+      [
+       "App-Symbol „Sell on Etsy“ mit orangefarbenem Etsy-Schriftzug zwischen weiteren Apps auf einem Bildschirm.",
+       314,
+       232,
+       412
+      ],
+      [
+       "Sandra May",
+       9464,
+       90,
+       90
+      ]
+     ],
+     "hoehe": 13195
+    },
+    "bestehende": {
+     "clipTop": 7481,
+     "clipHoehe": 900,
+     "pos": {
+      "Die neuen Regeln gelten nicht nur für neue Angebote. Etsy stellt klar: Wer bestehende Listings hat, die die Anforderungen nicht erfüllen, muss sie anpassen.": [
+       7781,
+       168
+      ]
+     },
+     "ank": {
+      "Etsy-Shop unter Druck": 157,
+      "Die wichtigsten Neuerungen im Überblick": 1792,
+      "Ausnahmen je nach Produktart": 4730,
+      "Gute Idee, aber viel Arbeit": 7643
+     },
+     "bilder": [
+      [
+       "App-Symbol „Sell on Etsy“ mit orangefarbenem Etsy-Schriftzug zwischen weiteren Apps auf einem Bildschirm.",
+       314,
+       232,
+       412
+      ],
+      [
+       "Sandra May",
+       9464,
+       90,
+       90
+      ]
+     ],
+     "hoehe": 13195
+    }
+   }
+  },
+  "hilfe-bilder": {
+   "url": "https://help.etsy.com/hc/de/articles/44297885802647-Inwiefern-gelten-Etsys-Voraussetzungen-f%C3%BCr-Artikelbilder-f%C3%BCr-meine-Artikel?segment=selling",
+   "status": 200,
+   "titel": "Inwiefern gelten Etsys Voraussetzungen für Artikelbilder für meine Artikel? – Etsy",
+   "varianten": {
+    "foto": {
+     "clipTop": 0,
+     "clipHoehe": 1400,
+     "pos": {
+      "Etsy schreibt für die meisten Artikel mindestens ein unbearbeitetes Foto vor.": [
+       438,
+       41
+      ]
+     },
+     "ank": {
+      "Inwiefern gelten Etsys Voraussetzungen": 207,
+      "Was gilt, wenn ich digitale Downloads": 2913
+     },
+     "bilder": [],
+     "hoehe": 5483
+    },
+    "weitere": {
+     "clipTop": 0,
+     "clipHoehe": 1400,
+     "pos": {
+      "Für weitere Bilder kannst du Bildbearbeitungsprogramme nutzen, auch solche mit KI, solange deine Bilder auch genau das zeigen, was die Käufer:innen erhalten werden.": [
+       462,
+       137
+      ]
+     },
+     "ank": {
+      "Inwiefern gelten Etsys Voraussetzungen": 207,
+      "Was gilt, wenn ich digitale Downloads": 2913
+     },
+     "bilder": [],
+     "hoehe": 5483
+    },
+    "ausnahmen": {
+     "clipTop": 2764,
+     "clipHoehe": 1160,
+     "pos": {
+      "Die Anforderungen können je nachdem, was du verkaufst, unterschiedlich sein:": [
+       3024,
+       41
+      ]
+     },
+     "ank": {
+      "Inwiefern gelten Etsys Voraussetzungen": 207,
+      "Was gilt, wenn ich digitale Downloads": 2913
+     },
+     "bilder": [],
+     "hoehe": 5483
+    }
+   }
+  },
+  "hilfe-verkaufen": {
+   "url": "https://help.etsy.com/hc/de/articles/360024112614-Was-kann-ich-auf-Etsy-verkaufen?segment=selling",
+   "status": 200,
+   "titel": "Was kann ich auf Etsy verkaufen? – Etsy",
+   "varianten": {
+    "anleitungen": {
+     "clipTop": 4428,
+     "clipHoehe": 980,
+     "pos": {
+      "KI-generierte Funktionsanleitungen, wie zum Beispiel Bastelvorlagen, Rezepte und Anleitungen": [
+       4848,
+       65
+      ]
+     },
+     "ank": {
+      "Was kann ich auf Etsy verkaufen?": 229,
+      "KI-generierte Inhalte": 4269
+     },
+     "bilder": [],
+     "hoehe": 7361
+    },
+    "bots": {
+     "clipTop": 4398,
+     "clipHoehe": 980,
+     "pos": {
+      "Von Bots erstellte Inhalte": [
+       4818,
+       17
+      ]
+     },
+     "ank": {
+      "Was kann ich auf Etsy verkaufen?": 229,
+      "KI-generierte Inhalte": 4269
+     },
+     "bilder": [],
+     "hoehe": 7361
+    },
+    "liste": {
+     "clipTop": 4329,
+     "clipHoehe": 980,
+     "pos": {
+      "Bestimmte Arten von KI-generierten Inhalten sind auf Etsy nicht erlaubt, darunter:": [
+       4749,
+       48
+      ]
+     },
+     "ank": {
+      "Was kann ich auf Etsy verkaufen?": 229,
+      "KI-generierte Inhalte": 4269
+     },
+     "bilder": [],
+     "hoehe": 7361
+    }
+   }
+  }
+ },
+ "datum": "2026-10-27T21:19:18.047Z",
+ "viewport": "412x732 @2.62"
+}

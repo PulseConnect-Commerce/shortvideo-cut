@@ -1,0 +1,51 @@
+{
+ "projekt": "etsyki",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 18.0,
+   "text": "Etsy-Händler aufgepasst! Etsy zieht jetzt bei KI tatsächlich ziemlich klare Grenzen. Und wenn du jetzt dort verkaufst, dann kann es sogar auch deine alten Produktbilder treffen."
+  },
+  {
+   "take": "t1",
+   "ab": 30.6,
+   "text": "Schaut euch mal diese Meldung hier an. Seit dem 22. Oktober verlangt Etsy bei vielen Angeboten mindestens ein echtes und komplett unbearbeitetes Foto von eurem Produkt."
+  },
+  {
+   "take": "t1",
+   "ab": 44.5,
+   "text": "Das heißt jetzt aber natürlich nicht, dass alle KI-Bilder generell verboten sind. Weitere Bilder dürfen natürlich weiterhin bearbeitet werden, solange sie aber das Produkt korrekt zeigen. Und für manche Produkte gibt es tatsächlich sogar auch Ausnahmen."
+  },
+  {
+   "take": "t1",
+   "ab": 58.85,
+   "text": "Was aber außerdem neu ist, KI-generierte Anleitungen, zum Beispiel Schnittmuster oder auch Rezepte, sind nicht mehr erlaubt. Und komplett automatisch erstellte Angebote ohne menschliche Beteiligung leider auch nicht mehr."
+  },
+  {
+   "take": "t1",
+   "ab": 81.9,
+   "text": "Und das betrifft aber leider nicht nur die neuen Listings, sondern eben auch bestehende Listings. Ich finde den Schritt von Etsy hier tatsächlich spannend, weil Etsy damit natürlich Vertrauen in echte Handarbeit stärker unterstützen will."
+  },
+  {
+   "take": "t1",
+   "ab": 96.0,
+   "text": "Wenn auch ihr auf Etsy verkauft, dann prüft bitte eure Bilder unbedingt und auch die Anleitungen."
+  },
+  {
+   "take": "t1",
+   "ab": 104.0,
+   "text": "Und wenn ihr weitere solcher News zu E-Commerce nicht verpassen wollt, dann drückt ihr gerne das Plus weg."
+  }
+ ],
+ "ende": {
+  "bis": 108.7
+ },
+ "korrekturen": []
+}
