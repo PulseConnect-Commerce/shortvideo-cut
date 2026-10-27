@@ -149,7 +149,9 @@
       <!-- Q1 echte Quelle OnlinehändlerNews / Händlerbund: "Schaut euch mal diese Meldung hier an. Seit dem 22. Oktober verlangt
            Etsy bei vielen Angeboten" Schaut 9,63 (Karte, Kamera: Überschrift "Etsy-Shop unter Druck: Neue KI-Regeln zwingen zum
            Foto-Marathon", 26.10.2026) / Seit 11,51 (Absatz "Seit dem 22. Oktober 2026 gelten neue Regeln …", grün markiert) /
-           22. 11,89 (Rahmen um die Markierung). Bild: ohn.haendlerbund.de, Sandra May, 26.10.2026, Handy-Ansicht, aufgenommen
+           22. 11,89 (Rahmen um die Markierung) / verlangt 13,01 (Abschnitt "1. Pflicht: mindestens ein unbearbeitetes Foto" mit dem
+           wörtlichen Zitat aus dem Briefing "Jedes Angebot braucht künftig mindestens ein Foto des echten Artikels vor einem echten
+           Hintergrund.", grün markiert) / bei vielen 13,75 (Rahmen um das Zitat). Bild: ohn.haendlerbund.de, Sandra May, 26.10.2026, Handy-Ansicht, aufgenommen
            27.10.2026 (ohne das Artikelbild) -->
       <section id="q1" class="karte clip" data-start="9.50" data-duration="5.22" data-track-index="1">
         <div class="qlabel"><span class="qdot"></span>OnlinehändlerNews · Händlerbund · 26.10.2026</div>
@@ -157,6 +159,9 @@
           <div class="qlage" id="q1-kopf"><img src="assets/ohn-kopf.jpg" width="1079" height="483" alt="" /></div>
           <div class="qlage" id="q1-seit" style="opacity:0"><img src="assets/ohn-seit.jpg" width="1079" height="548" alt="" />
             <div class="mark" id="q1-m" style="left:62px;top:174px;width:944px;height:370px"></div>
+          </div>
+          <div class="qlage" id="q1-zitat" style="opacity:0"><img src="assets/ohn-zitat.jpg" width="1079" height="747" alt="" />
+            <div class="mark" id="q1-m2" style="left:64px;top:328px;width:818px;height:380px"></div>
           </div>
         </div>
       </section>
@@ -497,7 +502,12 @@
       tl.to("#q1-kopf", { opacity: 0, y: -30, duration: 0.3, ease: "power2.in" }, 11.44);
       tl.fromTo("#q1-seit", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 11.46);
       pop("#q1-m", 11.82, 0.25);
-      tl.to("#q1-seit", { y: -56, duration: 2.6, ease: "sine.inOut" }, 11.9);
+      tl.to("#q1-seit", { y: -56, duration: 1.0, ease: "sine.inOut" }, 11.9);
+      gsap.set("#q1-zitat", { x: 88, y: -30, scale: 0.56 });
+      tl.to("#q1-seit", { opacity: 0, y: -80, duration: 0.3, ease: "power2.in" }, 12.94);
+      tl.fromTo("#q1-zitat", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 12.96);
+      tl.to("#q1-zitat", { y: -120, duration: 0.6, ease: "power2.inOut" }, 13.10);
+      pop("#q1-m2", 13.68, 0.25);
       tl.to("#q1", { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.25, ease: "power2.in" }, 14.47);
 
       // K1 1 echtes, unbearbeitetes Foto

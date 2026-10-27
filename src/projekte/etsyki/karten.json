@@ -7,17 +7,39 @@
    "text": "Dein Etsy-Shop: vier neutrale Artikel (keine erfundenen Produkte), Preis-Etiketten (verkaufst), Uhr 'alt' (alten), Bilder hervorgehoben (Produktbilder), '!' auf den Bildern und 'auch alte!' (treffen)",
    "start": 5.96,
    "ende": 9.54,
-   "teile": { "verkaufst": 6.82, "alten": 8.37, "produktbilder": 8.64, "treffen": 9.14 },
-   "sfx": [{ "datei": "whoosh.mp3", "at": 5.96, "volume": 0.12 }]
+   "teile": {
+    "verkaufst": 6.82,
+    "alten": 8.37,
+    "produktbilder": 8.64,
+    "treffen": 9.14
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.96,
+     "volume": 0.12
+    }
+   ]
   },
   {
    "id": "q1",
    "wort": "Schaut (euch mal diese Meldung hier an)",
-   "text": "Echte Quelle: OnlinehändlerNews/Händlerbund, Sandra May, 26.10.2026; Überschrift 'Etsy-Shop unter Druck: Neue KI-Regeln zwingen zum Foto-Marathon' mit Datum, auf 'Seit' der Absatz 'Seit dem 22. Oktober 2026 gelten neue Regeln für Produktfotos, KI-generierte Anleitungen und automatisch erstellte Angebote.' (grün markiert), Rahmen auf '22.'",
+   "text": "Echte Quelle: OnlinehändlerNews/Händlerbund, Sandra May, 26.10.2026; Überschrift 'Etsy-Shop unter Druck: Neue KI-Regeln zwingen zum Foto-Marathon' mit Datum, auf 'Seit' der Absatz 'Seit dem 22. Oktober 2026 gelten neue Regeln für Produktfotos, KI-generierte Anleitungen und automatisch erstellte Angebote.' (grün markiert), Rahmen auf '22.', auf 'verlangt' der Abschnitt '1. Pflicht: mindestens ein unbearbeitetes Foto' mit dem wörtlichen Zitat aus dem Briefing 'Jedes Angebot braucht künftig mindestens ein Foto des echten Artikels vor einem echten Hintergrund.' (grün markiert), Rahmen auf 'bei vielen'",
    "start": 9.5,
    "ende": 14.72,
-   "teile": { "seit": 11.51, "22": 11.89 },
-   "sfx": [{ "datei": "kamera.mp3", "at": 9.5, "volume": 0.12 }]
+   "teile": {
+    "seit": 11.51,
+    "22": 11.89,
+    "verlangt": 13.01,
+    "vielen": 13.75
+   },
+   "sfx": [
+    {
+     "datei": "kamera.mp3",
+     "at": 9.5,
+     "volume": 0.12
+    }
+   ]
   },
   {
    "id": "k1",
@@ -25,10 +47,24 @@
    "text": "Einblendung aus dem Briefing '1 ECHTES, UNBEARBEITETES FOTO': Platz 1 als Pflichtfeld, Kamera (echtes), Bearbeiten-Werkzeug (komplett) durchgestrichen mit Schloss 'unbearbeitet' (unbearbeitetes), Blitz und Haken (Foto), 'dein Produkt' und 'Pflicht' (Produkt)",
    "start": 14.72,
    "ende": 19.03,
-   "teile": { "echtes": 15.65, "komplett": 16.31, "unbearbeitetes": 16.89, "foto": 17.57, "produkt": 18.61 },
+   "teile": {
+    "echtes": 15.65,
+    "komplett": 16.31,
+    "unbearbeitetes": 16.89,
+    "foto": 17.57,
+    "produkt": 18.61
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 14.72, "volume": 0.12 },
-    { "datei": "tick.mp3", "at": 16.84, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 14.72,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 16.84,
+     "volume": 0.1
+    }
    ]
   },
   {
@@ -37,10 +73,26 @@
    "text": "Weitere Bilder (Briefing-Idee 'weitere Bilder dürfen bearbeitet sein'): Platz 1 echt mit Schloss, drei weitere Plätze; Bilder (alle), KI-Funken (KI-Bilder), Haken (sind), hervorgehoben (Weitere), Licht / Zuschnitt / Hintergrund laut Etsy-Hilfe (bearbeitet), '=' zum echten Foto (solange), 'korrekt!' (korrekt). Kein 'verboten' im Bild",
    "start": 18.96,
    "ende": 27.96,
-   "teile": { "alle": 20.95, "ki-bilder": 21.19, "sind": 22.49, "weitere": 23.27, "bearbeitet": 24.85, "solange": 25.65, "korrekt": 26.85 },
+   "teile": {
+    "alle": 20.95,
+    "ki-bilder": 21.19,
+    "sind": 22.49,
+    "weitere": 23.27,
+    "bearbeitet": 24.85,
+    "solange": 25.65,
+    "korrekt": 26.85
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 18.96, "volume": 0.12 },
-    { "datei": "tick.mp3", "at": 22.42, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 18.96,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 22.42,
+     "volume": 0.1
+    }
    ]
   },
   {
@@ -49,8 +101,21 @@
    "text": "Einblendung aus dem Briefing 'AUSNAHMEN JE NACH PRODUKT': Regel '1 unbearbeitetes Foto' mit Abzweig (manche) zu Print-on-Demand (Produkte), Digitale Downloads (gibt), Auftragsarbeiten (tatsächlich), 'Beispiele laut Etsy-Hilfe' (sogar), Ziele hervorgehoben (Ausnahmen)",
    "start": 28.02,
    "ende": 30.97,
-   "teile": { "manche": 28.35, "produkte": 28.65, "gibt": 29.05, "tatsaechlich": 29.33, "sogar": 29.93, "ausnahmen": 30.55 },
-   "sfx": [{ "datei": "whoosh.mp3", "at": 28.02, "volume": 0.12 }]
+   "teile": {
+    "manche": 28.35,
+    "produkte": 28.65,
+    "gibt": 29.05,
+    "tatsaechlich": 29.33,
+    "sogar": 29.93,
+    "ausnahmen": 30.55
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 28.02,
+     "volume": 0.12
+    }
+   ]
   },
   {
    "id": "q2",
@@ -58,8 +123,16 @@
    "text": "Echte Quelle: Etsy-Hilfe 'Was kann ich auf Etsy verkaufen?' (help.etsy.com, abgerufen 27.10.2026): 'Bestimmte Arten von KI-generierten Inhalten sind auf Etsy nicht erlaubt, darunter: Von Bots erstellte Inhalte, KI-generierte Funktionsanleitungen, wie zum Beispiel Bastelvorlagen, Rezepte und Anleitungen …'; Rahmen auf 'KI-generierte'",
    "start": 30.97,
    "ende": 32.92,
-   "teile": { "ki-generierte": 32.23 },
-   "sfx": [{ "datei": "kamera.mp3", "at": 30.97, "volume": 0.12 }]
+   "teile": {
+    "ki-generierte": 32.23
+   },
+   "sfx": [
+    {
+     "datei": "kamera.mp3",
+     "at": 30.97,
+     "volume": 0.12
+    }
+   ]
   },
   {
    "id": "k4",
@@ -67,8 +140,19 @@
    "text": "Einblendung aus dem Briefing 'KI-ANLEITUNGEN: NICHT ERLAUBT': KI erzeugt zwei Anleitungen, Schnittmuster (Schnittmuster), Rezept (Rezepte), rotes ✕ (nicht), 'nicht mehr' (erlaubt)",
    "start": 32.92,
    "ende": 36.98,
-   "teile": { "schnittmuster": 34.01, "rezepte": 34.99, "nicht": 35.77, "erlaubt": 36.05 },
-   "sfx": [{ "datei": "whoosh.mp3", "at": 32.92, "volume": 0.12 }]
+   "teile": {
+    "schnittmuster": 34.01,
+    "rezepte": 34.99,
+    "nicht": 35.77,
+    "erlaubt": 36.05
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 32.92,
+     "volume": 0.12
+    }
+   ]
   },
   {
    "id": "k5",
@@ -76,8 +160,20 @@
    "text": "Einblendung aus dem Briefing 'BOT-LISTINGS: NICHT ERLAUBT': Bot, Angebote laufen heraus (automatisch), 'Angebote' (Angebote), leerer Platz für den Menschen (ohne), durchgestrichen 'ohne Mensch' (Beteiligung), rotes ✕ (nicht)",
    "start": 36.98,
    "ende": 41.54,
-   "teile": { "automatisch": 37.79, "angebote": 38.93, "ohne": 39.4, "beteiligung": 40.05, "nicht": 41.15 },
-   "sfx": [{ "datei": "whoosh.mp3", "at": 36.98, "volume": 0.12 }]
+   "teile": {
+    "automatisch": 37.79,
+    "angebote": 38.93,
+    "ohne": 39.4,
+    "beteiligung": 40.05,
+    "nicht": 41.15
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 36.98,
+     "volume": 0.12
+    }
+   ]
   },
   {
    "id": "k6",
@@ -85,8 +181,19 @@
    "text": "Einblendung aus dem Briefing 'AUCH ALTE LISTINGS PRÜFEN': zwei Plätze, '+' (nicht), neue Listings (neuen), alte Listings mit Uhr (bestehende), Lupe und 'auch die!' (Listings)",
    "start": 41.52,
    "ende": 46.55,
-   "teile": { "nicht": 43.11, "neuen": 43.85, "bestehende": 45.11, "listings": 45.63 },
-   "sfx": [{ "datei": "whoosh.mp3", "at": 41.52, "volume": 0.12 }]
+   "teile": {
+    "nicht": 43.11,
+    "neuen": 43.85,
+    "bestehende": 45.11,
+    "listings": 45.63
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 41.52,
+     "volume": 0.12
+    }
+   ]
   },
   {
    "id": "k7",
@@ -94,10 +201,25 @@
    "text": "Seine Einschätzung: 'neue Regeln von Etsy' (Schritt), Sticker 'SPANNEND.' auf der Schulter (spannend), Pfeil (weil), Schild und 'Vertrauen' (Vertrauen), Hand im Schild 'echte Handarbeit' (Handarbeit), Schild wird kräftiger (stärker)",
    "start": 46.55,
    "ende": 53.25,
-   "teile": { "schritt": 47.19, "spannend": 48.65, "weil": 49.43, "vertrauen": 50.53, "handarbeit": 51.55, "staerker": 52.07 },
+   "teile": {
+    "schritt": 47.19,
+    "spannend": 48.65,
+    "weil": 49.43,
+    "vertrauen": 50.53,
+    "handarbeit": 51.55,
+    "staerker": 52.07
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 46.55, "volume": 0.12 },
-    { "datei": "pop.mp3", "at": 48.58, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 46.55,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 48.58,
+     "volume": 0.1
+    }
    ]
   },
   {
@@ -106,10 +228,23 @@
    "text": "Sein Tipp: dein Listing mit Bild und Anleitung, Lupe (prüft), aufs Bild '1 unbearbeitetes Foto?' (Bilder), abgehakt (unbedingt), auf die Anleitung 'Anleitung selbst erstellt?' (Anleitungen), abgehakt",
    "start": 53.25,
    "ende": 58.12,
-   "teile": { "prueft": 55.1, "bilder": 55.84, "unbedingt": 56.14, "anleitungen": 57.5 },
+   "teile": {
+    "prueft": 55.1,
+    "bilder": 55.84,
+    "unbedingt": 56.14,
+    "anleitungen": 57.5
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 53.25, "volume": 0.12 },
-    { "datei": "tick.mp3", "at": 56.07, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 53.25,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.07,
+     "volume": 0.1
+    }
    ]
   },
   {
@@ -118,10 +253,25 @@
    "text": "Umfrage (Regie: Schluss mit Frage oder Umfrage und Folgen-Plus): 'Listings schon geprüft?', 'Ja, alle' (weitere), 'Noch nicht' (News), 'Schreib's in die Kommentare' (E-Commerce), Folgen (verpassen), Zeiger (drückt), Plus angetippt und zum Haken (Plus)",
    "start": 58.12,
    "ende": 62.93,
-   "teile": { "weitere": 58.71, "news": 59.37, "e-commerce": 59.89, "verpassen": 60.65, "drueckt": 61.63, "plus": 62.33 },
+   "teile": {
+    "weitere": 58.71,
+    "news": 59.37,
+    "e-commerce": 59.89,
+    "verpassen": 60.65,
+    "drueckt": 61.63,
+    "plus": 62.33
+   },
    "sfx": [
-    { "datei": "whoosh.mp3", "at": 58.12, "volume": 0.12 },
-    { "datei": "klick.mp3", "at": 62.26, "volume": 0.1 }
+    {
+     "datei": "whoosh.mp3",
+     "at": 58.12,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 62.26,
+     "volume": 0.1
+    }
    ]
   }
  ]
