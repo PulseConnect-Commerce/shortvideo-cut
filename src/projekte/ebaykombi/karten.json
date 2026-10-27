@@ -1,0 +1,382 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlage P04/N06) für N09 · eBay-Kombirabatte. Sekunden im geschnittenen Video (cut.json, 85,03 s); Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) beim Kartenwechsel (Abstand >= 1,5 s), kamera (0,12) auf den echten Quellen, tick (0,10) auf ausgewählten Zuständen, pop (0,10) auf dem Sticker, klick (0,10) auf dem Schalter und dem Plus. Gebaut in hyperframes/ebaykombi-skizzen/index.html. Echte Quellen: Händlerbund (26.10.2026) in Q1, eBay-Hilfe in Q2; Hintergründe hinter ihm (npm run portrait --hintergrund) in Video.tsx (HG).",
+ "karten": [
+  {
+   "id": "k0",
+   "wort": "verschenkst",
+   "text": "Geschenk 'verschenkt?', Etikett '−15 %' fliegt heraus; auf 'ausrechnen' der Rechner und 'erst rechnen' (Kicker 'Bevor du Rabatt gibst')",
+   "start": 3.53,
+   "ende": 6.1,
+   "teile": {
+    "verschenkst": 3.6,
+    "ausrechnen": 5.54
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 3.53,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Mit (den neuen Kombirabatten)",
+   "text": "Echte Quelle: Händlerbund / Onlinehändler News, 26.10.2026, Überschrift 'Mehr Artikel pro Bestellung? Ebay startet Kombirabatte für Händler', Markierung auf 'Kombirabatte'",
+   "start": 6.1,
+   "ende": 9.2,
+   "teile": {
+    "kombirabatten": 6.75
+   },
+   "sfx": [
+    {
+     "datei": "kamera.mp3",
+     "at": 6.1,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "wort": "belohnen",
+   "text": "Warenkorb füllt sich (Briefing-Idee): Belohnung, auf 'mehrere', 'Artikel', 'Bestellung' fällt je ein Artikel in den Wagen, auf 'kaufen' die Plakette '−%'",
+   "start": 9.24,
+   "ende": 12.72,
+   "teile": {
+    "belohnen": 9.31,
+    "mehrere": 10.51,
+    "artikel": 10.85,
+    "bestellung": 11.71,
+    "kaufen": 12.11
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 9.24,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 12.04,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Du (kannst bis zu drei Stufen)",
+   "text": "Stufen-Grafik aus dem Briefing, als BEISPIEL gekennzeichnet: drei leere Stufen, Stempel 'BEISPIEL', 2 Artikel −5 %, 3 Artikel −10 %, 4+ Artikel −15 % auf ihren Wörtern, Stift und 'du wählst' auf 'Prozentsätze bestimmst du selbst'",
+   "start": 12.72,
+   "ende": 22.3,
+   "teile": {
+    "drei": 13.54,
+    "beispiel": 14.81,
+    "zwei": 15.71,
+    "5": 16.31,
+    "drei_2": 17.27,
+    "10": 17.64,
+    "vier": 18.62,
+    "15": 19.01,
+    "prozentsaetze": 20.39,
+    "bestimmst": 21.31
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 12.72,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 18.94,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Und (das funktioniert)",
+   "text": "Gilt für: dreimal derselbe Artikel ✓ und drei verschiedene Artikel ✓",
+   "start": 22.3,
+   "ende": 28.13,
+   "teile": {
+    "denselben": 24.11,
+    "mehrfach": 24.95,
+    "unterschiedlichen": 27.01,
+    "produkten": 27.63
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 22.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 27.56,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Der (Rabatt)",
+   "text": "Warenkorb mit drei Artikeln, auf 'automatisch' schiebt sich die Zeile 'Kombirabatt −%' hinein, auf 'berücksichtigt' Haken und 'automatisch'",
+   "start": 28.13,
+   "ende": 31.04,
+   "teile": {
+    "automatisch": 29.06,
+    "beruecksichtigt": 30.07
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 28.13,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 30.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Aktivieren",
+   "text": "Schalter 'Kombirabatte' aus, Zeiger tippt auf 'selbst', Schalter an, 'selbst an!'; auf 'Standardmäßig' die Zeile 'Standard: AUS'",
+   "start": 31.04,
+   "ende": 35.46,
+   "teile": {
+    "selbst": 32.55,
+    "standardmaessig": 33.04,
+    "eingeschaltet": 34.88
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 31.04,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 32.48,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Klingt (gut)",
+   "text": "Balken '1 Artikel' und 'mehrere' (wächst), 'Ø Warenkorbwert', Pfeil nach oben, 'höher'",
+   "start": 35.46,
+   "ende": 42.38,
+   "teile": {
+    "mehrere": 36.57,
+    "warenkorbwert": 39.21,
+    "erhoehen": 39.87
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 35.46,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 39.8,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "st1",
+   "wort": "Haken",
+   "text": "Sticker 'DER HAKEN.' links neben dem Kopf",
+   "start": 41.6,
+   "ende": 42.75,
+   "teile": {
+    "haken": 41.67
+   },
+   "sfx": [
+    {
+     "datei": "pop.mp3",
+     "at": 41.6,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Denn (mehr Umsatz)",
+   "text": "Einblendung aus dem Briefing 'MEHR WARENKORB ≠ MEHR GEWINN' (zweiter Teil im Verlauf): Umsatz-Balken wächst, ≠, Preis-Balken mit Kosten und Marge, Marge wird schmal ('knapp'), Rabatt-Block −10 % / −15 % senkt sich auf die Marge, auf 'auffressen' ist sie weg (rot), 'gefressen'",
+   "start": 42.38,
+   "ende": 51.63,
+   "teile": {
+    "umsatz": 42.87,
+    "nicht": 44.13,
+    "gewinn": 44.99,
+    "marge": 46.09,
+    "knapp": 46.45,
+    "10": 48.13,
+    "15": 48.65,
+    "rabatt": 49.39,
+    "auffressen": 51.07
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 42.38,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 51.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Rechne",
+   "text": "Vorher rechnen: Balken 'Preis nach Rabatt', Einkauf, Gebühren (eBay-Gebühren), Versand, Retouren knabbern je ein Stück ab, der Rest (gestrichelt) ist der 'Deckungsbeitrag', 'übrig?'",
+   "start": 51.63,
+   "ende": 59.18,
+   "teile": {
+    "einkauf": 55.48,
+    "ebay_gebuehren": 56.2,
+    "versand": 56.94,
+    "retouren": 57.54,
+    "uebrig": 58.62
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 51.63,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 58.55,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "Und (eine Sache)",
+   "text": "Echte Quelle: eBay-Hilfe 'Kombirabatte für Verkäufer', Abschnitt 'So funktionieren Rückgaben', Markierung auf 'berechnen wir den neuen Preis für die Artikel, die der Käufer behält.'",
+   "start": 59.18,
+   "ende": 61.09,
+   "teile": {
+    "wichtig": 60.39
+   },
+   "sfx": [
+    {
+     "datei": "kamera.mp3",
+     "at": 59.18,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Teilretouren",
+   "text": "Einblendung aus dem Briefing 'TEILRETOURE? RABATT WIRD NEU BERECHNET': drei Artikel, auf 'berechnet' geht einer zurück, die zwei behaltenen ✓, Rabattstufe springt von '3 Artikel' auf '2 Artikel', 'neu'",
+   "start": 61.09,
+   "ende": 65.76,
+   "teile": {
+    "berechnet": 61.93,
+    "rabattstufe": 63.43,
+    "behaltenen": 64.45,
+    "neu": 65.43
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 61.09,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 65.36,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Mein (Tipp)",
+   "text": "Tipp: Kolben 'erst testen', zwei Teile A und B greifen auf 'zusammenpassen' ineinander ('passt zusammen'), 'Marge ✓' auf 'genug Marge'",
+   "start": 65.76,
+   "ende": 73.12,
+   "teile": {
+    "teste": 67.03,
+    "produkten": 68.63,
+    "zusammenpassen": 70.37,
+    "marge": 72.03
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 65.76,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 70.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "Nicht (einfach nur pauschal)",
+   "text": "Regal mit zehn Artikeln, auf 'ganze' bekommen alle '−%', auf 'rabattieren' durchgestrichen, ✕, 'nicht alles'",
+   "start": 73.12,
+   "ende": 75.82,
+   "teile": {
+    "ganze": 74.37,
+    "rabattieren": 75.17
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 73.12,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 75.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Schreib's",
+   "text": "Umfrage 'Würdest du das nutzen?' mit 'Schreib's in die Kommentare', 'Ja, direkt' auf 'direkt', 'Erst testen' auf 'Tests', Folgen-Plus auf 'Und nicht vergessen', auf 'Plus' angetippt und zum Haken (keine Folgennummer)",
+   "start": 75.82,
+   "ende": 85.03,
+   "teile": {
+    "kommentare": 76.67,
+    "direkt": 79.23,
+    "tests": 82.33,
+    "und": 82.97,
+    "plus": 84.02
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 75.82,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 83.95,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

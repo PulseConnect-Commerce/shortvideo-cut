@@ -1,0 +1,141 @@
+{
+ "projekt": "ebaykombi",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 0.85,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 8.0,
+   "text": "eBay hat eine neue Rabattfunktion, aber bevor du jetzt 15% verschenkst, solltest du eine Sache erst einmal ausrechnen."
+  },
+  {
+   "take": "t1",
+   "ab": 33.6,
+   "text": "Mit den neuen Kombirabatten können tatsächlich Händler Kunden belohnen, wenn sie mehrere Artikel in einer Bestellung kaufen. Du kannst bis zu drei Stufen festlegen. Zum Beispiel ab zwei Artikel 5%, ab drei 10% und ab vier 15%. Die Prozentsätze bestimmst du selbst."
+  },
+  {
+   "take": "t1",
+   "ab": 50.2,
+   "text": "Und das funktioniert nicht nur, wenn jemand denselben Artikel mehrfach kauft, sondern eben auch bei unterschiedlichen Produkten."
+  },
+  {
+   "take": "t1",
+   "ab": 59.7,
+   "text": "Der Rabatt wird dann automatisch im Warenkorb berücksichtigt. aktivieren musst du ihn aber leider selbst."
+  },
+  {
+   "take": "t1",
+   "ab": 66.3,
+   "text": "Standardmäßig ist er nämlich nicht eingeschaltet. Klingt gut, denn mehrere Artikel Probestellung können natürlich deinen durchschnittlichen Warenkorbwert erhöhen. Aber hier kommt eben der kleine Haken. Denn mehr Umsatz bedeutet natürlich nicht automatisch mehr Gewinn. Wenn also deine Marge knapp ist, können tatsächlich 10 oder 15 Prozent Rabatt den Deckungsbeitrag komplett auffressen."
+  },
+  {
+   "take": "t1",
+   "ab": 94.3,
+   "text": "Rechnen also tatsächlich vorher zunächst einmal durch, was überhaupt nach dem Einkauf, nach eBay-Gebühren, Versand und Retouren überhaupt noch übrig bleibt."
+  },
+  {
+   "take": "t1",
+   "ab": 108.4,
+   "text": "und eine Sache ist hier noch wichtig, bei Teilretouren berechnet dann eBay tatsächlich die Rabattstufe für die behaltenen Artikel neu. Mein Tipp ist hier also, teste erst einmal Kombirabatte mit Produkten, die tatsächlich gut zusammenpassen und genug Marge haben. Nicht einfach nur pauschal das ganze Sortiment rabattieren,"
+  },
+  {
+   "take": "t1",
+   "ab": 153.5,
+   "text": "Schreibst du mir gerne mal in die Kommentare. Würdest du das Ganze in deinem eBay-Shop direkt nutzen oder wartest du doch lieber zunächst einmal einige Tests an? Und nicht vergessen, plus sie drücken!"
+  }
+ ],
+ "ende": {
+  "bis": 163.8
+ },
+ "korrekturen": [
+  [
+   "t1",
+   10.68,
+   "15%",
+   "15 %"
+  ],
+  [
+   "t1",
+   43.84,
+   "5%,",
+   "5 %,"
+  ],
+  [
+   "t1",
+   45.18,
+   "10%",
+   "10 %"
+  ],
+  [
+   "t1",
+   46.54,
+   "15%.",
+   "15 %."
+  ],
+  [
+   "t1",
+   62.76,
+   "aktivieren",
+   "Aktivieren"
+  ],
+  [
+   "t1",
+   71.4,
+   "Probestellung",
+   "pro Bestellung"
+  ],
+  [
+   "t1",
+   94.46,
+   "Rechnen",
+   "Rechne"
+  ],
+  [
+   "t1",
+   108.61,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   125.3,
+   "rabattieren,",
+   "rabattieren."
+  ],
+  [
+   "t1",
+   153.6,
+   "Schreibst",
+   "Schreib’s"
+  ],
+  [
+   "t1",
+   153.82,
+   "du",
+   ""
+  ],
+  [
+   "t1",
+   160.34,
+   "an?",
+   "ab?"
+  ],
+  [
+   "t1",
+   162.86,
+   "plus",
+   "Plus"
+  ],
+  [
+   "t1",
+   163.06,
+   "sie",
+   ""
+  ]
+ ]
+}

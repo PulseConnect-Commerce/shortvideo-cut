@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>N09 · eBay-Kombirabatte – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- NEWS N09 "eBay-Kombirabatte". Erklär-Bilder statt Wortkarten (karten-aufbau.md "Visuelle Metaphern", freigegeben
+         2026-10-26, Vorlage hyperframes/amazonbgh-skizzen): Geschenk "−15 %" und Rechner, echte Quelle Händlerbund (26.10.2026),
+         Warenkorb füllt sich, Stufen 2 / 3 / 4+ Artikel −5 / −10 / −15 % als BEISPIEL, gleiche und verschiedene Artikel,
+         Rabatt automatisch im Warenkorb, Schalter "selbst aktivieren", Ø Warenkorbwert steigt, "MEHR WARENKORB ≠ MEHR GEWINN"
+         (Umsatz steigt, Marge schrumpft), Einkauf / eBay-Gebühren / Versand / Retouren knabbern am Deckungsbeitrag, echte Quelle
+         eBay-Hilfe (Rückgaben), "TEILRETOURE? RABATT WIRD NEU BERECHNET", Tipp: passende Produkte mit Marge, nicht das ganze
+         Sortiment, Umfrage "Würdest du das nutzen?" mit Folgen-Plus. Höchstens 1-3 Wörter je Bild, ein handschriftliches
+         Akzentwort (Caveat, OFL, lokal; Blau #31ADEC). Rahmen wie freigegeben: helle Karte unter dem Kopf (x 80-900, y 1118-1468;
+         Instagram-Zone unten ab 1500), Pill-Untertitel darüber (Remotion, y 1068), ruhige Bewegung ohne Überschwingen. Rot nur
+         für Probleme (Rabatt frisst die Marge, ✕). Zeiten = Sekunden im geschnittenen Video (src/projekte/ebaykombi/cut.json,
+         85,03 s), Teile 2 Frames vor ihrem Wort; Liste mit Tönen in src/projekte/ebaykombi/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1118px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .karte.hoch { height: 378px; }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .qlabel { position: absolute; left: 30px; top: 20px; display: flex; align-items: center; gap: 9px; font-size: 20px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .qdot { width: 11px; height: 11px; border-radius: 6px; background: linear-gradient(135deg, #00e090, #31adec); }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 300px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #6b7280; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .kachel { fill: #fff; stroke: #e5e7eb; stroke-width: 2; }
+      .zeile { fill: #e5e7eb; }
+      .titel { position: absolute; left: 30px; top: 52px; font-size: 42px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; opacity: 0; line-height: 1.12; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .beispiel { position: absolute; right: 28px; top: 16px; padding: 6px 14px 7px; border-radius: 12px; border: 3px solid #0b0c0e; font-size: 22px; font-weight: 900; letter-spacing: 0.12em; opacity: 0; transform: rotate(4deg); background: #fff; }
+
+      /* Quellen-Bild */
+      .qbild { position: absolute; border-radius: 18px; overflow: hidden; background: #fff; border: 1px solid #e5e7eb; }
+      .qlage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+      .qlage img { display: block; }
+      .mark { position: absolute; border: 7px solid #00e090; border-radius: 14px; box-shadow: 0 0 0 5px rgba(49, 173, 236, 0.35), 0 0 30px rgba(0, 224, 144, 0.45); opacity: 0; }
+
+      /* Umfrage + Folgen */
+      .frage-titel { position: absolute; left: 30px; top: 56px; display: flex; align-items: center; gap: 16px; font-size: 44px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; opacity: 0; }
+      .frage-titel .ico2 { width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; }
+      .frage-titel .ico2 svg { width: 32px; height: 32px; fill: none; stroke: #0b0c0e; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .optionen { position: absolute; left: 30px; right: 30px; top: 132px; display: flex; gap: 14px; }
+      .option { position: relative; flex: 1; display: flex; align-items: center; gap: 14px; height: 64px; padding: 0 20px; border-radius: 16px; background: #fff; border: 1px solid #e5e7eb; font-size: 32px; font-weight: 800; opacity: 0; white-space: nowrap; }
+      .option .kreis { flex: none; width: 38px; height: 38px; border-radius: 19px; display: flex; align-items: center; justify-content: center; }
+      .option .kreis svg { width: 22px; height: 22px; fill: none; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+      .kommentar { position: absolute; left: 30px; top: 214px; display: flex; align-items: center; gap: 12px; font-size: 26px; font-weight: 700; color: #374151; opacity: 0; }
+      .kommentar svg { width: 30px; height: 30px; fill: none; stroke: #31adec; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .folgen { position: absolute; left: 30px; bottom: 20px; display: flex; align-items: center; gap: 22px; height: 92px; padding: 0 34px 0 16px; border-radius: 24px; background: #fff; border: 1px solid #e5e7eb; opacity: 0; }
+      .avatar { position: relative; flex: none; width: 66px; height: 66px; border-radius: 33px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 38px; height: 38px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 38px; height: 38px; border-radius: 19px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 22px; height: 22px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 38px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+
+      /* Sticker-Wort links unter dem Kopf (auf der Schulter, nicht auf dem Gesicht) */
+      .sticker { position: absolute; left: 70px; top: 880px; padding: 8px 18px 10px; border-radius: 14px; background: #fff; box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28); font-size: 46px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; opacity: 0; transform: rotate(-4deg); transform-origin: 0 50%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="ebaykombi-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="85.03">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+        </defs>
+      </svg>
+
+      <!-- K0 "aber bevor du jetzt 15 % verschenkst, solltest du eine Sache erst einmal ausrechnen." verschenkst 3,60 (Karte, Geschenk,
+           Etikett "−15 %" fliegt heraus) / ausrechnen 5,54 (Rechner, "erst rechnen") -->
+      <section id="k0" class="karte clip" data-start="3.53" data-duration="2.57" data-track-index="1">
+        <div class="kicker">Bevor du Rabatt gibst</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k0-gift">
+            <rect x="40" y="40" width="190" height="176" rx="26" fill="url(#gvd)" />
+            <g transform="translate(99 62) scale(3)" class="ico" style="stroke-width:1.7"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M12 8v13" /><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" /></g>
+            <text x="135" y="196" text-anchor="middle" class="lab" style="font-size:25px">verschenkt?</text>
+          </g>
+          <g id="k0-tag" opacity="0"><g transform="rotate(-8 330 90)"><rect x="262" y="60" width="148" height="60" rx="14" fill="#fff" stroke="#0b0c0e" stroke-width="3" /><text x="336" y="102" text-anchor="middle" style="font-size:34px;font-weight:900;fill:#0b0c0e">−15 %</text></g></g>
+          <g id="k0-rechner" opacity="0">
+            <rect x="560" y="30" width="200" height="186" rx="26" class="kachel" />
+            <g transform="translate(624 58) scale(3)" class="ico" style="stroke-width:1.7"><rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="16" x2="16" y1="14" y2="18" /><path d="M16 10h.01" /><path d="M12 10h.01" /><path d="M8 10h.01" /><path d="M12 14h.01" /><path d="M8 14h.01" /><path d="M12 18h.01" /><path d="M8 18h.01" /></g>
+          </g>
+          <clipPath id="k0-clip"><rect id="k0-cliprect" x="436" y="190" width="0" height="90" /></clipPath>
+          <text x="442" y="262" class="hand" style="font-size:60px" clip-path="url(#k0-clip)" transform="rotate(-5 520 244)">erst rechnen</text>
+        </svg>
+      </section>
+
+      <!-- Q1 echte Quelle: "Mit den neuen Kombirabatten können tatsächlich Händler Kunden belohnen," Mit 6,17 (Karte, Kamera) /
+           Kombirabatten 6,75 (Markierung auf "Kombirabatte"). Bild: Händlerbund / Onlinehändler News, 26.10.2026, Handy-Ansicht -->
+      <section id="q1" class="karte clip" data-start="6.10" data-duration="3.10" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>Händlerbund · Onlinehändler News · 26.10.2026</div>
+        <div class="qbild" style="left:20px;top:56px;width:780px;height:276px">
+          <div class="qlage" id="q1-lage"><img src="assets/hb-kopf.jpg" width="1079" height="800" alt="" />
+            <div class="mark" id="q1-m" style="left:424px;top:322px;width:430px;height:100px"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- K1 Warenkorb füllt sich: "Kunden belohnen, wenn sie mehrere Artikel in einer Bestellung kaufen." belohnen 9,31 (Karte, Wagen,
+           Belohnung) / mehrere 10,51 / Artikel 10,85 / Bestellung 11,71 (je ein Artikel fällt hinein) / kaufen 12,11 (Rabatt-Plakette) -->
+      <section id="k1" class="karte clip" data-start="9.24" data-duration="3.48" data-track-index="1">
+        <div class="kicker">Kombirabatt</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g transform="translate(250 6)">
+            <g id="k1-a1" opacity="0"><rect x="100" y="112" width="76" height="66" rx="10" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="3" /><path d="M100 138 h76 M138 112 v66" stroke="#0b0c0e" stroke-width="3" /></g>
+            <g id="k1-a2" opacity="0"><rect x="186" y="120" width="70" height="58" rx="10" fill="#fff" stroke="#0b0c0e" stroke-width="3" /><path d="M186 142 h70 M221 120 v58" stroke="#0b0c0e" stroke-width="3" /></g>
+            <g id="k1-a3" opacity="0"><rect x="266" y="104" width="74" height="74" rx="10" fill="#dcf0fb" stroke="#0b0c0e" stroke-width="3" /><path d="M266 134 h74 M303 104 v74" stroke="#0b0c0e" stroke-width="3" /></g>
+            <!-- Wagen (Linien wie Lucide shopping-cart, groß) -->
+            <path d="M10 6 h46 l40 190 a12 12 0 0 0 12 10 h214 a12 12 0 0 0 12 -9 l28 -114 H80" fill="none" stroke="#0b0c0e" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="128" cy="244" r="17" fill="#0b0c0e" /><circle cx="300" cy="244" r="17" fill="#0b0c0e" />
+          </g>
+          <g id="k1-lohn" opacity="0">
+            <rect x="34" y="40" width="170" height="150" rx="24" class="kachel" />
+            <g transform="translate(83 58) scale(3)" class="ico" style="stroke-width:1.7"><circle cx="12" cy="8" r="6" /><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" /></g>
+            <text x="119" y="174" text-anchor="middle" class="lab" style="font-size:24px">Belohnung</text>
+          </g>
+          <g id="k1-rabatt" opacity="0"><circle cx="704" cy="58" r="52" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="3" /><text x="704" y="72" text-anchor="middle" style="font-size:40px;font-weight:900;fill:#0b0c0e">−%</text></g>
+        </svg>
+      </section>
+
+      <!-- K2 Stufen (Grafik aus dem Briefing, als BEISPIEL): "Du kannst bis zu drei Stufen festlegen. Zum Beispiel ab zwei Artikel 5 %,
+           ab drei 10 % und ab vier 15 %. Die Prozentsätze bestimmst du selbst." Du 12,79 (Karte, drei leere Stufen) / Beispiel 14,81
+           (Stempel) / zwei 15,71 / 5 % 16,31 / drei 17,27 / 10 % 17,64 / vier 18,62 / 15 % 19,01 / Prozentsätze 20,39 (Stift) /
+           bestimmst 21,31 ("du bestimmst") -->
+      <section id="k2" class="karte clip" data-start="12.72" data-duration="9.58" data-track-index="1">
+        <div class="kicker">Bis zu 3 Stufen</div>
+        <div class="beispiel" id="k2-bsp">BEISPIEL</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <line x1="30" y1="270" x2="640" y2="270" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" />
+          <rect id="k2-l1" x="40" y="170" width="180" height="100" rx="14" fill="none" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="9 7" />
+          <rect id="k2-l2" x="240" y="110" width="180" height="160" rx="14" fill="none" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="9 7" />
+          <rect id="k2-l3" x="440" y="50" width="180" height="220" rx="14" fill="none" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="9 7" />
+          <g id="k2-s1" opacity="0"><rect x="40" y="170" width="180" height="100" rx="14" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><text x="130" y="210" text-anchor="middle" class="klein" style="font-size:24px;fill:#374151">2 Artikel</text></g>
+          <g id="k2-p1" opacity="0"><text x="130" y="254" text-anchor="middle" style="font-size:38px;font-weight:900;fill:#0b0c0e">−5 %</text></g>
+          <g id="k2-s2" opacity="0"><rect x="240" y="110" width="180" height="160" rx="14" fill="#e6faf2" stroke="#9ee6c8" stroke-width="2" /><text x="330" y="150" text-anchor="middle" class="klein" style="font-size:24px;fill:#374151">3 Artikel</text></g>
+          <g id="k2-p2" opacity="0"><text x="330" y="226" text-anchor="middle" style="font-size:46px;font-weight:900;fill:#0b0c0e">−10 %</text></g>
+          <g id="k2-s3" opacity="0"><rect x="440" y="50" width="180" height="220" rx="14" fill="url(#gvd)" /><text x="530" y="90" text-anchor="middle" class="klein" style="font-size:24px;fill:#0b0c0e">4+ Artikel</text></g>
+          <g id="k2-p3" opacity="0"><text x="530" y="190" text-anchor="middle" style="font-size:54px;font-weight:900;fill:#0b0c0e">−15 %</text></g>
+          <g id="k2-stift" opacity="0" transform="translate(690 110)">
+            <circle cx="50" cy="50" r="50" fill="#fff" stroke="#31adec" stroke-width="4" />
+            <g transform="translate(20 20) scale(2.5)" class="ico" style="stroke:#31adec;stroke-width:2"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /><path d="m15 5 4 4" /></g>
+          </g>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="626" y="220" width="0" height="70" /></clipPath>
+          <text x="630" y="268" class="hand" style="font-size:46px" clip-path="url(#k2-clip)" transform="rotate(-5 700 252)">du wählst</text>
+        </svg>
+      </section>
+
+      <!-- K3 gleiche und verschiedene Artikel: "Und das funktioniert nicht nur, wenn jemand denselben Artikel mehrfach kauft, sondern
+           eben auch bei unterschiedlichen Produkten." Und 22,37 (Karte) / denselben 24,11 (3× derselbe Artikel) / mehrfach 24,95 (✓) /
+           unterschiedlichen 27,01 (drei verschiedene) / Produkten 27,63 (✓, "beides") -->
+      <section id="k3" class="karte clip" data-start="22.30" data-duration="5.83" data-track-index="1">
+        <div class="kicker">Gilt für</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="30" y="20" width="360" height="190" rx="24" class="kachel" />
+          <text x="210" y="252" text-anchor="middle" class="lab" style="font-size:27px">gleicher Artikel</text>
+          <g id="k3-rleer"><rect x="430" y="20" width="360" height="190" rx="24" fill="none" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="10 8" /><text x="610" y="136" text-anchor="middle" style="font-size:60px;font-weight:800;fill:#cbd5e1">?</text></g>
+          <g id="k3-links" opacity="0">
+            <g transform="translate(58 52) scale(3.4)" class="ico" style="stroke-width:1.5"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" /></g>
+            <g transform="translate(170 52) scale(3.4)" class="ico" style="stroke-width:1.5"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" /></g>
+            <g transform="translate(282 52) scale(3.4)" class="ico" style="stroke-width:1.5"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" /></g>
+          </g>
+          <g id="k3-ok1" opacity="0"><circle cx="384" cy="26" r="24" fill="url(#gvd)" /><path d="M373 26 l7 7 l14 -15" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="k3-rechts" opacity="0">
+            <rect x="430" y="20" width="360" height="190" rx="24" class="kachel" />
+            <g transform="translate(458 52) scale(3.4)" class="ico" style="stroke-width:1.5"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" /></g>
+            <g transform="translate(570 52) scale(3.4)" class="ico" style="stroke-width:1.5"><path d="M10 2v2" /><path d="M14 2v2" /><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" /><path d="M6 2v2" /></g>
+            <g transform="translate(682 52) scale(3.4)" class="ico" style="stroke-width:1.5"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /></g>
+            <text x="610" y="252" text-anchor="middle" class="lab" style="font-size:27px">verschiedene</text>
+          </g>
+          <g id="k3-ok2" opacity="0"><circle cx="784" cy="26" r="24" fill="url(#gvd)" /><path d="M773 26 l7 7 l14 -15" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </svg>
+      </section>
+
+      <!-- K4 Rabatt automatisch im Warenkorb: "Der Rabatt wird dann automatisch im Warenkorb berücksichtigt." Der 28,20 (Karte,
+           Warenkorb mit drei Artikeln) / automatisch 29,06 (Zeile "Kombirabatt" schiebt sich hinein) / berücksichtigt 30,07 (Summe ✓) -->
+      <section id="k4" class="karte clip" data-start="28.13" data-duration="2.91" data-track-index="1">
+        <div class="kicker">Im Warenkorb</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="30" y="6" width="560" height="262" rx="22" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+          <g transform="translate(54 24) scale(1.6)" class="ico" style="stroke-width:2.2"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></g>
+          <text x="104" y="56" class="lab" style="font-size:28px">Warenkorb</text>
+          <rect x="54" y="82" width="30" height="30" rx="7" fill="url(#gvd)" /><rect x="100" y="90" width="240" height="14" rx="7" class="zeile" />
+          <rect x="54" y="124" width="30" height="30" rx="7" fill="#dcf0fb" stroke="#9ad9f2" stroke-width="2" /><rect x="100" y="132" width="200" height="14" rx="7" class="zeile" />
+          <rect x="54" y="166" width="30" height="30" rx="7" fill="#e5e7eb" /><rect x="100" y="174" width="220" height="14" rx="7" class="zeile" />
+          <g id="k4-zeile" opacity="0">
+            <rect x="46" y="206" width="528" height="50" rx="14" fill="#e6faf2" stroke="#00d088" stroke-width="2.5" />
+            <text x="66" y="240" style="font-size:25px;font-weight:800;fill:#0b0c0e">Kombirabatt</text>
+            <text x="556" y="240" text-anchor="end" style="font-size:27px;font-weight:900;fill:#00a86b">−%</text>
+          </g>
+          <g id="k4-auto" opacity="0">
+            <rect x="620" y="70" width="170" height="130" rx="22" fill="url(#gvd)" />
+            <path d="M676 138 l18 18 l36 -40" fill="none" stroke="#0b0c0e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="586" y="200" width="0" height="90" /></clipPath>
+          <text x="590" y="262" class="hand" style="font-size:44px" clip-path="url(#k4-clip)" transform="rotate(-5 680 246)">automatisch</text>
+        </svg>
+      </section>
+
+      <!-- K5 selbst aktivieren: "Aktivieren musst du ihn aber leider selbst. Standardmäßig ist er nämlich nicht eingeschaltet."
+           aktivieren 31,11 (Karte, Schalter aus) / musst 31,65 (Zeiger fährt hin) / selbst 32,55 (Zeiger tippt, Schalter an) /
+           Standardmäßig 33,04 (Zeile "Standard: aus") / eingeschaltet 34,88 ("aus" betont) -->
+      <section id="k5" class="karte clip" data-start="31.04" data-duration="4.42" data-track-index="1">
+        <div class="kicker">Selbst aktivieren</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="30" y="10" width="760" height="118" rx="22" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+          <g transform="translate(58 42) scale(2.2)" class="ico" style="stroke-width:1.8"><line x1="19" x2="5" y1="5" y2="19" /><circle cx="6.5" cy="6.5" r="2.5" /><circle cx="17.5" cy="17.5" r="2.5" /></g>
+          <text x="130" y="84" class="lab" style="font-size:34px">Kombirabatte</text>
+          <rect id="k5-bahn" x="580" y="34" width="150" height="72" rx="36" fill="#d1d5db" />
+          <rect id="k5-bahn-an" x="580" y="34" width="150" height="72" rx="36" fill="url(#gv)" opacity="0" />
+          <circle id="k5-knopf" cx="616" cy="70" r="28" fill="#fff" stroke="#9aa3af" stroke-width="2" />
+          <g id="k5-std" opacity="0">
+            <rect x="30" y="150" width="400" height="66" rx="18" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+            <text x="56" y="194" style="font-size:28px;font-weight:700;fill:#6b7280">Standard:</text>
+            <rect id="k5-aus" x="214" y="164" width="96" height="38" rx="19" fill="#9aa3af" /><text x="262" y="191" text-anchor="middle" style="font-size:24px;font-weight:900;fill:#fff">AUS</text>
+          </g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="476" y="140" width="0" height="100" /></clipPath>
+          <text x="482" y="212" class="hand" style="font-size:62px" clip-path="url(#k5-clip)" transform="rotate(-5 560 196)">selbst an!</text>
+        </svg>
+        <div class="zeiger" id="k5-zeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+
+      <!-- K6 Ø Warenkorbwert steigt: "Klingt gut, denn mehrere Artikel pro Bestellung können natürlich deinen durchschnittlichen
+           Warenkorbwert erhöhen." Klingt 35,53 (Karte, Balken "1 Artikel") / mehrere 36,57 (Balken "mehrere" wächst) / Warenkorbwert 39,21
+           (Linie, Beschriftung) / erhöhen 39,87 (Pfeil, "höher"). Bleibt bis zur nächsten Karte (der Haken, 42,4 s) -->
+      <section id="k6" class="karte clip" data-start="35.46" data-duration="6.92" data-track-index="1">
+        <div class="kicker">Klingt gut</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <line x1="40" y1="246" x2="520" y2="246" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" />
+          <rect id="k6-b1" x="80" y="176" width="140" height="70" rx="12" fill="#9aa3af" />
+          <text x="150" y="284" text-anchor="middle" class="lab grau" style="font-size:25px">1 Artikel</text>
+          <g transform="translate(130 136) scale(1.7)" class="ico" style="stroke:#6b7280;stroke-width:1.8"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /></g>
+          <g id="k6-g2" opacity="0">
+            <rect id="k6-b2" x="320" y="36" width="140" height="210" rx="12" fill="url(#gvd)" />
+            <text x="390" y="284" text-anchor="middle" class="lab" style="font-size:25px">mehrere</text>
+          </g>
+          <g id="k6-label" opacity="0"><rect x="560" y="64" width="232" height="56" rx="28" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><text x="676" y="101" text-anchor="middle" style="font-size:25px;font-weight:800;fill:#0b0c0e">Ø Warenkorbwert</text></g>
+          <path id="k6-pfeil" pathLength="1" d="M226 168 C 270 120, 290 80, 312 52" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-dasharray="1" />
+          <g id="k6-spitze" opacity="0"><path d="M296 46 L 318 44 L 316 66" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="566" y="150" width="0" height="100" /></clipPath>
+          <text x="572" y="222" class="hand" style="font-size:64px" clip-path="url(#k6-clip)" transform="rotate(-5 640 204)">höher</text>
+        </svg>
+      </section>
+
+      <!-- Sticker "DER HAKEN." ("Haken" 41,67) links unter dem Kopf auf der Schulter (y 880, nicht auf dem Gesicht) -->
+      <div id="st1" class="sticker clip" data-start="41.60" data-duration="1.15" data-track-index="2">DER HAKEN.</div>
+
+      <!-- K7 (Einblendung aus dem Briefing) "MEHR WARENKORB ≠ MEHR GEWINN": "Denn mehr Umsatz bedeutet natürlich nicht automatisch mehr
+           Gewinn. Wenn also deine Marge knapp ist, können tatsächlich 10 oder 15 Prozent Rabatt den Deckungsbeitrag komplett auffressen."
+           Denn 42,45 (Karte, Titel) / Umsatz 42,87 (Umsatz-Balken wächst) / Gewinn 44,99 (Preis-Balken: Kosten grau, Marge grün) /
+           Marge 46,09 (Marge markiert) / knapp 46,45 (Marge schmal) / 10 48,13 / 15 48,65 (Rabatt-Block −10 %, −15 %) / Rabatt 49,39
+           (Block senkt sich auf die Marge) / auffressen 51,07 (Marge weg, rot, "aufgefressen") -->
+      <section id="k7" class="karte hoch clip" data-start="42.38" data-duration="9.25" data-track-index="1">
+        <div class="titel" id="k7-titel">MEHR WARENKORB ≠ <span class="verlauf">MEHR GEWINN</span></div>
+        <svg class="buehne" viewBox="0 0 820 250" style="top:118px;height:250px">
+          <line x1="30" y1="226" x2="790" y2="226" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" />
+          <g id="k7-umsatz" opacity="0">
+            <rect id="k7-ubar" x="60" y="30" width="150" height="196" rx="12" fill="url(#gvd)" />
+            <g transform="translate(108 58) scale(2.3)" class="ico" style="stroke-width:2.2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></g>
+            <text x="250" y="210" class="lab" style="font-size:28px">Umsatz</text>
+          </g>
+          <text id="k7-ne" x="400" y="160" text-anchor="middle" opacity="0" style="font-size:70px;font-weight:900;fill:#0b0c0e">≠</text>
+          <g id="k7-gewinn" opacity="0">
+            <rect x="490" y="110" width="150" height="116" rx="12" fill="#d1d5db" />
+            <text x="565" y="176" text-anchor="middle" style="font-size:22px;font-weight:800;fill:#4b5563">Kosten</text>
+            <rect id="k7-marge" x="490" y="66" width="150" height="44" rx="10" fill="url(#gvd)" />
+            <text id="k7-mtext" x="656" y="98" class="lab" style="font-size:26px">Marge</text>
+          </g>
+          <g id="k7-rabatt" opacity="0">
+            <rect x="490" y="4" width="150" height="44" rx="10" fill="#fee2e2" stroke="#ef4444" stroke-width="3" />
+            <text id="k7-r10" x="565" y="35" text-anchor="middle" style="font-size:26px;font-weight:900;fill:#ef4444">−10 %</text>
+            <text id="k7-r15" x="565" y="35" text-anchor="middle" opacity="0" style="font-size:26px;font-weight:900;fill:#ef4444">−15 %</text>
+          </g>
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="648" y="140" width="0" height="80" /></clipPath>
+          <text x="652" y="196" class="hand" style="font-size:46px;fill:#ef4444" clip-path="url(#k7-clip)" transform="rotate(-6 720 180)">gefressen</text>
+        </svg>
+      </section>
+
+      <!-- K8 vorher rechnen (Briefing: Einkauf, eBay-Gebühren, Versand und Retouren knabbern am Deckungsbeitrag): "Rechne also tatsächlich
+           vorher zunächst einmal durch, was überhaupt nach dem Einkauf, nach eBay-Gebühren, Versand und Retouren überhaupt noch übrig
+           bleibt." Rechne 51,70 (Karte, Balken "Preis nach Rabatt") / Einkauf 55,48 / eBay-Gebühren 56,20 / Versand 56,94 / Retouren
+           57,54 (je ein Stück grau) / übrig 58,62 (Rest grün, "übrig?") -->
+      <section id="k8" class="karte clip" data-start="51.63" data-duration="7.55" data-track-index="1">
+        <div class="kicker">Vorher rechnen</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <text x="30" y="30" class="klein" style="font-size:23px">Preis nach Rabatt</text>
+          <rect id="k8-bar" x="30" y="46" width="760" height="76" rx="16" fill="url(#gvd)" />
+          <g id="k8-rechner" opacity="0"><circle cx="762" cy="16" r="26" fill="#fff" stroke="#0b0c0e" stroke-width="3" /><g transform="translate(748 2) scale(1.17)" class="ico" style="stroke-width:2"><rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><path d="M16 10h.01" /><path d="M12 10h.01" /><path d="M8 10h.01" /><path d="M12 14h.01" /><path d="M8 14h.01" /><path d="M12 18h.01" /><path d="M8 18h.01" /></g></g>
+          <g id="k8-c1" opacity="0"><rect x="30" y="46" width="250" height="76" rx="16" fill="#9aa3af" /><text x="155" y="95" text-anchor="middle" style="font-size:25px;font-weight:800;fill:#fff">Einkauf</text></g>
+          <g id="k8-c2" opacity="0"><rect x="284" y="46" width="170" height="76" rx="12" fill="#6b7280" /><text x="369" y="95" text-anchor="middle" style="font-size:23px;font-weight:800;fill:#fff">Gebühren</text></g>
+          <g id="k8-c3" opacity="0"><rect x="458" y="46" width="130" height="76" rx="12" fill="#9aa3af" /><text x="523" y="95" text-anchor="middle" style="font-size:23px;font-weight:800;fill:#fff">Versand</text></g>
+          <g id="k8-c4" opacity="0"><rect x="592" y="46" width="118" height="76" rx="12" fill="#6b7280" /><text x="651" y="95" text-anchor="middle" style="font-size:21px;font-weight:800;fill:#fff">Retouren</text></g>
+          <g id="k8-i1" opacity="0" transform="translate(132 140) scale(1.9)" class="ico" style="stroke-width:1.8"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /></g>
+          <g id="k8-i2" opacity="0" transform="translate(346 140) scale(1.9)" class="ico" style="stroke-width:1.8"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" /><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" /><path d="M12 17.5v-11" /></g>
+          <g id="k8-i3" opacity="0" transform="translate(500 140) scale(1.9)" class="ico" style="stroke-width:1.8"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></g>
+          <g id="k8-i4" opacity="0" transform="translate(628 140) scale(1.9)" class="ico" style="stroke-width:1.8"><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></g>
+          <g id="k8-rest" opacity="0"><rect x="714" y="40" width="80" height="88" rx="16" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-dasharray="8 6" /></g>
+          <g id="k8-db" opacity="0"><rect x="330" y="200" width="250" height="52" rx="26" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text x="455" y="235" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">Deckungsbeitrag</text></g>
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="616" y="190" width="0" height="90" /></clipPath>
+          <text x="620" y="252" class="hand" style="font-size:56px" clip-path="url(#k8-clip)" transform="rotate(-6 690 236)">übrig?</text>
+        </svg>
+      </section>
+
+      <!-- Q2 echte Quelle: "Und eine Sache ist hier noch wichtig," und 59,25 (Karte, Kamera) / wichtig 60,39 (Markierung auf "berechnen
+           wir den neuen Preis für die Artikel, die der Käufer behält."). Bild: eBay-Hilfe "Kombirabatte für Verkäufer", Abschnitt
+           "So funktionieren Rückgaben", aufgenommen 27.10.2026 -->
+      <section id="q2" class="karte clip" data-start="59.18" data-duration="1.91" data-track-index="1">
+        <div class="qlabel"><span class="qdot"></span>eBay-Hilfe · Kombirabatte für Verkäufer</div>
+        <div class="qbild" style="left:20px;top:56px;width:780px;height:276px">
+          <div class="qlage" id="q2-lage"><img src="assets/ebay-rueckgabe.jpg" width="1079" height="720" alt="" />
+            <div class="mark" id="q2-m" style="left:30px;top:296px;width:1020px;height:134px"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- K9 (Einblendung aus dem Briefing) "TEILRETOURE? RABATT WIRD NEU BERECHNET": "bei Teilretouren berechnet dann eBay tatsächlich die
+           Rabattstufe für die behaltenen Artikel neu." Teilretouren 61,16 (Karte, Titel, drei Artikel mit Stufe "3 Artikel") /
+           berechnet 61,93 (ein Artikel geht zurück) / Rabattstufe 63,43 (Stufe pulsiert) / behaltenen 64,45 (die zwei bleiben, ✓) /
+           neu 65,43 (Stufe springt auf "2 Artikel", "neu") -->
+      <section id="k9" class="karte hoch clip" data-start="61.09" data-duration="4.67" data-track-index="1">
+        <div class="titel" id="k9-titel">TEILRETOURE?<br /><span class="verlauf">RABATT WIRD NEU BERECHNET</span></div>
+        <svg class="buehne" viewBox="0 0 820 200" style="top:166px;height:200px">
+          <g id="k9-a1"><rect x="40" y="40" width="120" height="110" rx="16" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="3" /><path d="M40 82 h120 M100 40 v110" stroke="#0b0c0e" stroke-width="3" /></g>
+          <g id="k9-a2"><rect x="180" y="40" width="120" height="110" rx="16" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="3" /><path d="M180 82 h120 M240 40 v110" stroke="#0b0c0e" stroke-width="3" /></g>
+          <g id="k9-a3"><rect x="320" y="40" width="120" height="110" rx="16" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="3" /><path d="M320 82 h120 M380 40 v110" stroke="#0b0c0e" stroke-width="3" /></g>
+          <g id="k9-zur" opacity="0" transform="translate(452 54) scale(2.6)" class="ico" style="stroke:#ef4444;stroke-width:2.4"><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></g>
+          <g id="k9-ok" opacity="0"><circle cx="160" cy="34" r="22" fill="#0b0c0e" /><path d="M150 34 l7 7 l13 -14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><circle cx="300" cy="34" r="22" fill="#0b0c0e" /><path d="M290 34 l7 7 l13 -14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="k9-stufe">
+            <rect x="590" y="40" width="200" height="110" rx="18" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+            <text x="690" y="76" text-anchor="middle" class="klein" style="font-size:21px">Rabattstufe</text>
+            <text id="k9-s3" x="690" y="126" text-anchor="middle" style="font-size:34px;font-weight:900;fill:#0b0c0e">3 Artikel</text>
+            <text id="k9-s2" x="690" y="126" text-anchor="middle" opacity="0" style="font-size:34px;font-weight:900;fill:#00a86b">2 Artikel</text>
+          </g>
+          <clipPath id="k9-clip"><rect id="k9-cliprect" x="620" y="148" width="0" height="60" /></clipPath>
+          <text x="626" y="192" class="hand" style="font-size:46px" clip-path="url(#k9-clip)" transform="rotate(-5 680 180)">neu</text>
+        </svg>
+      </section>
+
+      <!-- K10 Tipp: "Mein Tipp ist hier also, teste erst einmal Kombirabatte mit Produkten, die tatsächlich gut zusammenpassen und
+           genug Marge haben." Mein 65,83 (Karte, Kolben "testen") / teste 67,03 ("erst testen") / Produkten 68,63 (zwei Teile) /
+           zusammenpassen 70,37 (die Teile greifen ineinander) / Marge 72,03 ("genug Marge" ✓) -->
+      <section id="k10" class="karte clip" data-start="65.76" data-duration="7.36" data-track-index="1">
+        <div class="kicker">Mein Tipp</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k10-test">
+            <rect x="30" y="20" width="170" height="160" rx="24" fill="url(#gvd)" />
+            <g transform="translate(79 42) scale(3)" class="ico" style="stroke-width:1.7"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /><path d="M6.453 15h11.094" /><path d="M8.5 2h7" /></g>
+          </g>
+          <clipPath id="k10-clip"><rect id="k10-cliprect" x="20" y="190" width="0" height="100" /></clipPath>
+          <text x="26" y="258" class="hand" style="font-size:54px" clip-path="url(#k10-clip)" transform="rotate(-5 110 240)">erst testen</text>
+          <!-- zwei Teile, die zusammenpassen (Nut und Feder) -->
+          <g id="k10-t1" opacity="0"><path d="M250 40 h150 v50 a20 20 0 0 0 0 40 v50 h-150 z" fill="#fff" stroke="#0b0c0e" stroke-width="4" stroke-linejoin="round" /><text x="318" y="118" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">A</text></g>
+          <g id="k10-t2" opacity="0"><path d="M420 40 h150 v140 h-150 v-50 a20 20 0 0 1 0 -40 z" fill="#dcf0fb" stroke="#0b0c0e" stroke-width="4" stroke-linejoin="round" /><text x="500" y="118" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">B</text></g>
+          <text id="k10-passt" x="410" y="226" text-anchor="middle" opacity="0" class="lab" style="font-size:26px">passt zusammen</text>
+          <g id="k10-marge" opacity="0">
+            <rect x="610" y="60" width="180" height="100" rx="22" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+            <text x="680" y="120" text-anchor="middle" class="lab" style="font-size:28px">Marge</text>
+            <circle cx="764" cy="66" r="24" fill="url(#gvd)" /><path d="M753 66 l7 7 l14 -15" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+        </svg>
+      </section>
+
+      <!-- K11 nicht pauschal: "Nicht einfach nur pauschal das ganze Sortiment rabattieren." Nicht 73,19 (Karte, Regal mit 10 Artikeln) /
+           ganze 74,37 (alle bekommen "−%") / rabattieren 75,17 (durchgestrichen, ✕, "nicht alles") -->
+      <section id="k11" class="karte clip" data-start="73.12" data-duration="2.70" data-track-index="1">
+        <div class="kicker">Nicht pauschal</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k11-regal">
+            <rect x="30" y="16" width="560" height="236" rx="20" fill="#fff" stroke="#e5e7eb" stroke-width="2" />
+            <g id="k11-kacheln"></g>
+          </g>
+          <path id="k11-strich" pathLength="1" d="M48 236 L 572 32" fill="none" stroke="#ef4444" stroke-width="9" stroke-linecap="round" stroke-dasharray="1" />
+          <g id="k11-x" opacity="0"><circle cx="590" cy="22" r="26" fill="#ef4444" /><path d="M579 11 l22 22 M601 11 l-22 22" stroke="#fff" stroke-width="5" stroke-linecap="round" /></g>
+          <clipPath id="k11-clip"><rect id="k11-cliprect" x="600" y="110" width="0" height="90" /></clipPath>
+          <text x="604" y="170" class="hand" style="font-size:46px" clip-path="url(#k11-clip)" transform="rotate(-6 690 154)">nicht alles</text>
+        </svg>
+      </section>
+
+      <!-- K12 Umfrage + Folgen: "Schreib's mir gerne mal in die Kommentare. Würdest du das Ganze in deinem eBay-Shop direkt nutzen oder
+           wartest du doch lieber zunächst einmal einige Tests ab? Und nicht vergessen, Plus drücken!" Schreib's 75,89 (Karte, Frage) /
+           Kommentare 76,67 / direkt 79,23 ("Ja, direkt") / Tests 82,33 ("Erst testen") / Und 82,97 (Folgen) / Plus 84,02 (Plus angetippt,
+           wird zum Haken) -->
+      <section id="k12" class="karte hoch clip" data-start="75.82" data-duration="9.21" data-track-index="1">
+        <div class="frage-titel" id="k12-frage"><div class="ico2"><svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg></div>Würdest du das nutzen?</div>
+        <div class="optionen">
+          <div class="option" id="k12-ja"><span class="kreis" style="background:linear-gradient(135deg,#00e090,#31adec)"><svg viewBox="0 0 24 24" style="stroke:#0b0c0e"><path d="M20 6 9 17l-5-5" /></svg></span>Ja, direkt</div>
+          <div class="option" id="k12-test"><span class="kreis" style="background:#e5e7eb"><svg viewBox="0 0 24 24" style="stroke:#0b0c0e;stroke-width:2.6"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /><path d="M8.5 2h7" /></svg></span>Erst testen</div>
+        </div>
+        <div class="kommentar" id="k12-komm"><svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg>Schreib’s in die Kommentare</div>
+        <div class="folgen" id="k12-folgen">
+          <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+          <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        </div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // K11: 10 Artikel-Kacheln im Regal (2 Reihen), jede mit einem "−%"-Etikett, das auf "ganze" erscheint
+      (function () {
+        const g = document.getElementById("k11-kacheln");
+        const ns = "http://www.w3.org/2000/svg";
+        let html = "";
+        for (let r = 0; r < 2; r++) for (let c = 0; c < 5; c++) {
+          const x = 52 + c * 106, y = 34 + r * 110;
+          html += `<rect x="${x}" y="${y}" width="90" height="90" rx="14" fill="${(r + c) % 3 === 0 ? "#dcf0fb" : (r + c) % 3 === 1 ? "#e6faf2" : "#f3f4f6"}" stroke="#d1d5db" stroke-width="2" />`;
+          html += `<g class="k11-tag" opacity="0"><rect x="${x + 44}" y="${y - 6}" width="54" height="30" rx="9" fill="#0b0c0e" /><text x="${x + 71}" y="${y + 16}" text-anchor="middle" style="font-size:19px;font-weight:900;fill:#fff">−%</text></g>`;
+        }
+        g.innerHTML = html;
+      })();
+
+      // Karte rein mit Kicker (leer höchstens ~0,2 s), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker, " + id + " .qlabel");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      gsap.set("#k6-pfeil, #k11-strich", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 });
+
+      // K0 Geschenk, "−15 %" fliegt heraus, Rechner, "erst rechnen"
+      karte("#k0", 3.53, 6.10);
+      tl.fromTo("#k0-tag", { opacity: 0, x: -150, y: 40, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.45, ease: "power2.out" }, 3.56);
+      pop("#k0-rechner", 5.47);
+      schreibe("#k0-cliprect", 320, 5.55, 0.45);
+
+      // Q1 echte Quelle: Kamerafahrt über die Überschrift, Markierung auf "Kombirabatte"
+      tl.fromTo("#q1", { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 6.10);
+      tl.fromTo("#q1 .qlabel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 6.14);
+      gsap.set("#q1-lage", { x: -6, y: -96, scale: 0.72 });
+      tl.to("#q1-lage", { x: -8, y: -124, scale: 0.725, duration: 3.0, ease: "sine.inOut" }, 6.15);
+      pop("#q1-m", 6.68, 0.25);
+      tl.to("#q1", { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.25, ease: "power2.in" }, 8.95);
+
+      // K1 Warenkorb füllt sich, Belohnung, Rabatt
+      karte("#k1", 9.24, 12.72);
+      ein("#k1-lohn", 9.28);
+      [["#k1-a1", 10.44], ["#k1-a2", 10.78], ["#k1-a3", 11.64]].forEach(([s, t]) =>
+        tl.fromTo(s, { opacity: 0, y: -70 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.in" }, t));
+      badge("#k1-rabatt", 12.04);
+
+      // K2 Stufen 2 / 3 / 4+ Artikel, −5 / −10 / −15 %, BEISPIEL, du bestimmst
+      karte("#k2", 12.72, 22.30);
+      [["#k2-l1", 12.76], ["#k2-l2", 12.80], ["#k2-l3", 12.84]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: 0.25 }, t));
+      tl.to("#k2-l1, #k2-l2, #k2-l3", { stroke: "#31adec", duration: 0.2, yoyo: true, repeat: 1 }, 13.74);
+      tl.fromTo("#k2-bsp", { opacity: 0, scale: 1.15, rotation: 4 }, { opacity: 1, scale: 1, rotation: 4, duration: 0.22, ease: "power2.out" }, 14.74);
+      [["#k2-s1", 15.64], ["#k2-s2", 17.20], ["#k2-s3", 18.55]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, t));
+      [["#k2-p1", 16.24], ["#k2-p2", 17.57], ["#k2-p3", 18.94]].forEach(([s, t]) => pop(s, t, 0.25));
+      pop("#k2-stift", 20.32);
+      tl.to("#k2-stift", { x: -30, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 1 }, 20.62);
+      schreibe("#k2-cliprect", 190, 21.24, 0.45);
+
+      // K3 gleicher Artikel ✓, verschiedene ✓
+      karte("#k3", 22.30, 28.13);
+      ein("#k3-links", 24.04);
+      badge("#k3-ok1", 24.88);
+      tl.to("#k3-rleer", { opacity: 0, duration: 0.2 }, 26.94);
+      ein("#k3-rechts", 26.94);
+      badge("#k3-ok2", 27.56);
+
+      // K4 Warenkorb, Zeile Kombirabatt automatisch, Haken
+      karte("#k4", 28.13, 31.04);
+      tl.fromTo("#k4-zeile", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 28.99);
+      pop("#k4-auto", 30.00);
+      schreibe("#k4-cliprect", 220, 30.05, 0.4);
+
+      // K5 Schalter: Zeiger tippt auf "selbst", Schalter an; Standard: aus
+      karte("#k5", 31.04, 35.46);
+      tl.fromTo("#k5-zeiger", { opacity: 0, x: 760, y: 300 }, { opacity: 1, x: 740, y: 290, duration: 0.15, ease: "power2.out" }, 31.58);
+      tl.to("#k5-zeiger", { x: 640, y: 150, duration: 0.6, ease: "power2.inOut" }, 31.70);
+      tl.to("#k5-zeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 32.44);
+      tl.to("#k5-zeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 32.52);
+      tl.to("#k5-knopf", { attr: { cx: 694 }, duration: 0.25, ease: "power2.inOut" }, 32.48);
+      tl.to("#k5-bahn-an", { opacity: 1, duration: 0.25 }, 32.48);
+      schreibe("#k5-cliprect", 270, 32.55, 0.45);
+      tl.to("#k5-zeiger", { opacity: 0, duration: 0.2 }, 32.9);
+      ein("#k5-std", 32.97);
+      tl.fromTo("#k5-aus", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.12, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 }, 34.81);
+
+      // K6 Ø Warenkorbwert steigt
+      karte("#k6", 35.46, 42.38);
+      tl.fromTo("#k6-g2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 36.50);
+      tl.fromTo("#k6-b2", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 36.50);
+      ein("#k6-label", 39.14);
+      zeichne("#k6-pfeil", 39.80, 0.4);
+      tl.fromTo("#k6-spitze", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 40.15);
+      schreibe("#k6-cliprect", 200, 39.85, 0.4);
+
+      // Sticker DER HAKEN.
+      tl.fromTo("#st1", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.2, ease: "power2.out" }, 41.60);
+      tl.to("#st1", { opacity: 0, scale: 0.92, duration: 0.2, ease: "power2.in" }, 42.55);
+
+      // K7 MEHR WARENKORB ≠ MEHR GEWINN: Umsatz wächst, Marge schmal, Rabatt frisst sie
+      karte("#k7", 42.38, 51.63);
+      ein("#k7-titel", 42.40, 0.35);
+      tl.fromTo("#k7-umsatz", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 42.80);
+      tl.fromTo("#k7-ubar", { scaleY: 0.25, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.7, ease: "power2.out" }, 42.80);
+      pop("#k7-ne", 44.06);
+      ein("#k7-gewinn", 44.92);
+      tl.fromTo("#k7-marge", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.06, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 }, 46.02);
+      tl.to("#k7-marge", { attr: { y: 86, height: 24 }, duration: 0.45, ease: "power2.inOut" }, 46.38);
+      tl.to("#k7-mtext", { attr: { y: 106 }, duration: 0.45, ease: "power2.inOut" }, 46.38);
+      tl.fromTo("#k7-rabatt", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 48.06);
+      tl.to("#k7-r10", { opacity: 0, duration: 0.15 }, 48.58);
+      tl.to("#k7-r15", { opacity: 1, duration: 0.15 }, 48.58);
+      tl.to("#k7-rabatt", { y: 34, duration: 0.5, ease: "power2.in" }, 49.32);
+      tl.to("#k7-rabatt", { y: 56, duration: 0.5, ease: "power2.in" }, 50.95);
+      tl.to("#k7-marge", { attr: { y: 108, height: 2 }, fill: "#ef4444", duration: 0.5, ease: "power2.in" }, 50.95);
+      tl.to("#k7-mtext", { fill: "#ef4444", duration: 0.3 }, 50.95);
+      schreibe("#k7-cliprect", 170, 51.00, 0.4);
+
+      // K8 Preis nach Rabatt, Einkauf / Gebühren / Versand / Retouren knabbern, Rest = Deckungsbeitrag, "übrig?"
+      karte("#k8", 51.63, 59.18);
+      badge("#k8-rechner", 52.73);
+      [["#k8-c1", "#k8-i1", 55.41], ["#k8-c2", "#k8-i2", 56.13], ["#k8-c3", "#k8-i3", 56.87], ["#k8-c4", "#k8-i4", 57.47]].forEach(([c, i, t]) => {
+        tl.fromTo(c, { opacity: 0, scaleX: 0.6, transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, duration: 0.3, ease: "power2.out" }, t);
+        tl.fromTo(i, { opacity: 0 }, { opacity: 1, duration: 0.25 }, t + 0.04);
+      });
+      tl.fromTo("#k8-rest", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 58.55);
+      ein("#k8-db", 58.55);
+      schreibe("#k8-cliprect", 170, 58.6, 0.35);
+
+      // Q2 echte Quelle eBay-Hilfe: Rückgaben, Markierung auf dem Satz
+      tl.fromTo("#q2", { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "expo.out" }, 59.18);
+      tl.fromTo("#q2 .qlabel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 59.22);
+      gsap.set("#q2-lage", { x: -6, y: -16, scale: 0.72 });
+      tl.to("#q2-lage", { x: -8, y: -30, scale: 0.725, duration: 1.9, ease: "sine.inOut" }, 59.2);
+      pop("#q2-m", 60.32, 0.25);
+      tl.to("#q2", { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.22, ease: "power2.in" }, 60.85);
+
+      // K9 Teilretoure: ein Artikel geht zurück, die Stufe wird neu berechnet
+      karte("#k9", 61.09, 65.76);
+      ein("#k9-titel", 61.11, 0.35);
+      tl.to("#k9-a3", { x: 180, opacity: 0.25, duration: 0.6, ease: "power2.inOut" }, 61.86);
+      tl.fromTo("#k9-zur", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 61.96);
+      tl.fromTo("#k9-stufe", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.06, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 }, 63.36);
+      badge("#k9-ok", 64.38);
+      tl.to("#k9-s3", { opacity: 0, y: -10, duration: 0.2 }, 65.36);
+      tl.fromTo("#k9-s2", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, 65.38);
+      schreibe("#k9-cliprect", 110, 65.38, 0.3);
+
+      // K10 Tipp: erst testen, zwei passende Produkte, genug Marge
+      karte("#k10", 65.76, 73.12);
+      schreibe("#k10-cliprect", 240, 66.96, 0.45);
+      tl.fromTo("#k10-t1", { opacity: 0, x: -30 }, { opacity: 1, x: -30, duration: 0.3 }, 68.56);
+      tl.fromTo("#k10-t2", { opacity: 0, x: 30 }, { opacity: 1, x: 30, duration: 0.3 }, 68.64);
+      tl.to("#k10-t1", { x: 0, duration: 0.45, ease: "power2.inOut" }, 70.30);
+      tl.to("#k10-t2", { x: -20, duration: 0.45, ease: "power2.inOut" }, 70.30);
+      ein("#k10-passt", 70.62);
+      pop("#k10-marge", 71.96);
+
+      // K11 das ganze Sortiment rabattieren? Nein
+      karte("#k11", 73.12, 75.82);
+      tl.fromTo(".k11-tag", { opacity: 0, scale: 0.7, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.03 }, 74.30);
+      zeichne("#k11-strich", 75.10, 0.3);
+      badge("#k11-x", 75.10);
+      tl.to("#k11-regal", { opacity: 0.55, duration: 0.25 }, 75.2);
+      schreibe("#k11-cliprect", 220, 75.12, 0.35);
+
+      // K12 Umfrage "Würdest du das nutzen?" Ja, direkt / Erst testen, Kommentare, dann Folgen: Plus wird angetippt und zum Haken
+      karte("#k12", 75.82, null);
+      ein("#k12-frage", 75.86, 0.3);
+      ein("#k12-komm", 76.60, 0.3);
+      ein("#k12-ja", 79.16, 0.3);
+      ein("#k12-test", 82.26, 0.3);
+      ein("#k12-folgen", 82.90, 0.3);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 83.40);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 360 }, { opacity: 1, x: 310, y: 350, duration: 0.12, ease: "power2.out" }, 83.55);
+      tl.to("#fzeiger", { x: 92, y: 330, duration: 0.4, ease: "power2.inOut" }, 83.58);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 83.95);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 84.03);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 83.98);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 83.98);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 84.01);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 84.01);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 84.01);
+      tl.to("#fzeiger", { x: 132, y: 338, duration: 0.25, ease: "power2.out" }, 84.2);
+
+      tl.seek(0);
+      window.__timelines["ebaykombi-skizzen"] = tl;
+    </script>
+  </body>
+</html>

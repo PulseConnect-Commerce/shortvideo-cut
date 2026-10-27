@@ -1,0 +1,178 @@
+{
+ "ziele": {
+  "ebay": {
+   "url": "https://www.ebay.de/help/selling/selling-tools/selling-bundle-discounts?id=5842",
+   "status": 200,
+   "titel": "Kombirabatte | eBay",
+   "pos": {
+    "beim Kauf von 2, 3 oder mehr Exemplaren desselben Artikels oder beim Kauf mehrerer unterschiedlicher Artikel festlegen.": [
+     920,
+     89
+    ],
+    "An der Kasse wird der Endbetrag angezeigt, den Ihre Käufer bezahlen.": [
+     1232,
+     41
+    ],
+    "Sie selbst müssen den Rabatt nicht berechnen oder bestätigen, dass er angewendet wurde.": [
+     1304,
+     41
+    ],
+    "Wählen Sie danach den Rabattprozentsatz für 2, 3 und 4+ Artikel aus": [
+     1668,
+     41
+    ],
+    "berechnen wir den neuen Preis für die Artikel, die der Käufer behält.": [
+     2516,
+     41
+    ],
+    "Da der Käufer 2 Artikel behält, gilt für die Bestellung nun der Kombirabatt für den Kauf von 2 Artikeln.": [
+     3156,
+     163
+    ]
+   },
+   "ank": {
+    "Kombirabatte für Verkäufer": 282,
+    "So funktionieren Kombirabatte": 1037,
+    "Einrichten von Kombirabatten": 1373,
+    "So funktionieren Rückgaben": 2417,
+    "FAQs": 4058
+   },
+   "faq": [
+    [
+     "Was sind Kombirabatte?",
+     "Was sind Kombirabatte?"
+    ],
+    [
+     "Muss ich diese Option aktivieren? Besteht die Möglichkeit, die Option zu deaktivieren?",
+     "Muss ich diese Option aktivieren? Besteht die Möglichkeit, die Option zu deaktivieren?"
+    ],
+    [
+     "Kann ich auswählen, für welche Artikel Kombirabatte gelten sollen?",
+     "Kann ich auswählen, für welche Artikel Kombirabatte gelten sollen?"
+    ],
+    [
+     "Stehen Kombirabatte automatisch für neue Angebote zur Verfügung?",
+     "Stehen Kombirabatte automatisch für neue Angebote zur Verfügung?"
+    ],
+    [
+     "Welche Rabattprozentsätze sollte ich anbieten?",
+     "Welche Rabattprozentsätze sollte ich anbieten?"
+    ],
+    [
+     "Hat es Auswirkungen auf meine Einzelpreise für Artikel, wenn ich Kombirabatte anbiete?",
+     "Hat es Auswirkungen auf meine Einzelpreise für Artikel, wenn ich Kombirabatte anbiete?"
+    ],
+    [
+     "Kann ich Kombirabatte mit anderen Verkaufsaktionen kombinieren, die ich durchführe?",
+     "Kann ich Kombirabatte mit anderen Verkaufsaktionen kombinieren, die ich durchführe?"
+    ],
+    [
+     "Was passiert, wenn ein Käufer einen Teil einer gebündelten Bestellung zurückgibt?",
+     "Was passiert, wenn ein Käufer einen Teil einer gebündelten Bestellung zurückgibt? Wenn ein Käufer einige Artikel einer Bestellung zurückgibt, wird der rabattierte Preis für die behaltenen Artikel entsprechend der verbleibenden Stückzahl neu berechnet. Wenn die Rabattvoraussetzungen nicht mehr erfüllt sind, wird wieder der volle Preis angewendet. Die Rückerstattung an den Käufer wird entsprechend berechnet. Sie müssen den neuen Preis nicht manuell berechnen."
+    ],
+    [
+     "Kann ich mein Kombirabatt-Angebot ändern oder beenden?",
+     "Kann ich mein Kombirabatt-Angebot ändern oder beenden?"
+    ],
+    [
+     "Sind Käufern meine Kombirabatte bekannt, bevor sie zur Kasse gehen?",
+     "Sind Käufern meine Kombirabatte bekannt, bevor sie zur Kasse gehen?"
+    ],
+    [
+     "Muss ich einen Versandrabatt anbieten?",
+     "Muss ich einen Versandrabatt anbieten?"
+    ],
+    [
+     "Wie unterscheiden sich Kombirabatte von anderen Rabatten, die Shop-Abonnenten zur Verfügung stehen?",
+     "Wie unterscheiden sich Kombirabatte von anderen Rabatten, die Shop-Abonnenten zur Verfügung stehen?"
+    ],
+    [
+     "Kombirabatte stellen eine einfache Möglichkeit dar, Ihren Käufern, die mehrere Artikel in einer Bestellung kaufen, einen zusätzlichen Kaufanreiz zu bieten",
+     "Auf einen Blick Kombirabatte stellen eine einfache Möglichkeit dar, Ihren Käufern, die mehrere Artikel in einer Bestellung kaufen, einen zusätzlichen Kaufanreiz zu bieten"
+    ],
+    [
+     "War dieser Artikel hilfreich?",
+     "War dieser Artikel hilfreich?"
+    ],
+    [
+     "Weitere Hilfe zum Thema",
+     "Weitere Hilfe zum Thema Weitere Artikel ansehen in: Verkaufen"
+    ]
+   ],
+   "hoehe": 6997
+  },
+  "hb": {
+   "url": "https://ohn.haendlerbund.de/themen/marktplaetze/mehr-artikel-bestellung-ebay-kombirabatte-haendler",
+   "status": 200,
+   "titel": "Mehr Artikel pro Bestellung? Ebay startet Kombirabatte für Händler",
+   "pos": {
+    "Möglich sind bis zu drei Stufen, etwa:": [
+     1811,
+     63
+    ],
+    "Die Prozentwerte sind Beispiele aus der Ankündigung.": [
+     2026,
+     63
+    ],
+    "Kombirabatte sind nicht standardmäßig aktiv.": [
+     2638,
+     63
+    ],
+    "Schickt ein Käufer einen Teil der Bestellung zurück, berechnet Ebay den Rabatt anhand der verbleibenden Stückzahl neu.": [
+     3866,
+     133
+    ]
+   },
+   "ank": {
+    "Mehr Artikel pro Bestellung? Ebay startet Kombirabatte für Händler": 157,
+    "So funktionieren die Kombirabatte": 1566,
+    "Aktivierung und Auswahl der Artikel": 2533
+   },
+   "faq": [
+    [
+     "Marktplatz-Wissen aus erster Hand",
+     "Eingeschränkte Kombirabatte Bei der Kombination mit anderen Aktionen gibt es Einschränkungen. Kombirabatte lassen sich mit Ebay-weiten Verkaufs- und Sonderaktionen verbinden, nicht aber mit Verkäufergutscheinen, Rabatten für Verkäuferbestellungen, Multi-Rabatten oder anderen Gutscheincodes. Kommen mehrere Verkäuferrabatte infrage, greift der für die Kundschaft günstigste. Bietet ein Händler etwa 15 Prozent Kombirabatt auf zwei Artikel und einen Gutschein über 20 Prozent, gilt der Gutschein. Auch"
+    ],
+    [
+     "Kontakt",
+     "Kontakt Kohlgartenstraße 11-13 04315 Leipzig Support-Bereich Kontaktformular"
+    ],
+    [
+     "Über uns",
+     "Über uns Onlinehändler News Karriere Mediadaten Netiquette FAQ Forum Presse"
+    ],
+    [
+     "E-Commerce im Blick",
+     "E-Commerce im Blick Newsticker RSS Themen Webinare Events Partner Glossar"
+    ],
+    [
+     "Bewertungen",
+     "Google Reviews 4,6 bei 793 Rezensionen"
+    ],
+    [
+     "Barrierefreiheitsmodi",
+     " Zurück Barrierefreiheitsmodi Epilepsie-sicherer Modus Dämpft Farben und entfernt Blinken Modus für Sehbehinderte Verbessert die visuelle Darstellung der Website Modus für kognitive Behinderung Hilft, sich auf bestimmte Inhalte zu konzentrieren ADHS-freundlicher Modus Reduziert Ablenkungen und verbessert den Fokus Blindheitsmodus Ermöglicht die Nutzung der Website mit Ihrem Bildschirmleser Online-Wörterbuch Beginnen Sie mit der Eingabe, um in Wikipedia zu suchen "
+    ],
+    [
+     "Online-Wörterbuch",
+     " Online-Wörterbuch Beginnen Sie mit der Eingabe, um in Wikipedia zu suchen "
+    ],
+    [
+     "Lesbare Erfahrung",
+     " Zurück Lesbare Erfahrung Inhaltsgröße Standard Textlupe Aa Lesbare Schriftart Aa Legasthenikerfreundlich Titel hervorheben Links hervorheben Schriftgröße Standard Zeilenhöhe Standard Zeichenabstand Standard Linksbündig Zentriert Rechtsbündig Visuell ansprechendes Erlebnis "
+    ],
+    [
+     "Visuell ansprechendes Erlebnis",
+     " Zurück Visuell ansprechendes Erlebnis Dunkler Kontrast Heller Kontrast Monochrom Hoher Kontrast Hohe Sättigung Niedrige Sättigung Farben anpassen "
+    ],
+    [
+     "Sprachbefehle",
+     " Sprachbefehle "
+    ]
+   ],
+   "hoehe": 7551
+  }
+ },
+ "datum": "2026-10-27T16:11:06.279Z",
+ "viewport": "412x732 @2.62"
+}
