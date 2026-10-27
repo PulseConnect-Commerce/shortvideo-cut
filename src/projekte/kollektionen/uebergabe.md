@@ -1,6 +1,6 @@
 # Übergabekarte: S03 · Automatische Kollektionen
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** (Pauls Vorgabe 27.10.: alle geschnittenen Videos selbst nach Kalender einplanen) für Mi 04.11.2026 14:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408162335 / 408162484 / 408162564, Drive-Final 1cynLwODrm95-uyBwaYilIOvFnlZHJJWP.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): S03 · Automatische Kollektionen
 - **Format / Design:** FACE (Serie S, Serien-ID "Shopify in 30 Sekunden", Inhalt laut Briefing bewusst substanzieller) / aktueller Look wie S02: Hook-Titel im Design verlauf (easyJet-Stil), helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlagen P04 und S02), echte Seiten des Shopify Help Center als Hintergrund hinter ihm, Musik ruhig, sanfter Grade, Porträt-Modus

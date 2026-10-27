@@ -1,6 +1,6 @@
 # Übergabekarte: A03 · Judge.me
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** (Pauls Vorgabe 27.10.: alle geschnittenen Videos selbst nach Kalender einplanen) für Sa 07.11.2026 14:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408162816 / 408162962 / 408163043, Drive-Final 1Sxt_mUOGRY2QBc1NaTVbx5xjAqxVnKzi.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): A03 · Judge.me
 - **Format / Design:** FACE (A-Reihe "Eine Shopify-App, ein Problem") / aktueller Look: Hook-Titel im Design verlauf (easyJet-Stil), helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlage P04), echte Judge.me-Seiten und offizielle App-Store-Bilder als Hintergrund hinter ihm, Musik ruhig, sanfter Grade, Porträt-Modus

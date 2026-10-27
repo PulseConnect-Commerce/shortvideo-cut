@@ -1,6 +1,6 @@
 # Übergabekarte: M07 · Gymshark
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** (Pauls Vorgabe 27.10.: alle geschnittenen Videos selbst nach Kalender einplanen) für Di 15.12.2026 19:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408165552 / 408165765 / 408165845, Drive-Final 1NvIE0Es2rlHId6UnIUiI4Y_MXxsucFSU.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): M07 · Gymshark
 - **Format / Design:** HERO (Serie M "Marken-Story", wie M05/M06) / Editorial-Stil wie M06 FIVE (karten-aufbau.md "Marken-Story im Editorial-Stil"): Kennzahlen und Schlagzeilen über dem Kopf (Instrument Serif und Geist im Wechsel, Akzent im PulseConnect-Verlauf, Strich zeichnet sich auf dem Wort), im Hook zwei echte freigestellte Produktfotos aus dem Gymshark-Shop neben dem Kopf, neun echte Gymshark-Seiten als Hintergrund hinter ihm, Erklär-Bilder und Quellen-Karte unter dem Kopf, Pill-Untertitel (aktives Wort `#00E090`), Hook-Titel im Design verlauf mit GYMSHARK in Zeile 1, Musik ruhig, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe

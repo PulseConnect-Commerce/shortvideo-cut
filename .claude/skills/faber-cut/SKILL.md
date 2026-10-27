@@ -289,3 +289,14 @@ aus dem 🎬-Termin und den 📣-Termin anlegen, nach Veröffentlichungstermin i
 Opus "Extra Hoch", immer nur einer). Eingeplant wird weiter erst nach seinem OK. Der 2-Stunden-Check prüft beides:
 grüne 🎬-Termine ohne fertiges Video und neue Clips im Ordner. Ist ein Termin grün, aber kein Clip da, oder liegt ein
 Clip da, dessen Termin noch braun ist, schneidet man den Clip trotzdem und sagt es ihm kurz.
+
+**Fertige Videos selbst einplanen** (seine Vorgabe 2026-10-27: "Bitte plane alle geschnittenen Videos eigenständig
+direkt in die vorgesehenen slots in metricool anhand der definierten Veröffentlichungszeiten aus Google Kalender
+ein"; das ersetzt "eingeplant wird erst nach seinem OK"): Ist ein Video fertig geschnitten und geprüft, kommt es ohne
+Rückfrage nach Drive ("Final geschnittene Videos", Titel wie im Kalender) und in Metricool, je ein Post für TikTok,
+Instagram (Reel) und YouTube (Short, über 180 s als Video), genau zum 📣-Termin aus dem Kalender. Erst TikTok mit dem
+Drive-Link anlegen, dann Instagram und YouTube mit der static.metricool-URL aus der Antwort. Bricht ein Aufruf ab, erst
+mit `getScheduledPosts` nachsehen, ob der Post doch angelegt ist, und nie doppelt anlegen. Status, Metricool-IDs und
+Drive-ID in die Übergabekarte. Die Chat-Fassung bekommt er trotzdem, mit den offenen Fragen; seine Antworten werden
+danach eingearbeitet (Datei in den Posts tauschen). Kein 📣-Termin im Kalender (z. B. News "ohne Datum"): nicht selbst
+einen Termin erfinden, sondern den nächsten freien passenden Slot vorschlagen und fragen.

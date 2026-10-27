@@ -1,6 +1,6 @@
 # Übergabekarte: S04 · Shopify Flow
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** (Pauls Vorgabe 27.10.: alle geschnittenen Videos selbst nach Kalender einplanen) für Mi 11.11.2026 14:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408163766 / 408164379 / 408164446, Drive-Final 14R80Cl6fxNAO0vdFuHQG6E7QDZq2UjpF.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): S04 · Shopify Flow
 - **Format / Design:** FACE (Serie S, Serien-ID "Shopify in 30 Sekunden", Inhalt laut Briefing bewusst substanzieller) / aktueller Look wie S02 und S03: Hook-Titel im Design verlauf (easyJet-Stil) unter dem Kopf, helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlagen P04, S02, S03), echte Seiten des Shopify Help Center als Hintergrund hinter ihm, Musik ruhig, sanfter Grade, Porträt-Modus

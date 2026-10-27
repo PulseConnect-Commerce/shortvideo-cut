@@ -1,6 +1,6 @@
 # Übergabekarte: A04 · Klaviyo
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** (Pauls Vorgabe 27.10.: alle geschnittenen Videos selbst nach Kalender einplanen) für Sa 14.11.2026 14:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408164628 / 408164761 / 408164836, Drive-Final 15UhSWP_S5BWT0tCycTf7oFs_Hbl7crm0.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): A04 · Klaviyo
 - **Format / Design:** FACE (A-Reihe "Eine Shopify-App, ein Problem") / aktueller Look wie A03 und S04: Hook-Titel im Design verlauf (easyJet-Stil) unter dem Kopf, helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlagen P04, A03, S04), echte Seiten von klaviyo.com, dem Klaviyo Help Center und dem Shopify App Store als Hintergrund hinter ihm, Musik ruhig, sanfter Grade, Porträt-Modus
