@@ -1,0 +1,136 @@
+{
+ "ziele": {
+  "nh": {
+   "url": "https://www.neuhandeln.de/beitraege/db/018477grollmann.html",
+   "status": 200,
+   "titel": "Regulierung wirkt: Temu in Deutschland 59 Prozent teurer als in der Schweiz",
+   "pos": {
+    "Ein identischer Warenkorb kostet beim Online-Marktplatz Temu in Deutschland 59 Prozent mehr als in der Schweiz.": [
+     822,
+     68
+    ],
+    "126,94 Euro bezahlen, während derselbe Einkauf in der Schweiz umgerechnet lediglich 80 Euro kostet.": [
+     990,
+     68
+    ],
+    "Die Untersuchung basiert auf einem Warenkorbvergleich vom 23. Oktober 2026.": [
+     1038,
+     68
+    ],
+    "Im deutschen Warenkorb weist Temu Einfuhrabgaben von 21,42 Euro aus, übernimmt davon allerdings selbst 6,42 Euro.": [
+     1388,
+     68
+    ],
+    "Selbst wenn diese vollständig herausgerechnet werden, liegt der deutsche Warenkorb allerdings mit 111,94 Euro noch deutlich über dem Schweizer Preisniveau.": [
+     1484,
+     92
+    ],
+    "Carpathia vermutet deshalb, dass Temu in der Schweiz möglicherweise gezielt niedrigere Aktionspreise einsetzt": [
+     1700,
+     68
+    ],
+    "Belege für diese Vermutungen liefert der Vergleich allerdings nicht.": [
+     1844,
+     44
+    ]
+   },
+   "ank": {
+    "Regulierung wirkt": 216,
+    "Einfuhrabgaben erklären nur einen Teil": 1324,
+    "Chinesische Plattformen": 1914
+   },
+   "bilder": [
+    [
+     " (Bild: Temu)",
+     553,
+     211,
+     364
+    ],
+    [
+     "Versandhausberater",
+     4938,
+     152,
+     110
+    ],
+    [
+     "www.hightext.de",
+     5240,
+     85,
+     360
+    ]
+   ],
+   "hoehe": 5458
+  },
+  "cp": {
+   "url": "https://blog.carpathia.ch/2026/10/25/gleicher-temu-warenkorb-in-deutschland-59-teurer-als-in-der-schweiz/",
+   "status": 200,
+   "titel": "Gleicher Temu-Warenkorb: In Deutschland 59% teurer als in der Schweiz | Carpathia Digital Business Blog",
+   "pos": {
+    "einen identischen Warenkorb mit Topsellern aus verschiedenen Produktkategorien zusammengestellt.": [
+     705,
+     98
+    ],
+    "In Deutschland ist derselbe Einkauf somit CHF 43.1 beziehungsweise 59 Prozent teurer als in der Schweiz.": [
+     1644,
+     72
+    ],
+    "Im deutschen Checkout werden EUR 21.42 an Einfuhrabgaben ausgewiesen. Temu subventioniert davon EUR 6.42; für den Warenkorb bleiben EUR 15 übrig.": [
+     1878,
+     98
+    ],
+    "Denkbar sind Schweiz-spezifische Aktionspreise": [
+     2191,
+     20
+    ],
+    "EUR 126.94": [
+     942,
+     31
+    ],
+    "EUR 80.0": [
+     973,
+     31
+    ]
+   },
+   "ank": {
+    "Gleicher Temu-Warenkorb": 123,
+    "Abgaben erklären die Differenz nur teilweise": 1798,
+    "Regulierungen zeigen Wirkung": 2398
+   },
+   "bilder": [
+    [
+     "p-content/uploads/sites/3/2026/10/Temu_Checkoutvergleich.png",
+     1078,
+     497,
+     372
+    ],
+    [
+     "-content/uploads/sites/3/2026/10/Temu_Warenkorbvergleich.png",
+     2945,
+     226,
+     372
+    ],
+    [
+     "_blog.carpathia.ch_banner_800x200_bottom_of_every_post-2.png",
+     3254,
+     93,
+     372
+    ],
+    [
+     "73710292ad7a9107457bf5f783a0d58bb66676ef772319?s=96&d=mm&r=g",
+     4259,
+     96,
+     96
+    ],
+    [
+     "3/07/AS___blog.carpathia.ch_banner_300x400_sidebar_top-5.png",
+     6717,
+     496,
+     372
+    ]
+   ],
+   "hoehe": 8968
+  }
+ },
+ "datum": "2026-10-27T18:43:28.626Z",
+ "viewport": "412x732 @2.62"
+}
