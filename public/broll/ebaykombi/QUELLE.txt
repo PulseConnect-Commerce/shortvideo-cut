@@ -1,0 +1,16 @@
+Hintergründe und Quellen-Bilder für N09 · eBay-Kombirabatte (alle aufgenommen am 27.10.2026 mit Playwright/Chromium in Handy-Ansicht, 412 px, Faktor 2,62, ohne Login, Skript hyperframes/ebaykombi-hg/aufnahme.cjs; nur zugeschnitten, skaliert, leicht abgedunkelt/weichgezeichnet; die grünen Markierungen sind <mark>-Hervorhebungen der Sätze, über die er spricht; schwebende Knöpfe (Chat-Hilfe, Barrierefreiheit) und eine Werbe-Einblendung ausgeblendet; nichts dazugemalt)
+
+Hintergründe (1080x1920, gestaltet mit hyperframes/ebaykombi-hg/gestalte.py):
+- hg-ebay-kopf.png: https://www.ebay.de/help/selling/selling-tools/selling-bundle-discounts?id=5842 (eBay-Hilfe, Kopf "eBay Kundenservice" und Überschrift "Kombirabatte für Verkäufer"; zwei Ausschnitte derselben Seite übereinander, ohne Brotkrumen und Suchfeld dazwischen)
+- hg-ebay-intro.png: dieselbe Seite, Einleitung, markiert: "beim Kauf von 2, 3 oder mehr Exemplaren desselben Artikels oder beim Kauf mehrerer unterschiedlicher Artikel festlegen."
+- hg-ebay-funktion.png: dieselbe Seite, "So funktionieren Kombirabatte", markiert: "An der Kasse wird der Endbetrag angezeigt, den Ihre Käufer bezahlen." und "Sie selbst müssen den Rabatt nicht berechnen oder bestätigen, dass er angewendet wurde."
+- hg-ebay-einrichten.png: dieselbe Seite, "Einrichten von Kombirabatten", markiert: "Wählen Sie danach den Rabattprozentsatz für 2, 3 und 4+ Artikel aus"
+- hg-ebay-rueckgabe.png: dieselbe Seite, "So funktionieren Rückgaben", markiert: "berechnen wir den neuen Preis für die Artikel, die der Käufer behält." (darunter das Beispiel der Seite)
+- hg-hb-stufen.png: https://ohn.haendlerbund.de/themen/marktplaetze/mehr-artikel-bestellung-ebay-kombirabatte-haendler (Händlerbund / Onlinehändler News, 26.10.2026), markiert: "Möglich sind bis zu drei Stufen, etwa:" (ab 2 Artikeln: 5 Prozent, ab 3 Artikeln: 10 Prozent, ab 4 Artikeln: 15 Prozent) und "Die Prozentwerte sind Beispiele aus der Ankündigung."
+- hg-hb-aktiv.png: dieselbe Meldung, "Aktivierung und Auswahl der Artikel", markiert: "Kombirabatte sind nicht standardmäßig aktiv."
+
+Quellen-Karten im Video (hyperframes/ebaykombi-skizzen/assets/):
+- hb-kopf.jpg: Kopf der Meldung "Mehr Artikel pro Bestellung? Ebay startet Kombirabatte für Händler", Händlerbund / Onlinehändler News, 26.10.2026 (Datum wie auf der Seite)
+- ebay-rueckgabe.jpg: eBay-Hilfe "Kombirabatte für Verkäufer", Abschnitt "So funktionieren Rückgaben" mit der Markierung oben
+
+Hinweis: eBay zeigte beim ersten Abruf mit Scrollen eine Identitätsprüfung (hCaptcha); sie wurde nicht umgangen. Die Seite wurde danach einmal ohne Scrollen geladen (keine Prüfung) und so aufgenommen.

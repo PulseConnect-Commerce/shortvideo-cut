@@ -13,7 +13,7 @@
  * hoch 817, x 72 (Take: Kopfoberkante Median y 701 mit der Porträt-Maske, Augen Median x 585 / y 916, Kinn ~1129, Hüftlinie
  * (oberste Jeans-Zeile) frühestens y 1743, Median 1775, an 178 Zeitpunkten alle 0,5 s über alle Schnittstücke gemessen) →
  * Kopfoberkante ~305, Augen ~649, Kinn ~988, mittig; der untere Bildrand zeigt Take-y 1711 (mit dem Zoom-in bis ~1688), also
- * liegt die Hüftlinie mindestens 32 px unter dem Bildrand. Sanfter Grade (Gesicht nach Farbe ~0,565), ein ruhiges Zoom-in (3 %)
+ * liegt die Hüftlinie mindestens 32 px unter dem Bildrand. Sanfter Grade plus brightness(0.985), ein ruhiges Zoom-in (3 %)
  * um die Augen, kein Punch-in. Von oben: Gesicht, Kinn, Pill-Untertitel (y 1068), Karte (y 1118-1468), alles über der
  * Instagram-Zone (ab y 1500).
  * Hintergründe (karten-aufbau.md "Marken-Shops als Hintergrund", stil-news "Quelle als Hintergrund"): an sieben Stellen steht er
@@ -53,8 +53,9 @@ export const HG: [string, number, number][] = [
   ["hg-ebay-rueckgabe", 108.4, 115.25], // "Und eine Sache ist hier noch wichtig, bei Teilretouren …" (eBay-Hilfe: "So funktionieren Rückgaben")
 ];
 
-/** Sanfter Grade (STIL.gradeSanft): das Gesicht liegt nach Farbe bei ~0,565 (Soll ~0,55-0,57), nicht weiter abgedunkelt */
-const GRADE = STIL.gradeSanft;
+/** Sanfter Grade (STIL.gradeSanft) plus brightness(0.985): das Gesicht lag im ersten fertigen Video bei 0,575 (gemessen wie
+ * npm run pruefen, 12 Zeitpunkten), Regie: "Liegt das Gesicht über 0,57, im Grade ausgleichen" → ~0,566 */
+const GRADE = `${STIL.gradeSanft} brightness(0.985)`;
 
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel bis "verschenkst" (3,60 s), ganz weg bei 3,5 s; die erste Karte kommt bei 3,53 s */
