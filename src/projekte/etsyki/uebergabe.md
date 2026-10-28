@@ -1,6 +1,6 @@
 # Übergabekarte: N08 · Etsy: Neue KI-Regeln
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** (News ohne Termin → nächster freier 09:00-Slot) für Fr 30.10.2026 09:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408583870 / 408583945 / 408583985, Drive-Final 1mgtWPrdrLy0oZkG4q2N9RZoYxrbuGVL8.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): N08 · Etsy: Neue KI-Regeln
 - **Format / Design:** NEWS / Look wie N07 (Temu-Warenkorb) und N09 (eBay-Kombirabatte): Hook-Titel im Design verlauf ("ETSY:" / "NEUE KI-REGELN!") unter dem Kopf, helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten, zwei echte Quellen als Quellen-Karte (OnlinehändlerNews/Händlerbund, Etsy-Hilfe), acht echte Seiten (drei OnlinehändlerNews, fünf Etsy-Hilfe) als Hintergrund hinter ihm, Musik news, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe

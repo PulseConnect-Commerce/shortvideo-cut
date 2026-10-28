@@ -1,6 +1,6 @@
 # Übergabekarte: P09 · Zu viele KI-Tools
 
-Status: **eingeplant** (Pauls Vorgabe 27.10.: alle geschnittenen Videos selbst nach Kalender einplanen) für So 08.11.2026 19:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408163216 / 408163360 / 408163457 (uuids 6375993044700057360 / 5627950706228611563 / 8256575954288070580), Drive-Final 1nYc4goYXF69ERK5QmT3YftZlYQbfPSGM. Hüft-Korrektur folgt: danach Datei in allen drei Posts tauschen.
+Status: **eingeplant** für So 08.11.2026 19:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408584868 / 408584946 / 408585008 (uuids 6375993044700057360 / 5627950706228611563 / 8256575954288070580), Datei am 28.10. gegen die Fassung ab Hüfthöhe getauscht, Drive-Final 1PsqxkeW459q65d4Yba_hPqWKNqGKCMJj.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): P09 · Zu viele KI-Tools
 - **Format / Design:** FACE (P-Serie, wie P04) / aktueller Look wie S03 und P04: Hook-Titel im Design verlauf (easyJet-Stil) unter dem Kopf, helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlagen P04 und S03), die echte Seite "KI-gestützte Tools" des Shopify Help Center als Hintergrund hinter ihm, echter Loop ohne Abspann, Musik ruhig, sanfter Grade, Porträt-Modus

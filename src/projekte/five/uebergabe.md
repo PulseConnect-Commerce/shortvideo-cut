@@ -1,6 +1,6 @@
 # Übergabekarte: M06 · FIVE Skincare
 
-Status: **eingeplant** für Di 03.11.2026 19:00 Europe/Berlin (auf Pauls Wunsch 27.10. vom 08.12. vorgezogen, Kalender-📣 mitverschoben), Metricool TikTok / Instagram / YouTube 408327896 / 408328047 / 408328171 (uuids 4925811329125335145 / -4360753732488117894 / -8359821835129895534), Drive-Final 1LrBzHRL3jqh57d_SKZLeAYw8I4qZbTM6. Hüft-Korrektur folgt: danach Datei in allen drei Posts tauschen.
+Status: **eingeplant** für Di 03.11.2026 19:00 Europe/Berlin (am 27.10. vom 08.12. vorgezogen), Metricool TikTok / Instagram / YouTube 408584149 / 408584225 / 408584277 (uuids 4925811329125335145 / -4360753732488117894 / -8359821835129895534), Datei am 28.10. gegen die Fassung ab Hüfthöhe getauscht, Drive-Final 1kYY2xlQiZoX5lF8YGgX2CSukLEoj3Oks.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): M06 · FIVE Skincare
 - **Format / Design:** HERO (Serie M "Marken-Story", wie M05) / erste Folge im **Editorial-Stil (PROBE ab M06**, karten-aufbau.md): Kennzahlen und Schlagzeilen über dem Kopf (Instrument Serif und Geist im Wechsel, Akzent im PulseConnect-Verlauf, Strich zeichnet sich auf dem Wort), echte freigestellte Fotos von fiveskincare.de neben dem Kopf, zehn echte Shop-Seiten als Hintergrund hinter ihm, Erklär-Bilder und Quellen-Karte unter dem Kopf, Pill-Untertitel (aktives Wort `#00E090`), Hook-Titel im Design verlauf mit FIVE in Zeile 1, Musik ruhig, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe
