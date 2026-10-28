@@ -8,10 +8,10 @@
     <!-- HERO M06 "FIVE Skincare" (Serie M "Marken-Story"), erste Folge im Editorial-Stil (PROBE ab M06, karten-aufbau.md):
          ÜBER DEM KOPF große, kurze Kennzahlen und Schlagzeilen (1-5 Wörter), Instrument Serif (OFL) und Geist im Wechsel,
          Akzent im PulseConnect-Verlauf #00E090 → #31ADEC, ein Strich zeichnet sich auf dem Wort darunter, auf einem hellen
-         Schleier (y ~280-470; der Kopf beginnt bei ~490). NEBEN DEM KOPF echte, freigestellte Fotos von fiveskincare.de
+         Schleier (y ~284-450 im Band oben, 0,9-fach; der Kopf beginnt bei ~468). NEBEN DEM KOPF echte, freigestellte Fotos von fiveskincare.de
          (Shea Cream, Porträt Anna Pfeiffer von der Presseseite; hyperframes/five-hg/freistellen.py).
-         UNTER DEM KOPF die Pill-Untertitel (Remotion, y 1068) und die Erklär-Bilder auf der hellen Karte (x 80-900,
-         y 1118-1468, über der Instagram-Zone ab 1500), dazu die Quellen-Karte mit Ausschnitten aus dem Shopify-Interview
+         UNTER DEM KOPF die Pill-Untertitel (Remotion, y 1168) und die Erklär-Bilder auf der hellen Karte (gebaut für x 80-900,
+         y 1118-1468, im Band unten 0,81-fach nach x 158-822, y 1216-1500, über der Instagram-Zone ab 1500), dazu die Quellen-Karte mit Ausschnitten aus dem Shopify-Interview
          (1. Sept. 2020). Auf den Shop-Hintergründen (in den Take gerechnet, hyperframes/five-hg) zeichnet sich der Strich
          unter dem echten USP der Seite ("Nur 5 Inhaltsstoffe", "Maximal 5 Inhaltsstoffe"). Rot nur für das Minus.
          Nur, was er sagt oder die Quellen belegen (Daten mit Stand); die KI-Formulierungen sind ausdrücklich Beispiele.
@@ -26,6 +26,14 @@
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      /* Bildausschnitt ab Hüfthöhe (Pauls Regel 2026-10-27): er steht größer im Bild (scale 1.54), darum werden die
+         Kennzahlen über dem Kopf (Band oben, um 490/284) leicht verkleinert und die Karten unter dem Kopf (Band unten)
+         nach unten gerückt und verkleinert: Karte y 1216-1500, über der Instagram-Zone. Fotos und Striche auf den
+         Shop-Seiten bleiben, wo sie waren. Die Bänder selbst werden nie animiert. */
+      .band { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; pointer-events: none; }
+      .band-oben { transform-origin: 490px 284px; transform: scale(0.9); }
+      .band-unten { transform-origin: 490px 1118px; transform: translateY(98px) scale(0.81); }
 
       /* heller Schleier hinter den Kennzahlen über dem Kopf */
       .schleier { position: absolute; left: 0; top: 226px; width: 1080px; height: 330px; opacity: 0;
@@ -115,6 +123,7 @@
         </defs>
       </svg>
 
+      <div id="band-oben" class="band band-oben">
       <!-- heller Schleier hinter den Kennzahlen (ab der ersten Kennzahl bis zum Schluss) -->
       <div id="schleier" class="schleier clip" data-start="3.20" data-duration="108.60" data-track-index="4"></div>
 
@@ -260,11 +269,13 @@
         <div class="kz" style="opacity:1"><span class="serif it">Learnings</span><span class="serif">&amp;</span><span class="serif it verlauf">Tipps</span></div>
       </section>
 
+      </div>
+
       <!-- ============ ECHTE FOTOS NEBEN DEM KOPF (Spur 2) ============ -->
       <!-- FIVE Shea Cream (Produktfoto aus dem Shop) im Hook, auf "Kosmetik" 1,73 -->
-      <div id="f1" class="foto clip" data-start="1.73" data-duration="4.97" data-track-index="2" style="left:92px;top:560px;width:236px"><img src="assets/shea-cream.png" alt="" /></div>
+      <div id="f1" class="foto clip" data-start="1.73" data-duration="4.97" data-track-index="2" style="left:66px;top:560px;width:220px"><img src="assets/shea-cream.png" alt="" /></div>
       <!-- Anna Pfeiffer (Porträt von der Presseseite fiveskincare.de/pages/presse) auf "Anna" 19,93 -->
-      <div id="f2" class="foto clip" data-start="19.93" data-duration="5.87" data-track-index="2" style="left:66px;top:500px;width:270px"><img src="assets/anna-pfeiffer.png" alt="" /><div class="name"><b>Anna Pfeiffer</b><span>Gründerin</span></div></div>
+      <div id="f2" class="foto clip" data-start="19.93" data-duration="5.87" data-track-index="2" style="left:66px;top:500px;width:210px"><img src="assets/anna-pfeiffer.png" alt="" /><div class="name"><b>Anna Pfeiffer</b><span>Gründerin</span></div></div>
 
       <!-- ============ STRICH UNTER DEM ECHTEN USP AUF DEM SHOP-HINTERGRUND (Spur 3) ============
            Produktseite Shea Cream: "Nur 5 Inhaltsstoffe" (Screenshot x 130-435, Unterkante y ~930), Startseite: "Maximal 5
@@ -274,6 +285,7 @@
       <svg id="m2" class="mark clip" data-start="68.53" data-duration="4.37" data-track-index="3" viewBox="0 0 1080 1920"><path id="m2-p" pathLength="1" d="M88 986 C 150 980, 230 981, 296 984" /></svg>
 
       <!-- ============ KARTEN UNTER DEM KOPF (Spur 1) ============ -->
+      <div id="band-unten" class="band band-unten">
 
       <!-- K1 Zutatenliste der Shea Cream (fiveskincare.de, Produktseite, "Mit nur 5 Inhaltsstoffen"): Die 10,03 /
            maximal 11,27 / fünf 11,93 / pro 12,97; bis vor "Und der Name" 13,60 -->
@@ -533,6 +545,7 @@
         <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
         <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
       </section>
+      </div>
     </div>
 
     <script>
@@ -638,9 +651,10 @@
       foto("#f1", 1.73, 6.70, -4);
       foto("#f2", 19.93, 25.80, -3);
 
-      // Strich unter dem echten USP auf dem Shop-Hintergrund
-      strich("#m1-p", 63.40, 0.55); tl.to("#m1", { opacity: 0, duration: 0.25 }, 66.65);
-      strich("#m2-p", 68.53, 0.5); tl.to("#m2", { opacity: 0, duration: 0.25 }, 72.65);
+      // Strich unter dem echten USP auf dem Shop-Hintergrund; seit dem Ausschnitt ab Hüfthöhe (scale 1.54) ist sein Kopf
+      // größer und wandert bei 64,9 s bzw. 70,6 s über die Stelle: der Strich geht vorher (64,40 / 70,30) wieder weg
+      strich("#m1-p", 63.40, 0.55); tl.to("#m1", { opacity: 0, duration: 0.25 }, 64.40);
+      strich("#m2-p", 68.53, 0.5); tl.to("#m2", { opacity: 0, duration: 0.25 }, 70.30);
 
       // K1 Zutatenliste
       karte("#k1", 10.03, 13.60);

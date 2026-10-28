@@ -7,15 +7,18 @@
  * (Shopify-Interview 2020) auf der hellen Karte.
  * Hook-Titel (Marke FIVE, darum mit Hook; Design "verlauf"): "FIVE SKINCARE:" / "MAX. 5 INHALTSSTOFFE PRO PRODUKT"
  * (Briefing 0-5 s "MAX. 5 INHALTSSTOFFE", Fakten-Grenze "pro Produkt"), an der Kartenposition unter dem Kopf.
- * Bild: damit die Kennzahlen über dem Kopf Platz haben, steht er etwas tiefer als in A04/M05 (Regie: "Wo die Kennzahlen
- * über dem Kopf zu wenig Platz haben, setz ihn etwas tiefer"): scale 1.2, hoch 270, x -26 (Take: Kopfoberkante Median
- * y 632 mit der Porträt-Maske, Augen Median x 518 / y 828, Kinn ~1030, an 166 Zeitpunkten über alle Stücke gemessen) →
- * Kopfoberkante ~488 (460-525), Augen ~724, mittig. Von oben: Kennzahl (y ~284-468, auf hellem Schleier), Kopf, Kinn
- * (~966), Pill-Untertitel (y 1068), Karte (y 1118-1468), alles über der Instagram-Zone (ab 1500). Sanfter Grade, ein
- * ruhiges Zoom-in (3 %) um die Augen, kein Punch-in (die Kennzahlen über dem Kopf und die Striche auf den
- * Shop-Hintergründen sitzen fest).
+ * Bild erst ab Hüfthöhe (Pauls Regel 2026-10-27: "erst ab Hüfthöhe bei einer sitzenden Aufnahme erst zu zeigen. Alles
+ * unterhalb der Hüfthöhe sollte abgeschnitten werden"): scale 1.54, hoch 505, x -30 (vorher 1.2 / 270 / -26, da sah man
+ * unten Schoß und Jeans). Take: Hüftlinie (oberste Zeile mit Jeans, links und rechts neben dem Hemd) frühestens y ~1580,
+ * Median ~1620; Kopfoberkante Median y 632 (p5 617), Augen Median x 526 / y 829, Kinn Median ~1028 (p80 1063), an
+ * 445 Zeitpunkten alle 0,25 s über alle Stücke gemessen. Der untere Bildrand zeigt Take-y 1575 (0 s, ohne Zoom), ab 3 s
+ * mit dem ruhigen Zoom-in höchstens 1565, am Ende 1553: die Hüftlinie liegt überall mindestens ~20 px unter dem Rand.
+ * Im Bild: Kopfoberkante ~468 (p5 445), Augen ~772, Kinn ~1078, mittig. Von oben: Kennzahl (Band oben 0,9-fach, y
+ * ~284-450, auf hellem Schleier), Kopf, Kinn, Pill-Untertitel (y 1168), Karte (Band unten 0,81-fach, y 1216-1500),
+ * alles über der Instagram-Zone (ab 1500). Sanfter Grade, ein ruhiges Zoom-in (3 %) um die Augen, kein Punch-in (die
+ * Kennzahlen über dem Kopf und die Striche auf den Shop-Hintergründen sitzen fest).
  * Marken-Hintergründe (karten-aufbau.md "Marken-Shops als Hintergrund"): an zehn Stellen steht er freigestellt vor echten
- * Seiten von fiveskincare.de (HG unten, in den Take gerechnet von npm run portrait --ausschnitt 1.2,270,-26
+ * Seiten von fiveskincare.de (HG unten, in den Take gerechnet von npm run portrait --ausschnitt 1.54,505,-30
  * --hintergrund …); Hook, Interview, Meinung, Tipp 1 und 3, KI und Aufruf vor seinem weichgezeichneten Zimmer.
  * Kennzahlen, Fotos und Karten als transparentes WebM aus hyperframes/five-skizzen (public/broll/five/skizzen.webm),
  * Zeiten und Töne in karten.json.
@@ -34,10 +37,11 @@ import karten from "./karten.json";
 const C = createCut(cut);
 export const meta = { id: "Five", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Augen im Take (Median) bei x 518, y 828 → im Bild x 540, y 724; Haar ~632 → 488; Bildunterkante = Take y ~1825 */
-const BILD = { scale: 1.2, hoch: 270, x: -26 };
+/** Augen im Take (Median) bei x 526, y 829 → im Bild x 548, y 772; Haar ~632 → 468; Bildunterkante = Take y ~1575
+ *  (mit dem Zoom-in ab 3 s ≤ 1565), Hüftlinie im Take frühestens ~1580 */
+const BILD = { scale: 1.54, hoch: 505, x: -30 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
-const AUGEN_Y = 724;
+const AUGEN_Y = 772;
 
 /** Marken-Hintergründe im Take (Sekunden), wie beim Aufruf von npm run portrait --hintergrund (public/broll/five/) */
 export const HG: [string, number, number][] = [
@@ -63,8 +67,8 @@ const HOOK_ENDE = fs(6.5);
 /** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json) */
 const TOENE = karten.karten.flatMap((k) => k.sfx);
 
-/** Pill-Untertitel unter dem Kinn, über der Karte (Karte x 80-900, oben bei y 1118) */
-const PILLE = { x: 490, y: 1068 };
+/** Pill-Untertitel unter dem Kinn, über der Karte (Karte x 158-822, oben bei y 1216) */
+const PILLE = { x: 490, y: 1168 };
 
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false };
 
@@ -91,10 +95,10 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
         />
       </AbsoluteFill>
 
-      {/* Hook-Titel (Marke FIVE, Text aus dem Briefing), an der Kartenposition unter dem Kopf (oben ~1118), wie Karte
+      {/* Hook-Titel (Marke FIVE, Text aus dem Briefing), an der Kartenposition unter dem Kopf (oben ~1216), wie Karte
           und Pille um x 490 zentriert, damit nichts in die TikTok-Leiste rechts (ab x 900) ragt */}
       <DesignRahmen design="verlauf">
-        <AbsoluteFill style={{ transform: "translate(-50px, 866px) scale(0.9)", transformOrigin: "50% 0%" }}>
+        <AbsoluteFill style={{ transform: "translate(-50px, 964px) scale(0.9)", transformOrigin: "50% 0%" }}>
           <HookTitle fr={fr} line1="FIVE SKINCARE:" line2="MAX. 5 INHALTSSTOFFE PRO PRODUKT" outAt={HOOK_ENDE} />
         </AbsoluteFill>
       </DesignRahmen>
