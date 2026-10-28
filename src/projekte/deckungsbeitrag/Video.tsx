@@ -5,11 +5,14 @@
  * 14:00.
  * Hook-Titel (Design "verlauf", easyJet-Stil) mit dem Cover-Text aus dem Briefing: "DECKUNGSBEITRAG –" / "WAS BLEIBT VON
  * DEINEM UMSATZ ÜBRIG?", an der Kartenposition unter dem Kopf.
- * Bild (Pauls Vorgabe 25.10.: "Oder du packst meinen Kopf höher und lässt die Motion Captions unter dem Kopf"): er steht
- * höher, Kopfoberkante im Median bei y ~315 (Take: Haar Median y 622, Augen Median x 515 / y 833 über alle
- * Schnittstücke gemessen) → scale 1.3, hoch 494, x -33: Augen bei ~589, mittig; unten endet das Bild an der Hüfte
- * (Take y ~1857). Sanfter Grade, ein ruhiges Zoom-in (3 %) um die Augen, kein Punch-in. Von oben: Gesicht, Kinn,
- * Pill-Untertitel (y 1025), Karte (ab y 1075, Zahlenkarte bis 1483), alles über der Instagram-Zone (ab y 1500).
+ * Bild (Pauls Vorgaben 25.10.: "Oder du packst meinen Kopf höher und lässt die Motion Captions unter dem Kopf", und
+ * 27.10.: "erst ab Hüfthöhe bei einer sitzenden Aufnahme erst zu zeigen. Alles unterhalb der Hüfthöhe sollte
+ * abgeschnitten werden"): Kopfoberkante im Median bei y ~310 (Take: Haar Median y 622, Augen Median x 516 / y 834,
+ * Kinn Median ~1050, über alle Schnittstücke alle 0,25 s gemessen) → scale 1.63, hoch 704, x -39 (bis 28.10.: 1.3 /
+ * 494 / -33, da sah man unten Schoß und Jeans): Augen bei ~655, mittig; der untere Bildrand zeigt Take-y ~1610 (mit
+ * dem Zoom-in ~1590), die Hüftlinie (Jeans neben dem Hemd) liegt im Take frühestens bei ~1640, also unsichtbar.
+ * Sanfter Grade, ein ruhiges Zoom-in (3 %) um die Augen, kein Punch-in. Von oben: Gesicht, Kinn (Median ~1015),
+ * Pill-Untertitel (y 1150), Karte (ab y 1200, Zahlenkarte 0,72-fach bis 1494), alles über der Instagram-Zone (ab 1500).
  * Karten als transparentes WebM aus hyperframes/deckungsbeitrag-skizzen (public/broll/deckungsbeitrag/skizzen.webm),
  * Zeiten und Töne in karten.json. Kein B-Roll aus alten Videos (Briefing über die Regie), Verweis auf E04 nur als Kicker
  * "Im letzten Video: ROAS" (seine Worte). Keine Folgennummern im Bild; zum Schluss nur das Folgen-Symbol
@@ -29,10 +32,10 @@ import karten from "./karten.json";
 const C = createCut(cut);
 export const meta = { id: "Deckungsbeitrag", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Augen im Take (Median) bei x 515, y 833 → im Bild x 540, y 589; Haar Median 622 → 315; Bildunterkante = Take y 1857 */
-const BILD = { scale: 1.3, hoch: 494, x: -33 };
+/** Augen im Take (Median) bei x 516, y 834 → im Bild x 540, y 655; Haar Median 622 → 310; Bildunterkante = Take y ~1610 (Hüfte ab ~1640) */
+const BILD = { scale: 1.63, hoch: 704, x: -39 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
-const AUGEN_Y = 589;
+const AUGEN_Y = 655;
 
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel bis nach "übrig?" (Ausgabe 3,51 s), ganz weg bei 3,65 s; die Serien-Karte kommt bei 3,63 s */
@@ -41,8 +44,10 @@ const HOOK_ENDE = fs(3.45);
 /** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json) */
 const TOENE = karten.karten.flatMap((k) => k.sfx);
 
-/** Pill-Untertitel unter dem Kinn, über der Karte (Karte x 80-900, oben bei y 1075); unter dem tiefsten Kinn (Take ~1140 → ~996, wenn er sich vorbeugt) */
-const PILLE = { x: 490, y: 1025 };
+/** Pill-Untertitel unter dem Kinn (Median ~1015), über der Karte (Karte x 80-900, oben bei y 1200); die Pille reicht von
+ * ~1115 bis ~1185. Beugt er sich weit vor (Kinn im Take über ~1110, etwa jedes sechste Bild), reicht das Kinn an die
+ * Pille, der Mund (höchstens ~1046) bleibt frei */
+const PILLE = { x: 490, y: 1150 };
 
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false };
 
@@ -69,9 +74,9 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
         />
       </AbsoluteFill>
 
-      {/* Hook-Titel mit dem Cover-Text aus dem Briefing, easyJet-Stil, an der Kartenposition unter dem Kopf (oben ~1075) */}
+      {/* Hook-Titel mit dem Cover-Text aus dem Briefing, easyJet-Stil, an der Kartenposition unter dem Kopf (oben ~1200) */}
       <DesignRahmen design="verlauf">
-        <AbsoluteFill style={{ transform: "translateY(823px) scale(0.9)", transformOrigin: "50% 0%" }}>
+        <AbsoluteFill style={{ transform: "translateY(948px) scale(0.9)", transformOrigin: "50% 0%" }}>
           <HookTitle fr={fr} line1="DECKUNGSBEITRAG –" line2="WAS BLEIBT VON DEINEM UMSATZ ÜBRIG?" outAt={HOOK_ENDE} />
         </AbsoluteFill>
       </DesignRahmen>
