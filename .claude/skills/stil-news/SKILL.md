@@ -163,6 +163,15 @@ nicht mehr). Schrift, Farben, Untertitel-Look, Hook-Look und Chips kommen aus de
   Weicht etwas ab oder hat sich die Lage geändert (z. B. Angebot ausgebucht), ihm sofort sagen und erst nach seinem
   OK einplanen.
 
+- **Ab 2026-10-28: Quelle groß, er klein in der Ecke** (geht vor die Punkte oben, wo sie sich widersprechen). Er:
+  "Kannst du bitte beim Einblenden der News oder anderen Zitaten von Quellen meinen Kopf weiter nach unten schieben,
+  damit man auch die Quelle lesen kann? Oder ansonsten einfach mein Video in dem Moment kleiner machen und in Ecke
+  schieben?" Solange eine Quelle oder ein Zitat gezeigt wird, steht der echte Screenshot scharf und groß über das ganze
+  Bild (markierte Sätze im Fokus), er läuft als abgerundete Bubble unten rechts weiter (x 520-900, y 1010-1480), die
+  Pille links daneben; Ein- und Ausgang 0,35 s. Baustein `src/lib/quelle-gross.tsx`, Regeln in
+  `.claude/skills/faber-cut/karten-aufbau.md` "Quelle groß, er klein in der Ecke (2026-10-28)", Vorlage N09
+  `src/projekte/ebaykombi`. Quellen-Hintergründe mit Lesetext nicht mehr hinter seinen Kopf legen.
+
 ## Hook
 
 - Seine Texteinblendung (z. B. "SHOPIFY BAUT DEINEN SHOP MIT KI?!") als Hook aus dem Design, zwei Zeilen, so geteilt,

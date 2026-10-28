@@ -100,6 +100,39 @@ Gilt für **jede M-Folge (Marken-Story)** und **jedes Video, in dem eine bekannt
 - Zusätzlich bleiben die Quellen-Karten (Fallstudie, Pressemeldung, App-Store) für Belege.
 - Nur echte, aktuelle Seiten, nichts nachbauen; Datum im Übergabebericht nennen.
 
+## Quelle groß, er klein in der Ecke (2026-10-28)
+
+Er: "Kannst du bitte beim Einblenden der News oder anderen Zitaten von Quellen meinen Kopf weiter nach unten schieben,
+damit man auch die Quelle lesen kann? Oder ansonsten einfach mein Video in dem Moment kleiner machen und in Ecke
+schieben?" Anlass: bei den Quellen-Hintergründen hinter ihm und bei den Quellen-Karten verdeckte sein Kopf den Text.
+
+Gilt für **jede Stelle, an der eine Quelle oder ein Zitat gezeigt wird** (Artikel, Hilfeseite, Pressemeldung, Quellen-
+Karte, Artikel-Hintergrund mit markierten Sätzen), in allen Formaten. Umgesetzt wird die Variante "klein in die Ecke":
+
+- **Baustein `src/lib/quelle-gross.tsx`** (`QuelleGross`, `QuelleBubble`, `quelleZustand`, `quellePille`): eine Liste
+  `QUELLEN: QuelleFenster[]` mit `von`/`bis` (Sekunden im Schnitt), `bild` (unter `public/`), Lage `y`/`x`/`zoom`,
+  `fokus` (Bänder der markierten Sätze auf dem Schirm) und `label` (Herkunft, wenn der Ausschnitt den Seitenkopf nicht
+  zeigt). Vorlage: `src/projekte/ebaykombi/Video.tsx`.
+- **Die Quelle steht groß über das ganze Bild**: der echte Screenshot scharf (nicht der abgedunkelte, weichgezeichnete
+  Hintergrund), zugeschnitten aus `hyperframes/<projekt>-hg/screenshots/` nach `public/broll/<projekt>/quelle-*.jpg`
+  (`ffmpeg -vf crop=1080:<h>:0:<y>`), Breite 1080 wie am Handy. Die markierten Sätze liegen im sicheren Bereich
+  zwischen y ~330 und ~800 (rechts ab y 780 liegt die TikTok-Leiste); alles außer den `fokus`-Bändern liegt unter einem
+  hellen Schleier, damit die Markierung im Fokus ist. Ein ruhiges Heranfahren (2 %) lässt das Bild nie stehen.
+- **Er läuft als Facecam-Bubble unten rechts weiter**: abgerundet (r 40, dünner weißer Rand, leichter Schatten), 380 x
+  470 px bei x 520-900, y 1010-1480 (über der Instagram-Zone ab y 1500, links der TikTok-Leiste ab x 900), Ausschnitt
+  Kopf und Schultern (`AUSSCHNITT` = Vollbild x 90-990, ab y 200; bei anderer Kopfhöhe anpassen).
+- **Ein- und Ausgang 0,35 s**: er schrumpft aus dem Vollbild in die Ecke und wächst wieder zurück (kein harter
+  Schnitt); die Erklär-Karten (skizzen.webm) blenden in dieser Zeit aus (`opacity: kartenSicht(q.p)`, in der ersten Hälfte des Eingangs ganz weg), die Pill-Untertitel
+  wandern links neben die Bubble (x ~296, y ~1250, Breite ≤ 436) und laufen weiter.
+- **Zeitfenster**: auf den Sätzen, die die Quelle belegen (Schlagzeile, markierte Zahl oder Aussage), meist 2,5-3,5 s,
+  an Kartenwechseln. Erklär-Bilder und Briefing-Grafiken bleiben davor und danach stehen; die Quelle ersetzt nur die
+  Sekunden, in denen sie gelesen werden soll.
+- **Quellen-Hintergründe hinter ihm** (`npm run portrait --hintergrund`) mit Text zum Lesen nicht mehr außerhalb dieser
+  Fenster: im Take entweder nur dort, wo er ohnehin als Bubble läuft, oder ganz heraus (Porträt neu ohne sie).
+  Hintergründe, die nur Stimmung oder Marke sind (Logo, Shop-Ansicht ohne Lesetext), dürfen bleiben.
+- Prüfen: Standbilder jedes Fensters in voller Größe und in Handy-Größe (~360 px breit) ansehen: Markierung lesbar,
+  nichts unter Pille oder Bubble, Bubble und Pille außerhalb der Zonen (`npm run raster`).
+
 ## Visuelle Metaphern statt Wortkarten (FREIGEGEBEN 2026-10-26, Vorlage P04 `src/projekte/pagebuilder`)
 
 Er: "Ich möchte gerne den skill eher dazu nutzen, visuell mein Gesprochenes darzustellen anstatt nur die Wörter

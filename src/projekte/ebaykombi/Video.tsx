@@ -16,9 +16,12 @@
  * liegt die Hüftlinie mindestens 32 px unter dem Bildrand. Sanfter Grade plus brightness(0.985), ein ruhiges Zoom-in (3 %)
  * um die Augen, kein Punch-in. Von oben: Gesicht, Kinn, Pill-Untertitel (y 1068), Karte (y 1118-1468), alles über der
  * Instagram-Zone (ab y 1500).
- * Hintergründe (karten-aufbau.md "Marken-Shops als Hintergrund", stil-news "Quelle als Hintergrund"): an sieben Stellen steht er
- * freigestellt vor echten Seiten (fünfmal die eBay-Hilfe "Kombirabatte für Verkäufer", zweimal die Händlerbund-Meldung; HG unten,
- * in den Take gerechnet von npm run portrait --ausschnitt 1.6,817,72 --hintergrund …). Rest vor seinem weichgezeichneten Zimmer.
+ * Quelle groß, er klein in der Ecke (Pauls Regel 2026-10-28, karten-aufbau.md, src/lib/quelle-gross.tsx): an vier Stellen steht
+ * die echte Quelle scharf über das ganze Bild (Händlerbund-Kopf, Händlerbund "bis zu drei Stufen", Händlerbund "nicht
+ * standardmäßig aktiv", eBay-Hilfe "So funktionieren Rückgaben"; QUELLEN unten), er läuft als Bubble unten rechts weiter, die
+ * Pille links daneben. Die früheren Quellen-Hintergründe hinter ihm (eBay-Hilfe intro/funktion/einrichten/rueckgabe,
+ * Händlerbund stufen/aktiv) sind aus dem Take genommen (npm run portrait neu, nur noch hg-ebay-kopf), sonst verdeckte sein
+ * Kopf dort wieder den Text. Geblieben ist der Marken-Hintergrund eBay-Hilfe-Kopf unter dem Hook (HG unten).
  * Karten als transparentes WebM aus hyperframes/ebaykombi-skizzen (public/broll/ebaykombi/skizzen.webm), Zeiten und Töne in
  * karten.json.
  */
@@ -27,6 +30,7 @@ import { AbsoluteFill, Easing, interpolate, OffthreadVideo, Sequence, staticFile
 import { clamp, HookTitle, Musik, Sfx, Takes } from "../../lib/bausteine";
 import { DesignRahmen } from "../../lib/design";
 import { PillUntertitel } from "../../lib/pillen";
+import { kartenSicht, QuelleBubble, type QuelleFenster, QuelleGross, quellePille, quelleZustand } from "../../lib/quelle-gross";
 import { Raster } from "../../lib/raster";
 import { createCut } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
@@ -42,15 +46,26 @@ const BILD = { scale: 1.6, hoch: 817, x: 72 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
 const AUGEN_Y = 649;
 
-/** Hintergründe im Take (Sekunden), wie beim Aufruf von npm run portrait --hintergrund (public/broll/ebaykombi/) */
+/** Hintergrund im Take (Sekunden), wie beim Aufruf von npm run portrait --hintergrund (public/broll/ebaykombi/); seit
+ * 2026-10-28 nur noch der Marken-Kopf unter dem Hook, die Quellen mit markierten Sätzen stehen groß (QUELLEN) */
 export const HG: [string, number, number][] = [
   ["hg-ebay-kopf", 7.9, 14.3], // "eBay hat eine neue Rabattfunktion, aber bevor du jetzt 15 % verschenkst, …" (eBay-Hilfe, Kopf)
-  ["hg-hb-stufen", 40.1, 47.5], // "Du kannst bis zu drei Stufen festlegen. Zum Beispiel …" (Händlerbund: "Möglich sind bis zu drei Stufen")
-  ["hg-ebay-einrichten", 47.5, 50.0], // "Die Prozentsätze bestimmst du selbst." (eBay-Hilfe: "Wählen Sie danach den Rabattprozentsatz …")
-  ["hg-ebay-intro", 50.2, 56.4], // "Und das funktioniert nicht nur, wenn jemand denselben Artikel …" (eBay-Hilfe, Einleitung)
-  ["hg-ebay-funktion", 59.7, 62.55], // "Der Rabatt wird dann automatisch im Warenkorb berücksichtigt." (eBay-Hilfe: "Sie selbst müssen den Rabatt nicht berechnen …")
-  ["hg-hb-aktiv", 62.55, 69.0], // "Aktivieren musst du ihn aber leider selbst. Standardmäßig …" (Händlerbund: "nicht standardmäßig aktiv")
-  ["hg-ebay-rueckgabe", 108.4, 115.25], // "Und eine Sache ist hier noch wichtig, bei Teilretouren …" (eBay-Hilfe: "So funktionieren Rückgaben")
+];
+
+/** Quelle groß, er als Bubble (Sekunden im Schnitt; Bilder scharf aus hyperframes/ebaykombi-hg/screenshots, nur
+ * zugeschnitten, QUELLE.txt). fokus: die markierten Sätze auf dem Schirm, der Rest unter hellem Schleier */
+const QUELLEN: QuelleFenster[] = [
+  // "Mit den neuen Kombirabatten können tatsächlich Händler Kunden belohnen" (statt Quellen-Karte q1): Kopf der Meldung
+  { von: 6.1, bis: 9.3, bild: "broll/ebaykombi/quelle-hb-kopf.jpg", y: 90, fokus: [[420, 850]] },
+  // "Du kannst bis zu drei Stufen festlegen. Zum Beispiel" → "Möglich sind bis zu drei Stufen, etwa:" (danach die Stufen-Grafik)
+  { von: 12.72, bis: 15.62, bild: "broll/ebaykombi/quelle-hb-stufen.jpg", y: -90, fokus: [[350, 850], [905, 1095]],
+    label: "Händlerbund · 26.10.2026" },
+  // "Standardmäßig ist er nämlich nicht eingeschaltet." → "Kombirabatte sind nicht standardmäßig aktiv."
+  { von: 32.88, bis: 35.52, bild: "broll/ebaykombi/quelle-hb-aktiv.jpg", y: -5, fokus: [[325, 800]],
+    label: "Händlerbund · 26.10.2026" },
+  // "Und eine Sache ist hier noch wichtig, bei Teilretouren" (statt Quellen-Karte q2) → "… berechnen wir den neuen Preis …"
+  { von: 59.18, bis: 62.1, bild: "broll/ebaykombi/quelle-ebay-rueckgabe.jpg", y: 66, fokus: [[385, 780]],
+    label: "eBay-Hilfe · Kombirabatte für Verkäufer" },
 ];
 
 /** Sanfter Grade (STIL.gradeSanft) plus brightness(0.985): das Gesicht lag im ersten fertigen Video bei 0,575 (gemessen wie
@@ -80,17 +95,22 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
   // ruhiges Zoom-in über das ganze Video (3 %), kein Punch-in
   const push = interpolate(fr, [0, 90], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
   const zoom = 1 + 0.03 * (0.45 * push + 0.55 * (fr / C.DURATION));
+  // Quelle groß: 0 = normal, 1 = Quelle über das ganze Bild, er als Bubble unten rechts
+  const q = quelleZustand(QUELLEN, fr, C.FPS);
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
-      <AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: `540px ${AUGEN_Y}px` }}>
-        <Takes
-          C={C}
-          voice={voice}
-          transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
-          transformOrigin="50% 0%"
-          grade={GRADE}
-        />
-      </AbsoluteFill>
+      <QuelleGross fenster={QUELLEN} fr={fr} fps={C.FPS} />
+      <QuelleBubble p={q.p}>
+        <AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: `540px ${AUGEN_Y}px` }}>
+          <Takes
+            C={C}
+            voice={voice}
+            transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
+            transformOrigin="50% 0%"
+            grade={GRADE}
+          />
+        </AbsoluteFill>
+      </QuelleBubble>
 
       {/* Hook-Titel (Regie und Briefing: "NEU BEI EBAY: KOMBI-RABATTE", Marke in Zeile 1, Design verlauf), an der Kartenposition
           unter dem Kopf (oben ~1118), wie Karte und Pille um x 490 zentriert, damit nichts in die TikTok-Leiste rechts (ab x 900) ragt */}
@@ -106,12 +126,12 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           src={staticFile("broll/ebaykombi/skizzen.webm")}
           transparent
           muted
-          style={{ position: "absolute", inset: 0, width: 1080, height: 1920 }}
+          style={{ position: "absolute", inset: 0, width: 1080, height: 1920, opacity: kartenSicht(q.p) }}
         />
       </Sequence>
       {sfx && TOENE.map((t, i) => <Sfx key={i} file={t.datei} at={t.at * C.FPS} volume={t.volume} />)}
 
-      {untertitel && <PillUntertitel C={C} fr={fr} x={PILLE.x} y={PILLE.y} farbe="#00E090" />}
+      {untertitel && <PillUntertitel C={C} fr={fr} {...quellePille(q.p, PILLE)} farbe="#00E090" />}
 
       {musik && <Musik C={C} datei={musik} />}
       {raster && <Raster />}

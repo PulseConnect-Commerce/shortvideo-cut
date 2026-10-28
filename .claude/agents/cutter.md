@@ -37,6 +37,8 @@ Skizzen mit HyperFrames), 6 (eigene Prüfung: Sync, Pacing, Standbilder, Raster)
 
 ## Farbe und Karten
 
+**Ab 2026-10-28, Quelle groß, er klein in der Ecke (alle Formate, News und Zitate):** "Kannst du bitte beim Einblenden der News oder anderen Zitaten von Quellen meinen Kopf weiter nach unten schieben, damit man auch die Quelle lesen kann? Oder ansonsten einfach mein Video in dem Moment kleiner machen und in Ecke schieben?" Wo eine Quelle oder ein Zitat gezeigt wird, den echten Screenshot groß über das ganze Bild und ihn als Bubble unten rechts, Baustein `src/lib/quelle-gross.tsx`, Regeln in karten-aufbau.md "Quelle groß, er klein in der Ecke (2026-10-28)". Keine Quellen-Hintergründe mit Lesetext mehr hinter seinem Kopf.
+
 **Ab 2026-10-26, Erklär-Bilder (freigegeben):** das Gesprochene als Bild mit Bewegung (Metaphern, auf das Wort getimt) statt Wortkarten, Vorlage `src/projekte/pagebuilder`, Regeln in karten-aufbau.md "Visuelle Metaphern".
 
 **Ab 2026-10-25, Hook-Titel nur, wenn er etwas bringt:** bei Markennamen, News oder starker Zahl ja; bei persönlichen/ehrlichen Videos weglassen (karten-hell.md).

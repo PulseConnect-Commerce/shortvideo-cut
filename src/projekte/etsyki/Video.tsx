@@ -16,10 +16,13 @@
  * Zoom-in bis ~1665), also liegt die Hüftlinie mindestens 34 px unter dem Bildrand. Sanfter Grade, ein ruhiges Zoom-in (3 %) um
  * die Augen, kein Punch-in. Von oben: Gesicht, Kinn, Pill-Untertitel (y 1068), Karte (y 1118-1468/1496), alles über der
  * Instagram-Zone (ab y 1500).
- * Hintergründe (karten-aufbau.md "Marken-Shops als Hintergrund", stil-news "Quelle als Hintergrund"; Regie: beide Quellen als
- * Quellen-Karte und als Hintergrund): an acht Stellen steht er freigestellt vor den echten Seiten (drei OnlinehändlerNews, fünf
- * Etsy-Hilfe; HG unten, in den Take gerechnet von npm run portrait --ausschnitt 1.62,815,47 --hintergrund …). Hook, Einschätzung,
- * Tipp und Aufruf vor seinem weichgezeichneten Zimmer. Karten als transparentes WebM aus hyperframes/etsyki-skizzen
+ * Quelle groß, er klein in der Ecke (Pauls Regel 2026-10-28, karten-aufbau.md, src/lib/quelle-gross.tsx): an zwei Stellen
+ * steht die echte Quelle scharf über das ganze Bild, er läuft als Bubble unten rechts weiter, die Pille links daneben
+ * (QUELLEN unten): 9,5-14,75 s OnlinehändlerNews (Überschrift mit Datum, "Seit dem 22. Oktober 2026 …", "Jedes Angebot
+ * braucht künftig mindestens ein Foto …"; statt der Quellen-Karte q1) und 30,97-33,45 s Etsy-Hilfe "KI-generierte
+ * Funktionsanleitungen …" (statt q2). Die acht Quellen-Hintergründe hinter ihm sind aus dem Take genommen (npm run portrait
+ * neu, ohne --hintergrund), sonst verdeckte sein Kopf dort den Text; dort steht er vor seinem weichgezeichneten Zimmer, die
+ * Erklär-Karten bleiben. Karten als transparentes WebM aus hyperframes/etsyki-skizzen
  * (public/broll/etsyki/skizzen.webm), Zeiten und Töne in karten.json.
  */
 import type React from "react";
@@ -27,6 +30,7 @@ import { AbsoluteFill, Easing, interpolate, OffthreadVideo, Sequence, staticFile
 import { clamp, HookTitle, Musik, Sfx, Takes } from "../../lib/bausteine";
 import { DesignRahmen } from "../../lib/design";
 import { PillUntertitel } from "../../lib/pillen";
+import { kartenSicht, QuelleBubble, type QuelleFenster, QuelleGross, quellePille, quelleZustand } from "../../lib/quelle-gross";
 import { Raster } from "../../lib/raster";
 import { createCut } from "../../lib/schnitt";
 import { STIL } from "../../lib/stil";
@@ -42,17 +46,24 @@ const BILD = { scale: 1.62, hoch: 815, x: 47 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
 const AUGEN_Y = 658;
 
-/** Hintergründe im Take (Sekunden), wie beim Aufruf von npm run portrait --hintergrund (public/broll/etsyki/). Jedes Bild reicht
- * mindestens 0,25 s über das Ende seines Schnittstücks (J-Cut: das Bild läuft 3 Frames länger als der Ton) */
-export const HG: [string, number, number][] = [
-  ["hg-ohn-intro", 23.75, 27.95], // "Und wenn du jetzt dort verkaufst, …" (OHN: "Wer auf Etsy verkauft, muss seine Listings prüfen – auch die bestehenden.")
-  ["hg-ohn-kopf", 30.45, 34.1], // "Schaut euch mal diese Meldung hier an. Seit dem 22. Oktober" (OHN: Überschrift, 26.10.2026)
-  ["hg-etsy-foto", 34.1, 40.45], // "verlangt Etsy bei vielen Angeboten mindestens ein echtes …" (Etsy-Hilfe: "Etsy schreibt für die meisten Artikel mindestens ein unbearbeitetes Foto vor.")
-  ["hg-etsy-weitere", 44.4, 53.35], // "Das heißt jetzt aber natürlich nicht, … Weitere Bilder dürfen …" (Etsy-Hilfe: "Für weitere Bilder kannst du Bildbearbeitungsprogramme nutzen, auch solche mit KI, …")
-  ["hg-etsy-ausnahmen", 53.35, 56.9], // "Und für manche Produkte gibt es tatsächlich sogar auch Ausnahmen." (Etsy-Hilfe: "Die Anforderungen können je nachdem, was du verkaufst, unterschiedlich sein:")
-  ["hg-etsy-anleitungen", 58.65, 64.45], // "Was aber außerdem neu ist, KI-generierte Anleitungen, …" (Etsy-Hilfe: "KI-generierte Funktionsanleitungen, wie zum Beispiel Bastelvorlagen, Rezepte und Anleitungen")
-  ["hg-etsy-bots", 64.45, 69.75], // "Und komplett automatisch erstellte Angebote ohne menschliche Beteiligung …" (Etsy-Hilfe: "Von Bots erstellte Inhalte")
-  ["hg-ohn-bestehende", 81.75, 86.95], // "Und das betrifft aber leider nicht nur die neuen Listings, …" (OHN: "Die neuen Regeln gelten nicht nur für neue Angebote. …")
+/** Hintergründe im Take: seit 2026-10-28 keine mehr (alle acht waren Quellen mit Lesetext; Porträt neu ohne
+ * --hintergrund). Die Quellen stehen jetzt groß (QUELLEN). */
+export const HG: [string, number, number][] = [];
+
+/** Quelle groß, er als Bubble (Sekunden im Schnitt; Bilder scharf aus hyperframes/etsyki-hg/screenshots, nur zugeschnitten,
+ * das Artikelbild von OnlinehändlerNews nie im Bild). Aneinanderstoßende Fenster: er bleibt klein, nur die Seite wechselt. */
+const QUELLEN: QuelleFenster[] = [
+  // "Schaut euch mal diese Meldung hier an.": Überschrift "Etsy-Shop unter Druck: Neue KI-Regeln zwingen zum Foto-Marathon", 26.10.2026
+  { von: 9.5, bis: 11.45, bild: "broll/etsyki/quelle-ohn-kopf.jpg", y: 60, fokus: [[400, 830]] },
+  // "Seit dem 22. Oktober": markiert "Seit dem 22. Oktober 2026 gelten neue Regeln für Produktfotos, …"
+  { von: 11.45, bis: 12.95, bild: "broll/etsyki/quelle-ohn-seit.jpg", y: 300, fokus: [[345, 775]],
+    label: "OnlinehändlerNews · 26.10.2026" },
+  // "verlangt Etsy bei vielen Angeboten mindestens ein echtes …": "1. Pflicht", markiert "Jedes Angebot braucht künftig …"
+  { von: 12.95, bis: 14.75, bild: "broll/etsyki/quelle-ohn-pflicht.jpg", y: 230, fokus: [[340, 1000]],
+    label: "OnlinehändlerNews · 26.10.2026" },
+  // "Was aber außerdem neu ist, KI-generierte …": Etsy-Hilfe, markiert "KI-generierte Funktionsanleitungen, …"
+  { von: 30.97, bis: 33.45, bild: "broll/etsyki/quelle-etsy-ki.jpg", y: 108, fokus: [[365, 840]],
+    label: "Etsy-Hilfe · Was kann ich auf Etsy verkaufen?" },
 ];
 
 /** Sanfter Grade (STIL.gradeSanft); Helligkeit am Gesicht nach den ersten Standbildern prüfen (Regie: über 0,57 ausgleichen) */
@@ -81,17 +92,22 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
   // ruhiges Zoom-in über das ganze Video (3 %), kein Punch-in
   const push = interpolate(fr, [0, 90], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
   const zoom = 1 + 0.03 * (0.45 * push + 0.55 * (fr / C.DURATION));
+  // Quelle groß: 0 = normal, 1 = Quelle über das ganze Bild, er als Bubble unten rechts
+  const q = quelleZustand(QUELLEN, fr, C.FPS);
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
-      <AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: `540px ${AUGEN_Y}px` }}>
-        <Takes
-          C={C}
-          voice={voice}
-          transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
-          transformOrigin="50% 0%"
-          grade={GRADE}
-        />
-      </AbsoluteFill>
+      <QuelleGross fenster={QUELLEN} fr={fr} fps={C.FPS} />
+      <QuelleBubble p={q.p}>
+        <AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: `540px ${AUGEN_Y}px` }}>
+          <Takes
+            C={C}
+            voice={voice}
+            transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
+            transformOrigin="50% 0%"
+            grade={GRADE}
+          />
+        </AbsoluteFill>
+      </QuelleBubble>
 
       {/* Hook-Titel (Regie: "ETSY: NEUE KI-REGELN!", Marke in Zeile 1, Design verlauf), an der Kartenposition unter dem Kopf
           (oben ~1118), wie Karte und Pille um x 490 zentriert, damit nichts in die TikTok-Leiste rechts (ab x 900) ragt */}
@@ -107,12 +123,12 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           src={staticFile("broll/etsyki/skizzen.webm")}
           transparent
           muted
-          style={{ position: "absolute", inset: 0, width: 1080, height: 1920 }}
+          style={{ position: "absolute", inset: 0, width: 1080, height: 1920, opacity: kartenSicht(q.p) }}
         />
       </Sequence>
       {sfx && TOENE.map((t, i) => <Sfx key={i} file={t.datei} at={t.at * C.FPS} volume={t.volume} />)}
 
-      {untertitel && <PillUntertitel C={C} fr={fr} x={PILLE.x} y={PILLE.y} farbe="#00E090" />}
+      {untertitel && <PillUntertitel C={C} fr={fr} {...quellePille(q.p, PILLE)} farbe="#00E090" />}
 
       {musik && <Musik C={C} datei={musik} />}
       {raster && <Raster />}
