@@ -1,6 +1,6 @@
 # Übergabekarte: A05 · MyStoreBuddy
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** für Sa 21.11.2026 14:00 Europe/Berlin (Pauls Vorgabe 27.10.: selbst nach Kalender einplanen), Metricool TikTok / Instagram / YouTube 408987998 / 409071479 / 409071703 (uuids 785988480485705951 / -4009932575252134866 / 6877898528283904502); Drive final 15qIaaG7UU-MxPLDloirqagPYkCnNeIE7
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): A05 · MyStoreBuddy
 - **Format / Design:** FACE (A-Reihe "Eine Shopify-App, ein Problem", im Video ohne Serien-Erwähnung) / aktueller Look wie A03 und A04: helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlagen P04, A03, A04), "Quelle groß, er klein in der Ecke" (Regel 2026-10-28) für App-Store-Eintrag, offizielles Chat-Bild und Preisbereich, statt Hook-Titel ein dezenter Schriftzug "MyStoreBuddy" (Briefing), Musik ruhig, sanfter Grade, Porträt-Modus
