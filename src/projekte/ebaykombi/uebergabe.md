@@ -1,6 +1,6 @@
 # Übergabekarte: N09 · eBay-Kombirabatte
 
-Status: **eingeplant** (Pauls Vorgabe 27.10.: alle geschnittenen Videos selbst nach Kalender einplanen) für Mi 28.10.2026 09:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408161086 / 408161704 / 408161775, Drive-Final 1b7MhRQKVSM8MzktmauIX5uaeneO9HYr1.
+Status: **eingeplant** für Mi 28.10.2026 09:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408633565 / 408633664 / 408633684, Datei am 28.10. um 08:28 gegen die Fassung „Quelle groß“ getauscht, Drive-Final 1TO0WYt8ljNSbQgysLgs1mLHQX_JU5s_j.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): N09 · eBay-Kombirabatte
 - **Format / Design:** NEWS / aktueller Look wie N06: Hook-Titel im Design verlauf ("NEU BEI EBAY:" / "KOMBI-RABATTE") unter dem Kopf, helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlage P04/N06), echte Quellen groß über das ganze Bild und er als Bubble unten rechts an vier Stellen (Pauls Regel 2026-10-28 "Quelle groß, er klein in der Ecke": dreimal Händlerbund, einmal eBay-Hilfe), der echte Kopf der eBay-Hilfe als Marken-Hintergrund unter dem Hook, Musik news, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe

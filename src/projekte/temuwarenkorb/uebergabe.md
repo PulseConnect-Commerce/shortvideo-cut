@@ -1,6 +1,6 @@
 # Übergabekarte: N07 · Temu-Warenkorb
 
-Status: **eingeplant** (News ohne Termin → nächster freier 09:00-Slot, Pauls Regel 27.10.) für Do 29.10.2026 09:00 Europe/Berlin, Metricool TikTok 408281517 / Instagram und YouTube siehe getScheduledPosts 29.10., Drive-Final 1fTI9Nl2IOFwT-GS2qNWXxNEWzSdBFg4L.
+Status: **eingeplant** für Do 29.10.2026 09:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408706976 / 408713620 / 408713714, Datei am 28.10. gegen die Fassung „Quelle groß“ getauscht, Drive-Final 1h3vqbbE8WcW5pVpRpINq7TYSV_uoUKEP.
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): N07 · Temu-Warenkorb
 - **Format / Design:** NEWS / Look wie N09 (eBay-Kombirabatte): Hook-Titel im Design verlauf ("TEMU: 59 % TEURER" / "IN DEUTSCHLAND?", klein darunter "ein getesteter Warenkorb") unter dem Kopf, helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten, echte Quellen groß über das ganze Bild und er als Bubble unten rechts an zwei Stellen (Pauls Regel 2026-10-28 "Quelle groß, er klein in der Ecke": neuhandeln.de und Carpathia-Blog 4,4–10,8 s, Carpathia "Aktionspreise" 32,5–36,0 s), sonst vor seinem weichgezeichneten Zimmer (keine Quellen-Hintergründe mehr hinter ihm), Musik news, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe
