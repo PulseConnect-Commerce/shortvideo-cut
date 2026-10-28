@@ -241,7 +241,7 @@
 
       <!-- K6 Trotzdem prüfen: "Natürlich würde ich jetzt trotzdem erst einmal überprüfen, ob tatsächlich die Empfehlungen wirklich
            passen und die KI natürlich auch keine falschen Produktinformationen ausgibt, denn das kann natürlich auch mal durchaus
-           passieren." Natürlich 46,71 / trotzdem 47,61 / überprüfen 48,53 / Empfehlungen 49,75 / passen 50,77 / falschen 52,89 /
+           passieren." Natürlich 46,71 (Empfehlung kommt mit der Karte) / trotzdem 47,61 / überprüfen 48,53 / Empfehlungen 49,75 (blau markiert) / passen 50,77 / falschen 52,89 /
            Produktinformationen 53,25 / passieren 56,29; bis vor "Was" (57,42) -->
       <section id="k6" class="karte clip" data-start="46.64" data-duration="10.78" data-track-index="1">
         <div class="kicker">Trotzdem prüfen</div>
@@ -446,7 +446,8 @@
       // K6 Empfehlung, Lupe prüft (Haken), Produktinfos, eine Zeile falsch (rot), Warnzeichen auf "passieren"
       karte("#k6", 46.64, 57.42);
       schreibe("#k6-cliprect", 210, 48.46, 0.45);
-      pop("#k6-emp", 49.68);
+      pop("#k6-emp", 46.75);
+      tl.to("#k6-emp > rect:first-child", { attr: { stroke: "#31adec", "stroke-width": 4 }, duration: 0.25 }, 49.68);
       gsap.set("#k6-lupe", { x: 120, y: 110 });
       tl.fromTo("#k6-lupe", { opacity: 0, x: 120, y: 110 }, { opacity: 1, duration: 0.25 }, 48.46);
       tl.to("#k6-lupe", { x: 230, y: 96, duration: 0.6, ease: "power2.inOut" }, 50.0);
