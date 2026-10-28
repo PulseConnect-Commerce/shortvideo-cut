@@ -13,15 +13,18 @@
  * "10 KI-Tools machen leider deinen Online-Shop nicht automatisch effizienter." (eine KI → zehn KI-Tools). "Denn am Ende
  * gilt:" ist im Take nicht gesprochen; der gesprochene Folgen-Aufruf am Schluss bricht den Loop und ist darum nicht drin,
  * auch kein Folgen-Plus (siehe Übergabekarte). Die letzte Karte bleibt bis zum letzten Frame stehen.
- * Bild (Pauls Vorgabe 25.10.: Kopf höher, Untertitel und Karten darunter): scale 1.25, hoch 468, x 0 (Take: Haar Median
- * y 626, Augen Median x 539 / y 864, Kinn ~1086, über alle Schnittstücke alle 0,25 s gemessen) → Kopfoberkante ~315, Augen
- * ~612, Kinn ~890, mittig; unten endet das Bild bei Take y ~1910 (kein Rand; 1,25 ist das kleinste scale ohne Rand, weil er
- * nah an der Kamera sitzt). Sanfter Grade, ein ruhiges Zoom-in (3 %) um die Augen, kein Punch-in. Von oben: Gesicht, Kinn,
- * Pill-Untertitel (y 990), Karte (y 1045-1405), alles über der Instagram-Zone (ab y 1500).
+ * Bild (Pauls Vorgaben 25.10.: Kopf höher, Untertitel und Karten darunter; 27.10.: erst ab Hüfthöhe, nichts darunter):
+ * scale 1.55, hoch 672, x 0 (vorher 1.25 / 468 / 0, da sah man unten Schoß und Jeans). Take: Kopfoberkante Median y 630 mit
+ * der Porträt-Maske, Augen Median x 537 / y 866, Kinn (Gesichtsbox unten) Median ~1084, Hüftlinie (oberste Jeans-Zeile links
+ * und rechts neben dem Hemd) frühestens y ~1695, meist 1710-1745, über alle Schnittstücke gemessen → Kopfoberkante ~305,
+ * Augen ~670, Kinn ~1008, mittig; der untere Bildrand zeigt Take-y 1672 (mit dem Zoom-in ab 3 s ≤ 1661, am Ende 1649), also
+ * liegt die Hüftlinie überall mindestens ~35 px unter dem Bildrand. Sanfter Grade, ein ruhiges Zoom-in (3 %) um die Augen,
+ * kein Punch-in. Von oben: Gesicht, Kinn, Pill-Untertitel (y 1085), Karte (y 1135-1495), alles über der Instagram-Zone (ab
+ * y 1500).
  * Marken-Hintergründe (karten-aufbau.md, "Marken-Shops als Hintergrund"; Shopify-Quelle aus dem Briefing): an den Stellen
  * über Zeitersparnis, Wechseln/Prüfen/Kopieren, KI ändert selbst, Daten/Aktionen/Freigabe und "wie viele KI-Tools ich
  * integrieren kann" steht er freigestellt vor der echten Seite "KI-gestützte Tools" des Shopify Help Center (HG unten, in
- * den Take gerechnet von npm run portrait --ausschnitt 1.25,468,0 --hintergrund …); Hook, Apps, Tools und der Schluss
+ * den Take gerechnet von npm run portrait --ausschnitt 1.55,672,0 --hintergrund …); Hook, Apps, Tools und der Schluss
  * (Loop in den Hook) vor seinem weichgezeichneten Zimmer.
  * Karten als transparentes WebM aus hyperframes/kitools-skizzen (public/broll/kitools/skizzen.webm), Zeiten und Töne in
  * karten.json.
@@ -40,10 +43,11 @@ import karten from "./karten.json";
 const C = createCut(cut);
 export const meta = { id: "KiTools", durationInFrames: C.DURATION, fps: C.FPS };
 
-/** Augen im Take (Median) bei x 539, y 864 → im Bild x 540, y 612; Haar ~626 → 315; Bildunterkante = Take y 1910 */
-const BILD = { scale: 1.25, hoch: 468, x: 0 };
+/** Augen im Take (Median) bei x 537, y 866 → im Bild x 535, y 670; Kopfoberkante 630 → 305; Bildunterkante = Take y 1672
+ *  (mit dem Zoom-in ab 3 s ≤ 1661), Hüftlinie im Take frühestens ~1695: alles darunter bleibt draußen (Pauls Regel 2026-10-27) */
+const BILD = { scale: 1.55, hoch: 672, x: 0 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
-const AUGEN_Y = 612;
+const AUGEN_Y = 670;
 
 /** Marken-Hintergründe im Take (Sekunden), wie beim Aufruf von npm run portrait --hintergrund (public/broll/kitools/) */
 export const HG: [string, number, number][] = [
@@ -63,8 +67,8 @@ const HOOK_ENDE = fs(3.75);
 /** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json) */
 const TOENE = karten.karten.flatMap((k) => k.sfx);
 
-/** Pill-Untertitel unter dem Kinn, über der Karte (Karte x 80-900, oben bei y 1045) */
-const PILLE = { x: 490, y: 990 };
+/** Pill-Untertitel unter dem Kinn (~1008), über der Karte (Karte x 80-900, oben bei y 1135) */
+const PILLE = { x: 490, y: 1085 };
 
 type Props = { voice?: boolean; sfx?: boolean; raster?: boolean; untertitel?: boolean; musik?: string | false };
 
@@ -91,10 +95,10 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
         />
       </AbsoluteFill>
 
-      {/* Hook-Titel (starke Zahl, sein erster Satz), easyJet-Stil, an der Kartenposition unter dem Kopf (oben ~1045), wie Karte
+      {/* Hook-Titel (starke Zahl, sein erster Satz), easyJet-Stil, an der Kartenposition unter dem Kopf (oben ~1135), wie Karte
           und Pille um x 490 zentriert, damit nichts in die TikTok-Leiste rechts (ab x 900) ragt; ab Frame 0 sichtbar (Loop) */}
       <DesignRahmen design="verlauf">
-        <AbsoluteFill style={{ transform: "translate(-50px, 793px) scale(0.9)", transformOrigin: "50% 0%" }}>
+        <AbsoluteFill style={{ transform: "translate(-50px, 883px) scale(0.9)", transformOrigin: "50% 0%" }}>
           <HookTitle fr={fr} line1="10 KI-TOOLS" line2="NICHT AUTOMATISCH EFFIZIENTER" outAt={HOOK_ENDE} />
         </AbsoluteFill>
       </DesignRahmen>

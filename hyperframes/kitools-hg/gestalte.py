@@ -19,7 +19,7 @@ import numpy as np
 
 HIER = os.path.dirname(os.path.abspath(__file__))
 SS = os.path.join(HIER, "screenshots")
-BILD = dict(scale=1.25, hoch=468, x=0)   # wie in src/projekte/kitools/Video.tsx
+BILD = dict(scale=1.55, hoch=672, x=0)   # wie in src/projekte/kitools/Video.tsx (seit 28.10. ab Hüfthöhe; vorher 1.25/468/0)
 DPR = 3                                    # Aufnahme 360 css-px, 3-fach
 KOPF = 195                                 # Kopfleiste "Hilfe" (65 css-px)
 MARKER = np.array([144, 224, 0], np.float32)   # #00E090 (BGR)
@@ -81,8 +81,8 @@ def vorschau(bg, take, t, rvm):
     comp = al * fg + (1 - al) * b
     comp = cv2.cvtColor(np.clip(comp, 0, 255).astype(np.uint8), cv2.COLOR_RGB2BGR)
     ov = comp.copy()
-    cv2.rectangle(ov, (190, 950), (790, 1020), (20, 20, 20), -1)         # Pille (ungefähr)
-    cv2.rectangle(ov, (80, 1045), (900, 1405), (245, 245, 245), -1)      # Karte
+    cv2.rectangle(ov, (190, 1048), (790, 1122), (20, 20, 20), -1)        # Pille (ungefähr)
+    cv2.rectangle(ov, (80, 1135), (900, 1495), (245, 245, 245), -1)      # Karte
     comp = cv2.addWeighted(ov, 0.75, comp, 0.25, 0)
     for y in (280, 315):
         cv2.line(comp, (0, y), (1080, y), (0, 0, 255), 1)
