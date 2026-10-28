@@ -1,0 +1,326 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26; Vorlagen P04, A03, A04) und Quellen-Fenster ('Quelle groß', 2026-10-28) für A05 · MyStoreBuddy. Sekunden im geschnittenen Video (cut.json, 77,375 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,10) beim Kartenwechsel, klick (0,10) auf jeder Quelle, tick (0,10) auf ausgewählten Zuständen, success auf '50', pop auf 'Link'. Karten (k*) gebaut in hyperframes/mystorebuddy-skizzen/index.html, Quellen (q*) in Video.tsx (QUELLEN). Keine fingierten KI-Chats, keine erfundenen Produktempfehlungen, keine Kundendaten.",
+ "karten": [
+  {
+   "id": "k0",
+   "wort": "Ich (Anfang)",
+   "text": "Dezenter Schriftzug 'MyStoreBuddy' mit offiziellem App-Icon (Briefing 0–8 s statt großem Hook), Chips 'KI-App für Shopify' auf 'KI-App' und 'Produktberatung' auf 'Produktberatung'",
+   "start": 0.0,
+   "ende": 6.85,
+   "teile": {
+    "ki-app": 1.47,
+    "produktberatung": 4.39
+   },
+   "sfx": []
+  },
+  {
+   "id": "q1",
+   "wort": "Die App nennt sich MyStoreBuddy",
+   "text": "Quelle groß (Remotion): App-Store-Eintrag oben (Icon, Name, Preisgestaltung, Bewertung, Entwickler), danach Kurzbeschreibung und 'MyStoreBuddy verkauft wie dein bester Fachverkäufer …'; er als Bubble",
+   "start": 6.95,
+   "ende": 10.45,
+   "teile": {},
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 6.95,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "wort": "deinen Onlineshop",
+   "text": "Shop mit drei Produkten, Besucher kommt, '?' auf 'nicht sicher', Blick wandert von Produkt zu Produkt auf 'welches Produkt', handschriftlich 'welches?' auf 'passt'",
+   "start": 10.4,
+   "ende": 15.45,
+   "teile": {
+    "onlineshop": 10.51,
+    "nicht": 12.31,
+    "welches": 12.71,
+    "produkt": 12.99,
+    "passt": 14.21
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 10.4,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 12.31,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Normalerweise",
+   "text": "Weggabelung: oben verschiedene Produktseiten, 'oder', unten eine Frage per Mail an den Support; handschriftlich 'bisher'",
+   "start": 15.48,
+   "ende": 21.42,
+   "teile": {
+    "normalerweise": 15.48,
+    "kunde": 16.99,
+    "produktseiten": 17.71,
+    "oder": 18.62,
+    "frage": 20.42,
+    "support": 20.9
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 15.48,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 17.71,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 20.42,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "Mit MyStoreBuddy … chatten",
+   "text": "Quelle groß (Remotion): offizielles Bild aus dem App-Store-Eintrag, das Chat-Fenster im Shop (Frage, Antwort, Produktkarten mit 'In den Warenkorb'); er als Bubble",
+   "start": 21.45,
+   "ende": 26.4,
+   "teile": {},
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 21.45,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Die KI kann … Rückfragen",
+   "text": "Sortiment mit sechs Produkten, Rückfrage-Symbol auf 'Rückfragen', vier treten zurück, zwei passende grün ('passend'), wandern als Empfehlung nach rechts, Mauszeiger klickt auf 'Klick', Warenkorb mit Haken auf 'Warenkorb'",
+   "start": 26.11,
+   "ende": 33.8,
+   "teile": {
+    "rueckfragen": 27.35,
+    "stellen": 27.85,
+    "passende": 28.27,
+    "empfehlen": 29.83,
+    "klick": 32.59,
+    "warenkorb": 33.05
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 26.2,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 28.27,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 32.59,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Das ist gerade …",
+   "text": "Titel wörtlich aus dem Briefing 'Produktberatung im Shop'; links ein Raster, das sich auf 'vielen Produkten' füllt, 'oder', rechts ein erklärungsbedürftiger Artikel mit Info und Anleitung, handschriftlich 'spannend'",
+   "start": 33.87,
+   "ende": 40.0,
+   "teile": {
+    "vielen": 36.05,
+    "produkten": 36.37,
+    "oder": 36.88,
+    "erklaerungsbeduerftigen": 37.34,
+    "artikeln": 38.59,
+    "spannend": 39.61
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 33.87,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 36.05,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 37.34,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Denn du kannst …",
+   "text": "Titel und Unterzeile wörtlich aus dem Briefing 'Weniger repetitive Fragen –' / 'Potenzial, keine Zeitersparnis-Garantie'; vier gleiche Fragen kommen immer wieder, zwei gehen auf 'automatisieren' in 'automatisch' (handschriftlich 'ein Teil'), zwei bleiben; Lupe mit Haken auf 'Produktsuche erleichtern'",
+   "start": 40.03,
+   "ende": 46.6,
+   "teile": {
+    "wiederkehrenden": 41.79,
+    "produktfragen": 42.41,
+    "automatisieren": 43.19,
+    "produktsuche": 45.46,
+    "erleichtern": 46.04
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 40.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 43.19,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 45.46,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Natürlich … trotzdem … überprüfen",
+   "text": "Lupe und handschriftlich 'prüfen!' auf 'überprüfen', Empfehlung auf 'Empfehlungen', Haken auf 'passen', Produktinfos auf 'falschen', eine Zeile rot mit Kreuz auf 'Produktinformationen', Warnzeichen auf 'passieren'",
+   "start": 46.64,
+   "ende": 57.42,
+   "teile": {
+    "ueberpruefen": 48.46,
+    "empfehlungen": 49.68,
+    "passen": 50.7,
+    "falschen": 52.82,
+    "produktinformationen": 53.18,
+    "passieren": 56.22
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 46.64,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 48.46,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 50.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 53.18,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Was ich außerdem …",
+   "text": "Preis-Etikett, 'Preis', handschriftlich 'interessant' (Überleitung zum Preisbereich)",
+   "start": 57.42,
+   "ende": 59.42,
+   "teile": {
+    "interessant": 58.5
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 57.42,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "wort": "schau mal hier: … 50 Beratungsgesprächen pro Monat",
+   "text": "Quelle groß (Remotion): Preisbereich des App-Store-Eintrags, Free-Plan 'Kostenlos' und die markierte Zeile 'bis zu 50 Beratungsgespräche im Monat', Rahmen auf '50'; er als Bubble",
+   "start": 59.25,
+   "ende": 65.75,
+   "teile": {
+    "50": 62.84
+   },
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 59.25,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 62.84,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Du musst also nicht direkt …",
+   "text": "'jetzt' testen (Kolben) gegen 'Abo später' (gestrichelt, grau), handschriftlich 'erst testen' auf 'testen', eigene Produkte in den Test auf 'eigenen Produkten', Haken auf 'funktioniert'",
+   "start": 65.55,
+   "ende": 72.78,
+   "teile": {
+    "nicht": 65.81,
+    "kostenpflichtigen": 66.62,
+    "sondern": 68.1,
+    "testen": 69.3,
+    "eigenen": 71.19,
+    "funktioniert": 72.1
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 65.6,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 69.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Und wenn du dir die App …",
+   "text": "Karte wörtlich aus dem Briefing 'Link in der Beschreibung' mit 'apps.shopify.com/mystorebuddy', Link-Icon zeichnet sich auf 'Link', Pfeil nach unten auf 'unten'",
+   "start": 72.79,
+   "ende": 77.375,
+   "teile": {
+    "link": 75.4,
+    "unten": 75.71
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 72.79,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 75.4,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+Quellen-Bilder für A05 · MyStoreBuddy (alle am 28.10.2026 aufgenommen bzw. geladen; nur zugeschnitten, nichts dazugemalt)
+
+Gestaltet mit hyperframes/mystorebuddy-hg/gestalte.py aus hyperframes/mystorebuddy-hg/screenshots/ (Aufnahme:
+hyperframes/mystorebuddy-hg/aufnahme.cjs, Playwright/Chromium ohne Login, Handy-Ansicht 412 css-px, 2,62-fach; Positionen
+in screenshots/aufnahme.json).
+
+- quelle-kopf.jpg: Shopify App Store, Eintrag "KI Verkauf & Support Agent" (MyStoreBuddy), Kopf der Seite: App-Store-Leiste,
+  App-Icon, Name, Preisgestaltung "Kostenloser Plan verfügbar", Bewertung 5,0 (3), Entwickler "PulseConnect UG",
+  "Installieren", "Demo-Shop ansehen", Video "MyStoreBuddy — KI-Verkaufsberater"
+  https://apps.shopify.com/mystorebuddy?locale=de
+- quelle-kurz.jpg: derselbe Eintrag, Kurzbeschreibung "KI-Verkaufsberater, der im Shop empfiehlt, verkauft und Bestellfragen
+  beantwortet — rund um die Uhr.", Beschreibung "MyStoreBuddy verkauft wie dein bester Fachverkäufer: Er stellt Rückfragen,
+  empfiehlt Produkte aus …" und die Funktionsliste
+- quelle-preis.jpg: derselbe Eintrag, Preisbereich "Preisgestaltung": Free "Kostenlos", "bis zu 50 Beratungsgespräche im
+  Monat" (beim Aufnehmen grün hinterlegt, Briefing: "50 Beratungsgespräche/Monat gut lesbar markieren"), daneben angeschnitten
+  Boost $29 / Monat
+- quelle-chat.jpg: offizielles Bild aus der Bildergalerie des App-Store-Eintrags ("Chat-Beispiel: Rückfrage, Produktkarten,
+  In den Warenkorb", vom Entwickler als "Ein echtes Gespräch aus dem Widget" beschrieben), Ausschnitt Chat-Fenster
+  (x 664-1010, y 236-630 von 1600x900), 1,9-fach vergrößert, auf hellem Grund in der Randfarbe des Bildes
+  https://cdn.shopify.com/app-store/listing_images/0344532cd5b2df3a3933a676aa428af8/desktop_screenshot/CLL4m73j1JYDEAE=.png
+
+Karten (skizzen.webm): eigene Zeichnungen aus hyperframes/mystorebuddy-skizzen (Lucide-Icons, ISC-Lizenz; Schrift Geist und
+Caveat, OFL); im Schriftzug am Anfang das offizielle App-Icon aus dem App-Store-Eintrag
+(https://cdn.shopify.com/app-store/listing_images/0344532cd5b2df3a3933a676aa428af8/icon/CJT4j-CY3pUDEAE=.png).
+Keine fingierten KI-Chats, keine erfundenen Produktempfehlungen, keine Kundendaten.

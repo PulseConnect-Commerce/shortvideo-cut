@@ -47,12 +47,12 @@ if __name__ == "__main__":
     f = 1.9
     chat = cv2.resize(chat, None, fx=f, fy=f, interpolation=cv2.INTER_LANCZOS4)
     grund = np.full((1920, 1080, 3), g4[880, 40].astype(np.uint8), np.uint8)   # heller Rand des Originalbilds
-    x, y = 90, 300
+    x, y = 90, 350
     h, w = chat.shape[:2]
     # weicher Schatten unter dem Chat-Fenster, wie im Original
     sch = np.zeros((1920, 1080), np.float32)
     sch[y + 10:y + h + 18, x + 4:x + w + 4] = 1
-    sch = cv2.GaussianBlur(sch, (0, 0), 14) * 0.16
+    sch = cv2.GaussianBlur(sch, (0, 0), 10) * 0.10
     grund = (grund.astype(np.float32) * (1 - sch[..., None])).astype(np.uint8)
     grund[y:y + h, x:x + w] = chat
     cv2.imwrite(os.path.join(ziel, "quelle-chat.jpg"), grund, [cv2.IMWRITE_JPEG_QUALITY, 93])

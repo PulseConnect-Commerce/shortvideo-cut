@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>A05 · MyStoreBuddy – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- FACE A05 "MyStoreBuddy" (A-Reihe "Eine Shopify-App, ein Problem", keine Serien-Erwähnung im Video). Erklär-Bilder nach
+         karten-aufbau.md "Visuelle Metaphern" (freigegeben 2026-10-26, Vorlagen P04 pagebuilder-skizzen, A03 judgeme-skizzen,
+         A04 klaviyo-skizzen): pro Kerngedanke ein Bild, das den Satz ohne Ton erklärt (Besucher unsicher zwischen Produkten,
+         Produktseiten oder Support, Rückfrage grenzt das Sortiment ein und zwei passende Produkte landen per Klick im
+         Warenkorb, viele Produkte oder erklärungsbedürftige Artikel, ein Teil der wiederkehrenden Fragen automatisiert,
+         Empfehlung und Produktinfos prüfen, erst testen statt Abo, Link in der Beschreibung), höchstens 1–3 Wörter je Bild,
+         ein handschriftliches Akzentwort (Caveat, OFL, lokal; Blau #31ADEC bzw. Grün; Rot nur für den Fehler).
+         Keine fingierten KI-Chats und keine erfundenen Produktempfehlungen: Chat und Produktkarten zeigen nur die offiziellen
+         App-Store-Bilder (in Remotion, "Quelle groß"); die Karten hier sind abstrakte Icons ohne Texte, Namen oder Preise.
+         Wörtliche Einblendungen aus dem Briefing: "MyStoreBuddy" (dezenter Schriftzug am Anfang), "Produktberatung im Shop",
+         "Weniger repetitive Fragen – Potenzial, keine Zeitersparnis-Garantie", "Link in der Beschreibung".
+         Rahmen: helle Karte unter dem Kopf (x 80-900, ab y 1100; Instagram-Zone unten ab 1500), Pill-Untertitel darüber
+         (Remotion, y 1050), ruhige Bewegung ohne Überschwingen. Lücken 6,95–10,45 / 21,45–26,4 / 59,25–65,75 s: dort steht die
+         Quelle groß (Remotion), die Karten sind ausgeblendet.
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/mystorebuddy/cut.json, 77,375 s), schon als Cues (2 Frames vor
+         dem Wort); Liste mit Tönen in src/projekte/mystorebuddy/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1100px; width: 820px; height: 360px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .karte.hoch { height: 384px; }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .titel { position: absolute; left: 30px; top: 20px; font-size: 44px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; white-space: nowrap; }
+      .unter { position: absolute; left: 30px; top: 74px; font-size: 34px; font-weight: 600; letter-spacing: -0.01em; color: #374151; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 300px; overflow: visible; }
+      svg.buehne.tief { top: 120px; height: 260px; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .hand.gruen { fill: #00c27c; }
+      .linie { fill: none; stroke: #cbd5e1; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 2 12; }
+      .zug { fill: none; stroke: url(#gvu); stroke-width: 6; stroke-linecap: round; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .platz { fill: none; stroke: #9aa3af; stroke-width: 3; stroke-dasharray: 11 9; }
+      .zeile { fill: #e5e7eb; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+      /* Schriftzug "MyStoreBuddy" am Anfang (Briefing: kleiner dezenter Schriftzug statt großem Hook) */
+      .schrift { position: absolute; left: 80px; top: 1100px; width: fit-content; height: 104px; display: flex; align-items: center; gap: 20px; padding: 0 34px 0 18px; border-radius: 28px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .schrift img { width: 68px; height: 68px; border-radius: 17px; }
+      .schrift .name { font-size: 50px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .chip { position: absolute; top: 1222px; height: 62px; display: flex; align-items: center; gap: 12px; padding: 0 24px 0 16px; border-radius: 31px; background: rgba(255, 255, 255, 0.94); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18); font-size: 30px; font-weight: 700; white-space: nowrap; opacity: 0; }
+      .chip svg { width: 34px; height: 34px; fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Link in der Beschreibung (Briefing: abschließend Einblendung) */
+      .linkkarte { position: absolute; left: 80px; top: 1100px; width: fit-content; height: 176px; display: flex; align-items: center; gap: 26px; padding: 0 44px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .lico { position: relative; flex: none; width: 112px; height: 112px; border-radius: 30px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; }
+      .lico svg { width: 60px; height: 60px; fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ltext .t { font-size: 48px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ltext .u { margin-top: 6px; font-size: 28px; font-weight: 600; color: #6b7280; white-space: nowrap; }
+      .pfeil { position: absolute; right: 22px; bottom: -64px; width: 54px; height: 54px; opacity: 0; }
+      .pfeil svg { width: 54px; height: 54px; fill: none; stroke: #ffffff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.45)); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="mystorebuddy-skizzen" data-width="1080" data-height="1920" data-start="0.00" data-duration="77.375">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvu" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="820" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24er Raster -->
+          <g id="laden"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.830 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="mail"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></g>
+          <g id="tasche"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></g>
+          <g id="shirt"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" /></g>
+          <g id="uhr"><circle cx="12" cy="12" r="6" /><polyline points="12 10 12 12 13 13" /><path d="m16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05" /><path d="m7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05" /></g>
+          <g id="brille"><circle cx="6" cy="15" r="4" /><circle cx="18" cy="15" r="4" /><path d="M14 15a2 2 0 0 0-2-2 2 2 0 0 0-2 2" /><path d="M2.5 13 5 7c.7-1.3 1.4-2 3-2" /><path d="M21.5 13 19 7c-.7-1.3-1.5-2-3-2" /></g>
+          <g id="geschenk"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M12 8v13" /><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" /></g>
+          <g id="schuh"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" /><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.630 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" /><path d="M16 17h4" /><path d="M4 13h4" /></g>
+          <g id="kamera"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" /><circle cx="12" cy="13" r="3" /></g>
+          <g id="korb"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></g>
+          <g id="headset"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" /><path d="M21 16v2a4 4 0 0 1-4 4h-5" /></g>
+          <g id="frage"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></g>
+          <g id="seite"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></g>
+          <g id="funkeln"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /></g>
+          <g id="lupe"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+          <g id="wieder"><path d="m17 2 4 4-4 4" /><path d="M3 11v-1a4 4 0 0 1 4-4h14" /><path d="m7 22-4-4 4-4" /><path d="M21 13v1a4 4 0 0 1-4 4H3" /></g>
+          <g id="info"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></g>
+          <g id="buch"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></g>
+          <g id="etikett"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.420 0l6.580-6.580a2.426 2.426 0 0 0 0-3.420z" /><circle cx="7.5" cy="7.5" r=".5" /></g>
+          <g id="kolben"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" /><path d="M8.5 2h7" /><path d="M7 16h10" /></g>
+          <g id="karte-kredit"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></g>
+          <g id="warnung"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
+          <g id="zeigerpfad"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+          <!-- Haken im Kreis (Verlauf), rotes Kreuz (nur für den Fehler) -->
+          <g id="ok"><circle cx="0" cy="0" r="20" fill="url(#gvd)" /><path d="M-10 0 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="nein"><circle cx="0" cy="0" r="20" fill="#ef4444" /><path d="M-8 -8 L8 8 M8 -8 L-8 8" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" /></g>
+          <!-- Produkt-Kachel klein (Rahmen 84) -->
+          <g id="kachel"><rect x="-42" y="-42" width="84" height="84" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /></g>
+        </defs>
+      </svg>
+
+      <!-- K0 Schriftzug "MyStoreBuddy" (0,0) mit zwei kleinen Chips: "KI-App" 1,54 / "Produktberatung" 4,46; bis vor die Quelle (6,95) -->
+      <section id="k0" class="schrift clip" data-start="0.00" data-duration="6.85" data-track-index="0">
+        <img src="assets/msb-icon.png" alt="" />
+        <div class="name">MyStore<span class="verlauf">Buddy</span></div>
+      </section>
+      <div id="c1" class="chip clip" style="left: 80px" data-start="1.47" data-duration="5.38" data-track-index="2">
+        <svg viewBox="0 0 24 24"><use href="#laden" /></svg>KI-App für Shopify
+      </div>
+      <div id="c2" class="chip clip" style="left: 452px" data-start="4.39" data-duration="2.46" data-track-index="3">
+        <svg viewBox="0 0 24 24"><use href="#frage" /></svg>Produktberatung
+      </div>
+
+      <!-- K1 Besucher unsicher: "jemand besucht jetzt deinen Onlineshop und ist sich aber noch gar nicht sicher, welches Produkt
+           überhaupt am besten zu ihm passt." deinen 10,28 / Onlineshop 10,58 / nicht 12,38 / welches 12,78 / Produkt 13,06 /
+           überhaupt 13,34 / besten 13,72 / passt 14,28; nach der Quelle (bis 10,45) bis vor "Normalerweise" (15,48) -->
+      <section id="k1" class="karte clip" data-start="10.40" data-duration="5.05" data-track-index="1">
+        <div class="kicker">Im Onlineshop</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <rect x="24" y="8" width="520" height="262" rx="26" class="rahmen" />
+          <use href="#laden" class="ico" transform="translate(48 26) scale(1.3)" style="stroke:#6b7280;stroke-width:1.8" />
+          <text x="90" y="52" class="lab grau" style="font-size:24px">Dein Shop</text>
+          <g id="k1-t1" transform="translate(130 170)"><use href="#kachel" transform="scale(1.45)" /><use href="#shirt" class="ico" transform="translate(-30 -30) scale(2.5)" style="stroke-width:1.5" /></g>
+          <g id="k1-t2" transform="translate(284 170)"><use href="#kachel" transform="scale(1.45)" /><use href="#uhr" class="ico" transform="translate(-30 -30) scale(2.5)" style="stroke-width:1.5" /></g>
+          <g id="k1-t3" transform="translate(438 170)"><use href="#kachel" transform="scale(1.45)" /><use href="#tasche" class="ico" transform="translate(-30 -30) scale(2.5)" style="stroke-width:1.5" /></g>
+          <rect id="k1-ring" x="66" y="106" width="128" height="128" rx="26" fill="none" stroke="url(#gvd)" stroke-width="5" opacity="0" />
+          <g id="k1-gast" opacity="0"><circle cx="660" cy="150" r="58" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#person" class="ico" transform="translate(632 122) scale(2.33)" style="stroke-width:1.5" /></g>
+          <g id="k1-frage" opacity="0"><rect x="696" y="44" width="58" height="64" rx="18" fill="#0b0c0e" /><text x="725" y="91" text-anchor="middle" style="font-size:44px;font-weight:900;fill:#fff">?</text></g>
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="566" y="222" width="0" height="80" /></clipPath>
+          <text x="572" y="276" class="hand" style="font-size:58px" clip-path="url(#k1-clip)" transform="rotate(-4 650 260)">welches?</text>
+        </svg>
+      </section>
+
+      <!-- K2 Bisher: Produktseiten oder Support. "Normalerweise schaut sich natürlich dann der Kunde verschiedene Produktseiten an
+           oder er schreibt einfach eine Frage an den Support." Normalerweise 15,55 / Kunde 17,06 / Produktseiten 17,78 / oder 18,69 /
+           Frage 20,49 / Support 20,97; bis vor die Quelle (21,45) -->
+      <section id="k2" class="karte clip" data-start="15.48" data-duration="5.94" data-track-index="1">
+        <div class="kicker">Normalerweise</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k2-gast"><circle cx="110" cy="140" r="58" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#person" class="ico" transform="translate(82 112) scale(2.33)" style="stroke-width:1.5" /></g>
+          <path id="k2-weg1" class="zug" pathLength="1" d="M176 122 C 250 70, 300 64, 372 64" />
+          <path id="k2-weg2" class="zug" pathLength="1" d="M176 160 C 250 212, 300 218, 372 218" style="stroke:#9aa3af;stroke-dasharray:1" />
+          <g id="k2-s1" opacity="0"><rect x="384" y="18" width="78" height="96" rx="12" class="rahmen" /><use href="#seite" class="ico" transform="translate(399 42) scale(2)" style="stroke-width:1.6" /></g>
+          <g id="k2-s2" opacity="0"><rect x="476" y="18" width="78" height="96" rx="12" class="rahmen" /><use href="#seite" class="ico" transform="translate(491 42) scale(2)" style="stroke-width:1.6" /></g>
+          <g id="k2-s3" opacity="0"><rect x="568" y="18" width="78" height="96" rx="12" class="rahmen" /><use href="#seite" class="ico" transform="translate(583 42) scale(2)" style="stroke-width:1.6" /></g>
+          <text id="k2-st" x="515" y="148" text-anchor="middle" class="lab" style="font-size:26px" opacity="0">Produktseiten</text>
+          <text id="k2-oder" x="244" y="150" text-anchor="middle" class="lab grau" style="font-size:26px" opacity="0">oder</text>
+          <g id="k2-flug" opacity="0"><rect x="-26" y="-19" width="52" height="38" rx="7" fill="#fff" stroke="#0b0c0e" stroke-width="2.4" /><path d="M-24 -14 L0 4 L24 -14" fill="none" stroke="#0b0c0e" stroke-width="2.4" stroke-linejoin="round" /></g>
+          <g id="k2-sup" opacity="0"><circle cx="600" cy="218" r="52" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#headset" class="ico" transform="translate(576 194) scale(2)" style="stroke-width:1.6" /></g>
+          <text id="k2-supt" x="670" y="228" class="lab" style="font-size:26px" opacity="0">Support</text>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="24" y="226" width="0" height="80" /></clipPath>
+          <text x="30" y="280" class="hand" style="font-size:52px" clip-path="url(#k2-clip)" transform="rotate(-4 100 266)">bisher</text>
+        </svg>
+      </section>
+
+      <!-- K3 Rückfrage grenzt ein, passende Produkte per Klick in den Warenkorb: "Die KI kann jetzt aber dabei Rückfragen stellen,
+           passende Produkte aus deinem Sortiment empfehlen oder diese einfach sogar direkt mit einem Klick in den Warenkorb legen."
+           Die 26,18 / Rückfragen 27,42 / stellen 27,92 / passende 28,34 / Sortiment 29,46 / empfehlen 29,90 / Klick 32,66 /
+           Warenkorb 33,12; nach der Quelle (bis 26,4) bis vor "Das" (33,87) -->
+      <section id="k3" class="karte clip" data-start="26.11" data-duration="7.69" data-track-index="1">
+        <div class="kicker">Dein Sortiment</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k3-raster">
+            <g class="tk" transform="translate(84 92)"><use href="#kachel" /><use href="#shirt" class="ico" transform="translate(-20 -20) scale(1.66)" style="stroke-width:1.8" /></g>
+            <g class="tk aus" transform="translate(184 92)"><use href="#kachel" /><use href="#schuh" class="ico" transform="translate(-20 -20) scale(1.66)" style="stroke-width:1.8" /></g>
+            <g class="tk aus" transform="translate(284 92)"><use href="#kachel" /><use href="#brille" class="ico" transform="translate(-20 -20) scale(1.66)" style="stroke-width:1.8" /></g>
+            <g class="tk aus" transform="translate(84 192)"><use href="#kachel" /><use href="#kamera" class="ico" transform="translate(-20 -20) scale(1.66)" style="stroke-width:1.8" /></g>
+            <g class="tk" transform="translate(184 192)"><use href="#kachel" /><use href="#tasche" class="ico" transform="translate(-20 -20) scale(1.66)" style="stroke-width:1.8" /></g>
+            <g class="tk aus" transform="translate(284 192)"><use href="#kachel" /><use href="#uhr" class="ico" transform="translate(-20 -20) scale(1.66)" style="stroke-width:1.8" /></g>
+          </g>
+          <g id="k3-frage" opacity="0"><circle cx="410" cy="62" r="34" fill="#0b0c0e" /><use href="#frage" class="ico" transform="translate(394 46) scale(1.33)" style="stroke:#fff;stroke-width:2" /></g>
+          <rect id="k3-r1" x="38" y="46" width="92" height="92" rx="20" fill="none" stroke="#00c27c" stroke-width="4.5" opacity="0" />
+          <rect id="k3-r2" x="138" y="146" width="92" height="92" rx="20" fill="none" stroke="#00c27c" stroke-width="4.5" opacity="0" />
+          <path id="k3-bahn" class="linie" d="M330 142 L 520 142" opacity="0" />
+          <g id="k3-e1" opacity="0"><use href="#kachel" /><use href="#shirt" class="ico" transform="translate(-20 -20) scale(1.66)" style="stroke-width:1.8" /></g>
+          <g id="k3-e2" opacity="0"><use href="#kachel" /><use href="#tasche" class="ico" transform="translate(-20 -20) scale(1.66)" style="stroke-width:1.8" /></g>
+          <g id="k3-korb" opacity="0"><circle cx="718" cy="150" r="62" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#korb" class="ico" transform="translate(690 120) scale(2.4)" style="stroke-width:1.6" /></g>
+          <g id="k3-ok" opacity="0"><use href="#ok" transform="translate(766 98)" /></g>
+          <g id="k3-zeiger" opacity="0"><use href="#zeigerpfad" transform="scale(1.9)" style="fill:#0b0c0e;stroke:#fff;stroke-width:1.4;stroke-linejoin:round" /></g>
+          <clipPath id="k3-clip"><rect id="k3-cliprect" x="380" y="214" width="0" height="80" /></clipPath>
+          <text x="386" y="270" class="hand gruen" style="font-size:58px" clip-path="url(#k3-clip)" transform="rotate(-4 470 254)">passend</text>
+        </svg>
+      </section>
+
+      <!-- K4 "Produktberatung im Shop" (wörtlich aus dem Briefing): "Das ist gerade bei Onlineshops mit tatsächlich vielen
+           Produkten oder einfach erklärungsbedürftigen Artikeln besonders spannend." Das 33,94 / vielen 36,12 / Produkten 36,44 /
+           oder 36,95 / erklärungsbedürftigen 37,41 / Artikeln 38,66 / spannend 39,68; bis vor "Denn" (40,03) -->
+      <section id="k4" class="karte hoch clip" data-start="33.87" data-duration="6.13" data-track-index="1">
+        <div class="titel">Produktberatung <span class="verlauf">im Shop</span></div>
+        <svg class="buehne tief" viewBox="0 0 820 260">
+          <rect x="24" y="6" width="370" height="196" rx="24" class="rahmen" />
+          <g id="k4-viele"></g>
+          <text id="k4-vt" x="209" y="244" text-anchor="middle" class="lab" style="font-size:27px" opacity="0">viele Produkte</text>
+          <text id="k4-oder" x="410" y="112" text-anchor="middle" class="lab grau" style="font-size:24px" opacity="0">oder</text>
+          <g id="k4-komplex" opacity="0">
+            <rect x="428" y="6" width="370" height="196" rx="24" class="rahmen" />
+            <g transform="translate(470 40)"><rect x="0" y="0" width="128" height="128" rx="26" fill="url(#gvl)" stroke="#9ad9f2" stroke-width="2" /><use href="#kamera" class="ico" transform="translate(24 24) scale(3.33)" style="stroke-width:1.4" /></g>
+            <g id="k4-info" opacity="0"><circle cx="604" cy="46" r="22" fill="#0b0c0e" /><use href="#info" class="ico" transform="translate(590 32) scale(1.17)" style="stroke:#fff;stroke-width:2" /></g>
+            <g id="k4-buch" opacity="0"><rect x="636" y="44" width="136" height="128" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="2.5" /><rect x="654" y="66" width="98" height="10" rx="5" class="zeile" /><rect x="654" y="88" width="80" height="10" rx="5" class="zeile" /><rect x="654" y="110" width="98" height="10" rx="5" class="zeile" /><rect x="654" y="132" width="62" height="10" rx="5" class="zeile" /></g>
+          </g>
+          <text id="k4-kt" x="613" y="244" text-anchor="middle" class="lab" style="font-size:27px" opacity="0">erklärungsbedürftig</text>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="560" y="-14" width="0" height="80" /></clipPath>
+        </svg>
+        <svg style="position:absolute;left:0;top:0;width:820px;height:384px;overflow:visible" viewBox="0 0 820 384"><clipPath id="k4-clip2"><rect id="k4-cliprect2" x="634" y="22" width="0" height="80" /></clipPath><text x="640" y="74" class="hand" style="font-size:50px" clip-path="url(#k4-clip2)" transform="rotate(-5 720 60)">spannend</text></svg>
+      </section>
+
+      <!-- K5 "Weniger repetitive Fragen – Potenzial, keine Zeitersparnis-Garantie" (wörtlich aus dem Briefing): "Denn du kannst
+           damit besonders einen Teil der wiederkehrenden Produktfragen automatisieren und deinen Kunden eben damit direkt die
+           Produktsuche erleichtern." Denn 40,10 / Teil 41,48 / wiederkehrenden 41,86 / Produktfragen 42,48 / automatisieren 43,26 /
+           Kunden 44,51 / Produktsuche 45,53 / erleichtern 46,11; bis vor "Natürlich" (46,64) -->
+      <section id="k5" class="karte hoch clip" data-start="40.03" data-duration="6.57" data-track-index="1">
+        <div class="titel" style="font-size:42px">Weniger <span class="verlauf">repetitive Fragen</span> –</div>
+        <div class="unter">Potenzial, keine Zeitersparnis-Garantie</div>
+        <svg class="buehne tief" viewBox="0 0 820 260">
+          <g id="k5-fragen">
+            <g class="fq"><rect x="-40" y="-34" width="80" height="68" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="2.5" /><use href="#frage" class="ico" transform="translate(-18 -18) scale(1.5)" style="stroke-width:1.8" /></g>
+            <g class="fq"><rect x="-40" y="-34" width="80" height="68" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="2.5" /><use href="#frage" class="ico" transform="translate(-18 -18) scale(1.5)" style="stroke-width:1.8" /></g>
+            <g class="fq"><rect x="-40" y="-34" width="80" height="68" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="2.5" /><use href="#frage" class="ico" transform="translate(-18 -18) scale(1.5)" style="stroke-width:1.8" /></g>
+            <g class="fq"><rect x="-40" y="-34" width="80" height="68" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="2.5" /><use href="#frage" class="ico" transform="translate(-18 -18) scale(1.5)" style="stroke-width:1.8" /></g>
+          </g>
+          <g id="k5-wieder" opacity="0"><circle cx="70" cy="36" r="24" fill="#0b0c0e" /><use href="#wieder" class="ico" transform="translate(58 24)" style="stroke:#fff;stroke-width:2.2" /></g>
+          <g id="k5-ki" opacity="0"><rect x="468" y="22" width="170" height="150" rx="26" fill="#fff" stroke="url(#gvd)" stroke-width="4" /><use href="#funkeln" class="ico" transform="translate(533 34) scale(1.66)" style="stroke-width:1.7" /><text x="553" y="104" text-anchor="middle" class="lab grau" style="font-size:22px">automatisch</text></g>
+          <g id="k5-ok" opacity="0"><use href="#ok" transform="translate(636 26)" /></g>
+          <g id="k5-lupe" opacity="0"><circle cx="740" cy="98" r="54" fill="#fff" stroke="#cbd5e1" stroke-width="3" /><use href="#lupe" class="ico" transform="translate(716 74) scale(2)" style="stroke-width:1.6" /></g>
+          <g id="k5-lok" opacity="0"><use href="#ok" transform="translate(784 54) scale(0.85)" /></g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="230" y="186" width="0" height="80" /></clipPath>
+          <text x="236" y="240" class="hand" style="font-size:54px" clip-path="url(#k5-clip)" transform="rotate(-4 320 226)">ein Teil</text>
+        </svg>
+      </section>
+
+      <!-- K6 Trotzdem prüfen: "Natürlich würde ich jetzt trotzdem erst einmal überprüfen, ob tatsächlich die Empfehlungen wirklich
+           passen und die KI natürlich auch keine falschen Produktinformationen ausgibt, denn das kann natürlich auch mal durchaus
+           passieren." Natürlich 46,71 / trotzdem 47,61 / überprüfen 48,53 / Empfehlungen 49,75 / passen 50,77 / falschen 52,89 /
+           Produktinformationen 53,25 / passieren 56,29; bis vor "Was" (57,42) -->
+      <section id="k6" class="karte clip" data-start="46.64" data-duration="10.78" data-track-index="1">
+        <div class="kicker">Trotzdem prüfen</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k6-emp" opacity="0">
+            <rect x="34" y="20" width="300" height="196" rx="24" class="rahmen" />
+            <g transform="translate(108 104)"><use href="#kachel" transform="scale(1.3)" /><use href="#tasche" class="ico" transform="translate(-26 -26) scale(2.16)" style="stroke-width:1.6" /></g>
+            <rect x="178" y="70" width="128" height="14" rx="7" fill="#0b0c0e" opacity="0.75" /><rect x="178" y="98" width="96" height="12" rx="6" class="zeile" /><rect x="178" y="122" width="112" height="12" rx="6" class="zeile" />
+            <text x="184" y="190" class="lab grau" style="font-size:22px">Empfehlung</text>
+          </g>
+          <g id="k6-pok" opacity="0"><use href="#ok" transform="translate(326 30)" /></g>
+          <g id="k6-blatt" opacity="0">
+            <rect x="420" y="20" width="300" height="196" rx="24" class="rahmen" />
+            <use href="#info" class="ico" transform="translate(440 38)" style="stroke:#6b7280;stroke-width:2" />
+            <text x="474" y="58" class="lab grau" style="font-size:22px">Produktinfos</text>
+            <rect x="444" y="86" width="250" height="14" rx="7" class="zeile" />
+            <rect id="k6-falsch" x="444" y="118" width="200" height="14" rx="7" class="zeile" />
+            <rect x="444" y="150" width="232" height="14" rx="7" class="zeile" />
+            <rect x="444" y="182" width="160" height="14" rx="7" class="zeile" />
+          </g>
+          <g id="k6-nein" opacity="0"><use href="#nein" transform="translate(674 125) scale(0.9)" /></g>
+          <g id="k6-lupe" opacity="0"><circle cx="0" cy="0" r="44" fill="rgba(255,255,255,0.35)" stroke="#0b0c0e" stroke-width="5" /><path d="M31 31 L 60 60" stroke="#0b0c0e" stroke-width="9" stroke-linecap="round" /></g>
+          <g id="k6-warn" opacity="0"><circle cx="770" cy="56" r="30" fill="#0b0c0e" /><use href="#warnung" class="ico" transform="translate(756 42) scale(1.17)" style="stroke:#fff;stroke-width:2.2" /></g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="30" y="226" width="0" height="80" /></clipPath>
+          <text x="36" y="282" class="hand" style="font-size:58px" clip-path="url(#k6-clip)" transform="rotate(-4 120 266)">prüfen!</text>
+        </svg>
+      </section>
+
+      <!-- K7 Außerdem, der Preis: "Was ich außerdem ziemlich interessant finde, schau mal hier:" Was 57,49 / interessant 58,57 /
+           schau 59,37; bis zur Quelle (Preisbereich ab 59,25) -->
+      <section id="k7" class="karte clip" data-start="57.42" data-duration="2.00" data-track-index="1">
+        <div class="kicker">Außerdem</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k7-tag"><circle cx="190" cy="140" r="86" fill="#fff" stroke="url(#gvd)" stroke-width="5" /><use href="#etikett" class="ico" transform="translate(146 96) scale(3.66)" style="stroke-width:1.4" /></g>
+          <text id="k7-preis" x="310" y="156" class="lab" style="font-size:44px" opacity="0">Preis</text>
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="300" y="196" width="0" height="90" /></clipPath>
+          <text x="306" y="256" class="hand" style="font-size:60px" clip-path="url(#k7-clip)" transform="rotate(-4 400 240)">interessant</text>
+        </svg>
+      </section>
+
+      <!-- K8 Erst testen statt Abo: "Du musst also nicht direkt irgendwelche kostenpflichtigen Abos abschließen, sondern kannst erst
+           einmal testen, wie die KI überhaupt bei deinen eigenen Produkten funktioniert." nicht 65,88 / kostenpflichtigen 66,69 /
+           Abos 67,43 / sondern 68,17 / testen 69,37 / eigenen 71,26 / Produkten 71,60 / funktioniert 72,17; nach der Quelle
+           (bis 65,75) bis vor "Und" (72,79) -->
+      <section id="k8" class="karte clip" data-start="65.55" data-duration="7.23" data-track-index="1">
+        <div class="kicker">Erst testen</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <path id="k8-pfad" class="linie" d="M300 120 L 520 120" />
+          <g id="k8-test"><rect id="k8-testr" x="34" y="20" width="260" height="196" rx="26" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><use href="#kolben" class="ico" transform="translate(126 46) scale(2.6)" style="stroke-width:1.6" /><text x="164" y="196" text-anchor="middle" class="lab" style="font-size:26px">jetzt</text></g>
+          <g id="k8-p1" opacity="0"><circle cx="0" cy="0" r="24" fill="#fff" stroke="#9aa3af" stroke-width="2.5" /><use href="#shirt" class="ico" transform="translate(-13 -13) scale(1.08)" style="stroke-width:2" /></g>
+          <g id="k8-p2" opacity="0"><circle cx="0" cy="0" r="24" fill="#fff" stroke="#9aa3af" stroke-width="2.5" /><use href="#tasche" class="ico" transform="translate(-13 -13) scale(1.08)" style="stroke-width:2" /></g>
+          <g id="k8-p3" opacity="0"><circle cx="0" cy="0" r="24" fill="#fff" stroke="#9aa3af" stroke-width="2.5" /><use href="#uhr" class="ico" transform="translate(-13 -13) scale(1.08)" style="stroke-width:2" /></g>
+          <g id="k8-ok" opacity="0"><use href="#ok" transform="translate(284 30)" /></g>
+          <g id="k8-abo" opacity="0"><rect x="526" y="20" width="260" height="196" rx="26" fill="#f9fafb" stroke="#9aa3af" stroke-width="3" stroke-dasharray="11 9" /><use href="#karte-kredit" class="ico" transform="translate(608 54) scale(4)" style="stroke:#6b7280;stroke-width:1.3" /><text x="656" y="196" text-anchor="middle" class="lab grau" style="font-size:26px">Abo später</text></g>
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="30" y="226" width="0" height="80" /></clipPath>
+          <text x="36" y="282" class="hand gruen" style="font-size:58px" clip-path="url(#k8-clip)" transform="rotate(-4 140 266)">erst testen</text>
+        </svg>
+      </section>
+
+      <!-- K9 "Link in der Beschreibung" (wörtlich aus dem Briefing): "Und wenn du dir die App mal selbst anschauen möchtest, ich habe
+           dir mal den Link hier unten in die Beschreibung gepackt." Und 72,86 / Link 75,47 / unten 75,78 / Beschreibung 76,31;
+           bis zum Ende (77,375) -->
+      <section id="k9" class="linkkarte clip" data-start="72.79" data-duration="4.585" data-track-index="1">
+        <div class="lico"><svg viewBox="0 0 24 24"><path id="k9-link1" d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path id="k9-link2" d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg></div>
+        <div class="ltext"><div class="t">Link <span class="verlauf">in der Beschreibung</span></div><div class="u">apps.shopify.com/mystorebuddy</div></div>
+        <div class="pfeil" id="k9-pfeil"><svg viewBox="0 0 24 24"><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker, raus weich mit Blur und Fade (Zeiten sind schon Cues: 2 Frames vor dem Wort)
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      gsap.set("#k2-weg1, #k2-weg2", { strokeDasharray: 1, strokeDashoffset: 1 });
+
+      // K0 Schriftzug, Chips auf "KI-App" und "Produktberatung"
+      tl.fromTo("#k0", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 0.0);
+      tl.fromTo("#c1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 1.47);
+      tl.fromTo("#c2", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 4.39);
+      tl.to("#k0, #c1, #c2", { opacity: 0, y: -8, duration: 0.25, ease: "power2.in" }, 6.6);
+
+      // K1 Shop mit drei Produkten, Besucher kommt, "?", Blick wandert von Produkt zu Produkt, "welches?"
+      karte("#k1", 10.40, 15.45);
+      tl.fromTo("#k1-gast", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 10.51);
+      badge("#k1-frage", 12.31);
+      tl.set("#k1-ring", { opacity: 1, x: 0 }, 12.71);
+      tl.fromTo("#k1-ring", { scale: 0.92, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.2, ease: "power2.out" }, 12.71);
+      tl.to("#k1-ring", { x: 154, duration: 0.35, ease: "power2.inOut" }, 12.99);
+      tl.to("#k1-ring", { x: 308, duration: 0.35, ease: "power2.inOut" }, 13.27);
+      tl.to("#k1-ring", { x: 0, duration: 0.45, ease: "power2.inOut" }, 13.65);
+      tl.to("#k1-ring", { opacity: 0, duration: 0.25 }, 14.21);
+      schreibe("#k1-cliprect", 230, 14.21, 0.45);
+
+      // K2 Weggabelung: oben Produktseiten (drei Seiten), unten eine Frage per Mail an den Support, "bisher"
+      karte("#k2", 15.48, 21.42);
+      schreibe("#k2-cliprect", 160, 15.55, 0.4);
+      tl.to("#k2-gast circle", { attr: { stroke: "#31adec" }, duration: 0.25 }, 16.99);
+      zeichne("#k2-weg1", 17.29, 0.4);
+      pop("#k2-s1", 17.71); pop("#k2-s2", 17.86); pop("#k2-s3", 18.01); ein("#k2-st", 18.01);
+      ein("#k2-oder", 18.62);
+      zeichne("#k2-weg2", 19.37, 0.45);
+      pop("#k2-sup", 20.20);
+      gsap.set("#k2-flug", { x: 176, y: 160 });
+      tl.fromTo("#k2-flug", { opacity: 0, x: 176, y: 160 }, { opacity: 1, duration: 0.15 }, 20.42);
+      tl.to("#k2-flug", { x: 540, y: 218, duration: 0.55, ease: "power2.inOut" }, 20.47);
+      tl.to("#k2-flug", { opacity: 0, duration: 0.15 }, 21.0);
+      ein("#k2-supt", 20.90);
+
+      // K3 Sortiment, Rückfrage, vier fallen weg, zwei passende (grün, "passend"), wandern als Empfehlung nach rechts,
+      // Klick, Warenkorb mit Haken
+      karte("#k3", 26.11, 33.80);
+      badge("#k3-frage", 27.35);
+      tl.to("#k3-raster .aus", { opacity: 0.22, duration: 0.35, ease: "power2.out", stagger: 0.05 }, 27.85);
+      tl.set("#k3-r1, #k3-r2", { opacity: 1 }, 28.27);
+      tl.fromTo("#k3-r1, #k3-r2", { scale: 0.9, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.25, ease: "power2.out" }, 28.27);
+      schreibe("#k3-cliprect", 230, 28.27, 0.45);
+      tl.to("#k3-frage", { opacity: 0, duration: 0.25 }, 29.6);
+      tl.set("#k3-bahn", { opacity: 1 }, 29.83);
+      gsap.set("#k3-e1", { x: 84, y: 92 }); gsap.set("#k3-e2", { x: 184, y: 192 });
+      tl.set("#k3-e1, #k3-e2", { opacity: 1 }, 29.83);
+      tl.to("#k3-e1", { x: 452, y: 90, duration: 0.55, ease: "power2.inOut" }, 29.83);
+      tl.to("#k3-e2", { x: 552, y: 190, duration: 0.55, ease: "power2.inOut" }, 29.93);
+      tl.to("#k3-r1, #k3-r2", { opacity: 0, duration: 0.2 }, 29.83);
+      pop("#k3-korb", 31.71);
+      gsap.set("#k3-zeiger", { x: 640, y: 250 });
+      tl.fromTo("#k3-zeiger", { opacity: 0, x: 640, y: 250 }, { opacity: 1, x: 600, y: 230, duration: 0.2, ease: "power2.out" }, 32.0);
+      tl.to("#k3-zeiger", { x: 470, y: 106, duration: 0.45, ease: "power2.inOut" }, 32.14);
+      tl.to("#k3-zeiger", { scale: 0.85, transformOrigin: "0% 0%", duration: 0.08, ease: "power2.in" }, 32.59);
+      tl.to("#k3-zeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 32.67);
+      tl.to("#k3-e1", { x: 718, y: 150, scale: 0.4, opacity: 0, duration: 0.45, ease: "power2.in" }, 32.70);
+      tl.to("#k3-e2", { x: 718, y: 150, scale: 0.4, opacity: 0, duration: 0.45, ease: "power2.in" }, 32.80);
+      tl.to("#k3-zeiger", { opacity: 0, duration: 0.2 }, 33.0);
+      badge("#k3-ok", 33.05);
+
+      // K4 Titel "Produktberatung im Shop"; links viele Produkte (Raster füllt sich), "oder", rechts ein erklärungsbedürftiger
+      // Artikel mit Info und Anleitung, "spannend"
+      karte("#k4", 33.87, 40.00);
+      (function () {
+        const g = document.getElementById("k4-viele");
+        const ns = "http://www.w3.org/2000/svg";
+        const icons = ["shirt", "tasche", "uhr", "brille", "schuh", "geschenk"];
+        let i = 0;
+        for (let r = 0; r < 3; r++) for (let c = 0; c < 6; c++) {
+          const x = 60 + c * 58, y = 44 + r * 56;
+          const k = document.createElementNS(ns, "g");
+          k.setAttribute("class", "vk");
+          k.setAttribute("transform", `translate(${x} ${y})`);
+          k.innerHTML = `<rect x="-24" y="-24" width="48" height="48" rx="11" fill="#fff" stroke="#d1d5db" stroke-width="2" /><use href="#${icons[i % 6]}" class="ico" transform="translate(-12 -12)" style="stroke-width:2" />`;
+          g.appendChild(k);
+          i++;
+        }
+      })();
+      gsap.set("#k4 .vk", { opacity: 0 });
+      // auf "Onlineshops" die erste Reihe (der Shop), auf "vielen Produkten" füllt sich der Rest
+      const vk = gsap.utils.toArray("#k4 .vk");
+      tl.fromTo(vk.slice(0, 6), { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.04 }, 34.73);
+      tl.fromTo(vk.slice(6), { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.03 }, 36.05);
+      ein("#k4-vt", 36.37);
+      ein("#k4-oder", 36.88);
+      pop("#k4-komplex", 37.34, 0.35);
+      badge("#k4-info", 37.70);
+      tl.fromTo("#k4-buch", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, 38.0);
+      ein("#k4-kt", 38.59);
+      schreibe("#k4-cliprect2", 190, 39.61, 0.45);
+
+      // K5 Titel und Unterzeile wörtlich; vier gleiche Fragen kommen immer wieder, zwei davon gehen in "automatisch" (ein Teil),
+      // zwei bleiben; Produktsuche: Lupe mit Haken
+      karte("#k5", 40.03, 46.60);
+      const fq = gsap.utils.toArray("#k5 .fq");
+      const fpos = [[60, 130], [150, 130], [240, 130], [330, 130]];
+      fq.forEach((f, i) => {
+        gsap.set(f, { x: fpos[i][0], y: fpos[i][1], opacity: 0 });
+        tl.fromTo(f, { opacity: 0, x: fpos[i][0] - 30 }, { opacity: 1, x: fpos[i][0], duration: 0.3, ease: "power2.out" }, 41.79 + i * 0.12);
+      });
+      badge("#k5-wieder", 42.41);
+      pop("#k5-ki", 43.19, 0.35);
+      tl.to(fq[2], { x: 520, y: 128, scale: 0.8, duration: 0.5, ease: "power2.inOut" }, 43.30);
+      tl.to(fq[3], { x: 590, y: 128, scale: 0.8, duration: 0.5, ease: "power2.inOut" }, 43.40);
+      tl.to([fq[2], fq[3]], { opacity: 0, duration: 0.2 }, 43.85);
+      badge("#k5-ok", 43.95);
+      schreibe("#k5-cliprect", 220, 43.19, 0.45);
+      pop("#k5-lupe", 45.46);
+      badge("#k5-lok", 46.04);
+
+      // K6 Empfehlung, Lupe prüft (Haken), Produktinfos, eine Zeile falsch (rot), Warnzeichen auf "passieren"
+      karte("#k6", 46.64, 57.42);
+      schreibe("#k6-cliprect", 210, 48.46, 0.45);
+      pop("#k6-emp", 49.68);
+      gsap.set("#k6-lupe", { x: 120, y: 110 });
+      tl.fromTo("#k6-lupe", { opacity: 0, x: 120, y: 110 }, { opacity: 1, duration: 0.25 }, 48.46);
+      tl.to("#k6-lupe", { x: 230, y: 96, duration: 0.6, ease: "power2.inOut" }, 50.0);
+      badge("#k6-pok", 50.70);
+      pop("#k6-blatt", 52.82);
+      tl.to("#k6-lupe", { x: 560, y: 120, duration: 0.5, ease: "power2.inOut" }, 52.82);
+      tl.to("#k6-falsch", { attr: { fill: "#fca5a5" }, duration: 0.25 }, 53.18);
+      badge("#k6-nein", 53.18);
+      badge("#k6-warn", 56.22);
+
+      // K7 Preis-Etikett, "interessant", dann kommt die Quelle (Preisbereich)
+      karte("#k7", 57.42, 59.42);
+      ein("#k7-preis", 57.78);
+      schreibe("#k7-cliprect", 300, 58.50, 0.45);
+
+      // K8 jetzt testen, Abo später; eigene Produkte in den Test, Haken
+      karte("#k8", 65.55, 72.78);
+      tl.fromTo("#k8-abo", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out" }, 65.81);
+      tl.to("#k8-abo rect", { attr: { stroke: "#374151" }, duration: 0.25 }, 66.62);
+      tl.to("#k8-abo", { opacity: 0.55, duration: 0.3 }, 68.10);
+      tl.to("#k8-testr", { attr: { stroke: "#00c27c", "stroke-width": 4.5 }, duration: 0.3 }, 69.30);
+      schreibe("#k8-cliprect", 280, 69.30, 0.5);
+      [["#k8-p1", 92, 71.19], ["#k8-p2", 164, 71.33], ["#k8-p3", 236, 71.53]].forEach(([s, x, t]) => {
+        gsap.set(s, { x: x, y: 104 });
+        tl.fromTo(s, { opacity: 0, x: x, y: 104 }, { opacity: 1, y: 146, duration: 0.35, ease: "power2.out" }, t);
+      });
+      badge("#k8-ok", 72.10);
+
+      // K9 Link in der Beschreibung: Karte, Link-Icon zeichnet sich auf "Link", Pfeil nach unten auf "unten"
+      tl.fromTo("#k9", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 72.79);
+      gsap.set("#k9-link1, #k9-link2", { strokeDasharray: 40, strokeDashoffset: 0 });
+      tl.fromTo("#k9-link1, #k9-link2", { strokeDashoffset: 40 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut", stagger: 0.08 }, 75.40);
+      tl.fromTo("#k9-pfeil", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 75.71);
+      tl.to("#k9-pfeil", { y: 10, duration: 0.35, ease: "power1.inOut", yoyo: true, repeat: 3 }, 76.05);
+
+      tl.seek(0);
+      window.__timelines["mystorebuddy-skizzen"] = tl;
+    </script>
+  </body>
+</html>
