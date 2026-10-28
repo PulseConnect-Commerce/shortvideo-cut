@@ -1,6 +1,6 @@
 # Übergabekarte: S02 · Metafelder
 
-Status: **eingeplant** (Pauls Vorgabe 27.10.: alle geschnittenen Videos selbst nach Kalender einplanen) für Mi 28.10.2026 14:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408161965 / 408162088 / 408162146, Drive-Final 1Ooqx86zc3NfNMRBsLngni-TnQcOKYVGL.
+Status: **veröffentlicht** Mi 28.10.2026 14:00 (TikTok https://www.tiktok.com/@_donpaulo/video/7701703927263284502, Instagram https://www.instagram.com/reel/DfCfyO7ilfd/, YouTube https://www.youtube.com/shorts/hG4bq-WdGOE); Rohclip und Final im Drive-Papierkorb, Takes und Ausgaben lokal gelöscht
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): S02 · Metafelder
 - **Format / Design:** FACE (Serie S, Serien-ID "Shopify in 30 Sekunden", Inhalt laut Briefing bewusst substanzieller) / aktueller Look: Hook-Titel im Design verlauf (easyJet-Stil), helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlagen P04 und A03), echte Seiten des Shopify Help Center als Hintergrund hinter ihm, Musik ruhig, sanfter Grade, Porträt-Modus
