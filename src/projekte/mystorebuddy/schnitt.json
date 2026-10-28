@@ -1,0 +1,103 @@
+{
+ "projekt": "mystorebuddy",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 9.0,
+   "text": "Ich möchte dir heute mal eine neue KI-App für Shopify vorstellen, die gerade einfach beim Thema Produktberatung ziemlich interessant ist. Die App nennt sich MyStoreBuddy."
+  },
+  {
+   "take": "t1",
+   "ab": 21.9,
+   "text": "Und stell dir vor, jemand besucht jetzt deinen Onlineshop und ist sich aber noch gar nicht sicher, welches Produkt überhaupt am besten zu ihm passt. Normalerweise schaut sich natürlich dann der Kunde verschiedene Produktseiten an oder er schreibt einfach eine Frage an den Support.",
+   "ganz": true
+  },
+  {
+   "take": "t1",
+   "ab": 58.95,
+   "text": "Mit MyStoreBuddy kann jetzt aber der User stattdessen direkt im Shop mit einem KI-Berater chatten."
+  },
+  {
+   "take": "t1",
+   "ab": 73.95,
+   "text": "Die KI kann jetzt aber dabei Rückfragen stellen, passende Produkte aus deinem Sortiment empfehlen oder diese einfach sogar direkt mit einem Klick in den Warenkorb legen."
+  },
+  {
+   "take": "t1",
+   "ab": 117.9,
+   "text": "Das ist gerade bei Onlineshops mit tatsächlich vielen Produkten oder einfach erklärungsbedürftigen Artikeln besonders spannend."
+  },
+  {
+   "take": "t1",
+   "ab": 141.1,
+   "text": "Denn du kannst damit besonders einen Teil der wiederkehrenden Produktfragen automatisieren"
+  },
+  {
+   "take": "t1",
+   "ab": 148.6,
+   "text": "und deinen Kunden eben damit direkt die Produktsuche erleichtern."
+  },
+  {
+   "take": "t1",
+   "ab": 159.2,
+   "text": "Natürlich würde ich jetzt trotzdem erst einmal überprüfen, ob tatsächlich die Empfehlungen wirklich passen und die KI natürlich auch keine falschen Produktinformationen ausgibt, denn das kann natürlich auch mal durchaus passieren. Was ich außerdem ziemlich interessant finde, schau mal hier:"
+  },
+  {
+   "take": "t1",
+   "ab": 199.05,
+   "text": "Du kannst MyStoreBuddy tatsächlich bereits kostenlos mit bis zu 50 Beratungsgesprächen pro Monat ausprobieren."
+  },
+  {
+   "take": "t1",
+   "ab": 207.3,
+   "text": "Du musst also nicht direkt irgendwelche kostenpflichtigen Abos abschließen, sondern kannst erst einmal testen, wie die KI überhaupt bei deinen eigenen Produkten funktioniert."
+  },
+  {
+   "take": "t1",
+   "ab": 219.25,
+   "text": "Und wenn du dir die App mal selbst anschauen möchtest, ich habe dir mal den Link hier unten in die Beschreibung gepackt."
+  }
+ ],
+ "ende": {
+  "bis": 223.87
+ },
+ "korrekturen": [
+  [
+   "t1",
+   17.11,
+   "MyStoreBuddy",
+   "MyStoreBuddy."
+  ],
+  [
+   "t1",
+   22.09,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   141.3,
+   "denn",
+   "Denn"
+  ],
+  [
+   "t1",
+   159.31,
+   "natürlich",
+   "Natürlich"
+  ],
+  [
+   "t1",
+   172.31,
+   "hier,",
+   "hier:"
+  ]
+ ]
+}
