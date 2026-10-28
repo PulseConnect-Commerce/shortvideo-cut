@@ -54,15 +54,15 @@ export const HG: [string, number, number][] = [];
  * das Artikelbild von OnlinehändlerNews nie im Bild). Aneinanderstoßende Fenster: er bleibt klein, nur die Seite wechselt. */
 const QUELLEN: QuelleFenster[] = [
   // "Schaut euch mal diese Meldung hier an.": Überschrift "Etsy-Shop unter Druck: Neue KI-Regeln zwingen zum Foto-Marathon", 26.10.2026
-  { von: 9.5, bis: 11.45, bild: "broll/etsyki/quelle-ohn-kopf.jpg", y: 60, fokus: [[400, 830]] },
+  { von: 9.5, bis: 11.45, bild: "broll/etsyki/quelle-ohn-kopf.jpg", y: 60, fokus: [[385, 830]] },
   // "Seit dem 22. Oktober": markiert "Seit dem 22. Oktober 2026 gelten neue Regeln für Produktfotos, …"
-  { von: 11.45, bis: 12.95, bild: "broll/etsyki/quelle-ohn-seit.jpg", y: 300, fokus: [[345, 775]],
+  { von: 11.45, bis: 12.95, bild: "broll/etsyki/quelle-ohn-seit.jpg", y: 320, fokus: [[350, 797]],
     label: "OnlinehändlerNews · 26.10.2026" },
   // "verlangt Etsy bei vielen Angeboten mindestens ein echtes …": "1. Pflicht", markiert "Jedes Angebot braucht künftig …"
   { von: 12.95, bis: 14.75, bild: "broll/etsyki/quelle-ohn-pflicht.jpg", y: 230, fokus: [[340, 1000]],
     label: "OnlinehändlerNews · 26.10.2026" },
   // "Was aber außerdem neu ist, KI-generierte …": Etsy-Hilfe, markiert "KI-generierte Funktionsanleitungen, …"
-  { von: 30.97, bis: 33.45, bild: "broll/etsyki/quelle-etsy-ki.jpg", y: 108, fokus: [[365, 840]],
+  { von: 30.97, bis: 33.45, bild: "broll/etsyki/quelle-etsy-ki.jpg", y: 108, fokus: [[345, 797]],
     label: "Etsy-Hilfe · Was kann ich auf Etsy verkaufen?" },
 ];
 
@@ -73,8 +73,18 @@ const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel bis zum Ende des ersten Satzes ("Grenzen." endet bei 5,36 s), ganz weg bei 5,6 s; die erste Karte kommt bei 5,96 s */
 const HOOK_ENDE = fs(5.4);
 
-/** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json) */
-const TOENE = karten.karten.flatMap((k) => k.sfx);
+/** Erklär-Karten aus (Sekunden im Schnitt): im WebM laufen hier noch die alten Quellen-Karten q1/q2 (ersetzt durch QUELLEN);
+ * beim Ein- bzw. Ausgang der Fenster schienen sie sonst 3-4 Frames halb durch (Standbilder 28.10.). Danach beginnt k1 genau
+ * am Ende von q1 (14,72 s); k4 (ab 32,92 s) läuft im zweiten Fenster schon und blendet beim Ausgang ein. */
+const KARTEN_AUS: [number, number][] = [
+  [9.5, 14.72],
+  [30.97, 32.92],
+];
+
+/** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json). Der whoosh von k4 (32,92 s) läge mitten im zweiten
+ * Quellen-Fenster, wo sich im Bild nichts ändert: er kommt auf den Ausgang des Fensters, wenn er zurückwächst und k4
+ * einblendet (33,27 s). */
+const TOENE = karten.karten.flatMap((k) => k.sfx).map((t) => (t.at === 32.92 ? { ...t, at: 33.27 } : t));
 
 /** Pill-Untertitel unter dem Kinn, über der Karte (Karte x 80-900, oben bei y 1118) */
 const PILLE = { x: 490, y: 1068 };
@@ -94,6 +104,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
   const zoom = 1 + 0.03 * (0.45 * push + 0.55 * (fr / C.DURATION));
   // Quelle groß: 0 = normal, 1 = Quelle über das ganze Bild, er als Bubble unten rechts
   const q = quelleZustand(QUELLEN, fr, C.FPS);
+  const karteO = KARTEN_AUS.some(([a, b]) => fr >= fs(a) && fr < fs(b)) ? 0 : kartenSicht(q.p);
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
       <QuelleGross fenster={QUELLEN} fr={fr} fps={C.FPS} />
@@ -123,7 +134,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           src={staticFile("broll/etsyki/skizzen.webm")}
           transparent
           muted
-          style={{ position: "absolute", inset: 0, width: 1080, height: 1920, opacity: kartenSicht(q.p) }}
+          style={{ position: "absolute", inset: 0, width: 1080, height: 1920, opacity: karteO }}
         />
       </Sequence>
       {sfx && TOENE.map((t, i) => <Sfx key={i} file={t.datei} at={t.at * C.FPS} volume={t.volume} />)}

@@ -52,16 +52,24 @@ export const HG: [string, number, number][] = [];
  * zugeschnitten, keine Artikelbilder im Fokus). Aneinanderstoßende Fenster: er bleibt klein, nur die Seite wechselt. */
 const QUELLEN: QuelleFenster[] = [
   // "Zumindest bei einem getesteten Warenkorb …": neuhandeln.de, Überschrift und Datum
-  { von: 4.36, bis: 6.0, bild: "broll/temuwarenkorb/quelle-nh-kopf.jpg", y: 0, fokus: [[380, 800]] },
+  { von: 4.36, bis: 6.0, bild: "broll/temuwarenkorb/quelle-nh-kopf.jpg", y: 0, fokus: [[340, 818]] },
   // "… wurde das hier gefunden. Schaut euch das mal an.": markiert "Ein identischer Warenkorb kostet … 59 Prozent mehr …"
-  { von: 6.0, bis: 8.66, bild: "broll/temuwarenkorb/quelle-nh-zitat.jpg", y: -60, fokus: [[325, 565]],
+  { von: 6.0, bis: 8.66, bild: "broll/temuwarenkorb/quelle-nh-zitat.jpg", y: -60, fokus: [[325, 531]],
     label: "neuhandeln.de · 26.10.2026" },
   // "Eine Schweizer E-Commerce-Beratung …": Carpathia, markiert "… einen identischen Warenkorb mit Topsellern …"
-  { von: 8.66, bis: 10.76, bild: "broll/temuwarenkorb/quelle-cp-warenkorb.jpg", y: 0, fokus: [[300, 725]],
+  { von: 8.66, bis: 10.76, bild: "broll/temuwarenkorb/quelle-cp-warenkorb.jpg", y: 45, fokus: [[345, 765]],
     label: "Carpathia-Blog · 25.10.2026" },
   // "Es können noch einfach unterschiedliche Aktionspreise eine Rolle spielen.": "Denkbar sind Schweiz-spezifische Aktionspreise"
-  { von: 32.45, bis: 35.97, bild: "broll/temuwarenkorb/quelle-cp-aktion.jpg", y: 110, fokus: [[340, 700]],
+  { von: 32.45, bis: 35.97, bild: "broll/temuwarenkorb/quelle-cp-aktion.jpg", y: 150, fokus: [[350, 708]],
     label: "Carpathia-Blog · 25.10.2026" },
+];
+
+/** Erklär-Karten aus (Sekunden im Schnitt): im WebM laufen hier noch die alten Quellen-Karten q1/q2 (ersetzt durch QUELLEN)
+ * und das Ende der Puzzle-Karte k3 (bis 35,97 s); beim Ein- bzw. Ausgang der Fenster schienen sie sonst 3-4 Frames halb
+ * durch (Standbilder 28.10.). Die nächste Karte (k1 bei 10,76 s, k4 bei 35,97 s) beginnt genau am Fensterende. */
+const KARTEN_AUS: [number, number][] = [
+  [4.36, 10.76],
+  [34.2, 35.97],
 ];
 
 /** Sanfter Grade (STIL.gradeSanft) plus brightness(0.94): das Gesicht lag in den ersten Standbildern bei 0,598 (Median aus 10,
@@ -128,6 +136,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
   const zoom = 1 + 0.03 * (0.45 * push + 0.55 * (fr / C.DURATION));
   // Quelle groß: 0 = normal, 1 = Quelle über das ganze Bild, er als Bubble unten rechts
   const q = quelleZustand(QUELLEN, fr, C.FPS);
+  const karteO = KARTEN_AUS.some(([a, b]) => fr >= fs(a) && fr < fs(b)) ? 0 : kartenSicht(q.p);
   return (
     <AbsoluteFill style={{ backgroundColor: "#0B0C0E" }}>
       <QuelleGross fenster={QUELLEN} fr={fr} fps={C.FPS} />
@@ -159,7 +168,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           src={staticFile("broll/temuwarenkorb/skizzen.webm")}
           transparent
           muted
-          style={{ position: "absolute", inset: 0, width: 1080, height: 1920, opacity: kartenSicht(q.p) }}
+          style={{ position: "absolute", inset: 0, width: 1080, height: 1920, opacity: karteO }}
         />
       </Sequence>
       {sfx && TOENE.map((t, i) => <Sfx key={i} file={t.datei} at={t.at * C.FPS} volume={t.volume} />)}
