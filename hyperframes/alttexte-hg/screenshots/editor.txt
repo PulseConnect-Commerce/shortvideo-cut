@@ -1,0 +1,229 @@
+https://help.shopify.com/de/manual/shopify-admin/productivity-tools/media-editor
+Shopify Help Center | Den Medien-Editor verwenden
+Status 200
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Produktivitätstools
+Den Medien-Editor verwenden
+
+Du kannst den Medien-Editor verwenden, um deine Bilder, 3D-Modelle und Videos zu bearbeiten. Der Medien-Editor ist sowohl auf Desktop- als auch auf Mobilgeräten verfügbar, aber einige Medienbearbeitungsfunktionen sind nur in der Desktop-Version verfügbar. Derzeit kannst du in der mobilen Version des Medien-Editors nur Bilddateien bearbeiten.
+
+Du kannst den Medien-Editor verwenden, um Medien überall dort zu bearbeiten, wo das Bearbeitungssymbol auf deinen Medien angezeigt wird. Dazu gehören Produktmedien, Medien in deinem Onlineshop-Editor, Medien in E-Mails von Shopify Messaging und Medien unter Inhalt > Dateien. Du kannst den Medien-Editor nicht verwenden, um Bilder im Rich-Text-Editor zu bearbeiten.
+
+Bevor du deine Medien bearbeitest, solltest du verstehen, wie sich das Seitenverhältnis deiner Bilder auf ihre Anzeige auf Websites auswirkt.
+
+Auf dieser Seite
+Das Seitenverhältnis von Bildern verstehen
+Alt-Text hinzufügen oder bearbeiten
+Ein Bild zuschneiden
+Auf einem Bild zeichnen
+Größe eines Bildes ändern
+Ausrichtung eines Bildes ändern
+Hintergrund eines Bildes entfernen oder ersetzen
+Änderungen an einem Bild rückgängig machen
+Ein 3D-Modell anpassen
+Thumbnail für ein Video ersetzen
+Informationen zum Seitenverhältnis von Bildern
+
+Das Seitenverhältnis eines Bildes ist das Verhältnis seiner Breite zu seiner Höhe. Ein Bild mit den Maßen 200 px mal 400 px hat beispielsweise ein Seitenverhältnis von 1:2. Ein Bild mit den Maßen 150 px mal 450 px hat ein Seitenverhältnis von 1:3.
+
+Bilder können unterschiedliche Größen haben und trotzdem das gleiche Seitenverhältnis aufweisen. Um zu berechnen, ob Bilder das gleiche Seitenverhältnis haben, teile die Breite jedes Bildes durch seine Höhe und vergleiche dann die Ergebnisse.
+
+Hinweis
+
+Du kannst die Produktkamera von Shopify verwenden, um Fotos und Videos von deinen Produkten direkt in der Shopify-App im idealen Seitenverhältnis aufzunehmen.
+
+Die Verwendung eines einheitlichen Seitenverhältnisses für alle Bilder eines bestimmten Typs sorgt für eine bessere Darstellung nebeneinander, da sie alle in der gleichen Größe angezeigt werden. Wenn du beispielsweise möchtest, dass deine Produktbilder innerhalb einer Kollektion in der gleichen Größe angezeigt werden, müssen sie das gleiche Seitenverhältnis haben.
+
+Du kannst den Medien-Editor verwenden, um deine Bilder zuzuschneiden, damit sie das gleiche Seitenverhältnis haben.
+
+Das Seitenverhältnis bestimmt auch, wie bestimmte Theme-Abschnitte ein Bild anzeigen. Abschnitte wie Slideshows, Bildbanner und Abschnitte in voller Breite schneiden dein Bild so zu, dass es in die Form des Bildbereichs des Abschnitts passt. Das Seitenverhältnis, auf das du dein Bild zuschneidest, bestimmt also, wie viel von dem Bild sichtbar bleibt. Erfahre mehr darüber, wie du den Bildzuschnitt reduzieren kannst.
+
+Alt-Text hinzufügen oder bearbeiten
+
+Alt-Text beschreibt ein Bild und ist wichtig für die Zugänglichkeit und die SEO. Du kannst Alt-Text für Bilder im Medien-Editor hinzufügen oder bearbeiten.
+
+Der Medien-Editor schlägt möglicherweise Alt-Text für Bilder vor, die noch keinen haben. Diese Vorschläge werden mithilfe von KI generiert, um den Inhalt deines Bildes zu beschreiben. Du kannst den vorgeschlagenen Alt-Text annehmen, bearbeiten oder ersetzen. Halte deinen Alt-Text kurz und beschreibend. Es werden etwa 125 Zeichen oder weniger empfohlen. Mehr Informationen zum Hinzufügen von Alt-Text zu Medien.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zur Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Thumbnail, um den Datei-Editor zu öffnen.
+
+Klicke im Abschnitt Informationen bearbeiten in das Feld Alt-Text.
+
+Führe einen der folgenden Schritte aus:
+
+Wenn ein Alt-Text vorgeschlagen wird, überprüfe ihn und klicke auf Akzeptieren, um ihn zu verwenden, oder bearbeite ihn bei Bedarf.
+Wenn kein Alt-Text vorgeschlagen wird oder du deinen eigenen schreiben möchtest, gib eine kurze Beschreibung des Bildes ein.
+
+Wenn du mit den Bearbeitungen im Medien-Editor fertig bist, klicke auf Speichern.
+
+Ein Bild zuschneiden
+
+Du kannst ein Bild zuschneiden, um einen Teil des Bildes zu entfernen. Dies ist nützlich, wenn du nur einen Teil des Bildes anzeigen oder das Seitenverhältnis des Bildes ändern möchtest.
+
+Du kannst ein Bild sowohl auf dem Desktop als auch auf mobilen Geräten zuschneiden. Beim Speichern eines zugeschnittenen Bildes auf einem Mobilgerät wird eine neue Kopie des Bildes erstellt.
+
+Schritte:
+Desktop
+
+Gehe in deinem Shopify-Adminbereich zur Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Thumbnail, um den Datei-Editor zu öffnen.
+
+Klicke im Medien-Editor auf Zuschneiden und transformieren.
+
+Rahme den Bereich des Bildes ein, den du behalten möchtest:
+
+Um das Bild mit einem benutzerdefinierten Seitenverhältnis zuzuschneiden, klicke auf Freiform. Du kannst die Ecken oder Kanten des hervorgehobenen Bereichs anklicken und ziehen oder in den hervorgehobenen Bereich klicken und ihn an eine andere Position ziehen.
+Um das Bild mit demselben Seitenverhältnis wie das Originalbild zuzuschneiden, klicke auf Original. Du kannst die Ecken des hervorgehobenen Bereichs anklicken und ziehen, um seine Größe zu ändern, oder in den hervorgehobenen Bereich klicken und ihn an eine andere Position ziehen. Das Seitenverhältnis bleibt beim Ändern der Größe dasselbe wie beim Originalbild.
+Um das Bild quadratisch zuzuschneiden, klicke auf Quadrat. Du kannst die Ecken des Quadrats anklicken und ziehen, um seine Größe zu ändern, oder in das Quadrat klicken und es an eine andere Position ziehen. Das Seitenverhältnis des Quadrats bleibt beim Ändern der Größe gleich.
+
+Klicke auf Anwenden, um das Bild zuzuschneiden.
+
+Wenn du mit den Bearbeitungen im Medien-Editor fertig bist, klicke auf Speichern.
+
+Mobil
+Auf einem Bild zeichnen
+
+Vielleicht möchtest du auf einem Bild zeichnen, um eine Linie hinzuzufügen, einen Teil des Bildes hervorzuheben oder ein Design zu ergänzen.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zur Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Thumbnail, um den Datei-Editor zu öffnen.
+
+Klicke auf Zeichnen.
+
+Wähle eine Farbe und eine Pinselgröße aus.
+
+Klicke und ziehe auf dem Bild, um zu zeichnen.
+
+Klicke auf Anwenden, um die Zeichnung hinzuzufügen.
+
+Wenn du mit den Bearbeitungen im Medien-Editor fertig bist, klicke auf Speichern.
+
+Du kannst den Radierer verwenden, um eine Zeichnung ganz oder teilweise zu entfernen. Der Radierer entfernt nichts vom Originalbild.
+
+Größe eines Bildes ändern
+
+Du kannst die Größe eines Bildes ändern, um seine tatsächliche Größe zu verändern. Wenn du versuchst, das Seitenverhältnis durch Ändern der Größe anzupassen, wird dein Bild möglicherweise verzerrt. Stattdessen solltest du das Bild zuschneiden, um das gewünschte Seitenverhältnis zu erhalten.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zur Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Thumbnail, um den Datei-Editor zu öffnen.
+
+Klicke auf Größe ändern.
+
+Gib die neue Breite für das Bild ein. Standardmäßig ist Seitenverhältnis beibehalten ausgewählt, wodurch die Bildhöhe automatisch aktualisiert wird, um das Seitenverhältnis des Bildes beizubehalten. Wenn du nur die Höhe oder Breite eines Bildes anpassen möchtest, klicke auf Seitenverhältnis beibehalten, um die Einstellung zu deaktivieren. Wenn du die Größe deines Bildes bei deaktivierter Option Seitenverhältnis beibehalten änderst, kann dein Bild verzerrt werden.
+
+Klicke auf Fertig, um die Größe des Bildes zu ändern.
+
+Wenn du mit den Bearbeitungen im Medien-Editor fertig bist, klicke auf Speichern.
+
+Ausrichtung eines Bildes ändern
+
+Du kannst ein Bild spiegeln oder drehen, um seine Ausrichtung zu ändern. Du kannst das Bild auch innerhalb seines Rahmens neigen.
+
+Hinweis
+
+Wenn Bilder nach dem Upload in einer unerwarteten Ausrichtung angezeigt werden, liegt dies normalerweise an den EXIF-Metadaten (Exchangeable Image File Format). Verschiedene Apps interpretieren die EXIF-Ausrichtungsdaten unterschiedlich. Um Probleme mit der Ausrichtung zu beheben, drehe das Bild im Medieneditor. Dadurch werden die Pixel dauerhaft neu angeordnet, anstatt dass die Ausrichtung auf Metadaten beruht.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zur Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Thumbnail, um den Datei-Editor zu öffnen.
+
+Klicke auf Drehen.
+
+So änderst du die Ausrichtung des Bildes:
+
+Klicke auf Im Uhrzeigersinn drehen, um das Bild zu drehen.
+Klicke auf die Schaltfläche Vertikal spiegeln oder Horizontal spiegeln, um das Bild zu spiegeln.
+
+Klicke auf Anwenden, um die Ausrichtung des Bildes zu ändern.
+
+Wenn du mit den Bearbeitungen im Medien-Editor fertig bist, klicke auf Speichern.
+
+Hintergrund eines Bildes entfernen oder ersetzen
+
+Mit Shopify Magic kannst du im Medieneditor den Hintergrund eines Bildes entfernen oder ersetzen. Du kannst den Hintergrund eines Bildes im Medieneditor sowohl auf dem Desktop als auch auf Mobilgeräten entfernen oder ersetzen.
+
+Mehr Informationen zur Medienerstellung mit Shopify Magic.
+
+Änderungen an einem Bild rückgängig machen
+
+Wenn du ein Bild mit dem Shopify-Medieneditor bearbeitet hast, kannst du alle Änderungen auf das Originalbild zurücksetzen, auch nachdem die Änderungen gespeichert wurden. Das Zurücksetzen eines bearbeiteten Bildes kann nicht rückgängig gemacht werden. Wenn du also Änderungen erneut anwenden oder beibehalten möchtest, musst du sie manuell erneut durchführen.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zur Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Thumbnail, um den Datei-Editor zu öffnen.
+
+Bearbeite das Bild.
+
+Klicke auf Auf Original zurücksetzen.
+
+Klicke im Dialogfeld Bild auf Original zurücksetzen? auf Zurücksetzen.
+
+Die Meldung Auf Original zurückgesetzt wird angezeigt und bestätigt, dass die Änderung abgeschlossen ist.
+
+Ein 3D-Modell anpassen
+
+Für deine 3D-Modelle kannst du Folgendes anpassen:
+
+Umgebung
+Hintergrund
+anfängliche Kameraposition
+
+Die Anpassung eines 3D-Modells auf Mobilgeräten ist nicht möglich.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zur Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Thumbnail, um den Datei-Editor zu öffnen.
+
+Klicke im Abschnitt Umgebung auf die gewünschte Umgebung für dein 3D-Modell und passe dann mit dem Schieberegler die Belichtung an.
+
+Verwende im Abschnitt Hintergrund die Farbauswahl, um die Hintergrundfarbe auszuwählen oder einen Hex-Code einzugeben.
+
+Klicke auf das Kamerasymbol, um die anfängliche Kameraposition anzupassen. Du kannst die X- und Y-Rotation anpassen, indem du den Rotationsgrad in das Feld X-Rotation oder das Feld Y-Rotation eingibst. Zoome in dein 3D-Modell, indem du den Schieberegler auf einen höheren Prozentsatz verschiebst.
+
+Klicke auf Fertig.
+
+Wenn du die X- oder Y-Kamerarotation bei einem 3D-Modell anpasst und die Änderungen beim Speichern zurückgesetzt werden, passe zuerst den Kamerazoom an, bevor du deine bevorzugte Kamerarotation einstellst.
+
+Vorschaubild für ein Video ersetzen
+
+Wenn du ein Video hochlädst, wird als Vorschaubild standardmäßig der erste Frame des Videos verwendet. Du kannst jedoch dein eigenes Vorschaubild hochladen, um das standardmäßige Bild zu ersetzen.
+
+Das Ersetzen des Vorschaubilds für ein Video ist auf Mobilgeräten nicht möglich.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zur Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Thumbnail, um den Datei-Editor zu öffnen.
+
+Klicke auf  > Vorschaubild ersetzen.
+
+Wähle die Datei auf deinem Computer aus.
+
+Feedback hinterlassen

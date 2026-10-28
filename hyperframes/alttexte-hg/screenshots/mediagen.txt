@@ -1,0 +1,226 @@
+https://help.shopify.com/de/manual/ai-powered-tools/media-generation
+Shopify Help Center | Mediengenerierung im Datei-Editor
+Status 200
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+KI-gestützte Tools
+Mediengenerierung im Datei-Editor
+Abo-Anforderung
+
+Die Mediengenerierung mit Sidekick ist nur für Shops mit dem Basic-Abo, Grow-Abo, Advanced-Abo und Shopify Plus-Abo verfügbar.
+
+Du kannst Bilder mit der Kraft der künstlichen Intelligenz (KI) durch die Mediengenerierung direkt im Datei-Editor ändern. Die KI-gestützte Mediengenerierung kann dir helfen, schnell professionelle Produktbilder ohne spezielle Designkenntnisse zu erstellen.
+
+Mit der Mediengenerierung kannst du folgende Aktionen ausführen:
+
+Farbhintergrund: Ersetze den Hintergrund eines Bildes durch eine einfarbige Fläche, mit automatischer Objekterkennung und bei Bedarf manueller Korrektur
+Generieren: Transformiere dein Bild mithilfe einfacher, in natürlicher Sprache verfasster Prompts, um Hintergründe, Beleuchtung oder andere Aspekte des Bildes zu ändern
+Hinweis
+
+Shopify legt großen Wert auf Originalität, respektiert die Rechte von Urheber:innen und unterstützt oder befürwortet weder das Hochladen von Bildern aus dem Internet noch Urheberrechtsverletzungen.
+
+Um mögliche Verstöße zu melden, können Rechteinhaber:innen die bestehenden Shopify-Formulare zur Meldung von Urheberrechts- und Markenverletzungen verwenden. Mehr Informationen zum Thema Rechtliche Entfernungen und geistiges Eigentum.
+
+Auf dieser Seite
+Preisgestaltung
+Überlegungen und Tipps zum Bearbeiten von Bildern mit der Mediengenerierung
+Farbhintergrund
+Bilder generieren
+Bilder erweitern
+Generierte Bilder auf deinem Gerät speichern
+Inhalte in generierten Bildern melden
+Häufig gestellte Fragen
+Preisgestaltung
+
+Für eine begrenzte Zeit ist die Mediengenerierung im Datei-Editor in allen Shopify-Abos ohne zusätzliche Kosten verfügbar.
+
+Überlegungen und Tipps zum Bearbeiten von Bildern mit der Mediengenerierung
+
+Bevor du die Mediengenerierung verwendest, solltest du Folgendes beachten:
+
+Bildauflösung und Format:
+
+Die Standardauflösung für generierte Bilder beträgt 1 Megapixel (MP), basierend auf dem Seitenverhältnis deines Bildes. Verwende nach Möglichkeit Bilder, deren Größe in etwa 1 Megapixel entspricht.
+Bilder mit mehr als 1 MP werden herunterskaliert, während Bilder mit weniger als 1 MP hochskaliert werden.
+Geänderte Bilder werden im Originalformat gespeichert. Alle Bilder mit transparentem Hintergrund sollten als neue Datei im PNG-Format gespeichert werden, um den transparenten Hintergrund beizubehalten. Bei anderen Bildformaten kann kein transparenter Hintergrund gespeichert werden.
+Wenn du Bilder mit transparentem Hintergrund erstellst, sollten sie als PNG-Dateien gespeichert werden, um den transparenten Hintergrund beizubehalten. Bei anderen Bildformaten kann kein transparenter Hintergrund gespeichert werden.
+
+Bildqualität:
+
+Verwende für optimale Ergebnisse Bilder mit deutlich sichtbaren Objekten und gutem Kontrast.
+Bilder mit sauberen Kanten und einfachen Kompositionen eignen sich besser zum Entfernen des Hintergrunds.
+
+Bearbeiten und Speichern:
+
+Der KI-Bild-Editor von Shopify erstellt jeweils 1 KI-generierte Szene. Es können weitere Sets generiert werden, aber alle nicht verwendeten Szenen werden gelöscht, wenn du den Editor schließt, es sei denn, du speicherst die Bilder auf deinem Gerät.
+
+Urheberrecht und Nutzung:
+
+Ein unsichtbares Wasserzeichen wird auf alle generierten Bilder angewendet. Dies schränkt die kommerzielle Nutzung nicht ein, kann aber nicht entfernt werden.
+Dein Unternehmen ausbauen
+
+Bist du dir unsicher, wie man großartige Produktbilder erstellt? Im Shopify-Blog findest du zahlreiche Artikel, die dir den Einstieg in die Produktfotografie erleichtern.
+
+Mehr Informationen zum Aufnehmen von Produktbildern.
+
+Anpassen deiner Mediengenerierung mit Text-Prompts
+
+Wenn du die Funktion Generieren verwendest, kannst du deine Bilder mit effektiven Text-Prompts transformieren. Verwende einfache, natürliche Sprache, um zu beschreiben, was du möchtest:
+
+Hintergrundänderungen: „Hintergrund in ein Studio ändern“ oder „Küchenumgebung mit warmer Beleuchtung“
+Szenenbeschreibungen: „in einem sonnigen Park mit Gras und Bäumen“
+Stilspezifikationen: „professionelle Werbefotografie“ oder „warme, gleichmäßige Beleuchtung“
+Kombinierte Elemente: „Studioumgebung mit Betonhintergrund und Umgebungsbeleuchtung“
+
+Beachte diese Prompt-Tipps:
+
+Keywords und Phrasen für Ästhetik und Stil können dazu beitragen, den letzten Schliff des Renderings zu verbessern. Zu den Beispielen, die du in Betracht ziehen solltest, gehören die folgenden Arten von Deskriptoren:
+
+Standort: drinnen, draußen, unter Wasser, in der Stadt
+Beleuchtung: warmes, gleichmäßiges Licht, Umgebungslicht, bewölkt, Neon, Studiobeleuchtung, Blitzlichtfotografie
+Farbe: lebhaft, gedämpft, hell, monochromatisch, schwarz-weiß, pastell
+Größe (relativ zum Objekt): extreme Nahaufnahme, Weitwinkel, 6" x 4" x 2"
+Kamerawinkel: Frontalaufnahme, Nahaufnahme, von oben
+
+Beachte beim Erstellen deines Text-Prompts die folgenden Best Practices:
+
+Text-Prompts sollten mindestens 3 bis 7 Wörter lang sein. Idealerweise formatierst du den Prompt mit kurzen Keywords oder Phrasen, die durch Kommas getrennt sind.
+Vermeide lange Listen von Anfragen und Anweisungen. Im Gegensatz zu einem Large Language Model (LLM) oder Chatbot ist der Text-Prompter für die Mediengenerierung nicht konversationsbasiert.
+Wenn dein Produkt im Vergleich zur Hintergrundszene zu groß oder zu klein erscheint, füge Größenangaben hinzu. So kann der Generator den Hintergrund passend zu deinem Produkt skalieren. Beispiel: Kerze im 8-Unzen-Glas oder 26" x 18" Koffer.
+Um zu vermeiden, dass Objekte in der Hintergrundszene „schweben“, gib an, wie das Objekt im Verhältnis zum Hintergrund verankert sein soll. Zum Beispiel: Getränkeflasche steht auf Tisch oder Stiefel stehen auf Boden an Wand.
+Farbiger Hintergrund
+
+Du kannst den Hintergrund eines Bildes durch eine Volltonfarbe ersetzen oder ihn transparent machen. Die Funktion erkennt das Objekt automatisch und trennt es vom Hintergrund. Bei Bedarf kannst du die Auswahl manuell korrigieren.
+
+Schritte:
+Desktop
+
+Gehe in deinem Shopify-Adminbereich zu der Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Vorschaubild, um den Dateieditor zu öffnen.
+
+Klicke im Dateieditor auf Farbiger Hintergrund.
+
+Die Funktion erkennt automatisch das Motiv in deinem Bild. Wenn die automatische Auswahl korrigiert werden muss, kannst du manuell anpassen, welche Teile des Bildes als Motiv betrachtet werden sollen, indem du Motiv auswählen auswählst.
+
+Wähle die gewünschte Hintergrundfarbe mit einer der folgenden Optionen aus:
+
+Klicke auf eines der voreingestellten Farbfelder unter Monochrom oder Standardfarben.
+Klicke im Abschnitt Benutzerdefiniert auf +, um die Farbauswahl zu verwenden oder einen bestimmten Farbcode einzugeben.
+
+Klicke auf Speichern oder Als neu speichern, um dein Bild zu speichern.
+
+Um alle Änderungen am Bild zu verwerfen, klicke auf Auf Original zurücksetzen.
+
+Mobil
+Bilder generieren
+
+Du kannst dein Bild mithilfe von einfachen Text-Prompts in natürlicher Sprache transformieren. Mit dieser Funktion kannst du Hintergründe, Einstellungen oder andere Aspekte deines Bildes ändern, indem du einfach beschreibst, was du möchtest.
+
+Du kannst beispielsweise „in einem sonnigen Park, Gras, Bank unter einem Baum, professionelle Werbefotografie“ oder „Hintergrund in ein Studio ändern“ eingeben und die KI wird dein Bild entsprechend transformieren.
+
+Schritte:
+Desktop
+
+Gehe in deinem Shopify-Adminbereich zu der Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Vorschaubild, um den Dateieditor zu öffnen.
+
+Klicke im Dateieditor auf Generieren.
+
+Beschreibe im Feld für den Text-Prompt in natürlicher Sprache, wie du dein Bild transformieren möchtest. Du kannst Folgendes tun:
+
+Den Hintergrund ändern („Hintergrund in ein Wohnzimmer ändern“)
+Eine Szene festlegen („in einem sonnigen Park mit Gras und Bäumen“)
+Einen Stil angeben („professionelle Werbefotografie“)
+Mehrere Elemente kombinieren („Studio-Setup mit warmer Beleuchtung“)
+
+Klicke auf Senden.
+
+Klicke auf Speichern oder Als neu speichern, um dein Bild zu speichern.
+
+Um alle Änderungen am Bild zu verwerfen, klicke auf Auf Original zurücksetzen.
+
+Mobil
+Bilder erweitern
+
+Du kannst Bildhintergründe über ihre ursprünglichen Ränder hinaus erweitern. Durch diesen Prozess, das sogenannte Outpainting, kannst du mehr Platz schaffen oder den Rahmen um dein Objekt anpassen. Das Outpainting von Bildern ist in der mobilen Shopify-App nicht verfügbar.
+
+Schritte:
+
+Gehe in deinem Shopify-Adminbereich zu der Mediendatei, die du bearbeiten möchtest.
+
+Klicke auf das Vorschaubild, um den Dateieditor zu öffnen.
+
+Klicke im Dateieditor auf Zuschneiden und transformieren und wähle das Seitenverhältnis aus.
+
+Passe mithilfe des Schiebereglers die Größe der Arbeitsfläche an, die du erweitern möchtest.
+
+Klicke auf das Symbol , um den Hintergrund deines Bildes zu erweitern.
+
+Klicke auf Speichern oder Als neu speichern, um dein Bild zu speichern.
+
+Um alle Änderungen am Bild rückgängig zu machen, klicke auf Verwerfen.
+
+Generierte Bilder auf deinem Gerät speichern
+
+Du kannst jedes von dir generierte Bild direkt im lokalen Speicher deines Geräts speichern oder auf einem mobilen Gerät teilen. Generierte Bilder, die nicht gespeichert werden, gehen verloren, wenn die Bearbeitungssitzung beendet ist.
+
+Schritte:
+Desktop
+Befolge die Schritte zur Nutzung der Option Farbiger Hintergrund oder Generieren und klicke auf Speichern oder Als neu speichern, um dein Bild zu speichern.
+Klicke auf das Vorschaubild des Bildes, das du speichern möchtest.
+Klicke in der Bildvorschau auf das Symbol ↧, um das Bild in den lokalen Speicher deines Geräts herunterzuladen.
+Mobil
+Inhalt von generierten Bildern melden
+
+Die Mediengenerierung nutzt trainierte Modelle, die Filter und Schutzmaßnahmen implementieren, um schädliche oder anstößige Inhalte zu erkennen und zu blockieren. Du kannst jedoch generierte Bilder, die dennoch unangemessene oder schädliche Inhalte aufweisen, manuell melden. Dein Feedback trägt dazu bei, die Qualität der durch die Mediengenerierung erstellten Szenen zu verbessern.
+
+Hinweis
+
+Shopify legt großen Wert auf Originalität, respektiert die Rechte von Urheber:innen und unterstützt oder befürwortet weder das Hochladen von Bildern aus dem Internet noch Urheberrechtsverletzungen.
+
+Um mögliche Verstöße zu melden, können Rechteinhaber:innen die bestehenden Shopify-Formulare zur Meldung von Urheberrechts- und Markenverletzungen verwenden. Mehr Informationen zum Thema Rechtliche Entfernungen und geistiges Eigentum.
+
+Schritte:
+
+Wenn du Bilder mit Generieren erstellt hast und dabei auf unangemessene oder schädliche Inhalte stößt:
+
+Klicke in der unteren Ecke des Bildes auf das Melden-Symbol.
+Wähle den Grund für die Meldung aus.
+Klicke auf Senden.
+Desktop
+Klicke auf das Vorschaubild für das Bild, das du melden möchtest.
+Klicke in der Bildvorschau auf das ⚐-Flaggensymbol für Inhalt melden.
+Wähle im Dialogfeld Bild melden aus, was du in Bezug auf das Bild melden möchtest.
+Optional: Gib im Abschnitt Weitere Details hinzufügen spezifische Informationen darüber ein, was du melden möchtest.
+Klicke auf Senden.
+Mobil
+Häufig gestellte Fragen
+Wie melde ich Probleme mit generierten Bildern?
+
+Du kannst jedes Bild direkt aus dem Bildeditor melden, indem du die Funktion zum Melden von Inhalten verwendest.
+
+Was ist die Quelle der generierten Bilder und wie wird das Urheberrecht gehandhabt?
+
+Die Mediengenerierung basiert auf mehreren generativen Medienmodellen und folgt den Datenschutzprinzipien von Shopify.
+
+Rechteinhaber:innen können potenzielle Verstöße über die Formulare zur Meldung von Urheberrechts- und Markenrechtsverletzungen melden.
+
+Welche Inhaberschafts- und Nutzungsrechte gelten für mit KI bearbeitete Bilder?
+
+Shopify beansprucht keine Inhaberschaft an Bildern, die Händler:innen mithilfe der Mediengenerierung erstellen, und schränkt auch nicht ein, wo diese Bilder verwendet werden können. Die erstellten Bilder können für die geschäftlichen Zwecke der Händler:innen sowohl innerhalb als auch außerhalb von Shopify verwendet werden.
+
+Hinweis
+
+Ein unsichtbares Wasserzeichen wird als eine Art von „Metadaten“ auf Inhalte angewendet, die mit KI generiert werden. Dies ist für das menschliche Auge nicht wahrnehmbar und hat keine Auswirkungen auf das Endergebnis des Bildes.
+
+Feedback hinterlassen

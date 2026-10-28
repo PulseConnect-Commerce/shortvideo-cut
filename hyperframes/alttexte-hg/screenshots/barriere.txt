@@ -1,0 +1,158 @@
+https://help.shopify.com/de/manual/online-store/themes/customizing-themes/accessibility
+Shopify Help Center | Zugänglichkeit für Themes
+Status 200
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Themes anpassen
+Zugänglichkeit für Themes
+
+Wenn du dein Theme anpasst, triff Design- und Inhaltsentscheidungen, die dazu beitragen, deinen Onlineshop zugänglich zu halten. Eine zugängliche Website ist so gestaltet, dass sie von allen, auch von Menschen mit Behinderungen, genutzt werden kann. Wenn du bei den Entscheidungen für deinen Onlineshop die Zugänglichkeit berücksichtigst, kannst du all deinen Kund:innen ein inklusives Erlebnis bieten.
+
+Die folgenden Richtlinien wurden unter Berücksichtigung der Web Content Accessibility Guidelines (WCAG) erstellt. Da bei der Erstellung einer zugänglichen Website viele Faktoren zu berücksichtigen sind, ist die alleinige Befolgung der nachstehenden Richtlinien keine Garantie dafür, dass dein Onlineshop vollständig zugänglich ist. Du kannst mehr über die Barrierefreiheit im Internet erfahren, indem du die WCAG-Website besuchst oder die unten aufgeführten Ressourcen einsiehst.
+
+Tipp
+
+Wenn du Entwickler:in bist, kannst du dein Theme mit den Tools und Best Practices von Shopify weiter für die Zugänglichkeit optimieren. Mehr dazu auf Shopify.dev.
+
+Auf dieser Seite
+Zugänglichkeit von Text
+Alternativtext für Bilder
+Zugänglichkeit von Slideshows und Videos
+Tastaturunterstützung
+Ressourcen
+Zugänglichkeit von Text
+
+Es ist wichtig, dass der Text in deinem Onlineshop für sehbehinderte Kund:innen oder für Kund:innen, die Schwierigkeiten haben, dichte Textblöcke zu lesen, gut lesbar ist.
+
+Farbkontrast
+
+Wenn du die Farben für deinen Onlineshop bearbeitest, stelle sicher, dass dein gesamter Text für farbenblinde oder anderweitig sehbehinderte Kund:innen zugänglich ist. Diese Kund:innen sind auf einen angemessenen Farbkontrast angewiesen, um Dinge visuell voneinander zu unterscheiden. Du kannst ein Online-Tool für das Kontrastverhältnis verwenden, um den Kontrast der verschiedenen Teile deines Shops zu überprüfen.
+
+Im folgenden Beispiel hat der Text ein Kontrastverhältnis von 2,4:1 zu seinem Hintergrund und ist für einige Kund:innen schwer zu lesen.
+
+Im nächsten Beispiel hat der Text ein Kontrastverhältnis von 4,8:1 und ist für viele Kund:innen leichter zu lesen.
+
+Teste den Kontrast des gesamten Textes, einschließlich Fließtext, Überschriften, Links und Formularfeldern. Beachte die folgenden Richtlinien:
+
+Die Farbe des Fließtextes und des Schaltflächentextes hat ein Kontrastverhältnis von mindestens 4,5:1 zu ihrem Hintergrund.
+Die Farbe von Überschriften und anderem großen Text (Schriftgröße 24 px und mehr) hat ein Kontrastverhältnis von mindestens 3:1 zu ihrem Hintergrund.
+Die Farbe des gesamten Textes über Bildern, einschließlich Slideshows, Bannern und Videos, hat ein ausreichendes Kontrastverhältnis zu ihrem Hintergrund. Bei großem Text (Schriftgröße 24 px und mehr) beträgt der Kontrast mindestens 3:1. Bei kleinerem Text beträgt der Kontrast mindestens 4,5:1.
+Die Farbe von Nicht-Textelementen, einschließlich Eingaberändern und Symbolen, hat ein Kontrastverhältnis von mindestens 3:1 zu ihrem Hintergrund.
+Tipp
+
+In einigen Themes kannst du eine Farbüberlagerung zwischen Text und einem Bild platzieren, um den Kontrast und die Lesbarkeit des Textes zu verbessern.
+
+Textüberschriften
+
+Wenn du mit dem Rich-Text-Editor Überschriften zu deiner Seite hinzufügst, ist es wichtig, eine fortlaufende Reihenfolge (1–6) einzuhalten. Überschriften werden von unterstützenden Technologien verwendet, um zu vermitteln, wie der Seiteninhalt organisiert ist. Das Überspringen von Ebenen, z. B. wenn auf eine Überschrift der Ebene 2 eine Überschrift der Ebene 4 folgt, kann für Nutzende verwirrend sein. Beachte folgende Richtlinie:
+
+Überschriften werden in sequenzieller Reihenfolge verwendet und es werden keine Ebenen übersprungen.
+Textgröße und Ausrichtung
+
+Wenn du die Typografieeinstellungen deines Themes bearbeitest, stelle sicher, dass dein Text groß genug ist, damit die Kundschaft ihn bequem lesen kann.
+
+Der Text sollte auch einen einheitlichen Abstand zwischen Wörtern und Buchstaben aufweisen, damit er leicht zu lesen ist. Im folgenden Beispiel ist der Text im Blocksatz ausgerichtet, was zu uneinheitlichen Abständen zwischen den Wörtern führt.
+
+Im nächsten Beispiel ist der Text linksbündig ausgerichtet, was zu einheitlichen Abständen zwischen den Wörtern führt.
+
+Beachte beim Anpassen der Größe und Ausrichtung von Text die folgenden Richtlinien:
+
+Die Mindestschriftgröße für den Haupttext entspricht 16 px.
+Die Textausrichtung ist kein Blocksatz. Text im Blocksatz erzeugt uneinheitliche Abstände zwischen den Wörtern.
+Hinweis
+
+Verschiedene Schriftfamilien können vergleichsweise klein oder groß dargestellt werden, auch wenn sie dieselbe Schriftgröße haben. Wenn die von dir verwendete Schriftart bei 16 px kleiner als andere Schriftarten dargestellt wird, verwende eine größere Schriftgröße.
+
+Textlinks
+
+Textlinks sollten unterstrichen sein oder einen anderen, sich optisch vom normalen Text unterscheidenden Stil haben. Da einige Kund:innen Schwierigkeiten haben, Farben zu sehen, kannst du dich nicht allein auf eine Farbänderung verlassen, um einen Link von normalem Text zu unterscheiden.
+
+Textlinks sollten im selben Tab geöffnet werden. Links, die in einem neuen Tab oder Fenster geöffnet werden, können zu Verwirrung führen, insbesondere auf Mobilgeräten, wo das alte Fenster nicht sichtbar ist. Außerdem sind sie für Kund:innen nicht inklusiv, insbesondere für Kund:innen, die eine Bildschirmvergrößerung verwenden oder weniger technisch versiert sind.
+
+Wenn du das Stylesheet deines Themes bearbeitest, achte darauf, die Stile für Textlinks nicht zu entfernen. Beachte die folgenden Richtlinien:
+
+Textlinks sind entweder unterstrichen oder weisen ein anderes visuelles Unterscheidungsmerkmal auf, das nicht nur aus Farbe besteht, damit Kund:innen Links von normalem Text unterscheiden können.
+Textlinks werden beim Anklicken im selben Tab geöffnet.
+Alternativtext für Bilder
+
+Wenn du Bilder zu deinem Onlineshop hinzufügst, ist es wichtig, sie für blinde oder sehbehinderte Kund:innen zugänglich zu machen. Dies kannst du tun, indem du Alternativtext hinzufügst, der jedes Bild genau beschreibt. Kund:innen, die Screenreader verwenden, sind auf Alt-Texte angewiesen, um den Inhalt von Bildern in deinem Onlineshop zu verstehen.
+
+Im Shopify-Adminbereich kannst du deinen Produktbildern Alt-Text hinzufügen. Im Theme-Editor kannst du den anderen Bildern in deinem Theme Alt-Text hinzufügen.
+
+Wenn du einem Bild einen Alt-Text hinzufügst, ist es eine bewährte Methode, so zu tun, als ob du das Bild jemandem mit geschlossenen Augen beschreibst. Hilf der Person, sich ein Bild im Kopf zu machen. Die Art und Weise, wie du ein Bild beschreibst, hängt auch vom Kontext deiner Webseite ab. Beispielsweise würdest du ein Bild anders beschreiben, wenn dein Unternehmen eine Reiseagentur ist, als wenn es ein Geschäft für Outdoor-Ausrüstung ist. Betrachte das folgende Bild:
+
+Für eine Reiseagentur könntest du auf das Land und die Region verweisen, in denen die beiden Freund:innen unterwegs sind, und auf den Namen des Ozeans oder Meeres, auf das sie blicken. Für ein Geschäft für Outdoor-Ausrüstung hingegen könntest du dich auf die Marken und Eigenschaften der Rucksäcke der beiden Freund:innen konzentrieren.
+
+Wenn dein Unternehmen eine Reiseagentur ist, wäre ein Beispiel für einen schlechten Alt-Text: „Zwei Personen vor dem Meer“. Ein Beispiel für einen guten Alt-Text für dieselbe Agentur wäre: „Zwei Freund:innen reisen in Lagos, Portugal, und blicken an einem sonnigen Tag auf die sandige Bucht von Praia do Camilo.“
+
+Zugänglichkeit von Slideshows und Videos
+
+Wenn du Videos zu deinem Onlineshop hinzufügst, solltest du die Bedürfnisse von Kund:innen mit Sehbehinderung, gehörlosen oder schwerhörigen Kund:innen oder Kund:innen, die anfällig für vestibuläre Störungen sein könnten, berücksichtigen.
+
+Einige dieser Kund:innen sind auf die Text-to-Speech-Funktion von Screenreadern angewiesen, die den Inhalt einer Webseite vorliest. Zusätzliche Audioinhalte von Videos und Musik, insbesondere wenn sie unerwartet sind, können dieses Erlebnis erschweren. Für gehörlose oder schwerhörige Kund:innen ist es eine gute Idee, deinen Videos Untertitel hinzuzufügen, damit diese Kund:innen auf den Inhalt zugreifen können.
+
+Bei Kund:innen mit vestibulären Störungen können sich bewegende Inhalte Schwindel auslösen. Aus diesem Grund ist es wichtig, dass Slideshows und Videos nicht automatisch abgespielt werden und dass die Kundschaft die Slideshow mit Steuerungsschaltflächen bedienen kann.
+
+Slideshows
+
+Wenn du deinem Onlineshop eine Slideshow hinzufügst, beachte die folgenden Richtlinien:
+
+Slideshows werden nicht automatisch abgespielt.
+Wenn Slideshows automatisch abgespielt werden, enthalten sie Steuerelemente, mit denen Kund:innen die Slideshow anhalten, fortsetzen oder stoppen können.
+Videos
+
+Wenn du deinem Onlineshop ein Video hinzufügst, beachte die folgenden Richtlinien:
+
+Videos werden nicht automatisch abgespielt.
+Wenn Videos automatisch abgespielt werden, ist ihr Ton stummgeschaltet.
+Bei Videos, die Audio enthalten, ist das Video vollständig sichtbar und wird nicht von anderen Seitenelementen verdeckt. Dadurch bleiben die Untertitel sichtbar.
+Für Videos, die Dialoge enthalten, sind Texttranskripte verfügbar. Diese sind entweder auf der Seite oder über einen Link auf einer separaten Seite enthalten.
+
+Diese Richtlinien gelten auch für Videos, die sich in einer Slideshow befinden.
+
+Tastaturunterstützung
+
+Kund:innen mit Seh- oder motorischen Beeinträchtigungen verwenden möglicherweise eine Tastatur, um online zu navigieren und Aufgaben zu erledigen. Diese Kund:innen sind auf einen visuellen Indikator angewiesen, der anzeigt, wo sich der Fokus ihrer Tastatur auf einer Webseite befindet. Im folgenden Beispiel hat das Feld E-Mail einen visuellen Fokusindikator:
+
+Wenn du das Stylesheet deines Themes bearbeitest, achte darauf, dass du den Stil für den Tastaturfokus von keinem Seitenelement entfernst. Beachte die folgende Richtlinie:
+
+Alle interaktiven Seitenelemente haben einen deutlichen visuellen Indikator, wenn sie den Tastaturfokus haben. Zu diesen Elementen gehören Links, Schaltflächen und Formularfelder.
+Ressourcen
+
+Weitere Informationen zur Barrierefreiheit im Internet für die in diesem Artikel besprochenen Themen findest du in den folgenden Ressourcen.
+
+Ressourcen zum Farbkontrast
+Colors with Good Contrast, ein Artikel der Web Accessibility Initiative
+Contrast Ratio, ein Online-Tool, mit dem du das Kontrastverhältnis zwischen zwei Farben ermitteln kannst
+Color Contrast Analyzer, eine von der Paciello Group entwickelte Anwendung zum Herunterladen des Kontrastverhältnisses
+Textressourcen
+16 Pixels Font Size: For Body Copy. Anything Less Is A Costly Mistake, ein Artikel aus dem Smashing Magazine
+Text alignment, ein Artikel von Web AIM
+Link Appearance, ein Artikel von Web AIM
+Using Headings for Content Structure, ein Artikel von Web AIM
+Ressourcen zum Thema Alternativtext
+Text to Speech, ein Artikel der Web Accessibility Initiative
+Alternative Text, ein Artikel von Web AIM
+Considerations when writing alt text, ein Artikel auf Medium.
+Ressourcen für Slideshows und Videos
+A Primer to Vestibular Disorders, ein Artikel von The A11Y Project
+Text to Speech, ein Artikel der Web Accessibility Initiative
+Video Captions, ein Artikel der Web Accessibility Initiative
+Use automatic captioning, ein Artikel aus der YouTube-Hilfe
+Captions and subtitles, ein Artikel aus dem Vimeo Help Center
+Carousel usability, ein Artikel von der Nielsen Norman Group
+Ressourcen zur Tastaturunterstützung
+Keyboard Compatibility, ein Artikel der Web Accessibility Initiative
+Introduction to Focus, ein Artikel von Google Developers
+In diesem Abschnitt
+Alternativtext zu deinen Theme-Bildern hinzufügen
+Feedback hinterlassen

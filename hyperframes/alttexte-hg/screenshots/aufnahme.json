@@ -1,0 +1,118 @@
+{
+ "ziele": {
+  "mediagen": {
+   "url": "https://help.shopify.com/de/manual/ai-powered-tools/media-generation",
+   "status": 200,
+   "titel": "Shopify Help Center | Mediengenerierung im Datei-Editor",
+   "pos": {
+    "Die Mediengenerierung mit Sidekick ist nur für Shops mit dem Basic-Abo, Grow-Abo, Advanced-Abo und Shopify Plus-Abo verfügbar.": [
+     302,
+     56
+    ],
+    "Farbhintergrund: Ersetze den Hintergrund eines Bildes durch eine einfarbige Fläche, mit automatischer Objekterkennung und bei Bedarf manueller Korrektur": [
+     585,
+     77
+    ]
+   },
+   "ank": {
+    "Mediengenerierung im Datei-Editor": [
+     157,
+     80
+    ],
+    "Abo-Anforderung": [
+     276,
+     24
+    ],
+    "Farbiger Hintergrund": [
+     4337,
+     32
+    ]
+   },
+   "hoehe": 6400
+  },
+  "editor": {
+   "url": "https://help.shopify.com/de/manual/shopify-admin/productivity-tools/media-editor",
+   "status": 200,
+   "titel": "Shopify Help Center | Den Medien-Editor verwenden",
+   "pos": {
+    "Der Medien-Editor schlägt möglicherweise Alt-Text für Bilder vor, die noch keinen haben.": [
+     2279,
+     37
+    ],
+    "Diese Vorschläge werden mithilfe von KI generiert, um den Inhalt deines Bildes zu beschreiben.": [
+     2299,
+     57
+    ],
+    "Du kannst den vorgeschlagenen Alt-Text annehmen, bearbeiten oder ersetzen.": [
+     2339,
+     57
+    ],
+    "Wenn ein Alt-Text vorgeschlagen wird, überprüfe ihn und klicke auf Akzeptieren, um ihn zu verwenden, oder bearbeite ihn bei Bedarf.": [
+     2689,
+     77
+    ]
+   },
+   "ank": {
+    "Den Medien-Editor verwenden": [
+     157,
+     80
+    ],
+    "Alt-Text hinzufügen oder bearbeiten": [
+     2095,
+     64
+    ]
+   },
+   "hoehe": 6400
+  },
+  "alttext": {
+   "url": "https://help.shopify.com/de/manual/products/product-media/add-alt-text",
+   "status": 200,
+   "titel": "Shopify Help Center | Alt-Text zu Medien hinzufügen",
+   "pos": {
+    "Alt-Text (Alternativtext) beschreibt ein Medienelement": [
+     265,
+     17
+    ],
+    "Er wird auch von unterstützenden Technologien verwendet, um Kund:innen mit Sehbehinderung ein Bild zu beschreiben.": [
+     345,
+     77
+    ],
+    "Halte deinen Alt-Text kurz und beschreibend.": [
+     462,
+     17
+    ]
+   },
+   "ank": {
+    "Alt-Text zu Medien hinzufügen": [
+     157,
+     80
+    ]
+   },
+   "hoehe": 6400
+  },
+  "barriere": {
+   "url": "https://help.shopify.com/de/manual/online-store/themes/customizing-themes/accessibility",
+   "status": 200,
+   "titel": "Shopify Help Center | Zugänglichkeit für Themes",
+   "pos": {
+    "Kund:innen, die Screenreader verwenden, sind auf Alt-Texte angewiesen, um den Inhalt von Bildern in deinem Onlineshop zu verstehen.": [
+     4649,
+     57
+    ]
+   },
+   "ank": {
+    "Zugänglichkeit für Themes": [
+     157,
+     80
+    ],
+    "Alternativtext für Bilder": [
+     4495,
+     32
+    ]
+   },
+   "hoehe": 6400
+  }
+ },
+ "datum": "2026-10-28T17:18:17.847Z",
+ "viewport": "412x732 @2.62"
+}

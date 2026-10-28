@@ -1,0 +1,44 @@
+https://help.shopify.com/de/manual/products/product-media/add-alt-text
+Shopify Help Center | Alt-Text zu Medien hinzufügen
+Status 200
+
+Hilfe
+Einloggen
+Frage stellen
+Deutsch
+Allgemeine geschäftsbedingungen
+Datenschutzerklärung
+Deine datenschutzoptionen
+Inhalt
+Home
+...
+Produktmedien
+Alt-Text zu Medien hinzufügen
+
+Alt-Text (Alternativtext) beschreibt ein Medienelement und ist ein wichtiger Bestandteil einer Produktbeschreibung. Wenn ein Medienelement aus irgendeinem Grund nicht geladen werden kann, wird stattdessen der Alt-Text angezeigt. Er wird auch von unterstützenden Technologien verwendet, um Kund:innen mit Sehbehinderung ein Bild zu beschreiben. Das Hinzufügen von Alt-Text kann die SEO deiner Website verbessern.
+
+Halte deinen Alt-Text kurz und beschreibend. Die maximale Länge beträgt 512 Zeichen, es werden jedoch 125 oder weniger empfohlen.
+
+Du kannst auch Alt-Text in einer CSV-Datei hochladen.
+
+Hinweis
+
+Der Medien-Editor schlägt möglicherweise Alt-Text für Bilder vor, für die noch kein Alt-Text eingegeben wurde. Wenn du den vorgeschlagenen Alt-Text im Medien-Editor übernimmst, wird der Alt-Text in der Datei gespeichert.
+
+Schritte:
+Desktop
+
+Gehe in deinem Shopify-Adminbereich zu Produkte.
+
+Klicke auf den Namen des Produkts, das du bearbeiten möchtest.
+
+Klicke auf der Produktdetailseite auf ein Produktmedienelement, um die Seite Medienvorschau anzuzeigen.
+
+Klicke auf Alt-Text hinzufügen.
+
+Gib deinen Alt-Text ein und klicke dann auf Alt-Text speichern.
+
+Klicke auf das X, um die Vorschauseite zu verlassen.
+
+Mobil
+Feedback hinterlassen
