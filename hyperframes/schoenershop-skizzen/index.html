@@ -28,7 +28,7 @@
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
 
       .karte {
-        position: absolute; left: 80px; top: 1120px; width: 820px; height: 360px; opacity: 0; isolation: isolate; overflow: hidden;
+        position: absolute; left: 80px; top: 1135px; width: 820px; height: 360px; opacity: 0; isolation: isolate; overflow: hidden;
         border-radius: 32px; background: rgba(242, 243, 245, 0.97);
         box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
       }
@@ -54,7 +54,7 @@
       .mark { fill: none; stroke: url(#gvu); stroke-width: 5; }
 
       /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Vorgabe 2026-10-25) */
-      .folgekarte { position: absolute; left: 80px; top: 1120px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .folgekarte { position: absolute; left: 80px; top: 1135px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
       .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
       .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
       .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
@@ -186,8 +186,8 @@
           <g id="k2-c2" opacity="0"><rect x="630" y="8" width="76" height="76" rx="18" class="rahmen" /><use href="#funken" class="ico" transform="translate(646 24) scale(1.85)" style="stroke-width:1.8" /></g>
           <g id="k2-c3" opacity="0"><rect x="728" y="8" width="76" height="76" rx="18" class="rahmen" /><text x="766" y="62" text-anchor="middle" style="font-family:Caveat,cursive;font-size:44px;font-weight:700;fill:#0b0c0e">Aa</text></g>
           <g id="k2-c4" opacity="0"><rect x="532" y="122" width="76" height="76" rx="18" class="rahmen" /><use href="#ebenen" class="ico" transform="translate(548 138) scale(1.85)" style="stroke-width:1.8" /></g>
-          <clipPath id="k2-clip"><rect id="k2-cliprect" x="618" y="132" width="0" height="96" /></clipPath>
-          <text x="624" y="196" class="hand" style="font-size:58px" clip-path="url(#k2-clip)" transform="rotate(-3 700 178)">immer mehr</text>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="560" y="206" width="0" height="96" /></clipPath>
+          <text x="566" y="266" class="hand" style="font-size:56px" clip-path="url(#k2-clip)" transform="rotate(-3 680 248)">immer mehr</text>
         </svg>
       </section>
 
@@ -314,8 +314,8 @@
           <!-- Lücke -->
           <rect id="k7-luecke" x="228" y="176" width="276" height="44" rx="12" class="platz" opacity="0" />
           <g id="k7-frage" opacity="0"><circle cx="504" cy="176" r="22" fill="#0b0c0e" /><text x="504" y="186" text-anchor="middle" style="font-size:28px;font-weight:900;fill:#fff">?</text></g>
-          <clipPath id="k7-clip"><rect id="k7-cliprect" x="554" y="70" width="0" height="100" /></clipPath>
-          <text x="560" y="136" class="hand" style="font-size:58px" clip-path="url(#k7-clip)" transform="rotate(-3 670 118)">Lücken finden</text>
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="540" y="74" width="0" height="96" /></clipPath>
+          <text x="546" y="136" class="hand" style="font-size:48px" clip-path="url(#k7-clip)" transform="rotate(-3 670 118)">Lücken finden</text>
         </svg>
       </section>
 
@@ -327,7 +327,13 @@
         <svg class="buehne" viewBox="0 0 820 300">
           <line x1="40" y1="244" x2="470" y2="244" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" />
           <!-- Umriss des Hauses (gestrichelt) -->
-          <path id="k8-umriss" d="M 90 242 V 108 L 255 8 L 420 108 V 242" fill="none" stroke="#b6bec9" stroke-width="3" stroke-dasharray="10 8" />
+          <path id="k8-umriss" d="M 90 242 V 108 L 255 8 L 420 108 V 242" fill="none" stroke="#8f99a6" stroke-width="4" stroke-dasharray="12 9" />
+          <!-- Platzhalter 1-2-3 (grau), die Beschriftungen kommen auf ihren Wörtern darüber -->
+          <g id="k8-platz">
+            <g id="k8-p3"><circle cx="506" cy="94" r="20" fill="#e5e7eb" /><text x="506" y="103" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#9aa3af">3</text><rect x="540" y="84" width="96" height="16" rx="8" fill="#e5e7eb" /></g>
+            <g id="k8-p2"><circle cx="506" cy="158" r="20" fill="#e5e7eb" /><text x="506" y="167" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#9aa3af">2</text><rect x="540" y="148" width="140" height="16" rx="8" fill="#e5e7eb" /></g>
+            <g id="k8-p1"><circle cx="506" cy="222" r="20" fill="#e5e7eb" /><text x="506" y="231" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#9aa3af">1</text><rect x="540" y="212" width="118" height="16" rx="8" fill="#e5e7eb" /></g>
+          </g>
           <!-- 1 Fundament: Klarheit -->
           <g id="k8-b1" opacity="0"><rect x="74" y="196" width="362" height="46" rx="10" fill="#0b0c0e" /><use href="#birne" class="ico weiss" transform="translate(240 204) scale(1.25)" style="stroke-width:2.2" /></g>
           <!-- 2 Wände: Vertrauen -->
@@ -340,8 +346,8 @@
           <g id="k8-l1" opacity="0"><circle cx="506" cy="222" r="20" fill="url(#gvd)" /><text x="506" y="231" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">1</text><text x="540" y="233" class="lab" style="font-size:32px">Klarheit</text></g>
           <g id="k8-l2" opacity="0"><circle cx="506" cy="158" r="20" fill="url(#gvd)" /><text x="506" y="167" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">2</text><text x="540" y="169" class="lab" style="font-size:32px">Vertrauen</text></g>
           <g id="k8-l3" opacity="0"><circle cx="506" cy="94" r="20" fill="url(#gvd)" /><text x="506" y="103" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">3</text><text x="540" y="105" class="lab" style="font-size:32px">Design</text></g>
-          <clipPath id="k8-clip"><rect id="k8-cliprect" x="554" y="-34" width="0" height="90" /></clipPath>
-          <text x="560" y="34" class="hand" style="font-size:56px" clip-path="url(#k8-clip)" transform="rotate(-3 660 18)">schön ≠ gut</text>
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="534" y="-34" width="0" height="90" /></clipPath>
+          <text x="540" y="34" class="hand" style="font-size:54px" clip-path="url(#k8-clip)" transform="rotate(-3 660 18)">schön ≠ gut</text>
         </svg>
       </section>
 
@@ -406,11 +412,11 @@
       auf("#k2-aa", 11.0, 0.3); pop("#k2-c3", 10.967);
       tl.to("#k2-bewegung", { opacity: 0, duration: 0.2 }, 11.2);
       auf("#k2-hinten1", 12.733, 0.25); auf("#k2-hinten2", 12.95, 0.25); pop("#k2-c4", 12.733);
-      schreibe("#k2-cliprect", 190, 13.10, 0.5);
+      schreibe("#k2-cliprect", 250, 13.10, 0.5);
 
       // K3 KI wirft Designs aus, noch schneller
       karte("#k3", 14.70, 18.633);
-      pop("#k3-ki", 14.967, 0.3);
+      pop("#k3-ki", 14.75, 0.3);
       tl.set("#k3-spur", { opacity: 1 }, 15.3);
       tl.fromTo("#k3-s1", { opacity: 0, x: -120, scale: 0.6, transformOrigin: "0% 50%" }, { opacity: 1, x: 0, scale: 1, duration: 0.35, ease: "power2.out" }, 16.367);
       tl.fromTo("#k3-s2", { opacity: 0, x: -262, scale: 0.6, transformOrigin: "0% 50%" }, { opacity: 1, x: 0, scale: 1, duration: 0.35, ease: "power2.out" }, 16.55);
@@ -468,19 +474,22 @@
       tl.set("#k7-luecke", { opacity: 1 }, 48.20);
       tl.fromTo("#k7-luecke", { strokeDashoffset: 18 }, { strokeDashoffset: 0, duration: 0.6, ease: "none" }, 48.20);
       badge("#k7-frage", 48.50);
-      schreibe("#k7-cliprect", 260, 48.55, 0.5);
+      schreibe("#k7-cliprect", 272, 48.55, 0.5);
 
       // K8 Haus: erst Fundament (Klarheit), dann Wände (Vertrauen), danach Dach (Design); schön ≠ gut
       karte("#k8", 53.767, 65.733);
       tl.fromTo("#k8-b1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 56.50);
       ein("#k8-l1", 56.50, 0.3);
+      tl.to("#k8-p1", { opacity: 0, duration: 0.2 }, 56.50);
       tl.fromTo("#k8-b2", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 58.567);
       ein("#k8-l2", 58.567, 0.3);
+      tl.to("#k8-p2", { opacity: 0, duration: 0.2 }, 58.567);
       tl.fromTo("#k8-b3", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 60.467);
       ein("#k8-l3", 60.467, 0.3);
+      tl.to("#k8-p3", { opacity: 0, duration: 0.2 }, 60.467);
       tl.to("#k8-umriss", { opacity: 0, duration: 0.3 }, 60.70);
       pop("#k8-f1", 62.167, 0.25); pop("#k8-f2", 62.35, 0.25);
-      schreibe("#k8-cliprect", 230, 64.067, 0.5);
+      schreibe("#k8-cliprect", 268, 64.067, 0.5);
 
       // K9 Folgen: Karte auf "E-Commerce-Tipps", Ring auf "verpassen", der Zeiger tippt auf "folgt" das Plus an, es wird zum Haken
       tl.fromTo("#k9", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 65.733);

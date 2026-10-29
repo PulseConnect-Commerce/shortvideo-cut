@@ -1,0 +1,29 @@
+{
+ "datum": "2026-10-29T15:51:28.843Z",
+ "viewport": "412x1300 @2.62",
+ "ziele": {
+  "de": {
+   "url": "https://help.shopify.com/de/manual/online-store/themes/customizing-themes/theme-editor/sidekick/generate-content",
+   "status": 200,
+   "titel": "Shopify Help Center | Automatische Erstellung von Inhalten im Theme-Editor",
+   "pos": {
+    "z. B. Produktvorteile, die du nicht auflistest, oder Fakten über ähnliche Produkte.": [
+     619,
+     36
+    ],
+    "Produktgarantien wie „garantiert bis zu 1000 Wäschen“": [
+     699,
+     36
+    ]
+   },
+   "ank": {
+    "Automatische Erstellung von Inhalten im Theme-Editor": 157
+   },
+   "kasten": [
+    461,
+    388
+   ],
+   "hoehe": 1300
+  }
+ }
+}

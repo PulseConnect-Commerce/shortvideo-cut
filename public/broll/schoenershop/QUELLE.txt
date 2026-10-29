@@ -1,0 +1,7 @@
+Quellen-Bild für P06 · Schöner Shop, aber wenig Verkäufe (aufgenommen am 29.10.2026 mit Playwright/Chromium in Handy-Ansicht, 412 css-px, Faktor 2,62, ohne Login, Skript hyperframes/schoenershop-hg/aufnahme.cjs; nur zugeschnitten; die grünen Markierungen sind <mark>-Hervorhebungen der Sätze, über die er spricht; nichts dazugemalt. Beim Laden zeigte Cloudflare zweimal eine Prüfseite; sie wurde nicht umgangen, die Seite wurde später normal geladen)
+
+- quelle-achtung.jpg: https://help.shopify.com/de/manual/online-store/themes/customizing-themes/theme-editor/sidekick/generate-content
+  (Shopify Help Center, "Automatische Erstellung von Inhalten im Theme-Editor", deutsche Fassung der Seite aus dem Briefing
+  https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor/sidekick/generate-content),
+  Ausschnitt Kasten "Achtung", markiert: "z. B. Produktvorteile, die du nicht auflistest, oder Fakten über ähnliche Produkte."
+  und "Produktgarantien wie „garantiert bis zu 1000 Wäschen“". Ganze Aufnahme: hyperframes/schoenershop-hg/screenshots/de-ganz.png

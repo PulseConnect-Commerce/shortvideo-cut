@@ -10,13 +10,13 @@ const ZIELE = {
     url: 'https://help.shopify.com/de/manual/online-store/themes/customizing-themes/theme-editor/sidekick/generate-content',
     marken: [
       'z. B. Produktvorteile, die du nicht auflistest, oder Fakten über ähnliche Produkte.',
-      'Produktgarantien wie',
+      'Produktgarantien wie „garantiert bis zu 1000 Wäschen“',
     ],
     anker: ['Automatische Erstellung von Inhalten im Theme-Editor'],
   },
   en: {
     url: 'https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor/sidekick/generate-content',
-    marken: ['such as product benefits you don\'t list or facts about similar products.', 'product guarantees such as'],
+    marken: ['such as product benefits you don\'t list or facts about similar products.', 'product guarantees such as "guaranteed up to 1000 washes"'],
     anker: ['Automatically generating content in the theme editor'],
   },
 };
@@ -24,11 +24,16 @@ const ZIELE = {
   const [out] = process.argv.slice(2);
   const browser = await chromium.launch({ proxy: { server: process.env.HTTPS_PROXY } });
   const info = {};
+  const nur = process.argv.slice(3);
   for (const [name, z] of Object.entries(ZIELE)) {
-    const ctx = await browser.newContext({ viewport: { width: 412, height: 732 }, deviceScaleFactor: 2.62, locale: name === 'de' ? 'de-DE' : 'en-US', ignoreHTTPSErrors: false });
+    if (nur.length && !nur.includes(name)) continue;
+    const ctx = await browser.newContext({ viewport: { width: 412, height: 1300 }, deviceScaleFactor: 2.62, locale: name === 'de' ? 'de-DE' : 'en-US', ignoreHTTPSErrors: false });
     const page = await ctx.newPage();
     const r = await page.goto(z.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
     await page.waitForTimeout(3500);
+    // Cloudflare "Verbindung wird verifiziert": wie ein normaler Browser warten, nichts umgehen (kein Captcha lösen)
+    for (let i = 0; i < 12 && /verifiziert|Verifying|Just a moment|Nur einen Moment|einen Moment/i.test(await page.title()); i++) await page.waitForTimeout(2500);
+    if (/verifiziert|Verifying|Just a moment|Nur einen Moment|einen Moment/i.test(await page.title())) { console.log(name, 'Prüfseite von Cloudflare, nicht umgangen, kein Bild'); await ctx.close(); continue; }
     for (const t of ['Akzeptieren', 'Alle akzeptieren', 'Accept', 'Accept all', 'OK']) {
       const b = page.getByRole('button', { name: t, exact: true });
       if (await b.count()) { try { await b.first().click({ timeout: 2000 }); break; } catch (e) {} }
@@ -68,6 +73,8 @@ const ZIELE = {
     console.log(name, page.url(), r && r.status(), await page.title(), JSON.stringify(daten));
     await ctx.close();
   }
-  fs.writeFileSync(`${out}/aufnahme.json`, JSON.stringify({ datum: new Date().toISOString(), viewport: '412x732 @2.62', ziele: info }, null, 1));
+  const p = `${out}/aufnahme.json`; const alt = fs.existsSync(p) ? JSON.parse(fs.readFileSync(p)) : { ziele: {} };
+  alt.datum = new Date().toISOString(); alt.viewport = '412x1300 @2.62'; Object.assign(alt.ziele, info);
+  fs.writeFileSync(p, JSON.stringify(alt, null, 1));
   await browser.close();
 })().catch((e) => { console.error('FEHLER', e.message); process.exit(1); });
