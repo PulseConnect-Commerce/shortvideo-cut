@@ -1,0 +1,216 @@
+{
+ "projekt": "alttexte",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 1,
+   "text": "Hast du auch immer keine Zeit, um irgendwelche Alt-Texte zu pflegen oder Bilder zu optimieren? Wenn du zum Beispiel viele Produkte in deinem Online-Shop zum Beispiel in Shopify hast, dann kennst du vielleicht das Problem. Du hast einfach immer Bilder hochgeladen, aber immer keine Zeit für vernünftige Bildoptimierung. Da habe ich eben genau das Richtige für dich."
+  },
+  {
+   "take": "t1",
+   "ab": 39.1,
+   "text": "Denn es gibt mittlerweile tatsächlich ein paar sehr gute KI-Funktionen direkt in Shopify, die dir einiges an Arbeit abnehmen können. Nehmen wir zum Beispiel einmal einen Shop, der Trinkflaschen verkauft. Du hast ein Produktbild hochgeladen, aber der Hintergrund sieht leider nicht besonders professionell aus. Im Shopify Medien-Editor kannst du dann zum Beispiel mit der KI den Hintergrund verändern oder auch beispielsweise eben direkt durch einen einfarbigen Hintergrund ersetzen."
+  },
+  {
+   "take": "t1",
+   "ab": 79.1,
+   "text": "die Funktion ist natürlich super praktisch, wenn du jetzt zum Beispiel deine Produktbilder einheitlich gestalten möchtest, ohne jetzt jedes Mal in Photoshop oder Canva arbeiten zu müssen."
+  },
+  {
+   "take": "t1",
+   "ab": 91.2,
+   "text": "aber jetzt kommt noch etwas, das viele Shopbetreiber tatsächlich vergessen und zwar die sogenannten Alt-Texte."
+  },
+  {
+   "take": "t1",
+   "ab": 102.5,
+   "text": "und kurz erklärt, ein Alt-Text beschreibt tatsächlich einfach, was auf einem Bild zu sehen ist. Also das ist vor allem für Menschen natürlich wichtig, die jetzt z .B. Screenreader benutzen. Zusätzlich kann es aber auch Suchmaschinen helfen, einfach deine Bilder besser einzuordnen. Und auch hier kann tatsächlich auch Shopify inzwischen mit KI super unterstützen. Wenn du jetzt ein Produktbild im Medien-Editor öffnest, dann kann Shopify dir tatsächlich einen passenden Alt-Text vorschlagen, den du einfach übernehmen oder bearbeiten kannst."
+  },
+  {
+   "take": "t1",
+   "ab": 135.3,
+   "text": "Aus einem schlechten Text, wie zum Beispiel Trinkflasche kaufen günstig, wird dann beispielsweise schwarze Edelstahl-Trinkflasche mit Schraubverschluss auf weißem Hintergrund. Das beschreibt dann tatsächlich auch das Bild, statt einfach nur irgendwelche Keywords einander zu rein. Wichtig dabei ist es aber, übernimm bitte diese KI-Texte nicht einfach nur blind. Denn gerade bei Materialien, Farben oder auch anderen Produkteigenschaften solltest du tatsächlich immer kontrollieren, ob die Beschreibung wirklich zum Bild passt. Und auch KI-überarbeitete Produktbilder würde ich tatsächlich immer selber überprüfen."
+  },
+  {
+   "take": "t1",
+   "ab": 173.8,
+   "text": "denn wenn die KI auf einmal plötzlich anfängt, Details zu verändern, die einfach dein Produkt tatsächlich in Wirklichkeit gar nicht hat,"
+  },
+  {
+   "take": "t1",
+   "ab": 185.2,
+   "text": "Dann kann das tatsächlich auch immer zu falschen Erwartungen führen."
+  },
+  {
+   "take": "t1",
+   "ab": 210.9,
+   "text": "Deswegen mein persönlicher Tipp an dich, fang tatsächlich mit den wichtigsten Produktseiten an, sorge einfach für einheitliche, aussagekräftige Bilder und ergänze einfach kurze und korrekte Alt-Texte."
+  },
+  {
+   "take": "t1",
+   "ab": 232.7,
+   "text": "Und erst, wenn der Ablauf tatsächlich sauber funktioniert, dann würde ich mir echt überlegen, welche Arbeitsschritte du dann tatsächlich beim größeren Sortiment weiter automatisieren kannst und dafür eben dann auch KI benutzen kannst. Du brauchst aber dafür nicht immer zwangsläufig direkt eine zusätzliche KI-App,"
+  },
+  {
+   "take": "t1",
+   "ab": 256.1,
+   "text": "Aber einiges geht ihm auch schon direkt mit den Shopify-Bordmitteln. Wenn du weitere solcher Tipps für Shopify und E-Commerce haben möchtest, dann folgt mir hier gerne und ich werde dir weitere Infos und Tipps mit an die Hand geben."
+  }
+ ],
+ "korrekturen": [
+  [
+   "t1",
+   79.32,
+   "die",
+   "Die"
+  ],
+  [
+   "t1",
+   91.39,
+   "aber",
+   "Aber"
+  ],
+  [
+   "t1",
+   93.93,
+   "vergessen",
+   "vergessen,"
+  ],
+  [
+   "t1",
+   102.73,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   103.13,
+   "erklärt,",
+   "erklärt:"
+  ],
+  [
+   "t1",
+   103.59,
+   "ein",
+   "Ein"
+  ],
+  [
+   "t1",
+   110.11,
+   "z",
+   "zum"
+  ],
+  [
+   "t1",
+   110.19,
+   ".B.",
+   "Beispiel"
+  ],
+  [
+   "t1",
+   137.35,
+   "Trinkflasche",
+   "„Trinkflasche"
+  ],
+  [
+   "t1",
+   138.45,
+   "günstig,",
+   "günstig“,"
+  ],
+  [
+   "t1",
+   140.87,
+   "schwarze",
+   "„Schwarze"
+  ],
+  [
+   "t1",
+   143.99,
+   "Hintergrund.",
+   "Hintergrund“."
+  ],
+  [
+   "t1",
+   148.95,
+   "einander",
+   "aneinanderzureihen."
+  ],
+  [
+   "t1",
+   149.31,
+   "zu",
+   ""
+  ],
+  [
+   "t1",
+   149.43,
+   "rein.",
+   ""
+  ],
+  [
+   "t1",
+   173.98,
+   "denn",
+   "Denn"
+  ],
+  [
+   "t1",
+   185.41,
+   "Dann",
+   "dann"
+  ],
+  [
+   "t1",
+   185.77,
+   "das",
+   "es"
+  ],
+  [
+   "t1",
+   212.78,
+   "dich,",
+   "dich:"
+  ],
+  [
+   "t1",
+   213.38,
+   "fang",
+   "Fang"
+  ],
+  [
+   "t1",
+   247.17,
+   "KI-App,",
+   "KI-App."
+  ],
+  [
+   "t1",
+   257.05,
+   "ihm",
+   "eben"
+  ],
+  [
+   "t1",
+   260.82,
+   "solcher",
+   "solche"
+  ],
+  [
+   "t1",
+   263.44,
+   "folgt",
+   "folg"
+  ]
+ ],
+ "ende": {
+  "bis": 267.7
+ }
+}
