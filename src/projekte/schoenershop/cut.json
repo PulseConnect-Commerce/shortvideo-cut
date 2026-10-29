@@ -1,0 +1,1444 @@
+{
+ "projekt": "schoenershop",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "schoenershop/t1",
+   "from": 1.905,
+   "to": 9.3,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "schoenershop/t1",
+   "from": 9.58,
+   "to": 20.795,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "schoenershop/t1",
+   "from": 34.665,
+   "to": 41.465,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "schoenershop/t1",
+   "from": 51.115,
+   "to": 66.855,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "schoenershop/t1",
+   "from": 68.025,
+   "to": 71.755,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "schoenershop/t1",
+   "from": 78.975,
+   "to": 83.815,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "schoenershop/t1",
+   "from": 89.715,
+   "to": 93.705,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "schoenershop/t1",
+   "from": 96.025,
+   "to": 101.575,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "schoenershop/t1",
+   "from": 103.935,
+   "to": 109.405,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "schoenershop/t1",
+   "from": 133.615,
+   "to": 139.85,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Dein",
+   "src": "schoenershop/t1",
+   "start": 1.97,
+   "end": 2.17
+  },
+  {
+   "text": "Shopify-Shop",
+   "src": "schoenershop/t1",
+   "start": 2.23,
+   "end": 2.83
+  },
+  {
+   "text": "kann",
+   "src": "schoenershop/t1",
+   "start": 2.93,
+   "end": 3.09
+  },
+  {
+   "text": "richtig",
+   "src": "schoenershop/t1",
+   "start": 3.17,
+   "end": 3.45
+  },
+  {
+   "text": "gut",
+   "src": "schoenershop/t1",
+   "start": 3.51,
+   "end": 3.63
+  },
+  {
+   "text": "aussehen",
+   "src": "schoenershop/t1",
+   "start": 3.67,
+   "end": 4.03
+  },
+  {
+   "text": "und",
+   "src": "schoenershop/t1",
+   "start": 4.11,
+   "end": 4.17
+  },
+  {
+   "text": "trotzdem",
+   "src": "schoenershop/t1",
+   "start": 4.27,
+   "end": 4.79
+  },
+  {
+   "text": "leider",
+   "src": "schoenershop/t1",
+   "start": 4.85,
+   "end": 5.05
+  },
+  {
+   "text": "kaum",
+   "src": "schoenershop/t1",
+   "start": 5.21,
+   "end": 5.43
+  },
+  {
+   "text": "etwas",
+   "src": "schoenershop/t1",
+   "start": 5.51,
+   "end": 5.71
+  },
+  {
+   "text": "verkaufen.",
+   "src": "schoenershop/t1",
+   "start": 5.75,
+   "end": 6.21
+  },
+  {
+   "text": "Viele",
+   "src": "schoenershop/t1",
+   "start": 7.13,
+   "end": 7.29
+  },
+  {
+   "text": "investieren",
+   "src": "schoenershop/t1",
+   "start": 7.35,
+   "end": 7.73
+  },
+  {
+   "text": "leider",
+   "src": "schoenershop/t1",
+   "start": 7.75,
+   "end": 7.91
+  },
+  {
+   "text": "unglaublich",
+   "src": "schoenershop/t1",
+   "start": 8.05,
+   "end": 8.67
+  },
+  {
+   "text": "viel",
+   "src": "schoenershop/t1",
+   "start": 8.71,
+   "end": 8.85
+  },
+  {
+   "text": "Zeit",
+   "src": "schoenershop/t1",
+   "start": 8.95,
+   "end": 9.17
+  },
+  {
+   "text": "in",
+   "src": "schoenershop/t1",
+   "start": 9.23,
+   "end": 9.29
+  },
+  {
+   "text": "das",
+   "src": "schoenershop/t1",
+   "start": 9.59,
+   "end": 9.69
+  },
+  {
+   "text": "perfekte",
+   "src": "schoenershop/t1",
+   "start": 9.75,
+   "end": 10.21
+  },
+  {
+   "text": "Design,",
+   "src": "schoenershop/t1",
+   "start": 10.29,
+   "end": 10.73
+  },
+  {
+   "text": "neue",
+   "src": "schoenershop/t1",
+   "start": 11.23,
+   "end": 11.43
+  },
+  {
+   "text": "Farben,",
+   "src": "schoenershop/t1",
+   "start": 11.55,
+   "end": 11.87
+  },
+  {
+   "text": "Animationen,",
+   "src": "schoenershop/t1",
+   "start": 11.97,
+   "end": 12.79
+  },
+  {
+   "text": "besondere",
+   "src": "schoenershop/t1",
+   "start": 13.21,
+   "end": 13.59
+  },
+  {
+   "text": "Schriften",
+   "src": "schoenershop/t1",
+   "start": 13.69,
+   "end": 14.19
+  },
+  {
+   "text": "oder",
+   "src": "schoenershop/t1",
+   "start": 14.29,
+   "end": 14.41
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 14.49,
+   "end": 14.59
+  },
+  {
+   "text": "immer",
+   "src": "schoenershop/t1",
+   "start": 14.65,
+   "end": 14.81
+  },
+  {
+   "text": "aufwendigere",
+   "src": "schoenershop/t1",
+   "start": 14.99,
+   "end": 15.61
+  },
+  {
+   "text": "Produktseiten.",
+   "src": "schoenershop/t1",
+   "start": 15.69,
+   "end": 16.31
+  },
+  {
+   "text": "Und",
+   "src": "schoenershop/t1",
+   "start": 16.95,
+   "end": 17.01
+  },
+  {
+   "text": "mit",
+   "src": "schoenershop/t1",
+   "start": 17.05,
+   "end": 17.13
+  },
+  {
+   "text": "KI",
+   "src": "schoenershop/t1",
+   "start": 17.21,
+   "end": 17.39
+  },
+  {
+   "text": "lassen",
+   "src": "schoenershop/t1",
+   "start": 17.51,
+   "end": 17.77
+  },
+  {
+   "text": "sich",
+   "src": "schoenershop/t1",
+   "start": 17.81,
+   "end": 17.93
+  },
+  {
+   "text": "natürlich",
+   "src": "schoenershop/t1",
+   "start": 17.97,
+   "end": 18.23
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 18.25,
+   "end": 18.33
+  },
+  {
+   "text": "solche",
+   "src": "schoenershop/t1",
+   "start": 18.37,
+   "end": 18.55
+  },
+  {
+   "text": "Designs",
+   "src": "schoenershop/t1",
+   "start": 18.61,
+   "end": 18.91
+  },
+  {
+   "text": "heutzutage",
+   "src": "schoenershop/t1",
+   "start": 18.95,
+   "end": 19.41
+  },
+  {
+   "text": "noch",
+   "src": "schoenershop/t1",
+   "start": 19.53,
+   "end": 19.67
+  },
+  {
+   "text": "schneller",
+   "src": "schoenershop/t1",
+   "start": 19.75,
+   "end": 20.07
+  },
+  {
+   "text": "umsetzen.",
+   "src": "schoenershop/t1",
+   "start": 20.17,
+   "end": 20.63
+  },
+  {
+   "text": "Aber",
+   "src": "schoenershop/t1",
+   "start": 34.73,
+   "end": 34.87
+  },
+  {
+   "text": "nur",
+   "src": "schoenershop/t1",
+   "start": 34.95,
+   "end": 35.07
+  },
+  {
+   "text": "weil",
+   "src": "schoenershop/t1",
+   "start": 35.17,
+   "end": 35.31
+  },
+  {
+   "text": "ein",
+   "src": "schoenershop/t1",
+   "start": 35.35,
+   "end": 35.43
+  },
+  {
+   "text": "Online-Shop",
+   "src": "schoenershop/t1",
+   "start": 35.55,
+   "end": 35.99
+  },
+  {
+   "text": "vielleicht",
+   "src": "schoenershop/t1",
+   "start": 36.07,
+   "end": 36.37
+  },
+  {
+   "text": "schön",
+   "src": "schoenershop/t1",
+   "start": 36.47,
+   "end": 36.63
+  },
+  {
+   "text": "aussieht,",
+   "src": "schoenershop/t1",
+   "start": 36.75,
+   "end": 37.19
+  },
+  {
+   "text": "heißt",
+   "src": "schoenershop/t1",
+   "start": 37.77,
+   "end": 37.99
+  },
+  {
+   "text": "das",
+   "src": "schoenershop/t1",
+   "start": 38.01,
+   "end": 38.11
+  },
+  {
+   "text": "natürlich",
+   "src": "schoenershop/t1",
+   "start": 38.15,
+   "end": 38.49
+  },
+  {
+   "text": "leider",
+   "src": "schoenershop/t1",
+   "start": 38.55,
+   "end": 38.73
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 38.77,
+   "end": 38.87
+  },
+  {
+   "text": "nicht,",
+   "src": "schoenershop/t1",
+   "start": 38.93,
+   "end": 39.11
+  },
+  {
+   "text": "dass",
+   "src": "schoenershop/t1",
+   "start": 39.15,
+   "end": 39.29
+  },
+  {
+   "text": "immer",
+   "src": "schoenershop/t1",
+   "start": 39.31,
+   "end": 39.47
+  },
+  {
+   "text": "Kunden",
+   "src": "schoenershop/t1",
+   "start": 39.57,
+   "end": 39.87
+  },
+  {
+   "text": "dort",
+   "src": "schoenershop/t1",
+   "start": 39.93,
+   "end": 40.09
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 40.13,
+   "end": 40.23
+  },
+  {
+   "text": "automatisch",
+   "src": "schoenershop/t1",
+   "start": 40.29,
+   "end": 40.81
+  },
+  {
+   "text": "kaufen",
+   "src": "schoenershop/t1",
+   "start": 40.87,
+   "end": 41.17
+  },
+  {
+   "text": "möchten.",
+   "src": "schoenershop/t1",
+   "start": 41.21,
+   "end": 41.465
+  },
+  {
+   "text": "Denn",
+   "src": "schoenershop/t1",
+   "start": 51.16,
+   "end": 51.28
+  },
+  {
+   "text": "wenn",
+   "src": "schoenershop/t1",
+   "start": 51.3,
+   "end": 51.42
+  },
+  {
+   "text": "ich",
+   "src": "schoenershop/t1",
+   "start": 51.46,
+   "end": 51.54
+  },
+  {
+   "text": "zum",
+   "src": "schoenershop/t1",
+   "start": 51.62,
+   "end": 51.68
+  },
+  {
+   "text": "Beispiel",
+   "src": "schoenershop/t1",
+   "start": 51.7,
+   "end": 51.96
+  },
+  {
+   "text": "persönlich",
+   "src": "schoenershop/t1",
+   "start": 52.02,
+   "end": 52.42
+  },
+  {
+   "text": "immer",
+   "src": "schoenershop/t1",
+   "start": 52.46,
+   "end": 52.6
+  },
+  {
+   "text": "einen",
+   "src": "schoenershop/t1",
+   "start": 52.64,
+   "end": 52.82
+  },
+  {
+   "text": "Online-Shop",
+   "src": "schoenershop/t1",
+   "start": 52.9,
+   "end": 53.24
+  },
+  {
+   "text": "prüfe,",
+   "src": "schoenershop/t1",
+   "start": 53.3,
+   "end": 53.54
+  },
+  {
+   "text": "dann",
+   "src": "schoenershop/t1",
+   "start": 53.62,
+   "end": 53.76
+  },
+  {
+   "text": "interessiert",
+   "src": "schoenershop/t1",
+   "start": 53.86,
+   "end": 54.34
+  },
+  {
+   "text": "mich",
+   "src": "schoenershop/t1",
+   "start": 54.4,
+   "end": 54.5
+  },
+  {
+   "text": "natürlich",
+   "src": "schoenershop/t1",
+   "start": 54.56,
+   "end": 54.88
+  },
+  {
+   "text": "erst",
+   "src": "schoenershop/t1",
+   "start": 54.98,
+   "end": 55.14
+  },
+  {
+   "text": "einmal",
+   "src": "schoenershop/t1",
+   "start": 55.2,
+   "end": 55.44
+  },
+  {
+   "text": "eine",
+   "src": "schoenershop/t1",
+   "start": 55.52,
+   "end": 55.66
+  },
+  {
+   "text": "andere",
+   "src": "schoenershop/t1",
+   "start": 55.78,
+   "end": 56.04
+  },
+  {
+   "text": "Frage.",
+   "src": "schoenershop/t1",
+   "start": 56.12,
+   "end": 56.36
+  },
+  {
+   "text": "Versteht",
+   "src": "schoenershop/t1",
+   "start": 57.05,
+   "end": 57.43
+  },
+  {
+   "text": "man",
+   "src": "schoenershop/t1",
+   "start": 57.49,
+   "end": 57.59
+  },
+  {
+   "text": "überhaupt",
+   "src": "schoenershop/t1",
+   "start": 57.63,
+   "end": 57.87
+  },
+  {
+   "text": "sofort,",
+   "src": "schoenershop/t1",
+   "start": 57.91,
+   "end": 58.27
+  },
+  {
+   "text": "was",
+   "src": "schoenershop/t1",
+   "start": 58.41,
+   "end": 58.57
+  },
+  {
+   "text": "in",
+   "src": "schoenershop/t1",
+   "start": 58.63,
+   "end": 58.69
+  },
+  {
+   "text": "dem",
+   "src": "schoenershop/t1",
+   "start": 58.73,
+   "end": 58.81
+  },
+  {
+   "text": "Online-Shop",
+   "src": "schoenershop/t1",
+   "start": 58.87,
+   "end": 59.21
+  },
+  {
+   "text": "angeboten",
+   "src": "schoenershop/t1",
+   "start": 59.29,
+   "end": 59.67
+  },
+  {
+   "text": "wird?",
+   "src": "schoenershop/t1",
+   "start": 59.73,
+   "end": 59.91
+  },
+  {
+   "text": "Ist",
+   "src": "schoenershop/t1",
+   "start": 60.61,
+   "end": 60.75
+  },
+  {
+   "text": "es",
+   "src": "schoenershop/t1",
+   "start": 60.81,
+   "end": 60.87
+  },
+  {
+   "text": "überhaupt",
+   "src": "schoenershop/t1",
+   "start": 60.93,
+   "end": 61.19
+  },
+  {
+   "text": "klar,",
+   "src": "schoenershop/t1",
+   "start": 61.25,
+   "end": 61.47
+  },
+  {
+   "text": "welche",
+   "src": "schoenershop/t1",
+   "start": 61.53,
+   "end": 61.71
+  },
+  {
+   "text": "konkreten",
+   "src": "schoenershop/t1",
+   "start": 61.81,
+   "end": 62.27
+  },
+  {
+   "text": "Nutzen",
+   "src": "schoenershop/t1",
+   "start": 62.35,
+   "end": 62.69
+  },
+  {
+   "text": "das",
+   "src": "schoenershop/t1",
+   "start": 62.75,
+   "end": 62.83
+  },
+  {
+   "text": "Produkt",
+   "src": "schoenershop/t1",
+   "start": 62.89,
+   "end": 63.13
+  },
+  {
+   "text": "hat?",
+   "src": "schoenershop/t1",
+   "start": 63.17,
+   "end": 63.31
+  },
+  {
+   "text": "Findet",
+   "src": "schoenershop/t1",
+   "start": 64.15,
+   "end": 64.39
+  },
+  {
+   "text": "man",
+   "src": "schoenershop/t1",
+   "start": 64.45,
+   "end": 64.55
+  },
+  {
+   "text": "überhaupt",
+   "src": "schoenershop/t1",
+   "start": 64.57,
+   "end": 64.83
+  },
+  {
+   "text": "Versand-",
+   "src": "schoenershop/t1",
+   "start": 64.87,
+   "end": 65.27
+  },
+  {
+   "text": "oder",
+   "src": "schoenershop/t1",
+   "start": 65.37,
+   "end": 65.47
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 65.51,
+   "end": 65.59
+  },
+  {
+   "text": "Retoureninformationen?",
+   "src": "schoenershop/t1",
+   "start": 65.63,
+   "end": 66.73
+  },
+  {
+   "text": "Und",
+   "src": "schoenershop/t1",
+   "start": 68.11,
+   "end": 68.25
+  },
+  {
+   "text": "gibt",
+   "src": "schoenershop/t1",
+   "start": 68.41,
+   "end": 68.55
+  },
+  {
+   "text": "es",
+   "src": "schoenershop/t1",
+   "start": 68.61,
+   "end": 68.67
+  },
+  {
+   "text": "vor",
+   "src": "schoenershop/t1",
+   "start": 68.73,
+   "end": 68.81
+  },
+  {
+   "text": "allem",
+   "src": "schoenershop/t1",
+   "start": 68.83,
+   "end": 68.97
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 69.01,
+   "end": 69.09
+  },
+  {
+   "text": "genug",
+   "src": "schoenershop/t1",
+   "start": 69.15,
+   "end": 69.41
+  },
+  {
+   "text": "Gründe,",
+   "src": "schoenershop/t1",
+   "start": 69.49,
+   "end": 69.77
+  },
+  {
+   "text": "diesem",
+   "src": "schoenershop/t1",
+   "start": 69.87,
+   "end": 70.11
+  },
+  {
+   "text": "Online-Shop",
+   "src": "schoenershop/t1",
+   "start": 70.15,
+   "end": 70.57
+  },
+  {
+   "text": "tatsächlich",
+   "src": "schoenershop/t1",
+   "start": 70.61,
+   "end": 71.13
+  },
+  {
+   "text": "zu",
+   "src": "schoenershop/t1",
+   "start": 71.19,
+   "end": 71.25
+  },
+  {
+   "text": "vertrauen?",
+   "src": "schoenershop/t1",
+   "start": 71.33,
+   "end": 71.71
+  },
+  {
+   "text": "KI",
+   "src": "schoenershop/t1",
+   "start": 79.04,
+   "end": 79.2
+  },
+  {
+   "text": "kann",
+   "src": "schoenershop/t1",
+   "start": 79.34,
+   "end": 79.46
+  },
+  {
+   "text": "natürlich",
+   "src": "schoenershop/t1",
+   "start": 79.5,
+   "end": 79.82
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 79.86,
+   "end": 79.96
+  },
+  {
+   "text": "immer",
+   "src": "schoenershop/t1",
+   "start": 79.98,
+   "end": 80.1
+  },
+  {
+   "text": "dabei",
+   "src": "schoenershop/t1",
+   "start": 80.14,
+   "end": 80.3
+  },
+  {
+   "text": "helfen,",
+   "src": "schoenershop/t1",
+   "start": 80.34,
+   "end": 80.62
+  },
+  {
+   "text": "Texte",
+   "src": "schoenershop/t1",
+   "start": 80.7,
+   "end": 81.02
+  },
+  {
+   "text": "zu",
+   "src": "schoenershop/t1",
+   "start": 81.12,
+   "end": 81.2
+  },
+  {
+   "text": "strukturieren",
+   "src": "schoenershop/t1",
+   "start": 81.28,
+   "end": 81.88
+  },
+  {
+   "text": "oder",
+   "src": "schoenershop/t1",
+   "start": 81.94,
+   "end": 82.06
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 82.1,
+   "end": 82.2
+  },
+  {
+   "text": "fehlende",
+   "src": "schoenershop/t1",
+   "start": 82.3,
+   "end": 82.54
+  },
+  {
+   "text": "Informationen",
+   "src": "schoenershop/t1",
+   "start": 82.6,
+   "end": 83.28
+  },
+  {
+   "text": "zu",
+   "src": "schoenershop/t1",
+   "start": 83.32,
+   "end": 83.4
+  },
+  {
+   "text": "erkennen.",
+   "src": "schoenershop/t1",
+   "start": 83.44,
+   "end": 83.76
+  },
+  {
+   "text": "Aber",
+   "src": "schoenershop/t1",
+   "start": 89.78,
+   "end": 89.9
+  },
+  {
+   "text": "sie",
+   "src": "schoenershop/t1",
+   "start": 89.96,
+   "end": 90.04
+  },
+  {
+   "text": "sollten",
+   "src": "schoenershop/t1",
+   "start": 90.12,
+   "end": 90.4
+  },
+  {
+   "text": "eben",
+   "src": "schoenershop/t1",
+   "start": 90.46,
+   "end": 90.58
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 90.6,
+   "end": 90.72
+  },
+  {
+   "text": "keine",
+   "src": "schoenershop/t1",
+   "start": 90.78,
+   "end": 91.0
+  },
+  {
+   "text": "Produktvorteile,",
+   "src": "schoenershop/t1",
+   "start": 91.08,
+   "end": 91.78
+  },
+  {
+   "text": "Bewertungen",
+   "src": "schoenershop/t1",
+   "start": 91.84,
+   "end": 92.38
+  },
+  {
+   "text": "oder",
+   "src": "schoenershop/t1",
+   "start": 92.5,
+   "end": 92.62
+  },
+  {
+   "text": "auch",
+   "src": "schoenershop/t1",
+   "start": 92.66,
+   "end": 92.76
+  },
+  {
+   "text": "Garantien",
+   "src": "schoenershop/t1",
+   "start": 92.8,
+   "end": 93.3
+  },
+  {
+   "text": "erfinden.",
+   "src": "schoenershop/t1",
+   "start": 93.34,
+   "end": 93.68
+  },
+  {
+   "text": "Deshalb",
+   "src": "schoenershop/t1",
+   "start": 96.09,
+   "end": 96.37
+  },
+  {
+   "text": "gilt",
+   "src": "schoenershop/t1",
+   "start": 96.49,
+   "end": 96.65
+  },
+  {
+   "text": "tatsächlich",
+   "src": "schoenershop/t1",
+   "start": 96.71,
+   "end": 97.15
+  },
+  {
+   "text": "immer",
+   "src": "schoenershop/t1",
+   "start": 97.19,
+   "end": 97.35
+  },
+  {
+   "text": "für",
+   "src": "schoenershop/t1",
+   "start": 97.43,
+   "end": 97.51
+  },
+  {
+   "text": "mich:",
+   "src": "schoenershop/t1",
+   "start": 97.59,
+   "end": 97.79
+  },
+  {
+   "text": "Erst",
+   "src": "schoenershop/t1",
+   "start": 98.41,
+   "end": 98.63
+  },
+  {
+   "text": "die",
+   "src": "schoenershop/t1",
+   "start": 98.69,
+   "end": 98.77
+  },
+  {
+   "text": "Klarheit",
+   "src": "schoenershop/t1",
+   "start": 98.81,
+   "end": 99.29
+  },
+  {
+   "text": "und",
+   "src": "schoenershop/t1",
+   "start": 99.43,
+   "end": 99.53
+  },
+  {
+   "text": "dann",
+   "src": "schoenershop/t1",
+   "start": 99.69,
+   "end": 99.89
+  },
+  {
+   "text": "tatsächlich",
+   "src": "schoenershop/t1",
+   "start": 100.01,
+   "end": 100.45
+  },
+  {
+   "text": "erst",
+   "src": "schoenershop/t1",
+   "start": 100.55,
+   "end": 100.73
+  },
+  {
+   "text": "Vertrauen",
+   "src": "schoenershop/t1",
+   "start": 100.89,
+   "end": 101.25
+  },
+  {
+   "text": "schaffen.",
+   "src": "schoenershop/t1",
+   "start": 101.29,
+   "end": 101.55
+  },
+  {
+   "text": "Und",
+   "src": "schoenershop/t1",
+   "start": 104.0,
+   "end": 104.08
+  },
+  {
+   "text": "danach",
+   "src": "schoenershop/t1",
+   "start": 104.1,
+   "end": 104.46
+  },
+  {
+   "text": "erst",
+   "src": "schoenershop/t1",
+   "start": 104.56,
+   "end": 104.76
+  },
+  {
+   "text": "kann",
+   "src": "schoenershop/t1",
+   "start": 104.82,
+   "end": 104.94
+  },
+  {
+   "text": "das",
+   "src": "schoenershop/t1",
+   "start": 104.98,
+   "end": 105.1
+  },
+  {
+   "text": "Design",
+   "src": "schoenershop/t1",
+   "start": 105.16,
+   "end": 105.5
+  },
+  {
+   "text": "optimiert",
+   "src": "schoenershop/t1",
+   "start": 105.56,
+   "end": 105.96
+  },
+  {
+   "text": "werden,",
+   "src": "schoenershop/t1",
+   "start": 106.0,
+   "end": 106.18
+  },
+  {
+   "text": "denn",
+   "src": "schoenershop/t1",
+   "start": 106.52,
+   "end": 106.64
+  },
+  {
+   "text": "ein",
+   "src": "schoenershop/t1",
+   "start": 106.68,
+   "end": 106.76
+  },
+  {
+   "text": "schöner",
+   "src": "schoenershop/t1",
+   "start": 106.86,
+   "end": 107.14
+  },
+  {
+   "text": "Shop",
+   "src": "schoenershop/t1",
+   "start": 107.2,
+   "end": 107.38
+  },
+  {
+   "text": "ist",
+   "src": "schoenershop/t1",
+   "start": 107.56,
+   "end": 107.7
+  },
+  {
+   "text": "leider",
+   "src": "schoenershop/t1",
+   "start": 107.78,
+   "end": 108.0
+  },
+  {
+   "text": "noch",
+   "src": "schoenershop/t1",
+   "start": 108.06,
+   "end": 108.16
+  },
+  {
+   "text": "lange",
+   "src": "schoenershop/t1",
+   "start": 108.28,
+   "end": 108.5
+  },
+  {
+   "text": "kein",
+   "src": "schoenershop/t1",
+   "start": 108.76,
+   "end": 108.88
+  },
+  {
+   "text": "guter",
+   "src": "schoenershop/t1",
+   "start": 108.92,
+   "end": 109.12
+  },
+  {
+   "text": "Shop.",
+   "src": "schoenershop/t1",
+   "start": 109.16,
+   "end": 109.34
+  },
+  {
+   "text": "Und",
+   "src": "schoenershop/t1",
+   "start": 133.68,
+   "end": 133.74
+  },
+  {
+   "text": "wenn",
+   "src": "schoenershop/t1",
+   "start": 133.76,
+   "end": 133.86
+  },
+  {
+   "text": "du",
+   "src": "schoenershop/t1",
+   "start": 133.88,
+   "end": 133.92
+  },
+  {
+   "text": "weitere",
+   "src": "schoenershop/t1",
+   "start": 133.96,
+   "end": 134.22
+  },
+  {
+   "text": "solcher",
+   "src": "schoenershop/t1",
+   "start": 134.32,
+   "end": 134.54
+  },
+  {
+   "text": "E-Commerce-Tipps",
+   "src": "schoenershop/t1",
+   "start": 134.64,
+   "end": 135.2
+  },
+  {
+   "text": "von",
+   "src": "schoenershop/t1",
+   "start": 135.24,
+   "end": 135.32
+  },
+  {
+   "text": "mir",
+   "src": "schoenershop/t1",
+   "start": 135.36,
+   "end": 135.44
+  },
+  {
+   "text": "in",
+   "src": "schoenershop/t1",
+   "start": 135.46,
+   "end": 135.5
+  },
+  {
+   "text": "Zukunft",
+   "src": "schoenershop/t1",
+   "start": 135.54,
+   "end": 135.84
+  },
+  {
+   "text": "nicht",
+   "src": "schoenershop/t1",
+   "start": 135.92,
+   "end": 136.06
+  },
+  {
+   "text": "verpassen",
+   "src": "schoenershop/t1",
+   "start": 136.08,
+   "end": 136.4
+  },
+  {
+   "text": "möchtest,",
+   "src": "schoenershop/t1",
+   "start": 136.44,
+   "end": 136.7
+  },
+  {
+   "text": "dann",
+   "src": "schoenershop/t1",
+   "start": 136.74,
+   "end": 136.88
+  },
+  {
+   "text": "folgt",
+   "src": "schoenershop/t1",
+   "start": 137.14,
+   "end": 137.3
+  },
+  {
+   "text": "mir",
+   "src": "schoenershop/t1",
+   "start": 137.34,
+   "end": 137.4
+  },
+  {
+   "text": "hier",
+   "src": "schoenershop/t1",
+   "start": 137.42,
+   "end": 137.52
+  },
+  {
+   "text": "gerne",
+   "src": "schoenershop/t1",
+   "start": 137.56,
+   "end": 137.78
+  },
+  {
+   "text": "und",
+   "src": "schoenershop/t1",
+   "start": 137.96,
+   "end": 138.06
+  },
+  {
+   "text": "wir",
+   "src": "schoenershop/t1",
+   "start": 138.42,
+   "end": 138.52
+  },
+  {
+   "text": "sehen",
+   "src": "schoenershop/t1",
+   "start": 138.56,
+   "end": 138.72
+  },
+  {
+   "text": "uns",
+   "src": "schoenershop/t1",
+   "start": 138.78,
+   "end": 138.86
+  },
+  {
+   "text": "im",
+   "src": "schoenershop/t1",
+   "start": 138.92,
+   "end": 138.96
+  },
+  {
+   "text": "nächsten",
+   "src": "schoenershop/t1",
+   "start": 139.0,
+   "end": 139.24
+  },
+  {
+   "text": "Video.",
+   "src": "schoenershop/t1",
+   "start": 139.26,
+   "end": 139.46
+  }
+ ],
+ "pages": [
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  2,
+  1,
+  2,
+  2,
+  2,
+  1,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  1,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  1,
+  4,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2,
+  4,
+  2,
+  1,
+  3,
+  3,
+  3,
+  1,
+  2,
+  3,
+  3,
+  2,
+  1,
+  2,
+  4,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  4,
+  1,
+  1,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3
+ ]
+}

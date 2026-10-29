@@ -1,0 +1,260 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26, Vorlagen P04 und P09) für P06 · Schöner Shop, aber wenig Verkäufe. Sekunden im geschnittenen Video (cut.json, 71,03 s), genau wie Remotion sie rechnet (Stücke auf ganze Frames gerundet), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf ausgewählten Zuständen, pop/success höchstens dreimal, klick auf der Quelle und auf dem Plus. Gebaut in hyperframes/schoenershop-skizzen/index.html. Beispielseiten als BEISPIEL gekennzeichnet; keine Sterne, Bewertungen, Garantien oder Zahlen (Briefing). Quelle groß in Video.tsx (QUELLEN).",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "Shopify-Shop",
+   "text": "schöner Demo-Shop (BEISPIEL), Funken auf 'richtig gut aussehen', Achse 'Verkäufe' auf 'trotzdem', die Linie bleibt flach auf 'kaum etwas verkaufen'; handschriftlich 'kaum Verkäufe'",
+   "start": 0.267,
+   "ende": 5.167,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 0.267,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 1.2,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 3.767,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Viele",
+   "text": "Uhr und Zeit-Balken, der sich ab 'Zeit' füllt; die Seite bekommt auf 'Farben' Farbe, auf 'Animationen' Bewegung, auf 'Schriften' eine Zierschrift, auf 'aufwendigere' stapeln sich Seiten; Kacheln Palette, Funken, Aa, Ebenen; handschriftlich 'immer mehr'",
+   "start": 5.167,
+   "ende": 14.7,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.167,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 9.0,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 10.967,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 12.733,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Und (mit KI)",
+   "text": "KI-Chip auf 'KI', drei Seiten fliegen auf 'Designs' heraus, Vorspul-Symbol auf 'schneller'; handschriftlich 'noch schneller'",
+   "start": 14.7,
+   "ende": 18.633,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 14.7,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 16.367,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 17.5,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Aber",
+   "text": "schöne Seite (Funken auf 'schön') ≠ (zeichnet sich auf 'nicht') Kunde → Warenkorb (auf 'Kunden'/'kaufen'), 'kauft' bleibt blass; handschriftlich 'nicht automatisch'",
+   "start": 18.633,
+   "ende": 25.4,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 18.633,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 22.833,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.767,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Denn",
+   "text": "Lupe fährt auf 'prüfe' über die Seite, Farbe und Schrift treten auf 'erst einmal' zurück (gestrichen), großes '?' auf 'andere'; handschriftlich 'andere Frage'",
+   "start": 25.4,
+   "ende": 31.3,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 25.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 27.567,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 30.033,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Versteht",
+   "text": "Prüffragen auf einer Beispielseite (BEISPIEL, keine Sterne, keine Garantien): 1 'Was gibt's?' mit Stoppuhr auf 'sofort', Titel grün auf 'angeboten'; 2 Markierung Nutzen-Zeilen auf 'klar', 'Nutzen?' auf 'Nutzen'; 3 'Versand & Retoure?' auf 'Versand', Retoure auf 'Retoureninformationen'; 4 'Vertrauen?' auf 'Gründe' (Kontakt, Impressum, Zahlarten als Icons), Schild auf 'vertrauen'",
+   "start": 31.3,
+   "ende": 44.933,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 31.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 32.167,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 35.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 39.133,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 42.6,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 44.433,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "KI",
+   "text": "KI-Chip, Textzeilen durcheinander auf 'Texte', ordnen sich auf 'strukturieren', gestrichelte Lücke mit '?' auf 'fehlende Informationen'; handschriftlich 'Lücken finden'",
+   "start": 44.933,
+   "ende": 49.9,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 44.933,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 47.167,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 48.5,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "quelle",
+   "wort": "Aber (sie sollten)",
+   "text": "Quelle groß (Remotion, QuelleGross): Shopify Help Center 'Automatische Erstellung von Inhalten im Theme-Editor', Kasten 'Achtung', markiert 'z. B. Produktvorteile, die du nicht auflistest, ...' und 'Produktgarantien wie'; er als Bubble unten rechts",
+   "start": 49.65,
+   "ende": 53.8,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 49.7,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Deshalb",
+   "text": "Haus: gestrichelter Umriss, Fundament 'Klarheit' auf 'Klarheit', Wände 'Vertrauen' auf 'Vertrauen', Dach 'Design' auf 'Design', Funken auf 'schöner'; handschriftlich 'schön ≠ gut' auf 'kein guter Shop'",
+   "start": 53.767,
+   "ende": 65.733,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 53.767,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 58.567,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 60.467,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 64.067,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "E-Commerce-Tipps",
+   "text": "Folgen-Plus (nur das Symbol): Karte auf 'E-Commerce-Tipps', Ring auf 'verpassen', der Zeiger tippt auf 'folgt' das Plus an, es wird zum Haken; bleibt bis zum Ende",
+   "start": 65.733,
+   "ende": 71.033,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 65.733,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 68.233,
+     "volume": 0.12
+    }
+   ]
+  }
+ ]
+}

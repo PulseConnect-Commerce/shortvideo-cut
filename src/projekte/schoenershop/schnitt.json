@@ -1,0 +1,124 @@
+{
+ "projekt": "schoenershop",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 1.9,
+   "text": "Dein Shopify-Shop kann richtig gut aussehen und trotzdem leider kaum etwas verkaufen. Viele investieren leider unglaublich viel Zeit in",
+   "bis": 9.3
+  },
+  {
+   "take": "t1",
+   "ab": 9.55,
+   "text": "das perfekte Design, neue Farben, Animationen, besondere Schriften oder auch immer aufwändigere Produktseiten. Und mit KI lassen sich natürlich auch solche Designs heutzutage noch schneller umsetzen.",
+   "von": 9.58
+  },
+  {
+   "take": "t1",
+   "ab": 34.6,
+   "text": "Aber nur weil ein Online-Shop vielleicht schön aussieht, heißt das natürlich leider auch nicht, dass immer Kunden dort auch automatisch kaufen möchten."
+  },
+  {
+   "take": "t1",
+   "ab": 51.1,
+   "text": "Denn wenn ich zum Beispiel persönlich immer einen Online-Shop prüfe, dann interessiert mich natürlich erst einmal eine andere Frage. Versteht man überhaupt sofort, was in dem Online-Shop angeboten wird? Ist es überhaupt klar, welche konkreten Nutzen das Produkt hat? findet man überhaupt Versand oder auch Retoureninformationen und gibt es vor allem auch genug Gründe diesen Onlineshop tatsächlich zu vertrauen."
+  },
+  {
+   "take": "t1",
+   "ab": 78.9,
+   "text": "KI kann natürlich auch immer dabei helfen, Texte zu strukturieren oder auch fehlende Informationen zu erkennen."
+  },
+  {
+   "take": "t1",
+   "ab": 89.6,
+   "text": "Aber sie sollten eben auch keine Produktvorteile, Bewertungen oder auch Garantien erfinden."
+  },
+  {
+   "take": "t1",
+   "ab": 95.95,
+   "text": "Deshalb gilt tatsächlich immer für mich Erst die Klarheit und dann tatsächlich erst Vertrauen schaffen."
+  },
+  {
+   "take": "t1",
+   "ab": 103.9,
+   "text": "Und danach erst kann das Design optimiert werden, denn ein schöner Shop ist leider noch lange kein guter Shop."
+  },
+  {
+   "take": "t1",
+   "ab": 133.6,
+   "text": "Und wenn du weitere solcher E-Commerce-Tipps von mir in Zukunft nicht verpassen möchtest, dann folgt mir hier gerne und wir sehen uns im nächsten Video."
+  }
+ ],
+ "ende": {
+  "bis": 139.85
+ },
+ "korrekturen": [
+  [
+   "t1",
+   14.99,
+   "aufwändigere",
+   "aufwendigere"
+  ],
+  [
+   "t1",
+   64.15,
+   "findet",
+   "Findet"
+  ],
+  [
+   "t1",
+   64.87,
+   "Versand",
+   "Versand-"
+  ],
+  [
+   "t1",
+   65.63,
+   "Retoureninformationen",
+   "Retoureninformationen?"
+  ],
+  [
+   "t1",
+   68.11,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   69.49,
+   "Gründe",
+   "Gründe,"
+  ],
+  [
+   "t1",
+   69.87,
+   "diesen",
+   "diesem"
+  ],
+  [
+   "t1",
+   70.15,
+   "Onlineshop",
+   "Online-Shop"
+  ],
+  [
+   "t1",
+   71.33,
+   "vertrauen.",
+   "vertrauen?"
+  ],
+  [
+   "t1",
+   97.59,
+   "mich",
+   "mich:"
+  ]
+ ]
+}

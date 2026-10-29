@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>P06 · Schöner Shop, aber wenig Verkäufe – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- FACE P06 "Schöner Shop, aber wenig Verkäufe" (P-Serie). Erklär-Bilder nach karten-aufbau.md "Visuelle Metaphern"
+         (freigegeben 2026-10-26, Vorlagen P04 hyperframes/pagebuilder-skizzen und P09 hyperframes/kitools-skizzen): pro
+         Kerngedanke ein Bild, das den Satz ohne Ton erklärt (schöner Demo-Shop, Verkaufslinie bleibt flach; Zeit fließt ins
+         perfekte Design: Farben, Animationen, Schriften, immer mehr Seiten; KI wirft Designs noch schneller aus; schön ≠ Kauf;
+         beim Prüfen zählt eine andere Frage; die vier Prüffragen als Markierungen auf einer Beispielseite: Angebot, Nutzen,
+         Versand & Retoure, Vertrauen; KI ordnet Text und findet Lücken; ein Haus: erst Fundament Klarheit, dann Vertrauen,
+         danach Design; Folgen-Plus), höchstens 1–3 Wörter je Bild, ein handschriftliches Akzentwort (Caveat, OFL, lokal).
+         Briefing: "Optisch attraktive Beispielseite → Markierung Produktnutzen/Versand/Vertrauen. Keine fingierten Reviews oder
+         Garantien." Die Seiten sind erkennbar Demo-Seiten (Platzhalter-Balken, Kennzeichnung BEISPIEL), ohne Sterne, ohne
+         Bewertungen, ohne Garantie- oder Gütesiegel, ohne Zahlen. Vertrauen zeigen nur Kontakt, Impressum und Zahlarten als Icons.
+         Rahmen: helle Karte unter dem Kopf (x 80-900, Instagram-Zone unten ab 1500), Pill-Untertitel darüber (Remotion),
+         ruhige Bewegung ohne Überschwingen. Icons Lucide (ISC). Zeiten = Sekunden im geschnittenen Video
+         (src/projekte/schoenershop/cut.json, 71,03 s), genau wie Remotion sie rechnet (Stücke auf ganze Frames gerundet), schon
+         als Cues (2 Frames vor dem Wort); Liste mit Tönen in src/projekte/schoenershop/karten.json. 49,65-53,8 s steht in
+         Remotion die echte Quelle groß (Shopify Help Center), die Karten sind dort ausgeblendet. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1120px; width: 820px; height: 360px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 22px; display: flex; align-items: center; gap: 10px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .demo { margin-left: 4px; padding: 3px 10px 4px; border-radius: 8px; background: #0b0c0e; color: #fff; font-size: 17px; letter-spacing: 0.12em; }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 300px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #6b7280; }
+      .klein { font-size: 20px; font-weight: 700; fill: #6b7280; letter-spacing: 0.06em; }
+      .gross { font-size: 38px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.02em; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .hand.gruen { fill: #00c27c; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .platz { fill: none; stroke: #b6bec9; stroke-width: 3; stroke-dasharray: 10 8; }
+      .zeile { fill: #d6dae0; }
+      .dunkel { fill: #0b0c0e; opacity: 0.85; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.weiss { stroke: #fff; }
+      .ico.grau { stroke: #6b7280; }
+      .spur { fill: #e5e7eb; }
+      .linie { fill: none; stroke: #0b0c0e; stroke-width: 6; stroke-linecap: round; }
+      .mark { fill: none; stroke: url(#gvu); stroke-width: 5; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Vorgabe 2026-10-25) */
+      .folgekarte { position: absolute; left: 80px; top: 1120px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 42px; height: 42px; border-radius: 21px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 24px; height: 24px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="schoenershop-skizzen" data-width="1080" data-height="1920" data-start="0.00" data-duration="71.04">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvu" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="820" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+          <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bff3dd" /><stop offset="0.55" stop-color="#c8e9fa" /><stop offset="1" stop-color="#e3dcfb" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24er Raster -->
+          <g id="funken"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></g>
+          <g id="bild"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></g>
+          <g id="uhr"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></g>
+          <g id="timer"><line x1="10" x2="14" y1="2" y2="2" /><line x1="12" x2="15" y1="14" y2="11" /><circle cx="12" cy="14" r="8" /></g>
+          <g id="lupe"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+          <g id="person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="korb"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></g>
+          <g id="palette"><circle cx="13.5" cy="6.5" r=".5" /><circle cx="17.5" cy="10.5" r=".5" /><circle cx="8.5" cy="7.5" r=".5" /><circle cx="6.5" cy="12.5" r=".5" /><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" /></g>
+          <g id="schrift"><polyline points="4 7 4 4 20 4 20 7" /><line x1="9" x2="15" y1="20" y2="20" /><line x1="12" x2="12" y1="4" y2="20" /></g>
+          <g id="ebenen"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></g>
+          <g id="vorspulen"><polygon points="13 19 22 12 13 5 13 19" /><polygon points="2 19 11 12 2 5 2 19" /></g>
+          <g id="laster"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></g>
+          <g id="zurueck"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /></g>
+          <g id="schild"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /></g>
+          <g id="mail"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></g>
+          <g id="info"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></g>
+          <g id="karte-ico"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></g>
+          <g id="birne"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
+          <g id="bot"><path d="M12 8V4H8" /><rect width="16" height="12" x="4" y="8" rx="2" /><path d="M2 14h2" /><path d="M20 14h2" /><path d="M15 13v2" /><path d="M9 13v2" /></g>
+          <g id="zeigerico"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+          <g id="maus"><use href="#zeigerico" transform="translate(-6 -6) scale(2)" style="fill:#0b0c0e;stroke:#fff;stroke-width:1.2;stroke-linejoin:round" /></g>
+          <!-- Funke im Verlauf (Deko "schön"), Haken im Kreis, KI-Chip -->
+          <g id="funke"><use href="#funken" transform="translate(-12 -12)" style="fill:url(#gvd);stroke:#0b0c0e;stroke-width:1;stroke-linejoin:round" /></g>
+          <g id="okk"><circle cx="0" cy="0" r="15" fill="url(#gvd)" /><path d="M-7 0 l5 5 l9 -10" fill="none" stroke="#0b0c0e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="kichip"><circle cx="0" cy="0" r="40" fill="url(#gvd)" /><use href="#funken" class="ico" transform="translate(-22 -22) scale(1.85)" style="stroke-width:2.1" /></g>
+          <!-- schöne Demo-Seite (380 x 236): Kopf, Bild-Banner im Verlauf, Titel, Knopf, drei Produktkacheln. Keine Sterne, keine Zahlen -->
+          <g id="seite">
+            <rect x="0" y="0" width="380" height="236" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <circle cx="24" cy="22" r="8" fill="url(#gvd)" />
+            <rect x="40" y="16" width="70" height="12" rx="6" fill="#0b0c0e" opacity="0.85" />
+            <rect x="262" y="17" width="32" height="10" rx="5" class="zeile" /><rect x="302" y="17" width="32" height="10" rx="5" class="zeile" /><rect x="342" y="17" width="20" height="10" rx="5" class="zeile" />
+            <rect x="14" y="40" width="352" height="120" rx="14" fill="url(#hero)" />
+            <circle cx="300" cy="100" r="44" fill="#fff" opacity="0.45" />
+            <circle cx="300" cy="100" r="26" fill="#fff" opacity="0.6" />
+            <rect x="34" y="66" width="150" height="18" rx="6" fill="#0b0c0e" />
+            <rect x="34" y="94" width="112" height="10" rx="5" fill="#fff" opacity="0.9" />
+            <rect x="34" y="120" width="88" height="26" rx="13" fill="#0b0c0e" />
+            <rect x="14" y="172" width="108" height="50" rx="10" fill="#eef1f4" />
+            <rect x="136" y="172" width="108" height="50" rx="10" fill="#eef1f4" />
+            <rect x="258" y="172" width="108" height="50" rx="10" fill="#eef1f4" />
+          </g>
+          <!-- kleine Seite (Vorschaubild, 120 x 150) -->
+          <g id="miniseite">
+            <rect x="0" y="0" width="120" height="150" rx="12" fill="#fff" stroke="#d1d5db" stroke-width="2" />
+            <rect x="8" y="10" width="40" height="7" rx="3.5" fill="#0b0c0e" opacity="0.8" />
+            <rect x="8" y="24" width="104" height="58" rx="8" fill="url(#hero)" />
+            <rect x="16" y="40" width="54" height="8" rx="4" fill="#0b0c0e" />
+            <rect x="16" y="58" width="34" height="10" rx="5" fill="#0b0c0e" />
+            <rect x="8" y="92" width="32" height="44" rx="6" fill="#eef1f4" /><rect x="44" y="92" width="32" height="44" rx="6" fill="#eef1f4" /><rect x="80" y="92" width="32" height="44" rx="6" fill="#eef1f4" />
+          </g>
+        </defs>
+      </svg>
+
+      <!-- K1 Schön, aber kaum Verkäufe: "Dein Shopify-Shop kann richtig gut aussehen und trotzdem leider kaum etwas verkaufen."
+           Shopify-Shop 0,27 / richtig 1,20 / gut 1,53 / aussehen 1,70 / trotzdem 2,30 / kaum 3,23 / verkaufen 3,77 -->
+      <section id="k1" class="karte clip" data-start="0.267" data-duration="4.900" data-track-index="1">
+        <div class="kicker">Dein Shop<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <use href="#seite" x="20" y="6" />
+          <g id="k1-f1" opacity="0"><use href="#funke" transform="translate(414 28) scale(1.5)" /></g>
+          <g id="k1-f2" opacity="0"><use href="#funke" transform="translate(422 118) scale(1.1)" /></g>
+          <g id="k1-f3" opacity="0"><use href="#funke" transform="translate(410 206) scale(1.3)" /></g>
+          <!-- Verkäufe: Achsen, Linie bleibt flach -->
+          <g id="k1-achsen" opacity="0">
+            <path d="M 480 20 L 480 206 L 796 206" fill="none" stroke="#9aa3af" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <use href="#korb" class="ico grau" transform="translate(486 222) scale(1.2)" />
+            <text x="522" y="244" class="lab grau" style="font-size:25px">Verkäufe</text>
+          </g>
+          <path id="k1-linie" d="M 486 196 C 530 196, 556 190, 590 193 S 650 197, 690 192 S 760 195, 790 194" fill="none" stroke="url(#gvu)" stroke-width="6" stroke-linecap="round" />
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="494" y="72" width="0" height="96" /></clipPath>
+          <text x="500" y="140" class="hand" style="font-size:58px" clip-path="url(#k1-clip)" transform="rotate(-3 620 122)">kaum Verkäufe</text>
+        </svg>
+      </section>
+
+      <!-- K2 Viel Zeit ins perfekte Design: "Viele investieren leider unglaublich viel Zeit in das perfekte Design, neue Farben,
+           Animationen, besondere Schriften oder auch immer aufwendigere Produktseiten."
+           Viele 5,17 / Zeit 6,97 / perfekte 7,50 / Farben 9,30 (neue 9,00) / Animationen 9,73 / Schriften 11,43 (besondere 10,97) /
+           aufwendigere 12,73 / Produktseiten 13,43 -->
+      <section id="k2" class="karte clip" data-start="5.167" data-duration="9.533" data-track-index="1">
+        <div class="kicker">Das perfekte Design</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <!-- Zeit: die Uhr, der Balken füllt sich -->
+          <use href="#uhr" class="ico" transform="translate(42 4) scale(2)" style="stroke-width:1.8" />
+          <rect x="52" y="64" width="28" height="170" rx="14" class="spur" />
+          <rect id="k2-zeit" x="52" y="234" width="28" height="0" rx="14" fill="url(#gvd)" />
+          <text x="66" y="276" class="lab" text-anchor="middle">Zeit</text>
+          <!-- die Seite, an der gefeilt wird (zwei Seiten dahinter für "immer aufwendiger") -->
+          <g id="k2-hinten2" opacity="0"><rect x="196" y="22" width="300" height="224" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="2" /></g>
+          <g id="k2-hinten1" opacity="0"><rect x="178" y="12" width="300" height="224" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="2" /></g>
+          <g id="k2-seite">
+            <rect x="160" y="2" width="300" height="224" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <rect x="176" y="16" width="60" height="10" rx="5" fill="#0b0c0e" opacity="0.8" />
+            <rect x="174" y="36" width="272" height="104" rx="12" fill="#eef1f4" />
+            <rect id="k2-farbe" x="174" y="36" width="272" height="104" rx="12" fill="url(#hero)" opacity="0" />
+            <rect id="k2-titel" x="190" y="58" width="120" height="16" rx="6" fill="#0b0c0e" />
+            <text id="k2-aa" x="190" y="84" style="font-family:Caveat,cursive;font-size:46px;font-weight:700;fill:#0b0c0e" opacity="0">Aa Shop</text>
+            <rect x="190" y="104" width="76" height="22" rx="11" fill="#0b0c0e" />
+            <g id="k2-bild"><circle cx="396" cy="88" r="32" fill="#fff" opacity="0.85" /><use href="#bild" class="ico grau" transform="translate(381 73) scale(1.25)" /></g>
+            <g id="k2-bewegung" opacity="0"><path d="M 336 76 h 18 M 330 90 h 22 M 336 104 h 18" stroke="#31adec" stroke-width="4" stroke-linecap="round" /></g>
+            <rect x="174" y="152" width="84" height="60" rx="10" fill="#eef1f4" /><rect x="268" y="152" width="84" height="60" rx="10" fill="#eef1f4" /><rect x="362" y="152" width="84" height="60" rx="10" fill="#eef1f4" />
+          </g>
+          <rect id="k2-ring" x="152" y="-6" width="316" height="240" rx="22" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <!-- was dazukommt -->
+          <g id="k2-c1" opacity="0"><rect x="532" y="8" width="76" height="76" rx="18" class="rahmen" /><use href="#palette" class="ico" transform="translate(548 24) scale(1.85)" style="stroke-width:1.8" />
+            <circle cx="548" cy="102" r="9" fill="#00e090" /><circle cx="570" cy="102" r="9" fill="#31adec" /><circle cx="592" cy="102" r="9" fill="#b9a7f5" /></g>
+          <g id="k2-c2" opacity="0"><rect x="630" y="8" width="76" height="76" rx="18" class="rahmen" /><use href="#funken" class="ico" transform="translate(646 24) scale(1.85)" style="stroke-width:1.8" /></g>
+          <g id="k2-c3" opacity="0"><rect x="728" y="8" width="76" height="76" rx="18" class="rahmen" /><text x="766" y="62" text-anchor="middle" style="font-family:Caveat,cursive;font-size:44px;font-weight:700;fill:#0b0c0e">Aa</text></g>
+          <g id="k2-c4" opacity="0"><rect x="532" y="122" width="76" height="76" rx="18" class="rahmen" /><use href="#ebenen" class="ico" transform="translate(548 138) scale(1.85)" style="stroke-width:1.8" /></g>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="618" y="132" width="0" height="96" /></clipPath>
+          <text x="624" y="196" class="hand" style="font-size:58px" clip-path="url(#k2-clip)" transform="rotate(-3 700 178)">immer mehr</text>
+        </svg>
+      </section>
+
+      <!-- K3 Mit KI noch schneller: "Und mit KI lassen sich natürlich auch solche Designs heutzutage noch schneller umsetzen."
+           KI 14,97 / Designs 16,37 / heutzutage 16,70 / schneller 17,50 / umsetzen 17,93 -->
+      <section id="k3" class="karte clip" data-start="14.700" data-duration="3.933" data-track-index="1">
+        <div class="kicker">Mit KI</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k3-ki" opacity="0"><use href="#kichip" transform="translate(110 104) scale(1.35)" /><text x="110" y="208" class="lab" text-anchor="middle">KI</text></g>
+          <path id="k3-spur" d="M 182 104 L 254 104" fill="none" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 9" opacity="0" />
+          <g id="k3-s1" opacity="0"><use href="#miniseite" x="268" y="22" /></g>
+          <g id="k3-s2" opacity="0"><use href="#miniseite" x="410" y="22" /></g>
+          <g id="k3-s3" opacity="0"><use href="#miniseite" x="552" y="22" /></g>
+          <g id="k3-tempo" opacity="0"><circle cx="740" cy="96" r="38" fill="#0b0c0e" /><use href="#vorspulen" class="ico weiss" transform="translate(722 78) scale(1.5)" style="stroke-width:2" />
+            <path d="M 262 196 h 70 M 300 210 h 60" stroke="#c5cbd3" stroke-width="4" stroke-linecap="round" /></g>
+          <clipPath id="k3-clip"><rect id="k3-cliprect" x="404" y="198" width="0" height="96" /></clipPath>
+          <text x="410" y="262" class="hand" style="font-size:60px" clip-path="url(#k3-clip)" transform="rotate(-3 540 244)">noch schneller</text>
+        </svg>
+      </section>
+
+      <!-- K4 Schön ≠ Kauf: "Aber nur weil ein Online-Shop vielleicht schön aussieht, heißt das natürlich leider auch nicht, dass immer
+           Kunden dort auch automatisch kaufen möchten." Aber 18,63 / schön 20,37 / nicht 22,83 / Kunden 23,47 / automatisch 24,20 / kaufen 24,77 -->
+      <section id="k4" class="karte clip" data-start="18.633" data-duration="6.767" data-track-index="1">
+        <div class="kicker">Schön heißt nicht gekauft</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g transform="translate(20 6) scale(0.86)"><use href="#seite" /></g>
+          <g id="k4-f1" opacity="0"><use href="#funke" transform="translate(352 22) scale(1.4)" /></g>
+          <g id="k4-f2" opacity="0"><use href="#funke" transform="translate(30 196) scale(1.1)" /></g>
+          <text x="183" y="258" class="lab grau" text-anchor="middle">schön</text>
+          <!-- ≠ -->
+          <g id="k4-ungleich" opacity="0">
+            <path class="k4-u" d="M 400 98 H 472" stroke="#0b0c0e" stroke-width="9" stroke-linecap="round" />
+            <path class="k4-u" d="M 400 128 H 472" stroke="#0b0c0e" stroke-width="9" stroke-linecap="round" />
+            <path class="k4-u" d="M 454 76 L 418 150" stroke="#0b0c0e" stroke-width="9" stroke-linecap="round" />
+          </g>
+          <!-- Kunde → Warenkorb -->
+          <g id="k4-kunde" opacity="0"><circle cx="580" cy="96" r="50" fill="#e5e7eb" /><use href="#person" class="ico grau" transform="translate(553 69) scale(2.25)" style="stroke-width:1.8" /></g>
+          <path id="k4-weg" d="M 636 96 L 682 96" fill="none" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 9" opacity="0" />
+          <g id="k4-korb" opacity="0"><rect x="690" y="46" width="100" height="100" rx="24" class="rahmen" /><use href="#korb" class="ico" transform="translate(712 68) scale(2.3)" style="stroke-width:1.7" /></g>
+          <text id="k4-kauft" x="690" y="186" class="lab" text-anchor="middle" opacity="0">kauft</text>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="414" y="200" width="0" height="96" /></clipPath>
+          <text x="420" y="264" class="hand" style="font-size:56px" clip-path="url(#k4-clip)" transform="rotate(-3 580 246)">nicht automatisch</text>
+        </svg>
+      </section>
+
+      <!-- K5 Beim Prüfen eine andere Frage: "Denn wenn ich zum Beispiel persönlich immer einen Online-Shop prüfe, dann interessiert
+           mich natürlich erst einmal eine andere Frage." Denn 25,40 / prüfe 27,57 / erst 29,23 / andere 30,03 / Frage 30,37 -->
+      <section id="k5" class="karte clip" data-start="25.400" data-duration="5.900" data-track-index="1">
+        <div class="kicker">Wenn ich einen Shop prüfe</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <use href="#seite" x="20" y="6" />
+          <!-- Design-Kacheln (Farbe, Schrift) -->
+          <g id="k5-design">
+            <rect x="430" y="10" width="76" height="76" rx="18" class="rahmen" /><use href="#palette" class="ico" transform="translate(446 26) scale(1.85)" style="stroke-width:1.8" />
+            <rect x="430" y="108" width="76" height="76" rx="18" class="rahmen" /><text x="468" y="162" text-anchor="middle" style="font-family:Caveat,cursive;font-size:44px;font-weight:700;fill:#0b0c0e">Aa</text>
+          </g>
+          <line id="k5-strich" x1="420" y1="196" x2="516" y2="0" stroke="#6b7280" stroke-width="6" stroke-linecap="round" />
+          <g id="k5-lupe" opacity="0"><circle cx="0" cy="0" r="34" fill="#0b0c0e" /><use href="#lupe" class="ico weiss" transform="translate(-19 -19) scale(1.6)" style="stroke-width:2.3" /></g>
+          <g id="k5-frage" opacity="0"><circle cx="672" cy="98" r="72" fill="url(#gvd)" /><text x="672" y="132" text-anchor="middle" style="font-size:100px;font-weight:900;fill:#0b0c0e">?</text></g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="534" y="200" width="0" height="96" /></clipPath>
+          <text x="540" y="264" class="hand" style="font-size:58px" clip-path="url(#k5-clip)" transform="rotate(-3 660 246)">andere Frage</text>
+        </svg>
+      </section>
+
+      <!-- K6 Meine Prüffragen (Beispielseite mit Markierungen, Briefing "Markierung Produktnutzen/Versand/Vertrauen"):
+           Versteht 31,30 / sofort 32,17 / angeboten 33,53 / klar 35,50 / Nutzen 36,60 / Produkt 37,13 / Findet 38,40 / Versand 39,13 /
+           Retoureninformationen 39,87 / Und 41,23 / Gründe 42,60 / Online-Shop 43,27 / vertrauen 44,43 -->
+      <section id="k6" class="karte clip" data-start="31.300" data-duration="13.633" data-track-index="1">
+        <div class="kicker">Meine Prüffragen<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <!-- Produktseite -->
+          <rect x="20" y="0" width="396" height="246" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+          <circle cx="44" cy="30" r="9" fill="url(#gvd)" />
+          <rect id="k6-titel" x="62" y="22" width="190" height="18" rx="6" fill="#0b0c0e" />
+          <rect x="36" y="58" width="112" height="90" rx="12" fill="url(#hero)" /><use href="#bild" class="ico grau" transform="translate(77 88) scale(1.25)" />
+          <rect class="k6-n" x="166" y="66" width="222" height="12" rx="6" fill="#d6dae0" />
+          <rect class="k6-n" x="166" y="90" width="196" height="12" rx="6" fill="#d6dae0" />
+          <rect class="k6-n" x="166" y="114" width="150" height="12" rx="6" fill="#d6dae0" />
+          <use id="k6-laster" href="#laster" class="ico grau" transform="translate(38 160) scale(1.15)" />
+          <rect x="74" y="168" width="110" height="12" rx="6" fill="#d6dae0" />
+          <use id="k6-retoure" href="#zurueck" class="ico grau" transform="translate(212 160) scale(1.15)" />
+          <rect x="248" y="168" width="110" height="12" rx="6" fill="#d6dae0" />
+          <use class="k6-v ico grau" href="#mail" transform="translate(38 206) scale(1.1)" />
+          <use class="k6-v ico grau" href="#info" transform="translate(84 206) scale(1.1)" />
+          <use class="k6-v ico grau" href="#karte-ico" transform="translate(130 206) scale(1.1)" />
+          <rect x="172" y="214" width="120" height="12" rx="6" fill="#d6dae0" />
+          <!-- Markierungen -->
+          <rect id="k6-m1" x="28" y="10" width="380" height="42" rx="12" class="mark" opacity="0" />
+          <rect id="k6-m2" x="156" y="56" width="244" height="80" rx="12" class="mark" opacity="0" />
+          <rect id="k6-m3" x="28" y="152" width="380" height="40" rx="12" class="mark" opacity="0" />
+          <rect id="k6-m4" x="28" y="198" width="380" height="40" rx="12" class="mark" opacity="0" />
+          <!-- Fragen rechts -->
+          <g id="k6-f1" opacity="0"><path d="M 412 31 H 452" stroke="#9aa3af" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 7" />
+            <circle cx="478" cy="31" r="20" fill="url(#gvd)" /><text x="478" y="40" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">1</text>
+            <text x="512" y="42" class="lab" style="font-size:30px">Was gibt's?</text>
+            <g id="k6-uhr" opacity="0"><use href="#timer" class="ico" transform="translate(682 15) scale(1.35)" style="stroke-width:2.1" /></g></g>
+          <g id="k6-f2" opacity="0"><path d="M 404 96 H 452" stroke="#9aa3af" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 7" />
+            <circle cx="478" cy="96" r="20" fill="url(#gvd)" /><text x="478" y="105" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">2</text>
+            <text x="512" y="107" class="lab" style="font-size:30px">Nutzen?</text></g>
+          <g id="k6-f3" opacity="0"><path d="M 412 172 H 452" stroke="#9aa3af" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 7" />
+            <circle cx="478" cy="172" r="20" fill="url(#gvd)" /><text x="478" y="181" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">3</text>
+            <text x="512" y="183" class="lab" style="font-size:30px">Versand &amp; Retoure?</text></g>
+          <g id="k6-f4" opacity="0"><path d="M 412 222 H 452" stroke="#9aa3af" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 7" />
+            <circle cx="478" cy="222" r="20" fill="url(#gvd)" /><text x="478" y="231" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">4</text>
+            <text x="512" y="233" class="lab" style="font-size:30px">Vertrauen?</text>
+            <g id="k6-schild"><use href="#schild" transform="translate(680 206) scale(1.35)" class="ico" style="stroke-width:2.1" /></g></g>
+          <g id="k6-schildv" opacity="0"><use href="#schild" transform="translate(680 206) scale(1.35)" style="fill:url(#gvd);stroke:#0b0c0e;stroke-width:2.1;stroke-linejoin:round" /></g>
+        </svg>
+      </section>
+
+      <!-- K7 Wobei KI hilft: "KI kann natürlich auch immer dabei helfen, Texte zu strukturieren oder auch fehlende Informationen zu
+           erkennen." KI 44,93 / helfen 46,23 / Texte 46,60 / strukturieren 47,17 / fehlende 48,20 / Informationen 48,50 / erkennen 49,33 -->
+      <section id="k7" class="karte clip" data-start="44.933" data-duration="4.967" data-track-index="1">
+        <div class="kicker">Wobei KI hilft</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <g id="k7-ki"><use href="#kichip" transform="translate(96 100) scale(1.2)" /><text x="96" y="196" class="lab" text-anchor="middle">KI</text></g>
+          <path d="M 156 100 L 196 100" fill="none" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 9" />
+          <rect x="206" y="0" width="320" height="246" rx="18" class="rahmen" />
+          <!-- Zeilen: erst durcheinander, dann geordnet (Überschrift, drei Punkte) -->
+          <rect class="k7-z" id="k7-z0" x="228" y="22" width="180" height="20" rx="7" fill="#0b0c0e" />
+          <g class="k7-z" id="k7-z1"><circle cx="236" cy="78" r="6" fill="url(#gvd)" /><rect x="252" y="72" width="220" height="12" rx="6" fill="#c5cbd3" /></g>
+          <g class="k7-z" id="k7-z2"><circle cx="236" cy="110" r="6" fill="url(#gvd)" /><rect x="252" y="104" width="190" height="12" rx="6" fill="#c5cbd3" /></g>
+          <g class="k7-z" id="k7-z3"><circle cx="236" cy="142" r="6" fill="url(#gvd)" /><rect x="252" y="136" width="240" height="12" rx="6" fill="#c5cbd3" /></g>
+          <!-- Lücke -->
+          <rect id="k7-luecke" x="228" y="176" width="276" height="44" rx="12" class="platz" opacity="0" />
+          <g id="k7-frage" opacity="0"><circle cx="504" cy="176" r="22" fill="#0b0c0e" /><text x="504" y="186" text-anchor="middle" style="font-size:28px;font-weight:900;fill:#fff">?</text></g>
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="554" y="70" width="0" height="100" /></clipPath>
+          <text x="560" y="136" class="hand" style="font-size:58px" clip-path="url(#k7-clip)" transform="rotate(-3 670 118)">Lücken finden</text>
+        </svg>
+      </section>
+
+      <!-- K8 Die Reihenfolge (Haus): "Deshalb gilt tatsächlich immer für mich: Erst die Klarheit und dann tatsächlich erst Vertrauen
+           schaffen. Und danach erst kann das Design optimiert werden, denn ein schöner Shop ist leider noch lange kein guter Shop."
+           Deshalb 53,77 / Klarheit 56,50 / Vertrauen 58,57 / Design 60,47 / optimiert 60,87 / schöner 62,17 / kein 64,07 / guter 64,23 -->
+      <section id="k8" class="karte clip" data-start="53.767" data-duration="11.966" data-track-index="1">
+        <div class="kicker">Die Reihenfolge</div>
+        <svg class="buehne" viewBox="0 0 820 300">
+          <line x1="40" y1="244" x2="470" y2="244" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" />
+          <!-- Umriss des Hauses (gestrichelt) -->
+          <path id="k8-umriss" d="M 90 242 V 108 L 255 8 L 420 108 V 242" fill="none" stroke="#b6bec9" stroke-width="3" stroke-dasharray="10 8" />
+          <!-- 1 Fundament: Klarheit -->
+          <g id="k8-b1" opacity="0"><rect x="74" y="196" width="362" height="46" rx="10" fill="#0b0c0e" /><use href="#birne" class="ico weiss" transform="translate(240 204) scale(1.25)" style="stroke-width:2.2" /></g>
+          <!-- 2 Wände: Vertrauen -->
+          <g id="k8-b2" opacity="0"><rect x="96" y="104" width="318" height="88" rx="10" fill="#fff" stroke="url(#gvu)" stroke-width="5" /><use href="#schild" class="ico" transform="translate(234 126) scale(1.8)" style="stroke-width:1.9" /></g>
+          <!-- 3 Dach: Design -->
+          <g id="k8-b3" opacity="0"><path d="M 78 102 L 255 6 L 432 102 Z" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="3" stroke-linejoin="round" /></g>
+          <g id="k8-f1" opacity="0"><use href="#funke" transform="translate(442 30) scale(1.4)" /></g>
+          <g id="k8-f2" opacity="0"><use href="#funke" transform="translate(70 40) scale(1.1)" /></g>
+          <!-- Beschriftung rechts -->
+          <g id="k8-l1" opacity="0"><circle cx="506" cy="222" r="20" fill="url(#gvd)" /><text x="506" y="231" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">1</text><text x="540" y="233" class="lab" style="font-size:32px">Klarheit</text></g>
+          <g id="k8-l2" opacity="0"><circle cx="506" cy="158" r="20" fill="url(#gvd)" /><text x="506" y="167" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">2</text><text x="540" y="169" class="lab" style="font-size:32px">Vertrauen</text></g>
+          <g id="k8-l3" opacity="0"><circle cx="506" cy="94" r="20" fill="url(#gvd)" /><text x="506" y="103" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#0b0c0e">3</text><text x="540" y="105" class="lab" style="font-size:32px">Design</text></g>
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="554" y="-34" width="0" height="90" /></clipPath>
+          <text x="560" y="34" class="hand" style="font-size:56px" clip-path="url(#k8-clip)" transform="rotate(-3 660 18)">schön ≠ gut</text>
+        </svg>
+      </section>
+
+      <!-- K9 Folgen (CTA): nur das Folgen-Symbol. E-Commerce-Tipps 65,73 (Karte) / verpassen 67,17 (Ring) / folgt 68,23 (Plus angetippt,
+           wird zum Haken); bleibt bis zum Ende -->
+      <section id="k9" class="folgekarte clip" data-start="65.733" data-duration="5.300" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // Zeiten sind Sekunden im geschnittenen Video, schon genau wie Remotion (Stücke auf ganze Frames gerundet) und als Cues.
+
+      // Karte rein mit Kicker, raus weich mit Blur und Fade (ohne "aus" bleibt sie stehen)
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const auf = (sel, t, d = 0.15) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "none" }, t);
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      function ring(sel, t) {
+        tl.set(sel, { opacity: 0.95, scale: 1, transformOrigin: "50% 50%" }, t);
+        tl.to(sel, { opacity: 0, scale: 1.04, duration: 0.8, ease: "power2.out" }, t + 0.02);
+      }
+      // Linien, die sich zeichnen (pathLength 1)
+      document.querySelectorAll("#k1-linie, #k4-ungleich path, #k5-strich").forEach((el) => el.setAttribute("pathLength", "1"));
+      gsap.set("#k1-linie, #k4-ungleich path, #k5-strich", { strokeDasharray: 1, strokeDashoffset: 1 });
+      gsap.set("#k5-strich", { opacity: 0 });
+
+      // K1 schöner Shop, Funken auf "richtig gut aussehen", die Verkaufslinie bleibt flach
+      karte("#k1", 0.267, 5.167);
+      pop("#k1-f1", 1.20, 0.25); pop("#k1-f2", 1.40, 0.25); pop("#k1-f3", 1.60, 0.25);
+      ein("#k1-achsen", 2.30, 0.3);
+      tl.to("#k1-linie", { strokeDashoffset: 0, duration: 1.0, ease: "power1.inOut" }, 3.233);
+      tl.to("#k1-f1, #k1-f2, #k1-f3", { opacity: 0.35, duration: 0.3 }, 3.233);
+      schreibe("#k1-cliprect", 300, 3.767, 0.55);
+
+      // K2 Zeit fließt ins Design: Farben, Animationen, Schriften, immer aufwendigere Seiten
+      karte("#k2", 5.167, 14.70);
+      tl.to("#k2-zeit", { attr: { y: 196, height: 38 }, duration: 0.5, ease: "power2.out" }, 6.967);
+      tl.to("#k2-zeit", { attr: { y: 64, height: 170 }, duration: 6.4, ease: "none" }, 7.5);
+      ring("#k2-ring", 7.50);
+      auf("#k2-farbe", 9.00, 0.35); pop("#k2-c1", 9.00);
+      tl.fromTo("#k2-bild", { x: -60 }, { x: 0, duration: 0.5, ease: "power2.out" }, 9.733);
+      auf("#k2-bewegung", 9.80, 0.2); pop("#k2-c2", 9.733);
+      tl.to("#k2-titel", { opacity: 0, duration: 0.2 }, 10.967);
+      auf("#k2-aa", 11.0, 0.3); pop("#k2-c3", 10.967);
+      tl.to("#k2-bewegung", { opacity: 0, duration: 0.2 }, 11.2);
+      auf("#k2-hinten1", 12.733, 0.25); auf("#k2-hinten2", 12.95, 0.25); pop("#k2-c4", 12.733);
+      schreibe("#k2-cliprect", 190, 13.10, 0.5);
+
+      // K3 KI wirft Designs aus, noch schneller
+      karte("#k3", 14.70, 18.633);
+      pop("#k3-ki", 14.967, 0.3);
+      tl.set("#k3-spur", { opacity: 1 }, 15.3);
+      tl.fromTo("#k3-s1", { opacity: 0, x: -120, scale: 0.6, transformOrigin: "0% 50%" }, { opacity: 1, x: 0, scale: 1, duration: 0.35, ease: "power2.out" }, 16.367);
+      tl.fromTo("#k3-s2", { opacity: 0, x: -262, scale: 0.6, transformOrigin: "0% 50%" }, { opacity: 1, x: 0, scale: 1, duration: 0.35, ease: "power2.out" }, 16.55);
+      tl.fromTo("#k3-s3", { opacity: 0, x: -404, scale: 0.6, transformOrigin: "0% 50%" }, { opacity: 1, x: 0, scale: 1, duration: 0.35, ease: "power2.out" }, 16.73);
+      pop("#k3-tempo", 17.50, 0.25);
+      schreibe("#k3-cliprect", 330, 17.55, 0.5);
+
+      // K4 schön ≠ Kauf
+      karte("#k4", 18.633, 25.40);
+      pop("#k4-f1", 20.367, 0.25); pop("#k4-f2", 20.52, 0.25);
+      tl.set("#k4-ungleich", { opacity: 1 }, 22.833);
+      tl.to("#k4-ungleich path", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out", stagger: 0.1 }, 22.833);
+      pop("#k4-kunde", 23.467, 0.3);
+      tl.set("#k4-weg", { opacity: 1 }, 24.0);
+      pop("#k4-korb", 24.10, 0.3);
+      auf("#k4-kauft", 24.767, 0.2);
+      tl.to("#k4-korb", { opacity: 0.45, duration: 0.3 }, 24.85);
+      schreibe("#k4-cliprect", 360, 24.20, 0.55);
+
+      // K5 beim Prüfen: die Lupe fährt über die Seite, Farbe und Schrift treten zurück, eine andere Frage
+      karte("#k5", 25.40, 31.30);
+      tl.fromTo("#k5-lupe", { opacity: 0, x: 110, y: 70 }, { opacity: 1, duration: 0.15 }, 27.567);
+      tl.to("#k5-lupe", { x: 330, y: 150, duration: 1.1, ease: "power1.inOut" }, 27.62);
+      tl.to("#k5-design", { opacity: 0.3, duration: 0.3 }, 29.233);
+      zeichne("#k5-strich", 29.233, 0.35);
+      tl.to("#k5-lupe", { opacity: 0, duration: 0.2 }, 29.6);
+      pop("#k5-frage", 30.033, 0.3);
+      schreibe("#k5-cliprect", 300, 30.10, 0.5);
+
+      // K6 die vier Prüffragen als Markierungen auf der Beispielseite
+      karte("#k6", 31.30, 44.933);
+      badge("#k6-m1", 32.167); ein("#k6-f1", 32.167, 0.3); badge("#k6-uhr", 32.30);
+      tl.to("#k6-titel", { fill: "#00d088", duration: 0.3 }, 33.533);
+      tl.to("#k6-m1, #k6-f1", { opacity: 0.45, duration: 0.3 }, 35.40);
+      badge("#k6-m2", 35.50); ein("#k6-f2", 36.60, 0.3);
+      tl.to("#k6 .k6-n", { fill: "#7ee8c2", duration: 0.25, stagger: 0.12 }, 37.133);
+      tl.to("#k6-m2, #k6-f2", { opacity: 0.45, duration: 0.3 }, 38.95);
+      badge("#k6-m3", 39.133); ein("#k6-f3", 39.133, 0.3);
+      tl.to("#k6-laster", { stroke: "#0b0c0e", duration: 0.2 }, 39.133);
+      tl.to("#k6-retoure", { stroke: "#0b0c0e", duration: 0.2 }, 39.867);
+      tl.to("#k6-m3, #k6-f3", { opacity: 0.45, duration: 0.3 }, 41.233);
+      badge("#k6-m4", 42.60); ein("#k6-f4", 42.60, 0.3);
+      tl.to("#k6 .k6-v", { stroke: "#0b0c0e", duration: 0.2, stagger: 0.3 }, 42.75);
+      tl.to("#k6-m1, #k6-f1, #k6-m2, #k6-f2, #k6-m3, #k6-f3", { opacity: 1, duration: 0.3 }, 44.433);
+      auf("#k6-schildv", 44.433, 0.25);
+
+      // K7 KI ordnet Texte und findet Lücken
+      karte("#k7", 44.933, 49.90);
+      tl.set("#k7-z0", { x: 60, y: 70, rotation: 4, svgOrigin: "318 32" }, 0);
+      tl.set("#k7-z1", { x: 30, y: 60, rotation: -6, svgOrigin: "360 78" }, 0);
+      tl.set("#k7-z2", { x: -10, y: -60, rotation: 5, svgOrigin: "340 110" }, 0);
+      tl.set("#k7-z3", { x: -20, y: 30, rotation: -3, svgOrigin: "370 142" }, 0);
+      tl.fromTo("#k7 .k7-z", { opacity: 0 }, { opacity: 1, duration: 0.25, stagger: 0.06 }, 45.0);
+      tl.to("#k7 .k7-z", { x: 0, y: 0, rotation: 0, duration: 0.55, ease: "power2.inOut", stagger: 0.06 }, 47.167);
+      tl.set("#k7-luecke", { opacity: 1 }, 48.20);
+      tl.fromTo("#k7-luecke", { strokeDashoffset: 18 }, { strokeDashoffset: 0, duration: 0.6, ease: "none" }, 48.20);
+      badge("#k7-frage", 48.50);
+      schreibe("#k7-cliprect", 260, 48.55, 0.5);
+
+      // K8 Haus: erst Fundament (Klarheit), dann Wände (Vertrauen), danach Dach (Design); schön ≠ gut
+      karte("#k8", 53.767, 65.733);
+      tl.fromTo("#k8-b1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 56.50);
+      ein("#k8-l1", 56.50, 0.3);
+      tl.fromTo("#k8-b2", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 58.567);
+      ein("#k8-l2", 58.567, 0.3);
+      tl.fromTo("#k8-b3", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 60.467);
+      ein("#k8-l3", 60.467, 0.3);
+      tl.to("#k8-umriss", { opacity: 0, duration: 0.3 }, 60.70);
+      pop("#k8-f1", 62.167, 0.25); pop("#k8-f2", 62.35, 0.25);
+      schreibe("#k8-cliprect", 230, 64.067, 0.5);
+
+      // K9 Folgen: Karte auf "E-Commerce-Tipps", Ring auf "verpassen", der Zeiger tippt auf "folgt" das Plus an, es wird zum Haken
+      tl.fromTo("#k9", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 65.733);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 67.167);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 67.55);
+      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.5, ease: "power2.inOut" }, 67.70);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 68.16);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 68.24);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 68.233);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 68.233);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 68.26);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 68.26);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 68.26);
+      tl.to("#fzeiger", { x: 132, y: 128, duration: 0.25, ease: "power2.out" }, 68.45);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.3 }, 69.2);
+
+      tl.seek(0);
+      window.__timelines["schoenershop-skizzen"] = tl;
+    </script>
+  </body>
+</html>
