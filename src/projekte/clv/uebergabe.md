@@ -1,6 +1,6 @@
 # Übergabekarte: E06 · Customer Lifetime Value
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** für Mo 23.11.2026 14:00 Europe/Berlin (Pauls Vorgabe 27.10.: selbst nach Kalender einplanen), Metricool TikTok / Instagram / YouTube 410489482 / 410492928 / 410493012 (uuids -7989420007643266582 / -7940939751507344938 / -717331268090311127); Drive final 1p4wk1hqOB2LaUdh3BVXhI9Y1Cqj3n7KB
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): E06 · Customer Lifetime Value
 - **Format / Design:** FACE (Serie "E-Commerce einfach erklärt") / aktueller E-Look wie E05: Hook-Titel mit dem Cover-Text im Design verlauf (easyJet-Stil), helle Karten unter dem Kopf als Erklär-Bilder (karten-aufbau.md "Visuelle Metaphern", Vorlage P04 pagebuilder), Pill-Untertitel (aktives Wort `#00E090`), Farbwelt PulseConnect-Verlauf `#00D088 → #31ADEC`, Musik ruhig, sanfter Grade plus brightness(0.83), Porträt-Modus
