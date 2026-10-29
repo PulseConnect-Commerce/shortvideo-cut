@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>S05 · Produktbilder und Alt-Texte mit KI – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- FACE S05 "Produktbilder und Alt-Texte mit KI" (Serie S). Erklär-Bilder nach karten-aufbau.md "Visuelle Metaphern"
+         (freigegeben 2026-10-26, Vorlagen P04 hyperframes/pagebuilder-skizzen, S02/S03 metafelder-/kollektionen-skizzen): pro
+         Kerngedanke ein Bild, das den Satz ohne Ton erklärt (Stoppuhr "keine Zeit", Demo-Shop mit uneinheitlichen
+         Flaschenbildern, KI nimmt Arbeit ab, unruhiger Hintergrund, Vorher/Nachher einfarbig, einheitliche Bilder ohne
+         Photoshop/Canva, leeres Alt-Text-Feld, Bild in Worten, Suchmaschine ordnet ein, KI-Vorschlag übernehmen/bearbeiten,
+         schlechter gegen guter Alt-Text, Material/Farbe prüfen, KI-Bild mit erfundenem Detail, wichtigste Seiten zuerst,
+         Dreischritt "Bilder vereinheitlichen → Alt-Text prüfen → erst dann skalieren" mit Bordmitteln und Folgen-Plus).
+         Höchstens 1–3 Wörter je Bild, ein handschriftliches Akzentwort (Caveat, OFL, lokal; Blau #31ADEC, Grün #00C27C, Rot
+         nur für Fehler). Rahmen: helle Karte unter dem Kopf (x 80-900, ab y 1145, bis 1485; Instagram-Zone unten ab 1500),
+         Pill-Untertitel darüber (Remotion, y 1095), ruhige Bewegung ohne Überschwingen.
+         Keine fingierten KI-Demos: die Flaschen sind gezeichnete Beispiel-Produkte (kein echter Shop, keine Shopify-Oberfläche),
+         jede Karte mit Produkt trägt BEISPIEL, DEMO oder SCHEMA. Die echten Quellen (Shopify Help Center) stehen nicht hier,
+         sondern groß in Remotion (src/lib/quelle-gross.tsx); in diesen Sekunden ist hier nichts zu sehen.
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/alttexte/cut.json, 158,20 s), genau wie Remotion sie rechnet
+         (Stücke auf ganze Frames gerundet), schon als Cues (2 Frames vor dem Wort); Liste mit Tönen in
+         src/projekte/alttexte/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1145px; width: 820px; height: 340px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 20px; display: flex; align-items: center; gap: 10px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .demo { margin-left: 4px; padding: 3px 10px 4px; border-radius: 8px; background: #0b0c0e; color: #fff; font-size: 17px; letter-spacing: 0.12em; }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 280px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #6b7280; }
+      .klein { font-size: 20px; font-weight: 700; fill: #6b7280; letter-spacing: 0.08em; }
+      .alt { font-size: 30px; font-weight: 700; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .hand.gruen { fill: #00c27c; }
+      .hand.rot { fill: #e5484d; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .platz { fill: none; stroke: #b6bec9; stroke-width: 3; stroke-dasharray: 10 8; }
+      .zeile { fill: #d6dae0; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .chip { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .aktiv { fill: none; stroke: url(#gvd); stroke-width: 5; }
+      .pfeil { fill: none; stroke: #9aa3af; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* keine Sticker-Wörter: bei 1,62-facher Vergrößerung füllt der Kopf die Breite, ein Sticker läge auf dem Gesicht */
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="alttexte-skizzen" data-width="1080" data-height="1920" data-start="0.00" data-duration="158.20">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+          <linearGradient id="studio" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7f8fa" /><stop offset="1" stop-color="#e3e7ec" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24er Raster -->
+          <g id="i-upload"><path d="M12 3v12" /><path d="m17 8-5-5-5 5" /><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /></g>
+          <g id="i-uhr"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></g>
+          <g id="i-funken"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></g>
+          <g id="i-lupe"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+          <g id="i-auge"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></g>
+          <g id="i-ordner"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /></g>
+          <g id="i-laden"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="i-stift"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /></g>
+          <g id="i-haken"><path d="M20 6 9 17l-5-5" /></g>
+          <g id="i-stern"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></g>
+          <g id="i-apps"><rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" /><rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" /></g>
+          <g id="i-werkzeug"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></g>
+          <g id="i-person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-zeiger"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+          <!-- Mauszeiger (Spitze bei 0,0) -->
+          <g id="maus"><use href="#i-zeiger" transform="translate(-6 -6) scale(2)" style="fill:#0b0c0e;stroke:#fff;stroke-width:1.2;stroke-linejoin:round" /></g>
+          <!-- Haken im Kreis (Verlauf), grauer Kreis mit X, roter Kreis mit X (nur für Fehler), Fragezeichen (prüfen) -->
+          <g id="ok"><circle cx="0" cy="0" r="20" fill="url(#gvd)" /><path d="M-10 0 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="nein"><circle cx="0" cy="0" r="18" fill="#9aa3af" /><path d="M-7 -7 L7 7 M7 -7 L-7 7" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" /></g>
+          <g id="fehler"><circle cx="0" cy="0" r="20" fill="#e5484d" /><path d="M-8 -8 L8 8 M8 -8 L-8 8" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" /></g>
+          <g id="frage"><circle cx="0" cy="0" r="20" fill="#f5b83d" /><text x="0" y="10" text-anchor="middle" style="font-family:Geist,sans-serif;font-size:28px;font-weight:900;fill:#0b0c0e">?</text></g>
+          <g id="warn"><circle cx="0" cy="0" r="17" fill="#e5484d" /><text x="0" y="9" text-anchor="middle" style="font-family:Geist,sans-serif;font-size:25px;font-weight:900;fill:#fff">!</text></g>
+          <!-- Gezeichnete Beispiel-Trinkflasche (200er Raster, Mitte x 100): Schraubverschluss, schwarzer Körper, Lichtkante -->
+          <g id="flasche">
+            <ellipse cx="100" cy="190" rx="42" ry="5" fill="#000" opacity="0.13" />
+            <rect x="82" y="22" width="36" height="26" rx="5" fill="#3b4047" />
+            <path d="M87 27 v16 M93 27 v16 M99 27 v16 M105 27 v16 M111 27 v16" stroke="#272b30" stroke-width="2.4" />
+            <rect x="87" y="47" width="26" height="12" fill="#22262a" />
+            <path d="M87 58 L113 58 C 128 62 134 72 134 88 L 134 176 Q 134 188 122 188 L 78 188 Q 66 188 66 176 L 66 88 C 66 72 72 62 87 58 Z" fill="#17191c" />
+            <rect x="75" y="84" width="9" height="92" rx="4.5" fill="#fff" opacity="0.17" />
+          </g>
+          <!-- Unruhiger Hintergrund (Küchentisch, Becher, Pflanze, harter Schatten) im 200er Raster -->
+          <g id="unruhig">
+            <rect width="200" height="200" fill="#d9cbb3" />
+            <rect x="120" y="14" width="60" height="70" fill="#f2ead8" opacity="0.8" />
+            <path d="M120 49 H180 M150 14 V84" stroke="#c9b99c" stroke-width="3" />
+            <ellipse cx="170" cy="96" rx="18" ry="30" fill="#5c8d4e" />
+            <ellipse cx="156" cy="104" rx="12" ry="22" fill="#4b7a40" transform="rotate(-25 156 104)" />
+            <rect x="160" y="118" width="22" height="30" rx="3" fill="#a5643b" />
+            <rect x="0" y="146" width="200" height="54" fill="#b88a5d" />
+            <path d="M0 160 H200 M0 178 H200" stroke="#a37549" stroke-width="2" />
+            <rect x="18" y="112" width="30" height="38" rx="4" fill="#c9473a" />
+            <path d="M48 120 c 12 0 12 20 0 20" fill="none" stroke="#c9473a" stroke-width="5" />
+            <path d="M118 188 L 196 168 L 200 200 L 120 200 Z" fill="#000" opacity="0.22" />
+          </g>
+        </defs>
+      </svg>
+
+      <!-- K1 Keine Zeit: "Hast du auch immer keine Zeit, um irgendwelche Alt-Texte zu pflegen oder Bilder zu optimieren?"
+           keine 0,84 / Zeit 1,22 / Alt-Texte 2,07 / pflegen 2,75 / Bilder 3,37 / optimieren 3,79 -->
+      <section id="k1" class="karte clip" data-start="0.773" data-duration="4.927" data-track-index="1">
+        <div class="kicker">Bildpflege</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k1-uhr">
+            <rect x="128" y="18" width="44" height="20" rx="6" fill="#0b0c0e" />
+            <circle cx="150" cy="140" r="96" fill="#fff" stroke="#0b0c0e" stroke-width="7" />
+            <path d="M150 54 v12 M150 214 v12 M64 140 h12 M224 140 h12" stroke="#9aa3af" stroke-width="5" stroke-linecap="round" />
+            <path id="k1-zeiger" d="M150 140 L150 70" stroke="#00c27c" stroke-width="9" stroke-linecap="round" />
+            <circle cx="150" cy="140" r="9" fill="#0b0c0e" />
+          </g>
+          <g id="k1-r1" opacity="0">
+            <rect x="300" y="30" width="48" height="48" rx="12" fill="#fff" stroke="#9aa3af" stroke-width="3.5" />
+            <text x="370" y="66" class="lab" style="font-size:34px">Alt-Texte pflegen</text>
+          </g>
+          <g id="k1-r2" opacity="0">
+            <rect x="300" y="104" width="48" height="48" rx="12" fill="#fff" stroke="#9aa3af" stroke-width="3.5" />
+            <text x="370" y="140" class="lab" style="font-size:34px">Bilder optimieren</text>
+          </g>
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="296" y="180" width="0" height="100" /></clipPath>
+          <text x="302" y="250" class="hand" style="font-size:72px" clip-path="url(#k1-clip)" transform="rotate(-3 420 230)">keine Zeit</text>
+        </svg>
+      </section>
+
+      <!-- K2 Viele Produkte = viel Bildpflege: "Wenn du zum Beispiel viele Produkte in deinem Online-Shop … hast, dann kennst du
+           vielleicht das Problem. Du hast einfach immer Bilder hochgeladen, aber immer keine Zeit für vernünftige Bildoptimierung."
+           viele 5,84 / Problem 10,24 / hochgeladen 12,13 / keine 13,56 / Bildoptimierung 14,80 -->
+      <section id="k2" class="karte clip" data-start="5.773" data-duration="10.477" data-track-index="1">
+        <div class="kicker">Trinkflaschen-Shop<span class="demo">DEMO</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k2-grid"></g>
+          <g id="k2-up" opacity="0"><circle cx="690" cy="58" r="50" fill="url(#gvd)" /><use href="#i-upload" class="ico" transform="translate(664 32) scale(2.2)" style="stroke-width:2.2" /></g>
+          <g id="k2-uhr" opacity="0"><circle cx="690" cy="168" r="44" fill="#0b0c0e" /><use href="#i-uhr" class="ico" transform="translate(667 145) scale(1.9)" style="stroke:#fff;stroke-width:2.2" /></g>
+          <g id="k2-w1" opacity="0"><use href="#warn" transform="translate(206 20)" /></g>
+          <g id="k2-w2" opacity="0"><use href="#warn" transform="translate(526 132)" /></g>
+          <g id="k2-satz" opacity="0">
+            <text x="30" y="266" class="lab" style="font-size:32px">Viele Produkte = <tspan fill="url(#gv)">viel Bildpflege</tspan></text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K3 KI nimmt Arbeit ab: "Da habe ich eben genau das Richtige für dich. Denn es gibt mittlerweile tatsächlich ein paar sehr gute
+           KI-Funktionen direkt in Shopify, die dir einiges an Arbeit abnehmen können."
+           Da 16,36 / KI-Funktionen 20,73 / direkt 21,66 / Shopify 22,14 / Arbeit 23,63 / abnehmen 24,02 -->
+      <section id="k3" class="karte clip" data-start="16.293" data-duration="10.460" data-track-index="1">
+        <div class="kicker">KI direkt in Shopify</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k3-stapel"></g>
+          <text x="40" y="214" class="klein">ARBEIT</text>
+          <rect x="40" y="226" width="300" height="26" rx="13" fill="#d6dae0" />
+          <rect id="k3-balken" x="40" y="226" width="300" height="26" rx="13" fill="#0b0c0e" />
+          <g id="k3-ki" opacity="0">
+            <circle cx="560" cy="84" r="70" fill="url(#gvd)" />
+            <use href="#i-funken" class="ico" transform="translate(524 48) scale(3)" style="stroke-width:1.6" />
+          </g>
+          <text id="k3-t1" x="560" y="186" text-anchor="middle" class="lab" opacity="0">KI-Funktionen</text>
+          <text id="k3-t2" x="560" y="216" text-anchor="middle" class="lab grau" style="font-size:24px" opacity="0">direkt in Shopify</text>
+          <clipPath id="k3-clip"><rect id="k3-cliprect" x="380" y="226" width="0" height="56" /></clipPath>
+          <text x="386" y="268" class="hand gruen" style="font-size:46px" clip-path="url(#k3-clip)" transform="rotate(-3 480 256)">weniger Arbeit</text>
+        </svg>
+      </section>
+
+      <!-- K4 Unruhiger Hintergrund: "Nehmen wir zum Beispiel einmal einen Shop, der Trinkflaschen verkauft. Du hast ein Produktbild
+           hochgeladen, aber der Hintergrund sieht leider nicht besonders professionell aus."
+           Shop 26,89 / Trinkflaschen 27,44 / Produktbild 29,55 / hochgeladen 30,13 / Hintergrund 31,44 / nicht 32,47 -->
+      <section id="k4" class="karte clip" data-start="26.823" data-duration="7.277" data-track-index="1">
+        <div class="kicker">Beispiel: Trinkflaschen<span class="demo">DEMO</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <svg x="40" y="6" width="260" height="260" viewBox="0 0 200 200">
+            <rect width="200" height="200" fill="#eef1f4" />
+            <g id="k4-unruhig" opacity="0"><g transform="rotate(-4 100 100) scale(1.08) translate(-8 -6)"><use href="#unruhig" /></g></g>
+            <g id="k4-fl" opacity="0"><g transform="rotate(-6 100 120) translate(10 4)"><use href="#flasche" /></g></g>
+          </svg>
+          <rect x="40" y="6" width="260" height="260" rx="22" fill="none" stroke="#d1d5db" stroke-width="3" />
+          <g id="k4-laden"><circle cx="370" cy="48" r="30" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><use href="#i-laden" class="ico" transform="translate(352 30) scale(1.5)" style="stroke-width:1.8" /></g>
+          <text id="k4-t1" x="420" y="58" class="lab" opacity="0">Produktbild</text>
+          <g id="k4-up" opacity="0"><use href="#ok" transform="translate(620 48)" /></g>
+          <g id="k4-hg" opacity="0">
+            <path d="M408 132 C 360 132, 330 120, 304 104" class="pfeil" />
+            <path d="M318 96 L 304 104 L 318 114" class="pfeil" />
+            <text x="420" y="142" class="lab">Hintergrund</text>
+          </g>
+          <g id="k4-x" opacity="0"><use href="#fehler" transform="translate(272 34)" /></g>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="330" y="188" width="0" height="90" /></clipPath>
+          <text x="336" y="252" class="hand rot" style="font-size:58px" clip-path="url(#k4-clip)" transform="rotate(-3 500 236)">nicht professionell</text>
+        </svg>
+      </section>
+
+      <!-- K5 Vorher/Nachher einfarbig: "… oder auch beispielsweise eben direkt durch einen einfarbigen Hintergrund ersetzen. Die Funktion
+           ist natürlich super praktisch, …"   einfarbigen 40,59 / Hintergrund 41,11 / ersetzen 41,48 / praktisch 43,22 -->
+      <section id="k5" class="karte clip" data-start="39.800" data-duration="4.800" data-track-index="1">
+        <div class="kicker">Hintergrund ersetzen<span class="demo">DEMO</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <text x="60" y="16" class="klein">VORHER</text>
+          <svg x="60" y="26" width="230" height="230" viewBox="0 0 200 200">
+            <g transform="rotate(-4 100 100) scale(1.08) translate(-8 -6)"><use href="#unruhig" /></g>
+            <g transform="rotate(-6 100 120) translate(10 4)"><use href="#flasche" /></g>
+          </svg>
+          <rect x="60" y="26" width="230" height="230" rx="22" fill="none" stroke="#d1d5db" stroke-width="3" />
+          <path id="k5-pfeil" pathLength="1" d="M308 141 H 404 M 390 127 L 406 141 L 390 155" class="pfeil" style="stroke:#0b0c0e" />
+          <text x="420" y="16" class="klein">NACHHER</text>
+          <svg x="420" y="26" width="230" height="230" viewBox="0 0 200 200">
+            <g transform="rotate(-4 100 100) scale(1.08) translate(-8 -6)"><use href="#unruhig" /></g>
+            <clipPath id="k5-wclip"><rect id="k5-wrect" x="0" y="0" width="0" height="200" /></clipPath>
+            <rect width="200" height="200" fill="#eef1f4" clip-path="url(#k5-wclip)" />
+            <g transform="rotate(-6 100 120) translate(10 4)"><use href="#flasche" /></g>
+          </svg>
+          <rect x="420" y="26" width="230" height="230" rx="22" fill="none" stroke="#d1d5db" stroke-width="3" />
+          <g id="k5-ok" opacity="0"><use href="#ok" transform="translate(644 34)" /></g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="660" y="120" width="0" height="80" /></clipPath>
+          <text x="664" y="176" class="hand gruen" style="font-size:46px" clip-path="url(#k5-clip)" transform="rotate(-6 720 160)">einfarbig</text>
+        </svg>
+      </section>
+
+      <!-- K6 Einheitlich ohne Photoshop/Canva: "… wenn du jetzt zum Beispiel deine Produktbilder einheitlich gestalten möchtest, ohne jetzt
+           jedes Mal in Photoshop oder Canva arbeiten zu müssen."
+           Produktbilder 44,74 / einheitlich 45,36 / ohne 46,96 / Photoshop 48,04 / Canva 48,70 / arbeiten 49,00 -->
+      <section id="k6" class="karte clip" data-start="44.673" data-duration="4.987" data-track-index="1">
+        <div class="kicker">Einheitliche Produktbilder<span class="demo">DEMO</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k6-grid"></g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="36" y="186" width="0" height="94" /></clipPath>
+          <text x="40" y="256" class="hand gruen" style="font-size:58px" clip-path="url(#k6-clip)" transform="rotate(-3 150 240)">einheitlich</text>
+          <g id="k6-c1" opacity="0"><rect x="330" y="200" width="196" height="56" rx="16" class="chip" /><text x="428" y="238" text-anchor="middle" class="lab">Photoshop</text></g>
+          <g id="k6-c2" opacity="0"><rect x="546" y="200" width="150" height="56" rx="16" class="chip" /><text x="621" y="238" text-anchor="middle" class="lab">Canva</text></g>
+          <path id="k6-strich" pathLength="1" d="M318 230 L 708 226" fill="none" stroke="#6b7280" stroke-width="6" stroke-linecap="round" />
+        </svg>
+      </section>
+
+      <!-- K7 Alt-Text vergessen: "Aber jetzt kommt noch etwas, das viele Shopbetreiber tatsächlich vergessen, und zwar die sogenannten
+           Alt-Texte."   Aber 49,76 / vergessen 52,30 / Alt-Texte 54,11 -->
+      <section id="k7" class="karte clip" data-start="49.693" data-duration="5.007" data-track-index="1">
+        <div class="kicker">Oft vergessen</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <svg x="40" y="20" width="220" height="220" viewBox="0 0 200 200">
+            <rect width="200" height="200" fill="#eef1f4" />
+            <use href="#flasche" />
+          </svg>
+          <rect x="40" y="20" width="220" height="220" rx="22" fill="none" stroke="#d1d5db" stroke-width="3" />
+          <rect id="k7-lab2" x="292" y="36" width="152" height="46" rx="10" fill="url(#gvl)" stroke="url(#gvd)" stroke-width="3" opacity="0" />
+          <text id="k7-lab" x="300" y="70" class="lab" style="font-size:32px">Alt-Text</text>
+          <rect x="300" y="96" width="480" height="76" rx="16" fill="#fff" stroke="#b6bec9" stroke-width="3" stroke-dasharray="10 8" />
+          <rect id="k7-cursor" x="322" y="114" width="4" height="40" rx="2" fill="#0b0c0e" />
+          <g id="k7-frage" opacity="0"><use href="#frage" transform="translate(746 96)" /></g>
+          <text id="k7-leer" x="342" y="146" class="lab grau" style="font-size:28px" opacity="0">leer</text>
+        </svg>
+      </section>
+
+      <!-- K8 Alt-Text = Bild in Worten: "Und kurz erklärt: Ein Alt-Text beschreibt tatsächlich einfach, was auf einem Bild zu sehen ist."
+           Und 54,80 / Alt-Text 55,88 / beschreibt 56,36 / Bild 58,12 / sehen 58,50 -->
+      <section id="k8" class="karte clip" data-start="54.733" data-duration="4.617" data-track-index="1">
+        <div class="kicker">Was ist ein Alt-Text?</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <svg x="40" y="20" width="220" height="220" viewBox="0 0 200 200">
+            <rect width="200" height="200" fill="#ffffff" />
+            <use href="#flasche" />
+          </svg>
+          <rect x="40" y="20" width="220" height="220" rx="22" fill="none" stroke="#d1d5db" stroke-width="3" />
+          <path id="k8-pfeil" pathLength="1" d="M272 130 H 336 M 322 116 L 338 130 L 322 144" class="pfeil" style="stroke:#0b0c0e" />
+          <rect x="352" y="20" width="430" height="200" rx="22" class="rahmen" />
+          <g id="k8-auge" opacity="0"><circle cx="398" cy="64" r="26" fill="url(#gvd)" /><use href="#i-auge" class="ico" transform="translate(381 47) scale(1.42)" style="stroke-width:2" /></g>
+          <rect class="k8-z" x="440" y="52" width="300" height="22" rx="11" fill="#9aa3af" />
+          <rect class="k8-z" x="382" y="104" width="370" height="22" rx="11" fill="#9aa3af" />
+          <rect class="k8-z" x="382" y="146" width="330" height="22" rx="11" fill="#9aa3af" />
+          <rect class="k8-z" x="382" y="188" width="200" height="22" rx="11" fill="#9aa3af" />
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="356" y="222" width="0" height="64" /></clipPath>
+          <text x="362" y="272" class="hand" style="font-size:52px" clip-path="url(#k8-clip)" transform="rotate(-3 460 258)">das Bild in Worten</text>
+        </svg>
+      </section>
+
+      <!-- K9 Suchmaschinen: "Zusätzlich kann es aber auch Suchmaschinen helfen, einfach deine Bilder besser einzuordnen."
+           Zusätzlich 64,00 / kann 64,50 / Suchmaschinen 65,04 / helfen 65,52 / einzuordnen 67,12 -->
+      <section id="k9" class="karte clip" data-start="63.250" data-duration="5.000" data-track-index="1">
+        <div class="kicker">Suchmaschinen</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k9-lupe" opacity="0"><circle cx="110" cy="100" r="70" fill="url(#gvd)" /><use href="#i-lupe" class="ico" transform="translate(77 67) scale(2.75)" style="stroke-width:2" /></g>
+          <g>
+            <rect x="500" y="20" width="290" height="210" rx="22" class="rahmen" />
+            <use href="#i-ordner" class="ico" transform="translate(522 38) scale(1.5)" style="stroke-width:1.8" />
+            <text x="566" y="66" class="lab" style="font-size:26px">Trinkflaschen</text>
+            <rect x="524" y="92" width="112" height="112" rx="14" class="platz" />
+            <rect x="654" y="92" width="112" height="112" rx="14" class="platz" />
+          </g>
+          <g id="k9-bild">
+            <svg x="236" y="36" width="130" height="130" viewBox="0 0 200 200"><rect width="200" height="200" fill="#ffffff" /><use href="#flasche" /></svg>
+            <rect x="236" y="36" width="130" height="130" rx="16" fill="none" stroke="#d1d5db" stroke-width="3" />
+            <rect x="244" y="174" width="114" height="26" rx="13" fill="#0b0c0e" />
+            <text x="301" y="193" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#fff;letter-spacing:0.1em">ALT-TEXT</text>
+          </g>
+          <g id="k9-ok" opacity="0"><use href="#ok" transform="translate(770 30)" /></g>
+          <clipPath id="k9-clip"><rect id="k9-cliprect" x="40" y="214" width="0" height="70" /></clipPath>
+          <text x="46" y="268" class="hand" style="font-size:56px" clip-path="url(#k9-clip)" transform="rotate(-3 140 250)">kann helfen</text>
+        </svg>
+      </section>
+
+      <!-- K10 KI hilft: "Und auch hier kann tatsächlich auch Shopify inzwischen mit KI super unterstützen."
+           Und 68,38 / Shopify 69,58 / KI 70,52 / super 70,88 / unterstützen 71,20 -->
+      <section id="k10" class="karte clip" data-start="68.313" data-duration="3.887" data-track-index="1">
+        <div class="kicker">Alt-Text mit KI</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <text x="40" y="44" class="lab" style="font-size:32px">Alt-Text</text>
+          <rect id="k10-feld" x="40" y="66" width="600" height="84" rx="18" fill="#fff" stroke="#b6bec9" stroke-width="3" stroke-dasharray="10 8" />
+          <rect id="k10-feld2" x="40" y="66" width="600" height="84" rx="18" fill="none" stroke="url(#gvd)" stroke-width="5" opacity="0" />
+          <rect class="k10-z" x="70" y="96" width="220" height="24" rx="12" fill="#c5ccd6" opacity="0" />
+          <rect class="k10-z" x="306" y="96" width="140" height="24" rx="12" fill="#c5ccd6" opacity="0" />
+          <rect class="k10-z" x="462" y="96" width="110" height="24" rx="12" fill="#c5ccd6" opacity="0" />
+          <g id="k10-ki" opacity="0"><circle cx="0" cy="0" r="54" fill="url(#gvd)" /><use href="#i-funken" class="ico" transform="translate(-30 -30) scale(2.5)" style="stroke-width:1.7" /></g>
+          <clipPath id="k10-clip"><rect id="k10-cliprect" x="36" y="186" width="0" height="94" /></clipPath>
+          <text x="42" y="254" class="hand gruen" style="font-size:66px" clip-path="url(#k10-clip)" transform="rotate(-3 140 236)">mit KI</text>
+        </svg>
+      </section>
+
+      <!-- K11 KI-Vorschlag: "… dann kann Shopify dir tatsächlich einen passenden Alt-Text vorschlagen, den du einfach übernehmen oder
+           bearbeiten kannst."   vorschlagen 77,32 / übernehmen 78,78 / bearbeiten 79,52 -->
+      <section id="k11" class="karte clip" data-start="76.000" data-duration="4.200" data-track-index="1">
+        <div class="kicker">KI-Vorschlag<span class="demo">SCHEMA</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <svg x="40" y="20" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#ffffff" /><use href="#flasche" /></svg>
+          <rect x="40" y="20" width="200" height="200" rx="20" fill="none" stroke="#d1d5db" stroke-width="3" />
+          <text x="280" y="36" class="klein">ALT-TEXT</text>
+          <rect x="280" y="48" width="500" height="92" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+          <g id="k11-vor" opacity="0">
+            <rect x="280" y="48" width="500" height="92" rx="18" fill="none" stroke="url(#gvd)" stroke-width="5" />
+            <circle cx="320" cy="94" r="22" fill="url(#gvd)" /><use href="#i-funken" class="ico" transform="translate(306 80) scale(1.17)" style="stroke-width:2" />
+            <rect x="358" y="72" width="270" height="18" rx="9" fill="#9aa3af" />
+            <rect x="358" y="102" width="390" height="18" rx="9" fill="#9aa3af" />
+          </g>
+          <g id="k11-c1" opacity="0"><rect x="280" y="172" width="236" height="62" rx="18" fill="url(#gvd)" /><use href="#i-haken" class="ico" transform="translate(298 186) scale(1.4)" style="stroke-width:2.6" /><text x="340" y="213" class="lab">übernehmen</text></g>
+          <g id="k11-c2" opacity="0"><rect x="536" y="172" width="236" height="62" rx="18" class="chip" /><use href="#i-stift" class="ico" transform="translate(556 187) scale(1.3)" style="stroke-width:2.2" /><text x="598" y="213" class="lab">bearbeiten</text></g>
+          <g id="k11-maus" opacity="0"><use href="#maus" /></g>
+        </svg>
+      </section>
+
+      <!-- K12 Schlechter gegen guter Alt-Text: "Aus einem schlechten Text, wie zum Beispiel „Trinkflasche kaufen günstig“, wird dann
+           beispielsweise „Schwarze Edelstahl-Trinkflasche mit Schraubverschluss auf weißem Hintergrund“. Das beschreibt dann tatsächlich
+           auch das Bild, statt einfach nur irgendwelche Keywords aneinanderzureihen."
+           „Trinkflasche 82,14 / kaufen 82,80 / günstig“ 83,24 / wird 84,34 / „Schwarze 85,66 / Edelstahl-Trinkflasche 86,24 / mit 87,32 /
+           Schraubverschluss 87,52 / auf 88,28 / weißem 88,46 / Hintergrund“ 88,78 / beschreibt 90,34 / Bild 91,76 / Keywords 93,22 /
+           aneinanderzureihen 93,74. Wörtlich wie gesprochen (Regie: Material nicht belegt, darum BEISPIEL) -->
+      <section id="k12" class="karte clip" data-start="80.253" data-duration="15.000" data-track-index="1">
+        <div class="kicker">Alt-Text<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <svg x="30" y="16" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#ffffff" /><use href="#flasche" /></svg>
+          <rect x="30" y="16" width="200" height="200" rx="20" fill="none" stroke="#d1d5db" stroke-width="3" />
+          <g id="k12-r1">
+            <text x="262" y="40" class="alt"><tspan class="k12-a">„Trinkflasche </tspan><tspan class="k12-a">kaufen </tspan><tspan class="k12-a">günstig“</tspan></text>
+            <rect id="k12-kw" x="254" y="8" width="440" height="44" rx="10" fill="none" stroke="#e5484d" stroke-width="3" opacity="0" />
+            <text id="k12-kwt" x="704" y="37" class="klein" style="fill:#e5484d;font-size:17px" opacity="0">KEYWORDS</text>
+          </g>
+          <path id="k12-strich1" pathLength="1" d="M256 30 L 668 30" fill="none" stroke="#e5484d" stroke-width="4" stroke-linecap="round" />
+          <g id="k12-x" opacity="0"><use href="#fehler" transform="translate(738 28)" /></g>
+          <text x="262" y="112" class="alt"><tspan class="k12-b">„Schwarze </tspan><tspan class="k12-b">Edelstahl-Trinkflasche</tspan></text>
+          <text x="262" y="154" class="alt"><tspan class="k12-b">mit </tspan><tspan class="k12-b">Schraubverschluss </tspan><tspan class="k12-b">auf</tspan></text>
+          <text x="262" y="196" class="alt"><tspan class="k12-b">weißem </tspan><tspan class="k12-b">Hintergrund“</tspan></text>
+          <g id="k12-ok" opacity="0"><use href="#ok" transform="translate(690 146)" /></g>
+          <path id="k12-l1" pathLength="1" d="M256 102 C 222 104, 192 122, 156 134" fill="none" stroke="#31adec" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1" />
+          <path id="k12-l2" pathLength="1" d="M318 146 C 248 146, 250 62, 152 48" fill="none" stroke="#31adec" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1" />
+          <path id="k12-l3" pathLength="1" d="M256 188 C 240 190, 226 184, 212 174" fill="none" stroke="#31adec" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1" />
+          <clipPath id="k12-clip"><rect id="k12-cliprect" x="26" y="224" width="0" height="64" /></clipPath>
+          <text x="32" y="270" class="hand gruen" style="font-size:46px" clip-path="url(#k12-clip)" transform="rotate(-2 140 256)">beschreibt das Bild</text>
+        </svg>
+      </section>
+
+      <!-- K14 Material und Farbe prüfen: "Denn gerade bei Materialien, Farben oder auch anderen Produkteigenschaften solltest du tatsächlich
+           immer kontrollieren, ob die Beschreibung wirklich zum Bild passt."
+           Materialien 100,42 / Farben 101,32 / Produkteigenschaften 102,46 / kontrollieren 105,04 / passt 107,42 -->
+      <section id="k14" class="karte clip" data-start="99.600" data-duration="8.650" data-track-index="1">
+        <div class="kicker">KI-Vorschlag prüfen<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <svg x="30" y="30" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#ffffff" /><use href="#flasche" /></svg>
+          <rect x="30" y="30" width="200" height="200" rx="20" fill="none" stroke="#d1d5db" stroke-width="3" />
+          <rect id="k14-h2" x="432" y="54" width="174" height="46" rx="10" fill="#ffe7a3" opacity="0" />
+          <rect id="k14-h1" x="260" y="54" width="144" height="46" rx="10" fill="#d9f9ec" opacity="0" />
+          <rect id="k14-h3" x="260" y="146" width="304" height="46" rx="10" fill="#d9f9ec" opacity="0" />
+          <text x="268" y="88" class="alt" style="font-size:32px">„Schwarze Edelstahl-</text>
+          <text x="268" y="134" class="alt" style="font-size:32px">Trinkflasche mit</text>
+          <text x="268" y="180" class="alt" style="font-size:32px">Schraubverschluss …“</text>
+          <g id="k14-q" opacity="0"><use href="#frage" transform="translate(452 26) scale(0.7)" /><text x="472" y="34" class="klein">MATERIAL</text></g>
+          <g id="k14-f" opacity="0"><use href="#ok" transform="translate(282 26) scale(0.7)" /><text x="302" y="34" class="klein">FARBE</text></g>
+          <g id="k14-e" opacity="0"><use href="#ok" transform="translate(282 212) scale(0.7)" /><text x="302" y="220" class="klein">EIGENSCHAFT</text></g>
+          <g id="k14-lupe" opacity="0"><circle cx="0" cy="0" r="40" fill="rgba(255,255,255,0.35)" stroke="#0b0c0e" stroke-width="6" /><path d="M28 28 L 54 54" stroke="#0b0c0e" stroke-width="9" stroke-linecap="round" /></g>
+          <clipPath id="k14-clip"><rect id="k14-cliprect" x="600" y="186" width="0" height="94" /></clipPath>
+          <text x="606" y="256" class="hand" style="font-size:62px" clip-path="url(#k14-clip)" transform="rotate(-4 680 240)">prüfen</text>
+        </svg>
+      </section>
+
+      <!-- K15 KI-Bild mit erfundenem Detail: "Und auch KI-überarbeitete Produktbilder würde ich tatsächlich immer selber überprüfen. Denn wenn
+           die KI auf einmal plötzlich anfängt, Details zu verändern, die einfach dein Produkt tatsächlich in Wirklichkeit gar nicht hat,
+           dann kann es tatsächlich auch immer zu falschen Erwartungen führen."
+           KI-überarbeitete 108,70 / überprüfen 111,98 / Details 114,55 / verändern 115,13 / gar 117,69 / Erwartungen 120,23 -->
+      <section id="k15" class="karte clip" data-start="108.293" data-duration="12.660" data-track-index="1">
+        <div class="kicker">KI-bearbeitetes Bild<span class="demo">SCHEMA</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <text x="70" y="14" class="klein">DEIN PRODUKT</text>
+          <svg x="70" y="24" width="200" height="200" viewBox="0 0 200 200">
+            <g transform="rotate(-4 100 100) scale(1.08) translate(-8 -6)"><use href="#unruhig" /></g>
+            <g transform="rotate(-6 100 120) translate(10 4)"><use href="#flasche" /></g>
+          </svg>
+          <rect x="70" y="24" width="200" height="200" rx="20" fill="none" stroke="#d1d5db" stroke-width="3" />
+          <g id="k15-ki">
+            <text x="450" y="14" class="klein">KI-BILD</text>
+            <svg x="450" y="24" width="200" height="200" viewBox="0 0 200 200">
+              <rect width="200" height="200" fill="url(#studio)" />
+              <path id="k15-schlaufe" pathLength="1" d="M90 30 C 86 -2, 114 -2, 110 30" fill="none" stroke="#3b4047" stroke-width="8" stroke-linecap="round" stroke-dasharray="1" />
+              <use href="#flasche" />
+            </svg>
+            <rect x="450" y="24" width="200" height="200" rx="20" fill="none" stroke="#d1d5db" stroke-width="3" />
+          </g>
+          <circle id="k15-kreis" cx="550" cy="54" r="34" fill="none" stroke="#e5484d" stroke-width="4" stroke-dasharray="8 6" opacity="0" />
+          <g id="k15-ne" opacity="0"><circle cx="360" cy="124" r="32" fill="#e5484d" /><path d="M344 116 H 376 M 344 132 H 376 M 368 104 L 352 144" stroke="#fff" stroke-width="5" stroke-linecap="round" /></g>
+          <g id="k15-lupe" opacity="0"><circle cx="0" cy="0" r="40" fill="rgba(255,255,255,0.3)" stroke="#0b0c0e" stroke-width="6" /><path d="M28 28 L 54 54" stroke="#0b0c0e" stroke-width="9" stroke-linecap="round" /></g>
+          <clipPath id="k15-clip"><rect id="k15-cliprect" x="230" y="222" width="0" height="64" /></clipPath>
+          <text x="236" y="272" class="hand rot" style="font-size:50px" clip-path="url(#k15-clip)" transform="rotate(-2 360 258)">falsche Erwartung</text>
+        </svg>
+      </section>
+
+      <!-- K17 Wichtigste Seiten zuerst: "Deswegen mein persönlicher Tipp an dich: Fang tatsächlich mit den wichtigsten Produktseiten an,
+           sorge einfach für einheitliche, aussagekräftige Bilder und ergänze einfach kurze und korrekte Alt-Texte."
+           Deswegen 121,04 / wichtigsten 124,04 / Produktseiten 124,50 / einheitliche 126,50 / aussagekräftige 127,18 / kurze 129,82 /
+           korrekte 130,50 / Alt-Texte 131,06 -->
+      <section id="k17" class="karte clip" data-start="120.973" data-duration="10.580" data-track-index="1">
+        <div class="kicker">Mein Tipp<span class="demo">DEMO</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k17-grid"></g>
+          <g id="k17-tags"></g>
+          <clipPath id="k17-clip"><rect id="k17-cliprect" x="26" y="208" width="0" height="80" /></clipPath>
+          <text x="32" y="266" class="hand gruen" style="font-size:56px" clip-path="url(#k17-clip)" transform="rotate(-2 140 250)">zuerst</text>
+        </svg>
+      </section>
+
+      <!-- K18 Dreischritt (bleibt bis zum Schluss): "Und erst, wenn der Ablauf tatsächlich sauber funktioniert, dann würde ich mir echt
+           überlegen, welche Arbeitsschritte du dann tatsächlich beim größeren Sortiment weiter automatisieren kannst und dafür eben dann auch
+           KI benutzen kannst. Du brauchst aber dafür nicht immer zwangsläufig direkt eine zusätzliche KI-App. Aber einiges geht eben auch
+           schon direkt mit den Shopify-Bordmitteln. Wenn du weitere solche Tipps … haben möchtest, dann folg mir hier gerne …"
+           Und 131,66 / Ablauf 132,40 / sauber 133,22 / funktioniert 133,52 / größeren 137,70 / automatisieren 139,26 / KI 141,46 /
+           Du 142,98 / zusätzliche 145,38 / KI-App 145,98 / Shopify-Bordmitteln 148,68 / Wenn 150,76 / Tipps 151,59 / folg 153,93 -->
+      <section id="k18" class="karte clip" data-start="131.593" data-duration="26.607" data-track-index="1">
+        <div class="kicker">Mein Ablauf</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k18-s1" opacity="0"><rect x="10" y="0" width="248" height="96" rx="20" class="rahmen" /><circle cx="40" cy="48" r="16" fill="#0b0c0e" /><text x="40" y="55" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#fff">1</text><text x="64" y="42" class="lab" style="font-size:22px">Bilder</text><text x="64" y="70" class="lab" style="font-size:22px">vereinheitlichen</text></g>
+          <g id="k18-s2" opacity="0"><rect x="286" y="0" width="248" height="96" rx="20" class="rahmen" /><circle cx="316" cy="48" r="16" fill="#0b0c0e" /><text x="316" y="55" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#fff">2</text><text x="340" y="42" class="lab" style="font-size:22px">Alt-Text</text><text x="340" y="70" class="lab" style="font-size:22px">prüfen</text></g>
+          <g id="k18-s3" opacity="0"><rect x="562" y="0" width="248" height="96" rx="20" class="rahmen" /><rect id="k18-s3a" x="562" y="0" width="248" height="96" rx="20" fill="none" stroke="url(#gvd)" stroke-width="5" opacity="0" /><circle cx="592" cy="48" r="16" fill="#0b0c0e" /><text x="592" y="55" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#fff">3</text><text x="616" y="42" class="lab" style="font-size:22px">erst dann</text><text x="616" y="70" class="lab" style="font-size:22px">skalieren</text></g>
+          <path id="k18-p1" pathLength="1" d="M260 48 H 282 M 274 40 L 284 48 L 274 56" class="pfeil" style="stroke:#0b0c0e;stroke-width:3.5" />
+          <path id="k18-p2" pathLength="1" d="M536 48 H 558 M 550 40 L 560 48 L 550 56" class="pfeil" style="stroke:#0b0c0e;stroke-width:3.5" />
+          <g id="k18-ok1" opacity="0"><use href="#ok" transform="translate(246 6) scale(0.8)" /></g>
+          <g id="k18-ok2" opacity="0"><use href="#ok" transform="translate(522 6) scale(0.8)" /></g>
+          <!-- Phase A: Sortiment wächst, KI -->
+          <g id="k18-a"><g id="k18-grid"></g>
+            <g id="k18-ki" opacity="0"><circle cx="700" cy="196" r="56" fill="url(#gvd)" /><use href="#i-funken" class="ico" transform="translate(670 166) scale(2.5)" style="stroke-width:1.7" /><text x="700" y="276" text-anchor="middle" class="lab" style="font-size:24px">KI</text></g>
+          </g>
+          <!-- Phase B: keine zusätzliche KI-App nötig, Shopify-Bordmittel -->
+          <g id="k18-b" opacity="0">
+            <g id="k18-app" opacity="0"><rect x="40" y="128" width="300" height="128" rx="22" fill="#fff" stroke="#b6bec9" stroke-width="3" stroke-dasharray="10 8" /><use href="#i-apps" class="ico" transform="translate(64 162) scale(2.5)" style="stroke:#6b7280;stroke-width:1.8" /><text x="138" y="190" class="lab grau" style="font-size:26px">+ zusätzliche</text><text x="138" y="224" class="lab grau" style="font-size:26px">KI-App</text></g>
+            <g id="k18-appx" opacity="0"><use href="#nein" transform="translate(334 136)" /></g>
+            <g id="k18-werk" opacity="0"><rect x="420" y="128" width="370" height="128" rx="22" class="rahmen" /><circle cx="482" cy="192" r="40" fill="url(#gvd)" /><use href="#i-werkzeug" class="ico" transform="translate(458 168) scale(2)" style="stroke-width:2" /><text x="540" y="186" class="lab" style="font-size:26px">Shopify-</text><text x="540" y="220" class="lab" style="font-size:26px">Bordmittel</text></g>
+            <g id="k18-werkok" opacity="0"><use href="#ok" transform="translate(772 136)" /></g>
+          </g>
+          <!-- Phase C: Folgen-Plus (Pauls Vorgabe 2026-10-25: nur das Folgen-Symbol als kurze Animation) -->
+          <g id="k18-c" opacity="0">
+            <circle cx="330" cy="196" r="50" fill="#e5e7eb" />
+            <use href="#i-person" class="ico" transform="translate(304 170) scale(2.2)" style="stroke:#6b7280;stroke-width:2" />
+            <circle id="k18-ring" cx="330" cy="196" r="58" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+            <circle id="k18-plusbg" cx="368" cy="232" r="22" fill="#0b0c0e" stroke="#fff" stroke-width="3.5" />
+            <path id="k18-plus" d="M368 221 V 243 M 357 232 H 379" stroke="#fff" stroke-width="4" stroke-linecap="round" />
+            <path id="k18-haken" d="M358 232 l7 7 l12 -13" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+            <text id="k18-f1" x="412" y="212" class="lab" style="font-size:44px">Folgen</text>
+            <text id="k18-f2" x="412" y="212" class="lab" style="font-size:44px;fill:url(#gv)" opacity="0">Folgen</text>
+            <g id="k18-maus" opacity="0"><use href="#maus" /></g>
+          </g>
+        </svg>
+      </section>
+    </div>
+
+    <script>
+      // Kacheln mit gezeichneten Beispiel-Flaschen (deterministisch, vor der Timeline gebaut)
+      const BG = {
+        hell: '<rect width="200" height="200" fill="#eef1f4" />',
+        weiss: '<rect width="200" height="200" fill="#ffffff" />',
+        pfirsich: '<rect width="200" height="200" fill="#f7d9c4" />',
+        blau: '<rect width="200" height="200" fill="#cfe2f5" />',
+        dunkel: '<rect width="200" height="200" fill="#3a3f46" />',
+        beige: '<rect width="200" height="200" fill="#eae1c8" />',
+        gruen: '<rect width="200" height="200" fill="#d3ebd6" />',
+        streifen: '<rect width="200" height="200" fill="#f0e6d8" /><path d="M-20 40 L 60 -40 M -20 100 L 100 -20 M -20 160 L 160 -20 M 20 200 L 200 20 M 80 200 L 200 80 M 140 200 L 200 140" stroke="#d9c7ab" stroke-width="14" />',
+        unruhig: '<g transform="rotate(-4 100 100) scale(1.08) translate(-8 -6)"><use href="#unruhig" /></g>',
+      };
+      function kachel(id, x, y, s, bg, lage = "", rx = 18) {
+        return `<g id="${id}" class="kachel"><svg x="${x}" y="${y}" width="${s}" height="${s}" viewBox="0 0 200 200">` +
+          `<g class="hg">${BG[bg]}</g><g class="hg-neu" opacity="0">${BG.hell}</g>` +
+          `<g transform="${lage}"><use href="#flasche" /></g></svg>` +
+          `<rect x="${x}" y="${y}" width="${s}" height="${s}" rx="${rx}" fill="none" stroke="#d1d5db" stroke-width="2.5" /></g>`;
+      }
+      const LAGEN = ["rotate(-8 100 120) translate(18 10)", "translate(-14 12) scale(0.9)", "rotate(5 100 120) translate(-10 -4) scale(1.1)", "translate(22 18) scale(0.82)", ""];
+      const MIX = ["unruhig", "pfirsich", "dunkel", "blau", "streifen", "beige", "gruen", "unruhig", "pfirsich", "dunkel"];
+      // K2: 2 x 5 uneinheitliche Produktbilder
+      let h = "";
+      for (let i = 0; i < 10; i++) h += kachel(`k2-p${i}`, 30 + (i % 5) * 112, (i < 5 ? 0 : 112), 100, MIX[i], LAGEN[i % 5]);
+      document.querySelector("#k2-grid").innerHTML = h;
+      // K3: Stapel Bilder (Arbeit)
+      h = "";
+      for (let i = 0; i < 6; i++) h += kachel(`k3-p${i}`, 40 + i * 16, 10 + i * 12, 150, MIX[i], LAGEN[i % 5]);
+      document.querySelector("#k3-stapel").innerHTML = h;
+      // K6: 4 uneinheitliche Bilder, werden einheitlich
+      h = "";
+      for (let i = 0; i < 4; i++) h += kachel(`k6-p${i}`, 40 + i * 166, 0, 150, ["unruhig", "pfirsich", "dunkel", "streifen"][i], LAGEN[i]);
+      document.querySelector("#k6-grid").innerHTML = h;
+      // K17: 5 Produktseiten, die ersten drei zuerst
+      h = "";
+      for (let i = 0; i < 5; i++) h += kachel(`k17-p${i}`, 30 + i * 150, 0, 132, ["unruhig", "dunkel", "pfirsich", "blau", "streifen"][i], LAGEN[i]);
+      for (let i = 0; i < 3; i++) h += `<g id="k17-s${i}" opacity="0"><circle cx="${30 + i * 150 + 120}" cy="10" r="20" fill="url(#gvd)" /><use href="#i-stern" class="ico" transform="translate(${30 + i * 150 + 108} -2) scale(1)" style="stroke-width:2.2" /></g>`;
+      document.querySelector("#k17-grid").innerHTML = h;
+      h = "";
+      for (let i = 0; i < 3; i++) h += `<g id="k17-t${i}" opacity="0"><rect x="${30 + i * 150}" y="144" width="132" height="40" rx="20" fill="#0b0c0e" /><text x="${30 + i * 150 + 54}" y="171" text-anchor="middle" style="font-size:18px;font-weight:800;fill:#fff;letter-spacing:0.08em">ALT</text><use href="#i-haken" class="ico" transform="translate(${30 + i * 150 + 84} 152) scale(1)" style="stroke:#00e090;stroke-width:3" /></g>`;
+      document.querySelector("#k17-tags").innerHTML = h;
+      // K18: kleines Sortiment, wächst von 3 auf 12
+      h = "";
+      for (let i = 0; i < 12; i++) h += kachel(`k18-g${i}`, 40 + (i % 6) * 92, 122 + Math.floor(i / 6) * 80, 72, "hell", "", 12);
+      document.querySelector("#k18-grid").innerHTML = h;
+
+      gsap.set("#k18 .kachel", { opacity: 0 });
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // Zeiten sind Sekunden im geschnittenen Video, schon genau wie Remotion (Stücke auf ganze Frames gerundet) und als Cues.
+
+      // Karte rein mit Kicker, raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const auf = (sel, t, d = 0.15) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "none" }, t);
+      const weg = (sel, t, d = 0.2) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      function ring(sel, t) {
+        tl.set(sel, { opacity: 0.95, scale: 1, transformOrigin: "50% 50%" }, t);
+        tl.to(sel, { opacity: 0, scale: 1.08, duration: 0.8, ease: "power2.out" }, t + 0.02);
+      }
+      // Hintergrund einer Kachel wird hell und einheitlich
+      const einheitlich = (sel, t) => tl.to(sel + " .hg-neu", { opacity: 1, duration: 0.35, ease: "power2.inOut" }, t);
+      gsap.set("#k5-pfeil, #k6-strich, #k8-pfeil, #k12-strich1, #k12-l1, #k12-l2, #k12-l3, #k15-schlaufe, #k18-p1, #k18-p2", { strokeDasharray: 1, strokeDashoffset: 1 });
+
+      // K1 Stoppuhr läuft, zwei offene Aufgaben, "keine Zeit"
+      karte("#k1", 0.773, 5.70);
+      tl.fromTo("#k1-zeiger", { rotation: 0, svgOrigin: "150 140" }, { rotation: 1440, svgOrigin: "150 140", duration: 4.9, ease: "none" }, 0.773);
+      schreibe("#k1-cliprect", 330, 1.153, 0.5);
+      ein("#k1-r1", 2.003);
+      ein("#k1-r2", 3.303);
+
+      // K2 Demo-Shop: viele Flaschenbilder, jedes anders; Viele Produkte = viel Bildpflege; hochgeladen; keine Zeit
+      karte("#k2", 5.773, 16.25);
+      tl.fromTo("#k2 .kachel", { opacity: 0, scale: 0.86, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.06 }, 5.80);
+      ein("#k2-satz", 10.173, 0.35);
+      pop("#k2-up", 12.063);
+      pop("#k2-uhr", 13.493);
+      badge("#k2-w1", 14.733); badge("#k2-w2", 14.83);
+
+      // K3 Stapel Arbeit, KI-Funktionen direkt in Shopify, Bilder wandern zur KI, Arbeit schrumpft
+      karte("#k3", 16.293, 26.75);
+      pop("#k3-ki", 20.663, 0.35);
+      ein("#k3-t1", 20.70); ein("#k3-t2", 21.593);
+      for (let i = 5; i >= 3; i--) {
+        const t = 23.563 + (5 - i) * 0.14;
+        tl.to(`#k3-p${i}`, { x: 445 - i * 16, y: -1 - i * 12, scale: 0.3, svgOrigin: `${115 + i * 16} ${85 + i * 12}`, duration: 0.45, ease: "power2.in" }, t);
+        tl.to(`#k3-p${i}`, { opacity: 0, duration: 0.12 }, t + 0.36);
+      }
+      tl.to("#k3-balken", { attr: { width: 105 }, duration: 0.7, ease: "power2.inOut" }, 23.70);
+      schreibe("#k3-cliprect", 330, 23.95, 0.55);
+
+      // K4 Produktbild einer Trinkflasche, hochgeladen; Hintergrund unruhig: nicht professionell
+      karte("#k4", 26.823, 34.10);
+      pop("#k4-fl", 27.373, 0.35);
+      ein("#k4-t1", 29.483);
+      badge("#k4-up", 30.063);
+      auf("#k4-unruhig", 31.373, 0.35);
+      ein("#k4-hg", 31.373);
+      tl.to("#k4-t1, #k4-up", { opacity: 0, duration: 0.2 }, 31.30);
+      badge("#k4-x", 32.403);
+      schreibe("#k4-cliprect", 470, 32.60, 0.6);
+
+      // (34,20-39,95 Quelle groß in Remotion: Shopify Help Center "Mediengenerierung im Datei-Editor")
+
+      // K5 Vorher/Nachher: derselbe Flaschenkörper, nur der Hintergrund wird einfarbig
+      karte("#k5", 39.80, 44.60);
+      zeichne("#k5-pfeil", 40.0, 0.35);
+      tl.fromTo("#k5-wrect", { attr: { width: 0 } }, { attr: { width: 200 }, duration: 0.6, ease: "power2.inOut" }, 40.523);
+      schreibe("#k5-cliprect", 160, 40.95, 0.45);
+      badge("#k5-ok", 41.413);
+
+      // K6 vier uneinheitliche Bilder werden einheitlich; ohne Photoshop oder Canva
+      karte("#k6", 44.673, 49.66);
+      for (let i = 0; i < 4; i++) einheitlich(`#k6-p${i}`, 45.293 + i * 0.08);
+      schreibe("#k6-cliprect", 270, 45.45, 0.5);
+      pop("#k6-c1", 47.973); pop("#k6-c2", 48.633);
+      zeichne("#k6-strich", 48.933, 0.4);
+      tl.to("#k6-c1, #k6-c2", { opacity: 0.45, duration: 0.3 }, 49.10);
+
+      // K7 leeres Alt-Text-Feld, Cursor blinkt, vergessen
+      karte("#k7", 49.693, 54.70);
+      for (let i = 0; i < 6; i++) { tl.set("#k7-cursor", { opacity: 0 }, 50.2 + i * 0.8); tl.set("#k7-cursor", { opacity: 1 }, 50.6 + i * 0.8); }
+      badge("#k7-frage", 52.233);
+      auf("#k7-leer", 52.30, 0.2);
+      auf("#k7-lab2", 54.043, 0.2);
+
+      // K8 Bild → Worte
+      karte("#k8", 54.733, 59.35);
+      zeichne("#k8-pfeil", 56.293, 0.35);
+      document.querySelectorAll("#k8 .k8-z").forEach((el, i) => {
+        const w = +el.getAttribute("width");
+        tl.fromTo(el, { attr: { width: 0 } }, { attr: { width: w }, duration: 0.45, ease: "power1.out" }, 56.45 + i * 0.5);
+      });
+      pop("#k8-auge", 56.40);
+      schreibe("#k8-cliprect", 420, 58.433, 0.5);
+
+      // (59,40-63,45 Quelle groß: Shopify Help Center "Alt-Text zu Medien hinzufügen")
+
+      // K9 Suchmaschine ordnet das Bild mit Alt-Text ein; "kann helfen"
+      karte("#k9", 63.25, 68.25);
+      pop("#k9-lupe", 64.973, 0.35);
+      schreibe("#k9-cliprect", 280, 65.453, 0.5);
+      tl.to("#k9-bild", { x: 279, y: 47, scale: 0.86, svgOrigin: "301 101", duration: 0.55, ease: "power2.inOut" }, 67.053);
+      badge("#k9-ok", 67.55);
+
+      // K10 KI hilft beim Alt-Text
+      karte("#k10", 68.313, 72.20);
+      tl.fromTo("#k10-ki", { opacity: 0, x: 760, y: 60 }, { opacity: 1, x: 700, y: 108, duration: 0.4, ease: "power2.out" }, 70.453);
+      auf("#k10-feld2", 70.65, 0.2);
+      tl.fromTo("#k10 .k10-z", { opacity: 0 }, { opacity: 1, duration: 0.2, stagger: 0.18 }, 70.70);
+      schreibe("#k10-cliprect", 230, 70.813, 0.45);
+
+      // (72,30-76,20 Quelle groß: Shopify Help Center "Den Medien-Editor verwenden", Alt-Text-Vorschläge)
+
+      // K11 Vorschlag erscheint; übernehmen oder bearbeiten
+      karte("#k11", 76.0, 80.20);
+      auf("#k11-vor", 77.253, 0.3);
+      pop("#k11-c1", 78.713);
+      tl.fromTo("#k11-maus", { opacity: 0, x: 470, y: 260 }, { opacity: 1, x: 420, y: 214, duration: 0.3, ease: "power2.out" }, 78.55);
+      pop("#k11-c2", 79.453);
+      tl.to("#k11-maus", { x: 680, y: 214, duration: 0.4, ease: "power2.inOut" }, 79.40);
+
+      // K12 schlechter Text (Keywords) ✕, guter Text ✓, der gute beschreibt das Bild
+      karte("#k12", 80.253, 95.25);
+      const a = document.querySelectorAll("#k12 .k12-a");
+      [82.073, 82.733, 83.173].forEach((t, i) => tl.fromTo(a[i], { opacity: 0 }, { opacity: 1, duration: 0.12 }, t));
+      gsap.set("#k12 .k12-a, #k12 .k12-b", { opacity: 0 });
+      zeichne("#k12-strich1", 84.273, 0.35);
+      badge("#k12-x", 84.273);
+      tl.to("#k12-r1", { opacity: 0.45, duration: 0.3 }, 84.60);
+      const b = document.querySelectorAll("#k12 .k12-b");
+      [85.593, 86.173, 87.253, 87.453, 88.213, 88.393, 88.713].forEach((t, i) => tl.fromTo(b[i], { opacity: 0 }, { opacity: 1, duration: 0.12 }, t));
+      badge("#k12-ok", 89.00);
+      zeichne("#k12-l1", 90.273, 0.4);
+      zeichne("#k12-l2", 90.75, 0.4);
+      zeichne("#k12-l3", 91.25, 0.35);
+      schreibe("#k12-cliprect", 400, 91.693, 0.55);
+      tl.to("#k12-r1", { opacity: 1, duration: 0.25 }, 93.153);
+      auf("#k12-kw", 93.153, 0.2); weg("#k12-x", 93.15, 0.15); auf("#k12-kwt", 93.20, 0.2);
+
+      // (95,30-99,75 Quelle groß: Medien-Editor, "überprüfe ihn")
+
+      // K14 Material? Farbe ✓ Eigenschaft ✓ – prüfen
+      karte("#k14", 99.60, 108.25);
+      auf("#k14-h2", 100.353, 0.2); badge("#k14-q", 100.353);
+      auf("#k14-h1", 101.253, 0.2); badge("#k14-f", 101.253);
+      auf("#k14-h3", 102.393, 0.2); badge("#k14-e", 102.393);
+      tl.fromTo("#k14-lupe", { opacity: 0, x: 200, y: 200 }, { opacity: 1, x: 150, y: 150, duration: 0.3, ease: "power2.out" }, 104.97);
+      tl.to("#k14-lupe", { x: 112, y: 96, duration: 0.6, ease: "power2.inOut" }, 105.25);
+      schreibe("#k14-cliprect", 210, 105.0, 0.45);
+      ring("#k14-h2", 107.353);
+      tl.set("#k14-h2", { opacity: 1 }, 108.2);
+
+      // K15 Produkt gegen KI-Bild: erfundenes Detail (Schlaufe), ≠, falsche Erwartung
+      karte("#k15", 108.293, 120.95);
+      tl.fromTo("#k15-ki", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, 108.633);
+      tl.fromTo("#k15-lupe", { opacity: 0, x: 700, y: 230 }, { opacity: 1, x: 640, y: 190, duration: 0.3, ease: "power2.out" }, 111.913);
+      tl.to("#k15-lupe", { x: 560, y: 110, duration: 0.6, ease: "power2.inOut" }, 112.2);
+      tl.to("#k15-lupe", { opacity: 0, duration: 0.25 }, 113.6);
+      zeichne("#k15-schlaufe", 114.483, 0.6);
+      auf("#k15-kreis", 115.063, 0.2);
+      badge("#k15-ne", 117.623);
+      schreibe("#k15-cliprect", 360, 120.163, 0.55);
+
+
+      // K17 die wichtigsten drei zuerst; einheitliche Bilder; Alt-Text ✓
+      karte("#k17", 120.973, 131.55);
+      tl.fromTo("#k17 .kachel", { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.07 }, 121.0);
+      tl.to("#k17-p3, #k17-p4", { opacity: 0.3, duration: 0.3 }, 124.433);
+      for (let i = 0; i < 3; i++) badge(`#k17-s${i}`, 124.433 + i * 0.1);
+      schreibe("#k17-cliprect", 200, 124.50, 0.45);
+      for (let i = 0; i < 3; i++) einheitlich(`#k17-p${i}`, 126.433 + i * 0.1);
+      for (let i = 0; i < 3; i++) ein(`#k17-t${i}`, 129.753 + i * 0.35);
+
+      // K18 Dreischritt; Sortiment wächst, KI; keine Extra-App, Bordmittel; Folgen-Plus
+      karte("#k18", 131.593);
+      ein("#k18-s1", 131.62); ein("#k18-s2", 131.76);
+      zeichne("#k18-p1", 132.333, 0.3);
+      badge("#k18-ok1", 133.153); badge("#k18-ok2", 133.453);
+      zeichne("#k18-p2", 137.40, 0.3);
+      ein("#k18-s3", 137.633); auf("#k18-s3a", 137.75, 0.2);
+      tl.fromTo("#k18-g0, #k18-g1, #k18-g2", { opacity: 0, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.08 }, 137.70);
+      tl.fromTo("#k18-g3, #k18-g4, #k18-g5, #k18-g6, #k18-g7, #k18-g8, #k18-g9, #k18-g10, #k18-g11", { opacity: 0, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.06 }, 139.193);
+      pop("#k18-ki", 141.393, 0.35);
+      weg("#k18-a", 142.75, 0.25);
+      auf("#k18-b", 142.95, 0.01);
+      ein("#k18-app", 142.95); badge("#k18-appx", 145.913);
+      tl.to("#k18-app", { opacity: 0.5, duration: 0.3 }, 146.0);
+      ein("#k18-werk", 146.70); badge("#k18-werkok", 148.613);
+      weg("#k18-b", 150.45, 0.25);
+      auf("#k18-c", 150.693, 0.3);
+      tl.set("#k18-ring", { opacity: 0.9, scale: 1, transformOrigin: "50% 50%" }, 151.523);
+      tl.to("#k18-ring", { opacity: 0, scale: 1.4, duration: 0.7, ease: "power2.out" }, 151.54);
+      tl.fromTo("#k18-maus", { opacity: 0, x: 470, y: 280 }, { opacity: 1, x: 450, y: 270, duration: 0.15, ease: "power2.out" }, 153.30);
+      tl.to("#k18-maus", { x: 372, y: 236, duration: 0.45, ease: "power2.inOut" }, 153.42);
+      tl.to("#k18-maus", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 153.84);
+      tl.to("#k18-maus", { scale: 1, duration: 0.15, ease: "power2.out" }, 153.92);
+      tl.to("#k18-plusbg", { attr: { fill: "#00d088" }, duration: 0.15 }, 153.863);
+      tl.to("#k18-plus", { opacity: 0, duration: 0.12 }, 153.863);
+      tl.to("#k18-haken", { opacity: 1, duration: 0.15 }, 153.90);
+      tl.to("#k18-f2", { opacity: 1, duration: 0.2 }, 153.90);
+      tl.to("#k18-f1", { opacity: 0, duration: 0.2 }, 153.90);
+      tl.to("#k18-maus", { opacity: 0, duration: 0.3 }, 154.6);
+
+      tl.seek(0);
+      window.__timelines["alttexte-skizzen"] = tl;
+    </script>
+  </body>
+</html>

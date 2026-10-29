@@ -1,0 +1,475 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md Visuelle Metaphern, freigegeben 2026-10-26, Vorlagen P04, S02, S03) und Quellen-Fenster (Quelle groß, Pauls Regel 2026-10-28) für S05 · Produktbilder und Alt-Texte mit KI. Sekunden im geschnittenen Video (cut.json, 158,20 s), genau wie Remotion sie rechnet, schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel, tick (0,10) auf ausgewählten Zuständen, klick (0,12) auf jeder Quelle und dem Plus, pop auf KI und dem ? am leeren Alt-Text-Feld, success auf einfarbig, gutem Alt-Text und dem sauberen Ablauf. Gebaut in hyperframes/alttexte-skizzen/index.html; Quellen in Video.tsx (QUELLEN). Die Flaschen sind gezeichnete Beispiele (DEMO/BEISPIEL/SCHEMA).",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "keine (Zeit)",
+   "text": "Stoppuhr läuft, zwei offene Aufgaben Alt-Texte pflegen / Bilder optimieren; handschriftlich keine Zeit",
+   "start": 0.773,
+   "ende": 5.7,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 0.773,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 3.303,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "viele (Produkte)",
+   "text": "Demo-Shop Trinkflaschen (DEMO): zehn uneinheitliche Flaschenbilder; Schlusszeile wörtlich aus dem Briefing Viele Produkte = viel Bildpflege; hochgeladen; Uhr; zwei unruhige Bilder !",
+   "start": 5.773,
+   "ende": 16.25,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.773,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 10.173,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 12.063,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Da (habe ich)",
+   "text": "Stapel Bildpflege mit Balken Arbeit; KI-Funktionen direkt in Shopify; drei Bilder wandern zur KI, der Balken schrumpft; handschriftlich weniger Arbeit",
+   "start": 16.293,
+   "ende": 26.75,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 16.293,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 20.663,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 23.95,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Shop (Trinkflaschen)",
+   "text": "Beispiel Trinkflaschen (DEMO): gezeichnete Flasche als Produktbild, hochgeladen ✓, unruhiger Hintergrund, ✕ nicht professionell",
+   "start": 26.823,
+   "ende": 34.1,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 26.823,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 30.063,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 32.403,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Im (Shopify Medien-Editor)",
+   "text": "Quelle groß: Shopify Help Center Mediengenerierung im Datei-Editor, Kopf mit Abo-Anforderung (34,20-36,95) und Farbhintergrund (36,95-39,95)",
+   "start": 34.2,
+   "ende": 39.95,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 34.2,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 36.95,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "einfarbigen",
+   "text": "Vorher/Nachher (DEMO): dieselbe Flasche, nur der Hintergrund wird einfarbig; ✓ ersetzen; handschriftlich einfarbig",
+   "start": 39.8,
+   "ende": 44.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 39.8,
+     "volume": 0.12
+    },
+    {
+     "datei": "success.mp3",
+     "at": 41.413,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Produktbilder (einheitlich)",
+   "text": "vier uneinheitliche Bilder werden einheitlich; Photoshop und Canva gestrichen; handschriftlich einheitlich",
+   "start": 44.673,
+   "ende": 49.66,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 44.673,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 45.293,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 48.933,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Aber (jetzt kommt)",
+   "text": "leeres Alt-Text-Feld, Cursor blinkt, ? auf vergessen",
+   "start": 49.693,
+   "ende": 54.7,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 49.693,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 52.233,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Und (kurz erklärt)",
+   "text": "Bild → Worte: Pfeil vom Flaschenbild zu einer Beschreibung, Auge; handschriftlich das Bild in Worten",
+   "start": 54.733,
+   "ende": 59.35,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 54.733,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.293,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "Also (Screenreader)",
+   "text": "Quelle groß: Shopify Help Center Alt-Text zu Medien hinzufügen (Alt-Text beschreibt ein Medienelement; unterstützende Technologien, Sehbehinderung)",
+   "start": 59.4,
+   "ende": 63.45,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 59.4,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Suchmaschinen",
+   "text": "Lupe, Bild mit Alt-Text wandert in den Ordner Trinkflaschen; handschriftlich kann helfen (keine SEO-Garantie)",
+   "start": 63.25,
+   "ende": 68.25,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 63.25,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 64.973,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 67.55,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Und (auch hier)",
+   "text": "Alt-Text-Feld, KI-Funken kommt, Feld füllt sich; handschriftlich mit KI",
+   "start": 68.313,
+   "ende": 72.2,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 68.313,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 70.453,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "wort": "Wenn (Medien-Editor)",
+   "text": "Quelle groß: Shopify Help Center Den Medien-Editor verwenden, Alt-Text hinzufügen oder bearbeiten (KI-Vorschläge annehmen, bearbeiten oder ersetzen)",
+   "start": 72.3,
+   "ende": 76.2,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 72.3,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "vorschlagen",
+   "text": "Schema: KI-Vorschlag im Alt-Text-Feld; übernehmen ✓ / bearbeiten ✎ mit Mauszeiger (SCHEMA)",
+   "start": 76,
+   "ende": 80.2,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 76,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 78.713,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 79.453,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Aus (einem schlechten Text)",
+   "text": "Alt-Text BEISPIEL wörtlich wie gesprochen: „Trinkflasche kaufen günstig“ ✕, „Schwarze Edelstahl-Trinkflasche mit Schraubverschluss auf weißem Hintergrund“ ✓ Wort für Wort; Linien zu Flasche, Verschluss, Hintergrund; handschriftlich beschreibt das Bild; Keywords markiert",
+   "start": 80.253,
+   "ende": 95.25,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 80.253,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 84.273,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 89,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 90.273,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 93.153,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q4",
+   "wort": "Wichtig (nicht blind)",
+   "text": "Quelle groß: Medien-Editor, Wenn ein Alt-Text vorgeschlagen wird, überprüfe ihn …",
+   "start": 95.3,
+   "ende": 99.75,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 95.3,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k14",
+   "wort": "Materialien / Farben / Produkteigenschaften",
+   "text": "BEISPIEL: Edelstahl ? Material, Schwarze ✓ Farbe, Schraubverschluss ✓ Eigenschaft; Lupe; handschriftlich prüfen",
+   "start": 99.6,
+   "ende": 108.25,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 99.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 100.353,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 101.253,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 102.393,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 105,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k15",
+   "wort": "KI-überarbeitete / Details / Erwartungen",
+   "text": "SCHEMA: dein Produkt gegen KI-Bild, Lupe, erfundene Schlaufe am Verschluss rot umkreist, ≠, handschriftlich falsche Erwartung",
+   "start": 108.293,
+   "ende": 120.95,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 108.293,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 111.913,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 115.063,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 117.623,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k17",
+   "wort": "Deswegen (Tipp)",
+   "text": "Kicker MEIN TIPP; fünf Produktseiten (DEMO), die wichtigsten drei mit Stern, handschriftlich zuerst; Bilder einheitlich; Alt-Text ✓",
+   "start": 120.973,
+   "ende": 131.55,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 120.973,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 124.433,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 126.433,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 129.753,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k18",
+   "wort": "Und (erst wenn)",
+   "text": "Dreischritt Bilder vereinheitlichen → Alt-Text prüfen → erst dann skalieren (bleibt bis zum Schluss): ✓ 1 und 2 auf sauber funktioniert, 3 auf größeren Sortiment, Sortiment wächst, KI; zusätzliche KI-App ✕, Shopify-Bordmittel ✓; Folgen-Plus auf folg",
+   "start": 131.593,
+   "ende": 158.2,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 131.593,
+     "volume": 0.12
+    },
+    {
+     "datei": "success.mp3",
+     "at": 133.453,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 137.633,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 141.393,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 145.913,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 148.613,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 153.863,
+     "volume": 0.12
+    }
+   ]
+  }
+ ]
+}

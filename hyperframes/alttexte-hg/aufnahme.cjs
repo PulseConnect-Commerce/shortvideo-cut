@@ -29,7 +29,6 @@ const ZIELE = {
     marken: [
       'Alt-Text (Alternativtext) beschreibt ein Medienelement',
       'Er wird auch von unterstützenden Technologien verwendet, um Kund:innen mit Sehbehinderung ein Bild zu beschreiben.',
-      'Halte deinen Alt-Text kurz und beschreibend.',
     ],
     anker: ['Alt-Text zu Medien hinzufügen'],
   },
