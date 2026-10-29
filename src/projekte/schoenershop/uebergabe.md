@@ -1,6 +1,6 @@
 # Übergabekarte: P06 · Schöner Shop, aber wenig Verkäufe
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** für So 15.11.2026 19:00 Europe/Berlin (Pauls Vorgabe 27.10.: selbst nach Kalender einplanen), Metricool TikTok / Instagram / YouTube 410362616 / 410362996 / 410363040 (uuids -1686619579964438375 / 149511357253830284 / 6857993929058569206); Drive final 1fDvFASQrhJ-FRHJSc5sgW93MOLSSkJ3H
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): P06 · Schöner Shop, aber wenig Verkäufe
 - **Format / Design:** FACE (P-Serie, wie P09 und P04) / aktueller Look wie P09 und P04: helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Metaphern auf das Wort), echte Quelle groß mit ihm als Bubble (Pauls Regel 2026-10-28), kein Hook-Titel (persönliche Meinung), klassischer Schluss mit Folgen-Plus, Musik ruhig, sanfter Grade, Porträt-Modus
