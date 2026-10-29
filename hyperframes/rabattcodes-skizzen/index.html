@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>S06 · Rabattcodes richtig konfigurieren – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- FACE S06 "Rabattcodes richtig konfigurieren" (Serie S). Erklär-Bilder nach karten-aufbau.md "Visuelle Metaphern"
+         (freigegeben 2026-10-26, Vorlagen P04 hyperframes/pagebuilder-skizzen, S05 hyperframes/alttexte-skizzen): pro Kerngedanke ein
+         Bild, das den Satz ohne Ton erklärt (Code-Formular mit "nicht einfach so", Marge behalten, T-Shirt-Shop mit 40-€-Shirt und
+         Beispiel-Code WELCOME10, "Gilt für" alle Produkte oder ausgewählte Kollektionen, nur T-Shirts statt teurer Jacken,
+         Mindestbestellwert 80 € mit zwei Warenkörben 40 € und 80 €, Kombinationen als Puzzle, Wasserfall 100 € → −20 € → 80 € →
+         −8 € (10 %) → 72 € mit "28 € weniger", Kombinationen prüfen, Nutzungsgrenze und Zeitraum, Testmatrix "muss funktionieren /
+         darf nicht funktionieren", Verkäufe fördern statt Kalkulation kaputt, Checkliste mit drei Punkten und Folgen-Plus).
+         Höchstens 1–3 Wörter je Bild, ein handschriftliches Akzentwort (Caveat, OFL, lokal; Blau #31ADEC, Grün #00C27C, Rot nur für
+         Fehler). Rahmen: helle Karte unter dem Kopf (x 80-900, ab y 1145, bis 1485; Instagram-Zone unten ab 1500), Pill-Untertitel
+         darüber (Remotion, y 1095), ruhige Bewegung ohne Überschwingen.
+         Keine fingierte Shopify-Oberfläche: Formular, Auswahl und Einstellungen sind vereinfachte Schemata (SCHEMA), die Zahlen sind
+         seine Beispielwerte (BEISPIEL); die Namen der Einstellungen stehen so im Shopify Help Center. Die echten Quellen (Shopify Help
+         Center) stehen nicht hier, sondern groß in Remotion (src/lib/quelle-gross.tsx); in diesen Sekunden ist hier nichts zu sehen.
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/rabattcodes/cut.json, 121,30 s), genau wie Remotion sie rechnet
+         (Stücke auf ganze Frames gerundet), schon als Cues (2 Frames vor dem Wort); Liste mit Tönen in
+         src/projekte/rabattcodes/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1145px; width: 820px; height: 340px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 20px; display: flex; align-items: center; gap: 10px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .demo { margin-left: 4px; padding: 3px 10px 4px; border-radius: 8px; background: #0b0c0e; color: #fff; font-size: 17px; letter-spacing: 0.12em; }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 280px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 30px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #6b7280; }
+      .klein { font-size: 20px; font-weight: 700; fill: #6b7280; letter-spacing: 0.08em; }
+      .wert { font-size: 34px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.02em; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .hand.gruen { fill: #00c27c; }
+      .hand.rot { fill: #e5484d; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .platz { fill: none; stroke: #b6bec9; stroke-width: 3; stroke-dasharray: 10 8; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .chip { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .pfeil { fill: none; stroke: #9aa3af; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .feld { fill: #fff; stroke: #c4cad3; stroke-width: 2.5; }
+      .code { font-family: "Geist", sans-serif; font-size: 28px; font-weight: 700; fill: #374151; letter-spacing: 0.06em; }
+
+      /* keine Sticker-Wörter: bei 1,62-facher Vergrößerung füllt der Kopf die Breite, ein Sticker läge auf dem Gesicht */
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="rabattcodes-skizzen" data-width="1080" data-height="1920" data-start="0.00" data-duration="121.30">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvv" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24er Raster -->
+          <g id="i-laden"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="i-clipboard"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /></g>
+          <g id="i-gift"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M12 8v13" /><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" /></g>
+          <g id="i-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></g>
+          <g id="i-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></g>
+          <g id="i-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r="1" /></g>
+          <g id="i-ziel"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+          <g id="i-wagen"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></g>
+          <g id="i-regler"><line x1="21" x2="14" y1="4" y2="4" /><line x1="10" x2="3" y1="4" y2="4" /><line x1="21" x2="12" y1="12" y2="12" /><line x1="8" x2="3" y1="12" y2="12" /><line x1="21" x2="16" y1="20" y2="20" /><line x1="12" x2="3" y1="20" y2="20" /><line x1="14" x2="14" y1="2" y2="6" /><line x1="8" x2="8" y1="10" y2="14" /><line x1="16" x2="16" y1="18" y2="22" /></g>
+          <g id="i-kalender"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></g>
+          <g id="i-raute"><line x1="4" x2="20" y1="9" y2="9" /><line x1="4" x2="20" y1="15" y2="15" /><line x1="10" x2="8" y1="3" y2="21" /><line x1="16" x2="14" y1="3" y2="21" /></g>
+          <g id="i-trend"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></g>
+          <g id="i-rechner"><rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="16" x2="16" y1="14" y2="18" /><path d="M16 10h.01" /><path d="M12 10h.01" /><path d="M8 10h.01" /><path d="M12 14h.01" /><path d="M8 14h.01" /><path d="M12 18h.01" /><path d="M8 18h.01" /></g>
+          <g id="i-lupe"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+          <g id="i-haken"><path d="M20 6 9 17l-5-5" /></g>
+          <g id="i-person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-zeiger"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+          <!-- Mauszeiger (Spitze bei 0,0) -->
+          <g id="maus"><use href="#i-zeiger" transform="translate(-6 -6) scale(2)" style="fill:#0b0c0e;stroke:#fff;stroke-width:1.2;stroke-linejoin:round" /></g>
+          <!-- Haken im Kreis (Verlauf), grauer Kreis mit X, roter Kreis mit X (nur für Fehler), Fragezeichen, Ausrufezeichen -->
+          <g id="ok"><circle cx="0" cy="0" r="20" fill="url(#gvd)" /><path d="M-10 0 l7 7 l13 -14" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="nein"><circle cx="0" cy="0" r="18" fill="#9aa3af" /><path d="M-7 -7 L7 7 M7 -7 L-7 7" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" /></g>
+          <g id="fehler"><circle cx="0" cy="0" r="20" fill="#e5484d" /><path d="M-8 -8 L8 8 M8 -8 L-8 8" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" /></g>
+          <g id="frage"><circle cx="0" cy="0" r="20" fill="#f5b83d" /><text x="0" y="10" text-anchor="middle" style="font-family:Geist,sans-serif;font-size:28px;font-weight:900;fill:#0b0c0e">?</text></g>
+          <g id="warn"><circle cx="0" cy="0" r="17" fill="#e5484d" /><text x="0" y="9" text-anchor="middle" style="font-family:Geist,sans-serif;font-size:25px;font-weight:900;fill:#fff">!</text></g>
+          <!-- Gezeichnetes Beispiel-T-Shirt (200er Raster, Mitte x 100) und Jacke mit Reißverschluss -->
+          <path id="shirt-form" d="M72 34 L38 50 L16 88 L44 102 L56 86 L56 176 L144 176 L144 86 L156 102 L184 88 L162 50 L128 34 C 120 52, 80 52, 72 34 Z" />
+          <g id="shirt"><use href="#shirt-form" fill="#3d5a80" /><path d="M76 36 C 86 50, 114 50, 124 36" fill="none" stroke="#2b4260" stroke-width="5" /></g>
+          <g id="shirt2"><use href="#shirt-form" fill="#6c8ebf" /><path d="M76 36 C 86 50, 114 50, 124 36" fill="none" stroke="#4d6f9f" stroke-width="5" /></g>
+          <g id="shirt3"><use href="#shirt-form" fill="#9aa9b8" /><path d="M76 36 C 86 50, 114 50, 124 36" fill="none" stroke="#7d8d9d" stroke-width="5" /></g>
+          <g id="jacke">
+            <path d="M70 22 L40 36 L18 168 L48 174 L58 92 L58 186 L142 186 L142 92 L152 174 L182 168 L160 36 L130 22 L100 44 Z" fill="#7a5c45" />
+            <path d="M70 22 L100 44 L130 22 L118 18 L100 30 L82 18 Z" fill="#5e4535" />
+            <path d="M100 44 V 186" stroke="#3f2e22" stroke-width="4" />
+            <rect x="66" y="120" width="22" height="6" rx="3" fill="#5e4535" /><rect x="112" y="120" width="22" height="6" rx="3" fill="#5e4535" />
+          </g>
+        </defs>
+      </svg>
+
+      <!-- K1 Code nicht einfach so speichern: "Wenn du in Shopify einfach Rabattcodes erstellst, würde ich tatsächlich nicht einfach nur
+           10 % antippen oder Speichern klicken."   Rabattcodes 1,30 / nicht 3,43 / 10 % 4,17 / antippen 4,80 / Speichern 5,50 / klicken 5,90 -->
+      <section id="k1" class="karte clip" data-start="1.300" data-duration="5.130" data-track-index="1">
+        <div class="kicker">Rabattcode erstellen<span class="demo">SCHEMA</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <text x="30" y="22" class="klein">RABATTCODE</text>
+          <rect x="30" y="32" width="300" height="60" rx="14" class="feld" />
+          <text x="50" y="72" class="code">WELCOME10</text>
+          <text x="352" y="22" class="klein">WERT</text>
+          <rect x="352" y="32" width="160" height="60" rx="14" class="feld" />
+          <rect id="k1-cursor" x="372" y="46" width="4" height="34" rx="2" fill="#0b0c0e" />
+          <clipPath id="k1-wclip"><rect id="k1-wrect" x="366" y="34" width="0" height="56" /></clipPath>
+          <text x="372" y="74" class="wert" style="font-size:32px" clip-path="url(#k1-wclip)">10 %</text>
+          <g id="k1-knopf"><rect x="30" y="128" width="230" height="66" rx="18" fill="#0b0c0e" /><text x="145" y="171" text-anchor="middle" style="font-size:28px;font-weight:800;fill:#fff">Speichern</text></g>
+          <rect id="k1-press" x="30" y="128" width="230" height="66" rx="18" fill="#fff" opacity="0" />
+          <g id="k1-x" opacity="0"><use href="#fehler" transform="translate(258 132)" /></g>
+          <g id="k1-maus" opacity="0"><use href="#maus" /></g>
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="540" y="40" width="0" height="220" /></clipPath>
+          <g clip-path="url(#k1-clip)">
+            <text x="560" y="120" class="hand rot" style="font-size:64px" transform="rotate(-4 660 110)">nicht</text>
+            <text x="548" y="196" class="hand rot" style="font-size:64px" transform="rotate(-4 660 186)">einfach so</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K2 Marge behalten: "Denn ich zeige dir mal, wie man eine Aktion vorbereiten würde, ohne dabei unnötig Marge zu verschenken."
+           Denn 6,47 / Aktion 7,90 / vorbereiten 8,27 / ohne 9,13 / unnötig 9,70 / Marge 10,23 / verschenken 10,70 -->
+      <section id="k2" class="karte clip" data-start="6.467" data-duration="5.533" data-track-index="1">
+        <div class="kicker">Aktion vorbereiten</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k2-plan">
+            <rect x="30" y="10" width="170" height="170" rx="32" fill="url(#gvd)" />
+            <use href="#i-clipboard" class="ico" transform="translate(57 37) scale(4.8)" style="stroke-width:1.5" />
+            <path id="k2-check" pathLength="1" d="M88 104 l 18 18 l 34 -36" fill="none" stroke="#0b0c0e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+          <g id="k2-marge" opacity="0">
+            <ellipse cx="390" cy="176" rx="74" ry="20" fill="#00b378" /><rect x="316" y="152" width="148" height="24" fill="#00c27c" /><ellipse cx="390" cy="152" rx="74" ry="20" fill="#22d696" />
+            <ellipse cx="390" cy="128" rx="74" ry="20" fill="#14a9c6" /><rect x="316" y="104" width="148" height="24" fill="#1cb3d2" /><ellipse cx="390" cy="104" rx="74" ry="20" fill="#4cc3e6" />
+            <g id="k2-muenze"><ellipse cx="390" cy="80" rx="74" ry="20" fill="#00b378" /><rect x="316" y="56" width="148" height="24" fill="#00c27c" /><ellipse cx="390" cy="56" rx="74" ry="20" fill="#3fe0a4" /></g>
+            <text x="390" y="236" text-anchor="middle" class="lab">Marge</text>
+          </g>
+          <circle id="k2-ring" cx="390" cy="120" r="104" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <g id="k2-gift" opacity="0">
+            <rect x="620" y="66" width="140" height="140" rx="28" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <use href="#i-gift" class="ico" transform="translate(648 94) scale(3.5)" style="stroke:#6b7280;stroke-width:1.6" />
+          </g>
+          <path id="k2-pfeil" pathLength="1" d="M478 70 C 530 20, 580 30, 612 84 M 596 74 L 614 88 L 618 66" class="pfeil" style="stroke-dasharray:1" />
+          <g id="k2-x" opacity="0"><use href="#nein" transform="translate(560 40) scale(1.3)" /></g>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="560" y="214" width="0" height="70" /></clipPath>
+          <text x="566" y="262" class="hand gruen" style="font-size:44px" clip-path="url(#k2-clip)" transform="rotate(-3 660 250)">Marge behalten</text>
+        </svg>
+      </section>
+
+      <!-- K3 Beispiel T-Shirt-Shop: "Stell dir mal einen Online-Shop vor mit T-Shirts. Ein T-Shirt kostet 40 Euro und du willst zum Beispiel
+           Stammkunden 10 % Rabatt anbieten."   Stell 12,03 / Online-Shop 12,83 / T-Shirts 13,80 / Ein 14,87 / 40 15,87 / Stammkunden 17,73 /
+           10 % 18,47 / Rabatt 18,77 -->
+      <section id="k3" class="karte clip" data-start="12.033" data-duration="8.167" data-track-index="1">
+        <div class="kicker">Beispiel: T-Shirt-Shop<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k3-shop" opacity="0">
+            <rect x="30" y="10" width="110" height="110" rx="24" fill="url(#gvd)" />
+            <use href="#i-laden" class="ico" transform="translate(55 35) scale(2.5)" style="stroke-width:1.7" />
+          </g>
+          <g id="k3-s1" opacity="0"><svg x="22" y="140" width="110" height="110" viewBox="0 0 200 200"><use href="#shirt2" /></svg></g>
+          <g id="k3-s2" opacity="0"><svg x="128" y="140" width="110" height="110" viewBox="0 0 200 200"><use href="#shirt3" /></svg></g>
+          <g id="k3-s3" opacity="0"><svg x="164" y="20" width="110" height="110" viewBox="0 0 200 200"><use href="#shirt" /></svg></g>
+          <g id="k3-karte" opacity="0">
+            <rect x="300" y="0" width="300" height="262" rx="26" class="rahmen" />
+            <svg x="345" y="6" width="210" height="190" viewBox="0 0 200 190"><use href="#shirt" /></svg>
+            <text x="324" y="240" class="lab" style="font-size:28px">T-Shirt</text>
+            <text id="k3-preis" x="578" y="242" text-anchor="end" class="wert" opacity="0">40 €</text>
+          </g>
+          <g id="k3-rabatt" opacity="0">
+            <rect x="500" y="14" width="114" height="54" rx="27" fill="url(#gv)" />
+            <text x="557" y="51" text-anchor="middle" style="font-size:30px;font-weight:800;fill:#0b0c0e">−10 %</text>
+          </g>
+          <g id="k3-stamm" opacity="0">
+            <rect x="630" y="30" width="170" height="150" rx="24" class="rahmen" />
+            <circle cx="715" cy="88" r="36" fill="url(#gvd)" />
+            <use href="#i-users" class="ico" transform="translate(694 67) scale(1.75)" style="stroke-width:2" />
+            <text x="715" y="160" text-anchor="middle" class="lab" style="font-size:22px">Stammkunden</text>
+          </g>
+          <g id="k3-code" opacity="0">
+            <rect x="630" y="200" width="170" height="62" rx="16" fill="#fff" stroke="#b6bec9" stroke-width="2.5" stroke-dasharray="8 6" />
+            <text x="715" y="224" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#6b7280;letter-spacing:0.08em">BEISPIEL-CODE</text>
+            <text x="715" y="251" text-anchor="middle" style="font-size:22px;font-weight:700;fill:#374151;letter-spacing:0.05em">WELCOME10</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- (20,00-23,95 Quelle groß in Remotion: Shopify Help Center "Betragsrabatte", Schritte "Rabatte" → "Rabatt erstellen") -->
+
+      <!-- K4 Gilt für: "… und leg zunächst einmal fest, worauf er tatsächlich gelten soll. Soll er für alle Produkte gelten oder tatsächlich
+           nur für ausgewählte Kollektionen?"   und 23,97 / worauf 25,40 / alle 27,47 / Produkte 27,67 / ausgewählte 29,43 / Kollektionen 29,90 -->
+      <section id="k4" class="karte clip" data-start="23.967" data-duration="6.953" data-track-index="1">
+        <div class="kicker">Gilt für<span class="demo">SCHEMA</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k4-ziel">
+            <rect x="30" y="10" width="130" height="130" rx="28" fill="url(#gvd)" />
+            <use href="#i-ziel" class="ico" transform="translate(56 36) scale(3.25)" style="stroke-width:1.6" />
+          </g>
+          <circle id="k4-ring" cx="95" cy="75" r="74" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <text id="k4-frage" x="190" y="58" class="lab" style="font-size:34px">Worauf soll er gelten?</text>
+          <g id="k4-a" opacity="0">
+            <rect id="k4-abox" x="190" y="96" width="600" height="72" rx="18" class="rahmen" />
+            <circle cx="232" cy="132" r="16" fill="#fff" stroke="#9aa3af" stroke-width="3.5" />
+            <text x="266" y="143" class="lab">Alle Produkte</text>
+          </g>
+          <g id="k4-b" opacity="0">
+            <rect x="190" y="184" width="600" height="72" rx="18" class="rahmen" />
+            <rect id="k4-baktiv" x="190" y="184" width="600" height="72" rx="18" fill="url(#gvl)" stroke="url(#gvd)" stroke-width="4" opacity="0" />
+            <circle cx="232" cy="220" r="16" fill="#fff" stroke="#9aa3af" stroke-width="3.5" />
+            <circle id="k4-punkt" cx="232" cy="220" r="9" fill="#0b0c0e" opacity="0" />
+            <text x="266" y="231" class="lab">Ausgewählte Kollektionen</text>
+          </g>
+          <g id="k4-maus" opacity="0"><use href="#maus" /></g>
+        </svg>
+      </section>
+
+      <!-- K5 Nur T-Shirts: "Wenn du dann eigentlich nur T-Shirts bewerben möchtest, dann solltest du natürlich auch nicht aus Versehen
+           irgendwelche teuren Jacken mitrabattieren."   Wenn 30,97 / T-Shirts 32,10 / bewerben 32,53 / Versehen 34,90 / teuren 35,93 /
+           Jacken 36,30 / mitrabattieren 36,63 -->
+      <section id="k5" class="karte clip" data-start="30.967" data-duration="6.303" data-track-index="1">
+        <div class="kicker">Nur das Richtige rabattieren<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <rect x="24" y="10" width="470" height="196" rx="24" fill="#fff" stroke="url(#gvd)" stroke-width="4" />
+          <text x="46" y="44" class="klein">KOLLEKTION T-SHIRTS</text>
+          <g id="k5-s"><svg x="40" y="56" width="140" height="140" viewBox="0 0 200 200"><use href="#shirt" /></svg><svg x="190" y="56" width="140" height="140" viewBox="0 0 200 200"><use href="#shirt2" /></svg><svg x="340" y="56" width="140" height="140" viewBox="0 0 200 200"><use href="#shirt3" /></svg></g>
+          <g id="k5-t1" opacity="0"><rect x="110" y="64" width="84" height="38" rx="19" fill="url(#gv)" /><text x="152" y="91" text-anchor="middle" style="font-size:22px;font-weight:800;fill:#0b0c0e">−10 %</text></g>
+          <g id="k5-t2" opacity="0"><rect x="260" y="64" width="84" height="38" rx="19" fill="url(#gv)" /><text x="302" y="91" text-anchor="middle" style="font-size:22px;font-weight:800;fill:#0b0c0e">−10 %</text></g>
+          <g id="k5-t3" opacity="0"><rect x="410" y="64" width="84" height="38" rx="19" fill="url(#gv)" /><text x="452" y="91" text-anchor="middle" style="font-size:22px;font-weight:800;fill:#0b0c0e">−10 %</text></g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="30" y="210" width="0" height="74" /></clipPath>
+          <text x="36" y="262" class="hand gruen" style="font-size:54px" clip-path="url(#k5-clip)" transform="rotate(-2 150 248)">nur T-Shirts</text>
+          <g id="k5-jacke" opacity="0">
+            <svg x="560" y="20" width="190" height="190" viewBox="0 0 200 200"><use href="#jacke" /></svg>
+            <text x="655" y="244" text-anchor="middle" class="lab grau" style="font-size:26px">Jacken</text>
+          </g>
+          <g id="k5-teuer" opacity="0"><rect x="720" y="24" width="84" height="44" rx="12" fill="#0b0c0e" /><text x="762" y="55" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#fff">€€€</text></g>
+          <g id="k5-tj" opacity="0"><rect x="598" y="96" width="84" height="38" rx="19" fill="url(#gv)" /><text x="640" y="123" text-anchor="middle" style="font-size:22px;font-weight:800;fill:#0b0c0e">−10 %</text></g>
+          <path id="k5-strich" pathLength="1" d="M590 140 L 692 90" fill="none" stroke="#e5484d" stroke-width="7" stroke-linecap="round" />
+          <g id="k5-x" opacity="0"><use href="#fehler" transform="translate(700 150)" /></g>
+        </svg>
+      </section>
+
+      <!-- K6 Mindestbestellwert: "Als Nächstes würde ich tatsächlich zunächst einmal den Mindestbestellwert prüfen. Denn bei einer Aktion ab
+           80 Euro würde ich nicht automatisch immer jedem Kunden mit einem 40-Euro-T-Shirt einen Rabatt geben. Das ist zum Beispiel immer
+           dann sinnvoll, wenn du natürlich auch mal einen höheren Warenkorb fördern möchtest."
+           Als 37,30 / Mindestbestellwert 39,17 / 80 41,57 / Kunden 43,73 / 40-Euro-T-Shirt 44,53 / Rabatt 45,77 / sinnvoll 47,53 /
+           höheren 49,03 / Warenkorb 49,53 / fördern 50,13 -->
+      <section id="k6" class="karte clip" data-start="37.300" data-duration="13.540" data-track-index="1">
+        <div class="kicker">Mindestbestellwert<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <line x1="40" y1="222" x2="560" y2="222" stroke="#9aa3af" stroke-width="3" />
+          <!-- Schwelle 80 € (2 px je Euro: 80 € = 160 px über der Grundlinie) -->
+          <g id="k6-linie" opacity="0">
+            <path id="k6-strich" pathLength="1" d="M40 62 H 560" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-dasharray="14 10" />
+            <text x="572" y="58" class="klein" style="font-size:18px">MINDESTBESTELLWERT</text>
+          </g>
+          <text id="k6-80" x="580" y="98" class="wert" opacity="0">ab 80 €</text>
+          <!-- Warenkorb 1: ein Shirt, 40 € -->
+          <g id="k6-a" opacity="0">
+            <rect x="110" y="62" width="130" height="160" rx="16" class="platz" />
+            <rect id="k6-abar" x="110" y="142" width="130" height="80" rx="16" fill="#9aa3af" />
+            <text x="175" y="128" text-anchor="middle" class="wert" style="font-size:30px">40 €</text>
+            <text x="175" y="258" text-anchor="middle" class="lab grau" style="font-size:22px">1 T-Shirt</text>
+          </g>
+          <g id="k6-ax" opacity="0"><use href="#nein" transform="translate(240 150) scale(1.2)" /></g>
+          <!-- Warenkorb 2: zwei Shirts, 80 € -->
+          <g id="k6-b" opacity="0">
+            <rect x="330" y="62" width="130" height="160" rx="16" class="platz" />
+            <text x="395" y="258" text-anchor="middle" class="lab grau" style="font-size:22px">2 T-Shirts</text>
+          </g>
+          <rect id="k6-bbar" x="330" y="62" width="130" height="160" rx="16" fill="url(#gvv)" opacity="0" />
+          <text id="k6-bwert" x="395" y="128" text-anchor="middle" class="wert" style="font-size:30px" opacity="0">80 €</text>
+          <g id="k6-bok" opacity="0"><use href="#ok" transform="translate(462 62) scale(1.2)" /></g>
+          <g id="k6-brabatt" opacity="0"><rect x="580" y="128" width="114" height="50" rx="25" fill="url(#gv)" /><text x="637" y="163" text-anchor="middle" style="font-size:28px;font-weight:800;fill:#0b0c0e">−10 %</text></g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="574" y="190" width="0" height="90" /></clipPath>
+          <g clip-path="url(#k6-clip)">
+            <text x="580" y="232" class="hand gruen" style="font-size:44px" transform="rotate(-3 680 220)">höherer</text>
+            <text x="580" y="274" class="hand gruen" style="font-size:44px" transform="rotate(-3 680 262)">Warenkorb</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K7 Kombinationen: "Jetzt kommt aber meiner Meinung nach diese Einstellung, die ich hier besonders wichtig finde, und zwar die
+           Kombination."   Jetzt 50,87 / Einstellung 52,57 / wichtig 53,93 / Kombination 55,33 -->
+      <section id="k7" class="karte clip" data-start="50.867" data-duration="5.433" data-track-index="1">
+        <div class="kicker">Die wichtigste Einstellung</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k7-p1"><rect x="40" y="40" width="200" height="120" rx="20" fill="#fff" stroke="#c4cad3" stroke-width="3" /><circle cx="240" cy="100" r="22" fill="#fff" stroke="#c4cad3" stroke-width="3" /><rect x="226" y="80" width="14" height="40" fill="#fff" /><text x="140" y="95" text-anchor="middle" class="lab" style="font-size:26px">Produkt-</text><text x="140" y="127" text-anchor="middle" class="lab" style="font-size:26px">rabatt</text></g>
+          <g id="k7-p2"><rect x="310" y="40" width="200" height="120" rx="20" fill="#fff" stroke="#c4cad3" stroke-width="3" /><circle cx="510" cy="100" r="22" fill="#fff" stroke="#c4cad3" stroke-width="3" /><rect x="496" y="80" width="14" height="40" fill="#fff" /><text x="410" y="95" text-anchor="middle" class="lab" style="font-size:26px">Bestell-</text><text x="410" y="127" text-anchor="middle" class="lab" style="font-size:26px">rabatt</text></g>
+          <g id="k7-p3"><rect x="580" y="40" width="200" height="120" rx="20" fill="#fff" stroke="#c4cad3" stroke-width="3" /><text x="680" y="95" text-anchor="middle" class="lab" style="font-size:26px">Versand-</text><text x="680" y="127" text-anchor="middle" class="lab" style="font-size:26px">rabatt</text></g>
+          <rect id="k7-rahmen" x="96" y="26" width="628" height="148" rx="28" fill="none" stroke="url(#gv)" stroke-width="5" opacity="0" />
+          <g id="k7-regler" opacity="0"><circle cx="70" cy="226" r="34" fill="url(#gvd)" /><use href="#i-regler" class="ico" transform="translate(52 208) scale(1.5)" style="stroke-width:2" /></g>
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="116" y="190" width="0" height="90" /></clipPath>
+          <text x="122" y="250" class="hand" style="font-size:56px" clip-path="url(#k7-clip)" transform="rotate(-2 260 236)">besonders wichtig</text>
+          <text id="k7-wort" x="530" y="246" class="lab" style="font-size:32px;fill:#00a8a0" opacity="0">Kombinationen</text>
+        </svg>
+      </section>
+
+      <!-- (56,13-60,85 Quelle groß in Remotion: "Rabatte kombinieren", Klassen Produkt-, Bestell-, Versandrabatte) -->
+
+      <!-- K8 Wasserfall (Beispiel, nur bei erlaubter Kombination): "Stell dir zum Beispiel einen Warenkorb für 100 Euro vor, auf den schon
+           bereits ein Produktrabatt von 20 Euro angewendet wurde. Wenn der zusätzlich ein Bestellrabatt von 10 % zulässig ist, dann wird
+           natürlich dieser auf die verbleibenden 80 Euro berechnet. Dann landen wir aber zum Beispiel bei 72 Euro vor den möglichen
+           Versandkosten selbstverständlich. Das sind dann aber natürlich 28 Euro weniger als der ursprüngliche Warenkorbwert."
+           Stell 60,90 / 100 62,90 / Produktrabatt 64,77 / 20 65,83 / angewendet 66,47 / (67,17-70,33 Quelle Reihenfolge) / dann 70,33 /
+           verbleibenden 71,87 / 80 72,40 / berechnet 72,93 / 72 74,83 / Versandkosten 76,80 / 28 79,07 / ursprüngliche 80,63
+           Maßstab 1,7 px je Euro (100 € = 170 px), Grundlinie y 212 -->
+      <section id="k8" class="karte clip" data-start="60.900" data-duration="21.700" data-track-index="1">
+        <div class="kicker">Beispiel-Rechnung<span class="demo">BEISPIEL</span><span style="text-transform:none;letter-spacing:0.02em;font-weight:600">nur wenn kombinierbar</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <line x1="20" y1="212" x2="800" y2="212" stroke="#9aa3af" stroke-width="3" />
+          <path id="k8-alt" pathLength="1" d="M150 42 H 790" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="1" />
+          <!-- Spalten: 1 Warenkorb 100 €, 2 Produktrabatt −20 €, 3 Zwischensumme 80 €, 4 Bestellrabatt −8 € (10 % von 80 €), 5 Ergebnis 72 € -->
+          <rect id="k8-b1" x="30" y="42" width="120" height="170" rx="12" fill="#3d4a5c" />
+          <text id="k8-w1" x="90" y="30" text-anchor="middle" class="wert" style="font-size:30px">100 €</text>
+          <text id="k8-l1" x="90" y="242" text-anchor="middle" class="lab" style="font-size:22px">Warenkorb</text>
+          <path id="k8-v1" pathLength="1" d="M150 42 H 190" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="1" />
+          <rect id="k8-b2" x="190" y="42" width="120" height="34" rx="10" fill="#9aa3af" />
+          <text id="k8-w2" x="250" y="30" text-anchor="middle" class="wert" style="font-size:30px">−20 €</text>
+          <g id="k8-l2"><text x="250" y="242" text-anchor="middle" class="lab" style="font-size:22px">Produkt-</text><text x="250" y="268" text-anchor="middle" class="lab" style="font-size:22px">rabatt</text></g>
+          <path id="k8-v2" pathLength="1" d="M310 76 H 350" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="1" />
+          <rect id="k8-b3" x="350" y="76" width="120" height="136" rx="12" fill="#3d4a5c" />
+          <text id="k8-w3" x="410" y="68" text-anchor="middle" class="wert" style="font-size:30px">80 €</text>
+          <g id="k8-l3"><text x="410" y="242" text-anchor="middle" class="lab" style="font-size:22px">Zwischen-</text><text x="410" y="268" text-anchor="middle" class="lab" style="font-size:22px">summe</text></g>
+          <rect id="k8-ring3" x="342" y="68" width="136" height="152" rx="16" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <path id="k8-v3" pathLength="1" d="M470 76 H 510" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="1" />
+          <rect id="k8-b4" x="510" y="76" width="120" height="14" rx="6" fill="#9aa3af" />
+          <text id="k8-w4" x="570" y="68" text-anchor="middle" class="wert" style="font-size:30px">−8 €</text>
+          <g id="k8-l4"><text x="570" y="242" text-anchor="middle" class="lab" style="font-size:22px">Bestell-</text><text x="570" y="268" text-anchor="middle" class="lab" style="font-size:22px">rabatt 10 %</text></g>
+          <path id="k8-v4" pathLength="1" d="M630 90 H 670" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="1" />
+          <rect id="k8-b5" x="670" y="90" width="120" height="122" rx="12" fill="url(#gvv)" />
+          <text id="k8-w5" x="730" y="82" text-anchor="middle" class="wert" style="font-size:30px">72 €</text>
+          <text id="k8-l5" x="730" y="242" text-anchor="middle" class="lab" style="font-size:22px">Ergebnis</text>
+          <text id="k8-l5b" x="730" y="268" text-anchor="middle" class="lab grau" style="font-size:20px">vor Versand</text>
+          <!-- 28 € weniger: Klammer zwischen 100-€-Linie und 72 € -->
+          <path id="k8-klammer" pathLength="1" d="M800 44 V 88" fill="none" stroke="#00c27c" stroke-width="5" stroke-linecap="round" />
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="490" y="100" width="0" height="112" /></clipPath>
+          <g clip-path="url(#k8-clip)">
+            <text x="510" y="146" class="hand gruen" style="font-size:46px" transform="rotate(-4 570 136)">28 €</text>
+            <text x="500" y="192" class="hand gruen" style="font-size:46px" transform="rotate(-4 570 182)">weniger</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- (82,47-85,75 Quelle groß in Remotion: "Arten von Rabattkombinationen", Produktrabatte mit Bestellrabatten nur für berechtigte
+           Händler:innen) -->
+
+      <!-- K9 Einstellungen prüfen: "Aber genau deshalb solltest du unbedingt deine Einstellungen prüfen. Denn statt dich einfach nur darauf zu
+           verlassen, dass Shopify jetzt das Richtige macht, …"   Aber 85,77 / unbedingt 87,33 / Einstellungen 88,13 / prüfen 88,63 /
+           verlassen 90,97 / Shopify 91,63 / Richtige 92,47 -->
+      <section id="k9" class="karte clip" data-start="85.767" data-duration="7.933" data-track-index="1">
+        <div class="kicker">Einstellungen prüfen<span class="demo">SCHEMA</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <rect id="k9-panel" x="24" y="0" width="460" height="262" rx="24" class="rahmen" />
+          <text x="50" y="44" class="lab" style="font-size:30px">Kombinationen</text>
+          <g id="k9-r1" opacity="0"><rect x="50" y="72" width="34" height="34" rx="8" fill="#fff" stroke="#9aa3af" stroke-width="3" /><text x="102" y="100" class="lab" style="font-size:28px">Produktrabatte</text></g>
+          <g id="k9-r2" opacity="0"><rect x="50" y="132" width="34" height="34" rx="8" fill="#fff" stroke="#9aa3af" stroke-width="3" /><text x="102" y="160" class="lab" style="font-size:28px">Bestellrabatte</text></g>
+          <g id="k9-r3" opacity="0"><rect x="50" y="192" width="34" height="34" rx="8" fill="#fff" stroke="#9aa3af" stroke-width="3" /><text x="102" y="220" class="lab" style="font-size:28px">Versandrabatte</text></g>
+          <rect id="k9-ring" x="16" y="-8" width="476" height="278" rx="30" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <g id="k9-lupe" opacity="0"><circle cx="0" cy="0" r="44" fill="rgba(255,255,255,0.25)" stroke="#0b0c0e" stroke-width="7" /><path d="M31 31 L 60 60" stroke="#0b0c0e" stroke-width="10" stroke-linecap="round" /></g>
+          <g id="k9-auto" opacity="0">
+            <rect x="516" y="24" width="290" height="70" rx="18" fill="#fff" stroke="#b6bec9" stroke-width="2.5" stroke-dasharray="8 6" />
+            <text x="536" y="68" class="lab grau" style="font-size:24px">von selbst richtig?</text>
+          </g>
+          <g id="k9-x" opacity="0"><use href="#nein" transform="translate(796 30)" /></g>
+          <clipPath id="k9-clip"><rect id="k9-cliprect" x="526" y="120" width="0" height="140" /></clipPath>
+          <g clip-path="url(#k9-clip)">
+            <text x="540" y="176" class="hand" style="font-size:58px" transform="rotate(-3 640 166)">selbst</text>
+            <text x="560" y="236" class="hand" style="font-size:58px" transform="rotate(-3 660 226)">prüfen</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K10 Nutzungsgrenze und Zeitraum: "… würde ich tatsächlich auch die Nutzungsgrenzen und den Zeitraum der Aktion immer lieber selber
+           sauber festlegen."   würde 93,73 / Nutzungsgrenzen 95,03 / Zeitraum 96,17 / selber 97,57 / festlegen 98,30 -->
+      <section id="k10" class="karte clip" data-start="93.733" data-duration="6.467" data-track-index="1">
+        <div class="kicker">Selbst festlegen<span class="demo">SCHEMA</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k10-r1" opacity="0">
+            <rect x="24" y="0" width="772" height="120" rx="22" class="rahmen" />
+            <rect x="44" y="18" width="84" height="84" rx="20" fill="url(#gvd)" />
+            <use href="#i-raute" class="ico" transform="translate(62 36) scale(2)" style="stroke-width:2" />
+            <text x="150" y="56" class="lab" style="font-size:32px">Nutzungsgrenze</text>
+            <text x="150" y="92" class="lab grau" style="font-size:21px">„Maximale Rabattnutzung“</text>
+            <g id="k10-zaehler"><rect x="520" y="34" width="190" height="52" rx="14" class="feld" /><text x="540" y="70" class="lab grau" style="font-size:24px">max.</text><rect x="612" y="48" width="80" height="24" rx="8" fill="#e5e7eb" /></g>
+          </g>
+          <g id="k10-r2" opacity="0">
+            <rect x="24" y="138" width="772" height="120" rx="22" class="rahmen" />
+            <rect x="44" y="156" width="84" height="84" rx="20" fill="url(#gvd)" />
+            <use href="#i-kalender" class="ico" transform="translate(62 174) scale(2)" style="stroke-width:2" />
+            <text x="150" y="194" class="lab" style="font-size:32px">Zeitraum</text>
+            <text x="150" y="230" class="lab grau" style="font-size:21px">„Aktivitätszeitraum“</text>
+            <circle cx="470" cy="198" r="12" fill="#0b0c0e" /><text x="470" y="238" text-anchor="middle" class="lab grau" style="font-size:20px">Start</text>
+            <path id="k10-linie" pathLength="1" d="M484 198 H 676" fill="none" stroke="#00c27c" stroke-width="7" stroke-linecap="round" />
+            <circle id="k10-ende" cx="690" cy="198" r="12" fill="#0b0c0e" opacity="0" /><text id="k10-endet" x="690" y="238" text-anchor="middle" class="lab grau" style="font-size:20px" opacity="0">Ende</text>
+          </g>
+          <g id="k10-ok1" opacity="0"><use href="#ok" transform="translate(756 60)" /></g>
+          <g id="k10-ok2" opacity="0"><use href="#ok" transform="translate(756 198)" /></g>
+        </svg>
+      </section>
+
+      <!-- (100,00-104,45 Quelle groß in Remotion: "Rabattkombinationen testen", Produkte, für die der Code gilt, und ausgeschlossene) -->
+
+      <!-- K11 Testmatrix: "Einen, der den Rabatt bekommen soll, und einen, der einfach ihn ausdrücklich nicht bekommen darf."
+           Einen 104,47 / bekommen 105,37 / soll 105,70 / einen 106,50 / nicht 108,13 / bekommen 108,30 / darf 108,63 -->
+      <section id="k11" class="karte clip" data-start="104.467" data-duration="5.133" data-track-index="1">
+        <div class="kicker">Testmatrix: zwei Warenkörbe<span class="demo">BEISPIEL</span></div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k11-a">
+            <rect x="20" y="0" width="380" height="262" rx="24" class="rahmen" />
+            <text x="44" y="42" class="lab" style="font-size:24px">muss funktionieren</text>
+            <use href="#i-wagen" class="ico" transform="translate(44 70) scale(4.2)" style="stroke-width:1.5" />
+            <svg x="70" y="58" width="74" height="74" viewBox="0 0 200 200"><use href="#shirt" /></svg>
+            <svg x="118" y="58" width="74" height="74" viewBox="0 0 200 200"><use href="#shirt2" /></svg>
+            <text x="44" y="232" class="lab grau" style="font-size:22px">2 T-Shirts · 80 €</text>
+            <g id="k11-acode"><rect x="214" y="88" width="166" height="50" rx="14" fill="#fff" stroke="#b6bec9" stroke-width="2.5" stroke-dasharray="8 6" /><text x="297" y="121" text-anchor="middle" style="font-size:19px;font-weight:700;fill:#374151;letter-spacing:0.04em">WELCOME10</text></g>
+            <g id="k11-aok" opacity="0"><rect x="214" y="150" width="166" height="50" rx="25" fill="url(#gv)" /><text x="290" y="184" text-anchor="middle" style="font-size:26px;font-weight:800;fill:#0b0c0e">−10 %</text><use href="#ok" transform="translate(372 152)" /></g>
+          </g>
+          <g id="k11-b" opacity="0">
+            <rect x="420" y="0" width="380" height="262" rx="24" class="rahmen" />
+            <text x="444" y="42" class="lab" style="font-size:24px">darf nicht funktionieren</text>
+            <use href="#i-wagen" class="ico" transform="translate(444 70) scale(4.2)" style="stroke-width:1.5" />
+            <svg x="490" y="54" width="82" height="82" viewBox="0 0 200 200"><use href="#jacke" /></svg>
+            <text x="444" y="232" class="lab grau" style="font-size:22px">Jacke</text>
+            <g id="k11-bcode"><rect x="614" y="88" width="166" height="50" rx="14" fill="#fff" stroke="#b6bec9" stroke-width="2.5" stroke-dasharray="8 6" /><text x="697" y="121" text-anchor="middle" style="font-size:19px;font-weight:700;fill:#374151;letter-spacing:0.04em">WELCOME10</text></g>
+            <g id="k11-bx" opacity="0"><rect x="614" y="150" width="166" height="50" rx="25" fill="#e5e7eb" /><text x="690" y="184" text-anchor="middle" style="font-size:22px;font-weight:800;fill:#374151">gilt nicht</text><use href="#fehler" transform="translate(772 152)" /></g>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K12 Verkäufe fördern, Kalkulation nicht kaputt: "Ein Rabatt soll eben in dem Fall deine Verkäufe fördern und nicht einfach nur durch
+           Konfigurationsfehler deine Kalkulation kaputt machen."   Ein 109,63 / Verkäufe 111,13 / fördern 111,63 / Konfigurationsfehler
+           113,63 / Kalkulation 115,13 / kaputt 115,83 -->
+      <section id="k12" class="karte clip" data-start="109.633" data-duration="6.837" data-track-index="1">
+        <div class="kicker">Wofür ein Rabatt da ist</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k12-chart">
+            <line x1="40" y1="200" x2="360" y2="200" stroke="#9aa3af" stroke-width="3" />
+            <rect id="k12-c1" x="60" y="150" width="60" height="50" rx="8" fill="#c4cad3" />
+            <rect id="k12-c2" x="150" y="120" width="60" height="80" rx="8" fill="#c4cad3" />
+            <rect id="k12-c3" x="240" y="200" width="60" height="0" rx="8" fill="url(#gvv)" />
+            <path id="k12-pfeil" pathLength="1" d="M70 132 L 180 98 L 270 56 M 246 52 L 272 55 L 262 78" fill="none" stroke="#0b0c0e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+            <text x="40" y="244" class="lab" style="font-size:26px">Verkäufe</text>
+          </g>
+          <g id="k12-ok" opacity="0"><use href="#ok" transform="translate(340 46)" /></g>
+                    <g id="k12-rechner" opacity="0">
+            <rect x="500" y="10" width="200" height="200" rx="34" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <use href="#i-rechner" class="ico" transform="translate(528 38) scale(6)" style="stroke-width:1.3" />
+            <text x="600" y="246" text-anchor="middle" class="lab" style="font-size:26px">Kalkulation</text>
+          </g>
+          <g id="k12-fehler" opacity="0"><use href="#warn" transform="translate(712 30) scale(1.4)" /></g>
+          <path id="k12-riss" pathLength="1" d="M560 14 L 588 64 L 572 96 L 610 140 L 594 172 L 626 210" fill="none" stroke="#e5484d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+          <rect id="k12-ring" x="490" y="0" width="220" height="220" rx="40" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <clipPath id="k12-hclip"><rect id="k12-hcliprect" x="168" y="210" width="0" height="74" /></clipPath>
+          <text x="176" y="262" class="hand gruen" style="font-size:50px" clip-path="url(#k12-hclip)" transform="rotate(-3 250 248)">fördern</text>
+        </svg>
+      </section>
+
+      <!-- K13 Checkliste (bleibt bis zum Schluss, zum Screenshotten) mit Folgen-Plus: "Wenn du weitere solche Shopify-Tipps in Zukunft sehen
+           möchtest, dann würde mich hier sehr über ein Follow freuen."   Wenn 116,50 / Shopify-Tipps 117,30 / Follow 120,50 -->
+      <section id="k13" class="karte clip" data-start="116.500" data-duration="4.800" data-track-index="1">
+        <div class="kicker">Checkliste Rabattcode</div>
+        <svg class="buehne" viewBox="0 0 820 280">
+          <g id="k13-z1" opacity="0"><circle cx="46" cy="30" r="22" fill="#0b0c0e" /><text x="46" y="39" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#fff">1</text><text x="84" y="41" class="lab" style="font-size:31px">Gilt für + Mindestbestellwert</text></g>
+          <g id="k13-z2" opacity="0"><circle cx="46" cy="110" r="22" fill="#0b0c0e" /><text x="46" y="119" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#fff">2</text><text x="84" y="121" class="lab" style="font-size:31px">Kombinationen, Limit, Zeitraum</text></g>
+          <g id="k13-z3" opacity="0"><circle cx="46" cy="190" r="22" fill="#0b0c0e" /><text x="46" y="199" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#fff">3</text><text x="84" y="201" class="lab" style="font-size:31px">Test:</text>
+            <rect x="176" y="166" width="150" height="48" rx="24" fill="url(#gvl)" stroke="url(#gvd)" stroke-width="3" /><use href="#ok" transform="translate(200 190) scale(0.62)" /><text x="222" y="200" class="lab" style="font-size:27px">muss</text>
+            <rect x="340" y="166" width="200" height="48" rx="24" fill="#fff" stroke="#e5484d" stroke-width="3" /><use href="#fehler" transform="translate(364 190) scale(0.62)" /><text x="386" y="200" class="lab" style="font-size:27px">darf nicht</text></g>
+          <g id="k13-ok1" opacity="0"><use href="#ok" transform="translate(640 30) scale(0.9)" /></g>
+          <g id="k13-ok2" opacity="0"><use href="#ok" transform="translate(640 110) scale(0.9)" /></g>
+          <g id="k13-ok3" opacity="0"><use href="#ok" transform="translate(640 190) scale(0.9)" /></g>
+          <!-- Folgen-Plus (Pauls Vorgabe 2026-10-25: nur das Folgen-Symbol als kurze Animation) -->
+          <g id="k13-f" opacity="0">
+            <circle cx="728" cy="112" r="50" fill="#e5e7eb" />
+            <use href="#i-person" class="ico" transform="translate(702 86) scale(2.2)" style="stroke:#6b7280;stroke-width:2" />
+            <circle id="k13-ring" cx="728" cy="112" r="58" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+            <circle id="k13-plusbg" cx="766" cy="148" r="22" fill="#0b0c0e" stroke="#fff" stroke-width="3.5" />
+            <path id="k13-plus" d="M766 137 V 159 M 755 148 H 777" stroke="#fff" stroke-width="4" stroke-linecap="round" />
+            <path id="k13-haken" d="M756 148 l7 7 l12 -13" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+            <text x="728" y="206" text-anchor="middle" class="lab" style="font-size:24px">Folgen</text>
+            <g id="k13-maus" opacity="0"><use href="#maus" /></g>
+          </g>
+        </svg>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // Zeiten sind Sekunden im geschnittenen Video, schon genau wie Remotion (Stücke auf ganze Frames gerundet) und als Cues.
+
+      // Karte rein mit Kicker, raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const auf = (sel, t, d = 0.15) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "none" }, t);
+      const weg = (sel, t, d = 0.2) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      function zeichne(sel, t, d = 0.5) {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.out" }, t);
+      }
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      function ring(sel, t) {
+        tl.set(sel, { opacity: 0.95, scale: 1, transformOrigin: "50% 50%" }, t);
+        tl.to(sel, { opacity: 0, scale: 1.08, duration: 0.8, ease: "power2.out" }, t + 0.02);
+      }
+      // Balken wächst von der Grundlinie (y unten fest)
+      function wachse(sel, t, d = 0.5) {
+        const el = document.querySelector(sel);
+        const y = +el.getAttribute("y"), h = +el.getAttribute("height");
+        tl.fromTo(sel, { attr: { y: y + h, height: 0 } }, { attr: { y, height: h }, duration: d, ease: "power2.out" }, t);
+      }
+      // Balken fällt von oben (Rabatt-Stufe)
+      function falle(sel, t, d = 0.45) {
+        const el = document.querySelector(sel);
+        const h = +el.getAttribute("height");
+        tl.fromTo(sel, { attr: { height: 0 } }, { attr: { height: h }, duration: d, ease: "power2.out" }, t);
+      }
+      gsap.set("#k2-check, #k2-pfeil, #k5-strich, #k6-strich, #k8-alt, #k8-v1, #k8-v2, #k8-v3, #k8-v4, #k8-klammer, #k10-linie, #k12-pfeil, #k12-riss", { strokeDasharray: 1, strokeDashoffset: 1 });
+      gsap.set("#k8-b1, #k8-b2, #k8-b3, #k8-b4, #k8-b5, #k8-w1, #k8-w2, #k8-w3, #k8-w4, #k8-w5, #k8-l1, #k8-l2, #k8-l3, #k8-l4, #k8-l5, #k8-l5b", { opacity: 0 });
+
+      // K1 Code-Formular: WELCOME10, 10 % wird getippt, Zeiger auf Speichern, Klick, rotes ✕; "nicht einfach so"
+      karte("#k1", 1.30, 6.43);
+      for (let i = 0; i < 4; i++) { tl.set("#k1-cursor", { opacity: 0 }, 1.6 + i * 0.6); tl.set("#k1-cursor", { opacity: 1 }, 1.9 + i * 0.6); }
+      schreibe("#k1-cliprect", 270, 3.433, 0.55);
+      tl.set("#k1-cursor", { opacity: 0 }, 4.167);
+      schreibe("#k1-wrect", 140, 4.167, 0.4);
+      tl.fromTo("#k1-maus", { opacity: 0, x: 420, y: 250 }, { opacity: 1, x: 400, y: 236, duration: 0.15, ease: "power2.out" }, 5.20);
+      tl.to("#k1-maus", { x: 210, y: 176, duration: 0.45, ease: "power2.inOut" }, 5.40);
+      tl.to("#k1-maus", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 5.90);
+      tl.to("#k1-maus", { scale: 1, duration: 0.15, ease: "power2.out" }, 5.98);
+      tl.fromTo("#k1-press", { opacity: 0 }, { opacity: 0.25, duration: 0.08 }, 5.90);
+      tl.to("#k1-press", { opacity: 0, duration: 0.2 }, 6.0);
+      badge("#k1-x", 5.95);
+
+      // K2 Aktion vorbereiten (Plan ✓), Marge als Münzstapel, Pfeil zum Geschenk wird gestrichen: Marge behalten
+      karte("#k2", 6.467, 12.0);
+      zeichne("#k2-check", 8.267, 0.45);
+      pop("#k2-marge", 9.133, 0.35);
+      auf("#k2-gift", 9.70, 0.25);
+      zeichne("#k2-pfeil", 9.70, 0.45);
+      ring("#k2-ring", 10.233);
+      tl.to("#k2-muenze", { x: 140, y: -18, opacity: 0.35, duration: 0.45, ease: "power2.inOut" }, 10.70);
+      badge("#k2-x", 10.95);
+      tl.to("#k2-muenze", { x: 0, y: 0, opacity: 1, duration: 0.4, ease: "power2.inOut" }, 11.05);
+      tl.to("#k2-pfeil", { opacity: 0.35, duration: 0.3 }, 11.05);
+      schreibe("#k2-cliprect", 256, 11.0, 0.5);
+
+      // K3 Shop mit T-Shirts, ein Shirt 40 €, Stammkunden, −10 %, Beispiel-Code WELCOME10
+      karte("#k3", 12.033, 20.2);
+      pop("#k3-shop", 12.833);
+      pop("#k3-s3", 13.80, 0.25); pop("#k3-s1", 13.88, 0.25); pop("#k3-s2", 13.96, 0.25);
+      ein("#k3-karte", 14.867, 0.35);
+      tl.to("#k3-s3", { opacity: 0.3, duration: 0.3 }, 14.867);
+      const preis = { v: 0 };
+      auf("#k3-preis", 15.867, 0.1);
+      tl.to(preis, { v: 40, duration: 0.45, ease: "power2.out", onUpdate: () => { document.querySelector("#k3-preis").textContent = Math.round(preis.v) + " €"; } }, 15.867);
+      pop("#k3-stamm", 17.733);
+      badge("#k3-rabatt", 18.467);
+      ein("#k3-code", 18.767);
+
+      // K4 Gilt für: Ziel, alle Produkte oder ausgewählte Kollektionen (ausgewählt)
+      karte("#k4", 23.967, 30.92);
+      ring("#k4-ring", 25.40);
+      ein("#k4-a", 27.467);
+      ein("#k4-b", 29.433);
+      tl.fromTo("#k4-maus", { opacity: 0, x: 640, y: 290 }, { opacity: 1, x: 620, y: 278, duration: 0.15, ease: "power2.out" }, 29.45);
+      tl.to("#k4-maus", { x: 236, y: 226, duration: 0.42, ease: "power2.inOut" }, 29.50);
+      tl.to("#k4-maus", { scale: 0.85, duration: 0.08 }, 29.90);
+      tl.to("#k4-maus", { scale: 1, duration: 0.15 }, 29.98);
+      auf("#k4-baktiv", 29.90, 0.2);
+      auf("#k4-punkt", 29.90, 0.1);
+      tl.to("#k4-a", { opacity: 0.4, duration: 0.3 }, 30.0);
+      tl.to("#k4-maus", { opacity: 0, duration: 0.3 }, 30.4);
+
+      // K5 Kollektion T-Shirts mit −10 %, nur T-Shirts; Jacke teuer, −10 % dort wäre ein Fehler
+      karte("#k5", 30.967, 37.27);
+      schreibe("#k5-cliprect", 300, 32.10, 0.5);
+      badge("#k5-t1", 32.533); badge("#k5-t2", 32.63); badge("#k5-t3", 32.73);
+      ein("#k5-jacke", 34.90, 0.35);
+      badge("#k5-teuer", 35.933);
+      badge("#k5-tj", 36.30);
+      zeichne("#k5-strich", 36.633, 0.3);
+      badge("#k5-x", 36.70);
+
+      // K6 Mindestbestellwert 80 €: Warenkorb 40 € ✕, Warenkorb 80 € ✓ −10 %, höherer Warenkorb
+      karte("#k6", 37.30, 50.84);
+      auf("#k6-linie", 39.167, 0.01);
+      zeichne("#k6-strich", 39.167, 0.6);
+      ein("#k6-80", 41.567);
+      auf("#k6-a", 43.733, 0.25);
+      tl.set("#k6-abar", { attr: { y: 222, height: 0 } }, 43.733);
+      tl.to("#k6-abar", { attr: { y: 142, height: 80 }, duration: 0.5, ease: "power2.out" }, 44.533);
+      badge("#k6-ax", 45.767);
+      auf("#k6-b", 47.533, 0.25);
+      tl.set("#k6-bbar", { opacity: 1, attr: { y: 222, height: 0 } }, 49.033);
+      tl.to("#k6-bbar", { attr: { y: 62, height: 160 }, duration: 0.55, ease: "power2.out" }, 49.033);
+      auf("#k6-bwert", 49.30, 0.2);
+      schreibe("#k6-cliprect", 240, 49.033, 0.6);
+      badge("#k6-bok", 49.533);
+      ein("#k6-brabatt", 50.133, 0.25);
+
+      // K7 Puzzle: drei Rabattklassen, Regler (Einstellung), besonders wichtig, rasten auf "Kombination" ein
+      karte("#k7", 50.867, 56.30);
+      pop("#k7-regler", 52.567);
+      schreibe("#k7-cliprect", 430, 53.933, 0.55);
+      tl.to("#k7-p1", { x: 70, duration: 0.45, ease: "power2.inOut" }, 55.333);
+      tl.to("#k7-p3", { x: -70, duration: 0.45, ease: "power2.inOut" }, 55.333);
+      auf("#k7-rahmen", 55.70, 0.25);
+      ein("#k7-wort", 55.333, 0.3);
+
+      // K8 Wasserfall 100 → −20 → 80 → −8 (10 %) → 72, 28 € weniger
+      karte("#k8", 60.90, 82.60);
+      auf("#k8-l1", 61.0, 0.2);
+      auf("#k8-b1", 62.90, 0.01); wachse("#k8-b1", 62.90, 0.5); ein("#k8-w1", 62.95);
+      auf("#k8-l2", 64.767, 0.2);
+      zeichne("#k8-v1", 65.833, 0.2);
+      auf("#k8-b2", 65.90, 0.01); falle("#k8-b2", 65.90, 0.4); ein("#k8-w2", 65.90);
+      auf("#k8-l3", 66.467, 0.2);
+      zeichne("#k8-v2", 66.467, 0.2);
+      auf("#k8-b3", 66.50, 0.01); wachse("#k8-b3", 66.50, 0.45); ein("#k8-w3", 66.60);
+      // (67,17-70,33 Quelle groß, Karte unsichtbar)
+      auf("#k8-l4", 70.333, 0.2);
+      ring("#k8-ring3", 71.867);
+      zeichne("#k8-v3", 72.933, 0.2);
+      auf("#k8-b4", 72.95, 0.01); falle("#k8-b4", 72.95, 0.35); ein("#k8-w4", 72.95);
+      zeichne("#k8-v4", 74.833, 0.2);
+      auf("#k8-l5", 74.833, 0.2);
+      auf("#k8-b5", 74.85, 0.01); wachse("#k8-b5", 74.85, 0.5);
+      const ergebnis = { v: 100 };
+      tl.set("#k8-w5", { opacity: 1, textContent: "100 €" }, 74.85);
+      tl.to(ergebnis, { v: 72, duration: 0.6, ease: "power2.out", onUpdate: () => { document.querySelector("#k8-w5").textContent = Math.round(ergebnis.v) + " €"; } }, 74.85);
+      auf("#k8-l5b", 76.80, 0.25);
+      zeichne("#k8-klammer", 79.067, 0.35);
+      schreibe("#k8-cliprect", 170, 79.20, 0.55);
+      zeichne("#k8-alt", 80.633, 0.6);
+
+      // K9 Kombinationen-Panel, Lupe prüft; von selbst richtig? ✕ selbst prüfen
+      karte("#k9", 85.767, 93.70);
+      ein("#k9-r1", 85.95, 0.25); ein("#k9-r2", 86.10, 0.25); ein("#k9-r3", 86.25, 0.25);
+      ring("#k9-ring", 87.333);
+      tl.fromTo("#k9-lupe", { opacity: 0, x: 420, y: 230 }, { opacity: 1, x: 380, y: 210, duration: 0.25, ease: "power2.out" }, 88.20);
+      tl.to("#k9-lupe", { x: 330, y: 90, duration: 0.5, ease: "power2.inOut" }, 88.633);
+      tl.to("#k9-lupe", { x: 330, y: 150, duration: 0.4, ease: "power2.inOut" }, 89.20);
+      tl.to("#k9-lupe", { x: 330, y: 210, duration: 0.4, ease: "power2.inOut" }, 89.70);
+      tl.to("#k9-lupe", { opacity: 0, duration: 0.3 }, 90.40);
+      ein("#k9-auto", 90.967);
+      badge("#k9-x", 92.467);
+      tl.to("#k9-auto", { opacity: 0.45, duration: 0.3 }, 92.55);
+      schreibe("#k9-cliprect", 270, 92.60, 0.55);
+
+      // K10 Nutzungsgrenze und Zeitraum selbst festlegen
+      karte("#k10", 93.733, 100.20);
+      ein("#k10-r1", 95.033);
+      ein("#k10-r2", 96.167);
+      zeichne("#k10-linie", 96.30, 0.6);
+      auf("#k10-ende", 96.85, 0.2); auf("#k10-endet", 96.85, 0.2);
+      badge("#k10-ok1", 97.567);
+      badge("#k10-ok2", 98.30);
+
+      // K11 Testmatrix: Warenkorb 1 muss funktionieren (−10 % ✓), Warenkorb 2 darf nicht (gilt nicht ✕)
+      karte("#k11", 104.467, 109.60);
+      badge("#k11-aok", 105.367);
+      ein("#k11-b", 106.50, 0.3);
+      badge("#k11-bx", 108.133);
+
+      // K12 Verkäufe steigen (fördern ✓), Konfigurationsfehler, Kalkulation bekommt einen Riss
+      karte("#k12", 109.633, 116.47);
+      tl.to("#k12-c3", { attr: { y: 70, height: 130 }, duration: 0.55, ease: "power2.out" }, 111.133);
+      zeichne("#k12-pfeil", 111.133, 0.55);
+      badge("#k12-ok", 111.633);
+      schreibe("#k12-hcliprect", 190, 111.633, 0.45);
+      pop("#k12-rechner", 113.633, 0.35);
+      badge("#k12-fehler", 113.70);
+      ring("#k12-ring", 115.133);
+      zeichne("#k12-riss", 115.833, 0.35);
+      tl.to("#k12-rechner", { rotation: -3, svgOrigin: "600 110", duration: 0.25, ease: "power2.out" }, 115.85);
+
+      // K13 Checkliste, drei Punkte mit Haken, Folgen-Plus auf "Follow"
+      karte("#k13", 116.50);
+      ein("#k13-z1", 116.55, 0.3); ein("#k13-z2", 116.80, 0.3); ein("#k13-z3", 117.05, 0.3);
+      badge("#k13-ok1", 117.40); badge("#k13-ok2", 117.65); badge("#k13-ok3", 117.90);
+      auf("#k13-f", 118.40, 0.3);
+      tl.set("#k13-ring", { opacity: 0.9, scale: 1, transformOrigin: "50% 50%" }, 118.967);
+      tl.to("#k13-ring", { opacity: 0, scale: 1.3, duration: 0.7, ease: "power2.out" }, 118.98);
+      tl.fromTo("#k13-maus", { opacity: 0, x: 812, y: 250 }, { opacity: 1, x: 800, y: 236, duration: 0.15, ease: "power2.out" }, 119.85);
+      tl.to("#k13-maus", { x: 770, y: 152, duration: 0.45, ease: "power2.inOut" }, 119.98);
+      tl.to("#k13-maus", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 120.43);
+      tl.to("#k13-maus", { scale: 1, duration: 0.15, ease: "power2.out" }, 120.51);
+      tl.to("#k13-plusbg", { attr: { fill: "#00d088" }, duration: 0.15 }, 120.47);
+      tl.to("#k13-plus", { opacity: 0, duration: 0.12 }, 120.47);
+      tl.to("#k13-haken", { opacity: 1, duration: 0.15 }, 120.50);
+      tl.to("#k13-maus", { opacity: 0, duration: 0.3 }, 120.95);
+
+      tl.seek(0);
+      window.__timelines["rabattcodes-skizzen"] = tl;
+    </script>
+  </body>
+</html>

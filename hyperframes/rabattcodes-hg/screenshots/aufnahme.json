@@ -1,0 +1,136 @@
+{
+ "ziele": {
+  "kombi": {
+   "url": "https://help.shopify.com/de/manual/discounts/discount-combinations",
+   "status": 200,
+   "titel": "Shopify Help Center | Rabatte kombinieren",
+   "pos": {
+    "Produktrabatte: Gelten für bestimmte Artikel oder Kollektionen": [
+     460,
+     37
+    ],
+    "Bestellrabatte: Gelten für die Zwischensummen von Warenkörben": [
+     507,
+     37
+    ],
+    "Versandrabatte: Ändern die Versandkosten": [
+     554,
+     17
+    ],
+    "Produktrabatte mit Bestellrabatten (nur für berechtigte Händler:innen verfügbar)": [
+     2122,
+     37
+    ],
+    "Mehrere Rabatte werden nur dann auf eine Bestellung angewendet, wenn die Einstellung bei jedem Rabatt die Kombination zulässt.": [
+     3275,
+     57
+    ],
+    "Bestellrabatte werden auf die angepasste Zwischensumme nach den Produktrabatten angewendet.": [
+     4572,
+     57
+    ],
+    "Wenn du deine Rabattkombinationen testest, teste gleichzeitig auch alle Rabattbeschränkungen.": [
+     11732,
+     37
+    ],
+    "Versuche beispielsweise, sowohl Produkte hinzuzufügen, für die deine Rabattcodes gelten, als auch Produkte, die vom Rabatt ausgeschlossen sind, um sicherzustellen, dass die Rabattkombinationen wie erwartet funktionieren.": [
+     11772,
+     97
+    ]
+   },
+   "ank": {
+    "Rabatte kombinieren": [
+     157,
+     40
+    ],
+    "Arten von Rabattkombinationen": [
+     1855,
+     64
+    ],
+    "Berechtigungsvoraussetzungen": [
+     2323,
+     32
+    ],
+    "Kombinationseinstellungen": [
+     3244,
+     20
+    ],
+    "Reihenfolge der Rabattanwendung": [
+     4437,
+     20
+    ],
+    "Rabattkombinationen testen": [
+     11420,
+     24
+    ]
+   },
+   "hoehe": 6400
+  },
+  "betrag": {
+   "url": "https://help.shopify.com/de/manual/discounts/discount-types/percentage-fixed-amount",
+   "status": 200,
+   "titel": "Shopify Help Center | Betragsrabatte",
+   "pos": {
+    "Gehe in deinem Shopify-Adminbereich zu „Rabatte“.": [
+     2856,
+     37
+    ],
+    "Klicke auf der Seite „Rabatte“ auf Rabatt erstellen.": [
+     2903,
+     37
+    ],
+    "Um den Rabatt auf bestimmte Kollektionen anzuwenden, wähle Bestimmte Kollektionen aus und füge anschließend deine Kollektionen hinzu.": [
+     3547,
+     77
+    ],
+    "Wähle Mindestkaufbetrag aus, damit Kund:innen einen Mindestkaufbetrag ausgeben müssen, um sich für den Rabatt zu qualifizieren.": [
+     3915,
+     77
+    ],
+    "Um die Rabattnutzung zu begrenzen, führe im Abschnitt Maximale Rabattnutzung eine der folgenden Aktionen aus:": [
+     4674,
+     57
+    ],
+    "Lege im Abschnitt Aktivitätszeitraum das Startdatum für den Rabatt fest": [
+     5129,
+     37
+    ]
+   },
+   "ank": {
+    "Betragsrabatte": [
+     157,
+     40
+    ],
+    "Betragsrabattcode erstellen": [
+     2401,
+     64
+    ],
+    "Schritte:": [
+     2747,
+     24
+    ]
+   },
+   "hoehe": 6400
+  },
+  "rabatte": {
+   "url": "https://help.shopify.com/de/manual/discounts",
+   "status": 200,
+   "titel": "Shopify Help Center | Rabatte",
+   "pos": {
+    "Um Rabatte anzubieten, kannst du Rabattcodes erstellen oder automatische Rabatte einrichten.": [
+     265,
+     57
+    ]
+   },
+   "ank": {
+    "Rabatte": [
+     157,
+     40
+    ]
+   },
+   "hoehe": 6400
+  }
+ },
+ "datum": "2026-10-29T19:24:34.435Z",
+ "viewport": "412x732 @2.62"
+}

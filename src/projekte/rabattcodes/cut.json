@@ -1,0 +1,2495 @@
+{
+ "projekt": "rabattcodes",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "rabattcodes/t1",
+   "from": 21.925,
+   "to": 28.225,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 35.125,
+   "to": 48.885,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 68.235,
+   "to": 75.205,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 86.425,
+   "to": 96.705,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 119.665,
+   "to": 128.795,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 152.325,
+   "to": 156.765,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 165.975,
+   "to": 171.315,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 179.565,
+   "to": 184.285,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 198.575,
+   "to": 204.875,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 211.285,
+   "to": 217.525,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 230.665,
+   "to": 235.295,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 241.895,
+   "to": 249.425,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 268.095,
+   "to": 286.895,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 305.885,
+   "to": 317.955,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "rabattcodes/t1",
+   "from": 332.485,
+   "to": 337.3,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Wenn",
+   "src": "rabattcodes/t1",
+   "start": 21.92,
+   "end": 22.04
+  },
+  {
+   "text": "du",
+   "src": "rabattcodes/t1",
+   "start": 22.1,
+   "end": 22.16
+  },
+  {
+   "text": "in",
+   "src": "rabattcodes/t1",
+   "start": 22.22,
+   "end": 22.28
+  },
+  {
+   "text": "Shopify",
+   "src": "rabattcodes/t1",
+   "start": 22.34,
+   "end": 22.78
+  },
+  {
+   "text": "einfach",
+   "src": "rabattcodes/t1",
+   "start": 23.0,
+   "end": 23.26
+  },
+  {
+   "text": "Rabattcodes",
+   "src": "rabattcodes/t1",
+   "start": 23.3,
+   "end": 23.86
+  },
+  {
+   "text": "erstellst,",
+   "src": "rabattcodes/t1",
+   "start": 23.92,
+   "end": 24.38
+  },
+  {
+   "text": "würde",
+   "src": "rabattcodes/t1",
+   "start": 24.56,
+   "end": 24.76
+  },
+  {
+   "text": "ich",
+   "src": "rabattcodes/t1",
+   "start": 24.82,
+   "end": 24.9
+  },
+  {
+   "text": "tatsächlich",
+   "src": "rabattcodes/t1",
+   "start": 24.94,
+   "end": 25.34
+  },
+  {
+   "text": "nicht",
+   "src": "rabattcodes/t1",
+   "start": 25.42,
+   "end": 25.56
+  },
+  {
+   "text": "einfach",
+   "src": "rabattcodes/t1",
+   "start": 25.66,
+   "end": 25.92
+  },
+  {
+   "text": "nur",
+   "src": "rabattcodes/t1",
+   "start": 25.96,
+   "end": 26.06
+  },
+  {
+   "text": "10 %",
+   "src": "rabattcodes/t1",
+   "start": 26.16,
+   "end": 26.79
+  },
+  {
+   "text": "antippen",
+   "src": "rabattcodes/t1",
+   "start": 26.79,
+   "end": 27.12
+  },
+  {
+   "text": "oder",
+   "src": "rabattcodes/t1",
+   "start": 27.24,
+   "end": 27.4
+  },
+  {
+   "text": "Speichern",
+   "src": "rabattcodes/t1",
+   "start": 27.5,
+   "end": 27.84
+  },
+  {
+   "text": "klicken.",
+   "src": "rabattcodes/t1",
+   "start": 27.88,
+   "end": 28.12
+  },
+  {
+   "text": "Denn",
+   "src": "rabattcodes/t1",
+   "start": 35.35,
+   "end": 35.47
+  },
+  {
+   "text": "ich",
+   "src": "rabattcodes/t1",
+   "start": 35.53,
+   "end": 35.61
+  },
+  {
+   "text": "zeige",
+   "src": "rabattcodes/t1",
+   "start": 35.69,
+   "end": 35.89
+  },
+  {
+   "text": "dir",
+   "src": "rabattcodes/t1",
+   "start": 35.95,
+   "end": 36.03
+  },
+  {
+   "text": "mal,",
+   "src": "rabattcodes/t1",
+   "start": 36.07,
+   "end": 36.17
+  },
+  {
+   "text": "wie",
+   "src": "rabattcodes/t1",
+   "start": 36.25,
+   "end": 36.33
+  },
+  {
+   "text": "man",
+   "src": "rabattcodes/t1",
+   "start": 36.39,
+   "end": 36.51
+  },
+  {
+   "text": "eine",
+   "src": "rabattcodes/t1",
+   "start": 36.59,
+   "end": 36.73
+  },
+  {
+   "text": "Aktion",
+   "src": "rabattcodes/t1",
+   "start": 36.79,
+   "end": 37.09
+  },
+  {
+   "text": "vorbereiten",
+   "src": "rabattcodes/t1",
+   "start": 37.17,
+   "end": 37.63
+  },
+  {
+   "text": "würde,",
+   "src": "rabattcodes/t1",
+   "start": 37.67,
+   "end": 37.85
+  },
+  {
+   "text": "ohne",
+   "src": "rabattcodes/t1",
+   "start": 38.01,
+   "end": 38.21
+  },
+  {
+   "text": "dabei",
+   "src": "rabattcodes/t1",
+   "start": 38.29,
+   "end": 38.47
+  },
+  {
+   "text": "unnötig",
+   "src": "rabattcodes/t1",
+   "start": 38.59,
+   "end": 39.03
+  },
+  {
+   "text": "Marge",
+   "src": "rabattcodes/t1",
+   "start": 39.13,
+   "end": 39.39
+  },
+  {
+   "text": "zu",
+   "src": "rabattcodes/t1",
+   "start": 39.47,
+   "end": 39.53
+  },
+  {
+   "text": "verschenken.",
+   "src": "rabattcodes/t1",
+   "start": 39.59,
+   "end": 39.99
+  },
+  {
+   "text": "Stell",
+   "src": "rabattcodes/t1",
+   "start": 40.91,
+   "end": 41.11
+  },
+  {
+   "text": "dir",
+   "src": "rabattcodes/t1",
+   "start": 41.13,
+   "end": 41.19
+  },
+  {
+   "text": "mal",
+   "src": "rabattcodes/t1",
+   "start": 41.23,
+   "end": 41.37
+  },
+  {
+   "text": "einen",
+   "src": "rabattcodes/t1",
+   "start": 41.45,
+   "end": 41.65
+  },
+  {
+   "text": "Online-Shop",
+   "src": "rabattcodes/t1",
+   "start": 41.71,
+   "end": 42.11
+  },
+  {
+   "text": "vor",
+   "src": "rabattcodes/t1",
+   "start": 42.17,
+   "end": 42.31
+  },
+  {
+   "text": "mit",
+   "src": "rabattcodes/t1",
+   "start": 42.45,
+   "end": 42.55
+  },
+  {
+   "text": "T-Shirts.",
+   "src": "rabattcodes/t1",
+   "start": 42.69,
+   "end": 43.15
+  },
+  {
+   "text": "Ein",
+   "src": "rabattcodes/t1",
+   "start": 43.77,
+   "end": 43.87
+  },
+  {
+   "text": "T-Shirt",
+   "src": "rabattcodes/t1",
+   "start": 43.93,
+   "end": 44.23
+  },
+  {
+   "text": "kostet",
+   "src": "rabattcodes/t1",
+   "start": 44.31,
+   "end": 44.65
+  },
+  {
+   "text": "40",
+   "src": "rabattcodes/t1",
+   "start": 44.77,
+   "end": 45.09
+  },
+  {
+   "text": "Euro",
+   "src": "rabattcodes/t1",
+   "start": 45.21,
+   "end": 45.41
+  },
+  {
+   "text": "und",
+   "src": "rabattcodes/t1",
+   "start": 45.67,
+   "end": 45.75
+  },
+  {
+   "text": "du",
+   "src": "rabattcodes/t1",
+   "start": 45.79,
+   "end": 45.83
+  },
+  {
+   "text": "willst",
+   "src": "rabattcodes/t1",
+   "start": 45.87,
+   "end": 46.07
+  },
+  {
+   "text": "zum",
+   "src": "rabattcodes/t1",
+   "start": 46.09,
+   "end": 46.19
+  },
+  {
+   "text": "Beispiel",
+   "src": "rabattcodes/t1",
+   "start": 46.23,
+   "end": 46.53
+  },
+  {
+   "text": "Stammkunden",
+   "src": "rabattcodes/t1",
+   "start": 46.63,
+   "end": 47.21
+  },
+  {
+   "text": "10 %",
+   "src": "rabattcodes/t1",
+   "start": 47.37,
+   "end": 47.95
+  },
+  {
+   "text": "Rabatt",
+   "src": "rabattcodes/t1",
+   "start": 47.65,
+   "end": 48.23
+  },
+  {
+   "text": "anbieten.",
+   "src": "rabattcodes/t1",
+   "start": 48.33,
+   "end": 48.65
+  },
+  {
+   "text": "Gehe",
+   "src": "rabattcodes/t1",
+   "start": 68.25,
+   "end": 68.37
+  },
+  {
+   "text": "dafür",
+   "src": "rabattcodes/t1",
+   "start": 68.41,
+   "end": 68.61
+  },
+  {
+   "text": "zunächst",
+   "src": "rabattcodes/t1",
+   "start": 68.69,
+   "end": 68.97
+  },
+  {
+   "text": "einmal",
+   "src": "rabattcodes/t1",
+   "start": 69.01,
+   "end": 69.17
+  },
+  {
+   "text": "in",
+   "src": "rabattcodes/t1",
+   "start": 69.23,
+   "end": 69.29
+  },
+  {
+   "text": "Shopify",
+   "src": "rabattcodes/t1",
+   "start": 69.35,
+   "end": 69.75
+  },
+  {
+   "text": "zu",
+   "src": "rabattcodes/t1",
+   "start": 69.85,
+   "end": 69.91
+  },
+  {
+   "text": "„Rabatte“,",
+   "src": "rabattcodes/t1",
+   "start": 69.99,
+   "end": 70.37
+  },
+  {
+   "text": "dann",
+   "src": "rabattcodes/t1",
+   "start": 70.95,
+   "end": 71.09
+  },
+  {
+   "text": "erstelle",
+   "src": "rabattcodes/t1",
+   "start": 71.17,
+   "end": 71.47
+  },
+  {
+   "text": "einen",
+   "src": "rabattcodes/t1",
+   "start": 71.53,
+   "end": 71.61
+  },
+  {
+   "text": "Rabattcode",
+   "src": "rabattcodes/t1",
+   "start": 71.67,
+   "end": 72.15
+  },
+  {
+   "text": "und",
+   "src": "rabattcodes/t1",
+   "start": 72.21,
+   "end": 72.27
+  },
+  {
+   "text": "leg",
+   "src": "rabattcodes/t1",
+   "start": 72.31,
+   "end": 72.43
+  },
+  {
+   "text": "zunächst",
+   "src": "rabattcodes/t1",
+   "start": 72.53,
+   "end": 72.81
+  },
+  {
+   "text": "einmal",
+   "src": "rabattcodes/t1",
+   "start": 72.85,
+   "end": 73.03
+  },
+  {
+   "text": "fest,",
+   "src": "rabattcodes/t1",
+   "start": 73.11,
+   "end": 73.31
+  },
+  {
+   "text": "worauf",
+   "src": "rabattcodes/t1",
+   "start": 73.65,
+   "end": 73.95
+  },
+  {
+   "text": "er",
+   "src": "rabattcodes/t1",
+   "start": 73.99,
+   "end": 74.07
+  },
+  {
+   "text": "tatsächlich",
+   "src": "rabattcodes/t1",
+   "start": 74.11,
+   "end": 74.57
+  },
+  {
+   "text": "gelten",
+   "src": "rabattcodes/t1",
+   "start": 74.65,
+   "end": 74.91
+  },
+  {
+   "text": "soll.",
+   "src": "rabattcodes/t1",
+   "start": 74.95,
+   "end": 75.11
+  },
+  {
+   "text": "Soll",
+   "src": "rabattcodes/t1",
+   "start": 86.46,
+   "end": 86.6
+  },
+  {
+   "text": "er",
+   "src": "rabattcodes/t1",
+   "start": 86.62,
+   "end": 86.66
+  },
+  {
+   "text": "für",
+   "src": "rabattcodes/t1",
+   "start": 86.76,
+   "end": 86.84
+  },
+  {
+   "text": "alle",
+   "src": "rabattcodes/t1",
+   "start": 86.94,
+   "end": 87.08
+  },
+  {
+   "text": "Produkte",
+   "src": "rabattcodes/t1",
+   "start": 87.14,
+   "end": 87.42
+  },
+  {
+   "text": "gelten",
+   "src": "rabattcodes/t1",
+   "start": 87.5,
+   "end": 87.8
+  },
+  {
+   "text": "oder",
+   "src": "rabattcodes/t1",
+   "start": 88.0,
+   "end": 88.18
+  },
+  {
+   "text": "tatsächlich",
+   "src": "rabattcodes/t1",
+   "start": 88.24,
+   "end": 88.62
+  },
+  {
+   "text": "nur",
+   "src": "rabattcodes/t1",
+   "start": 88.66,
+   "end": 88.74
+  },
+  {
+   "text": "für",
+   "src": "rabattcodes/t1",
+   "start": 88.76,
+   "end": 88.84
+  },
+  {
+   "text": "ausgewählte",
+   "src": "rabattcodes/t1",
+   "start": 88.88,
+   "end": 89.3
+  },
+  {
+   "text": "Kollektionen?",
+   "src": "rabattcodes/t1",
+   "start": 89.36,
+   "end": 89.82
+  },
+  {
+   "text": "Wenn",
+   "src": "rabattcodes/t1",
+   "start": 90.42,
+   "end": 90.54
+  },
+  {
+   "text": "du",
+   "src": "rabattcodes/t1",
+   "start": 90.58,
+   "end": 90.64
+  },
+  {
+   "text": "dann",
+   "src": "rabattcodes/t1",
+   "start": 90.68,
+   "end": 90.8
+  },
+  {
+   "text": "eigentlich",
+   "src": "rabattcodes/t1",
+   "start": 90.9,
+   "end": 91.26
+  },
+  {
+   "text": "nur",
+   "src": "rabattcodes/t1",
+   "start": 91.36,
+   "end": 91.46
+  },
+  {
+   "text": "T-Shirts",
+   "src": "rabattcodes/t1",
+   "start": 91.56,
+   "end": 91.94
+  },
+  {
+   "text": "bewerben",
+   "src": "rabattcodes/t1",
+   "start": 91.98,
+   "end": 92.3
+  },
+  {
+   "text": "möchtest,",
+   "src": "rabattcodes/t1",
+   "start": 92.34,
+   "end": 92.64
+  },
+  {
+   "text": "dann",
+   "src": "rabattcodes/t1",
+   "start": 92.68,
+   "end": 92.82
+  },
+  {
+   "text": "solltest",
+   "src": "rabattcodes/t1",
+   "start": 92.86,
+   "end": 93.16
+  },
+  {
+   "text": "du",
+   "src": "rabattcodes/t1",
+   "start": 93.18,
+   "end": 93.24
+  },
+  {
+   "text": "natürlich",
+   "src": "rabattcodes/t1",
+   "start": 93.3,
+   "end": 93.64
+  },
+  {
+   "text": "auch",
+   "src": "rabattcodes/t1",
+   "start": 93.76,
+   "end": 93.88
+  },
+  {
+   "text": "nicht",
+   "src": "rabattcodes/t1",
+   "start": 93.98,
+   "end": 94.1
+  },
+  {
+   "text": "aus",
+   "src": "rabattcodes/t1",
+   "start": 94.16,
+   "end": 94.3
+  },
+  {
+   "text": "Versehen",
+   "src": "rabattcodes/t1",
+   "start": 94.36,
+   "end": 94.68
+  },
+  {
+   "text": "irgendwelche",
+   "src": "rabattcodes/t1",
+   "start": 94.74,
+   "end": 95.08
+  },
+  {
+   "text": "teuren",
+   "src": "rabattcodes/t1",
+   "start": 95.38,
+   "end": 95.68
+  },
+  {
+   "text": "Jacken",
+   "src": "rabattcodes/t1",
+   "start": 95.76,
+   "end": 95.98
+  },
+  {
+   "text": "mitrabattieren.",
+   "src": "rabattcodes/t1",
+   "start": 96.08,
+   "end": 96.16
+  },
+  {
+   "text": "Als",
+   "src": "rabattcodes/t1",
+   "start": 119.73,
+   "end": 119.83
+  },
+  {
+   "text": "Nächstes",
+   "src": "rabattcodes/t1",
+   "start": 119.89,
+   "end": 120.17
+  },
+  {
+   "text": "würde",
+   "src": "rabattcodes/t1",
+   "start": 120.23,
+   "end": 120.37
+  },
+  {
+   "text": "ich",
+   "src": "rabattcodes/t1",
+   "start": 120.39,
+   "end": 120.45
+  },
+  {
+   "text": "tatsächlich",
+   "src": "rabattcodes/t1",
+   "start": 120.47,
+   "end": 120.87
+  },
+  {
+   "text": "zunächst",
+   "src": "rabattcodes/t1",
+   "start": 120.91,
+   "end": 121.17
+  },
+  {
+   "text": "einmal",
+   "src": "rabattcodes/t1",
+   "start": 121.19,
+   "end": 121.37
+  },
+  {
+   "text": "den",
+   "src": "rabattcodes/t1",
+   "start": 121.43,
+   "end": 121.51
+  },
+  {
+   "text": "Mindestbestellwert",
+   "src": "rabattcodes/t1",
+   "start": 121.59,
+   "end": 122.33
+  },
+  {
+   "text": "prüfen.",
+   "src": "rabattcodes/t1",
+   "start": 122.37,
+   "end": 122.65
+  },
+  {
+   "text": "Denn",
+   "src": "rabattcodes/t1",
+   "start": 123.11,
+   "end": 123.23
+  },
+  {
+   "text": "bei",
+   "src": "rabattcodes/t1",
+   "start": 123.25,
+   "end": 123.31
+  },
+  {
+   "text": "einer",
+   "src": "rabattcodes/t1",
+   "start": 123.35,
+   "end": 123.45
+  },
+  {
+   "text": "Aktion",
+   "src": "rabattcodes/t1",
+   "start": 123.51,
+   "end": 123.79
+  },
+  {
+   "text": "ab",
+   "src": "rabattcodes/t1",
+   "start": 123.83,
+   "end": 123.89
+  },
+  {
+   "text": "80",
+   "src": "rabattcodes/t1",
+   "start": 123.99,
+   "end": 124.27
+  },
+  {
+   "text": "Euro",
+   "src": "rabattcodes/t1",
+   "start": 124.37,
+   "end": 124.51
+  },
+  {
+   "text": "würde",
+   "src": "rabattcodes/t1",
+   "start": 124.59,
+   "end": 124.73
+  },
+  {
+   "text": "ich",
+   "src": "rabattcodes/t1",
+   "start": 124.77,
+   "end": 124.83
+  },
+  {
+   "text": "nicht",
+   "src": "rabattcodes/t1",
+   "start": 124.91,
+   "end": 125.05
+  },
+  {
+   "text": "automatisch",
+   "src": "rabattcodes/t1",
+   "start": 125.09,
+   "end": 125.63
+  },
+  {
+   "text": "immer",
+   "src": "rabattcodes/t1",
+   "start": 125.65,
+   "end": 125.81
+  },
+  {
+   "text": "jedem",
+   "src": "rabattcodes/t1",
+   "start": 125.89,
+   "end": 126.07
+  },
+  {
+   "text": "Kunden",
+   "src": "rabattcodes/t1",
+   "start": 126.17,
+   "end": 126.49
+  },
+  {
+   "text": "mit",
+   "src": "rabattcodes/t1",
+   "start": 126.57,
+   "end": 126.67
+  },
+  {
+   "text": "einem",
+   "src": "rabattcodes/t1",
+   "start": 126.73,
+   "end": 126.87
+  },
+  {
+   "text": "40-Euro-T-Shirt",
+   "src": "rabattcodes/t1",
+   "start": 126.95,
+   "end": 127.95
+  },
+  {
+   "text": "einen",
+   "src": "rabattcodes/t1",
+   "start": 128.05,
+   "end": 128.15
+  },
+  {
+   "text": "Rabatt",
+   "src": "rabattcodes/t1",
+   "start": 128.19,
+   "end": 128.43
+  },
+  {
+   "text": "geben.",
+   "src": "rabattcodes/t1",
+   "start": 128.49,
+   "end": 128.67
+  },
+  {
+   "text": "Das",
+   "src": "rabattcodes/t1",
+   "start": 152.36,
+   "end": 152.5
+  },
+  {
+   "text": "ist",
+   "src": "rabattcodes/t1",
+   "start": 152.54,
+   "end": 152.64
+  },
+  {
+   "text": "zum",
+   "src": "rabattcodes/t1",
+   "start": 152.7,
+   "end": 152.8
+  },
+  {
+   "text": "Beispiel",
+   "src": "rabattcodes/t1",
+   "start": 152.84,
+   "end": 153.1
+  },
+  {
+   "text": "immer",
+   "src": "rabattcodes/t1",
+   "start": 153.12,
+   "end": 153.24
+  },
+  {
+   "text": "dann",
+   "src": "rabattcodes/t1",
+   "start": 153.28,
+   "end": 153.44
+  },
+  {
+   "text": "sinnvoll,",
+   "src": "rabattcodes/t1",
+   "start": 153.5,
+   "end": 153.82
+  },
+  {
+   "text": "wenn",
+   "src": "rabattcodes/t1",
+   "start": 153.86,
+   "end": 153.98
+  },
+  {
+   "text": "du",
+   "src": "rabattcodes/t1",
+   "start": 154.02,
+   "end": 154.06
+  },
+  {
+   "text": "natürlich",
+   "src": "rabattcodes/t1",
+   "start": 154.16,
+   "end": 154.48
+  },
+  {
+   "text": "auch",
+   "src": "rabattcodes/t1",
+   "start": 154.52,
+   "end": 154.62
+  },
+  {
+   "text": "mal",
+   "src": "rabattcodes/t1",
+   "start": 154.64,
+   "end": 154.7
+  },
+  {
+   "text": "einen",
+   "src": "rabattcodes/t1",
+   "start": 154.72,
+   "end": 154.9
+  },
+  {
+   "text": "höheren",
+   "src": "rabattcodes/t1",
+   "start": 154.98,
+   "end": 155.28
+  },
+  {
+   "text": "Warenkorb",
+   "src": "rabattcodes/t1",
+   "start": 155.48,
+   "end": 156.02
+  },
+  {
+   "text": "fördern",
+   "src": "rabattcodes/t1",
+   "start": 156.08,
+   "end": 156.32
+  },
+  {
+   "text": "möchtest.",
+   "src": "rabattcodes/t1",
+   "start": 156.36,
+   "end": 156.68
+  },
+  {
+   "text": "Jetzt",
+   "src": "rabattcodes/t1",
+   "start": 166.03,
+   "end": 166.19
+  },
+  {
+   "text": "kommt",
+   "src": "rabattcodes/t1",
+   "start": 166.23,
+   "end": 166.37
+  },
+  {
+   "text": "aber",
+   "src": "rabattcodes/t1",
+   "start": 166.41,
+   "end": 166.53
+  },
+  {
+   "text": "meiner",
+   "src": "rabattcodes/t1",
+   "start": 166.61,
+   "end": 166.89
+  },
+  {
+   "text": "Meinung",
+   "src": "rabattcodes/t1",
+   "start": 166.93,
+   "end": 167.17
+  },
+  {
+   "text": "nach",
+   "src": "rabattcodes/t1",
+   "start": 167.25,
+   "end": 167.37
+  },
+  {
+   "text": "diese",
+   "src": "rabattcodes/t1",
+   "start": 167.49,
+   "end": 167.67
+  },
+  {
+   "text": "Einstellung,",
+   "src": "rabattcodes/t1",
+   "start": 167.75,
+   "end": 168.15
+  },
+  {
+   "text": "die",
+   "src": "rabattcodes/t1",
+   "start": 168.21,
+   "end": 168.27
+  },
+  {
+   "text": "ich",
+   "src": "rabattcodes/t1",
+   "start": 168.31,
+   "end": 168.37
+  },
+  {
+   "text": "hier",
+   "src": "rabattcodes/t1",
+   "start": 168.43,
+   "end": 168.55
+  },
+  {
+   "text": "besonders",
+   "src": "rabattcodes/t1",
+   "start": 168.61,
+   "end": 169.05
+  },
+  {
+   "text": "wichtig",
+   "src": "rabattcodes/t1",
+   "start": 169.11,
+   "end": 169.35
+  },
+  {
+   "text": "finde,",
+   "src": "rabattcodes/t1",
+   "start": 169.43,
+   "end": 169.63
+  },
+  {
+   "text": "und",
+   "src": "rabattcodes/t1",
+   "start": 170.03,
+   "end": 170.11
+  },
+  {
+   "text": "zwar",
+   "src": "rabattcodes/t1",
+   "start": 170.15,
+   "end": 170.31
+  },
+  {
+   "text": "die",
+   "src": "rabattcodes/t1",
+   "start": 170.35,
+   "end": 170.43
+  },
+  {
+   "text": "Kombination.",
+   "src": "rabattcodes/t1",
+   "start": 170.51,
+   "end": 171.15
+  },
+  {
+   "text": "Darf",
+   "src": "rabattcodes/t1",
+   "start": 179.55,
+   "end": 179.73
+  },
+  {
+   "text": "sich",
+   "src": "rabattcodes/t1",
+   "start": 179.79,
+   "end": 179.89
+  },
+  {
+   "text": "zum",
+   "src": "rabattcodes/t1",
+   "start": 179.93,
+   "end": 179.99
+  },
+  {
+   "text": "Beispiel",
+   "src": "rabattcodes/t1",
+   "start": 180.01,
+   "end": 180.27
+  },
+  {
+   "text": "der",
+   "src": "rabattcodes/t1",
+   "start": 180.33,
+   "end": 180.39
+  },
+  {
+   "text": "Code",
+   "src": "rabattcodes/t1",
+   "start": 180.49,
+   "end": 180.69
+  },
+  {
+   "text": "auch",
+   "src": "rabattcodes/t1",
+   "start": 180.73,
+   "end": 180.83
+  },
+  {
+   "text": "mit",
+   "src": "rabattcodes/t1",
+   "start": 180.87,
+   "end": 180.97
+  },
+  {
+   "text": "anderen",
+   "src": "rabattcodes/t1",
+   "start": 181.07,
+   "end": 181.39
+  },
+  {
+   "text": "Rabatt-,",
+   "src": "rabattcodes/t1",
+   "start": 181.47,
+   "end": 181.81
+  },
+  {
+   "text": "Bestell-",
+   "src": "rabattcodes/t1",
+   "start": 182.05,
+   "end": 182.55
+  },
+  {
+   "text": "oder",
+   "src": "rabattcodes/t1",
+   "start": 182.59,
+   "end": 182.73
+  },
+  {
+   "text": "Versandvarianten",
+   "src": "rabattcodes/t1",
+   "start": 182.95,
+   "end": 183.67
+  },
+  {
+   "text": "kombinieren?",
+   "src": "rabattcodes/t1",
+   "start": 183.71,
+   "end": 184.13
+  },
+  {
+   "text": "Stell",
+   "src": "rabattcodes/t1",
+   "start": 198.61,
+   "end": 198.81
+  },
+  {
+   "text": "dir",
+   "src": "rabattcodes/t1",
+   "start": 198.83,
+   "end": 198.91
+  },
+  {
+   "text": "zum",
+   "src": "rabattcodes/t1",
+   "start": 199.03,
+   "end": 199.13
+  },
+  {
+   "text": "Beispiel",
+   "src": "rabattcodes/t1",
+   "start": 199.17,
+   "end": 199.49
+  },
+  {
+   "text": "einen",
+   "src": "rabattcodes/t1",
+   "start": 199.65,
+   "end": 199.79
+  },
+  {
+   "text": "Warenkorb",
+   "src": "rabattcodes/t1",
+   "start": 199.85,
+   "end": 200.31
+  },
+  {
+   "text": "für",
+   "src": "rabattcodes/t1",
+   "start": 200.41,
+   "end": 200.51
+  },
+  {
+   "text": "100",
+   "src": "rabattcodes/t1",
+   "start": 200.61,
+   "end": 200.87
+  },
+  {
+   "text": "Euro",
+   "src": "rabattcodes/t1",
+   "start": 200.97,
+   "end": 201.13
+  },
+  {
+   "text": "vor,",
+   "src": "rabattcodes/t1",
+   "start": 201.21,
+   "end": 201.35
+  },
+  {
+   "text": "auf",
+   "src": "rabattcodes/t1",
+   "start": 201.49,
+   "end": 201.61
+  },
+  {
+   "text": "den",
+   "src": "rabattcodes/t1",
+   "start": 201.69,
+   "end": 201.83
+  },
+  {
+   "text": "schon",
+   "src": "rabattcodes/t1",
+   "start": 201.87,
+   "end": 202.03
+  },
+  {
+   "text": "bereits",
+   "src": "rabattcodes/t1",
+   "start": 202.07,
+   "end": 202.33
+  },
+  {
+   "text": "ein",
+   "src": "rabattcodes/t1",
+   "start": 202.35,
+   "end": 202.45
+  },
+  {
+   "text": "Produktrabatt",
+   "src": "rabattcodes/t1",
+   "start": 202.49,
+   "end": 203.07
+  },
+  {
+   "text": "von",
+   "src": "rabattcodes/t1",
+   "start": 203.17,
+   "end": 203.33
+  },
+  {
+   "text": "20",
+   "src": "rabattcodes/t1",
+   "start": 203.55,
+   "end": 203.91
+  },
+  {
+   "text": "Euro",
+   "src": "rabattcodes/t1",
+   "start": 203.99,
+   "end": 204.13
+  },
+  {
+   "text": "angewendet",
+   "src": "rabattcodes/t1",
+   "start": 204.17,
+   "end": 204.55
+  },
+  {
+   "text": "wurde.",
+   "src": "rabattcodes/t1",
+   "start": 204.61,
+   "end": 204.77
+  },
+  {
+   "text": "Wenn",
+   "src": "rabattcodes/t1",
+   "start": 211.3,
+   "end": 211.42
+  },
+  {
+   "text": "der",
+   "src": "rabattcodes/t1",
+   "start": 211.46,
+   "end": 211.52
+  },
+  {
+   "text": "zusätzlich",
+   "src": "rabattcodes/t1",
+   "start": 211.64,
+   "end": 212.1
+  },
+  {
+   "text": "ein",
+   "src": "rabattcodes/t1",
+   "start": 212.14,
+   "end": 212.22
+  },
+  {
+   "text": "Bestellrabatt",
+   "src": "rabattcodes/t1",
+   "start": 212.28,
+   "end": 212.86
+  },
+  {
+   "text": "von",
+   "src": "rabattcodes/t1",
+   "start": 212.92,
+   "end": 213.02
+  },
+  {
+   "text": "10 %",
+   "src": "rabattcodes/t1",
+   "start": 213.12,
+   "end": 213.75
+  },
+  {
+   "text": "zulässig",
+   "src": "rabattcodes/t1",
+   "start": 213.74,
+   "end": 214.12
+  },
+  {
+   "text": "ist,",
+   "src": "rabattcodes/t1",
+   "start": 214.2,
+   "end": 214.34
+  },
+  {
+   "text": "dann",
+   "src": "rabattcodes/t1",
+   "start": 214.44,
+   "end": 214.6
+  },
+  {
+   "text": "wird",
+   "src": "rabattcodes/t1",
+   "start": 214.68,
+   "end": 214.84
+  },
+  {
+   "text": "natürlich",
+   "src": "rabattcodes/t1",
+   "start": 214.92,
+   "end": 215.22
+  },
+  {
+   "text": "dieser",
+   "src": "rabattcodes/t1",
+   "start": 215.26,
+   "end": 215.48
+  },
+  {
+   "text": "auf",
+   "src": "rabattcodes/t1",
+   "start": 215.6,
+   "end": 215.72
+  },
+  {
+   "text": "die",
+   "src": "rabattcodes/t1",
+   "start": 215.8,
+   "end": 215.9
+  },
+  {
+   "text": "verbleibenden",
+   "src": "rabattcodes/t1",
+   "start": 215.98,
+   "end": 216.44
+  },
+  {
+   "text": "80",
+   "src": "rabattcodes/t1",
+   "start": 216.52,
+   "end": 216.78
+  },
+  {
+   "text": "Euro",
+   "src": "rabattcodes/t1",
+   "start": 216.86,
+   "end": 217.0
+  },
+  {
+   "text": "berechnet.",
+   "src": "rabattcodes/t1",
+   "start": 217.06,
+   "end": 217.44
+  },
+  {
+   "text": "Dann",
+   "src": "rabattcodes/t1",
+   "start": 230.73,
+   "end": 230.87
+  },
+  {
+   "text": "landen",
+   "src": "rabattcodes/t1",
+   "start": 230.91,
+   "end": 231.15
+  },
+  {
+   "text": "wir",
+   "src": "rabattcodes/t1",
+   "start": 231.21,
+   "end": 231.31
+  },
+  {
+   "text": "aber",
+   "src": "rabattcodes/t1",
+   "start": 231.37,
+   "end": 231.49
+  },
+  {
+   "text": "zum",
+   "src": "rabattcodes/t1",
+   "start": 231.55,
+   "end": 231.63
+  },
+  {
+   "text": "Beispiel",
+   "src": "rabattcodes/t1",
+   "start": 231.67,
+   "end": 231.91
+  },
+  {
+   "text": "bei",
+   "src": "rabattcodes/t1",
+   "start": 231.93,
+   "end": 231.99
+  },
+  {
+   "text": "72",
+   "src": "rabattcodes/t1",
+   "start": 232.11,
+   "end": 232.65
+  },
+  {
+   "text": "Euro",
+   "src": "rabattcodes/t1",
+   "start": 232.75,
+   "end": 232.93
+  },
+  {
+   "text": "vor",
+   "src": "rabattcodes/t1",
+   "start": 233.41,
+   "end": 233.51
+  },
+  {
+   "text": "den",
+   "src": "rabattcodes/t1",
+   "start": 233.57,
+   "end": 233.65
+  },
+  {
+   "text": "möglichen",
+   "src": "rabattcodes/t1",
+   "start": 233.69,
+   "end": 234.01
+  },
+  {
+   "text": "Versandkosten",
+   "src": "rabattcodes/t1",
+   "start": 234.05,
+   "end": 234.59
+  },
+  {
+   "text": "selbstverständlich.",
+   "src": "rabattcodes/t1",
+   "start": 234.61,
+   "end": 235.21
+  },
+  {
+   "text": "Das",
+   "src": "rabattcodes/t1",
+   "start": 241.9,
+   "end": 242.02
+  },
+  {
+   "text": "sind",
+   "src": "rabattcodes/t1",
+   "start": 242.06,
+   "end": 242.18
+  },
+  {
+   "text": "dann",
+   "src": "rabattcodes/t1",
+   "start": 242.2,
+   "end": 242.32
+  },
+  {
+   "text": "aber",
+   "src": "rabattcodes/t1",
+   "start": 242.36,
+   "end": 242.48
+  },
+  {
+   "text": "natürlich",
+   "src": "rabattcodes/t1",
+   "start": 242.52,
+   "end": 242.84
+  },
+  {
+   "text": "28",
+   "src": "rabattcodes/t1",
+   "start": 242.92,
+   "end": 243.4
+  },
+  {
+   "text": "Euro",
+   "src": "rabattcodes/t1",
+   "start": 243.42,
+   "end": 243.54
+  },
+  {
+   "text": "weniger",
+   "src": "rabattcodes/t1",
+   "start": 243.6,
+   "end": 243.94
+  },
+  {
+   "text": "als",
+   "src": "rabattcodes/t1",
+   "start": 244.14,
+   "end": 244.28
+  },
+  {
+   "text": "der",
+   "src": "rabattcodes/t1",
+   "start": 244.34,
+   "end": 244.42
+  },
+  {
+   "text": "ursprüngliche",
+   "src": "rabattcodes/t1",
+   "start": 244.5,
+   "end": 244.98
+  },
+  {
+   "text": "Warenkorbwert.",
+   "src": "rabattcodes/t1",
+   "start": 245.02,
+   "end": 245.6
+  },
+  {
+   "text": "Und",
+   "src": "rabattcodes/t1",
+   "start": 246.32,
+   "end": 246.4
+  },
+  {
+   "text": "nicht",
+   "src": "rabattcodes/t1",
+   "start": 246.42,
+   "end": 246.54
+  },
+  {
+   "text": "jede",
+   "src": "rabattcodes/t1",
+   "start": 246.56,
+   "end": 246.72
+  },
+  {
+   "text": "Kombination",
+   "src": "rabattcodes/t1",
+   "start": 246.8,
+   "end": 247.36
+  },
+  {
+   "text": "ist",
+   "src": "rabattcodes/t1",
+   "start": 247.44,
+   "end": 247.52
+  },
+  {
+   "text": "in",
+   "src": "rabattcodes/t1",
+   "start": 247.58,
+   "end": 247.68
+  },
+  {
+   "text": "jedem",
+   "src": "rabattcodes/t1",
+   "start": 247.82,
+   "end": 248.08
+  },
+  {
+   "text": "Shop",
+   "src": "rabattcodes/t1",
+   "start": 248.14,
+   "end": 248.32
+  },
+  {
+   "text": "tatsächlich",
+   "src": "rabattcodes/t1",
+   "start": 248.38,
+   "end": 248.78
+  },
+  {
+   "text": "auch",
+   "src": "rabattcodes/t1",
+   "start": 248.84,
+   "end": 248.92
+  },
+  {
+   "text": "möglich.",
+   "src": "rabattcodes/t1",
+   "start": 248.98,
+   "end": 249.32
+  },
+  {
+   "text": "Aber",
+   "src": "rabattcodes/t1",
+   "start": 268.31,
+   "end": 268.43
+  },
+  {
+   "text": "genau",
+   "src": "rabattcodes/t1",
+   "start": 268.53,
+   "end": 268.81
+  },
+  {
+   "text": "deshalb",
+   "src": "rabattcodes/t1",
+   "start": 268.93,
+   "end": 269.25
+  },
+  {
+   "text": "solltest",
+   "src": "rabattcodes/t1",
+   "start": 269.31,
+   "end": 269.61
+  },
+  {
+   "text": "du",
+   "src": "rabattcodes/t1",
+   "start": 269.65,
+   "end": 269.69
+  },
+  {
+   "text": "unbedingt",
+   "src": "rabattcodes/t1",
+   "start": 269.87,
+   "end": 270.43
+  },
+  {
+   "text": "deine",
+   "src": "rabattcodes/t1",
+   "start": 270.45,
+   "end": 270.59
+  },
+  {
+   "text": "Einstellungen",
+   "src": "rabattcodes/t1",
+   "start": 270.67,
+   "end": 271.13
+  },
+  {
+   "text": "prüfen.",
+   "src": "rabattcodes/t1",
+   "start": 271.17,
+   "end": 271.49
+  },
+  {
+   "text": "Denn",
+   "src": "rabattcodes/t1",
+   "start": 272.11,
+   "end": 272.25
+  },
+  {
+   "text": "statt",
+   "src": "rabattcodes/t1",
+   "start": 272.35,
+   "end": 272.55
+  },
+  {
+   "text": "dich",
+   "src": "rabattcodes/t1",
+   "start": 272.61,
+   "end": 272.69
+  },
+  {
+   "text": "einfach",
+   "src": "rabattcodes/t1",
+   "start": 272.75,
+   "end": 272.93
+  },
+  {
+   "text": "nur",
+   "src": "rabattcodes/t1",
+   "start": 272.97,
+   "end": 273.05
+  },
+  {
+   "text": "darauf",
+   "src": "rabattcodes/t1",
+   "start": 273.09,
+   "end": 273.31
+  },
+  {
+   "text": "zu",
+   "src": "rabattcodes/t1",
+   "start": 273.35,
+   "end": 273.43
+  },
+  {
+   "text": "verlassen,",
+   "src": "rabattcodes/t1",
+   "start": 273.49,
+   "end": 273.91
+  },
+  {
+   "text": "dass",
+   "src": "rabattcodes/t1",
+   "start": 273.99,
+   "end": 274.11
+  },
+  {
+   "text": "Shopify",
+   "src": "rabattcodes/t1",
+   "start": 274.17,
+   "end": 274.59
+  },
+  {
+   "text": "jetzt",
+   "src": "rabattcodes/t1",
+   "start": 274.61,
+   "end": 274.75
+  },
+  {
+   "text": "das",
+   "src": "rabattcodes/t1",
+   "start": 274.79,
+   "end": 274.91
+  },
+  {
+   "text": "Richtige",
+   "src": "rabattcodes/t1",
+   "start": 275.01,
+   "end": 275.33
+  },
+  {
+   "text": "macht,",
+   "src": "rabattcodes/t1",
+   "start": 275.39,
+   "end": 275.59
+  },
+  {
+   "text": "würde",
+   "src": "rabattcodes/t1",
+   "start": 276.25,
+   "end": 276.43
+  },
+  {
+   "text": "ich",
+   "src": "rabattcodes/t1",
+   "start": 276.55,
+   "end": 276.67
+  },
+  {
+   "text": "tatsächlich",
+   "src": "rabattcodes/t1",
+   "start": 276.73,
+   "end": 277.15
+  },
+  {
+   "text": "auch",
+   "src": "rabattcodes/t1",
+   "start": 277.23,
+   "end": 277.35
+  },
+  {
+   "text": "die",
+   "src": "rabattcodes/t1",
+   "start": 277.41,
+   "end": 277.49
+  },
+  {
+   "text": "Nutzungsgrenzen",
+   "src": "rabattcodes/t1",
+   "start": 277.55,
+   "end": 278.37
+  },
+  {
+   "text": "und",
+   "src": "rabattcodes/t1",
+   "start": 278.45,
+   "end": 278.51
+  },
+  {
+   "text": "den",
+   "src": "rabattcodes/t1",
+   "start": 278.55,
+   "end": 278.63
+  },
+  {
+   "text": "Zeitraum",
+   "src": "rabattcodes/t1",
+   "start": 278.71,
+   "end": 279.07
+  },
+  {
+   "text": "der",
+   "src": "rabattcodes/t1",
+   "start": 279.11,
+   "end": 279.19
+  },
+  {
+   "text": "Aktion",
+   "src": "rabattcodes/t1",
+   "start": 279.22,
+   "end": 279.52
+  },
+  {
+   "text": "immer",
+   "src": "rabattcodes/t1",
+   "start": 279.62,
+   "end": 279.76
+  },
+  {
+   "text": "lieber",
+   "src": "rabattcodes/t1",
+   "start": 279.82,
+   "end": 280.0
+  },
+  {
+   "text": "selber",
+   "src": "rabattcodes/t1",
+   "start": 280.1,
+   "end": 280.4
+  },
+  {
+   "text": "sauber",
+   "src": "rabattcodes/t1",
+   "start": 280.48,
+   "end": 280.76
+  },
+  {
+   "text": "festlegen.",
+   "src": "rabattcodes/t1",
+   "start": 280.82,
+   "end": 281.24
+  },
+  {
+   "text": "Aber",
+   "src": "rabattcodes/t1",
+   "start": 282.54,
+   "end": 282.68
+  },
+  {
+   "text": "bevor",
+   "src": "rabattcodes/t1",
+   "start": 282.74,
+   "end": 282.98
+  },
+  {
+   "text": "du",
+   "src": "rabattcodes/t1",
+   "start": 283.04,
+   "end": 283.1
+  },
+  {
+   "text": "tatsächlich",
+   "src": "rabattcodes/t1",
+   "start": 283.16,
+   "end": 283.54
+  },
+  {
+   "text": "den",
+   "src": "rabattcodes/t1",
+   "start": 283.58,
+   "end": 283.68
+  },
+  {
+   "text": "Code",
+   "src": "rabattcodes/t1",
+   "start": 283.78,
+   "end": 284.0
+  },
+  {
+   "text": "öffentlich",
+   "src": "rabattcodes/t1",
+   "start": 284.08,
+   "end": 284.42
+  },
+  {
+   "text": "teilst,",
+   "src": "rabattcodes/t1",
+   "start": 284.48,
+   "end": 284.78
+  },
+  {
+   "text": "teste",
+   "src": "rabattcodes/t1",
+   "start": 285.18,
+   "end": 285.46
+  },
+  {
+   "text": "erst",
+   "src": "rabattcodes/t1",
+   "start": 285.58,
+   "end": 285.7
+  },
+  {
+   "text": "einmal",
+   "src": "rabattcodes/t1",
+   "start": 285.76,
+   "end": 285.94
+  },
+  {
+   "text": "zwei",
+   "src": "rabattcodes/t1",
+   "start": 286.0,
+   "end": 286.14
+  },
+  {
+   "text": "Warenkörbe.",
+   "src": "rabattcodes/t1",
+   "start": 286.2,
+   "end": 286.68
+  },
+  {
+   "text": "Einen,",
+   "src": "rabattcodes/t1",
+   "start": 305.98,
+   "end": 306.24
+  },
+  {
+   "text": "der",
+   "src": "rabattcodes/t1",
+   "start": 306.3,
+   "end": 306.38
+  },
+  {
+   "text": "den",
+   "src": "rabattcodes/t1",
+   "start": 306.42,
+   "end": 306.52
+  },
+  {
+   "text": "Rabatt",
+   "src": "rabattcodes/t1",
+   "start": 306.58,
+   "end": 306.86
+  },
+  {
+   "text": "bekommen",
+   "src": "rabattcodes/t1",
+   "start": 306.88,
+   "end": 307.18
+  },
+  {
+   "text": "soll,",
+   "src": "rabattcodes/t1",
+   "start": 307.22,
+   "end": 307.4
+  },
+  {
+   "text": "und",
+   "src": "rabattcodes/t1",
+   "start": 307.8,
+   "end": 307.88
+  },
+  {
+   "text": "einen,",
+   "src": "rabattcodes/t1",
+   "start": 308.02,
+   "end": 308.28
+  },
+  {
+   "text": "der",
+   "src": "rabattcodes/t1",
+   "start": 308.34,
+   "end": 308.44
+  },
+  {
+   "text": "einfach",
+   "src": "rabattcodes/t1",
+   "start": 308.5,
+   "end": 308.78
+  },
+  {
+   "text": "ihn",
+   "src": "rabattcodes/t1",
+   "start": 308.84,
+   "end": 308.92
+  },
+  {
+   "text": "ausdrücklich",
+   "src": "rabattcodes/t1",
+   "start": 309.04,
+   "end": 309.56
+  },
+  {
+   "text": "nicht",
+   "src": "rabattcodes/t1",
+   "start": 309.64,
+   "end": 309.78
+  },
+  {
+   "text": "bekommen",
+   "src": "rabattcodes/t1",
+   "start": 309.82,
+   "end": 310.1
+  },
+  {
+   "text": "darf.",
+   "src": "rabattcodes/t1",
+   "start": 310.14,
+   "end": 310.3
+  },
+  {
+   "text": "Ein",
+   "src": "rabattcodes/t1",
+   "start": 311.14,
+   "end": 311.24
+  },
+  {
+   "text": "Rabatt",
+   "src": "rabattcodes/t1",
+   "start": 311.3,
+   "end": 311.54
+  },
+  {
+   "text": "soll",
+   "src": "rabattcodes/t1",
+   "start": 311.62,
+   "end": 311.76
+  },
+  {
+   "text": "eben",
+   "src": "rabattcodes/t1",
+   "start": 311.86,
+   "end": 312.02
+  },
+  {
+   "text": "in",
+   "src": "rabattcodes/t1",
+   "start": 312.06,
+   "end": 312.12
+  },
+  {
+   "text": "dem",
+   "src": "rabattcodes/t1",
+   "start": 312.16,
+   "end": 312.26
+  },
+  {
+   "text": "Fall",
+   "src": "rabattcodes/t1",
+   "start": 312.3,
+   "end": 312.42
+  },
+  {
+   "text": "deine",
+   "src": "rabattcodes/t1",
+   "start": 312.44,
+   "end": 312.56
+  },
+  {
+   "text": "Verkäufe",
+   "src": "rabattcodes/t1",
+   "start": 312.64,
+   "end": 313.04
+  },
+  {
+   "text": "fördern",
+   "src": "rabattcodes/t1",
+   "start": 313.14,
+   "end": 313.46
+  },
+  {
+   "text": "und",
+   "src": "rabattcodes/t1",
+   "start": 313.98,
+   "end": 314.06
+  },
+  {
+   "text": "nicht",
+   "src": "rabattcodes/t1",
+   "start": 314.14,
+   "end": 314.3
+  },
+  {
+   "text": "einfach",
+   "src": "rabattcodes/t1",
+   "start": 314.36,
+   "end": 314.62
+  },
+  {
+   "text": "nur",
+   "src": "rabattcodes/t1",
+   "start": 314.68,
+   "end": 314.78
+  },
+  {
+   "text": "durch",
+   "src": "rabattcodes/t1",
+   "start": 314.96,
+   "end": 315.08
+  },
+  {
+   "text": "Konfigurationsfehler",
+   "src": "rabattcodes/t1",
+   "start": 315.14,
+   "end": 316.2
+  },
+  {
+   "text": "deine",
+   "src": "rabattcodes/t1",
+   "start": 316.34,
+   "end": 316.58
+  },
+  {
+   "text": "Kalkulation",
+   "src": "rabattcodes/t1",
+   "start": 316.66,
+   "end": 317.28
+  },
+  {
+   "text": "kaputt",
+   "src": "rabattcodes/t1",
+   "start": 317.36,
+   "end": 317.64
+  },
+  {
+   "text": "machen.",
+   "src": "rabattcodes/t1",
+   "start": 317.7,
+   "end": 317.9
+  },
+  {
+   "text": "Wenn",
+   "src": "rabattcodes/t1",
+   "start": 332.55,
+   "end": 332.67
+  },
+  {
+   "text": "du",
+   "src": "rabattcodes/t1",
+   "start": 332.69,
+   "end": 332.73
+  },
+  {
+   "text": "weitere",
+   "src": "rabattcodes/t1",
+   "start": 332.77,
+   "end": 333.01
+  },
+  {
+   "text": "solche",
+   "src": "rabattcodes/t1",
+   "start": 333.07,
+   "end": 333.29
+  },
+  {
+   "text": "Shopify-Tipps",
+   "src": "rabattcodes/t1",
+   "start": 333.35,
+   "end": 333.69
+  },
+  {
+   "text": "in",
+   "src": "rabattcodes/t1",
+   "start": 334.01,
+   "end": 334.07
+  },
+  {
+   "text": "Zukunft",
+   "src": "rabattcodes/t1",
+   "start": 334.13,
+   "end": 334.43
+  },
+  {
+   "text": "sehen",
+   "src": "rabattcodes/t1",
+   "start": 334.49,
+   "end": 334.65
+  },
+  {
+   "text": "möchtest,",
+   "src": "rabattcodes/t1",
+   "start": 334.67,
+   "end": 334.97
+  },
+  {
+   "text": "dann",
+   "src": "rabattcodes/t1",
+   "start": 335.01,
+   "end": 335.15
+  },
+  {
+   "text": "würde",
+   "src": "rabattcodes/t1",
+   "start": 335.43,
+   "end": 335.55
+  },
+  {
+   "text": "mich",
+   "src": "rabattcodes/t1",
+   "start": 335.61,
+   "end": 335.69
+  },
+  {
+   "text": "hier",
+   "src": "rabattcodes/t1",
+   "start": 335.73,
+   "end": 335.83
+  },
+  {
+   "text": "sehr",
+   "src": "rabattcodes/t1",
+   "start": 335.87,
+   "end": 336.01
+  },
+  {
+   "text": "über",
+   "src": "rabattcodes/t1",
+   "start": 336.15,
+   "end": 336.29
+  },
+  {
+   "text": "ein",
+   "src": "rabattcodes/t1",
+   "start": 336.35,
+   "end": 336.45
+  },
+  {
+   "text": "Follow",
+   "src": "rabattcodes/t1",
+   "start": 336.55,
+   "end": 336.77
+  },
+  {
+   "text": "freuen.",
+   "src": "rabattcodes/t1",
+   "start": 336.83,
+   "end": 337.07
+  }
+ ],
+ "pages": [
+  4,
+  1,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  4,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  4,
+  2,
+  3,
+  2,
+  1,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  1,
+  4,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  4,
+  3,
+  4,
+  3,
+  1,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  4,
+  3,
+  3,
+  1,
+  2,
+  1,
+  4,
+  2,
+  4,
+  4,
+  2,
+  3,
+  2,
+  3,
+  2,
+  4,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  3,
+  3,
+  1,
+  1,
+  3,
+  3,
+  3,
+  2,
+  1,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  1,
+  2,
+  3,
+  4,
+  3,
+  2,
+  4,
+  2,
+  3,
+  2,
+  1,
+  3,
+  2,
+  2,
+  3,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  2,
+  1,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3
+ ]
+}

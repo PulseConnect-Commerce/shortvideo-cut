@@ -1,0 +1,226 @@
+{
+ "projekt": "rabattcodes",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 21.8,
+   "text": "Wenn du in Shopify einfach Rabattcodes erstellst, würde ich tatsächlich nicht einfach nur 10% antippen oder speichern klicken."
+  },
+  {
+   "take": "t1",
+   "ab": 35.2,
+   "text": "denn ich zeige dir mal, wie man eine Aktion vorbereiten würde, ohne dabei unnötig Marge zu verschenken. Stell dir mal einen Online-Shop vor mit T-Shirts. Ein T-Shirt kostet 40 Euro und du willst zum Beispiel Stammkunden 10% Rabatt anbieten.",
+   "ganz": true
+  },
+  {
+   "take": "t1",
+   "ab": 68.1,
+   "text": "Gehe dafür zunächst einmal in Shopify zu Rabatte, dann erstelle ein Rabattcode und leg zunächst einmal fest, worauf er tatsächlich gelten soll."
+  },
+  {
+   "take": "t1",
+   "ab": 86.3,
+   "text": "Soll er für alle Produkte gelten oder tatsächlich nur für ausgewählte Kollektionen? Wenn du dann eigentlich nur T-Shirts bewerben möchtest, dann solltest du natürlich auch nicht aus Versehen irgendwelche teuren Jacken mit rabattieren."
+  },
+  {
+   "take": "t1",
+   "ab": 119.6,
+   "text": "Als nächstes würde ich tatsächlich zunächst einmal den Mindestbestellwert prüfen. Denn bei einer Aktion ab 80 Euro würde ich nicht automatisch immer jedem Kunden mit einem 40-Euro-T-Shirt einen Rabatt geben."
+  },
+  {
+   "take": "t1",
+   "ab": 152.2,
+   "text": "das ist zum Beispiel immer dann sinnvoll, wenn du natürlich auch mal einen höheren Warenkorb fördern möchtest."
+  },
+  {
+   "take": "t1",
+   "ab": 165.9,
+   "text": "jetzt kommt aber meiner Meinung nach diese Einstellung, die ich hier besonders wichtig finde und zwar die Kombination."
+  },
+  {
+   "take": "t1",
+   "ab": 179.4,
+   "text": "Darf sich zum Beispiel der Code auch mit anderen Rabatt, Bestell- oder Versandvarianten kombinieren?"
+  },
+  {
+   "take": "t1",
+   "ab": 198.4,
+   "text": "Stell dir zum Beispiel einen Warenkorb für 100 Euro vor, auf den schon bereits ein Produktrabatt von 20 Euro angewendet wurde."
+  },
+  {
+   "take": "t1",
+   "ab": 211.2,
+   "text": "Wenn der zusätzlich ein Bestellrabatt von 10% zulässig ist, dann wird natürlich dieser auf die verbleibenden 80 Euro berechnet."
+  },
+  {
+   "take": "t1",
+   "ab": 230.6,
+   "text": "Dann landen wir aber zum Beispiel bei 72 Euro vor dem möglichen Versandkosten selbstverständlich."
+  },
+  {
+   "take": "t1",
+   "ab": 241.8,
+   "text": "Das sind dann aber natürlich 28 Euro weniger als der ursprüngliche Warenkorbwert. Und nicht jede Kombination ist in jedem Shop tatsächlich auch möglich."
+  },
+  {
+   "take": "t1",
+   "ab": 268.2,
+   "ganz": true,
+   "text": "Aber genau deshalb solltest du unbedingt deine Einstellungen prüfen. Denn statt dich einfach nur darauf zu verlassen, dass Shopify jetzt das Richtige macht, Würde ich tatsächlich auch die Nutzungsgrenzen und den Zeitraum der Aktion immer lieber selber sauber festlegen. Aber bevor du tatsächlich den Code öffentlich teilst, teste erst einmal zwei Warenkörbe."
+  },
+  {
+   "take": "t1",
+   "ab": 305.9,
+   "text": "einen der den Rabatt bekommen soll und einen der einfach ihn ausdrücklich nicht bekommen darf. Ein Rabatt soll eben in dem Fall deine Verkäufe fördern und nicht einfach nur durch Konfigurationsfehler deine Kalkulation kaputt machen."
+  },
+  {
+   "take": "t1",
+   "ab": 332.4,
+   "text": "Wenn du weitere solcher Shopify Tipps in Zukunft sehen möchtest, dann würde mich hier sehr über ein Follow freuen."
+  }
+ ],
+ "korrekturen": [
+  [
+   "t1",
+   27.5,
+   "speichern",
+   "Speichern"
+  ],
+  [
+   "t1",
+   35.35,
+   "denn",
+   "Denn"
+  ],
+  [
+   "t1",
+   69.99,
+   "Rabatte,",
+   "„Rabatte“,"
+  ],
+  [
+   "t1",
+   71.53,
+   "ein",
+   "einen"
+  ],
+  [
+   "t1",
+   96.08,
+   "mit",
+   "mitrabattieren."
+  ],
+  [
+   "t1",
+   96.2,
+   "rabattieren.",
+   ""
+  ],
+  [
+   "t1",
+   119.89,
+   "nächstes",
+   "Nächstes"
+  ],
+  [
+   "t1",
+   152.36,
+   "das",
+   "Das"
+  ],
+  [
+   "t1",
+   166.03,
+   "jetzt",
+   "Jetzt"
+  ],
+  [
+   "t1",
+   169.43,
+   "finde",
+   "finde,"
+  ],
+  [
+   "t1",
+   181.47,
+   "Rabatt,",
+   "Rabatt-,"
+  ],
+  [
+   "t1",
+   233.57,
+   "dem",
+   "den"
+  ],
+  [
+   "t1",
+   276.25,
+   "Würde",
+   "würde"
+  ],
+  [
+   "t1",
+   305.98,
+   "einen",
+   "Einen,"
+  ],
+  [
+   "t1",
+   307.22,
+   "soll",
+   "soll,"
+  ],
+  [
+   "t1",
+   308.02,
+   "einen",
+   "einen,"
+  ],
+  [
+   "t1",
+   333.07,
+   "solcher",
+   "solche"
+  ],
+  [
+   "t1",
+   333.35,
+   "Shopify",
+   "Shopify-Tipps"
+  ],
+  [
+   "t1",
+   333.77,
+   "Tipps",
+   ""
+  ],
+  [
+   "t1",
+   26.16,
+   "10%",
+   "10 %"
+  ],
+  [
+   "t1",
+   47.37,
+   "10%",
+   "10 %"
+  ],
+  [
+   "t1",
+   213.12,
+   "10%",
+   "10 %"
+  ]
+ ],
+ "ende": {
+  "bis": 337.3
+ }
+}
