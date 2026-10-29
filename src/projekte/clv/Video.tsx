@@ -12,7 +12,7 @@
  * Augen Median x 572 / y 944, Kinn Median 1138 (p95 1197), Hüftlinie (oberste Jeans-Zeile neben dem Pullover) frühestens
  * y 1848 → scale 1.5, hoch 792, x 48: Kopfoberkante ~312, Augen ~624 mittig, Kinn ~915; der untere Bildrand zeigt Take-y
  * 1808 (mit dem Zoom-in höchstens ~1782), die Hüftlinie liegt damit mindestens ~60 px unter dem Rand (Bild 0: 1848 → 1980).
- * Sanfter Grade, ein ruhiges Zoom-in (3 %) um die Augen, kein Punch-in. Von oben: Gesicht, Kinn, Pill-Untertitel (y 1062),
+ * Sanfter Grade plus brightness(0.83) (helle Aufnahme), ein ruhiges Zoom-in (3 %) um die Augen, kein Punch-in. Von oben: Gesicht, Kinn, Pill-Untertitel (y 1062),
  * Karte (y 1120-1480), alles über der Instagram-Zone (ab 1500).
  * Karten als transparentes WebM aus hyperframes/clv-skizzen (public/broll/clv/skizzen.webm), Zeiten und Töne in karten.json.
  * Kein B-Roll aus alten Videos, keine Folgennummer, keine Quelle (nur sein Beispiel).
@@ -39,6 +39,11 @@ const AUGEN_Y = 624;
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel bis nach "wert?" (endet 3,83 s), ganz weg bei ~4,1 s; die erste Karte kommt bei 4,12 s */
 const HOOK_ENDE = fs(3.9);
+
+/** Sanfter Grade (STIL.gradeSanft) plus brightness(0.83): die Aufnahme ist hell (Gesicht nach npm run farbe, das höchstens
+ * ±4 % korrigiert, im Bild noch ~0,675, gemessen wie npm run pruefen an 11 Standbildern), Soll ~0,55-0,57 (Regel 5b, seine
+ * Vorgabe 2026-10-18 "zu hell"); wie bei MyStoreBuddy (0,68 → brightness 0,83) */
+const GRADE = `brightness(0.83) ${STIL.gradeSanft}`;
 
 /** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json) */
 const TOENE = karten.karten.flatMap((k) => k.sfx);
@@ -67,7 +72,7 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           voice={voice}
           transform={`translate(${-BILD.x}px, ${-BILD.hoch}px) scale(${BILD.scale})`}
           transformOrigin="50% 0%"
-          grade={STIL.gradeSanft}
+          grade={GRADE}
         />
       </AbsoluteFill>
 
