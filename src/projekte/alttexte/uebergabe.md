@@ -1,6 +1,6 @@
 # Übergabekarte: S05 · Produktbilder und Alt-Texte mit KI
 
-Status: **zur Prüfung** (Cutter, 29.10.2026)
+Status: **eingeplant** für Do 05.11.2026 14:00 Europe/Berlin (Pauls Vorgabe 27.10.: selbst nach Kalender einplanen), Metricool TikTok / Instagram / YouTube 410163058 / 410163347 / 410163651 (uuids -5055947836744708892 / -4423241730063121046 / 4598140802718779482); Drive final 16fktI59JSKj7lUzg9420FzzoTIy3x6AV
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): S05 · Produktbilder und Alt-Texte mit KI
 - **Format / Design:** FACE (Serie S, Serien-ID "Shopify in 30 Sekunden", keine Serien-Erwähnung im Video) / aktueller Look wie S02/S03: kein Hook-Titel (Briefing "ohne großes Hook-Overlay"), helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlagen P04, S02, S03), echte Seiten des Shopify Help Center groß über das ganze Bild mit ihm als Bubble unten rechts (Pauls Regel 28.10. "Quelle groß, er klein in der Ecke"), keine Quellen-Hintergründe hinter ihm, Musik ruhig, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe
