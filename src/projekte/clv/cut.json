@@ -1,0 +1,1144 @@
+{
+ "projekt": "clv",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "clv/t1",
+   "from": 1.345,
+   "to": 8.405,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clv/t1",
+   "from": 10.525,
+   "to": 23.095,
+   "nach": 0.025,
+   "vor": 0.09
+  },
+  {
+   "src": "clv/t1",
+   "from": 32.085,
+   "to": 44.975,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clv/t1",
+   "from": 53.775,
+   "to": 58.545,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clv/t1",
+   "from": 64.725,
+   "to": 69.935,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "clv/t1",
+   "from": 109.385,
+   "to": 120.1,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Der",
+   "src": "clv/t1",
+   "start": 1.39,
+   "end": 1.51
+  },
+  {
+   "text": "CLV,",
+   "src": "clv/t1",
+   "start": 1.65,
+   "end": 1.99
+  },
+  {
+   "text": "was",
+   "src": "clv/t1",
+   "start": 2.75,
+   "end": 2.89
+  },
+  {
+   "text": "ist",
+   "src": "clv/t1",
+   "start": 2.95,
+   "end": 2.99
+  },
+  {
+   "text": "ein",
+   "src": "clv/t1",
+   "start": 3.07,
+   "end": 3.17
+  },
+  {
+   "text": "Kunde",
+   "src": "clv/t1",
+   "start": 3.25,
+   "end": 3.49
+  },
+  {
+   "text": "tatsächlich",
+   "src": "clv/t1",
+   "start": 3.57,
+   "end": 4.17
+  },
+  {
+   "text": "auch",
+   "src": "clv/t1",
+   "start": 4.23,
+   "end": 4.33
+  },
+  {
+   "text": "langfristig",
+   "src": "clv/t1",
+   "start": 4.41,
+   "end": 4.93
+  },
+  {
+   "text": "wert?",
+   "src": "clv/t1",
+   "start": 4.99,
+   "end": 5.17
+  },
+  {
+   "text": "Heute",
+   "src": "clv/t1",
+   "start": 5.53,
+   "end": 5.73
+  },
+  {
+   "text": "erkläre",
+   "src": "clv/t1",
+   "start": 5.77,
+   "end": 6.05
+  },
+  {
+   "text": "ich",
+   "src": "clv/t1",
+   "start": 6.09,
+   "end": 6.15
+  },
+  {
+   "text": "dir",
+   "src": "clv/t1",
+   "start": 6.19,
+   "end": 6.29
+  },
+  {
+   "text": "kurz",
+   "src": "clv/t1",
+   "start": 6.35,
+   "end": 6.55
+  },
+  {
+   "text": "einmal,",
+   "src": "clv/t1",
+   "start": 6.59,
+   "end": 6.81
+  },
+  {
+   "text": "was",
+   "src": "clv/t1",
+   "start": 6.89,
+   "end": 7.03
+  },
+  {
+   "text": "überhaupt",
+   "src": "clv/t1",
+   "start": 7.11,
+   "end": 7.39
+  },
+  {
+   "text": "der",
+   "src": "clv/t1",
+   "start": 7.43,
+   "end": 7.51
+  },
+  {
+   "text": "CLV",
+   "src": "clv/t1",
+   "start": 7.61,
+   "end": 7.91
+  },
+  {
+   "text": "ist.",
+   "src": "clv/t1",
+   "start": 8.11,
+   "end": 8.25
+  },
+  {
+   "text": "CLV",
+   "src": "clv/t1",
+   "start": 10.75,
+   "end": 10.99
+  },
+  {
+   "text": "steht",
+   "src": "clv/t1",
+   "start": 11.21,
+   "end": 11.39
+  },
+  {
+   "text": "zunächst",
+   "src": "clv/t1",
+   "start": 11.45,
+   "end": 11.73
+  },
+  {
+   "text": "einmal",
+   "src": "clv/t1",
+   "start": 11.77,
+   "end": 11.97
+  },
+  {
+   "text": "für",
+   "src": "clv/t1",
+   "start": 12.03,
+   "end": 12.11
+  },
+  {
+   "text": "den",
+   "src": "clv/t1",
+   "start": 12.15,
+   "end": 12.23
+  },
+  {
+   "text": "Customer",
+   "src": "clv/t1",
+   "start": 12.31,
+   "end": 12.73
+  },
+  {
+   "text": "Lifetime",
+   "src": "clv/t1",
+   "start": 12.79,
+   "end": 13.13
+  },
+  {
+   "text": "Value.",
+   "src": "clv/t1",
+   "start": 13.15,
+   "end": 13.37
+  },
+  {
+   "text": "Also",
+   "src": "clv/t1",
+   "start": 13.89,
+   "end": 14.01
+  },
+  {
+   "text": "ein",
+   "src": "clv/t1",
+   "start": 14.03,
+   "end": 14.11
+  },
+  {
+   "text": "Kunde",
+   "src": "clv/t1",
+   "start": 14.19,
+   "end": 14.41
+  },
+  {
+   "text": "kauft",
+   "src": "clv/t1",
+   "start": 14.49,
+   "end": 14.71
+  },
+  {
+   "text": "heute",
+   "src": "clv/t1",
+   "start": 14.77,
+   "end": 15.01
+  },
+  {
+   "text": "zum",
+   "src": "clv/t1",
+   "start": 15.15,
+   "end": 15.23
+  },
+  {
+   "text": "Beispiel",
+   "src": "clv/t1",
+   "start": 15.25,
+   "end": 15.47
+  },
+  {
+   "text": "für",
+   "src": "clv/t1",
+   "start": 15.49,
+   "end": 15.59
+  },
+  {
+   "text": "50",
+   "src": "clv/t1",
+   "start": 15.65,
+   "end": 15.97
+  },
+  {
+   "text": "Euro.",
+   "src": "clv/t1",
+   "start": 16.05,
+   "end": 16.27
+  },
+  {
+   "text": "Vielleicht",
+   "src": "clv/t1",
+   "start": 16.75,
+   "end": 17.05
+  },
+  {
+   "text": "bestellt",
+   "src": "clv/t1",
+   "start": 17.11,
+   "end": 17.43
+  },
+  {
+   "text": "er",
+   "src": "clv/t1",
+   "start": 17.47,
+   "end": 17.53
+  },
+  {
+   "text": "aber",
+   "src": "clv/t1",
+   "start": 17.57,
+   "end": 17.69
+  },
+  {
+   "text": "allerdings",
+   "src": "clv/t1",
+   "start": 17.75,
+   "end": 18.13
+  },
+  {
+   "text": "in",
+   "src": "clv/t1",
+   "start": 18.17,
+   "end": 18.23
+  },
+  {
+   "text": "den",
+   "src": "clv/t1",
+   "start": 18.25,
+   "end": 18.33
+  },
+  {
+   "text": "nächsten",
+   "src": "clv/t1",
+   "start": 18.37,
+   "end": 18.63
+  },
+  {
+   "text": "zwei",
+   "src": "clv/t1",
+   "start": 18.69,
+   "end": 18.87
+  },
+  {
+   "text": "Jahren",
+   "src": "clv/t1",
+   "start": 18.95,
+   "end": 19.19
+  },
+  {
+   "text": "noch",
+   "src": "clv/t1",
+   "start": 19.27,
+   "end": 19.39
+  },
+  {
+   "text": "einmal",
+   "src": "clv/t1",
+   "start": 19.47,
+   "end": 19.73
+  },
+  {
+   "text": "in",
+   "src": "clv/t1",
+   "start": 19.79,
+   "end": 19.85
+  },
+  {
+   "text": "deinem",
+   "src": "clv/t1",
+   "start": 19.87,
+   "end": 20.03
+  },
+  {
+   "text": "Online-Shop",
+   "src": "clv/t1",
+   "start": 20.07,
+   "end": 20.51
+  },
+  {
+   "text": "oder",
+   "src": "clv/t1",
+   "start": 21.51,
+   "end": 21.69
+  },
+  {
+   "text": "auch",
+   "src": "clv/t1",
+   "start": 21.77,
+   "end": 21.87
+  },
+  {
+   "text": "sogar",
+   "src": "clv/t1",
+   "start": 21.91,
+   "end": 22.13
+  },
+  {
+   "text": "bis",
+   "src": "clv/t1",
+   "start": 22.19,
+   "end": 22.27
+  },
+  {
+   "text": "zu",
+   "src": "clv/t1",
+   "start": 22.33,
+   "end": 22.39
+  },
+  {
+   "text": "fünfmal.",
+   "src": "clv/t1",
+   "start": 22.49,
+   "end": 22.95
+  },
+  {
+   "text": "Und",
+   "src": "clv/t1",
+   "start": 32.31,
+   "end": 32.39
+  },
+  {
+   "text": "genau",
+   "src": "clv/t1",
+   "start": 32.43,
+   "end": 32.63
+  },
+  {
+   "text": "deshalb",
+   "src": "clv/t1",
+   "start": 32.69,
+   "end": 32.99
+  },
+  {
+   "text": "solltest",
+   "src": "clv/t1",
+   "start": 33.05,
+   "end": 33.37
+  },
+  {
+   "text": "du",
+   "src": "clv/t1",
+   "start": 33.39,
+   "end": 33.43
+  },
+  {
+   "text": "eben",
+   "src": "clv/t1",
+   "start": 33.47,
+   "end": 33.55
+  },
+  {
+   "text": "auch",
+   "src": "clv/t1",
+   "start": 33.59,
+   "end": 33.67
+  },
+  {
+   "text": "in",
+   "src": "clv/t1",
+   "start": 33.71,
+   "end": 33.77
+  },
+  {
+   "text": "deinem",
+   "src": "clv/t1",
+   "start": 33.79,
+   "end": 33.93
+  },
+  {
+   "text": "Online-Shop",
+   "src": "clv/t1",
+   "start": 33.99,
+   "end": 34.19
+  },
+  {
+   "text": "nie",
+   "src": "clv/t1",
+   "start": 34.47,
+   "end": 34.59
+  },
+  {
+   "text": "einfach",
+   "src": "clv/t1",
+   "start": 34.67,
+   "end": 34.91
+  },
+  {
+   "text": "nur",
+   "src": "clv/t1",
+   "start": 34.97,
+   "end": 35.05
+  },
+  {
+   "text": "die",
+   "src": "clv/t1",
+   "start": 35.11,
+   "end": 35.17
+  },
+  {
+   "text": "erste",
+   "src": "clv/t1",
+   "start": 35.27,
+   "end": 35.47
+  },
+  {
+   "text": "Bestellung",
+   "src": "clv/t1",
+   "start": 35.53,
+   "end": 35.85
+  },
+  {
+   "text": "betrachten,",
+   "src": "clv/t1",
+   "start": 35.91,
+   "end": 36.31
+  },
+  {
+   "text": "sondern",
+   "src": "clv/t1",
+   "start": 36.75,
+   "end": 37.05
+  },
+  {
+   "text": "immer",
+   "src": "clv/t1",
+   "start": 37.11,
+   "end": 37.27
+  },
+  {
+   "text": "den",
+   "src": "clv/t1",
+   "start": 37.33,
+   "end": 37.43
+  },
+  {
+   "text": "gesamten",
+   "src": "clv/t1",
+   "start": 37.49,
+   "end": 37.89
+  },
+  {
+   "text": "Customer",
+   "src": "clv/t1",
+   "start": 37.95,
+   "end": 38.35
+  },
+  {
+   "text": "Lifetime",
+   "src": "clv/t1",
+   "start": 38.39,
+   "end": 38.69
+  },
+  {
+   "text": "Value.",
+   "src": "clv/t1",
+   "start": 38.71,
+   "end": 38.89
+  },
+  {
+   "text": "Denn",
+   "src": "clv/t1",
+   "start": 39.75,
+   "end": 39.87
+  },
+  {
+   "text": "der",
+   "src": "clv/t1",
+   "start": 39.89,
+   "end": 39.97
+  },
+  {
+   "text": "Customer",
+   "src": "clv/t1",
+   "start": 39.99,
+   "end": 40.27
+  },
+  {
+   "text": "Lifetime",
+   "src": "clv/t1",
+   "start": 40.29,
+   "end": 40.57
+  },
+  {
+   "text": "Value",
+   "src": "clv/t1",
+   "start": 40.59,
+   "end": 40.75
+  },
+  {
+   "text": "beschreibt",
+   "src": "clv/t1",
+   "start": 40.81,
+   "end": 41.15
+  },
+  {
+   "text": "einfach",
+   "src": "clv/t1",
+   "start": 41.21,
+   "end": 41.43
+  },
+  {
+   "text": "den",
+   "src": "clv/t1",
+   "start": 41.49,
+   "end": 41.57
+  },
+  {
+   "text": "gesamten",
+   "src": "clv/t1",
+   "start": 41.67,
+   "end": 42.09
+  },
+  {
+   "text": "wirtschaftlichen",
+   "src": "clv/t1",
+   "start": 42.15,
+   "end": 42.69
+  },
+  {
+   "text": "Wert",
+   "src": "clv/t1",
+   "start": 42.73,
+   "end": 42.89
+  },
+  {
+   "text": "eines",
+   "src": "clv/t1",
+   "start": 42.93,
+   "end": 43.11
+  },
+  {
+   "text": "Kunden",
+   "src": "clv/t1",
+   "start": 43.19,
+   "end": 43.45
+  },
+  {
+   "text": "über",
+   "src": "clv/t1",
+   "start": 43.55,
+   "end": 43.69
+  },
+  {
+   "text": "die",
+   "src": "clv/t1",
+   "start": 43.75,
+   "end": 43.81
+  },
+  {
+   "text": "gesamte",
+   "src": "clv/t1",
+   "start": 43.87,
+   "end": 44.25
+  },
+  {
+   "text": "Kundenbeziehung.",
+   "src": "clv/t1",
+   "start": 44.33,
+   "end": 44.87
+  },
+  {
+   "text": "Wichtig",
+   "src": "clv/t1",
+   "start": 53.83,
+   "end": 54.09
+  },
+  {
+   "text": "ist",
+   "src": "clv/t1",
+   "start": 54.17,
+   "end": 54.27
+  },
+  {
+   "text": "es",
+   "src": "clv/t1",
+   "start": 54.33,
+   "end": 54.39
+  },
+  {
+   "text": "aber,",
+   "src": "clv/t1",
+   "start": 54.45,
+   "end": 54.59
+  },
+  {
+   "text": "ob",
+   "src": "clv/t1",
+   "start": 54.69,
+   "end": 54.79
+  },
+  {
+   "text": "du",
+   "src": "clv/t1",
+   "start": 54.85,
+   "end": 54.91
+  },
+  {
+   "text": "dann",
+   "src": "clv/t1",
+   "start": 54.95,
+   "end": 55.07
+  },
+  {
+   "text": "tatsächlich",
+   "src": "clv/t1",
+   "start": 55.11,
+   "end": 55.51
+  },
+  {
+   "text": "den",
+   "src": "clv/t1",
+   "start": 55.55,
+   "end": 55.65
+  },
+  {
+   "text": "Umsatz",
+   "src": "clv/t1",
+   "start": 55.77,
+   "end": 56.13
+  },
+  {
+   "text": "oder",
+   "src": "clv/t1",
+   "start": 56.25,
+   "end": 56.45
+  },
+  {
+   "text": "den",
+   "src": "clv/t1",
+   "start": 56.57,
+   "end": 56.67
+  },
+  {
+   "text": "tatsächlichen",
+   "src": "clv/t1",
+   "start": 56.75,
+   "end": 57.33
+  },
+  {
+   "text": "Ergebnisbeitrag",
+   "src": "clv/t1",
+   "start": 57.39,
+   "end": 58.21
+  },
+  {
+   "text": "misst.",
+   "src": "clv/t1",
+   "start": 58.29,
+   "end": 58.47
+  },
+  {
+   "text": "Denn",
+   "src": "clv/t1",
+   "start": 64.79,
+   "end": 64.91
+  },
+  {
+   "text": "gerade",
+   "src": "clv/t1",
+   "start": 64.95,
+   "end": 65.17
+  },
+  {
+   "text": "bei",
+   "src": "clv/t1",
+   "start": 65.23,
+   "end": 65.31
+  },
+  {
+   "text": "Produkten,",
+   "src": "clv/t1",
+   "start": 65.43,
+   "end": 65.89
+  },
+  {
+   "text": "die",
+   "src": "clv/t1",
+   "start": 65.93,
+   "end": 65.99
+  },
+  {
+   "text": "einfach",
+   "src": "clv/t1",
+   "start": 66.03,
+   "end": 66.27
+  },
+  {
+   "text": "regelmäßig",
+   "src": "clv/t1",
+   "start": 66.35,
+   "end": 66.95
+  },
+  {
+   "text": "nachgekauft",
+   "src": "clv/t1",
+   "start": 66.99,
+   "end": 67.47
+  },
+  {
+   "text": "werden,",
+   "src": "clv/t1",
+   "start": 67.51,
+   "end": 67.71
+  },
+  {
+   "text": "ist",
+   "src": "clv/t1",
+   "start": 68.07,
+   "end": 68.17
+  },
+  {
+   "text": "natürlich",
+   "src": "clv/t1",
+   "start": 68.23,
+   "end": 68.53
+  },
+  {
+   "text": "dieser",
+   "src": "clv/t1",
+   "start": 68.57,
+   "end": 68.77
+  },
+  {
+   "text": "Wert",
+   "src": "clv/t1",
+   "start": 68.83,
+   "end": 69.03
+  },
+  {
+   "text": "besonders",
+   "src": "clv/t1",
+   "start": 69.11,
+   "end": 69.51
+  },
+  {
+   "text": "wichtig.",
+   "src": "clv/t1",
+   "start": 69.59,
+   "end": 69.85
+  },
+  {
+   "text": "Und",
+   "src": "clv/t1",
+   "start": 109.41,
+   "end": 109.47
+  },
+  {
+   "text": "wenn",
+   "src": "clv/t1",
+   "start": 109.49,
+   "end": 109.61
+  },
+  {
+   "text": "du",
+   "src": "clv/t1",
+   "start": 109.63,
+   "end": 109.67
+  },
+  {
+   "text": "einfach",
+   "src": "clv/t1",
+   "start": 109.71,
+   "end": 109.91
+  },
+  {
+   "text": "weiter",
+   "src": "clv/t1",
+   "start": 109.97,
+   "end": 110.21
+  },
+  {
+   "text": "in",
+   "src": "clv/t1",
+   "start": 110.25,
+   "end": 110.29
+  },
+  {
+   "text": "der",
+   "src": "clv/t1",
+   "start": 110.31,
+   "end": 110.39
+  },
+  {
+   "text": "Zukunft",
+   "src": "clv/t1",
+   "start": 110.43,
+   "end": 110.69
+  },
+  {
+   "text": "solche",
+   "src": "clv/t1",
+   "start": 110.73,
+   "end": 110.93
+  },
+  {
+   "text": "Videos",
+   "src": "clv/t1",
+   "start": 110.99,
+   "end": 111.31
+  },
+  {
+   "text": "zum",
+   "src": "clv/t1",
+   "start": 111.45,
+   "end": 111.57
+  },
+  {
+   "text": "Thema",
+   "src": "clv/t1",
+   "start": 111.63,
+   "end": 111.87
+  },
+  {
+   "text": "E-Commerce",
+   "src": "clv/t1",
+   "start": 112.39,
+   "end": 112.85
+  },
+  {
+   "text": "nicht",
+   "src": "clv/t1",
+   "start": 112.91,
+   "end": 113.03
+  },
+  {
+   "text": "verpassen",
+   "src": "clv/t1",
+   "start": 113.05,
+   "end": 113.43
+  },
+  {
+   "text": "möchtest,",
+   "src": "clv/t1",
+   "start": 113.47,
+   "end": 113.77
+  },
+  {
+   "text": "dann",
+   "src": "clv/t1",
+   "start": 113.81,
+   "end": 113.93
+  },
+  {
+   "text": "drücke",
+   "src": "clv/t1",
+   "start": 113.97,
+   "end": 114.17
+  },
+  {
+   "text": "gerne",
+   "src": "clv/t1",
+   "start": 114.25,
+   "end": 114.39
+  },
+  {
+   "text": "das",
+   "src": "clv/t1",
+   "start": 114.43,
+   "end": 114.49
+  },
+  {
+   "text": "Plus",
+   "src": "clv/t1",
+   "start": 114.55,
+   "end": 114.71
+  },
+  {
+   "text": "weg,",
+   "src": "clv/t1",
+   "start": 114.75,
+   "end": 114.91
+  },
+  {
+   "text": "denn",
+   "src": "clv/t1",
+   "start": 115.29,
+   "end": 115.41
+  },
+  {
+   "text": "dann",
+   "src": "clv/t1",
+   "start": 115.45,
+   "end": 115.57
+  },
+  {
+   "text": "erkläre",
+   "src": "clv/t1",
+   "start": 115.61,
+   "end": 115.93
+  },
+  {
+   "text": "ich",
+   "src": "clv/t1",
+   "start": 115.97,
+   "end": 116.05
+  },
+  {
+   "text": "dir",
+   "src": "clv/t1",
+   "start": 116.09,
+   "end": 116.19
+  },
+  {
+   "text": "nicht",
+   "src": "clv/t1",
+   "start": 116.23,
+   "end": 116.35
+  },
+  {
+   "text": "immer",
+   "src": "clv/t1",
+   "start": 116.37,
+   "end": 116.51
+  },
+  {
+   "text": "nur",
+   "src": "clv/t1",
+   "start": 116.57,
+   "end": 116.67
+  },
+  {
+   "text": "die",
+   "src": "clv/t1",
+   "start": 116.73,
+   "end": 116.81
+  },
+  {
+   "text": "Theorie,",
+   "src": "clv/t1",
+   "start": 116.85,
+   "end": 117.23
+  },
+  {
+   "text": "sondern",
+   "src": "clv/t1",
+   "start": 117.59,
+   "end": 117.85
+  },
+  {
+   "text": "tatsächlich",
+   "src": "clv/t1",
+   "start": 117.89,
+   "end": 118.31
+  },
+  {
+   "text": "auch",
+   "src": "clv/t1",
+   "start": 118.37,
+   "end": 118.49
+  },
+  {
+   "text": "die",
+   "src": "clv/t1",
+   "start": 118.53,
+   "end": 118.61
+  },
+  {
+   "text": "klaren",
+   "src": "clv/t1",
+   "start": 118.69,
+   "end": 118.99
+  },
+  {
+   "text": "Zahlen",
+   "src": "clv/t1",
+   "start": 119.07,
+   "end": 119.33
+  },
+  {
+   "text": "dahinter.",
+   "src": "clv/t1",
+   "start": 119.37,
+   "end": 119.67
+  }
+ ],
+ "pages": [
+  2,
+  4,
+  2,
+  2,
+  4,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  4,
+  3,
+  3,
+  2,
+  3,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  1,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  1,
+  4,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  4,
+  4,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  4,
+  3,
+  2,
+  3,
+  2
+ ]
+}

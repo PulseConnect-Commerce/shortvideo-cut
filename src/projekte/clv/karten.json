@@ -1,0 +1,107 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md, 'Visuelle Metaphern'; Vorlage hyperframes/pagebuilder-skizzen) für E06 · Customer Lifetime Value. Sekunden im geschnittenen Video (cut.json, 53,17 s). Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, pop auf dem Sticker und auf 50 €, success auf der Wert-Säule, klick auf dem Plus. Gebaut in hyperframes/clv-skizzen/index.html. Nur Lucide-Icons, eigene Formen und Text; Zahlen nur seine (50 €, zwei Jahre, bis zu fünfmal), keine Beträge für spätere Bestellungen, kein B-Roll aus alten Videos, keine Folgennummern.",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "Heute",
+   "text": "WAS IST DER CLV? – drei Buchstaben C · L · V, '?' auf 'CLV', auf Customer / Lifetime / Value je Rahmen im Verlauf, Symbol (Person, Sanduhr, Münzen) und Wort",
+   "start": 4.12,
+   "ende": 10.36,
+   "teile": {"heute": 4.12, "clv": 6.20, "customer": 8.78, "lifetime": 9.26, "value": 9.62},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 4.12, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 8.78, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 9.26, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 9.62, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Also",
+   "text": "EIN BEISPIEL – Zeitstrahl: Kunde, erste Bestellung heute (50 €), die Zukunft zeichnet sich auf 'Vielleicht', Ende '2 Jahre', eine weitere Bestellung auf 'einmal', dann bis zu fünf weitere (gestrichelt, ohne Betrag), handschriftlich 'bis zu 5×'",
+   "start": 10.36,
+   "ende": 19.79,
+   "teile": {"kunde": 10.40, "kauft": 10.96, "heute": 11.24, "50": 12.12, "vielleicht": 13.22, "zwei": 15.16, "jahren": 15.42, "einmal": 15.94, "sogar": 18.38, "bis": 18.66, "zu": 18.80, "fuenfmal": 18.96},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 10.36, "volume": 0.12},
+    {"datei": "pop.mp3", "at": 12.12, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 15.94, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 18.96, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Und",
+   "text": "DEIN BLICK AUF DEN KUNDEN – alle Bestellungen; auf 'nur' der Sucher um die erste, der Rest tritt zurück, 'nur die erste?'; auf 'gesamten' weitet sich der Sucher über alle, Klammer 'Customer Lifetime Value'",
+   "start": 19.79,
+   "ende": 27.23,
+   "teile": {"und": 19.79, "nur": 22.45, "erste": 22.75, "sondern": 24.23, "gesamten": 24.97, "customer": 25.43},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 19.79, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 22.45, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 25.43, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "st1",
+   "wort": "nie",
+   "text": "Sticker NIE. (links neben dem Kopf)",
+   "start": 21.95,
+   "ende": 23.45,
+   "sfx": [
+    {"datei": "pop.mp3", "at": 21.95, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Denn",
+   "text": "CUSTOMER LIFETIME VALUE – Kunde und Shop; Münzen stapeln sich auf 'gesamten wirtschaftlichen', 'Wert'; Ring um den Kunden; das Band der Beziehung zeichnet sich, 'Kundenbeziehung', handschriftlich 'gesamt'",
+   "start": 27.23,
+   "ende": 32.48,
+   "teile": {"gesamten": 29.15, "wert": 30.21, "kunden": 30.67, "ueber": 31.03, "gesamte": 31.35, "kundenbeziehung": 31.81},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 27.23, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 30.21, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 31.81, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Wichtig",
+   "text": "WAS MISST DU? – zwei Balken: Umsatz füllt sich ganz, handschriftlich 'oder?', Ergebnisbeitrag füllt sich nur zum Teil (Rest gestrichelt, ohne Zahl), Maßband auf 'misst'",
+   "start": 32.48,
+   "ende": 37.26,
+   "teile": {"umsatz": 34.43, "oder": 34.91, "ergebnisbeitrag": 36.05, "misst": 36.95},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 32.48, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 34.43, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 36.05, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Denn",
+   "text": "PRODUKTE ZUM NACHKAUFEN – Produkt, Kalender auf 'regelmäßig', auf 'nachgekauft' leert sich das Produkt und wird nachgekauft (Kreislauf), jede Bestellung landet im Kalender und füllt die Wert-Säule; 'Wert', handschriftlich 'besonders wichtig'",
+   "start": 37.26,
+   "ende": 42.42,
+   "teile": {"produkten": 37.90, "regelmaessig": 38.82, "nachgekauft": 39.46, "wert": 41.30, "besonders": 41.58},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 37.26, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 39.46, "volume": 0.1},
+    {"datei": "success.mp3", "at": 41.30, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Videos",
+   "text": "Nur das Folgen-Symbol (Pauls Vorgabe 2026-10-25): Profilbild mit Plus und 'Folgen' auf 'Videos', Ring auf 'verpassen', der Zeiger tippt auf 'Plus' das Plus an, es wird zum Haken; bleibt bis zum Ende",
+   "start": 44.0,
+   "ende": 53.17,
+   "teile": {"videos": 44.0, "verpassen": 46.06, "druecke": 46.98, "plus": 47.56},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 44.0, "volume": 0.12},
+    {"datei": "klick.mp3", "at": 47.56, "volume": 0.1}
+   ]
+  }
+ ]
+}
