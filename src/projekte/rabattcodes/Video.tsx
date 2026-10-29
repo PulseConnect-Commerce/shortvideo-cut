@@ -20,7 +20,7 @@
  * Kopfoberkante ~697, Kinn ~1127, Hüftlinie (oberste Zeile mit Jeans) frühestens y 1726, 5-%-Wert 1730, Median 1810) → Kopfoberkante
  * ~307, Augen ~657, Kinn ~1004, mittig; der untere Bildrand zeigt Take-y 1693 (mit dem Zoom-in am Ende ~1670), die Hüftlinie liegt
  * also mindestens 33 Take-px (54 px im Bild) unter dem Bildrand. Die Aufnahme ist etwas weich (Gesichtsdetail 67-71 statt ~117 bei
- * S03), darum vor dem Porträt leicht nachgeschärft (unsharp 0,3, Regel 0c). Sanfter Grade (STIL.gradeSanft), ein ruhiges Zoom-in
+ * S03), darum vor dem Porträt leicht nachgeschärft (unsharp 0,3, Regel 0c). Sanfter Grade, 7 % dunkler (GRADE), ein ruhiges Zoom-in
  * (3 %) um die Augen, kein Punch-in. Keine Sticker-Wörter: der Kopf füllt bei 1,62-facher Vergrößerung die Breite. Von oben:
  * Gesicht, Kinn, Pill-Untertitel (y 1095), Karte (y 1145-1485), alles über der Instagram-Zone (ab y 1500).
  * Karten als transparentes WebM aus hyperframes/rabattcodes-skizzen (public/broll/rabattcodes/skizzen.webm), Zeiten und Töne in
@@ -74,8 +74,10 @@ const QUELLEN: QuelleFenster[] = [
     label: "Shopify Help Center · Rabattkombinationen testen" },
 ];
 
-/** Sanfter Grade (Regel 5b, STIL.gradeSanft): die Farbkorrektur von npm run farbe hat das Gesicht schon sanft auf ~0,55 gesetzt */
-const GRADE = STIL.gradeSanft;
+/** Sanfter Grade plus 7 % dunkler: die Aufnahme ist hell (Gesicht im Take 0,578; npm run farbe senkt höchstens ±4 %), im fertigen
+ *  Video lag das Gesicht mit dem sanften Grade bei 0,608 (npm run pruefen), Ziel ~0,55-0,57 (seine Vorgabe 2026-10-18 "zu hell").
+ *  Wie bei S03 (src/projekte/kollektionen) im Grade ausgeglichen; mit 0,93 gemessen 0,564. */
+const GRADE = `brightness(0.93) ${STIL.gradeSanft}`;
 
 /** Soundeffekte der Karten und Quellen (Sekunden im Schnitt, aus karten.json) */
 const TOENE = karten.karten.flatMap((k) => k.sfx);
