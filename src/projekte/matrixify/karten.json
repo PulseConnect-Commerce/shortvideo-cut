@@ -1,0 +1,423 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', freigegeben 2026-10-26; Vorlagen P04, A05) und Quellen-Fenster ('Quelle groß', 2026-10-28) für A06 · Matrixify. Sekunden im geschnittenen Video (cut.json, 105,867 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,10) beim Kartenwechsel, klick (0,10) auf jeder Quelle, tick (0,10) auf ausgewählten Zuständen, pop auf 'Matrixify', success auf 'Plus'. Karten (k*) gebaut in hyperframes/matrixify-skizzen/index.html, Quellen (q*) in Video.tsx (QUELLEN). Keine fingierte Demo: Tabellen als DEMO/Beispiel gekennzeichnet, Produktdaten erfunden, keine Kundendaten.",
+ "karten": [
+  {
+   "id": "k0",
+   "wort": "Bei größeren Shopify-Shops … einzeln zu bearbeiten",
+   "text": "Kopfzeile mit dezentem Schriftzug 'Matrixify' (offizielles App-Icon, statt großem Hook-Titel wie A05); Liste mit fünf Produkten, der Zeiger bearbeitet eins nach dem anderen (Haken), Uhr auf 'irgendwann', handschriftlich 'nervig' auf 'nerven', 'einzeln' auf 'einzeln'",
+   "start": 0.0,
+   "ende": 7.45,
+   "teile": {
+    "größeren": 0.1,
+    "Sache": 2.53,
+    "irgendwann": 2.83,
+    "nerven": 3.6,
+    "einzeln": 5.37
+   },
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 2.88,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "wort": "500 Artikel … korrigieren",
+   "text": "Titel '500 Produkte – 1 Datenkorrektur' (wörtlich, Briefing 0–12 s), DEMO; Tabelle mit vier Zeilen und '… bis Produkt 500', rote Punkte auf 'vielen', Rahmen wandert über Lieferant, Metafeld, Angabe, Stift und '500 ×' auf 'korrigieren'",
+   "start": 7.5,
+   "ende": 13.95,
+   "teile": {
+    "500": 7.5,
+    "vielen": 9.07,
+    "Lieferanten": 9.93,
+    "Metafeld": 11.03,
+    "Angabe": 12.47,
+    "korrigieren": 12.8
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 7.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 9.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Natürlich kannst du vieles … direkt in Shopify bearbeiten",
+   "text": "Admin-Fenster 'Shopify-Admin' (vereinfacht, ohne Logo), Haken auf 'vieles', Stift auf 'bearbeiten', Haken und 'klar' (faire Erwähnung der Bordmittel, Briefing-Faktencheck)",
+   "start": 14.03,
+   "ende": 18.23,
+   "teile": {
+    "vieles": 14.97,
+    "bearbeiten": 16.3,
+    "klar": 17.5
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 14.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 17.5,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Aber sobald es … Matrixify nutzen",
+   "text": "Drei Fälle je auf ihrem Wort (größere Datenmengen, mehrere Datentypen, wiederkehrende Exporte), Linien laufen auf 'Matrixify' im Matrixify-Zeichen zusammen",
+   "start": 18.27,
+   "ende": 27.35,
+   "teile": {
+    "größere": 19.13,
+    "mehrere": 21.2,
+    "wiederkehrende": 23.07,
+    "Matrixify": 26.47
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 18.27,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 26.47,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Das ist eine Shopify-App, mit der du … Excel oder als CSV-Datei",
+   "text": "Quelle groß (Remotion): App-Store-Eintrag oben (Name, Built for Shopify, 'Kostenloser Plan verfügbar', Bewertung, Entwickler ITissible), danach Kurzbeschreibung mit markiertem 'Excel, CSV oder Google Sheets'; er als Bubble",
+   "start": 27.15,
+   "ende": 32.3,
+   "teile": {},
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 27.15,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "exportieren … Tabelle bearbeiten … wieder importieren",
+   "text": "Shop → Export (Excel / CSV) → Tabelle, Zelle wird bearbeitet → Import zurück in den Shop mit Haken",
+   "start": 32.15,
+   "ende": 35.85,
+   "teile": {
+    "exportieren": 32.37,
+    "Tabelle": 33.87,
+    "bearbeiten": 34.3,
+    "importieren": 35.3
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 32.15,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 35.5,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "Nehmen wir mal das Beispiel. Du exportierst deine Produkte,",
+   "text": "Quelle groß: offizielles App-Store-Bild 'Export data, download as Excel file'",
+   "start": 35.85,
+   "ende": 39.05,
+   "teile": {},
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 35.85,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "änderst dann gezielt eine Spalte und importierst … wieder",
+   "text": "DEMO-Tabelle (Briefing 40–58 s): drei erfundene Produkte mit ID / Handle / Metafeld: Material, nur die Metafeld-Spalte wird geändert, dann Import und Haken je Zeile; handschriftlich 'gezielt'",
+   "start": 39.0,
+   "ende": 43.5,
+   "teile": {
+    "gezielt": 39.57,
+    "Spalte": 40.3,
+    "importierst": 41.0,
+    "aktualisierten": 41.8
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 39.0,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 40.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 41.8,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "nicht nur für Produkte … Kollektionen, Metafelder oder auch Weiterleitungen",
+   "text": "Kacheln (Briefing 73–90 s, belegt im App-Store-Eintrag) Produkte, Kollektionen, Metafelder, Weiterleitungen je auf ihrem Wort, verbunden mit dem Matrixify-Zeichen, 'u. a.', 'laut App-Store-Eintrag'",
+   "start": 43.53,
+   "ende": 51.25,
+   "teile": {
+    "Produkte": 45.13,
+    "unter": 47.27,
+    "Kollektionen": 48.07,
+    "Metafelder": 49.03,
+    "Weiterleitungen": 50.4
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 43.53,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 45.13,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 50.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "mit deinem Onlineshop umziehst … Handarbeit sparen",
+   "text": "Shop-Umzug: alter Shop → neuer Shop, Pakete wandern auf 'umziehst' und werden zu Tabellenzeilen ('strukturierter Import'), Hand und 'weniger Handarbeit'",
+   "start": 51.27,
+   "ende": 57.65,
+   "teile": {
+    "Onlineshop": 52.8,
+    "umziehst": 53.27,
+    "strukturierter": 54.63,
+    "Handarbeit": 56.23
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 51.27,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 54.7,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "niemals direkt mit 500 Live-Produkten experimentieren",
+   "text": "Experiment → Live-Shop (erst Shop-Zeichen), rotes Kreuz auf 'niemals', '500 Produkte' zählt auf '500' hoch, LIVE auf 'Live', 'nicht live testen'",
+   "start": 57.7,
+   "ende": 62.48,
+   "teile": {
+    "niemals": 59.17,
+    "500": 60.2,
+    "Live": 60.6,
+    "experimentieren": 61.1
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 57.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 59.17,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Daher mein Tipp … dann erst … größeren Import durchführen",
+   "text": "Titel 'Erst 3 Testprodukte, dann alle' (wörtlich, Briefing 58–73 s), Schritte 'Vorher exportieren' (Export/Sicherung), 'Klein testen' (drei Testprodukte), 'Änderungen prüfen', dann 'dann alle' füllt sich auf 'größeren Import'",
+   "start": 62.53,
+   "ende": 75.43,
+   "teile": {
+    "Export": 64.97,
+    "Sicherung": 65.77,
+    "drei": 67.83,
+    "prüfen": 70.73,
+    "größeren": 74.33
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 62.53,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 65.77,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 68.13,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "wort": "prüfen, ob die richtigen Datensätze aktualisiert wurden",
+   "text": "Quelle groß: offizielles App-Store-Bild 'Control what happens during import' ganz, auf 'Datensätze aktualisiert' (72,2 s) dasselbe Bild 2,5-fach mit dem Import-Ergebnis 'Products New: 2 · Updated: 5 · Warnings: 1'",
+   "start": 70.7,
+   "ende": 73.55,
+   "teile": {},
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 70.7,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "gerade bei IDs, Varianten und Preisen … sehr, sehr unangenehm",
+   "text": "Beispiel-Tabelle ID / Variante / Preis, Kopf-Markierung je Wort, auf 'falsch aufgebauter Import' verrutscht die Preis-Spalte um eine Zeile (rot), Warnzeichen und 'unangenehm'",
+   "start": 75.47,
+   "ende": 82.57,
+   "teile": {
+    "IDs": 76.13,
+    "Varianten": 76.57,
+    "Preisen": 77.37,
+    "falsch": 78.6,
+    "unangenehm": 80.63
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 75.47,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 78.95,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q4",
+   "wort": "Matrixify hat natürlich auch einen kostenlosen Einstieg. Also welche Datenmengen …",
+   "text": "Quelle groß: Preisbereich des App-Store-Eintrags, kostenloser Plan 'Demo' mit markiertem 'Kostenlos' und 'Pro Datei: 10 Produkte, 10 Kategorien'",
+   "start": 82.4,
+   "ende": 89.1,
+   "teile": {},
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 82.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "vor dem Einsatz im aktuellen Tarif unbedingt prüfen",
+   "text": "Tarif-Karte, 'aktuell', Lupe auf 'Tarif', Haken und 'prüfen'",
+   "start": 88.95,
+   "ende": 91.28,
+   "teile": {
+    "aktuellen": 89.7,
+    "Tarif": 90.03,
+    "prüfen": 90.83
+   },
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 90.83,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Für Shops mit vielen Produkten … praktischere App … Popup-Tools",
+   "text": "Viele Produkte → Matrixify mit Haken und 'praktischer', daneben '+1 Popup-Tool' grau und durchgestrichen",
+   "start": 91.3,
+   "ende": 98.28,
+   "teile": {
+    "vielen": 92.23,
+    "praktischere": 94.83,
+    "zusätzlichen": 96.57,
+    "Popup": 97.17
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 91.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 94.83,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k13",
+   "wort": "Und wenn du weitere … Shopify-Apps … drück mal gerne das Plus weg",
+   "text": "Schluss (Briefing 90 s–Schluss): 'Vorher exportieren → Klein testen → Änderungen prüfen', dann Plus 'Mehr Shopify-Apps vorgestellt', auf 'Plus' angetippt, wird zum Haken",
+   "start": 98.3,
+   "ende": 105.867,
+   "teile": {
+    "Shopify-Apps": 100.07,
+    "drück": 102.67,
+    "Plus": 103.4
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 98.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 103.45,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

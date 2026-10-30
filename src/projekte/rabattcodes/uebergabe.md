@@ -1,6 +1,6 @@
 # Übergabekarte: S06 · Rabattcodes richtig konfigurieren
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** für Mi 25.11.2026 14:00 Europe/Berlin (Pauls Vorgabe 27.10.: selbst nach Kalender einplanen), Metricool TikTok / Instagram / YouTube 410693455 / 410693529 / 410693572 (uuids 1050030814193600212 / -4817295143439808677 / 4636156908725554828); Drive final 1n3C7rgT7NQpTOTltzXZHfoAJA3_Ub1np
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): S06 · Rabattcodes richtig konfigurieren
 - **Format / Design:** FACE (Serie S, Serien-ID "Shopify in 30 Sekunden", keine Serien-Erwähnung im Video) / aktueller S-Look wie S05: kein Hook-Titel (Briefing "realer Nutzwert statt künstlichem Clickbait"), helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlagen P04, S05), echte Seiten des Shopify Help Center groß über das ganze Bild mit ihm als Bubble unten rechts (Pauls Regel 28.10. "Quelle groß, er klein in der Ecke"), keine Quellen-Hintergründe hinter ihm, Musik ruhig, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe

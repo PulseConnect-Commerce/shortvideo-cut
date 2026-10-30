@@ -1,0 +1,28 @@
+Quellen-Bilder für A06 · Matrixify (alle am 29.10.2026 aufgenommen bzw. geladen; nur zugeschnitten, nichts dazugemalt)
+
+Gestaltet mit hyperframes/matrixify-hg/gestalte.py aus hyperframes/matrixify-hg/screenshots/ (Aufnahme:
+hyperframes/matrixify-hg/aufnahme.cjs, Playwright/Chromium ohne Login, Handy-Ansicht 412 css-px, 2,62-fach; Positionen
+in screenshots/aufnahme-de.json; englische Originalseite zum Abgleich in screenshots/app-en.png).
+
+- quelle-kopf.jpg: Shopify App Store, Eintrag "Matrixify: Data Export Import", Kopf der Seite: App-Store-Leiste, App-Icon,
+  Name, "Built for Shopify", Preisgestaltung "Kostenloser Plan verfügbar", Bewertung 4,9 (1.837), Entwickler "ITissible",
+  "Installieren", Video-Vorschau des Entwicklers
+  https://apps.shopify.com/excel-export-import?locale=de
+- quelle-kurz.jpg: derselbe Eintrag, Kurzbeschreibung "Shop-Daten verwalten: Massen-Upload und Updates mit Excel, CSV oder
+  Google Sheets. Migration von jedem Shop." ("Excel, CSV oder Google Sheets" beim Aufnehmen grün hinterlegt) und die
+  Funktionsliste (automatisch übersetzter Text, wie auf der Seite vermerkt)
+- quelle-preis.jpg: derselbe Eintrag, Preisbereich "Preisgestaltung": Plan "Demo" "Kostenlos", "Pro Datei: 10 Produkte,
+  10 Kategorien, … 10 Weiterleitungen, … ∞ Metafelder" ("Kostenlos" und "10 Produkte, 10 Kategorien" beim Aufnehmen grün
+  hinterlegt), daneben angeschnitten "Basic $20 / Monat"
+- quelle-export.jpg: offizielles Bild aus der Bildergalerie desselben Eintrags, "Export data, download as Excel file",
+  1600x900 auf 1080 Breite verkleinert, auf seiner Randfarbe #202E78
+  https://cdn.shopify.com/app-store/listing_images/88eff9935abeb622b5b85569b705f673/desktop_screenshot/CNibjeWn-v8CEAE=.png
+- quelle-import.jpg: offizielles Bild aus derselben Galerie, "Control what happens during import" (Import-Ergebnis mit New /
+  Updated / Warnings), verkleinert wie oben
+  https://cdn.shopify.com/app-store/listing_images/88eff9935abeb622b5b85569b705f673/desktop_screenshot/CMXZmOWn-v8CEAE=.png
+
+Karten (skizzen.webm): eigene Zeichnungen aus hyperframes/matrixify-skizzen (Lucide-Icons, ISC-Lizenz; Schrift Geist und
+Caveat, OFL); im Schriftzug am Anfang und in drei Karten das offizielle App-Icon aus dem App-Store-Eintrag
+(https://cdn.shopify.com/app-store/listing_images/88eff9935abeb622b5b85569b705f673/icon/CNevroaPk_4CEAE=.png).
+Tabellen in den Karten sind als DEMO bzw. Beispiel gekennzeichnet; Produktdaten erfunden (Handles nach Produkten aus Pauls
+Dev-Store online-store-development-pulseconnect), keine Kundendaten, keine echte Matrixify-Oberfläche nachgebaut.
