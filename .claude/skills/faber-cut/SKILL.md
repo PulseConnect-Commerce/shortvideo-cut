@@ -304,7 +304,11 @@ danach eingearbeitet (Datei in den Posts tauschen). **News ohne 📣-Termin** (s
 eigenständig News Beiträge immer zu 9 Uhr in einem jeweils freien Slot einplanen kannst … egal ob morgen, übermorgen
 oder überübermorgen"): in Metricool den nächsten Tag ab morgen suchen, an dem 09:00 noch frei ist, und die News dort
 ohne Rückfrage einplanen; mehrere News der Reihe nach auf die folgenden freien 09:00-Slots. Andere Videos ohne
-📣-Termin: nächsten freien passenden Slot (14:00 Serie, 19:00 Hero/Marke) vorschlagen und fragen. Damit er nicht jeden
+📣-Termin: nächsten freien passenden Slot (14:00 Serie, 19:00 Hero/Marke) vorschlagen und fragen. **Mindestens zwei Videos
+pro Tag** (seine Vorgabe 2026-10-30: "Es sollten jeden Tag min. 2 Videos geplant werden."): bei jedem Einplanen in Metricool die nächsten 7 Tage zählen (ein Video = drei Posts); hat ein Tag weniger als zwei,
+der Regie und ihm einen Plan vorschlagen, welche fertigen Videos aus späteren Terminen in die freien Slots (14:00,
+19:00; 09:00 nur News) vorgezogen werden, und neue Videos zuerst in solche Lücken legen. Verschieben fertiger Posts
+erst nach seinem OK zum Plan; danach Kalender-📣 mitverschieben. Damit er nicht jeden
 Post einzeln bestätigen muss ("Ich würde dir hier gerne die … Bestätigung geben, dass du das auch eigenständig
 durchführst"), gehören die drei Metricool-Werkzeuge (getScheduledPosts, createScheduledPost, updateScheduledPost) in
 `permissions.allow` von `.claude/settings.json`; diese Freigabe trägt er selbst ein (Claude darf seine eigenen

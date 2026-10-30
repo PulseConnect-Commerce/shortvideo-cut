@@ -1,7 +1,7 @@
 # Briefing: K01 · Claude: 6 Werkzeuge, die die meisten nicht kennen
 
 Rohclip im Drive: "K01 · Claude: 6 Werkzeuge, die die meisten nicht kennen" (1nlTfgnzJXETG-s-O0Tw_Q0EHth3UHFWp, 396 MB),
-hochgeladen am 30.10.2026, Drehtermin im Kalender grün. Veröffentlichung laut Kalender: **Sa 31.10.2026 19:00**
+hochgeladen am 30.10.2026, Drehtermin im Kalender grün. Veröffentlichung: **HEUTE Fr 30.10.2026 19:00** (Pauls Wunsch 30.10., vorher Sa 31.10. 19:00
 ("Veröffentlichung: 31.10.26 Slot 3" = 🎯 PUBLISH-SLOT 3 · Hero / Marke / Meinung). Neue Reihe K "KI allgemein".
 Format: **HERO** (Erklärvideo, Skill stil-hero). Kanäle TikTok, Instagram Reels, YouTube Shorts.
 
