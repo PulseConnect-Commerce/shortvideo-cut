@@ -801,7 +801,12 @@
 
       // K14 Vier Kacheln auf ihren Wörtern, "wie hier!" auf "Fall"
       karte("#k14", 114.85, 122.87);
-      pop("#k14-a", 116.03); pop("#k14-b", 117.26); pop("#k14-c", 118.96); pop("#k14-d", 121.23);
+      // die vier Kacheln stehen gleich mit der Karte schwach da (keine leere Karte) und werden auf ihren Wörtern voll
+      tl.to("#k14-a, #k14-b, #k14-c, #k14-d", { opacity: 0.3, duration: 0.3, ease: "power2.out" }, 114.89);
+      [["#k14-a", 116.03], ["#k14-b", 117.26], ["#k14-c", 118.96], ["#k14-d", 121.23]].forEach(([sel, t]) => {
+        tl.to(sel, { opacity: 1, duration: 0.25, ease: "power2.out" }, t);
+        tl.fromTo(sel, { scale: 0.94, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "power2.out" }, t);
+      });
       schreibe("#k14-cliprect", 200, 122.10, 0.4);
 
       // K15 Free vs. Pro (ohne Preise), Pro wird auf "empfehlen" markiert
@@ -812,10 +817,12 @@
       // K16 Stufen: Stufe 1 "Projekt" auf "Projekt", Kreislauf auf "wiederholen", Stufe 2 "Claude Code", "nächster Schritt"
       karte("#k16", 136.40, 146.00);
       zeichne("#k16-stufen", 136.46, 0.6);
-      ein("#k16-s1", 139.36);
+      // beide Stufen stehen gleich mit der Karte schwach da und werden auf ihren Wörtern voll
+      tl.to("#k16-s1, #k16-s2", { opacity: 0.3, duration: 0.3, ease: "power2.out" }, 136.50);
+      tl.to("#k16-s1", { opacity: 1, duration: 0.3, ease: "power2.out" }, 139.36);
       ein("#k16-loop", 142.93);
       tl.fromTo("#k16-kreis", { rotation: 0, svgOrigin: "372 96" }, { rotation: 360, duration: 1.0, ease: "power2.inOut" }, 142.93);
-      ein("#k16-s2", 143.93);
+      tl.to("#k16-s2", { opacity: 1, duration: 0.3, ease: "power2.out" }, 143.93);
       schreibe("#k16-cliprect", 236, 145.13, 0.5);
 
       // K17 Dieses Video: Filmstreifen gleich mit der Karte, "KI" auf "KI", Schnitte und Schere auf "schneiden", Badge

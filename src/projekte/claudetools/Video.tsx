@@ -18,7 +18,7 @@
  * "Export anywhere"), claude.com/pricing (Free und Pro, Preise weichgezeichnet). Bilder in hyperframes/claudetools-hg (QUELLE.txt).
  * Karten als transparentes WebM aus hyperframes/claudetools-skizzen (public/broll/claudetools/skizzen.webm), Zeiten und Töne in
  * karten.json.
- * Farbe: die gemessene Filterkette von `npm run farbe` (colorchannelmixer 0.9984/0.9942/1.0079, Gamma 1/0.962, Vibrance 0.08)
+ * Farbe: im Bild brightness(0.9) vor dem sanften Grade (Gesicht in der ersten Vollversion 0,624, Ziel 0,55-0,57); die gemessene Filterkette von `npm run farbe` (colorchannelmixer 0.9984/0.9942/1.0079, Gamma 1/0.962, Vibrance 0.08)
  * wurde in einem Durchgang mit dem Schwärzen der ungenutzten Take-Teile auf den Take gelegt (Speicher knapp, keine Sicherung).
  */
 import type React from "react";
@@ -42,8 +42,9 @@ const BILD = { scale: 1.6, hoch: 630, x: 72 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
 const AUGEN_Y = 653;
 
-/** Sanfter Grade (Regel 5b, freigegebener Look) */
-const GRADE = STIL.gradeSanft;
+/** Sanfter Grade (Regel 5b, freigegebener Look) plus brightness: in der ersten Vollversion lag das Gesicht bei 0,624 (npm run
+ * pruefen), Ziel 0,55-0,57 (seine Vorgabe 2026-10-18 "zu hell"); 0,9 · 0,624 ≈ 0,56 */
+const GRADE = `brightness(0.9) ${STIL.gradeSanft}`;
 
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel "CLAUDE: 6 WERKZEUGE" bis "Es sind inzwischen einfach mindestens" (7,6 s), ganz weg bei ~7,55 s; die erste Karte
