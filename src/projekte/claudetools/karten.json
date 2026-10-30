@@ -3,20 +3,15 @@
  "karten": [
   {
    "id": "k0",
-   "wort": "Es",
-   "start": 6.1,
+   "wort": "sechs",
+   "start": 7.6,
    "ende": 12.3,
-   "text": "MINDESTENS 6 WERKZEUGE – sechs Kacheln (Chat, Projekte, Connectors, Chrome, Design, Code) auf 'sechs', auf 'nicht nutzen' werden die fünf außer Chat grau, handschriftlich 'meist ungenutzt'",
+   "text": "MINDESTENS 6 WERKZEUGE – Karte und sechs Kacheln (Chat, Projekte, Connectors, Chrome, Design, Code) auf 'sechs', auf 'nicht nutzen' werden die fünf außer Chat grau, handschriftlich 'meist ungenutzt'",
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 6.1,
+     "at": 7.6,
      "volume": 0.12
-    },
-    {
-     "datei": "tick.mp3",
-     "at": 7.66,
-     "volume": 0.1
     },
     {
      "datei": "tick.mp3",

@@ -50,10 +50,10 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 
 ## Briefing-Checkliste
 
-- [x] Hook 0-5 s: Facecam + Hook-Titel "CLAUDE: / 6 WERKZEUGE" (Zahl, Hook-Titel erlaubt), 0-5,8 s, an der Kartenposition unter dem Kopf; erster Satz "Du nutzt Claude wirklich nur zum Chatten?" ab 0,0 s
+- [x] Hook 0-5 s: Facecam + Hook-Titel "CLAUDE: / 6 WERKZEUGE" (Zahl, Hook-Titel erlaubt), 0-7,5 s bis "... mindestens sechs", an der Kartenposition unter dem Kopf; erster Satz "Du nutzt Claude wirklich nur zum Chatten?" ab 0,0 s
 - [x] Hook A oder B: er hat beide nicht getrennt aufgenommen, sondern B's Frage direkt vor A gesprochen ("Du nutzt Claude wirklich nur zum Chatten? Claude ist aber längst nicht ..."); das "aber" in A braucht die Frage, darum beides als ein Hook (siehe Entscheidungen); B's zweiter Satz ("Dann lässt du gerade das Beste liegen") ist im Take nicht gesprochen
 - [x] Zähler "1 von 6 ... 6 von 6" oben rechts auf den Karten (19,5-122,9 s)
-- [x] Überblick sechs Werkzeuge als Kacheln auf "sechs" (7,7 s), auf "nicht nutzen" bleibt nur Chat farbig, "meist ungenutzt" (11,6 s)
+- [x] Überblick: Karte mit sechs Werkzeug-Kacheln auf "sechs" (7,6 s, löst den Hook-Titel ab), auf "nicht nutzen" bleibt nur Chat farbig, "meist ungenutzt" (11,6 s)
 - [x] 1 Chat: Karte mit drei Geräten Browser / Desktop-App / Handy auf ihren Wörtern (19,5-25,3 s); Fragen / Texte / Produkttexte, Badge "kostenlos" auf "kostenlosen" (25,3-34,3 s, Badge 33,0 s)
 - [x] 2 Projekte: Ordner "Mein Shop" mit Markenstimme / Produktdaten / Regeln auf ihren Wörtern (34,3-42,0 s) → drei Chats mit Haken, "Shop ✓", "Marke ✓" (42,0-47,8 s)
 - [x] 3 Connectors & Skills: Google Drive / Kalender / Mails stecken sich an "Claude" an (Linien-Icons, kein Logo; 47,8-55,4 s); Skill als gespeicherte Anleitung (Lesezeichen), "jedes Mal neu" durchgestrichen (55,4-61,4 s)
@@ -84,6 +84,7 @@ Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), 
 - **Hook-Titel** im Design "verlauf" (karten-hell.md, Vorgabe 2026-10-23, wie N08 Etsy) statt "nacht-gruen" aus dem Cutter-Auftrag: der neuere Stil mit dem PulseConnect-Verlauf, eine Farbwelt im ganzen Video.
 - **Folgen-Karte** nach Pauls Vorgabe vom 30.10. (zu E08): groß (560 x 200, Avatar 150 px, Plus 60 px, "Folgen" 72 px), waagerecht mittig (x 260-820), Plus im Verlauf; beim Tippen drückt es ein, dreht sich um 180°, wird zum weißen Kreis mit Verlaufs-Haken, springt kurz über und gibt einen Ring-Puls; leiser `pop` darauf. Das kurze Überschwingen (`back.out`) weicht bewusst von karten-hell.md ("kein back") ab, weil Paul es ausdrücklich wie bei TikTok will.
 - **Ton:** Musik `ruhig.mp3` (HERO), leise; `whoosh` (0,12) nur beim Kartenwechsel, `tick` (0,10) auf Zuständen, `klick` (0,10) auf den Quellen, `pop` (0,10) nur auf "kostenlos", "das Spannendste" und dem Folgen-Tippen. Kein Punch-in (kein Zoom-Wechsel), nur das ruhige Zoom-in.
+- **kontrolle** (Übereinstimmung 94 %, vier Meldungen, alle geprüft): GEDEHNT 35,6 s "Projekte." (danach eine natürliche Satzpause mit leisem Atem, Pegel geprüft); ZUSÄTZLICH 84,4 s "ein One Pager" (gesprochen "einfach One-Pager", Hörfehler); ZUSÄTZLICH 120,0 s "Vielen Dank für's Zuhören!" (typische Whisper-Erfindung, dort wird nichts dergleichen gesagt); DOPPELT 127,2 s "Cloud in Chrome oder auch Cloud in" (gesprochen "Claude in Chrome oder auch Claude in Excel", kein Doppler). Nichts geändert.
 - **fillerscan:** drei sehr kurze Stellen (0,1 s) mit Stimme ohne Wort bei 97,2 / 117,1 / 132,6 s im Video: Wortenden bzw. Atem, kein "äh"; bleiben.
 
 ## Offene Fragen an Paul

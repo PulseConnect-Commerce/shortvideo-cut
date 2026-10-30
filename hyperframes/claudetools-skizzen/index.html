@@ -123,7 +123,7 @@
 
       <!-- K0 Sechs Werkzeuge: "Es sind inzwischen einfach mindestens sechs Werkzeuge, die du unbedingt kennen solltest und die die
            meisten davon einfach nicht nutzen." Es 6,17 / sechs 7,73 / Werkzeuge 8,00 / nicht 11,63 / nutzen 11,90 -->
-      <section id="k0" class="karte clip" data-start="6.1" data-duration="6.2" data-track-index="1">
+      <section id="k0" class="karte clip" data-start="7.6" data-duration="4.7" data-track-index="1">
         <div class="kicker">Mindestens 6 Werkzeuge</div>
         <svg class="buehne" viewBox="0 0 820 290">
           <g id="k0-t1"><use href="#kachel-verlauf" x="30" y="20" /><g transform="translate(56 46) scale(2.4)" class="ico"><use href="#i-chat" /></g><text x="85" y="166" text-anchor="middle" class="lab" style="font-size:21px">Chat</text></g>
@@ -486,7 +486,8 @@
             <rect x="40" y="10" width="480" height="250" rx="22" fill="#0b0c0e" />
             <circle cx="66" cy="36" r="6" fill="#4b5563" /><circle cx="88" cy="36" r="6" fill="#4b5563" /><circle cx="110" cy="36" r="6" fill="#4b5563" />
             <text x="70" y="120" style="font-size:44px;font-weight:800;fill:#00e090;font-family:'Geist',monospace">&gt;</text>
-            <text id="k12-cmd" x="110" y="120" style="font-size:44px;font-weight:700;fill:#fff">claude</text>
+            <clipPath id="k12-tclip"><rect id="k12-trect" x="108" y="70" width="0" height="70" /></clipPath>
+            <text id="k12-cmd" x="110" y="120" style="font-size:44px;font-weight:700;fill:#fff" clip-path="url(#k12-tclip)">claude</text>
             <rect id="k12-cursor" x="262" y="84" width="22" height="44" fill="#31adec" />
             <rect x="70" y="160" width="300" height="16" rx="8" fill="#374151" /><rect x="70" y="194" width="220" height="16" rx="8" fill="#374151" />
           </g>
@@ -687,9 +688,9 @@
       }
       gsap.set("#k0-klammer, #k1-schiene, #k1-kurve, #k2-l1, #k2-l2, #k2-l3, #k5-l1, #k5-l2, #k5-l3, #k6-l1, #k6-l2, #k6-l3, #k7-pfeil, #k7-strich, #k11-l1, #k11-l2, #k13-strich, #k13-pfeil, #k16-stufen, #k17-schnitt1, #k17-schnitt2, #k18-l1, #k18-l2", { strokeDasharray: 1, strokeDashoffset: 1 });
 
-      // K0 Sechs Werkzeuge: Kacheln auf "sechs", auf "nicht nutzen" werden die fünf außer Chat grau, "meist ungenutzt"
-      karte("#k0", 6.10, 12.30);
-      ["#k0-t1", "#k0-t2", "#k0-t3", "#k0-t4", "#k0-t5", "#k0-t6"].forEach((s, i) => pop(s, 7.66 + i * 0.07, 0.3));
+      // K0 Sechs Werkzeuge: Karte und Kacheln auf "sechs" (vorher steht der Hook-Titel "6 WERKZEUGE"), auf "nicht nutzen" werden die fünf außer Chat grau, "meist ungenutzt"
+      karte("#k0", 7.60, 12.30);
+      ["#k0-t1", "#k0-t2", "#k0-t3", "#k0-t4", "#k0-t5", "#k0-t6"].forEach((s, i) => pop(s, 7.64 + i * 0.07, 0.3));
       tl.to(".k0-rest", { opacity: 0.32, duration: 0.35, ease: "power2.out" }, 11.56);
       zeichne("#k0-klammer", 11.56, 0.4);
       schreibe("#k0-cliprect", 300, 11.83, 0.5);
@@ -735,9 +736,10 @@
 
       // K6 Connectors: Claude gleich mit der Karte, Drive, Kalender, Mails auf ihren Wörtern, Kabel zeichnen sich
       karte("#k6", 47.80, 55.43);
-      ein("#k6-a", 52.03); zeichne("#k6-l1", 52.10, 0.4); badge("#k6-s1", 52.45);
-      ein("#k6-b", 53.00); zeichne("#k6-l2", 53.07, 0.35); badge("#k6-s2", 53.40);
-      ein("#k6-c", 54.26); zeichne("#k6-l3", 54.33, 0.4); badge("#k6-s3", 54.68);
+      tl.to("#k6-a, #k6-b, #k6-c", { opacity: 0.3, duration: 0.3, ease: "power2.out" }, 48.60);
+      tl.to("#k6-a", { opacity: 1, duration: 0.25, ease: "power2.out" }, 52.03); zeichne("#k6-l1", 52.10, 0.4); badge("#k6-s1", 52.45);
+      tl.to("#k6-b", { opacity: 1, duration: 0.25, ease: "power2.out" }, 53.00); zeichne("#k6-l2", 53.07, 0.35); badge("#k6-s2", 53.40);
+      tl.to("#k6-c", { opacity: 1, duration: 0.25, ease: "power2.out" }, 54.26); zeichne("#k6-l3", 54.33, 0.4); badge("#k6-s3", 54.68);
       schreibe("#k6-cliprect", 230, 54.70, 0.45);
 
       // K7 Skills: Ablauf dreht sich auf "wiederholen", Pfeil auf "speicherst", Skill auf "Skill", "jedes Mal neu" durchgestrichen
@@ -783,8 +785,8 @@
 
       // K12 Claude Code: Terminal gleich mit der Karte, "claude" tippt sich auf "Claude Code", Stern und "das Spannendste"
       karte("#k12", 100.77, 106.50);
-      tl.fromTo("#k12-cmd", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 103.30);
-      tl.fromTo("#k12-cursor", { attr: { x: 112 } }, { attr: { x: 262 }, duration: 0.4, ease: "steps(6)" }, 103.30);
+      tl.fromTo("#k12-trect", { attr: { width: 0 } }, { attr: { width: 152 }, duration: 0.42, ease: "steps(6)" }, 103.30);
+      tl.fromTo("#k12-cursor", { attr: { x: 112 } }, { attr: { x: 262 }, duration: 0.42, ease: "steps(6)" }, 103.30);
       tl.fromTo("#k12-cursor", { opacity: 1 }, { opacity: 0.15, duration: 0.4, repeat: 5, yoyo: true, ease: "none" }, 101.0);
       tl.fromTo("#k12-stern", { opacity: 0, scale: 0.85, svgOrigin: "665 95" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out" }, 105.90);
       schreibe("#k12-cliprect", 280, 106.00, 0.4);

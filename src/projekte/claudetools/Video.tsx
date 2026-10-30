@@ -5,7 +5,7 @@
  * Karten unter dem Kopf als Erklär-Bilder (karten-aufbau.md "Visuelle Metaphern"), Pill-Untertitel (aktives Wort #00E090),
  * Farbwelt PulseConnect-Verlauf #00D088 → #31ADEC, Zähler "1 von 6 … 6 von 6" auf den Karten (Briefing).
  * Hook-Titel (Briefing, starke Zahl): "CLAUDE:" / "6 WERKZEUGE" im easyJet-Stil (Design "verlauf", karten-hell.md), an der
- * Kartenposition unter dem Kopf, bis zum Ende des Satzes "… ein Chatfenster geworden." (5,6 s); die erste Karte kommt bei 6,1 s.
+ * Kartenposition unter dem Kopf, bis "sechs" (7,6 s); dort kommt die erste Karte mit den sechs Werkzeugen.
  * Bild (Pauls Vorgaben 25.10.: Kopf höher, Untertitel und Karten darunter; 27.10.: erst ab Hüfthöhe, nichts darunter): sitzend,
  * gemessen im Take an 173 Zeitpunkten (jede Sekunde über alle Schnittstücke, YuNet): Augen Median x 585 / y 802 (p5 756, p95
  * 869), Kinn Median 1017 (p95 1087), Haaransatz/Kopfoberkante ~575 (Standbilder); Hüftlinie (oberste Jeans-Zeile neben dem
@@ -46,8 +46,9 @@ const AUGEN_Y = 653;
 const GRADE = STIL.gradeSanft;
 
 const fs = (s: number) => Math.round(s * C.FPS);
-/** Hook-Titel bis zum Ende von "… ein Chatfenster geworden." (endet 5,6 s), ganz weg bei ~5,8 s; die erste Karte kommt 6,1 s */
-const HOOK_ENDE = fs(5.6);
+/** Hook-Titel "CLAUDE: 6 WERKZEUGE" bis "Es sind inzwischen einfach mindestens" (7,6 s), ganz weg bei ~7,55 s; die erste Karte
+ * (die sechs Werkzeuge) kommt auf "sechs" (7,6 s) */
+const HOOK_ENDE = fs(7.35);
 
 const CHROME = "claude.com/claude-in-chrome";
 const PREISE = "claude.com/pricing";
