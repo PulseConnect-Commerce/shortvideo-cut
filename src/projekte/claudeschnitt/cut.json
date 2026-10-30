@@ -1,0 +1,3727 @@
+{
+ "projekt": "claudeschnitt",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "claudeschnitt/t1",
+   "from": 3.645,
+   "to": 17.655,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 18.845,
+   "to": 36.875,
+   "nach": 0.09,
+   "vor": 0.05
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 41.125,
+   "to": 46.235,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 53.585,
+   "to": 65.585,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 80.765,
+   "to": 83.115,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 94.435,
+   "to": 95.415,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 98.015,
+   "to": 106.965,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 107.835,
+   "to": 116.575,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 140.535,
+   "to": 155.855,
+   "nach": 0.01,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 158.665,
+   "to": 162.705,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 172.815,
+   "to": 175.925,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 177.045,
+   "to": 178.445,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 180.885,
+   "to": 191.415,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 202.555,
+   "to": 207.315,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 212.275,
+   "to": 214.235,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 238.125,
+   "to": 247.755,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 277.095,
+   "to": 300.785,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 304.385,
+   "to": 311.825,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 315.895,
+   "to": 327.485,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "claudeschnitt/t1",
+   "from": 342.725,
+   "to": 354.06,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Kennst",
+   "src": "claudeschnitt/t1",
+   "start": 3.67,
+   "end": 3.91
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 3.97,
+   "end": 4.03
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 4.11,
+   "end": 4.21
+  },
+  {
+   "text": "Problem",
+   "src": "claudeschnitt/t1",
+   "start": 4.27,
+   "end": 4.55
+  },
+  {
+   "text": "auch?",
+   "src": "claudeschnitt/t1",
+   "start": 4.65,
+   "end": 4.77
+  },
+  {
+   "text": "Du",
+   "src": "claudeschnitt/t1",
+   "start": 4.83,
+   "end": 4.89
+  },
+  {
+   "text": "möchtest",
+   "src": "claudeschnitt/t1",
+   "start": 4.95,
+   "end": 5.23
+  },
+  {
+   "text": "endlich",
+   "src": "claudeschnitt/t1",
+   "start": 5.37,
+   "end": 5.69
+  },
+  {
+   "text": "mal",
+   "src": "claudeschnitt/t1",
+   "start": 5.73,
+   "end": 5.83
+  },
+  {
+   "text": "mit",
+   "src": "claudeschnitt/t1",
+   "start": 5.89,
+   "end": 5.97
+  },
+  {
+   "text": "Social",
+   "src": "claudeschnitt/t1",
+   "start": 6.03,
+   "end": 6.29
+  },
+  {
+   "text": "Media",
+   "src": "claudeschnitt/t1",
+   "start": 6.33,
+   "end": 6.51
+  },
+  {
+   "text": "anfangen",
+   "src": "claudeschnitt/t1",
+   "start": 6.57,
+   "end": 6.89
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 6.93,
+   "end": 6.99
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 7.05,
+   "end": 7.27
+  },
+  {
+   "text": "regelmäßig",
+   "src": "claudeschnitt/t1",
+   "start": 7.33,
+   "end": 7.79
+  },
+  {
+   "text": "Videos",
+   "src": "claudeschnitt/t1",
+   "start": 7.85,
+   "end": 8.07
+  },
+  {
+   "text": "posten,",
+   "src": "claudeschnitt/t1",
+   "start": 8.13,
+   "end": 8.49
+  },
+  {
+   "text": "aber",
+   "src": "claudeschnitt/t1",
+   "start": 8.97,
+   "end": 9.09
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 9.13,
+   "end": 9.17
+  },
+  {
+   "text": "traust",
+   "src": "claudeschnitt/t1",
+   "start": 9.25,
+   "end": 9.53
+  },
+  {
+   "text": "dich",
+   "src": "claudeschnitt/t1",
+   "start": 9.57,
+   "end": 9.67
+  },
+  {
+   "text": "nicht,",
+   "src": "claudeschnitt/t1",
+   "start": 9.75,
+   "end": 9.93
+  },
+  {
+   "text": "weil",
+   "src": "claudeschnitt/t1",
+   "start": 9.99,
+   "end": 10.13
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 10.17,
+   "end": 10.23
+  },
+  {
+   "text": "denkst",
+   "src": "claudeschnitt/t1",
+   "start": 10.29,
+   "end": 10.51
+  },
+  {
+   "text": "dir,",
+   "src": "claudeschnitt/t1",
+   "start": 10.55,
+   "end": 10.65
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 11.23,
+   "end": 11.31
+  },
+  {
+   "text": "Schneiden",
+   "src": "claudeschnitt/t1",
+   "start": 11.35,
+   "end": 11.77
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 11.81,
+   "end": 11.87
+  },
+  {
+   "text": "Bearbeiten",
+   "src": "claudeschnitt/t1",
+   "start": 11.91,
+   "end": 12.31
+  },
+  {
+   "text": "frisst",
+   "src": "claudeschnitt/t1",
+   "start": 12.37,
+   "end": 12.57
+  },
+  {
+   "text": "doch",
+   "src": "claudeschnitt/t1",
+   "start": 12.63,
+   "end": 12.73
+  },
+  {
+   "text": "so",
+   "src": "claudeschnitt/t1",
+   "start": 12.83,
+   "end": 12.95
+  },
+  {
+   "text": "viel",
+   "src": "claudeschnitt/t1",
+   "start": 13.09,
+   "end": 13.25
+  },
+  {
+   "text": "Zeit",
+   "src": "claudeschnitt/t1",
+   "start": 13.37,
+   "end": 13.63
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 13.73,
+   "end": 13.83
+  },
+  {
+   "text": "ich",
+   "src": "claudeschnitt/t1",
+   "start": 14.17,
+   "end": 14.23
+  },
+  {
+   "text": "kenne",
+   "src": "claudeschnitt/t1",
+   "start": 14.29,
+   "end": 14.47
+  },
+  {
+   "text": "mich",
+   "src": "claudeschnitt/t1",
+   "start": 14.51,
+   "end": 14.61
+  },
+  {
+   "text": "mit",
+   "src": "claudeschnitt/t1",
+   "start": 14.67,
+   "end": 14.75
+  },
+  {
+   "text": "der",
+   "src": "claudeschnitt/t1",
+   "start": 14.77,
+   "end": 14.85
+  },
+  {
+   "text": "Materie",
+   "src": "claudeschnitt/t1",
+   "start": 14.89,
+   "end": 15.37
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 15.73,
+   "end": 15.81
+  },
+  {
+   "text": "den",
+   "src": "claudeschnitt/t1",
+   "start": 15.85,
+   "end": 15.97
+  },
+  {
+   "text": "Techniken",
+   "src": "claudeschnitt/t1",
+   "start": 16.15,
+   "end": 16.61
+  },
+  {
+   "text": "überhaupt",
+   "src": "claudeschnitt/t1",
+   "start": 16.67,
+   "end": 17.07
+  },
+  {
+   "text": "nicht",
+   "src": "claudeschnitt/t1",
+   "start": 17.13,
+   "end": 17.27
+  },
+  {
+   "text": "aus.",
+   "src": "claudeschnitt/t1",
+   "start": 17.33,
+   "end": 17.53
+  },
+  {
+   "text": "Ich",
+   "src": "claudeschnitt/t1",
+   "start": 18.89,
+   "end": 18.99
+  },
+  {
+   "text": "persönlich",
+   "src": "claudeschnitt/t1",
+   "start": 19.09,
+   "end": 19.51
+  },
+  {
+   "text": "hatte",
+   "src": "claudeschnitt/t1",
+   "start": 19.57,
+   "end": 19.73
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 19.81,
+   "end": 19.89
+  },
+  {
+   "text": "gleiche",
+   "src": "claudeschnitt/t1",
+   "start": 19.95,
+   "end": 20.23
+  },
+  {
+   "text": "Problem",
+   "src": "claudeschnitt/t1",
+   "start": 20.29,
+   "end": 20.63
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 20.67,
+   "end": 20.75
+  },
+  {
+   "text": "ich",
+   "src": "claudeschnitt/t1",
+   "start": 20.87,
+   "end": 20.99
+  },
+  {
+   "text": "schneide",
+   "src": "claudeschnitt/t1",
+   "start": 21.17,
+   "end": 21.45
+  },
+  {
+   "text": "inzwischen",
+   "src": "claudeschnitt/t1",
+   "start": 21.51,
+   "end": 21.79
+  },
+  {
+   "text": "meine",
+   "src": "claudeschnitt/t1",
+   "start": 21.81,
+   "end": 21.97
+  },
+  {
+   "text": "Videos",
+   "src": "claudeschnitt/t1",
+   "start": 21.99,
+   "end": 22.21
+  },
+  {
+   "text": "auch",
+   "src": "claudeschnitt/t1",
+   "start": 22.33,
+   "end": 22.45
+  },
+  {
+   "text": "nicht",
+   "src": "claudeschnitt/t1",
+   "start": 22.51,
+   "end": 22.61
+  },
+  {
+   "text": "mehr",
+   "src": "claudeschnitt/t1",
+   "start": 22.65,
+   "end": 22.73
+  },
+  {
+   "text": "selbst.",
+   "src": "claudeschnitt/t1",
+   "start": 22.77,
+   "end": 23.03
+  },
+  {
+   "text": "Das",
+   "src": "claudeschnitt/t1",
+   "start": 23.53,
+   "end": 23.67
+  },
+  {
+   "text": "übernimmt",
+   "src": "claudeschnitt/t1",
+   "start": 23.73,
+   "end": 24.03
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 24.07,
+   "end": 24.15
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 24.19,
+   "end": 24.41
+  },
+  {
+   "text": "Claude",
+   "src": "claudeschnitt/t1",
+   "start": 24.49,
+   "end": 24.73
+  },
+  {
+   "text": "Code",
+   "src": "claudeschnitt/t1",
+   "start": 24.77,
+   "end": 24.95
+  },
+  {
+   "text": "für",
+   "src": "claudeschnitt/t1",
+   "start": 24.97,
+   "end": 25.09
+  },
+  {
+   "text": "mich.",
+   "src": "claudeschnitt/t1",
+   "start": 25.11,
+   "end": 25.23
+  },
+  {
+   "text": "Ich",
+   "src": "claudeschnitt/t1",
+   "start": 26.13,
+   "end": 26.21
+  },
+  {
+   "text": "saß",
+   "src": "claudeschnitt/t1",
+   "start": 26.25,
+   "end": 26.31
+  },
+  {
+   "text": "nämlich",
+   "src": "claudeschnitt/t1",
+   "start": 26.45,
+   "end": 26.65
+  },
+  {
+   "text": "früher",
+   "src": "claudeschnitt/t1",
+   "start": 26.71,
+   "end": 26.93
+  },
+  {
+   "text": "mal",
+   "src": "claudeschnitt/t1",
+   "start": 27.01,
+   "end": 27.07
+  },
+  {
+   "text": "in",
+   "src": "claudeschnitt/t1",
+   "start": 27.11,
+   "end": 27.17
+  },
+  {
+   "text": "einem",
+   "src": "claudeschnitt/t1",
+   "start": 27.21,
+   "end": 27.37
+  },
+  {
+   "text": "einzigen",
+   "src": "claudeschnitt/t1",
+   "start": 27.49,
+   "end": 27.83
+  },
+  {
+   "text": "Short",
+   "src": "claudeschnitt/t1",
+   "start": 27.89,
+   "end": 28.07
+  },
+  {
+   "text": "teilweise",
+   "src": "claudeschnitt/t1",
+   "start": 28.13,
+   "end": 28.47
+  },
+  {
+   "text": "mehrere",
+   "src": "claudeschnitt/t1",
+   "start": 28.59,
+   "end": 29.01
+  },
+  {
+   "text": "Stunden",
+   "src": "claudeschnitt/t1",
+   "start": 29.09,
+   "end": 29.49
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 29.63,
+   "end": 29.71
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 29.75,
+   "end": 29.85
+  },
+  {
+   "text": "hat",
+   "src": "claudeschnitt/t1",
+   "start": 29.89,
+   "end": 29.99
+  },
+  {
+   "text": "viel",
+   "src": "claudeschnitt/t1",
+   "start": 30.17,
+   "end": 30.31
+  },
+  {
+   "text": "länger",
+   "src": "claudeschnitt/t1",
+   "start": 30.33,
+   "end": 30.53
+  },
+  {
+   "text": "gedauert",
+   "src": "claudeschnitt/t1",
+   "start": 30.57,
+   "end": 30.87
+  },
+  {
+   "text": "als",
+   "src": "claudeschnitt/t1",
+   "start": 30.95,
+   "end": 31.07
+  },
+  {
+   "text": "der",
+   "src": "claudeschnitt/t1",
+   "start": 31.13,
+   "end": 31.25
+  },
+  {
+   "text": "Dreh",
+   "src": "claudeschnitt/t1",
+   "start": 31.33,
+   "end": 31.51
+  },
+  {
+   "text": "an",
+   "src": "claudeschnitt/t1",
+   "start": 31.57,
+   "end": 31.65
+  },
+  {
+   "text": "sich",
+   "src": "claudeschnitt/t1",
+   "start": 31.69,
+   "end": 31.79
+  },
+  {
+   "text": "selbst.",
+   "src": "claudeschnitt/t1",
+   "start": 31.83,
+   "end": 32.11
+  },
+  {
+   "text": "Untertitel,",
+   "src": "claudeschnitt/t1",
+   "start": 33.01,
+   "end": 33.57
+  },
+  {
+   "text": "Pausen",
+   "src": "claudeschnitt/t1",
+   "start": 33.71,
+   "end": 34.07
+  },
+  {
+   "text": "rausschneiden,",
+   "src": "claudeschnitt/t1",
+   "start": 34.09,
+   "end": 34.65
+  },
+  {
+   "text": "Grafiken",
+   "src": "claudeschnitt/t1",
+   "start": 34.69,
+   "end": 35.25
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 35.33,
+   "end": 35.41
+  },
+  {
+   "text": "Musik",
+   "src": "claudeschnitt/t1",
+   "start": 35.47,
+   "end": 35.93
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 36.13,
+   "end": 36.25
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 36.33,
+   "end": 36.45
+  },
+  {
+   "text": "und.",
+   "src": "claudeschnitt/t1",
+   "start": 36.55,
+   "end": 36.67
+  },
+  {
+   "text": "Genau",
+   "src": "claudeschnitt/t1",
+   "start": 41.34,
+   "end": 41.54
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 41.6,
+   "end": 41.74
+  },
+  {
+   "text": "war",
+   "src": "claudeschnitt/t1",
+   "start": 41.78,
+   "end": 41.86
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 41.88,
+   "end": 42.02
+  },
+  {
+   "text": "immer",
+   "src": "claudeschnitt/t1",
+   "start": 42.04,
+   "end": 42.14
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 42.16,
+   "end": 42.24
+  },
+  {
+   "text": "Problem,",
+   "src": "claudeschnitt/t1",
+   "start": 42.26,
+   "end": 42.54
+  },
+  {
+   "text": "weshalb",
+   "src": "claudeschnitt/t1",
+   "start": 42.58,
+   "end": 42.82
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 42.88,
+   "end": 43.04
+  },
+  {
+   "text": "meine",
+   "src": "claudeschnitt/t1",
+   "start": 43.08,
+   "end": 43.2
+  },
+  {
+   "text": "Videos",
+   "src": "claudeschnitt/t1",
+   "start": 43.28,
+   "end": 43.52
+  },
+  {
+   "text": "nie",
+   "src": "claudeschnitt/t1",
+   "start": 43.66,
+   "end": 43.76
+  },
+  {
+   "text": "online",
+   "src": "claudeschnitt/t1",
+   "start": 43.86,
+   "end": 44.08
+  },
+  {
+   "text": "gegangen",
+   "src": "claudeschnitt/t1",
+   "start": 44.12,
+   "end": 44.38
+  },
+  {
+   "text": "sind.",
+   "src": "claudeschnitt/t1",
+   "start": 44.42,
+   "end": 44.56
+  },
+  {
+   "text": "Vermutlich",
+   "src": "claudeschnitt/t1",
+   "start": 44.96,
+   "end": 45.32
+  },
+  {
+   "text": "kennst",
+   "src": "claudeschnitt/t1",
+   "start": 45.38,
+   "end": 45.58
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 45.6,
+   "end": 45.64
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 45.7,
+   "end": 45.82
+  },
+  {
+   "text": "halt",
+   "src": "claudeschnitt/t1",
+   "start": 45.84,
+   "end": 45.94
+  },
+  {
+   "text": "auch.",
+   "src": "claudeschnitt/t1",
+   "start": 46.04,
+   "end": 46.14
+  },
+  {
+   "text": "Heute",
+   "src": "claudeschnitt/t1",
+   "start": 53.64,
+   "end": 53.86
+  },
+  {
+   "text": "mache",
+   "src": "claudeschnitt/t1",
+   "start": 53.94,
+   "end": 54.08
+  },
+  {
+   "text": "ich",
+   "src": "claudeschnitt/t1",
+   "start": 54.12,
+   "end": 54.18
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 54.22,
+   "end": 54.32
+  },
+  {
+   "text": "allerdings",
+   "src": "claudeschnitt/t1",
+   "start": 54.36,
+   "end": 54.7
+  },
+  {
+   "text": "anders.",
+   "src": "claudeschnitt/t1",
+   "start": 54.78,
+   "end": 55
+  },
+  {
+   "text": "Ich",
+   "src": "claudeschnitt/t1",
+   "start": 55.62,
+   "end": 55.7
+  },
+  {
+   "text": "mache",
+   "src": "claudeschnitt/t1",
+   "start": 55.78,
+   "end": 55.98
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 56.04,
+   "end": 56.14
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 56.18,
+   "end": 56.4
+  },
+  {
+   "text": "mit",
+   "src": "claudeschnitt/t1",
+   "start": 56.44,
+   "end": 56.52
+  },
+  {
+   "text": "Claude",
+   "src": "claudeschnitt/t1",
+   "start": 56.6,
+   "end": 56.84
+  },
+  {
+   "text": "Code",
+   "src": "claudeschnitt/t1",
+   "start": 56.88,
+   "end": 57.14
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 57.2,
+   "end": 57.28
+  },
+  {
+   "text": "dem",
+   "src": "claudeschnitt/t1",
+   "start": 57.32,
+   "end": 57.4
+  },
+  {
+   "text": "Modell",
+   "src": "claudeschnitt/t1",
+   "start": 57.42,
+   "end": 57.68
+  },
+  {
+   "text": "Opus",
+   "src": "claudeschnitt/t1",
+   "start": 57.84,
+   "end": 58.12
+  },
+  {
+   "text": "5.5.",
+   "src": "claudeschnitt/t1",
+   "start": 58.26,
+   "end": 58.46
+  },
+  {
+   "text": "Und",
+   "src": "claudeschnitt/t1",
+   "start": 59.66,
+   "end": 59.74
+  },
+  {
+   "text": "der",
+   "src": "claudeschnitt/t1",
+   "start": 59.76,
+   "end": 59.84
+  },
+  {
+   "text": "Trick",
+   "src": "claudeschnitt/t1",
+   "start": 59.92,
+   "end": 60.12
+  },
+  {
+   "text": "dabei",
+   "src": "claudeschnitt/t1",
+   "start": 60.16,
+   "end": 60.38
+  },
+  {
+   "text": "ist",
+   "src": "claudeschnitt/t1",
+   "start": 60.44,
+   "end": 60.52
+  },
+  {
+   "text": "tatsächlich",
+   "src": "claudeschnitt/t1",
+   "start": 60.54,
+   "end": 60.88
+  },
+  {
+   "text": "nicht",
+   "src": "claudeschnitt/t1",
+   "start": 60.94,
+   "end": 61.06
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 61.14,
+   "end": 61.36
+  },
+  {
+   "text": "nur",
+   "src": "claudeschnitt/t1",
+   "start": 61.42,
+   "end": 61.5
+  },
+  {
+   "text": "ein",
+   "src": "claudeschnitt/t1",
+   "start": 61.64,
+   "end": 61.76
+  },
+  {
+   "text": "einziger",
+   "src": "claudeschnitt/t1",
+   "start": 61.88,
+   "end": 62.2
+  },
+  {
+   "text": "magischer",
+   "src": "claudeschnitt/t1",
+   "start": 62.26,
+   "end": 62.64
+  },
+  {
+   "text": "Prompt,",
+   "src": "claudeschnitt/t1",
+   "start": 62.7,
+   "end": 62.9
+  },
+  {
+   "text": "sondern",
+   "src": "claudeschnitt/t1",
+   "start": 63.54,
+   "end": 63.88
+  },
+  {
+   "text": "tatsächlich",
+   "src": "claudeschnitt/t1",
+   "start": 64.1,
+   "end": 64.48
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 64.52,
+   "end": 64.62
+  },
+  {
+   "text": "richtige",
+   "src": "claudeschnitt/t1",
+   "start": 64.74,
+   "end": 65.1
+  },
+  {
+   "text": "Setup.",
+   "src": "claudeschnitt/t1",
+   "start": 65.2,
+   "end": 65.585
+  },
+  {
+   "text": "Und",
+   "src": "claudeschnitt/t1",
+   "start": 80.77,
+   "end": 80.85
+  },
+  {
+   "text": "deshalb",
+   "src": "claudeschnitt/t1",
+   "start": 80.89,
+   "end": 81.17
+  },
+  {
+   "text": "gebe",
+   "src": "claudeschnitt/t1",
+   "start": 81.25,
+   "end": 81.39
+  },
+  {
+   "text": "ich",
+   "src": "claudeschnitt/t1",
+   "start": 81.43,
+   "end": 81.51
+  },
+  {
+   "text": "dir",
+   "src": "claudeschnitt/t1",
+   "start": 81.53,
+   "end": 81.63
+  },
+  {
+   "text": "hier",
+   "src": "claudeschnitt/t1",
+   "start": 81.67,
+   "end": 81.77
+  },
+  {
+   "text": "die",
+   "src": "claudeschnitt/t1",
+   "start": 81.83,
+   "end": 81.89
+  },
+  {
+   "text": "Schritt-für-Schritt-Anleitung.",
+   "src": "claudeschnitt/t1",
+   "start": 81.97,
+   "end": 82.19
+  },
+  {
+   "text": "Schritt",
+   "src": "claudeschnitt/t1",
+   "start": 94.5,
+   "end": 94.74
+  },
+  {
+   "text": "1",
+   "src": "claudeschnitt/t1",
+   "start": 94.84,
+   "end": 95.06
+  },
+  {
+   "text": "ist,",
+   "src": "claudeschnitt/t1",
+   "start": 95.12,
+   "end": 95.3
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 98.06,
+   "end": 98.12
+  },
+  {
+   "text": "öffnest",
+   "src": "claudeschnitt/t1",
+   "start": 98.22,
+   "end": 98.52
+  },
+  {
+   "text": "Claude",
+   "src": "claudeschnitt/t1",
+   "start": 98.58,
+   "end": 98.82
+  },
+  {
+   "text": "Code",
+   "src": "claudeschnitt/t1",
+   "start": 98.88,
+   "end": 99.16
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 99.26,
+   "end": 99.34
+  },
+  {
+   "text": "gibst",
+   "src": "claudeschnitt/t1",
+   "start": 99.4,
+   "end": 99.6
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 99.66,
+   "end": 99.88
+  },
+  {
+   "text": "einen",
+   "src": "claudeschnitt/t1",
+   "start": 100.04,
+   "end": 100.26
+  },
+  {
+   "text": "einzigen",
+   "src": "claudeschnitt/t1",
+   "start": 100.38,
+   "end": 100.72
+  },
+  {
+   "text": "Prompt",
+   "src": "claudeschnitt/t1",
+   "start": 100.78,
+   "end": 101.02
+  },
+  {
+   "text": "erst",
+   "src": "claudeschnitt/t1",
+   "start": 101.08,
+   "end": 101.22
+  },
+  {
+   "text": "einmal",
+   "src": "claudeschnitt/t1",
+   "start": 101.28,
+   "end": 101.44
+  },
+  {
+   "text": "ein.",
+   "src": "claudeschnitt/t1",
+   "start": 101.54,
+   "end": 101.66
+  },
+  {
+   "text": "Zum",
+   "src": "claudeschnitt/t1",
+   "start": 101.86,
+   "end": 101.96
+  },
+  {
+   "text": "Beispiel:",
+   "src": "claudeschnitt/t1",
+   "start": 102,
+   "end": 102.38
+  },
+  {
+   "text": "„Richte",
+   "src": "claudeschnitt/t1",
+   "start": 103.08,
+   "end": 103.32
+  },
+  {
+   "text": "mir",
+   "src": "claudeschnitt/t1",
+   "start": 103.42,
+   "end": 103.56
+  },
+  {
+   "text": "meinen",
+   "src": "claudeschnitt/t1",
+   "start": 103.88,
+   "end": 104.02
+  },
+  {
+   "text": "Videoschnitt",
+   "src": "claudeschnitt/t1",
+   "start": 104.06,
+   "end": 104.54
+  },
+  {
+   "text": "ein",
+   "src": "claudeschnitt/t1",
+   "start": 104.64,
+   "end": 104.8
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 105.14,
+   "end": 105.22
+  },
+  {
+   "text": "frag",
+   "src": "claudeschnitt/t1",
+   "start": 105.28,
+   "end": 105.46
+  },
+  {
+   "text": "mich",
+   "src": "claudeschnitt/t1",
+   "start": 105.54,
+   "end": 105.64
+  },
+  {
+   "text": "danach",
+   "src": "claudeschnitt/t1",
+   "start": 105.68,
+   "end": 105.96
+  },
+  {
+   "text": "nach",
+   "src": "claudeschnitt/t1",
+   "start": 106.04,
+   "end": 106.14
+  },
+  {
+   "text": "meinem",
+   "src": "claudeschnitt/t1",
+   "start": 106.22,
+   "end": 106.52
+  },
+  {
+   "text": "Stil.“",
+   "src": "claudeschnitt/t1",
+   "start": 106.6,
+   "end": 106.86
+  },
+  {
+   "text": "Dann",
+   "src": "claudeschnitt/t1",
+   "start": 107.9,
+   "end": 108.06
+  },
+  {
+   "text": "installiert",
+   "src": "claudeschnitt/t1",
+   "start": 108.12,
+   "end": 108.52
+  },
+  {
+   "text": "ja",
+   "src": "claudeschnitt/t1",
+   "start": 108.56,
+   "end": 108.6
+  },
+  {
+   "text": "Claude",
+   "src": "claudeschnitt/t1",
+   "start": 108.7,
+   "end": 108.98
+  },
+  {
+   "text": "erstmal",
+   "src": "claudeschnitt/t1",
+   "start": 109.02,
+   "end": 109.3
+  },
+  {
+   "text": "selbst",
+   "src": "claudeschnitt/t1",
+   "start": 109.38,
+   "end": 109.62
+  },
+  {
+   "text": "alles,",
+   "src": "claudeschnitt/t1",
+   "start": 109.68,
+   "end": 109.92
+  },
+  {
+   "text": "was",
+   "src": "claudeschnitt/t1",
+   "start": 110.2,
+   "end": 110.34
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 110.38,
+   "end": 110.44
+  },
+  {
+   "text": "natürlich",
+   "src": "claudeschnitt/t1",
+   "start": 110.5,
+   "end": 110.78
+  },
+  {
+   "text": "zum",
+   "src": "claudeschnitt/t1",
+   "start": 110.8,
+   "end": 110.88
+  },
+  {
+   "text": "Schneiden",
+   "src": "claudeschnitt/t1",
+   "start": 110.94,
+   "end": 111.24
+  },
+  {
+   "text": "brauchst.",
+   "src": "claudeschnitt/t1",
+   "start": 111.28,
+   "end": 111.62
+  },
+  {
+   "text": "Die",
+   "src": "claudeschnitt/t1",
+   "start": 112.16,
+   "end": 112.24
+  },
+  {
+   "text": "Spracherkennung,",
+   "src": "claudeschnitt/t1",
+   "start": 112.3,
+   "end": 113.06
+  },
+  {
+   "text": "die",
+   "src": "claudeschnitt/t1",
+   "start": 113.22,
+   "end": 113.3
+  },
+  {
+   "text": "Werkzeuge,",
+   "src": "claudeschnitt/t1",
+   "start": 113.34,
+   "end": 113.9
+  },
+  {
+   "text": "die",
+   "src": "claudeschnitt/t1",
+   "start": 114.3,
+   "end": 114.4
+  },
+  {
+   "text": "Software",
+   "src": "claudeschnitt/t1",
+   "start": 114.46,
+   "end": 114.86
+  },
+  {
+   "text": "für",
+   "src": "claudeschnitt/t1",
+   "start": 114.9,
+   "end": 114.98
+  },
+  {
+   "text": "die",
+   "src": "claudeschnitt/t1",
+   "start": 115,
+   "end": 115.08
+  },
+  {
+   "text": "Untertitel",
+   "src": "claudeschnitt/t1",
+   "start": 115.1,
+   "end": 115.6
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 115.78,
+   "end": 115.84
+  },
+  {
+   "text": "die",
+   "src": "claudeschnitt/t1",
+   "start": 115.88,
+   "end": 115.96
+  },
+  {
+   "text": "Grafiken.",
+   "src": "claudeschnitt/t1",
+   "start": 115.98,
+   "end": 116.44
+  },
+  {
+   "text": "Und",
+   "src": "claudeschnitt/t1",
+   "start": 140.52,
+   "end": 140.63
+  },
+  {
+   "text": "Schritt",
+   "src": "claudeschnitt/t1",
+   "start": 140.65,
+   "end": 140.83
+  },
+  {
+   "text": "2",
+   "src": "claudeschnitt/t1",
+   "start": 140.89,
+   "end": 141.11
+  },
+  {
+   "text": "ist",
+   "src": "claudeschnitt/t1",
+   "start": 141.33,
+   "end": 141.41
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 141.45,
+   "end": 141.55
+  },
+  {
+   "text": "Onboarding.",
+   "src": "claudeschnitt/t1",
+   "start": 141.63,
+   "end": 142.03
+  },
+  {
+   "text": "Claude",
+   "src": "claudeschnitt/t1",
+   "start": 142.79,
+   "end": 143.07
+  },
+  {
+   "text": "fragt",
+   "src": "claudeschnitt/t1",
+   "start": 143.11,
+   "end": 143.31
+  },
+  {
+   "text": "dich",
+   "src": "claudeschnitt/t1",
+   "start": 143.35,
+   "end": 143.45
+  },
+  {
+   "text": "dabei",
+   "src": "claudeschnitt/t1",
+   "start": 143.49,
+   "end": 143.75
+  },
+  {
+   "text": "erst",
+   "src": "claudeschnitt/t1",
+   "start": 143.85,
+   "end": 143.99
+  },
+  {
+   "text": "einmal,",
+   "src": "claudeschnitt/t1",
+   "start": 144.05,
+   "end": 144.29
+  },
+  {
+   "text": "wie",
+   "src": "claudeschnitt/t1",
+   "start": 144.39,
+   "end": 144.49
+  },
+  {
+   "text": "ein",
+   "src": "claudeschnitt/t1",
+   "start": 144.61,
+   "end": 144.71
+  },
+  {
+   "text": "neuer",
+   "src": "claudeschnitt/t1",
+   "start": 144.79,
+   "end": 145.03
+  },
+  {
+   "text": "Cutter",
+   "src": "claudeschnitt/t1",
+   "start": 145.11,
+   "end": 145.39
+  },
+  {
+   "text": "im",
+   "src": "claudeschnitt/t1",
+   "start": 145.45,
+   "end": 145.53
+  },
+  {
+   "text": "Team,",
+   "src": "claudeschnitt/t1",
+   "start": 145.59,
+   "end": 145.79
+  },
+  {
+   "text": "was",
+   "src": "claudeschnitt/t1",
+   "start": 145.91,
+   "end": 146.07
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 146.13,
+   "end": 146.19
+  },
+  {
+   "text": "eigentlich",
+   "src": "claudeschnitt/t1",
+   "start": 146.29,
+   "end": 146.59
+  },
+  {
+   "text": "brauchst.",
+   "src": "claudeschnitt/t1",
+   "start": 146.63,
+   "end": 146.95
+  },
+  {
+   "text": "Wie",
+   "src": "claudeschnitt/t1",
+   "start": 147.87,
+   "end": 147.97
+  },
+  {
+   "text": "heißt",
+   "src": "claudeschnitt/t1",
+   "start": 148.03,
+   "end": 148.21
+  },
+  {
+   "text": "deine",
+   "src": "claudeschnitt/t1",
+   "start": 148.25,
+   "end": 148.41
+  },
+  {
+   "text": "Marke",
+   "src": "claudeschnitt/t1",
+   "start": 148.47,
+   "end": 148.79
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 148.99,
+   "end": 149.05
+  },
+  {
+   "text": "wofür",
+   "src": "claudeschnitt/t1",
+   "start": 149.11,
+   "end": 149.37
+  },
+  {
+   "text": "steht",
+   "src": "claudeschnitt/t1",
+   "start": 149.43,
+   "end": 149.67
+  },
+  {
+   "text": "sie?",
+   "src": "claudeschnitt/t1",
+   "start": 149.75,
+   "end": 149.85
+  },
+  {
+   "text": "Welche",
+   "src": "claudeschnitt/t1",
+   "start": 150.6,
+   "end": 150.8
+  },
+  {
+   "text": "Farben",
+   "src": "claudeschnitt/t1",
+   "start": 150.88,
+   "end": 151.14
+  },
+  {
+   "text": "gehören",
+   "src": "claudeschnitt/t1",
+   "start": 151.2,
+   "end": 151.46
+  },
+  {
+   "text": "zum",
+   "src": "claudeschnitt/t1",
+   "start": 151.48,
+   "end": 151.56
+  },
+  {
+   "text": "Beispiel",
+   "src": "claudeschnitt/t1",
+   "start": 151.6,
+   "end": 151.8
+  },
+  {
+   "text": "zu",
+   "src": "claudeschnitt/t1",
+   "start": 151.86,
+   "end": 151.92
+  },
+  {
+   "text": "dir?",
+   "src": "claudeschnitt/t1",
+   "start": 152.02,
+   "end": 152.18
+  },
+  {
+   "text": "Dann",
+   "src": "claudeschnitt/t1",
+   "start": 152.8,
+   "end": 152.92
+  },
+  {
+   "text": "gibst",
+   "src": "claudeschnitt/t1",
+   "start": 152.98,
+   "end": 153.16
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 153.2,
+   "end": 153.26
+  },
+  {
+   "text": "noch",
+   "src": "claudeschnitt/t1",
+   "start": 153.32,
+   "end": 153.42
+  },
+  {
+   "text": "zwei,",
+   "src": "claudeschnitt/t1",
+   "start": 153.52,
+   "end": 153.72
+  },
+  {
+   "text": "drei",
+   "src": "claudeschnitt/t1",
+   "start": 153.82,
+   "end": 153.96
+  },
+  {
+   "text": "bestehende",
+   "src": "claudeschnitt/t1",
+   "start": 154.04,
+   "end": 154.38
+  },
+  {
+   "text": "Videos",
+   "src": "claudeschnitt/t1",
+   "start": 154.46,
+   "end": 154.72
+  },
+  {
+   "text": "als",
+   "src": "claudeschnitt/t1",
+   "start": 154.8,
+   "end": 154.9
+  },
+  {
+   "text": "Beispiel",
+   "src": "claudeschnitt/t1",
+   "start": 154.96,
+   "end": 155.32
+  },
+  {
+   "text": "ein,",
+   "src": "claudeschnitt/t1",
+   "start": 155.48,
+   "end": 155.64
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 158.74,
+   "end": 158.82
+  },
+  {
+   "text": "wenn",
+   "src": "claudeschnitt/t1",
+   "start": 158.84,
+   "end": 158.96
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 159,
+   "end": 159.04
+  },
+  {
+   "text": "natürlich",
+   "src": "claudeschnitt/t1",
+   "start": 159.1,
+   "end": 159.36
+  },
+  {
+   "text": "hier",
+   "src": "claudeschnitt/t1",
+   "start": 159.38,
+   "end": 159.48
+  },
+  {
+   "text": "schon",
+   "src": "claudeschnitt/t1",
+   "start": 159.52,
+   "end": 159.64
+  },
+  {
+   "text": "bestehende",
+   "src": "claudeschnitt/t1",
+   "start": 159.68,
+   "end": 160.12
+  },
+  {
+   "text": "Social-Media-Videos",
+   "src": "claudeschnitt/t1",
+   "start": 160.18,
+   "end": 160.44
+  },
+  {
+   "text": "hast,",
+   "src": "claudeschnitt/t1",
+   "start": 161.12,
+   "end": 161.3
+  },
+  {
+   "text": "dann",
+   "src": "claudeschnitt/t1",
+   "start": 161.36,
+   "end": 161.48
+  },
+  {
+   "text": "lad",
+   "src": "claudeschnitt/t1",
+   "start": 161.54,
+   "end": 161.7
+  },
+  {
+   "text": "sie",
+   "src": "claudeschnitt/t1",
+   "start": 161.76,
+   "end": 161.82
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 161.86,
+   "end": 162.06
+  },
+  {
+   "text": "mal",
+   "src": "claudeschnitt/t1",
+   "start": 162.1,
+   "end": 162.18
+  },
+  {
+   "text": "mit",
+   "src": "claudeschnitt/t1",
+   "start": 162.22,
+   "end": 162.3
+  },
+  {
+   "text": "hoch.",
+   "src": "claudeschnitt/t1",
+   "start": 162.36,
+   "end": 162.54
+  },
+  {
+   "text": "Wenn",
+   "src": "claudeschnitt/t1",
+   "start": 172.88,
+   "end": 172.98
+  },
+  {
+   "text": "aber",
+   "src": "claudeschnitt/t1",
+   "start": 173,
+   "end": 173.14
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 173.18,
+   "end": 173.22
+  },
+  {
+   "text": "natürlich",
+   "src": "claudeschnitt/t1",
+   "start": 173.28,
+   "end": 173.54
+  },
+  {
+   "text": "keine",
+   "src": "claudeschnitt/t1",
+   "start": 173.58,
+   "end": 173.74
+  },
+  {
+   "text": "eigenen",
+   "src": "claudeschnitt/t1",
+   "start": 173.9,
+   "end": 174.18
+  },
+  {
+   "text": "hast,",
+   "src": "claudeschnitt/t1",
+   "start": 174.22,
+   "end": 174.38
+  },
+  {
+   "text": "dann",
+   "src": "claudeschnitt/t1",
+   "start": 174.4,
+   "end": 174.5
+  },
+  {
+   "text": "kannst",
+   "src": "claudeschnitt/t1",
+   "start": 174.54,
+   "end": 174.68
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 174.7,
+   "end": 174.74
+  },
+  {
+   "text": "auch",
+   "src": "claudeschnitt/t1",
+   "start": 174.76,
+   "end": 174.84
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 174.88,
+   "end": 175.1
+  },
+  {
+   "text": "irgendwelche,",
+   "src": "claudeschnitt/t1",
+   "start": 175.2,
+   "end": 175.66
+  },
+  {
+   "text": "die",
+   "src": "claudeschnitt/t1",
+   "start": 177.04,
+   "end": 177.12
+  },
+  {
+   "text": "dir",
+   "src": "claudeschnitt/t1",
+   "start": 177.18,
+   "end": 177.3
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 177.34,
+   "end": 177.58
+  },
+  {
+   "text": "im",
+   "src": "claudeschnitt/t1",
+   "start": 177.64,
+   "end": 177.7
+  },
+  {
+   "text": "Stil",
+   "src": "claudeschnitt/t1",
+   "start": 177.76,
+   "end": 177.94
+  },
+  {
+   "text": "gefallen.",
+   "src": "claudeschnitt/t1",
+   "start": 178,
+   "end": 178.3
+  },
+  {
+   "text": "Und",
+   "src": "claudeschnitt/t1",
+   "start": 180.95,
+   "end": 181.03
+  },
+  {
+   "text": "zum",
+   "src": "claudeschnitt/t1",
+   "start": 181.07,
+   "end": 181.17
+  },
+  {
+   "text": "Schluss",
+   "src": "claudeschnitt/t1",
+   "start": 181.23,
+   "end": 181.47
+  },
+  {
+   "text": "natürlich,",
+   "src": "claudeschnitt/t1",
+   "start": 181.53,
+   "end": 181.89
+  },
+  {
+   "text": "wie",
+   "src": "claudeschnitt/t1",
+   "start": 182.05,
+   "end": 182.17
+  },
+  {
+   "text": "soll",
+   "src": "claudeschnitt/t1",
+   "start": 182.23,
+   "end": 182.35
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 182.39,
+   "end": 182.61
+  },
+  {
+   "text": "der",
+   "src": "claudeschnitt/t1",
+   "start": 182.67,
+   "end": 182.75
+  },
+  {
+   "text": "Untertitel",
+   "src": "claudeschnitt/t1",
+   "start": 182.85,
+   "end": 183.33
+  },
+  {
+   "text": "aussehen?",
+   "src": "claudeschnitt/t1",
+   "start": 183.41,
+   "end": 183.77
+  },
+  {
+   "text": "Wie",
+   "src": "claudeschnitt/t1",
+   "start": 183.83,
+   "end": 183.89
+  },
+  {
+   "text": "schnell",
+   "src": "claudeschnitt/t1",
+   "start": 183.95,
+   "end": 184.25
+  },
+  {
+   "text": "wird",
+   "src": "claudeschnitt/t1",
+   "start": 184.37,
+   "end": 184.49
+  },
+  {
+   "text": "geschnitten?",
+   "src": "claudeschnitt/t1",
+   "start": 184.55,
+   "end": 185.03
+  },
+  {
+   "text": "Was",
+   "src": "claudeschnitt/t1",
+   "start": 185.45,
+   "end": 185.57
+  },
+  {
+   "text": "sind",
+   "src": "claudeschnitt/t1",
+   "start": 185.63,
+   "end": 185.75
+  },
+  {
+   "text": "die",
+   "src": "claudeschnitt/t1",
+   "start": 185.79,
+   "end": 185.87
+  },
+  {
+   "text": "Effekte?",
+   "src": "claudeschnitt/t1",
+   "start": 185.91,
+   "end": 186.33
+  },
+  {
+   "text": "Daraus",
+   "src": "claudeschnitt/t1",
+   "start": 186.89,
+   "end": 187.15
+  },
+  {
+   "text": "entsteht",
+   "src": "claudeschnitt/t1",
+   "start": 187.21,
+   "end": 187.53
+  },
+  {
+   "text": "dann",
+   "src": "claudeschnitt/t1",
+   "start": 187.55,
+   "end": 187.69
+  },
+  {
+   "text": "dein",
+   "src": "claudeschnitt/t1",
+   "start": 187.73,
+   "end": 187.85
+  },
+  {
+   "text": "eigenes",
+   "src": "claudeschnitt/t1",
+   "start": 187.99,
+   "end": 188.33
+  },
+  {
+   "text": "Schnittprofil,",
+   "src": "claudeschnitt/t1",
+   "start": 188.39,
+   "end": 189.01
+  },
+  {
+   "text": "gespeichert",
+   "src": "claudeschnitt/t1",
+   "start": 189.53,
+   "end": 190.09
+  },
+  {
+   "text": "in",
+   "src": "claudeschnitt/t1",
+   "start": 190.17,
+   "end": 190.23
+  },
+  {
+   "text": "sogenannten",
+   "src": "claudeschnitt/t1",
+   "start": 190.37,
+   "end": 190.87
+  },
+  {
+   "text": "Skills.",
+   "src": "claudeschnitt/t1",
+   "start": 190.91,
+   "end": 191.27
+  },
+  {
+   "text": "Nutze",
+   "src": "claudeschnitt/t1",
+   "start": 202.64,
+   "end": 202.86
+  },
+  {
+   "text": "zum",
+   "src": "claudeschnitt/t1",
+   "start": 202.92,
+   "end": 202.94
+  },
+  {
+   "text": "Beispiel",
+   "src": "claudeschnitt/t1",
+   "start": 203.12,
+   "end": 203.14
+  },
+  {
+   "text": "dafür",
+   "src": "claudeschnitt/t1",
+   "start": 203.22,
+   "end": 203.46
+  },
+  {
+   "text": "auch",
+   "src": "claudeschnitt/t1",
+   "start": 203.48,
+   "end": 203.56
+  },
+  {
+   "text": "mal",
+   "src": "claudeschnitt/t1",
+   "start": 203.6,
+   "end": 203.68
+  },
+  {
+   "text": "den",
+   "src": "claudeschnitt/t1",
+   "start": 203.72,
+   "end": 203.8
+  },
+  {
+   "text": "Stil",
+   "src": "claudeschnitt/t1",
+   "start": 203.88,
+   "end": 204.08
+  },
+  {
+   "text": "Motion",
+   "src": "claudeschnitt/t1",
+   "start": 204.16,
+   "end": 204.46
+  },
+  {
+   "text": "Design",
+   "src": "claudeschnitt/t1",
+   "start": 204.5,
+   "end": 204.84
+  },
+  {
+   "text": "oder",
+   "src": "claudeschnitt/t1",
+   "start": 205.36,
+   "end": 205.56
+  },
+  {
+   "text": "HyperFrames",
+   "src": "claudeschnitt/t1",
+   "start": 205.7,
+   "end": 206.32
+  },
+  {
+   "text": "von",
+   "src": "claudeschnitt/t1",
+   "start": 206.62,
+   "end": 206.76
+  },
+  {
+   "text": "HeyGen.",
+   "src": "claudeschnitt/t1",
+   "start": 206.82,
+   "end": 207.14
+  },
+  {
+   "text": "Und",
+   "src": "claudeschnitt/t1",
+   "start": 212.34,
+   "end": 212.42
+  },
+  {
+   "text": "Schritt",
+   "src": "claudeschnitt/t1",
+   "start": 212.46,
+   "end": 212.66
+  },
+  {
+   "text": "3",
+   "src": "claudeschnitt/t1",
+   "start": 212.68,
+   "end": 212.88
+  },
+  {
+   "text": "ist",
+   "src": "claudeschnitt/t1",
+   "start": 213.08,
+   "end": 213.16
+  },
+  {
+   "text": "tatsächlich",
+   "src": "claudeschnitt/t1",
+   "start": 213.2,
+   "end": 213.62
+  },
+  {
+   "text": "der",
+   "src": "claudeschnitt/t1",
+   "start": 213.66,
+   "end": 213.74
+  },
+  {
+   "text": "Alltag.",
+   "src": "claudeschnitt/t1",
+   "start": 213.8,
+   "end": 214.1
+  },
+  {
+   "text": "Ich",
+   "src": "claudeschnitt/t1",
+   "start": 238.17,
+   "end": 238.25
+  },
+  {
+   "text": "zum",
+   "src": "claudeschnitt/t1",
+   "start": 238.31,
+   "end": 238.33
+  },
+  {
+   "text": "Beispiel",
+   "src": "claudeschnitt/t1",
+   "start": 238.41,
+   "end": 238.43
+  },
+  {
+   "text": "drehe",
+   "src": "claudeschnitt/t1",
+   "start": 238.69,
+   "end": 238.91
+  },
+  {
+   "text": "immer",
+   "src": "claudeschnitt/t1",
+   "start": 238.93,
+   "end": 239.09
+  },
+  {
+   "text": "mit",
+   "src": "claudeschnitt/t1",
+   "start": 239.15,
+   "end": 239.23
+  },
+  {
+   "text": "dem",
+   "src": "claudeschnitt/t1",
+   "start": 239.27,
+   "end": 239.35
+  },
+  {
+   "text": "Handy,",
+   "src": "claudeschnitt/t1",
+   "start": 239.39,
+   "end": 239.65
+  },
+  {
+   "text": "lade",
+   "src": "claudeschnitt/t1",
+   "start": 240.11,
+   "end": 240.33
+  },
+  {
+   "text": "dann",
+   "src": "claudeschnitt/t1",
+   "start": 240.43,
+   "end": 240.55
+  },
+  {
+   "text": "den",
+   "src": "claudeschnitt/t1",
+   "start": 240.59,
+   "end": 240.69
+  },
+  {
+   "text": "Rohclip",
+   "src": "claudeschnitt/t1",
+   "start": 240.73,
+   "end": 241.09
+  },
+  {
+   "text": "immer",
+   "src": "claudeschnitt/t1",
+   "start": 241.19,
+   "end": 241.39
+  },
+  {
+   "text": "in",
+   "src": "claudeschnitt/t1",
+   "start": 241.41,
+   "end": 241.45
+  },
+  {
+   "text": "einen",
+   "src": "claudeschnitt/t1",
+   "start": 241.47,
+   "end": 241.59
+  },
+  {
+   "text": "Google-Drive-Ordner",
+   "src": "claudeschnitt/t1",
+   "start": 241.63,
+   "end": 241.85
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 242.87,
+   "end": 242.95
+  },
+  {
+   "text": "färbe",
+   "src": "claudeschnitt/t1",
+   "start": 243.01,
+   "end": 243.23
+  },
+  {
+   "text": "dann",
+   "src": "claudeschnitt/t1",
+   "start": 243.27,
+   "end": 243.37
+  },
+  {
+   "text": "zum",
+   "src": "claudeschnitt/t1",
+   "start": 243.39,
+   "end": 243.41
+  },
+  {
+   "text": "Beispiel",
+   "src": "claudeschnitt/t1",
+   "start": 243.59,
+   "end": 243.61
+  },
+  {
+   "text": "den",
+   "src": "claudeschnitt/t1",
+   "start": 243.69,
+   "end": 243.77
+  },
+  {
+   "text": "Termin",
+   "src": "claudeschnitt/t1",
+   "start": 243.81,
+   "end": 244.07
+  },
+  {
+   "text": "in",
+   "src": "claudeschnitt/t1",
+   "start": 244.13,
+   "end": 244.17
+  },
+  {
+   "text": "meinem",
+   "src": "claudeschnitt/t1",
+   "start": 244.21,
+   "end": 244.37
+  },
+  {
+   "text": "Kalender",
+   "src": "claudeschnitt/t1",
+   "start": 244.39,
+   "end": 244.73
+  },
+  {
+   "text": "grün,",
+   "src": "claudeschnitt/t1",
+   "start": 244.79,
+   "end": 245.01
+  },
+  {
+   "text": "sobald",
+   "src": "claudeschnitt/t1",
+   "start": 245.37,
+   "end": 245.67
+  },
+  {
+   "text": "ich",
+   "src": "claudeschnitt/t1",
+   "start": 245.73,
+   "end": 245.79
+  },
+  {
+   "text": "ihn",
+   "src": "claudeschnitt/t1",
+   "start": 245.85,
+   "end": 245.91
+  },
+  {
+   "text": "hochgeladen",
+   "src": "claudeschnitt/t1",
+   "start": 245.97,
+   "end": 246.55
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 246.79,
+   "end": 246.87
+  },
+  {
+   "text": "fertiggestellt",
+   "src": "claudeschnitt/t1",
+   "start": 246.93,
+   "end": 247.47
+  },
+  {
+   "text": "habe.",
+   "src": "claudeschnitt/t1",
+   "start": 247.51,
+   "end": 247.65
+  },
+  {
+   "text": "Das",
+   "src": "claudeschnitt/t1",
+   "start": 277.1,
+   "end": 277.26
+  },
+  {
+   "text": "ist",
+   "src": "claudeschnitt/t1",
+   "start": 277.32,
+   "end": 277.4
+  },
+  {
+   "text": "natürlich",
+   "src": "claudeschnitt/t1",
+   "start": 277.44,
+   "end": 277.76
+  },
+  {
+   "text": "für",
+   "src": "claudeschnitt/t1",
+   "start": 277.82,
+   "end": 277.9
+  },
+  {
+   "text": "Claude",
+   "src": "claudeschnitt/t1",
+   "start": 277.98,
+   "end": 278.28
+  },
+  {
+   "text": "immer",
+   "src": "claudeschnitt/t1",
+   "start": 278.3,
+   "end": 278.44
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 278.56,
+   "end": 278.7
+  },
+  {
+   "text": "Startsignal",
+   "src": "claudeschnitt/t1",
+   "start": 278.76,
+   "end": 279.36
+  },
+  {
+   "text": "zum",
+   "src": "claudeschnitt/t1",
+   "start": 279.42,
+   "end": 279.54
+  },
+  {
+   "text": "Loslegen.",
+   "src": "claudeschnitt/t1",
+   "start": 279.58,
+   "end": 279.96
+  },
+  {
+   "text": "Dann",
+   "src": "claudeschnitt/t1",
+   "start": 280.74,
+   "end": 280.92
+  },
+  {
+   "text": "legt",
+   "src": "claudeschnitt/t1",
+   "start": 281.2,
+   "end": 281.36
+  },
+  {
+   "text": "zum",
+   "src": "claudeschnitt/t1",
+   "start": 281.4,
+   "end": 281.42
+  },
+  {
+   "text": "Beispiel",
+   "src": "claudeschnitt/t1",
+   "start": 281.6,
+   "end": 281.62
+  },
+  {
+   "text": "Claude",
+   "src": "claudeschnitt/t1",
+   "start": 281.8,
+   "end": 282.04
+  },
+  {
+   "text": "los,",
+   "src": "claudeschnitt/t1",
+   "start": 282.08,
+   "end": 282.32
+  },
+  {
+   "text": "Versprecher",
+   "src": "claudeschnitt/t1",
+   "start": 282.66,
+   "end": 283.18
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 283.32,
+   "end": 283.38
+  },
+  {
+   "text": "Pausen",
+   "src": "claudeschnitt/t1",
+   "start": 283.44,
+   "end": 283.78
+  },
+  {
+   "text": "werden",
+   "src": "claudeschnitt/t1",
+   "start": 283.82,
+   "end": 283.98
+  },
+  {
+   "text": "rausgeschnitten,",
+   "src": "claudeschnitt/t1",
+   "start": 284.06,
+   "end": 284.64
+  },
+  {
+   "text": "Untertitel",
+   "src": "claudeschnitt/t1",
+   "start": 285.1,
+   "end": 285.6
+  },
+  {
+   "text": "werden",
+   "src": "claudeschnitt/t1",
+   "start": 285.64,
+   "end": 285.8
+  },
+  {
+   "text": "Wort",
+   "src": "claudeschnitt/t1",
+   "start": 285.86,
+   "end": 286.04
+  },
+  {
+   "text": "für",
+   "src": "claudeschnitt/t1",
+   "start": 286.08,
+   "end": 286.16
+  },
+  {
+   "text": "Wort",
+   "src": "claudeschnitt/t1",
+   "start": 286.24,
+   "end": 286.4
+  },
+  {
+   "text": "erstellt,",
+   "src": "claudeschnitt/t1",
+   "start": 286.48,
+   "end": 286.86
+  },
+  {
+   "text": "Grafiken",
+   "src": "claudeschnitt/t1",
+   "start": 287.18,
+   "end": 287.66
+  },
+  {
+   "text": "werden",
+   "src": "claudeschnitt/t1",
+   "start": 287.7,
+   "end": 287.86
+  },
+  {
+   "text": "genau",
+   "src": "claudeschnitt/t1",
+   "start": 287.9,
+   "end": 288.12
+  },
+  {
+   "text": "auf",
+   "src": "claudeschnitt/t1",
+   "start": 288.14,
+   "end": 288.22
+  },
+  {
+   "text": "dem",
+   "src": "claudeschnitt/t1",
+   "start": 288.28,
+   "end": 288.36
+  },
+  {
+   "text": "gesprochenen",
+   "src": "claudeschnitt/t1",
+   "start": 288.42,
+   "end": 288.88
+  },
+  {
+   "text": "Wort",
+   "src": "claudeschnitt/t1",
+   "start": 288.98,
+   "end": 289.2
+  },
+  {
+   "text": "eingefügt",
+   "src": "claudeschnitt/t1",
+   "start": 289.3,
+   "end": 289.8
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 290.32,
+   "end": 290.4
+  },
+  {
+   "text": "der",
+   "src": "claudeschnitt/t1",
+   "start": 290.42,
+   "end": 290.52
+  },
+  {
+   "text": "Ton",
+   "src": "claudeschnitt/t1",
+   "start": 290.6,
+   "end": 290.82
+  },
+  {
+   "text": "auf",
+   "src": "claudeschnitt/t1",
+   "start": 290.96,
+   "end": 291.06
+  },
+  {
+   "text": "die",
+   "src": "claudeschnitt/t1",
+   "start": 291.12,
+   "end": 291.2
+  },
+  {
+   "text": "richtige",
+   "src": "claudeschnitt/t1",
+   "start": 291.26,
+   "end": 291.6
+  },
+  {
+   "text": "Lautstärke",
+   "src": "claudeschnitt/t1",
+   "start": 291.68,
+   "end": 292.08
+  },
+  {
+   "text": "gestellt.",
+   "src": "claudeschnitt/t1",
+   "start": 292.14,
+   "end": 292.44
+  },
+  {
+   "text": "Und",
+   "src": "claudeschnitt/t1",
+   "start": 292.9,
+   "end": 292.98
+  },
+  {
+   "text": "am",
+   "src": "claudeschnitt/t1",
+   "start": 293.04,
+   "end": 293.1
+  },
+  {
+   "text": "Ende",
+   "src": "claudeschnitt/t1",
+   "start": 293.12,
+   "end": 293.3
+  },
+  {
+   "text": "plant",
+   "src": "claudeschnitt/t1",
+   "start": 293.38,
+   "end": 293.6
+  },
+  {
+   "text": "dann",
+   "src": "claudeschnitt/t1",
+   "start": 293.62,
+   "end": 293.7
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 293.74,
+   "end": 293.96
+  },
+  {
+   "text": "Claude",
+   "src": "claudeschnitt/t1",
+   "start": 294.02,
+   "end": 294.28
+  },
+  {
+   "text": "sogar",
+   "src": "claudeschnitt/t1",
+   "start": 294.3,
+   "end": 294.48
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 294.5,
+   "end": 294.6
+  },
+  {
+   "text": "Video",
+   "src": "claudeschnitt/t1",
+   "start": 294.65,
+   "end": 294.91
+  },
+  {
+   "text": "direkt",
+   "src": "claudeschnitt/t1",
+   "start": 295.09,
+   "end": 295.45
+  },
+  {
+   "text": "in",
+   "src": "claudeschnitt/t1",
+   "start": 295.53,
+   "end": 295.59
+  },
+  {
+   "text": "Metricool",
+   "src": "claudeschnitt/t1",
+   "start": 295.65,
+   "end": 296.17
+  },
+  {
+   "text": "ein",
+   "src": "claudeschnitt/t1",
+   "start": 296.27,
+   "end": 296.43
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 296.85,
+   "end": 296.93
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 296.99,
+   "end": 297.07
+  },
+  {
+   "text": "hast",
+   "src": "claudeschnitt/t1",
+   "start": 297.15,
+   "end": 297.33
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 297.39,
+   "end": 297.51
+  },
+  {
+   "text": "automatisch",
+   "src": "claudeschnitt/t1",
+   "start": 297.77,
+   "end": 298.23
+  },
+  {
+   "text": "veröffentlicht",
+   "src": "claudeschnitt/t1",
+   "start": 298.27,
+   "end": 298.83
+  },
+  {
+   "text": "in",
+   "src": "claudeschnitt/t1",
+   "start": 299.25,
+   "end": 299.31
+  },
+  {
+   "text": "all",
+   "src": "claudeschnitt/t1",
+   "start": 299.47,
+   "end": 299.59
+  },
+  {
+   "text": "deinen",
+   "src": "claudeschnitt/t1",
+   "start": 299.63,
+   "end": 299.79
+  },
+  {
+   "text": "Social-Media-Kanälen.",
+   "src": "claudeschnitt/t1",
+   "start": 299.81,
+   "end": 300.785
+  },
+  {
+   "text": "Und",
+   "src": "claudeschnitt/t1",
+   "start": 304.44,
+   "end": 304.5
+  },
+  {
+   "text": "ehrlich",
+   "src": "claudeschnitt/t1",
+   "start": 304.56,
+   "end": 304.78
+  },
+  {
+   "text": "gesagt,",
+   "src": "claudeschnitt/t1",
+   "start": 304.82,
+   "end": 305.12
+  },
+  {
+   "text": "perfekt",
+   "src": "claudeschnitt/t1",
+   "start": 305.46,
+   "end": 305.86
+  },
+  {
+   "text": "ist",
+   "src": "claudeschnitt/t1",
+   "start": 305.98,
+   "end": 306.06
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 306.1,
+   "end": 306.2
+  },
+  {
+   "text": "natürlich",
+   "src": "claudeschnitt/t1",
+   "start": 306.24,
+   "end": 306.56
+  },
+  {
+   "text": "immer",
+   "src": "claudeschnitt/t1",
+   "start": 306.64,
+   "end": 306.78
+  },
+  {
+   "text": "noch",
+   "src": "claudeschnitt/t1",
+   "start": 306.84,
+   "end": 306.94
+  },
+  {
+   "text": "nicht.",
+   "src": "claudeschnitt/t1",
+   "start": 307,
+   "end": 307.16
+  },
+  {
+   "text": "Aber",
+   "src": "claudeschnitt/t1",
+   "start": 307.56,
+   "end": 307.66
+  },
+  {
+   "text": "ich",
+   "src": "claudeschnitt/t1",
+   "start": 307.7,
+   "end": 307.78
+  },
+  {
+   "text": "schaue",
+   "src": "claudeschnitt/t1",
+   "start": 307.8,
+   "end": 308
+  },
+  {
+   "text": "mir",
+   "src": "claudeschnitt/t1",
+   "start": 308.04,
+   "end": 308.14
+  },
+  {
+   "text": "immer",
+   "src": "claudeschnitt/t1",
+   "start": 308.16,
+   "end": 308.28
+  },
+  {
+   "text": "jedes",
+   "src": "claudeschnitt/t1",
+   "start": 308.36,
+   "end": 308.58
+  },
+  {
+   "text": "Video",
+   "src": "claudeschnitt/t1",
+   "start": 308.62,
+   "end": 308.84
+  },
+  {
+   "text": "noch",
+   "src": "claudeschnitt/t1",
+   "start": 308.9,
+   "end": 309.02
+  },
+  {
+   "text": "selbst",
+   "src": "claudeschnitt/t1",
+   "start": 309.1,
+   "end": 309.34
+  },
+  {
+   "text": "einmal",
+   "src": "claudeschnitt/t1",
+   "start": 309.4,
+   "end": 309.58
+  },
+  {
+   "text": "an",
+   "src": "claudeschnitt/t1",
+   "start": 309.66,
+   "end": 309.76
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 310.22,
+   "end": 310.3
+  },
+  {
+   "text": "gebe",
+   "src": "claudeschnitt/t1",
+   "start": 310.38,
+   "end": 310.58
+  },
+  {
+   "text": "immer",
+   "src": "claudeschnitt/t1",
+   "start": 310.64,
+   "end": 310.8
+  },
+  {
+   "text": "der",
+   "src": "claudeschnitt/t1",
+   "start": 310.84,
+   "end": 310.92
+  },
+  {
+   "text": "KI Feedback.",
+   "src": "claudeschnitt/t1",
+   "start": 310.96,
+   "end": 311.7
+  },
+  {
+   "text": "Und",
+   "src": "claudeschnitt/t1",
+   "start": 315.93,
+   "end": 316.01
+  },
+  {
+   "text": "dabei",
+   "src": "claudeschnitt/t1",
+   "start": 316.05,
+   "end": 316.23
+  },
+  {
+   "text": "wird",
+   "src": "claudeschnitt/t1",
+   "start": 316.31,
+   "end": 316.43
+  },
+  {
+   "text": "dann",
+   "src": "claudeschnitt/t1",
+   "start": 316.45,
+   "end": 316.55
+  },
+  {
+   "text": "natürlich",
+   "src": "claudeschnitt/t1",
+   "start": 316.57,
+   "end": 316.91
+  },
+  {
+   "text": "aus",
+   "src": "claudeschnitt/t1",
+   "start": 316.97,
+   "end": 317.09
+  },
+  {
+   "text": "jeder",
+   "src": "claudeschnitt/t1",
+   "start": 317.19,
+   "end": 317.39
+  },
+  {
+   "text": "Korrektur",
+   "src": "claudeschnitt/t1",
+   "start": 317.41,
+   "end": 317.85
+  },
+  {
+   "text": "automatisch",
+   "src": "claudeschnitt/t1",
+   "start": 318.05,
+   "end": 318.61
+  },
+  {
+   "text": "zu",
+   "src": "claudeschnitt/t1",
+   "start": 318.67,
+   "end": 318.73
+  },
+  {
+   "text": "einer",
+   "src": "claudeschnitt/t1",
+   "start": 318.79,
+   "end": 318.93
+  },
+  {
+   "text": "neuen",
+   "src": "claudeschnitt/t1",
+   "start": 319.01,
+   "end": 319.21
+  },
+  {
+   "text": "Regel",
+   "src": "claudeschnitt/t1",
+   "start": 319.27,
+   "end": 319.53
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 319.93,
+   "end": 319.99
+  },
+  {
+   "text": "das",
+   "src": "claudeschnitt/t1",
+   "start": 320.01,
+   "end": 320.11
+  },
+  {
+   "text": "nächste",
+   "src": "claudeschnitt/t1",
+   "start": 320.19,
+   "end": 320.43
+  },
+  {
+   "text": "Video",
+   "src": "claudeschnitt/t1",
+   "start": 320.49,
+   "end": 320.71
+  },
+  {
+   "text": "wird",
+   "src": "claudeschnitt/t1",
+   "start": 320.79,
+   "end": 320.91
+  },
+  {
+   "text": "dadurch",
+   "src": "claudeschnitt/t1",
+   "start": 320.95,
+   "end": 321.23
+  },
+  {
+   "text": "automatisch",
+   "src": "claudeschnitt/t1",
+   "start": 321.39,
+   "end": 321.83
+  },
+  {
+   "text": "besser.",
+   "src": "claudeschnitt/t1",
+   "start": 321.87,
+   "end": 322.09
+  },
+  {
+   "text": "Meine",
+   "src": "claudeschnitt/t1",
+   "start": 322.97,
+   "end": 323.17
+  },
+  {
+   "text": "Arbeit",
+   "src": "claudeschnitt/t1",
+   "start": 323.23,
+   "end": 323.45
+  },
+  {
+   "text": "ist",
+   "src": "claudeschnitt/t1",
+   "start": 323.49,
+   "end": 323.59
+  },
+  {
+   "text": "jetzt",
+   "src": "claudeschnitt/t1",
+   "start": 323.63,
+   "end": 323.77
+  },
+  {
+   "text": "eigentlich",
+   "src": "claudeschnitt/t1",
+   "start": 323.79,
+   "end": 324.01
+  },
+  {
+   "text": "nur",
+   "src": "claudeschnitt/t1",
+   "start": 324.05,
+   "end": 324.15
+  },
+  {
+   "text": "noch",
+   "src": "claudeschnitt/t1",
+   "start": 324.19,
+   "end": 324.31
+  },
+  {
+   "text": "drehen,",
+   "src": "claudeschnitt/t1",
+   "start": 324.45,
+   "end": 324.77
+  },
+  {
+   "text": "hochladen",
+   "src": "claudeschnitt/t1",
+   "start": 325.11,
+   "end": 325.63
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 326.03,
+   "end": 326.11
+  },
+  {
+   "text": "manchmal",
+   "src": "claudeschnitt/t1",
+   "start": 326.17,
+   "end": 326.53
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 326.57,
+   "end": 326.83
+  },
+  {
+   "text": "drüberschauen.",
+   "src": "claudeschnitt/t1",
+   "start": 326.93,
+   "end": 327.17
+  },
+  {
+   "text": "Und",
+   "src": "claudeschnitt/t1",
+   "start": 342.93,
+   "end": 342.99
+  },
+  {
+   "text": "wenn",
+   "src": "claudeschnitt/t1",
+   "start": 343.01,
+   "end": 343.13
+  },
+  {
+   "text": "auch",
+   "src": "claudeschnitt/t1",
+   "start": 343.15,
+   "end": 343.25
+  },
+  {
+   "text": "du",
+   "src": "claudeschnitt/t1",
+   "start": 343.39,
+   "end": 343.45
+  },
+  {
+   "text": "jetzt",
+   "src": "claudeschnitt/t1",
+   "start": 343.57,
+   "end": 343.75
+  },
+  {
+   "text": "wissen",
+   "src": "claudeschnitt/t1",
+   "start": 343.79,
+   "end": 343.99
+  },
+  {
+   "text": "willst,",
+   "src": "claudeschnitt/t1",
+   "start": 344.03,
+   "end": 344.25
+  },
+  {
+   "text": "wie",
+   "src": "claudeschnitt/t1",
+   "start": 344.35,
+   "end": 344.45
+  },
+  {
+   "text": "ich",
+   "src": "claudeschnitt/t1",
+   "start": 344.53,
+   "end": 344.61
+  },
+  {
+   "text": "tatsächlich",
+   "src": "claudeschnitt/t1",
+   "start": 344.65,
+   "end": 345.05
+  },
+  {
+   "text": "so",
+   "src": "claudeschnitt/t1",
+   "start": 345.13,
+   "end": 345.19
+  },
+  {
+   "text": "ein",
+   "src": "claudeschnitt/t1",
+   "start": 345.27,
+   "end": 345.35
+  },
+  {
+   "text": "Setup",
+   "src": "claudeschnitt/t1",
+   "start": 345.45,
+   "end": 345.71
+  },
+  {
+   "text": "aufgebaut",
+   "src": "claudeschnitt/t1",
+   "start": 345.83,
+   "end": 346.21
+  },
+  {
+   "text": "habe,",
+   "src": "claudeschnitt/t1",
+   "start": 346.25,
+   "end": 346.39
+  },
+  {
+   "text": "um",
+   "src": "claudeschnitt/t1",
+   "start": 346.69,
+   "end": 346.75
+  },
+  {
+   "text": "solche",
+   "src": "claudeschnitt/t1",
+   "start": 346.81,
+   "end": 347.03
+  },
+  {
+   "text": "Videos",
+   "src": "claudeschnitt/t1",
+   "start": 347.09,
+   "end": 347.39
+  },
+  {
+   "text": "schneiden",
+   "src": "claudeschnitt/t1",
+   "start": 347.55,
+   "end": 347.85
+  },
+  {
+   "text": "zu",
+   "src": "claudeschnitt/t1",
+   "start": 347.89,
+   "end": 347.95
+  },
+  {
+   "text": "lassen,",
+   "src": "claudeschnitt/t1",
+   "start": 348.01,
+   "end": 348.27
+  },
+  {
+   "text": "dann",
+   "src": "claudeschnitt/t1",
+   "start": 348.65,
+   "end": 348.77
+  },
+  {
+   "text": "schreib",
+   "src": "claudeschnitt/t1",
+   "start": 348.79,
+   "end": 348.99
+  },
+  {
+   "text": "mir",
+   "src": "claudeschnitt/t1",
+   "start": 349.07,
+   "end": 349.15
+  },
+  {
+   "text": "einfach",
+   "src": "claudeschnitt/t1",
+   "start": 349.19,
+   "end": 349.41
+  },
+  {
+   "text": "hier",
+   "src": "claudeschnitt/t1",
+   "start": 349.45,
+   "end": 349.55
+  },
+  {
+   "text": "„Schnitt“",
+   "src": "claudeschnitt/t1",
+   "start": 349.59,
+   "end": 349.83
+  },
+  {
+   "text": "in",
+   "src": "claudeschnitt/t1",
+   "start": 349.87,
+   "end": 349.93
+  },
+  {
+   "text": "die",
+   "src": "claudeschnitt/t1",
+   "start": 349.95,
+   "end": 350.03
+  },
+  {
+   "text": "Kommentare",
+   "src": "claudeschnitt/t1",
+   "start": 350.05,
+   "end": 350.51
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 350.85,
+   "end": 350.91
+  },
+  {
+   "text": "lass",
+   "src": "claudeschnitt/t1",
+   "start": 350.95,
+   "end": 351.07
+  },
+  {
+   "text": "ein",
+   "src": "claudeschnitt/t1",
+   "start": 351.11,
+   "end": 351.19
+  },
+  {
+   "text": "Follow",
+   "src": "claudeschnitt/t1",
+   "start": 351.23,
+   "end": 351.45
+  },
+  {
+   "text": "da",
+   "src": "claudeschnitt/t1",
+   "start": 351.53,
+   "end": 351.59
+  },
+  {
+   "text": "und",
+   "src": "claudeschnitt/t1",
+   "start": 352.01,
+   "end": 352.09
+  },
+  {
+   "text": "ich",
+   "src": "claudeschnitt/t1",
+   "start": 352.19,
+   "end": 352.27
+  },
+  {
+   "text": "werde",
+   "src": "claudeschnitt/t1",
+   "start": 352.33,
+   "end": 352.51
+  },
+  {
+   "text": "dir",
+   "src": "claudeschnitt/t1",
+   "start": 352.59,
+   "end": 352.69
+  },
+  {
+   "text": "meine",
+   "src": "claudeschnitt/t1",
+   "start": 352.89,
+   "end": 353.09
+  },
+  {
+   "text": "Anleitung",
+   "src": "claudeschnitt/t1",
+   "start": 353.17,
+   "end": 353.49
+  },
+  {
+   "text": "zuschicken.",
+   "src": "claudeschnitt/t1",
+   "start": 353.55,
+   "end": 353.59
+  }
+ ],
+ "pages": [
+  1,
+  4,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  2,
+  4,
+  2,
+  3,
+  4,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  2,
+  4,
+  3,
+  2,
+  3,
+  1,
+  2,
+  3,
+  3,
+  4,
+  3,
+  3,
+  3,
+  2,
+  2,
+  4,
+  3,
+  3,
+  4,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  4,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  1,
+  3,
+  3,
+  3,
+  2,
+  3,
+  4,
+  2,
+  3,
+  3,
+  3,
+  4,
+  3,
+  1,
+  1,
+  4,
+  3,
+  4,
+  3,
+  4,
+  2,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2,
+  2,
+  2,
+  4,
+  2,
+  2,
+  2,
+  1,
+  3,
+  3,
+  3,
+  4,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  4,
+  3,
+  1,
+  3,
+  4,
+  2,
+  2,
+  3,
+  1,
+  3,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2,
+  1,
+  3,
+  1,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  1,
+  3,
+  1,
+  3,
+  1,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  1,
+  2,
+  2,
+  3,
+  4,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2
+ ]
+}

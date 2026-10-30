@@ -1,0 +1,586 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', Look wie K01 hyperframes/claudetools-skizzen) für K02 · Videos schneiden mit Claude Code (Opus 5.5). Sekunden im geschnittenen Video (cut.json, 174,97 s), Teile 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, klick (0,10) auf Enter, angetippten Chips und dem Abschicken, pop (0,10) nur auf 'Opus', 'Startsignal' und dem Folgen-Tippen. Gebaut in hyperframes/claudeschnitt-skizzen/index.html. Keine Quelle-groß-Fenster (er zitiert keine Quelle). Nur Lucide-Icons und eigene flache Zeichnungen, keine fremden Logos, das Eingabefenster ist als 'Illustration' markiert.",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "Schneiden",
+   "start": 7.66,
+   "ende": 14.03,
+   "text": "DAS PROBLEM – Schnitt-Spuren (Video, Untertitel, Grafiken, Musik), Abspielkopf läuft, Uhr dreht sich auf 'Zeit', Fragezeichen auf 'Techniken', handschriftlich 'zu technisch?'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 7.66,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 9.66,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 12.43,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Ich",
+   "start": 14.03,
+   "ende": 21.26,
+   "text": "MEIN VIDEOSCHNITT – 'ich' mit Schere, auf 'nicht mehr selbst' grau und 'selbst schneiden' gestrichen, Schere wandert auf 'übernimmt' zu Claude Code",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 14.03,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 19.63,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Ich",
+   "start": 21.26,
+   "ende": 32.2,
+   "text": "FRÜHER · EIN EINZIGER SHORT – Balken Schnitt wächst auf 'Stunden', Dreh kurz auf 'Dreh', 'viel länger!', Teile Untertitel / Pausen / Grafiken / Musik auf ihren Wörtern, 'und und und'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 21.26,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.23,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 26.46,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 28.13,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Genau",
+   "start": 32.2,
+   "ende": 37.13,
+   "text": "DESHALB NIE ONLINE – drei Entwürfe, 'online' mit Kreuz auf 'nie', 'nie gepostet', gestrichelte Kachel 'du?' auf 'du'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 32.2,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 34.53,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Heute",
+   "start": 37.13,
+   "ende": 43.16,
+   "text": "HEUTE – 'selbst schneiden' gestrichen auf 'anders', Fenster 'Claude Code' auf 'Claude Code', Badge 'Modell · Opus 5.5' auf 'Opus'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 37.13,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 41.33,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Und",
+   "start": 43.16,
+   "ende": 49.1,
+   "text": "DER TRICK – 'magischer Prompt' auf 'magischer', gestrichen auf 'sondern', 'das richtige Setup' mit Haken auf 'Setup', handschriftlich 'Setup statt Zauber-Prompt'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 43.16,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 47.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 48.7,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Und",
+   "start": 49.1,
+   "ende": 51.5,
+   "text": "SCHRITT FÜR SCHRITT – Schiene 1 Einrichtung · 2 Onboarding · 3 Alltag auf 'Schritt-für-Schritt-Anleitung'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 49.1,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 49.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Schritt",
+   "start": 51.5,
+   "ende": 70.1,
+   "text": "SCHRITT 1 · EINRICHTUNG (Prompt-Animation) – '1 Einrichtung', auf 'öffnest' öffnet sich das stilisierte Fenster 'Claude Code' (klein 'Illustration'), Feld leuchtet auf 'Prompt', 'Beispiel-Prompt' auf 'Zum Beispiel', der Prompt tippt sich Buchstabe für Buchstabe auf seinen Wörtern (57,5-61,3 s), Enter, 'Claude installiert …', Haken auf 'Spracherkennung', 'Werkzeuge', 'Grafiken'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 51.5,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 52.63,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 61.4,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 65.83,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 66.86,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 69.5,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Schritt",
+   "start": 70.1,
+   "ende": 77.36,
+   "text": "SCHRITT 2 · ONBOARDING – Claude fragt (Punkte) auf 'fragt', 'wie ein neuer Cutter im Team' auf 'neuer', 'Was brauchst du?' auf 'brauchst'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 70.1,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 74.36,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Wie",
+   "start": 77.36,
+   "ende": 80.16,
+   "text": "FRAGE 1 VON 4 · MARKE – 'Wie heißt deine Marke?', Antwort 'PulseConnect' tippt sich, Chips E-Commerce · Shopify · KI auf 'wofür', E-Commerce wird angetippt",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 77.36,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 79.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "Welche",
+   "start": 80.16,
+   "ende": 82.36,
+   "text": "FRAGE 2 VON 4 · FARBEN – Farbfelder auf 'Farben', auf 'zu dir' werden #00D088 und #31ADEC gewählt, Verlauf zeichnet sich",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 80.16,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 81.43,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Dann",
+   "start": 82.36,
+   "ende": 94.06,
+   "text": "FRAGE 3 VON 4 · BEISPIEL-VIDEOS – drei Kacheln aus fertigen Videos (K01, E08, Etsy) auf 'zwei, drei', Upload auf 'Social-Media-Videos' / 'lad … hoch', dann 'eigene Videos' (abgewählt auf 'keine eigenen') und '♥ Videos, die dir gefallen' (angetippt auf 'gefallen')",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 82.36,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 83.1,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 89.13,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 93.56,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k13",
+   "wort": "Und",
+   "start": 94.06,
+   "ende": 100,
+   "text": "FRAGE 4 VON 4 · STIL – Untertitel? Wort für Wort · Tempo? zügig · Effekte? leise Effekte, je angetippt auf 'aussehen', 'geschnitten', 'Effekte'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 94.06,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 96.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 97.66,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 99.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k14",
+   "wort": "Daraus",
+   "start": 100,
+   "ende": 104.56,
+   "text": "DEIN SCHNITTPROFIL – die Antworten fliegen auf 'Schnittprofil' ins Blatt, Pfeil zu 'Skills' auf 'gespeichert', '✓ gespeichert' auf 'Skills'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 100,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 101.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 104,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k15",
+   "wort": "Nutze",
+   "start": 104.56,
+   "ende": 109.3,
+   "text": "ZUM BEISPIEL – 'Motion Design' auf 'Motion', 'HyperFrames' auf 'HyperFrames', 'von HeyGen' (nur Namen, keine Logos)",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 104.56,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 106.1,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 107.63,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k16",
+   "wort": "Und",
+   "start": 109.3,
+   "ende": 124.46,
+   "text": "SCHRITT 3 · ALLTAG – Handy auf 'drehe', Rohclip fliegt auf 'lade' in den Ordner 'Rohclips' (Google Drive), Dreh-Termin braun auf 'Termin', grün auf 'grün', Haken auf 'hochgeladen', 'Startsignal' auf 'Startsignal'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 109.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 114.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 117.86,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 122.5,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k17",
+   "wort": "Dann",
+   "start": 124.46,
+   "ende": 136.63,
+   "text": "CLAUDE LEGT LOS – Versprecher & Pausen raus ✓ / Untertitel Wort für Wort ✓ / Grafiken auf dem Wort ✓ / Ton richtige Lautstärke ✓, jeweils auf ihren Wörtern",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 124.46,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 127.8,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 130.2,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 133.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 135.86,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k18",
+   "wort": "Und",
+   "start": 136.63,
+   "ende": 144.56,
+   "text": "AM ENDE – Video fällt auf 'plant' in die Woche, 'eingeplant in Metricool' auf 'Metricool', TikTok / Instagram / YouTube auf 'veröffentlicht', Haken auf 'Kanälen'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 136.63,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 137.9,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 143.53,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k19",
+   "wort": "Und",
+   "start": 144.56,
+   "ende": 152,
+   "text": "EHRLICH GESAGT – 'perfekt' auf 'perfekt', gestrichen und 'noch nicht' auf 'nicht', Auge aufs Video auf 'schaue', 'Feedback an die KI' auf 'Feedback'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 144.56,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 147.13,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 151.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k20",
+   "wort": "Und",
+   "start": 152,
+   "ende": 159.03,
+   "text": "JEDE KORREKTUR – Korrektur → neue Regel ('Regel') → besseres Video ('besser'), Schleife zurück, 'automatisch'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 152,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 155.33,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 157.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k21",
+   "wort": "Meine",
+   "start": 159.03,
+   "ende": 163.76,
+   "text": "MEINE ARBEIT HEUTE – drehen → hochladen → drüberschauen auf ihren Wörtern, 'manchmal'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 159.03,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 160.53,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 161.16,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 163,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k22",
+   "wort": "Und",
+   "start": 163.76,
+   "ende": 169.63,
+   "text": "MEIN SETUP – 'wie genau?' auf 'wissen', 1 Einrichtung · 2 Onboarding · 3 Alltag auf 'Setup', Schere auf 'schneiden'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 163.76,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 166.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 168.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k23",
+   "wort": "schreib",
+   "start": 169.63,
+   "ende": 174.97,
+   "text": "CTA 'SCHREIB IN DIE KOMMENTARE' – „Schnitt“ tippt sich auf seinem Wort, abgeschickt auf 'Kommentare', '→ und ich schick dir meine Anleitung' auf 'Anleitung'; bis zum Ende (keine Links, keine Codes)",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 169.63,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 170.9,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k24",
+   "wort": "lass",
+   "start": 171.7,
+   "ende": 174.97,
+   "text": "FOLGEN (groß, mittig, TikTok-Animation) – Zeiger tippt auf 'Follow', Plus drückt ein, dreht sich, wird zum Haken mit Ring-Puls; bleibt bis zum Ende",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 171.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 172.2,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

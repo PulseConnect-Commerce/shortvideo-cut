@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>K02 · Videos schneiden mit Claude Code – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- HERO, Reihe K "KI allgemein", K02 · Videos schneiden mit Claude Code (Opus 5.5). Look wie K01
+         (hyperframes/claudetools-skizzen): helle Karte unter dem Kopf (x 80-900, y 1120-1470; Instagram-Zone ab 1500),
+         Pill-Untertitel darüber (Remotion, y ~1072), Erklär-Bilder statt Wortkarten (karten-aufbau.md "Visuelle Metaphern"),
+         ruhige Bewegung ohne Überschwingen (nur das Folgen-Plus springt wie bei TikTok).
+         Herzstück nach Pauls Wunsch (30.10.): der Prompt tippt sich Buchstabe für Buchstabe genau auf seinen Wörtern in ein
+         stilisiertes Eingabefenster (klein als "Illustration" markiert), danach haken sich Spracherkennung, Schnitt-Werkzeuge
+         und Untertitel & Grafiken auf ihren Wörtern ab; die Onboarding-Fragen (Marke, Farben, Beispiel-Videos, Stil) kommen als
+         Chat-Karten mit Auswahl-Chips, alles fließt in "Dein Schnittprofil" → "gespeichert als Skills".
+         Beispiel-Kacheln: Standbilder aus fertigen Videos von Paul (K01 und E08 aus out/final, beide vor K02 online; Etsy N
+         aus dem Bilderbogen des veröffentlichten Videos), nie Rohclips oder Takes.
+         Keine fremden Logos (auch kein Claude-, Google-, Metricool-, TikTok-Logo; nur Namen als Text), keine echten
+         Oberflächen als "echt", keine echten Kalender- oder Drive-Inhalte, keine Passwörter, Schlüssel oder Kundendaten.
+         Icons Lucide (ISC), Schriften Geist und Caveat (OFL, lokal).
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/claudeschnitt/cut.json, 174,97 s), Teile 2 Frames vor ihrem
+         Wort; Töne in src/projekte/claudeschnitt/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1120px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 20px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .zaehler { position: absolute; right: 26px; top: 14px; padding: 5px 14px 6px; border-radius: 10px; background: linear-gradient(90deg, #00d088, #31adec); color: #0b0c0e; font-size: 21px; font-weight: 800; letter-spacing: 0.04em; white-space: nowrap; }
+      .b { position: absolute; left: 0; top: 54px; width: 820px; height: 290px; }
+      .a { position: absolute; }
+      svg.buehne { position: absolute; left: 0; top: 0; width: 820px; height: 290px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #2a9ed8; }
+      .linie { fill: none; stroke: url(#gvh); stroke-width: 5; stroke-linecap: round; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.grau { stroke: #6b7280; }
+      .ico.weiss { stroke: #fff; }
+      .ico.gruen { stroke: #00e090; }
+
+      /* HTML-Bausteine */
+      .i { display: block; fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+      .kachel { position: absolute; background: #fff; border: 2.5px solid #d1d5db; border-radius: 24px; }
+      .vk { position: absolute; border-radius: 24px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; }
+      .t { position: absolute; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; color: #0b0c0e; }
+      .g { color: #6b7280; font-weight: 700; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .mitte { text-align: center; }
+      .chip { position: absolute; display: inline-flex; align-items: center; gap: 10px; padding: 9px 22px 11px; border-radius: 999px; background: #fff; border: 2.5px solid #d1d5db; font-size: 26px; font-weight: 700; color: #374151; white-space: nowrap; overflow: hidden; isolation: isolate; }
+      .chip > .fill { position: absolute; inset: -3px; background: linear-gradient(90deg, #00d088, #31adec); opacity: 0; z-index: -1; }
+      .chip.an { border-color: transparent; color: #0b0c0e; font-weight: 800; }
+      .chip.an > .fill { opacity: 1; }
+      .blase { position: absolute; background: #fff; border: 2.5px solid #e5e7eb; border-radius: 8px 24px 24px 24px; padding: 9px 22px 11px; font-size: 30px; font-weight: 700; white-space: nowrap; }
+      .antwort { position: absolute; background: linear-gradient(90deg, #00d088, #31adec); border-radius: 24px 8px 24px 24px; padding: 9px 24px 11px; font-size: 32px; font-weight: 800; white-space: nowrap; min-height: 60px; }
+      .ava { position: absolute; width: 60px; height: 60px; border-radius: 30px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; }
+      .nr { position: absolute; width: 56px; height: 56px; border-radius: 28px; background: #0b0c0e; color: #fff; font-size: 30px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+      .haken { position: absolute; width: 40px; height: 40px; }
+      .z { display: none; }
+      .cur { display: inline-block; width: 16px; height: 34px; margin-left: 3px; vertical-align: -5px; background: #31adec; border-radius: 3px; }
+      .tile { position: absolute; border-radius: 16px; overflow: hidden; background: #1f2731; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18); }
+      .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+      /* stilisiertes Eingabefenster (Illustration, kein Nachbau einer echten Oberfläche) */
+      .fenster { position: absolute; left: 20px; top: 0; width: 780px; height: 282px; background: #0e1116; border-radius: 20px; overflow: hidden; box-shadow: inset 0 0 0 2px #1f2731; }
+      .fkopf { position: absolute; left: 0; top: 0; width: 780px; height: 46px; border-bottom: 1.5px solid #1f2731; }
+      .fkopf .p { position: absolute; top: 17px; width: 12px; height: 12px; border-radius: 6px; background: #3a4350; }
+      .fkopf .titel { position: absolute; left: 92px; top: 9px; font-size: 22px; font-weight: 700; color: #e5e7eb; }
+      .fkopf .illu { position: absolute; right: 18px; top: 11px; font-size: 19px; font-weight: 600; color: #8b95a3; letter-spacing: 0.04em; }
+      .eingabe { position: absolute; left: 24px; top: 64px; width: 732px; height: 150px; border: 2px solid #2b3440; border-radius: 16px; }
+      .ptext { position: absolute; left: 62px; top: 14px; width: 660px; font-size: 32px; line-height: 46px; font-weight: 600; color: #f3f4f6; }
+      .platz { position: absolute; left: 86px; top: 14px; font-size: 32px; line-height: 46px; font-weight: 500; color: #4b5563; }
+      .enter { position: absolute; right: 12px; bottom: 8px; width: 58px; height: 42px; border-radius: 10px; border: 2px solid #3a4350; display: flex; align-items: center; justify-content: center; isolation: isolate; overflow: hidden; }
+      .gesendet { position: absolute; left: 24px; top: 58px; width: 732px; padding: 8px 18px 10px; border-radius: 14px; background: #1f2731; color: #cbd5e1; font-size: 21px; line-height: 28px; font-weight: 600; opacity: 0; }
+      .zeile { position: absolute; left: 30px; font-size: 28px; line-height: 34px; font-weight: 700; color: #f3f4f6; white-space: nowrap; display: flex; align-items: center; gap: 14px; opacity: 0; }
+      .kreis { width: 30px; height: 30px; border-radius: 15px; border: 2.5px solid #4b5563; position: relative; flex: none; }
+      .kreis > svg { position: absolute; left: -3px; top: -3px; width: 32px; height: 32px; opacity: 0; }
+
+      /* Folgen (CTA), Vorlage K01 / E08: groß, mittig, Plus wie bei TikTok */
+      .folgekarte { position: absolute; left: 260px; top: 1282px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+      .avatar { position: absolute; left: 34px; top: 18px; width: 150px; height: 150px; border-radius: 75px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 84px; height: 84px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      #fplus { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; overflow: visible; }
+      #fring { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #31adec; opacity: 0; }
+      .ftext { position: absolute; left: 224px; top: 56px; font-size: 72px; line-height: 88px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 56px; height: 56px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 56px; height: 56px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+      /* Kommentar-Karte (CTA "Schnitt"), mittig über der Folgen-Karte */
+      .kommentar { position: absolute; left: 190px; top: 1108px; width: 700px; height: 160px; border-radius: 30px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="claudeschnitt-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="174.97">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvh" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="820" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24er-Raster -->
+          <g id="i-schere"><circle cx="6" cy="6" r="3" /><path d="M8.12 8.12 12 12" /><path d="M20 4 8.12 15.88" /><circle cx="6" cy="18" r="3" /><path d="M14.8 14.8 20 20" /></g>
+          <g id="i-uhr"><circle cx="12" cy="12" r="10" /></g>
+          <g id="i-handy"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></g>
+          <g id="i-person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-ordner"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /></g>
+          <g id="i-kalender"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></g>
+          <g id="i-flagge"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+          <g id="i-auge"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></g>
+          <g id="i-blase"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></g>
+          <g id="i-funken"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></g>
+          <g id="i-zauber"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72" /><path d="m14 7 3 3" /><path d="M5 6v4" /><path d="M19 14v4" /><path d="M10 2v2" /><path d="M7 8H3" /><path d="M21 16h-4" /><path d="M11 3H9" /></g>
+          <g id="i-ebenen"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></g>
+          <g id="i-ton"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" /><path d="M16 9a5 5 0 0 1 0 6" /><path d="M19.364 18.364a9 9 0 0 0 0-12.728" /></g>
+          <g id="i-untertitel"><rect width="18" height="14" x="3" y="5" rx="2" ry="2" /><path d="M7 15h4M15 15h2M7 11h2M13 11h4" /></g>
+          <g id="i-trend"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></g>
+          <g id="i-regel"><path d="M15 12h-5" /><path d="M15 8h-5" /><path d="M19 17V5a2 2 0 0 0-2-2H4" /><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" /></g>
+          <g id="i-bausteine"><rect width="7" height="7" x="14" y="3" rx="1" /><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" /></g>
+          <g id="i-play"><polygon points="6 3 20 12 6 21 6 3" /></g>
+          <g id="i-senden"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /><path d="m21.854 2.147-10.94 10.939" /></g>
+          <g id="i-herz"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></g>
+          <g id="i-klappe"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" /><path d="m6.2 5.3 3.1 3.9" /><path d="m12.4 3.4 3.1 4" /><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" /></g>
+          <g id="i-kamera"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect x="2" y="6" width="14" height="12" rx="2" /></g>
+          <g id="i-hoch"><path d="M12 13v8" /><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="m8 17 4-4 4 4" /></g>
+          <g id="i-offline"><path d="m2 2 20 20" /><path d="M5.782 5.782A7 7 0 0 0 9 19h8.5a4.5 4.5 0 0 0 1.307-.193" /><path d="M21.532 16.5A4.5 4.5 0 0 0 17.5 8h-1.79A7.008 7.008 0 0 0 10 5.07" /></g>
+          <g id="i-lader"><path d="M21 12a9 9 0 1 1-6.219-8.56" /></g>
+          <g id="i-enter"><polyline points="9 10 4 15 9 20" /><path d="M20 4v7a4 4 0 0 1-4 4H4" /></g>
+          <g id="i-lesezeichen"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" /></g>
+          <g id="i-film"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M7 3v18" /><path d="M3 7.5h4" /><path d="M3 12h18" /><path d="M3 16.5h4" /><path d="M17 3v18" /><path d="M17 7.5h4" /><path d="M17 16.5h4" /></g>
+          <g id="i-palette"><circle cx="13.5" cy="6.5" r=".5" /><circle cx="17.5" cy="10.5" r=".5" /><circle cx="8.5" cy="7.5" r=".5" /><circle cx="6.5" cy="12.5" r=".5" /><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" /></g>
+          <!-- Zustände -->
+          <g id="kreuz"><circle r="20" fill="#e5484d" /><path d="M-7 -7 L7 7 M7 -7 L-7 7" stroke="#fff" stroke-width="4" stroke-linecap="round" /></g>
+          <g id="haken"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 L-2 6 L9 -6" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </defs>
+      </svg>
+
+      <!-- K1 Das Problem: "das Schneiden und Bearbeiten frisst doch so viel Zeit und ich kenne mich mit der Materie und den Techniken
+           überhaupt nicht aus." Schneiden 7,73 / Bearbeiten 8,27 / Zeit 9,73 / Techniken 12,50 / überhaupt 13,03 -->
+      <section id="k1" class="karte clip" data-start="7.66" data-duration="6.37" data-track-index="1">
+        <div class="kicker">Das Problem</div>
+        <div class="b">
+          <svg class="buehne" viewBox="0 0 820 290">
+            <g id="k1-spuren">
+              <g class="k1-s"><text x="30" y="36" style="font-size:22px;font-weight:700;fill:#6b7280">Video</text><rect x="170" y="10" width="430" height="38" rx="10" fill="#e5e7eb" /><rect x="176" y="16" width="150" height="26" rx="7" fill="#9aa3af" /><rect x="334" y="16" width="110" height="26" rx="7" fill="#9aa3af" /><rect x="452" y="16" width="140" height="26" rx="7" fill="#9aa3af" /></g>
+              <g class="k1-s"><text x="30" y="90" style="font-size:22px;font-weight:700;fill:#6b7280">Untertitel</text><rect x="170" y="64" width="430" height="38" rx="10" fill="#e5e7eb" /><rect x="186" y="70" width="60" height="26" rx="7" fill="#d1d5db" /><rect x="252" y="70" width="44" height="26" rx="7" fill="#d1d5db" /><rect x="302" y="70" width="70" height="26" rx="7" fill="#d1d5db" /><rect x="378" y="70" width="52" height="26" rx="7" fill="#d1d5db" /><rect x="436" y="70" width="66" height="26" rx="7" fill="#d1d5db" /><rect x="508" y="70" width="48" height="26" rx="7" fill="#d1d5db" /></g>
+              <g class="k1-s"><text x="30" y="144" style="font-size:22px;font-weight:700;fill:#6b7280">Grafiken</text><rect x="170" y="118" width="430" height="38" rx="10" fill="#e5e7eb" /><rect x="230" y="124" width="90" height="26" rx="7" fill="#b9c0c9" /><rect x="420" y="124" width="110" height="26" rx="7" fill="#b9c0c9" /></g>
+              <g class="k1-s"><text x="30" y="198" style="font-size:22px;font-weight:700;fill:#6b7280">Musik</text><rect x="170" y="172" width="430" height="38" rx="10" fill="#e5e7eb" /><rect x="176" y="178" width="418" height="26" rx="7" fill="#c9cfd6" /></g>
+            </g>
+            <line id="k1-kopf" x1="180" y1="2" x2="180" y2="218" stroke="#31adec" stroke-width="4" stroke-linecap="round" />
+            <g id="k1-f1" opacity="0"><g transform="translate(330 64)"><circle cx="18" cy="-6" r="17" fill="#0b0c0e" /><text x="18" y="2" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#fff">?</text></g></g>
+            <g id="k1-f2" opacity="0"><g transform="translate(470 118)"><circle cx="18" cy="-6" r="17" fill="#0b0c0e" /><text x="18" y="2" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#fff">?</text></g></g>
+            <g id="k1-uhr" opacity="0">
+              <circle cx="715" cy="110" r="76" fill="#fff" stroke="#d1d5db" stroke-width="3" />
+              <circle cx="715" cy="110" r="76" fill="none" stroke="url(#gv)" stroke-width="6" />
+              <line x1="715" y1="110" x2="715" y2="60" stroke="#0b0c0e" stroke-width="6" stroke-linecap="round" />
+              <line id="k1-zeiger" x1="715" y1="110" x2="715" y2="48" stroke="#31adec" stroke-width="5" stroke-linecap="round" />
+              <circle cx="715" cy="110" r="7" fill="#0b0c0e" />
+            </g>
+            <clipPath id="k1-clip"><rect id="k1-cliprect" x="168" y="222" width="0" height="66" /></clipPath>
+            <text x="176" y="270" class="hand" style="font-size:44px" clip-path="url(#k1-clip)" transform="rotate(-2 300 258)">zu technisch?</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- K2 Mein Schnitt: "Ich persönlich hatte das gleiche Problem und ich schneide inzwischen meine Videos auch nicht mehr selbst. Das
+           übernimmt das einfach Claude Code für mich." schneide 16,37 / nicht 17,70 / übernimmt 18,93 / Claude 19,70 -->
+      <section id="k2" class="karte clip" data-start="14.03" data-duration="7.23" data-track-index="1">
+        <div class="kicker">Mein Videoschnitt</div>
+        <div class="b">
+          <div id="k2-ich" class="kachel" style="left:40px;top:14px;width:200px;height:180px">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:58px;top:30px;width:84px;height:84px;stroke:#374151"><use href="#i-person" /></svg>
+            <div class="t mitte" style="left:0;top:126px;width:196px;font-size:28px">ich</div>
+          </div>
+          <div id="k2-selbst" class="t g mitte" style="left:40px;top:208px;width:200px;font-size:24px">selbst schneiden</div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k2-strich" pathLength="1" d="M48 222 H 232" fill="none" stroke="#e5484d" stroke-width="4" stroke-linecap="round" />
+            <path id="k2-pfeil" pathLength="1" d="M262 104 H 548" class="linie" style="stroke-width:6" />
+            <path id="k2-spitze" d="M536 92 L 552 104 L 536 116" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+            <clipPath id="k2-clip"><rect id="k2-cliprect" x="290" y="20" width="0" height="64" /></clipPath>
+            <text x="300" y="66" class="hand" style="font-size:46px" clip-path="url(#k2-clip)" transform="rotate(-2 400 54)">übernimmt</text>
+          </svg>
+          <div id="k2-claude" class="a" style="left:570px;top:14px;width:220px;height:180px;border-radius:24px;background:#0b0c0e;opacity:0">
+            <div class="t" style="left:28px;top:40px;font-size:52px;color:#00e090">&gt;_</div>
+            <div class="t" style="left:28px;top:122px;font-size:28px;color:#fff">Claude Code</div>
+          </div>
+          <div id="k2-schere" class="vk" style="left:196px;top:-4px;width:76px;height:76px;border-radius:38px;box-shadow:0 6px 16px rgba(0,0,0,.18)">
+            <svg class="i" viewBox="0 0 24 24" style="width:42px;height:42px;stroke-width:2.2"><use href="#i-schere" /></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- K3 Früher: "Ich saß nämlich früher mal in einem einzigen Short teilweise mehrere Stunden und das hat viel länger gedauert als
+           der Dreh an sich selbst. Untertitel, Pausen rausschneiden, Grafiken und Musik und und und" Short 23,10 / Stunden 24,30 /
+           länger 25,53 / Dreh 26,53 / Untertitel 28,20 / Pausen 28,90 / Grafiken 29,90 / Musik 30,67 / und und und 31,33 -->
+      <section id="k3" class="karte clip" data-start="21.26" data-duration="10.94" data-track-index="1">
+        <div class="kicker">Früher · ein einziger Short</div>
+        <div class="b">
+          <div class="t" style="left:30px;top:24px;font-size:30px">Schnitt</div>
+          <div class="a" style="left:170px;top:16px;width:520px;height:60px;border-radius:14px;background:#e5e7eb;overflow:hidden">
+            <div id="k3-schnitt" class="a" style="left:0;top:0;width:520px;height:60px;background:linear-gradient(90deg,#00d088,#31adec)"></div>
+            <div class="a" style="left:0;top:0;width:520px;height:60px;display:flex">
+              <div class="k3-seg" style="flex:1;opacity:0;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:800;border-right:3px solid #f2f3f5">Untertitel</div>
+              <div class="k3-seg" style="flex:1;opacity:0;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:800;border-right:3px solid #f2f3f5">Pausen</div>
+              <div class="k3-seg" style="flex:1;opacity:0;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:800;border-right:3px solid #f2f3f5">Grafiken</div>
+              <div class="k3-seg" style="flex:1;opacity:0;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:800">Musik</div>
+            </div>
+          </div>
+          <div id="k3-stunden" class="a" style="left:704px;top:22px;display:flex;align-items:center;gap:8px;opacity:0">
+            <svg class="i" viewBox="0 0 24 24" style="width:40px;height:40px"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+            <div class="t" style="position:static;font-size:26px">Std.</div>
+          </div>
+          <div class="t" style="left:30px;top:118px;font-size:30px">Dreh</div>
+          <div class="a" style="left:170px;top:110px;width:520px;height:60px;border-radius:14px;background:#e5e7eb;overflow:hidden">
+            <div id="k3-dreh" class="a" style="left:0;top:0;width:96px;height:60px;background:#0b0c0e"></div>
+          </div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <clipPath id="k3-clip1"><rect id="k3-cliprect1" x="290" y="196" width="0" height="80" /></clipPath>
+            <text id="k3-h1" x="300" y="250" class="hand" style="font-size:50px" clip-path="url(#k3-clip1)" transform="rotate(-2 420 236)">viel länger!</text>
+            <clipPath id="k3-clip2"><rect id="k3-cliprect2" x="290" y="196" width="0" height="80" /></clipPath>
+            <text x="300" y="250" class="hand" style="font-size:50px" clip-path="url(#k3-clip2)" transform="rotate(-2 420 236)">und und und</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- K4 Nie online: "Genau das war einfach immer das Problem, weshalb einfach meine Videos nie online gegangen sind. Vermutlich kennst
+           du das halt auch." Problem 33,20 / Videos 34,20 / nie 34,60 / online 34,80 / Vermutlich 35,90 / du 36,53 -->
+      <section id="k4" class="karte clip" data-start="32.2" data-duration="4.93" data-track-index="1">
+        <div class="kicker">Deshalb nie online</div>
+        <div class="b">
+          <div class="k4-v kachel" style="left:30px;top:10px;width:104px;height:176px;border-radius:18px">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:30px;top:66px;width:40px;height:40px;stroke:#9aa3af"><use href="#i-play" /></svg>
+          </div>
+          <div class="k4-v kachel" style="left:152px;top:10px;width:104px;height:176px;border-radius:18px">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:30px;top:66px;width:40px;height:40px;stroke:#9aa3af"><use href="#i-play" /></svg>
+          </div>
+          <div class="k4-v kachel" style="left:274px;top:10px;width:104px;height:176px;border-radius:18px">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:30px;top:66px;width:40px;height:40px;stroke:#9aa3af"><use href="#i-play" /></svg>
+          </div>
+          <div id="k4-du" class="a" style="left:396px;top:10px;width:104px;height:176px;border-radius:18px;border:3px dashed #9aa3af;opacity:0">
+            <div class="t mitte" style="left:0;top:62px;width:98px;font-size:34px;color:#6b7280">du?</div>
+          </div>
+          <div class="k4-e chip" style="left:36px;top:200px;font-size:20px;padding:5px 12px 7px">Entwurf</div>
+          <div class="k4-e chip" style="left:158px;top:200px;font-size:20px;padding:5px 12px 7px">Entwurf</div>
+          <div class="k4-e chip" style="left:280px;top:200px;font-size:20px;padding:5px 12px 7px">Entwurf</div>
+          <div id="k4-off" class="kachel" style="left:560px;top:10px;width:200px;height:176px;opacity:0">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:52px;top:28px;width:92px;height:92px;stroke:#374151"><use href="#i-offline" /></svg>
+            <div class="t mitte" style="left:0;top:128px;width:196px;font-size:26px">online</div>
+          </div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <g id="k4-x" opacity="0"><use href="#kreuz" x="752" y="20" /></g>
+            <clipPath id="k4-clip"><rect id="k4-cliprect" x="520" y="200" width="0" height="80" /></clipPath>
+            <text x="528" y="256" class="hand" style="font-size:46px" clip-path="url(#k4-clip)" transform="rotate(-3 650 242)">nie gepostet</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- K5 Heute: "Heute mache ich das allerdings anders. Ich mache das einfach mit Claude Code und dem Modell Opus 5.5." anders 38,33 /
+           Claude 40,17 / Code 40,43 / Modell 41,00 / Opus 41,40 -->
+      <section id="k5" class="karte clip" data-start="37.13" data-duration="6.03" data-track-index="1">
+        <div class="kicker">Heute</div>
+        <div class="b">
+          <div id="k5-alt" class="kachel" style="left:30px;top:20px;width:210px;height:170px">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:69px;top:24px;width:68px;height:68px;stroke:#6b7280"><use href="#i-schere" /></svg>
+            <div class="t g mitte" style="left:0;top:108px;width:206px;font-size:24px;line-height:28px">selbst<br />schneiden</div>
+          </div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k5-strich" pathLength="1" d="M40 106 L 230 106" fill="none" stroke="#e5484d" stroke-width="5" stroke-linecap="round" />
+            <path id="k5-pfeil" pathLength="1" d="M258 106 H 312" class="linie" style="stroke-width:6" />
+          </svg>
+          <div id="k5-fenster" class="a" style="left:330px;top:6px;width:460px;height:200px;border-radius:20px;background:#0e1116;box-shadow:inset 0 0 0 2px #1f2731;opacity:0;overflow:hidden">
+            <div class="a" style="left:18px;top:16px;width:12px;height:12px;border-radius:6px;background:#3a4350"></div>
+            <div class="a" style="left:38px;top:16px;width:12px;height:12px;border-radius:6px;background:#3a4350"></div>
+            <div class="a" style="left:58px;top:16px;width:12px;height:12px;border-radius:6px;background:#3a4350"></div>
+            <div id="k5-titel" class="t" style="left:30px;top:66px;font-size:46px;color:#fff;opacity:0"><span style="color:#00e090">&gt;_</span> Claude Code</div>
+            <div id="k5-cursor" class="a" style="left:32px;top:140px;width:18px;height:36px;background:#31adec;border-radius:3px"></div>
+          </div>
+          <div id="k5-opus" class="a" style="left:360px;top:220px;padding:8px 22px 10px;border-radius:999px;background:linear-gradient(90deg,#00d088,#31adec);font-size:28px;font-weight:800;opacity:0;white-space:nowrap">Modell · Opus 5.5</div>
+        </div>
+      </section>
+
+      <!-- K6 Der Trick: "Und der Trick dabei ist tatsächlich nicht einfach nur ein einziger magischer Prompt, sondern tatsächlich das richtige
+           Setup." Trick 43,50 / nicht 44,50 / einziger 45,43 / magischer 45,83 / sondern 47,10 / richtige 48,30 / Setup 48,77 -->
+      <section id="k6" class="karte clip" data-start="43.16" data-duration="5.94" data-track-index="1">
+        <div class="kicker">Der Trick</div>
+        <div class="b">
+          <div id="k6-prompt" class="kachel" style="left:30px;top:16px;width:330px;height:190px">
+            <div class="vk" style="left:24px;top:24px;width:88px;height:88px;border-radius:22px;background:#e5e7eb">
+              <svg class="i" viewBox="0 0 24 24" style="width:52px;height:52px"><use href="#i-zauber" /></svg>
+            </div>
+            <div class="t" style="left:24px;top:124px;font-size:30px">magischer Prompt</div>
+          </div>
+          <div id="k6-setup" class="kachel" style="left:460px;top:16px;width:330px;height:190px;border-color:transparent;box-shadow:inset 0 0 0 3px #31adec">
+            <div class="vk" style="left:24px;top:24px;width:88px;height:88px;border-radius:22px">
+              <svg class="i" viewBox="0 0 24 24" style="width:52px;height:52px"><use href="#i-bausteine" /></svg>
+            </div>
+            <div class="t" style="left:24px;top:124px;font-size:30px">das richtige <span class="verlauf">Setup</span></div>
+          </div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k6-strich" pathLength="1" d="M48 158 L 344 158" fill="none" stroke="#e5484d" stroke-width="5" stroke-linecap="round" />
+            <g id="k6-x" opacity="0"><use href="#kreuz" x="350" y="22" /></g>
+            <path id="k6-pfeil" pathLength="1" d="M378 110 H 440" class="linie" style="stroke-width:6" />
+            <g id="k6-h" opacity="0"><use href="#haken" x="780" y="22" /></g>
+            <clipPath id="k6-clip"><rect id="k6-cliprect" x="250" y="214" width="0" height="74" /></clipPath>
+            <text x="258" y="266" class="hand" style="font-size:44px" clip-path="url(#k6-clip)" transform="rotate(-2 400 252)">Setup statt Zauber-Prompt</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- K7 Schritt für Schritt: "Und deshalb gebe ich dir hier die Schritt-für-Schritt-Anleitung." Schritt-für-Schritt-Anleitung 50,37 -->
+      <section id="k7" class="karte clip" data-start="49.1" data-duration="2.4" data-track-index="1">
+        <div class="kicker">Schritt für Schritt</div>
+        <div class="b">
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k7-schiene" pathLength="1" d="M150 90 H 670" fill="none" stroke="#d1d5db" stroke-width="6" stroke-linecap="round" />
+          </svg>
+          <div class="k7-p a" style="left:110px;top:44px;width:80px;height:180px"><div class="nr" style="left:6px;top:18px;width:68px;height:68px;border-radius:34px;font-size:34px;background:linear-gradient(135deg,#00e090,#31adec);color:#0b0c0e">1</div><div class="t mitte" style="left:-60px;top:106px;width:200px;font-size:28px">Einrichtung</div></div>
+          <div class="k7-p a" style="left:370px;top:44px;width:80px;height:180px"><div class="nr" style="left:6px;top:18px;width:68px;height:68px;border-radius:34px;font-size:34px;background:linear-gradient(135deg,#00e090,#31adec);color:#0b0c0e">2</div><div class="t mitte" style="left:-60px;top:106px;width:200px;font-size:28px">Onboarding</div></div>
+          <div class="k7-p a" style="left:630px;top:44px;width:80px;height:180px"><div class="nr" style="left:6px;top:18px;width:68px;height:68px;border-radius:34px;font-size:34px;background:linear-gradient(135deg,#00e090,#31adec);color:#0b0c0e">3</div><div class="t mitte" style="left:-60px;top:106px;width:200px;font-size:28px">Alltag</div></div>
+        </div>
+      </section>
+
+      <!-- K8 Schritt 1 (Prompt-Animation): "Schritt 1 ist, du öffnest Claude Code und gibst einfach einen einzigen Prompt erst einmal ein.
+           Zum Beispiel: „Richte mir meinen Videoschnitt ein und frag mich danach nach meinem Stil.“ Dann installiert ja Claude erstmal
+           selbst alles, was du natürlich zum Schneiden brauchst. Die Spracherkennung, die Werkzeuge, die Software für die Untertitel
+           und die Grafiken." Schritt 51,57 / öffnest 52,70 / Claude 53,03 / Prompt 55,23 / Zum Beispiel 56,33 / Richte 57,53 … Stil 61,07
+           / Dann 61,50 / installiert 61,73 / alles 63,27 / Spracherkennung 65,90 / Werkzeuge 66,93 / Untertitel 68,70 / Grafiken 69,57 -->
+      <section id="k8" class="karte clip" data-start="51.5" data-duration="18.6" data-track-index="1">
+        <div class="kicker">Schritt 1 · Einrichtung</div>
+        <div class="b">
+          <div id="k8-start" class="a" style="left:0;top:0;width:820px;height:290px">
+            <div class="nr" style="left:250px;top:96px;width:84px;height:84px;border-radius:42px;font-size:44px;background:linear-gradient(135deg,#00e090,#31adec);color:#0b0c0e">1</div>
+            <div class="t" style="left:356px;top:104px;font-size:52px">Einrichtung</div>
+          </div>
+          <div id="k8-fenster" class="fenster" style="opacity:0">
+            <div class="fkopf">
+              <div class="p" style="left:20px"></div><div class="p" style="left:40px"></div><div class="p" style="left:60px"></div>
+              <div id="k8-titel" class="titel" style="opacity:0">Claude Code</div>
+              <div class="illu">Illustration</div>
+            </div>
+            <div id="k8-eingabe" class="eingabe">
+              <div class="t" style="left:22px;top:12px;font-size:36px;line-height:46px;color:#00e090">›</div>
+              <div id="k8-platz" class="platz">Prompt eingeben …</div>
+              <div id="k8-ptext" class="ptext"></div>
+              <div id="k8-enter" class="enter">
+                <div id="k8-enterfill" class="a" style="inset:0;background:linear-gradient(90deg,#00d088,#31adec);opacity:0;z-index:-1"></div>
+                <svg class="i" viewBox="0 0 24 24" style="width:26px;height:26px;stroke:#9aa3af"><use href="#i-enter" /></svg>
+              </div>
+            </div>
+            <div id="k8-bsp" class="a" style="left:24px;top:226px;padding:5px 14px 7px;border-radius:999px;border:2px solid #3a4350;font-size:20px;font-weight:700;color:#9aa3af;opacity:0">Beispiel-Prompt</div>
+            <div id="k8-gesendet" class="gesendet">Richte mir meinen Videoschnitt ein und frag mich danach nach meinem Stil.</div>
+            <div id="k8-status" class="a" style="left:30px;top:130px;display:flex;align-items:center;gap:12px;font-size:23px;font-weight:600;color:#9aa3af;opacity:0;white-space:nowrap">
+              <svg id="k8-lader" class="i" viewBox="0 0 24 24" style="width:26px;height:26px;stroke:#31adec;stroke-width:2.6"><use href="#i-lader" /></svg>
+              <span id="k8-st1">Claude installiert …</span>
+            </div>
+            <div id="k8-z1" class="zeile" style="top:170px"><div class="kreis"><svg viewBox="-20 -20 40 40"><use href="#haken" /></svg></div>Spracherkennung</div>
+            <div id="k8-z2" class="zeile" style="top:206px"><div class="kreis"><svg viewBox="-20 -20 40 40"><use href="#haken" /></svg></div>Schnitt-Werkzeuge</div>
+            <div id="k8-z3" class="zeile" style="top:242px"><div class="kreis"><svg viewBox="-20 -20 40 40"><use href="#haken" /></svg></div>Untertitel &amp; Grafiken</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- K9 Schritt 2 Onboarding: "Und Schritt 2 ist das Onboarding. Claude fragt dich dabei erst einmal, wie ein neuer Cutter im Team, was
+           du eigentlich brauchst." Schritt 70,30 / Onboarding 71,27 / fragt 72,73 / neuer 74,43 / Cutter 74,73 / brauchst 76,27 -->
+      <section id="k9" class="karte clip" data-start="70.1" data-duration="7.26" data-track-index="1">
+        <div class="kicker">Schritt 2 · Onboarding</div>
+        <div class="b">
+          <div class="nr" style="left:30px;top:6px;width:64px;height:64px;border-radius:32px;font-size:36px;background:linear-gradient(135deg,#00e090,#31adec);color:#0b0c0e">2</div>
+          <div class="t" style="left:112px;top:8px;font-size:44px">Onboarding</div>
+          <div id="k9-ava" class="ava" style="left:30px;top:112px">
+            <svg class="i" viewBox="0 0 24 24" style="width:34px;height:34px"><use href="#i-funken" /></svg>
+          </div>
+          <div id="k9-blase" class="blase" style="left:110px;top:108px;opacity:0;min-width:120px;height:62px">
+            <div id="k9-punkte" class="a" style="left:26px;top:22px;display:flex;gap:10px"><div class="k9-pk" style="width:12px;height:12px;border-radius:6px;background:#9aa3af"></div><div class="k9-pk" style="width:12px;height:12px;border-radius:6px;background:#9aa3af"></div><div class="k9-pk" style="width:12px;height:12px;border-radius:6px;background:#9aa3af"></div></div>
+            <div id="k9-frage" style="opacity:0">Was brauchst du?</div>
+          </div>
+          <div id="k9-cutter" class="a" style="left:110px;top:200px;display:flex;align-items:center;gap:12px;padding:9px 22px 11px;border-radius:999px;background:#0b0c0e;color:#fff;font-size:26px;font-weight:700;white-space:nowrap;opacity:0">
+            <svg class="i" viewBox="0 0 24 24" style="width:30px;height:30px;stroke:#00e090"><use href="#i-schere" /></svg>wie ein neuer Cutter im Team
+          </div>
+        </div>
+      </section>
+
+      <!-- K10 Frage 1 Marke: "Wie heißt deine Marke und wofür steht sie?" Wie 77,50 / Marke 78,10 / wofür 78,73 / steht 79,07 -->
+      <section id="k10" class="karte clip" data-start="77.36" data-duration="2.8" data-track-index="1">
+        <div class="kicker">Onboarding · Marke</div>
+        <div class="zaehler">Frage 1 von 4</div>
+        <div class="b">
+          <div class="ava" style="left:30px;top:0px"><svg class="i" viewBox="0 0 24 24" style="width:34px;height:34px"><use href="#i-funken" /></svg></div>
+          <div class="blase" style="left:110px;top:-2px">Wie heißt deine Marke?</div>
+          <div id="k10-antwort" class="antwort" style="right:30px;top:78px;opacity:0"><span id="k10-text"></span><span class="cur" style="height:30px;background:#0b0c0e;vertical-align:-4px"></span></div>
+          <div id="k10-wofuer" class="t g" style="left:30px;top:186px;font-size:26px;opacity:0">wofür?</div>
+          <div id="k10-c1" class="chip" style="left:140px;top:174px;opacity:0"><span class="fill"></span>E-Commerce</div>
+          <div id="k10-c2" class="chip" style="left:358px;top:174px;opacity:0"><span class="fill"></span>Shopify</div>
+          <div id="k10-c3" class="chip" style="left:526px;top:174px;opacity:0"><span class="fill"></span>KI</div>
+          <div id="k10-zeiger" class="zeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+        </div>
+      </section>
+
+      <!-- K11 Frage 2 Farben: "Welche Farben gehören zum Beispiel zu dir?" Welche 80,23 / Farben 80,50 / zu dir 81,50 -->
+      <section id="k11" class="karte clip" data-start="80.16" data-duration="2.2" data-track-index="1">
+        <div class="kicker">Onboarding · Farben</div>
+        <div class="zaehler">Frage 2 von 4</div>
+        <div class="b">
+          <div class="ava" style="left:30px;top:0px"><svg class="i" viewBox="0 0 24 24" style="width:34px;height:34px"><use href="#i-funken" /></svg></div>
+          <div class="blase" style="left:110px;top:-2px">Welche Farben gehören zu dir?</div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <g class="k11-f k11-aus"><circle cx="150" cy="128" r="34" fill="#e5484d" /></g>
+            <g class="k11-f k11-aus"><circle cx="250" cy="128" r="34" fill="#f5a524" /></g>
+            <g class="k11-f k11-aus"><circle cx="350" cy="128" r="34" fill="#6b7280" /></g>
+            <g class="k11-f"><circle id="k11-r1" cx="450" cy="128" r="42" fill="none" stroke="#0b0c0e" stroke-width="4" opacity="0" /><circle cx="450" cy="128" r="34" fill="#00d088" /></g>
+            <g class="k11-f"><circle id="k11-r2" cx="550" cy="128" r="42" fill="none" stroke="#0b0c0e" stroke-width="4" opacity="0" /><circle cx="550" cy="128" r="34" fill="#31adec" /></g>
+            <g id="k11-h" opacity="0"><use href="#haken" x="640" y="128" /></g>
+            <rect id="k11-balken" x="150" y="196" width="400" height="30" rx="15" fill="url(#gv)" />
+            <text id="k11-c1" x="150" y="262" style="font-size:22px;font-weight:700;fill:#6b7280" opacity="0">#00D088</text>
+            <text id="k11-c2" x="550" y="262" text-anchor="end" style="font-size:22px;font-weight:700;fill:#6b7280" opacity="0">#31ADEC</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- K12 Frage 3 Beispiel-Videos: "Dann gibst du noch zwei, drei bestehende Videos als Beispiel ein, und wenn du natürlich hier schon
+           bestehende Social-Media-Videos hast, dann lad sie einfach mal mit hoch. Wenn aber du natürlich keine eigenen hast, dann kannst
+           du auch einfach irgendwelche, die dir einfach im Stil gefallen." zwei 83,17 / drei 83,47 / Beispiel 84,60 / Social-Media-Videos
+           87,00 / lad 88,37 / hoch 89,20 / Wenn 89,60 / eigenen 90,63 / irgendwelche 91,93 / gefallen 93,63 -->
+      <section id="k12" class="karte clip" data-start="82.36" data-duration="11.7" data-track-index="1">
+        <div class="kicker">Onboarding · Beispiel-Videos</div>
+        <div class="zaehler">Frage 3 von 4</div>
+        <div class="b">
+          <div class="ava" style="left:30px;top:0px"><svg class="i" viewBox="0 0 24 24" style="width:34px;height:34px"><use href="#i-funken" /></svg></div>
+          <div class="blase" style="left:110px;top:-2px">Hast du Beispiel-Videos?</div>
+          <div id="k12-v1" class="tile" style="left:30px;top:86px;width:100px;height:178px;opacity:0"><img src="assets/beispiel-k01.jpg" alt="" /></div>
+          <div id="k12-v2" class="tile" style="left:142px;top:86px;width:100px;height:178px;opacity:0"><img src="assets/beispiel-e08.jpg" alt="" /></div>
+          <div id="k12-v3" class="tile" style="left:254px;top:86px;width:100px;height:178px;opacity:0"><img src="assets/beispiel-etsy.jpg" alt="" /></div>
+          <div id="k12-up" class="a" style="left:380px;top:80px;width:410px;height:196px;border:3px dashed #9aa3af;border-radius:24px;opacity:0">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:165px;top:18px;width:74px;height:74px;stroke:#374151"><use href="#i-hoch" /></svg>
+            <div id="k12-uptxt" class="t mitte" style="left:0;top:98px;width:404px;font-size:28px">hochladen</div><div id="k12-uptxt2" class="t mitte" style="left:0;top:98px;width:404px;font-size:28px;opacity:0">✓ hochgeladen</div>
+            <div class="a" style="left:50px;top:146px;width:304px;height:18px;border-radius:9px;background:#e5e7eb;overflow:hidden"><div id="k12-bar" class="a" style="left:0;top:0;width:304px;height:18px;background:linear-gradient(90deg,#00d088,#31adec)"></div></div>
+          </div>
+          <div id="k12-o1" class="chip an" style="left:380px;top:96px;opacity:0;font-size:25px"><span class="fill"></span>eigene Videos</div>
+          <div id="k12-o2" class="chip" style="left:380px;top:184px;opacity:0;font-size:25px"><span class="fill"></span><svg class="i" viewBox="0 0 24 24" style="width:28px;height:28px;stroke:#0b0c0e"><use href="#i-herz" /></svg>Videos, die dir gefallen</div>
+          <div id="k12-zeiger" class="zeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+        </div>
+      </section>
+
+      <!-- K13 Frage 4 Stil: "Und zum Schluss natürlich, wie soll einfach der Untertitel aussehen? Wie schnell wird geschnitten? Was sind die
+           Effekte?" Untertitel 96,03 / aussehen 96,57 / schnell 97,13 / geschnitten 97,73 / Effekte 99,07 -->
+      <section id="k13" class="karte clip" data-start="94.06" data-duration="5.94" data-track-index="1">
+        <div class="kicker">Onboarding · Stil</div>
+        <div class="zaehler">Frage 4 von 4</div>
+        <div class="b">
+          <div id="k13-r1" class="a" style="left:0;top:6px;width:820px;height:80px">
+            <div class="t" style="left:30px;top:16px;font-size:32px">Untertitel?</div>
+            <div id="k13-a1" class="chip" style="left:300px;top:8px"><span class="fill"></span>Wort für Wort</div>
+            <div class="chip" style="left:560px;top:8px"><span class="fill"></span>ganze Sätze</div>
+          </div>
+          <div id="k13-r2" class="a" style="left:0;top:100px;width:820px;height:80px">
+            <div class="t" style="left:30px;top:16px;font-size:32px">Tempo?</div>
+            <div id="k13-a2" class="chip" style="left:300px;top:8px"><span class="fill"></span>zügig</div>
+            <div class="chip" style="left:446px;top:8px"><span class="fill"></span>ruhig</div>
+          </div>
+          <div id="k13-r3" class="a" style="left:0;top:194px;width:820px;height:80px">
+            <div class="t" style="left:30px;top:16px;font-size:32px">Effekte?</div>
+            <div id="k13-a3" class="chip" style="left:300px;top:8px"><span class="fill"></span>leise Effekte</div>
+            <div class="chip" style="left:540px;top:8px"><span class="fill"></span>viele Effekte</div>
+          </div>
+          <div id="k13-zeiger" class="zeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+        </div>
+      </section>
+
+      <!-- K14 Dein Schnittprofil: "Daraus entsteht dann dein eigenes Schnittprofil, gespeichert in sogenannten Skills." Daraus 100,07 /
+           Schnittprofil 101,57 / gespeichert 102,70 / Skills 104,07 -->
+      <section id="k14" class="karte clip" data-start="100.0" data-duration="4.56" data-track-index="1">
+        <div class="kicker">Aus deinen Antworten</div>
+        <div class="b">
+          <div id="k14-blatt" class="kachel" style="left:30px;top:0;width:470px;height:282px;border-radius:22px">
+            <div class="t" style="left:24px;top:14px;font-size:32px">Dein <span class="verlauf">Schnittprofil</span></div>
+            <div class="k14-z t" style="left:24px;top:70px;font-size:24px;font-weight:700">PulseConnect · E-Commerce</div>
+            <div class="k14-z a" style="left:24px;top:114px;width:300px;height:22px;border-radius:11px;background:linear-gradient(90deg,#00d088,#31adec)"></div>
+            <div class="k14-z a" style="left:24px;top:150px;display:flex;gap:8px;align-items:center">
+              <div class="tile" style="position:relative;width:34px;height:60px;border-radius:7px"><img src="assets/beispiel-k01.jpg" alt="" /></div>
+              <div class="tile" style="position:relative;width:34px;height:60px;border-radius:7px"><img src="assets/beispiel-e08.jpg" alt="" /></div>
+              <div class="tile" style="position:relative;width:34px;height:60px;border-radius:7px"><img src="assets/beispiel-etsy.jpg" alt="" /></div>
+              <div class="t" style="position:static;font-size:24px;font-weight:700;margin-left:6px">Beispiel-Videos</div>
+            </div>
+            <div class="k14-z t" style="left:24px;top:230px;font-size:21px;font-weight:700">Wort für Wort · zügig · leise Effekte</div>
+          </div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k14-pfeil" pathLength="1" d="M512 120 H 572" class="linie" style="stroke-width:6" />
+          </svg>
+          <div id="k14-skills" class="a" style="left:588px;top:30px;width:202px;height:180px;border-radius:24px;background:#0b0c0e;opacity:0">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:71px;top:16px;width:60px;height:60px;stroke:#00e090"><use href="#i-lesezeichen" /></svg>
+            <div class="t mitte" style="left:0;top:84px;width:202px;font-size:32px;color:#fff">Skills</div>
+            <div id="k14-gesp" class="t mitte verlauf" style="left:0;top:132px;width:202px;font-size:24px;opacity:0">✓ gespeichert</div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- K15 Tipp: "Nutze zum Beispiel dafür auch mal den Stil Motion Design oder HyperFrames von HeyGen." Nutze 104,63 / Motion 106,17 /
+           oder 107,37 / HyperFrames 107,70 / von HeyGen 108,63 -->
+      <section id="k15" class="karte clip" data-start="104.56" data-duration="4.74" data-track-index="1">
+        <div class="kicker">Zum Beispiel</div>
+        <div class="b">
+          <div id="k15-a" class="kachel" style="left:30px;top:20px;width:340px;height:200px">
+            <div class="vk" style="left:24px;top:24px;width:88px;height:88px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:52px;height:52px"><use href="#i-funken" /></svg></div>
+            <div class="t" style="left:24px;top:128px;font-size:34px">Motion Design</div>
+          </div>
+          <div id="k15-oder" class="t g mitte" style="left:370px;top:96px;width:80px;font-size:26px">oder</div>
+          <div id="k15-b" class="kachel" style="left:450px;top:20px;width:340px;height:200px">
+            <div class="vk" style="left:24px;top:24px;width:88px;height:88px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:52px;height:52px"><use href="#i-ebenen" /></svg></div>
+            <div class="t" style="left:24px;top:128px;font-size:34px">HyperFrames</div>
+            <div id="k15-von" class="t g" style="left:132px;top:58px;font-size:24px;opacity:0">von HeyGen</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- K16 Schritt 3 Alltag: "Und Schritt 3 ist tatsächlich der Alltag. Ich zum Beispiel drehe immer mit dem Handy, lade dann den Rohclip immer
+           in einen Google-Drive-Ordner und färbe dann zum Beispiel den Termin in meinem Kalender grün, sobald ich ihn hochgeladen und
+           fertiggestellt habe. Das ist natürlich für Claude immer das Startsignal zum Loslegen." Alltag 110,83 / drehe 111,83 / Handy 112,53
+           / lade 113,23 / Rohclip 113,87 / Google-Drive-Ordner 114,77 / Termin 116,93 / Kalender 117,53 / grün 117,93 / hochgeladen 119,10
+           / Startsignal 122,57 -->
+      <section id="k16" class="karte clip" data-start="109.3" data-duration="15.16" data-track-index="1">
+        <div class="kicker">Schritt 3 · Alltag</div>
+        <div class="b">
+          <div id="k16-handy" class="a" style="left:30px;top:20px;width:112px;height:196px;border-radius:22px;border:4px solid #0b0c0e;background:#fff">
+            <div class="a" style="left:40px;top:10px;width:24px;height:6px;border-radius:3px;background:#0b0c0e"></div>
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:28px;top:62px;width:48px;height:48px"><use href="#i-kamera" /></svg>
+            <div id="k16-rec" class="a" style="left:44px;top:134px;width:16px;height:16px;border-radius:8px;background:#e5484d;opacity:0"></div>
+          </div>
+          <div id="k16-lh" class="t mitte" style="left:10px;top:230px;width:152px;font-size:24px">Handy</div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k16-l1" pathLength="1" d="M156 118 H 214" class="linie" style="stroke-width:6" />
+            <path id="k16-l2" pathLength="1" d="M444 118 H 494" class="linie" style="stroke-width:6" />
+          </svg>
+          <div id="k16-datei" class="a" style="left:120px;top:96px;padding:5px 12px 7px;border-radius:10px;background:#0b0c0e;color:#fff;font-size:20px;font-weight:700;opacity:0;white-space:nowrap">Rohclip</div>
+          <div id="k16-ordner" class="kachel" style="left:226px;top:20px;width:206px;height:196px">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:55px;top:20px;width:92px;height:92px;stroke:#374151"><use href="#i-ordner" /></svg>
+            <div class="t mitte" style="left:0;top:118px;width:202px;font-size:28px">Rohclips</div>
+            <div class="t g mitte" style="left:0;top:156px;width:202px;font-size:20px">Google Drive</div>
+          </div>
+          <div class="a" id="k16-oh" style="left:404px;top:2px;opacity:0"><svg viewBox="-20 -20 40 40" style="width:44px;height:44px"><use href="#haken" /></svg></div>
+          <div id="k16-kal" class="kachel" style="left:506px;top:20px;width:284px;height:196px">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:20px;top:16px;width:40px;height:40px;stroke:#6b7280"><use href="#i-kalender" /></svg>
+            <div class="t g" style="left:72px;top:22px;font-size:22px">Kalender</div>
+            <div id="k16-termin" class="a" style="left:16px;top:76px;width:250px;height:90px;border-radius:16px;background:#8d6e63;display:flex;align-items:center;gap:10px;padding:0 14px;overflow:hidden">
+              <div id="k16-gruen" class="a" style="inset:0;background:#00b37a;opacity:0"></div>
+              <svg class="i" viewBox="0 0 24 24" style="position:relative;width:36px;height:36px;stroke:#fff"><use href="#i-klappe" /></svg>
+              <div style="position:relative;font-size:26px;font-weight:800;color:#fff;white-space:nowrap">Dreh-Termin</div>
+            </div>
+          </div>
+          <div id="k16-lk" class="t mitte" style="left:506px;top:230px;width:284px;font-size:24px">Termin grün</div>
+          <div id="k16-start" class="a" style="left:548px;top:206px;display:flex;align-items:center;gap:10px;padding:9px 20px 11px;border-radius:999px;background:#0b0c0e;color:#fff;font-size:26px;font-weight:800;white-space:nowrap;opacity:0;box-shadow:0 8px 20px rgba(0,0,0,.25)">
+            <svg class="i" viewBox="0 0 24 24" style="width:28px;height:28px;stroke:#00e090"><use href="#i-flagge" /></svg>Startsignal
+          </div>
+        </div>
+      </section>
+
+      <!-- K17 Claude legt los: "Dann legt zum Beispiel Claude los, Versprecher und Pausen werden rausgeschnitten, Untertitel werden Wort für Wort
+           erstellt, Grafiken werden genau auf dem gesprochenen Wort eingefügt und der Ton auf die richtige Lautstärke gestellt."
+           Versprecher 126,47 / rausgeschnitten 127,87 / Untertitel 128,90 / erstellt 130,27 / Grafiken 130,97 / eingefügt 133,10 / Ton 134,40
+           / gestellt 135,93 -->
+      <section id="k17" class="karte clip" data-start="124.46" data-duration="12.17" data-track-index="1">
+        <div class="kicker">Claude legt los</div>
+        <div class="b">
+          <div id="k17-t1" class="kachel k17-t" style="left:24px;top:4px;width:378px;height:130px">
+            <div class="vk" style="left:18px;top:21px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-schere" /></svg></div>
+            <div class="t" style="left:118px;top:26px;font-size:27px">Versprecher &amp;</div><div class="t" style="left:118px;top:64px;font-size:27px">Pausen raus</div>
+            <div class="a k17-h" style="right:-14px;top:-14px;opacity:0"><svg viewBox="-20 -20 40 40" style="width:44px;height:44px"><use href="#haken" /></svg></div>
+          </div>
+          <div id="k17-t2" class="kachel k17-t" style="left:418px;top:4px;width:378px;height:130px">
+            <div class="vk" style="left:18px;top:21px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-untertitel" /></svg></div>
+            <div class="t" style="left:118px;top:26px;font-size:27px">Untertitel</div><div class="t g" style="left:118px;top:64px;font-size:23px">Wort für Wort</div>
+            <div class="a k17-h" style="right:-14px;top:-14px;opacity:0"><svg viewBox="-20 -20 40 40" style="width:44px;height:44px"><use href="#haken" /></svg></div>
+          </div>
+          <div id="k17-t3" class="kachel k17-t" style="left:24px;top:150px;width:378px;height:130px">
+            <div class="vk" style="left:18px;top:21px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-funken" /></svg></div>
+            <div class="t" style="left:118px;top:26px;font-size:27px">Grafiken</div><div class="t g" style="left:118px;top:64px;font-size:23px">auf dem Wort</div>
+            <div class="a k17-h" style="right:-14px;top:-14px;opacity:0"><svg viewBox="-20 -20 40 40" style="width:44px;height:44px"><use href="#haken" /></svg></div>
+          </div>
+          <div id="k17-t4" class="kachel k17-t" style="left:418px;top:150px;width:378px;height:130px">
+            <div class="vk" style="left:18px;top:21px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-ton" /></svg></div>
+            <div class="t" style="left:118px;top:26px;font-size:27px">Ton</div><div class="t g" style="left:118px;top:64px;font-size:23px">richtige Lautstärke</div>
+            <div class="a k17-h" style="right:-14px;top:-14px;opacity:0"><svg viewBox="-20 -20 40 40" style="width:44px;height:44px"><use href="#haken" /></svg></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- K18 Eingeplant: "Und am Ende plant dann einfach Claude sogar das Video direkt in Metricool ein und du hast das automatisch
+           veröffentlicht in all deinen Social-Media-Kanälen." plant 137,17 / Video 138,47 / Metricool 139,47 / automatisch 141,57 /
+           veröffentlicht 142,07 / Social-Media-Kanälen 143,60 -->
+      <section id="k18" class="karte clip" data-start="136.63" data-duration="7.93" data-track-index="1">
+        <div class="kicker">Am Ende</div>
+        <div class="b">
+          <div class="a" style="left:24px;top:4px;width:530px;height:200px;border-radius:22px;background:#fff;border:2.5px solid #d1d5db">
+            <div class="a" style="left:0;top:0;width:526px;height:44px;display:flex">
+              <div class="k18-tag">Mo</div><div class="k18-tag">Di</div><div class="k18-tag">Mi</div><div class="k18-tag">Do</div><div class="k18-tag">Fr</div><div class="k18-tag">Sa</div><div class="k18-tag">So</div>
+            </div>
+            <div class="a" style="left:14px;top:52px;width:500px;height:132px;display:flex;gap:8px">
+              <div class="k18-slot"></div><div class="k18-slot"></div><div class="k18-slot"></div><div class="k18-slot"></div><div class="k18-slot"></div><div class="k18-slot" id="k18-ziel"></div><div class="k18-slot"></div>
+            </div>
+          </div>
+          <div id="k18-video" class="a" style="left:405px;top:66px;width:62px;height:118px;border-radius:12px;background:linear-gradient(160deg,#00d088,#31adec);display:flex;align-items:center;justify-content:center;opacity:0;box-shadow:0 6px 14px rgba(0,0,0,.2)">
+            <svg class="i" viewBox="0 0 24 24" style="width:28px;height:28px;fill:#0b0c0e;stroke:#0b0c0e"><use href="#i-play" /></svg>
+          </div>
+          <div id="k18-mc" class="a" style="left:24px;top:220px;padding:9px 20px 11px;border-radius:999px;background:#0b0c0e;color:#fff;font-size:26px;font-weight:700;white-space:nowrap;opacity:0">eingeplant in <span class="verlauf" style="font-weight:800">Metricool</span></div>
+          <div id="k18-k1" class="chip k18-k" style="left:586px;top:14px;opacity:0"><span class="fill"></span>TikTok<span class="k18-h" style="opacity:0">✓</span></div>
+          <div id="k18-k2" class="chip k18-k" style="left:586px;top:88px;opacity:0"><span class="fill"></span>Instagram<span class="k18-h" style="opacity:0">✓</span></div>
+          <div id="k18-k3" class="chip k18-k" style="left:586px;top:162px;opacity:0"><span class="fill"></span>YouTube<span class="k18-h" style="opacity:0">✓</span></div>
+          <div id="k18-auto" class="t g" style="left:590px;top:232px;font-size:22px;opacity:0">automatisch</div>
+        </div>
+        <style>
+          .k18-tag { flex: 1; text-align: center; padding-top: 10px; font-size: 21px; font-weight: 700; color: #6b7280; }
+          .k18-slot { flex: 1; border-radius: 12px; background: #f2f3f5; position: relative; }
+        </style>
+      </section>
+
+      <!-- K19 Ehrlich gesagt: "Und ehrlich gesagt, perfekt ist das natürlich immer noch nicht. Aber ich schaue mir immer jedes Video noch selbst
+           einmal an und gebe immer der KI Feedback." ehrlich 144,77 / perfekt 145,67 / nicht 147,20 / schaue 148,00 / Video 148,83 /
+           Feedback 151,17 -->
+      <section id="k19" class="karte clip" data-start="144.56" data-duration="7.44" data-track-index="1">
+        <div class="kicker">Ehrlich gesagt</div>
+        <div class="b">
+          <div id="k19-perfekt" class="t" style="left:40px;top:36px;font-size:64px;opacity:0">perfekt</div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k19-strich" pathLength="1" d="M34 112 L 316 98" fill="none" stroke="#e5484d" stroke-width="6" stroke-linecap="round" />
+            <clipPath id="k19-clip"><rect id="k19-cliprect" x="40" y="150" width="0" height="80" /></clipPath>
+            <text x="48" y="206" class="hand" style="font-size:52px" clip-path="url(#k19-clip)" transform="rotate(-3 160 190)">noch nicht</text>
+          </svg>
+          <div id="k19-video" class="kachel" style="left:400px;top:10px;width:120px;height:210px;border-radius:20px;opacity:.3">
+            <svg class="i" viewBox="0 0 24 24" style="position:absolute;left:38px;top:82px;width:40px;height:40px;stroke:#9aa3af"><use href="#i-play" /></svg>
+          </div>
+          <div id="k19-auge" class="vk" style="left:452px;top:150px;width:84px;height:84px;border-radius:42px;opacity:0;box-shadow:0 6px 16px rgba(0,0,0,.18)"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-auge" /></svg></div>
+          <div id="k19-fb" class="a" style="left:560px;top:40px;display:flex;align-items:center;gap:10px;padding:12px 22px 14px;border-radius:24px 24px 24px 8px;background:#0b0c0e;color:#fff;font-size:30px;font-weight:800;white-space:nowrap;opacity:0">
+            <svg class="i" viewBox="0 0 24 24" style="width:32px;height:32px;stroke:#00e090"><use href="#i-blase" /></svg>Feedback
+          </div>
+          <div id="k19-ki" class="t g" style="left:600px;top:120px;font-size:24px;opacity:0">an die KI</div>
+        </div>
+      </section>
+
+      <!-- K20 Aus Korrektur wird Regel: "Und dabei wird dann natürlich aus jeder Korrektur automatisch zu einer neuen Regel und das nächste
+           Video wird dadurch automatisch besser." Korrektur 153,53 / neuen 155,13 / Regel 155,40 / nächste 156,33 / besser 158,00 -->
+      <section id="k20" class="karte clip" data-start="152.0" data-duration="7.03" data-track-index="1">
+        <div class="kicker">Jede Korrektur</div>
+        <div class="b">
+          <div id="k20-n1" class="kachel" style="left:24px;top:6px;width:210px;height:170px">
+            <div class="vk" style="left:63px;top:16px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-blase" /></svg></div>
+            <div class="t mitte" style="left:0;top:114px;width:206px;font-size:27px">Korrektur</div>
+          </div>
+          <div id="k20-n2" class="kachel" style="left:305px;top:6px;width:210px;height:170px;opacity:.3">
+            <div class="vk" style="left:63px;top:16px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-regel" /></svg></div>
+            <div class="t mitte" style="left:0;top:114px;width:206px;font-size:27px">neue Regel</div>
+          </div>
+          <div id="k20-n3" class="kachel" style="left:586px;top:6px;width:210px;height:170px;opacity:.3">
+            <div class="vk" style="left:63px;top:16px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-trend" /></svg></div>
+            <div class="t mitte" style="left:0;top:116px;width:206px;font-size:25px">besseres Video</div>
+          </div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k20-l1" pathLength="1" d="M244 92 H 296" class="linie" style="stroke-width:6" />
+            <path id="k20-l2" pathLength="1" d="M525 92 H 577" class="linie" style="stroke-width:6" />
+            <path id="k20-loop" pathLength="1" d="M690 186 C 690 272, 600 280, 410 280 C 220 280, 128 272, 128 190" fill="none" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" />
+            <path id="k20-spitze" d="M116 202 L 128 186 L 140 202" fill="none" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+            <clipPath id="k20-clip"><rect id="k20-cliprect" x="330" y="216" width="0" height="56" /></clipPath>
+            <text x="338" y="258" class="hand" style="font-size:38px" clip-path="url(#k20-clip)">automatisch</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- K21 Meine Arbeit: "Meine Arbeit ist jetzt eigentlich nur noch drehen, hochladen und manchmal einfach drüberschauen." Arbeit 159,37 /
+           drehen 160,60 / hochladen 161,23 / manchmal 162,30 / drüberschauen 163,07 -->
+      <section id="k21" class="karte clip" data-start="159.03" data-duration="4.73" data-track-index="1">
+        <div class="kicker">Meine Arbeit heute</div>
+        <div class="b">
+          <div id="k21-a" class="kachel" style="left:24px;top:30px;width:210px;height:180px;opacity:.3">
+            <div class="vk" style="left:63px;top:20px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-kamera" /></svg></div>
+            <div class="t mitte" style="left:0;top:120px;width:206px;font-size:30px">drehen</div>
+          </div>
+          <div id="k21-b" class="kachel" style="left:305px;top:30px;width:210px;height:180px;opacity:.3">
+            <div class="vk" style="left:63px;top:20px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-hoch" /></svg></div>
+            <div class="t mitte" style="left:0;top:120px;width:206px;font-size:30px">hochladen</div>
+          </div>
+          <div id="k21-c" class="kachel" style="left:586px;top:30px;width:210px;height:180px;opacity:.3">
+            <div class="vk" style="left:63px;top:20px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-auge" /></svg></div>
+            <div class="t mitte" style="left:0;top:122px;width:206px;font-size:26px">drüberschauen</div>
+          </div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k21-l1" pathLength="1" d="M244 120 H 296" class="linie" style="stroke-width:6" />
+            <path id="k21-l2" pathLength="1" d="M525 120 H 577" class="linie" style="stroke-width:6" />
+            <clipPath id="k21-clip"><rect id="k21-cliprect" x="600" y="214" width="0" height="64" /></clipPath>
+            <text x="610" y="262" class="hand" style="font-size:42px" clip-path="url(#k21-clip)" transform="rotate(-3 690 250)">manchmal</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- K22 Dein Setup?: "Und wenn auch du jetzt wissen willst, wie ich tatsächlich so ein Setup aufgebaut habe, um solche Videos schneiden zu
+           lassen," wissen 164,47 / Setup 166,37 / aufgebaut 166,73 / Videos 168,00 / schneiden 168,47 -->
+      <section id="k22" class="karte clip" data-start="163.76" data-duration="5.87" data-track-index="1">
+        <div class="kicker">Mein Setup</div>
+        <div class="b">
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k22-schiene" pathLength="1" d="M90 110 H 600" fill="none" stroke="#d1d5db" stroke-width="6" stroke-linecap="round" />
+          </svg>
+          <div class="k22-p a" style="left:50px;top:64px;width:80px;height:180px;opacity:.3"><div class="nr" style="left:6px;top:12px;width:68px;height:68px;border-radius:34px;font-size:34px;background:linear-gradient(135deg,#00e090,#31adec);color:#0b0c0e">1</div><div class="t mitte" style="left:-60px;top:96px;width:200px;font-size:26px">Einrichtung</div></div>
+          <div class="k22-p a" style="left:300px;top:64px;width:80px;height:180px;opacity:.3"><div class="nr" style="left:6px;top:12px;width:68px;height:68px;border-radius:34px;font-size:34px;background:linear-gradient(135deg,#00e090,#31adec);color:#0b0c0e">2</div><div class="t mitte" style="left:-60px;top:96px;width:200px;font-size:26px">Onboarding</div></div>
+          <div class="k22-p a" style="left:550px;top:64px;width:80px;height:180px;opacity:.3"><div class="nr" style="left:6px;top:12px;width:68px;height:68px;border-radius:34px;font-size:34px;background:linear-gradient(135deg,#00e090,#31adec);color:#0b0c0e">3</div><div class="t mitte" style="left:-60px;top:96px;width:200px;font-size:26px">Alltag</div></div>
+          <div id="k22-schere" class="a" style="left:672px;top:60px;width:120px;height:120px;border-radius:30px;background:#0b0c0e;display:flex;align-items:center;justify-content:center;opacity:0">
+            <svg class="i" viewBox="0 0 24 24" style="width:64px;height:64px;stroke:#00e090"><use href="#i-schere" /></svg>
+          </div>
+          <svg class="buehne" viewBox="0 0 820 290">
+            <path id="k22-l" pathLength="1" d="M612 110 H 664" class="linie" style="stroke-width:6" />
+            <clipPath id="k22-clip"><rect id="k22-cliprect" x="560" y="0" width="0" height="58" /></clipPath>
+            <text x="568" y="42" class="hand" style="font-size:40px" clip-path="url(#k22-clip)" transform="rotate(-3 660 30)">wie genau?</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- K23 Kommentar-Karte (CTA): "dann schreib mir einfach hier „Schnitt“ in die Kommentare … und ich werde dir meine Anleitung
+           zuschicken." schreib 169,70 / Schnitt 170,50 / Kommentare 170,97 / Anleitung 174,07; bleibt bis zum Ende. Keine Links, keine Codes. -->
+      <section id="k23" class="kommentar clip" data-start="169.63" data-duration="5.34" data-track-index="1">
+        <div class="vk" style="left:22px;top:22px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:48px;height:48px"><use href="#i-blase" /></svg></div>
+        <div class="t" style="left:128px;top:14px;font-size:22px;font-weight:700;letter-spacing:0.1em;color:#6b7280">SCHREIB IN DIE KOMMENTARE</div>
+        <div class="a" style="left:126px;top:48px;width:548px;height:62px;border-radius:16px;background:#f2f3f5;border:2px solid #e5e7eb">
+          <div class="t" style="left:18px;top:4px;font-size:40px;line-height:52px"><span id="k23-text" class="verlauf"></span><span id="k23-cur" class="cur" style="height:36px;vertical-align:-6px"></span></div>
+          <div id="k23-senden" class="a" style="right:10px;top:7px;width:44px;height:44px;border-radius:22px;background:#d1d5db;display:flex;align-items:center;justify-content:center">
+            <svg class="i" viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#i-senden" /></svg>
+          </div>
+        </div>
+        <div id="k23-anl" class="t" style="left:128px;top:120px;font-size:24px;font-weight:700;color:#374151;opacity:0">→ und ich schick dir meine <span class="verlauf" style="font-weight:800">Anleitung</span></div>
+      </section>
+
+      <!-- K24 Folgen: "und lass ein Follow da" Follow 172,13 (Zeiger tippt, Plus wird zum Haken wie bei TikTok); bleibt bis zum Ende. -->
+      <section id="k24" class="folgekarte clip" data-start="171.7" data-duration="3.27" data-track-index="2">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
+        <div id="fring"></div>
+        <svg id="fplus" viewBox="-32 -32 64 64">
+          <g id="fp-plus"><circle r="28" fill="url(#gvd)" stroke="#fff" stroke-width="4" /><path d="M-12 0 H12 M0 -12 V12" stroke="#fff" stroke-width="5.5" stroke-linecap="round" /></g>
+          <g id="fp-haken" opacity="0" transform="rotate(180)"><circle r="28" fill="#fff" stroke="#e5e7eb" stroke-width="3" /><path id="fp-hpfad" pathLength="1" d="M-12 1 L-3 10 L13 -8" fill="none" stroke="url(#gvd)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </svg>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const L = 0.07; // 2 Frames vor dem Wort
+
+      // Karte rein mit Kicker und Zähler (keine leere Karte: der erste Inhalt kommt mit), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const z = document.querySelector(id + " .zaehler");
+        if (z) tl.fromTo(z, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, an + 0.06);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const voll = (sel, t) => {
+        tl.to(sel, { opacity: 1, duration: 0.25, ease: "power2.out" }, t);
+        tl.fromTo(sel, { scale: 0.95, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "power2.out" }, t);
+      };
+      const raus = (sel, t, d = 0.25) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      function zeichne(sel, t, d = 0.5, ease = "power2.out") {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, t);
+      }
+      // Schreibschrift erscheint von links nach rechts (Clip-Rechteck wächst)
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      // Chip antippen: Verlauf füllt sich, Schrift wird kräftig
+      function tippeChip(sel, t) {
+        tl.to(sel + " > .fill", { opacity: 1, duration: 0.2, ease: "power2.out" }, t);
+        tl.to(sel, { borderColor: "rgba(0,0,0,0)", color: "#0b0c0e", fontWeight: 800, duration: 0.2 }, t);
+        tl.fromTo(sel, { scale: 0.94, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      }
+      // Zeiger fährt auf einen Punkt (Koordinaten in seiner Karte) und tippt bei t
+      function zeigerTipp(sel, x, y, t, von) {
+        if (von) tl.fromTo(sel, { opacity: 0, x: von[0], y: von[1] }, { opacity: 1, x: von[0], y: von[1], duration: 0.12 }, t - 0.45);
+        tl.to(sel, { x, y, duration: 0.3, ease: "power2.inOut" }, t - 0.32);
+        tl.to(sel, { scale: 0.85, duration: 0.07, ease: "power2.in", transformOrigin: "0 0" }, t - 0.02);
+        tl.to(sel, { scale: 1, duration: 0.15, ease: "power2.out" }, t + 0.06);
+      }
+      // Getippter Text: jedes Wort Buchstabe für Buchstabe zwischen Anfang und Ende seines gesprochenen Worts
+      function tippeText(ziel, worte) {
+        const el = document.querySelector(ziel);
+        const cur = el.querySelector(".cur");
+        worte.forEach(([text, a, b], i) => {
+          const zeichen = (i ? " " : "") + text;
+          const ende = Math.max(a + 0.05, b);
+          [...zeichen].forEach((c, j) => {
+            const s = document.createElement("span");
+            s.className = "z";
+            s.textContent = c;
+            if (cur) el.insertBefore(s, cur); else el.appendChild(s);
+            tl.set(s, { display: "inline" }, a + ((ende - a) * j) / zeichen.length);
+          });
+        });
+      }
+      gsap.set("#k2-strich, #k2-pfeil, #k5-strich, #k5-pfeil, #k6-strich, #k6-pfeil, #k7-schiene, #k14-pfeil, #k16-l1, #k16-l2, #k19-strich, #k20-l1, #k20-l2, #k20-loop, #k21-l1, #k21-l2, #k22-schiene, #k22-l, #fp-hpfad", { strokeDasharray: 1, strokeDashoffset: 1 });
+
+      // K1 Das Problem: Spuren gleich mit der Karte, Abspielkopf läuft, Uhr auf "Zeit", Fragezeichen auf "Techniken", "zu technisch?"
+      karte("#k1", 7.66, 14.03);
+      tl.fromTo("#k1-spuren .k1-s", { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.06, ease: "power3.out" }, 7.70);
+      tl.fromTo("#k1-kopf", { x: 0 }, { x: 400, duration: 5.8, ease: "none" }, 8.20);
+      pop("#k1-uhr", 9.66);
+      tl.fromTo("#k1-zeiger", { rotation: 0, svgOrigin: "715 110" }, { rotation: 900, duration: 4.2, ease: "power1.inOut" }, 9.70);
+      badge("#k1-f1", 12.43); badge("#k1-f2", 12.55);
+      schreibe("#k1-cliprect", 300, 12.96, 0.5);
+
+      // K2 Mein Videoschnitt: ich mit Schere, auf "nicht mehr selbst" grau, Schere wandert auf "übernimmt" zu Claude Code
+      karte("#k2", 14.03, 21.26);
+      tl.to("#k2-ich", { opacity: 0.4, duration: 0.3 }, 17.63);
+      zeichne("#k2-strich", 17.63, 0.35);
+      zeichne("#k2-pfeil", 18.86, 0.6);
+      tl.to("#k2-spitze", { opacity: 1, duration: 0.15 }, 19.36);
+      schreibe("#k2-cliprect", 230, 18.86, 0.5);
+      tl.to("#k2-schere", { x: 470, duration: 0.8, ease: "power2.inOut" }, 18.86);
+      pop("#k2-claude", 19.63);
+
+      // K3 Früher: Schnitt-Balken wächst auf "Stunden", Dreh-Balken kurz auf "Dreh", Teile Untertitel / Pausen / Grafiken / Musik
+      karte("#k3", 21.26, 32.20);
+      tl.fromTo("#k3-schnitt", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 1.4, ease: "power2.inOut" }, 24.23);
+      ein("#k3-stunden", 24.30);
+      schreibe("#k3-cliprect1", 260, 25.46, 0.45);
+      tl.fromTo("#k3-dreh", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.4, ease: "power2.out" }, 26.46);
+      raus("#k3-h1", 27.80);
+      const seg = document.querySelectorAll("#k3 .k3-seg");
+      [28.13, 28.83, 29.83, 30.60].forEach((t, i) => tl.fromTo(seg[i], { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, t));
+      schreibe("#k3-cliprect2", 300, 31.26, 0.6);
+
+      // K4 Nie online: drei Entwürfe gleich mit der Karte, "online" mit Kreuz auf "nie", "nie gepostet", gestrichelte Kachel "du?"
+      karte("#k4", 32.20, 37.13);
+      tl.fromTo("#k4 .k4-v", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.06, ease: "power3.out" }, 32.24);
+      tl.fromTo("#k4 .k4-e", { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.06 }, 34.13);
+      pop("#k4-off", 34.53); badge("#k4-x", 34.70);
+      schreibe("#k4-cliprect", 280, 34.80, 0.5);
+      pop("#k4-du", 36.46);
+
+      // K5 Heute: "selbst schneiden" wird auf "anders" gestrichen, Pfeil zum Fenster, "Claude Code" auf "Claude Code", Modell-Badge auf "Opus"
+      karte("#k5", 37.13, 43.16);
+      zeichne("#k5-strich", 38.26, 0.35);
+      tl.to("#k5-alt", { opacity: 0.45, duration: 0.3 }, 38.26);
+      zeichne("#k5-pfeil", 38.40, 0.3);
+      pop("#k5-fenster", 38.50);
+      tl.fromTo("#k5-titel", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 40.10);
+      tl.fromTo("#k5-cursor", { opacity: 1 }, { opacity: 0.15, duration: 0.4, repeat: 11, yoyo: true, ease: "none" }, 38.6);
+      pop("#k5-opus", 41.33);
+
+      // K6 Der Trick: beide Seiten gleich schwach da, "magischer Prompt" auf "magischer", gestrichen auf "sondern", Setup auf "Setup"
+      karte("#k6", 43.16, 49.10);
+      tl.set("#k6-prompt, #k6-setup", { opacity: 0.3 }, 43.16);
+      voll("#k6-prompt", 45.76);
+      zeichne("#k6-strich", 47.03, 0.35); badge("#k6-x", 47.20);
+      zeichne("#k6-pfeil", 47.40, 0.3);
+      schreibe("#k6-cliprect", 500, 47.50, 0.6);
+      voll("#k6-setup", 48.70); badge("#k6-h", 48.80);
+
+      // K7 Schritt für Schritt: Schiene mit der Karte, die drei Schritte auf "Schritt-für-Schritt-Anleitung"
+      karte("#k7", 49.10, 51.50);
+      zeichne("#k7-schiene", 49.14, 0.5);
+      tl.fromTo("#k7 .k7-p", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.12, ease: "power3.out" }, 49.30);
+
+      // K8 Schritt 1: "1 Einrichtung" mit der Karte, auf "öffnest" öffnet sich das Fenster, "Claude Code" auf "Claude Code", das Feld leuchtet
+      // auf "Prompt", "Beispiel-Prompt" auf "Zum Beispiel", der Prompt tippt sich Wort für Wort mit seiner Stimme, Enter, dann installiert
+      // Claude und die drei Zeilen haken sich auf ihren Wörtern ab
+      karte("#k8", 51.50, 70.10);
+      raus("#k8-start", 52.63, 0.2);
+      tl.fromTo("#k8-fenster", { opacity: 0, scale: 0.94, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, 52.63);
+      tl.fromTo("#k8-titel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 52.96);
+      tl.to("#k8-eingabe", { borderColor: "#00d088", duration: 0.3 }, 55.16);
+      ein("#k8-bsp", 56.26);
+      tl.to("#k8-platz", { opacity: 0, duration: 0.1 }, 57.40);
+      const P = [["Richte", 57.53, 57.80], ["mir", 57.90, 58.03], ["meinen", 58.33, 58.50], ["Videoschnitt", 58.53, 59.00], ["ein", 59.10, 59.27], ["und", 59.60, 59.70], ["frag", 59.73, 59.93], ["mich", 60.00, 60.10], ["danach", 60.13, 60.43], ["nach", 60.50, 60.60], ["meinem", 60.70, 61.00], ["Stil.", 61.07, 61.33]];
+      const ptext = document.querySelector("#k8-ptext");
+      const pcur = document.createElement("span"); pcur.className = "cur"; pcur.id = "k8-cur"; ptext.appendChild(pcur);
+      tippeText("#k8-ptext", P.map(([w, a, b]) => [w, a - L, b - L]));
+      tl.fromTo("#k8-cur", { opacity: 1 }, { opacity: 0.2, duration: 0.35, repeat: 13, yoyo: true, ease: "none" }, 52.8);
+      // Enter
+      tl.to("#k8-enterfill", { opacity: 1, duration: 0.08 }, 61.40);
+      tl.to("#k8-enter", { scale: 0.88, duration: 0.08, ease: "power2.in" }, 61.40);
+      tl.to("#k8-enter", { scale: 1, duration: 0.15, ease: "power2.out" }, 61.50);
+      raus("#k8-eingabe, #k8-bsp", 61.62, 0.2);
+      tl.fromTo("#k8-gesendet", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 61.66);
+      ein("#k8-status", 61.70);
+      tl.fromTo("#k8-lader", { rotation: 0, transformOrigin: "50% 50%" }, { rotation: 2160, duration: 8.0, ease: "none" }, 61.70);
+      tl.fromTo(["#k8-z1", "#k8-z2", "#k8-z3"], { opacity: 0, y: 8 }, { opacity: 0.35, y: 0, duration: 0.3, stagger: 0.08, ease: "power3.out" }, 63.20);
+      [["#k8-z1", 65.83], ["#k8-z2", 66.86], ["#k8-z3", 69.50]].forEach(([s, t]) => {
+        tl.to(s, { opacity: 1, duration: 0.2 }, t);
+        tl.to(s + " .kreis", { borderColor: "rgba(0,0,0,0)", duration: 0.1 }, t);
+        tl.fromTo(s + " .kreis > svg", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      });
+      tl.to("#k8-z3", { opacity: 0.6, duration: 0.2 }, 68.63);
+      tl.to("#k8-lader", { opacity: 0, duration: 0.2 }, 69.70);
+
+      // K9 Onboarding: Claude fragt (Punkte), "wie ein neuer Cutter im Team" auf "neuer", "Was brauchst du?" auf "brauchst"
+      karte("#k9", 70.10, 77.36);
+      ein("#k9-blase", 72.66);
+      tl.fromTo("#k9 .k9-pk", { opacity: 0.25 }, { opacity: 1, duration: 0.3, stagger: 0.15, repeat: 5, yoyo: true, ease: "none" }, 72.70);
+      ein("#k9-cutter", 74.36);
+      raus("#k9-punkte", 76.20, 0.12);
+      tl.to("#k9-frage", { opacity: 1, duration: 0.2 }, 76.24);
+
+      // K10 Frage 1: Antwort "PulseConnect" tippt sich nach "Marke", Chips auf "wofür", "E-Commerce" wird angetippt
+      karte("#k10", 77.36, 80.16);
+      ein("#k10-antwort", 78.36, 0.2);
+      tippeText("#k10-text", [["PulseConnect", 78.40, 78.70]]);
+      tl.to("#k10-antwort .cur", { opacity: 0, duration: 0.15 }, 78.85);
+      ein("#k10-wofuer", 78.66);
+      tl.fromTo(["#k10-c1", "#k10-c2", "#k10-c3"], { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.25, stagger: 0.07, ease: "power3.out" }, 78.66);
+      zeigerTipp("#k10-zeiger", 250, 210, 79.30, [420, 290]);
+      tippeChip("#k10-c1", 79.30);
+      raus("#k10-zeiger", 79.70, 0.2);
+
+      // K11 Frage 2: Farbfelder auf "Farben", auf "zu dir" werden Grün und Blau gewählt, der Verlauf zeichnet sich
+      karte("#k11", 80.16, 82.36);
+      tl.fromTo("#k11 .k11-f", { opacity: 0, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, stagger: 0.06, ease: "power2.out" }, 80.43);
+      tl.to("#k11 .k11-aus", { opacity: 0.25, duration: 0.25 }, 81.43);
+      tl.to("#k11-r1, #k11-r2", { opacity: 1, duration: 0.2 }, 81.43);
+      badge("#k11-h", 81.50);
+      tl.fromTo("#k11-balken", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.5, ease: "power2.out" }, 81.50);
+      tl.to("#k11-c1, #k11-c2", { opacity: 1, duration: 0.25 }, 81.70);
+
+      // K12 Frage 3: Kacheln aus fertigen Videos auf "zwei, drei", Upload auf "Social-Media-Videos" / "lad … hoch", dann "eigene" oder
+      // "Videos, die dir gefallen"
+      karte("#k12", 82.36, 94.06);
+      tl.fromTo("#k12-v1", { opacity: 0, y: 30, rotation: -4 }, { opacity: 1, y: 0, rotation: 0, duration: 0.4, ease: "power3.out" }, 83.10);
+      tl.fromTo("#k12-v2", { opacity: 0, y: 30, rotation: 4 }, { opacity: 1, y: 0, rotation: 0, duration: 0.4, ease: "power3.out" }, 83.25);
+      tl.fromTo("#k12-v3", { opacity: 0, y: 30, rotation: -3 }, { opacity: 1, y: 0, rotation: 0, duration: 0.4, ease: "power3.out" }, 83.40);
+      ein("#k12-up", 86.93);
+      tl.fromTo("#k12-bar", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.85, ease: "power1.inOut" }, 88.30);
+      tl.to("#k12-up", { borderColor: "#00d088", duration: 0.2 }, 89.13);
+      tl.to("#k12-uptxt", { opacity: 0, duration: 0.12 }, 89.13);
+      tl.to("#k12-uptxt2", { opacity: 1, duration: 0.12 }, 89.13);
+      raus("#k12-up", 89.53, 0.25);
+      ein("#k12-o1", 89.70);
+      tl.to("#k12-o1 > .fill", { opacity: 0, duration: 0.25 }, 90.56);
+      tl.to("#k12-o1", { borderColor: "#d1d5db", color: "#9aa3af", duration: 0.25 }, 90.56);
+      ein("#k12-o2", 91.86);
+      zeigerTipp("#k12-zeiger", 540, 222, 93.56, [760, 300]);
+      tippeChip("#k12-o2", 93.56);
+      raus("#k12-zeiger", 93.80, 0.2);
+
+      // K13 Frage 4: drei Zeilen schwach mit der Karte, voll auf ihren Wörtern, Antwort-Chips werden angetippt
+      karte("#k13", 94.06, 100.00);
+      tl.set("#k13-r1, #k13-r2, #k13-r3", { opacity: 0.3 }, 94.06);
+      tl.to("#k13-r1", { opacity: 1, duration: 0.25 }, 95.96);
+      zeigerTipp("#k13-zeiger", 400, 50, 96.50, [560, 140]);
+      tippeChip("#k13-a1", 96.50);
+      tl.to("#k13-r2", { opacity: 1, duration: 0.25 }, 97.06);
+      zeigerTipp("#k13-zeiger", 350, 144, 97.66);
+      tippeChip("#k13-a2", 97.66);
+      tl.to("#k13-r3", { opacity: 1, duration: 0.25 }, 99.00);
+      zeigerTipp("#k13-zeiger", 390, 238, 99.30);
+      tippeChip("#k13-a3", 99.30);
+      raus("#k13-zeiger", 99.60, 0.2);
+
+      // K14 Dein Schnittprofil: Blatt mit der Karte, Antworten fliegen auf "Schnittprofil" hinein, auf "gespeichert" Pfeil zu "Skills",
+      // "gespeichert als Skills" auf "Skills"
+      karte("#k14", 100.00, 104.56);
+      tl.fromTo("#k14 .k14-z", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.35, stagger: 0.12, ease: "power3.out" }, 100.30);
+      tl.fromTo("#k14-blatt", { boxShadow: "0 0 0 0 rgba(49,173,236,0)" }, { boxShadow: "0 0 0 4px rgba(49,173,236,1)", duration: 0.3 }, 101.50);
+      zeichne("#k14-pfeil", 102.63, 0.3);
+      pop("#k14-skills", 102.80);
+      tl.fromTo("#k14-gesp", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 104.00);
+
+      // K15 Zum Beispiel: Motion Design auf "Motion", HyperFrames auf "HyperFrames", "von HeyGen" auf "von"
+      karte("#k15", 104.56, 109.30);
+      tl.set("#k15-a, #k15-b, #k15-oder", { opacity: 0.3 }, 104.56);
+      voll("#k15-a", 106.10);
+      tl.to("#k15-oder", { opacity: 1, duration: 0.2 }, 107.30);
+      voll("#k15-b", 107.63);
+      ein("#k15-von", 108.56);
+
+      // K16 Alltag: Handy auf "drehe", Pfeil und Rohclip auf "lade", Ordner "Rohclips" auf "Google-Drive-Ordner", Termin auf "Termin",
+      // grün auf "grün", Haken am Ordner auf "hochgeladen", "Startsignal" auf "Startsignal"
+      karte("#k16", 109.30, 124.46);
+      tl.set("#k16-handy, #k16-ordner, #k16-kal, #k16-lh, #k16-lk", { opacity: 0.3 }, 109.30);
+      voll("#k16-handy", 111.76);
+      tl.to("#k16-lh", { opacity: 1, duration: 0.25 }, 111.76);
+      tl.fromTo("#k16-rec", { opacity: 0 }, { opacity: 1, duration: 0.3, repeat: 3, yoyo: true, ease: "none" }, 111.80);
+      zeichne("#k16-l1", 113.16, 0.4);
+      tl.fromTo("#k16-datei", { opacity: 0, x: 0 }, { opacity: 1, x: 0, duration: 0.15 }, 113.16);
+      tl.to("#k16-datei", { x: 150, duration: 1.26, ease: "power2.inOut" }, 113.32);
+      tl.to("#k16-datei", { opacity: 0, duration: 0.2 }, 114.60);
+      voll("#k16-ordner", 114.70);
+      zeichne("#k16-l2", 115.93, 0.35);
+      voll("#k16-kal", 116.86);
+      tl.to("#k16-gruen", { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 117.86);
+      tl.to("#k16-lk", { opacity: 1, duration: 0.25 }, 117.86);
+      raus("#k16-lk", 122.40, 0.15);
+      badge("#k16-oh", 119.03);
+      tl.fromTo("#k16-start", { opacity: 0, y: 12, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "power3.out" }, 122.50);
+
+      // K17 Claude legt los: vier Kacheln schwach mit der Karte, voll auf ihrem ersten Wort, Haken auf dem letzten
+      karte("#k17", 124.46, 136.63);
+      tl.set("#k17 .k17-t", { opacity: 0.3 }, 124.46);
+      [["#k17-t1", 126.40, 127.80], ["#k17-t2", 128.83, 130.20], ["#k17-t3", 130.90, 133.03], ["#k17-t4", 134.33, 135.86]].forEach(([s, a, b]) => {
+        voll(s, a);
+        tl.fromTo(s + " .k17-h", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, b);
+      });
+
+      // K18 Am Ende: Video fällt auf "plant" in einen Platz der Woche, "eingeplant in Metricool" auf "Metricool", Kanäle auf
+      // "veröffentlicht", Haken auf "Kanälen"
+      karte("#k18", 136.63, 144.56);
+      tl.fromTo("#k18-video", { opacity: 0, x: 220, y: -40 }, { opacity: 1, x: 220, y: -40, duration: 0.15 }, 137.10);
+      tl.to("#k18-video", { x: 0, y: 0, duration: 0.64, ease: "power2.inOut" }, 137.26);
+      tl.to("#k18-ziel", { backgroundColor: "#d7f5ea", duration: 0.25 }, 137.90);
+      ein("#k18-mc", 139.40);
+      tl.fromTo(["#k18-k1", "#k18-k2", "#k18-k3"], { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.12, ease: "power3.out" }, 142.00);
+      ein("#k18-auto", 141.50);
+      ["#k18-k1", "#k18-k2", "#k18-k3"].forEach((s, i) => {
+        tippeChip(s, 143.53 + i * 0.1);
+        tl.to(s + " .k18-h", { opacity: 1, duration: 0.2 }, 143.53 + i * 0.1);
+      });
+
+      // K19 Ehrlich gesagt: "perfekt" auf "perfekt", gestrichen auf "nicht", "noch nicht", Auge aufs Video auf "schaue", Feedback
+      karte("#k19", 144.56, 152.00);
+      ein("#k19-perfekt", 145.60);
+      zeichne("#k19-strich", 147.13, 0.35);
+      schreibe("#k19-cliprect", 260, 147.20, 0.5);
+      tl.to("#k19-video", { opacity: 1, duration: 0.25 }, 147.93);
+      pop("#k19-auge", 147.93);
+      tl.fromTo("#k19-fb", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 151.10);
+      ein("#k19-ki", 151.20);
+
+      // K20 Korrektur → neue Regel → besseres Video, Schleife zurück
+      karte("#k20", 152.00, 159.03);
+      zeichne("#k20-l1", 153.46, 0.35);
+      voll("#k20-n2", 155.33);
+      zeichne("#k20-l2", 156.26, 0.35);
+      voll("#k20-n3", 157.93);
+      zeichne("#k20-loop", 158.10, 0.6);
+      tl.to("#k20-spitze", { opacity: 1, duration: 0.15 }, 158.62);
+      schreibe("#k20-cliprect", 190, 154.13, 0.5);
+
+      // K21 Meine Arbeit: drehen → hochladen → drüberschauen, "manchmal"
+      karte("#k21", 159.03, 163.76);
+      voll("#k21-a", 160.53);
+      zeichne("#k21-l1", 161.10, 0.25); voll("#k21-b", 161.16);
+      schreibe("#k21-cliprect", 200, 162.23, 0.45);
+      zeichne("#k21-l2", 162.90, 0.25); voll("#k21-c", 163.00);
+
+      // K22 Mein Setup: "wie genau?" auf "wissen", die drei Schritte auf "Setup", Schere auf "schneiden"
+      karte("#k22", 163.76, 169.63);
+      zeichne("#k22-schiene", 163.80, 0.5);
+      schreibe("#k22-cliprect", 210, 164.40, 0.45);
+      tl.to("#k22 .k22-p", { opacity: 1, duration: 0.25, stagger: 0.15 }, 166.30);
+      zeichne("#k22-l", 168.30, 0.2);
+      pop("#k22-schere", 168.40);
+
+      // K23 Kommentar: Karte auf "schreib", "Schnitt" tippt sich auf seinem Wort, abgeschickt auf "Kommentare", Anleitung auf "Anleitung"
+      tl.fromTo("#k23", { opacity: 0, y: 20, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 169.63);
+      tippeText("#k23-text", [["Schnitt", 170.43, 170.70]]);
+      tl.fromTo("#k23-cur", { opacity: 1 }, { opacity: 0.2, duration: 0.35, repeat: 1, yoyo: true, ease: "none" }, 169.7);
+      tl.to("#k23-senden", { background: "linear-gradient(90deg, #00d088, #31adec)", duration: 0.15 }, 170.90);
+      tl.fromTo("#k23-senden", { scale: 0.85, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.25, ease: "power2.out" }, 170.92);
+      tl.to("#k23-cur", { opacity: 0, duration: 0.1 }, 170.95);
+      ein("#k23-anl", 173.73);
+
+      // K24 Folgen wie bei TikTok (Vorlage K01 / E08): Karte auf "lass", Zeiger tippt auf "Follow": Plus drückt ein, dreht sich, wird zum
+      // Haken im Verlauf, springt kurz über und gibt einen Ring-Puls
+      const TAP = 172.20;
+      tl.fromTo("#k24", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 171.70);
+      gsap.set("#fplus", { transformOrigin: "50% 50%" });
+      tl.fromTo("#fzeiger", { opacity: 0, x: 200, y: 200 }, { opacity: 1, x: 180, y: 192, duration: 0.07, ease: "power2.out" }, TAP - 0.36);
+      tl.to("#fzeiger", { x: 112, y: 170, duration: 0.26, ease: "power2.inOut" }, TAP - 0.28);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, TAP - 0.02);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, TAP + 0.06);
+      tl.to("#fplus", { scale: 0.8, duration: 0.08, ease: "power2.in" }, TAP);
+      tl.to("#fplus", { rotation: 180, duration: 0.3, ease: "power2.inOut" }, TAP);
+      tl.set("#fp-plus", { opacity: 0 }, TAP + 0.15);
+      tl.set("#fp-haken", { opacity: 1 }, TAP + 0.15);
+      tl.to("#fp-hpfad", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, TAP + 0.16);
+      tl.fromTo("#fplus", { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "back.out(4)" }, TAP + 0.12);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.6, ease: "power2.out" }, TAP + 0.16);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, TAP + 0.15);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, TAP + 0.15);
+      tl.to("#fzeiger", { x: 150, y: 210, duration: 0.25, ease: "power2.out" }, TAP + 0.25);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.3, ease: "power2.in" }, TAP + 0.5);
+
+      tl.seek(0);
+      window.__timelines["claudeschnitt-skizzen"] = tl;
+    </script>
+  </body>
+</html>
