@@ -1,6 +1,6 @@
 # Übergabekarte: E08 · Upselling vs. Cross-Selling
 
-Status: **zur Prüfung** (Cutter, 30.10.2026) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** für Sa 31.10.2026 14:00 Europe/Berlin (vom 07.12. in eine Lücke vorgezogen: Pauls Vorgabe 30.10. "min. 2 Videos" pro Tag, neue Schnitte in die Lücken; Kalender-📣 mitverschoben), Metricool TikTok / Instagram / YouTube 411094970 / 411095375 / 411095481 (uuids -316759585127772443 / 5175704388200252147 / -3263209179866575081), Drive-Final 1MiecpOsI5Lb9HiVPewm6UlURQyN3WxtS, Ordner 1NULJGD9lZaaYH5EwpiUQm_oJSDI8MgNb, Beschreibungs-Doc 1WFPik96vk_UO-dJnnkKAC_EGdFJVO9qX16STTsOrIVI
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): E08 · Upselling vs. Cross-Selling
 - **Format / Design:** FACE (Serie "E-Commerce einfach erklärt") / aktueller E-Look wie E06 und E07: kein Hook-Titel (Briefing: "kein übergroßer Hook-Titel nötig"), helle Karten unter dem Kopf als Erklär-Bilder (karten-aufbau.md "Visuelle Metaphern", Vorlage P04 pagebuilder), Pill-Untertitel (aktives Wort `#00E090`), Farbwelt PulseConnect-Verlauf `#00D088 → #31ADEC`, Musik ruhig, sanfte Gamma-Kurve plus sanfter Grade und leichte Unscharfmaske (dunkle, weiche Aufnahme), Porträt-Modus; keine Quelle groß (siehe Entscheidungen)
