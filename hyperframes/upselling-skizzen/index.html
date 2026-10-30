@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>E08 · Upselling vs. Cross-Selling – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- FACE, Serie "E-Commerce einfach erklärt", E08 · Upselling vs. Cross-Selling. Erklär-Bilder statt Wortkarten
+         (karten-aufbau.md "Visuelle Metaphern", Vorlagen hyperframes/warenkorb-skizzen und hyperframes/pagebuilder-skizzen):
+         pro Gedanke ein Bild, das den Satz ohne Ton erklärt. Briefing-Grafiken: eigene Produktkarte "Kaffeemaschine 129 €"
+         (DEMO), Upsell-Pfeil 129 € → 159 € mit +30 €, Cross-Sell 129 € + Bohnen 15 € = 144 €, falsches Beispiel
+         600-€-Profi-Maschine mit Warnsymbol, Pop-up-Stapel schematisch, Shop-Mock-up vor dem Kauf / im Warenkorb,
+         Gegenüberstellung AOV / Conversion / Marge, Schluss "Die Empfehlung soll passen, nicht stören."
+         Zahlen nur aus Take und Briefing (129, 159, 30, 15, 144, 600; nachgerechnet: 159 − 129 = 30, 129 + 15 = 144), alle
+         Preise als DEMO gekennzeichnet; keine echten Kennzahlen, keine Marken, eigene flache Zeichnungen (Maschine, Bohnen,
+         Schuh, Socke), Icons Lucide (ISC), Schriften Geist und Caveat (OFL, lokal).
+         Rahmen wie freigegeben: helle Karte unter dem Kopf (x 80-900, y 1140-1490; Instagram-Zone ab 1500), Pill-Untertitel
+         darüber (Remotion, y ~1080), ruhige Bewegung ohne Überschwingen.
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/upselling/cut.json, 102,93 s), Teile 2 Frames vor ihrem Wort;
+         Liste mit Tönen in src/projekte/upselling/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1140px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 20px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .badge { position: absolute; right: 26px; top: 14px; padding: 5px 13px 6px; border-radius: 10px; background: #0b0c0e; color: #fff; font-size: 20px; font-weight: 800; letter-spacing: 0.14em; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 54px; width: 820px; height: 290px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #9aa3af; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .zeile { font-size: 19px; font-weight: 800; fill: #6b7280; letter-spacing: 0.1em; }
+      .preis { font-weight: 900; fill: #0b0c0e; letter-spacing: -0.02em; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #2a9ed8; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.grau { stroke: #6b7280; }
+      .gtext { fill: url(#gv); }
+      .m-k { fill: #3b4a5c; stroke: #0b0c0e; stroke-width: 2.6; stroke-linejoin: round; }
+      .m-l { fill: none; stroke: #0b0c0e; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Vorgabe 2026-10-25) */
+      .folgekarte { position: absolute; left: 80px; top: 1140px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 42px; height: 42px; border-radius: 21px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 24px; height: 24px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="upselling-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="102.93">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <!-- waagrechte Linien haben keine Höhe: dort der Verlauf in Bühnen-Koordinaten (objectBoundingBox zeichnet sonst nichts) -->
+          <linearGradient id="gvh" gradientUnits="userSpaceOnUse" x1="300" y1="0" x2="640" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvp" gradientUnits="userSpaceOnUse" x1="470" y1="0" x2="640" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3faf1" /><stop offset="1" stop-color="#e2f2fc" /></linearGradient>
+          <!-- Kaffeemaschine (eigene flache Zeichnung, 120 x 130): Gehäuse, Auslauf, Tasse -->
+          <g id="maschine">
+            <rect x="12" y="6" width="96" height="112" rx="14" class="m-k" />
+            <rect x="12" y="6" width="96" height="30" rx="14" fill="#2a3542" stroke="#0b0c0e" stroke-width="2.6" />
+            <circle cx="92" cy="21" r="5" fill="#00e090" />
+            <rect x="28" y="46" width="64" height="58" rx="8" fill="#e8eaed" stroke="#0b0c0e" stroke-width="2.2" />
+            <rect x="50" y="46" width="20" height="12" rx="3" fill="#0b0c0e" />
+            <path d="M44 78 H74 V90 Q74 99 65 99 H53 Q44 99 44 90 Z" fill="#fff" stroke="#0b0c0e" stroke-width="2.2" />
+            <path d="M74 82 Q82 82 82 88 Q82 94 74 94" class="m-l" />
+            <rect x="6" y="116" width="108" height="10" rx="5" fill="#0b0c0e" />
+          </g>
+          <!-- dieselbe Maschine als höherwertige Variante: Display und Milchdüse -->
+          <g id="maschine-plus">
+            <use href="#maschine" />
+            <rect x="24" y="13" width="46" height="16" rx="4" fill="url(#gvd)" stroke="#0b0c0e" stroke-width="1.6" />
+            <path d="M108 50 H116 V90 L111 100" class="m-l" style="stroke-width:3" />
+          </g>
+          <!-- Profi-Maschine (200 x 140): breit, zwei Brühgruppen, Manometer -->
+          <g id="profi">
+            <rect x="8" y="8" width="184" height="112" rx="14" fill="#1f2731" stroke="#0b0c0e" stroke-width="2.6" />
+            <rect x="8" y="8" width="184" height="30" rx="14" fill="#11161c" stroke="#0b0c0e" stroke-width="2.6" />
+            <circle cx="100" cy="23" r="10" fill="#e5e7eb" stroke="#0b0c0e" stroke-width="2" />
+            <path d="M100 23 L106 18" stroke="#0b0c0e" stroke-width="2" stroke-linecap="round" />
+            <rect x="22" y="48" width="156" height="58" rx="8" fill="#e8eaed" stroke="#0b0c0e" stroke-width="2.2" />
+            <rect x="44" y="48" width="22" height="12" rx="3" fill="#0b0c0e" />
+            <rect x="134" y="48" width="22" height="12" rx="3" fill="#0b0c0e" />
+            <path d="M40 80 H70 V92 Q70 100 62 100 H48 Q40 100 40 92 Z" fill="#fff" stroke="#0b0c0e" stroke-width="2" />
+            <path d="M130 80 H160 V92 Q160 100 152 100 H138 Q130 100 130 92 Z" fill="#fff" stroke="#0b0c0e" stroke-width="2" />
+            <rect x="2" y="118" width="196" height="12" rx="6" fill="#0b0c0e" />
+          </g>
+          <!-- Beutel Kaffeebohnen (100 x 120) -->
+          <g id="bohnen">
+            <path d="M18 22 L82 22 L92 112 Q50 120 8 112 Z" fill="#c9a27e" stroke="#0b0c0e" stroke-width="2.6" stroke-linejoin="round" />
+            <path d="M18 22 L26 8 L74 8 L82 22" fill="#b38b66" stroke="#0b0c0e" stroke-width="2.6" stroke-linejoin="round" />
+            <rect x="26" y="46" width="48" height="42" rx="8" fill="#fff" stroke="#0b0c0e" stroke-width="2" />
+            <ellipse cx="50" cy="67" rx="11" ry="15" fill="#5b3a29" transform="rotate(25 50 67)" />
+            <path d="M46 56 Q52 67 55 78" fill="none" stroke="#e0c4a6" stroke-width="2.4" stroke-linecap="round" />
+          </g>
+          <!-- Laufschuh (120 x 70) und Socke (80 x 110) -->
+          <g id="schuh">
+            <path d="M8 52 L10 18 Q12 10 22 12 L40 16 Q48 30 64 30 L92 36 Q112 40 114 52 L114 58 L8 58 Z" fill="#3b4a5c" stroke="#0b0c0e" stroke-width="2.6" stroke-linejoin="round" />
+            <path d="M8 58 H114 V63 Q114 68 108 68 H14 Q8 68 8 63 Z" fill="#fff" stroke="#0b0c0e" stroke-width="2.4" />
+            <path d="M46 24 L54 32 M56 22 L64 30" stroke="#fff" stroke-width="2.4" stroke-linecap="round" />
+          </g>
+          <g id="socke">
+            <path d="M22 6 H54 V62 L74 80 Q84 92 72 102 Q62 110 50 100 L26 78 Q20 72 22 64 Z" fill="#fff" stroke="#0b0c0e" stroke-width="2.6" stroke-linejoin="round" />
+            <path d="M22 18 H54" stroke="#0b0c0e" stroke-width="2.2" />
+            <path d="M23 27 H53" stroke="url(#gv)" stroke-width="6" />
+          </g>
+          <!-- Lucide-Icons (ISC) -->
+          <g id="i-wagen"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></g>
+          <g id="i-person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-paket"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><polyline points="3.29 7 12 12 20.71 7" /><path d="m7.5 4.27 9 5.15" /></g>
+          <g id="i-hoch"><path d="m5 12 7-7 7 7" /><path d="M12 19V5" /></g>
+          <g id="i-plus"><path d="M5 12h14" /><path d="M12 5v14" /></g>
+          <g id="i-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></g>
+          <g id="i-ziel"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+          <g id="i-megafon"><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></g>
+          <g id="i-trend"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></g>
+          <g id="i-laptop"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" /></g>
+          <g id="i-stecker"><path d="M12 22v-5" /><path d="M9 8V2" /><path d="M15 8V2" /><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" /></g>
+          <g id="i-stern"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></g>
+          <!-- Zustände -->
+          <g id="kreuz"><circle r="22" fill="#e5484d" /><path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#fff" stroke-width="4.2" stroke-linecap="round" /></g>
+          <g id="warn"><circle r="22" fill="#e5484d" /><path d="M0 -11 V3" stroke="#fff" stroke-width="4.6" stroke-linecap="round" /><circle cy="10" r="2.8" fill="#fff" /></g>
+          <g id="haken"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 L-2 6 L9 -6" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="plusrund"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 H8 M0 -8 V8" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" /></g>
+          <!-- schematisches Pop-up (280 x 120) -->
+          <g id="popup">
+            <rect x="6" y="8" width="280" height="120" rx="18" fill="rgba(11,12,14,0.14)" />
+            <rect x="0" y="0" width="280" height="120" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <rect x="24" y="28" width="150" height="16" rx="8" fill="#9aa3af" />
+            <rect x="24" y="58" width="220" height="12" rx="6" fill="#e5e7eb" />
+            <rect x="24" y="82" width="150" height="12" rx="6" fill="#e5e7eb" />
+            <path d="M246 22 L260 36 M260 22 L246 36" stroke="#6b7280" stroke-width="3" stroke-linecap="round" />
+          </g>
+        </defs>
+      </svg>
+
+      <!-- K1 Der Unterschied: "Ich würde dir am besten den Unterschied zwischen Upselling und Cross-Selling direkt in einem Warenkorb
+           zeigen." Upselling 1,87 / und 2,27 / Cross-Selling 2,37 / Warenkorb 4,03 / zeigen 4,43 -->
+      <section id="k1" class="karte clip" data-start="1.8" data-duration="3.47" data-track-index="1">
+        <div class="kicker">Der Unterschied</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k1-up">
+            <rect x="30" y="0" width="250" height="200" rx="28" class="rahmen" />
+            <g transform="translate(52 108) scale(2.6)" class="ico grau"><use href="#i-paket" /></g>
+            <path d="M126 140 C 150 140, 156 98, 168 82" fill="none" stroke="url(#gv)" stroke-width="5" stroke-linecap="round" />
+            <path d="M156 86 L170 78 L172 94" fill="none" stroke="#31adec" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+            <g transform="translate(166 26) scale(4.4)" class="ico" style="stroke-width:1.6"><use href="#i-paket" /></g>
+            <text x="155" y="246" text-anchor="middle" class="lab" style="font-size:32px">Upselling</text>
+          </g>
+          <text id="k1-vs" x="410" y="104" text-anchor="middle" style="font-size:44px;font-weight:900;fill:#9aa3af" opacity="0">vs.</text>
+          <g id="k1-cross" opacity="0">
+            <rect x="540" y="0" width="250" height="200" rx="28" class="rahmen" />
+            <g transform="translate(560 54) scale(4)" class="ico" style="stroke-width:1.7"><use href="#i-paket" /></g>
+            <use href="#plusrund" x="676" y="104" />
+            <g transform="translate(706 82) scale(2.5)" class="ico"><use href="#i-paket" /></g>
+            <text x="665" y="246" text-anchor="middle" class="lab" style="font-size:32px">Cross-Selling</text>
+          </g>
+          <g id="k1-wagen" opacity="0">
+            <rect x="362" y="130" width="96" height="96" rx="24" fill="url(#gvd)" />
+            <g transform="translate(380 148) scale(2.5)" class="ico"><use href="#i-wagen" /></g>
+          </g>
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="300" y="236" width="0" height="60" /></clipPath>
+          <text x="306" y="278" class="hand" style="font-size:44px" clip-path="url(#k1-clip)" transform="rotate(-3 410 262)">am Warenkorb</text>
+        </svg>
+      </section>
+
+      <!-- K2 Beispiel Kaffeeshop (DEMO): "Stell dir vor, du betreibst zum Beispiel einen Kaffeeshop. Und dein Kunde hat jetzt eine
+           Kaffeemaschine für 129 Euro ausgewählt." Stell 5,33 / Kaffeeshop 7,30 / Kunde 8,93 / Kaffeemaschine 9,70 / 129 10,53 /
+           ausgewählt 11,90 -->
+      <section id="k2" class="karte clip" data-start="5.27" data-duration="7.56" data-track-index="1">
+        <div class="kicker">Beispiel · Kaffeeshop</div>
+        <div class="badge">DEMO</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k2-seite">
+            <rect x="24" y="0" width="470" height="282" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <path d="M24 44 H494" stroke="#e5e7eb" stroke-width="2.5" />
+            <circle cx="50" cy="22" r="6" fill="#d1d5db" /><circle cx="70" cy="22" r="6" fill="#d1d5db" /><circle cx="90" cy="22" r="6" fill="#d1d5db" />
+          </g>
+          <text id="k2-name" x="118" y="30" class="klein" style="font-size:19px;font-weight:800;letter-spacing:0.08em" opacity="0">DEMO-SHOP · KAFFEE</text>
+          <g id="k2-bild" opacity="0">
+            <rect x="44" y="62" width="196" height="204" rx="18" fill="#f2f3f5" />
+            <use href="#maschine" transform="translate(67 82) scale(1.25)" />
+          </g>
+          <text id="k2-titel" x="260" y="100" class="lab" style="font-size:28px" opacity="0">Kaffeemaschine</text>
+          <text id="k2-preis" x="260" y="164" class="preis" style="font-size:52px" opacity="0">129 €</text>
+          <g id="k2-knopf" opacity="0">
+            <rect id="k2-knopfbg" x="260" y="200" width="214" height="56" rx="28" fill="#0b0c0e" />
+            <text id="k2-knopft1" x="367" y="235" text-anchor="middle" style="font-size:20px;font-weight:800;fill:#fff">Auswählen</text>
+            <text id="k2-knopft2" x="367" y="235" text-anchor="middle" style="font-size:20px;font-weight:800;fill:#0b0c0e" opacity="0">✓ Ausgewählt</text>
+          </g>
+          <g id="k2-kunde" opacity="0">
+            <circle cx="650" cy="110" r="58" fill="#e5e7eb" />
+            <g transform="translate(618.5 78.5) scale(2.62)" class="ico" style="stroke:#4b5563"><use href="#i-person" /></g>
+            <text x="650" y="212" text-anchor="middle" class="lab">Kunde</text>
+          </g>
+        </svg>
+        <div class="zeiger" id="k2-zeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+
+      <!-- K3 Upselling (DEMO): "Beim Upselling empfiehlst du jetzt tatsächlich ihm eine hochwertige Variante derselben Maschine, zum
+           Beispiel für 159 Euro. Wenn er aber wirklich mehr Funktionen braucht, dann kann das tatsächlich auch sinnvoll sein."
+           Beim 12,90 / empfiehlst 13,70 / hochwertige 15,70 / Variante 16,23 / derselben 17,17 / 159 19,10 / Euro 20,00 /
+           Funktionen 21,70 / sinnvoll 24,00 -->
+      <section id="k3" class="karte clip" data-start="12.83" data-duration="11.84" data-track-index="1">
+        <div class="kicker">Upselling · Beispiel</div>
+        <div class="badge">DEMO</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k3-alt">
+            <rect x="30" y="40" width="140" height="160" rx="24" class="rahmen" />
+            <use href="#maschine" transform="translate(43 58) scale(0.95)" />
+            <text x="100" y="246" text-anchor="middle" class="preis" style="font-size:36px">129 €</text>
+          </g>
+          <path id="k3-pfeil" pathLength="1" d="M182 128 C 232 128, 252 78, 296 74" fill="none" stroke="url(#gv)" stroke-width="6" stroke-linecap="round" />
+          <path id="k3-spitze" d="M282 62 L300 74 L284 88" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+          <g id="k3-gleich" opacity="0">
+            <text x="238" y="176" text-anchor="middle" class="klein" style="font-size:20px">dieselbe</text>
+            <text x="238" y="200" text-anchor="middle" class="klein" style="font-size:20px">Maschine</text>
+          </g>
+          <g id="k3-neu" opacity="0">
+            <rect x="310" y="0" width="215" height="236" rx="26" fill="#fff" stroke="url(#gv)" stroke-width="4" />
+            <use href="#maschine-plus" transform="translate(334 22) scale(1.38)" />
+          </g>
+          <text id="k3-nl" x="417" y="272" text-anchor="middle" class="lab" style="font-size:24px" opacity="0">hochwertige Variante</text>
+          <g id="k3-funk" opacity="0">
+            <use href="#plusrund" x="512" y="56" transform="translate(512 56) scale(0.8) translate(-512 -56)" />
+            <use href="#plusrund" x="524" y="104" transform="translate(524 104) scale(0.8) translate(-524 -104)" />
+            <use href="#plusrund" x="512" y="152" transform="translate(512 152) scale(0.8) translate(-512 -152)" />
+          </g>
+          <text id="k3-preis" x="562" y="56" class="preis" style="font-size:50px" opacity="0">159 €</text>
+          <g id="k3-diff" opacity="0">
+            <rect x="562" y="76" width="126" height="54" rx="16" fill="url(#gvd)" />
+            <text x="625" y="114" text-anchor="middle" class="preis" style="font-size:32px">+30 €</text>
+          </g>
+          <clipPath id="k3-clip"><rect id="k3-cliprect" x="552" y="150" width="0" height="64" /></clipPath>
+          <text x="558" y="196" class="hand" style="font-size:38px" clip-path="url(#k3-clip)" transform="rotate(-3 640 180)">mehr Funktionen</text>
+          <g id="k3-ok" opacity="0">
+            <use href="#haken" x="582" y="252" />
+            <text x="612" y="263" class="gtext" style="font-size:32px;font-weight:900">sinnvoll</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K4 Cross-Selling (DEMO): "Beim Cross-Selling hingegen bleibt die Maschine tatsächlich für 129 Euro einfach im Warenkorb und
+           empfiehlst stattdessen aber ein passendes Zubehör, wie zum Beispiel Kaffeebohnen." Beim 24,73 / bleibt 25,93 / 129 27,33 /
+           Warenkorb 28,73 / empfiehlst 29,77 / Zubehör 31,67 / Kaffeebohnen 33,30 -->
+      <section id="k4" class="karte clip" data-start="24.67" data-duration="9.43" data-track-index="1">
+        <div class="kicker">Cross-Selling · Beispiel</div>
+        <div class="badge">DEMO</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k4-korb">
+            <rect x="24" y="0" width="500" height="284" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(44 12) scale(1.15)" class="ico grau"><use href="#i-wagen" /></g>
+            <text x="82" y="33" class="zeile">WARENKORB</text>
+            <path d="M24 50 H524" stroke="#e5e7eb" stroke-width="2.5" />
+          </g>
+          <g id="k4-r1" opacity="0">
+            <use href="#maschine" transform="translate(44 62) scale(0.52)" />
+            <text x="120" y="108" class="lab" style="font-size:27px">Kaffeemaschine</text>
+            <text id="k4-p1" x="504" y="108" text-anchor="end" class="preis" style="font-size:32px">129 €</text>
+          </g>
+          <rect id="k4-hl" x="36" y="58" width="476" height="76" rx="14" fill="none" stroke="url(#gv)" stroke-width="3.5" opacity="0" />
+          <g id="k4-leer" opacity="0">
+            <rect x="36" y="146" width="476" height="76" rx="14" fill="none" stroke="#9aa3af" stroke-width="2.5" stroke-dasharray="9 8" />
+            <text id="k4-leer1" x="62" y="193" class="klein" style="font-size:24px">+ Empfehlung</text>
+            <text id="k4-leer2" x="62" y="193" class="klein" style="font-size:24px" opacity="0">+ passendes Zubehör</text>
+          </g>
+          <g id="k4-r2" opacity="0">
+            <rect x="36" y="146" width="476" height="76" rx="14" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3" />
+            <use href="#bohnen" transform="translate(52 150) scale(0.56)" />
+            <text x="120" y="194" class="lab" style="font-size:27px">Kaffeebohnen</text>
+            <text x="496" y="194" text-anchor="end" class="preis" style="font-size:32px">15 €</text>
+          </g>
+          <g id="k4-summe" opacity="0">
+            <path d="M44 236 H504" stroke="#d1d5db" stroke-width="2.5" />
+            <text x="48" y="271" class="zeile">SUMME</text>
+            <text x="504" y="273" text-anchor="end" class="preis" style="font-size:34px">144 €</text>
+          </g>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="548" y="56" width="0" height="70" /></clipPath>
+          <text x="556" y="106" class="hand" style="font-size:44px" clip-path="url(#k4-clip)" transform="rotate(-4 640 90)">bleibt drin</text>
+          <g id="k4-plus" opacity="0">
+            <rect x="606" y="140" width="120" height="120" rx="28" fill="url(#gvd)" />
+            <g transform="translate(630 164) scale(3)" class="ico" style="stroke-width:2.2"><use href="#i-plus" /></g>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K5 Zwei Methoden (DEMO): "Das klingt jetzt erst einmal nach zwei Methoden, um einfach den Bestellwert zu erhöhen."
+           Das 34,17 / zwei 35,60 / Bestellwert 36,70 -->
+      <section id="k5" class="karte clip" data-start="34.1" data-duration="4.13" data-track-index="1">
+        <div class="kicker">Zwei Methoden</div>
+        <div class="badge">DEMO</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k5-r1">
+            <rect x="24" y="14" width="776" height="118" rx="24" class="rahmen" />
+            <rect x="44" y="31" width="84" height="84" rx="20" fill="url(#gvd)" />
+            <g transform="translate(62 49) scale(2)" class="ico" style="stroke-width:2.4"><use href="#i-hoch" /></g>
+            <text x="150" y="66" class="lab" style="font-size:30px">Upselling</text>
+            <text x="150" y="108" style="font-size:30px;font-weight:700;fill:#374151">129 € → 159 €</text>
+          </g>
+          <g id="k5-r2" opacity="0">
+            <rect x="24" y="152" width="776" height="118" rx="24" class="rahmen" />
+            <rect x="44" y="169" width="84" height="84" rx="20" fill="url(#gvd)" />
+            <g transform="translate(62 187) scale(2)" class="ico" style="stroke-width:2.4"><use href="#i-plus" /></g>
+            <text x="150" y="204" class="lab" style="font-size:30px">Cross-Selling</text>
+            <text x="150" y="246" style="font-size:30px;font-weight:700;fill:#374151">129 € + 15 € = 144 €</text>
+          </g>
+          <g id="k5-wert" opacity="0">
+            <text x="672" y="58" text-anchor="middle" class="zeile">BESTELLWERT</text>
+            <rect x="610" y="70" width="124" height="50" rx="15" fill="url(#gvd)" />
+            <text x="672" y="106" text-anchor="middle" class="preis" style="font-size:30px">+30 €</text>
+            <text x="672" y="196" text-anchor="middle" class="zeile">BESTELLWERT</text>
+            <rect x="610" y="208" width="124" height="50" rx="15" fill="url(#gvd)" />
+            <text x="672" y="244" text-anchor="middle" class="preis" style="font-size:30px">+15 €</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K6 Die spannende Frage: "Aber die spannende Frage ist doch, passt überhaupt die Empfehlung zu dem Kauf?"
+           Aber 38,30 / passt 39,97 / Empfehlung 40,60 / Kauf 41,50 -->
+      <section id="k6" class="karte clip" data-start="38.23" data-duration="4.17" data-track-index="1">
+        <div class="kicker">Die spannende Frage</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k6-a">
+            <path d="M120 60 H360 V125 A25 25 0 0 0 360 175 V250 H120 Z" fill="#fff" stroke="#d1d5db" stroke-width="2.5" stroke-linejoin="round" />
+            <use href="#maschine" transform="translate(203 78) scale(0.62)" />
+            <text x="240" y="228" text-anchor="middle" class="lab" style="font-size:30px">Kauf</text>
+          </g>
+          <g id="k6-b">
+            <path d="M480 60 H720 V250 H480 V175 A25 25 0 0 1 480 125 Z" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3.5" stroke-linejoin="round" />
+            <g transform="translate(564 86) scale(3)" class="ico" style="stroke-width:1.8"><use href="#i-stern" /></g>
+            <text id="k6-bl" x="600" y="228" text-anchor="middle" class="lab" style="font-size:28px">Empfehlung</text>
+          </g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="300" y="0" width="0" height="58" /></clipPath>
+          <text x="308" y="44" class="hand" style="font-size:52px" clip-path="url(#k6-clip)" transform="rotate(-4 370 30)">passt?</text>
+        </svg>
+      </section>
+
+      <!-- K7 Falsches Beispiel (DEMO): "Und wenn du jetzt jemanden beim Kauf einer Einstiegsmaschine, zum Beispiel gleich eine
+           Profi-Maschine aufdrängst, dann kann ihn das natürlich auch sehr stark verunsichern." jemanden 42,47 /
+           Einstiegsmaschine 43,70 / Profi-Maschine 45,50 / aufdrängst 46,17 / sehr 48,33 / verunsichern 48,93
+           Preis 600 € aus dem Briefing (gesprochen ist er herausgeschnitten, siehe Übergabekarte) -->
+      <section id="k7" class="karte clip" data-start="42.4" data-duration="7.97" data-track-index="1">
+        <div class="kicker">Falsches Beispiel</div>
+        <div class="badge">DEMO</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k7-kunde">
+            <circle cx="92" cy="126" r="54" fill="#e5e7eb" />
+            <g transform="translate(62 96) scale(2.5)" class="ico" style="stroke:#4b5563"><use href="#i-person" /></g>
+            <text x="92" y="214" text-anchor="middle" class="lab" style="font-size:24px">Kunde</text>
+          </g>
+          <g id="k7-klein" opacity="0">
+            <use href="#maschine" transform="translate(176 104) scale(0.72)" />
+            <text x="219" y="226" text-anchor="middle" class="lab" style="font-size:24px">Einstieg</text>
+          </g>
+          <g id="k7-profi" opacity="0">
+            <text x="450" y="30" class="lab" style="font-size:26px">Profi-Maschine</text>
+            <text x="760" y="32" text-anchor="end" class="preis" style="font-size:36px">600 €</text>
+            <use href="#profi" transform="translate(450 50) scale(1.55)" />
+            <use href="#warn" x="752" y="78" />
+          </g>
+          <g id="k7-frage" opacity="0">
+            <text x="128" y="62" class="hand" style="font-size:54px;fill:#0b0c0e">?</text>
+            <text x="150" y="44" class="hand" style="font-size:40px;fill:#0b0c0e">?</text>
+          </g>
+          <clipPath id="k7-clip"><rect id="k7-cliprect" x="10" y="222" width="0" height="64" /></clipPath>
+          <text x="16" y="270" class="hand" style="font-size:42px" clip-path="url(#k7-clip)" transform="rotate(-3 110 256)">verunsichert</text>
+        </svg>
+      </section>
+
+      <!-- K8 Pop-ups (schematisch): "Und drei Pop-ups hintereinander machen tatsächlich die Sache nicht unbedingt besser."
+           Und 50,43 / drei 50,53 / Pop-ups 50,77 / hintereinander 51,17 / nicht 53,07 / besser 53,73 -->
+      <section id="k8" class="karte clip" data-start="50.37" data-duration="4.2" data-track-index="1">
+        <div class="kicker">Drei Pop-ups hintereinander</div>
+        <div class="badge">SCHEMA</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k8-handy">
+            <rect x="56" y="0" width="210" height="286" rx="28" fill="#fff" stroke="#0b0c0e" stroke-width="3" />
+            <rect x="76" y="26" width="170" height="118" rx="14" fill="#f2f3f5" />
+            <use href="#maschine" transform="translate(126 38) scale(0.72)" />
+            <rect x="76" y="158" width="120" height="14" rx="7" fill="#9aa3af" />
+            <rect x="76" y="182" width="80" height="12" rx="6" fill="#e5e7eb" />
+            <rect x="76" y="220" width="170" height="46" rx="23" fill="#0b0c0e" />
+            <text x="161" y="250" text-anchor="middle" style="font-size:20px;font-weight:800;fill:#fff">Kaufen</text>
+          </g>
+          <g id="k8-p1" opacity="0"><use href="#popup" x="120" y="16" /></g>
+          <g id="k8-p2" opacity="0"><use href="#popup" x="160" y="76" /></g>
+          <g id="k8-p3" opacity="0"><use href="#popup" x="200" y="136" /></g>
+          <use id="k8-x" href="#kreuz" x="508" y="140" opacity="0" />
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="540" y="168" width="0" height="70" /></clipPath>
+          <text x="548" y="220" class="hand" style="font-size:48px" clip-path="url(#k8-clip)" transform="rotate(-4 650 200)">nicht besser</text>
+        </svg>
+      </section>
+
+      <!-- K9 Erst eine Empfehlung: "Ich würde deshalb hier erst einmal mit einer Empfehlung starten, die zum Beispiel einen klaren
+           Nutzen hat." Ich 54,63 / mit 55,87 / Empfehlung 56,23 / klaren 57,90 / Nutzen 58,23 -->
+      <section id="k9" class="karte clip" data-start="54.57" data-duration="4.23" data-track-index="1">
+        <div class="kicker">Mein Start</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k9-stapel">
+            <g opacity="0.45">
+              <rect x="40" y="40" width="200" height="86" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+              <rect x="66" y="84" width="200" height="86" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+              <rect x="92" y="128" width="200" height="86" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+              <rect x="112" y="154" width="110" height="12" rx="6" fill="#9aa3af" />
+              <rect x="112" y="178" width="150" height="10" rx="5" fill="#e5e7eb" />
+            </g>
+            <text x="166" y="254" text-anchor="middle" class="lab grau" style="font-size:24px">drei Pop-ups</text>
+          </g>
+          <path id="k9-pfeil" pathLength="1" d="M312 130 H 404" fill="none" stroke="url(#gvh)" stroke-width="6" stroke-linecap="round" />
+          <path id="k9-spitze" d="M390 116 L406 130 L390 144" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+          <g id="k9-eine" opacity="0">
+            <rect x="430" y="14" width="360" height="232" rx="28" fill="#fff" stroke="url(#gv)" stroke-width="4" />
+            <rect x="454" y="40" width="100" height="100" rx="24" fill="url(#gvd)" />
+            <g transform="translate(474 60) scale(2.5)" class="ico"><use href="#i-ziel" /></g>
+            <text x="578" y="84" class="lab" style="font-size:30px">eine</text>
+            <text x="578" y="122" class="lab" style="font-size:30px">Empfehlung</text>
+          </g>
+          <use id="k9-ok" href="#haken" x="776" y="28" opacity="0" />
+          <clipPath id="k9-clip"><rect id="k9-cliprect" x="450" y="160" width="0" height="76" /></clipPath>
+          <text x="458" y="214" class="hand" style="font-size:50px" clip-path="url(#k9-clip)" transform="rotate(-3 600 196)">klarer Nutzen</text>
+        </svg>
+      </section>
+
+      <!-- K10 Passende Empfehlungen: "Bei der Maschine könnten es dann auch tatsächlich Bohnen sein, bei Laufschuhen zum Beispiel
+           passende Socken oder einfach bei einem technischen Produkt vielleicht eine kompatible Erweiterung." Bei 58,87 /
+           Maschine 59,10 / Bohnen 60,73 / Laufschuhen 61,70 / Socken 63,10 / technischen 64,50 / kompatible 66,13 -->
+      <section id="k10" class="karte clip" data-start="58.8" data-duration="8.37" data-track-index="1">
+        <div class="kicker">Passt zum Kauf · Beispiele</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k10-a1"><rect x="40" y="2" width="84" height="84" rx="20" class="rahmen" /><use href="#maschine" transform="translate(52 10) scale(0.52)" /><text x="142" y="55" class="lab" style="font-size:27px">Kaffeemaschine</text></g>
+          <use id="k10-p1" href="#plusrund" x="430" y="44" opacity="0" />
+          <g id="k10-b1" opacity="0"><rect x="480" y="2" width="84" height="84" rx="20" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3" /><use href="#bohnen" transform="translate(494 9) scale(0.58)" /><text x="582" y="55" class="lab" style="font-size:27px">Bohnen</text></g>
+          <g id="k10-a2" opacity="0"><rect x="40" y="100" width="84" height="84" rx="20" class="rahmen" /><use href="#schuh" transform="translate(48 123) scale(0.57)" /><text x="142" y="153" class="lab" style="font-size:27px">Laufschuhe</text></g>
+          <use id="k10-p2" href="#plusrund" x="430" y="142" opacity="0" />
+          <g id="k10-b2" opacity="0"><rect x="480" y="100" width="84" height="84" rx="20" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3" /><use href="#socke" transform="translate(499 108) scale(0.62)" /><text x="582" y="153" class="lab" style="font-size:27px">Socken</text></g>
+          <g id="k10-a3" opacity="0"><rect x="40" y="198" width="84" height="84" rx="20" class="rahmen" /><g transform="translate(55 213) scale(2.25)" class="ico"><use href="#i-laptop" /></g><text x="142" y="234" class="lab" style="font-size:25px">technisches</text><text x="142" y="264" class="lab" style="font-size:25px">Produkt</text></g>
+          <use id="k10-p3" href="#plusrund" x="430" y="240" opacity="0" />
+          <g id="k10-b3" opacity="0"><rect x="480" y="198" width="84" height="84" rx="20" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3" /><g transform="translate(495 213) scale(2.25)" class="ico"><use href="#i-stecker" /></g><text x="582" y="234" class="lab" style="font-size:25px">kompatible</text><text x="582" y="264" class="lab" style="font-size:25px">Erweiterung</text></g>
+        </svg>
+      </section>
+
+      <!-- K11 Was du misst (AOV / Conversion / Marge): "Aber miss hier tatsächlich auch nicht unbedingt nur den durchschnittlichen
+           Warenkorbwert dabei, sondern eben auch, ob die Conversion Rate zum Beispiel darunter leidet und eben, was nach Abzug der
+           Kosten tatsächlich am Ende übrig bleibt." Aber 67,23 / durchschnittlichen 69,50 / Warenkorbwert 70,03 / Conversion 72,70 /
+           leidet 73,97 / Abzug 75,27 / Kosten 75,77 / übrig 77,13. Keine Zahlen, nur Richtungen. -->
+      <section id="k11" class="karte clip" data-start="67.17" data-duration="11.1" data-track-index="1">
+        <div class="kicker">Nicht nur den Warenkorbwert</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k11-s1" opacity="0.35">
+            <rect x="20" y="0" width="244" height="286" rx="22" fill="#fff" stroke="#e5e7eb" stroke-width="2.5" />
+            <text x="40" y="40" class="lab" style="font-size:24px">Ø Warenkorbwert</text>
+            <text x="40" y="66" class="zeile">AOV</text>
+            <path d="M40 262 H244" stroke="#d1d5db" stroke-width="2.5" />
+            <rect id="k11-b1" x="66" y="182" width="64" height="80" rx="10" fill="url(#gvd)" />
+          </g>
+          <g id="k11-t1" opacity="0"><rect x="150" y="104" width="74" height="74" rx="18" fill="url(#gvd)" /><g transform="translate(163 117) scale(2)" class="ico" style="stroke-width:2.2"><use href="#i-trend" /></g></g>
+          <g id="k11-s2" opacity="0.35">
+            <rect x="288" y="0" width="244" height="286" rx="22" fill="#fff" stroke="#e5e7eb" stroke-width="2.5" />
+            <text x="308" y="40" class="lab" style="font-size:24px">Conversion Rate</text>
+            <text x="308" y="66" class="zeile">CR</text>
+            <path d="M308 262 H512" stroke="#d1d5db" stroke-width="2.5" />
+            <rect id="k11-b2g" x="334" y="132" width="64" height="130" rx="10" fill="none" stroke="#9aa3af" stroke-width="2.5" stroke-dasharray="8 7" opacity="0" />
+            <rect id="k11-b2" x="334" y="132" width="64" height="130" rx="10" fill="#9aa3af" />
+          </g>
+          <clipPath id="k11-clip"><rect id="k11-cliprect" x="408" y="104" width="0" height="64" /></clipPath>
+          <text x="412" y="150" class="hand" style="font-size:42px" clip-path="url(#k11-clip)" transform="rotate(-4 460 136)">leidet?</text>
+          <g id="k11-s3" opacity="0.35">
+            <rect x="556" y="0" width="244" height="286" rx="22" fill="#fff" stroke="#e5e7eb" stroke-width="2.5" />
+            <text x="576" y="40" class="lab" style="font-size:24px">Marge</text>
+            <text x="576" y="66" class="zeile">NACH KOSTEN</text>
+            <path d="M576 262 H780" stroke="#d1d5db" stroke-width="2.5" />
+            <rect id="k11-rest" x="602" y="192" width="64" height="70" rx="10" fill="url(#gvd)" />
+            <g id="k11-kosten">
+              <rect x="602" y="96" width="64" height="94" rx="10" fill="#fff" stroke="#e5484d" stroke-width="3" stroke-dasharray="8 6" />
+              <text x="634" y="150" text-anchor="middle" style="font-size:30px;font-weight:900;fill:#e5484d">−</text>
+            </g>
+          </g>
+          <text id="k11-kl" x="680" y="150" class="klein" style="font-size:22px" opacity="0">Kosten</text>
+          <clipPath id="k11-clip3"><rect id="k11-cliprect3" x="674" y="186" width="0" height="64" /></clipPath>
+          <text x="680" y="232" class="hand" style="font-size:42px" clip-path="url(#k11-clip3)" transform="rotate(-4 720 216)">übrig</text>
+        </svg>
+      </section>
+
+      <!-- K12 Die richtige Stelle (DEMO): "Mein Tipp ist eben außerdem, die Empfehlung an der richtigen Stelle zu platzieren. Ein Upgrade
+           gehört eher zu der Produktauswahl und ein Zubehörartikel kann dann tatsächlich auch mal im Warenkorb sinnvoll sein."
+           Mein 78,33 / Empfehlung 79,67 / richtigen 80,50 / Upgrade 82,50 / Produktauswahl 83,80 / Zubehörartikel 85,17 / Warenkorb 87,13 -->
+      <section id="k12" class="karte clip" data-start="78.27" data-duration="9.73" data-track-index="1">
+        <div class="kicker">Die richtige Stelle</div>
+        <div class="badge">DEMO</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k12-l">
+            <text x="40" y="22" class="zeile">PRODUKTAUSWAHL</text>
+            <rect x="30" y="34" width="360" height="252" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <rect x="50" y="52" width="86" height="86" rx="14" fill="#f2f3f5" />
+            <use href="#maschine" transform="translate(60 60) scale(0.55)" />
+            <text x="152" y="88" class="lab" style="font-size:24px">Kaffeemaschine</text>
+            <text x="152" y="126" class="preis" style="font-size:32px">129 €</text>
+          </g>
+          <g id="k12-r">
+            <text x="440" y="22" class="zeile">IM WARENKORB</text>
+            <rect x="430" y="34" width="360" height="252" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(452 54) scale(1.1)" class="ico grau"><use href="#i-wagen" /></g>
+            <text x="490" y="76" class="klein" style="font-size:20px">1 Artikel</text>
+            <use href="#maschine" transform="translate(452 96) scale(0.36)" />
+            <text x="504" y="126" class="lab" style="font-size:22px">Kaffeemaschine</text>
+            <text x="770" y="126" text-anchor="end" class="preis" style="font-size:24px">129 €</text>
+          </g>
+          <g id="k12-empf" opacity="0">
+            <rect x="314" y="154" width="192" height="58" rx="29" fill="#0b0c0e" />
+            <g transform="translate(330 168) scale(1.25)" class="ico" style="stroke:#fff"><use href="#i-stern" /></g>
+            <text x="366" y="191" style="font-size:22px;font-weight:800;fill:#fff">Empfehlung</text>
+          </g>
+          <g id="k12-pin" opacity="0"><g transform="translate(386 86) scale(2)" class="ico" style="stroke:#31adec;stroke-width:2.4"><use href="#i-pin" /></g></g>
+          <g id="k12-up" opacity="0">
+            <rect x="48" y="160" width="324" height="104" rx="18" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3" />
+            <rect x="64" y="180" width="64" height="64" rx="16" fill="url(#gvd)" />
+            <g transform="translate(78 194) scale(1.5)" class="ico" style="stroke-width:2.6"><use href="#i-hoch" /></g>
+            <text x="146" y="202" class="zeile">UPGRADE</text>
+            <text x="146" y="238" class="lab" style="font-size:25px">Variante 159 €</text>
+          </g>
+          <g id="k12-zu" opacity="0">
+            <rect x="448" y="160" width="324" height="104" rx="18" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3" />
+            <rect x="464" y="180" width="64" height="64" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="2" />
+            <use href="#bohnen" transform="translate(471 184) scale(0.5)" />
+            <text x="546" y="202" class="zeile">ZUBEHÖR</text>
+            <text x="546" y="238" class="lab" style="font-size:25px">Bohnen 15 €</text>
+          </g>
+          <use id="k12-ok1" href="#haken" x="372" y="40" opacity="0" />
+          <use id="k12-ok2" href="#haken" x="772" y="40" opacity="0" />
+        </svg>
+      </section>
+
+      <!-- K13 Fazit, Schluss laut Briefing: "Die Empfehlung soll passen, nicht stören." Gesprochen: "Upselling und Cross-Selling
+           funktionieren für mich persönlich besonders dann gut, wenn sie tatsächlich auch eine Kaufentscheidung erleichtern. Und nicht
+           einfach nur, wenn sie möglichst aggressiv noch etwas verkaufen sollen." Upselling 88,07 / Cross-Selling 88,73 /
+           besonders 90,57 / Kaufentscheidung 93,10 / erleichtern 93,73 / möglichst 95,93 / aggressiv 96,40 -->
+      <section id="k13" class="karte clip" data-start="88" data-duration="10.6" data-track-index="1">
+        <div class="kicker">Mein Fazit</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <text x="30" y="40" style="font-size:44px;font-weight:800;fill:#0b0c0e;letter-spacing:-0.02em">Die Empfehlung soll <tspan id="k13-passen" fill="url(#gvp)">passen,</tspan></text>
+          <text x="30" y="96" style="font-size:44px;font-weight:800;fill:#0b0c0e;letter-spacing:-0.02em">nicht stören.</text>
+          <path id="k13-linie" pathLength="1" d="M440 54 H 600" fill="none" stroke="url(#gvh)" stroke-width="6" stroke-linecap="round" />
+          <g id="k13-t1">
+            <rect x="350" y="64" width="196" height="44" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2" />
+            <g transform="translate(364 74) scale(1)" class="ico"><use href="#i-hoch" /></g>
+            <text x="396" y="94" style="font-size:22px;font-weight:800;fill:#0b0c0e">Upselling</text>
+          </g>
+          <g id="k13-t2" opacity="0">
+            <rect x="560" y="64" width="232" height="44" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2" />
+            <g transform="translate(574 74) scale(1)" class="ico"><use href="#i-plus" /></g>
+            <text x="606" y="94" style="font-size:22px;font-weight:800;fill:#0b0c0e">Cross-Selling</text>
+          </g>
+          <g id="k13-gut" opacity="0">
+            <rect x="24" y="146" width="380" height="132" rx="24" fill="#fff" stroke="url(#gv)" stroke-width="3.5" />
+            <rect x="44" y="172" width="80" height="80" rx="20" fill="url(#gvd)" />
+            <g transform="translate(60 188) scale(2)" class="ico" style="stroke-width:2.2"><use href="#i-person" /></g>
+            <text x="142" y="206" class="lab" style="font-size:25px">Kaufentscheidung</text>
+            <text x="142" y="242" class="lab" style="font-size:25px">erleichtern</text>
+          </g>
+          <use id="k13-ok" href="#haken" x="384" y="160" opacity="0" />
+          <g id="k13-schlecht" opacity="0">
+            <rect x="420" y="146" width="376" height="132" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <rect x="440" y="172" width="80" height="80" rx="20" fill="#e5e7eb" />
+            <g transform="translate(456 188) scale(2)" class="ico"><use href="#i-megafon" /></g>
+            <text x="538" y="206" class="lab" style="font-size:24px">möglichst aggressiv</text>
+            <text x="538" y="242" class="lab" style="font-size:24px">verkaufen</text>
+          </g>
+          <path id="k13-strich" pathLength="1" d="M532 228 L 776 196" fill="none" stroke="#e5484d" stroke-width="6" stroke-linecap="round" />
+          <use id="k13-x" href="#kreuz" x="776" y="160" opacity="0" />
+        </svg>
+      </section>
+
+      <!-- K14 Folgen (CTA): nur das Folgen-Symbol. Wenn 98,67 (Karte) / Tipps 99,53 (Ring) / drücke 101,43 (Zeiger) / Plus 102,20
+           (angetippt, wird zum Haken); bleibt bis zum Ende -->
+      <section id="k14" class="folgekarte clip" data-start="98.6" data-duration="4.33" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker (keine leere Karte: der erste Inhalt kommt mit), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const b = document.querySelector(id + " .badge");
+        if (b) tl.fromTo(b, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, an + 0.06);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5, ease = "power2.out") {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, t);
+      }
+      // Schreibschrift erscheint von links nach rechts (Clip-Rechteck wächst)
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      // Linie unter "passen," genau unter dem Wort (gemessen, nicht geschätzt)
+      const tp = document.getElementById("k13-passen");
+      const x0 = tp.getStartPositionOfChar(0).x, x1 = x0 + tp.getComputedTextLength();
+      document.getElementById("k13-linie").setAttribute("d", `M${x0 + 2} 54 H ${x1 - 12}`);
+      document.getElementById("gvp").setAttribute("x1", x0);
+      document.getElementById("gvp").setAttribute("x2", x1);
+      gsap.set("#k3-pfeil, #k9-pfeil, #k13-linie, #k13-strich", { strokeDasharray: 1, strokeDashoffset: 1 });
+
+      // K1 Upselling (Paket wird größer) vs. Cross-Selling (Paket + Paket), auf "Warenkorb" der Warenkorb, "am Warenkorb"
+      karte("#k1", 1.80, 5.27);
+      tl.fromTo("#k1-up", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 1.84);
+      ein("#k1-vs", 2.20);
+      tl.fromTo("#k1-cross", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 2.30);
+      tl.to("#k1-vs", { y: -14, duration: 0.3, ease: "power2.inOut" }, 3.97);
+      pop("#k1-wagen", 3.97);
+      schreibe("#k1-cliprect", 230, 4.37, 0.45);
+
+      // K2 Demo-Shop: Shop auf "Kaffeeshop", Kunde, Maschine mit Titel, 129 €, Zeiger wählt auf "ausgewählt"
+      karte("#k2", 5.27, 12.83);
+      tl.fromTo("#k2-seite", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 5.31);
+      ein("#k2-name", 7.23);
+      tl.fromTo("#k2-kunde", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 8.87);
+      pop("#k2-bild", 9.63, 0.35);
+      ein("#k2-titel", 9.63);
+      tl.fromTo("#k2-preis", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 10.47);
+      ein("#k2-knopf", 10.80);
+      tl.fromTo("#k2-zeiger", { opacity: 0, x: 600, y: 230 }, { opacity: 1, x: 570, y: 236, duration: 0.15, ease: "power2.out" }, 11.20);
+      tl.to("#k2-zeiger", { x: 372, y: 270, duration: 0.45, ease: "power2.inOut" }, 11.30);
+      tl.to("#k2-zeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 11.75);
+      tl.to("#k2-zeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 11.83);
+      tl.to("#k2-knopfbg", { fill: "#00d088", duration: 0.15 }, 11.83);
+      tl.to("#k2-knopft1", { opacity: 0, duration: 0.12 }, 11.83);
+      tl.to("#k2-knopft2", { opacity: 1, duration: 0.15 }, 11.85);
+      tl.to("#k2-zeiger", { x: 400, y: 292, duration: 0.25, ease: "power2.out" }, 12.0);
+      tl.to("#k2-zeiger", { opacity: 0, duration: 0.3, ease: "power2.in" }, 12.4);
+
+      // K3 Upselling: gewählte Maschine 129 €, Pfeil auf "empfiehlst", Variante, "dieselbe Maschine", 159 €, +30 €, Funktionen, sinnvoll
+      karte("#k3", 12.83, 24.67);
+      tl.fromTo("#k3-alt", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 12.87);
+      zeichne("#k3-pfeil", 13.63, 0.45);
+      tl.fromTo("#k3-spitze", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 14.0);
+      tl.fromTo("#k3-neu", { opacity: 0, scale: 0.86, svgOrigin: "417 236" }, { opacity: 1, scale: 1, duration: 0.45, ease: "power3.out" }, 15.63);
+      ein("#k3-nl", 16.17);
+      ein("#k3-gleich", 17.10);
+      tl.fromTo("#k3-preis", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 19.03);
+      pop("#k3-diff", 19.93);
+      tl.fromTo("#k3-funk", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 21.63);
+      schreibe("#k3-cliprect", 256, 21.70, 0.5);
+      tl.fromTo("#k3-ok", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 23.93);
+
+      // K4 Cross-Selling: Warenkorb, Maschine 129 € bleibt, "bleibt drin", Empfehlungs-Platz, Zubehör, Bohnen 15 €, Summe 144 €
+      karte("#k4", 24.67, 34.10);
+      tl.fromTo("#k4-korb", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 24.71);
+      tl.fromTo("#k4-r1", { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 25.87);
+      tl.fromTo("#k4-hl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 27.27);
+      tl.to("#k4-hl", { opacity: 0, duration: 0.4 }, 29.40);
+      schreibe("#k4-cliprect", 230, 28.67, 0.45);
+      tl.fromTo("#k4-leer", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 29.70);
+      pop("#k4-plus", 29.70);
+      tl.to("#k4-leer1", { opacity: 0, duration: 0.15 }, 31.60);
+      tl.to("#k4-leer2", { opacity: 1, duration: 0.2 }, 31.62);
+      tl.to("#k4-leer", { opacity: 0, duration: 0.2 }, 33.23);
+      tl.fromTo("#k4-r2", { opacity: 0, scale: 0.97, svgOrigin: "274 184" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 33.23);
+      tl.fromTo("#k4-summe", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, 33.48);
+
+      // K5 Zwei Methoden: Upselling 129 → 159, auf "zwei" Cross-Selling 129 + 15 = 144, auf "Bestellwert" +30 € und +15 €
+      karte("#k5", 34.10, 38.23);
+      tl.fromTo("#k5-r1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 34.14);
+      tl.fromTo("#k5-r2", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 35.53);
+      tl.fromTo("#k5-wert", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 36.63);
+
+      // K6 Puzzle: Empfehlung rückt auf "passt" an den Kauf heran, bleibt knapp davor, "passt?" auf "Kauf"
+      karte("#k6", 38.23, 42.40);
+      tl.fromTo("#k6-a", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 38.27);
+      tl.fromTo("#k6-b", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 38.33);
+      tl.to("#k6-b", { x: -112, duration: 0.9, ease: "power2.inOut" }, 39.90);
+      schreibe("#k6-cliprect", 160, 41.43, 0.4);
+
+      // K7 Falsches Beispiel: Kunde, Einstiegsmaschine, Profi-Maschine 600 € (Warnung), drängt sich auf, Kunde verunsichert
+      karte("#k7", 42.40, 50.37);
+      tl.fromTo("#k7-kunde", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 42.44);
+      tl.fromTo("#k7-klein", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 43.63);
+      tl.fromTo("#k7-profi", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 45.43);
+      tl.to("#k7-profi", { x: -96, duration: 0.6, ease: "power2.inOut" }, 46.10);
+      tl.to("#k7-klein", { opacity: 0.3, x: -18, duration: 0.6, ease: "power2.inOut" }, 46.10);
+      tl.fromTo("#k7-frage", { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 48.27);
+      schreibe("#k7-cliprect", 230, 48.87, 0.45);
+
+      // K8 Pop-ups nacheinander auf "drei", "Pop-ups", "hintereinander"; Kreuz auf "nicht", "nicht besser"
+      karte("#k8", 50.37, 54.57);
+      tl.fromTo("#k8-handy", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 50.40);
+      pop("#k8-p1", 50.47, 0.25);
+      pop("#k8-p2", 50.70, 0.25);
+      pop("#k8-p3", 51.10, 0.25);
+      badge("#k8-x", 53.00);
+      schreibe("#k8-cliprect", 260, 53.67, 0.45);
+
+      // K9 Statt Stapel eine Empfehlung: Pfeil auf "mit", Empfehlung, Haken auf "klaren", "klarer Nutzen"
+      karte("#k9", 54.57, 58.80);
+      tl.fromTo("#k9-stapel", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 54.61);
+      zeichne("#k9-pfeil", 55.80, 0.35);
+      tl.fromTo("#k9-spitze", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 56.05);
+      pop("#k9-eine", 56.17, 0.35);
+      badge("#k9-ok", 57.83);
+      schreibe("#k9-cliprect", 300, 58.17, 0.5);
+
+      // K10 Paare auf ihren Wörtern: Maschine + Bohnen, Laufschuhe + Socken, Technik + kompatible Erweiterung
+      karte("#k10", 58.80, 67.17);
+      tl.fromTo("#k10-a1", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 58.84);
+      badge("#k10-p1", 60.67); pop("#k10-b1", 60.67);
+      tl.fromTo("#k10-a2", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 61.63);
+      badge("#k10-p2", 63.03); pop("#k10-b2", 63.03);
+      tl.fromTo("#k10-a3", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 64.43);
+      badge("#k10-p3", 66.07); pop("#k10-b3", 66.07);
+
+      // K11 Gegenüberstellung AOV / Conversion / Marge: Spalten werden auf ihrem Wort aktiv
+      karte("#k11", 67.17, 78.27);
+      tl.to("#k11-s1", { opacity: 1, duration: 0.3 }, 69.43);
+      tl.fromTo("#k11-b1", { attr: { y: 182, height: 80 } }, { attr: { y: 112, height: 150 }, duration: 0.6, ease: "power2.out" }, 69.97);
+      pop("#k11-t1", 70.10);
+      tl.to("#k11-s2", { opacity: 1, duration: 0.3 }, 72.63);
+      tl.to("#k11-b2g", { opacity: 1, duration: 0.2 }, 73.90);
+      tl.to("#k11-b2", { attr: { y: 192, height: 70 }, duration: 0.6, ease: "power2.inOut" }, 73.90);
+      schreibe("#k11-cliprect", 120, 74.05, 0.4);
+      tl.to("#k11-s3", { opacity: 1, duration: 0.3 }, 75.20);
+      ein("#k11-kl", 75.70);
+      tl.to("#k11-kosten", { y: 40, opacity: 0, duration: 0.7, ease: "power2.in" }, 76.0);
+      tl.to("#k11-kl", { opacity: 0, duration: 0.3 }, 76.4);
+      schreibe("#k11-cliprect3", 120, 77.07, 0.4);
+
+      // K12 Richtige Stelle: Empfehlung, Pin, Upgrade in die Produktauswahl, Zubehör in den Warenkorb, je ein Haken
+      karte("#k12", 78.27, 88.00);
+      tl.fromTo("#k12-l", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 78.31);
+      tl.fromTo("#k12-r", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 78.38);
+      pop("#k12-empf", 79.60);
+      tl.fromTo("#k12-pin", { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 80.43);
+      tl.to("#k12-empf", { opacity: 0, duration: 0.2 }, 82.43);
+      tl.to("#k12-pin", { opacity: 0, duration: 0.2 }, 82.43);
+      tl.fromTo("#k12-up", { opacity: 0, x: 120, scale: 0.92, svgOrigin: "210 212" }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "power3.out" }, 82.43);
+      badge("#k12-ok1", 83.73);
+      tl.fromTo("#k12-zu", { opacity: 0, x: -120, scale: 0.92, svgOrigin: "610 212" }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "power3.out" }, 85.10);
+      badge("#k12-ok2", 87.07);
+
+      // K13 Fazit: "Die Empfehlung soll passen, nicht stören." mit Upselling / Cross-Selling, Linie, erleichtern ✓, aggressiv ✕
+      karte("#k13", 88.00, 98.60);
+      ein("#k13-t1", 88.04);
+      ein("#k13-t2", 88.67);
+      zeichne("#k13-linie", 90.50, 0.45);
+      tl.fromTo("#k13-gut", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 93.03);
+      badge("#k13-ok", 93.67);
+      tl.fromTo("#k13-schlecht", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 95.87);
+      zeichne("#k13-strich", 96.33, 0.35);
+      badge("#k13-x", 96.33);
+
+      // K14 Folgen: Karte auf "Wenn", Ring auf "Tipps", Zeiger auf "drücke", Plus auf "Plus" angetippt, wird zum Haken
+      tl.fromTo("#k14", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 98.60);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 99.47);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 101.37);
+      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.6, ease: "power2.inOut" }, 101.50);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 102.05);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 102.13);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 102.13);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 102.13);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 102.15);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 102.15);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 102.15);
+      tl.to("#fzeiger", { x: 132, y: 128, duration: 0.25, ease: "power2.out" }, 102.33);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.3, ease: "power2.in" }, 102.6);
+
+      tl.seek(0);
+      window.__timelines["upselling-skizzen"] = tl;
+    </script>
+  </body>
+</html>
