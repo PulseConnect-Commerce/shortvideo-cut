@@ -1,0 +1,451 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', Vorlagen hyperframes/upselling-skizzen, hyperframes/rabattcodes-skizzen) und Quelle-groß-Fenster (q1-q4, in Video.tsx QUELLEN) für S07 · Produktvarianten strukturieren. Sekunden im geschnittenen Video (cut.json, 133,27 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, klick (0,12) auf jeder Quelle und jedem Tippen des Zeigers, pop (0,10) nur auf '12' und dem Folgen-Plus, success (0,10) auf richtige Farbe, sinnvoll und 'alle drei funktionieren'. Gebaut in hyperframes/varianten-skizzen/index.html. Hoodies, Bestände und Artikelnummern sind gezeichnete Beispiele (BEISPIEL/SCHEMA), keine Shopify-Oberfläche.",
+ "karten": [
+  {
+   "id": "k0",
+   "wort": "eine (Menge Zeit)",
+   "text": "Weggabelung: Varianten → Zeit sparen ✓ (Zeit/ersparen) oder Chaos ✕ (Chaos/einhandeln), handschriftlich oder",
+   "start": 4.33,
+   "ende": 8,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 4.33,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 5.1,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 7.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "wort": "Beispiel",
+   "text": "BEISPIEL Hoodie: S M L XL auf 'vier Größen', Schwarz/Blau/Grau auf 'drei Farben', 12 Felder und '4 Größen × 3 Farben = 12' auf 'zwölf'",
+   "start": 8.73,
+   "ende": 14.95,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 8.73,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 10.2,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 11.1,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 13.33,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Ich (würde dafür normalerweise)",
+   "text": "Quelle groß: Shopify Help Center 'Varianten', markiert 'Du kannst Varianten zu einem Produkt hinzufügen, das mehr als eine Option hat (z. B. Größe oder Farbe). Jede Kombination von Optionswerten für ein Produkt kann eine Variante dieses Produkts sein.'",
+   "start": 14.95,
+   "ende": 19.55,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 14.95,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "statt",
+   "text": "1 Produkt mit 12 Varianten (Farben, Größen) statt 12 fast identischer Produkte (auf 'zwölf'), ✕ auf 'erstellen', handschriftlich '1 statt 12'",
+   "start": 19.55,
+   "ende": 23.33,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 19.55,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 20.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 22.13,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Denn",
+   "text": "SCHEMA je Variante: Schwarz · M / Blau · M / Grau · L auf 'jede Kombination', Bestand auf 'Bestand', Barcodes auf 'Artikelnummer', handschriftlich eindeutig",
+   "start": 23.33,
+   "ende": 28.53,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 23.33,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 25.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 27.26,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "während",
+   "text": "SCHEMA Handy mit einer Produktseite, Kundschaft, '1 Produktseite' ✓, Zeiger wechselt Blau → L → Grau auf 'zwischen', 'Varianten', 'her'",
+   "start": 28.53,
+   "ende": 34.07,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 28.53,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 31.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 32.75,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Aber (ein Detail)",
+   "text": "SCHEMA Schwarz/M ausverkauft (M ausgegraut) auf 'ausverkauft', 'Ganzes Produkt: nicht verfügbar' ✕ auf 'komplette', Blau/M verfügbar ✓ auf 'verfügbar' (Briefing)",
+   "start": 34.07,
+   "ende": 44.03,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 34.07,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 37.92,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 41.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 42.85,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "Deshalb",
+   "text": "Quelle groß: Shopify Help Center 'Varianten', markiert 'Du kannst auch den Inventarbestand für jede Variante auf der Seite Inventar verwalten.'",
+   "start": 44.1,
+   "ende": 48.6,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 44.1,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "wort": "Und (ich würde jetzt mal)",
+   "text": "Quelle groß: Shopify Help Center 'Bilder zu Produktvarianten hinzufügen', markiert 'Du kannst Bilder zu deinen Produktvarianten hinzufügen, damit deine Kundschaft jede Produktvariante ansehen kann.'",
+   "start": 48.6,
+   "ende": 51.45,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 48.6,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "damit",
+   "text": "SCHEMA Variantenbild je Farbe: Zeiger tippt Blau auf 'Farbauswahl', Hauptbild wird blau ✓ auf 'richtige Farbe', Hinweis 'nur wenn das Theme es unterstützt' auf 'Theme'",
+   "start": 51.45,
+   "ende": 58.17,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 51.45,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 52.8,
+     "volume": 0.12
+    },
+    {
+     "datei": "success.mp3",
+     "at": 54.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.33,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Tipp",
+   "text": "BEISPIEL Artikelnummer (SKU) auf 'Artikelnummer', Schema Produkt – Farbe – Größe auf 'Schema', HOODIE-SCHWARZ-M tippt sich auf seinen Wörtern, handschriftlich klares Schema",
+   "start": 58.66,
+   "ende": 64.03,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 58.66,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 61.73,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 63.24,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7b",
+   "wort": "ist",
+   "text": "BEISPIEL HOODIE-SCHWARZ-S/-M/-L (Briefing), Lager / Retouren / Support auf ihren Wörtern, ✓ auf 'nachvollziehbarer', zufällige Zahlenfolge ✕, handschriftlich nachvollziehbar",
+   "start": 64.03,
+   "ende": 70.93,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 64.03,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 67.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 70.13,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Das (ist jetzt natürlich nur mein Beispiel)",
+   "text": "HOODIE-SCHWARZ-M mit Stempel BEISPIEL auf 'Beispiel', 'Pflichtformat' durchgestrichen auf 'Format'",
+   "start": 70.93,
+   "ende": 74.1,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 70.93,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 72,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8b",
+   "wort": "Du",
+   "text": "Bausteine Produkt / Farbe / Größe ungeordnet, 'Benennung frei wählbar', dein Lager auf 'Lager', auf 'Struktur' rasten sie zu Produkt - Farbe - Größe ein ✓, handschriftlich mit fester Struktur",
+   "start": 74.1,
+   "ende": 82.63,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 74.1,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 77.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Und (bei sehr vielen Farben)",
+   "text": "SCHEMA Handy: viele Farben und Größen auf ihren Wörtern, 'viele Werte' auf 'aufpassen', 'leicht auswählbar? auf dem Smartphone', dritte Option (Stil), '3 Optionen × viele Werte', ✕ und handschriftlich unnötig kompliziert",
+   "start": 82.63,
+   "ende": 95.45,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 82.63,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 85.66,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 93.8,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q4",
+   "wort": "Denn (drei Optionen)",
+   "text": "Quelle groß: Shopify Help Center 'Varianten hinzufügen', markiert 'Du kannst bis zu 2.048 Varianten für ein Produkt erstellen.' und 'Jedes Produkt kann bis zu drei Optionen haben.'",
+   "start": 89.35,
+   "ende": 92.85,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 89.35,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Und (bei der Frage)",
+   "text": "Hoodie Schwarz und Hoodie Blau, '?' auf 'zusammengehören', Glühbirne auf 'Gedanke', '=' auf 'dasselbe', 'ändert sich nur: Farbe' ✓ auf 'Eigenschaft', beide werden zu '1 gemeinsame Produktseite' ✓ auf 'gemeinsame'/'sinnvoll'",
+   "start": 95.45,
+   "ende": 111.05,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 95.45,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 97.46,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 102.66,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 106.43,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 109.96,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "Ich (würde es aber erstmal)",
+   "text": "Checkliste zum Speichern 'Vor der Veröffentlichung testen': Verfügbare Kombination (Bestand je Variante), Ausverkaufte Kombination (nur diese Variante), Farbwechsel (richtiges Variantenbild) auf ihren Wörtern, Haken auf 'alle drei … funktionieren', 'alles auch am Handy', Backend ✓ / Kunde ✓",
+   "start": 111.07,
+   "ende": 129.23,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 111.07,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 114.96,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 116.8,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 118.63,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 122.06,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 125.1,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 127.23,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Wenn (du weitere solche)",
+   "text": "Folgen-Karte groß und mittig, Plus wie bei TikTok: Ring auf 'Tipps', Zeiger auf 'drück', Plus wird auf 'Plus' zum Haken, bis zum Schluss",
+   "start": 129.23,
+   "ende": 133.27,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 129.23,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 132.53,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

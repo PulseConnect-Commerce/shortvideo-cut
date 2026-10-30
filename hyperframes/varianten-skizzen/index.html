@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>S07 · Produktvarianten strukturieren – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- Serie S (ID "Shopify in 30 Sekunden", keine Serien-Erwähnung im Video), S07 · Produktvarianten strukturieren.
+         Erklär-Bilder statt Wortkarten (karten-aufbau.md "Visuelle Metaphern", Vorlagen hyperframes/upselling-skizzen und
+         hyperframes/rabattcodes-skizzen): pro Gedanke ein Bild, das den Satz ohne Ton erklärt. Briefing-Grafiken: Matrix
+         4 Größen × 3 Farben = 12, 12 Einzelprodukte → 1 Produkt mit 12 Varianten, Bestand und Artikelnummer je Variante,
+         Frontend Schwarz/M ausverkauft – Blau/M verfügbar, Variantenbild je Farbe (themeabhängig), SKU HOODIE-SCHWARZ-S/-M/-L
+         "keine Verwechslung", Auswahl am Handy mit vielen Werten, Zusammengehören-Test, Test-Checkliste zum Speichern, Folgen-Plus.
+         Alle Produkte, Farben, Bestände und Artikelnummern sind gezeichnete Beispiele (BEISPIEL/SCHEMA), keine nachgebaute
+         Shopify-Oberfläche und kein Demo-Shop (es gibt keine Bildschirmaufnahme im Rohmaterial); echte Shopify-Seiten laufen in
+         Remotion als "Quelle groß" (src/projekte/varianten/Video.tsx). Zahlen nur aus Take und Briefing (4 × 3 = 12).
+         Hoodie eigene flache Zeichnung, Icons Lucide (ISC), Schriften Geist und Caveat (OFL, lokal).
+         Rahmen wie freigegeben: helle Karte unter dem Kopf (x 80-900, y 1130-1480; Instagram-Zone ab 1500), Pill-Untertitel
+         darüber (Remotion, y ~1080), ruhige Bewegung ohne Überschwingen.
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/varianten/cut.json, 133,27 s), Teile 2 Frames vor ihrem Wort;
+         Liste mit Tönen in src/projekte/varianten/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1130px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 20px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .badge { position: absolute; right: 26px; top: 14px; padding: 5px 13px 6px; border-radius: 10px; background: #0b0c0e; color: #fff; font-size: 20px; font-weight: 800; letter-spacing: 0.14em; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 54px; width: 820px; height: 290px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 30px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #9aa3af; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .zeile { font-size: 20px; font-weight: 800; fill: #6b7280; letter-spacing: 0.1em; }
+      .sku { font-weight: 800; fill: #0b0c0e; letter-spacing: 0.02em; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #2a9ed8; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.grau { stroke: #6b7280; }
+      .gtext { fill: url(#gv); }
+      .chiptext { font-size: 22px; font-weight: 800; fill: #0b0c0e; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, groß und waagerecht mittig, Plus wie bei TikTok (Pauls Vorgabe 30.10.,
+         karten-aufbau.md Punkt 7, Vorlage hyperframes/upselling-skizzen K14): 560 x 200, Kartenmitte x 540, Avatar 150, Plus 64,
+         "Folgen" 72 px, an der Kartenposition unter Kopf und Pille */
+      .folgekarte { position: absolute; left: 260px; top: 1130px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+      .avatar { position: absolute; left: 34px; top: 18px; width: 150px; height: 150px; border-radius: 75px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 84px; height: 84px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      #fplus { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; overflow: visible; }
+      #fring { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #31adec; opacity: 0; }
+      .ftext { position: absolute; left: 224px; top: 56px; font-size: 72px; line-height: 88px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 56px; height: 56px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 56px; height: 56px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+      .status { position: absolute; right: 26px; top: 14px; display: flex; gap: 8px; }
+      .status span { padding: 5px 12px 6px; border-radius: 10px; background: #fff; border: 2px solid #bfe9da; color: #0b0c0e; font-size: 19px; font-weight: 800; letter-spacing: 0.04em; white-space: nowrap; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="varianten-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="133.27">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3faf1" /><stop offset="1" stop-color="#e2f2fc" /></linearGradient>
+          <!-- Hoodie (eigene flache Zeichnung, 120 x 120), Farbe über --h -->
+          <symbol id="hoodie" viewBox="0 0 120 120">
+            <path d="M34 26 Q38 8 60 6 Q82 8 86 26 L104 34 Q112 38 113 48 L116 84 Q116 90 110 90 L102 90 L98 60 L96 112 Q96 116 92 116 L28 116 Q24 116 24 112 L22 60 L18 90 L10 90 Q4 90 4 84 L7 48 Q8 38 16 34 Z" fill="var(--h, #3b4a5c)" stroke="#0b0c0e" stroke-width="3" stroke-linejoin="round" />
+            <path d="M40 27 Q60 46 80 27" fill="none" stroke="#0b0c0e" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M53 36 V54 M67 36 V54" stroke="#f2f3f5" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M38 80 H82 L88 104 H32 Z" fill="none" stroke="#0b0c0e" stroke-width="2.4" stroke-linejoin="round" opacity="0.55" />
+          </symbol>
+          <!-- Lucide-Icons (ISC) -->
+          <g id="i-timer"><line x1="10" x2="14" y1="2" y2="2" /><line x1="12" x2="15" y1="14" y2="11" /><circle cx="12" cy="14" r="8" /></g>
+          <g id="i-barcode"><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /><path d="M8 7v10" /><path d="M12 7v10" /><path d="M17 7v10" /></g>
+          <g id="i-lager"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z" /><path d="M6 18h12" /><path d="M6 14h12" /><rect width="12" height="12" x="6" y="10" /></g>
+          <g id="i-retoure"><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></g>
+          <g id="i-support"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" /><path d="M21 16v2a4 4 0 0 1-4 4h-5" /></g>
+          <g id="i-handy"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></g>
+          <g id="i-birne"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
+          <g id="i-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r="1" /></g>
+          <g id="i-person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-palette"><circle cx="13.5" cy="6.5" r=".5" /><circle cx="17.5" cy="10.5" r=".5" /><circle cx="8.5" cy="7.5" r=".5" /><circle cx="6.5" cy="12.5" r=".5" /><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" /></g>
+          <g id="i-liste"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="m9 14 2 2 4-4" /></g>
+          <g id="i-zufall"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22" /><path d="m18 2 4 4-4 4" /><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2" /><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8" /><path d="m18 14 4 4-4 4" /></g>
+          <!-- Zustände -->
+          <g id="kreuz"><circle r="22" fill="#e5484d" /><path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#fff" stroke-width="4.2" stroke-linecap="round" /></g>
+          <g id="warn"><circle r="22" fill="#e5484d" /><path d="M0 -11 V3" stroke="#fff" stroke-width="4.6" stroke-linecap="round" /><circle cy="10" r="2.8" fill="#fff" /></g>
+          <g id="haken"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 L-2 6 L9 -6" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="zeigerform"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+        </defs>
+      </svg>
+
+      <!-- K0 Zeit sparen oder Chaos: "dann kannst du dir tatsächlich beim Anlegen von Varianten eine Menge Zeit ersparen oder auch ein
+           ziemliches Chaos einhandeln." Bis ~4,2 s steht dort der Hook-Titel (Remotion). Karte auf "eine" 4,40 / Zeit 4,97 / ersparen
+           5,17 / oder 5,97 / Chaos 7,10 / einhandeln 7,47 -->
+      <section id="k0" class="karte clip" data-start="4.33" data-duration="3.67" data-track-index="1">
+        <div class="kicker">Varianten anlegen</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k0-start">
+            <use href="#hoodie" x="34" y="48" width="140" height="140" style="--h:#2f62b3" />
+            <text x="104" y="230" text-anchor="middle" class="lab">Varianten</text>
+          </g>
+          <path id="k0-weg1" pathLength="1" d="M196 122 C 262 122, 280 64, 352 64" fill="none" stroke="url(#gv)" stroke-width="6" stroke-linecap="round" opacity="0" />
+          <path id="k0-weg2" pathLength="1" d="M196 122 C 262 122, 280 198, 352 198" fill="none" stroke="#e5484d" stroke-width="6" stroke-linecap="round" opacity="0" />
+          <g id="k0-zeit" opacity="0">
+            <rect x="362" y="12" width="420" height="104" rx="24" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <g transform="translate(386 34) scale(2.5)" class="ico"><use href="#i-timer" /></g>
+            <text x="462" y="80" class="lab" style="font-size:40px">Zeit sparen</text>
+          </g>
+          <use id="k0-ok" href="#haken" x="770" y="18" opacity="0" />
+          <g id="k0-chaos" opacity="0">
+            <rect x="362" y="146" width="420" height="104" rx="24" fill="#fdecec" stroke="#f5c2c3" stroke-width="2" />
+            <path id="k0-knaeuel" pathLength="1" d="M394 214 c 6 -30 38 -32 40 -8 c 2 22 -34 26 -32 2 c 2 -24 42 -26 40 0 c -2 20 -30 22 -28 4" fill="none" stroke="#e5484d" stroke-width="3.4" stroke-linecap="round" />
+            <text x="462" y="214" class="lab" style="font-size:40px;fill:#c2373c">Chaos</text>
+          </g>
+          <use id="k0-x" href="#kreuz" x="770" y="152" opacity="0" />
+          <text id="k0-oder" x="290" y="146" class="hand" style="font-size:40px" opacity="0">oder</text>
+        </svg>
+      </section>
+
+      <!-- K1 Matrix: "Nehmen wir uns mal als Beispiel einen Hoodie in vier Größen und in drei Farben. Das sind natürlich immer zwölf
+           mögliche Kombinationen." Beispiel 8,80 (Karte mit Hoodie) / vier 10,27 / Größen 10,43 / drei 11,17 / Farben 11,50 /
+           zwölf 13,40 / Kombinationen 14,20; 4 × 3 = 12 (Faktencheck Briefing) -->
+      <section id="k1" class="karte clip" data-start="8.73" data-duration="6.22" data-track-index="1">
+        <div class="kicker">Beispiel · Hoodie</div>
+        <div class="badge">BEISPIEL</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k1-hoodie">
+            <use href="#hoodie" x="14" y="36" width="150" height="150" style="--h:#23272e" />
+            <text x="89" y="224" text-anchor="middle" class="lab">Hoodie</text>
+          </g>
+          <g id="k1-kopf" class="lab" style="font-size:28px" text-anchor="middle">
+            <text class="k1-g" x="420" y="30">S</text><text class="k1-g" x="515" y="30">M</text><text class="k1-g" x="610" y="30">L</text><text class="k1-g" x="705" y="30">XL</text>
+          </g>
+          <g class="k1-f"><circle cx="232" cy="80" r="13" fill="#23272e" /><text x="254" y="89" class="klein" style="fill:#0b0c0e">Schwarz</text></g>
+          <g class="k1-f"><circle cx="232" cy="138" r="13" fill="#2f62b3" /><text x="254" y="147" class="klein" style="fill:#0b0c0e">Blau</text></g>
+          <g class="k1-f"><circle cx="232" cy="196" r="13" fill="#9aa3af" /><text x="254" y="205" class="klein" style="fill:#0b0c0e">Grau</text></g>
+          <g id="k1-zellen">
+            <g class="k1-z"><rect x="380" y="58" width="80" height="44" rx="10" fill="#23272e" /><text x="420" y="88" text-anchor="middle" class="chiptext" style="fill:#fff">S</text></g>
+            <g class="k1-z"><rect x="475" y="58" width="80" height="44" rx="10" fill="#23272e" /><text x="515" y="88" text-anchor="middle" class="chiptext" style="fill:#fff">M</text></g>
+            <g class="k1-z"><rect x="570" y="58" width="80" height="44" rx="10" fill="#23272e" /><text x="610" y="88" text-anchor="middle" class="chiptext" style="fill:#fff">L</text></g>
+            <g class="k1-z"><rect x="665" y="58" width="80" height="44" rx="10" fill="#23272e" /><text x="705" y="88" text-anchor="middle" class="chiptext" style="fill:#fff">XL</text></g>
+            <g class="k1-z"><rect x="380" y="116" width="80" height="44" rx="10" fill="#2f62b3" /><text x="420" y="146" text-anchor="middle" class="chiptext" style="fill:#fff">S</text></g>
+            <g class="k1-z"><rect x="475" y="116" width="80" height="44" rx="10" fill="#2f62b3" /><text x="515" y="146" text-anchor="middle" class="chiptext" style="fill:#fff">M</text></g>
+            <g class="k1-z"><rect x="570" y="116" width="80" height="44" rx="10" fill="#2f62b3" /><text x="610" y="146" text-anchor="middle" class="chiptext" style="fill:#fff">L</text></g>
+            <g class="k1-z"><rect x="665" y="116" width="80" height="44" rx="10" fill="#2f62b3" /><text x="705" y="146" text-anchor="middle" class="chiptext" style="fill:#fff">XL</text></g>
+            <g class="k1-z"><rect x="380" y="174" width="80" height="44" rx="10" fill="#9aa3af" /><text x="420" y="204" text-anchor="middle" class="chiptext">S</text></g>
+            <g class="k1-z"><rect x="475" y="174" width="80" height="44" rx="10" fill="#9aa3af" /><text x="515" y="204" text-anchor="middle" class="chiptext">M</text></g>
+            <g class="k1-z"><rect x="570" y="174" width="80" height="44" rx="10" fill="#9aa3af" /><text x="610" y="204" text-anchor="middle" class="chiptext">L</text></g>
+            <g class="k1-z"><rect x="665" y="174" width="80" height="44" rx="10" fill="#9aa3af" /><text x="705" y="204" text-anchor="middle" class="chiptext">XL</text></g>
+          </g>
+          <text id="k1-e4" x="566" y="272" text-anchor="end" class="lab" style="font-size:30px;font-weight:900">4 Größen ×</text>
+          <text id="k1-e3" x="576" y="272" class="lab" style="font-size:30px;font-weight:900">3 Farben</text>
+          <text id="k1-e12" x="726" y="272" class="lab gtext" style="font-size:34px;font-weight:900">= 12</text>
+        </svg>
+      </section>
+
+      <!-- K2 1 Produkt statt 12: "statt einfach nur zwölf fast identische Produkte erst mal zu erstellen. Aber warum?" Davor die echte
+           Hilfe-Seite (Remotion, 14,95-19,55). statt 19,67 (Karte mit dem 1 Produkt) / zwölf 20,37 / identische 21,07 / Produkte
+           21,53 / erstellen 22,20 / Aber 22,70 -->
+      <section id="k2" class="karte clip" data-start="19.55" data-duration="3.78" data-track-index="1">
+        <div class="kicker">1 Produkt statt 12</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k2-eins">
+            <rect x="16" y="0" width="320" height="240" rx="24" fill="#fff" stroke="url(#gv)" stroke-width="3" />
+            <use href="#hoodie" x="36" y="18" width="110" height="110" style="--h:#2f62b3" />
+            <text x="152" y="58" class="lab" style="font-size:30px">1 Produkt</text>
+            <text x="152" y="94" class="lab gtext" style="font-size:24px">12 Varianten</text>
+            <circle cx="172" cy="122" r="11" fill="#23272e" /><circle cx="202" cy="122" r="11" fill="#2f62b3" /><circle cx="232" cy="122" r="11" fill="#9aa3af" />
+            <g class="chiptext" style="font-size:20px" text-anchor="middle">
+              <rect x="40" y="156" width="56" height="38" rx="9" fill="#f2f3f5" stroke="#d1d5db" stroke-width="2" /><text x="68" y="182">S</text>
+              <rect x="104" y="156" width="56" height="38" rx="9" fill="#f2f3f5" stroke="#d1d5db" stroke-width="2" /><text x="132" y="182">M</text>
+              <rect x="168" y="156" width="56" height="38" rx="9" fill="#f2f3f5" stroke="#d1d5db" stroke-width="2" /><text x="196" y="182">L</text>
+              <rect x="232" y="156" width="64" height="38" rx="9" fill="#f2f3f5" stroke="#d1d5db" stroke-width="2" /><text x="264" y="182">XL</text>
+            </g>
+          </g>
+          <text id="k2-statt" x="372" y="134" text-anchor="middle" class="lab grau" style="font-size:30px" opacity="0">statt</text>
+          <g id="k2-zwoelf">
+            <g class="k2-p"><rect x="424" y="0" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="443" y="8" width="44" height="44" style="--h:#23272e" /><text x="465" y="64" text-anchor="middle" class="klein" style="font-size:15px">S</text></g>
+            <g class="k2-p"><rect x="518" y="0" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="537" y="8" width="44" height="44" style="--h:#23272e" /><text x="559" y="64" text-anchor="middle" class="klein" style="font-size:15px">M</text></g>
+            <g class="k2-p"><rect x="612" y="0" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="631" y="8" width="44" height="44" style="--h:#23272e" /><text x="653" y="64" text-anchor="middle" class="klein" style="font-size:15px">L</text></g>
+            <g class="k2-p"><rect x="706" y="0" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="725" y="8" width="44" height="44" style="--h:#23272e" /><text x="747" y="64" text-anchor="middle" class="klein" style="font-size:15px">XL</text></g>
+            <g class="k2-p"><rect x="424" y="80" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="443" y="88" width="44" height="44" style="--h:#2f62b3" /><text x="465" y="144" text-anchor="middle" class="klein" style="font-size:15px">S</text></g>
+            <g class="k2-p"><rect x="518" y="80" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="537" y="88" width="44" height="44" style="--h:#2f62b3" /><text x="559" y="144" text-anchor="middle" class="klein" style="font-size:15px">M</text></g>
+            <g class="k2-p"><rect x="612" y="80" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="631" y="88" width="44" height="44" style="--h:#2f62b3" /><text x="653" y="144" text-anchor="middle" class="klein" style="font-size:15px">L</text></g>
+            <g class="k2-p"><rect x="706" y="80" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="725" y="88" width="44" height="44" style="--h:#2f62b3" /><text x="747" y="144" text-anchor="middle" class="klein" style="font-size:15px">XL</text></g>
+            <g class="k2-p"><rect x="424" y="160" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="443" y="168" width="44" height="44" style="--h:#9aa3af" /><text x="465" y="224" text-anchor="middle" class="klein" style="font-size:15px">S</text></g>
+            <g class="k2-p"><rect x="518" y="160" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="537" y="168" width="44" height="44" style="--h:#9aa3af" /><text x="559" y="224" text-anchor="middle" class="klein" style="font-size:15px">M</text></g>
+            <g class="k2-p"><rect x="612" y="160" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="631" y="168" width="44" height="44" style="--h:#9aa3af" /><text x="653" y="224" text-anchor="middle" class="klein" style="font-size:15px">L</text></g>
+            <g class="k2-p"><rect x="706" y="160" width="82" height="70" rx="12" class="rahmen" /><use href="#hoodie" x="725" y="168" width="44" height="44" style="--h:#9aa3af" /><text x="747" y="224" text-anchor="middle" class="klein" style="font-size:15px">XL</text></g>
+          </g>
+          <text id="k2-label" x="606" y="272" text-anchor="middle" class="klein" style="font-size:24px" opacity="0">12 fast identische Produkte</text>
+          <use id="k2-x" href="#kreuz" x="606" y="115" opacity="0" />
+          <text id="k2-hand" x="44" y="284" class="hand" style="font-size:38px" opacity="0">1 statt 12</text>
+        </svg>
+      </section>
+
+      <!-- K3 Je Variante: "Denn weil du für jede Kombination mal einen eigenen Bestand und eine eindeutige Artikelnummer pflegen kannst,"
+           Denn 23,40 (Karte mit erster Zeile) / jede 24,33 / Kombination 24,57 / Bestand 25,77 / eindeutige 26,73 / Artikelnummer 27,33 -->
+      <section id="k3" class="karte clip" data-start="23.33" data-duration="5.2" data-track-index="1">
+        <div class="kicker">Je Variante</div>
+        <div class="badge">SCHEMA</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <text x="40" y="16" class="zeile">VARIANTE</text>
+          <text id="k3-hb" x="410" y="16" class="zeile" opacity="0">BESTAND</text>
+          <text id="k3-ha" x="640" y="16" class="zeile" opacity="0">ART.-NR.</text>
+          <g class="k3-r" id="k3-r1"><rect x="20" y="30" width="780" height="60" rx="14" class="rahmen" /><circle cx="56" cy="60" r="14" fill="#23272e" /><text x="84" y="70" class="lab">Schwarz · M</text></g>
+          <g class="k3-r" id="k3-r2"><rect x="20" y="102" width="780" height="60" rx="14" class="rahmen" /><circle cx="56" cy="132" r="14" fill="#2f62b3" /><text x="84" y="142" class="lab">Blau · M</text></g>
+          <g class="k3-r" id="k3-r3"><rect x="20" y="174" width="780" height="60" rx="14" class="rahmen" /><circle cx="56" cy="204" r="14" fill="#9aa3af" /><text x="84" y="214" class="lab">Grau · L</text></g>
+          <text id="k3-mehr" x="40" y="272" class="klein" opacity="0">+ 9 weitere Kombinationen</text>
+          <g id="k3-bestand" opacity="0">
+            <rect x="410" y="53" width="170" height="14" rx="7" fill="#e5e7eb" /><text x="596" y="70" class="lab" style="font-size:24px;fill:#c2373c">0</text>
+            <rect x="410" y="125" width="170" height="14" rx="7" fill="#e5e7eb" /><rect class="k3-fill" x="410" y="125" width="0" height="14" rx="7" fill="url(#gv)" data-w="96" />
+            <rect x="410" y="197" width="170" height="14" rx="7" fill="#e5e7eb" /><rect class="k3-fill" x="410" y="197" width="0" height="14" rx="7" fill="url(#gv)" data-w="150" />
+          </g>
+          <g class="k3-nr" transform="translate(640 41) scale(1.6)"><g class="ico"><use href="#i-barcode" /></g></g>
+          <g class="k3-nr" transform="translate(640 113) scale(1.6)"><g class="ico"><use href="#i-barcode" /></g></g>
+          <g class="k3-nr" transform="translate(640 185) scale(1.6)"><g class="ico"><use href="#i-barcode" /></g></g>
+          <text id="k3-eind" x="690" y="272" class="hand" style="font-size:34px" opacity="0">eindeutig</text>
+        </svg>
+      </section>
+
+      <!-- K4 Eine Produktseite: "während die Kundschaft natürlich immer auf einer einzigen Produktseite mal zwischen den einzelnen
+           Varianten hin und her wechselt." während 28,60 (Karte mit Handy) / Kundschaft 28,97 / einzigen 30,17 / Produktseite 30,53 /
+           zwischen 31,23 (Tipp auf Blau) / Varianten 32,03 (L) / her 32,67 (Grau) / wechselt 32,83 -->
+      <section id="k4" class="karte clip" data-start="28.53" data-duration="5.54" data-track-index="1">
+        <div class="kicker">Eine Produktseite</div>
+        <div class="badge">SCHEMA</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k4-handy">
+            <rect x="40" y="0" width="212" height="288" rx="30" fill="#fff" stroke="#0b0c0e" stroke-width="3" />
+            <rect x="120" y="10" width="52" height="8" rx="4" fill="#0b0c0e" />
+            <rect x="58" y="28" width="176" height="130" rx="14" fill="#f2f3f5" />
+            <use id="k4-hs" href="#hoodie" x="86" y="32" width="122" height="122" style="--h:#23272e" />
+            <use id="k4-hb" href="#hoodie" x="86" y="32" width="122" height="122" style="--h:#2f62b3" opacity="0" />
+            <use id="k4-hg" href="#hoodie" x="86" y="32" width="122" height="122" style="--h:#9aa3af" opacity="0" />
+            <circle cx="96" cy="182" r="12" fill="#23272e" /><circle cx="136" cy="182" r="12" fill="#2f62b3" /><circle cx="176" cy="182" r="12" fill="#9aa3af" />
+            <circle id="k4-ring" cx="96" cy="182" r="18" fill="none" stroke="url(#gvd)" stroke-width="3.5" />
+            <rect id="k4-sel" x="62" y="210" width="38" height="32" rx="8" fill="#0b0c0e" />
+            <g class="chiptext" style="font-size:17px" text-anchor="middle">
+              <rect x="62" y="210" width="38" height="32" rx="8" fill="none" stroke="#9aa3af" stroke-width="2" /><text id="k4-ts" x="81" y="232" style="fill:#fff">S</text>
+              <rect x="106" y="210" width="38" height="32" rx="8" fill="none" stroke="#9aa3af" stroke-width="2" /><text x="125" y="232">M</text>
+              <rect x="150" y="210" width="38" height="32" rx="8" fill="none" stroke="#9aa3af" stroke-width="2" /><text id="k4-tl" x="169" y="232">L</text>
+              <rect x="194" y="210" width="40" height="32" rx="8" fill="none" stroke="#9aa3af" stroke-width="2" /><text x="214" y="232">XL</text>
+            </g>
+            <rect x="62" y="254" width="172" height="20" rx="10" fill="#0b0c0e" />
+          </g>
+          <g id="k4-kunde" opacity="0">
+            <rect x="320" y="12" width="96" height="96" rx="24" fill="url(#gvd)" />
+            <g transform="translate(338 30) scale(2.5)" class="ico"><use href="#i-person" /></g>
+            <text x="440" y="74" class="lab" style="font-size:34px">Kundschaft</text>
+          </g>
+          <g id="k4-seite" opacity="0">
+            <text x="320" y="166" class="lab" style="font-size:36px">1 Produktseite</text>
+            <use href="#haken" x="600" y="154" />
+          </g>
+          <text id="k4-hand" x="320" y="250" class="hand" style="font-size:42px" opacity="0">alle Varianten wählbar</text>
+        </svg>
+        <div class="zeiger" id="k4-zeiger"><svg viewBox="0 0 24 24"><use href="#zeigerform" /></svg></div>
+      </section>
+
+      <!-- K5 Ausverkauft nur die Variante: "Aber ein Detail wird einfach oft unterschätzt, denn wenn ein Hoodie in Schwarz in Größe M
+           ausverkauft ist, dann darf das natürlich nicht so aussehen, als wäre immer gleich das komplette Produkt immer nicht
+           verfügbar." Aber 34,13 (Karte mit Produkt) / Schwarz 36,77 / M 37,87 / ausverkauft 37,97 / nicht 40,00 / komplette 41,77 /
+           verfügbar 42,87 (Blau/M verfügbar, Briefing) -->
+      <section id="k5" class="karte clip" data-start="34.07" data-duration="9.96" data-track-index="1">
+        <div class="kicker">Ausverkauft? Nur die Variante</div>
+        <div class="badge">SCHEMA</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <rect x="20" y="0" width="370" height="288" rx="24" class="rahmen" />
+          <use id="k5-hs" href="#hoodie" x="36" y="10" width="150" height="150" style="--h:#23272e" />
+          <use id="k5-hb" href="#hoodie" x="36" y="10" width="150" height="150" style="--h:#2f62b3" opacity="0" />
+          <text x="200" y="66" class="lab" style="font-size:32px">Hoodie</text>
+          <text id="k5-farbname" x="200" y="104" class="klein">Farbe: Schwarz</text>
+          <text id="k5-farbname2" x="200" y="104" class="klein" opacity="0">Farbe: Blau</text>
+          <circle cx="62" cy="194" r="13" fill="#23272e" /><circle cx="104" cy="194" r="13" fill="#2f62b3" /><circle cx="146" cy="194" r="13" fill="#9aa3af" />
+          <circle id="k5-ring" cx="62" cy="194" r="19" fill="none" stroke="url(#gvd)" stroke-width="3.5" opacity="0" />
+          <g class="chiptext" text-anchor="middle">
+            <rect x="40" y="226" width="64" height="44" rx="10" fill="#fff" stroke="#9aa3af" stroke-width="2" /><text x="72" y="256">S</text>
+            <rect id="k5-mbox" x="114" y="226" width="64" height="44" rx="10" fill="#fff" stroke="#9aa3af" stroke-width="2" /><text id="k5-mtext" x="146" y="256">M</text>
+            <path id="k5-mstrich" pathLength="1" d="M118 266 L174 230" stroke="#9aa3af" stroke-width="3" stroke-linecap="round" opacity="0" />
+            <rect x="188" y="226" width="64" height="44" rx="10" fill="#fff" stroke="#9aa3af" stroke-width="2" /><text x="220" y="256">L</text>
+            <rect x="262" y="226" width="64" height="44" rx="10" fill="#fff" stroke="#9aa3af" stroke-width="2" /><text x="294" y="256">XL</text>
+          </g>
+          <g id="k5-st1" opacity="0">
+            <rect x="416" y="0" width="384" height="56" rx="28" fill="#fff" stroke="#f5c2c3" stroke-width="2" />
+            <circle cx="446" cy="28" r="9" fill="#e5484d" />
+            <text x="466" y="37" class="lab" style="font-size:24px">Schwarz · M: ausverkauft</text>
+          </g>
+          <g id="k5-falsch" opacity="0">
+            <rect x="416" y="72" width="384" height="140" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2" stroke-dasharray="8 7" />
+            <use href="#hoodie" x="432" y="84" width="112" height="112" style="--h:#c9ced6" />
+            <text x="556" y="124" class="lab grau" style="font-size:26px">Ganzes Produkt:</text>
+            <text x="556" y="160" class="lab" style="font-size:28px;fill:#9aa3af">nicht verfügbar</text>
+            <path d="M556 152 H 760" stroke="#9aa3af" stroke-width="2" opacity="0" />
+          </g>
+          <use id="k5-x" href="#kreuz" x="780" y="88" opacity="0" />
+          <g id="k5-st2" opacity="0">
+            <rect x="416" y="228" width="384" height="56" rx="28" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <circle cx="446" cy="256" r="9" fill="#00c27a" />
+            <text x="466" y="265" class="lab" style="font-size:24px">Blau · M: verfügbar</text>
+            <use href="#haken" x="772" y="256" />
+          </g>
+        </svg>
+        <div class="zeiger" id="k5-zeiger"><svg viewBox="0 0 24 24"><use href="#zeigerform" /></svg></div>
+      </section>
+
+      <!-- K6 Variantenbild je Farbe: "damit der Kunde dann nach der Farbauswahl auch wirklich die richtige Farbe sieht. Sofern natürlich
+           das Theme immer die Darstellung auch unterstützt." Davor zwei echte Hilfe-Seiten (Remotion 44,10-51,45). damit 51,53 (Karte
+           mit Bildern) / Farbauswahl 52,73 (Tipp auf Blau) / richtige 54,00 / Farbe 54,37 / Theme 56,40 (themeabhängig, Faktencheck) -->
+      <section id="k6" class="karte clip" data-start="51.45" data-duration="6.72" data-track-index="1">
+        <div class="kicker">Variantenbild je Farbe</div>
+        <div class="badge">SCHEMA</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <rect x="20" y="0" width="250" height="212" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+          <use id="k6-hs" href="#hoodie" x="55" y="16" width="180" height="180" style="--h:#23272e" />
+          <use id="k6-hb" href="#hoodie" x="55" y="16" width="180" height="180" style="--h:#2f62b3" opacity="0" />
+          <use id="k6-ok" href="#haken" x="250" y="20" opacity="0" />
+          <circle cx="95" cy="250" r="15" fill="#23272e" /><circle cx="145" cy="250" r="15" fill="#2f62b3" /><circle cx="195" cy="250" r="15" fill="#9aa3af" />
+          <circle id="k6-ring" cx="95" cy="250" r="22" fill="none" stroke="url(#gvd)" stroke-width="3.5" />
+          <g id="k6-bilder">
+            <g class="k6-b"><rect id="k6-rs" x="320" y="0" width="146" height="146" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><use href="#hoodie" x="338" y="14" width="110" height="110" style="--h:#23272e" /><text x="393" y="178" text-anchor="middle" class="klein" style="fill:#0b0c0e">Schwarz</text></g>
+            <g class="k6-b"><rect id="k6-rb" x="482" y="0" width="146" height="146" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><use href="#hoodie" x="500" y="14" width="110" height="110" style="--h:#2f62b3" /><text x="555" y="178" text-anchor="middle" class="klein" style="fill:#0b0c0e">Blau</text></g>
+            <g class="k6-b"><rect x="644" y="0" width="146" height="146" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><use href="#hoodie" x="662" y="14" width="110" height="110" style="--h:#9aa3af" /><text x="717" y="178" text-anchor="middle" class="klein" style="fill:#0b0c0e">Grau</text></g>
+          </g>
+          <rect id="k6-rahmen" x="482" y="0" width="146" height="146" rx="18" fill="none" stroke="url(#gvd)" stroke-width="5" opacity="0" />
+          <g id="k6-theme" opacity="0">
+            <rect x="320" y="214" width="470" height="56" rx="28" fill="#fff" stroke="#d1d5db" stroke-width="2" />
+            <g transform="translate(338 228) scale(1.15)" class="ico grau"><use href="#i-palette" /></g>
+            <text x="378" y="250" class="klein" style="font-size:23px;fill:#374151">nur wenn das Theme es unterstützt</text>
+          </g>
+        </svg>
+        <div class="zeiger" id="k6-zeiger"><svg viewBox="0 0 24 24"><use href="#zeigerform" /></svg></div>
+      </section>
+
+      <!-- K7 Artikelnummer: "Mein nächster Tipp betrifft tatsächlich die Artikelnummer. Denn ein klares Schema wie HOODIE-SCHWARZ-M"
+           Tipp 58,73 (Karte mit Etikett) / Artikelnummer 59,87 / Schema 61,80 / HOODIE 62,27 / SCHWARZ 62,65 / M 63,31 -->
+      <section id="k7" class="karte clip" data-start="58.66" data-duration="5.37" data-track-index="1">
+        <div class="kicker">Nächster Tipp</div>
+        <div class="badge">BEISPIEL</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <rect x="22" y="2" width="76" height="76" rx="20" fill="url(#gvd)" />
+          <g transform="translate(36 16) scale(2)" class="ico"><use href="#i-tag" /></g>
+          <text id="k7-titel" x="120" y="54" class="lab" style="font-size:42px" opacity="0">Artikelnummer <tspan class="gtext">(SKU)</tspan></text>
+          <g id="k7-schema" opacity="0">
+            <text x="160" y="118" text-anchor="middle" class="zeile">PRODUKT</text>
+            <text x="455" y="118" text-anchor="middle" class="zeile">FARBE</text>
+            <text x="690" y="118" text-anchor="middle" class="zeile">GRÖSSE</text>
+            <rect x="30" y="132" width="260" height="76" rx="16" class="rahmen" />
+            <rect x="320" y="132" width="270" height="76" rx="16" class="rahmen" />
+            <rect x="620" y="132" width="140" height="76" rx="16" class="rahmen" />
+          </g>
+          <text id="k7-t1" x="160" y="186" text-anchor="middle" class="sku" style="font-size:44px" opacity="0">HOODIE</text>
+          <text id="k7-s1" x="305" y="184" text-anchor="middle" class="sku" style="font-size:40px;fill:#9aa3af" opacity="0">-</text>
+          <text id="k7-t2" x="455" y="186" text-anchor="middle" class="sku" style="font-size:44px" opacity="0">SCHWARZ</text>
+          <text id="k7-s2" x="605" y="184" text-anchor="middle" class="sku" style="font-size:40px;fill:#9aa3af" opacity="0">-</text>
+          <text id="k7-t3" x="690" y="186" text-anchor="middle" class="sku gtext" style="font-size:44px" opacity="0">M</text>
+          <text id="k7-hand" x="34" y="270" class="hand" style="font-size:40px" opacity="0">klares Schema</text>
+        </svg>
+      </section>
+
+      <!-- K7b Nachvollziehbar: "ist natürlich für das Lager, Retouren und für den Support immer nachvollziehbarer als irgendwelche
+           zufälligen Zahlenfolgen." Drei Beispiel-SKUs (Briefing: HOODIE-SCHWARZ-S, -M, -L) mit der Karte auf "ist" 64,10 /
+           Lager 64,93 / Retouren 65,43 / Support 66,27 / nachvollziehbarer 67,37 / zufälligen 69,60 / Zahlenfolgen 70,20 -->
+      <section id="k7b" class="karte clip" data-start="64.03" data-duration="6.9" data-track-index="1">
+        <div class="kicker">Keine Verwechslung</div>
+        <div class="badge">BEISPIEL</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g class="k7b-r"><rect x="20" y="0" width="420" height="54" rx="14" class="rahmen" /><circle cx="48" cy="27" r="10" fill="#23272e" /><text x="68" y="38" class="sku" style="font-size:28px">HOODIE-SCHWARZ-S</text></g>
+          <g class="k7b-r"><rect x="20" y="64" width="420" height="54" rx="14" class="rahmen" /><circle cx="48" cy="91" r="10" fill="#23272e" /><text x="68" y="102" class="sku" style="font-size:28px">HOODIE-SCHWARZ-M</text></g>
+          <g class="k7b-r"><rect x="20" y="128" width="420" height="54" rx="14" class="rahmen" /><circle cx="48" cy="155" r="10" fill="#23272e" /><text x="68" y="166" class="sku" style="font-size:28px">HOODIE-SCHWARZ-L</text></g>
+          <g id="k7b-zufall" opacity="0">
+            <rect x="20" y="206" width="420" height="58" rx="14" fill="#fff" stroke="#d1d5db" stroke-width="2" stroke-dasharray="8 7" />
+            <g transform="translate(36 220) scale(1.3)" class="ico grau"><use href="#i-zufall" /></g>
+            <text x="80" y="246" class="sku" style="font-size:28px;fill:#9aa3af;letter-spacing:0.12em">7301948265</text>
+          </g>
+          <use id="k7b-x" href="#kreuz" x="424" y="214" opacity="0" />
+          <g class="k7b-i" id="k7b-lager"><rect x="470" y="12" width="96" height="96" rx="22" fill="url(#gvd)" /><g transform="translate(488 30) scale(2.5)" class="ico"><use href="#i-lager" /></g><text x="518" y="142" text-anchor="middle" class="klein" style="fill:#0b0c0e">Lager</text></g>
+          <g class="k7b-i" id="k7b-retoure"><rect x="586" y="12" width="96" height="96" rx="22" fill="url(#gvd)" /><g transform="translate(604 30) scale(2.5)" class="ico"><use href="#i-retoure" /></g><text x="634" y="142" text-anchor="middle" class="klein" style="fill:#0b0c0e">Retouren</text></g>
+          <g class="k7b-i" id="k7b-support"><rect x="702" y="12" width="96" height="96" rx="22" fill="url(#gvd)" /><g transform="translate(720 30) scale(2.5)" class="ico"><use href="#i-support" /></g><text x="750" y="142" text-anchor="middle" class="klein" style="fill:#0b0c0e">Support</text></g>
+          <use class="k7b-ok" href="#haken" x="556" y="20" opacity="0" />
+          <use class="k7b-ok" href="#haken" x="672" y="20" opacity="0" />
+          <use class="k7b-ok" href="#haken" x="788" y="20" opacity="0" />
+          <text id="k7b-hand" x="476" y="214" class="hand" style="font-size:40px" opacity="0">nachvollziehbar</text>
+        </svg>
+      </section>
+
+      <!-- K8 Nur ein Beispiel: "Das ist jetzt natürlich nur mein Beispiel und kein vorgeschriebenes Format." Das 70,97 (Karte mit SKU) /
+           Beispiel 72,07 / kein 72,87 / Format 73,77 -->
+      <section id="k8" class="karte clip" data-start="70.93" data-duration="3.17" data-track-index="1">
+        <div class="kicker">Nur ein Beispiel</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <rect x="70" y="58" width="680" height="96" rx="20" class="rahmen" />
+          <text x="410" y="124" text-anchor="middle" class="sku" style="font-size:48px">HOODIE-SCHWARZ-M</text>
+          <g transform="rotate(-6 660 30)"><g id="k8-stempel" opacity="0">
+            <rect x="566" y="4" width="190" height="50" rx="10" fill="#fff" stroke="#31adec" stroke-width="4" />
+            <text x="661" y="40" text-anchor="middle" class="lab gtext" style="font-size:30px;font-weight:900;letter-spacing:0.08em">BEISPIEL</text>
+          </g></g>
+          <g id="k8-pflicht" opacity="0">
+            <rect x="230" y="192" width="360" height="72" rx="36" fill="#fff" stroke="#d1d5db" stroke-width="2" />
+            <text x="410" y="239" text-anchor="middle" class="lab" style="font-size:32px">Pflichtformat</text>
+          </g>
+          <path id="k8-strich" pathLength="1" d="M248 229 H 572" stroke="#e5484d" stroke-width="5" stroke-linecap="round" opacity="0" />
+          <use id="k8-x" href="#kreuz" x="592" y="198" opacity="0" />
+        </svg>
+      </section>
+
+      <!-- K8b Deine Struktur: "Du kannst natürlich die Benennung so machen, wie du es einfach für dein Lager am effizientesten hast, aber
+           ich kann dir auf jeden Fall empfehlen, baue dir hier eine Struktur auf." Du 74,17 (Karte mit Bausteinen, ungeordnet) /
+           Benennung 75,70 / Lager 78,00 / Struktur 82,03 (Bausteine rasten ein) -->
+      <section id="k8b" class="karte clip" data-start="74.1" data-duration="8.53" data-track-index="1">
+        <div class="kicker">Deine Struktur</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k8b-lager" opacity="0">
+            <rect x="24" y="20" width="150" height="150" rx="30" fill="url(#gvd)" />
+            <g transform="translate(51 47) scale(4)" class="ico"><use href="#i-lager" /></g>
+            <text x="99" y="210" text-anchor="middle" class="lab" style="font-size:28px">dein Lager</text>
+          </g>
+          <g id="k8b-b1"><rect x="0" y="0" width="170" height="66" rx="16" fill="#fff" stroke="#0b0c0e" stroke-width="2.5" /><text x="85" y="44" text-anchor="middle" class="lab" style="font-size:28px">Produkt</text></g>
+          <g id="k8b-b2"><rect x="0" y="0" width="150" height="66" rx="16" fill="#fff" stroke="#0b0c0e" stroke-width="2.5" /><text x="75" y="44" text-anchor="middle" class="lab" style="font-size:28px">Farbe</text></g>
+          <g id="k8b-b3"><rect x="0" y="0" width="150" height="66" rx="16" fill="#fff" stroke="#0b0c0e" stroke-width="2.5" /><text x="75" y="44" text-anchor="middle" class="lab" style="font-size:28px">Größe</text></g>
+          <text id="k8b-s1" x="432" y="140" text-anchor="middle" class="sku" style="font-size:40px;fill:#9aa3af" opacity="0">-</text>
+          <text id="k8b-s2" x="614" y="140" text-anchor="middle" class="sku" style="font-size:40px;fill:#9aa3af" opacity="0">-</text>
+          <text id="k8b-frei" x="250" y="268" class="hand" style="font-size:40px" opacity="0">Benennung frei wählbar</text>
+          <text id="k8b-hand" x="250" y="268" class="hand" style="font-size:44px" opacity="0">mit fester Struktur</text>
+          <use id="k8b-ok" href="#haken" x="790" y="96" opacity="0" />
+        </svg>
+      </section>
+
+      <!-- K9 Auswahl am Handy: "Und bei sehr vielen Farben und Größen solltest du natürlich immer außerdem aufpassen, wie leicht zum
+           Beispiel die Auswahl auf dem Smartphone funktioniert. Denn drei Optionen mit jeweils vielen Werten können natürlich die
+           Produktseite auch unnötig kompliziert machen." Und 82,70 (Karte mit Handy) / vielen 83,13 / Farben 83,43 / Größen 83,93 /
+           aufpassen 85,73 / leicht 86,83 / Smartphone 88,30; 89,35-92,85 echte Hilfe-Seite (Remotion), dabei drei 89,73 (dritte
+           Option) / kompliziert 93,87 -->
+      <section id="k9" class="karte clip" data-start="82.63" data-duration="12.82" data-track-index="1">
+        <div class="kicker">Auswahl am Handy</div>
+        <div class="badge">SCHEMA</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k9-handy">
+            <rect id="k9-rand" x="40" y="0" width="240" height="288" rx="30" fill="#fff" stroke="#0b0c0e" stroke-width="3" />
+            <rect x="134" y="10" width="52" height="8" rx="4" fill="#0b0c0e" />
+            <use href="#hoodie" x="120" y="22" width="80" height="80" style="--h:#23272e" />
+            <text x="62" y="124" class="klein" style="font-size:16px">FARBE</text>
+            <g id="k9-farben">
+              <circle cx="72" cy="144" r="11" fill="#23272e" /><circle cx="102" cy="144" r="11" fill="#2f62b3" /><circle cx="132" cy="144" r="11" fill="#9aa3af" />
+              <g class="k9-fx"><circle cx="162" cy="144" r="11" fill="#b4413c" /></g><g class="k9-fx"><circle cx="192" cy="144" r="11" fill="#3d7a52" /></g><g class="k9-fx"><circle cx="222" cy="144" r="11" fill="#d9b44a" /></g><g class="k9-fx"><circle cx="252" cy="144" r="11" fill="#e8e1d4" stroke="#9aa3af" stroke-width="1.5" /></g>
+              <g class="k9-fx"><circle cx="72" cy="172" r="11" fill="#6b4c9a" /></g><g class="k9-fx"><circle cx="102" cy="172" r="11" fill="#d9779a" /></g><g class="k9-fx"><circle cx="132" cy="172" r="11" fill="#7a5a3a" /></g>
+            </g>
+            <text x="62" y="204" class="klein" style="font-size:16px">GRÖSSE</text>
+            <g class="chiptext" style="font-size:14px" text-anchor="middle">
+              <rect x="62" y="212" width="32" height="24" rx="6" fill="none" stroke="#9aa3af" stroke-width="1.6" /><text x="78" y="229">S</text>
+              <rect x="98" y="212" width="32" height="24" rx="6" fill="none" stroke="#9aa3af" stroke-width="1.6" /><text x="114" y="229">M</text>
+              <rect x="134" y="212" width="32" height="24" rx="6" fill="none" stroke="#9aa3af" stroke-width="1.6" /><text x="150" y="229">L</text>
+              <g class="k9-gx"><rect x="170" y="212" width="32" height="24" rx="6" fill="none" stroke="#9aa3af" stroke-width="1.6" /><text x="186" y="229">XL</text></g>
+              <g class="k9-gx"><rect x="206" y="212" width="40" height="24" rx="6" fill="none" stroke="#9aa3af" stroke-width="1.6" /><text x="226" y="229">XXL</text></g>
+              <g class="k9-gx"><rect x="62" y="240" width="32" height="24" rx="6" fill="none" stroke="#9aa3af" stroke-width="1.6" /><text x="78" y="257">XS</text></g>
+              <g class="k9-gx"><rect x="98" y="240" width="40" height="24" rx="6" fill="none" stroke="#9aa3af" stroke-width="1.6" /><text x="118" y="257">3XL</text></g>
+              <g class="k9-gx"><rect x="142" y="240" width="40" height="24" rx="6" fill="none" stroke="#9aa3af" stroke-width="1.6" /><text x="162" y="257">4XL</text></g>
+            </g>
+            <g id="k9-stil" opacity="0">
+              <text x="190" y="256" class="klein" style="font-size:14px">STIL</text>
+              <rect x="186" y="262" width="80" height="18" rx="5" fill="#f2f3f5" stroke="#9aa3af" stroke-width="1.4" />
+            </g>
+          </g>
+          <use id="k9-x" href="#kreuz" x="268" y="14" opacity="0" />
+          <g id="k9-viele" opacity="0">
+            <use href="#warn" x="346" y="40" />
+            <text x="384" y="52" class="lab" style="font-size:34px">viele Werte</text>
+          </g>
+          <g id="k9-leicht" opacity="0">
+            <rect x="324" y="96" width="96" height="96" rx="24" fill="url(#gvd)" />
+            <g transform="translate(342 114) scale(2.5)" class="ico"><use href="#i-handy" /></g>
+            <text x="440" y="136" class="lab" style="font-size:32px">leicht auswählbar?</text>
+            <text x="440" y="174" class="klein">auf dem Smartphone</text>
+          </g>
+          <g id="k9-drei" opacity="0">
+            <text x="326" y="244" class="lab" style="font-size:30px">3 Optionen × viele Werte</text>
+          </g>
+          <text id="k9-hand" x="326" y="282" class="hand" style="font-size:36px" opacity="0">unnötig kompliziert</text>
+        </svg>
+      </section>
+
+      <!-- K10 Gehören sie zusammen: "Und bei der Frage, ob wir zwei Varianten zusammengehören, hilft mir natürlich immer ein einfacher
+           Gedanke. Ist es überhaupt für den Kunden im Kern dasselbe Produkt und ändert sich dann wirklich nur eine klar auswählbare
+           Eigenschaft, dann kann natürlich auch genau eine gemeinsame Produktseite immer sehr sinnvoll sein."
+           Und 95,50 (Karte mit beiden) / zusammengehören 97,53 / Gedanke 100,03 / Ist 101,13 / dasselbe 102,73 / ändert 104,17 /
+           Eigenschaft 106,50 / gemeinsame 108,50 / sinnvoll 110,03 -->
+      <section id="k10" class="karte clip" data-start="95.45" data-duration="15.6" data-track-index="1">
+        <div class="kicker" id="k10-k1">Gehören sie zusammen?</div>
+        <div class="kicker" id="k10-k2" style="opacity:0">Der einfache Gedanke</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <rect id="k10-seite" x="150" y="-4" width="520" height="226" rx="26" fill="none" stroke="url(#gvd)" stroke-width="5" opacity="0" />
+          <g id="k10-l">
+            <rect x="40" y="6" width="250" height="206" rx="22" class="rahmen" />
+            <use href="#hoodie" x="95" y="16" width="140" height="140" style="--h:#23272e" />
+            <text x="165" y="194" text-anchor="middle" class="lab" style="font-size:28px">Hoodie Schwarz</text>
+          </g>
+          <g id="k10-r">
+            <rect x="530" y="6" width="250" height="206" rx="22" class="rahmen" />
+            <use href="#hoodie" x="585" y="16" width="140" height="140" style="--h:#2f62b3" />
+            <text x="655" y="194" text-anchor="middle" class="lab" style="font-size:28px">Hoodie Blau</text>
+          </g>
+          <text id="k10-frage" x="410" y="164" text-anchor="middle" class="lab grau" style="font-size:96px;font-weight:900" opacity="0">?</text>
+          <g id="k10-birne" opacity="0">
+            <rect x="376" y="0" width="68" height="68" rx="18" fill="url(#gvd)" />
+            <g transform="translate(386 10) scale(2)" class="ico"><use href="#i-birne" /></g>
+          </g>
+          <text id="k10-gleich" x="410" y="158" text-anchor="middle" class="lab gtext" style="font-size:96px;font-weight:900" opacity="0">=</text>
+          <text id="k10-hand1" x="410" y="270" text-anchor="middle" class="hand" style="font-size:42px" opacity="0">im Kern dasselbe?</text>
+          <g id="k10-chip" opacity="0">
+            <rect x="180" y="232" width="420" height="54" rx="27" fill="#fff" stroke="#bfe9da" stroke-width="2" />
+            <text x="212" y="268" class="lab" style="font-size:26px">ändert sich nur: Farbe</text>
+            <circle cx="520" cy="259" r="10" fill="#23272e" /><circle cx="548" cy="259" r="10" fill="#2f62b3" />
+          </g>
+          <use id="k10-ok1" href="#haken" x="634" y="259" opacity="0" />
+          <g id="k10-eine" opacity="0">
+            <text x="410" y="272" text-anchor="middle" class="lab" style="font-size:32px">1 gemeinsame Produktseite</text>
+          </g>
+          <use id="k10-ok2" href="#haken" x="666" y="2" opacity="0" />
+        </svg>
+      </section>
+
+      <!-- K11 Checkliste zum Speichern (Briefing: "Test-Checkliste als speicherbarer Frame: Bestand / Bild / Auswahl auf Mobilgerät"):
+           "Ich würde es aber erstmal vor Veröffentlichung mit drei Fällen einfach mal durchtesten. Eine verfügbare Kombination, eine
+           ausverkaufte Kombination und einen Farbwechsel. Wenn natürlich dann alle drei im Shop eindeutig funktionieren, dann hast du
+           natürlich auch die Varianten nicht nur im Backend angelegt, sondern eben auch für den Kunden sinnvoll gelöst."
+           Ich 111,13 (Karte mit Titel) / verfügbare 115,03 / ausverkaufte 116,87 / Farbwechsel 118,70 / alle 120,83 / drei 121,10 /
+           eindeutig 121,70 / funktionieren 122,13 / Backend 125,17 / Kunden 127,30; steht bis zur Folgen-Karte -->
+      <section id="k11" class="karte clip" data-start="111.07" data-duration="18.16" data-track-index="1">
+        <div class="kicker">Checkliste · zum Speichern</div>
+        <div class="status"><span id="k11-backend">Backend ✓</span><span id="k11-kunde">Kunde ✓</span></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <rect x="22" y="0" width="50" height="50" rx="14" fill="url(#gvd)" />
+          <g transform="translate(29 7) scale(1.5)" class="ico"><use href="#i-liste" /></g>
+          <text x="88" y="37" class="lab" style="font-size:34px">Vor der Veröffentlichung testen</text>
+          <g class="k11-p" id="k11-p1">
+            <rect class="k11-box" x="26" y="70" width="44" height="44" rx="11" fill="#fff" stroke="#9aa3af" stroke-width="3" />
+            <path class="k11-h" pathLength="1" d="M37 92 L46 101 L61 83" fill="none" stroke="#0b0c0e" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+            <text x="88" y="94" class="lab" style="font-size:29px">Verfügbare Kombination</text>
+            <text x="88" y="120" class="klein" style="font-size:21px">Bestand je Variante stimmt</text>
+          </g>
+          <g class="k11-p" id="k11-p2">
+            <rect class="k11-box" x="26" y="136" width="44" height="44" rx="11" fill="#fff" stroke="#9aa3af" stroke-width="3" />
+            <path class="k11-h" pathLength="1" d="M37 158 L46 167 L61 149" fill="none" stroke="#0b0c0e" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+            <text x="88" y="160" class="lab" style="font-size:29px">Ausverkaufte Kombination</text>
+            <text x="88" y="186" class="klein" style="font-size:21px">nur diese Variante nicht verfügbar</text>
+          </g>
+          <g class="k11-p" id="k11-p3">
+            <rect class="k11-box" x="26" y="202" width="44" height="44" rx="11" fill="#fff" stroke="#9aa3af" stroke-width="3" />
+            <path class="k11-h" pathLength="1" d="M37 224 L46 233 L61 215" fill="none" stroke="#0b0c0e" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+            <text x="88" y="226" class="lab" style="font-size:29px">Farbwechsel</text>
+            <text x="88" y="252" class="klein" style="font-size:21px">richtiges Variantenbild erscheint</text>
+          </g>
+          <g id="k11-handy" opacity="0">
+            <rect x="560" y="196" width="240" height="76" rx="22" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <g transform="translate(576 216) scale(1.5)" class="ico"><use href="#i-handy" /></g>
+            <text x="622" y="230" class="lab" style="font-size:22px">alles auch</text>
+            <text x="622" y="258" class="lab" style="font-size:22px">am Handy</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K12 Folgen (CTA), groß und mittig, Plus wie bei TikTok: Wenn 129,30 (Karte) / Tipps ~130,4 (leiser Ring-Hinweis) /
+           drück 131,83 (Zeiger) / Plus 132,60 (Plus drückt ein, dreht sich, wird zum Haken); bleibt bis zum Ende -->
+      <section id="k12" class="folgekarte clip" data-start="129.23" data-duration="4.04" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
+        <div id="fring"></div>
+        <svg id="fplus" viewBox="-32 -32 64 64">
+          <g id="fp-plus"><circle r="28" fill="url(#gvd)" stroke="#fff" stroke-width="4" /><path d="M-12 0 H12 M0 -12 V12" stroke="#fff" stroke-width="5.5" stroke-linecap="round" /></g>
+          <g id="fp-haken" opacity="0" transform="rotate(180)"><circle r="28" fill="#fff" stroke="#e5e7eb" stroke-width="3" /><path id="fp-hpfad" pathLength="1" d="M-12 1 L-3 10 L13 -8" fill="none" stroke="url(#gvd)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </svg>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><use href="#zeigerform" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker (keine leere Karte: der erste Inhalt kommt mit), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const b = document.querySelector(id + " .badge");
+        if (b) tl.fromTo(b, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, an + 0.06);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const weg = (sel, t, d = 0.2) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      const da = (sel, t, d = 0.25) => tl.to(sel, { opacity: 1, duration: d, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5, ease = "power2.out") {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, t);
+      }
+      // Zeiger (Spitze bei 9/9 px des 56-px-Symbols): fährt in Karten-Koordinaten auf (x, y) und tippt bei t
+      function zeiger(sel, von, nach, t0, tap) {
+        tl.fromTo(sel, { opacity: 0, x: von[0] - 9, y: von[1] - 9 }, { opacity: 1, duration: 0.15, ease: "power2.out" }, t0);
+        tl.to(sel, { x: nach[0] - 9, y: nach[1] - 9, duration: Math.max(0.2, tap - t0 - 0.2), ease: "power2.inOut" }, t0 + 0.05);
+        tl.to(sel, { scale: 0.85, duration: 0.08, ease: "power2.in" }, tap - 0.02);
+        tl.to(sel, { scale: 1, duration: 0.15, ease: "power2.out" }, tap + 0.06);
+      }
+      const ziehe = (sel, nach, t, d = 0.4) => {
+        tl.to(sel, { x: nach[0] - 9, y: nach[1] - 9, duration: d, ease: "power2.inOut" }, t);
+        tl.to(sel, { scale: 0.85, duration: 0.08, ease: "power2.in" }, t + d - 0.02);
+        tl.to(sel, { scale: 1, duration: 0.15, ease: "power2.out" }, t + d + 0.06);
+      };
+      gsap.set("#k0-weg1, #k0-weg2, #k0-knaeuel, #k5-mstrich, #k8-strich, .k11-h, #fp-hpfad", { strokeDasharray: 1, strokeDashoffset: 1 });
+      gsap.set(".zeiger", { transformOrigin: "9px 9px" });
+
+      // K0 Varianten → Zeit sparen ✓ oder Chaos ✕ (Weggabelung)
+      karte("#k0", 4.33, 8.0);
+      zeichne("#k0-weg1", 4.9, 0.4);
+      pop("#k0-zeit", 4.95, 0.35);
+      badge("#k0-ok", 5.1);
+      ein("#k0-oder", 5.9);
+      zeichne("#k0-weg2", 7.03, 0.35);
+      pop("#k0-chaos", 7.06, 0.3);
+      zeichne("#k0-knaeuel", 7.1, 0.5, "power1.inOut");
+      badge("#k0-x", 7.4);
+
+      // K1 Matrix 4 Größen × 3 Farben = 12
+      karte("#k1", 8.73, 14.95);
+      tl.fromTo("#k1-hoodie", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 8.77);
+      tl.fromTo(".k1-g", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out", stagger: 0.06 }, 10.2);
+      tl.fromTo("#k1-e4", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 10.36);
+      tl.fromTo(".k1-f", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.25, ease: "power3.out", stagger: 0.08 }, 11.1);
+      tl.fromTo("#k1-e3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 11.43);
+      tl.fromTo(".k1-z", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.out", stagger: 0.035 }, 13.33);
+      pop("#k1-e12", 13.33, 0.3);
+
+      // K2 1 Produkt mit 12 Varianten statt 12 fast identischer Produkte
+      karte("#k2", 19.55, 23.33);
+      tl.fromTo("#k2-eins", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 19.59);
+      ein("#k2-statt", 19.62);
+      tl.fromTo(".k2-p", { opacity: 0, scale: 0.88, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.03 }, 20.3);
+      ein("#k2-label", 21.0);
+      tl.to(".k2-p", { opacity: 0.35, duration: 0.25, ease: "power2.out" }, 22.13);
+      badge("#k2-x", 22.13);
+      ein("#k2-hand", 22.63);
+
+      // K3 je Variante eigener Bestand und eigene Artikelnummer (Schema)
+      karte("#k3", 23.33, 28.53);
+      ein("#k3-r1", 23.37);
+      ein("#k3-r2", 24.26);
+      ein("#k3-r3", 24.5);
+      ein("#k3-mehr", 24.5);
+      ein("#k3-hb", 25.7);
+      da("#k3-bestand", 25.7);
+      document.querySelectorAll(".k3-fill").forEach((r) => tl.to(r, { attr: { width: +r.dataset.w }, duration: 0.5, ease: "power2.out" }, 25.72));
+      ein("#k3-ha", 26.66);
+      tl.fromTo(".k3-nr", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out", stagger: 0.1 }, 27.26);
+      ein("#k3-eind", 27.76);
+
+      // K4 eine Produktseite, die Kundschaft wechselt die Varianten
+      karte("#k4", 28.53, 34.07);
+      tl.fromTo("#k4-handy", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 28.57);
+      tl.fromTo("#k4-kunde", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 28.9);
+      ein("#k4-seite", 30.46);
+      zeiger("#k4-zeiger", [330, 330], [136, 236], 31.0, 31.3);
+      tl.to("#k4-hs", { opacity: 0, duration: 0.2 }, 31.32); tl.to("#k4-hb", { opacity: 1, duration: 0.2 }, 31.32);
+      tl.to("#k4-ring", { attr: { cx: 136 }, duration: 0.25, ease: "power2.inOut" }, 31.32);
+      ziehe("#k4-zeiger", [169, 280], 31.75, 0.35);
+      tl.to("#k4-sel", { attr: { x: 150 }, duration: 0.2, ease: "power2.inOut" }, 32.12);
+      tl.to("#k4-ts", { fill: "#0b0c0e", duration: 0.1 }, 32.12); tl.to("#k4-tl", { fill: "#fff", duration: 0.1 }, 32.18);
+      ein("#k4-hand", 32.36);
+      ziehe("#k4-zeiger", [176, 236], 32.45, 0.3);
+      tl.to("#k4-hb", { opacity: 0, duration: 0.2 }, 32.77); tl.to("#k4-hg", { opacity: 1, duration: 0.2 }, 32.77);
+      tl.to("#k4-ring", { attr: { cx: 176 }, duration: 0.25, ease: "power2.inOut" }, 32.77);
+      tl.to("#k4-zeiger", { opacity: 0, duration: 0.3 }, 33.3);
+
+      // K5 Schwarz/M ausverkauft, nicht das ganze Produkt; Blau/M verfügbar
+      karte("#k5", 34.07, 44.03);
+      badge("#k5-ring", 36.7);
+      tl.to("#k5-mbox", { attr: { fill: "#0b0c0e" }, duration: 0.15 }, 37.8); tl.to("#k5-mtext", { fill: "#fff", duration: 0.15 }, 37.8);
+      tl.to("#k5-mbox", { attr: { fill: "#e5e7eb", stroke: "#d1d5db" }, duration: 0.2 }, 37.92); tl.to("#k5-mtext", { fill: "#9aa3af", duration: 0.2 }, 37.92);
+      zeichne("#k5-mstrich", 37.92, 0.3);
+      tl.fromTo("#k5-st1", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 37.95);
+      tl.fromTo("#k5-falsch", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 39.93);
+      badge("#k5-x", 41.7);
+      zeiger("#k5-zeiger", [300, 330], [104, 248], 42.35, 42.85);
+      tl.to("#k5-ring", { attr: { cx: 104 }, duration: 0.25, ease: "power2.inOut" }, 42.87);
+      tl.to("#k5-hs", { opacity: 0, duration: 0.2 }, 42.87); tl.to("#k5-hb", { opacity: 1, duration: 0.2 }, 42.87);
+      tl.to("#k5-farbname", { opacity: 0, duration: 0.15 }, 42.87); tl.to("#k5-farbname2", { opacity: 1, duration: 0.15 }, 42.95);
+      tl.to("#k5-mbox", { attr: { fill: "#0b0c0e", stroke: "#0b0c0e" }, duration: 0.2 }, 42.9); tl.to("#k5-mtext", { fill: "#fff", duration: 0.2 }, 42.9);
+      tl.to("#k5-mstrich", { opacity: 0, duration: 0.2 }, 42.9);
+      tl.fromTo("#k5-st2", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 42.95);
+      tl.to("#k5-zeiger", { opacity: 0, duration: 0.3 }, 43.4);
+
+      // K6 Variantenbild je Farbe: Tipp auf Blau, das Hauptbild wechselt zur richtigen Farbe; themeabhängig
+      karte("#k6", 51.45, 58.17);
+      tl.fromTo(".k6-b", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.07 }, 51.5);
+      zeiger("#k6-zeiger", [330, 330], [145, 304], 52.3, 52.8);
+      tl.to("#k6-ring", { attr: { cx: 145 }, duration: 0.25, ease: "power2.inOut" }, 52.82);
+      da("#k6-rahmen", 52.82);
+      tl.to("#k6-zeiger", { opacity: 0, duration: 0.3 }, 53.3);
+      tl.to("#k6-hs", { opacity: 0, duration: 0.3 }, 53.93); tl.to("#k6-hb", { opacity: 1, duration: 0.3 }, 53.93);
+      badge("#k6-ok", 54.3);
+      tl.fromTo("#k6-theme", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 56.33);
+
+      // K7 Artikelnummer: Schema Produkt-Farbe-Größe, HOODIE-SCHWARZ-M tippt sich auf seinen Wörtern
+      karte("#k7", 58.66, 64.03);
+      ein("#k7-titel", 59.8);
+      ein("#k7-schema", 61.73);
+      ein("#k7-hand", 61.78);
+      ein("#k7-t1", 62.2, 0.2);
+      da("#k7-s1", 62.55, 0.1);
+      ein("#k7-t2", 62.58, 0.2);
+      da("#k7-s2", 63.2, 0.1);
+      pop("#k7-t3", 63.24, 0.25);
+
+      // K7b HOODIE-SCHWARZ-S/-M/-L, Lager / Retouren / Support ✓, zufällige Zahlenfolge ✕
+      karte("#k7b", 64.03, 70.93);
+      tl.fromTo(".k7b-r", { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out", stagger: 0.09 }, 64.07);
+      pop("#k7b-lager", 64.86);
+      pop("#k7b-retoure", 65.36);
+      pop("#k7b-support", 66.2);
+      tl.fromTo(".k7b-ok", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.08 }, 67.3);
+      ein("#k7b-hand", 67.7);
+      ein("#k7b-zufall", 69.53);
+      badge("#k7b-x", 70.13);
+
+      // K8 nur ein Beispiel, kein Pflichtformat
+      karte("#k8", 70.93, 74.1);
+      tl.fromTo("#k8-stempel", { opacity: 0, scale: 1.25, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, 72.0);
+      ein("#k8-pflicht", 72.8);
+      zeichne("#k8-strich", 73.7, 0.3);
+      badge("#k8-x", 73.75);
+
+      // K8b Benennung frei, dein Lager, dann rasten Produkt - Farbe - Größe als Struktur ein
+      karte("#k8b", 74.1, 82.63);
+      gsap.set("#k8b-b1", { x: 470, y: 94, rotation: 7, transformOrigin: "50% 50%" });
+      gsap.set("#k8b-b2", { x: 640, y: 6, rotation: -6, transformOrigin: "50% 50%" });
+      gsap.set("#k8b-b3", { x: 262, y: 14, rotation: -9, transformOrigin: "50% 50%" });
+      tl.fromTo("#k8b-b1, #k8b-b2, #k8b-b3", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out", stagger: 0.07 }, 74.14);
+      ein("#k8b-frei", 75.63);
+      tl.fromTo("#k8b-lager", { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 77.93);
+      tl.to("#k8b-b1", { x: 252, y: 98, rotation: 0, duration: 0.45, ease: "power3.inOut" }, 81.96);
+      tl.to("#k8b-b2", { x: 457, y: 98, rotation: 0, duration: 0.45, ease: "power3.inOut" }, 82.0);
+      tl.to("#k8b-b3", { x: 640, y: 98, rotation: 0, duration: 0.45, ease: "power3.inOut" }, 82.04);
+      da("#k8b-s1", 82.38, 0.15); da("#k8b-s2", 82.4, 0.15);
+      weg("#k8b-frei", 81.96);
+      ein("#k8b-hand", 82.2);
+      badge("#k8b-ok", 82.4);
+
+      // K9 Handy: viele Farben und Größen, leicht auswählbar?, dritte Option, unnötig kompliziert
+      karte("#k9", 82.63, 95.45);
+      tl.fromTo(".k9-fx", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.05 }, 83.06);
+      tl.fromTo(".k9-gx", { opacity: 0, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.05 }, 83.86);
+      tl.fromTo("#k9-viele", { opacity: 0, x: 14 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 85.66);
+      tl.fromTo("#k9-leicht", { opacity: 0, x: 14 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 86.76);
+      tl.to("#k9-rand", { attr: { stroke: "#31adec" }, duration: 0.3 }, 88.23);
+      ein("#k9-stil", 89.66);
+      ein("#k9-drei", 89.9);
+      badge("#k9-x", 93.8);
+      ein("#k9-hand", 93.85);
+
+      // K10 zwei Hoodies: gehören sie zusammen? → dasselbe Produkt, nur die Farbe ändert sich → 1 gemeinsame Produktseite
+      karte("#k10", 95.45, 111.05);
+      tl.fromTo("#k10-l, #k10-r", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out", stagger: 0.08 }, 95.49);
+      pop("#k10-frage", 97.46);
+      pop("#k10-birne", 99.96);
+      tl.to("#k10-k1", { opacity: 0, duration: 0.2 }, 101.06); tl.fromTo("#k10-k2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 101.1);
+      ein("#k10-hand1", 101.1);
+      weg("#k10-frage", 102.66, 0.15);
+      pop("#k10-gleich", 102.7);
+      weg("#k10-hand1", 104.1);
+      ein("#k10-chip", 104.12);
+      badge("#k10-ok1", 106.43);
+      weg("#k10-birne", 108.3);
+      weg("#k10-gleich", 108.43);
+      weg("#k10-chip, #k10-ok1", 108.43);
+      tl.to("#k10-l", { x: 110, duration: 0.5, ease: "power3.inOut" }, 108.43);
+      tl.to("#k10-r", { x: -110, duration: 0.5, ease: "power3.inOut" }, 108.43);
+      da("#k10-seite", 108.8, 0.3);
+      ein("#k10-eine", 108.85);
+      badge("#k10-ok2", 109.96);
+
+      // K11 Checkliste (speicherbar): drei Tests auf ihren Wörtern, Haken auf "alle drei … funktionieren", Handy, Backend → Kunde
+      karte("#k11", 111.07, null);
+      ein("#k11-p1", 114.96);
+      ein("#k11-p2", 116.8);
+      ein("#k11-p3", 118.63);
+      [["#k11-p1", 120.76], ["#k11-p2", 121.03], ["#k11-p3", 121.33]].forEach(([p, t]) => {
+        tl.to(p + " .k11-box", { attr: { fill: "#00e090", stroke: "#00c27a" }, duration: 0.2 }, t);
+        zeichne(p + " .k11-h", t + 0.04, 0.3);
+      });
+      tl.fromTo("#k11-handy", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 121.63);
+      tl.fromTo("#k11-backend", { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 125.1);
+      tl.fromTo("#k11-kunde", { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 127.23);
+      tl.to("#k11", { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, 128.93);
+
+      // K12 Folgen wie bei TikTok: Karte auf "Wenn", leiser Ring auf "Tipps", Zeiger auf "drück", auf "Plus" drückt das Plus ein
+      // (1 → 0,8), dreht sich um 180°, wird zum weißen Kreis mit gezeichnetem Haken im Verlauf, springt kurz über und gibt einen
+      // Ring-Puls nach außen; der Haken bleibt bis zum Schluss
+      const TAP = 132.53;
+      tl.fromTo("#k12", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 129.23);
+      gsap.set("#fplus", { transformOrigin: "50% 50%" });
+      tl.fromTo("#fring", { opacity: 0.6, scale: 1 }, { opacity: 0, scale: 1.6, duration: 0.6, ease: "power2.out", immediateRender: false }, 130.37);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 220, y: 214 }, { opacity: 1, x: 200, y: 206, duration: 0.15, ease: "power2.out" }, 131.77);
+      tl.to("#fzeiger", { x: 112, y: 170, duration: 0.55, ease: "power2.inOut" }, 131.9);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, TAP - 0.02);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, TAP + 0.06);
+      tl.to("#fplus", { scale: 0.8, duration: 0.08, ease: "power2.in" }, TAP);
+      tl.to("#fplus", { rotation: 180, duration: 0.3, ease: "power2.inOut" }, TAP);
+      tl.set("#fp-plus", { opacity: 0 }, TAP + 0.15);
+      tl.set("#fp-haken", { opacity: 1 }, TAP + 0.15);
+      tl.to("#fp-hpfad", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, TAP + 0.16);
+      tl.fromTo("#fplus", { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "back.out(4)", immediateRender: false }, TAP + 0.12);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.6, ease: "power2.out", immediateRender: false }, TAP + 0.16);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, TAP + 0.15);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, TAP + 0.15);
+      tl.to("#fzeiger", { x: 150, y: 210, duration: 0.25, ease: "power2.out" }, TAP + 0.25);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.3, ease: "power2.in" }, TAP + 0.5);
+      tl.set({}, {}, 133.27);
+
+      tl.seek(0);
+      window.__timelines["varianten-skizzen"] = tl;
+    </script>
+  </body>
+</html>
