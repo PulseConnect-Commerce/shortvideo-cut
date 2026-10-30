@@ -1,0 +1,162 @@
+{
+ "projekt": "varianten",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 14.6,
+   "text": "Verkaufst du auf Shopify Kleidung, dann kannst du dir tatsächlich beim Anlegen von Varianten eine Menge Zeit ersparen oder auch ein ziemliches Chaos einhandeln."
+  },
+  {
+   "take": "t1",
+   "ab": 27.6,
+   "text": "Nehmen wir uns mal als Beispiel einen Hoodie in vier Größen und in drei Farben. Das sind natürlich immer zwölf mögliche Kombinationen."
+  },
+  {
+   "take": "t1",
+   "ab": 42.2,
+   "text": "Ich würde dafür normalerweise mein Produkt erstmal mit Optionen, Größen oder Farben anlegen, statt einfach nur zwölf fast identische Produkte erst mal zu erstellen."
+  },
+  {
+   "take": "t1",
+   "ab": 52.7,
+   "text": "Aber warum? Denn weil du für jede Kombination mal einen eigenen Bestand und eine eindeutige Artikelnummer pflegen kannst,"
+  },
+  {
+   "take": "t1",
+   "ab": 62.2,
+   "text": "während die Kundschaft natürlich immer auf einer einzigen Produktseite mal zwischen den einzelnen Varianten hin und her wechselt. Aber ein Detail wird einfach oft unterschätzt, denn wenn ein Hoodie in Schwarz in Größe M ausverkauft ist, dann darf das natürlich nicht so aussehen, als wäre immer gleich das komplette Produkt immer nicht verfügbar. Deshalb würde ich hier tatsächlich immer empfehlen, die Bestände pro Variante einzeln zu prüfen. Und ich würde jetzt mal unterschiedliche Variantbilder hinterlegen,"
+  },
+  {
+   "take": "t1",
+   "ab": 92.8,
+   "text": "damit der Kunde dann nach der Farbauswahl auch wirklich die richtige Farbe sieht. Sofern natürlich das Theme immer die Darstellung auch unterstützt."
+  },
+  {
+   "take": "t1",
+   "ab": 102.8,
+   "text": "Mein nächster Tipp betrifft tatsächlich die Artikelnummer. Denn ein klares Schema wie Hoodie Schwarz M ist natürlich für das Lager, Retouren und für den Support immer nachvollziehbarer als irgendwelche zufälligen Zahlen vollen."
+  },
+  {
+   "take": "t1",
+   "ab": 122.6,
+   "text": "Das ist jetzt natürlich nur mein Beispiel und kein vorgeschriebenes Format. Du kannst natürlich die Benennung so machen, wie du es einfach für dein Lager am effizientesten hast, aber ich kann dir auf jeden Fall empfehlen, baue dir hier eine Struktur auf."
+  },
+  {
+   "take": "t1",
+   "ab": 137.6,
+   "text": "Und bei sehr vielen Farben und Größen solltest du natürlich immer außerdem aufpassen, wie leicht zum Beispiel die Auswahl auf dem Smartphone funktioniert. Denn drei Optionen mit jeweils vielen Werten können natürlich die Produktseite auch unnötig kompliziert machen. Und bei der Frage, ob wir zwei Varianten zusammengehören, hilft mir natürlich immer ein einfacher Gedanke. Ist es überhaupt für den Kunden im Kern dasselbe Produkt"
+  },
+  {
+   "take": "t1",
+   "ab": 164,
+   "text": "und ändert sich dann wirklich nur eine klar auswählbare Eigenschaft,"
+  },
+  {
+   "take": "t1",
+   "ab": 174.8,
+   "text": "dann kann natürlich auch genau eine gemeinsame Produktseite immer sehr sinnvoll sein. Ich würde es aber erstmal vor Veröffentlichung mit drei Fällen einfach mal durchtesten. Eine verfügbare Kombination, eine ausverkaufte Kombination und einen Farbwechsel. Wenn natürlich dann alle drei im Shop eindeutig funktionieren, dann hast du natürlich auch die Variante nicht nur im Backend angelegt, sondern eben auch für den Kunden sinnvoll gelöst. Wenn du weitere solche E-Commerce Tipps nicht verpassen willst, dann drück mal hier gerne das Plus weg."
+  }
+ ],
+ "korrekturen": [
+  [
+   "t1",
+   15.23,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   17.03,
+   "Du",
+   "du"
+  ],
+  [
+   "t1",
+   17.11,
+   "Dir",
+   "dir"
+  ],
+  [
+   "t1",
+   83.95,
+   "Variantbilder",
+   "Variantenbilder"
+  ],
+  [
+   "t1",
+   92.93,
+   "Damit",
+   "damit"
+  ],
+  [
+   "t1",
+   106.91,
+   "Hoodie",
+   "HOODIE-SCHWARZ-M"
+  ],
+  [
+   "t1",
+   107.29,
+   "Schwarz",
+   ""
+  ],
+  [
+   "t1",
+   107.95,
+   "M",
+   ""
+  ],
+  [
+   "t1",
+   114.85,
+   "Zahlen",
+   "Zahlenfolgen."
+  ],
+  [
+   "t1",
+   115.19,
+   "vollen.",
+   ""
+  ],
+  [
+   "t1",
+   166.61,
+   "Eigenschaft.",
+   "Eigenschaft,"
+  ],
+  [
+   "t1",
+   174.89,
+   "Dann",
+   "dann"
+  ],
+  [
+   "t1",
+   192.25,
+   "Variante",
+   "Varianten"
+  ],
+  [
+   "t1",
+   197.97,
+   "E-Commerce",
+   "E-Commerce-Tipps"
+  ],
+  [
+   "t1",
+   198.31,
+   "Tipps",
+   ""
+  ]
+ ],
+ "ende": {
+  "bis": 201.15
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/variants/searching-filtering",
+ "status": 200,
+ "datum": "2026-10-30T21:03:45.547Z",
+ "titel": "Shopify Help Center | Varianten suchen, filtern und gruppieren",
+ "text": "Hilfe\nKostenlos starten\nEinloggen\nInhalt\nHome\nProdukte\nVarianten\nVarianten suchen, filtern und gruppieren\nFrühzeitiger Zugriff\n\nEine neu gestaltete Produktdetailseite wird schrittweise eingeführt. Wenn diese in deinem Shop verfügbar ist, verwaltest du all deine Varianten auf der Produktdetailseite anstatt auf separaten Variantendetailseiten. Daher stimmen einige Informationen auf dieser Seite möglicherweise nicht mit dem überein, was dir angezeigt wird. Mehr Informationen zu Varianten auf der neu gestalteten Produktdetailseite.\n\nAlle deine Produktvarianten sind im Abschnitt Varianten auf der Produktdetailseite aufgeführt. Varianten werden auch nach Option gruppiert. Das Suchen und Filtern deiner Variantenliste kann dir helfen, die spezifischen Varianten zu finden, die du bearbeiten, überprüfen oder aktualisieren musst.\n\nDu kannst Varianten nur in deinem Shopify-Adminbereich auf deinem Desktop-Computer oder in deinem mobilen Browser suchen, filtern und gruppieren.\n\nDu kannst Optionswerte suchen und filtern, um bestimmte Varianten zu finden. Außerdem kannst du nach Standort filtern, um den verfügbaren Inventarbestand für einen bestimmten Standort anzuzeigen.\n\nMehr Informationen über das Suchen, Filtern und Sortieren deiner Listenansichten im Shopify-Adminbereich.\n\nAuf dieser Seite\nVarianten nach Optionswert suchen und filtern\nNach Standort filtern\nNach Option gruppieren\nVarianten auf der neu gestalteten Produktdetailseite\nVarianten nach Optionswert suchen und filtern\n\nIm Abschnitt Varianten auf der Produktdetailseite kannst du nach Varianten anhand des Titels suchen und deine Variantenliste filtern, um eine Untergruppe von Varianten anzuzeigen, die einem bestimmten Optionswert entsprechen. Wenn deine Varianten mehr als eine Option haben, kannst du für jede Option einen Filter hinzufügen. Optionsfilter können zusammen mit der Suche verwendet werden, um spezifischere Ergebnisse zu erhalten. Wenn du mehr als einen Filter hinzufügst, werden nur die Varianten angezeigt, die allen Bedingungen entsprechen.\n\nBeispiel: Du verkaufst einen Hut, den es in vielen Größen und Farben gibt. Die kleinen schwarzen Hüte sollen im Rahmen eines Sales rabattiert werden, also musst du den Preis dieser Variante anpassen. Du kannst die Variantensuche und den Filter öffnen und dann unter der Option Größe den Wert Small und unter der Option Farbe den Wert Schwarz auswählen. Daraufhin wird die Variantenliste so angepasst, dass nur der kleine, schwarze Hut angezeigt wird.\n\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt Varianten auf das Symbol , um die Suchleiste und den Optionsfilter zu öffnen.\n\nPasse mit einer oder beiden der folgenden Methoden an, welche Varianten angezeigt werden:\n\nGib den Namen der Variante in die Suchleiste ein.\nKlicke auf eine der verfügbaren Optionen und wähle einen Optionswert aus.\nOptional: Entferne einen Suchbegriff oder Filter, um mehr Ergebnisse anzuzeigen, indem du eine der folgenden Methoden anwendest:\nUm einen Suchbegriff zu entfernen, lösche den Text in der Suchleiste.\nUm einen einzelnen Optionsfilter zu entfernen, klicke auf den Namen der Option und dann auf Löschen.\nUm alle Optionsfilter zu entfernen, klicke auf Alle löschen.\nNach Standort filtern\n\nStandardmäßig wird die verfügbare Menge für alle Standorte im Abschnitt Varianten angezeigt. Du kannst nach Standort filtern, um die verfügbaren Mengen für einen bestimmten Standort anzuzeigen. Nachdem du nach Standort gefiltert hast, kannst du den verfügbaren Inventarbestand bearbeiten. Klicke auf Alle Standorte, um den gesamten verfügbaren Inventarbestand für alle Standorte anzuzeigen.\n\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt Varianten auf Alle Standorte.\n\nWähle den Standort aus, den du überprüfen oder aktualisieren möchtest.\n\nNach Option gruppieren\n\nVarianten werden nach Variantenoption gruppiert und die Gesamtzahl der Varianten innerhalb der Gruppe wird angezeigt. Um die Varianten innerhalb einer Gruppe anzuzeigen oder zu verwalten, klicke auf die übergeordnete Variante, um die Gruppe zu öffnen und einzelne Varianten innerhalb der Gruppe zu bearbeiten.\n\nWenn du mehr als eine Variantenoption hast, kannst du die Gruppierung der Varianten ändern, indem du im Abschnitt Varianten auf der Produktdetailseite unter Gruppieren nach auf eine der anderen Variantenoptionen klickst. Wenn mehr als eine Option vorhanden ist, werden die Varianten standardmäßig nach der ersten zugewiesenen Option gruppiert. Um die Standardgruppierung zu ändern, kannst du die Anzeigereihenfolge der Variantenoptionen ändern.\n\nVarianten auf der neu gestalteten Produktdetailseite\nFrühzeitiger Zugriff\n\nDie neu gestaltete Produktdetailseite wird schrittweise eingeführt und ist nur für bestimmte Shops verfügbar.\n\nWenn in deinem Shop die neu gestaltete Produktdetailseite verfügbar ist, kannst du alle deine Varianten direkt auf der Produktdetailseite verwalten, ohne eine separate Variantendetailseite öffnen zu müssen. Du kannst dir deine Varianten in einer Detailansicht oder Tabellenansicht anzeigen lassen:\n\nAnsicht\tBeschreibung\nDetailansicht\tKlicke in der Tabellenansicht auf den Titel einer Variante, um deren Details wie Preis, Inventar und Versand zu öffnen. Du kannst jeweils eine Variante bearbeiten oder den Preis und Versand für mehrere ausgewählte Varianten bearbeiten.\nTabellenansicht\tKlicke auf das Symbol , um all deine Varianten in einer Tabelle mit ihren Preisen, Kanälen, Katalogen und dem verfügbaren Inventar anzuzeigen. Du kannst deine Varianten vergleichen, das Inventar an einem Standort über die Auswahl Alle Standorte überprüfen und Preise in der Tabelle bearbeiten. Um verfügbare Mengen zu bearbeiten, wähle zunächst einen Standort aus.\nFeedback hinterlassen\nTeam kontaktieren",
+ "hs": [
+  "H1: Varianten suchen, filtern und gruppieren",
+  "H2: Auf dieser Seite",
+  "H2: Varianten nach Optionswert suchen und filtern",
+  "H2: Nach Standort filtern",
+  "H2: Nach Option gruppieren",
+  "H2: Varianten auf der neu gestalteten Produktdetailseite"
+ ],
+ "imgs": [
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/SearchIcon.svg",
+   "alt": "Suchen",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/FilterIcon.svg",
+   "alt": "Filter",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/TableIcon.svg",
+   "alt": "Tabellenansicht anzeigen",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IFRAME",
+   "src": "",
+   "alt": "",
+   "w": 0,
+   "h": 0
+  }
+ ],
+ "svgs": [
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  }
+ ],
+ "icons": [],
+ "links": [
+  "Produkte -> https://help.shopify.com/de/manual/products",
+  "Varianten -> https://help.shopify.com/de/manual/products/variants",
+  "Varianten auf der neu gestalteten Produktdetailseite -> https://help.shopify.com/de/manual/products/variants/searching-filtering#redesigned-product-details-page",
+  "Varianten nach Optionswert suchen und filtern -> https://help.shopify.com/de/manual/products/variants/searching-filtering#search-and-filter-variants-by-option-value",
+  "Nach Standort filtern -> https://help.shopify.com/de/manual/products/variants/searching-filtering#filter-by-location",
+  "Nach Option gruppieren -> https://help.shopify.com/de/manual/products/variants/searching-filtering#group-by-option",
+  "Varianten auf der neu gestalteten Produktdetailseite -> https://help.shopify.com/de/manual/products/variants/searching-filtering#redesigned-product-details-page",
+  "verfügbaren Inventarbestand bearbeiten -> https://help.shopify.com/de/manual/products/variants/edit-variants#edit-variants-from-the-product-details-page",
+  "Anzeigereihenfolge der Variantenoptionen ändern -> https://help.shopify.com/de/manual/products/variants/edit-variants#change-the-display-order-of-variant-options-and-values"
+ ]
+}

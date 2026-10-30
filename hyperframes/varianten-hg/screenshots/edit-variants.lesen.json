@@ -1,0 +1,106 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/variants/edit-variants",
+ "status": 200,
+ "datum": "2026-10-30T21:03:38.581Z",
+ "titel": "Shopify Help Center | Varianten für ein bestehendes Produkt bearbeiten",
+ "text": "Hilfe\nKostenlos starten\nEinloggen\nInhalt\nHome\nProdukte\nVarianten\nVarianten für ein bestehendes Produkt bearbeiten\nFrühzeitiger Zugriff\n\nEine neu gestaltete Produktdetailseite wird schrittweise eingeführt. Wenn diese in deinem Shop verfügbar ist, verwaltest du all deine Varianten auf der Produktdetailseite anstatt auf separaten Variantendetailseiten. Daher stimmen einige Informationen auf dieser Seite möglicherweise nicht mit dem überein, was dir angezeigt wird. Mehr Informationen zu Varianten auf der neu gestalteten Produktdetailseite.\n\nAuf der Detailseite eines Produkts kannst du Varianten bearbeiten und entfernen. Dies gibt dir die Flexibilität, die für ein Produkt verkauften Varianten jederzeit zu ändern. Du kannst auch die Veröffentlichung für einzelne Produktvarianten verwalten.\n\nAuf der Produktdetailseite kannst du Variantenoptionen und -werte verwalten, Varianten auswählen, um sie per Sammelaktion zu bearbeiten, oder auf einzelne Varianten klicken, um zur Variantendetailseite zu gelangen und Änderungen an dieser spezifischen Variante vorzunehmen.\n\nAuf dieser Seite\nVariantendetails einzeln bearbeiten\nVariantendetails per Sammelaktion bearbeiten\nVariantenoptionen und -werte bearbeiten\nAnzeigereihenfolge von Variantenoptionen und -werten ändern\nMetafeld für eine Variante bearbeiten\nVariante löschen\nVariantendetails einzeln bearbeiten\n\nDu kannst deine Variantendetails einzeln auf der Variantendetailseite bearbeiten.\n\nDesktop\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt Varianten auf die Variante, die du bearbeiten möchtest.\n\nBearbeite deine Variantendetails, wie z. B. Optionen, Preisgestaltung, Inventar und Versand.\n\nKlicke auf Speichern.\n\nMobil\nVariantendetails in Bulk bearbeiten\n\nDu kannst einige Variantendetails auf der Produktdetailseite ändern. Um andere Details für mehrere Varianten auf einmal zu bearbeiten, kannst du den Bulk-Editor verwenden.\n\nVarianten auf der Produktdetailseite bearbeiten\n\nDu kannst die folgenden Details auf der Produktdetailseite anpassen:\n\nVariantenbild\nVariantenpreis\nverfügbares Inventar pro Standort\n\nKlicke auf ein Variantenbild, um es anzupassen. Klicke auf den Variantenpreis und gib dann den neuen Preis ein.\n\nUm das Varianteninventar zu bearbeiten, musst du nach Standort filtern. Wenn du nach einem bestimmten Standort gefiltert hast, passe das verfügbare Inventar an.\n\nDie übergeordnete Variante einer Gruppe ist keine eindeutige Variante. Wenn du den Preis oder das Bild des übergeordneten Eintrags anpasst, ändern sich auch alle Variantenpreise und -bilder innerhalb der Gruppe. Um den Preis oder das Bild einer einzelnen Variante anzupassen, klicke auf die übergeordnete Variante, um die Gruppe zu öffnen, und wähle dann die spezifische Variante aus, die du anpassen möchtest. Das verfügbare Inventar kann in der Gruppenanzeige auf der obersten Ebene nicht bearbeitet werden. Du musst die Variantengruppe öffnen, um das verfügbare Inventar jeder Variante einzeln anzupassen.\n\nDen Bulk-Editor verwenden\n\nDu kannst mit dem Bulk-Editor Änderungen an allen Details für mehrere Varianten auf einmal vornehmen. Informationen zur Verwendung des Bulk-Editors findest du unter Produkte und Varianten per Sammelaktion bearbeiten.\n\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nFühre im Abschnitt Varianten einen der folgenden Schritte aus:\n\nUm bestimmte Varianten zu bearbeiten, wähle die zu bearbeitenden Varianten über die Kontrollkästchen aus und klicke dann auf Massenbearbeitung.\nUm alle Varianten auf einmal zu bearbeiten, wähle das oberste Kontrollkästchen aus und klicke dann auf Bulk-Bearbeitung.\n\nNimm die Änderungen an deinen Varianten vor.\n\nKlicke auf Speichern.\n\nVariantenoptionen und Werte bearbeiten\n\nDu kannst Variantenoptionen und Optionswerte hinzufügen, entfernen oder bearbeiten.\n\nDesktop\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nFühre im Abschnitt Varianten einen der folgenden Schritte aus:\n\nUm eine neue Variantenoption hinzuzufügen, klicke auf + Weitere Option hinzufügen und gib den Namen der Option und einen Standardoptionswert ein. Der Standardoptionswert wird auf alle vorhandenen Varianten angewendet. Du kannst maximal drei Optionen für ein Produkt haben.\nUm den Namen einer Variantenoption zu ändern, klicke neben der Option, die du ändern möchtest, auf Bearbeiten und gib dann den neuen Optionsnamen ein.\nUm einen Optionswert einer Variante zu löschen, klicke auf Bearbeiten und dann auf das Papierkorbsymbol neben dem Wert, den du löschen möchtest. Wenn nur ein Optionswert aufgeführt ist, musst du die gesamte Option löschen, um den Wert zu entfernen.\nUm eine Variantenoption zu löschen, klicke auf das Papierkorb-Symbol neben dem Namen der Option.\n\nKlicke auf Speichern.\n\nMobil\nAnzeigereihenfolge von Variantenoptionen und -werten ändern\n\nWenn deine Kunden deine Produkte ansehen, werden die Variantenoptionen und -werte in einer bestimmten Reihenfolge angezeigt. Du kannst die Anzeigereihenfolge ändern.\n\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nFühre im Abschnitt Varianten einen der folgenden Schritte aus:\n\nUm die Reihenfolge der Variantenoptionen zu ändern, verwende die ⋮⋮-Drag-and-Drop-Handles neben der Option.\nUm die Reihenfolge der Optionswerte zu ändern, klicke neben der Option auf Bearbeiten und verwende dann die ⋮⋮-Drag-and-Drop-Handles.\n\nKlicke auf Speichern.\n\nMetafeld für eine Variante bearbeiten\n\nDu kannst mithilfe von Metafeldern benutzerdefinierte Felder zu deinen Variantendetailseiten hinzufügen. Metafelder werden in einer bearbeitbaren Tabelle auf deinen Variantendetailseiten angezeigt. Jedes Metafeld zeigt den Namen an, den du auswählst, wenn du deine Metafelddefinition erstellst. Du kannst auf jede Tabellenzeile klicken, um den Metafeldtyp und seine Beschreibung anzuzeigen, und dann auf das Feld klicken, um einen Wert einzugeben.\n\nWenn du ein kompatibles Theme hast, kannst du über den Theme-Editor Referenzen zu den Metafeldern deiner Produktvarianten hinzufügen.\n\nVariante löschen\nHinweis\n\nWenn du eine bestimmte Variante eines Produkts nicht mehr verkaufen möchtest, die Variante aber für historische Daten oder zur erneuten Veröffentlichung zu einem späteren Zeitpunkt in deinem Shopify-Adminbereich behalten willst, kannst du die Veröffentlichung für deine Produktvarianten verwalten, anstatt Varianten zu löschen.\n\nWenn du ein Produkt mit Varianten nicht mehr verkaufen möchtest, musst du alle seine Variantenoptionen und -werte löschen, einschließlich der Standardeinstellung. Andernfalls wird deinen Kunden weiterhin das Dropdown-Menü zur Auswahl einer Variante angezeigt.\n\nUm mehrere Varianten auf einmal zu löschen, verwende eine Sammelaktion.\n\nSchritte:\nDesktop\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt Varianten auf die Variante, die du löschen möchtest.\n\nKlicke auf Variante löschen und dann erneut auf Variante löschen.\n\nMobil\nFeedback hinterlassen\nTeam kontaktieren",
+ "hs": [
+  "H1: Varianten für ein bestehendes Produkt bearbeiten",
+  "H2: Auf dieser Seite",
+  "H2: Variantendetails einzeln bearbeiten",
+  "H2: Variantendetails in Bulk bearbeiten",
+  "H3: Varianten auf der Produktdetailseite bearbeiten",
+  "H3: Den Bulk-Editor verwenden",
+  "H2: Variantenoptionen und Werte bearbeiten",
+  "H2: Anzeigereihenfolge von Variantenoptionen und -werten ändern",
+  "H2: Metafeld für eine Variante bearbeiten",
+  "H2: Variante löschen"
+ ],
+ "imgs": [
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/MenuHorizontalIcon.svg",
+   "alt": "Horizontales Menü",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/MenuVerticalIcon.svg",
+   "alt": "Vertikales Menü",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IFRAME",
+   "src": "",
+   "alt": "",
+   "w": 0,
+   "h": 0
+  }
+ ],
+ "svgs": [
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  }
+ ],
+ "icons": [],
+ "links": [
+  "Produkte -> https://help.shopify.com/de/manual/products",
+  "Varianten -> https://help.shopify.com/de/manual/products/variants",
+  "Varianten auf der neu gestalteten Produktdetailseite -> https://help.shopify.com/de/manual/products/variants/searching-filtering#redesigned-product-details-page",
+  "die Veröffentlichung für einzelne Produktvarianten verwalten -> https://help.shopify.com/de/manual/products/variants/publish-variants",
+  "Variantendetails einzeln bearbeiten -> https://help.shopify.com/de/manual/products/variants/edit-variants#change-variant-details",
+  "Variantendetails per Sammelaktion bearbeiten -> https://help.shopify.com/de/manual/products/variants/edit-variants#edit-variant-details-in-bulk",
+  "Variantenoptionen und -werte bearbeiten -> https://help.shopify.com/de/manual/products/variants/edit-variants#edit-variant-options-and-values",
+  "Anzeigereihenfolge von Variantenoptionen und -werten ändern -> https://help.shopify.com/de/manual/products/variants/edit-variants#change-the-display-order-of-variant-options-and-values",
+  "Metafeld für eine Variante bearbeiten -> https://help.shopify.com/de/manual/products/variants/edit-variants#editing-a-metafield-for-a-variant",
+  "Variante löschen -> https://help.shopify.com/de/manual/products/variants/edit-variants#delete-a-variant",
+  "nach Standort filtern -> https://help.shopify.com/de/manual/products/variants/searching-filtering/#filter-by-location",
+  "Gruppe -> https://help.shopify.com/de/manual/products/variants/searching-filtering#group-by-option",
+  "die Veröffentlichung für deine Produktvarianten verwalten -> https://help.shopify.com/de/manual/products/variants/publish-variants"
+ ]
+}

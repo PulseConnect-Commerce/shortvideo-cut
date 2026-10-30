@@ -1,0 +1,143 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/variants/add-variants",
+ "status": 200,
+ "datum": "2026-10-30T21:03:31.459Z",
+ "titel": "Shopify Help Center | Varianten hinzufügen",
+ "text": "Hilfe\nKostenlos starten\nEinloggen\nInhalt\nHome\nProdukte\nVarianten\nVarianten hinzufügen\nFrühzeitiger Zugriff\n\nEine neu gestaltete Produktdetailseite wird schrittweise eingeführt. Wenn diese in deinem Shop verfügbar ist, verwaltest du all deine Varianten auf der Produktdetailseite anstatt auf separaten Variantendetailseiten. Daher stimmen einige Informationen auf dieser Seite möglicherweise nicht mit dem überein, was dir angezeigt wird. Mehr Informationen zu Varianten auf der neu gestalteten Produktdetailseite.\n\nDu kannst Varianten zu einem Produkt hinzufügen, das mehr als eine Option hat, z. B. Größe oder Farbe. Jede Kombination von Optionswerten für ein Produkt kann eine Variante dieses Produkts sein.\n\nWenn du ein Produkt hinzufügst, kannst du die Einstellungen für Preis, Inventar und Versand für das Produkt auf der Produktdetailseite anpassen. Wenn du dem Produkt jedoch Varianten hinzufügst, musst du diese Einstellungen für jede Variante auf der Variantendetailseite anpassen.\n\nAuf dieser Seite\nÜberlegungen zum Hinzufügen von Varianten\nVarianten zu einem Produkt hinzufügen\nEine Variante mit Kategorie-Metafeldern hinzufügen\nMit einem Kategorie-Metafeld verbundene Variantenoptionen bearbeiten\nEin Kategorie-Metafeld von einer Variante trennen\nVariantenoptionen zu Kategorie-Metafeldern migrieren\nWerte zu einer bestehenden Option hinzufügen\nEine Variante manuell hinzufügen\nEine Variante durch Duplizieren einer bestehenden Variante hinzufügen\nMehrere Varianten gebündelt duplizieren\nÜberlegungen zum Hinzufügen von Varianten\n\nBevor du deinem Produkt Varianten hinzufügst, beachte die folgenden Überlegungen:\n\nDu kannst bis zu 2.048 Varianten für ein Produkt erstellen.\nJedes Produkt kann bis zu drei Optionen haben. Die Optionen können sich von Produkt zu Produkt unterscheiden. Ein Produkt kann beispielsweise Größe, Farbe und Stil verwenden und ein anderes Produkt Gewicht, Finish und Material.\nDu kannst Kategorie-Metafelder verwenden, um Variantenoptionen zu erstellen. Die Daten sind wiederverwendbar, sodass du konsistentere Inhalte hast. Wenn du beispielsweise den Namen deiner Farbe von Schwarz in Graphit ändern musst, kannst du die Änderung einmal vornehmen und sie wird überall dort aktualisiert, wo du diesen Kategorie-Metafeld-Eintrag verbunden hast. Wenn du Farbeinträge als Variantenoptionen verwendest, kannst du Variantenoptionen als Farbfelder für Farboptionen auf den Produktseiten deiner Storefront anzeigen.\nWenn du spezielle Informationen für deine Varianten speichern möchtest, kannst du mithilfe von Metafeldern benutzerdefinierte Felder zu deinen Variantendetailseiten hinzufügen. Wenn du ein kompatibles Theme verwendest, kannst du über den Theme-Editor Verweise auf die Metafelder deiner Produktvarianten hinzufügen.\nWenn du 500.000 oder mehr Varianten in deinem Shop hast, unterliegst du einem täglichen Ratenlimit für das Hochladen von Varianten über eine App oder einen CSV-Dateiimport. Du kannst bis zu 10.000 neue Varianten pro Tag hinzufügen, bevor das Limit erreicht ist. Wenn du den Shopify Plus-Plan nutzt, gilt das tägliche Ratenlimit für das Hochladen von Varianten nicht für deinen Shop.\nDu kannst auswählen, welche Produktvarianten in deinen verschiedenen Vertriebskanälen und Produktkatalogen veröffentlicht werden sollen und bei welchen die Veröffentlichung aufgehoben werden soll. Weitere Informationen findest du unter Veröffentlichung von Varianten verwalten.\nHinweis\n\nUm ein Produkt mit mehr als 2.048 Varianten oder mehr als drei Optionen zu erstellen, kannst du eine Drittanbieter-App aus dem Shopify App Store verwenden oder deinen Theme-Code anpassen, um Positionseigenschaften zu extrahieren, damit du benutzerdefinierte Anforderungen von deinen Kund:innen erhalten kannst.\n\nWenn dein Shop den Shopify Plus-Plan nutzt, kannst du auch die Shopify Combined Listings-App verwenden, um separate Produkte zu einem einzigen Angebot zu kombinieren. Ein kombiniertes Angebot kann zusätzlich zu den Optionen in jedem enthaltenen Produkt bis zu 3 Optionen umfassen.\n\nÜberlegungen zum Hinzufügen von mehr als 100 Varianten\n\nBeachte die folgenden Überlegungen zum Hinzufügen von mehr als 100 Varianten:\n\nDu kannst bis zu 250 Medienelemente, wie z. B. Bilder, pro Produkt haben. Jede Variante kann ein Medienelement zugewiesen bekommen, das aus der Medienliste des Produkts stammen muss. Erfahre mehr über das Hinzufügen von Produktmedien.\nWenn du möchtest, dass bestimmte Produktvarianten in Kollektionen und in den Produktrastern der Suchergebnisse angezeigt werden, anstatt nur das Haupt-Produktangebot, ziehe die Verwendung von kombinierten Angeboten in Betracht.\nEinige Themes von Drittanbietern unterstützen möglicherweise nicht mehr als 100 Varianten. Erfahre mehr darüber, wie du ein Theme aktualisieren kannst, um eine höhere Variantenanzahl zu unterstützen.\nEinige Theme-App-Erweiterungen, öffentliche Apps und Vertriebskanäle unterstützen möglicherweise nicht mehr als 100 Varianten. Wende dich für weitere Informationen direkt an den App-Entwickler.\nDie Stocky-App und die Legacy Order Printer-App unterstützen nicht mehr als 100 Varianten.\nEinige benutzerdefinierte Apps unterstützen möglicherweise nicht mehr als 100 Varianten. Wenn eine benutzerdefinierte App die REST Admin API verwendet, muss sie zur GraphQL Admin API migrieren.\nVarianten zu einem Produkt hinzufügen\n\nDu kannst Optionen und Optionswerte hinzufügen, um neue Varianten für dein Produkt zu generieren. Nachdem du die Varianten gespeichert hast, kannst du ihnen Preise hinzufügen.\n\nDesktop\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt Varianten auf + Optionen wie Größe oder Farbe hinzufügen.\n\nGib im Feld Name der Option einen Namen für die Option ein, z. B. Größe. Der Name der Option wird deinen Kund:innen angezeigt.\n\nGib im Abschnitt Optionswerte jeden Optionswert ein, z. B. Klein, Mittel oder Groß. Die Optionswerte werden deinen Kund:innen angezeigt, wenn sie eine Variante auswählen.\n\nOptional: Um deiner Variante eine weitere Option hinzuzufügen, z. B. Farbe oder Material, klicke auf + Weitere Option hinzufügen. Du kannst bis zu 3 Optionen für jedes Produkt haben.\n\nKlicke auf Fertig und dann auf Speichern.\n\nMobil\nEine Variante mit Kategorie-Metafeldern hinzufügen\n\nDu kannst Varianten hinzufügen, indem du eine Variantenoption mit einem Kategorie-Metafeld verbindest. Wenn Variantenoptionen mit Metafeldern verbunden sind, können Daten in deinem Shop wiederverwendet werden und Inhaltsbearbeitungen sind viel einfacher. Wenn du beispielsweise den Namen deiner Farbe black in graphite ändern musst, kannst du den Eintrag auf der Seite Inhalt > Metaobjekte in deinem Adminbereich bearbeiten und die Änderung wird überall dort aktualisiert, wo die Farbe verbunden ist.\n\nWenn du eine Variante hinzufügst, wird eine Liste von Kategorie-Metafeldern angezeigt, mit denen du sie verbinden kannst, oder du kannst eine benutzerdefinierte Option erstellen.\n\nSchritte:\nDesktop\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt Varianten auf + Optionen wie Größe oder Farbe hinzufügen.\n\nWenn ein Kategorie-Metafeld zur Verbindung verfügbar ist, wähle es aus. Die Optionswerte werden automatisch mit allen Einträgen ausgefüllt, die du dem Kategorie-Metafeld hinzugefügt hast. Du kannst weitere Optionswerte auswählen oder neue erstellen.\n\nOptional: Wenn du benutzerdefinierte Optionswerte hinzufügen möchtest, klicke auf Bearbeiten und dann auf Neuen Eintrag hinzufügen. Fülle die Eintragsfelder aus und klicke dann auf Speichern.\n\nKlicke auf Speichern, um das Produkt zu speichern.\n\nMobil\nMit einem Kategorie-Metafeld verbundene Variantenoptionen bearbeiten\n\nDu kannst Variantenoptionen, die mit einem Kategorie-Metafeld verbunden sind, hinzufügen oder bearbeiten.\n\nSchritte:\nDesktop\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt mit den Optionswerten, die du bearbeiten oder hinzufügen möchtest.\n\nKlicke auf die Variantenoption und dann auf das Optionswertfeld.\n\nKlicke auf den Eintrag, den du bearbeiten möchtest, und klicke dann auf Bearbeiten.\n\nBearbeite die Felder nach Bedarf.\n\nKlicke auf Speichern.\n\nMobil\nEin Kategorie-Metafeld von einer Variante trennen\n\nDu kannst ein Kategorie-Metafeld von einer Variante trennen.\n\nSchritte:\nDesktop\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt Varianten auf Bearbeiten neben der Option, die du von deinem Kategorie-Metafeld trennen möchtest.\n\nKlicke auf den Namen des Kategorie-Metafelds und dann auf Trennen. Die Option wird aus dem Abschnitt Varianten entfernt und im Abschnitt Metafelder platziert.\n\nKlicke auf Speichern, um das Produkt zu speichern.\n\nMobil\nVariantenoptionen zu Kategorie-Metafeldern migrieren\n\nWenn du bereits ein Produkt mit Variantenoptionen erstellt hast, kannst du deine Werte zu Kategorie-Metafeldern migrieren und schnell die verschiedenen neuen Variantenkombinationen generieren. Wenn du Kategorie-Metafelder verwendest, um deine Variantenoptionen zu erstellen, kannst du die Namen der Variantenoptionen an einem einzigen Ort aktualisieren. Die Aktualisierung wird dann überall dort übernommen, wo dieser Kategorie-Metafeldwert verbunden ist.\n\nWenn du beispielsweise derzeit drei Größen (Small, Medium und Large) und zwei Farben (Red und Blue) anbietest und eine dritte Farbe Yellow hinzufügen möchtest, werden mit dieser Methode die drei möglichen Größen von gelben Varianten auf einmal erstellt.\n\nVerbinde das Kategorie-Metafeld mit einer vorhandenen Option, indem du auf das Symbol für die dynamische Quelle ⛁ klickst;\n\nDesktop\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt mit Variantenoptionen, die du zu Kategorie-Metafeldern migrieren möchtest.\n\nOptional: Wenn dein Produkt keine Kategorie hat, führe einen der folgenden Schritte aus:\n\nGib die Kategorie deines Produkts ein und wähle dann das genaueste Ergebnis aus der Liste Produktkategorie aus.\nKlicke dich durch die einzelnen Ebenen der Kategorien und Unterkategorien, um deine Produktkategorie zu finden.\nKlicke auf Vorgeschlagen, um die vorgeschlagene Kategorie zu akzeptieren.\n\nUm deine Variantenoption mit einem Kategorie-Metafeld zu verbinden, führe eine der folgenden Aufgaben aus:\n\nKlicke auf eine vorhandene Option, klicke auf das Symbol für die dynamische Quelle und klicke dann auf das Kategorie-Metafeld, das du verbinden möchtest.\nKlicke auf Weitere Option hinzufügen und klicke dann auf das Kategorie-Metafeld, das du verbinden möchtest.\n\nKlicke auf Speichern.\n\nMobil\nWerte zu einer vorhandenen Option hinzufügen\n\nWenn du bereits ein Produkt mit Variantenoptionen erstellt hast, kannst du neue Werte hinzufügen, um schnell die verschiedenen neuen Variantenkombinationen zu generieren.\n\nWenn du beispielsweise derzeit drei Größen (Small, Medium und Large) und zwei Farben (Red und Blue) anbietest und eine dritte Farbe Yellow hinzufügen möchtest, werden mit dieser Methode die drei möglichen Größen von gelben Varianten auf einmal erstellt.\n\nSchritte:\nDesktop\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt Varianten auf Bearbeiten neben der Option, der du einen Wert hinzufügen möchtest.\n\nGib im Feld Weiteren Wert hinzufügen einen weiteren Wert ein.\n\nKlicke auf Fertig.\n\nOptional: Füge für jede neue Variante ein anderes Produktbild hinzu. Du kannst für die neuen Varianten auch Preise, Mengen, SKUs, Barcodes, Codes des Harmonisierten Systems (HS), das Herkunftsland bzw. die Herkunftsregion und Standorte hinzufügen oder die Standardwerte basierend auf den Produktdetails verwenden.\n\nKlicke auf Speichern.\n\nMobil\nVariante manuell hinzufügen\n\nDu kannst Varianten einzeln hinzufügen. Bevor du eine neue Variante speichern kannst, muss mindestens einer ihrer Optionswerte neu sein. Du kannst kein exaktes Duplikat einer bereits vorhandenen Variante speichern.\n\nHinweis\n\nDiese Methode erstellt nur eine einzelne Variante. Es werden nicht alle möglichen Kombinationen des neuen Wertes mit den anderen vorhandenen Variantenoptionen erstellt. Um mehrere Variantenkombinationen auf einmal hinzuzufügen, kannst du einen neuen Wert zu einer Option hinzufügen oder mehrere Varianten über eine Sammelaktion duplizieren.\n\nSchritte:\nDesktop\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt „Varianten“ auf „Variante hinzufügen“.\n\nGib die Optionswerte in die vorhandenen Optionsfelder ein.\n\nOptional: Füge für jede neue Variante ein anderes Produktbild hinzu. Du kannst auch Preise, Mengen, SKUs, Barcodes, HS-Codes, das Ursprungsland/-die Ursprungsregion und Standorte für die neuen Varianten hinzufügen oder die Standardwerte basierend auf den Produktdetails verwenden. Wenn du Änderungen vornimmst, klicke auf „Speichern“.\n\nKlicke auf Speichern.\n\nMobil\nVariante durch Duplizieren einer vorhandenen Variante hinzufügen\n\nDu kannst eine Variante duplizieren, um Zeit zu sparen, wenn du ähnliche Varianten hinzufügst, anstatt die gleichen Details erneut einzugeben. Die duplizierte Variante hat die gleichen Details wie die ursprüngliche Variante.\n\nBevor du eine duplizierte Variante speichern kannst, musst du mindestens einen ihrer Optionswerte bearbeiten. Du kannst kein exaktes Duplikat von ihr selbst oder einer anderen bereits vorhandenen Variante speichern. Du kannst eine Variante nur im Shopify-Adminbereich auf dem Desktop oder auf Mobilgeräten duplizieren.\n\nHinweis\n\nDiese Methode erstellt nur eine einzelne Variante. Es werden nicht alle möglichen Kombinationen des neuen Wertes mit den anderen vorhandenen Variantenoptionen erstellt. Um mehrere Variantenkombinationen auf einmal hinzuzufügen, kannst du einen neuen Wert zu einer Option hinzufügen oder mehrere Varianten über eine Sammelaktion duplizieren.\n\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nKlicke im Abschnitt „Varianten“ auf die Variante, die du duplizieren möchtest, und klicke dann auf „Duplizieren“.\n\nBearbeite einen Optionswert, um eine eindeutige Variante zu erstellen. Du kannst einen neuen Optionswert hinzufügen oder einen, der bereits für die Produktvarianten verwendet wird.\n\nOptional: Füge für jede neue Variante ein anderes Produktbild hinzu. Du kannst auch Preise, Mengen, SKUs, Barcodes, HS-Codes, das Ursprungsland/-die Ursprungsregion und Standorte für die neuen Varianten hinzufügen oder die Standardwerte basierend auf den Produktdetails verwenden.\n\nKlicke auf Speichern.\n\nMehrere Varianten per Sammelaktion duplizieren\n\nWenn du eine neue Variante mit den gleichen Optionen wie eine bereits angepasste Variante erstellen musst, kannst du eine Sammelaktion verwenden, um die vorhandene Variante zu duplizieren und eine neue Option hinzuzufügen.\n\nUm eine Sammelaktion zum Hinzufügen neuer Varianten zu verwenden, musst du mehrere ähnliche Varianten auswählen, ihre Details duplizieren und dann mindestens einen Optionswert ändern.\n\nAngenommen, du verkaufst T-Shirts mit zwei Optionen: Größe und Farbe. Deine blauen und roten T-Shirts sind gut bestückt und kosten dasselbe, aber alle deine gelben T-Shirts sind eine limitierte Auflage, kosten mehr und werden in einem anderen Lager aufbewahrt. Wenn du Grün als neue limitierte Farbe einführen möchtest, sparst du durch das Duplizieren der gelben Varianten Zeit bei der Festlegung von Mengen, Preisen und Standorten für deine grünen Varianten.\n\nWenn eine Variante bereits vorhanden ist, wird durch das Duplizieren einer Variante keine zweite Kopie erstellt. Angenommen, du verkaufst gelbe T-Shirts in Small, Medium und Large. Du fügst manuell eine grüne T-Shirt-Variante für die Größe Small hinzu. Wenn du die Farbvariante (gelb) duplizierst, um grüne T-Shirts in allen verfügbaren Größen zu erstellen, werden durch die Duplizierung nur grüne T-Shirts in Medium und Large erstellt, da das grüne T-Shirt in der Größe Small bereits existiert.\n\nSchritte:\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf das Produkt, das du bearbeiten möchtest.\n\nWähle im Abschnitt „Varianten“ die Varianten aus, die du duplizieren möchtest. Die von dir ausgewählten Varianten müssen denselben Optionswert haben, den du hinzufügst, und unterschiedliche Optionswerte für alle anderen Optionen, wie z. B. grüne T-Shirts in den Größen Small und Medium.\n\nKlicke auf .\n\nKlicke im Abschnitt VARIANTEN DUPLIZIEREN auf „...in einer anderen Option“, basierend auf den von dir ausgewählten Varianten.\n\nGib im Dialogfeld Duplizierte Varianten erstellen den Wert für die neuen Varianten ein, die du erstellen möchtest, und wähle dann die Informationen aus, die aus den vorhandenen Varianten kopiert werden sollen.\n\nKlicke auf „Duplizieren“.\n\nFeedback hinterlassen\nTeam kontaktieren",
+ "hs": [
+  "H1: Varianten hinzufügen",
+  "H2: Auf dieser Seite",
+  "H2: Überlegungen zum Hinzufügen von Varianten",
+  "H3: Überlegungen zum Hinzufügen von mehr als 100 Varianten",
+  "H2: Varianten zu einem Produkt hinzufügen",
+  "H2: Eine Variante mit Kategorie-Metafeldern hinzufügen",
+  "H2: Mit einem Kategorie-Metafeld verbundene Variantenoptionen bearbeiten",
+  "H2: Ein Kategorie-Metafeld von einer Variante trennen",
+  "H2: Variantenoptionen zu Kategorie-Metafeldern migrieren",
+  "H2: Werte zu einer vorhandenen Option hinzufügen",
+  "H2: Variante manuell hinzufügen",
+  "H2: Variante durch Duplizieren einer vorhandenen Variante hinzufügen",
+  "H2: Mehrere Varianten per Sammelaktion duplizieren"
+ ],
+ "imgs": [
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/MenuHorizontalIcon.svg",
+   "alt": "Horizontales Menü",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IFRAME",
+   "src": "",
+   "alt": "",
+   "w": 0,
+   "h": 0
+  }
+ ],
+ "svgs": [
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  }
+ ],
+ "icons": [],
+ "links": [
+  "Produkte -> https://help.shopify.com/de/manual/products",
+  "Varianten -> https://help.shopify.com/de/manual/products/variants",
+  "Varianten auf der neu gestalteten Produktdetailseite -> https://help.shopify.com/de/manual/products/variants/searching-filtering#redesigned-product-details-page",
+  "Überlegungen zum Hinzufügen von Varianten -> https://help.shopify.com/de/manual/products/variants/add-variants#considerations-for-adding-variants",
+  "Varianten zu einem Produkt hinzufügen -> https://help.shopify.com/de/manual/products/variants/add-variants#add-options-to-an-existing-product",
+  "Eine Variante mit Kategorie-Metafeldern hinzufügen -> https://help.shopify.com/de/manual/products/variants/add-variants#add-variant-category-metafields",
+  "Mit einem Kategorie-Metafeld verbundene Variantenoptionen be -> https://help.shopify.com/de/manual/products/variants/add-variants#edit-variant-options-connected-to-a-category-metafield",
+  "Ein Kategorie-Metafeld von einer Variante trennen -> https://help.shopify.com/de/manual/products/variants/add-variants#disconnect-variant-category-metafields",
+  "Variantenoptionen zu Kategorie-Metafeldern migrieren -> https://help.shopify.com/de/manual/products/variants/add-variants#migrate-variant-options-to-category-metafields",
+  "Werte zu einer bestehenden Option hinzufügen -> https://help.shopify.com/de/manual/products/variants/add-variants#add-values-to-an-existing-option",
+  "Eine Variante manuell hinzufügen -> https://help.shopify.com/de/manual/products/variants/add-variants#manual-variant",
+  "Eine Variante durch Duplizieren einer bestehenden Variante h -> https://help.shopify.com/de/manual/products/variants/add-variants#add-a-variant-by-duplicating-an-existing-variant",
+  "Mehrere Varianten gebündelt duplizieren -> https://help.shopify.com/de/manual/products/variants/add-variants#duplicate-bulk",
+  "Veröffentlichung von Varianten verwalten -> https://help.shopify.com/de/manual/products/variants/publish-variants",
+  "Shopify Combined Listings-App -> https://help.shopify.com/de/manual/products/combined-listings-app",
+  "Hinzufügen von Produktmedien -> https://help.shopify.com/de/manual/products/product-media/add-media",
+  "kombinierten Angeboten -> https://help.shopify.com/de/manual/products/combined-listings-app",
+  "Produktbild -> https://help.shopify.com/de/manual/products/product-media/add-images-variants",
+  "Produktbilder -> https://help.shopify.com/de/manual/products/product-media/add-images-variants",
+  "einen neuen Wert zu einer Option hinzufügen -> https://help.shopify.com/de/manual/products/variants/add-variants#add-values-to-an-existing-option",
+  "mehrere Varianten über eine Sammelaktion duplizieren -> https://help.shopify.com/de/manual/products/variants/add-variants#duplicate-bulk",
+  "Produktbild -> https://help.shopify.com/de/manual/products/product-media/add-images-variants",
+  "Produktbild -> https://help.shopify.com/de/manual/products/product-media/add-images-variants",
+  "einen neuen Wert zu einer Option hinzufügen -> https://help.shopify.com/de/manual/products/variants/add-variants#add-values-to-an-existing-option",
+  "mehrere Varianten über eine Sammelaktion duplizieren -> https://help.shopify.com/de/manual/products/variants/add-variants#duplicate-bulk",
+  "Produktbild -> https://help.shopify.com/de/manual/products/product-media/add-images-variants"
+ ]
+}

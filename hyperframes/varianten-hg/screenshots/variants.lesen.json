@@ -1,0 +1,32 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/variants",
+ "status": 200,
+ "datum": "2026-10-30T21:03:17.941Z",
+ "titel": "Shopify Help Center | Varianten",
+ "text": "Hilfe\nKostenlos starten\nEinloggen\nInhalt\nHome\nProdukte\nVarianten\nFrühzeitiger Zugriff\n\nEine neu gestaltete Produktdetailseite wird schrittweise eingeführt. Wenn diese in deinem Shop verfügbar ist, verwaltest du all deine Varianten auf der Produktdetailseite anstatt auf separaten Variantendetailseiten. Daher stimmen einige Informationen auf dieser Seite möglicherweise nicht mit dem überein, was dir angezeigt wird. Mehr Informationen zu Varianten auf der neu gestalteten Produktdetailseite.\n\nDu kannst Varianten zu einem Produkt hinzufügen, das mehr als eine Option hat (z. B. Größe oder Farbe). Jede Kombination von Optionswerten für ein Produkt kann eine Variante dieses Produkts sein. Mit Varianten kannst du verschiedene Versionen eines Produkts anbieten, z. B. in unterschiedlichen Größen und Farben, damit deine Kundschaft genau das findet, was sie sucht.\n\nAngenommen, du verkaufst T-Shirts mit zwei Optionen: Größe und Farbe. Die Option „Größe“ hat drei Werte: Small, Medium und Large. Die Option „Farbe“ hat zwei Werte: Blau und Grün. Eine bestimmte Variante aus diesen Optionen ist ein kleines, blaues T-Shirt.\n\nEine Liste der für ein Produkt verfügbaren Varianten wird auf der Produktdetailseite angezeigt. Du kannst auch den Inventarbestand für jede Variante auf der Seite Inventar verwalten.\n\nWenn du spezielle Informationen für deine Varianten speichern möchtest, kannst du über Metafelder benutzerdefinierte Felder zu deinen Variantendetailseiten hinzufügen. Zurzeit können Metafelder für Produktvarianten für die Kundschaft nicht angezeigt werden.\n\nDu kannst auch Kategorie-Metafelder mit Variantenoptionen verbinden. Dadurch kannst du deine Daten für mehrere Produkte wiederverwenden, anstatt sie jedes Mal neu erstellen zu müssen.\n\nTipp\n\nHändler:innen, deren Shops den Shopify Plus-Plan nutzen, können die Shopify Combined Listings-App verwenden, um einzelne Produkte zu einem einzigen Angebot zu kombinieren. Ein kombiniertes Angebot kann zusätzlich zu den Optionen in jedem enthaltenen Produkt bis zu 3 Optionen umfassen, sodass du mehr Optionen anbieten kannst, als ein einzelnes Produkt zulässt.\n\nIn diesem Abschnitt\n\nVarianten hinzufügen\n\nVarianten für ein bestehendes Produkt bearbeiten\n\nProduktvarianten veröffentlichen und Veröffentlichung aufheben\n\nProdukt- und Varianten-IDs finden\n\nVarianten suchen, filtern und gruppieren\n\nFeedback hinterlassen\nTeam kontaktieren",
+ "hs": [
+  "H1: Varianten",
+  "H3: In diesem Abschnitt"
+ ],
+ "imgs": [
+  {
+   "tag": "IFRAME",
+   "src": "",
+   "alt": "",
+   "w": 0,
+   "h": 0
+  }
+ ],
+ "svgs": [],
+ "icons": [],
+ "links": [
+  "Produkte -> https://help.shopify.com/de/manual/products",
+  "Varianten auf der neu gestalteten Produktdetailseite -> https://help.shopify.com/de/manual/products/variants/searching-filtering#redesigned-product-details-page",
+  "Shopify Combined Listings-App -> https://help.shopify.com/de/manual/products/combined-listings-app",
+  "Varianten hinzufügen -> https://help.shopify.com/de/manual/products/variants/add-variants",
+  "Varianten für ein bestehendes Produkt bearbeiten -> https://help.shopify.com/de/manual/products/variants/edit-variants",
+  "Produktvarianten veröffentlichen und Veröffentlichung aufheb -> https://help.shopify.com/de/manual/products/variants/publish-variants",
+  "Produkt- und Varianten-IDs finden -> https://help.shopify.com/de/manual/products/variants/find-variant-id",
+  "Varianten suchen, filtern und gruppieren -> https://help.shopify.com/de/manual/products/variants/searching-filtering"
+ ]
+}
