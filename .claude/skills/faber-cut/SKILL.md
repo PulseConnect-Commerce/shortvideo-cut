@@ -263,7 +263,8 @@ So geht es:
    `public/broll/<projekt>/skizzen.webm` kopieren.
 4. In der Remotion-Komposition: `<OffthreadVideo src={staticFile("broll/<projekt>/skizzen.webm")} transparent muted />`
    in einer `<Sequence from={0}>`; ein leiser `pop`/`tick`/`success` auf jeder Szene und jedem Zähler.
-Nur Inhalte, die er sagt oder die Quelle belegt; keine fremden Logos oder Markenfotos; keine HeyGen-Dienste mit
+Nur Inhalte, die er sagt oder die Quelle belegt; keine erfundenen oder nachgezeichneten Logos und keine fremden Markenfotos ohne Rechte
+(Ausnahme Produkt-Videos, siehe unten "Originale Logos und Screenshots"); keine HeyGen-Dienste mit
 seinen Rohclips (die Snapshot-Beschreibung schickt nur unsere Zeichnungen an Gemini, nie Takes).
 
 ### Weitere B-Rolls mit HyperFrames
@@ -277,6 +278,8 @@ Remotion-Komposition gelegt, auf dem Wort (wie jede Grafik: `C.cue`). Schnitt, U
 bleiben bei faber-cut; der HyperFrames-Router nennt sich "Standard für jedes Video", das gilt nur für diese Grafiken.
 Keine HeyGen-Dienste (Sprecher, Musik, Soundeffekte über `media-use`) mit seinen Rohclips. Nur Inhalte, die er sagt
 oder die Quelle belegt; keine fremden Logos oder Markenfotos ohne Rechte.
+
+**Originale Logos und Screenshots bei Produkt-Videos** (seine Vorgabe 2026-10-30 zu K01/K02: "Weshalb verwendest du nicht die originalen Logos von Claude in den Videos? … originale Logos und originale Screenshotaufnahmen von Claude verwenden. Es muss dabei nicht in das CI und die Farben passen"): Geht es im Video um ein Werkzeug oder eine App (Claude, Shopify-Apps, Tools), zeigt es das **echte Logo** (aus offizieller Quelle: Website-Kopf, Favicon, Pressematerial; nicht nachzeichnen, nicht umfärben) und **echte Screenshots** (offizielle Produktseiten und Produktbilder, ohne Login aufgenommen, oder seine eigenen Bildschirmaufnahmen) statt stilisierter Nachbauten. Die Farben des Originals bleiben; Pille, Hook-Titel und Folgen-Karte bleiben im PulseConnect-Look. Was es nicht öffentlich gibt (eingeloggte Ansichten, Dialoge), fordert die Regie bei ihm an; bis dahin ein gekennzeichneter Nachbau mit echtem Logo.
 
 **Drive aufräumen nach dem Veröffentlichen** (seine Vorgabe 2026-10-26: "Bitte lösche alle finalen und Rohclip Videos, sobald die Videos veröffentlicht wurden aus dem Google Drive Ordner, um Platz im Speicher freizumachen"): Sobald ein Video auf allen Kanälen PUBLISHED ist (in Metricool prüfen), kommen sein Rohclip (Ordner Rohclips) und alle Fassungen im Ordner "Final geschnittene Videos" in den Papierkorb (`trash_file`); überholte Zwischenfassungen (v1, alte Hooks) gleich mit. Nicht löschen: noch geplante oder unveröffentlichte Videos und Fassungen (z. B. Video 2 B/C), die Beschreibungs-Docs. Metricool hat beim Einplanen eine eigene Kopie, der Drive-Link wird danach nicht mehr gebraucht. Der Papierkorb belegt weiter Speicher, bis er geleert wird (oder nach 30 Tagen); das sagt man ihm.
 
