@@ -1,6 +1,6 @@
 # Übergabekarte: N08 · Etsy: Neue KI-Regeln
 
-Status: **eingeplant** für Fr 30.10.2026 09:00 Europe/Berlin, Metricool TikTok / Instagram / YouTube 408707224 / 408713857 / 408714493, Datei am 28.10. gegen die Fassung „Quelle groß“ getauscht, Drive-Final 1HKGdU2kDpzw0a5FDw0a7MFHAo8iKEQKV.
+Status: **veröffentlicht** Fr 30.10.2026 09:00 (TikTok https://www.tiktok.com/@_donpaulo/video/7702368235915611414, Instagram https://www.instagram.com/reel/DfHG5C0DQrl/, YouTube https://www.youtube.com/shorts/jG5dfaSps80); Rohclip und Final im Drive-Papierkorb, Takes und Ausgaben lokal gelöscht
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): N08 · Etsy: Neue KI-Regeln
 - **Format / Design:** NEWS / Look wie N07 (Temu-Warenkorb) und N09 (eBay-Kombirabatte): Hook-Titel im Design verlauf ("ETSY:" / "NEUE KI-REGELN!") unter dem Kopf, helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten, echte Quellen groß über das ganze Bild und er als Bubble unten rechts an zwei Stellen (Pauls Regel 2026-10-28 "Quelle groß, er klein in der Ecke": OnlinehändlerNews 9,5–14,75 s, Etsy-Hilfe 31,0–33,45 s), sonst vor seinem weichgezeichneten Zimmer (keine Quellen-Hintergründe mehr hinter ihm), Musik news, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe

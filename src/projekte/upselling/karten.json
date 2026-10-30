@@ -1,0 +1,492 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md, 'Visuelle Metaphern'; Vorlagen hyperframes/warenkorb-skizzen und hyperframes/pagebuilder-skizzen) für E08 · Upselling vs. Cross-Selling. Sekunden im geschnittenen Video (cut.json, 102,93 s). Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, pop auf den Preisen (129 €, 159 €, Bohnen 15 €, 600 €) und dem Bestellwert, success auf 'erleichtern', klick auf dem Tipp 'Auswählen' und auf dem Plus. Gebaut in hyperframes/upselling-skizzen/index.html. Nur Lucide-Icons und eigene flache Zeichnungen (Maschine, Bohnen, Schuh, Socke); Zahlen nur aus Take und Briefing (129, 159, +30, 15, 144, 600), alle als DEMO gekennzeichnet; keine echte Kennzahl, keine Marke, kein B-Roll aus alten Videos, keine Folgennummer, keine Quelle groß (die Briefing-Seite sagt nichts zu Upselling/Cross-Selling).",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "Upselling",
+   "text": "DER UNTERSCHIED – Upselling: Paket wird größer (Pfeil nach oben) auf 'Upselling', 'vs.' auf 'und', Cross-Selling: Paket + Paket auf 'Cross-Selling', Warenkorb auf 'Warenkorb', handschriftlich 'am Warenkorb' auf 'zeigen'",
+   "start": 1.8,
+   "ende": 5.27,
+   "teile": {
+    "upselling": 1.8,
+    "und": 2.2,
+    "cross_selling": 2.3,
+    "warenkorb": 3.97,
+    "zeigen": 4.37
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 1.8,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 3.97,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Stell",
+   "text": "BEISPIEL · KAFFEESHOP, DEMO – Demo-Shop-Seite, 'DEMO-SHOP · KAFFEE' auf 'Kaffeeshop', Kunde auf 'Kunde', eigene Kaffeemaschinen-Zeichnung mit Titel auf 'Kaffeemaschine', '129 €' auf '129', Zeiger tippt 'Auswählen' an, wird auf 'ausgewählt' zu '✓ Ausgewählt'",
+   "start": 5.27,
+   "ende": 12.83,
+   "teile": {
+    "stell": 5.27,
+    "kaffeeshop": 7.23,
+    "kunde": 8.87,
+    "kaffeemaschine": 9.63,
+    "129": 10.47,
+    "ausgewaehlt": 11.83
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.27,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 8.87,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 10.47,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 11.83,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Beim",
+   "text": "UPSELLING · BEISPIEL, DEMO – gewählte Maschine 129 €, Pfeil auf 'empfiehlst', dieselbe Maschine als höherwertige Variante (Display, Milchdüse) auf 'hochwertige', Label auf 'Variante', 'dieselbe Maschine' auf 'derselben', '159 €' auf '159', '+30 €' auf 'Euro', drei Plus an der Maschine und handschriftlich 'mehr Funktionen' auf 'Funktionen', Haken 'sinnvoll' auf 'sinnvoll'",
+   "start": 12.83,
+   "ende": 24.67,
+   "teile": {
+    "beim": 12.83,
+    "empfiehlst": 13.63,
+    "hochwertige": 15.63,
+    "variante": 16.17,
+    "derselben": 17.1,
+    "159": 19.03,
+    "euro": 19.93,
+    "funktionen": 21.63,
+    "sinnvoll": 23.93
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 12.83,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 15.63,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 19.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 21.63,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 23.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Beim",
+   "text": "CROSS-SELLING · BEISPIEL, DEMO – Warenkorb, Zeile 'Kaffeemaschine 129 €' auf 'bleibt', markiert auf '129', handschriftlich 'bleibt drin' auf 'Warenkorb', gestrichelter Platz '+ Empfehlung' und Plus auf 'empfiehlst', '+ passendes Zubehör' auf 'Zubehör', 'Kaffeebohnen 15 €' auf 'Kaffeebohnen', 'Summe 144 €' direkt danach",
+   "start": 24.67,
+   "ende": 34.1,
+   "teile": {
+    "beim": 24.67,
+    "bleibt": 25.87,
+    "129": 27.27,
+    "warenkorb": 28.67,
+    "empfiehlst": 29.7,
+    "zubehoer": 31.6,
+    "kaffeebohnen": 33.23,
+    "summe": 33.48
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 24.67,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 25.87,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 29.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 33.23,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Das",
+   "text": "ZWEI METHODEN, DEMO – 'Upselling 129 € → 159 €', auf 'zwei' 'Cross-Selling 129 € + 15 € = 144 €', auf 'Bestellwert' je 'BESTELLWERT +30 €' und '+15 €'",
+   "start": 34.1,
+   "ende": 38.23,
+   "teile": {
+    "das": 34.1,
+    "zwei": 35.53,
+    "bestellwert": 36.63
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 34.1,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 36.63,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Aber",
+   "text": "DIE SPANNENDE FRAGE – Puzzle: Teil 'Kauf' (Maschine) und Teil 'Empfehlung' (Stern), die Empfehlung rückt auf 'passt' heran und bleibt knapp davor, handschriftlich 'passt?' auf 'Kauf'",
+   "start": 38.23,
+   "ende": 42.4,
+   "teile": {
+    "aber": 38.23,
+    "passt": 39.9,
+    "kauf": 41.43
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 38.23,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 39.9,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 41.43,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "jemanden",
+   "text": "FALSCHES BEISPIEL, DEMO – Kunde auf 'jemanden', kleine Maschine 'Einstieg' auf 'Einstiegsmaschine', große 'Profi-Maschine 600 €' mit rotem Warnzeichen auf 'Profi-Maschine', drängt sich auf 'aufdrängst' vor (die kleine tritt zurück), '? ?' über dem Kunden auf 'sehr', handschriftlich 'verunsichert' auf 'verunsichern'. 600 € aus dem Briefing (gesprochen herausgeschnitten)",
+   "start": 42.4,
+   "ende": 50.37,
+   "teile": {
+    "jemanden": 42.4,
+    "einstiegsmaschine": 43.63,
+    "profi_maschine": 45.43,
+    "aufdraengst": 46.1,
+    "sehr": 48.27,
+    "verunsichern": 48.87
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 42.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 43.63,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 45.43,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 48.27,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Und",
+   "text": "DREI POP-UPS HINTEREINANDER, SCHEMA – Handy mit Demo-Produkt und 'Kaufen', Pop-up 1 auf 'drei', 2 auf 'Pop-ups', 3 auf 'hintereinander' (verdecken 'Kaufen'), Kreuz auf 'nicht', handschriftlich 'nicht besser' auf 'besser'",
+   "start": 50.37,
+   "ende": 54.57,
+   "teile": {
+    "und": 50.37,
+    "drei": 50.47,
+    "pop_ups": 50.7,
+    "hintereinander": 51.1,
+    "nicht": 53.0,
+    "besser": 53.67
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 50.37,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 53.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Ich",
+   "text": "MEIN START – blasser Stapel 'drei Pop-ups', Pfeil auf 'mit', 'eine Empfehlung' mit Ziel-Symbol auf 'Empfehlung', Haken auf 'klaren', handschriftlich 'klarer Nutzen' auf 'Nutzen'",
+   "start": 54.57,
+   "ende": 58.8,
+   "teile": {
+    "ich": 54.57,
+    "mit": 55.8,
+    "empfehlung": 56.17,
+    "klaren": 57.83,
+    "nutzen": 58.17
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 54.57,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.17,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 57.83,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Bei",
+   "text": "PASST ZUM KAUF · BEISPIELE – Kaffeemaschine + Bohnen, Laufschuhe + Socken, technisches Produkt + kompatible Erweiterung, jedes Teil auf seinem Wort",
+   "start": 58.8,
+   "ende": 67.17,
+   "teile": {
+    "maschine": 58.8,
+    "bohnen": 60.67,
+    "laufschuhen": 61.63,
+    "socken": 63.03,
+    "technischen": 64.43,
+    "kompatible": 66.07
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 58.8,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 60.67,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 63.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 66.07,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "Aber",
+   "text": "NICHT NUR DEN WARENKORBWERT – Gegenüberstellung AOV / Conversion / Marge (Briefing): drei blasse Spalten; 'Ø Warenkorbwert (AOV)' wird auf 'durchschnittlichen' aktiv, Balken steigt auf 'Warenkorbwert'; 'Conversion Rate' auf 'Conversion', Balken sinkt und 'leidet?' auf 'leidet'; 'Marge nach Kosten' auf 'Abzug', Kosten fallen auf 'Kosten' weg, handschriftlich 'übrig' auf 'übrig'. Keine Zahlen",
+   "start": 67.17,
+   "ende": 78.27,
+   "teile": {
+    "aber": 67.17,
+    "durchschnittlichen": 69.43,
+    "warenkorbwert": 69.97,
+    "conversion": 72.63,
+    "leidet": 73.9,
+    "abzug": 75.2,
+    "kosten": 75.7,
+    "uebrig": 77.07
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 67.17,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 69.97,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 73.9,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 75.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 77.07,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Mein",
+   "text": "DIE RICHTIGE STELLE, DEMO – Shop-Mock-up 'Produktauswahl' (Maschine 129 €) und 'Im Warenkorb'; 'Empfehlung' auf 'Empfehlung', Pin auf 'richtigen', 'UPGRADE Variante 159 €' in der Produktauswahl auf 'Upgrade', Haken auf 'Produktauswahl', 'ZUBEHÖR Bohnen 15 €' im Warenkorb auf 'Zubehörartikel', Haken auf 'Warenkorb'",
+   "start": 78.27,
+   "ende": 88.0,
+   "teile": {
+    "mein": 78.27,
+    "empfehlung": 79.6,
+    "richtigen": 80.43,
+    "upgrade": 82.43,
+    "produktauswahl": 83.73,
+    "zubehoerartikel": 85.1,
+    "warenkorb": 87.07
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 78.27,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 80.43,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 82.43,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 83.73,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 85.1,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 87.07,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k13",
+   "wort": "Upselling",
+   "text": "MEIN FAZIT (Briefing-Schluss, wörtlich) – 'Die Empfehlung soll passen, nicht stören.' ('passen,' im Verlauf), Upselling und Cross-Selling auf ihren Wörtern, Linie unter 'passen' auf 'besonders', 'Kaufentscheidung erleichtern' auf 'Kaufentscheidung' mit Haken auf 'erleichtern', 'möglichst aggressiv verkaufen' auf 'möglichst', rot durchgestrichen mit Kreuz auf 'aggressiv'",
+   "start": 88.0,
+   "ende": 98.6,
+   "teile": {
+    "upselling": 88.0,
+    "cross_selling": 88.67,
+    "besonders": 90.5,
+    "kaufentscheidung": 93.03,
+    "erleichtern": 93.67,
+    "moeglichst": 95.87,
+    "aggressiv": 96.33
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 88.0,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 90.5,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 93.67,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 96.33,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k14",
+   "wort": "Wenn",
+   "text": "Nur das Folgen-Symbol (Pauls Vorgabe 2026-10-25): Profilbild mit Plus und 'Folgen' auf 'Wenn', Ring auf 'Tipps', Zeiger auf 'drücke', das Plus wird auf 'Plus' angetippt und zum Haken; bleibt bis zum Ende",
+   "start": 98.6,
+   "ende": 102.93,
+   "teile": {
+    "wenn": 98.6,
+    "tipps": 99.47,
+    "druecke": 101.37,
+    "plus": 102.13
+   },
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 98.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 102.13,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}
