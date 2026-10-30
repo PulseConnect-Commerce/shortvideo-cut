@@ -1,6 +1,6 @@
 # Übergabekarte: S07 · Produktvarianten strukturieren
 
-Status: **zur Prüfung** (Cutter, 30.10.2026)
+Status: **eingeplant** für So 01.11.2026 14:00 Europe/Berlin (vom 02.12. in eine Lücke vorgezogen, Pauls Vorgabe 30.10.; Kalender-📣 mitverschoben), Metricool TikTok / Instagram / YouTube 411785327 / 411785553 / 411785658 (uuids 5458062100248546633 / -4888128973614267389 / -6971400749011286313), Drive-Final 1zjk_e85r5TaKMAgY82u0VMf0jKl6b6-M, Ordner 16Nf_MsSrPiobBQTb2PohuUOZv7mviBLI
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): S07 · Produktvarianten strukturieren
 - **Format / Design:** FACE (Erklärvideo, Serie S, Serien-ID "Shopify in 30 Sekunden", keine Serien-Erwähnung im Video) / S-Look wie S06 mit Pauls Vorgaben vom 30.10.: Hook-Titel "PRODUKTVARIANTEN" / "RICHTIG ANLEGEN" (Design "verlauf") an der Kartenposition mit dem originalen Shopify-Logo, helle Karten unter dem Kopf mit Pill-Untertiteln (aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten, echte Seiten des Shopify Help Center groß über das ganze Bild mit dir als Bubble unten rechts ("Quelle groß"), Test-Checkliste zum Speichern, große mittige Folgen-Karte mit TikTok-Plus, Musik ruhig, sanfter Grade, Porträt-Modus, Bild erst ab Hüfthöhe
@@ -95,6 +95,8 @@ Status: **zur Prüfung** (Cutter, 30.10.2026)
 - `checks --stems` am Master: −14,0 LUFS, True Peak −0,9 dB, keine Ausreißer-Frames, keine Tonlöcher, lautester Effekt 8,1 dB unter der Stimme, Musik beim Sprechen 23,2 dB darunter (lauteste 5 %: 20,6 dB). Helligkeit Gesicht im Master 0,550 (gemessen wie `pruefen`). Unten im Bild (y 1500–1920) an 18 Standbildern über das ganze Master nur Pulli und Hände
 - `kontrolle` am Master: 95 %, zwei Meldungen, beide nur Schreibweise derselben Wörter: "Hudi Schwarz M" gegen "HOODIE-SCHWARZ-M" (62,3 s) und "E -Commerce Tipps" gegen "E-Commerce-Tipps" (130,1 s); kein Doppler, kein Anlauf, nichts fehlt
 - Post-Fassung: `npm run final` kam auf 47,1 MB (10^6 Byte), `pruefen` verlangt unter 47 MB; darum aus dem Master mit denselben Einstellungen und maxrate 2500k neu kodiert (45,1 MB). Chat-Fassung (27,6 MB) unverändert
+- `npm run pruefen -- Varianten varianten`: TECHNIK OK, kein FEHLER; WARNUNG Länge 133,3 s (FACE 40–75 s; das Briefing verlangt ca. 1:45–2:15, unter 180 s, also weiter ein YouTube Short), PRÜFEN Bilderbogen (angesehen: Hook-Titel mit Logo bei 0,5–4,0 s lesbar, Untertitel ab 0,5 s, keine leere Karte, nichts in den Zonen, Quellen lesbar) und PRÜFEN `kontrolle` 95 % mit den zwei Schreibweisen-Meldungen oben; Helligkeit Gesicht 0,550, Post-Fassung 45,1 MB
+- Platz auf der Platte (Regie): das Master `out/final/Varianten.mp4` ist nach `pruefen` gelöscht; es bleiben `-post.mp4` (45,1 MB), `-chat.mp4` (27,6 MB) und `-cover.jpg` (Standbild bei 14,0 s). Für einen neuen `pruefen`-Lauf oder das Hochladen in bester Qualität das Master neu rendern (`npm run final -- Varianten`, ~20 min, danach die Post-Fassung wie oben mit maxrate 2500k); die veraltete Vorschau und der Rohschnitt sind gelöscht
 
 ## Offene Fragen an Paul
 
