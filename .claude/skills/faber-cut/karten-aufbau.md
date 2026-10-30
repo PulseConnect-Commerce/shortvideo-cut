@@ -66,6 +66,14 @@ genau auf dem gesprochenen Wort dazu oder ändert seinen Zustand. So erklärt di
      Reihenfolgen gar nicht gleich und auf Social Media Short Videos sehen sich die Leute meist sowieso keine Reihen an,
      sondern nur die FYP. Somit reicht es nur ein Follow Symbol oder ein + Symbol als Animation anzuzeigen". Dasselbe
      gilt für Captions: keine Folgennummer und keine Liste früherer Folgen.
+   - **Folgen-Karte groß, mittig, Plus wie bei TikTok** (seine Vorgabe 2026-10-30 zu E08: "Ich finde den Folgen-Button am
+     Ende nicht groß genug und auch ist er nicht zentriert. Idealerweise animierst du das Plus beim Drücken, wie es bei
+     TikTok gemacht wird"): Avatar ~150 px, Plus-Kreis ~60 px, „Folgen“ ~72 px (Geist 800), weiße runde Karte (~560 × 200
+     px) waagerecht mittig (Kartenmitte x 540, rechte Kante ≤ 900), an der Kartenposition unter Kopf und Pille. Plus-Kreis
+     im Verlauf #00D088 → #31ADEC mit weißem Plus unten am Avatar; der Zeiger tippt auf sein Wort, das Plus drückt ein
+     (scale 1 → 0,8, ~0,08 s), dreht sich (~180°) und wird zum weißen Kreis mit gezeichnetem Haken im Verlauf, springt
+     über (~1,2 → 1, back.out), kleiner Ring-Puls; leiser `pop.mp3` (~0,10). Der Haken bleibt bis zum Schluss. Die alte
+     kleine Karte links (bis E08) nicht mehr kopieren.
 
 8. **Pill-Untertitel**
    - Kurze Phrasen von 2–4 Wörtern in einer dunklen, abgerundeten Pille (rgba(10,12,14,0.82), Geist 700, ~44 px,
