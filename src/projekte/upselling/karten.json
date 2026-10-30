@@ -30,7 +30,7 @@
   {
    "id": "k2",
    "wort": "Stell",
-   "text": "BEISPIEL · KAFFEESHOP, DEMO – Demo-Shop-Seite, 'DEMO-SHOP · KAFFEE' auf 'Kaffeeshop', Kunde auf 'Kunde', eigene Kaffeemaschinen-Zeichnung mit Titel auf 'Kaffeemaschine', '129 €' auf '129', Zeiger tippt 'Auswählen' an, wird auf 'ausgewählt' zu '✓ Ausgewählt'",
+   "text": "BEISPIEL · KAFFEESHOP, DEMO – Demo-Shop-Seite 'DEMO-SHOP · KAFFEE' gleich mit der Karte auf 'Stell', eigene Kaffeemaschinen-Zeichnung auf 'Kaffeeshop', Kunde auf 'Kunde', Titel 'Kaffeemaschine' auf 'Kaffeemaschine', '129 €' auf '129', Zeiger tippt 'Auswählen' an, wird auf 'ausgewählt' zu '✓ Ausgewählt'",
    "start": 5.27,
    "ende": 12.83,
    "teile": {

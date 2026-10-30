@@ -194,8 +194,12 @@
             <circle cx="50" cy="22" r="6" fill="#d1d5db" /><circle cx="70" cy="22" r="6" fill="#d1d5db" /><circle cx="90" cy="22" r="6" fill="#d1d5db" />
           </g>
           <text id="k2-name" x="118" y="30" class="klein" style="font-size:19px;font-weight:800;letter-spacing:0.08em" opacity="0">DEMO-SHOP · KAFFEE</text>
+          <!-- Platzhalter wie eine ladende Shop-Seite (kein Inhalt, nur Formen), bis Maschine, Titel, Preis und Knopf auf ihren Wörtern kommen -->
+          <rect id="k2-feld" x="44" y="62" width="196" height="204" rx="18" fill="#f2f3f5" opacity="0" />
+          <rect id="k2-sk1" x="260" y="80" width="190" height="24" rx="12" fill="#e5e7eb" opacity="0" />
+          <rect id="k2-sk2" x="260" y="126" width="120" height="40" rx="14" fill="#e5e7eb" opacity="0" />
+          <rect id="k2-sk3" x="260" y="200" width="214" height="56" rx="28" fill="#eef0f2" opacity="0" />
           <g id="k2-bild" opacity="0">
-            <rect x="44" y="62" width="196" height="204" rx="18" fill="#f2f3f5" />
             <use href="#maschine" transform="translate(67 82) scale(1.25)" />
           </g>
           <text id="k2-titel" x="260" y="100" class="lab" style="font-size:28px" opacity="0">Kaffeemaschine</text>
@@ -637,12 +641,17 @@
       pop("#k1-wagen", 3.97);
       schreibe("#k1-cliprect", 230, 4.37, 0.45);
 
-      // K2 Demo-Shop: Shop auf "Kaffeeshop", Kunde, Maschine mit Titel, 129 €, Zeiger wählt auf "ausgewählt"
+      // K2 Demo-Shop: Shop mit Namen gleich mit der Karte (keine fast leere Karte), Maschine auf "Kaffeeshop", Kunde, Titel auf
+      // "Kaffeemaschine", 129 €, Zeiger wählt auf "ausgewählt"
       karte("#k2", 5.27, 12.83);
       tl.fromTo("#k2-seite", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 5.31);
-      ein("#k2-name", 7.23);
+      ein("#k2-name", 5.33);
+      tl.fromTo("#k2-feld, #k2-sk1, #k2-sk2, #k2-sk3", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 5.37);
+      tl.to("#k2-sk1", { opacity: 0, duration: 0.2 }, 9.63);
+      tl.to("#k2-sk2", { opacity: 0, duration: 0.2 }, 10.47);
+      tl.to("#k2-sk3", { opacity: 0, duration: 0.2 }, 10.80);
       tl.fromTo("#k2-kunde", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 8.87);
-      pop("#k2-bild", 9.63, 0.35);
+      pop("#k2-bild", 7.23, 0.35);
       ein("#k2-titel", 9.63);
       tl.fromTo("#k2-preis", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 10.47);
       ein("#k2-knopf", 10.80);
