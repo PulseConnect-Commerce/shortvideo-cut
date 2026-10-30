@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>K01 · Claude: 6 Werkzeuge – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- HERO, Reihe K "KI allgemein", K01 · Claude: 6 Werkzeuge, die die meisten nicht kennen. Erklär-Bilder statt Wortkarten
+         (karten-aufbau.md "Visuelle Metaphern", Vorlagen hyperframes/upselling-skizzen und hyperframes/pagebuilder-skizzen):
+         pro Gedanke ein Bild, das den Satz ohne Ton erklärt, Zähler "1 von 6 … 6 von 6" oben rechts auf den Karten (Briefing).
+         Briefing-Grafiken: sechs Werkzeuge, drei Geräte mit Badge "kostenlos", Ordner "Mein Shop" mit Markenstimme /
+         Produktdaten / Regeln → Chats mit Haken, Drive / Kalender / Mail an Claude angesteckt, Skill als gespeicherte Anleitung,
+         Export PDF / PPTX / Canva, Terminal und vier Kacheln Daten / Automationen / Theme-Code / Videos schneiden, Free vs. Pro
+         (ohne Preise), Badge "geschnitten mit Claude Code", Teaser "Nächstes Video: Videos schneiden mit Claude Code" mit
+         Folgen-Plus. Die drei echten Seiten (Claude in Chrome, Claude Design, Pricing) stehen nicht hier, sondern als "Quelle
+         groß" in Remotion (src/lib/quelle-gross.tsx); in diesen Fenstern ist hier keine Karte.
+         Keine fremden Logos (auch kein Claude- oder Canva-Logo), keine nachgebauten Oberflächen als "echt": alles gezeichnet,
+         Icons Lucide (ISC), Schriften Geist und Caveat (OFL, lokal). Keine Preise, keine Plan-Zuordnung für Claude Design.
+         Rahmen wie freigegeben: helle Karte unter dem Kopf (x 80-900, y 1120-1470; Instagram-Zone ab 1500), Pill-Untertitel
+         darüber (Remotion, y ~1072), ruhige Bewegung ohne Überschwingen.
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/claudetools/cut.json, 165,10 s), Teile 2 Frames vor ihrem Wort;
+         Liste mit Tönen in src/projekte/claudetools/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1120px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 20px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .zaehler { position: absolute; right: 26px; top: 14px; padding: 5px 14px 6px; border-radius: 10px; background: linear-gradient(90deg, #00d088, #31adec); color: #0b0c0e; font-size: 21px; font-weight: 800; letter-spacing: 0.04em; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 54px; width: 820px; height: 290px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #9aa3af; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #2a9ed8; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.grau { stroke: #6b7280; }
+      .ico.weiss { stroke: #fff; }
+      .gtext { fill: url(#gv); }
+      .linie { fill: none; stroke: url(#gvh); stroke-width: 5; stroke-linecap: round; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, groß und waagerecht mittig (Pauls Vorgabe 30.10. zu E08: "Ich finde den
+         Folgen-Button am Ende nicht groß genug und auch ist er nicht zentriert. Idealerweise animierst du das Plus beim Drücken,
+         wie es bei TikTok gemacht wird."): 560 x 200, Kartenmitte x 540, Avatar 150, Plus 60, "Folgen" 72 px */
+      .folgekarte { position: absolute; left: 260px; top: 1120px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+      .avatar { position: absolute; left: 34px; top: 18px; width: 150px; height: 150px; border-radius: 75px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 84px; height: 84px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      #fplus { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; overflow: visible; }
+      #fring { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #31adec; opacity: 0; }
+      .ftext { position: absolute; left: 224px; top: 56px; font-size: 72px; line-height: 88px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 56px; height: 56px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 56px; height: 56px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+      /* Teaser auf das nächste Video (Briefing), unter der Folgen-Karte, ebenfalls mittig */
+      .teaserkarte { position: absolute; left: 190px; top: 1340px; width: 700px; height: 124px; border-radius: 30px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; display: flex; align-items: center; gap: 20px; padding: 0 22px; }
+      .teaserkarte .tk { flex: none; width: 76px; height: 76px; border-radius: 20px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; }
+      .teaserkarte .tk svg { width: 44px; height: 44px; fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .teaserkarte .t1 { font-size: 21px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7280; }
+      .teaserkarte .t2 { font-size: 33px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="claudetools-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="165.1">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvh" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="820" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24er-Raster -->
+          <g id="i-chat"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></g>
+          <g id="i-ordner"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /></g>
+          <g id="i-stecker"><path d="M12 22v-5" /><path d="M9 8V2" /><path d="M15 8V2" /><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" /></g>
+          <g id="i-globus"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></g>
+          <g id="i-palette"><circle cx="13.5" cy="6.5" r=".5" /><circle cx="17.5" cy="10.5" r=".5" /><circle cx="8.5" cy="7.5" r=".5" /><circle cx="6.5" cy="12.5" r=".5" /><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" /></g>
+          <g id="i-terminal"><polyline points="4 17 10 11 4 5" /><line x1="12" x2="20" y1="19" y2="19" /></g>
+          <g id="i-monitor"><rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" x2="16" y1="21" y2="21" /><line x1="12" x2="12" y1="17" y2="21" /></g>
+          <g id="i-handy"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></g>
+          <g id="i-fenster"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M10 4v4" /><path d="M2 8h20" /><path d="M6 4v4" /></g>
+          <g id="i-datei"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></g>
+          <g id="i-kalender"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></g>
+          <g id="i-mail"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></g>
+          <g id="i-laufwerk"><line x1="22" x2="2" y1="12" y2="12" /><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" /><line x1="6" x2="6.01" y1="16" y2="16" /><line x1="10" x2="10.01" y1="16" y2="16" /></g>
+          <g id="i-wieder"><path d="m17 2 4 4-4 4" /><path d="M3 11v-1a4 4 0 0 1 4-4h14" /><path d="m7 22-4-4 4-4" /><path d="M21 13v1a4 4 0 0 1-4 4H3" /></g>
+          <g id="i-lesezeichen"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" /></g>
+          <g id="i-lupe"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+          <g id="i-tasche"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></g>
+          <g id="i-balken"><path d="M3 3v18h18" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" /></g>
+          <g id="i-ablauf"><rect width="8" height="8" x="3" y="3" rx="2" /><path d="M7 11v4a2 2 0 0 0 2 2h4" /><rect width="8" height="8" x="13" y="13" rx="2" /></g>
+          <g id="i-code"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></g>
+          <g id="i-schere"><circle cx="6" cy="6" r="3" /><path d="M8.12 8.12 12 12" /><path d="M20 4 8.12 15.88" /><circle cx="6" cy="18" r="3" /><path d="M14.8 14.8 20 20" /></g>
+          <g id="i-film"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M7 3v18" /><path d="M3 7.5h4" /><path d="M3 12h18" /><path d="M3 16.5h4" /><path d="M17 3v18" /><path d="M17 7.5h4" /><path d="M17 16.5h4" /></g>
+          <g id="i-funken"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /></g>
+          <g id="i-wolke"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></g>
+          <g id="i-laptop"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" /></g>
+          <g id="i-etikett"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r="1.2" /></g>
+          <g id="i-trend"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></g>
+          <g id="i-stern"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></g>
+          <g id="i-person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-praes"><path d="M2 3h20" /><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" /><path d="m7 21 5-5 5 5" /></g>
+          <!-- Zustände -->
+          <g id="kreuz"><circle r="20" fill="#e5484d" /><path d="M-7 -7 L7 7 M7 -7 L-7 7" stroke="#fff" stroke-width="4" stroke-linecap="round" /></g>
+          <g id="haken"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 L-2 6 L9 -6" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <!-- Kachel 110 x 110 mit Icon (Icon 24 → 2.4-fach = 58 px) -->
+          <g id="kachel-rahmen"><rect x="0" y="0" width="110" height="110" rx="26" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /></g>
+          <g id="kachel-verlauf"><rect x="0" y="0" width="110" height="110" rx="26" fill="url(#gvd)" /></g>
+          <!-- Mini-Seite (Skizze ohne Inhalt): Fenster 150 x 110 -->
+          <g id="mini-seite">
+            <rect x="0" y="0" width="150" height="110" rx="14" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <path d="M0 24 H150" stroke="#e5e7eb" stroke-width="2.5" />
+            <circle cx="14" cy="12" r="3.6" fill="#d1d5db" /><circle cx="26" cy="12" r="3.6" fill="#d1d5db" /><circle cx="38" cy="12" r="3.6" fill="#d1d5db" />
+          </g>
+        </defs>
+      </svg>
+
+      <!-- K0 Sechs Werkzeuge: "Es sind inzwischen einfach mindestens sechs Werkzeuge, die du unbedingt kennen solltest und die die
+           meisten davon einfach nicht nutzen." Es 6,17 / sechs 7,73 / Werkzeuge 8,00 / nicht 11,63 / nutzen 11,90 -->
+      <section id="k0" class="karte clip" data-start="6.1" data-duration="6.2" data-track-index="1">
+        <div class="kicker">Mindestens 6 Werkzeuge</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k0-t1"><use href="#kachel-verlauf" x="30" y="20" /><g transform="translate(56 46) scale(2.4)" class="ico"><use href="#i-chat" /></g><text x="85" y="166" text-anchor="middle" class="lab" style="font-size:21px">Chat</text></g>
+          <g id="k0-t2" class="k0-rest"><use href="#kachel-rahmen" x="160" y="20" /><g transform="translate(186 46) scale(2.4)" class="ico"><use href="#i-ordner" /></g><text x="215" y="166" text-anchor="middle" class="lab" style="font-size:21px">Projekte</text></g>
+          <g id="k0-t3" class="k0-rest"><use href="#kachel-rahmen" x="290" y="20" /><g transform="translate(316 46) scale(2.4)" class="ico"><use href="#i-stecker" /></g><text x="345" y="166" text-anchor="middle" class="lab" style="font-size:21px">Connectors</text></g>
+          <g id="k0-t4" class="k0-rest"><use href="#kachel-rahmen" x="420" y="20" /><g transform="translate(446 46) scale(2.4)" class="ico"><use href="#i-globus" /></g><text x="475" y="166" text-anchor="middle" class="lab" style="font-size:21px">Chrome</text></g>
+          <g id="k0-t5" class="k0-rest"><use href="#kachel-rahmen" x="550" y="20" /><g transform="translate(576 46) scale(2.4)" class="ico"><use href="#i-palette" /></g><text x="605" y="166" text-anchor="middle" class="lab" style="font-size:21px">Design</text></g>
+          <g id="k0-t6" class="k0-rest"><use href="#kachel-rahmen" x="680" y="20" /><g transform="translate(706 46) scale(2.4)" class="ico"><use href="#i-terminal" /></g><text x="735" y="166" text-anchor="middle" class="lab" style="font-size:21px">Code</text></g>
+          <path id="k0-klammer" pathLength="1" d="M164 196 Q164 212 180 212 H770 Q786 212 786 196" fill="none" stroke="#9aa3af" stroke-width="3" stroke-linecap="round" opacity="0" />
+          <clipPath id="k0-clip"><rect id="k0-cliprect" x="330" y="214" width="0" height="70" /></clipPath>
+          <text x="338" y="262" class="hand" style="font-size:44px" clip-path="url(#k0-clip)" transform="rotate(-2 450 250)">meist ungenutzt</text>
+        </svg>
+      </section>
+
+      <!-- K1 Kurz erklärt: "Denn ich erkläre dir hier mal kurz die wichtigsten Funktionen von Claude, die du unbedingt gehört haben
+           solltest und die deinen Alltag erheblich verbessern werden." erkläre 12,67 / Funktionen 14,53 / Alltag 17,97 /
+           verbessern 18,90 -->
+      <section id="k1" class="karte clip" data-start="12.3" data-duration="7.23" data-track-index="1">
+        <div class="kicker">Kurz erklärt</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <path id="k1-schiene" pathLength="1" d="M60 70 H500" fill="none" stroke="#d1d5db" stroke-width="6" stroke-linecap="round" />
+          <g id="k1-punkte">
+            <g class="k1-p"><circle cx="60" cy="70" r="26" fill="url(#gvd)" /><text x="60" y="80" text-anchor="middle" class="lab" style="font-size:26px">1</text></g>
+            <g class="k1-p"><circle cx="148" cy="70" r="26" fill="url(#gvd)" /><text x="148" y="80" text-anchor="middle" class="lab" style="font-size:26px">2</text></g>
+            <g class="k1-p"><circle cx="236" cy="70" r="26" fill="url(#gvd)" /><text x="236" y="80" text-anchor="middle" class="lab" style="font-size:26px">3</text></g>
+            <g class="k1-p"><circle cx="324" cy="70" r="26" fill="url(#gvd)" /><text x="324" y="80" text-anchor="middle" class="lab" style="font-size:26px">4</text></g>
+            <g class="k1-p"><circle cx="412" cy="70" r="26" fill="url(#gvd)" /><text x="412" y="80" text-anchor="middle" class="lab" style="font-size:26px">5</text></g>
+            <g class="k1-p"><circle cx="500" cy="70" r="26" fill="url(#gvd)" /><text x="500" y="80" text-anchor="middle" class="lab" style="font-size:26px">6</text></g>
+          </g>
+          <text id="k1-titel" x="40" y="160" class="lab" style="font-size:40px" opacity="0">Die wichtigsten Funktionen</text>
+          <g id="k1-alltag" opacity="0">
+            <rect x="590" y="22" width="190" height="160" rx="24" class="rahmen" />
+            <g transform="translate(612 44) scale(2.1)" class="ico grau"><use href="#i-kalender" /></g>
+            <text x="685" y="160" text-anchor="middle" class="lab" style="font-size:26px">Alltag</text>
+          </g>
+          <path id="k1-kurve" pathLength="1" d="M690 128 C 716 120, 726 96, 738 74 S 756 46, 768 38" fill="none" stroke="url(#gv)" stroke-width="7" stroke-linecap="round" />
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="40" y="186" width="0" height="80" /></clipPath>
+          <text x="46" y="246" class="hand" style="font-size:48px" clip-path="url(#k1-clip)" transform="rotate(-2 300 230)">deinen Alltag verbessern</text>
+        </svg>
+      </section>
+
+      <!-- K2 Chat auf drei Geräten: "Erstens ist der Claude Chat im Browser als Desktop-App oder auch auf deinem Handy natürlich
+           verfügbar," Erstens 19,60 / Browser 21,83 / Desktop-App 22,53 / Handy 23,93 -->
+      <section id="k2" class="karte clip" data-start="19.53" data-duration="5.77" data-track-index="1">
+        <div class="kicker">Chat · überall</div>
+        <div class="zaehler">1 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k2-mitte">
+            <rect x="340" y="6" width="140" height="80" rx="22" fill="url(#gvd)" />
+            <g transform="translate(386 22) scale(2)" class="ico"><use href="#i-chat" /></g>
+          </g>
+          <g id="k2-browser" opacity="0">
+            <rect x="40" y="110" width="220" height="140" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <path d="M40 140 H260" stroke="#e5e7eb" stroke-width="2.5" />
+            <circle cx="58" cy="125" r="5" fill="#d1d5db" /><circle cx="76" cy="125" r="5" fill="#d1d5db" /><circle cx="94" cy="125" r="5" fill="#d1d5db" />
+            <rect x="70" y="160" width="120" height="26" rx="13" fill="#e5e7eb" />
+            <rect x="110" y="200" width="120" height="26" rx="13" fill="url(#gvd)" />
+            <text x="150" y="282" text-anchor="middle" class="lab" style="font-size:26px">Browser</text>
+          </g>
+          <g id="k2-desktop" opacity="0">
+            <g transform="translate(330 104) scale(6.6)" class="ico" style="stroke-width:0.5"><use href="#i-monitor" /></g>
+            <rect x="380" y="142" width="64" height="18" rx="9" fill="#e5e7eb" />
+            <rect x="400" y="168" width="64" height="18" rx="9" fill="url(#gvd)" />
+            <text x="410" y="282" text-anchor="middle" class="lab" style="font-size:26px">Desktop-App</text>
+          </g>
+          <g id="k2-handy" opacity="0">
+            <rect x="628" y="104" width="92" height="150" rx="18" fill="#fff" stroke="#0b0c0e" stroke-width="3.2" />
+            <rect x="642" y="132" width="52" height="16" rx="8" fill="#e5e7eb" />
+            <rect x="654" y="156" width="52" height="16" rx="8" fill="url(#gvd)" />
+            <circle cx="674" cy="236" r="4" fill="#0b0c0e" />
+            <text x="674" y="282" text-anchor="middle" class="lab" style="font-size:26px">Handy</text>
+          </g>
+          <path id="k2-l1" pathLength="1" d="M360 86 Q 260 96, 180 108" class="linie" style="stroke-width:3.5" />
+          <path id="k2-l2" pathLength="1" d="M410 86 V 100" class="linie" style="stroke-width:3.5" />
+          <path id="k2-l3" pathLength="1" d="M460 86 Q 580 96, 660 102" class="linie" style="stroke-width:3.5" />
+        </svg>
+      </section>
+
+      <!-- K3 Wofür: "und für erste Fragen, Texte oder auch schnelle erste Produktbeschreibungen ist das tatsächlich durchaus ein sehr
+           gutes Mittel. Du kannst es auch sogar in deinem kostenlosen Modell nutzen." Fragen 25,90 / Texte 26,40 /
+           Produktbeschreibungen 27,93 / gutes 30,83 / kostenlosen 33,10 -->
+      <section id="k3" class="karte clip" data-start="25.3" data-duration="9.03" data-track-index="1">
+        <div class="kicker">Chat · wofür?</div>
+        <div class="zaehler">1 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k3-frage" opacity="0">
+            <rect x="40" y="20" width="200" height="150" rx="24" class="rahmen" />
+            <text x="140" y="118" text-anchor="middle" style="font-size:84px;font-weight:900" class="gtext">?</text>
+            <text x="140" y="214" text-anchor="middle" class="lab">Fragen</text>
+          </g>
+          <g id="k3-text" opacity="0">
+            <rect x="270" y="20" width="200" height="150" rx="24" class="rahmen" />
+            <rect x="300" y="52" width="140" height="14" rx="7" fill="#9aa3af" />
+            <rect x="300" y="80" width="120" height="14" rx="7" fill="#d1d5db" />
+            <rect x="300" y="108" width="140" height="14" rx="7" fill="#d1d5db" />
+            <rect x="300" y="136" width="90" height="14" rx="7" fill="#d1d5db" />
+            <text x="370" y="214" text-anchor="middle" class="lab">Texte</text>
+          </g>
+          <g id="k3-produkt" opacity="0">
+            <rect x="500" y="20" width="280" height="150" rx="24" class="rahmen" />
+            <g transform="translate(522 44) scale(2.6)" class="ico"><use href="#i-etikett" /></g>
+            <rect x="610" y="56" width="140" height="14" rx="7" fill="#9aa3af" />
+            <rect x="610" y="84" width="120" height="14" rx="7" fill="#d1d5db" />
+            <rect x="610" y="112" width="140" height="14" rx="7" fill="#d1d5db" />
+            <text x="640" y="214" text-anchor="middle" class="lab" style="font-size:26px">Produkttexte</text>
+          </g>
+          <g id="k3-gratis" opacity="0">
+            <rect x="286" y="232" width="248" height="54" rx="27" fill="url(#gvd)" />
+            <text x="410" y="270" text-anchor="middle" class="lab" style="font-size:30px">kostenlos</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K4 Projekt: "Zweitens sind die Claude Projekte. Da hinterlegst du dann einmal einfach deine Markenstimme, deine
+           Produktdaten und auch deine Regeln." Zweitens 34,40 / Projekte 35,57 / hinterlegst 37,43 / Markenstimme 38,90 /
+           Produktdaten 40,17 / Regeln 41,50 -->
+      <section id="k4" class="karte clip" data-start="34.33" data-duration="7.64" data-track-index="1">
+        <div class="kicker">Projekte</div>
+        <div class="zaehler">2 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k4-ordner">
+            <g transform="translate(40 10) scale(10.4)" style="fill:url(#gvd);stroke:#0b0c0e;stroke-width:0.24;stroke-linejoin:round"><use href="#i-ordner" /></g>
+            <text x="165" y="168" text-anchor="middle" class="lab" style="font-size:32px">Mein Shop</text>
+          </g>
+          <g id="k4-d1" opacity="0">
+            <rect x="350" y="8" width="410" height="72" rx="20" class="rahmen" />
+            <g transform="translate(366 22) scale(1.8)" class="ico"><use href="#i-datei" /></g>
+            <text x="420" y="56" class="lab">Markenstimme</text>
+          </g>
+          <g id="k4-d2" opacity="0">
+            <rect x="350" y="96" width="410" height="72" rx="20" class="rahmen" />
+            <g transform="translate(366 110) scale(1.8)" class="ico"><use href="#i-datei" /></g>
+            <text x="420" y="144" class="lab">Produktdaten</text>
+          </g>
+          <g id="k4-d3" opacity="0">
+            <rect x="350" y="184" width="410" height="72" rx="20" class="rahmen" />
+            <g transform="translate(366 198) scale(1.8)" class="ico"><use href="#i-datei" /></g>
+            <text x="420" y="232" class="lab">Regeln</text>
+          </g>
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="34" y="196" width="0" height="80" /></clipPath>
+          <text x="40" y="250" class="hand" style="font-size:44px" clip-path="url(#k4-clip)" transform="rotate(-3 160 240)">einmal hinterlegt</text>
+        </svg>
+      </section>
+
+      <!-- K5 Jeder Chat kennt den Shop: "Und jeder Chat, den du in diesem Projekt dann gestartet hast, kennt dann zum Glück deinen
+           Shop und auch deine Marke." jeder 42,23 / Chat 42,57 / gestartet 43,93 / kennt 45,17 / Shop 46,47 / Marke 47,43 -->
+      <section id="k5" class="karte clip" data-start="41.97" data-duration="5.83" data-track-index="1">
+        <div class="kicker">Projekte · jeder Chat</div>
+        <div class="zaehler">2 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g>
+            <g transform="translate(40 40) scale(6.4)" style="fill:url(#gvd);stroke:#0b0c0e;stroke-width:0.36;stroke-linejoin:round"><use href="#i-ordner" /></g>
+            <text x="117" y="214" text-anchor="middle" class="lab" style="font-size:26px">Mein Shop</text>
+          </g>
+          <path id="k5-l1" pathLength="1" d="M210 92 C 260 92, 270 52, 330 52" class="linie" style="stroke-width:4" />
+          <path id="k5-l2" pathLength="1" d="M210 120 H330" class="linie" style="stroke-width:4" />
+          <path id="k5-l3" pathLength="1" d="M210 148 C 260 148, 270 188, 330 188" class="linie" style="stroke-width:4" />
+          <g id="k5-c1" opacity="0"><rect x="340" y="22" width="190" height="60" rx="18" class="rahmen" /><g transform="translate(354 36) scale(1.35)" class="ico"><use href="#i-chat" /></g><text x="396" y="61" class="lab" style="font-size:24px">Chat</text><use href="#haken" x="500" y="52" class="k5-h" opacity="0" /></g>
+          <g id="k5-c2" opacity="0"><rect x="340" y="90" width="190" height="60" rx="18" class="rahmen" /><g transform="translate(354 104) scale(1.35)" class="ico"><use href="#i-chat" /></g><text x="396" y="129" class="lab" style="font-size:24px">Chat</text><use href="#haken" x="500" y="120" class="k5-h" opacity="0" /></g>
+          <g id="k5-c3" opacity="0"><rect x="340" y="158" width="190" height="60" rx="18" class="rahmen" /><g transform="translate(354 172) scale(1.35)" class="ico"><use href="#i-chat" /></g><text x="396" y="197" class="lab" style="font-size:24px">Chat</text><use href="#haken" x="500" y="188" class="k5-h" opacity="0" /></g>
+          <g id="k5-shop" opacity="0"><rect x="570" y="40" width="210" height="64" rx="32" fill="#fff" stroke="url(#gv)" stroke-width="3.5" /><g transform="translate(590 56) scale(1.35)" class="ico"><use href="#i-tasche" /></g><text x="630" y="83" class="lab" style="font-size:28px">Shop ✓</text></g>
+          <g id="k5-marke" opacity="0"><rect x="570" y="124" width="210" height="64" rx="32" fill="#fff" stroke="url(#gv)" stroke-width="3.5" /><g transform="translate(590 140) scale(1.35)" class="ico"><use href="#i-stern" /></g><text x="630" y="167" class="lab" style="font-size:28px">Marke ✓</text></g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="560" y="200" width="0" height="80" /></clipPath>
+          <text x="566" y="254" class="hand" style="font-size:42px" clip-path="url(#k5-clip)" transform="rotate(-3 660 240)">kennt dich</text>
+        </svg>
+      </section>
+
+      <!-- K6 Connectors: "Und drittens sind die Connectoren und Skills. Damit greift dann Claude zum Beispiel auf deinen Google Drive,
+           auf deinen Kalender oder auf deine Mails zu." drittens 47,97 / Connectoren 48,67 / Skills 49,33 / Claude 51,07 / Drive 52,10 /
+           Kalender 53,07 / Mails 54,33 -->
+      <section id="k6" class="karte clip" data-start="47.8" data-duration="7.63" data-track-index="1">
+        <div class="kicker">Connectors</div>
+        <div class="zaehler">3 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k6-claude">
+            <rect x="520" y="54" width="250" height="150" rx="30" fill="url(#gvd)" />
+            <g transform="translate(546 98) scale(2.6)" class="ico"><use href="#i-funken" /></g>
+            <text x="620" y="144" class="lab" style="font-size:36px">Claude</text>
+          </g>
+          <g id="k6-a" opacity="0"><rect x="40" y="6" width="250" height="72" rx="20" class="rahmen" /><g transform="translate(58 20) scale(1.8)" class="ico"><use href="#i-laufwerk" /></g><text x="112" y="54" class="lab" style="font-size:27px">Google Drive</text></g>
+          <g id="k6-b" opacity="0"><rect x="40" y="94" width="250" height="72" rx="20" class="rahmen" /><g transform="translate(58 108) scale(1.8)" class="ico"><use href="#i-kalender" /></g><text x="112" y="142" class="lab" style="font-size:27px">Kalender</text></g>
+          <g id="k6-c" opacity="0"><rect x="40" y="182" width="250" height="72" rx="20" class="rahmen" /><g transform="translate(58 196) scale(1.8)" class="ico"><use href="#i-mail" /></g><text x="112" y="230" class="lab" style="font-size:27px">Mails</text></g>
+          <path id="k6-l1" pathLength="1" d="M290 42 C 400 42, 420 100, 520 104" class="linie" />
+          <path id="k6-l2" pathLength="1" d="M290 130 H520" class="linie" />
+          <path id="k6-l3" pathLength="1" d="M290 218 C 400 218, 420 160, 520 156" class="linie" />
+          <g id="k6-s1" opacity="0"><circle cx="520" cy="104" r="10" fill="#0b0c0e" /></g>
+          <g id="k6-s2" opacity="0"><circle cx="520" cy="130" r="10" fill="#0b0c0e" /></g>
+          <g id="k6-s3" opacity="0"><circle cx="520" cy="156" r="10" fill="#0b0c0e" /></g>
+          <clipPath id="k6-clip"><rect id="k6-cliprect" x="540" y="214" width="0" height="72" /></clipPath>
+          <text x="546" y="262" class="hand" style="font-size:42px" clip-path="url(#k6-clip)" transform="rotate(-3 640 250)">angesteckt</text>
+        </svg>
+      </section>
+
+      <!-- K7 Skills: "Und Abläufe, die sich wiederholen, speicherst du am besten immer als Skill, statt sie einfach nur jedes Mal neu
+           zu erklären." Abläufe 55,70 / wiederholen 56,50 / speicherst 57,23 / Skill 58,57 / jedes 60,23 / neu 60,70 / erklären 60,97 -->
+      <section id="k7" class="karte clip" data-start="55.43" data-duration="5.94" data-track-index="1">
+        <div class="kicker">Skills</div>
+        <div class="zaehler">3 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k7-ablauf">
+            <rect x="40" y="10" width="220" height="190" rx="26" class="rahmen" />
+            <g id="k7-kreis" transform="translate(150 92)"><g transform="translate(-48 -48) scale(4)" class="ico grau"><use href="#i-wieder" /></g></g>
+            <text x="150" y="240" text-anchor="middle" class="lab">Ablauf</text>
+          </g>
+          <path id="k7-pfeil" pathLength="1" d="M280 105 H 430" class="linie" style="stroke-width:6" />
+          <path id="k7-spitze" d="M418 92 L434 105 L418 118" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+          <g id="k7-skill" opacity="0">
+            <rect x="460" y="10" width="200" height="190" rx="26" fill="#fff" stroke="url(#gv)" stroke-width="4" />
+            <g transform="translate(512 40) scale(4)" class="ico"><use href="#i-lesezeichen" /></g>
+            <use href="#haken" x="640" y="26" />
+            <text x="560" y="240" text-anchor="middle" class="lab gtext" style="font-size:32px">Skill</text>
+          </g>
+          <g id="k7-neu" opacity="0">
+            <g transform="translate(690 60) scale(1.6)" class="ico grau"><use href="#i-chat" /></g>
+            <g transform="translate(700 104) scale(1.6)" class="ico grau"><use href="#i-chat" /></g>
+            <g transform="translate(690 148) scale(1.6)" class="ico grau"><use href="#i-chat" /></g>
+          </g>
+          <path id="k7-strich" pathLength="1" d="M680 190 L 760 60" fill="none" stroke="#e5484d" stroke-width="6" stroke-linecap="round" />
+          <text id="k7-neul" x="726" y="240" text-anchor="middle" class="klein" opacity="0">jedes Mal neu</text>
+        </svg>
+      </section>
+
+      <!-- K8 Claude in Chrome: "Viertens ist Claude in deinem Chrome Browser. Da gibst du dann Claude einmal die Freigabe" Viertens
+           61,47 / Chrome 62,93 / Browser 63,17 / Freigabe 65,07; danach Quelle groß (claude.com/claude-in-chrome) -->
+      <section id="k8" class="karte clip" data-start="61.37" data-duration="4.23" data-track-index="1">
+        <div class="kicker">Claude in Chrome</div>
+        <div class="zaehler">4 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k8-browser">
+            <rect x="40" y="6" width="460" height="270" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <path d="M40 54 H500" stroke="#e5e7eb" stroke-width="2.5" />
+            <circle cx="64" cy="30" r="6" fill="#d1d5db" /><circle cx="86" cy="30" r="6" fill="#d1d5db" /><circle cx="108" cy="30" r="6" fill="#d1d5db" />
+            <rect x="140" y="16" width="120" height="28" rx="10" fill="#f2f3f5" /><rect x="270" y="16" width="120" height="28" rx="10" fill="#f2f3f5" />
+            <rect x="70" y="80" width="260" height="20" rx="10" fill="#d1d5db" />
+            <rect x="70" y="116" width="380" height="14" rx="7" fill="#e5e7eb" />
+            <rect x="70" y="142" width="340" height="14" rx="7" fill="#e5e7eb" />
+            <rect x="70" y="186" width="160" height="50" rx="14" fill="#e5e7eb" />
+          </g>
+          <g id="k8-claude" opacity="0">
+            <rect x="372" y="168" width="104" height="80" rx="20" fill="url(#gvd)" />
+            <g transform="translate(400 184) scale(2)" class="ico"><use href="#i-funken" /></g>
+          </g>
+          <g id="k8-frei" opacity="0">
+            <rect x="540" y="60" width="240" height="170" rx="26" class="rahmen" />
+            <text x="660" y="112" text-anchor="middle" class="lab" style="font-size:28px">Freigabe</text>
+            <rect id="k8-schalter" x="600" y="140" width="120" height="62" rx="31" fill="#d1d5db" />
+            <circle id="k8-knopf" cx="632" cy="171" r="25" fill="#fff" />
+          </g>
+        </svg>
+      </section>
+
+      <!-- K9 Claude in Chrome, Beispiele: "Zum Beispiel einfach für schnelle Wettbewerbsrecherche oder für eigene Tests in deinem
+           Online-Shop." Zum 72,30 / Wettbewerbsrecherche 73,50 / Tests 75,63 / Online-Shop 76,43 -->
+      <section id="k9" class="karte clip" data-start="72.25" data-duration="4.68" data-track-index="1">
+        <div class="kicker">Claude in Chrome · Beispiele</div>
+        <div class="zaehler">4 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k9-tabs">
+            <use href="#mini-seite" x="40" y="10" />
+            <use href="#mini-seite" x="70" y="62" />
+            <use href="#mini-seite" x="100" y="114" />
+            <rect x="122" y="152" width="90" height="14" rx="7" fill="#d1d5db" /><rect x="122" y="174" width="70" height="14" rx="7" fill="#e5e7eb" />
+          </g>
+          <g id="k9-lupe" opacity="0"><circle cx="0" cy="0" r="40" fill="rgba(255,255,255,0.55)" /><g transform="translate(-40 -40) scale(3.4)" class="ico" style="stroke-width:2.2"><use href="#i-lupe" /></g></g>
+          <text id="k9-l1" x="160" y="276" text-anchor="middle" class="lab" style="font-size:26px" opacity="0">Wettbewerb</text>
+          <g id="k9-shop" opacity="0">
+            <rect x="440" y="10" width="340" height="200" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(464 30) scale(1.6)" class="ico"><use href="#i-tasche" /></g>
+            <text x="510" y="58" class="lab" style="font-size:24px">Dein Shop</text>
+            <g id="k9-t1" opacity="0"><use href="#haken" x="486" y="112" /><rect x="520" y="102" width="200" height="18" rx="9" fill="#d1d5db" /></g>
+            <g id="k9-t2" opacity="0"><use href="#haken" x="486" y="166" /><rect x="520" y="156" width="160" height="18" rx="9" fill="#d1d5db" /></g>
+          </g>
+          <text id="k9-l2" x="610" y="262" text-anchor="middle" class="lab" style="font-size:26px" opacity="0">Tests</text>
+        </svg>
+      </section>
+
+      <!-- K10 Claude Design, Entwurf: "Du beschreibst dort einfach eine Landingpage, ein Pitch-Deck oder einfach One-Pager und Claude
+           baut dir einfach daraus deinen ersten Entwurf oder erstellt sogar komplette Design-Guidelines." beschreibst 81,37 /
+           Landingpage 82,40 / Pitch-Deck 83,30 / One-Pager 84,50 / baut 85,90 / Entwurf 87,27 / Design-Guidelines 89,33 -->
+      <section id="k10" class="karte clip" data-start="80.55" data-duration="9.85" data-track-index="1">
+        <div class="kicker">Claude Design</div>
+        <div class="zaehler">5 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k10-prompt">
+            <rect x="30" y="10" width="760" height="58" rx="20" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(48 23) scale(1.35)" class="ico grau"><use href="#i-chat" /></g>
+            <text id="k10-tipp" x="96" y="49" class="lab" style="font-size:26px;font-weight:700;fill:#374151">Du beschreibst …</text>
+          </g>
+          <!-- drei Entwürfe (Skizzen) -->
+          <g id="k10-e1" opacity="0">
+            <rect x="30" y="90" width="200" height="140" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <rect class="k10-leer" x="48" y="106" width="164" height="50" rx="8" fill="#eef0f2" />
+            <rect class="k10-voll" x="48" y="106" width="164" height="50" rx="8" fill="url(#gvd)" opacity="0" />
+            <rect x="48" y="166" width="110" height="12" rx="6" fill="#d1d5db" /><rect x="48" y="186" width="140" height="12" rx="6" fill="#e5e7eb" />
+            <rect class="k10-voll" x="48" y="206" width="70" height="16" rx="8" fill="#0b0c0e" opacity="0" />
+            <text x="130" y="270" text-anchor="middle" class="lab" style="font-size:25px">Landingpage</text>
+          </g>
+          <g id="k10-e2" opacity="0">
+            <rect x="250" y="100" width="200" height="120" rx="12" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <rect class="k10-leer" x="268" y="116" width="120" height="16" rx="8" fill="#eef0f2" />
+            <rect class="k10-voll" x="268" y="116" width="120" height="16" rx="8" fill="#0b0c0e" opacity="0" />
+            <rect class="k10-leer" x="268" y="148" width="72" height="56" rx="6" fill="#eef0f2" />
+            <rect class="k10-voll" x="268" y="148" width="72" height="56" rx="6" fill="url(#gvd)" opacity="0" />
+            <rect x="352" y="152" width="80" height="10" rx="5" fill="#d1d5db" /><rect x="352" y="172" width="64" height="10" rx="5" fill="#e5e7eb" />
+            <text x="350" y="270" text-anchor="middle" class="lab" style="font-size:25px">Pitch-Deck</text>
+          </g>
+          <g id="k10-e3" opacity="0">
+            <rect x="476" y="84" width="120" height="152" rx="10" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <rect class="k10-leer" x="490" y="98" width="92" height="40" rx="6" fill="#eef0f2" />
+            <rect class="k10-voll" x="490" y="98" width="92" height="40" rx="6" fill="url(#gvd)" opacity="0" />
+            <rect x="490" y="150" width="80" height="9" rx="4.5" fill="#d1d5db" /><rect x="490" y="168" width="92" height="9" rx="4.5" fill="#e5e7eb" /><rect x="490" y="186" width="70" height="9" rx="4.5" fill="#e5e7eb" />
+            <text x="536" y="270" text-anchor="middle" class="lab" style="font-size:25px">One-Pager</text>
+          </g>
+          <g id="k10-guide" opacity="0">
+            <rect x="620" y="84" width="170" height="152" rx="16" fill="#fff" stroke="url(#gv)" stroke-width="3.5" />
+            <text x="640" y="134" style="font-size:40px;font-weight:900" class="gtext">Aa</text>
+            <circle cx="652" cy="172" r="14" fill="#00d088" /><circle cx="688" cy="172" r="14" fill="#31adec" /><circle cx="724" cy="172" r="14" fill="#0b0c0e" /><circle cx="760" cy="172" r="14" fill="#e5e7eb" />
+            <rect x="640" y="202" width="130" height="12" rx="6" fill="#d1d5db" />
+            <text x="705" y="270" text-anchor="middle" class="lab" style="font-size:25px">Guidelines</text>
+          </g>
+          <clipPath id="k10-clip"><rect id="k10-cliprect" x="300" y="12" width="0" height="56" /></clipPath>
+          <text x="420" y="54" class="hand" style="font-size:40px" clip-path="url(#k10-clip)">erster Entwurf ✓</text>
+        </svg>
+      </section>
+
+      <!-- K11 Export und Nutzung: "Dadurch kannst du natürlich dann diese auch als PDF oder als PowerPoint oder auch einfach nach
+           Canva direkt exportieren [Quelle groß] und für deine Webseite oder auch für deinen Online-Shop als Design-Guideline perfekt
+           nutzen." Webseite 96,63 / Online-Shop 98,47 / Design-Guideline 99,23 / perfekt 99,97 -->
+      <section id="k11" class="karte clip" data-start="95.7" data-duration="5.07" data-track-index="1">
+        <div class="kicker">Claude Design · Export</div>
+        <div class="zaehler">5 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k11-dateien">
+            <rect x="40" y="10" width="200" height="66" rx="18" class="rahmen" /><g transform="translate(56 24) scale(1.6)" class="ico"><use href="#i-datei" /></g><text x="104" y="56" class="lab" style="font-size:28px">PDF</text>
+            <rect x="40" y="98" width="200" height="66" rx="18" class="rahmen" /><g transform="translate(56 112) scale(1.6)" class="ico"><use href="#i-praes" /></g><text x="104" y="144" class="lab" style="font-size:28px">PPTX</text>
+            <rect x="40" y="186" width="200" height="66" rx="18" class="rahmen" /><g transform="translate(56 200) scale(1.6)" class="ico"><use href="#i-palette" /></g><text x="104" y="232" class="lab" style="font-size:28px">Canva</text>
+          </g>
+          <path id="k11-l1" pathLength="1" d="M250 130 C 320 130, 330 70, 400 70" class="linie" />
+          <path id="k11-l2" pathLength="1" d="M250 130 C 320 130, 330 190, 400 190" class="linie" />
+          <g id="k11-web" opacity="0"><rect x="410" y="30" width="200" height="80" rx="20" class="rahmen" /><g transform="translate(428 50) scale(1.7)" class="ico"><use href="#i-globus" /></g><text x="478" y="81" class="lab" style="font-size:26px">Webseite</text></g>
+          <g id="k11-shop" opacity="0"><rect x="410" y="150" width="200" height="80" rx="20" class="rahmen" /><g transform="translate(428 170) scale(1.7)" class="ico"><use href="#i-tasche" /></g><text x="478" y="201" class="lab" style="font-size:26px">Shop</text></g>
+          <g id="k11-guide" opacity="0">
+            <rect x="640" y="50" width="150" height="160" rx="20" fill="#fff" stroke="url(#gv)" stroke-width="3.5" />
+            <text x="662" y="108" style="font-size:42px;font-weight:900" class="gtext">Aa</text>
+            <circle cx="672" cy="148" r="13" fill="#00d088" /><circle cx="706" cy="148" r="13" fill="#31adec" /><circle cx="740" cy="148" r="13" fill="#0b0c0e" />
+            <rect x="660" y="176" width="110" height="11" rx="5.5" fill="#d1d5db" />
+          </g>
+          <clipPath id="k11-clip"><rect id="k11-cliprect" x="560" y="222" width="0" height="66" /></clipPath>
+          <text x="566" y="270" class="hand" style="font-size:40px" clip-path="url(#k11-clip)" transform="rotate(-2 680 256)">Design-Guideline</text>
+        </svg>
+      </section>
+
+      <!-- K12 Claude Code: "Und sechstens vermutlich das allerwichtigste Claude Code. Das ist für mich tatsächlich immer das
+           Spannendste," sechstens 101,00 / allerwichtigste 102,30 / Claude 103,37 / Code 103,70 / Spannendste 105,97 -->
+      <section id="k12" class="karte clip" data-start="100.77" data-duration="5.73" data-track-index="1">
+        <div class="kicker">Claude Code</div>
+        <div class="zaehler">6 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k12-term">
+            <rect x="40" y="10" width="480" height="250" rx="22" fill="#0b0c0e" />
+            <circle cx="66" cy="36" r="6" fill="#4b5563" /><circle cx="88" cy="36" r="6" fill="#4b5563" /><circle cx="110" cy="36" r="6" fill="#4b5563" />
+            <text x="70" y="120" style="font-size:44px;font-weight:800;fill:#00e090;font-family:'Geist',monospace">&gt;</text>
+            <text id="k12-cmd" x="110" y="120" style="font-size:44px;font-weight:700;fill:#fff">claude</text>
+            <rect id="k12-cursor" x="262" y="84" width="22" height="44" fill="#31adec" />
+            <rect x="70" y="160" width="300" height="16" rx="8" fill="#374151" /><rect x="70" y="194" width="220" height="16" rx="8" fill="#374151" />
+          </g>
+          <g id="k12-stern" opacity="0">
+            <g transform="translate(600 30) scale(5.4)" style="fill:url(#gvd);stroke:#0b0c0e;stroke-width:0.4;stroke-linejoin:round"><use href="#i-stern" /></g>
+          </g>
+          <clipPath id="k12-clip"><rect id="k12-cliprect" x="540" y="186" width="0" height="80" /></clipPath>
+          <text x="546" y="240" class="hand" style="font-size:44px" clip-path="url(#k12-clip)" transform="rotate(-3 660 230)">das Spannendste</text>
+        </svg>
+      </section>
+
+      <!-- K13 Nicht nur schreiben, sondern arbeiten: "denn da schreibst du einfach nicht nur mit Claude, sondern da arbeitet Claude
+           tatsächlich direkt mit deinen Dateien auf deinem Rechner oder eben auch direkt an der Cloud." schreibst 107,07 / nicht
+           107,80 / sondern 109,10 / arbeitet 109,47 / Dateien 111,37 / Rechner 112,60 / Cloud 114,53 -->
+      <section id="k13" class="karte clip" data-start="106.5" data-duration="8.35" data-track-index="1">
+        <div class="kicker">Claude Code · arbeitet mit</div>
+        <div class="zaehler">6 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k13-chat" opacity="0">
+            <rect x="40" y="30" width="210" height="150" rx="26" class="rahmen" />
+            <g transform="translate(103 63) scale(3.5)" class="ico grau"><use href="#i-chat" /></g>
+            <text x="145" y="222" text-anchor="middle" class="lab grau" style="font-size:26px">nur schreiben</text>
+          </g>
+          <path id="k13-strich" pathLength="1" d="M52 168 L 238 42" fill="none" stroke="#e5484d" stroke-width="6" stroke-linecap="round" />
+          <path id="k13-pfeil" pathLength="1" d="M270 105 H 350" class="linie" style="stroke-width:6" />
+          <path id="k13-spitze" d="M338 92 L354 105 L338 118" fill="none" stroke="#31adec" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+          <g id="k13-dateien" opacity="0">
+            <rect x="376" y="20" width="130" height="170" rx="22" fill="#fff" stroke="url(#gv)" stroke-width="3.5" />
+            <g transform="translate(406 50) scale(2.4)" class="ico"><use href="#i-datei" /></g>
+            <g transform="translate(420 64) scale(2.4)" class="ico"><use href="#i-datei" /></g>
+            <text x="441" y="232" text-anchor="middle" class="lab" style="font-size:26px">Dateien</text>
+          </g>
+          <g id="k13-rechner" opacity="0">
+            <rect x="530" y="20" width="120" height="170" rx="22" class="rahmen" />
+            <g transform="translate(556 70) scale(2.8)" class="ico"><use href="#i-laptop" /></g>
+            <text x="590" y="232" text-anchor="middle" class="lab" style="font-size:26px">Rechner</text>
+          </g>
+          <g id="k13-cloud" opacity="0">
+            <rect x="670" y="20" width="120" height="170" rx="22" class="rahmen" />
+            <g transform="translate(696 70) scale(2.8)" class="ico"><use href="#i-wolke" /></g>
+            <text x="730" y="232" text-anchor="middle" class="lab" style="font-size:26px">Cloud</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K14 Vier Kacheln: "Damit kannst du zum Beispiel deine Daten auswerten, Abläufe automatisieren oder Theme-Codes anpassen
+           oder einfach sogar direkt Videos schneiden, wie ich jetzt hier in dem Fall." Daten 116,10 / Abläufe 117,33 /
+           Theme-Codes 119,03 / Videos 121,30 / Fall 122,57 -->
+      <section id="k14" class="karte clip" data-start="114.85" data-duration="8.02" data-track-index="1">
+        <div class="kicker">Claude Code · zum Beispiel</div>
+        <div class="zaehler">6 von 6</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k14-a" opacity="0"><rect x="30" y="10" width="176" height="176" rx="28" class="rahmen" /><g transform="translate(76 46) scale(3.5)" class="ico"><use href="#i-balken" /></g><text x="118" y="232" text-anchor="middle" class="lab" style="font-size:23px">Daten</text></g>
+          <g id="k14-b" opacity="0"><rect x="226" y="10" width="176" height="176" rx="28" class="rahmen" /><g transform="translate(272 46) scale(3.5)" class="ico"><use href="#i-ablauf" /></g><text x="314" y="232" text-anchor="middle" class="lab" style="font-size:23px">Automationen</text></g>
+          <g id="k14-c" opacity="0"><rect x="422" y="10" width="176" height="176" rx="28" class="rahmen" /><g transform="translate(468 46) scale(3.5)" class="ico"><use href="#i-code" /></g><text x="510" y="232" text-anchor="middle" class="lab" style="font-size:23px">Theme-Code</text></g>
+          <g id="k14-d" opacity="0"><rect x="618" y="10" width="176" height="176" rx="28" fill="url(#gvd)" /><g transform="translate(664 46) scale(3.5)" class="ico"><use href="#i-schere" /></g><text x="706" y="232" text-anchor="middle" class="lab" style="font-size:23px">Videos schneiden</text></g>
+          <clipPath id="k14-clip"><rect id="k14-cliprect" x="600" y="242" width="0" height="56" /></clipPath>
+          <text x="626" y="280" class="hand" style="font-size:38px" clip-path="url(#k14-clip)" transform="rotate(-2 700 270)">wie hier!</text>
+        </svg>
+      </section>
+
+      <!-- K15 Free vs. Pro (ohne Preise): nach der Pricing-Seite (Quelle groß davor). "Das würde ich dir aber auch echt empfehlen,
+           wenn du deinen Alltag optimieren möchtest." Das 133,03 / empfehlen 134,13 -->
+      <section id="k15" class="karte clip" data-start="132.75" data-duration="3.65" data-track-index="1">
+        <div class="kicker">Free vs. Pro</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k15-free">
+            <rect x="30" y="6" width="330" height="270" rx="26" class="rahmen" />
+            <text x="60" y="58" class="lab" style="font-size:34px">Free</text>
+            <text x="60" y="118" class="lab" style="font-size:27px;font-weight:700">✓ Chat</text>
+            <text x="60" y="164" class="lab" style="font-size:27px;font-weight:700">✓ Projekte</text>
+          </g>
+          <g id="k15-pro">
+            <rect id="k15-prorahmen" x="390" y="6" width="400" height="270" rx="26" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <text x="420" y="58" class="lab" style="font-size:34px">Pro</text>
+            <text x="420" y="118" class="lab" style="font-size:27px;font-weight:700">✓ Claude Code</text>
+            <text x="420" y="164" class="lab" style="font-size:27px;font-weight:700">✓ Claude in Chrome</text>
+            <text x="420" y="210" class="lab" style="font-size:27px;font-weight:700">✓ Excel &amp; PowerPoint</text>
+          </g>
+          <clipPath id="k15-clip"><rect id="k15-cliprect" x="500" y="10" width="0" height="64" /></clipPath>
+          <text x="506" y="56" class="hand" style="font-size:40px" clip-path="url(#k15-clip)" transform="rotate(-3 620 44)">meine Empfehlung</text>
+        </svg>
+      </section>
+
+      <!-- K16 Mein Tipp (Stufen): "Und mein Tipp, wenn du E-Commerce Inhaber bist, fang einfach mal mit einem Projekt für deinen Shop an.
+           Und sobald sich einfach Aufgaben ständig wiederholen, ist Claude Code tatsächlich der nächste Schritt für dich."
+           Tipp 136,73 / Projekt 139,43 / Shop 140,17 / wiederholen 143,00 / Claude 144,00 / nächste 145,20 -->
+      <section id="k16" class="karte clip" data-start="136.4" data-duration="9.6" data-track-index="1">
+        <div class="kicker">Mein Tipp</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <path id="k16-stufen" pathLength="1" d="M30 270 H 300 V 170 H 560 V 70 H 790" fill="none" stroke="#9aa3af" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+          <g id="k16-s1" opacity="0">
+            <rect x="40" y="150" width="250" height="100" rx="22" fill="#fff" stroke="url(#gv)" stroke-width="3.5" />
+            <g transform="translate(58 176) scale(2)" class="ico"><use href="#i-ordner" /></g>
+            <text x="116" y="196" class="lab" style="font-size:27px">Projekt</text>
+            <text x="116" y="228" class="klein">für deinen Shop</text>
+            <circle cx="40" cy="150" r="16" fill="#0b0c0e" /><text x="40" y="157" text-anchor="middle" style="font-size:20px;font-weight:800;fill:#fff">1</text>
+          </g>
+          <g id="k16-loop" opacity="0">
+            <g id="k16-kreis" transform="translate(372 96)"><g transform="translate(-36 -36) scale(3)" class="ico grau"><use href="#i-wieder" /></g></g>
+            <text x="372" y="160" text-anchor="middle" class="klein">wiederholt sich</text>
+          </g>
+          <g id="k16-s2" opacity="0">
+            <rect x="554" y="40" width="246" height="110" rx="22" fill="#0b0c0e" />
+            <text x="574" y="104" style="font-size:34px;font-weight:800;fill:#00e090">&gt;_</text>
+            <text x="622" y="104" style="font-size:28px;font-weight:800;fill:#fff">Claude Code</text>
+            <circle cx="554" cy="40" r="16" fill="#0b0c0e" stroke="#fff" stroke-width="3" /><text x="554" y="47" text-anchor="middle" style="font-size:20px;font-weight:800;fill:#fff">2</text>
+          </g>
+          <clipPath id="k16-clip"><rect id="k16-cliprect" x="574" y="176" width="0" height="74" /></clipPath>
+          <text x="580" y="222" class="hand" style="font-size:40px" clip-path="url(#k16-clip)" transform="rotate(-3 680 210)">nächster Schritt</text>
+        </svg>
+      </section>
+
+      <!-- K17 Dieses Video: "Und ein gutes Beispiel: Dieses Video habe ich persönlich zum Beispiel komplett von der KI schneiden und
+           auch bearbeiten lassen." Beispiel 146,67 / Dieses 147,47 / Video 147,77 / KI 150,33 / schneiden 150,60 / bearbeiten 151,40 -->
+      <section id="k17" class="karte clip" data-start="146.0" data-duration="6.23" data-track-index="1">
+        <div class="kicker">Dieses Video</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k17-film">
+            <rect x="40" y="40" width="560" height="140" rx="16" fill="#1f2731" />
+            <g fill="#f2f3f5"><rect x="56" y="52" width="22" height="14" rx="3" /><rect x="96" y="52" width="22" height="14" rx="3" /><rect x="136" y="52" width="22" height="14" rx="3" /><rect x="176" y="52" width="22" height="14" rx="3" /><rect x="216" y="52" width="22" height="14" rx="3" /><rect x="256" y="52" width="22" height="14" rx="3" /><rect x="296" y="52" width="22" height="14" rx="3" /><rect x="336" y="52" width="22" height="14" rx="3" /><rect x="376" y="52" width="22" height="14" rx="3" /><rect x="416" y="52" width="22" height="14" rx="3" /><rect x="456" y="52" width="22" height="14" rx="3" /><rect x="496" y="52" width="22" height="14" rx="3" /><rect x="536" y="52" width="22" height="14" rx="3" /><rect x="56" y="154" width="22" height="14" rx="3" /><rect x="96" y="154" width="22" height="14" rx="3" /><rect x="136" y="154" width="22" height="14" rx="3" /><rect x="176" y="154" width="22" height="14" rx="3" /><rect x="216" y="154" width="22" height="14" rx="3" /><rect x="256" y="154" width="22" height="14" rx="3" /><rect x="296" y="154" width="22" height="14" rx="3" /><rect x="336" y="154" width="22" height="14" rx="3" /><rect x="376" y="154" width="22" height="14" rx="3" /><rect x="416" y="154" width="22" height="14" rx="3" /><rect x="456" y="154" width="22" height="14" rx="3" /><rect x="496" y="154" width="22" height="14" rx="3" /><rect x="536" y="154" width="22" height="14" rx="3" /></g>
+            <rect x="56" y="76" width="160" height="68" rx="8" fill="#4b5563" /><rect x="236" y="76" width="160" height="68" rx="8" fill="#4b5563" /><rect x="416" y="76" width="168" height="68" rx="8" fill="#4b5563" />
+          </g>
+          <path id="k17-schnitt1" pathLength="1" d="M226 24 V 196" fill="none" stroke="#31adec" stroke-width="5" stroke-dasharray="1" stroke-linecap="round" />
+          <path id="k17-schnitt2" pathLength="1" d="M406 24 V 196" fill="none" stroke="#31adec" stroke-width="5" stroke-linecap="round" />
+          <g id="k17-schere" opacity="0"><g transform="translate(-30 -30) scale(2.5)" class="ico" style="stroke-width:2.2"><use href="#i-schere" /></g></g>
+          <g id="k17-badge" opacity="0">
+            <rect x="160" y="212" width="500" height="66" rx="33" fill="#0b0c0e" />
+            <g transform="translate(184 229) scale(1.35)" class="ico" style="stroke:#00e090"><use href="#i-schere" /></g>
+            <text x="230" y="256" style="font-size:28px;font-weight:700;fill:#fff">geschnitten mit <tspan class="gtext" style="font-weight:800">Claude Code</tspan></text>
+          </g>
+          <g id="k17-ki" opacity="0">
+            <rect x="630" y="50" width="160" height="120" rx="26" fill="url(#gvd)" />
+            <text x="710" y="130" text-anchor="middle" style="font-size:52px;font-weight:900;fill:#0b0c0e">KI</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K18 Dein Schnittprozess?: "Und willst du wissen, wie ich einfach diesen Schnittprozess aufgesetzt habe?" willst 152,40 /
+           wissen 152,80 / Schnittprozess 154,10 / aufgesetzt 154,80 -->
+      <section id="k18" class="karte clip" data-start="152.23" data-duration="3.87" data-track-index="1">
+        <div class="kicker">Mein Schnittprozess</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k18-a"><rect x="40" y="30" width="190" height="150" rx="26" class="rahmen" /><g transform="translate(101 57) scale(2.8)" class="ico"><use href="#i-film" /></g><text x="135" y="222" text-anchor="middle" class="lab" style="font-size:26px">Rohclip</text></g>
+          <path id="k18-l1" pathLength="1" d="M240 105 H 300" class="linie" style="stroke-width:6" />
+          <g id="k18-b" opacity="0"><rect x="310" y="30" width="200" height="150" rx="26" fill="#0b0c0e" /><text x="340" y="122" style="font-size:44px;font-weight:800;fill:#00e090">&gt;_</text><text x="410" y="222" text-anchor="middle" class="lab" style="font-size:26px">Claude Code</text></g>
+          <path id="k18-l2" pathLength="1" d="M520 105 H 580" class="linie" style="stroke-width:6" />
+          <g id="k18-c" opacity="0"><rect x="590" y="30" width="190" height="150" rx="26" fill="#fff" stroke="url(#gv)" stroke-width="3.5" /><g transform="translate(651 57) scale(2.8)" class="ico"><use href="#i-handy" /></g><text x="685" y="222" text-anchor="middle" class="lab" style="font-size:26px">fertiges Video</text></g>
+          <clipPath id="k18-clip"><rect id="k18-cliprect" x="330" y="236" width="0" height="56" /></clipPath>
+          <text x="340" y="280" class="hand" style="font-size:42px" clip-path="url(#k18-clip)" transform="rotate(-2 410 268)">wie genau?</text>
+        </svg>
+      </section>
+
+      <!-- K19 Folgen (CTA): "Dann folge mir hier einfach mal" Dann 156,17 / folge 156,40 (Zeiger tippt, Plus wird zum Haken wie bei
+           TikTok); bleibt bis zum Ende. Nur das Folgen-Symbol, keine Folgennummer. -->
+      <section id="k19" class="folgekarte clip" data-start="156.1" data-duration="9.0" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
+        <div id="fring"></div>
+        <svg id="fplus" viewBox="-32 -32 64 64">
+          <g id="fp-plus"><circle r="28" fill="url(#gvd)" stroke="#fff" stroke-width="4" /><path d="M-12 0 H12 M0 -12 V12" stroke="#fff" stroke-width="5.5" stroke-linecap="round" /></g>
+          <g id="fp-haken" opacity="0" transform="rotate(180)"><circle r="28" fill="#fff" stroke="#e5e7eb" stroke-width="3" /><path id="fp-hpfad" pathLength="1" d="M-12 1 L-3 10 L13 -8" fill="none" stroke="url(#gvd)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </svg>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+
+      <!-- K20 Teaser (Briefing): "und schau dir einfach mal mein nächstes Video dazu an, wo ich dir einfach erkläre, was du brauchst,
+           um einfach deine Videos professionell von Claude schneiden zu lassen." nächstes 158,60; bleibt bis zum Ende -->
+      <section id="k20" class="teaserkarte clip" data-start="158.5" data-duration="6.6" data-track-index="2">
+        <div class="tk"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3" /><path d="M8.12 8.12 12 12" /><path d="M20 4 8.12 15.88" /><circle cx="6" cy="18" r="3" /><path d="M14.8 14.8 20 20" /></svg></div>
+        <div><div class="t1">Nächstes Video</div><div class="t2">Videos schneiden mit <span class="verlauf">Claude Code</span></div></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker und Zähler (keine leere Karte: der erste Inhalt kommt mit), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const z = document.querySelector(id + " .zaehler");
+        if (z) tl.fromTo(z, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, an + 0.06);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5, ease = "power2.out") {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, t);
+      }
+      // Schreibschrift erscheint von links nach rechts (Clip-Rechteck wächst)
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      gsap.set("#k0-klammer, #k1-schiene, #k1-kurve, #k2-l1, #k2-l2, #k2-l3, #k5-l1, #k5-l2, #k5-l3, #k6-l1, #k6-l2, #k6-l3, #k7-pfeil, #k7-strich, #k11-l1, #k11-l2, #k13-strich, #k13-pfeil, #k16-stufen, #k17-schnitt1, #k17-schnitt2, #k18-l1, #k18-l2", { strokeDasharray: 1, strokeDashoffset: 1 });
+
+      // K0 Sechs Werkzeuge: Kacheln auf "sechs", auf "nicht nutzen" werden die fünf außer Chat grau, "meist ungenutzt"
+      karte("#k0", 6.10, 12.30);
+      ["#k0-t1", "#k0-t2", "#k0-t3", "#k0-t4", "#k0-t5", "#k0-t6"].forEach((s, i) => pop(s, 7.66 + i * 0.07, 0.3));
+      tl.to(".k0-rest", { opacity: 0.32, duration: 0.35, ease: "power2.out" }, 11.56);
+      zeichne("#k0-klammer", 11.56, 0.4);
+      schreibe("#k0-cliprect", 300, 11.83, 0.5);
+
+      // K1 Kurz erklärt: Schiene 1-6 auf "Funktionen", Alltag-Kalender auf "Alltag", Kurve nach oben auf "verbessern"
+      karte("#k1", 12.30, 19.53);
+      zeichne("#k1-schiene", 12.36, 0.5);
+      tl.fromTo("#k1-punkte .k1-p", { opacity: 0, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, stagger: 0.06, ease: "power2.out" }, 12.40);
+      ein("#k1-titel", 14.46);
+      ein("#k1-alltag", 17.90);
+      zeichne("#k1-kurve", 18.83, 0.5);
+      schreibe("#k1-cliprect", 470, 18.90, 0.6);
+
+      // K2 Chat: Mitte gleich mit der Karte, Geräte auf ihren Wörtern, Linien zum Chat
+      karte("#k2", 19.53, 25.30);
+      zeichne("#k2-l1", 21.76, 0.3); ein("#k2-browser", 21.76);
+      zeichne("#k2-l2", 22.46, 0.25); ein("#k2-desktop", 22.46);
+      zeichne("#k2-l3", 23.86, 0.3); ein("#k2-handy", 23.86);
+
+      // K3 Wofür: Fragen, Texte, Produkttexte auf ihren Wörtern, "kostenlos" auf "kostenlosen"
+      karte("#k3", 25.30, 34.33);
+      ein("#k3-frage", 25.34);
+      ein("#k3-text", 26.33);
+      ein("#k3-produkt", 27.86);
+      badge("#k3-gratis", 33.03);
+
+      // K4 Projekt: Ordner "Mein Shop" gleich mit der Karte, Dateien auf ihren Wörtern, "einmal hinterlegt"
+      karte("#k4", 34.33, 41.97);
+      tl.fromTo("#k4-ordner", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 34.37);
+      tl.fromTo("#k4-d1", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 38.83);
+      tl.fromTo("#k4-d2", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 40.10);
+      tl.fromTo("#k4-d3", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 41.43);
+      schreibe("#k4-cliprect", 280, 37.36, 0.5);
+
+      // K5 Jeder Chat kennt Shop und Marke
+      karte("#k5", 41.97, 47.80);
+      zeichne("#k5-l1", 42.16, 0.3); zeichne("#k5-l2", 42.22, 0.3); zeichne("#k5-l3", 42.28, 0.3);
+      ein("#k5-c1", 42.20); ein("#k5-c2", 42.30); ein("#k5-c3", 43.86);
+      tl.fromTo(".k5-h", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, stagger: 0.06, ease: "power2.out" }, 45.10);
+      ein("#k5-shop", 46.40);
+      ein("#k5-marke", 47.36);
+      schreibe("#k5-cliprect", 0, 47.36, 0.01);
+
+      // K6 Connectors: Claude gleich mit der Karte, Drive, Kalender, Mails auf ihren Wörtern, Kabel zeichnen sich
+      karte("#k6", 47.80, 55.43);
+      ein("#k6-a", 52.03); zeichne("#k6-l1", 52.10, 0.4); badge("#k6-s1", 52.45);
+      ein("#k6-b", 53.00); zeichne("#k6-l2", 53.07, 0.35); badge("#k6-s2", 53.40);
+      ein("#k6-c", 54.26); zeichne("#k6-l3", 54.33, 0.4); badge("#k6-s3", 54.68);
+      schreibe("#k6-cliprect", 230, 54.70, 0.45);
+
+      // K7 Skills: Ablauf dreht sich auf "wiederholen", Pfeil auf "speicherst", Skill auf "Skill", "jedes Mal neu" durchgestrichen
+      karte("#k7", 55.43, 61.37);
+      tl.fromTo("#k7-kreis", { rotation: 0, svgOrigin: "150 92" }, { rotation: 360, duration: 1.2, ease: "power2.inOut" }, 56.43);
+      zeichne("#k7-pfeil", 57.16, 0.4);
+      tl.fromTo("#k7-spitze", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 57.48);
+      tl.fromTo("#k7-skill", { opacity: 0, scale: 0.92, svgOrigin: "560 105" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out" }, 58.50);
+      ein("#k7-neu", 60.16); ein("#k7-neul", 60.16);
+      zeichne("#k7-strich", 60.63, 0.3);
+
+      // K8 Claude in Chrome: Browser gleich mit der Karte, Claude arbeitet mit, Schalter "Freigabe" springt auf "Freigabe" um
+      karte("#k8", 61.37, 65.60);
+      pop("#k8-claude", 62.86);
+      ein("#k8-frei", 63.56);
+      tl.to("#k8-schalter", { attr: { fill: "#00d088" }, duration: 0.2 }, 65.00);
+      tl.to("#k8-knopf", { attr: { cx: 688 }, duration: 0.25, ease: "power2.inOut" }, 65.00);
+
+      // K9 Beispiele: Lupe fährt über die Wettbewerber-Seiten, Shop mit zwei Haken auf "Tests"
+      karte("#k9", 72.25, 76.93);
+      ein("#k9-l1", 73.43);
+      tl.fromTo("#k9-lupe", { opacity: 0, x: 120, y: 70 }, { opacity: 1, x: 120, y: 70, duration: 0.2 }, 73.43);
+      tl.to("#k9-lupe", { x: 230, y: 150, duration: 1.0, ease: "power1.inOut" }, 73.60);
+      ein("#k9-shop", 74.70);
+      badge("#k9-t1", 75.56); badge("#k9-t2", 75.80);
+      ein("#k9-l2", 75.56);
+
+      // K10 Claude Design: Eingabe gleich mit der Karte, drei Entwürfe auf ihren Wörtern, auf "Entwurf" füllen sie sich, Guidelines
+      karte("#k10", 80.55, 90.40);
+      ein("#k10-e1", 82.33); ein("#k10-e2", 83.23); ein("#k10-e3", 84.43);
+      tl.to(".k10-leer", { opacity: 0, duration: 0.3 }, 87.20);
+      tl.to(".k10-voll", { opacity: 1, duration: 0.3, stagger: 0.05 }, 87.20);
+      tl.to("#k10-tipp", { opacity: 0, duration: 0.2 }, 87.20);
+      schreibe("#k10-cliprect", 330, 87.30, 0.5);
+      tl.fromTo("#k10-guide", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 89.26);
+
+      // K11 Export: PDF / PPTX / Canva gleich mit der Karte, Linien zu Webseite und Shop, Guideline, handschriftlich
+      karte("#k11", 95.70, 100.77);
+      zeichne("#k11-l1", 96.56, 0.35); ein("#k11-web", 96.56);
+      zeichne("#k11-l2", 98.40, 0.35); ein("#k11-shop", 98.40);
+      tl.fromTo("#k11-guide", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 99.16);
+      schreibe("#k11-cliprect", 240, 99.40, 0.5);
+
+      // K12 Claude Code: Terminal gleich mit der Karte, "claude" tippt sich auf "Claude Code", Stern und "das Spannendste"
+      karte("#k12", 100.77, 106.50);
+      tl.fromTo("#k12-cmd", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 103.30);
+      tl.fromTo("#k12-cursor", { attr: { x: 112 } }, { attr: { x: 262 }, duration: 0.4, ease: "steps(6)" }, 103.30);
+      tl.fromTo("#k12-cursor", { opacity: 1 }, { opacity: 0.15, duration: 0.4, repeat: 5, yoyo: true, ease: "none" }, 101.0);
+      tl.fromTo("#k12-stern", { opacity: 0, scale: 0.85, svgOrigin: "665 95" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out" }, 105.90);
+      schreibe("#k12-cliprect", 280, 106.00, 0.4);
+
+      // K13 nicht nur schreiben → arbeitet mit Dateien, auf dem Rechner, in der Cloud
+      karte("#k13", 106.50, 114.85);
+      ein("#k13-chat", 106.54);
+      zeichne("#k13-strich", 107.73, 0.35);
+      zeichne("#k13-pfeil", 109.40, 0.35);
+      tl.fromTo("#k13-spitze", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 109.68);
+      ein("#k13-dateien", 111.30); ein("#k13-rechner", 112.53); ein("#k13-cloud", 114.46);
+
+      // K14 Vier Kacheln auf ihren Wörtern, "wie hier!" auf "Fall"
+      karte("#k14", 114.85, 122.87);
+      pop("#k14-a", 116.03); pop("#k14-b", 117.26); pop("#k14-c", 118.96); pop("#k14-d", 121.23);
+      schreibe("#k14-cliprect", 200, 122.10, 0.4);
+
+      // K15 Free vs. Pro (ohne Preise), Pro wird auf "empfehlen" markiert
+      karte("#k15", 132.75, 136.40);
+      tl.to("#k15-prorahmen", { attr: { stroke: "#31adec", "stroke-width": 4 }, duration: 0.25 }, 134.06);
+      schreibe("#k15-cliprect", 270, 134.10, 0.45);
+
+      // K16 Stufen: Stufe 1 "Projekt" auf "Projekt", Kreislauf auf "wiederholen", Stufe 2 "Claude Code", "nächster Schritt"
+      karte("#k16", 136.40, 146.00);
+      zeichne("#k16-stufen", 136.46, 0.6);
+      ein("#k16-s1", 139.36);
+      ein("#k16-loop", 142.93);
+      tl.fromTo("#k16-kreis", { rotation: 0, svgOrigin: "372 96" }, { rotation: 360, duration: 1.0, ease: "power2.inOut" }, 142.93);
+      ein("#k16-s2", 143.93);
+      schreibe("#k16-cliprect", 236, 145.13, 0.5);
+
+      // K17 Dieses Video: Filmstreifen gleich mit der Karte, "KI" auf "KI", Schnitte und Schere auf "schneiden", Badge
+      karte("#k17", 146.00, 152.23);
+      pop("#k17-ki", 150.26);
+      tl.set("#k17-schere", { x: 226, y: 16 }, 146.0);
+      tl.to("#k17-schere", { opacity: 1, duration: 0.15 }, 150.53);
+      zeichne("#k17-schnitt1", 150.53, 0.35);
+      tl.to("#k17-schere", { x: 406, duration: 0.35, ease: "power2.inOut" }, 150.85);
+      zeichne("#k17-schnitt2", 151.10, 0.3);
+      tl.fromTo("#k17-badge", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 147.40);
+
+      // K18 Schnittprozess: Rohclip gleich mit der Karte, Claude Code und Video auf "Schnittprozess", "wie genau?" auf "aufgesetzt"
+      karte("#k18", 152.23, 156.10);
+      zeichne("#k18-l1", 154.03, 0.25); ein("#k18-b", 154.10);
+      zeichne("#k18-l2", 154.30, 0.25); ein("#k18-c", 154.40);
+      schreibe("#k18-cliprect", 200, 154.73, 0.4);
+
+      // K19 Folgen wie bei TikTok: Karte auf "Dann", Zeiger tippt auf "folge": Plus drückt ein (1 → 0,8), dreht sich um 180°, wird
+      // zum weißen Kreis mit Haken im Verlauf, der sich zeichnet, springt kurz über (≈1,2 → 1) und gibt einen Ring-Puls nach außen
+      const TAP = 156.33;
+      tl.fromTo("#k19", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 156.10);
+      gsap.set("#fplus", { transformOrigin: "50% 50%" });
+      gsap.set("#fp-hpfad", { strokeDasharray: 1, strokeDashoffset: 1 });
+      tl.fromTo("#fzeiger", { opacity: 0, x: 200, y: 200 }, { opacity: 1, x: 180, y: 192, duration: 0.1, ease: "power2.out" }, TAP - 0.36);
+      tl.to("#fzeiger", { x: 112, y: 170, duration: 0.26, ease: "power2.inOut" }, TAP - 0.28);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, TAP - 0.02);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, TAP + 0.06);
+      tl.to("#fplus", { scale: 0.8, duration: 0.08, ease: "power2.in" }, TAP);
+      tl.to("#fplus", { rotation: 180, duration: 0.3, ease: "power2.inOut" }, TAP);
+      tl.set("#fp-plus", { opacity: 0 }, TAP + 0.15);
+      tl.set("#fp-haken", { opacity: 1 }, TAP + 0.15);
+      tl.to("#fp-hpfad", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, TAP + 0.16);
+      tl.fromTo("#fplus", { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "back.out(4)" }, TAP + 0.12);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.6, ease: "power2.out" }, TAP + 0.16);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, TAP + 0.15);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, TAP + 0.15);
+      tl.to("#fzeiger", { x: 150, y: 210, duration: 0.25, ease: "power2.out" }, TAP + 0.25);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.3, ease: "power2.in" }, TAP + 0.5);
+
+      // K20 Teaser auf "nächstes", bleibt bis zum Ende
+      tl.fromTo("#k20", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 158.53);
+
+      tl.seek(0);
+      window.__timelines["claudetools-skizzen"] = tl;
+    </script>
+  </body>
+</html>

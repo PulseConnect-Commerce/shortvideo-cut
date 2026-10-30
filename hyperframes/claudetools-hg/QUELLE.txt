@@ -1,0 +1,11 @@
+K01 · Claude: 6 Werkzeuge – echte Seiten für "Quelle groß" (src/lib/quelle-gross.tsx), aufgenommen 30.10.2026 ~11:25-11:28 UTC
+mit hyperframes/claudetools-hg/aufnahme.cjs (Playwright/Chromium, ohne Login, Handy-Ansicht 412 css-px @2,62, de-DE).
+Grün markiert (sonst unverändert) sind nur die Stellen, die Paul im Video sagt.
+- https://claude.com/claude-in-chrome (→ claude.com/de/claude-in-chrome): "Hilfe für alle Ihre Registerkarten", markiert
+  "liest die Seite" und "klickt sich durch" → public/broll/claudetools/quelle-chrome.jpg
+- https://www.anthropic.com/news/claude-design-anthropic-labs: Kopf "Introducing Claude Design by Anthropic Labs", Published
+  Apr 17, 2026 (Ausschnitt endet vor dem Absatz mit den Plänen, Faktencheck: keine Plan-Zuordnung für Design)
+  → quelle-design-kopf.jpg; Absatz "Export anywhere ... export to Canva, PDF, PPTX ..." (markiert) → quelle-design-export.jpg
+- https://claude.com/pricing (→ claude.com/de/pricing): Free-Plan (markiert "Im Web, auf dem Desktop und mobil chatten") und
+  Pro-Plan "Alles in Free, plus:" (markiert "Claude Code", "Claude in Chrome und Microsoft 365"). Die Preise ("0 $", "17 $",
+  Preiszeilen) sind weichgezeichnet (Briefing: keine Preise im Bild) → quelle-preise.jpg

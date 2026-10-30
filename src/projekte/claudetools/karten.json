@@ -1,0 +1,532 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', Vorlage hyperframes/upselling-skizzen) und Quelle-groß-Fenster für K01 · Claude: 6 Werkzeuge. Sekunden im geschnittenen Video (cut.json, 165,10 s). Teile 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, klick auf den Quellen, pop nur auf 'kostenlos', 'das Spannendste' und dem Folgen-Tippen. Gebaut in hyperframes/claudetools-skizzen/index.html; die Quellen (q1-q6) stehen in Video.tsx (QUELLEN). Nur Lucide-Icons und eigene flache Zeichnungen, keine fremden Logos, keine Preise.",
+ "karten": [
+  {
+   "id": "k0",
+   "wort": "Es",
+   "start": 6.1,
+   "ende": 12.3,
+   "text": "MINDESTENS 6 WERKZEUGE – sechs Kacheln (Chat, Projekte, Connectors, Chrome, Design, Code) auf 'sechs', auf 'nicht nutzen' werden die fünf außer Chat grau, handschriftlich 'meist ungenutzt'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 6.1,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 7.66,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 11.56,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "wort": "Denn",
+   "start": 12.3,
+   "ende": 19.53,
+   "text": "KURZ ERKLÄRT – Schiene 1-6, 'Die wichtigsten Funktionen' auf 'Funktionen', Kalender 'Alltag' auf 'Alltag', Kurve nach oben auf 'verbessern', handschriftlich 'deinen Alltag verbessern'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 12.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 18.83,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Erstens",
+   "start": 19.53,
+   "ende": 25.3,
+   "text": "CHAT · ÜBERALL (1 von 6) – Chat in der Mitte, Browser / Desktop-App / Handy auf ihren Wörtern",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 19.53,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 21.76,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 23.86,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "und",
+   "start": 25.3,
+   "ende": 34.33,
+   "text": "CHAT · WOFÜR? (1 von 6) – Fragen, Texte, Produkttexte auf ihren Wörtern, Badge 'kostenlos' auf 'kostenlosen'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 25.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 27.86,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 33.03,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Zweitens",
+   "start": 34.33,
+   "ende": 41.97,
+   "text": "PROJEKTE (2 von 6) – Ordner 'Mein Shop', Dateien Markenstimme / Produktdaten / Regeln auf ihren Wörtern, handschriftlich 'einmal hinterlegt' auf 'hinterlegst'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 34.33,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 38.83,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 40.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Und",
+   "start": 41.97,
+   "ende": 47.8,
+   "text": "PROJEKTE · JEDER CHAT (2 von 6) – drei Chats am Ordner, Haken auf 'kennt', 'Shop ✓' und 'Marke ✓' auf ihren Wörtern",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 41.97,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 45.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "drittens",
+   "start": 47.8,
+   "ende": 55.43,
+   "text": "CONNECTORS (3 von 6) – Claude in der Mitte, Google Drive / Kalender / Mails stecken sich auf ihren Wörtern an, handschriftlich 'angesteckt'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 47.8,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 52.45,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 53.4,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 54.68,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Abläufe",
+   "start": 55.43,
+   "ende": 61.37,
+   "text": "SKILLS (3 von 6) – Ablauf dreht sich auf 'wiederholen', Pfeil, 'Skill' gespeichert auf 'Skill', 'jedes Mal neu' durchgestrichen",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 55.43,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 58.5,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Viertens",
+   "start": 61.37,
+   "ende": 65.6,
+   "text": "CLAUDE IN CHROME (4 von 6) – Browser, Claude arbeitet mit, Schalter 'Freigabe' springt auf 'Freigabe' um",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 61.37,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 65.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "arbeitet",
+   "start": 65.6,
+   "ende": 68.95,
+   "text": "QUELLE GROSS claude.com/claude-in-chrome: 'Hilfe für alle Ihre Registerkarten'",
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 65.6,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "liest",
+   "start": 68.95,
+   "ende": 72.25,
+   "text": "QUELLE GROSS claude.com/claude-in-chrome: markiert 'liest die Seite', 'klickt sich durch'",
+   "sfx": []
+  },
+  {
+   "id": "k9",
+   "wort": "Zum",
+   "start": 72.25,
+   "ende": 76.93,
+   "text": "CLAUDE IN CHROME · BEISPIELE (4 von 6) – Lupe über Wettbewerber-Seiten auf 'Wettbewerbsrecherche', Shop mit Haken auf 'Tests'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 72.25,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 75.56,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "wort": "fünftens",
+   "start": 76.93,
+   "ende": 80.55,
+   "text": "QUELLE GROSS anthropic.com: 'Introducing Claude Design by Anthropic Labs', Published Apr 17, 2026",
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 76.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Du",
+   "start": 80.55,
+   "ende": 90.4,
+   "text": "CLAUDE DESIGN (5 von 6) – Eingabe 'Du beschreibst', Landingpage / Pitch-Deck / One-Pager auf ihren Wörtern, auf 'Entwurf' füllen sie sich ('erster Entwurf ✓'), Guidelines auf 'Design-Guidelines'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 80.55,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 87.2,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q4",
+   "wort": "Dadurch",
+   "start": 90.4,
+   "ende": 95.7,
+   "text": "QUELLE GROSS anthropic.com: 'Export anywhere … export to Canva, PDF, PPTX' (markiert)",
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 90.4,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "und",
+   "start": 95.7,
+   "ende": 100.77,
+   "text": "CLAUDE DESIGN · EXPORT (5 von 6) – PDF / PPTX / Canva, Linien zu Webseite und Shop, Guideline, handschriftlich 'Design-Guideline'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 95.7,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 96.56,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "sechstens",
+   "start": 100.77,
+   "ende": 106.5,
+   "text": "CLAUDE CODE (6 von 6) – Terminal, 'claude' tippt sich auf 'Claude Code', Stern und 'das Spannendste' auf 'Spannendste'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 100.77,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 105.9,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k13",
+   "wort": "denn",
+   "start": 106.5,
+   "ende": 114.85,
+   "text": "CLAUDE CODE · ARBEITET MIT (6 von 6) – 'nur schreiben' durchgestrichen auf 'nicht nur', Pfeil auf 'arbeitet', Dateien / Rechner / Cloud auf ihren Wörtern",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 106.5,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 111.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k14",
+   "wort": "Damit",
+   "start": 114.85,
+   "ende": 122.87,
+   "text": "CLAUDE CODE · ZUM BEISPIEL (6 von 6) – Daten / Automationen / Theme-Code / Videos schneiden auf ihren Wörtern, 'wie hier!' auf 'Fall'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 114.85,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 116.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 117.26,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 118.96,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 121.23,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q5",
+   "wort": "Chat",
+   "start": 122.87,
+   "ende": 126.05,
+   "text": "QUELLE GROSS claude.com/pricing: Free-Plan, markiert 'Im Web, auf dem Desktop und mobil chatten' (Preis weichgezeichnet)",
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 122.87,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q6",
+   "wort": "Für",
+   "start": 126.05,
+   "ende": 132.75,
+   "text": "QUELLE GROSS claude.com/pricing: Pro 'Alles in Free, plus', markiert 'Claude Code', 'Claude in Chrome und Microsoft 365'",
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 126.05,
+     "volume": 0.08
+    }
+   ]
+  },
+  {
+   "id": "k15",
+   "wort": "Das",
+   "start": 132.75,
+   "ende": 136.4,
+   "text": "FREE VS. PRO (ohne Preise) – Free: Chat, Projekte; Pro: Claude Code, Claude in Chrome, Excel & PowerPoint; Pro markiert auf 'empfehlen', handschriftlich 'meine Empfehlung'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 132.75,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 134.06,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k16",
+   "wort": "Und",
+   "start": 136.4,
+   "ende": 146.0,
+   "text": "MEIN TIPP – Stufen: 1 'Projekt für deinen Shop' auf 'Projekt', Kreislauf auf 'wiederholen', 2 'Claude Code' auf 'Claude Code', 'nächster Schritt'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 136.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 139.36,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 143.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k17",
+   "wort": "Und",
+   "start": 146.0,
+   "ende": 152.23,
+   "text": "DIESES VIDEO – Filmstreifen, Badge 'geschnitten mit Claude Code' auf 'Dieses', 'KI' auf 'KI', Schere schneidet auf 'schneiden'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 146.0,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 147.4,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 150.53,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k18",
+   "wort": "willst",
+   "start": 152.23,
+   "ende": 156.1,
+   "text": "MEIN SCHNITTPROZESS – Rohclip → Claude Code → fertiges Video auf 'Schnittprozess', 'wie genau?' auf 'aufgesetzt'",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 152.23,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 154.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k19",
+   "wort": "Dann",
+   "start": 156.1,
+   "ende": 165.1,
+   "text": "FOLGEN (groß, mittig, TikTok-Animation) – Zeiger tippt auf 'folge', Plus drückt ein, dreht sich, wird zum Haken mit Ring-Puls; bleibt bis zum Ende",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 156.1,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 156.33,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k20",
+   "wort": "nächstes",
+   "start": 158.53,
+   "ende": 165.1,
+   "text": "TEASER – 'Nächstes Video: Videos schneiden mit Claude Code' auf 'nächstes', bleibt bis zum Ende",
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 158.53,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}
