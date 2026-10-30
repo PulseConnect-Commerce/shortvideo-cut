@@ -1,0 +1,195 @@
+{
+ "url": "https://www.anthropic.com/claude/opus",
+ "status": 200,
+ "datum": "2026-10-30T19:20:24.990Z",
+ "titel": "Claude Opus \\ Anthropic",
+ "hs": [
+  "H1: Claude Opus 4.8",
+  "H2: Announcements",
+  "H2: Availability and pricing",
+  "H2: Use cases",
+  "H2: Benchmarks",
+  "H2: Trust and safety",
+  "H2: Safeguards",
+  "H2: Hear from our customers",
+  "H2: Frequently asked questions"
+ ],
+ "imgs": [
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/8b7aeb2c294b8da6ffdd641e472704a115675e3e-916x140.svg",
+   "alt": "Claude Opus 4.8",
+   "w": 916,
+   "h": 140
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/072b5ad0a2fc97b5beff71c076cdc92516cd51ff-174x155.svg",
+   "alt": "Claude Opus 4.8",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fdc0c3b4c8b63872b717f3c7a28c7f3b3fc4a3fba-2160x1932.png&w=3840&q=75",
+   "alt": "",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/fc55f4db8afa5db479127fde5be3e492940f513d-94x64.svg",
+   "alt": "Mario Rodriguez logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/72d90f8ad7d9766efae833c5d1d8d70bb7c46435-131x64.svg",
+   "alt": "Sean Heintz logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/40a2a6a28afd8ac8fbf0e764b6bbf4ebf06a1977-133x64.svg",
+   "alt": "Fabian Hedin logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/0ac44b8505d1e5d6ef413b164a81942a62e06f12-148x64.svg",
+   "alt": "Harley Barnes logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/559d5a46493e4a7546583509f86fe38167267409-161x64.svg",
+   "alt": "Aleksandar Mitic logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/fbd45dbecde0ed6e7c3bf8551df0525d87efd4de-127x64.svg",
+   "alt": "Noyan Tokgozoglu logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/4cd6a4282b7245aa0f3d86ba6b00c5b23fdbb272-114x64.svg",
+   "alt": "Mitch Fierro logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/198c9eb920db5dc4581daefd3dc19d9fb51f6637-125x32.svg",
+   "alt": "Deepak Singh logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/fc0cf984de735ef64c17f033f10efb9e273d69d8-125x64.svg",
+   "alt": "Carl Bennett logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/beb4f74e935e111be9a63875ae7743aaea2cb0a2-88x64.svg",
+   "alt": "Strib Walker logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/bf3f6430e27cae249b7696911571ab17b0715d9d-172x64.svg",
+   "alt": "Min Chen logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/74f9dcd65076def29413e42e822da248590b68d3-145x64.svg",
+   "alt": "Frank Corrao logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/7fbed01e869d6a4faf97317a1fc4b74f7997c66e-78x64.svg",
+   "alt": "Izzy Miller logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/efe6b287384573de696a70288b0418b9b4c3eebe-222x64.svg",
+   "alt": "Omar Bari logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/ac77c59a0734811a829fab67d7ee8e801e45c50c-136x64.svg",
+   "alt": "Aabhas Sharma logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/799ce98295cd71c7a43c13ddca27e9b893842b5f-100x64.svg",
+   "alt": "Peter Albert logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/04280ffcf9a88b0f6fa85f2437b46102c8cb35e6-118x64.svg",
+   "alt": "John Ruelas logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/d514853a44cf69f069306c98b558f214112c4ef3-91x64.svg",
+   "alt": "Cristian Rivera logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/bf162513ba017e72d4e07b0cd7683b86c4c5bc88-60x64.svg",
+   "alt": "Yashodha Bhavnani logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/e778eeea7ac1ccd90b9842d9d3da3c17a8029c5e-216x64.svg",
+   "alt": "Austen Tomek logo",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "tag": "IMG",
+   "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/18f900625532e1baaa3302bdf9539f73592bdf60-164x64.svg",
+   "alt": "Zimu Li logo",
+   "w": 0,
+   "h": 0
+  }
+ ],
+ "logo": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\" style=\"flex-shrink:0\" aria-hidden=\"true\"><path d=\"M14.128 7.16482C14.3126 6.95983 14.6298 6.94336 14.835 7.12771C15.0402 7.31242 15.0567 7.62952 14.8721 7.83477L10.372 12.835L10.2939 12.9053C10.2093 12.9667 10.1063 13 9.99995 13C9.85833 12.9999 9.72264 12.9402 9.62788 12.835L5.12778 7.83477L5.0682 7.75273C4.95072 7.55225 4.98544 7.28926 5.16489 7.12771C5.34445 6.96617 5.60969 6.95939 5.79674 7.09744L5.87193 7.16482L9.99995 11.7519L14.128 7.16482Z\"></path></svg>",
+ "icons": [
+  "https://www.anthropic.com/favicon.ico",
+  "https://www.anthropic.com/images/icons/favicon-32x32.png",
+  "https://www.anthropic.com/images/icons/apple-touch-icon.png",
+  "https://www.anthropic.com/images/icons/apple-touch-icon.png",
+  "https://www.anthropic.com/images/icons/safari-pinned-tab.svg"
+ ]
+}
