@@ -77,3 +77,21 @@ https://www.anthropic.com/news/claude-design-anthropic-labs
 
 CAPTION-VORSCHLAG:
 „Claude ist mehr als ein Chat: Chat, Projekte, Connectors & Skills, Claude in Chrome, Claude Design und Claude Code. Welches nutzt du schon? 👇 #KI #Claude“ (max. 2 Hashtags)
+
+## Neue Fassung (Pauls Vorgabe 30.10. abends) – So 01.11.2026 14:00
+
+Paul: „Weshalb verwendest du nicht die originalen Logos von Claude in den Videos? Bitte noch einmal das K01 und K02 Video
+anpassen und originale Logos und originale Screenshotaufnahmen von Claude verwenden. Es muss dabei nicht in das CI und die
+Farben passen.“ Entscheidung: K01 neu schneiden und neu posten (So 01.11. 14:00); Paul löscht danach die drei alten Posts
+vom 30.10.
+
+- Schnitt, Wortzeiten und Untertitel der ersten Fassung bleiben (cut.json, schnitt.json, karten.json im Repo). Der Take
+  ist gelöscht: Rohclip (Drive-ID 1nlTfgnzJXETG-s-O0Tw_Q0EHth3UHFWp, liegt im Drive-Papierkorb, über die ID weiter
+  ladbar) neu holen, Intake, Farbe, Porträt mit demselben Ausschnitt wie in der Übergabekarte.
+- **Originales Claude-Logo** (Wortmarke/Zeichen aus offizieller Quelle: claude.com, claude.ai, anthropic.com) statt
+  gezeichneter Platzhalter; nicht nachzeichnen, nicht umfärben.
+- **Echte Screenshots** je Werkzeug statt gezeichneter Karten, wo es Originale gibt: offizielle Produktseiten und
+  Produktbilder (Chat, Projekte, Connectors/Skills, Claude in Chrome, Claude Design, Claude Code, Pricing) ohne Login
+  aufnehmen; „Quelle groß, er klein in der Ecke“. Eigene Screenshots von Paul („K01 · Screen …“ im Drive-Ordner
+  Rohclips), wenn vorhanden, haben Vorrang.
+- Pille, Hook-Titel und die große Folgen-Karte bleiben im PulseConnect-Look.
