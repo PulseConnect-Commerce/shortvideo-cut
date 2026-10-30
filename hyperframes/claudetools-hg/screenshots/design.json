@@ -1,0 +1,40 @@
+{
+ "datum": "2026-10-30T11:27:41.567Z",
+ "viewport": "412x732 @2.62",
+ "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+ "status": 200,
+ "titel": "Introducing Claude Design by Anthropic Labs \\ Anthropic",
+ "pos": {
+  "Describe what you need and Claude builds a first version.": [
+   1360,
+   45,
+   32,
+   301
+  ],
+  "Canva, PDF, PPTX": [
+   3621,
+   20,
+   203,
+   139
+  ]
+ },
+ "ank": {
+  "Introducing": [
+   [
+    132,
+    32,
+    333,
+    60
+   ]
+  ],
+  "Published": [
+   [
+    269,
+    32,
+    159,
+    20
+   ]
+  ]
+ },
+ "hoehe": 6226
+}

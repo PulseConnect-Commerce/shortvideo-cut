@@ -1,7 +1,7 @@
 # Briefing: K02 · Videos schneiden mit Claude Code (Opus 5.5)
 
 Rohclip im Drive: "K02 · Videos schneiden mit Claude Code (Opus 5.5)" (1T-D0OHpIBAcOOSa0_7OQ5ShC-_ZX4Z7s, 347 MB),
-hochgeladen am 30.10.2026, Drehtermin im Kalender grün. Veröffentlichung: **noch offen** (nach K01, das am Sa 31.10.
+hochgeladen am 30.10.2026, Drehtermin im Kalender grün. Veröffentlichung: **Sa 31.10.2026 19:00** (Pauls Entscheidung 30.10.: neue Schnitte in die Lücken; nach K01, das am Fr 30.10.
 19:00 kommt und am Schluss auf dieses Video verweist). Reihe K "KI allgemein". Format: **HERO** (persönlicher
 Erfahrungsbericht, Skill stil-hero). Kanäle TikTok, Instagram Reels, YouTube Shorts.
 
@@ -15,7 +15,7 @@ Aufruf am Ende: „Schnitt“ in die Kommentare. Wer kommentiert, bekommt den Bl
 
 ---
 
-🎬 K02 · Videos schneiden mit Claude Code (Opus 5.5) | Veröffentlichung: noch offen
+🎬 K02 · Videos schneiden mit Claude Code (Opus 5.5) | Veröffentlichung: 2026-10-31 19:00
 
 ZIEL: ca. 1:45–2:10 Minuten, natürlich sprechen, Face-Up / One-Take, persönlicher Erfahrungsbericht.
 
