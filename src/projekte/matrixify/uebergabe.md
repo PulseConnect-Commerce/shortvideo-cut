@@ -1,6 +1,6 @@
 # Übergabekarte: A06 · Matrixify
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** für Sa 28.11.2026 14:00 Europe/Berlin (Pauls Vorgabe 27.10.: selbst nach Kalender einplanen), Metricool TikTok / Instagram / YouTube 410840185 / 410840253 / 410840274 (uuids -1301539676994057704 / 1006772227956035535 / 1504481196162436042); Drive final 1t7dI9w8LuO2RkVU5uT1h2aRPW0axEJS6
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): A06 · Matrixify
 - **Format / Design:** FACE (A-Reihe "Eine Shopify-App, ein Problem", im Video ohne Serien-Erwähnung) / aktueller A-Look wie A05 und A03: helle Karten unter dem Kopf mit Pill-Untertiteln (karten-aufbau.md, aktives Wort `#00E090`), Erklär-Bilder statt Wortkarten (Vorlagen P04, A05), "Quelle groß, er klein in der Ecke" (Regel 2026-10-28) für App-Store-Eintrag, zwei offizielle App-Store-Bilder und Preisbereich, statt Hook-Titel ein dezenter Schriftzug "Matrixify" (Briefing: keine künstliche Hook), Musik ruhig, sanfter Grade, Porträt-Modus
