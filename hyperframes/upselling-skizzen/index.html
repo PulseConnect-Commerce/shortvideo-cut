@@ -47,19 +47,20 @@
       .m-k { fill: #3b4a5c; stroke: #0b0c0e; stroke-width: 2.6; stroke-linejoin: round; }
       .m-l { fill: none; stroke: #0b0c0e; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 
-      /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Vorgabe 2026-10-25) */
-      .folgekarte { position: absolute; left: 80px; top: 1140px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
-      .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
-      .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
-      .plus { position: absolute; right: -10px; bottom: -10px; width: 42px; height: 42px; border-radius: 21px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
-      .plus svg { position: absolute; width: 24px; height: 24px; stroke: #fff; stroke-width: 3.4; }
-      .plus .haken { opacity: 0; stroke: #0b0c0e; }
-      .ftext { position: relative; font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      /* Folgen (CTA): nur das Folgen-Symbol, groß und waagerecht mittig, Plus wie bei TikTok (Pauls Vorgabe 30.10. zu E08: "Ich
+         finde den Folgen-Button am Ende nicht groß genug und auch ist er nicht zentriert. Idealerweise animierst du das Plus beim
+         Drücken, wie es bei TikTok gemacht wird."; karten-aufbau.md Punkt 7, Vorlage hyperframes/claudetools-skizzen):
+         560 x 200, Kartenmitte x 540, Avatar 150, Plus 64, "Folgen" 72 px, an der Kartenposition unter Kopf und Pille */
+      .folgekarte { position: absolute; left: 260px; top: 1140px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+      .avatar { position: absolute; left: 34px; top: 18px; width: 150px; height: 150px; border-radius: 75px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 84px; height: 84px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      #fplus { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; overflow: visible; }
+      #fring { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #31adec; opacity: 0; }
+      .ftext { position: absolute; left: 224px; top: 56px; font-size: 72px; line-height: 88px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
       .ftext span { display: inline-block; }
       .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
-      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 56px; height: 56px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 56px; height: 56px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
     </style>
   </head>
   <body>
@@ -152,8 +153,8 @@
       </svg>
 
       <!-- K1 Der Unterschied: "Ich würde dir am besten den Unterschied zwischen Upselling und Cross-Selling direkt in einem Warenkorb
-           zeigen." Upselling 1,87 / und 2,27 / Cross-Selling 2,37 / Warenkorb 4,03 / zeigen 4,43 -->
-      <section id="k1" class="karte clip" data-start="1.8" data-duration="3.47" data-track-index="1">
+           zeigen." Bis ~3,1 s steht dort der Hook-Titel (Remotion); Karte auf "direkt" 3,17, Warenkorb 4,03 / zeigen 4,43 -->
+      <section id="k1" class="karte clip" data-start="3.15" data-duration="2.12" data-track-index="1">
         <div class="kicker">Der Unterschied</div>
         <svg class="buehne" viewBox="0 0 820 290">
           <g id="k1-up">
@@ -591,10 +592,15 @@
         </svg>
       </section>
 
-      <!-- K14 Folgen (CTA): nur das Folgen-Symbol. Wenn 98,67 (Karte) / Tipps 99,53 (Ring) / drücke 101,43 (Zeiger) / Plus 102,20
-           (angetippt, wird zum Haken); bleibt bis zum Ende -->
+      <!-- K14 Folgen (CTA), groß und mittig, Plus wie bei TikTok: Wenn 98,67 (Karte) / Tipps 99,53 (leiser Ring-Hinweis) /
+           drücke 101,43 (Zeiger) / Plus 102,20 (Plus drückt ein, dreht sich, wird zum Haken); bleibt bis zum Ende -->
       <section id="k14" class="folgekarte clip" data-start="98.6" data-duration="4.33" data-track-index="1">
-        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
+        <div id="fring"></div>
+        <svg id="fplus" viewBox="-32 -32 64 64">
+          <g id="fp-plus"><circle r="28" fill="url(#gvd)" stroke="#fff" stroke-width="4" /><path d="M-12 0 H12 M0 -12 V12" stroke="#fff" stroke-width="5.5" stroke-linecap="round" /></g>
+          <g id="fp-haken" opacity="0" transform="rotate(180)"><circle r="28" fill="#fff" stroke="#e5e7eb" stroke-width="3" /><path id="fp-hpfad" pathLength="1" d="M-12 1 L-3 10 L13 -8" fill="none" stroke="url(#gvd)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </svg>
         <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
         <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
       </section>
@@ -633,10 +639,12 @@
       gsap.set("#k3-pfeil, #k9-pfeil, #k13-linie, #k13-strich", { strokeDasharray: 1, strokeDashoffset: 1 });
 
       // K1 Upselling (Paket wird größer) vs. Cross-Selling (Paket + Paket), auf "Warenkorb" der Warenkorb, "am Warenkorb"
-      karte("#k1", 1.80, 5.27);
-      tl.fromTo("#k1-up", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 1.84);
-      ein("#k1-vs", 2.20);
-      tl.fromTo("#k1-cross", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 2.30);
+      // Seit Runde 2 kommt K1 erst nach dem Hook-Titel (Remotion, "UNTERSCHIED ZWISCHEN / UPSELLING UND CROSS-SELLING", bis ~3,1 s
+      // ganz weg): Karte auf "direkt" mit beiden Seiten
+      karte("#k1", 3.15, 5.27);
+      tl.fromTo("#k1-up", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 3.19);
+      ein("#k1-vs", 3.25);
+      tl.fromTo("#k1-cross", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 3.31);
       tl.to("#k1-vs", { y: -14, duration: 0.3, ease: "power2.inOut" }, 3.97);
       pop("#k1-wagen", 3.97);
       schreibe("#k1-cliprect", 230, 4.37, 0.45);
@@ -783,20 +791,29 @@
       zeichne("#k13-strich", 96.33, 0.35);
       badge("#k13-x", 96.33);
 
-      // K14 Folgen: Karte auf "Wenn", Ring auf "Tipps", Zeiger auf "drücke", Plus auf "Plus" angetippt, wird zum Haken
+      // K14 Folgen wie bei TikTok (Vorlage claudetools-skizzen K19): Karte auf "Wenn", leiser Ring auf "Tipps", Zeiger auf "drücke",
+      // auf "Plus" drückt das Plus ein (1 → 0,8), dreht sich um 180°, wird zum weißen Kreis mit gezeichnetem Haken im Verlauf,
+      // springt kurz über (≈1,2 → 1) und gibt einen Ring-Puls nach außen; der Haken bleibt bis zum Schluss
+      const TAP = 102.13;
       tl.fromTo("#k14", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 98.60);
-      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 99.47);
-      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 101.37);
-      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.6, ease: "power2.inOut" }, 101.50);
-      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 102.05);
-      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 102.13);
-      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 102.13);
-      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 102.13);
-      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 102.15);
-      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 102.15);
-      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 102.15);
-      tl.to("#fzeiger", { x: 132, y: 128, duration: 0.25, ease: "power2.out" }, 102.33);
-      tl.to("#fzeiger", { opacity: 0, duration: 0.3, ease: "power2.in" }, 102.6);
+      gsap.set("#fplus", { transformOrigin: "50% 50%" });
+      gsap.set("#fp-hpfad", { strokeDasharray: 1, strokeDashoffset: 1 });
+      tl.fromTo("#fring", { opacity: 0.6, scale: 1 }, { opacity: 0, scale: 1.6, duration: 0.6, ease: "power2.out", immediateRender: false }, 99.47);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 220, y: 214 }, { opacity: 1, x: 200, y: 206, duration: 0.15, ease: "power2.out" }, 101.37);
+      tl.to("#fzeiger", { x: 112, y: 170, duration: 0.55, ease: "power2.inOut" }, 101.50);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, TAP - 0.02);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, TAP + 0.06);
+      tl.to("#fplus", { scale: 0.8, duration: 0.08, ease: "power2.in" }, TAP);
+      tl.to("#fplus", { rotation: 180, duration: 0.3, ease: "power2.inOut" }, TAP);
+      tl.set("#fp-plus", { opacity: 0 }, TAP + 0.15);
+      tl.set("#fp-haken", { opacity: 1 }, TAP + 0.15);
+      tl.to("#fp-hpfad", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, TAP + 0.16);
+      tl.fromTo("#fplus", { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "back.out(4)", immediateRender: false }, TAP + 0.12);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.6, ease: "power2.out", immediateRender: false }, TAP + 0.16);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, TAP + 0.15);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, TAP + 0.15);
+      tl.to("#fzeiger", { x: 150, y: 210, duration: 0.25, ease: "power2.out" }, TAP + 0.25);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.3, ease: "power2.in" }, TAP + 0.5);
 
       tl.seek(0);
       window.__timelines["upselling-skizzen"] = tl;
