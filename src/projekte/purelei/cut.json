@@ -1,0 +1,2031 @@
+{
+ "projekt": "purelei",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "purelei/t1",
+   "from": 2.125,
+   "to": 7.315,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "purelei/t1",
+   "from": 10.955,
+   "to": 19.745,
+   "nach": 0.09,
+   "vor": 0.0
+  },
+  {
+   "src": "purelei/t1",
+   "from": 25.865,
+   "to": 47.345,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "purelei/t1",
+   "from": 54.355,
+   "to": 61.925,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "purelei/t1",
+   "from": 87.885,
+   "to": 94.685,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "purelei/t1",
+   "from": 98.275,
+   "to": 111.865,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "purelei/t1",
+   "from": 116.375,
+   "to": 139.555,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "purelei/t1",
+   "from": 140.495,
+   "to": 149.725,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "purelei/t1",
+   "from": 151.295,
+   "to": 155.415,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "purelei/t1",
+   "from": 159.335,
+   "to": 163.065,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "purelei/t1",
+   "from": 179.275,
+   "to": 182.45,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Wie",
+   "src": "purelei/t1",
+   "start": 2.19,
+   "end": 2.27
+  },
+  {
+   "text": "wird",
+   "src": "purelei/t1",
+   "start": 2.31,
+   "end": 2.43
+  },
+  {
+   "text": "eigentlich",
+   "src": "purelei/t1",
+   "start": 2.47,
+   "end": 2.73
+  },
+  {
+   "text": "aus",
+   "src": "purelei/t1",
+   "start": 2.77,
+   "end": 2.85
+  },
+  {
+   "text": "Schmuck,",
+   "src": "purelei/t1",
+   "start": 2.91,
+   "end": 3.19
+  },
+  {
+   "text": "den",
+   "src": "purelei/t1",
+   "start": 3.29,
+   "end": 3.41
+  },
+  {
+   "text": "es",
+   "src": "purelei/t1",
+   "start": 3.45,
+   "end": 3.51
+  },
+  {
+   "text": "in",
+   "src": "purelei/t1",
+   "start": 3.55,
+   "end": 3.63
+  },
+  {
+   "text": "tausenden",
+   "src": "purelei/t1",
+   "start": 3.71,
+   "end": 4.15
+  },
+  {
+   "text": "Onlineshops",
+   "src": "purelei/t1",
+   "start": 4.21,
+   "end": 4.61
+  },
+  {
+   "text": "bereits",
+   "src": "purelei/t1",
+   "start": 4.67,
+   "end": 4.95
+  },
+  {
+   "text": "gibt,",
+   "src": "purelei/t1",
+   "start": 5.01,
+   "end": 5.19
+  },
+  {
+   "text": "eine",
+   "src": "purelei/t1",
+   "start": 5.35,
+   "end": 5.51
+  },
+  {
+   "text": "Marke",
+   "src": "purelei/t1",
+   "start": 5.59,
+   "end": 5.85
+  },
+  {
+   "text": "mit",
+   "src": "purelei/t1",
+   "start": 5.89,
+   "end": 5.97
+  },
+  {
+   "text": "einer",
+   "src": "purelei/t1",
+   "start": 6.03,
+   "end": 6.17
+  },
+  {
+   "text": "riesen",
+   "src": "purelei/t1",
+   "start": 6.27,
+   "end": 6.63
+  },
+  {
+   "text": "Community?",
+   "src": "purelei/t1",
+   "start": 6.69,
+   "end": 7.15
+  },
+  {
+   "text": "PURELEI",
+   "src": "purelei/t1",
+   "start": 10.99,
+   "end": 11.45
+  },
+  {
+   "text": "ist",
+   "src": "purelei/t1",
+   "start": 11.51,
+   "end": 11.59
+  },
+  {
+   "text": "dafür",
+   "src": "purelei/t1",
+   "start": 11.63,
+   "end": 11.81
+  },
+  {
+   "text": "zum",
+   "src": "purelei/t1",
+   "start": 11.85,
+   "end": 11.91
+  },
+  {
+   "text": "Beispiel",
+   "src": "purelei/t1",
+   "start": 11.93,
+   "end": 12.21
+  },
+  {
+   "text": "ein",
+   "src": "purelei/t1",
+   "start": 12.29,
+   "end": 12.37
+  },
+  {
+   "text": "super",
+   "src": "purelei/t1",
+   "start": 12.49,
+   "end": 12.75
+  },
+  {
+   "text": "Beispiel.",
+   "src": "purelei/t1",
+   "start": 12.79,
+   "end": 13.15
+  },
+  {
+   "text": "Ich",
+   "src": "purelei/t1",
+   "start": 13.67,
+   "end": 13.75
+  },
+  {
+   "text": "persönlich",
+   "src": "purelei/t1",
+   "start": 13.81,
+   "end": 14.21
+  },
+  {
+   "text": "habe",
+   "src": "purelei/t1",
+   "start": 14.27,
+   "end": 14.39
+  },
+  {
+   "text": "die",
+   "src": "purelei/t1",
+   "start": 14.45,
+   "end": 14.51
+  },
+  {
+   "text": "Gründerin",
+   "src": "purelei/t1",
+   "start": 14.55,
+   "end": 14.93
+  },
+  {
+   "text": "Alisa",
+   "src": "purelei/t1",
+   "start": 15.05,
+   "end": 15.31
+  },
+  {
+   "text": "Jahnke",
+   "src": "purelei/t1",
+   "start": 15.39,
+   "end": 15.67
+  },
+  {
+   "text": "damals",
+   "src": "purelei/t1",
+   "start": 15.73,
+   "end": 16.03
+  },
+  {
+   "text": "beim",
+   "src": "purelei/t1",
+   "start": 16.11,
+   "end": 16.27
+  },
+  {
+   "text": "OMR",
+   "src": "purelei/t1",
+   "start": 16.37,
+   "end": 16.71
+  },
+  {
+   "text": "im",
+   "src": "purelei/t1",
+   "start": 16.75,
+   "end": 16.83
+  },
+  {
+   "text": "Speech",
+   "src": "purelei/t1",
+   "start": 16.91,
+   "end": 17.19
+  },
+  {
+   "text": "gehört",
+   "src": "purelei/t1",
+   "start": 17.23,
+   "end": 17.51
+  },
+  {
+   "text": "und",
+   "src": "purelei/t1",
+   "start": 17.75,
+   "end": 17.83
+  },
+  {
+   "text": "war",
+   "src": "purelei/t1",
+   "start": 17.87,
+   "end": 17.95
+  },
+  {
+   "text": "wirklich",
+   "src": "purelei/t1",
+   "start": 18.07,
+   "end": 18.37
+  },
+  {
+   "text": "begeistert",
+   "src": "purelei/t1",
+   "start": 18.43,
+   "end": 18.89
+  },
+  {
+   "text": "von",
+   "src": "purelei/t1",
+   "start": 18.93,
+   "end": 19.03
+  },
+  {
+   "text": "ihrer",
+   "src": "purelei/t1",
+   "start": 19.09,
+   "end": 19.25
+  },
+  {
+   "text": "Story.",
+   "src": "purelei/t1",
+   "start": 19.29,
+   "end": 19.57
+  },
+  {
+   "text": "Denn",
+   "src": "purelei/t1",
+   "start": 25.87,
+   "end": 25.99
+  },
+  {
+   "text": "die",
+   "src": "purelei/t1",
+   "start": 26.01,
+   "end": 26.07
+  },
+  {
+   "text": "Gründerin",
+   "src": "purelei/t1",
+   "start": 26.11,
+   "end": 26.47
+  },
+  {
+   "text": "hat",
+   "src": "purelei/t1",
+   "start": 26.51,
+   "end": 26.61
+  },
+  {
+   "text": "sich",
+   "src": "purelei/t1",
+   "start": 26.67,
+   "end": 26.77
+  },
+  {
+   "text": "nämlich",
+   "src": "purelei/t1",
+   "start": 26.81,
+   "end": 27.05
+  },
+  {
+   "text": "zum",
+   "src": "purelei/t1",
+   "start": 27.07,
+   "end": 27.13
+  },
+  {
+   "text": "Beispiel",
+   "src": "purelei/t1",
+   "start": 27.15,
+   "end": 27.37
+  },
+  {
+   "text": "damals",
+   "src": "purelei/t1",
+   "start": 27.41,
+   "end": 27.75
+  },
+  {
+   "text": "von",
+   "src": "purelei/t1",
+   "start": 27.83,
+   "end": 27.93
+  },
+  {
+   "text": "Hawaii",
+   "src": "purelei/t1",
+   "start": 27.99,
+   "end": 28.29
+  },
+  {
+   "text": "inspirieren",
+   "src": "purelei/t1",
+   "start": 28.41,
+   "end": 28.85
+  },
+  {
+   "text": "lassen.",
+   "src": "purelei/t1",
+   "start": 28.87,
+   "end": 29.11
+  },
+  {
+   "text": "Und",
+   "src": "purelei/t1",
+   "start": 29.55,
+   "end": 29.63
+  },
+  {
+   "text": "genau",
+   "src": "purelei/t1",
+   "start": 29.71,
+   "end": 29.93
+  },
+  {
+   "text": "dieses",
+   "src": "purelei/t1",
+   "start": 30.05,
+   "end": 30.31
+  },
+  {
+   "text": "Lebensgefühl",
+   "src": "purelei/t1",
+   "start": 30.37,
+   "end": 30.95
+  },
+  {
+   "text": "zieht",
+   "src": "purelei/t1",
+   "start": 31.03,
+   "end": 31.17
+  },
+  {
+   "text": "sich",
+   "src": "purelei/t1",
+   "start": 31.21,
+   "end": 31.31
+  },
+  {
+   "text": "tatsächlich",
+   "src": "purelei/t1",
+   "start": 31.33,
+   "end": 31.69
+  },
+  {
+   "text": "durch",
+   "src": "purelei/t1",
+   "start": 31.73,
+   "end": 31.85
+  },
+  {
+   "text": "den",
+   "src": "purelei/t1",
+   "start": 31.87,
+   "end": 31.97
+  },
+  {
+   "text": "gesamten",
+   "src": "purelei/t1",
+   "start": 32.03,
+   "end": 32.43
+  },
+  {
+   "text": "Onlineshop",
+   "src": "purelei/t1",
+   "start": 32.51,
+   "end": 32.91
+  },
+  {
+   "text": "und",
+   "src": "purelei/t1",
+   "start": 33.03,
+   "end": 33.11
+  },
+  {
+   "text": "die",
+   "src": "purelei/t1",
+   "start": 33.15,
+   "end": 33.23
+  },
+  {
+   "text": "Marke.",
+   "src": "purelei/t1",
+   "start": 33.27,
+   "end": 33.51
+  },
+  {
+   "text": "Aloha,",
+   "src": "purelei/t1",
+   "start": 34.25,
+   "end": 34.65
+  },
+  {
+   "text": "Lifestyle",
+   "src": "purelei/t1",
+   "start": 34.79,
+   "end": 35.27
+  },
+  {
+   "text": "und",
+   "src": "purelei/t1",
+   "start": 35.33,
+   "end": 35.41
+  },
+  {
+   "text": "ein",
+   "src": "purelei/t1",
+   "start": 35.49,
+   "end": 35.57
+  },
+  {
+   "text": "immer",
+   "src": "purelei/t1",
+   "start": 35.69,
+   "end": 35.91
+  },
+  {
+   "text": "wieder",
+   "src": "purelei/t1",
+   "start": 36.03,
+   "end": 36.27
+  },
+  {
+   "text": "erkennbarer",
+   "src": "purelei/t1",
+   "start": 36.41,
+   "end": 37.01
+  },
+  {
+   "text": "Look.",
+   "src": "purelei/t1",
+   "start": 37.09,
+   "end": 37.25
+  },
+  {
+   "text": "2017",
+   "src": "purelei/t1",
+   "start": 37.97,
+   "end": 38.69
+  },
+  {
+   "text": "ist",
+   "src": "purelei/t1",
+   "start": 38.73,
+   "end": 38.81
+  },
+  {
+   "text": "PURELEI",
+   "src": "purelei/t1",
+   "start": 38.87,
+   "end": 39.31
+  },
+  {
+   "text": "dann",
+   "src": "purelei/t1",
+   "start": 39.55,
+   "end": 39.85
+  },
+  {
+   "text": "damals",
+   "src": "purelei/t1",
+   "start": 39.55,
+   "end": 39.83
+  },
+  {
+   "text": "gestartet,",
+   "src": "purelei/t1",
+   "start": 39.87,
+   "end": 40.41
+  },
+  {
+   "text": "aber",
+   "src": "purelei/t1",
+   "start": 40.99,
+   "end": 41.13
+  },
+  {
+   "text": "die",
+   "src": "purelei/t1",
+   "start": 41.17,
+   "end": 41.25
+  },
+  {
+   "text": "Marke",
+   "src": "purelei/t1",
+   "start": 41.29,
+   "end": 41.57
+  },
+  {
+   "text": "hat",
+   "src": "purelei/t1",
+   "start": 41.65,
+   "end": 41.75
+  },
+  {
+   "text": "tatsächlich",
+   "src": "purelei/t1",
+   "start": 41.79,
+   "end": 42.15
+  },
+  {
+   "text": "nicht",
+   "src": "purelei/t1",
+   "start": 42.21,
+   "end": 42.35
+  },
+  {
+   "text": "einfach",
+   "src": "purelei/t1",
+   "start": 42.43,
+   "end": 42.71
+  },
+  {
+   "text": "nur",
+   "src": "purelei/t1",
+   "start": 42.79,
+   "end": 42.91
+  },
+  {
+   "text": "Schmuckbilder",
+   "src": "purelei/t1",
+   "start": 43.05,
+   "end": 43.61
+  },
+  {
+   "text": "gepostet",
+   "src": "purelei/t1",
+   "start": 43.65,
+   "end": 44.15
+  },
+  {
+   "text": "und",
+   "src": "purelei/t1",
+   "start": 44.55,
+   "end": 44.63
+  },
+  {
+   "text": "einfach",
+   "src": "purelei/t1",
+   "start": 44.71,
+   "end": 44.97
+  },
+  {
+   "text": "nur",
+   "src": "purelei/t1",
+   "start": 45.03,
+   "end": 45.11
+  },
+  {
+   "text": "darauf",
+   "src": "purelei/t1",
+   "start": 45.15,
+   "end": 45.35
+  },
+  {
+   "text": "gehofft,",
+   "src": "purelei/t1",
+   "start": 45.41,
+   "end": 45.67
+  },
+  {
+   "text": "dass",
+   "src": "purelei/t1",
+   "start": 45.69,
+   "end": 45.81
+  },
+  {
+   "text": "jemand",
+   "src": "purelei/t1",
+   "start": 45.87,
+   "end": 46.11
+  },
+  {
+   "text": "diese",
+   "src": "purelei/t1",
+   "start": 46.17,
+   "end": 46.35
+  },
+  {
+   "text": "bestellt,",
+   "src": "purelei/t1",
+   "start": 46.69,
+   "end": 47.19
+  },
+  {
+   "text": "sondern",
+   "src": "purelei/t1",
+   "start": 54.42,
+   "end": 54.8
+  },
+  {
+   "text": "sie",
+   "src": "purelei/t1",
+   "start": 54.86,
+   "end": 54.94
+  },
+  {
+   "text": "hat",
+   "src": "purelei/t1",
+   "start": 54.98,
+   "end": 55.06
+  },
+  {
+   "text": "tatsächlich",
+   "src": "purelei/t1",
+   "start": 55.12,
+   "end": 55.48
+  },
+  {
+   "text": "damals",
+   "src": "purelei/t1",
+   "start": 55.52,
+   "end": 55.76
+  },
+  {
+   "text": "früh",
+   "src": "purelei/t1",
+   "start": 55.86,
+   "end": 56.02
+  },
+  {
+   "text": "über",
+   "src": "purelei/t1",
+   "start": 56.08,
+   "end": 56.18
+  },
+  {
+   "text": "Instagram",
+   "src": "purelei/t1",
+   "start": 56.26,
+   "end": 56.78
+  },
+  {
+   "text": "und",
+   "src": "purelei/t1",
+   "start": 56.88,
+   "end": 56.96
+  },
+  {
+   "text": "auch",
+   "src": "purelei/t1",
+   "start": 57.0,
+   "end": 57.08
+  },
+  {
+   "text": "Influencer",
+   "src": "purelei/t1",
+   "start": 57.16,
+   "end": 57.64
+  },
+  {
+   "text": "kommuniziert",
+   "src": "purelei/t1",
+   "start": 57.68,
+   "end": 58.22
+  },
+  {
+   "text": "und",
+   "src": "purelei/t1",
+   "start": 58.62,
+   "end": 58.7
+  },
+  {
+   "text": "dabei",
+   "src": "purelei/t1",
+   "start": 58.74,
+   "end": 58.96
+  },
+  {
+   "text": "immer",
+   "src": "purelei/t1",
+   "start": 59.12,
+   "end": 59.32
+  },
+  {
+   "text": "wieder",
+   "src": "purelei/t1",
+   "start": 59.38,
+   "end": 59.54
+  },
+  {
+   "text": "Menschen",
+   "src": "purelei/t1",
+   "start": 59.62,
+   "end": 59.9
+  },
+  {
+   "text": "eingebunden,",
+   "src": "purelei/t1",
+   "start": 59.98,
+   "end": 60.44
+  },
+  {
+   "text": "die",
+   "src": "purelei/t1",
+   "start": 60.5,
+   "end": 60.56
+  },
+  {
+   "text": "einfach",
+   "src": "purelei/t1",
+   "start": 60.62,
+   "end": 60.86
+  },
+  {
+   "text": "zur",
+   "src": "purelei/t1",
+   "start": 60.94,
+   "end": 61.06
+  },
+  {
+   "text": "Markenwelt",
+   "src": "purelei/t1",
+   "start": 61.12,
+   "end": 61.6
+  },
+  {
+   "text": "passen.",
+   "src": "purelei/t1",
+   "start": 61.64,
+   "end": 61.88
+  },
+  {
+   "text": "Laut",
+   "src": "purelei/t1",
+   "start": 87.93,
+   "end": 88.09
+  },
+  {
+   "text": "einem",
+   "src": "purelei/t1",
+   "start": 88.15,
+   "end": 88.33
+  },
+  {
+   "text": "Shopify-Beitrag",
+   "src": "purelei/t1",
+   "start": 88.41,
+   "end": 88.79
+  },
+  {
+   "text": "hatte",
+   "src": "purelei/t1",
+   "start": 89.37,
+   "end": 89.57
+  },
+  {
+   "text": "PURELEI",
+   "src": "purelei/t1",
+   "start": 89.63,
+   "end": 89.99
+  },
+  {
+   "text": "2021",
+   "src": "purelei/t1",
+   "start": 90.07,
+   "end": 91.15
+  },
+  {
+   "text": "bereits",
+   "src": "purelei/t1",
+   "start": 91.23,
+   "end": 91.55
+  },
+  {
+   "text": "mehr",
+   "src": "purelei/t1",
+   "start": 91.67,
+   "end": 91.81
+  },
+  {
+   "text": "als",
+   "src": "purelei/t1",
+   "start": 91.91,
+   "end": 92.05
+  },
+  {
+   "text": "600.000",
+   "src": "purelei/t1",
+   "start": 92.39,
+   "end": 92.99
+  },
+  {
+   "text": "Follower",
+   "src": "purelei/t1",
+   "start": 93.39,
+   "end": 93.63
+  },
+  {
+   "text": "auf",
+   "src": "purelei/t1",
+   "start": 93.65,
+   "end": 93.73
+  },
+  {
+   "text": "Instagram",
+   "src": "purelei/t1",
+   "start": 93.79,
+   "end": 94.15
+  },
+  {
+   "text": "aufgebaut.",
+   "src": "purelei/t1",
+   "start": 94.21,
+   "end": 94.61
+  },
+  {
+   "text": "Für",
+   "src": "purelei/t1",
+   "start": 98.34,
+   "end": 98.42
+  },
+  {
+   "text": "mich",
+   "src": "purelei/t1",
+   "start": 98.46,
+   "end": 98.6
+  },
+  {
+   "text": "liegt",
+   "src": "purelei/t1",
+   "start": 98.68,
+   "end": 98.84
+  },
+  {
+   "text": "hier",
+   "src": "purelei/t1",
+   "start": 98.88,
+   "end": 98.98
+  },
+  {
+   "text": "natürlich",
+   "src": "purelei/t1",
+   "start": 99.02,
+   "end": 99.3
+  },
+  {
+   "text": "der",
+   "src": "purelei/t1",
+   "start": 99.34,
+   "end": 99.4
+  },
+  {
+   "text": "interessante",
+   "src": "purelei/t1",
+   "start": 99.44,
+   "end": 99.9
+  },
+  {
+   "text": "Punkt",
+   "src": "purelei/t1",
+   "start": 99.98,
+   "end": 100.18
+  },
+  {
+   "text": "aber",
+   "src": "purelei/t1",
+   "start": 100.32,
+   "end": 100.48
+  },
+  {
+   "text": "ganz",
+   "src": "purelei/t1",
+   "start": 100.6,
+   "end": 100.82
+  },
+  {
+   "text": "woanders.",
+   "src": "purelei/t1",
+   "start": 100.86,
+   "end": 101.22
+  },
+  {
+   "text": "Denn",
+   "src": "purelei/t1",
+   "start": 101.68,
+   "end": 101.8
+  },
+  {
+   "text": "bei",
+   "src": "purelei/t1",
+   "start": 101.84,
+   "end": 101.92
+  },
+  {
+   "text": "Schmuck",
+   "src": "purelei/t1",
+   "start": 101.98,
+   "end": 102.22
+  },
+  {
+   "text": "kannst",
+   "src": "purelei/t1",
+   "start": 102.3,
+   "end": 102.54
+  },
+  {
+   "text": "du",
+   "src": "purelei/t1",
+   "start": 102.58,
+   "end": 102.64
+  },
+  {
+   "text": "nur",
+   "src": "purelei/t1",
+   "start": 102.8,
+   "end": 102.9
+  },
+  {
+   "text": "begrenzt",
+   "src": "purelei/t1",
+   "start": 102.96,
+   "end": 103.48
+  },
+  {
+   "text": "über",
+   "src": "purelei/t1",
+   "start": 103.68,
+   "end": 103.82
+  },
+  {
+   "text": "die",
+   "src": "purelei/t1",
+   "start": 103.92,
+   "end": 104.0
+  },
+  {
+   "text": "reine",
+   "src": "purelei/t1",
+   "start": 104.1,
+   "end": 104.4
+  },
+  {
+   "text": "Produktkategorie",
+   "src": "purelei/t1",
+   "start": 104.48,
+   "end": 105.14
+  },
+  {
+   "text": "unterscheiden.",
+   "src": "purelei/t1",
+   "start": 105.16,
+   "end": 105.58
+  },
+  {
+   "text": "Deshalb",
+   "src": "purelei/t1",
+   "start": 106.26,
+   "end": 106.54
+  },
+  {
+   "text": "muss",
+   "src": "purelei/t1",
+   "start": 106.6,
+   "end": 106.72
+  },
+  {
+   "text": "natürlich",
+   "src": "purelei/t1",
+   "start": 106.74,
+   "end": 107.04
+  },
+  {
+   "text": "ein",
+   "src": "purelei/t1",
+   "start": 107.1,
+   "end": 107.16
+  },
+  {
+   "text": "Kunde",
+   "src": "purelei/t1",
+   "start": 107.22,
+   "end": 107.44
+  },
+  {
+   "text": "erstmal",
+   "src": "purelei/t1",
+   "start": 107.52,
+   "end": 107.8
+  },
+  {
+   "text": "verstehen,",
+   "src": "purelei/t1",
+   "start": 107.86,
+   "end": 108.42
+  },
+  {
+   "text": "warum",
+   "src": "purelei/t1",
+   "start": 108.82,
+   "end": 109.12
+  },
+  {
+   "text": "er",
+   "src": "purelei/t1",
+   "start": 109.2,
+   "end": 109.28
+  },
+  {
+   "text": "überhaupt",
+   "src": "purelei/t1",
+   "start": 109.31,
+   "end": 109.59
+  },
+  {
+   "text": "sich",
+   "src": "purelei/t1",
+   "start": 109.65,
+   "end": 109.75
+  },
+  {
+   "text": "ausgerechnet",
+   "src": "purelei/t1",
+   "start": 109.81,
+   "end": 110.29
+  },
+  {
+   "text": "für",
+   "src": "purelei/t1",
+   "start": 110.33,
+   "end": 110.41
+  },
+  {
+   "text": "deine",
+   "src": "purelei/t1",
+   "start": 110.51,
+   "end": 110.75
+  },
+  {
+   "text": "Marke",
+   "src": "purelei/t1",
+   "start": 110.79,
+   "end": 111.03
+  },
+  {
+   "text": "entscheiden",
+   "src": "purelei/t1",
+   "start": 111.09,
+   "end": 111.41
+  },
+  {
+   "text": "sollte.",
+   "src": "purelei/t1",
+   "start": 111.47,
+   "end": 111.71
+  },
+  {
+   "text": "Und",
+   "src": "purelei/t1",
+   "start": 116.41,
+   "end": 116.49
+  },
+  {
+   "text": "hier",
+   "src": "purelei/t1",
+   "start": 116.55,
+   "end": 116.69
+  },
+  {
+   "text": "tatsächlich",
+   "src": "purelei/t1",
+   "start": 116.75,
+   "end": 117.11
+  },
+  {
+   "text": "sehe",
+   "src": "purelei/t1",
+   "start": 117.15,
+   "end": 117.27
+  },
+  {
+   "text": "ich",
+   "src": "purelei/t1",
+   "start": 117.29,
+   "end": 117.35
+  },
+  {
+   "text": "immer",
+   "src": "purelei/t1",
+   "start": 117.39,
+   "end": 117.57
+  },
+  {
+   "text": "drei",
+   "src": "purelei/t1",
+   "start": 117.69,
+   "end": 117.89
+  },
+  {
+   "text": "ganz",
+   "src": "purelei/t1",
+   "start": 118.01,
+   "end": 118.23
+  },
+  {
+   "text": "wichtige",
+   "src": "purelei/t1",
+   "start": 118.31,
+   "end": 118.59
+  },
+  {
+   "text": "Learnings",
+   "src": "purelei/t1",
+   "start": 118.67,
+   "end": 119.01
+  },
+  {
+   "text": "für",
+   "src": "purelei/t1",
+   "start": 119.07,
+   "end": 119.15
+  },
+  {
+   "text": "Onlineshop-Betreiber.",
+   "src": "purelei/t1",
+   "start": 119.19,
+   "end": 119.89
+  },
+  {
+   "text": "Erstens,",
+   "src": "purelei/t1",
+   "start": 120.62,
+   "end": 121.04
+  },
+  {
+   "text": "definiere",
+   "src": "purelei/t1",
+   "start": 121.44,
+   "end": 121.94
+  },
+  {
+   "text": "bitte",
+   "src": "purelei/t1",
+   "start": 122.04,
+   "end": 122.24
+  },
+  {
+   "text": "eine",
+   "src": "purelei/t1",
+   "start": 122.36,
+   "end": 122.52
+  },
+  {
+   "text": "Markenwelt,",
+   "src": "purelei/t1",
+   "start": 122.6,
+   "end": 123.2
+  },
+  {
+   "text": "die",
+   "src": "purelei/t1",
+   "start": 123.28,
+   "end": 123.38
+  },
+  {
+   "text": "auch",
+   "src": "purelei/t1",
+   "start": 123.5,
+   "end": 123.62
+  },
+  {
+   "text": "ohne",
+   "src": "purelei/t1",
+   "start": 123.8,
+   "end": 124.02
+  },
+  {
+   "text": "Logo",
+   "src": "purelei/t1",
+   "start": 124.12,
+   "end": 124.28
+  },
+  {
+   "text": "erkennbar",
+   "src": "purelei/t1",
+   "start": 124.36,
+   "end": 124.72
+  },
+  {
+   "text": "ist.",
+   "src": "purelei/t1",
+   "start": 124.78,
+   "end": 124.88
+  },
+  {
+   "text": "Farben,",
+   "src": "purelei/t1",
+   "start": 125.46,
+   "end": 125.8
+  },
+  {
+   "text": "Bildsprache",
+   "src": "purelei/t1",
+   "start": 125.92,
+   "end": 126.62
+  },
+  {
+   "text": "und",
+   "src": "purelei/t1",
+   "start": 126.78,
+   "end": 126.88
+  },
+  {
+   "text": "auch",
+   "src": "purelei/t1",
+   "start": 126.94,
+   "end": 127.04
+  },
+  {
+   "text": "Botschaft",
+   "src": "purelei/t1",
+   "start": 127.12,
+   "end": 127.5
+  },
+  {
+   "text": "sollten",
+   "src": "purelei/t1",
+   "start": 127.56,
+   "end": 127.86
+  },
+  {
+   "text": "tatsächlich",
+   "src": "purelei/t1",
+   "start": 127.92,
+   "end": 128.36
+  },
+  {
+   "text": "immer",
+   "src": "purelei/t1",
+   "start": 128.42,
+   "end": 128.56
+  },
+  {
+   "text": "gut",
+   "src": "purelei/t1",
+   "start": 128.62,
+   "end": 128.76
+  },
+  {
+   "text": "zusammenpassen.",
+   "src": "purelei/t1",
+   "start": 128.8,
+   "end": 129.34
+  },
+  {
+   "text": "Zweitens,",
+   "src": "purelei/t1",
+   "start": 130.19,
+   "end": 130.71
+  },
+  {
+   "text": "such",
+   "src": "purelei/t1",
+   "start": 131.15,
+   "end": 131.31
+  },
+  {
+   "text": "dir",
+   "src": "purelei/t1",
+   "start": 131.37,
+   "end": 131.47
+  },
+  {
+   "text": "einfach",
+   "src": "purelei/t1",
+   "start": 131.51,
+   "end": 131.75
+  },
+  {
+   "text": "mal",
+   "src": "purelei/t1",
+   "start": 131.79,
+   "end": 131.91
+  },
+  {
+   "text": "Creator,",
+   "src": "purelei/t1",
+   "start": 132.03,
+   "end": 132.53
+  },
+  {
+   "text": "die",
+   "src": "purelei/t1",
+   "start": 132.73,
+   "end": 132.83
+  },
+  {
+   "text": "nicht",
+   "src": "purelei/t1",
+   "start": 132.93,
+   "end": 133.13
+  },
+  {
+   "text": "nur",
+   "src": "purelei/t1",
+   "start": 133.19,
+   "end": 133.29
+  },
+  {
+   "text": "nach",
+   "src": "purelei/t1",
+   "start": 133.33,
+   "end": 133.43
+  },
+  {
+   "text": "Followerzahlen",
+   "src": "purelei/t1",
+   "start": 133.53,
+   "end": 134.15
+  },
+  {
+   "text": "aus",
+   "src": "purelei/t1",
+   "start": 134.21,
+   "end": 134.31
+  },
+  {
+   "text": "sind.",
+   "src": "purelei/t1",
+   "start": 134.37,
+   "end": 134.51
+  },
+  {
+   "text": "Entscheidend",
+   "src": "purelei/t1",
+   "start": 135.07,
+   "end": 135.51
+  },
+  {
+   "text": "ist",
+   "src": "purelei/t1",
+   "start": 135.53,
+   "end": 135.63
+  },
+  {
+   "text": "natürlich,",
+   "src": "purelei/t1",
+   "start": 135.65,
+   "end": 135.97
+  },
+  {
+   "text": "ob",
+   "src": "purelei/t1",
+   "start": 136.07,
+   "end": 136.15
+  },
+  {
+   "text": "ihre",
+   "src": "purelei/t1",
+   "start": 136.23,
+   "end": 136.37
+  },
+  {
+   "text": "Zielgruppe",
+   "src": "purelei/t1",
+   "start": 136.51,
+   "end": 136.95
+  },
+  {
+   "text": "und",
+   "src": "purelei/t1",
+   "start": 137.07,
+   "end": 137.17
+  },
+  {
+   "text": "ihre",
+   "src": "purelei/t1",
+   "start": 137.27,
+   "end": 137.41
+  },
+  {
+   "text": "Inhalte",
+   "src": "purelei/t1",
+   "start": 137.51,
+   "end": 137.83
+  },
+  {
+   "text": "auch",
+   "src": "purelei/t1",
+   "start": 137.87,
+   "end": 137.95
+  },
+  {
+   "text": "tatsächlich",
+   "src": "purelei/t1",
+   "start": 137.97,
+   "end": 138.41
+  },
+  {
+   "text": "zu",
+   "src": "purelei/t1",
+   "start": 138.47,
+   "end": 138.55
+  },
+  {
+   "text": "deinem",
+   "src": "purelei/t1",
+   "start": 138.67,
+   "end": 138.95
+  },
+  {
+   "text": "Produkt",
+   "src": "purelei/t1",
+   "start": 138.99,
+   "end": 139.23
+  },
+  {
+   "text": "passen.",
+   "src": "purelei/t1",
+   "start": 139.27,
+   "end": 139.53
+  },
+  {
+   "text": "Und",
+   "src": "purelei/t1",
+   "start": 140.56,
+   "end": 140.64
+  },
+  {
+   "text": "drittens,",
+   "src": "purelei/t1",
+   "start": 140.72,
+   "end": 141.14
+  },
+  {
+   "text": "bau",
+   "src": "purelei/t1",
+   "start": 141.56,
+   "end": 141.68
+  },
+  {
+   "text": "einfach",
+   "src": "purelei/t1",
+   "start": 141.8,
+   "end": 142.04
+  },
+  {
+   "text": "nicht",
+   "src": "purelei/t1",
+   "start": 142.14,
+   "end": 142.32
+  },
+  {
+   "text": "nur",
+   "src": "purelei/t1",
+   "start": 142.38,
+   "end": 142.46
+  },
+  {
+   "text": "Reichweite",
+   "src": "purelei/t1",
+   "start": 142.54,
+   "end": 142.96
+  },
+  {
+   "text": "auf.",
+   "src": "purelei/t1",
+   "start": 143.06,
+   "end": 143.18
+  },
+  {
+   "text": "Überleg",
+   "src": "purelei/t1",
+   "start": 143.56,
+   "end": 143.9
+  },
+  {
+   "text": "dir",
+   "src": "purelei/t1",
+   "start": 144.02,
+   "end": 144.1
+  },
+  {
+   "text": "ganz",
+   "src": "purelei/t1",
+   "start": 144.18,
+   "end": 144.4
+  },
+  {
+   "text": "genau,",
+   "src": "purelei/t1",
+   "start": 144.46,
+   "end": 144.74
+  },
+  {
+   "text": "wie",
+   "src": "purelei/t1",
+   "start": 145.22,
+   "end": 145.32
+  },
+  {
+   "text": "du",
+   "src": "purelei/t1",
+   "start": 145.38,
+   "end": 145.44
+  },
+  {
+   "text": "diese",
+   "src": "purelei/t1",
+   "start": 145.54,
+   "end": 145.7
+  },
+  {
+   "text": "Menschen",
+   "src": "purelei/t1",
+   "start": 145.78,
+   "end": 146.14
+  },
+  {
+   "text": "in",
+   "src": "purelei/t1",
+   "start": 146.2,
+   "end": 146.26
+  },
+  {
+   "text": "den",
+   "src": "purelei/t1",
+   "start": 146.3,
+   "end": 146.4
+  },
+  {
+   "text": "Shop",
+   "src": "purelei/t1",
+   "start": 146.48,
+   "end": 146.68
+  },
+  {
+   "text": "holst",
+   "src": "purelei/t1",
+   "start": 146.76,
+   "end": 147.1
+  },
+  {
+   "text": "und",
+   "src": "purelei/t1",
+   "start": 147.48,
+   "end": 147.58
+  },
+  {
+   "text": "eine",
+   "src": "purelei/t1",
+   "start": 147.68,
+   "end": 147.84
+  },
+  {
+   "text": "langfristige",
+   "src": "purelei/t1",
+   "start": 147.94,
+   "end": 148.56
+  },
+  {
+   "text": "Kundenbeziehung",
+   "src": "purelei/t1",
+   "start": 148.68,
+   "end": 149.24
+  },
+  {
+   "text": "aufbaust.",
+   "src": "purelei/t1",
+   "start": 149.3,
+   "end": 149.66
+  },
+  {
+   "text": "Denn",
+   "src": "purelei/t1",
+   "start": 151.36,
+   "end": 151.5
+  },
+  {
+   "text": "eine",
+   "src": "purelei/t1",
+   "start": 151.64,
+   "end": 151.82
+  },
+  {
+   "text": "Marke",
+   "src": "purelei/t1",
+   "start": 151.9,
+   "end": 152.16
+  },
+  {
+   "text": "entsteht",
+   "src": "purelei/t1",
+   "start": 152.2,
+   "end": 152.56
+  },
+  {
+   "text": "tatsächlich",
+   "src": "purelei/t1",
+   "start": 152.6,
+   "end": 152.96
+  },
+  {
+   "text": "nicht",
+   "src": "purelei/t1",
+   "start": 153.06,
+   "end": 153.24
+  },
+  {
+   "text": "nur",
+   "src": "purelei/t1",
+   "start": 153.3,
+   "end": 153.38
+  },
+  {
+   "text": "dabei,",
+   "src": "purelei/t1",
+   "start": 153.42,
+   "end": 153.62
+  },
+  {
+   "text": "dass",
+   "src": "purelei/t1",
+   "start": 153.68,
+   "end": 153.8
+  },
+  {
+   "text": "du",
+   "src": "purelei/t1",
+   "start": 153.84,
+   "end": 153.9
+  },
+  {
+   "text": "Produkte",
+   "src": "purelei/t1",
+   "start": 153.98,
+   "end": 154.44
+  },
+  {
+   "text": "schön",
+   "src": "purelei/t1",
+   "start": 154.5,
+   "end": 154.66
+  },
+  {
+   "text": "fotografierst,",
+   "src": "purelei/t1",
+   "start": 154.7,
+   "end": 155.32
+  },
+  {
+   "text": "sondern,",
+   "src": "purelei/t1",
+   "start": 159.4,
+   "end": 159.76
+  },
+  {
+   "text": "dass",
+   "src": "purelei/t1",
+   "start": 159.84,
+   "end": 159.96
+  },
+  {
+   "text": "auch",
+   "src": "purelei/t1",
+   "start": 160.02,
+   "end": 160.1
+  },
+  {
+   "text": "tatsächlich",
+   "src": "purelei/t1",
+   "start": 160.14,
+   "end": 160.6
+  },
+  {
+   "text": "Menschen",
+   "src": "purelei/t1",
+   "start": 160.74,
+   "end": 161.12
+  },
+  {
+   "text": "etwas",
+   "src": "purelei/t1",
+   "start": 161.26,
+   "end": 161.5
+  },
+  {
+   "text": "ganz",
+   "src": "purelei/t1",
+   "start": 161.62,
+   "end": 161.82
+  },
+  {
+   "text": "Bestimmtes",
+   "src": "purelei/t1",
+   "start": 161.9,
+   "end": 162.34
+  },
+  {
+   "text": "damit",
+   "src": "purelei/t1",
+   "start": 162.38,
+   "end": 162.6
+  },
+  {
+   "text": "verbinden.",
+   "src": "purelei/t1",
+   "start": 162.66,
+   "end": 163.0
+  },
+  {
+   "text": "Und",
+   "src": "purelei/t1",
+   "start": 179.31,
+   "end": 179.39
+  },
+  {
+   "text": "für",
+   "src": "purelei/t1",
+   "start": 179.41,
+   "end": 179.49
+  },
+  {
+   "text": "weitere",
+   "src": "purelei/t1",
+   "start": 179.57,
+   "end": 179.91
+  },
+  {
+   "text": "solcher",
+   "src": "purelei/t1",
+   "start": 179.99,
+   "end": 180.23
+  },
+  {
+   "text": "Markenstories,",
+   "src": "purelei/t1",
+   "start": 180.29,
+   "end": 181.05
+  },
+  {
+   "text": "lass",
+   "src": "purelei/t1",
+   "start": 181.23,
+   "end": 181.37
+  },
+  {
+   "text": "mal",
+   "src": "purelei/t1",
+   "start": 181.43,
+   "end": 181.49
+  },
+  {
+   "text": "gerne",
+   "src": "purelei/t1",
+   "start": 181.53,
+   "end": 181.73
+  },
+  {
+   "text": "ein",
+   "src": "purelei/t1",
+   "start": 181.75,
+   "end": 181.81
+  },
+  {
+   "text": "Follow",
+   "src": "purelei/t1",
+   "start": 181.83,
+   "end": 182.03
+  },
+  {
+   "text": "da.",
+   "src": "purelei/t1",
+   "start": 182.07,
+   "end": 182.13
+  }
+ ],
+ "pages": [
+  3,
+  2,
+  4,
+  1,
+  2,
+  4,
+  2,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  1,
+  3,
+  1,
+  4,
+  1,
+  2,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  1,
+  3,
+  2,
+  2,
+  2,
+  1,
+  3,
+  2,
+  2,
+  3,
+  1,
+  4,
+  2,
+  2,
+  3,
+  1,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  4,
+  3,
+  1,
+  1,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  1,
+  3,
+  2,
+  3,
+  3,
+  1,
+  3,
+  2,
+  2,
+  2,
+  1,
+  3,
+  2,
+  3,
+  2,
+  2,
+  1,
+  2,
+  3,
+  4,
+  3,
+  2,
+  2,
+  3,
+  3,
+  4,
+  4,
+  4,
+  3,
+  1,
+  1,
+  3,
+  2,
+  3,
+  3,
+  2,
+  1,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3
+ ]
+}

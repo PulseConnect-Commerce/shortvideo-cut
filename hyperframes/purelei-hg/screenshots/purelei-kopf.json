@@ -1,0 +1,1163 @@
+{
+ "url": "https://purelei.com/",
+ "status": 200,
+ "datum": "2026-10-30T23:35:59.376Z",
+ "svgs": [
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "sprite-icon",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"sprite-icon\" width=\"16\" height=\"16\" aria-hidden=\"true\" focusable=\"false\"><use href=\"//purelei.com/cdn/shop/t/1026/assets/layout.svg?v=81269570975788670241785858153#icon-menu\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "sprite-icon",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"sprite-icon\" width=\"20\" height=\"20\" aria-hidden=\"true\" focusable=\"false\"><use href=\"//purelei.com/cdn/shop/t/1026/assets/layout.svg?v=81269570975788670241785858153#icon-close\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://purelei.com/",
+   "cls": "sprite-icon",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"sprite-icon\" width=\"72\" height=\"18\" aria-hidden=\"true\" focusable=\"false\"><use href=\"//purelei.com/cdn/shop/t/1026/assets/layout.svg?v=81269570975788670241785858153#logo-purelei\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "sprite-icon",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"sprite-icon\" width=\"20\" height=\"20\" aria-hidden=\"true\" focusable=\"false\"><use href=\"//purelei.com/cdn/shop/t/1026/assets/layout.svg?v=81269570975788670241785858153#icon-close\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg style=\"display: none\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\">\n  <symbol id=\"hdr-icon-chevron-right\" viewBox=\"0 0 20 20\" fill=\"none\">\n    <path d=\"M7.72954 15L7 14.3079L11.5438 10L7 5.68935L7.72954 5L13 10L7.72954 15Z\" fill=\"currentColor\"></path>\n  </symbol>\n  <symbol id=\"hdr-icon-chevron-left\" viewBox=\"0 0 20 20\" fill=\"none\">\n    <path d=\"M12.2705 15L7 10L12.2705 5L13 5.68935L8.45628 10L13 14.3079L12.2705 15Z\" fill=\"currentColor\"></path>\n  </symbol>\n  <symbol id=\"hdr-icon-close\" viewBox=\"0 0 20 20\" fill=\"none\">\n    <path d=\"M6.8975 13.8637L6.13625 13.1025L9.21792 10L6.13625 6.91833L6.8975 6.15708L10 9.23875L13.0817 6.15708L13.8429 6.91833L10.7612 10L13.8429 13.1025L13.0817 13.8637L10 10.7821L6.8975 13.8637Z\" fill=\"currentColor\"></path>\n  </symbol>\n  <symbol id=\"hdr-icon-logo\" viewBox=\"0 0 72 18\" fill=\"none\">\n    <path d=\"M2.55367 8.58603V2.70754C2.55367 2.35199 2.6491 2.25811 3.00674 2.25811H4.05352C5.10232 2.25811 6.08079 3.04011 6.08079 4.84181V6.45375C6.08079 8.25146 5.10232 9.03845 4.05352 9.03845H3.00674C2.6491 9.03845 2.55367 8.93858 2.55367 8.58803V8.58603ZM0.502295 0.00499117C0.144661 0.00499117 0 0.147811 0 0.504355V17.2889C0 17.6444 0.142652 17.7883 0.502295 17.7883H2.05338C2.41102 17.7883 2.55568 17.6454 2.55568 17.2889V11.8359C2.55568 11.4803 2.65112 11.3855 3.00875 11.3855H4.27252C6.80007 11.3855 8.63647 9.55978 8.63647 6.50169V4.88676C8.63647 1.82866 6.80007 0.00299747 4.27252 0.00299747L0.502295 0.00499117ZM19.3886 0.00499117C19.031 0.00499117 18.8863 0.147811 18.8863 0.504355V12.6888C18.8863 14.5384 18.1459 15.629 16.8821 15.629C15.6425 15.629 14.9031 14.5384 14.9031 12.6888V0.504355C14.9031 0.149808 14.7594 0.00499117 14.4008 0.00499117H12.8557C12.4981 0.00499117 12.3534 0.147811 12.3534 0.504355V12.6888C12.3534 15.9846 13.9518 18 16.8842 18C19.8417 18 21.439 15.9846 21.439 12.6888V0.504355C21.439 0.149808 21.2963 0.00499117 20.9367 0.00499117H19.3886ZM28.3295 8.27942V2.70754C28.3295 2.35199 28.4299 2.25811 28.7835 2.25811H29.8323C30.8821 2.25811 31.8596 3.04011 31.8596 4.84181V6.17012C31.8596 7.94785 30.8821 8.72984 29.8323 8.72984H28.7865C28.4279 8.72984 28.3325 8.63496 28.3325 8.27942H28.3295ZM26.2821 0.00499117C25.9245 0.00499117 25.7798 0.147811 25.7798 0.504355V17.2889C25.7798 17.6444 25.9235 17.7883 26.2821 17.7883H27.8322C28.1898 17.7883 28.3345 17.6454 28.3345 17.2889V11.5253C28.3345 11.1697 28.4349 11.0758 28.7885 11.0758H30.0041L32.4834 17.4527C32.5839 17.6904 32.7456 17.7853 33.0319 17.7853H34.8402C35.0793 17.7853 35.1978 17.5945 35.0793 17.3109L32.3127 10.4826C33.6005 9.7006 34.4112 8.22949 34.4112 6.18809V4.88676C34.4112 1.82866 32.5749 0.00299747 30.0473 0.00299747L26.2821 0.00499117ZM39.2544 0.00499117C38.8967 0.00499117 38.7521 0.147811 38.7521 0.504355V17.2889C38.7521 17.6444 38.8947 17.7883 39.2544 17.7883H45.2166C45.5753 17.7883 45.7189 17.6454 45.7189 17.2889V16.0305C45.7189 15.674 45.5763 15.5312 45.2166 15.5312H41.7588C41.4012 15.5312 41.3058 15.4363 41.3058 15.0807V10.2459C41.3058 9.89036 41.4012 9.79449 41.7588 9.79449H45.2166C45.5753 9.79449 45.7189 9.65267 45.7189 9.29513V8.01675C45.7189 7.66121 45.5763 7.51739 45.2166 7.51739H41.7588C41.4012 7.51739 41.3058 7.42351 41.3058 7.06796V2.70754C41.3058 2.35199 41.4012 2.25811 41.7588 2.25811H45.2166C45.5753 2.25811 45.7189 2.1153 45.7189 1.75875V0.500361C45.7189 0.145814 45.5763 0.000999157 45.2166 0.000999157L39.2544 0.00499117ZM50.558 0.00499117C50.2004 0.00499117 50.0557 0.147811 50.0557 0.504355V17.2889C50.0557 17.6444 50.1984 17.7883 50.558 17.7883H56.4017C56.7584 17.7883 56.904 17.6454 56.904 17.2889V16.0305C56.904 15.674 56.7604 15.5312 56.4017 15.5312H53.0625C52.7048 15.5312 52.6094 15.4363 52.6094 15.0807V0.499361C52.6094 0.144814 52.4657 0 52.1071 0L50.558 0.00499117ZM59.5993 0.00499117C59.2417 0.00499117 59.097 0.147811 59.097 0.504355V17.2889C59.097 17.6444 59.2397 17.7883 59.5993 17.7883H65.5616C65.9192 17.7883 66.0639 17.6454 66.0639 17.2889V16.0305C66.0639 15.674 65.9202 15.5312 65.5616 15.5312H62.1008C61.7431 15.5312 61.6477 15.4363 61.6477 15.0807V10.2459C61.6477 9.89036 61.7482 9.79449 62.1008 9.79449H65.5586C65.9162 9.79449 66.0609 9.65267 66.0609 9.29513V8.01675C66.0609 7.66121 65.9172 7.51739 65.5586 7.51739H62.1008C61.7431 7.51739 61.6477 7.42351 61.6477 7.06796V2.70754C61.6477 2.35199 61.7482 2.25811 62.1008 2.25811H65.5586C65.9162 2.25811 66.0609 2.1153 66.0609 1.75875V0.500361C66.0609 0.145814 65.9172 0.000999157 65.5586 0.000999157L59.5993 0.00499117ZM69.9466 0.00499117C69.589 0.00499117 69.4443 0.147811 69.4443 0.504355V17.2889C69.4443 17.6444 69.587 17.7883 69.9466 17.7883H71.4977C71.8553 17.7883 72 17.6454 72 17.2889V0.500361C72 0.145814 71.8574 0.000999157 71.4977 0.000999157L69.9466 0.00499117Z\" fill=\"currentColor\"></path>\n  </symbol>\n</svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-right\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-left\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-right\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-left\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-right\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-left\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-right\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-left\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-right\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-left\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-right\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-left\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-right\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-left\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-right\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><use href=\"#hdr-icon-chevron-left\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://purelei.com/",
+   "cls": "sprite-icon",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"sprite-icon\" width=\"72\" height=\"18\" aria-hidden=\"true\" focusable=\"false\"><use href=\"//purelei.com/cdn/shop/t/1026/assets/layout.svg?v=81269570975788670241785858153#logo-purelei\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "sprite-icon",
+   "w": 16,
+   "h": 16,
+   "html": "<svg class=\"sprite-icon\" width=\"17\" height=\"17\" aria-hidden=\"true\" focusable=\"false\"><use href=\"//purelei.com/cdn/shop/t/1026/assets/layout.svg?v=81269570975788670241785858153#icon-search\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://purelei.com/account",
+   "cls": "sprite-icon",
+   "w": 16,
+   "h": 16,
+   "html": "<svg class=\"sprite-icon\" width=\"17\" height=\"17\" aria-hidden=\"true\" focusable=\"false\"><use href=\"//purelei.com/cdn/shop/t/1026/assets/layout.svg?v=81269570975788670241785858153#icon-account\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://purelei.com/account",
+   "cls": "sprite-icon",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"sprite-icon\" width=\"20\" height=\"20\" aria-hidden=\"true\" focusable=\"false\"><use href=\"//purelei.com/cdn/shop/t/1026/assets/layout.svg?v=81269570975788670241785858153#icon-checkmark\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "cls": "sprite-icon",
+   "w": 16,
+   "h": 16,
+   "html": "<svg class=\"sprite-icon\" width=\"16\" height=\"16\" aria-hidden=\"true\" focusable=\"false\"><use href=\"//purelei.com/cdn/shop/t/1026/assets/layout.svg?v=81269570975788670241785858153#icon-cart\"></use></svg>"
+  }
+ ],
+ "imgs": [
+  {
+   "src": "https://purelei.com/cdn/shop/files/annamaria.png?v=1789031653&width=92",
+   "alt": "Adventskalender x @anna_maria_ferchichi",
+   "a": "https://purelei.com/pages/annamariaferchichi",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produktyp_1c6651f9-5c63-4483-a5ee-6000e2ae2d70.png?v=1787812214&width=92",
+   "alt": "Adventskalender x @_putzmarie_ ",
+   "a": "https://purelei.com/pages/putzmarie",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produktyp_f3668800-d2b8-4fc8-9dd1-d424ffe7dcd4.png?v=1787812224&width=92",
+   "alt": "Adventskalender x @twenty4tim",
+   "a": "https://purelei.com/pages/twenty4tim",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms.png?v=1788378711&width=92",
+   "alt": "Adventskalender x @karokauer",
+   "a": "https://purelei.com/pages/karokauer",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_ketten.png?v=1762977596&width=92",
+   "alt": "Ketten",
+   "a": "https://purelei.com/collections/ketten",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_ohrringe.png?v=1762977702&width=92",
+   "alt": "Ohrringe",
+   "a": "https://purelei.com/collections/ohrringe",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_armbaender.png?v=1762977687&width=92",
+   "alt": "Armbänder & Armcuffs",
+   "a": "https://purelei.com/collections/armbaender",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_ringe.png?v=1762977671&width=92",
+   "alt": "Ringe",
+   "a": "https://purelei.com/collections/ringe",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_charms1.png?v=1764576978&width=92",
+   "alt": "Charms",
+   "a": "https://purelei.com/collections/charms",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_533d09f6-3d4d-4ea6-a95d-e6bb5e6bb33e.png?v=1789539220&width=92",
+   "alt": "Ohrring Charms",
+   "a": "https://purelei.com/collections/ohrringe-mit-charms",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_sets.png?v=1762977743&width=92",
+   "alt": "Sets",
+   "a": "https://purelei.com/collections/sets",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_fusskettchen.png?v=1762977624&width=92",
+   "alt": "Fußkettchen",
+   "a": "https://purelei.com/collections/fusskettchen",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_earcuffs.png?v=1762977643&width=92",
+   "alt": "Piercings & Earcuffs",
+   "a": "https://purelei.com/collections/piercings-earcuffs",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_Sonnenbrillen.png?v=1772717008&width=92",
+   "alt": "Sonnenbrillen",
+   "a": "https://purelei.com/collections/sonnenbrillen",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Kleidung-accessoires_Kleidung.png?v=1773331717&width=92",
+   "alt": "Kleidung & Accessoires",
+   "a": "https://purelei.com/collections/kleidung-accessoires",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_schmuckaufbewahrung.png?v=1762977792&width=92",
+   "alt": "Schmuckaufbewahrung",
+   "a": "https://purelei.com/collections/schmuckaufbewahrung",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_3e68a094-3548-457d-8246-2dddf799831b.png?v=1790691722&width=92",
+   "alt": "Bestseller",
+   "a": "https://purelei.com/collections/bestseller-maenner",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_collectionentdecken.png?v=1779953262&width=92",
+   "alt": "Alle Produkte entdecken",
+   "a": "https://purelei.com/collections/mannerschmuck-und-unisex",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Mannerschmuck-und-unisex_Ketten.png?v=1762770665&width=92",
+   "alt": "Ketten",
+   "a": "https://purelei.com/collections/maenner-ketten",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Mannerschmuck-und-unisex_Armbaender.png?v=1762770700&width=92",
+   "alt": "Armbänder",
+   "a": "https://purelei.com/collections/maenner-armbander",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Mannerschmuck-und-unisex_Ringe.png?v=1762770574&width=92",
+   "alt": "Ringe",
+   "a": "https://purelei.com/collections/maenner-ringe",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp-1.png?v=1790691395&width=92",
+   "alt": "Ohrringe & Piercings",
+   "a": "https://purelei.com/collections/maenner-ohrringe",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_Sonnenbrillen.png?v=1772717008&width=92",
+   "alt": "Sonnenbrillen",
+   "a": "https://purelei.com/collections/sonnenbrillen",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Kleidung-accessoires_Kleidung.png?v=1773331717&width=92",
+   "alt": "Kleidung & Accessoires",
+   "a": "https://purelei.com/collections/kleidung-accessoires",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_schmuckaufbewahrung.png?v=1762977792&width=92",
+   "alt": "Schmuckaufbewahrung",
+   "a": "https://purelei.com/collections/schmuckaufbewahrung",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_collectionentdecken.png?v=1779953262&width=92",
+   "alt": "Alle LEI Produkte anzeigen",
+   "a": "https://purelei.com/collections/lei-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_f1546109-a636-49d5-928e-00817242ea1a.png?v=1790686451&width=92",
+   "alt": "LEI Charms",
+   "a": "https://purelei.com/collections/lei-slider-charms",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_e1f35735-bdd8-4867-a85f-1965c9031a15.png?v=1790690412&width=92",
+   "alt": "LEI Sets",
+   "a": "https://purelei.com/collections/lei-sets",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_deineleigestalten.png?v=1779953324&width=92",
+   "alt": "Bundle Builder: Deine LEI gestalten",
+   "a": "https://purelei.com/pages/lei-bundle-builder",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenaviagtion_wasistlei.png?v=1779953077&width=92",
+   "alt": "Storytelling: Über die LEI",
+   "a": "https://purelei.com/pages/ueber-die-lei",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_workshopbuchen.png?v=1779953376&width=92",
+   "alt": "Workshop buchen",
+   "a": "https://purelei.com/pages/lei-workshops",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms_fb337341-fef1-4c67-8f74-387f217aab0e.jpg?v=1793262063&width=92",
+   "alt": "Gifting Pieces ",
+   "a": "https://purelei.com/collections/gifting-pieces",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms_56d223da-a14b-4b46-ba96-d80b1051bce2.jpg?v=1793261953&width=92",
+   "alt": "LEI Christmas Collection ",
+   "a": "https://purelei.com/collections/lei-christmas-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_highlights_festivecollection.png?v=1764835413&width=92",
+   "alt": "Festive Collection by Ann Kathrin Götze",
+   "a": "https://purelei.com/collections/festive-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms_62be1fae-1ba5-4234-ba88-f73d9302040c.jpg?v=1791407252&width=92",
+   "alt": "LEI Zodiac Charms ",
+   "a": "https://purelei.com/collections/lei-zodiac-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_533d09f6-3d4d-4ea6-a95d-e6bb5e6bb33e.png?v=1789539220&width=92",
+   "alt": "Ohrring Charms - Mix & Match ",
+   "a": "https://purelei.com/collections/ohrringe-mit-charms",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation-charm-bundlebuilder.png?v=1776780938&width=92",
+   "alt": "Charms + Ketten",
+   "a": "https://purelei.com/pages/bundle-builder",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_lettercollection.png?v=1763454357&width=92",
+   "alt": "Letters",
+   "a": "https://purelei.com/collections/letter-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_birthstone.png?v=1762976161&width=92",
+   "alt": "Birthstones",
+   "a": "https://purelei.com/collections/geburtsstein-schmuck",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_birthflower.png?v=1762976121&width=92",
+   "alt": "Birth Flowers",
+   "a": "https://purelei.com/collections/birthflower-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Schmuck_Charms.png?v=1762768174&width=92",
+   "alt": "Herzen",
+   "a": "https://purelei.com/collections/herzen",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektion_springflowers.png?v=1772716134&width=92",
+   "alt": "Blumen",
+   "a": "https://purelei.com/collections/spring-flowers-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_spirituality-collection.png?v=1764838941&width=92",
+   "alt": "Spirituality",
+   "a": "https://purelei.com/collections/spirituality-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_antistressschmuck.png?v=1762976079&width=92",
+   "alt": "Anti-Stress",
+   "a": "https://purelei.com/collections/anxiety-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_perlenschmuck.png?v=1762976207&width=92",
+   "alt": "Perlenschmuck",
+   "a": "https://purelei.com/collections/perlenschmuck",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Spirit-of-stones_Ohrringe.png?v=1782218463&width=92",
+   "alt": "Edel- & Natursteine",
+   "a": "https://purelei.com/collections/edel-naturseine",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Shop_Colorful-Moments_0033_25411-Ringset-Serenity_Gruppe_02_0002_260114a83375_Gruppe.psd.png?v=1784116222&width=92",
+   "alt": "Glitzer & Zirkonia",
+   "a": "https://purelei.com/collections/glitzer-schmuck",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_Hellsilber.png?v=1772717039&width=92",
+   "alt": "Schmuck in Hellsilber",
+   "a": "https://purelei.com/collections/schmuck-in-hellsilber",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_essentials.png?v=1773061873&width=92",
+   "alt": "Essentials",
+   "a": "https://purelei.com/collections/essentials",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_gravierbarerschmuck.png?v=1762976247&width=92",
+   "alt": "Gravierbarer Schmuck",
+   "a": "https://purelei.com/collections/engravable-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_echtschmuck.png?v=1762977731&width=92",
+   "alt": "Echt Schmuck | Fine Jewelry",
+   "a": "https://purelei.com/collections/fine-jewelry-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_Maritim-shells.png?v=1776324049&width=92",
+   "alt": "Maritimer Schmuck",
+   "a": "https://purelei.com/collections/maritime-shells-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_inspiration_brautschmuck.png?v=1762975656&width=92",
+   "alt": "Wedding Season",
+   "a": "https://purelei.com/collections/brautschmuck",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_swirlcollection.png?v=1762975984&width=92",
+   "alt": "Swirl Collection by @emaxlouise",
+   "a": "https://purelei.com/collections/swirl-collection-by-emaxlouise",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Neuheiten_Ohrringe5.png?v=1785743717&width=92",
+   "alt": "Favoriten",
+   "a": "https://purelei.com/collections/favoriten",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_inspiration_brautschmuck.png?v=1762975656&width=92",
+   "alt": "Brautschmuck",
+   "a": "https://purelei.com/collections/brautschmuck",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_inspiration_brautjungfern.png?v=1762975673&width=92",
+   "alt": "Brautjungfern",
+   "a": "https://purelei.com/collections/brautjungfern",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_inspiration_verlobung.png?v=1762975692&width=92",
+   "alt": "Verlobung",
+   "a": "https://purelei.com/collections/verlobung",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_highlights_festivecollection.png?v=1764835413&width=92",
+   "alt": "Festive Collection",
+   "a": "https://purelei.com/collections/festive-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_antistressschmuck.png?v=1762976079&width=92",
+   "alt": "Anxiety Schmuck",
+   "a": "https://purelei.com/collections/anxiety-collection",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation-geschenkideen.png?v=1776780923&width=92",
+   "alt": "Geschenkideen",
+   "a": "https://purelei.com/collections/geschenkideen",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms_e43b0fac-aa20-456d-b094-43914a70b84d.png?v=1791185073&width=92",
+   "alt": "PURELEI x mydays",
+   "a": "https://purelei.com/pages/purelei-x-mydays",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavi_gutschein.png?v=1786028810&width=92",
+   "alt": "Gutscheine",
+   "a": "https://purelei.com/collections/gutscheine",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation-charm-bundlebuilder.png?v=1776780938&width=92",
+   "alt": "Charm Bundle Builder",
+   "a": "https://purelei.com/pages/bundle-builder",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_deineleigestalten.png?v=1779953324&width=92",
+   "alt": "LEI Bundle Builder",
+   "a": "https://purelei.com/pages/lei-bundle-builder",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_geschenke_geschenkverpackung.png?v=1773046460&width=92",
+   "alt": "Geschenkverpackungen",
+   "a": "https://purelei.com/collections/geschenkverpackung",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_geschenke_frauen.png?v=1762964120&width=92",
+   "alt": "Geschenke für Frauen",
+   "a": "https://purelei.com/collections/geschenke-fur-sie",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_geschenke_maenner.png?v=1762964087&width=92",
+   "alt": "Geschenke für Männer",
+   "a": "https://purelei.com/collections/geschenke-fur-maenner",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_geschenke_kinder.png?v=1762964234&width=92",
+   "alt": "Geschenke für Deine Tochter",
+   "a": "https://purelei.com/collections/geschenke-fuer-deine-tochter",
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/t/1026/assets/logo.png?v=143560868255669250281785689776",
+   "alt": "PURELEI",
+   "a": "https://purelei.com/",
+   "w": 64.3125,
+   "h": 40
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_ketten.png?v=1762977596&width=46",
+   "alt": "Ketten",
+   "a": "https://purelei.com/collections/ketten",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_ohrringe.png?v=1762977702&width=46",
+   "alt": "Ohrringe",
+   "a": "https://purelei.com/collections/ohrringe",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_533d09f6-3d4d-4ea6-a95d-e6bb5e6bb33e.png?v=1789539220&width=46",
+   "alt": "Ohrring Charms",
+   "a": "https://purelei.com/collections/ohrringe-mit-charms",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_armbaender.png?v=1762977687&width=46",
+   "alt": "Armbänder & Armcuffs",
+   "a": "https://purelei.com/collections/armbaender",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_ringe.png?v=1762977671&width=46",
+   "alt": "Ringe",
+   "a": "https://purelei.com/collections/ringe",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_charms1.png?v=1764576978&width=46",
+   "alt": "Charms",
+   "a": "https://purelei.com/collections/charms",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_sets.png?v=1762977743&width=46",
+   "alt": "Sets",
+   "a": "https://purelei.com/collections/sets",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_fusskettchen.png?v=1762977624&width=46",
+   "alt": "Fußkettchen",
+   "a": "https://purelei.com/collections/fusskettchen",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_earcuffs.png?v=1762977643&width=46",
+   "alt": "Piercings & Earcuffs",
+   "a": "https://purelei.com/collections/piercings-earcuffs",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_collectionentdecken.png?v=1779953262&width=46",
+   "alt": "Alle Produkte entdecken",
+   "a": "https://purelei.com/collections/mannerschmuck-und-unisex",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_3e68a094-3548-457d-8246-2dddf799831b.png?v=1790691722&width=46",
+   "alt": "Bestseller Männer",
+   "a": "https://purelei.com/collections/bestseller-maenner",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Mannerschmuck-und-unisex_Ketten.png?v=1762770665&width=46",
+   "alt": "Ketten",
+   "a": "https://purelei.com/collections/maenner-ketten",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Mannerschmuck-und-unisex_Armbaender.png?v=1762770700&width=46",
+   "alt": "Armbänder",
+   "a": "https://purelei.com/collections/maenner-armbander",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Mannerschmuck-und-unisex_Ringe.png?v=1762770574&width=46",
+   "alt": "Ringe",
+   "a": "https://purelei.com/collections/maenner-ringe",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp-1.png?v=1790691395&width=46",
+   "alt": "Ohrringe & Piercings",
+   "a": "https://purelei.com/collections/maenner-ohrringe",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_Sonnenbrillen.png?v=1772717008&width=46",
+   "alt": "Sonnenbrillen",
+   "a": "https://purelei.com/collections/sonnenbrillen",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Kleidung-accessoires_Kleidung.png?v=1773331717&width=46",
+   "alt": "Kleidung & Accessoires",
+   "a": "https://purelei.com/collections/kleidung-accessoires",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_schmuckaufbewahrung.png?v=1762977792&width=46",
+   "alt": "Schmuckaufbewahrung",
+   "a": "https://purelei.com/collections/schmuckaufbewahrung",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_collectionentdecken.png?v=1779953262&width=46",
+   "alt": "Alle LEI Produkte anzeigen",
+   "a": "https://purelei.com/collections/lei-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_f1546109-a636-49d5-928e-00817242ea1a.png?v=1790686451&width=46",
+   "alt": "LEI Charms",
+   "a": "https://purelei.com/collections/lei-slider-charms",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_e1f35735-bdd8-4867-a85f-1965c9031a15.png?v=1790690412&width=46",
+   "alt": "LEI Sets",
+   "a": "https://purelei.com/collections/lei-sets",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_deineleigestalten.png?v=1779953324&width=46",
+   "alt": "Bundle Builder: Deine LEI gestalten",
+   "a": "https://purelei.com/pages/lei-bundle-builder",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenaviagtion_wasistlei.png?v=1779953077&width=46",
+   "alt": "Storytelling: Über die LEI",
+   "a": "https://purelei.com/pages/ueber-die-lei",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_workshopbuchen.png?v=1779953376&width=46",
+   "alt": "Workshop buchen",
+   "a": "https://purelei.com/pages/lei-workshops",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms_fb337341-fef1-4c67-8f74-387f217aab0e.jpg?v=1793262063&width=46",
+   "alt": "Gifting Pieces ",
+   "a": "https://purelei.com/collections/gifting-pieces",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms_56d223da-a14b-4b46-ba96-d80b1051bce2.jpg?v=1793261953&width=46",
+   "alt": "LEI Christmas Collection ",
+   "a": "https://purelei.com/collections/lei-christmas-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_highlights_festivecollection.png?v=1764835413&width=46",
+   "alt": "Festive Collection by Ann-Kathrin Götze ",
+   "a": "https://purelei.com/collections/festive-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms_62be1fae-1ba5-4234-ba88-f73d9302040c.jpg?v=1791407252&width=46",
+   "alt": "LEI Zodiac Charms ",
+   "a": "https://purelei.com/collections/lei-zodiac-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produkttyp_533d09f6-3d4d-4ea6-a95d-e6bb5e6bb33e.png?v=1789539220&width=46",
+   "alt": "Ohrring Charms",
+   "a": "https://purelei.com/collections/ohrringe-mit-charms",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation-charm-bundlebuilder.png?v=1776780938&width=46",
+   "alt": "Charms + Ketten",
+   "a": "https://purelei.com/pages/bundle-builder",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_lettercollection.png?v=1763454357&width=46",
+   "alt": "Letters",
+   "a": "https://purelei.com/collections/letter-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_birthstone.png?v=1762976161&width=46",
+   "alt": "Birthstones",
+   "a": "https://purelei.com/collections/geburtsstein-schmuck",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_birthflower.png?v=1762976121&width=46",
+   "alt": "Birth Flowers",
+   "a": "https://purelei.com/collections/birthflower-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_sternzeichenschmuck.png?v=1762976228&width=46",
+   "alt": "Sternzeichen ",
+   "a": "https://purelei.com/collections/zodiac-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Schmuck_Charms.png?v=1762768174&width=46",
+   "alt": "Herzen ",
+   "a": "https://purelei.com/collections/herzen",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektion_springflowers.png?v=1772716134&width=46",
+   "alt": "Blumen",
+   "a": "https://purelei.com/collections/spring-flowers-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_spirituality-collection.png?v=1764838941&width=46",
+   "alt": "Spirituality",
+   "a": "https://purelei.com/collections/spirituality-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_antistressschmuck.png?v=1762976079&width=46",
+   "alt": "Anti-Stress",
+   "a": "https://purelei.com/collections/anxiety-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_perlenschmuck.png?v=1762976207&width=46",
+   "alt": "Perlenschmuck",
+   "a": "https://purelei.com/collections/perlenschmuck",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Spirit-of-stones_Ohrringe.png?v=1782218463&width=46",
+   "alt": "Edel- & Natursteine",
+   "a": "https://purelei.com/collections/edel-naturseine",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Shop_Colorful-Moments_0033_25411-Ringset-Serenity_Gruppe_02_0002_260114a83375_Gruppe.psd.png?v=1784116222&width=46",
+   "alt": "Glitzer & Zirkonia",
+   "a": "https://purelei.com/collections/glitzer-schmuck",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_Hellsilber.png?v=1772717039&width=46",
+   "alt": "Schmuck in Hellsilber",
+   "a": "https://purelei.com/collections/schmuck-in-hellsilber",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_essentials.png?v=1773061873&width=46",
+   "alt": "Essentials",
+   "a": "https://purelei.com/collections/essentials",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_gravierbarerschmuck.png?v=1762976247&width=46",
+   "alt": "Gravierbarer Schmuck",
+   "a": "https://purelei.com/collections/engravable-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_frauen_echtschmuck.png?v=1762977731&width=46",
+   "alt": "Echt Schmuck | Fine Jewelry",
+   "a": "https://purelei.com/collections/fine-jewelry-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_Maritim-shells.png?v=1776324049&width=46",
+   "alt": "Maritimer Schmuck",
+   "a": "https://purelei.com/collections/maritime-shells-collection",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_inspiration_brautschmuck.png?v=1762975656&width=46",
+   "alt": "Wedding Season",
+   "a": "https://purelei.com/collections/brautschmuck",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_kollektionen_swirlcollection.png?v=1762975984&width=46",
+   "alt": "Swirl Collection by @emaxlouise",
+   "a": "https://purelei.com/collections/swirl-collection-by-emaxlouise",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Neuheiten_Ohrringe5.png?v=1785743717&width=46",
+   "alt": "Favoriten",
+   "a": "https://purelei.com/collections/favoriten",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavi_gutschein.png?v=1786028810&width=46",
+   "alt": "Gutscheine",
+   "a": "https://purelei.com/collections/gutscheine",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation-charm-bundlebuilder.png?v=1776780938&width=46",
+   "alt": "Charms Bundle Builder",
+   "a": "https://purelei.com/pages/bundle-builder",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_deineleigestalten.png?v=1779953324&width=46",
+   "alt": "LEI Bundle Builder",
+   "a": "https://purelei.com/pages/lei-bundle-builder",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_geschenke_geschenkverpackung.png?v=1773046460&width=46",
+   "alt": "Geschenkverpackungen",
+   "a": "https://purelei.com/collections/geschenkverpackung",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms_e43b0fac-aa20-456d-b094-43914a70b84d.png?v=1791185073&width=46",
+   "alt": "PURELEI x mydays ",
+   "a": "https://purelei.com/pages/purelei-x-mydays",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_geschenke_maenner.png?v=1762964087&width=46",
+   "alt": "Geschenke für Männer",
+   "a": "https://purelei.com/collections/geschenke-fur-maenner",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_geschenke_frauen.png?v=1762964120&width=46",
+   "alt": "Geschenk für Frauen",
+   "a": "https://purelei.com/collections/geschenke-fur-sie",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/mobilenavigation_geschenke_kinder.png?v=1762964234&width=46",
+   "alt": "Geschenke für Deine Tochter",
+   "a": "https://purelei.com/collections/geschenke-fuer-deine-tochter",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/annamaria.png?v=1789031653&width=46",
+   "alt": "Adventskalender x @anna_maria_ferchichi",
+   "a": "https://purelei.com/pages/annamariaferchichi",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produktyp_1c6651f9-5c63-4483-a5ee-6000e2ae2d70.png?v=1787812214&width=46",
+   "alt": "Adventskalender x @_putzmarie_ ",
+   "a": "https://purelei.com/pages/putzmarie",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/filter_Produktyp_f3668800-d2b8-4fc8-9dd1-d424ffe7dcd4.png?v=1787812224&width=46",
+   "alt": "Adventskalender x @twenty4tim",
+   "a": "https://purelei.com/pages/twenty4tim",
+   "w": 46,
+   "h": 46
+  },
+  {
+   "src": "https://purelei.com/cdn/shop/files/Charms.png?v=1788378711&width=46",
+   "alt": "Adventskalender x @karokauer",
+   "a": "https://purelei.com/pages/karokauer",
+   "w": 46,
+   "h": 46
+  }
+ ],
+ "icons": [
+  "https://purelei.com/cdn/shop/files/favicon-32.png?crop=center&height=32&v=1721655385&width=32"
+ ]
+}

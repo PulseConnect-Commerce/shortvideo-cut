@@ -1,0 +1,141 @@
+{
+ "projekt": "purelei",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 2.0,
+   "text": "Wie wird eigentlich aus Schmuck, den es in tausenden Onlineshops bereits gibt, eine Marke mit einer riesen Community?"
+  },
+  {
+   "take": "t1",
+   "ab": 10.8,
+   "text": "Purelei ist dafür zum Beispiel ein super Beispiel. Ich persönlich habe die Gründerin Alisa Jahnke damals beim OMR im Speech gehört und war wirklich begeistert von ihrer Story."
+  },
+  {
+   "take": "t1",
+   "ab": 25.7,
+   "text": "Denn die Gründerin hat sich nämlich zum Beispiel damals von Hawaii inspirieren lassen. Und genau dieses Lebensgefühl zieht sich tatsächlich durch den gesamten Onlineshop und die Marke. Aloha, Lifestyle und ein immer wieder erkennbarer Look. 2017 des Purelei dann damals gestartet, aber die Marke hat tatsächlich nicht einfach nur Schmuckbilder gepostet und einfach nur darauf gehofft, dass jemand diese bestellt,"
+  },
+  {
+   "take": "t1",
+   "ab": 54.2,
+   "text": "...sondern sie hat tatsächlich damals früh über Instagram und auch Influencer kommuniziert und dabei immer wieder Menschen eingebunden, die einfach zur Markenwelt passen."
+  },
+  {
+   "take": "t1",
+   "ab": 87.8,
+   "text": "Laut einem Shopify Beitrag hatte Purelei 2021 bereits mehr als 600 .000 Follower auf Instagram aufgebaut."
+  },
+  {
+   "take": "t1",
+   "ab": 98.2,
+   "text": "Für mich liegt hier natürlich der interessante Punkt aber ganz woanders. Denn bei Schmuck kannst du nur begrenzt über die reine Produktkategorie unterscheiden. Deshalb muss natürlich ein Kunde erstmal verstehen, warum er überhaupt sich ausgerechnet für deine Marke entscheiden sollte."
+  },
+  {
+   "take": "t1",
+   "ab": 116.3,
+   "text": "Und hier tatsächlich sehe ich immer drei ganz wichtige Learnings für Onlineshop-Betreiber. Erstens, definiere bitte eine Markenwelt, die auch ohne Logo erkennbar ist. Farben, Bildsprache und auch Botschaft sollten tatsächlich immer gut zusammenpassen. Zweitens, Such dir einfach mal Creator, die nicht nur nach Followerzahlen aus sind. Entscheidend ist natürlich, ob ihre Zielgruppe und ihre Inhalte auch tatsächlich zu deinem Produkt passen. Und drittens, bau einfach nicht nur Reichwerte auf. Überleg dir ganz genau, wie du diese Menschen in den Shop holst und eine langfristige Kundenbeziehung aufbaust. Denn eine Marke entsteht tatsächlich nicht nur dabei, dass du Produkte schön fotografierst,"
+  },
+  {
+   "take": "t1",
+   "ab": 159.3,
+   "text": "Sondern, dass auch tatsächlich Menschen etwas ganz bestimmtes damit verbinden."
+  },
+  {
+   "take": "t1",
+   "ab": 179.2,
+   "text": "Und für weitere solcher Markenstories, lass mal gerne ein Follow da.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 182.45
+ },
+ "korrekturen": [
+  [
+   "t1",
+   10.99,
+   "Purelei",
+   "PURELEI"
+  ],
+  [
+   "t1",
+   38.73,
+   "des",
+   "ist"
+  ],
+  [
+   "t1",
+   38.87,
+   "Purelei",
+   "PURELEI"
+  ],
+  [
+   "t1",
+   54.42,
+   "...sondern",
+   "sondern"
+  ],
+  [
+   "t1",
+   88.41,
+   "Shopify",
+   "Shopify-Beitrag"
+  ],
+  [
+   "t1",
+   88.87,
+   "Beitrag",
+   ""
+  ],
+  [
+   "t1",
+   89.63,
+   "Purelei",
+   "PURELEI"
+  ],
+  [
+   "t1",
+   92.39,
+   "600",
+   "600.000"
+  ],
+  [
+   "t1",
+   93.11,
+   ".000",
+   ""
+  ],
+  [
+   "t1",
+   131.15,
+   "Such",
+   "such"
+  ],
+  [
+   "t1",
+   142.54,
+   "Reichwerte",
+   "Reichweite"
+  ],
+  [
+   "t1",
+   159.4,
+   "Sondern,",
+   "sondern"
+  ],
+  [
+   "t1",
+   161.9,
+   "bestimmtes",
+   "Bestimmtes"
+  ]
+ ]
+}
