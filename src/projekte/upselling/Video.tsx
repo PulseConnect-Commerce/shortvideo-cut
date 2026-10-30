@@ -7,7 +7,10 @@
  * "passt?", falsches Beispiel Profi-Maschine 600 € mit Warnzeichen, Pop-up-Stapel (Schema), eine Empfehlung mit klarem
  * Nutzen, passende Paare, Gegenüberstellung AOV / Conversion / Marge, Shop-Mock-up Produktauswahl / Warenkorb, Schluss
  * "Die Empfehlung soll passen, nicht stören." (Briefing), zum Schluss nur das Folgen-Symbol. Alle Preise als DEMO.
- * Kein Hook-Titel: das Briefing sagt "kein übergroßer Hook-Titel nötig", keine Marke, keine News (karten-hell.md).
+ * Hook-Titel seit Runde 2 (Pauls Wunsch 30.10.: "Mir fehlt hier leider eine Titel-Hook über meinem Kopf zu Beginn. Einfach nur
+ * kurz und prägnant. 'Unterschied zwischen Upselling und Cross Selling'"): Design "verlauf" wie E06, "UNTERSCHIED ZWISCHEN" /
+ * "UPSELLING UND CROSS-SELLING" während des ersten Satzes bis nach "Cross-Selling", an der Kartenposition unter Kopf und
+ * Pille (über dem Kopf ist bei Kopfoberkante ~315 keine sichere Fläche); die erste Karte (K1) kommt erst danach.
  * Keine Quelle groß: die Briefing-Seite (Shopify-Hilfe "Marketing und Werbeaktionen") sagt nichts zu Upselling oder
  * Cross-Selling, es gibt keinen Satz zu belegen (offene Frage in der Übergabekarte).
  * Bild (Pauls Vorgaben 25.10.: Kopf höher, Untertitel und Karten darunter; 27.10.: "erst ab Hüfthöhe"): sitzende Aufnahme,
@@ -23,7 +26,7 @@
  */
 import type React from "react";
 import { AbsoluteFill, Easing, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
-import { clamp, Musik, Sfx, Takes } from "../../lib/bausteine";
+import { clamp, HookTitle, Musik, Sfx, Takes } from "../../lib/bausteine";
 import { DesignRahmen } from "../../lib/design";
 import { PillUntertitel } from "../../lib/pillen";
 import { Raster } from "../../lib/raster";
@@ -65,6 +68,9 @@ const GammaFilter: React.FC = () => (
   </svg>
 );
 
+/** Hook-Titel bis nach "Cross-Selling" (endet ~2,9 s), ganz weg bei ~3,13 s; K1 kommt bei 3,15 s auf "direkt" */
+const HOOK_ENDE = Math.round(2.92 * C.FPS);
+
 /** Soundeffekte der Karten (Sekunden im Schnitt, aus karten.json) */
 const TOENE = karten.karten.flatMap((k) => k.sfx);
 
@@ -96,6 +102,14 @@ const Inhalt: React.FC<Props> = ({ voice = true, sfx = true, raster = false, unt
           grade={GRADE}
         />
       </AbsoluteFill>
+
+      {/* Hook-Titel im easyJet-Stil (Design "verlauf", wie E06), an der Kartenposition unter Kopf und Pille: oben bei y 1140
+          (Pille endet bei ~1116), x 94-886, wie Karte und Pille um x 490 zentriert, nichts in der TikTok-Leiste rechts (ab x 900) */}
+      <DesignRahmen design="verlauf">
+        <AbsoluteFill style={{ transform: "translate(-50px, 888px) scale(0.9)", transformOrigin: "50% 0%" }}>
+          <HookTitle fr={fr} line1="UNTERSCHIED ZWISCHEN" line2="UPSELLING UND CROSS-SELLING" outAt={HOOK_ENDE} />
+        </AbsoluteFill>
+      </DesignRahmen>
 
       {/* Erklär-Bilder aus HyperFrames (hyperframes/upselling-skizzen), helle Karten unter dem Kopf */}
       <Sequence from={0} durationInFrames={C.DURATION} layout="none">

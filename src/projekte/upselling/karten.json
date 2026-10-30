@@ -1,23 +1,21 @@
 {
- "hinweis": "Erklär-Bilder (karten-aufbau.md, 'Visuelle Metaphern'; Vorlagen hyperframes/warenkorb-skizzen und hyperframes/pagebuilder-skizzen) für E08 · Upselling vs. Cross-Selling. Sekunden im geschnittenen Video (cut.json, 102,93 s). Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, pop auf den Preisen (129 €, 159 €, Bohnen 15 €, 600 €) und dem Bestellwert, success auf 'erleichtern', klick auf dem Tipp 'Auswählen' und auf dem Plus. Gebaut in hyperframes/upselling-skizzen/index.html. Nur Lucide-Icons und eigene flache Zeichnungen (Maschine, Bohnen, Schuh, Socke); Zahlen nur aus Take und Briefing (129, 159, +30, 15, 144, 600), alle als DEMO gekennzeichnet; keine echte Kennzahl, keine Marke, kein B-Roll aus alten Videos, keine Folgennummer, keine Quelle groß (die Briefing-Seite sagt nichts zu Upselling/Cross-Selling).",
+ "hinweis": "Erklär-Bilder (karten-aufbau.md, 'Visuelle Metaphern'; Vorlagen hyperframes/warenkorb-skizzen und hyperframes/pagebuilder-skizzen) für E08 · Upselling vs. Cross-Selling. Sekunden im geschnittenen Video (cut.json, 102,93 s). Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, pop auf den Preisen (129 €, 159 €, Bohnen 15 €, 600 €) und dem Bestellwert, success auf 'erleichtern', klick auf dem Tipp 'Auswählen', pop auf dem Plus. Gebaut in hyperframes/upselling-skizzen/index.html. Nur Lucide-Icons und eigene flache Zeichnungen (Maschine, Bohnen, Schuh, Socke); Zahlen nur aus Take und Briefing (129, 159, +30, 15, 144, 600), alle als DEMO gekennzeichnet; keine echte Kennzahl, keine Marke, kein B-Roll aus alten Videos, keine Folgennummer, keine Quelle groß (die Briefing-Seite sagt nichts zu Upselling/Cross-Selling). Runde 2 (30.10.): Hook-Titel 'UNTERSCHIED ZWISCHEN / UPSELLING UND CROSS-SELLING' in Remotion (0-3,1 s), K1 deshalb erst ab 3,15 s; K14 neue Folgen-Karte groß und mittig.",
  "karten": [
   {
    "id": "k1",
-   "wort": "Upselling",
-   "text": "DER UNTERSCHIED – Upselling: Paket wird größer (Pfeil nach oben) auf 'Upselling', 'vs.' auf 'und', Cross-Selling: Paket + Paket auf 'Cross-Selling', Warenkorb auf 'Warenkorb', handschriftlich 'am Warenkorb' auf 'zeigen'",
-   "start": 1.8,
+   "wort": "direkt",
+   "text": "DER UNTERSCHIED (seit Runde 2 nach dem Hook-Titel) – auf 'direkt' Upselling: Paket wird größer (Pfeil nach oben) vs. Cross-Selling: Paket + Paket, Warenkorb auf 'Warenkorb', handschriftlich 'am Warenkorb' auf 'zeigen'",
+   "start": 3.15,
    "ende": 5.27,
    "teile": {
-    "upselling": 1.8,
-    "und": 2.2,
-    "cross_selling": 2.3,
+    "direkt": 3.15,
     "warenkorb": 3.97,
     "zeigen": 4.37
    },
    "sfx": [
     {
      "datei": "whoosh.mp3",
-     "at": 1.8,
+     "at": 3.15,
      "volume": 0.12
     },
     {
@@ -466,7 +464,7 @@
   {
    "id": "k14",
    "wort": "Wenn",
-   "text": "Nur das Folgen-Symbol (Pauls Vorgabe 2026-10-25): Profilbild mit Plus und 'Folgen' auf 'Wenn', Ring auf 'Tipps', Zeiger auf 'drücke', das Plus wird auf 'Plus' angetippt und zum Haken; bleibt bis zum Ende",
+   "text": "Nur das Folgen-Symbol, groß und mittig, Plus wie bei TikTok (Pauls Vorgaben 2026-10-25 und 2026-10-30, karten-aufbau.md Punkt 7): Karte 560 x 200 (Kartenmitte x 540) mit Avatar 150 px, Plus 64 px und 'Folgen' 72 px auf 'Wenn', leiser Ring auf 'Tipps', Zeiger auf 'drücke', auf 'Plus' drückt das Plus ein, dreht sich, wird zum Haken im Verlauf mit Ring-Puls; bleibt bis zum Ende",
    "start": 98.6,
    "ende": 102.93,
    "teile": {
@@ -482,7 +480,7 @@
      "volume": 0.12
     },
     {
-     "datei": "klick.mp3",
+     "datei": "pop.mp3",
      "at": 102.13,
      "volume": 0.1
     }
