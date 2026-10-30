@@ -1,0 +1,54 @@
+{
+ "projekt": "upselling",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 11.98,
+   "text": "ich würde dir am besten den Unterschied zwischen Upselling und Cross-Selling direkt in einem Warenkorb zeigen. Stell dir vor, du betreibst zum Beispiel einen Kaffeeshop. Und dein Kunde hat jetzt eine Kaffeemaschine für 129 Euro ausgewählt. Beim Upselling empfiehlst du jetzt tatsächlich ihm eine hochwertige Variante der selben Maschine. zum Beispiel für 159 Euro. Wenn er aber wirklich mehr Funktionen braucht, dann kann das tatsächlich auch sinnvoll sein.",
+   "bis": 36.62
+  },
+  {
+   "take": "t1",
+   "ab": 54.6,
+   "text": "Beim Cross-Selling hingegen bleibt die Maschine tatsächlich für 129 Euro einfach im Warenkorb und empfiehlt stattdessen aber ein passendes Zubehör, wie zum Beispiel Kaffeebohnen"
+  },
+  {
+   "take": "t1",
+   "ab": 71.2,
+   "von": 70.95,
+   "text": "Das klingt jetzt erst einmal nach zwei Methoden, um einfach den Bestellwert zu erhöhen. Aber die spannende Frage ist doch, passt überhaupt die Empfehlung zu dem Kauf?"
+  },
+  {
+   "take": "t1",
+   "ab": 83.5,
+   "text": "und wenn du jetzt jemanden beim Kauf einer Einstiegsmaschine, zum Beispiel gleich ein Profi-Maschine aufdrängst, dann kann ihm das natürlich auch sehr stark verunsichern. Und drei Pop-ups hintereinander machen tatsächlich die Sache nicht unbedingt besser. Ich würde deshalb hier erst einmal mit einer Empfehlung starten, die zum Beispiel einen klaren Nutzen hat."
+  },
+  {
+   "take": "t1",
+   "ab": 109.8,
+   "text": "Bei der Maschine könnten es dann auch tatsächlich Bohnen sein, bei Laufschuhen zum Beispiel passende Socken oder einfach bei einem technischen Produkt vielleicht eine kompatible Erweiterung."
+  },
+  {
+   "take": "t1",
+   "ab": 130.4,
+   "text": "Aber misst ihr tatsächlich auch nicht unbedingt nur den durchschnittlichen Warenkorbwert dabei, sondern eben auch ob die Conversion Rate zum Beispiel darunter leidet und eben was nach Abzug der Kosten tatsächlich am Ende übrig bleibt. Mein Tipp ist eben außerdem die Empfehlung an der richtigen Stelle zu platzieren. Ein Upgrade gehört eher zu der Produktauswahl und ein Zubehörartikel kann dann tatsächlich auch mal im Warenkorb sinnvoll sein."
+  },
+  {
+   "take": "t1",
+   "ab": 178.6,
+   "text": "Upselling und Cross-Selling funktionieren für mich persönlich besonders dann gut, wenn sie tatsächlich auch eine Kaufentscheidung erleichtern. Und nicht einfach nur, wenn sie möglichst aggressiv noch etwas verkaufen sollen. Wenn du weitere solcher Tipps für E-Commerce hören möchtest, dann drücke gerne mal das Plus weg.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 193.45
+ },
+ "korrekturen": []
+}
