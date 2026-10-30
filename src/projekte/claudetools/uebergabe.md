@@ -1,6 +1,6 @@
 # Übergabekarte: K01 · Claude: 6 Werkzeuge, die die meisten nicht kennen
 
-Status: **eingeplant** für Fr 30.10.2026 19:00 Europe/Berlin (Pauls Wunsch 30.10.: „heute Nachmittag/Abend“), Metricool TikTok / Instagram / YouTube 411382570 / 411382896 / 411382990 (uuids 4802212422760481813 / -575009748820801101 / -3571128460751843468), Drive-Final 1xZr1wsgfBZ2bgwPW8Zk2PeZQXahDN2_0, Ordner 1JljYvOZKLSqX0uPZxSyptjaUd94fz2Oa
+Status: **veröffentlicht** Fr 30.10.2026 19:00: TikTok https://www.tiktok.com/@_donpaulo/video/7702523687991332118 · Instagram https://www.instagram.com/reel/DfILz__FG7z/ · YouTube https://www.youtube.com/shorts/XSM1lh79nr8 (Metricool 411382570 / 411382896 / 411382990), Drive-Final 1xZr1wsgfBZ2bgwPW8Zk2PeZQXahDN2_0, Ordner 1JljYvOZKLSqX0uPZxSyptjaUd94fz2Oa; lokal t1.orig.mp4 und post-Datei gelöscht (Platz)
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): K01 · Claude: 6 Werkzeuge, die die meisten nicht kennen
 - **Format / Design:** HERO / pulse (helle Karten als Erklär-Bilder, Pill-Untertitel, PulseConnect-Verlauf), Hook-Titel im Design verlauf (easyJet-Stil); neue Reihe K "KI allgemein"
