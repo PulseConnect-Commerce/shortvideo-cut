@@ -1,12 +1,12 @@
 # Übergabekarte: E08 · Upselling vs. Cross-Selling
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **zur Prüfung** (Cutter, 30.10.2026) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): E08 · Upselling vs. Cross-Selling
-- **Format / Design:** FACE / …
+- **Format / Design:** FACE (Serie "E-Commerce einfach erklärt") / aktueller E-Look wie E06 und E07: kein Hook-Titel (Briefing: "kein übergroßer Hook-Titel nötig"), helle Karten unter dem Kopf als Erklär-Bilder (karten-aufbau.md "Visuelle Metaphern", Vorlage P04 pagebuilder), Pill-Untertitel (aktives Wort `#00E090`), Farbwelt PulseConnect-Verlauf `#00D088 → #31ADEC`, Musik ruhig, sanfte Gamma-Kurve plus sanfter Grade und leichte Unscharfmaske (dunkle, weiche Aufnahme), Porträt-Modus; keine Quelle groß (siehe Entscheidungen)
 - **Plattformen:** TikTok, Instagram Reel, YouTube Short
-- **Termin laut Kalender:** … (Termin-Titel und Datum/Uhrzeit aus dem VERÖFFENTLICHUNGSPLAN; "keiner" wenn es keinen gibt)
-- **Briefing:** … (Titel des Kalendertermins)
+- **Termin laut Kalender:** 📣 "E08 · Upselling vs. Cross-Selling | E-Commerce einfach erklärt veröffentlichen", Mo 07.12.2026, 14:00 (Serien-Slot; im Briefing "Veröffentlichung: 2026-12-07")
+- **Briefing:** "🎬 E08 · Upselling vs. Cross-Selling | Veröffentlichung: 2026-12-07", `src/projekte/upselling/briefing.md`; Rohclip Drive "E08 · Upselling vs. Cross-Selling" (ID 1KkpBSu4VURMMPrwUb1G5APExJPeVoofr, hochgeladen 28.10.2026, 196,9 s, 1080 x 1920, HEVC, 30 fps)
 
 <!-- auto:start (npm run uebergabe) -->
 - **Projekt / Komposition:** `upselling` / `Upselling`
