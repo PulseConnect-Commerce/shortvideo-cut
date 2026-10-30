@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>E07 · Warenkorbabbruch – Erklär-Bilder</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- FACE, Serie "E-Commerce einfach erklärt", E07 · Warenkorbabbruch. Erklär-Bilder statt Wortkarten (karten-aufbau.md
+         "Visuelle Metaphern", Vorlagen hyperframes/pagebuilder-skizzen und hyperframes/clv-skizzen): pro Gedanke ein Bild,
+         das den Satz ohne Ton erklärt. Briefing-Grafiken: fiktive Produktseite "Jacke 89 €" und Checkout "+ 7 € Versand"
+         (DEMO), zweiter Besucher mit zwei Größen "Noch im Vergleich", Warenkorb- ≠ Checkout-Abbruch, Trichter
+         100 → 60 → 30 als BEISPIEL mit den Differenzen 40 und 30, Mobile-Checkout-Mock-up (DEMO) mit Versand, Zahlungsarten
+         und Formularen nacheinander markiert, pauschaler "−10 %"-Rabatt durchgestrichen und "Ursache vor Gutschein".
+         Nur seine Beispielwerte (89 €, 7 €, 100 / 60 / 30, 40, 30, 10 %), keine Gesamtsumme, keine echte Kennzahl, keine
+         Marken-Logos; Icons Lucide (ISC), Schriften Geist und Caveat (OFL, lokal).
+         Rahmen wie freigegeben: helle Karte unter dem Kopf (x 80-900, y 1120-1480; Instagram-Zone ab 1500), Pill-Untertitel
+         darüber (Remotion, y ~1062), ruhige Bewegung ohne Überschwingen.
+         Zeiten = Sekunden im geschnittenen Video (src/projekte/warenkorb/cut.json, 99,87 s), Teile 2 Frames vor ihrem Wort;
+         Liste mit Tönen in src/projekte/warenkorb/karten.json. 70,35-73,27 s keine Karte: dort steht die Quelle groß
+         (Shopify-Hilfe, Remotion src/lib/quelle-gross.tsx). -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1120px; width: 820px; height: 360px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; left: 30px; top: 22px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .badge { position: absolute; right: 26px; top: 16px; padding: 5px 13px 6px; border-radius: 10px; background: #0b0c0e; color: #fff; font-size: 20px; font-weight: 800; letter-spacing: 0.14em; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 56px; width: 820px; height: 304px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 28px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #9aa3af; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .zeile { font-size: 20px; font-weight: 800; fill: #6b7280; letter-spacing: 0.08em; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #31adec; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.grau { stroke: #6b7280; }
+      .ico.weiss { stroke: #fff; }
+      .gtext { fill: url(#gv); }
+      .jacke-k { fill: #3b4a5c; stroke: #0b0c0e; stroke-width: 2.6; stroke-linejoin: round; }
+      .jacke-l { fill: none; stroke: #0b0c0e; stroke-width: 2.2; stroke-linecap: round; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, das Plus wird angetippt und zum Haken (Pauls Vorgabe 2026-10-25) */
+      .folgekarte { position: absolute; left: 80px; top: 1120px; width: fit-content; height: 132px; display: flex; align-items: center; gap: 26px; padding: 0 46px 0 24px; border-radius: 32px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); opacity: 0; }
+      .avatar { position: relative; flex: none; width: 88px; height: 88px; border-radius: 44px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 50px; height: 50px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .avatar .ring { position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #31adec; opacity: 0; }
+      .plus { position: absolute; right: -10px; bottom: -10px; width: 42px; height: 42px; border-radius: 21px; background: #0b0c0e; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; }
+      .plus svg { position: absolute; width: 24px; height: 24px; stroke: #fff; stroke-width: 3.4; }
+      .plus .haken { opacity: 0; stroke: #0b0c0e; }
+      .ftext { position: relative; font-size: 46px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 44px; height: 44px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="warenkorb-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="99.9">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f9ec" /><stop offset="1" stop-color="#dcf0fb" /></linearGradient>
+          <!-- Jacke (eigene flache Zeichnung, 120 x 120): lange Ärmel, Kragen, Reißverschluss, Taschen -->
+          <g id="jacke">
+            <path class="jacke-k" d="M44 14 L52 9 Q60 17 68 9 L76 14 L98 26 Q104 30 105 38 L112 92 L97 95 L90 52 L90 110 L30 110 L30 52 L23 95 L8 92 L15 38 Q16 30 22 26 Z" />
+            <path class="jacke-l" d="M52 9 L56 22 L60 18 L64 22 L68 9" />
+            <path class="jacke-l" d="M60 20 L60 110" />
+            <path class="jacke-l" d="M38 78 L50 78 M70 78 L82 78" />
+          </g>
+          <!-- Einkaufswagen (Lucide shopping-cart) -->
+          <g id="i-wagen"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></g>
+          <g id="i-karte"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></g>
+          <g id="i-person"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-lupe"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+          <g id="i-lkw"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></g>
+          <g id="i-uhr"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></g>
+          <g id="i-geld"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></g>
+          <g id="i-bank"><line x1="3" x2="21" y1="22" y2="22" /><line x1="6" x2="6" y1="18" y2="11" /><line x1="10" x2="10" y1="18" y2="11" /><line x1="14" x2="14" y1="18" y2="11" /><line x1="18" x2="18" y1="18" y2="11" /><polygon points="12 2 20 7 4 7" /></g>
+          <g id="i-feld"><path d="M5 4h1a3 3 0 0 1 3 3 3 3 0 0 1 3-3h1" /><path d="M13 20h-1a3 3 0 0 1-3-3 3 3 0 0 1-3 3H5" /><path d="M5 16H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1" /><path d="M13 8h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7" /><path d="M9 7v10" /></g>
+          <g id="i-laden"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="i-shirt"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" /></g>
+          <g id="i-fertig"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></g>
+          <g id="i-tuer"><path d="M13 4h3a2 2 0 0 1 2 2v14" /><path d="M2 20h3" /><path d="M13 20h9" /><path d="M10 12v.01" /><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z" /></g>
+          <g id="i-vergleich"><path d="M8 3 4 7l4 4" /><path d="M4 7h16" /><path d="m16 21 4-4-4-4" /><path d="M20 17H4" /></g>
+          <g id="i-megafon"><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></g>
+          <g id="i-birne"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
+          <g id="i-auge"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></g>
+          <!-- Rabatt-Ticket 200 x 100 mit Kerben links und rechts -->
+          <path id="ticket" d="M14 0 H186 A14 14 0 0 1 200 14 V36 A14 14 0 0 0 200 64 V86 A14 14 0 0 1 186 100 H14 A14 14 0 0 1 0 86 V64 A14 14 0 0 0 0 36 V14 A14 14 0 0 1 14 0 Z" />
+          <!-- rotes Abbruch-Kreuz -->
+          <g id="kreuz"><circle r="22" fill="#e5484d" /><path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#fff" stroke-width="4.2" stroke-linecap="round" /></g>
+          <g id="haken"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 L-2 6 L9 -6" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </defs>
+      </svg>
+
+      <!-- K1 Der erste Reflex: "Bei abgebrochenen Warenkörben denken tatsächlich viele Online-Händler einfach immer sofort an
+           Rabattcodes." abgebrochenen 0,30 / Warenkörben 1,02 / denken 1,65 / Online-Händler 2,70 / sofort 3,74 / Rabattcodes 4,38 -->
+      <section id="k1" class="karte clip" data-start="0.23" data-duration="5.42" data-track-index="1">
+        <div class="kicker">Warenkorb abgebrochen</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <g id="k1-wagen">
+            <rect x="30" y="34" width="170" height="170" rx="30" class="rahmen" />
+            <g transform="translate(60 64) scale(4.6)" class="ico" style="stroke-width:1.6"><use href="#i-wagen" /></g>
+          </g>
+          <use id="k1-x" href="#kreuz" x="196" y="38" opacity="0" />
+          <text id="k1-wl" x="115" y="246" text-anchor="middle" class="lab" opacity="0">Warenkorb</text>
+          <path id="k1-pfeil" pathLength="1" d="M222 119 L 318 119 M302 105 L 320 119 L 302 133" fill="none" stroke="#9aa3af" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+          <g id="k1-laden" opacity="0">
+            <rect x="340" y="34" width="170" height="170" rx="30" class="rahmen" />
+            <g transform="translate(370 64) scale(4.6)" class="ico" style="stroke-width:1.6"><use href="#i-laden" /></g>
+          </g>
+          <text id="k1-ll" x="425" y="246" text-anchor="middle" class="lab" opacity="0">Händler</text>
+          <circle id="k1-d1" cx="526" cy="64" r="7" fill="#d1d5db" opacity="0" />
+          <circle id="k1-d2" cx="546" cy="44" r="10" fill="#d1d5db" opacity="0" />
+          <g id="k1-ticket" opacity="0">
+            <use href="#ticket" x="566" y="64" transform="translate(566 64) scale(1.17 1.1) translate(-566 -64)" fill="url(#gvd)" />
+            <text x="612" y="147" text-anchor="middle" style="font-size:58px;font-weight:900;fill:#0b0c0e">%</text>
+            <path d="M650 78 L650 166" stroke="#0b0c0e" stroke-width="2.5" stroke-dasharray="6 7" opacity="0.5" />
+            <text x="723" y="114" text-anchor="middle" style="font-size:25px;font-weight:800;fill:#0b0c0e">Rabatt-</text>
+            <text x="723" y="144" text-anchor="middle" style="font-size:25px;font-weight:800;fill:#0b0c0e">code</text>
+          </g>
+          <clipPath id="k1-clip"><rect id="k1-cliprect" x="212" y="20" width="0" height="80" /></clipPath>
+          <text x="218" y="86" class="hand" style="font-size:52px" clip-path="url(#k1-clip)" transform="rotate(-5 270 70)">sofort</text>
+        </svg>
+      </section>
+
+      <!-- K2 Wo springen sie ab? "Aber ich würde vorher tatsächlich mal herausfinden, an welcher Stelle überhaupt die Leute
+           abspringen." Aber 5,74 / herausfinden 7,16 / welcher 7,82 / Stelle 8,10 / abspringen 9,10 -->
+      <section id="k2" class="karte clip" data-start="5.67" data-duration="4.17" data-track-index="1">
+        <div class="kicker">Erst herausfinden</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <path d="M120 74 L 690 74" fill="none" stroke="#d1d5db" stroke-width="5" stroke-linecap="round" />
+          <g id="k2-n1"><rect x="56" y="24" width="100" height="100" rx="24" class="rahmen" /><g transform="translate(76 44) scale(2.5)" class="ico"><use href="#i-shirt" /></g><text x="106" y="166" text-anchor="middle" class="lab" style="font-size:24px">Produkt</text></g>
+          <g id="k2-n2"><rect x="256" y="24" width="100" height="100" rx="24" class="rahmen" /><g transform="translate(276 44) scale(2.5)" class="ico"><use href="#i-wagen" /></g><text x="306" y="166" text-anchor="middle" class="lab" style="font-size:24px">Warenkorb</text></g>
+          <g id="k2-n3"><rect x="456" y="24" width="100" height="100" rx="24" class="rahmen" /><g transform="translate(476 44) scale(2.5)" class="ico"><use href="#i-karte" /></g><text x="506" y="166" text-anchor="middle" class="lab" style="font-size:24px">Checkout</text></g>
+          <g id="k2-n4"><rect x="656" y="24" width="100" height="100" rx="24" fill="url(#gvd)" /><g transform="translate(676 44) scale(2.5)" class="ico"><use href="#i-fertig" /></g><text x="706" y="166" text-anchor="middle" class="lab" style="font-size:24px">Kauf</text></g>
+          <!-- Abspringen zwischen den Schritten: wo? -->
+          <g id="k2-a1" opacity="0"><path d="M206 80 C 206 140, 214 186, 232 214" fill="none" stroke="#9aa3af" stroke-width="4" stroke-dasharray="8 8" stroke-linecap="round" /><text x="238" y="262" text-anchor="middle" class="hand" style="font-size:52px">?</text></g>
+          <g id="k2-a2" opacity="0"><path d="M406 80 C 406 140, 414 186, 432 214" fill="none" stroke="#9aa3af" stroke-width="4" stroke-dasharray="8 8" stroke-linecap="round" /><text x="438" y="262" text-anchor="middle" class="hand" style="font-size:52px">?</text></g>
+          <g id="k2-a3" opacity="0"><path d="M606 80 C 606 140, 614 186, 632 214" fill="none" stroke="#9aa3af" stroke-width="4" stroke-dasharray="8 8" stroke-linecap="round" /><text x="638" y="262" text-anchor="middle" class="hand" style="font-size:52px">?</text></g>
+          <g id="k2-lupe" opacity="0" transform="translate(106 74)"><circle r="40" fill="rgba(255,255,255,0.35)" stroke="url(#gv)" stroke-width="7" /><path d="M28 28 L 50 50" stroke="#0b0c0e" stroke-width="9" stroke-linecap="round" /></g>
+          <clipPath id="k2-clip"><rect id="k2-cliprect" x="700" y="200" width="0" height="90" /></clipPath>
+          <text x="706" y="272" class="hand" style="font-size:62px" clip-path="url(#k2-clip)" transform="rotate(-5 740 250)">Wo?</text>
+        </svg>
+      </section>
+
+      <!-- K3 Beispiel Produktseite (DEMO): "Nehmen wir jetzt zum Beispiel mal einen Online-Shop, der Jacken verkauft. Eine Kundin legt
+           einfach eine Jacke für 89 Euro in den Warenkorb" Nehmen 9,91 / Beispiel 10,37 / Online-Shop 11,17 / Jacken 11,87 / Kundin 13,47 /
+           Jacke 14,45 / 89 14,83 / Warenkorb 15,77 -->
+      <section id="k3" class="karte clip" data-start="9.84" data-duration="7.36" data-track-index="1">
+        <div class="kicker">Beispiel · Jackenshop</div>
+        <div class="badge">DEMO</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <g id="k3-seite">
+            <rect x="24" y="0" width="470" height="290" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <path d="M24 44 H494" stroke="#e5e7eb" stroke-width="2.5" />
+            <circle cx="50" cy="22" r="6" fill="#d1d5db" /><circle cx="70" cy="22" r="6" fill="#d1d5db" /><circle cx="90" cy="22" r="6" fill="#d1d5db" />
+            <text x="118" y="30" class="klein" style="font-size:19px;font-weight:800;letter-spacing:0.08em">DEMO-SHOP · JACKEN</text>
+          </g>
+          <g id="k3-bildfeld" opacity="0"><rect x="44" y="62" width="196" height="210" rx="18" fill="#f2f3f5" /></g>
+          <g id="k3-jacke" opacity="0"><use href="#jacke" transform="translate(50 76) scale(1.53)" /></g>
+          <text id="k3-titel" x="260" y="104" class="lab" style="font-size:36px" opacity="0">Jacke</text>
+          <text id="k3-preis" x="260" y="166" style="font-size:50px;font-weight:900;fill:#0b0c0e" opacity="0">89 €</text>
+          <g id="k3-knopf" opacity="0">
+            <rect id="k3-knopfbg" x="260" y="200" width="214" height="56" rx="28" fill="#0b0c0e" />
+            <text id="k3-knopft1" x="367" y="235" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#fff">In den Warenkorb</text>
+            <text id="k3-knopft2" x="367" y="235" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#0b0c0e" opacity="0">✓ Im Warenkorb</text>
+          </g>
+          <g id="k3-kundin" opacity="0">
+            <circle cx="600" cy="104" r="54" fill="#e5e7eb" />
+            <g transform="translate(570.5 74.5) scale(2.46)" class="ico" style="stroke:#4b5563"><use href="#i-person" /></g>
+            <text x="600" y="200" text-anchor="middle" class="lab">Kundin</text>
+          </g>
+          <g id="k3-wagen" opacity="0">
+            <rect x="700" y="58" width="96" height="96" rx="22" class="rahmen" />
+            <g transform="translate(718 76) scale(2.5)" class="ico"><use href="#i-wagen" /></g>
+          </g>
+          <g id="k3-eins" opacity="0"><circle cx="792" cy="62" r="20" fill="url(#gvd)" /><text x="792" y="71" text-anchor="middle" style="font-size:24px;font-weight:900;fill:#0b0c0e">1</text></g>
+        </svg>
+        <div class="zeiger" id="k3-zeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+
+      <!-- K4 Beispiel Checkout (DEMO): "und erst im Checkout sieht sie natürlich weitere 7 Euro Versandkosten. Vielleicht war das dann
+           auch leider der Punkt, an dem sie einfach ausgestiegen ist." Checkout 17,33 / 7 19,33 / Versandkosten 19,75 / Punkt 22,04 /
+           ausgestiegen 22,96 -->
+      <section id="k4" class="karte clip" data-start="17.26" data-duration="6.72" data-track-index="1">
+        <div class="kicker">Beispiel · Checkout</div>
+        <div class="badge">DEMO</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <rect x="24" y="0" width="470" height="290" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+          <path d="M24 44 H494" stroke="#e5e7eb" stroke-width="2.5" />
+          <text x="46" y="30" class="klein" style="font-size:19px;font-weight:800;letter-spacing:0.08em">DEMO-SHOP · KASSE</text>
+          <!-- Zeile Jacke -->
+          <rect x="44" y="62" width="70" height="70" rx="14" fill="#f2f3f5" />
+          <use href="#jacke" transform="translate(50 68) scale(0.48)" />
+          <text x="132" y="108" class="lab" style="font-size:30px">Jacke</text>
+          <text x="474" y="108" text-anchor="end" class="lab" style="font-size:30px">89 €</text>
+          <path d="M44 150 H474" stroke="#e5e7eb" stroke-width="2.5" />
+          <!-- Zeile Versand: erst hier sichtbar -->
+          <rect id="k4-hl" x="36" y="162" width="446" height="70" rx="16" fill="url(#gvl)" stroke="url(#gv)" stroke-width="4" opacity="0" />
+          <g transform="translate(52 176) scale(1.75)" class="ico"><use href="#i-lkw" /></g>
+          <text x="104" y="207" class="lab" style="font-size:30px">Versand</text>
+          <text id="k4-sieben" x="466" y="207" text-anchor="end" style="font-size:34px;font-weight:900;fill:#0b0c0e" opacity="0">+ 7 €</text>
+          <use id="k4-pin" href="#kreuz" x="482" y="162" opacity="0" />
+          <clipPath id="k4-clip"><rect id="k4-cliprect" x="120" y="226" width="0" height="80" /></clipPath>
+          <text x="126" y="284" class="hand" style="font-size:50px" clip-path="url(#k4-clip)" transform="rotate(-3 260 266)">erst im Checkout</text>
+          <!-- Kundin und Ausgang -->
+          <g id="k4-kundin">
+            <circle cx="600" cy="104" r="54" fill="#e5e7eb" />
+            <g transform="translate(570.5 74.5) scale(2.46)" class="ico" style="stroke:#4b5563"><use href="#i-person" /></g>
+          </g>
+          <text id="k4-kl" x="600" y="200" text-anchor="middle" class="lab">Kundin</text>
+          <g id="k4-tuer" opacity="0">
+            <rect x="700" y="58" width="96" height="96" rx="22" class="rahmen" />
+            <g transform="translate(718 76) scale(2.5)" class="ico"><use href="#i-tuer" /></g>
+          </g>
+          <clipPath id="k4-clip2"><rect id="k4-cliprect2" x="590" y="216" width="0" height="84" /></clipPath>
+          <text x="596" y="276" class="hand" style="font-size:52px" clip-path="url(#k4-clip2)" transform="rotate(-4 680 260)">Ausstieg?</text>
+        </svg>
+      </section>
+
+      <!-- K5 Zweiter Besucher: "Und ein weiterer Besucher speichert jetzt einfach dagegen nur zwei verschiedene Größen in dem Warenkorb und
+           vergleicht diese einfach noch einmal miteinander. Der war einfach vielleicht noch überhaupt nicht kaufbereit."
+           Besucher 24,59 / speichert 25,03 / zwei 26,45 / verschiedene 26,67 / Größen 27,07 / vergleicht 28,43 / nicht 31,69 / kaufbereit 31,88 -->
+      <section id="k5" class="karte clip" data-start="23.98" data-duration="10.47" data-track-index="1">
+        <div class="kicker">Beispiel · ein weiterer Besucher</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <g id="k5-person">
+            <circle cx="82" cy="104" r="52" fill="#e5e7eb" />
+            <g transform="translate(53.2 75.2) scale(2.4)" class="ico" style="stroke:#6b7280"><use href="#i-person" /></g>
+          </g>
+          <text id="k5-pl" x="82" y="200" text-anchor="middle" class="lab" style="font-size:26px" opacity="0">Besucher</text>
+          <g id="k5-korb" opacity="0">
+            <rect x="166" y="16" width="340" height="236" rx="26" class="rahmen" />
+            <g transform="translate(186 30) scale(1.3)" class="ico grau"><use href="#i-wagen" /></g>
+            <text x="226" y="54" class="zeile">WARENKORB</text>
+          </g>
+          <g id="k5-j1" opacity="0"><use href="#jacke" transform="translate(186 76) scale(1.2)" /></g>
+          <g id="k5-j2" opacity="0"><use href="#jacke" transform="translate(342 76) scale(1.2)" /></g>
+          <g id="k5-m" opacity="0"><circle cx="318" cy="88" r="24" fill="url(#gvd)" /><text x="318" y="97" text-anchor="middle" style="font-size:24px;font-weight:900;fill:#0b0c0e">M</text></g>
+          <g id="k5-l" opacity="0"><circle cx="474" cy="88" r="24" fill="url(#gvd)" /><text x="474" y="97" text-anchor="middle" style="font-size:24px;font-weight:900;fill:#0b0c0e">L</text></g>
+          <g id="k5-pfeile" opacity="0"><rect x="300" y="196" width="72" height="44" rx="14" fill="#0b0c0e" /><g transform="translate(320 202) scale(1.3)" class="ico weiss"><use href="#i-vergleich" /></g></g>
+          <g id="k5-vergleich" opacity="0">
+            <rect x="530" y="26" width="270" height="62" rx="31" fill="#fff" stroke="url(#gv)" stroke-width="4" />
+            <text x="665" y="67" text-anchor="middle" class="lab" style="font-size:26px">Noch im Vergleich</text>
+          </g>
+          <g id="k5-bereit" opacity="0">
+            <text x="532" y="152" class="zeile">KAUFBEREIT?</text>
+            <rect x="530" y="166" width="270" height="30" rx="15" fill="#e5e7eb" />
+            <rect id="k5-balken" x="530" y="166" width="0" height="30" rx="15" fill="url(#gv)" />
+          </g>
+          <clipPath id="k5-clip"><rect id="k5-cliprect" x="540" y="200" width="0" height="90" /></clipPath>
+          <text x="546" y="262" class="hand" style="font-size:54px" clip-path="url(#k5-clip)" transform="rotate(-4 640 240)">noch nicht</text>
+        </svg>
+      </section>
+
+      <!-- K6 Nicht verwechseln: "Das ist aber wichtig, weil natürlich Warenkorbabbrüche und Checkout-Abbrüche unterschiedliche Situationen
+           beschreiben." Warenkorbabbrüche 34,59 / Checkout-Abbrüche 35,66 / unterschiedliche 36,64 -->
+      <section id="k6" class="karte clip" data-start="34.52" data-duration="4.72" data-track-index="1">
+        <div class="kicker">Nicht verwechseln</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <g id="k6-links">
+            <rect x="22" y="10" width="350" height="270" rx="26" class="rahmen" />
+            <rect x="44" y="32" width="84" height="84" rx="20" fill="#f2f3f5" />
+            <g transform="translate(56 44) scale(2.5)" class="ico"><use href="#i-wagen" /></g>
+            <text x="44" y="170" class="lab" style="font-size:31px">Warenkorbabbruch</text>
+            <text x="44" y="216" class="klein" style="font-size:23px">Artikel liegen im Korb,</text>
+            <text x="44" y="246" class="klein" style="font-size:23px">noch im Vergleich</text>
+          </g>
+          <g id="k6-rechts" opacity="0">
+            <rect x="448" y="10" width="350" height="270" rx="26" class="rahmen" />
+            <rect x="470" y="32" width="84" height="84" rx="20" fill="#f2f3f5" />
+            <g transform="translate(482 44) scale(2.5)" class="ico"><use href="#i-karte" /></g>
+            <text x="470" y="170" class="lab" style="font-size:31px">Checkout-Abbruch</text>
+            <text x="470" y="216" class="klein" style="font-size:23px">Checkout begonnen,</text>
+            <text x="470" y="246" class="klein" style="font-size:23px">dort ausgestiegen</text>
+          </g>
+          <text id="k6-ungleich" x="410" y="172" text-anchor="middle" class="gtext" style="font-size:86px;font-weight:900" opacity="0">≠</text>
+        </svg>
+      </section>
+
+      <!-- K7 Rechenbeispiel als Trichter: "Stell dir mal 100 Warenkörbe vor. Davon werden jetzt zum Beispiel 60 Checkouts gestartet und
+           30 Bestellungen werden davon tatsächlich auch abgeschlossen. Da stecken jetzt einfach zwei verschiedene Fragen drin. Zum einen,
+           warum starten überhaupt diese 40 Menschen den Checkout gar nicht? Und zum anderen, warum brechen überhaupt weitere 30 nach dem
+           Start ab?" 100 39,31 / Warenkörbe 39,79 / 60 42,19 / Checkouts 42,61 / 30 43,93 / Bestellungen 44,37 / abgeschlossen 46,09 /
+           zwei 48,41 / Fragen 49,07 / 40 51,85 / 30 55,81. 4,4 px je Stück: 100 = 440, 60 = 264, 30 = 132; Differenzen 176 (40) und 132 (30) -->
+      <section id="k7" class="karte clip" data-start="39.24" data-duration="18.51" data-track-index="1">
+        <div class="kicker">Rechenbeispiel</div>
+        <div class="badge">BEISPIEL</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <!-- Zeile 1: Warenkörbe -->
+          <text id="k7-z1" x="130" y="20" class="zeile" opacity="0">WARENKÖRBE</text>
+          <text id="k7-n1" x="30" y="68" style="font-size:44px;font-weight:900;fill:#0b0c0e" opacity="0">100</text>
+          <rect id="k7-b1" x="130" y="30" width="0" height="46" rx="14" fill="#0b0c0e" />
+          <!-- Zeile 2: begonnene Checkouts -->
+          <text id="k7-z2" x="130" y="115" class="zeile" opacity="0">CHECKOUTS GESTARTET</text>
+          <text id="k7-n2" x="30" y="163" style="font-size:44px;font-weight:900;fill:#0b0c0e" opacity="0">60</text>
+          <rect id="k7-g2" x="394" y="125" width="176" height="46" rx="14" fill="#f2f3f5" stroke="#9aa3af" stroke-width="3" stroke-dasharray="9 7" opacity="0" />
+          <rect id="k7-b2" x="130" y="125" width="0" height="46" rx="14" fill="url(#gv)" />
+          <!-- Zeile 3: Bestellungen -->
+          <text id="k7-z3" x="130" y="210" class="zeile" opacity="0">BESTELLUNGEN</text>
+          <text id="k7-n3" x="30" y="258" style="font-size:44px;font-weight:900;fill:#0b0c0e" opacity="0">30</text>
+          <rect id="k7-g3" x="262" y="220" width="132" height="46" rx="14" fill="#f2f3f5" stroke="#9aa3af" stroke-width="3" stroke-dasharray="9 7" opacity="0" />
+          <rect id="k7-b3" x="130" y="220" width="0" height="46" rx="14" fill="url(#gv)" />
+          <use id="k7-ok" href="#haken" x="240" y="243" opacity="0" />
+          <!-- zwei Fragen: erst "?", dann die Differenz auf ihrer Zahl -->
+          <text id="k7-q1" x="610" y="164" class="hand" style="font-size:62px" opacity="0">?</text>
+          <text id="k7-q2" x="610" y="259" class="hand" style="font-size:62px" opacity="0">?</text>
+          <g id="k7-d1" opacity="0">
+            <text x="596" y="150" class="gtext" style="font-size:42px;font-weight:900">−40</text>
+            <text x="596" y="180" class="klein" style="font-size:21px">kein Checkout</text>
+          </g>
+          <path id="k7-l2" pathLength="1" d="M400 243 L 584 243" fill="none" stroke="#9aa3af" stroke-width="3" stroke-dasharray="1" />
+          <g id="k7-d2" opacity="0">
+            <text x="596" y="245" class="gtext" style="font-size:42px;font-weight:900">−30</text>
+            <text x="596" y="275" class="klein" style="font-size:21px">Abbruch nach Start</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K8 Mobile Checkout (DEMO): "Ich würde tatsächlich deshalb zunächst einmal den Kaufprozess auf dem Smartphone durchgehen. Sind
+           vielleicht Versandkosten oder Lieferzeiten früh genug sichtbar? Gibt es überhaupt eine passende Zahlungsart? Funktionieren
+           überhaupt die Formulare? Und erst wenn ich das geprüft habe," Ich 57,89 / Kaufprozess 59,81 / Smartphone 60,77 /
+           Versandkosten 62,37 / Lieferzeiten 63,19 / sichtbar 64,36 / Zahlungsart 66,27 / Formulare 67,92 / geprüft 69,74 -->
+      <section id="k8" class="karte clip" data-start="57.82" data-duration="12.53" data-track-index="1">
+        <div class="kicker">Kaufprozess am Smartphone</div>
+        <div class="badge">DEMO</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <defs><clipPath id="k8-schirm"><rect x="44" y="12" width="236" height="300" rx="26" /></clipPath></defs>
+          <g id="k8-handy">
+            <rect x="34" y="2" width="256" height="340" rx="36" fill="#0b0c0e" />
+            <rect x="44" y="12" width="236" height="330" rx="26" fill="#fff" />
+            <g clip-path="url(#k8-schirm)">
+              <g id="k8-inhalt">
+                <text x="62" y="44" class="klein" style="font-size:14px;font-weight:800;letter-spacing:0.08em">DEMO-SHOP</text>
+                <text x="62" y="72" style="font-size:24px;font-weight:800;fill:#0b0c0e">Kasse</text>
+                <!-- Versand und Lieferzeit -->
+                <rect id="k8-h1" x="52" y="86" width="220" height="92" rx="12" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3.5" opacity="0" />
+                <g transform="translate(62 96) scale(1.05)" class="ico"><use href="#i-lkw" /></g>
+                <text x="94" y="115" style="font-size:18px;font-weight:700;fill:#0b0c0e">Versand</text>
+                <text x="262" y="115" text-anchor="end" style="font-size:18px;font-weight:800;fill:#0b0c0e">7 €</text>
+                <g transform="translate(62 140) scale(1.05)" class="ico"><use href="#i-uhr" /></g>
+                <text x="94" y="159" style="font-size:18px;font-weight:700;fill:#0b0c0e">Lieferzeit</text>
+                <rect x="204" y="148" width="58" height="12" rx="6" fill="#e5e7eb" />
+                <!-- Zahlungsart -->
+                <rect id="k8-h2" x="52" y="186" width="220" height="92" rx="12" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3.5" opacity="0" />
+                <text x="62" y="210" style="font-size:17px;font-weight:700;fill:#6b7280">Zahlungsart</text>
+                <rect x="62" y="222" width="62" height="44" rx="10" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(81 232)" class="ico"><use href="#i-karte" /></g>
+                <rect x="131" y="222" width="62" height="44" rx="10" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(150 232)" class="ico"><use href="#i-geld" /></g>
+                <rect x="200" y="222" width="62" height="44" rx="10" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(219 232)" class="ico"><use href="#i-bank" /></g>
+                <!-- Formular -->
+                <rect id="k8-h3" x="52" y="286" width="220" height="134" rx="12" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3.5" opacity="0" />
+                <text x="62" y="310" style="font-size:17px;font-weight:700;fill:#6b7280">Kontakt</text>
+                <rect x="62" y="322" width="200" height="40" rx="9" fill="#fff" stroke="#9aa3af" stroke-width="2" />
+                <text x="76" y="348" style="font-size:16px;font-weight:600;fill:#9aa3af">E-Mail</text>
+                <rect id="k8-cursor" x="134" y="331" width="2.5" height="22" fill="#0b0c0e" opacity="0" />
+                <rect x="62" y="370" width="200" height="40" rx="9" fill="#fff" stroke="#9aa3af" stroke-width="2" />
+                <text x="76" y="396" style="font-size:16px;font-weight:600;fill:#9aa3af">Adresse</text>
+              </g>
+            </g>
+          </g>
+          <!-- rechts: die drei Prüfpunkte -->
+          <g id="k8-p1" opacity="0">
+            <rect x="330" y="14" width="64" height="64" rx="16" fill="url(#gvd)" />
+            <g transform="translate(343 27) scale(1.6)" class="ico"><use href="#i-lkw" /></g>
+            <text x="412" y="56" class="lab" style="font-size:29px">Versand &amp; Lieferzeit</text>
+          </g>
+          <clipPath id="k8-clip"><rect id="k8-cliprect" x="406" y="64" width="0" height="50" /></clipPath>
+          <text x="412" y="104" class="hand" style="font-size:40px" clip-path="url(#k8-clip)">früh sichtbar?</text>
+          <g id="k8-p2" opacity="0">
+            <rect x="330" y="122" width="64" height="64" rx="16" fill="url(#gvd)" />
+            <g transform="translate(343 135) scale(1.6)" class="ico"><use href="#i-karte" /></g>
+            <text x="412" y="164" class="lab" style="font-size:29px">Zahlungsart</text>
+          </g>
+          <g id="k8-p3" opacity="0">
+            <rect x="330" y="214" width="64" height="64" rx="16" fill="url(#gvd)" />
+            <g transform="translate(343 227) scale(1.6)" class="ico"><use href="#i-feld" /></g>
+            <text x="412" y="256" class="lab" style="font-size:29px">Formulare</text>
+          </g>
+          <use id="k8-ok1" href="#haken" x="772" y="46" opacity="0" />
+          <use id="k8-ok2" href="#haken" x="772" y="154" opacity="0" />
+          <use id="k8-ok3" href="#haken" x="772" y="246" opacity="0" />
+        </svg>
+      </section>
+
+      <!-- K9 Pauschaler Rabatt: "Und bitte nicht einfach sofort jeden Abbruch mit 10 Prozent oder höher als Rabatt zu belohnen, denn sonst
+           verschenkst du womöglich unter Umständen einfach Marge, obwohl vielleicht das eigentliche Problem ganz woanders liegt."
+           Und 73,34 / Abbruch 74,82 / 10 75,38 / höher 76,28 / belohnen 77,24 / verschenkst 78,00 / Marge 80,16 / Problem 81,82 /
+           woanders 82,52 -->
+      <section id="k9" class="karte clip" data-start="73.27" data-duration="10.19" data-track-index="1">
+        <div class="kicker">Pauschaler Rabatt?</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <g id="k9-wagen">
+            <rect x="24" y="22" width="160" height="160" rx="30" class="rahmen" />
+            <g transform="translate(52 50) scale(4.3)" class="ico" style="stroke-width:1.6"><use href="#i-wagen" /></g>
+          </g>
+          <use id="k9-x" href="#kreuz" x="180" y="28" opacity="0" />
+          <text x="104" y="224" text-anchor="middle" class="lab" style="font-size:24px">Abbruch</text>
+          <g id="k9-ticket" opacity="0">
+            <use href="#ticket" x="0" y="0" transform="translate(222 52)" fill="#0b0c0e" />
+            <text x="322" y="118" text-anchor="middle" style="font-size:46px;font-weight:900;fill:#fff">−10 %</text>
+          </g>
+          <clipPath id="k9-clip"><rect id="k9-cliprect" x="226" y="160" width="0" height="80" /></clipPath>
+          <text x="232" y="214" class="hand" style="font-size:46px" clip-path="url(#k9-clip)" transform="rotate(-4 300 196)">oder mehr</text>
+          <!-- Marge schrumpft -->
+          <g id="k9-marge" opacity="0">
+            <text x="470" y="40" class="zeile">MARGE</text>
+            <rect x="470" y="54" width="320" height="50" rx="16" fill="#e5e7eb" />
+          </g>
+          <rect id="k9-mb" x="470" y="54" width="320" height="50" rx="16" fill="url(#gv)" opacity="0" />
+          <g id="k9-weg" opacity="0">
+            <rect x="680" y="54" width="110" height="50" rx="16" fill="#fff" stroke="#e5484d" stroke-width="3" stroke-dasharray="8 6" />
+            <circle cx="712" cy="79" r="12" fill="url(#gvd)" /><circle cx="742" cy="79" r="12" fill="url(#gvd)" /><circle cx="770" cy="79" r="12" fill="url(#gvd)" />
+          </g>
+          <!-- das eigentliche Problem: woanders im Kaufprozess -->
+          <g id="k9-orte" opacity="0">
+            <rect x="476" y="176" width="80" height="80" rx="20" class="rahmen" /><g transform="translate(496 196) scale(1.66)" class="ico"><use href="#i-lkw" /></g>
+            <rect x="590" y="176" width="80" height="80" rx="20" class="rahmen" /><g transform="translate(610 196) scale(1.66)" class="ico"><use href="#i-karte" /></g>
+            <rect x="704" y="176" width="80" height="80" rx="20" class="rahmen" /><g transform="translate(724 196) scale(1.66)" class="ico"><use href="#i-feld" /></g>
+          </g>
+          <text id="k9-pl" x="630" y="150" text-anchor="middle" class="lab" style="font-size:24px" opacity="0">das eigentliche Problem?</text>
+          <g id="k9-lupe" opacity="0" transform="translate(516 216)"><circle r="44" fill="rgba(255,255,255,0.2)" stroke="url(#gv)" stroke-width="7" /><path d="M31 31 L 52 52" stroke="#0b0c0e" stroke-width="9" stroke-linecap="round" /></g>
+        </svg>
+      </section>
+
+      <!-- K10 Signal statt Hektik: "Für mich ist der Warenkorbabbruch also eher weniger ein Grund für hektisches Retargeting, sondern
+           zunächst einmal ein Signal, einfach um den Kaufprozess besser zu verstehen." Für 83,53 / Warenkorbabbruch 84,09 / weniger 85,71 /
+           hektisches 86,81 / Retargeting 87,37 / sondern 88,39 / Signal 89,81 / Kaufprozess 90,79 / verstehen 91,95 -->
+      <section id="k10" class="karte clip" data-start="83.46" data-duration="8.42" data-track-index="1">
+        <div class="kicker">Für mich ist ein Warenkorbabbruch …</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <g id="k10-wagen">
+            <rect x="24" y="68" width="150" height="150" rx="30" class="rahmen" />
+            <g transform="translate(51 95) scale(4)" class="ico" style="stroke-width:1.6"><use href="#i-wagen" /></g>
+            <use href="#kreuz" x="170" y="74" />
+          </g>
+          <text id="k10-wl" x="99" y="258" text-anchor="middle" class="lab" style="font-size:24px" opacity="0">Abbruch</text>
+          <path id="k10-ast1" pathLength="1" d="M190 132 C 240 132, 250 72, 300 72" fill="none" stroke="#9aa3af" stroke-width="5" stroke-linecap="round" />
+          <path id="k10-ast2" pathLength="1" d="M190 154 C 240 154, 250 226, 300 226" fill="none" stroke="url(#gv)" stroke-width="6" stroke-linecap="round" />
+          <g id="k10-oben" opacity="0">
+            <rect x="306" y="12" width="490" height="120" rx="24" class="rahmen" />
+            <g id="k10-megafon"><rect x="324" y="36" width="72" height="72" rx="18" fill="#e5e7eb" /><g transform="translate(339 51) scale(1.75)" class="ico"><use href="#i-megafon" /></g></g>
+            <text id="k10-rt" x="414" y="84" class="lab" style="font-size:30px" opacity="0">hektisches Retargeting</text>
+          </g>
+          <path id="k10-strich" pathLength="1" d="M410 74 L 776 74" fill="none" stroke="#e5484d" stroke-width="5" stroke-linecap="round" />
+          <g id="k10-unten" opacity="0">
+            <rect x="306" y="166" width="490" height="122" rx="24" fill="#fff" stroke="url(#gv)" stroke-width="4" />
+            <rect x="324" y="191" width="72" height="72" rx="18" fill="url(#gvd)" /><g transform="translate(339 206) scale(1.75)" class="ico"><use href="#i-birne" /></g>
+            <text x="414" y="222" class="gtext" style="font-size:38px;font-weight:900">Signal</text>
+          </g>
+          <text id="k10-kp" x="414" y="262" class="lab" style="font-size:24px" opacity="0">Kaufprozess besser verstehen</text>
+        </svg>
+      </section>
+
+      <!-- K11 Schluss laut Briefing: durchgestrichener pauschaler Rabatt "−10 %" und "Ursache vor Gutschein" (verstehen 91,95) -->
+      <section id="k11" class="karte clip" data-start="91.88" data-duration="3.32" data-track-index="1">
+        <div class="kicker">Mein Fazit</div>
+        <svg class="buehne" viewBox="0 0 820 304">
+          <g id="k11-ticket">
+            <use href="#ticket" x="0" y="0" transform="translate(30 70) scale(1.1)" fill="#0b0c0e" />
+            <text x="140" y="142" text-anchor="middle" style="font-size:50px;font-weight:900;fill:#fff">−10 %</text>
+          </g>
+          <path id="k11-strich" pathLength="1" d="M18 186 L 262 52" fill="none" stroke="#e5484d" stroke-width="8" stroke-linecap="round" />
+          <text x="300" y="118" class="gtext" style="font-size:74px;font-weight:900;letter-spacing:-0.02em">Ursache</text>
+          <text x="300" y="196" style="font-size:56px;font-weight:800;fill:#0b0c0e;letter-spacing:-0.02em">vor Gutschein</text>
+        </svg>
+      </section>
+
+      <!-- K12 Folgen (CTA): nur das Folgen-Symbol. abbrechen 95,31 (Karte) / möchtest 95,71 (Ring) / drück 96,29 (Zeiger) / Plus 97,07
+           (angetippt, wird zum Haken); bleibt bis zum Ende -->
+      <section id="k12" class="folgekarte clip" data-start="95.24" data-duration="4.66" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg><div class="ring" id="fring"></div><div class="plus" id="fplus"><svg viewBox="0 0 24 24" class="kreuz" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg><svg viewBox="0 0 24 24" class="haken" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div></div>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker (leer höchstens ~0,2 s), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const b = document.querySelector(id + " .badge");
+        if (b) tl.fromTo(b, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, an + 0.06);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5, ease = "power2.out") {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, t);
+      }
+      // Schreibschrift erscheint von links nach rechts (Clip-Rechteck wächst)
+      function schreibe(sel, breite, t, d = 0.45) {
+        tl.fromTo(sel, { attr: { width: 0 } }, { attr: { width: breite }, duration: d, ease: "power1.out" }, t);
+      }
+      gsap.set("#k1-pfeil, #k7-l2, #k10-ast1, #k10-ast2, #k10-strich, #k11-strich", { strokeDasharray: 1, strokeDashoffset: 1 });
+
+      // K1 Reflex: Warenkorb (Kreuz auf "Warenkörben"), Pfeil auf "denken", Händler, "sofort", Rabattcode im Gedanken
+      karte("#k1", 0.23, 5.65);
+      tl.fromTo("#k1-wagen", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 0.27);
+      badge("#k1-x", 0.95);
+      ein("#k1-wl", 0.95);
+      zeichne("#k1-pfeil", 1.58, 0.4);
+      pop("#k1-laden", 2.63);
+      ein("#k1-ll", 2.63);
+      schreibe("#k1-cliprect", 130, 3.67, 0.4);
+      tl.fromTo("#k1-d1", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 4.2);
+      tl.fromTo("#k1-d2", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 4.26);
+      tl.fromTo("#k1-ticket", { opacity: 0, scale: 0.9, y: 8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, y: 0, duration: 0.3, ease: "power2.out" }, 4.31);
+
+      // K2 Kaufweg: vier Schritte, die Lupe sucht auf "herausfinden", "Wo?" auf "welcher", Absprünge mit "?" auf "abspringen"
+      karte("#k2", 5.67, 9.84);
+      [["#k2-n1", 5.71], ["#k2-n2", 5.77], ["#k2-n3", 5.83], ["#k2-n4", 5.89]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t));
+      tl.fromTo("#k2-lupe", { opacity: 0, x: 106, y: 74, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, 7.09);
+      tl.to("#k2-lupe", { x: 706, duration: 1.5, ease: "power1.inOut" }, 7.2);
+      tl.to("#k2-lupe", { opacity: 0, duration: 0.25, ease: "power2.in" }, 8.75);
+      schreibe("#k2-cliprect", 110, 7.75, 0.35);
+      [["#k2-a1", 9.03], ["#k2-a2", 9.11], ["#k2-a3", 9.19]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, t));
+
+      // K3 Produktseite (DEMO): Rahmen, Bild auf "Online-Shop", Jacke auf "Jacken", Kundin, Titel, 89 €, Tipp auf "Warenkorb"
+      karte("#k3", 9.84, 17.2);
+      tl.fromTo("#k3-seite", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 9.88);
+      ein("#k3-bildfeld", 11.10);
+      pop("#k3-jacke", 11.80, 0.35);
+      tl.fromTo("#k3-kundin", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 13.40);
+      ein("#k3-titel", 14.38);
+      tl.fromTo("#k3-preis", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 14.76);
+      ein("#k3-knopf", 14.76);
+      ein("#k3-wagen", 15.0);
+      tl.fromTo("#k3-zeiger", { opacity: 0, x: 560, y: 300 }, { opacity: 1, x: 530, y: 296, duration: 0.15, ease: "power2.out" }, 15.15);
+      tl.to("#k3-zeiger", { x: 362, y: 276, duration: 0.4, ease: "power2.inOut" }, 15.25);
+      tl.to("#k3-zeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 15.62);
+      tl.to("#k3-zeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 15.70);
+      tl.to("#k3-knopfbg", { fill: "#00d088", duration: 0.15 }, 15.70);
+      tl.to("#k3-knopft1", { opacity: 0, duration: 0.12 }, 15.70);
+      tl.to("#k3-knopft2", { opacity: 1, duration: 0.15 }, 15.72);
+      badge("#k3-eins", 15.74);
+      tl.to("#k3-zeiger", { x: 392, y: 300, duration: 0.25, ease: "power2.out" }, 15.86);
+      tl.to("#k3-zeiger", { opacity: 0, duration: 0.3, ease: "power2.in" }, 16.5);
+
+      // K4 Checkout (DEMO): Zeile Jacke 89 €, auf "7" + 7 € Versand markiert, "erst im Checkout", Punkt, Ausstieg
+      karte("#k4", 17.26, 23.98);
+      tl.to("#k4-hl", { opacity: 1, duration: 0.25, ease: "power2.out" }, 19.26);
+      tl.fromTo("#k4-sieben", { opacity: 0, x: 10 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 19.26);
+      schreibe("#k4-cliprect", 330, 19.68, 0.55);
+      badge("#k4-pin", 21.97);
+      pop("#k4-tuer", 22.89);
+      tl.to("#k4-kundin", { x: 110, opacity: 0, duration: 0.6, ease: "power2.in" }, 22.95);
+      tl.to("#k4-kl", { opacity: 0, duration: 0.3, ease: "power2.in" }, 22.95);
+      schreibe("#k4-cliprect2", 210, 23.2, 0.45);
+
+      // K5 Zweiter Besucher: Korb, zwei Jacken in M und L, Vergleich, kaufbereit? noch nicht
+      karte("#k5", 23.98, 34.45);
+      tl.fromTo("#k5-person", { opacity: 0, scale: 0.9, svgOrigin: "82 104" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 24.02);
+      ein("#k5-pl", 24.52);
+      ein("#k5-korb", 24.96);
+      tl.fromTo("#k5-j1", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 26.38);
+      tl.fromTo("#k5-j2", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 26.46);
+      badge("#k5-m", 26.60);
+      badge("#k5-l", 27.00);
+      pop("#k5-pfeile", 28.36);
+      tl.to("#k5-j1", { x: 6, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, 28.5);
+      tl.to("#k5-j2", { x: -6, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, 28.5);
+      ein("#k5-vergleich", 28.36);
+      ein("#k5-bereit", 30.88);
+      tl.to("#k5-balken", { attr: { width: 62 }, duration: 0.5, ease: "power2.out" }, 31.81);
+      schreibe("#k5-cliprect", 240, 31.95, 0.5);
+
+      // K6 Nicht verwechseln: Warenkorbabbruch, Checkout-Abbruch, ≠ auf "unterschiedliche"
+      karte("#k6", 34.52, 39.24);
+      tl.fromTo("#k6-links", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 34.56);
+      tl.fromTo("#k6-rechts", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 35.59);
+      tl.fromTo("#k6-ungleich", { opacity: 0, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 36.57);
+
+      // K7 Rechenbeispiel: Balken auf 100 / 60 / 30, Haken auf "abgeschlossen", zwei "?" auf "zwei Fragen", Differenzen auf 40 und 30
+      karte("#k7", 39.24, 57.75);
+      const zeile = (n, z, b, w, t, tz) => {
+        ein(n, t, 0.25);
+        tl.fromTo(b, { attr: { width: 0 } }, { attr: { width: w }, duration: 0.5, ease: "power2.out" }, t);
+        ein(z, tz, 0.25);
+      };
+      zeile("#k7-n1", "#k7-z1", "#k7-b1", 440, 39.24, 39.30);
+      zeile("#k7-n2", "#k7-z2", "#k7-b2", 264, 42.12, 42.54);
+      zeile("#k7-n3", "#k7-z3", "#k7-b3", 132, 43.86, 44.30);
+      badge("#k7-ok", 46.02);
+      tl.fromTo("#k7-q1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 48.34);
+      tl.fromTo("#k7-q2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 48.54);
+      tl.to("#k7-q1", { opacity: 0, duration: 0.15 }, 51.78);
+      tl.fromTo("#k7-g2", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 51.78);
+      ein("#k7-d1", 51.78);
+      tl.to("#k7-q2", { opacity: 0, duration: 0.15 }, 55.74);
+      tl.fromTo("#k7-g3", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 55.74);
+      zeichne("#k7-l2", 55.74, 0.35);
+      ein("#k7-d2", 55.80);
+
+      // K8 Mobile Checkout (DEMO): Handy mit der Karte, Prüfpunkte nacheinander markiert, Formular scrollt hoch, Haken auf "geprüft"
+      karte("#k8", 57.82, 70.35);
+      tl.fromTo("#k8-handy", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 57.86);
+      tl.fromTo("#k8-inhalt", { y: 0 }, { y: -14, duration: 0.8, ease: "power2.inOut" }, 59.74);
+      tl.to("#k8-inhalt", { y: 0, duration: 0.6, ease: "power2.inOut" }, 60.70);
+      tl.fromTo("#k8-handy", { scale: 1, svgOrigin: "162 172" }, { scale: 1.03, duration: 0.25, ease: "power2.out" }, 60.70);
+      tl.to("#k8-handy", { scale: 1, duration: 0.3, ease: "power2.inOut" }, 60.98);
+      tl.to("#k8-h1", { opacity: 1, duration: 0.25 }, 62.30);
+      ein("#k8-p1", 62.30);
+      schreibe("#k8-cliprect", 250, 64.29, 0.45);
+      tl.to("#k8-h1", { opacity: 0.25, duration: 0.25 }, 66.20);
+      tl.to("#k8-h2", { opacity: 1, duration: 0.25 }, 66.20);
+      ein("#k8-p2", 66.20);
+      tl.to("#k8-inhalt", { y: -130, duration: 0.45, ease: "power2.inOut" }, 67.70);
+      tl.to("#k8-h2", { opacity: 0.25, duration: 0.25 }, 67.85);
+      tl.to("#k8-h3", { opacity: 1, duration: 0.25 }, 67.85);
+      ein("#k8-p3", 67.85);
+      [68.2, 68.8, 69.4, 70.0].forEach((t) => { tl.set("#k8-cursor", { opacity: 1 }, t); tl.set("#k8-cursor", { opacity: 0 }, t + 0.3); });
+      badge("#k8-ok1", 69.67); badge("#k8-ok2", 69.75); badge("#k8-ok3", 69.83);
+
+      // K9 Pauschaler Rabatt: Abbruch, −10 % auf "10", "oder mehr", Rabatt landet im Korb, Marge schrumpft, Problem woanders
+      karte("#k9", 73.27, 83.46);
+      tl.fromTo("#k9-wagen", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 73.31);
+      badge("#k9-x", 74.75);
+      tl.fromTo("#k9-ticket", { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 75.31);
+      schreibe("#k9-cliprect", 200, 76.21, 0.45);
+      tl.to("#k9-ticket", { x: -84, y: 70, scale: 0.6, rotation: -8, duration: 0.5, ease: "power2.inOut" }, 77.17);
+      tl.to("#k9-cliprect", { attr: { width: 0 }, duration: 0.25, ease: "power2.in" }, 77.17);
+      ein("#k9-marge", 77.93);
+      tl.fromTo("#k9-mb", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 77.93);
+      tl.to("#k9-mb", { attr: { width: 210 }, duration: 0.5, ease: "power2.inOut" }, 80.09);
+      tl.fromTo("#k9-weg", { opacity: 0, y: 0 }, { opacity: 1, y: 0, duration: 0.2 }, 80.09);
+      tl.to("#k9-weg", { y: 46, opacity: 0, duration: 0.7, ease: "power2.in" }, 80.5);
+      ein("#k9-pl", 81.33);
+      ein("#k9-orte", 81.75);
+      tl.fromTo("#k9-lupe", { opacity: 0, x: 516, y: 216 }, { opacity: 1, duration: 0.2 }, 81.85);
+      tl.to("#k9-lupe", { x: 744, duration: 0.9, ease: "power1.inOut" }, 82.0);
+
+      // K10 Signal statt Hektik: Abbruch, Ast zu "hektisches Retargeting" (wird durchgestrichen), Ast zum Signal, "Kaufprozess besser verstehen"
+      karte("#k10", 83.46, 91.88);
+      tl.fromTo("#k10-wagen", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 83.50);
+      ein("#k10-wl", 84.02);
+      zeichne("#k10-ast1", 85.64, 0.4);
+      pop("#k10-oben", 86.74);
+      tl.to("#k10-megafon", { x: 3, duration: 0.07, ease: "none", yoyo: true, repeat: 7 }, 86.8);
+      ein("#k10-rt", 87.30);
+      zeichne("#k10-strich", 88.32, 0.4);
+      tl.to("#k10-oben", { opacity: 0.4, duration: 0.3 }, 88.5);
+      zeichne("#k10-ast2", 89.74, 0.4);
+      pop("#k10-unten", 89.74);
+      ein("#k10-kp", 90.72);
+
+      // K11 Schluss: −10 % wird durchgestrichen, "Ursache vor Gutschein"
+      karte("#k11", 91.88, 95.20);
+      zeichne("#k11-strich", 92.25, 0.4);
+
+      // K12 Folgen: Karte auf "abbrechen", Ring auf "möchtest", Zeiger tippt auf "Plus" das Plus an, es wird zum Haken
+      tl.fromTo("#k12", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 95.24);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.45, duration: 0.7, ease: "power2.out" }, 95.64);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 330, y: 150 }, { opacity: 1, x: 310, y: 140, duration: 0.15, ease: "power2.out" }, 96.22);
+      tl.to("#fzeiger", { x: 94, y: 92, duration: 0.45, ease: "power2.inOut" }, 96.35);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, 96.92);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, 97.00);
+      tl.to("#fplus", { backgroundColor: "#00d088", duration: 0.15 }, 97.00);
+      tl.to("#fplus .kreuz", { opacity: 0, duration: 0.12 }, 97.00);
+      tl.to("#fplus .haken", { opacity: 1, duration: 0.15 }, 97.02);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, 97.02);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, 97.02);
+      tl.to("#fzeiger", { x: 132, y: 128, duration: 0.25, ease: "power2.out" }, 97.2);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.3, ease: "power2.in" }, 98.0);
+
+      tl.seek(0);
+      window.__timelines["warenkorb-skizzen"] = tl;
+    </script>
+  </body>
+</html>

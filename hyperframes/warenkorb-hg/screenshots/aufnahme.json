@@ -1,0 +1,40 @@
+{
+ "ziele": {
+  "checkouts": {
+   "url": "https://help.shopify.com/de/manual/promoting-marketing/create-marketing/abandoned-checkouts",
+   "status": 200,
+   "titel": "Shopify Help Center | Wiederherstellung abgebrochener Checkouts",
+   "pos": {
+    "Ein abgebrochener Checkout ist ein Checkout-Prozess, der unvollständig bleibt, obwohl Kund:innen ihre E-Mail-Informationen angegeben haben.": [
+     430,
+     57
+    ],
+    "Du kannst deine abgebrochenen Checkouts überprüfen, um Muster zu finden, die darauf hindeuten könnten, warum deine Kund:innen ihre Bestellungen nicht abschließen.": [
+     1453,
+     77
+    ],
+    "Du kannst Kund:innen automatisch eine E-Mail senden, nachdem sie ihren Checkout abgebrochen haben.": [
+     3982,
+     37
+    ]
+   },
+   "ank": {
+    "Wiederherstellung abgebrochener Checkouts": [
+     157,
+     80
+    ],
+    "Abgebrochene Checkouts überprüfen": [
+     1364,
+     64
+    ],
+    "Kund:innen automatisch einen Link": [
+     3599,
+     192
+    ]
+   },
+   "hoehe": 6400
+  }
+ },
+ "datum": "2026-10-30T02:09:09.322Z",
+ "viewport": "412x732 @2.62"
+}

@@ -1,0 +1,159 @@
+{
+ "projekt": "warenkorb",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 1.6,
+   "text": "Bei abgebrochenen Warenkörben denken tatsächlich viele Online-Händer einfach immer sofort an Rabattcodes. Aber ich würde vorher tatsächlich mal herausfinden, an welcher Stelle überhaupt die Leute abspringen.",
+   "bis": 11.55
+  },
+  {
+   "take": "t1",
+   "ab": 13.4,
+   "text": "Nehmen wir jetzt zum Beispiel mal einen Onlineshop, der Jacken verkauft. Eine Kundin legt einfach eine Jacke für 89 Euro in den Warenkorb und erst im Checkout sieht sie natürlich weitere 7 Euro Versandkosten."
+  },
+  {
+   "take": "t1",
+   "ab": 25.9,
+   "text": "Vielleicht war das dann auch leider der Punkt, an dem sie einfach ausgestiegen ist.",
+   "bis": 29.2,
+   "von": 25.62
+  },
+  {
+   "take": "t1",
+   "ab": 46.1,
+   "text": "Und ein weiterer Besucher speichert jetzt einfach dagegen nur zwei verschiedene Größen in dem Warenkorb und vergleicht diese einfach noch einmal miteinander.",
+   "bis": 52.62
+  },
+  {
+   "take": "t1",
+   "ab": 55.5,
+   "text": "Der war einfach vielleicht noch überhaupt nicht kaufbereit. Das ist aber wichtig, weil natürlich Warenkorbabbrüche und Checkoutabbrüche unterschiedliche Situationen beschreiben.",
+   "bis": 63.7
+  },
+  {
+   "take": "t1",
+   "ab": 74.7,
+   "text": "Stelle mal 100 Warenkörbe vor. Davon werden jetzt zum Beispiel 60 Checkouts gestartet und 30 Bestellungen werden davon tatsächlich auch abgeschlossen. Da stecken jetzt einfach zwei verschiedene Fragen drin. Zum Einen, warum starten überhaupt diese 40 Menschen den Checkout gar nicht? Und zum Anderen, warum brechen überhaupt weitere 30 nach dem Start ab? Ich würde tatsächlich deshalb zunächst einmal den Kaufprozess auf dem Smartphone durchgehen.",
+   "bis": 99.35
+  },
+  {
+   "take": "t1",
+   "ab": 100.85,
+   "text": "Sind vielleicht Versandkosten oder Lieferzeiten früh genug sichtbar? Gibt es überhaupt eine passende Zahlungsart?"
+  },
+  {
+   "take": "t1",
+   "ab": 108.1,
+   "text": "Funktionieren überhaupt die Formulare? Und erst wenn ich das geprüft habe, würde ich tatsächlich über Erinnerung oder Gutscheine nachdenken.",
+   "bis": 115.45
+  },
+  {
+   "take": "t1",
+   "ab": 133.0,
+   "text": "Und bitte nicht einfach sofort jeden Abbruch mit 10 Prozent oder höher als Rabatt zu belohnen,"
+  },
+  {
+   "take": "t1",
+   "ab": 152.2,
+   "text": "denn sonst verschenkst du womöglich unter Umständen einfach Marge, obwohl vielleicht das eigentliche Problem ganz woanders liegt.",
+   "bis": 158.1
+  },
+  {
+   "take": "t1",
+   "ab": 163.4,
+   "text": "für mich ist der Warnkorbabbruch also eher weniger ein Grund für hektisches Retargeting, sondern zunächst einmal ein Signal einfach um den Kaufprozess besser zu verstehen.",
+   "bis": 172.6
+  },
+  {
+   "take": "t1",
+   "ab": 193.75,
+   "text": "Und wenn du jetzt deinen Checkout hier in diesem Video nicht abbrechen möchtest, dann drück dir gerne mal das Plus weg, um weitere solcher Videos in Zukunft nicht zu verpassen.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 200.9
+ },
+ "korrekturen": [
+  [
+   "t1",
+   4.39,
+   "Online-Händer",
+   "Online-Händler"
+  ],
+  [
+   "t1",
+   14.73,
+   "Onlineshop,",
+   "Online-Shop,"
+  ],
+  [
+   "t1",
+   60.69,
+   "Checkoutabbrüche",
+   "Checkout-Abbrüche"
+  ],
+  [
+   "t1",
+   74.81,
+   "Stelle",
+   "Stell dir"
+  ],
+  [
+   "t1",
+   86.35,
+   "Einen,",
+   "einen,"
+  ],
+  [
+   "t1",
+   90.39,
+   "Anderen,",
+   "anderen,"
+  ],
+  [
+   "t1",
+   113.51,
+   "Erinnerung",
+   "Erinnerungen"
+  ],
+  [
+   "t1",
+   133.05,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   163.45,
+   "für",
+   "Für"
+  ],
+  [
+   "t1",
+   164.01,
+   "Warnkorbabbruch",
+   "Warenkorbabbruch"
+  ],
+  [
+   "t1",
+   169.73,
+   "Signal",
+   "Signal,"
+  ],
+  [
+   "t1",
+   197.51,
+   "dir",
+   "hier"
+  ]
+ ]
+}

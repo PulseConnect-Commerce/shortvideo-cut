@@ -1,0 +1,2045 @@
+{
+ "projekt": "warenkorb",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "warenkorb/t1",
+   "from": 1.685,
+   "to": 11.55,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 13.425,
+   "to": 23.965,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 25.62,
+   "to": 29.2,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 46.105,
+   "to": 52.62,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 55.535,
+   "to": 63.7,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 74.745,
+   "to": 93.885,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 95.245,
+   "to": 99.35,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 100.885,
+   "to": 105.975,
+   "nach": 0.0,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 108.125,
+   "to": 109.825,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 110.825,
+   "to": 115.45,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 133.035,
+   "to": 137.315,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 152.235,
+   "to": 158.1,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 163.385,
+   "to": 172.6,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "warenkorb/t1",
+   "from": 193.745,
+   "to": 200.9,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Bei",
+   "src": "warenkorb/t1",
+   "start": 1.69,
+   "end": 1.79
+  },
+  {
+   "text": "abgebrochenen",
+   "src": "warenkorb/t1",
+   "start": 1.99,
+   "end": 2.63
+  },
+  {
+   "text": "Warenkörben",
+   "src": "warenkorb/t1",
+   "start": 2.71,
+   "end": 3.27
+  },
+  {
+   "text": "denken",
+   "src": "warenkorb/t1",
+   "start": 3.33,
+   "end": 3.57
+  },
+  {
+   "text": "tatsächlich",
+   "src": "warenkorb/t1",
+   "start": 3.61,
+   "end": 4.03
+  },
+  {
+   "text": "viele",
+   "src": "warenkorb/t1",
+   "start": 4.13,
+   "end": 4.31
+  },
+  {
+   "text": "Online-Händler",
+   "src": "warenkorb/t1",
+   "start": 4.39,
+   "end": 4.93
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 4.95,
+   "end": 5.19
+  },
+  {
+   "text": "immer",
+   "src": "warenkorb/t1",
+   "start": 5.23,
+   "end": 5.37
+  },
+  {
+   "text": "sofort",
+   "src": "warenkorb/t1",
+   "start": 5.43,
+   "end": 5.85
+  },
+  {
+   "text": "an",
+   "src": "warenkorb/t1",
+   "start": 5.93,
+   "end": 5.99
+  },
+  {
+   "text": "Rabattcodes.",
+   "src": "warenkorb/t1",
+   "start": 6.07,
+   "end": 6.65
+  },
+  {
+   "text": "Aber",
+   "src": "warenkorb/t1",
+   "start": 7.43,
+   "end": 7.55
+  },
+  {
+   "text": "ich",
+   "src": "warenkorb/t1",
+   "start": 7.59,
+   "end": 7.67
+  },
+  {
+   "text": "würde",
+   "src": "warenkorb/t1",
+   "start": 7.71,
+   "end": 7.87
+  },
+  {
+   "text": "vorher",
+   "src": "warenkorb/t1",
+   "start": 7.93,
+   "end": 8.17
+  },
+  {
+   "text": "tatsächlich",
+   "src": "warenkorb/t1",
+   "start": 8.25,
+   "end": 8.65
+  },
+  {
+   "text": "mal",
+   "src": "warenkorb/t1",
+   "start": 8.69,
+   "end": 8.81
+  },
+  {
+   "text": "herausfinden,",
+   "src": "warenkorb/t1",
+   "start": 8.85,
+   "end": 9.35
+  },
+  {
+   "text": "an",
+   "src": "warenkorb/t1",
+   "start": 9.41,
+   "end": 9.47
+  },
+  {
+   "text": "welcher",
+   "src": "warenkorb/t1",
+   "start": 9.51,
+   "end": 9.75
+  },
+  {
+   "text": "Stelle",
+   "src": "warenkorb/t1",
+   "start": 9.79,
+   "end": 9.99
+  },
+  {
+   "text": "überhaupt",
+   "src": "warenkorb/t1",
+   "start": 10.05,
+   "end": 10.29
+  },
+  {
+   "text": "die",
+   "src": "warenkorb/t1",
+   "start": 10.31,
+   "end": 10.39
+  },
+  {
+   "text": "Leute",
+   "src": "warenkorb/t1",
+   "start": 10.45,
+   "end": 10.71
+  },
+  {
+   "text": "abspringen.",
+   "src": "warenkorb/t1",
+   "start": 10.79,
+   "end": 11.23
+  },
+  {
+   "text": "Nehmen",
+   "src": "warenkorb/t1",
+   "start": 13.47,
+   "end": 13.63
+  },
+  {
+   "text": "wir",
+   "src": "warenkorb/t1",
+   "start": 13.65,
+   "end": 13.71
+  },
+  {
+   "text": "jetzt",
+   "src": "warenkorb/t1",
+   "start": 13.73,
+   "end": 13.83
+  },
+  {
+   "text": "zum",
+   "src": "warenkorb/t1",
+   "start": 13.85,
+   "end": 13.91
+  },
+  {
+   "text": "Beispiel",
+   "src": "warenkorb/t1",
+   "start": 13.93,
+   "end": 14.21
+  },
+  {
+   "text": "mal",
+   "src": "warenkorb/t1",
+   "start": 14.25,
+   "end": 14.37
+  },
+  {
+   "text": "einen",
+   "src": "warenkorb/t1",
+   "start": 14.47,
+   "end": 14.67
+  },
+  {
+   "text": "Online-Shop,",
+   "src": "warenkorb/t1",
+   "start": 14.73,
+   "end": 15.19
+  },
+  {
+   "text": "der",
+   "src": "warenkorb/t1",
+   "start": 15.27,
+   "end": 15.37
+  },
+  {
+   "text": "Jacken",
+   "src": "warenkorb/t1",
+   "start": 15.43,
+   "end": 15.69
+  },
+  {
+   "text": "verkauft.",
+   "src": "warenkorb/t1",
+   "start": 15.75,
+   "end": 16.13
+  },
+  {
+   "text": "Eine",
+   "src": "warenkorb/t1",
+   "start": 16.83,
+   "end": 16.97
+  },
+  {
+   "text": "Kundin",
+   "src": "warenkorb/t1",
+   "start": 17.03,
+   "end": 17.29
+  },
+  {
+   "text": "legt",
+   "src": "warenkorb/t1",
+   "start": 17.33,
+   "end": 17.51
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 17.57,
+   "end": 17.77
+  },
+  {
+   "text": "eine",
+   "src": "warenkorb/t1",
+   "start": 17.83,
+   "end": 17.95
+  },
+  {
+   "text": "Jacke",
+   "src": "warenkorb/t1",
+   "start": 18.01,
+   "end": 18.19
+  },
+  {
+   "text": "für",
+   "src": "warenkorb/t1",
+   "start": 18.25,
+   "end": 18.35
+  },
+  {
+   "text": "89",
+   "src": "warenkorb/t1",
+   "start": 18.39,
+   "end": 18.87
+  },
+  {
+   "text": "Euro",
+   "src": "warenkorb/t1",
+   "start": 18.97,
+   "end": 19.11
+  },
+  {
+   "text": "in",
+   "src": "warenkorb/t1",
+   "start": 19.17,
+   "end": 19.21
+  },
+  {
+   "text": "den",
+   "src": "warenkorb/t1",
+   "start": 19.23,
+   "end": 19.29
+  },
+  {
+   "text": "Warenkorb",
+   "src": "warenkorb/t1",
+   "start": 19.33,
+   "end": 19.77
+  },
+  {
+   "text": "und",
+   "src": "warenkorb/t1",
+   "start": 20.29,
+   "end": 20.37
+  },
+  {
+   "text": "erst",
+   "src": "warenkorb/t1",
+   "start": 20.49,
+   "end": 20.67
+  },
+  {
+   "text": "im",
+   "src": "warenkorb/t1",
+   "start": 20.73,
+   "end": 20.79
+  },
+  {
+   "text": "Checkout",
+   "src": "warenkorb/t1",
+   "start": 20.89,
+   "end": 21.35
+  },
+  {
+   "text": "sieht",
+   "src": "warenkorb/t1",
+   "start": 21.65,
+   "end": 21.81
+  },
+  {
+   "text": "sie",
+   "src": "warenkorb/t1",
+   "start": 21.87,
+   "end": 21.95
+  },
+  {
+   "text": "natürlich",
+   "src": "warenkorb/t1",
+   "start": 21.99,
+   "end": 22.37
+  },
+  {
+   "text": "weitere",
+   "src": "warenkorb/t1",
+   "start": 22.45,
+   "end": 22.79
+  },
+  {
+   "text": "7",
+   "src": "warenkorb/t1",
+   "start": 22.89,
+   "end": 23.07
+  },
+  {
+   "text": "Euro",
+   "src": "warenkorb/t1",
+   "start": 23.11,
+   "end": 23.27
+  },
+  {
+   "text": "Versandkosten.",
+   "src": "warenkorb/t1",
+   "start": 23.31,
+   "end": 23.91
+  },
+  {
+   "text": "Vielleicht",
+   "src": "warenkorb/t1",
+   "start": 25.97,
+   "end": 26.23
+  },
+  {
+   "text": "war",
+   "src": "warenkorb/t1",
+   "start": 26.25,
+   "end": 26.33
+  },
+  {
+   "text": "das",
+   "src": "warenkorb/t1",
+   "start": 26.37,
+   "end": 26.49
+  },
+  {
+   "text": "dann",
+   "src": "warenkorb/t1",
+   "start": 26.53,
+   "end": 26.65
+  },
+  {
+   "text": "auch",
+   "src": "warenkorb/t1",
+   "start": 26.69,
+   "end": 26.77
+  },
+  {
+   "text": "leider",
+   "src": "warenkorb/t1",
+   "start": 26.81,
+   "end": 27.03
+  },
+  {
+   "text": "der",
+   "src": "warenkorb/t1",
+   "start": 27.09,
+   "end": 27.17
+  },
+  {
+   "text": "Punkt,",
+   "src": "warenkorb/t1",
+   "start": 27.25,
+   "end": 27.47
+  },
+  {
+   "text": "an",
+   "src": "warenkorb/t1",
+   "start": 27.51,
+   "end": 27.57
+  },
+  {
+   "text": "dem",
+   "src": "warenkorb/t1",
+   "start": 27.61,
+   "end": 27.73
+  },
+  {
+   "text": "sie",
+   "src": "warenkorb/t1",
+   "start": 27.77,
+   "end": 27.83
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 27.87,
+   "end": 28.09
+  },
+  {
+   "text": "ausgestiegen",
+   "src": "warenkorb/t1",
+   "start": 28.17,
+   "end": 28.67
+  },
+  {
+   "text": "ist.",
+   "src": "warenkorb/t1",
+   "start": 28.71,
+   "end": 28.81
+  },
+  {
+   "text": "Und",
+   "src": "warenkorb/t1",
+   "start": 46.17,
+   "end": 46.23
+  },
+  {
+   "text": "ein",
+   "src": "warenkorb/t1",
+   "start": 46.25,
+   "end": 46.31
+  },
+  {
+   "text": "weiterer",
+   "src": "warenkorb/t1",
+   "start": 46.33,
+   "end": 46.65
+  },
+  {
+   "text": "Besucher",
+   "src": "warenkorb/t1",
+   "start": 46.71,
+   "end": 47.07
+  },
+  {
+   "text": "speichert",
+   "src": "warenkorb/t1",
+   "start": 47.15,
+   "end": 47.55
+  },
+  {
+   "text": "jetzt",
+   "src": "warenkorb/t1",
+   "start": 47.59,
+   "end": 47.73
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 47.75,
+   "end": 47.99
+  },
+  {
+   "text": "dagegen",
+   "src": "warenkorb/t1",
+   "start": 48.05,
+   "end": 48.37
+  },
+  {
+   "text": "nur",
+   "src": "warenkorb/t1",
+   "start": 48.43,
+   "end": 48.51
+  },
+  {
+   "text": "zwei",
+   "src": "warenkorb/t1",
+   "start": 48.57,
+   "end": 48.71
+  },
+  {
+   "text": "verschiedene",
+   "src": "warenkorb/t1",
+   "start": 48.79,
+   "end": 49.15
+  },
+  {
+   "text": "Größen",
+   "src": "warenkorb/t1",
+   "start": 49.19,
+   "end": 49.47
+  },
+  {
+   "text": "in",
+   "src": "warenkorb/t1",
+   "start": 49.51,
+   "end": 49.55
+  },
+  {
+   "text": "dem",
+   "src": "warenkorb/t1",
+   "start": 49.59,
+   "end": 49.65
+  },
+  {
+   "text": "Warenkorb",
+   "src": "warenkorb/t1",
+   "start": 49.69,
+   "end": 50.11
+  },
+  {
+   "text": "und",
+   "src": "warenkorb/t1",
+   "start": 50.45,
+   "end": 50.51
+  },
+  {
+   "text": "vergleicht",
+   "src": "warenkorb/t1",
+   "start": 50.55,
+   "end": 50.93
+  },
+  {
+   "text": "diese",
+   "src": "warenkorb/t1",
+   "start": 50.97,
+   "end": 51.11
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 51.15,
+   "end": 51.39
+  },
+  {
+   "text": "noch",
+   "src": "warenkorb/t1",
+   "start": 51.45,
+   "end": 51.53
+  },
+  {
+   "text": "einmal",
+   "src": "warenkorb/t1",
+   "start": 51.59,
+   "end": 51.81
+  },
+  {
+   "text": "miteinander.",
+   "src": "warenkorb/t1",
+   "start": 51.85,
+   "end": 52.33
+  },
+  {
+   "text": "Der",
+   "src": "warenkorb/t1",
+   "start": 55.55,
+   "end": 55.65
+  },
+  {
+   "text": "war",
+   "src": "warenkorb/t1",
+   "start": 55.67,
+   "end": 55.77
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 55.79,
+   "end": 55.95
+  },
+  {
+   "text": "vielleicht",
+   "src": "warenkorb/t1",
+   "start": 55.99,
+   "end": 56.23
+  },
+  {
+   "text": "noch",
+   "src": "warenkorb/t1",
+   "start": 56.25,
+   "end": 56.35
+  },
+  {
+   "text": "überhaupt",
+   "src": "warenkorb/t1",
+   "start": 56.39,
+   "end": 56.69
+  },
+  {
+   "text": "nicht",
+   "src": "warenkorb/t1",
+   "start": 56.73,
+   "end": 56.85
+  },
+  {
+   "text": "kaufbereit.",
+   "src": "warenkorb/t1",
+   "start": 56.91,
+   "end": 57.37
+  },
+  {
+   "text": "Das",
+   "src": "warenkorb/t1",
+   "start": 58.25,
+   "end": 58.39
+  },
+  {
+   "text": "ist",
+   "src": "warenkorb/t1",
+   "start": 58.43,
+   "end": 58.49
+  },
+  {
+   "text": "aber",
+   "src": "warenkorb/t1",
+   "start": 58.53,
+   "end": 58.67
+  },
+  {
+   "text": "wichtig,",
+   "src": "warenkorb/t1",
+   "start": 58.75,
+   "end": 59.03
+  },
+  {
+   "text": "weil",
+   "src": "warenkorb/t1",
+   "start": 59.11,
+   "end": 59.25
+  },
+  {
+   "text": "natürlich",
+   "src": "warenkorb/t1",
+   "start": 59.33,
+   "end": 59.61
+  },
+  {
+   "text": "Warenkorbabbrüche",
+   "src": "warenkorb/t1",
+   "start": 59.63,
+   "end": 60.41
+  },
+  {
+   "text": "und",
+   "src": "warenkorb/t1",
+   "start": 60.53,
+   "end": 60.61
+  },
+  {
+   "text": "Checkout-Abbrüche",
+   "src": "warenkorb/t1",
+   "start": 60.69,
+   "end": 61.53
+  },
+  {
+   "text": "unterschiedliche",
+   "src": "warenkorb/t1",
+   "start": 61.67,
+   "end": 62.27
+  },
+  {
+   "text": "Situationen",
+   "src": "warenkorb/t1",
+   "start": 62.37,
+   "end": 62.93
+  },
+  {
+   "text": "beschreiben.",
+   "src": "warenkorb/t1",
+   "start": 62.97,
+   "end": 63.31
+  },
+  {
+   "text": "Stell dir",
+   "src": "warenkorb/t1",
+   "start": 74.81,
+   "end": 75.09
+  },
+  {
+   "text": "mal",
+   "src": "warenkorb/t1",
+   "start": 75.15,
+   "end": 75.27
+  },
+  {
+   "text": "100",
+   "src": "warenkorb/t1",
+   "start": 75.39,
+   "end": 75.83
+  },
+  {
+   "text": "Warenkörbe",
+   "src": "warenkorb/t1",
+   "start": 75.87,
+   "end": 76.29
+  },
+  {
+   "text": "vor.",
+   "src": "warenkorb/t1",
+   "start": 76.37,
+   "end": 76.51
+  },
+  {
+   "text": "Davon",
+   "src": "warenkorb/t1",
+   "start": 77.07,
+   "end": 77.37
+  },
+  {
+   "text": "werden",
+   "src": "warenkorb/t1",
+   "start": 77.43,
+   "end": 77.59
+  },
+  {
+   "text": "jetzt",
+   "src": "warenkorb/t1",
+   "start": 77.63,
+   "end": 77.75
+  },
+  {
+   "text": "zum",
+   "src": "warenkorb/t1",
+   "start": 77.79,
+   "end": 77.87
+  },
+  {
+   "text": "Beispiel",
+   "src": "warenkorb/t1",
+   "start": 77.91,
+   "end": 78.19
+  },
+  {
+   "text": "60",
+   "src": "warenkorb/t1",
+   "start": 78.27,
+   "end": 78.61
+  },
+  {
+   "text": "Checkouts",
+   "src": "warenkorb/t1",
+   "start": 78.69,
+   "end": 79.05
+  },
+  {
+   "text": "gestartet",
+   "src": "warenkorb/t1",
+   "start": 79.09,
+   "end": 79.59
+  },
+  {
+   "text": "und",
+   "src": "warenkorb/t1",
+   "start": 79.89,
+   "end": 79.97
+  },
+  {
+   "text": "30",
+   "src": "warenkorb/t1",
+   "start": 80.01,
+   "end": 80.39
+  },
+  {
+   "text": "Bestellungen",
+   "src": "warenkorb/t1",
+   "start": 80.45,
+   "end": 80.95
+  },
+  {
+   "text": "werden",
+   "src": "warenkorb/t1",
+   "start": 81.03,
+   "end": 81.21
+  },
+  {
+   "text": "davon",
+   "src": "warenkorb/t1",
+   "start": 81.25,
+   "end": 81.47
+  },
+  {
+   "text": "tatsächlich",
+   "src": "warenkorb/t1",
+   "start": 81.51,
+   "end": 81.95
+  },
+  {
+   "text": "auch",
+   "src": "warenkorb/t1",
+   "start": 82.01,
+   "end": 82.09
+  },
+  {
+   "text": "abgeschlossen.",
+   "src": "warenkorb/t1",
+   "start": 82.17,
+   "end": 82.71
+  },
+  {
+   "text": "Da",
+   "src": "warenkorb/t1",
+   "start": 83.59,
+   "end": 83.65
+  },
+  {
+   "text": "stecken",
+   "src": "warenkorb/t1",
+   "start": 83.71,
+   "end": 83.97
+  },
+  {
+   "text": "jetzt",
+   "src": "warenkorb/t1",
+   "start": 84.01,
+   "end": 84.13
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 84.19,
+   "end": 84.41
+  },
+  {
+   "text": "zwei",
+   "src": "warenkorb/t1",
+   "start": 84.49,
+   "end": 84.67
+  },
+  {
+   "text": "verschiedene",
+   "src": "warenkorb/t1",
+   "start": 84.75,
+   "end": 85.09
+  },
+  {
+   "text": "Fragen",
+   "src": "warenkorb/t1",
+   "start": 85.15,
+   "end": 85.43
+  },
+  {
+   "text": "drin.",
+   "src": "warenkorb/t1",
+   "start": 85.45,
+   "end": 85.55
+  },
+  {
+   "text": "Zum",
+   "src": "warenkorb/t1",
+   "start": 86.15,
+   "end": 86.27
+  },
+  {
+   "text": "einen,",
+   "src": "warenkorb/t1",
+   "start": 86.35,
+   "end": 86.63
+  },
+  {
+   "text": "warum",
+   "src": "warenkorb/t1",
+   "start": 86.71,
+   "end": 86.97
+  },
+  {
+   "text": "starten",
+   "src": "warenkorb/t1",
+   "start": 87.05,
+   "end": 87.35
+  },
+  {
+   "text": "überhaupt",
+   "src": "warenkorb/t1",
+   "start": 87.37,
+   "end": 87.65
+  },
+  {
+   "text": "diese",
+   "src": "warenkorb/t1",
+   "start": 87.67,
+   "end": 87.83
+  },
+  {
+   "text": "40",
+   "src": "warenkorb/t1",
+   "start": 87.93,
+   "end": 88.25
+  },
+  {
+   "text": "Menschen",
+   "src": "warenkorb/t1",
+   "start": 88.33,
+   "end": 88.61
+  },
+  {
+   "text": "den",
+   "src": "warenkorb/t1",
+   "start": 88.67,
+   "end": 88.75
+  },
+  {
+   "text": "Checkout",
+   "src": "warenkorb/t1",
+   "start": 88.81,
+   "end": 89.15
+  },
+  {
+   "text": "gar",
+   "src": "warenkorb/t1",
+   "start": 89.19,
+   "end": 89.31
+  },
+  {
+   "text": "nicht?",
+   "src": "warenkorb/t1",
+   "start": 89.35,
+   "end": 89.53
+  },
+  {
+   "text": "Und",
+   "src": "warenkorb/t1",
+   "start": 90.15,
+   "end": 90.21
+  },
+  {
+   "text": "zum",
+   "src": "warenkorb/t1",
+   "start": 90.25,
+   "end": 90.35
+  },
+  {
+   "text": "anderen,",
+   "src": "warenkorb/t1",
+   "start": 90.39,
+   "end": 90.67
+  },
+  {
+   "text": "warum",
+   "src": "warenkorb/t1",
+   "start": 90.73,
+   "end": 90.95
+  },
+  {
+   "text": "brechen",
+   "src": "warenkorb/t1",
+   "start": 90.97,
+   "end": 91.25
+  },
+  {
+   "text": "überhaupt",
+   "src": "warenkorb/t1",
+   "start": 91.29,
+   "end": 91.51
+  },
+  {
+   "text": "weitere",
+   "src": "warenkorb/t1",
+   "start": 91.53,
+   "end": 91.83
+  },
+  {
+   "text": "30",
+   "src": "warenkorb/t1",
+   "start": 91.89,
+   "end": 92.29
+  },
+  {
+   "text": "nach",
+   "src": "warenkorb/t1",
+   "start": 92.39,
+   "end": 92.55
+  },
+  {
+   "text": "dem",
+   "src": "warenkorb/t1",
+   "start": 92.63,
+   "end": 92.75
+  },
+  {
+   "text": "Start",
+   "src": "warenkorb/t1",
+   "start": 92.81,
+   "end": 93.05
+  },
+  {
+   "text": "ab?",
+   "src": "warenkorb/t1",
+   "start": 93.19,
+   "end": 93.29
+  },
+  {
+   "text": "Ich",
+   "src": "warenkorb/t1",
+   "start": 95.33,
+   "end": 95.43
+  },
+  {
+   "text": "würde",
+   "src": "warenkorb/t1",
+   "start": 95.49,
+   "end": 95.65
+  },
+  {
+   "text": "tatsächlich",
+   "src": "warenkorb/t1",
+   "start": 95.73,
+   "end": 96.15
+  },
+  {
+   "text": "deshalb",
+   "src": "warenkorb/t1",
+   "start": 96.19,
+   "end": 96.45
+  },
+  {
+   "text": "zunächst",
+   "src": "warenkorb/t1",
+   "start": 96.51,
+   "end": 96.81
+  },
+  {
+   "text": "einmal",
+   "src": "warenkorb/t1",
+   "start": 96.85,
+   "end": 97.05
+  },
+  {
+   "text": "den",
+   "src": "warenkorb/t1",
+   "start": 97.11,
+   "end": 97.19
+  },
+  {
+   "text": "Kaufprozess",
+   "src": "warenkorb/t1",
+   "start": 97.25,
+   "end": 97.83
+  },
+  {
+   "text": "auf",
+   "src": "warenkorb/t1",
+   "start": 97.91,
+   "end": 98.01
+  },
+  {
+   "text": "dem",
+   "src": "warenkorb/t1",
+   "start": 98.05,
+   "end": 98.13
+  },
+  {
+   "text": "Smartphone",
+   "src": "warenkorb/t1",
+   "start": 98.21,
+   "end": 98.61
+  },
+  {
+   "text": "durchgehen.",
+   "src": "warenkorb/t1",
+   "start": 98.65,
+   "end": 99.03
+  },
+  {
+   "text": "Sind",
+   "src": "warenkorb/t1",
+   "start": 100.93,
+   "end": 101.05
+  },
+  {
+   "text": "vielleicht",
+   "src": "warenkorb/t1",
+   "start": 101.09,
+   "end": 101.31
+  },
+  {
+   "text": "Versandkosten",
+   "src": "warenkorb/t1",
+   "start": 101.35,
+   "end": 101.97
+  },
+  {
+   "text": "oder",
+   "src": "warenkorb/t1",
+   "start": 102.01,
+   "end": 102.13
+  },
+  {
+   "text": "Lieferzeiten",
+   "src": "warenkorb/t1",
+   "start": 102.17,
+   "end": 102.73
+  },
+  {
+   "text": "früh",
+   "src": "warenkorb/t1",
+   "start": 102.81,
+   "end": 102.97
+  },
+  {
+   "text": "genug",
+   "src": "warenkorb/t1",
+   "start": 103.05,
+   "end": 103.25
+  },
+  {
+   "text": "sichtbar?",
+   "src": "warenkorb/t1",
+   "start": 103.33,
+   "end": 103.67
+  },
+  {
+   "text": "Gibt",
+   "src": "warenkorb/t1",
+   "start": 104.09,
+   "end": 104.25
+  },
+  {
+   "text": "es",
+   "src": "warenkorb/t1",
+   "start": 104.29,
+   "end": 104.35
+  },
+  {
+   "text": "überhaupt",
+   "src": "warenkorb/t1",
+   "start": 104.41,
+   "end": 104.65
+  },
+  {
+   "text": "eine",
+   "src": "warenkorb/t1",
+   "start": 104.71,
+   "end": 104.83
+  },
+  {
+   "text": "passende",
+   "src": "warenkorb/t1",
+   "start": 104.91,
+   "end": 105.17
+  },
+  {
+   "text": "Zahlungsart?",
+   "src": "warenkorb/t1",
+   "start": 105.25,
+   "end": 105.81
+  },
+  {
+   "text": "Funktionieren",
+   "src": "warenkorb/t1",
+   "start": 108.17,
+   "end": 108.63
+  },
+  {
+   "text": "überhaupt",
+   "src": "warenkorb/t1",
+   "start": 108.67,
+   "end": 108.93
+  },
+  {
+   "text": "die",
+   "src": "warenkorb/t1",
+   "start": 108.95,
+   "end": 109.01
+  },
+  {
+   "text": "Formulare?",
+   "src": "warenkorb/t1",
+   "start": 109.05,
+   "end": 109.59
+  },
+  {
+   "text": "Und",
+   "src": "warenkorb/t1",
+   "start": 110.89,
+   "end": 110.97
+  },
+  {
+   "text": "erst",
+   "src": "warenkorb/t1",
+   "start": 111.09,
+   "end": 111.29
+  },
+  {
+   "text": "wenn",
+   "src": "warenkorb/t1",
+   "start": 111.33,
+   "end": 111.45
+  },
+  {
+   "text": "ich",
+   "src": "warenkorb/t1",
+   "start": 111.49,
+   "end": 111.57
+  },
+  {
+   "text": "das",
+   "src": "warenkorb/t1",
+   "start": 111.63,
+   "end": 111.79
+  },
+  {
+   "text": "geprüft",
+   "src": "warenkorb/t1",
+   "start": 111.87,
+   "end": 112.25
+  },
+  {
+   "text": "habe,",
+   "src": "warenkorb/t1",
+   "start": 112.27,
+   "end": 112.45
+  },
+  {
+   "text": "würde",
+   "src": "warenkorb/t1",
+   "start": 112.55,
+   "end": 112.69
+  },
+  {
+   "text": "ich",
+   "src": "warenkorb/t1",
+   "start": 112.73,
+   "end": 112.79
+  },
+  {
+   "text": "tatsächlich",
+   "src": "warenkorb/t1",
+   "start": 112.83,
+   "end": 113.25
+  },
+  {
+   "text": "über",
+   "src": "warenkorb/t1",
+   "start": 113.31,
+   "end": 113.43
+  },
+  {
+   "text": "Erinnerungen",
+   "src": "warenkorb/t1",
+   "start": 113.51,
+   "end": 113.91
+  },
+  {
+   "text": "oder",
+   "src": "warenkorb/t1",
+   "start": 114.03,
+   "end": 114.17
+  },
+  {
+   "text": "Gutscheine",
+   "src": "warenkorb/t1",
+   "start": 114.25,
+   "end": 114.63
+  },
+  {
+   "text": "nachdenken.",
+   "src": "warenkorb/t1",
+   "start": 114.69,
+   "end": 115.07
+  },
+  {
+   "text": "Und",
+   "src": "warenkorb/t1",
+   "start": 133.05,
+   "end": 133.13
+  },
+  {
+   "text": "bitte",
+   "src": "warenkorb/t1",
+   "start": 133.17,
+   "end": 133.37
+  },
+  {
+   "text": "nicht",
+   "src": "warenkorb/t1",
+   "start": 133.43,
+   "end": 133.55
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 133.57,
+   "end": 133.77
+  },
+  {
+   "text": "sofort",
+   "src": "warenkorb/t1",
+   "start": 133.81,
+   "end": 134.11
+  },
+  {
+   "text": "jeden",
+   "src": "warenkorb/t1",
+   "start": 134.19,
+   "end": 134.41
+  },
+  {
+   "text": "Abbruch",
+   "src": "warenkorb/t1",
+   "start": 134.53,
+   "end": 134.83
+  },
+  {
+   "text": "mit",
+   "src": "warenkorb/t1",
+   "start": 134.89,
+   "end": 134.99
+  },
+  {
+   "text": "10",
+   "src": "warenkorb/t1",
+   "start": 135.09,
+   "end": 135.27
+  },
+  {
+   "text": "Prozent",
+   "src": "warenkorb/t1",
+   "start": 135.31,
+   "end": 135.69
+  },
+  {
+   "text": "oder",
+   "src": "warenkorb/t1",
+   "start": 135.77,
+   "end": 135.91
+  },
+  {
+   "text": "höher",
+   "src": "warenkorb/t1",
+   "start": 135.99,
+   "end": 136.23
+  },
+  {
+   "text": "als",
+   "src": "warenkorb/t1",
+   "start": 136.33,
+   "end": 136.45
+  },
+  {
+   "text": "Rabatt",
+   "src": "warenkorb/t1",
+   "start": 136.51,
+   "end": 136.77
+  },
+  {
+   "text": "zu",
+   "src": "warenkorb/t1",
+   "start": 136.83,
+   "end": 136.89
+  },
+  {
+   "text": "belohnen,",
+   "src": "warenkorb/t1",
+   "start": 136.95,
+   "end": 137.23
+  },
+  {
+   "text": "denn",
+   "src": "warenkorb/t1",
+   "start": 152.27,
+   "end": 152.39
+  },
+  {
+   "text": "sonst",
+   "src": "warenkorb/t1",
+   "start": 152.41,
+   "end": 152.59
+  },
+  {
+   "text": "verschenkst",
+   "src": "warenkorb/t1",
+   "start": 152.63,
+   "end": 152.97
+  },
+  {
+   "text": "du",
+   "src": "warenkorb/t1",
+   "start": 153.01,
+   "end": 153.05
+  },
+  {
+   "text": "womöglich",
+   "src": "warenkorb/t1",
+   "start": 153.11,
+   "end": 153.57
+  },
+  {
+   "text": "unter",
+   "src": "warenkorb/t1",
+   "start": 153.67,
+   "end": 153.87
+  },
+  {
+   "text": "Umständen",
+   "src": "warenkorb/t1",
+   "start": 153.95,
+   "end": 154.41
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 154.47,
+   "end": 154.69
+  },
+  {
+   "text": "Marge,",
+   "src": "warenkorb/t1",
+   "start": 154.79,
+   "end": 155.13
+  },
+  {
+   "text": "obwohl",
+   "src": "warenkorb/t1",
+   "start": 155.39,
+   "end": 155.59
+  },
+  {
+   "text": "vielleicht",
+   "src": "warenkorb/t1",
+   "start": 155.63,
+   "end": 155.85
+  },
+  {
+   "text": "das",
+   "src": "warenkorb/t1",
+   "start": 155.87,
+   "end": 155.95
+  },
+  {
+   "text": "eigentliche",
+   "src": "warenkorb/t1",
+   "start": 156.03,
+   "end": 156.39
+  },
+  {
+   "text": "Problem",
+   "src": "warenkorb/t1",
+   "start": 156.45,
+   "end": 156.77
+  },
+  {
+   "text": "ganz",
+   "src": "warenkorb/t1",
+   "start": 156.87,
+   "end": 157.09
+  },
+  {
+   "text": "woanders",
+   "src": "warenkorb/t1",
+   "start": 157.15,
+   "end": 157.53
+  },
+  {
+   "text": "liegt.",
+   "src": "warenkorb/t1",
+   "start": 157.59,
+   "end": 157.77
+  },
+  {
+   "text": "Für",
+   "src": "warenkorb/t1",
+   "start": 163.45,
+   "end": 163.53
+  },
+  {
+   "text": "mich",
+   "src": "warenkorb/t1",
+   "start": 163.57,
+   "end": 163.69
+  },
+  {
+   "text": "ist",
+   "src": "warenkorb/t1",
+   "start": 163.73,
+   "end": 163.81
+  },
+  {
+   "text": "der",
+   "src": "warenkorb/t1",
+   "start": 163.85,
+   "end": 163.93
+  },
+  {
+   "text": "Warenkorbabbruch",
+   "src": "warenkorb/t1",
+   "start": 164.01,
+   "end": 164.77
+  },
+  {
+   "text": "also",
+   "src": "warenkorb/t1",
+   "start": 164.85,
+   "end": 165.01
+  },
+  {
+   "text": "eher",
+   "src": "warenkorb/t1",
+   "start": 165.35,
+   "end": 165.51
+  },
+  {
+   "text": "weniger",
+   "src": "warenkorb/t1",
+   "start": 165.63,
+   "end": 166.01
+  },
+  {
+   "text": "ein",
+   "src": "warenkorb/t1",
+   "start": 166.09,
+   "end": 166.19
+  },
+  {
+   "text": "Grund",
+   "src": "warenkorb/t1",
+   "start": 166.25,
+   "end": 166.47
+  },
+  {
+   "text": "für",
+   "src": "warenkorb/t1",
+   "start": 166.55,
+   "end": 166.65
+  },
+  {
+   "text": "hektisches",
+   "src": "warenkorb/t1",
+   "start": 166.73,
+   "end": 167.19
+  },
+  {
+   "text": "Retargeting,",
+   "src": "warenkorb/t1",
+   "start": 167.29,
+   "end": 167.93
+  },
+  {
+   "text": "sondern",
+   "src": "warenkorb/t1",
+   "start": 168.31,
+   "end": 168.55
+  },
+  {
+   "text": "zunächst",
+   "src": "warenkorb/t1",
+   "start": 168.59,
+   "end": 168.87
+  },
+  {
+   "text": "einmal",
+   "src": "warenkorb/t1",
+   "start": 168.93,
+   "end": 169.21
+  },
+  {
+   "text": "ein",
+   "src": "warenkorb/t1",
+   "start": 169.45,
+   "end": 169.57
+  },
+  {
+   "text": "Signal,",
+   "src": "warenkorb/t1",
+   "start": 169.73,
+   "end": 170.07
+  },
+  {
+   "text": "einfach",
+   "src": "warenkorb/t1",
+   "start": 170.13,
+   "end": 170.35
+  },
+  {
+   "text": "um",
+   "src": "warenkorb/t1",
+   "start": 170.39,
+   "end": 170.45
+  },
+  {
+   "text": "den",
+   "src": "warenkorb/t1",
+   "start": 170.49,
+   "end": 170.57
+  },
+  {
+   "text": "Kaufprozess",
+   "src": "warenkorb/t1",
+   "start": 170.71,
+   "end": 171.29
+  },
+  {
+   "text": "besser",
+   "src": "warenkorb/t1",
+   "start": 171.37,
+   "end": 171.63
+  },
+  {
+   "text": "zu",
+   "src": "warenkorb/t1",
+   "start": 171.75,
+   "end": 171.81
+  },
+  {
+   "text": "verstehen.",
+   "src": "warenkorb/t1",
+   "start": 171.87,
+   "end": 172.23
+  },
+  {
+   "text": "Und",
+   "src": "warenkorb/t1",
+   "start": 193.81,
+   "end": 193.87
+  },
+  {
+   "text": "wenn",
+   "src": "warenkorb/t1",
+   "start": 193.91,
+   "end": 194.03
+  },
+  {
+   "text": "du",
+   "src": "warenkorb/t1",
+   "start": 194.07,
+   "end": 194.13
+  },
+  {
+   "text": "jetzt",
+   "src": "warenkorb/t1",
+   "start": 194.21,
+   "end": 194.41
+  },
+  {
+   "text": "deinen",
+   "src": "warenkorb/t1",
+   "start": 194.45,
+   "end": 194.73
+  },
+  {
+   "text": "Checkout",
+   "src": "warenkorb/t1",
+   "start": 194.81,
+   "end": 195.19
+  },
+  {
+   "text": "hier",
+   "src": "warenkorb/t1",
+   "start": 195.21,
+   "end": 195.37
+  },
+  {
+   "text": "in",
+   "src": "warenkorb/t1",
+   "start": 195.43,
+   "end": 195.47
+  },
+  {
+   "text": "diesem",
+   "src": "warenkorb/t1",
+   "start": 195.51,
+   "end": 195.71
+  },
+  {
+   "text": "Video",
+   "src": "warenkorb/t1",
+   "start": 195.75,
+   "end": 195.95
+  },
+  {
+   "text": "nicht",
+   "src": "warenkorb/t1",
+   "start": 196.07,
+   "end": 196.25
+  },
+  {
+   "text": "abbrechen",
+   "src": "warenkorb/t1",
+   "start": 196.37,
+   "end": 196.73
+  },
+  {
+   "text": "möchtest,",
+   "src": "warenkorb/t1",
+   "start": 196.77,
+   "end": 197.11
+  },
+  {
+   "text": "dann",
+   "src": "warenkorb/t1",
+   "start": 197.15,
+   "end": 197.31
+  },
+  {
+   "text": "drück",
+   "src": "warenkorb/t1",
+   "start": 197.35,
+   "end": 197.49
+  },
+  {
+   "text": "hier",
+   "src": "warenkorb/t1",
+   "start": 197.51,
+   "end": 197.63
+  },
+  {
+   "text": "gerne",
+   "src": "warenkorb/t1",
+   "start": 197.65,
+   "end": 197.83
+  },
+  {
+   "text": "mal",
+   "src": "warenkorb/t1",
+   "start": 197.85,
+   "end": 197.95
+  },
+  {
+   "text": "das",
+   "src": "warenkorb/t1",
+   "start": 197.97,
+   "end": 198.05
+  },
+  {
+   "text": "Plus",
+   "src": "warenkorb/t1",
+   "start": 198.13,
+   "end": 198.29
+  },
+  {
+   "text": "weg,",
+   "src": "warenkorb/t1",
+   "start": 198.33,
+   "end": 198.47
+  },
+  {
+   "text": "um",
+   "src": "warenkorb/t1",
+   "start": 198.55,
+   "end": 198.61
+  },
+  {
+   "text": "weitere",
+   "src": "warenkorb/t1",
+   "start": 198.65,
+   "end": 198.91
+  },
+  {
+   "text": "solcher",
+   "src": "warenkorb/t1",
+   "start": 198.97,
+   "end": 199.19
+  },
+  {
+   "text": "Videos",
+   "src": "warenkorb/t1",
+   "start": 199.23,
+   "end": 199.45
+  },
+  {
+   "text": "in",
+   "src": "warenkorb/t1",
+   "start": 199.51,
+   "end": 199.55
+  },
+  {
+   "text": "Zukunft",
+   "src": "warenkorb/t1",
+   "start": 199.61,
+   "end": 199.95
+  },
+  {
+   "text": "nicht",
+   "src": "warenkorb/t1",
+   "start": 200.01,
+   "end": 200.15
+  },
+  {
+   "text": "zu",
+   "src": "warenkorb/t1",
+   "start": 200.19,
+   "end": 200.25
+  },
+  {
+   "text": "verpassen.",
+   "src": "warenkorb/t1",
+   "start": 200.29,
+   "end": 200.67
+  }
+ ],
+ "pages": [
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  4,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  4,
+  2,
+  1,
+  2,
+  1,
+  1,
+  1,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  4,
+  3,
+  2,
+  3,
+  3,
+  1,
+  2,
+  1,
+  3,
+  2,
+  4,
+  2,
+  1,
+  1,
+  2,
+  4,
+  3,
+  3,
+  2,
+  2,
+  1,
+  4,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  4,
+  2,
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  4,
+  3,
+  4,
+  2,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3
+ ]
+}

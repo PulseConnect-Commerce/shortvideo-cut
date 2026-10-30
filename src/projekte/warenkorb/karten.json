@@ -1,0 +1,148 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md, 'Visuelle Metaphern'; Vorlagen hyperframes/pagebuilder-skizzen und hyperframes/clv-skizzen) für E07 · Warenkorbabbruch. Sekunden im geschnittenen Video (cut.json, 99,87 s). Teile kommen 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, pop auf Rabattcode, 89 € und −10 %, success auf 'geprüft', klick auf dem Tipp in den Warenkorb, auf der Quelle und auf dem Plus. Gebaut in hyperframes/warenkorb-skizzen/index.html. Nur Lucide-Icons, eigene Formen (Jacke) und Text; Zahlen nur seine (89 €, 7 €, 100 / 60 / 30, 40, 30, 10 %), als DEMO bzw. BEISPIEL gekennzeichnet, keine Gesamtsumme, keine echte Kennzahl, kein B-Roll aus alten Videos, keine Folgennummern. 70,35-73,27 s Quelle groß (Shopify-Hilfe), dort keine Karte.",
+ "karten": [
+  {
+   "id": "k1", "wort": "abgebrochenen",
+   "text": "WARENKORB ABGEBROCHEN – Warenkorb (rotes Kreuz auf 'Warenkörben'), Pfeil auf 'denken', Händler auf 'Online-Händler', handschriftlich 'sofort', Rabattcode-Ticket auf 'Rabattcodes'",
+   "start": 0.23, "ende": 5.65,
+   "teile": {"abgebrochenen": 0.23, "warenkoerben": 0.95, "denken": 1.58, "haendler": 2.63, "sofort": 3.67, "rabattcodes": 4.31},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 0.23, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 0.95, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 2.63, "volume": 0.1},
+    {"datei": "pop.mp3", "at": 4.31, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k2", "wort": "Aber",
+   "text": "ERST HERAUSFINDEN – Kaufweg Produkt → Warenkorb → Checkout → Kauf, die Lupe sucht auf 'herausfinden', 'Wo?' auf 'welcher', Absprünge mit '?' zwischen den Schritten auf 'abspringen'",
+   "start": 5.67, "ende": 9.84,
+   "teile": {"aber": 5.67, "herausfinden": 7.09, "welcher": 7.75, "abspringen": 9.03},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 5.67, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 9.03, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k3", "wort": "Nehmen",
+   "text": "BEISPIEL · JACKENSHOP, DEMO – fiktive Produktseite 'DEMO-SHOP · JACKEN', Jacke auf 'Jacken', Kundin, Titel 'Jacke', '89 €' auf '89', Zeiger tippt 'In den Warenkorb' auf 'Warenkorb' (wird 'Im Warenkorb', Warenkorb zeigt 1)",
+   "start": 9.84, "ende": 17.2,
+   "teile": {"nehmen": 9.84, "online_shop": 11.1, "jacken": 11.8, "kundin": 13.4, "jacke": 14.38, "89": 14.76, "warenkorb": 15.7},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 9.84, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 11.8, "volume": 0.1},
+    {"datei": "pop.mp3", "at": 14.76, "volume": 0.1},
+    {"datei": "klick.mp3", "at": 15.7, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k4", "wort": "Checkout",
+   "text": "BEISPIEL · CHECKOUT, DEMO – Kasse mit 'Jacke 89 €', auf '7' die Zeile 'Versand + 7 €' markiert, handschriftlich 'erst im Checkout', Kreuz auf 'Punkt', Kundin geht auf 'ausgestiegen' zur Tür, 'Ausstieg?'",
+   "start": 17.26, "ende": 23.98,
+   "teile": {"checkout": 17.26, "7": 19.26, "versandkosten": 19.68, "punkt": 21.97, "ausgestiegen": 22.89},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 17.26, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 19.26, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 22.89, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k5", "wort": "Und",
+   "text": "BEISPIEL · EIN WEITERER BESUCHER – Besucher, Warenkorb, zwei Jacken auf 'zwei', Größen M und L, Vergleichs-Pfeile und 'Noch im Vergleich' auf 'vergleicht', 'KAUFBEREIT?' mit kurzem Balken auf 'kaufbereit', handschriftlich 'noch nicht'",
+   "start": 23.98, "ende": 34.45,
+   "teile": {"besucher": 24.52, "speichert": 24.96, "zwei": 26.38, "verschiedene": 26.6, "groessen": 27.0, "vergleicht": 28.36, "kaufbereit": 31.81},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 23.98, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 26.38, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 28.36, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k6", "wort": "Warenkorbabbrüche",
+   "text": "NICHT VERWECHSELN – Warenkorbabbruch ('Artikel liegen im Korb, noch im Vergleich') ≠ Checkout-Abbruch ('Checkout begonnen, dort ausgestiegen'), ≠ auf 'unterschiedliche'",
+   "start": 34.52, "ende": 39.24,
+   "teile": {"warenkorbabbrueche": 34.52, "checkout_abbrueche": 35.59, "unterschiedliche": 36.57},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 34.52, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 35.59, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 36.57, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k7", "wort": "100",
+   "text": "RECHENBEISPIEL, BEISPIEL – Balken 100 Warenkörbe / 60 Checkouts gestartet / 30 Bestellungen auf ihren Zahlen, Haken auf 'abgeschlossen', zwei '?' auf 'zwei Fragen', auf '40' die Lücke 100 → 60 gestrichelt mit '−40 kein Checkout', auf '30' die Lücke 60 → 30 mit '−30 Abbruch nach Start'",
+   "start": 39.24, "ende": 57.75,
+   "teile": {"100": 39.24, "60": 42.12, "30": 43.86, "abgeschlossen": 46.02, "zwei": 48.34, "40": 51.78, "30b": 55.74},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 39.24, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 42.12, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 43.86, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 51.78, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 55.74, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k8", "wort": "Ich",
+   "text": "KAUFPROZESS AM SMARTPHONE, DEMO – Handy mit Demo-Kasse; nacheinander markiert: Versand & Lieferzeit auf 'Versandkosten' ('früh sichtbar?' auf 'sichtbar'), Zahlungsart auf 'Zahlungsart', Formulare auf 'Formulare' (scrollt hoch, Cursor blinkt); drei Haken auf 'geprüft'",
+   "start": 57.82, "ende": 70.35,
+   "teile": {"ich": 57.82, "kaufprozess": 59.74, "smartphone": 60.7, "versandkosten": 62.3, "sichtbar": 64.29, "zahlungsart": 66.2, "formulare": 67.85, "geprueft": 69.67},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 57.82, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 62.3, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 66.2, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 67.85, "volume": 0.1},
+    {"datei": "success.mp3", "at": 69.67, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "q1", "wort": "würde",
+   "text": "Quelle groß, er als Bubble unten rechts (Remotion, src/lib/quelle-gross.tsx): Shopify-Hilfe 'Wiederherstellung abgebrochener Checkouts', markiert 'Du kannst Kund:innen automatisch eine E-Mail senden, nachdem sie ihren Checkout abgebrochen haben.' (zu 'Erinnerungen')",
+   "start": 70.35, "ende": 73.27,
+   "sfx": [
+    {"datei": "klick.mp3", "at": 70.35, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k9", "wort": "Und",
+   "text": "PAUSCHALER RABATT? – Warenkorb, Kreuz auf 'Abbruch', Ticket '−10 %' auf '10', handschriftlich 'oder mehr' auf 'höher', das Ticket landet auf 'belohnen' beim Abbruch, Marge-Balken auf 'verschenkst', schrumpft auf 'Marge' (ein Stück mit Münzen fällt weg), 'das eigentliche Problem?' mit Versand / Zahlung / Formular und Lupe",
+   "start": 73.27, "ende": 83.46,
+   "teile": {"abbruch": 74.75, "10": 75.31, "hoeher": 76.21, "belohnen": 77.17, "verschenkst": 77.93, "marge": 80.09, "eigentliche": 81.33, "problem": 81.75},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 73.27, "volume": 0.12},
+    {"datei": "pop.mp3", "at": 75.31, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 80.09, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k10", "wort": "Für",
+   "text": "FÜR MICH IST EIN WARENKORBABBRUCH … – Abbruch; Ast zu 'hektisches Retargeting' (Megafon zittert), auf 'sondern' durchgestrichen; Ast zum 'Signal' (Glühbirne) auf 'Signal', 'Kaufprozess besser verstehen' auf 'Kaufprozess'",
+   "start": 83.46, "ende": 91.88,
+   "teile": {"warenkorbabbruch": 84.02, "weniger": 85.64, "hektisches": 86.74, "retargeting": 87.3, "sondern": 88.32, "signal": 89.74, "kaufprozess": 90.72},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 83.46, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 88.32, "volume": 0.1},
+    {"datei": "tick.mp3", "at": 89.74, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k11", "wort": "verstehen",
+   "text": "MEIN FAZIT (Briefing-Schluss) – pauschaler Rabatt '−10 %' wird durchgestrichen, 'Ursache vor Gutschein'",
+   "start": 91.88, "ende": 95.2,
+   "teile": {"verstehen": 91.88, "strich": 92.25},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 91.88, "volume": 0.12},
+    {"datei": "tick.mp3", "at": 92.25, "volume": 0.1}
+   ]
+  },
+  {
+   "id": "k12", "wort": "abbrechen",
+   "text": "Nur das Folgen-Symbol (Pauls Vorgabe 2026-10-25): Profilbild mit Plus und 'Folgen' auf 'abbrechen', Ring auf 'möchtest', Zeiger auf 'drück', das Plus wird auf 'Plus' angetippt und zum Haken; bleibt bis zum Ende",
+   "start": 95.24, "ende": 99.87,
+   "teile": {"abbrechen": 95.24, "moechtest": 95.64, "drueck": 96.22, "plus": 97.0},
+   "sfx": [
+    {"datei": "whoosh.mp3", "at": 95.24, "volume": 0.12},
+    {"datei": "klick.mp3", "at": 97.0, "volume": 0.1}
+   ]
+  }
+ ]
+}
