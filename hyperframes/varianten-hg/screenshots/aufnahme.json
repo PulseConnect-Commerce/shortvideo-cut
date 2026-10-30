@@ -1,0 +1,100 @@
+{
+ "ziele": {
+  "varianten": {
+   "url": "https://help.shopify.com/de/manual/products/variants",
+   "status": 200,
+   "titel": "Shopify Help Center | Varianten",
+   "pos": {
+    "Du kannst Varianten zu einem Produkt hinzufügen, das mehr als eine Option hat (z. B. Größe oder Farbe).": [
+     470,
+     37
+    ],
+    "Jede Kombination von Optionswerten für ein Produkt kann eine Variante dieses Produkts sein.": [
+     510,
+     37
+    ],
+    "Du kannst auch den Inventarbestand für jede Variante auf der Seite Inventar verwalten.": [
+     785,
+     57
+    ]
+   },
+   "ank": {
+    "Varianten": [
+     157,
+     40
+    ],
+    "Frühzeitiger Zugriff": [
+     236,
+     24
+    ],
+    "Tipp": [
+     1109,
+     24
+    ]
+   },
+   "hoehe": 6400
+  },
+  "hinzufuegen": {
+   "url": "https://help.shopify.com/de/manual/products/variants/add-variants",
+   "status": 200,
+   "titel": "Shopify Help Center | Varianten hinzufügen",
+   "pos": {
+    "Wenn du dem Produkt jedoch Varianten hinzufügst, musst du diese Einstellungen für jede Variante auf der Variantendetailseite anpassen.": [
+     608,
+     77
+    ],
+    "Du kannst bis zu 2.048 Varianten für ein Produkt erstellen.": [
+     1328,
+     37
+    ],
+    "Jedes Produkt kann bis zu drei Optionen haben.": [
+     1375,
+     17
+    ]
+   },
+   "ank": {
+    "Varianten hinzufügen": [
+     157,
+     40
+    ],
+    "Überlegungen zum Hinzufügen von Varianten": [
+     1182,
+     64
+    ],
+    "Hinweis": [
+     2194,
+     24
+    ]
+   },
+   "hoehe": 6400
+  },
+  "bilder": {
+   "url": "https://help.shopify.com/de/manual/products/product-media/add-images-variants",
+   "status": 200,
+   "titel": "Shopify Help Center | Bilder zu Produktvarianten hinzufügen",
+   "pos": {
+    "Du kannst Bilder zu deinen Produktvarianten hinzufügen, damit deine Kundschaft jede Produktvariante ansehen kann.": [
+     510,
+     57
+    ],
+    "Wenn eine Kund:in die Variante auswählt, wird das zugewiesene Bild als Variantenvorschau angezeigt,": [
+     1304,
+     57
+    ]
+   },
+   "ank": {
+    "Bilder zu Produktvarianten hinzufügen": [
+     157,
+     80
+    ],
+    "Mehrere Bilder für eine Variante": [
+     962,
+     64
+    ]
+   },
+   "hoehe": 6400
+  }
+ },
+ "datum": "2026-10-30T21:40:46.555Z",
+ "viewport": "412x732 @2.62"
+}

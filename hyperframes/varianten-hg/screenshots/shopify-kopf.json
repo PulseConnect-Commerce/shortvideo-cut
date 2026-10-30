@@ -1,0 +1,627 @@
+{
+ "url": "https://www.shopify.com/de",
+ "status": 200,
+ "datum": "2026-10-30T21:39:34.024Z",
+ "svgs": [
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "aAria": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"pointer-events-none w-6 h-6 lg:hidden rtl:-scale-x-100\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "aAria": "",
+   "w": 16,
+   "h": 16,
+   "html": "<svg class=\"pointer-events-none w-4 h-4 mt-[3px] shrink-0 transition-transform duration-200 [.level1-item:hover_&amp;]:-scale-y-100 [.level1-item:focus-within_&amp;]:-scale-y-100 max-lg:hidden\"><use href=\"#icon-chevron\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "aAria": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0 ltr:rotate-90 rtl:-rotate-90\"><use href=\"#icon-chevron\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/start",
+   "aAria": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"pointer-events-none row-start-[span_2] w-7 h-7 shrink-0 md:hidden\"><use href=\"#icon-drag-and-drop\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/start",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate] max-sm:hidden max-md:absolute max-md:w-6 max-md:h-6 max-md:opacity-100 max-md:top-1/2 max-md:-translate-y-1/2 max-md:end-4 max-md:rtl:-scale-x-100\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/sell",
+   "aAria": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"pointer-events-none row-start-[span_2] w-7 h-7 shrink-0 md:hidden\"><use href=\"#icon-boost\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/sell",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate] max-sm:hidden max-md:absolute max-md:w-6 max-md:h-6 max-md:opacity-100 max-md:top-1/2 max-md:-translate-y-1/2 max-md:end-4 max-md:rtl:-scale-x-100\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/enterprise",
+   "aAria": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"pointer-events-none row-start-[span_2] w-7 h-7 shrink-0 md:hidden\"><use href=\"#icon-sales-up\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/enterprise",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate] max-sm:hidden max-md:absolute max-md:w-6 max-md:h-6 max-md:opacity-100 max-md:top-1/2 max-md:-translate-y-1/2 max-md:end-4 max-md:rtl:-scale-x-100\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/checkout",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/sidekick",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "aAria": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"pointer-events-none w-6 h-6 lg:hidden rtl:-scale-x-100\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "aAria": "",
+   "w": 16,
+   "h": 16,
+   "html": "<svg class=\"pointer-events-none w-4 h-4 mt-[3px] shrink-0 transition-transform duration-200 [.level1-item:hover_&amp;]:-scale-y-100 [.level1-item:focus-within_&amp;]:-scale-y-100 max-lg:hidden\"><use href=\"#icon-chevron\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "",
+   "aAria": "",
+   "w": 0,
+   "h": 0,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0 ltr:rotate-90 rtl:-rotate-90\"><use href=\"#icon-chevron\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/website/builder",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-drag-and-drop\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/website/builder",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://themes.shopify.com/?locale=de",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-design\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://themes.shopify.com/?locale=de",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/domains",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-domain\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/domains",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/customer-accounts",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-user-profile\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/customer-accounts",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/sidekick",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-ai\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/sidekick",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/online",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-online\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/online",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/agentic-storefronts",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-ai-chats\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/agentic-storefronts",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/pos",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-pos-tick\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/pos",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/shop",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-shop-app\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/shop",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/channels",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-social\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/channels",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/international",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-global\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/international",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/solutions/b2b/enterprise",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-sales-up\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/solutions/b2b/enterprise",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/markets",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-global-markets\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/markets",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/marketing",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-marketing\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/marketing",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/marketing-automation-tools",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-users\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/marketing-automation-tools",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/discounts",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-discount\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/discounts",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/analytics",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-analytics\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/analytics",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/test-and-launch",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-computer-tick\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/test-and-launch",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/orders",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-inventory-synced\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/orders",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/shipping",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-shipping\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/shipping",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/flow",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-save-time\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/flow",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/mobile",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-mobile\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/mobile",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/checkout",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-credit-card\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/checkout",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/payments",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-money\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/payments",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/tax",
+   "aAria": "",
+   "w": 20,
+   "h": 20,
+   "html": "<svg class=\"pointer-events-none w-5 h-5 shrink-0\"><use href=\"#icon-taxes\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/tax",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/ucp",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://apps.shopify.com/?locale=de",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://shopify.dev/",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  },
+  {
+   "aria": "",
+   "title": "",
+   "a": "https://www.shopify.com/de/editions/fall2026",
+   "aAria": "",
+   "w": 14,
+   "h": 14,
+   "html": "<svg class=\"w-3.5 h-3.5 shrink-0 opacity-0 pointer-events-none rtl:-scale-x-100 lg:[.level3-link:hover_&amp;]:opacity-100 lg:[.level3-link:hover_&amp;]:translate-x-1/2 rtl:lg:[.level3-link:hover_&amp;]:-translate-x-1/2 lg:transition-[opacity,translate] lg:duration-300 lg:will-change-[opacity,translate]\"><use href=\"#icon-arrow\"></use></svg>"
+  }
+ ],
+ "icons": [
+  "https://cdn.shopify.com/b/shopify-brochure2-assets/61cc781fe73f11e9d4bd160d27cc627b.png",
+  "https://cdn.shopify.com/b/shopify-brochure2-assets/c97c60ca19c64a8b5378d9f9e971f7bd.png",
+  "https://cdn.shopify.com/b/shopify-brochure2-assets/c97c60ca19c64a8b5378d9f9e971f7bd.png",
+  "https://cdn.shopify.com/b/shopify-brochure2-assets/b13486e5693b246af63c66ab047a6b6b.png",
+  "https://cdn.shopify.com/b/shopify-brochure2-assets/8734d76c98437c8ae8a628bbeed3750a.png",
+  "https://cdn.shopify.com/b/shopify-brochure2-assets/193f18e4855704ef1716dc0cd750c1ee.png"
+ ]
+}

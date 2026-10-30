@@ -1,0 +1,71 @@
+{
+ "url": "https://help.shopify.com/de/manual/products/product-media/add-images-variants",
+ "status": 200,
+ "datum": "2026-10-30T21:37:23.781Z",
+ "titel": "Shopify Help Center | Bilder zu Produktvarianten hinzufügen",
+ "text": "Hilfe\nKostenlos starten\nEinloggen\nInhalt\nHome\nProdukte\nProduktmedien\nBilder zu Produktvarianten hinzufügen\nFrühzeitiger Zugriff\n\nEine neu gestaltete Produktdetailseite wird schrittweise eingeführt. Wenn diese in deinem Shop verfügbar ist, verwaltest du all deine Varianten auf der Produktdetailseite anstatt auf separaten Variantendetailseiten. Daher stimmen einige Informationen auf dieser Seite möglicherweise nicht mit dem überein, was dir angezeigt wird. Mehr Informationen zu Varianten auf der neu gestalteten Produktdetailseite.\n\nDu kannst Bilder zu deinen Produktvarianten hinzufügen, damit deine Kundschaft jede Produktvariante ansehen kann. Du kannst neue Bilder von deinem Gerät hinzufügen oder aus vorhandenen Produktbildern auswählen. Produktvarianten unterstützen keine anderen Medientypen wie 3D-Modelle oder Videos und du kannst jeder Produktvariante nur ein Bild hinzufügen.\n\nAuf dieser Seite\nMehrere Bilder für eine Variante\nBilder einzeln zu vorhandenen Varianten hinzufügen\nBilder per Sammelaktion zu vorhandenen Varianten hinzufügen\nDeine Bilder schützen\nMehrere Bilder für eine Variante\n\nJede Variante unterstützt nur ein zugewiesenes Bild, du kannst jedoch die Mediengalerie des Produkts verwenden, um zusätzliche Bilder für eine Variantenoption anzuzeigen.\n\nSchritte:\nFüge alle mit einer Variante verknüpften Bilder zur Mediengalerie des Produkts hinzu.\nOrdne die Bilder in der richtigen Reihenfolge an, sodass zusammengehörige Bilder zusammen angezeigt werden.\nWeise der Variante ein Bild zu. Wenn eine Kund:in die Variante auswählt, wird das zugewiesene Bild als Variantenvorschau angezeigt, und sie kann durch die Galerie scrollen, um die restlichen Bilder anzusehen.\n\nWenn eine bestimmte Gruppe von Bildern automatisch angezeigt werden soll, sobald eine Kund:in eine bestimmte Option auswählt, dann ziehe die Shopify Combined Listings-App in Betracht, die im Shopify Plus-Plan und im Shopify Enterprise Commerce-Plan verfügbar ist.\n\nBilder einzeln zu vorhandenen Varianten hinzufügen\nDesktop\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf den Namen des Produkts, das du bearbeiten möchtest.\n\nKlicke im Abschnitt Varianten auf das Bildsymbol neben der Variante, zu der du ein Bild hinzufügen möchtest.\n\nWähle ein Produktbild aus deinen vorhandenen Bildern aus oder klicke auf Bild hinzufügen, um ein neues Bild von deinem Gerät hochzuladen.\n\nKlicke auf Fertig.\n\nKlicke auf Speichern.\n\nMobil\nBilder per Sammelaktion zu vorhandenen Varianten hinzufügen\n\nGehe in deinem Shopify-Adminbereich zu Produkte.\n\nKlicke auf den Namen des Produkts, das du bearbeiten möchtest.\n\nWähle im Abschnitt Varianten die Varianten, denen du Bilder hinzufügen möchtest, über die Kontrollkästchen aus.\n\nKlicke auf  und dann auf Bilder hinzufügen oder Bilder bearbeiten, wenn du vorhandene Variantenbilder ersetzt.\n\nWähle ein Produktbild aus deinen vorhandenen Bildern aus oder klicke auf Bild hinzufügen, um ein neues Bild von deinem Gerät hochzuladen.\n\nKlicke auf Fertig.\n\nKlicke auf Speichern.\n\nDeine Bilder schützen\n\nDu kannst nicht verhindern, dass Personen deine Bilder auf dem Bildschirm speichern, aber du kannst eine App aus dem Shopify App Store verwenden, um ein Wasserzeichen hinzuzufügen.\n\nFeedback hinterlassen\nTeam kontaktieren",
+ "hs": [
+  "H1: Bilder zu Produktvarianten hinzufügen",
+  "H2: Auf dieser Seite",
+  "H2: Mehrere Bilder für eine Variante",
+  "H2: Bilder einzeln zu vorhandenen Varianten hinzufügen",
+  "H2: Bilder per Sammelaktion zu vorhandenen Varianten hinzufügen",
+  "H2: Deine Bilder schützen"
+ ],
+ "imgs": [
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/ProductIcon.svg",
+   "alt": "Produkte",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/shopifycloud/help-center/manual/admin-icons/MenuHorizontalIcon.svg",
+   "alt": "Horizontales Menü",
+   "w": 150,
+   "h": 150
+  },
+  {
+   "tag": "IFRAME",
+   "src": "",
+   "alt": "",
+   "w": 0,
+   "h": 0
+  }
+ ],
+ "svgs": [
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  },
+  {
+   "aria": "",
+   "html": "<svg viewBox=\"0 0 15 15\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mx-[3px] my-0 -mb-px inline-block aspect-square h-[0.8rem]\"><path d=\"M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964",
+   "len": 896
+  }
+ ],
+ "icons": [],
+ "links": [
+  "Produkte -> https://help.shopify.com/de/manual/products",
+  "Produktmedien -> https://help.shopify.com/de/manual/products/product-media",
+  "Varianten auf der neu gestalteten Produktdetailseite -> https://help.shopify.com/de/manual/products/variants/searching-filtering#redesigned-product-details-page",
+  "Mehrere Bilder für eine Variante -> https://help.shopify.com/de/manual/products/product-media/add-images-variants#multiple-images",
+  "Bilder einzeln zu vorhandenen Varianten hinzufügen -> https://help.shopify.com/de/manual/products/product-media/add-images-variants#add-images-to-existing-variants-individually",
+  "Bilder per Sammelaktion zu vorhandenen Varianten hinzufügen -> https://help.shopify.com/de/manual/products/product-media/add-images-variants#add-images-to-existing-variants-in-bulk",
+  "Deine Bilder schützen -> https://help.shopify.com/de/manual/products/product-media/add-images-variants#protect-your-images",
+  "Shopify Combined Listings-App -> https://help.shopify.com/de/manual/products/combined-listings-app"
+ ]
+}
