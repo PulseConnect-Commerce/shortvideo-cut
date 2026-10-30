@@ -76,7 +76,7 @@
   {
    "id": "k3",
    "wort": "Aber sobald es … Matrixify nutzen",
-   "text": "Drei Fälle je auf ihrem Wort (größere Datenmengen, mehrere Datentypen, wiederkehrende Exporte), Linien laufen auf 'Matrixify' im Matrixify-Zeichen zusammen",
+   "text": "Drei gestrichelte Plätze, die sich je auf ihrem Wort füllen (größere Datenmengen, mehrere Datentypen, wiederkehrende Exporte), Linien laufen auf 'Matrixify' im Matrixify-Zeichen zusammen",
    "start": 18.27,
    "ende": 27.35,
    "teile": {
@@ -267,7 +267,7 @@
   {
    "id": "k9",
    "wort": "Daher mein Tipp … dann erst … größeren Import durchführen",
-   "text": "Titel 'Erst 3 Testprodukte, dann alle' (wörtlich, Briefing 58–73 s), Schritte 'Vorher exportieren' (Export/Sicherung), 'Klein testen' (drei Testprodukte), 'Änderungen prüfen', dann 'dann alle' füllt sich auf 'größeren Import'",
+   "text": "Titel 'Erst 3 Testprodukte, dann alle' (wörtlich, Briefing 58–73 s) mit drei gestrichelten Plätzen, die sich füllen: Schritte 'Vorher exportieren' (Export/Sicherung), 'Klein testen' (drei Testprodukte), 'Änderungen prüfen', dann 'dann alle' füllt sich auf 'größeren Import'",
    "start": 62.53,
    "ende": 75.43,
    "teile": {
@@ -373,11 +373,11 @@
   {
    "id": "k12",
    "wort": "Für Shops mit vielen Produkten … praktischere App … Popup-Tools",
-   "text": "Viele Produkte → Matrixify mit Haken und 'praktischer', daneben '+1 Popup-Tool' grau und durchgestrichen",
+   "text": "Viele Produkte (Raster kommt mit der Karte) → Matrixify mit Haken und 'praktischer', daneben '+1 Popup-Tool' grau und durchgestrichen",
    "start": 91.3,
    "ende": 98.28,
    "teile": {
-    "vielen": 92.23,
+    "vielen": 91.36,
     "praktischere": 94.83,
     "zusätzlichen": 96.57,
     "Popup": 97.17
