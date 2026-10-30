@@ -1,6 +1,6 @@
 # Übergabekarte: E07 · Warenkorbabbruch
 
-Status: **zur Prüfung** (Cutter) <!-- danach: freigegeben / zurück (Prüfer), eingeplant (Planer) -->
+Status: **eingeplant** für Mo 30.11.2026 14:00 Europe/Berlin (Pauls Vorgabe 27.10.: selbst nach Kalender einplanen), Metricool TikTok / Instagram / YouTube 410874273 / 410876508 / 410876526 (uuids 7822245543392988233 / 8379535257171805950 / 7224691111368739230); Drive final 1xefWnXMr3hYlz2ZbjdxgWsJHcMlUGrB2
 
 - **Titel** (wie im Kalendertermin, auch Datei-, Ordner- und Doc-Name): E07 · Warenkorbabbruch
 - **Format / Design:** FACE (Serie "E-Commerce einfach erklärt") / aktueller E-Look wie E05 und E06: kein Hook-Titel (Briefing: "kein übergroßer Hook-Titel nötig"), helle Karten unter dem Kopf als Erklär-Bilder (karten-aufbau.md "Visuelle Metaphern", Vorlage P04 pagebuilder), Pill-Untertitel (aktives Wort `#00E090`), Farbwelt PulseConnect-Verlauf `#00D088 → #31ADEC`, Quelle groß mit ihm als Bubble (karten-aufbau.md, 2026-10-28), Musik ruhig, sanfter Grade plus brightness(0.76), Porträt-Modus
