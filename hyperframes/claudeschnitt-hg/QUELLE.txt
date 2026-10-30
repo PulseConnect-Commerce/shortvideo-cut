@@ -1,0 +1,17 @@
+K02 · Videos schneiden mit Claude Code (Opus 5.5) – echte, öffentliche Seiten für "Quelle groß" (src/lib/quelle-gross.tsx) und das
+originale Claude-Zeichen, aufgenommen 30.10.2026 ~19:20 UTC nach Pauls Vorgabe vom 30.10. abends ("originale Logos und originale
+Screenshotaufnahmen von Claude verwenden"). Playwright/Chromium ohne Login, ohne Konto, keine persönlichen Daten:
+aufnahme.cjs (Kopie der K01-Aufnahme: Handy-Ansicht 412 css-px @2,62, de-DE, Cookie-Hinweis bestätigt, schwebende Elemente
+ausgeblendet) und probe.cjs (liest Titel, Überschriften, Bilder und das Logo-SVG im Seitenkopf).
+- https://claude.com/product/claude-code (→ claude.com/de/product/claude-code), Status 200, Titel "Claude Code von Anthropic |
+  KI-Coding-Agent und -Assistent":
+  · Kopf mit Claude-Logo, "Claude Code", Beschreibung (Bild-y 0-1700) → public/broll/claudeschnitt/quelle-code-kopf.jpg
+  · Abschnitt "Trifft dich dort, wo du programmierst" mit dem Terminal-Bild "Welcome to Claude Code!" und "Im Terminal starten"
+    (Bild-y 16100-18400) → quelle-code-terminal.jpg; im Video tippt sich darin der Beispiel-Prompt in die Eingabezeile
+    (eingefügt, im Video als "Beispiel-Prompt · Illustration" markiert)
+- https://www.anthropic.com/claude-opus-5-5 (von /news/claude-opus-5-5), Status 200, Titel "Introducing Claude Opus 5.5 \
+  Anthropic": Kopf "September 22, 2026 · Claude Opus 5.5" (Bild-y 0-2300) → quelle-opus.jpg
+- Claude-Zeichen: https://claude.com/icon.svg (Favicon der Seite, #D97757, unverändert) → icon.svg und
+  hyperframes/claudeschnitt-skizzen/assets/claude-icon.svg; Wortmarke aus dem Seitenkopf von claude.com (SVG, aria-label "Claude",
+  Textfarbe wie auf der Seite #141413) → wordmark.svg und assets/claude-wordmark.svg
+Keine Preise im Bild (der Teil der Produktseite mit "Team $20" ist nicht im Ausschnitt).

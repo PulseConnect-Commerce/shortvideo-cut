@@ -15,7 +15,9 @@
          Chat-Karten mit Auswahl-Chips, alles fließt in "Dein Schnittprofil" → "gespeichert als Skills".
          Beispiel-Kacheln: Standbilder aus fertigen Videos von Paul (K01 und E08 aus out/final, beide vor K02 online; Etsy N
          aus dem Bilderbogen des veröffentlichten Videos), nie Rohclips oder Takes.
-         Keine fremden Logos (auch kein Claude-, Google-, Metricool-, TikTok-Logo; nur Namen als Text), keine echten
+         Pauls Vorgabe 30.10. abends: originales Claude-Zeichen statt gezeichneter Platzhalter (assets/claude-icon.svg = claude.com/icon.svg,
+         unverändert; claude-wordmark.svg aus dem Seitenkopf von claude.com) und echte Screenshots (stehen als "Quelle groß" in Remotion).
+         Andere fremde Logos (Google, Metricool, TikTok …) nicht, nur Namen als Text, keine echten
          Oberflächen als "echt", keine echten Kalender- oder Drive-Inhalte, keine Passwörter, Schlüssel oder Kundendaten.
          Icons Lucide (ISC), Schriften Geist und Caveat (OFL, lokal).
          Zeiten = Sekunden im geschnittenen Video (src/projekte/claudeschnitt/cut.json, 174,97 s), Teile 2 Frames vor ihrem
@@ -59,7 +61,9 @@
       .chip.an > .fill { opacity: 1; }
       .blase { position: absolute; background: #fff; border: 2.5px solid #e5e7eb; border-radius: 8px 24px 24px 24px; padding: 9px 22px 11px; font-size: 30px; font-weight: 700; white-space: nowrap; }
       .antwort { position: absolute; background: linear-gradient(90deg, #00d088, #31adec); border-radius: 24px 8px 24px 24px; padding: 9px 24px 11px; font-size: 32px; font-weight: 800; white-space: nowrap; min-height: 60px; }
-      .ava { position: absolute; width: 60px; height: 60px; border-radius: 30px; background: linear-gradient(135deg, #00e090, #31adec); display: flex; align-items: center; justify-content: center; }
+      .ava { position: absolute; width: 60px; height: 60px; border-radius: 30px; background: #fff; border: 2.5px solid #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .ava img { width: 38px; height: 38px; display: block; }
+      .logo { display: block; }
       .nr { position: absolute; width: 56px; height: 56px; border-radius: 28px; background: #0b0c0e; color: #fff; font-size: 30px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
       .haken { position: absolute; width: 40px; height: 40px; }
       .z { display: none; }
@@ -71,7 +75,7 @@
       .fenster { position: absolute; left: 20px; top: 0; width: 780px; height: 282px; background: #0e1116; border-radius: 20px; overflow: hidden; box-shadow: inset 0 0 0 2px #1f2731; }
       .fkopf { position: absolute; left: 0; top: 0; width: 780px; height: 46px; border-bottom: 1.5px solid #1f2731; }
       .fkopf .p { position: absolute; top: 17px; width: 12px; height: 12px; border-radius: 6px; background: #3a4350; }
-      .fkopf .titel { position: absolute; left: 92px; top: 9px; font-size: 22px; font-weight: 700; color: #e5e7eb; }
+      .fkopf .titel { position: absolute; left: 124px; top: 9px; font-size: 22px; font-weight: 700; color: #e5e7eb; }
       .fkopf .illu { position: absolute; right: 18px; top: 11px; font-size: 19px; font-weight: 600; color: #8b95a3; letter-spacing: 0.04em; }
       .eingabe { position: absolute; left: 24px; top: 64px; width: 732px; height: 150px; border: 2px solid #2b3440; border-radius: 16px; }
       .ptext { position: absolute; left: 62px; top: 14px; width: 660px; font-size: 32px; line-height: 46px; font-weight: 600; color: #f3f4f6; }
@@ -184,9 +188,9 @@
             <clipPath id="k2-clip"><rect id="k2-cliprect" x="290" y="20" width="0" height="64" /></clipPath>
             <text x="300" y="66" class="hand" style="font-size:46px" clip-path="url(#k2-clip)" transform="rotate(-2 400 54)">übernimmt</text>
           </svg>
-          <div id="k2-claude" class="a" style="left:570px;top:14px;width:220px;height:180px;border-radius:24px;background:#0b0c0e;opacity:0">
-            <div class="t" style="left:28px;top:40px;font-size:52px;color:#00e090">&gt;_</div>
-            <div class="t" style="left:28px;top:122px;font-size:28px;color:#fff">Claude Code</div>
+          <div id="k2-claude" class="kachel" style="left:570px;top:14px;width:220px;height:180px;opacity:0">
+            <img class="logo a" src="assets/claude-icon.svg" alt="Claude" style="left:72px;top:24px;width:72px;height:72px" />
+            <div class="t mitte" style="left:0;top:120px;width:216px;font-size:28px">Claude Code</div>
           </div>
           <div id="k2-schere" class="vk" style="left:196px;top:-4px;width:76px;height:76px;border-radius:38px;box-shadow:0 6px 16px rgba(0,0,0,.18)">
             <svg class="i" viewBox="0 0 24 24" style="width:42px;height:42px;stroke-width:2.2"><use href="#i-schere" /></svg>
@@ -259,9 +263,9 @@
         </div>
       </section>
 
-      <!-- K5 Heute: "Heute mache ich das allerdings anders. Ich mache das einfach mit Claude Code und dem Modell Opus 5.5." anders 38,33 /
-           Claude 40,17 / Code 40,43 / Modell 41,00 / Opus 41,40 -->
-      <section id="k5" class="karte clip" data-start="37.13" data-duration="6.03" data-track-index="1">
+      <!-- K5 Heute: "Heute mache ich das allerdings anders." anders 38,33; ab "Ich mache das einfach mit Claude Code" (39,13) steht in
+           Remotion die echte Seite claude.com/product/claude-code groß, ab "dem Modell Opus 5.5" anthropic.com/claude-opus-5-5 -->
+      <section id="k5" class="karte clip" data-start="37.13" data-duration="2.07" data-track-index="1">
         <div class="kicker">Heute</div>
         <div class="b">
           <div id="k5-alt" class="kachel" style="left:30px;top:20px;width:210px;height:170px">
@@ -272,14 +276,10 @@
             <path id="k5-strich" pathLength="1" d="M40 106 L 230 106" fill="none" stroke="#e5484d" stroke-width="5" stroke-linecap="round" />
             <path id="k5-pfeil" pathLength="1" d="M258 106 H 312" class="linie" style="stroke-width:6" />
           </svg>
-          <div id="k5-fenster" class="a" style="left:330px;top:6px;width:460px;height:200px;border-radius:20px;background:#0e1116;box-shadow:inset 0 0 0 2px #1f2731;opacity:0;overflow:hidden">
-            <div class="a" style="left:18px;top:16px;width:12px;height:12px;border-radius:6px;background:#3a4350"></div>
-            <div class="a" style="left:38px;top:16px;width:12px;height:12px;border-radius:6px;background:#3a4350"></div>
-            <div class="a" style="left:58px;top:16px;width:12px;height:12px;border-radius:6px;background:#3a4350"></div>
-            <div id="k5-titel" class="t" style="left:30px;top:66px;font-size:46px;color:#fff;opacity:0"><span style="color:#00e090">&gt;_</span> Claude Code</div>
-            <div id="k5-cursor" class="a" style="left:32px;top:140px;width:18px;height:36px;background:#31adec;border-radius:3px"></div>
+          <div id="k5-claude" class="kachel" style="left:340px;top:6px;width:300px;height:200px;opacity:0">
+            <img class="logo a" src="assets/claude-icon.svg" alt="Claude" style="left:110px;top:26px;width:80px;height:80px" />
+            <div class="t mitte" style="left:0;top:132px;width:296px;font-size:32px">Claude Code</div>
           </div>
-          <div id="k5-opus" class="a" style="left:360px;top:220px;padding:8px 22px 10px;border-radius:999px;background:linear-gradient(90deg,#00d088,#31adec);font-size:28px;font-weight:800;opacity:0;white-space:nowrap">Modell · Opus 5.5</div>
         </div>
       </section>
 
@@ -339,6 +339,7 @@
           <div id="k8-fenster" class="fenster" style="opacity:0">
             <div class="fkopf">
               <div class="p" style="left:20px"></div><div class="p" style="left:40px"></div><div class="p" style="left:60px"></div>
+              <img id="k8-logo" class="logo a" src="assets/claude-icon.svg" alt="Claude" style="left:90px;top:11px;width:24px;height:24px;opacity:0" />
               <div id="k8-titel" class="titel" style="opacity:0">Claude Code</div>
               <div class="illu">Illustration</div>
             </div>
@@ -372,7 +373,7 @@
           <div class="nr" style="left:30px;top:6px;width:64px;height:64px;border-radius:32px;font-size:36px;background:linear-gradient(135deg,#00e090,#31adec);color:#0b0c0e">2</div>
           <div class="t" style="left:112px;top:8px;font-size:44px">Onboarding</div>
           <div id="k9-ava" class="ava" style="left:30px;top:112px">
-            <svg class="i" viewBox="0 0 24 24" style="width:34px;height:34px"><use href="#i-funken" /></svg>
+            <img src="assets/claude-icon.svg" alt="Claude" />
           </div>
           <div id="k9-blase" class="blase" style="left:110px;top:108px;opacity:0;min-width:120px;height:62px">
             <div id="k9-punkte" class="a" style="left:26px;top:22px;display:flex;gap:10px"><div class="k9-pk" style="width:12px;height:12px;border-radius:6px;background:#9aa3af"></div><div class="k9-pk" style="width:12px;height:12px;border-radius:6px;background:#9aa3af"></div><div class="k9-pk" style="width:12px;height:12px;border-radius:6px;background:#9aa3af"></div></div>
@@ -389,7 +390,7 @@
         <div class="kicker">Onboarding · Marke</div>
         <div class="zaehler">Frage 1 von 4</div>
         <div class="b">
-          <div class="ava" style="left:30px;top:0px"><svg class="i" viewBox="0 0 24 24" style="width:34px;height:34px"><use href="#i-funken" /></svg></div>
+          <div class="ava" style="left:30px;top:0px"><img src="assets/claude-icon.svg" alt="Claude" /></div>
           <div class="blase" style="left:110px;top:-2px">Wie heißt deine Marke?</div>
           <div id="k10-antwort" class="antwort" style="right:30px;top:78px;opacity:0"><span id="k10-text"></span><span class="cur" style="height:30px;background:#0b0c0e;vertical-align:-4px"></span></div>
           <div id="k10-wofuer" class="t g" style="left:30px;top:186px;font-size:26px;opacity:0">wofür?</div>
@@ -405,7 +406,7 @@
         <div class="kicker">Onboarding · Farben</div>
         <div class="zaehler">Frage 2 von 4</div>
         <div class="b">
-          <div class="ava" style="left:30px;top:0px"><svg class="i" viewBox="0 0 24 24" style="width:34px;height:34px"><use href="#i-funken" /></svg></div>
+          <div class="ava" style="left:30px;top:0px"><img src="assets/claude-icon.svg" alt="Claude" /></div>
           <div class="blase" style="left:110px;top:-2px">Welche Farben gehören zu dir?</div>
           <svg class="buehne" viewBox="0 0 820 290">
             <g class="k11-f k11-aus"><circle cx="150" cy="128" r="34" fill="#e5484d" /></g>
@@ -429,7 +430,7 @@
         <div class="kicker">Onboarding · Beispiel-Videos</div>
         <div class="zaehler">Frage 3 von 4</div>
         <div class="b">
-          <div class="ava" style="left:30px;top:0px"><svg class="i" viewBox="0 0 24 24" style="width:34px;height:34px"><use href="#i-funken" /></svg></div>
+          <div class="ava" style="left:30px;top:0px"><img src="assets/claude-icon.svg" alt="Claude" /></div>
           <div class="blase" style="left:110px;top:-2px">Hast du Beispiel-Videos?</div>
           <div id="k12-v1" class="tile" style="left:30px;top:86px;width:100px;height:178px;opacity:0"><img src="assets/beispiel-k01.jpg" alt="" /></div>
           <div id="k12-v2" class="tile" style="left:142px;top:86px;width:100px;height:178px;opacity:0"><img src="assets/beispiel-e08.jpg" alt="" /></div>
@@ -563,7 +564,7 @@
            Versprecher 126,47 / rausgeschnitten 127,87 / Untertitel 128,90 / erstellt 130,27 / Grafiken 130,97 / eingefügt 133,10 / Ton 134,40
            / gestellt 135,93 -->
       <section id="k17" class="karte clip" data-start="124.46" data-duration="12.17" data-track-index="1">
-        <div class="kicker">Claude legt los</div>
+        <div class="kicker"><img src="assets/claude-icon.svg" alt="Claude" style="width:26px;height:26px;vertical-align:-6px;margin-right:10px" />Claude legt los</div>
         <div class="b">
           <div id="k17-t1" class="kachel k17-t" style="left:24px;top:4px;width:378px;height:130px">
             <div class="vk" style="left:18px;top:21px;width:84px;height:84px;border-radius:22px"><svg class="i" viewBox="0 0 24 24" style="width:46px;height:46px"><use href="#i-schere" /></svg></div>
@@ -820,7 +821,7 @@
       zeichne("#k2-pfeil", 18.86, 0.6);
       tl.to("#k2-spitze", { opacity: 1, duration: 0.15 }, 19.36);
       schreibe("#k2-cliprect", 230, 18.86, 0.5);
-      tl.to("#k2-schere", { x: 470, duration: 0.8, ease: "power2.inOut" }, 18.86);
+      tl.to("#k2-schere", { x: 530, duration: 0.8, ease: "power2.inOut" }, 18.86);
       pop("#k2-claude", 19.63);
 
       // K3 Früher: Schnitt-Balken wächst auf "Stunden", Dreh-Balken kurz auf "Dreh", Teile Untertitel / Pausen / Grafiken / Musik
@@ -842,15 +843,12 @@
       schreibe("#k4-cliprect", 280, 34.80, 0.5);
       pop("#k4-du", 36.46);
 
-      // K5 Heute: "selbst schneiden" wird auf "anders" gestrichen, Pfeil zum Fenster, "Claude Code" auf "Claude Code", Modell-Badge auf "Opus"
-      karte("#k5", 37.13, 43.16);
+      // K5 Heute: "selbst schneiden" wird auf "anders" gestrichen, Pfeil zu Claude Code (echtes Zeichen); ab 39,13 s Quelle groß in Remotion
+      karte("#k5", 37.13, 39.20);
       zeichne("#k5-strich", 38.26, 0.35);
       tl.to("#k5-alt", { opacity: 0.45, duration: 0.3 }, 38.26);
       zeichne("#k5-pfeil", 38.40, 0.3);
-      pop("#k5-fenster", 38.50);
-      tl.fromTo("#k5-titel", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 40.10);
-      tl.fromTo("#k5-cursor", { opacity: 1 }, { opacity: 0.15, duration: 0.4, repeat: 11, yoyo: true, ease: "none" }, 38.6);
-      pop("#k5-opus", 41.33);
+      pop("#k5-claude", 38.50);
 
       // K6 Der Trick: beide Seiten gleich schwach da, "magischer Prompt" auf "magischer", gestrichen auf "sondern", Setup auf "Setup"
       karte("#k6", 43.16, 49.10);
@@ -872,7 +870,7 @@
       karte("#k8", 51.50, 70.10);
       raus("#k8-start", 52.63, 0.2);
       tl.fromTo("#k8-fenster", { opacity: 0, scale: 0.94, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, 52.63);
-      tl.fromTo("#k8-titel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 52.96);
+      tl.fromTo("#k8-titel, #k8-logo", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 52.96);
       tl.to("#k8-eingabe", { borderColor: "#00d088", duration: 0.3 }, 55.16);
       ein("#k8-bsp", 56.26);
       tl.to("#k8-platz", { opacity: 0, duration: 0.1 }, 57.40);

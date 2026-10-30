@@ -1,5 +1,5 @@
 {
- "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', Look wie K01 hyperframes/claudetools-skizzen) für K02 · Videos schneiden mit Claude Code (Opus 5.5). Sekunden im geschnittenen Video (cut.json, 174,97 s), Teile 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, klick (0,10) auf Enter, angetippten Chips und dem Abschicken, pop (0,10) nur auf 'Opus', 'Startsignal' und dem Folgen-Tippen. Gebaut in hyperframes/claudeschnitt-skizzen/index.html. Keine Quelle-groß-Fenster (er zitiert keine Quelle). Nur Lucide-Icons und eigene flache Zeichnungen, keine fremden Logos, das Eingabefenster ist als 'Illustration' markiert.",
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', Look wie K01 hyperframes/claudetools-skizzen) für K02 · Videos schneiden mit Claude Code (Opus 5.5). Sekunden im geschnittenen Video (cut.json, 174,97 s), Teile 2 Frames vor ihrem Wort. sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, klick (0,10) auf Enter, angetippten Chips und dem Abschicken, pop (0,10) nur auf 'Startsignal' und dem Folgen-Tippen, klick (0,10) auf den Quellen. Gebaut in hyperframes/claudeschnitt-skizzen/index.html. Quelle groß (q1-q3, stehen in Video.tsx QUELLEN): echte Seiten von claude.com und anthropic.com (Pauls Vorgabe 30.10. abends). Echtes Claude-Zeichen (claude.com/icon.svg) in den Karten; das nachgebaute Fenster bleibt als 'Illustration' markiert; sonst Lucide-Icons, keine anderen fremden Logos.",
  "karten": [
   {
    "id": "k1",
@@ -30,7 +30,7 @@
    "wort": "Ich",
    "start": 14.03,
    "ende": 21.26,
-   "text": "MEIN VIDEOSCHNITT – 'ich' mit Schere, auf 'nicht mehr selbst' grau und 'selbst schneiden' gestrichen, Schere wandert auf 'übernimmt' zu Claude Code",
+   "text": "MEIN VIDEOSCHNITT – 'ich' mit Schere, auf 'nicht mehr selbst' grau und 'selbst schneiden' gestrichen, Schere wandert auf 'übernimmt' zu Claude Code (echtes Claude-Zeichen)",
    "sfx": [
     {
      "datei": "whoosh.mp3",
@@ -96,20 +96,37 @@
    "id": "k5",
    "wort": "Heute",
    "start": 37.13,
-   "ende": 43.16,
-   "text": "HEUTE – 'selbst schneiden' gestrichen auf 'anders', Fenster 'Claude Code' auf 'Claude Code', Badge 'Modell · Opus 5.5' auf 'Opus'",
+   "ende": 39.2,
+   "text": "HEUTE – 'selbst schneiden' gestrichen auf 'anders', Pfeil zu Claude Code (echtes Claude-Zeichen); danach Quelle groß",
    "sfx": [
     {
      "datei": "whoosh.mp3",
      "at": 37.13,
      "volume": 0.12
-    },
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Ich",
+   "start": 39.13,
+   "ende": 40.87,
+   "text": "QUELLE GROSS claude.com/product/claude-code: Seitenkopf mit Claude-Logo, 'Claude Code' (Screenshot 30.10.2026)",
+   "sfx": [
     {
-     "datei": "pop.mp3",
-     "at": 41.33,
+     "datei": "klick.mp3",
+     "at": 39.13,
      "volume": 0.1
     }
    ]
+  },
+  {
+   "id": "q2",
+   "wort": "dem",
+   "start": 40.87,
+   "ende": 43.13,
+   "text": "QUELLE GROSS anthropic.com/claude-opus-5-5: 'Claude Opus 5.5', September 22, 2026 (Screenshot 30.10.2026)",
+   "sfx": []
   },
   {
    "id": "k6",
@@ -159,17 +176,12 @@
    "wort": "Schritt",
    "start": 51.5,
    "ende": 70.1,
-   "text": "SCHRITT 1 · EINRICHTUNG (Prompt-Animation) – '1 Einrichtung', auf 'öffnest' öffnet sich das stilisierte Fenster 'Claude Code' (klein 'Illustration'), Feld leuchtet auf 'Prompt', 'Beispiel-Prompt' auf 'Zum Beispiel', der Prompt tippt sich Buchstabe für Buchstabe auf seinen Wörtern (57,5-61,3 s), Enter, 'Claude installiert …', Haken auf 'Spracherkennung', 'Werkzeuge', 'Grafiken'",
+   "text": "SCHRITT 1 · EINRICHTUNG – '1 Einrichtung' (51,5 s); 52,5-61,95 s Quelle groß: das echte Terminal-Bild von claude.com/product/claude-code ('Welcome to Claude Code!'), der Prompt tippt sich Buchstabe für Buchstabe auf seinen Wörtern in dessen Eingabezeile (57,5-61,3 s, Hinweis 'Beispiel-Prompt · Illustration'), Enter; danach das nachgebaute Fenster ('Illustration', echtes Claude-Zeichen im Kopf): 'Claude installiert', Haken auf 'Spracherkennung', 'Werkzeuge', 'Grafiken'",
    "sfx": [
     {
      "datei": "whoosh.mp3",
      "at": 51.5,
      "volume": 0.12
-    },
-    {
-     "datei": "tick.mp3",
-     "at": 52.63,
-     "volume": 0.1
     },
     {
      "datei": "klick.mp3",
@@ -189,6 +201,20 @@
     {
      "datei": "tick.mp3",
      "at": 69.5,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "wort": "du",
+   "start": 52.5,
+   "ende": 61.95,
+   "text": "QUELLE GROSS claude.com/product/claude-code: Terminal-Bild 'Welcome to Claude Code!', Prompt in der Eingabezeile getippt (Illustration)",
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 52.5,
      "volume": 0.1
     }
    ]
