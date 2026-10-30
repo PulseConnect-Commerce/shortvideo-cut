@@ -33,7 +33,7 @@
   },
   {
    "src": "upselling/t1",
-   "from": 88.725,
+   "from": 88.675,
    "to": 101.345,
    "nach": 0.09,
    "vor": 0.0
@@ -54,7 +54,7 @@
   },
   {
    "src": "upselling/t1",
-   "from": 178.645,
+   "from": 178.635,
    "to": 193.45,
    "nach": 0.09,
    "vor": 0.0
@@ -62,7 +62,7 @@
  ],
  "words": [
   {
-   "text": "ich",
+   "text": "Ich",
    "src": "upselling/t1",
    "start": 12.04,
    "end": 12.09
@@ -338,19 +338,13 @@
    "end": 28.76
   },
   {
-   "text": "der",
+   "text": "derselben",
    "src": "upselling/t1",
    "start": 29.14,
    "end": 29.24
   },
   {
-   "text": "selben",
-   "src": "upselling/t1",
-   "start": 29.34,
-   "end": 29.66
-  },
-  {
-   "text": "Maschine.",
+   "text": "Maschine,",
    "src": "upselling/t1",
    "start": 29.7,
    "end": 30.08
@@ -554,7 +548,7 @@
    "end": 59.65
   },
   {
-   "text": "empfiehlt",
+   "text": "empfiehlst",
    "src": "upselling/t1",
    "start": 59.71,
    "end": 60.09
@@ -608,7 +602,7 @@
    "end": 63.17
   },
   {
-   "text": "Kaffeebohnen",
+   "text": "Kaffeebohnen.",
    "src": "upselling/t1",
    "start": 63.25,
    "end": 63.69
@@ -776,7 +770,7 @@
    "end": 78.91
   },
   {
-   "text": "und",
+   "text": "Und",
    "src": "upselling/t1",
    "start": 83.6,
    "end": 83.68
@@ -848,7 +842,7 @@
    "end": 86.92
   },
   {
-   "text": "ein",
+   "text": "eine",
    "src": "upselling/t1",
    "start": 86.96,
    "end": 87.06
@@ -862,7 +856,7 @@
   {
    "text": "aufdrängst,",
    "src": "upselling/t1",
-   "start": 88.75,
+   "start": 88.72,
    "end": 89.28
   },
   {
@@ -878,7 +872,7 @@
    "end": 89.92
   },
   {
-   "text": "ihm",
+   "text": "ihn",
    "src": "upselling/t1",
    "start": 89.96,
    "end": 90.04
@@ -1250,13 +1244,13 @@
    "end": 130.58
   },
   {
-   "text": "misst",
+   "text": "miss",
    "src": "upselling/t1",
    "start": 130.64,
    "end": 130.8
   },
   {
-   "text": "ihr",
+   "text": "hier",
    "src": "upselling/t1",
    "start": 130.84,
    "end": 130.9
@@ -1328,7 +1322,7 @@
    "end": 135.22
   },
   {
-   "text": "auch",
+   "text": "auch,",
    "src": "upselling/t1",
    "start": 135.34,
    "end": 135.48
@@ -1388,7 +1382,7 @@
    "end": 137.78
   },
   {
-   "text": "eben",
+   "text": "eben,",
    "src": "upselling/t1",
    "start": 137.88,
    "end": 138.06
@@ -1478,7 +1472,7 @@
    "end": 142.24
   },
   {
-   "text": "außerdem",
+   "text": "außerdem,",
    "src": "upselling/t1",
    "start": 142.3,
    "end": 142.68
@@ -1648,7 +1642,7 @@
   {
    "text": "Upselling",
    "src": "upselling/t1",
-   "start": 178.68,
+   "start": 178.61,
    "end": 179.06
   },
   {
@@ -1936,7 +1930,7 @@
   3,
   3,
   2,
-  3,
+  2,
   2,
   3,
   4,
@@ -1996,13 +1990,13 @@
   2,
   2,
   1,
-  2,
   3,
   3,
   2,
   2,
+  2,
+  3,
   4,
-  3,
   3,
   3,
   3,
