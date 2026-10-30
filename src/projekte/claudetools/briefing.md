@@ -78,12 +78,11 @@ https://www.anthropic.com/news/claude-design-anthropic-labs
 CAPTION-VORSCHLAG:
 „Claude ist mehr als ein Chat: Chat, Projekte, Connectors & Skills, Claude in Chrome, Claude Design und Claude Code. Welches nutzt du schon? 👇 #KI #Claude“ (max. 2 Hashtags)
 
-## Neue Fassung (Pauls Vorgabe 30.10. abends) – So 01.11.2026 14:00
+## Neue Fassung (Pauls Vorgabe 30.10. abends) – Termin später, noch offen
 
 Paul: „Weshalb verwendest du nicht die originalen Logos von Claude in den Videos? Bitte noch einmal das K01 und K02 Video
 anpassen und originale Logos und originale Screenshotaufnahmen von Claude verwenden. Es muss dabei nicht in das CI und die
-Farben passen.“ Entscheidung: K01 neu schneiden und neu posten (So 01.11. 14:00); Paul löscht danach die drei alten Posts
-vom 30.10.
+Farben passen.“ Entscheidung (30.10., 20:25): Die alte Fassung bleibt online. Paul: „Wir veröffentlichen später einfach noch einmal beide neuen Versionen von K01 und K02 zum späteren Zeitpunkt.“ Neue Fassung schneiden, wenn die Warteschlange es zulässt; Termin dann vorschlagen.
 
 - Schnitt, Wortzeiten und Untertitel der ersten Fassung bleiben (cut.json, schnitt.json, karten.json im Repo). Der Take
   ist gelöscht: Rohclip (Drive-ID 1nlTfgnzJXETG-s-O0Tw_Q0EHth3UHFWp, liegt im Drive-Papierkorb, über die ID weiter
