@@ -45,8 +45,10 @@ const BILD = { scale: 1.451, hoch: 489, x: 12 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
 const AUGEN_Y = 660;
 
-/** Sanfter Grade (Regel 5b, freigegebener Look) */
-const GRADE = STIL.gradeSanft;
+/** Sanfter Grade (Regel 5b, freigegebener Look) plus brightness(0.87): im ersten Master lag das Gesicht nach Farbe und Porträt
+ * bei 0,643 (gemessen mit npm run pruefen), Ziel ~0,55-0,57; wie bei M09 ooia (0,627 → brightness 0.89 → 0,557) im Grade
+ * ausgeglichen */
+const GRADE = `${STIL.gradeSanft} brightness(0.87)`;
 
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel "SEARCH & DISCOVERY / FILTER STATT NEUER APP" über den ersten Satz bis "Ich würde nämlich beim" (6,85 s), ganz weg
