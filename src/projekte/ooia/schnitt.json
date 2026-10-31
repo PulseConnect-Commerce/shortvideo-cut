@@ -1,0 +1,81 @@
+{
+ "projekt": "ooia",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 1.9,
+   "text": "Wie baut man eigentlich aus einem Thema, das viele früher überhaupt kaum angesprochen haben, eine eigene E-Commerce-Marke? Oia hat nämlich genau das mit den Periodenunterwäschen gemacht."
+  },
+  {
+   "take": "t1",
+   "ab": 18.8,
+   "text": "Die Gründerinnen Kristine Zeller und Kati Ernst haben tatsächlich verstanden, dass sie nicht einfach nur ein neues Produkt online stellen können. Denn Kundinnen haben einfach bei so einem Produkt tatsächlich sehr viele Fragen. Wie funktioniert das eigentlich? Wie fühlt es sich an? Wie pflegt man es? Und welche Varianten passen eigentlich zu mir? Deshalb ist es ein großer Teil einfach des Markenauftritts, nicht nur Verkauf, sondern eben auch Erklärungen und vor allem die Aufklärung. Oia hat nämlich dabei über Social Media einfach Gespräche angestoßen und Informationen zugänglich gemacht,"
+  },
+  {
+   "take": "t1",
+   "ab": 55.3,
+   "text": "Die Menschen vor einer Kaufentscheidung brauchen. Und genau das finde ich eben für andere Schraubs besonders spannend. denn das gilt einfach nicht nur für Periodenunterwäsche, sondern tatsächlich auch für alle anderen Produkte, bei denen Kunden einfach sich unsicher sind."
+  },
+  {
+   "take": "t1",
+   "ab": 72.6,
+   "text": "Deswegen mein erster Praxistipp, sammle tatsächlich mal die 10 häufigsten Fragen aus Support, Kommentaren und auch Retourengründen. Zweitens, beantworte einfach mal diese Fragen dort, wo tatsächlich Kunden auch entscheiden. Auf Produktseiten, in Größentabellen, kurze Videos oder einfach in den klaren FAQs."
+  },
+  {
+   "take": "t1",
+   "ab": 106.2,
+   "text": "und drittens sei einfach mal bei den aussagen sehr präzise denn du brauchst einfach keine übertriebenen versprechen sondern tatsächlich nachvollziehbare antworten"
+  },
+  {
+   "take": "t1",
+   "ab": 130.8,
+   "text": "Und KI kann ja natürlich auch dabei super helfen, einfach die häufigsten Fragen zu Clustern und auch eben FAQ-Entwürfe daraus zu schreiben."
+  },
+  {
+   "take": "t1",
+   "ab": 143.1,
+   "text": "Aber gerade bei sensiblen Produkt- und Gesundheitsfragen müssen dann tatsächlich die Antworten fachlich geprüft werden."
+  },
+  {
+   "take": "t1",
+   "ab": 173.0,
+   "text": "Aber das wichtigste Learning, was ich jetzt für mich aus dem Onlineshop von Oya mitnehmen würde, ist deshalb,"
+  },
+  {
+   "take": "t1",
+   "ab": 182.1,
+   "text": "dass Aufklärung tatsächlich selbst zu einem starken Teil deiner Markenstrategie verwendet werden kann."
+  },
+  {
+   "take": "t1",
+   "ab": 213.5,
+   "text": "Und jetzt zum Schluss ein ganz ganz wichtiger Tipp, das Plus hier mal bitte wegdrücken.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 217.47
+ },
+ "korrekturen": [
+  ["t1", 8.47, "Oia", "ooia"],
+  ["t1", 45.84, "Oia", "ooia"],
+  ["t1", 55.45, "Die", "die"],
+  ["t1", 60.41, "Schraubs", "Shops"],
+  ["t1", 62.17, "denn", "Denn"],
+  ["t1", 106.39, "und", "Und"],
+  ["t1", 108.51, "aussagen", "Aussagen"],
+  ["t1", 109.31, "präzise", "präzise,"],
+  ["t1", 112.11, "versprechen", "Versprechen,"],
+  ["t1", 114.59, "antworten", "Antworten."],
+  ["t1", 131.68, "ja", "dir"],
+  ["t1", 134.78, "Clustern", "clustern"],
+  ["t1", 176.12, "Oya", "ooia"]
+ ]
+}

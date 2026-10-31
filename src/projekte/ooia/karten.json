@@ -1,0 +1,396 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern'), Checkliste der drei Tipps, KI-FAQ-Grafik mit Hinweis auf fachliche Prüfung und Folgen-Karte aus hyperframes/ooia-skizzen/index.html, Quelle-groß-Fenster (q1, q2; in Video.tsx QUELLEN) für M09 · ooia. Sekunden im geschnittenen Video (cut.json, 107,1 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,10-0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, klick (0,10-0,12) auf jeder Quelle und dem Tipp auf den Kaufknopf, pop (0,10) nur auf '10' und dem Folgen-Plus, success (0,10) nur auf 'fachlich geprüft', wusch-gross (0,12, Extra-Effekt) auf dem Beginn der Tipps.",
+ "karten": [
+  {
+   "id": "hook",
+   "wort": "(Remotion) Wie baut man eigentlich ...",
+   "text": "Hook-Titel OOIA / AUFKLÄRUNG ALS MARKENSTRATEGIE (Design verlauf, Kartenposition), 0-6,1 s; Hintergrund Startseite ooia.de (Kategorien mit Produktbildern)",
+   "start": 0,
+   "ende": 6.1,
+   "sfx": []
+  },
+  {
+   "id": "k1",
+   "wort": "ooia",
+   "text": "Das Beispiel: originales ooia-Logo (Seitenkopf ooia.de), 'genau das' auf 'genau', Produkt (Linienzeichnung) 'Periodenunterwäsche' auf 'Periodenunterwäschen'",
+   "start": 6.3,
+   "ende": 9.15,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 6.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 7.85,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Die (Gründerinnen)",
+   "text": "Die Gründerinnen: Foto von ooia.de (Mission & Werte), 'Kristine Zeller' auf 'Kristine' (im Foto links), 'Kati Ernst' auf 'Kati' (rechts)",
+   "start": 9.18,
+   "ende": 12.5,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 9.18,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 10.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "verstanden (dass sie nicht einfach nur ein neues Produkt online stellen können)",
+   "text": "Quelle groß (Remotion): Shopify-Beitrag 2. Juli 2019, Titel und 'Dazu kommt, dass es sich bei uns um ein Produkt handelt, das erklärt werden muss und das in Deutschland tabu-behaftet ist.' markiert",
+   "start": 12.5,
+   "ende": 16.6,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 12.5,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Denn / Kundinnen",
+   "text": "Bei so einem Produkt: Produkt, Kundin auf 'Kundinnen', Pfeil auf 'Produkt', Fragezeichen und 'sehr viele Fragen' auf 'sehr viele Fragen'",
+   "start": 16.95,
+   "ende": 21.45,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 16.95,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 19.86,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Wie (funktioniert)",
+   "text": "Was Kundinnen wissen wollen: 'Wie funktioniert das?', 'Wie fühlt es sich an?', 'Wie pflegt man es?', 'Welche Variante passt zu mir?' je auf ihrem 'Wie'/'Und'",
+   "start": 21.54,
+   "ende": 27.97,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 21.54,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 23.01,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.27,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 25.47,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Deshalb",
+   "text": "Der Markenauftritt: Balken auf 'Markenauftritts', 'nicht nur' + grauer Teil 'Verkauf', 'Erklärung' und 'Aufklärung' im Verlauf auf ihren Wörtern, Klammer 'großer Teil'",
+   "start": 28.05,
+   "ende": 36.0,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 28.05,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 31.55,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 32.95,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 34.67,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "ooia (hat nämlich dabei über Social Media ...)",
+   "text": "Quelle groß (Remotion): Shopify-Beitrag, Frage zur Aufklärungsarbeit, 'Wir haben eine sehr ausführliche FAQ-Sektion auf unserer Webseite.' und 'Außerdem betreiben wir einen interaktiven Instagram-Channel ... Live-Sessions berichten. Wir bekommen unglaublich viele Fragen' markiert",
+   "start": 36.05,
+   "ende": 39.95,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 36.05,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Informationen",
+   "text": "Infos vor dem Kauf: Infos, Schloss offen auf 'zugänglich', Menschen, Tasche mit Haken und 'Kaufentscheidung'",
+   "start": 39.98,
+   "ende": 43.75,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 39.98,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Und (genau das)",
+   "text": "Spannend für andere Shops: ooia-Shop (Logo, 'Aufklärung'), drei andere Shops auf 'Shops', 'besonders spannend' auf 'spannend'",
+   "start": 43.8,
+   "ende": 47.15,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 43.8,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 45.36,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Denn (das gilt)",
+   "text": "Nicht nur Periodenunterwäsche: Produkt auf 'Periodenunterwäsche', weitere Produkte (Beispiele ohne Marke) auf 'alle anderen Produkte', Fragezeichen auf 'Kunden', wackeln auf 'unsicher'",
+   "start": 47.13,
+   "ende": 53.85,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 47.13,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 48.48,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 51.05,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "t1",
+   "wort": "Deswegen / Praxistipp",
+   "text": "Tipp 1 · 10 Fragen: Checkliste (10 Fragen / Antwort am Kaufpunkt / Fakten prüfen), Ziffer 1, Liste 'Top 10 Fragen' zählt auf '10' hoch, Support, Kommentare, Retourengründe fließen hinein",
+   "start": 53.88,
+   "ende": 61.35,
+   "sfx": [
+    {
+     "datei": "wusch-gross.mp3",
+     "at": 53.88,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 56.63,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 58.35,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 59.84,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "wort": "Zweitens",
+   "text": "Tipp 2 · Antwort am Kaufpunkt: Checkliste (1 erledigt), Ziffer 2, Handy mit Produktseite, 'Antwort', Zeiger tippt auf 'entscheiden' den Kaufknopf, Produktseite / Größentabelle / kurzes Video / klare FAQ mit Haken auf ihren Wörtern",
+   "start": 61.35,
+   "ende": 72.15,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 61.35,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 65.35,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 66.67,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 67.76,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 68.79,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "wort": "drittens",
+   "text": "Tipp 3 · Fakten prüfen: Checkliste (1 und 2 erledigt), Ziffer 3, Ziel auf 'präzise', lautes Versprechen '!!!' auf 'übertriebenen', durchgestrichen auf 'Versprechen', Antwort mit Lupe und Haken auf 'nachvollziehbare'",
+   "start": 72.17,
+   "ende": 80.8,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 72.17,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 75.05,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 77.86,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 79.31,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "KI",
+   "text": "KI-FAQ: KI-Kachel, verstreute Fragen auf 'häufigsten Fragen', drei Gruppen (Pflege, Größe, Gefühl) auf 'clustern', FAQ-Entwurf schreibt sich auf 'FAQ-Entwürfe', Plakette 'KI-Entwurf'",
+   "start": 80.85,
+   "ende": 87.75,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 80.85,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 84.57,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 86.13,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Aber (gerade bei sensiblen)",
+   "text": "Vor dem Veröffentlichen: KI-Entwurf, 'sensibel' auf 'sensiblen', 'Gesundheitsfrage' auf 'Gesundheitsfragen', Fachperson auf 'fachlich', Stempel 'FACHLICH GEPRÜFT' auf 'geprüft', 'erst prüfen'",
+   "start": 87.75,
+   "ende": 93.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 87.75,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 89.53,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 92.87,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "Aber (das wichtigste Learning) / Aufklärung",
+   "text": "Das wichtigste Learning: Glühbirne, 'Mein Learning aus dem Onlineshop von' + ooia-Logo auf 'ooia'; dann Haus der Markenstrategie, Säule 'Aufklärung' schiebt sich auf 'Aufklärung' hinein, 'stark' auf 'starken', Dach leuchtet auf 'Markenstrategie'",
+   "start": 93.6,
+   "ende": 103.3,
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 96.54,
+     "volume": 0.1
+    },
+    {
+     "datei": "whoosh.mp3",
+     "at": 98.2,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 100.56,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Und / Plus",
+   "text": "Folgen: große mittige Karte, Zeiger tippt genau auf 'Plus', Plus wird zum Haken (bleibt bis zum Ende)",
+   "start": 103.3,
+   "ende": 107.1,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 103.3,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 105.95,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

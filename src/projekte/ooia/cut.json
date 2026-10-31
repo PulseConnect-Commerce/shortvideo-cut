@@ -1,0 +1,2001 @@
+{
+ "projekt": "ooia",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "ooia/t1",
+   "from": 2.105,
+   "to": 11.295,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 18.885,
+   "to": 51.425,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 55.425,
+   "to": 57.465,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 58.745,
+   "to": 68.855,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 72.735,
+   "to": 90.985,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 106.315,
+   "to": 115.015,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 130.975,
+   "to": 137.895,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 143.185,
+   "to": 149.035,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 173.115,
+   "to": 177.545,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 182.185,
+   "to": 187.485,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "ooia/t1",
+   "from": 213.695,
+   "to": 217.47,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Wie",
+   "src": "ooia/t1",
+   "start": 2.17,
+   "end": 2.27
+  },
+  {
+   "text": "baut",
+   "src": "ooia/t1",
+   "start": 2.33,
+   "end": 2.53
+  },
+  {
+   "text": "man",
+   "src": "ooia/t1",
+   "start": 2.57,
+   "end": 2.65
+  },
+  {
+   "text": "eigentlich",
+   "src": "ooia/t1",
+   "start": 2.69,
+   "end": 2.91
+  },
+  {
+   "text": "aus",
+   "src": "ooia/t1",
+   "start": 2.93,
+   "end": 3.01
+  },
+  {
+   "text": "einem",
+   "src": "ooia/t1",
+   "start": 3.07,
+   "end": 3.25
+  },
+  {
+   "text": "Thema,",
+   "src": "ooia/t1",
+   "start": 3.39,
+   "end": 3.71
+  },
+  {
+   "text": "das",
+   "src": "ooia/t1",
+   "start": 3.87,
+   "end": 4.01
+  },
+  {
+   "text": "viele",
+   "src": "ooia/t1",
+   "start": 4.27,
+   "end": 4.57
+  },
+  {
+   "text": "früher",
+   "src": "ooia/t1",
+   "start": 4.75,
+   "end": 5.03
+  },
+  {
+   "text": "überhaupt",
+   "src": "ooia/t1",
+   "start": 5.09,
+   "end": 5.39
+  },
+  {
+   "text": "kaum",
+   "src": "ooia/t1",
+   "start": 5.47,
+   "end": 5.71
+  },
+  {
+   "text": "angesprochen",
+   "src": "ooia/t1",
+   "start": 5.79,
+   "end": 6.25
+  },
+  {
+   "text": "haben,",
+   "src": "ooia/t1",
+   "start": 6.31,
+   "end": 6.47
+  },
+  {
+   "text": "eine",
+   "src": "ooia/t1",
+   "start": 6.51,
+   "end": 6.63
+  },
+  {
+   "text": "eigene",
+   "src": "ooia/t1",
+   "start": 6.77,
+   "end": 6.99
+  },
+  {
+   "text": "E-Commerce-Marke?",
+   "src": "ooia/t1",
+   "start": 7.05,
+   "end": 7.75
+  },
+  {
+   "text": "ooia",
+   "src": "ooia/t1",
+   "start": 8.47,
+   "end": 8.69
+  },
+  {
+   "text": "hat",
+   "src": "ooia/t1",
+   "start": 8.79,
+   "end": 8.89
+  },
+  {
+   "text": "nämlich",
+   "src": "ooia/t1",
+   "start": 8.93,
+   "end": 9.13
+  },
+  {
+   "text": "genau",
+   "src": "ooia/t1",
+   "start": 9.19,
+   "end": 9.41
+  },
+  {
+   "text": "das",
+   "src": "ooia/t1",
+   "start": 9.49,
+   "end": 9.67
+  },
+  {
+   "text": "mit",
+   "src": "ooia/t1",
+   "start": 9.75,
+   "end": 9.85
+  },
+  {
+   "text": "den",
+   "src": "ooia/t1",
+   "start": 9.87,
+   "end": 9.97
+  },
+  {
+   "text": "Periodenunterwäschen",
+   "src": "ooia/t1",
+   "start": 10.03,
+   "end": 10.97
+  },
+  {
+   "text": "gemacht.",
+   "src": "ooia/t1",
+   "start": 11.01,
+   "end": 11.23
+  },
+  {
+   "text": "Die",
+   "src": "ooia/t1",
+   "start": 18.95,
+   "end": 19.03
+  },
+  {
+   "text": "Gründerinnen",
+   "src": "ooia/t1",
+   "start": 19.09,
+   "end": 19.49
+  },
+  {
+   "text": "Kristine",
+   "src": "ooia/t1",
+   "start": 19.51,
+   "end": 20.03
+  },
+  {
+   "text": "Zeller",
+   "src": "ooia/t1",
+   "start": 20.13,
+   "end": 20.37
+  },
+  {
+   "text": "und",
+   "src": "ooia/t1",
+   "start": 20.49,
+   "end": 20.59
+  },
+  {
+   "text": "Kati",
+   "src": "ooia/t1",
+   "start": 20.69,
+   "end": 21.01
+  },
+  {
+   "text": "Ernst",
+   "src": "ooia/t1",
+   "start": 21.11,
+   "end": 21.43
+  },
+  {
+   "text": "haben",
+   "src": "ooia/t1",
+   "start": 21.49,
+   "end": 21.71
+  },
+  {
+   "text": "tatsächlich",
+   "src": "ooia/t1",
+   "start": 21.79,
+   "end": 22.29
+  },
+  {
+   "text": "verstanden,",
+   "src": "ooia/t1",
+   "start": 22.35,
+   "end": 22.91
+  },
+  {
+   "text": "dass",
+   "src": "ooia/t1",
+   "start": 23.29,
+   "end": 23.41
+  },
+  {
+   "text": "sie",
+   "src": "ooia/t1",
+   "start": 23.45,
+   "end": 23.53
+  },
+  {
+   "text": "nicht",
+   "src": "ooia/t1",
+   "start": 23.59,
+   "end": 23.73
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 23.91,
+   "end": 24.23
+  },
+  {
+   "text": "nur",
+   "src": "ooia/t1",
+   "start": 24.35,
+   "end": 24.47
+  },
+  {
+   "text": "ein",
+   "src": "ooia/t1",
+   "start": 24.61,
+   "end": 24.71
+  },
+  {
+   "text": "neues",
+   "src": "ooia/t1",
+   "start": 24.79,
+   "end": 25.03
+  },
+  {
+   "text": "Produkt",
+   "src": "ooia/t1",
+   "start": 25.11,
+   "end": 25.39
+  },
+  {
+   "text": "online",
+   "src": "ooia/t1",
+   "start": 25.45,
+   "end": 25.67
+  },
+  {
+   "text": "stellen",
+   "src": "ooia/t1",
+   "start": 25.71,
+   "end": 26.19
+  },
+  {
+   "text": "können.",
+   "src": "ooia/t1",
+   "start": 25.74,
+   "end": 26.12
+  },
+  {
+   "text": "Denn",
+   "src": "ooia/t1",
+   "start": 26.72,
+   "end": 26.84
+  },
+  {
+   "text": "Kundinnen",
+   "src": "ooia/t1",
+   "start": 26.96,
+   "end": 27.4
+  },
+  {
+   "text": "haben",
+   "src": "ooia/t1",
+   "start": 27.52,
+   "end": 27.74
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 27.86,
+   "end": 28.1
+  },
+  {
+   "text": "bei",
+   "src": "ooia/t1",
+   "start": 28.18,
+   "end": 28.28
+  },
+  {
+   "text": "so",
+   "src": "ooia/t1",
+   "start": 28.38,
+   "end": 28.44
+  },
+  {
+   "text": "einem",
+   "src": "ooia/t1",
+   "start": 28.52,
+   "end": 28.7
+  },
+  {
+   "text": "Produkt",
+   "src": "ooia/t1",
+   "start": 28.74,
+   "end": 29.0
+  },
+  {
+   "text": "tatsächlich",
+   "src": "ooia/t1",
+   "start": 29.04,
+   "end": 29.48
+  },
+  {
+   "text": "sehr",
+   "src": "ooia/t1",
+   "start": 29.62,
+   "end": 29.78
+  },
+  {
+   "text": "viele",
+   "src": "ooia/t1",
+   "start": 29.84,
+   "end": 30.0
+  },
+  {
+   "text": "Fragen.",
+   "src": "ooia/t1",
+   "start": 30.08,
+   "end": 30.32
+  },
+  {
+   "text": "Wie",
+   "src": "ooia/t1",
+   "start": 31.3,
+   "end": 31.4
+  },
+  {
+   "text": "funktioniert",
+   "src": "ooia/t1",
+   "start": 31.48,
+   "end": 31.9
+  },
+  {
+   "text": "das",
+   "src": "ooia/t1",
+   "start": 31.94,
+   "end": 32.04
+  },
+  {
+   "text": "eigentlich?",
+   "src": "ooia/t1",
+   "start": 32.1,
+   "end": 32.44
+  },
+  {
+   "text": "Wie",
+   "src": "ooia/t1",
+   "start": 32.78,
+   "end": 32.88
+  },
+  {
+   "text": "fühlt",
+   "src": "ooia/t1",
+   "start": 32.98,
+   "end": 33.16
+  },
+  {
+   "text": "es",
+   "src": "ooia/t1",
+   "start": 33.2,
+   "end": 33.26
+  },
+  {
+   "text": "sich",
+   "src": "ooia/t1",
+   "start": 33.34,
+   "end": 33.44
+  },
+  {
+   "text": "an?",
+   "src": "ooia/t1",
+   "start": 33.56,
+   "end": 33.68
+  },
+  {
+   "text": "Wie",
+   "src": "ooia/t1",
+   "start": 34.04,
+   "end": 34.14
+  },
+  {
+   "text": "pflegt",
+   "src": "ooia/t1",
+   "start": 34.2,
+   "end": 34.48
+  },
+  {
+   "text": "man",
+   "src": "ooia/t1",
+   "start": 34.54,
+   "end": 34.66
+  },
+  {
+   "text": "es?",
+   "src": "ooia/t1",
+   "start": 34.72,
+   "end": 34.8
+  },
+  {
+   "text": "Und",
+   "src": "ooia/t1",
+   "start": 35.24,
+   "end": 35.32
+  },
+  {
+   "text": "welche",
+   "src": "ooia/t1",
+   "start": 35.36,
+   "end": 35.58
+  },
+  {
+   "text": "Varianten",
+   "src": "ooia/t1",
+   "start": 35.64,
+   "end": 36.18
+  },
+  {
+   "text": "passen",
+   "src": "ooia/t1",
+   "start": 36.22,
+   "end": 36.48
+  },
+  {
+   "text": "eigentlich",
+   "src": "ooia/t1",
+   "start": 36.52,
+   "end": 36.74
+  },
+  {
+   "text": "zu",
+   "src": "ooia/t1",
+   "start": 36.76,
+   "end": 36.84
+  },
+  {
+   "text": "mir?",
+   "src": "ooia/t1",
+   "start": 36.9,
+   "end": 37.0
+  },
+  {
+   "text": "Deshalb",
+   "src": "ooia/t1",
+   "start": 37.82,
+   "end": 38.16
+  },
+  {
+   "text": "ist",
+   "src": "ooia/t1",
+   "start": 38.26,
+   "end": 38.34
+  },
+  {
+   "text": "es",
+   "src": "ooia/t1",
+   "start": 38.38,
+   "end": 38.46
+  },
+  {
+   "text": "ein",
+   "src": "ooia/t1",
+   "start": 38.5,
+   "end": 38.6
+  },
+  {
+   "text": "großer",
+   "src": "ooia/t1",
+   "start": 38.66,
+   "end": 39.04
+  },
+  {
+   "text": "Teil",
+   "src": "ooia/t1",
+   "start": 39.1,
+   "end": 39.28
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 39.3,
+   "end": 39.54
+  },
+  {
+   "text": "des",
+   "src": "ooia/t1",
+   "start": 39.6,
+   "end": 39.7
+  },
+  {
+   "text": "Markenauftritts,",
+   "src": "ooia/t1",
+   "start": 39.84,
+   "end": 40.56
+  },
+  {
+   "text": "nicht",
+   "src": "ooia/t1",
+   "start": 40.98,
+   "end": 41.14
+  },
+  {
+   "text": "nur",
+   "src": "ooia/t1",
+   "start": 41.18,
+   "end": 41.28
+  },
+  {
+   "text": "Verkauf,",
+   "src": "ooia/t1",
+   "start": 41.32,
+   "end": 41.82
+  },
+  {
+   "text": "sondern",
+   "src": "ooia/t1",
+   "start": 41.98,
+   "end": 42.26
+  },
+  {
+   "text": "eben",
+   "src": "ooia/t1",
+   "start": 42.36,
+   "end": 42.52
+  },
+  {
+   "text": "auch",
+   "src": "ooia/t1",
+   "start": 42.56,
+   "end": 42.66
+  },
+  {
+   "text": "Erklärungen",
+   "src": "ooia/t1",
+   "start": 42.72,
+   "end": 43.3
+  },
+  {
+   "text": "und",
+   "src": "ooia/t1",
+   "start": 43.62,
+   "end": 43.76
+  },
+  {
+   "text": "vor",
+   "src": "ooia/t1",
+   "start": 43.92,
+   "end": 44.0
+  },
+  {
+   "text": "allem",
+   "src": "ooia/t1",
+   "start": 44.08,
+   "end": 44.26
+  },
+  {
+   "text": "die",
+   "src": "ooia/t1",
+   "start": 44.3,
+   "end": 44.36
+  },
+  {
+   "text": "Aufklärung.",
+   "src": "ooia/t1",
+   "start": 44.44,
+   "end": 44.9
+  },
+  {
+   "text": "ooia",
+   "src": "ooia/t1",
+   "start": 45.84,
+   "end": 46.06
+  },
+  {
+   "text": "hat",
+   "src": "ooia/t1",
+   "start": 46.18,
+   "end": 46.28
+  },
+  {
+   "text": "nämlich",
+   "src": "ooia/t1",
+   "start": 46.38,
+   "end": 46.64
+  },
+  {
+   "text": "dabei",
+   "src": "ooia/t1",
+   "start": 46.7,
+   "end": 46.92
+  },
+  {
+   "text": "über",
+   "src": "ooia/t1",
+   "start": 47.08,
+   "end": 47.22
+  },
+  {
+   "text": "Social",
+   "src": "ooia/t1",
+   "start": 47.32,
+   "end": 47.66
+  },
+  {
+   "text": "Media",
+   "src": "ooia/t1",
+   "start": 47.7,
+   "end": 47.92
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 47.94,
+   "end": 48.18
+  },
+  {
+   "text": "Gespräche",
+   "src": "ooia/t1",
+   "start": 48.22,
+   "end": 48.68
+  },
+  {
+   "text": "angestoßen",
+   "src": "ooia/t1",
+   "start": 48.74,
+   "end": 49.26
+  },
+  {
+   "text": "und",
+   "src": "ooia/t1",
+   "start": 49.62,
+   "end": 49.7
+  },
+  {
+   "text": "Informationen",
+   "src": "ooia/t1",
+   "start": 49.74,
+   "end": 50.46
+  },
+  {
+   "text": "zugänglich",
+   "src": "ooia/t1",
+   "start": 50.54,
+   "end": 50.98
+  },
+  {
+   "text": "gemacht,",
+   "src": "ooia/t1",
+   "start": 51.02,
+   "end": 51.3
+  },
+  {
+   "text": "die",
+   "src": "ooia/t1",
+   "start": 55.45,
+   "end": 55.53
+  },
+  {
+   "text": "Menschen",
+   "src": "ooia/t1",
+   "start": 55.57,
+   "end": 55.91
+  },
+  {
+   "text": "vor",
+   "src": "ooia/t1",
+   "start": 55.99,
+   "end": 56.07
+  },
+  {
+   "text": "einer",
+   "src": "ooia/t1",
+   "start": 56.13,
+   "end": 56.27
+  },
+  {
+   "text": "Kaufentscheidung",
+   "src": "ooia/t1",
+   "start": 56.37,
+   "end": 56.99
+  },
+  {
+   "text": "brauchen.",
+   "src": "ooia/t1",
+   "start": 57.05,
+   "end": 57.37
+  },
+  {
+   "text": "Und",
+   "src": "ooia/t1",
+   "start": 58.81,
+   "end": 58.89
+  },
+  {
+   "text": "genau",
+   "src": "ooia/t1",
+   "start": 58.95,
+   "end": 59.15
+  },
+  {
+   "text": "das",
+   "src": "ooia/t1",
+   "start": 59.27,
+   "end": 59.47
+  },
+  {
+   "text": "finde",
+   "src": "ooia/t1",
+   "start": 59.59,
+   "end": 59.75
+  },
+  {
+   "text": "ich",
+   "src": "ooia/t1",
+   "start": 59.79,
+   "end": 59.87
+  },
+  {
+   "text": "eben",
+   "src": "ooia/t1",
+   "start": 59.91,
+   "end": 60.01
+  },
+  {
+   "text": "für",
+   "src": "ooia/t1",
+   "start": 60.03,
+   "end": 60.11
+  },
+  {
+   "text": "andere",
+   "src": "ooia/t1",
+   "start": 60.15,
+   "end": 60.35
+  },
+  {
+   "text": "Shops",
+   "src": "ooia/t1",
+   "start": 60.41,
+   "end": 60.61
+  },
+  {
+   "text": "besonders",
+   "src": "ooia/t1",
+   "start": 60.69,
+   "end": 61.19
+  },
+  {
+   "text": "spannend.",
+   "src": "ooia/t1",
+   "start": 61.23,
+   "end": 61.49
+  },
+  {
+   "text": "Denn",
+   "src": "ooia/t1",
+   "start": 62.17,
+   "end": 62.31
+  },
+  {
+   "text": "das",
+   "src": "ooia/t1",
+   "start": 62.35,
+   "end": 62.51
+  },
+  {
+   "text": "gilt",
+   "src": "ooia/t1",
+   "start": 62.57,
+   "end": 62.71
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 62.77,
+   "end": 62.99
+  },
+  {
+   "text": "nicht",
+   "src": "ooia/t1",
+   "start": 63.09,
+   "end": 63.25
+  },
+  {
+   "text": "nur",
+   "src": "ooia/t1",
+   "start": 63.29,
+   "end": 63.37
+  },
+  {
+   "text": "für",
+   "src": "ooia/t1",
+   "start": 63.39,
+   "end": 63.49
+  },
+  {
+   "text": "Periodenunterwäsche,",
+   "src": "ooia/t1",
+   "start": 63.53,
+   "end": 64.39
+  },
+  {
+   "text": "sondern",
+   "src": "ooia/t1",
+   "start": 64.79,
+   "end": 65.09
+  },
+  {
+   "text": "tatsächlich",
+   "src": "ooia/t1",
+   "start": 65.13,
+   "end": 65.59
+  },
+  {
+   "text": "auch",
+   "src": "ooia/t1",
+   "start": 65.67,
+   "end": 65.77
+  },
+  {
+   "text": "für",
+   "src": "ooia/t1",
+   "start": 65.87,
+   "end": 65.95
+  },
+  {
+   "text": "alle",
+   "src": "ooia/t1",
+   "start": 66.09,
+   "end": 66.21
+  },
+  {
+   "text": "anderen",
+   "src": "ooia/t1",
+   "start": 66.27,
+   "end": 66.51
+  },
+  {
+   "text": "Produkte,",
+   "src": "ooia/t1",
+   "start": 66.55,
+   "end": 66.89
+  },
+  {
+   "text": "bei",
+   "src": "ooia/t1",
+   "start": 66.97,
+   "end": 67.03
+  },
+  {
+   "text": "denen",
+   "src": "ooia/t1",
+   "start": 67.09,
+   "end": 67.25
+  },
+  {
+   "text": "Kunden",
+   "src": "ooia/t1",
+   "start": 67.33,
+   "end": 67.61
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 67.65,
+   "end": 67.89
+  },
+  {
+   "text": "sich",
+   "src": "ooia/t1",
+   "start": 67.99,
+   "end": 68.11
+  },
+  {
+   "text": "unsicher",
+   "src": "ooia/t1",
+   "start": 68.23,
+   "end": 68.57
+  },
+  {
+   "text": "sind.",
+   "src": "ooia/t1",
+   "start": 68.63,
+   "end": 68.75
+  },
+  {
+   "text": "Deswegen",
+   "src": "ooia/t1",
+   "start": 72.8,
+   "end": 73.16
+  },
+  {
+   "text": "mein",
+   "src": "ooia/t1",
+   "start": 73.24,
+   "end": 73.42
+  },
+  {
+   "text": "erster",
+   "src": "ooia/t1",
+   "start": 73.52,
+   "end": 73.78
+  },
+  {
+   "text": "Praxistipp,",
+   "src": "ooia/t1",
+   "start": 73.82,
+   "end": 74.32
+  },
+  {
+   "text": "sammle",
+   "src": "ooia/t1",
+   "start": 74.5,
+   "end": 74.76
+  },
+  {
+   "text": "tatsächlich",
+   "src": "ooia/t1",
+   "start": 74.84,
+   "end": 75.22
+  },
+  {
+   "text": "mal",
+   "src": "ooia/t1",
+   "start": 75.26,
+   "end": 75.32
+  },
+  {
+   "text": "die",
+   "src": "ooia/t1",
+   "start": 75.36,
+   "end": 75.46
+  },
+  {
+   "text": "10",
+   "src": "ooia/t1",
+   "start": 75.56,
+   "end": 75.72
+  },
+  {
+   "text": "häufigsten",
+   "src": "ooia/t1",
+   "start": 75.82,
+   "end": 76.28
+  },
+  {
+   "text": "Fragen",
+   "src": "ooia/t1",
+   "start": 76.32,
+   "end": 76.66
+  },
+  {
+   "text": "aus",
+   "src": "ooia/t1",
+   "start": 77.1,
+   "end": 77.2
+  },
+  {
+   "text": "Support,",
+   "src": "ooia/t1",
+   "start": 77.28,
+   "end": 77.7
+  },
+  {
+   "text": "Kommentaren",
+   "src": "ooia/t1",
+   "start": 77.82,
+   "end": 78.4
+  },
+  {
+   "text": "und",
+   "src": "ooia/t1",
+   "start": 78.5,
+   "end": 78.58
+  },
+  {
+   "text": "auch",
+   "src": "ooia/t1",
+   "start": 78.64,
+   "end": 78.72
+  },
+  {
+   "text": "Retourengründen.",
+   "src": "ooia/t1",
+   "start": 78.76,
+   "end": 79.48
+  },
+  {
+   "text": "Zweitens,",
+   "src": "ooia/t1",
+   "start": 80.28,
+   "end": 80.76
+  },
+  {
+   "text": "beantworte",
+   "src": "ooia/t1",
+   "start": 80.9,
+   "end": 81.44
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 81.48,
+   "end": 81.66
+  },
+  {
+   "text": "mal",
+   "src": "ooia/t1",
+   "start": 81.68,
+   "end": 81.76
+  },
+  {
+   "text": "diese",
+   "src": "ooia/t1",
+   "start": 81.8,
+   "end": 81.92
+  },
+  {
+   "text": "Fragen",
+   "src": "ooia/t1",
+   "start": 82.0,
+   "end": 82.3
+  },
+  {
+   "text": "dort,",
+   "src": "ooia/t1",
+   "start": 82.38,
+   "end": 82.62
+  },
+  {
+   "text": "wo",
+   "src": "ooia/t1",
+   "start": 83.06,
+   "end": 83.12
+  },
+  {
+   "text": "tatsächlich",
+   "src": "ooia/t1",
+   "start": 83.22,
+   "end": 83.62
+  },
+  {
+   "text": "Kunden",
+   "src": "ooia/t1",
+   "start": 83.68,
+   "end": 83.98
+  },
+  {
+   "text": "auch",
+   "src": "ooia/t1",
+   "start": 84.04,
+   "end": 84.16
+  },
+  {
+   "text": "entscheiden.",
+   "src": "ooia/t1",
+   "start": 84.28,
+   "end": 84.66
+  },
+  {
+   "text": "Auf",
+   "src": "ooia/t1",
+   "start": 85.46,
+   "end": 85.54
+  },
+  {
+   "text": "Produktseiten,",
+   "src": "ooia/t1",
+   "start": 85.6,
+   "end": 86.36
+  },
+  {
+   "text": "in",
+   "src": "ooia/t1",
+   "start": 86.56,
+   "end": 86.64
+  },
+  {
+   "text": "Größentabellen,",
+   "src": "ooia/t1",
+   "start": 86.68,
+   "end": 87.56
+  },
+  {
+   "text": "kurze",
+   "src": "ooia/t1",
+   "start": 87.72,
+   "end": 88.0
+  },
+  {
+   "text": "Videos",
+   "src": "ooia/t1",
+   "start": 88.06,
+   "end": 88.46
+  },
+  {
+   "text": "oder",
+   "src": "ooia/t1",
+   "start": 88.88,
+   "end": 89.04
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 89.12,
+   "end": 89.42
+  },
+  {
+   "text": "in",
+   "src": "ooia/t1",
+   "start": 89.56,
+   "end": 89.62
+  },
+  {
+   "text": "den",
+   "src": "ooia/t1",
+   "start": 89.68,
+   "end": 89.8
+  },
+  {
+   "text": "klaren",
+   "src": "ooia/t1",
+   "start": 89.88,
+   "end": 90.2
+  },
+  {
+   "text": "FAQs.",
+   "src": "ooia/t1",
+   "start": 90.44,
+   "end": 90.84
+  },
+  {
+   "text": "Und",
+   "src": "ooia/t1",
+   "start": 106.39,
+   "end": 106.47
+  },
+  {
+   "text": "drittens",
+   "src": "ooia/t1",
+   "start": 106.53,
+   "end": 106.97
+  },
+  {
+   "text": "sei",
+   "src": "ooia/t1",
+   "start": 107.53,
+   "end": 107.65
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 107.73,
+   "end": 107.93
+  },
+  {
+   "text": "mal",
+   "src": "ooia/t1",
+   "start": 107.97,
+   "end": 108.09
+  },
+  {
+   "text": "bei",
+   "src": "ooia/t1",
+   "start": 108.13,
+   "end": 108.21
+  },
+  {
+   "text": "den",
+   "src": "ooia/t1",
+   "start": 108.25,
+   "end": 108.39
+  },
+  {
+   "text": "Aussagen",
+   "src": "ooia/t1",
+   "start": 108.51,
+   "end": 108.97
+  },
+  {
+   "text": "sehr",
+   "src": "ooia/t1",
+   "start": 109.09,
+   "end": 109.25
+  },
+  {
+   "text": "präzise,",
+   "src": "ooia/t1",
+   "start": 109.31,
+   "end": 109.73
+  },
+  {
+   "text": "denn",
+   "src": "ooia/t1",
+   "start": 110.23,
+   "end": 110.35
+  },
+  {
+   "text": "du",
+   "src": "ooia/t1",
+   "start": 110.37,
+   "end": 110.41
+  },
+  {
+   "text": "brauchst",
+   "src": "ooia/t1",
+   "start": 110.45,
+   "end": 110.69
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 110.73,
+   "end": 110.93
+  },
+  {
+   "text": "keine",
+   "src": "ooia/t1",
+   "start": 110.99,
+   "end": 111.23
+  },
+  {
+   "text": "übertriebenen",
+   "src": "ooia/t1",
+   "start": 111.35,
+   "end": 112.05
+  },
+  {
+   "text": "Versprechen,",
+   "src": "ooia/t1",
+   "start": 112.11,
+   "end": 112.63
+  },
+  {
+   "text": "sondern",
+   "src": "ooia/t1",
+   "start": 112.75,
+   "end": 113.01
+  },
+  {
+   "text": "tatsächlich",
+   "src": "ooia/t1",
+   "start": 113.07,
+   "end": 113.45
+  },
+  {
+   "text": "nachvollziehbare",
+   "src": "ooia/t1",
+   "start": 113.57,
+   "end": 114.49
+  },
+  {
+   "text": "Antworten.",
+   "src": "ooia/t1",
+   "start": 114.59,
+   "end": 114.99
+  },
+  {
+   "text": "Und",
+   "src": "ooia/t1",
+   "start": 131.02,
+   "end": 131.08
+  },
+  {
+   "text": "KI",
+   "src": "ooia/t1",
+   "start": 131.14,
+   "end": 131.38
+  },
+  {
+   "text": "kann",
+   "src": "ooia/t1",
+   "start": 131.52,
+   "end": 131.66
+  },
+  {
+   "text": "dir",
+   "src": "ooia/t1",
+   "start": 131.68,
+   "end": 131.72
+  },
+  {
+   "text": "natürlich",
+   "src": "ooia/t1",
+   "start": 131.78,
+   "end": 132.14
+  },
+  {
+   "text": "auch",
+   "src": "ooia/t1",
+   "start": 132.18,
+   "end": 132.26
+  },
+  {
+   "text": "dabei",
+   "src": "ooia/t1",
+   "start": 132.3,
+   "end": 132.5
+  },
+  {
+   "text": "super",
+   "src": "ooia/t1",
+   "start": 132.6,
+   "end": 132.84
+  },
+  {
+   "text": "helfen,",
+   "src": "ooia/t1",
+   "start": 132.9,
+   "end": 133.2
+  },
+  {
+   "text": "einfach",
+   "src": "ooia/t1",
+   "start": 133.24,
+   "end": 133.46
+  },
+  {
+   "text": "die",
+   "src": "ooia/t1",
+   "start": 133.52,
+   "end": 133.6
+  },
+  {
+   "text": "häufigsten",
+   "src": "ooia/t1",
+   "start": 133.66,
+   "end": 134.12
+  },
+  {
+   "text": "Fragen",
+   "src": "ooia/t1",
+   "start": 134.16,
+   "end": 134.48
+  },
+  {
+   "text": "zu",
+   "src": "ooia/t1",
+   "start": 134.6,
+   "end": 134.7
+  },
+  {
+   "text": "clustern",
+   "src": "ooia/t1",
+   "start": 134.78,
+   "end": 135.22
+  },
+  {
+   "text": "und",
+   "src": "ooia/t1",
+   "start": 135.62,
+   "end": 135.72
+  },
+  {
+   "text": "auch",
+   "src": "ooia/t1",
+   "start": 135.84,
+   "end": 135.96
+  },
+  {
+   "text": "eben",
+   "src": "ooia/t1",
+   "start": 136.06,
+   "end": 136.3
+  },
+  {
+   "text": "FAQ-Entwürfe",
+   "src": "ooia/t1",
+   "start": 136.34,
+   "end": 137.0
+  },
+  {
+   "text": "daraus",
+   "src": "ooia/t1",
+   "start": 137.04,
+   "end": 137.28
+  },
+  {
+   "text": "zu",
+   "src": "ooia/t1",
+   "start": 137.34,
+   "end": 137.4
+  },
+  {
+   "text": "schreiben.",
+   "src": "ooia/t1",
+   "start": 137.46,
+   "end": 137.76
+  },
+  {
+   "text": "Aber",
+   "src": "ooia/t1",
+   "start": 143.25,
+   "end": 143.37
+  },
+  {
+   "text": "gerade",
+   "src": "ooia/t1",
+   "start": 143.43,
+   "end": 143.65
+  },
+  {
+   "text": "bei",
+   "src": "ooia/t1",
+   "start": 143.71,
+   "end": 143.79
+  },
+  {
+   "text": "sensiblen",
+   "src": "ooia/t1",
+   "start": 143.87,
+   "end": 144.37
+  },
+  {
+   "text": "Produkt-",
+   "src": "ooia/t1",
+   "start": 144.41,
+   "end": 144.77
+  },
+  {
+   "text": "und",
+   "src": "ooia/t1",
+   "start": 144.85,
+   "end": 144.97
+  },
+  {
+   "text": "Gesundheitsfragen",
+   "src": "ooia/t1",
+   "start": 145.03,
+   "end": 145.81
+  },
+  {
+   "text": "müssen",
+   "src": "ooia/t1",
+   "start": 146.17,
+   "end": 146.45
+  },
+  {
+   "text": "dann",
+   "src": "ooia/t1",
+   "start": 146.49,
+   "end": 146.63
+  },
+  {
+   "text": "tatsächlich",
+   "src": "ooia/t1",
+   "start": 146.67,
+   "end": 147.13
+  },
+  {
+   "text": "die",
+   "src": "ooia/t1",
+   "start": 147.17,
+   "end": 147.27
+  },
+  {
+   "text": "Antworten",
+   "src": "ooia/t1",
+   "start": 147.35,
+   "end": 147.79
+  },
+  {
+   "text": "fachlich",
+   "src": "ooia/t1",
+   "start": 147.93,
+   "end": 148.31
+  },
+  {
+   "text": "geprüft",
+   "src": "ooia/t1",
+   "start": 148.37,
+   "end": 148.71
+  },
+  {
+   "text": "werden.",
+   "src": "ooia/t1",
+   "start": 148.75,
+   "end": 148.95
+  },
+  {
+   "text": "Aber",
+   "src": "ooia/t1",
+   "start": 173.18,
+   "end": 173.3
+  },
+  {
+   "text": "das",
+   "src": "ooia/t1",
+   "start": 173.34,
+   "end": 173.42
+  },
+  {
+   "text": "wichtigste",
+   "src": "ooia/t1",
+   "start": 173.48,
+   "end": 173.84
+  },
+  {
+   "text": "Learning,",
+   "src": "ooia/t1",
+   "start": 173.9,
+   "end": 174.16
+  },
+  {
+   "text": "was",
+   "src": "ooia/t1",
+   "start": 174.22,
+   "end": 174.32
+  },
+  {
+   "text": "ich",
+   "src": "ooia/t1",
+   "start": 174.5,
+   "end": 174.6
+  },
+  {
+   "text": "jetzt",
+   "src": "ooia/t1",
+   "start": 174.66,
+   "end": 174.84
+  },
+  {
+   "text": "für",
+   "src": "ooia/t1",
+   "start": 174.88,
+   "end": 174.94
+  },
+  {
+   "text": "mich",
+   "src": "ooia/t1",
+   "start": 175.0,
+   "end": 175.14
+  },
+  {
+   "text": "aus",
+   "src": "ooia/t1",
+   "start": 175.2,
+   "end": 175.28
+  },
+  {
+   "text": "dem",
+   "src": "ooia/t1",
+   "start": 175.34,
+   "end": 175.44
+  },
+  {
+   "text": "Onlineshop",
+   "src": "ooia/t1",
+   "start": 175.52,
+   "end": 175.88
+  },
+  {
+   "text": "von",
+   "src": "ooia/t1",
+   "start": 175.92,
+   "end": 176.02
+  },
+  {
+   "text": "ooia",
+   "src": "ooia/t1",
+   "start": 176.12,
+   "end": 176.3
+  },
+  {
+   "text": "mitnehmen",
+   "src": "ooia/t1",
+   "start": 176.38,
+   "end": 176.68
+  },
+  {
+   "text": "würde,",
+   "src": "ooia/t1",
+   "start": 176.7,
+   "end": 176.88
+  },
+  {
+   "text": "ist",
+   "src": "ooia/t1",
+   "start": 176.94,
+   "end": 177.04
+  },
+  {
+   "text": "deshalb,",
+   "src": "ooia/t1",
+   "start": 177.08,
+   "end": 177.4
+  },
+  {
+   "text": "dass",
+   "src": "ooia/t1",
+   "start": 182.25,
+   "end": 182.39
+  },
+  {
+   "text": "Aufklärung",
+   "src": "ooia/t1",
+   "start": 182.57,
+   "end": 183.07
+  },
+  {
+   "text": "tatsächlich",
+   "src": "ooia/t1",
+   "start": 183.17,
+   "end": 183.59
+  },
+  {
+   "text": "selbst",
+   "src": "ooia/t1",
+   "start": 183.89,
+   "end": 184.23
+  },
+  {
+   "text": "zu",
+   "src": "ooia/t1",
+   "start": 184.31,
+   "end": 184.37
+  },
+  {
+   "text": "einem",
+   "src": "ooia/t1",
+   "start": 184.51,
+   "end": 184.69
+  },
+  {
+   "text": "starken",
+   "src": "ooia/t1",
+   "start": 184.79,
+   "end": 185.19
+  },
+  {
+   "text": "Teil",
+   "src": "ooia/t1",
+   "start": 185.27,
+   "end": 185.47
+  },
+  {
+   "text": "deiner",
+   "src": "ooia/t1",
+   "start": 185.51,
+   "end": 185.71
+  },
+  {
+   "text": "Markenstrategie",
+   "src": "ooia/t1",
+   "start": 185.79,
+   "end": 186.55
+  },
+  {
+   "text": "verwendet",
+   "src": "ooia/t1",
+   "start": 186.63,
+   "end": 186.99
+  },
+  {
+   "text": "werden",
+   "src": "ooia/t1",
+   "start": 187.03,
+   "end": 187.21
+  },
+  {
+   "text": "kann.",
+   "src": "ooia/t1",
+   "start": 187.25,
+   "end": 187.39
+  },
+  {
+   "text": "Und",
+   "src": "ooia/t1",
+   "start": 213.73,
+   "end": 213.81
+  },
+  {
+   "text": "jetzt",
+   "src": "ooia/t1",
+   "start": 213.85,
+   "end": 214.01
+  },
+  {
+   "text": "zum",
+   "src": "ooia/t1",
+   "start": 214.05,
+   "end": 214.13
+  },
+  {
+   "text": "Schluss",
+   "src": "ooia/t1",
+   "start": 214.17,
+   "end": 214.39
+  },
+  {
+   "text": "ein",
+   "src": "ooia/t1",
+   "start": 214.45,
+   "end": 214.51
+  },
+  {
+   "text": "ganz",
+   "src": "ooia/t1",
+   "start": 214.69,
+   "end": 214.95
+  },
+  {
+   "text": "ganz",
+   "src": "ooia/t1",
+   "start": 215.01,
+   "end": 215.17
+  },
+  {
+   "text": "wichtiger",
+   "src": "ooia/t1",
+   "start": 215.23,
+   "end": 215.55
+  },
+  {
+   "text": "Tipp,",
+   "src": "ooia/t1",
+   "start": 215.61,
+   "end": 215.77
+  },
+  {
+   "text": "das",
+   "src": "ooia/t1",
+   "start": 216.19,
+   "end": 216.31
+  },
+  {
+   "text": "Plus",
+   "src": "ooia/t1",
+   "start": 216.39,
+   "end": 216.53
+  },
+  {
+   "text": "hier",
+   "src": "ooia/t1",
+   "start": 216.55,
+   "end": 216.65
+  },
+  {
+   "text": "mal",
+   "src": "ooia/t1",
+   "start": 216.67,
+   "end": 216.77
+  },
+  {
+   "text": "bitte",
+   "src": "ooia/t1",
+   "start": 216.81,
+   "end": 216.93
+  },
+  {
+   "text": "wegdrücken.",
+   "src": "ooia/t1",
+   "start": 216.95,
+   "end": 217.47
+  }
+ ],
+ "pages": [
+  4,
+  3,
+  3,
+  2,
+  2,
+  2,
+  1,
+  4,
+  3,
+  1,
+  1,
+  2,
+  4,
+  2,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  4,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  4,
+  3,
+  2,
+  2,
+  1,
+  4,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  1,
+  4,
+  2,
+  3,
+  2,
+  4,
+  3,
+  1,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  1,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  1,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  4,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  1,
+  1,
+  2,
+  1,
+  1,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  1,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  4,
+  2,
+  1,
+  2,
+  4,
+  3,
+  2,
+  3,
+  3
+ ]
+}

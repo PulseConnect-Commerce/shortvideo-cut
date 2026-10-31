@@ -1,0 +1,47 @@
+Hintergründe, Quellen, Logo und Foto für M09 · ooia (alle am 31.10.2026 mit Playwright/Chromium ohne Login in der
+Handy-Ansicht 432 css-px, 2,5-fach = 1080 px breit, aufgenommen; Cookie-Hinweis bestätigt, schwebende Knöpfe und Popups
+ausgeblendet, sonst nichts verändert). Aufnahme: hyperframes/ooia-hg/aufnahme.cjs (Überschriften, Bilder und Markierungen mit
+css-y in hyperframes/ooia-hg/screenshots/aufnahme.json; die Bilder der ganzen Seiten lagen wegen des knappen Speichers nur in
+/dev/shm), gestaltet mit hyperframes/ooia-hg/gestalte.py (oben die Kopfleiste von ooia.de mit dem ooia-Logo, darunter ein oder
+zwei Abschnitte derselben Seite, leicht weichgezeichnet und leicht abgedunkelt, nach unten etwas mehr; nichts dazugemalt).
+Sensibles Produkt: nur sachliche Abschnitte (Produktbilder ohne Körper, Hilfe/FAQ, Größen, Pflege, Kaufbereich, Marke).
+
+Hintergründe hinter ihm (Video.tsx HG, in den Take gerechnet mit npm run portrait --hintergrund):
+- hg-produkte.png: Startseite, Kategorien "PERIODE", "EVERYDAY", "BRA", "MOMS" (Produktbilder ohne Körper)
+  https://ooia.de/
+- hg-leine.png: Pflege, Bild mit ooias an der Wäscheleine (nur Produkte) und "ooias richtig trocknen"
+  https://ooia.de/pages/pflege
+- hg-hilfe.png: Hilfe-Center "ooia - we empower women*" (Suche, "Mehr Informationen erhalten": Reklamation/Retouren, Bestellung
+  und Lieferung, Größen Guide, Waschen & Material), im Seitenfuß von ooia.de als "FAQs" verlinkt
+  https://ooia.gorgias.help/de-DE
+- hg-faq.png: Ratgeber, Abschnitt "Häufig gestellte Fragen" https://ooia.de/pages/berater
+- hg-kauf.png: Produktseite "Slip Comfy Cotton Extra Strong schwarz", Kaufbereich (Farbe, Größe mit Link "Größentabelle",
+  Hinweis, "In den Warenkorb"), ohne Produktfoto am Körper
+  https://ooia.de/products/slip-comfy-cotton-extra-strong-schwarz
+- hg-magazin.png: "ooia Cycle Magazin" (Kopf und Artikelübersicht, ohne das Titelbild)
+  https://ooia.de/pages/magazin (leitet weiter auf https://ooia.de/blogs/news/magazin)
+- hg-pflege.png: "Pflege – Hier erfährst du Pflegehinweise für deine ooia Produkte" (gefaltete Wäsche)
+  https://ooia.de/pages/pflege
+- hg-hilfe2.png: Hilfe-Center, oben der Kopf, darunter die Themen (Größen Guide, Waschen & Material, FAQs, Female Empowerment,
+  Kontakt) https://ooia.gorgias.help/de-DE
+- hg-mission.png: "Mission & Werte", Abschnitt "Dafür steht ooia" und der Absatz mit "Instagram Channel @its.me.ooia" (ohne die
+  Körperbilder dazwischen) https://ooia.de/pages/mission-werte
+Die Kopfleiste ("90 TAGE RÜCKGABERECHT", Menü, ooia-Logo, Suche, Korb) ist auf allen Seiten von ooia.de gleich; sie stammt aus
+der Aufnahme der Seite Technologie (https://ooia.de/pages/technologie).
+
+Quelle groß (Video.tsx QUELLEN, hyperframes/ooia-hg/quelle.py):
+- quelle-erklaeren.jpg: Shopify-Blog, "Tabus überwinden: Wie zwei Gründerinnen den deutschen Damenhygiene-Markt auf den Kopf
+  stellen" (Inara Muradowa, 2. Juli 2019), Antwort von Kati ab "Kati: Wir haben beobachtet, dass ...", markiert "Dazu kommt,
+  dass es sich bei uns um ein Produkt handelt, das erklärt werden muss und das in Deutschland tabu-behaftet ist."
+- quelle-aufklaerung.jpg: derselbe Beitrag, Frage "Wie löst ihr die Herausforderung der Aufklärungsarbeit für die
+  Periodenunterwäsche?", markiert "Wir haben eine sehr ausführliche FAQ-Sektion auf unserer Webseite." und (nach der
+  Trennlinie) "Außerdem betreiben wir einen interaktiven Instagram-Channel, auf dem wir über das Produkt und über uns in
+  regelmäßigen Live-Sessions berichten." / "Wir bekommen unglaublich viele Fragen"
+  https://www.shopify.com/de/blog/ooia-revolutioniert-damenhygiene
+
+Logo und Foto:
+- ooia-logo.svg: originales Logo aus dem Seitenkopf von ooia.de, unverändert
+  https://ooia.de/cdn/shop/files/ooia-logo-black.svg?v=1780324266
+- gruenderinnen.jpg: Foto der Gründerinnen aus "Mission & Werte" (Abschnitt "Wir vertrauen"), nur zugeschnitten und verkleinert;
+  links Kristine Zeller, rechts Kati Ernst (zugeordnet über die Einzelfotos der Story-Seite "HI, ITS ME, KRISTINE" und
+  "HI, ITS ME, KATI", https://ooia.de/pages/story) https://ooia.de/pages/mission-werte

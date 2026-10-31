@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>M09 · ooia – Erklär-Bilder, Checkliste und Folgen-Karte</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- Serie M "Marken-Story", M09 · ooia. Vorlage hyperframes/purelei-skizzen (M02) mit Pauls Regeln: er steht oben
+         (Kopfoberkante ~320), darum stehen die Erklär-Bilder auf der hellen Karte UNTER Kopf und Pille (x 80-900, y 1140-1490;
+         Instagram-Zone ab 1500); Erklär-Bilder statt Wortkarten (karten-aufbau.md "Visuelle Metaphern"), Checkliste der drei Tipps
+         "10 Fragen" / "Antwort am Kaufpunkt" / "Fakten prüfen" als Leiste oben in den Tipp-Karten, KI-FAQ-Grafik mit Hinweis auf
+         fachliche Prüfung, am Ende die große mittige Folgen-Karte mit dem TikTok-Plus (karten-aufbau.md Punkt 7), getippt auf
+         "Plus". Das originale ooia-Logo (assets/ooia-logo.svg, ooia.de/cdn/shop/files/ooia-logo-black.svg aus dem Seitenkopf,
+         unverändert) und das Foto der Gründerinnen (assets/gruenderinnen.jpg, Seite "Mission & Werte" von ooia.de, nur
+         zugeschnitten). Echte Seiten (ooia.de als Hintergrund, Shopify-Beitrag als "Quelle groß") laufen in Remotion
+         (src/projekte/ooia/Video.tsx); in den Quellen-Fenstern (12,5-16,6 / 36,05-39,95 s) blenden diese Karten dort aus.
+         Sensibles Produkt (Briefing): keine Gesundheits- oder Wirkversprechen, keine Körperbilder, nichts Reißerisches; nur
+         Inhalte aus Take, Skript und Quelle, keine erfundenen Zahlen. Icons Lucide (ISC), Schriften Geist, Instrument Serif,
+         Caveat (OFL, lokal). Zeiten = Sekunden im geschnittenen Video (src/projekte/ooia/cut.json, 107,1 s), Teile 2 Frames vor
+         ihrem Wort; Liste mit Tönen in src/projekte/ooia/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1140px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; z-index: 2; left: 30px; top: 20px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 54px; width: 820px; height: 290px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 30px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #9aa3af; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #2a9ed8; }
+      .hand.gruen { fill: #00b877; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.grau { stroke: #9aa3af; }
+      .gtext { fill: url(#gv); }
+      .zug { fill: none; stroke: url(#gv); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .grauzug { fill: none; stroke: #6b7280; stroke-width: 6; stroke-linecap: round; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 0.04em; }
+
+      /* Logo-Karte: das originale Logo aus dem Seitenkopf von ooia.de, unverändert (schwarz auf Weiß wie dort) */
+      .logofeld { position: absolute; left: 40px; top: 92px; width: 360px; height: 200px; border-radius: 26px; background: #ffffff; border: 2px solid #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .logofeld img { width: 230px; height: auto; display: block; }
+      /* Foto der Gründerinnen (ooia.de, Mission & Werte), nur zugeschnitten */
+      .foto { position: absolute; left: 30px; top: 62px; width: 280px; height: 275px; border-radius: 22px; overflow: hidden; border: 3px solid #ffffff; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); }
+      .foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .fotoquelle { position: absolute; left: 40px; top: 300px; padding: 3px 10px 4px; border-radius: 8px; background: rgba(11, 12, 14, 0.72); color: #fff; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; }
+
+      /* Checkliste der drei Tipps (oben in den Tipp-Karten): erledigt grau mit Haken, aktiv mit Verlaufsrand */
+      .leiste { position: absolute; z-index: 2; left: 26px; top: 14px; display: flex; gap: 10px; }
+      .stufe { position: relative; display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 16px 0 6px; border-radius: 21px; background: #ffffff; border: 2.5px solid #d1d5db; font-size: 21px; font-weight: 800; color: #9aa3af; white-space: nowrap; }
+      .stufe .nr { width: 30px; height: 30px; border-radius: 15px; background: #e5e7eb; color: #6b7280; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+      .stufe.aktiv { border-color: transparent; color: #0b0c0e; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(90deg, #00d088, #31adec) border-box; }
+      .stufe.aktiv .nr { background: linear-gradient(135deg, #00e090, #31adec); color: #0b0c0e; }
+      .stufe.fertig { color: #6b7280; }
+      .stufe.fertig .nr { background: #0b0c0e; color: #ffffff; }
+      /* Tipp-Ziffer links in der Karte */
+      .ziffer { position: absolute; left: 18px; top: 66px; width: 120px; text-align: center; font-family: "Instrument Serif", serif; font-size: 210px; line-height: 1; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, groß und waagerecht mittig, Plus wie bei TikTok (Pauls Vorgabe 30.10.,
+         karten-aufbau.md Punkt 7, Vorlage hyperframes/purelei-skizzen K12): 560 x 200, Kartenmitte x 540, Avatar 150, Plus 64,
+         "Folgen" 72 px, an der Kartenposition unter Kopf und Pille */
+      .folgekarte { position: absolute; left: 260px; top: 1140px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+      .avatar { position: absolute; left: 34px; top: 18px; width: 150px; height: 150px; border-radius: 75px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 84px; height: 84px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      #fplus { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; overflow: visible; }
+      #fring { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #31adec; opacity: 0; }
+      .ftext { position: absolute; left: 224px; top: 56px; font-size: 72px; line-height: 88px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 56px; height: 56px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 56px; height: 56px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="ooia-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="107.1">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3faf1" /><stop offset="1" stop-color="#e2f2fc" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24 x 24 -->
+          <g id="i-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="i-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></g>
+          <g id="i-msg"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></g>
+          <g id="i-msgq"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></g>
+          <g id="i-layers"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></g>
+          <g id="i-feather"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z" /><path d="M16 8 2 22" /><path d="M17.5 15H9" /></g>
+          <g id="i-wasch"><path d="M3 6h3" /><path d="M17 6h.01" /><rect width="18" height="20" x="3" y="2" rx="2" /><circle cx="12" cy="13" r="5" /><path d="M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5" /></g>
+          <g id="i-ruler"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" /><path d="m14.5 12.5 2-2" /><path d="m11.5 9.5 2-2" /><path d="m8.5 6.5 2-2" /><path d="m17.5 15.5 2-2" /></g>
+          <g id="i-headset"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" /><path d="M21 16v2a4 4 0 0 1-4 4h-5" /></g>
+          <g id="i-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /><path d="m7.5 4.27 9 5.15" /></g>
+          <g id="i-undo"><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></g>
+          <g id="i-search"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>
+          <g id="i-target"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+          <g id="i-mega"><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></g>
+          <g id="i-file"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /></g>
+          <g id="i-sparkles"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></g>
+          <g id="i-shield"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="M12 8v4" /><path d="M12 16h.01" /></g>
+          <g id="i-pulse"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" /></g>
+          <g id="i-usercheck"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><polyline points="16 11 18 13 22 9" /></g>
+          <g id="i-bulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
+          <g id="i-bed"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" /><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" /><path d="M12 4v6" /><path d="M2 18h20" /></g>
+          <g id="i-foot"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" /><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" /><path d="M16 17h4" /><path d="M4 13h4" /></g>
+          <g id="i-baby"><path d="M9 12h.01" /><path d="M15 12h.01" /><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" /><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" /></g>
+          <g id="i-laptop"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" /></g>
+          <g id="i-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 9.9-1" /></g>
+          <g id="i-bag"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></g>
+          <g id="i-play"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="m9 8 6 4-6 4Z" /></g>
+          <g id="i-info"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></g>
+          <!-- Zustände -->
+          <g id="kreuz"><circle r="22" fill="#9aa3af" /><path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#fff" stroke-width="4.2" stroke-linecap="round" /></g>
+          <g id="haken"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 L-2 6 L9 -6" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="zeigerform"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+          <!-- Produkt (eigene schlichte Linienzeichnung eines Slips, ohne Körper), 100 x 100 -->
+          <symbol id="slip" viewBox="0 0 100 100"><path d="M8 28 H92 L88 44 C 72 50, 60 62, 57 78 H43 C 40 62, 28 50, 12 44 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" /><path d="M10 35 H90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.5" /></symbol>
+        </defs>
+      </svg>
+
+      <!-- K1 Das Beispiel: "ooia hat nämlich genau das mit den Periodenunterwäschen gemacht." Karte mit dem originalen Logo auf
+           "ooia" 6,37; handschriftlich "genau das" auf "genau" 7,08; Produkt (Linienzeichnung) und "Periodenunterwäsche" auf
+           "Periodenunterwäschen" 7,92. Bis ~6,0 s steht dort der Hook-Titel (Remotion). -->
+      <section id="k1" class="karte clip" data-start="6.30" data-duration="2.85" data-track-index="1">
+        <div class="kicker">Das Beispiel</div>
+        <div class="logofeld"><img src="assets/ooia-logo.svg" alt="ooia" /></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <text id="k1-genau" x="610" y="58" text-anchor="middle" class="hand gruen" style="font-size:52px">genau das</text>
+          <path id="k1-strich" pathLength="1" d="M520 74 C 580 84, 660 82, 712 70" class="zug" />
+          <g id="k1-prod">
+            <rect x="440" y="96" width="340" height="150" rx="26" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <use href="#slip" x="456" y="104" width="120" height="120" style="color:#0b0c0e" />
+            <text x="584" y="168" class="lab" style="font-size:26px">Perioden-</text>
+            <text x="584" y="200" class="lab" style="font-size:26px">unterwäsche</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K2 Die Gründerinnen: "Die Gründerinnen Kristine Zeller und Kati Ernst haben tatsächlich verstanden, ..." Karte mit dem Foto
+           von ooia.de auf "Die" 9,25; "Kristine Zeller" auf "Kristine" 9,82 (links im Foto); "Kati Ernst" auf "Kati" 11,00 (rechts im
+           Foto). Ab 12,5 s die Quelle (Remotion). -->
+      <section id="k2" class="karte clip" data-start="9.18" data-duration="3.32" data-track-index="1">
+        <div class="kicker" style="left:340px">Die Gründerinnen</div>
+        <div class="foto"><img src="assets/gruenderinnen.jpg" alt="Die Gründerinnen von ooia" /></div>
+        <div class="fotoquelle">Foto: ooia.de</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k2-a">
+            <circle cx="370" cy="70" r="30" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(352 52) scale(1.5)" class="ico"><use href="#i-user" /></g>
+            <text x="416" y="66" class="lab" style="font-size:38px">Kristine Zeller</text>
+            <text x="418" y="96" class="klein" style="font-size:21px">Gründerin · im Foto links</text>
+          </g>
+          <g id="k2-b">
+            <circle cx="370" cy="178" r="30" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(352 160) scale(1.5)" class="ico"><use href="#i-user" /></g>
+            <text x="416" y="174" class="lab" style="font-size:38px">Kati Ernst</text>
+            <text x="418" y="204" class="klein" style="font-size:21px">Gründerin · im Foto rechts</text>
+          </g>
+          <path id="k2-strich" pathLength="1" d="M346 240 C 470 252, 640 250, 780 238" class="zug" />
+        </svg>
+      </section>
+
+      <!-- K3 Viele Fragen: "Denn Kundinnen haben einfach bei so einem Produkt tatsächlich sehr viele Fragen." Denn 17,02 (Karte,
+           Produkt) / Kundinnen 17,26 (Kundin) / Produkt 19,04 / sehr 19,93 / Fragen 20,38 (Fragezeichen um das Produkt) -->
+      <section id="k3" class="karte clip" data-start="16.95" data-duration="4.5" data-track-index="1">
+        <div class="kicker">Bei so einem Produkt</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k3-kundin">
+            <circle cx="140" cy="118" r="76" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(104 82) scale(3)" class="ico"><use href="#i-user" /></g>
+            <text x="140" y="236" text-anchor="middle" class="lab" style="font-size:30px">Kundin</text>
+          </g>
+          <path id="k3-pfeil" pathLength="1" d="M236 118 C 290 100, 340 100, 392 118" class="zug" />
+          <g id="k3-prod">
+            <rect x="404" y="40" width="170" height="160" rx="28" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <use href="#slip" x="429" y="52" width="120" height="120" style="color:#0b0c0e" />
+            <text x="489" y="236" text-anchor="middle" class="lab" style="font-size:30px">Produkt</text>
+          </g>
+          <g id="k3-fragen" class="lab">
+            <g class="k3-q"><circle cx="630" cy="56" r="30" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text x="630" y="68" text-anchor="middle" style="font-size:34px">?</text></g>
+            <g class="k3-q"><circle cx="720" cy="104" r="34" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text x="720" y="117" text-anchor="middle" style="font-size:38px">?</text></g>
+            <g class="k3-q"><circle cx="636" cy="152" r="28" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text x="636" y="163" text-anchor="middle" style="font-size:32px">?</text></g>
+            <g class="k3-q"><circle cx="740" cy="200" r="30" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text x="740" y="212" text-anchor="middle" style="font-size:34px">?</text></g>
+            <g class="k3-q"><circle cx="392" cy="40" r="24" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text x="392" y="50" text-anchor="middle" style="font-size:28px">?</text></g>
+          </g>
+          <text id="k3-hand" x="650" y="270" text-anchor="middle" class="hand gruen" style="font-size:48px">sehr viele Fragen</text>
+        </svg>
+      </section>
+
+      <!-- K4 Was Kundinnen wissen wollen: "Wie funktioniert das eigentlich? Wie fühlt es sich an? Wie pflegt man es? Und welche
+           Varianten passen eigentlich zu mir?" Wie 21,61 / Wie 23,08 / Wie 24,34 / Und 25,54; die aktuelle Frage mit Verlaufsrand -->
+      <section id="k4" class="karte clip" data-start="21.54" data-duration="6.43" data-track-index="1">
+        <div class="kicker">Was Kundinnen wissen wollen</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k4-1" class="k4-f">
+            <rect class="k4-r" x="24" y="14" width="378" height="122" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <circle cx="88" cy="75" r="40" fill="url(#gvl)" /><g transform="translate(64 51) scale(2)" class="ico"><use href="#i-layers" /></g>
+            <text x="144" y="68" class="lab" style="font-size:29px">Wie funktioniert</text><text x="144" y="104" class="lab" style="font-size:29px">das?</text>
+          </g>
+          <g id="k4-2" class="k4-f">
+            <rect class="k4-r" x="418" y="14" width="378" height="122" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <circle cx="482" cy="75" r="40" fill="url(#gvl)" /><g transform="translate(458 51) scale(2)" class="ico"><use href="#i-feather" /></g>
+            <text x="538" y="68" class="lab" style="font-size:29px">Wie fühlt es</text><text x="538" y="104" class="lab" style="font-size:29px">sich an?</text>
+          </g>
+          <g id="k4-3" class="k4-f">
+            <rect class="k4-r" x="24" y="152" width="378" height="122" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <circle cx="88" cy="213" r="40" fill="url(#gvl)" /><g transform="translate(64 189) scale(2)" class="ico"><use href="#i-wasch" /></g>
+            <text x="144" y="206" class="lab" style="font-size:29px">Wie pflegt</text><text x="144" y="242" class="lab" style="font-size:29px">man es?</text>
+          </g>
+          <g id="k4-4" class="k4-f">
+            <rect class="k4-r" x="418" y="152" width="378" height="122" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <circle cx="482" cy="213" r="40" fill="url(#gvl)" /><g transform="translate(458 189) scale(2)" class="ico"><use href="#i-ruler" /></g>
+            <text x="538" y="206" class="lab" style="font-size:29px">Welche Variante</text><text x="538" y="242" class="lab" style="font-size:29px">passt zu mir?</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K5 Der Markenauftritt: "Deshalb ist es ein großer Teil einfach des Markenauftritts, nicht nur Verkauf, sondern eben auch
+           Erklärungen und vor allem die Aufklärung." Deshalb 28,12 (Karte) / Markenauftritts 30,14 (Balken) / nicht nur 31,28 /
+           Verkauf 31,62 (grauer Teil) / Erklärungen 33,02 / Aufklärung 34,74 (Teile im Verlauf, Klammer "großer Teil") -->
+      <section id="k5" class="karte clip" data-start="28.05" data-duration="7.95" data-track-index="1">
+        <div class="kicker">Der Markenauftritt</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k5-shop">
+            <rect x="24" y="84" width="130" height="130" rx="26" class="rahmen" />
+            <g transform="translate(53 113) scale(3)" class="ico"><use href="#i-store" /></g>
+          </g>
+          <g id="k5-balken">
+            <rect x="176" y="104" width="620" height="92" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+          </g>
+          <g id="k5-v">
+            <rect x="182" y="110" width="170" height="80" rx="17" fill="#e5e7eb" />
+            <text x="267" y="160" text-anchor="middle" class="lab" style="font-size:28px;fill:#6b7280">Verkauf</text>
+          </g>
+          <text id="k5-nicht" x="267" y="80" text-anchor="middle" class="hand" style="font-size:40px;fill:#6b7280">nicht nur</text>
+          <g id="k5-e">
+            <rect x="358" y="110" width="212" height="80" rx="17" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <text x="464" y="160" text-anchor="middle" class="lab" style="font-size:28px">Erklärung</text>
+          </g>
+          <g id="k5-a">
+            <rect x="576" y="110" width="214" height="80" rx="17" fill="url(#gvd)" />
+            <text x="683" y="160" text-anchor="middle" class="lab" style="font-size:28px">Aufklärung</text>
+          </g>
+          <path id="k5-klammer" pathLength="1" d="M362 214 Q 362 232, 382 232 H 556 Q 574 232, 574 250 Q 574 232, 592 232 H 766 Q 786 232, 786 214" class="zug" style="stroke-width:5" />
+          <text id="k5-hand" x="574" y="284" text-anchor="middle" class="hand gruen" style="font-size:42px">großer Teil</text>
+          <text id="k5-titel" x="486" y="80" text-anchor="middle" class="klein" style="font-size:24px">Markenauftritt</text>
+        </svg>
+      </section>
+
+      <!-- K6 Infos vor dem Kauf: "... und Informationen zugänglich gemacht, die Menschen vor einer Kaufentscheidung brauchen."
+           Davor die Quelle (Remotion, 36,05-39,95). Informationen 40,05 (Infos) / zugänglich 40,84 (Schloss offen, Weg) / Menschen
+           41,87 / Kaufentscheidung 42,67 (Tasche mit Haken) -->
+      <section id="k6" class="karte clip" data-start="39.98" data-duration="3.77" data-track-index="1">
+        <div class="kicker">Infos vor dem Kauf</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k6-infos">
+            <g transform="translate(40 40)"><rect width="110" height="140" rx="16" class="rahmen" /><path d="M22 36 H88 M22 64 H88 M22 92 H70" stroke="#9aa3af" stroke-width="6" stroke-linecap="round" /></g>
+            <g transform="translate(70 70)"><rect width="110" height="140" rx="16" class="rahmen" /><path d="M22 36 H88 M22 64 H88 M22 92 H70" stroke="#9aa3af" stroke-width="6" stroke-linecap="round" /><g transform="translate(37 98) scale(1.5)" class="ico"><use href="#i-info" /></g></g>
+            <text x="125" y="256" text-anchor="middle" class="lab" style="font-size:30px">Infos</text>
+          </g>
+          <g id="k6-lock"><g transform="translate(230 92) scale(2.4)" class="ico" style="stroke:#00b877"><use href="#i-lock" /></g></g>
+          <path id="k6-weg" pathLength="1" d="M206 196 C 290 214, 370 206, 436 150" class="zug" />
+          <g id="k6-mensch">
+            <circle cx="510" cy="118" r="70" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(476 84) scale(2.8)" class="ico"><use href="#i-users" /></g>
+            <text x="510" y="232" text-anchor="middle" class="lab" style="font-size:30px">Menschen</text>
+          </g>
+          <path id="k6-weg2" pathLength="1" d="M590 118 L 636 118" class="zug" />
+          <g id="k6-kauf">
+            <rect x="648" y="48" width="140" height="140" rx="26" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <g transform="translate(682 82) scale(3)" class="ico"><use href="#i-bag" /></g>
+          </g>
+          <use id="k6-ok" href="#haken" x="780" y="56" opacity="0" />
+          <text id="k6-hand" x="706" y="276" text-anchor="middle" class="hand gruen" style="font-size:38px">Kaufentscheidung</text>
+        </svg>
+      </section>
+
+      <!-- K7 Für andere Shops: "Und genau das finde ich eben für andere Shops besonders spannend." Und 43,84 (Karte, ooia-Shop) /
+           Shops 45,43 (drei andere Shops) / spannend 46,26 (handschriftlich) -->
+      <section id="k7" class="karte clip" data-start="43.80" data-duration="3.35" data-track-index="1">
+        <div class="kicker">Spannend für andere Shops</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k7-ooia">
+            <rect x="30" y="40" width="200" height="170" rx="28" fill="#fff" stroke="url(#gv)" stroke-width="4" />
+            <image href="assets/ooia-logo.svg" x="70" y="78" width="120" height="65" />
+            <text x="130" y="186" text-anchor="middle" class="klein">Aufklärung</text>
+          </g>
+          <path id="k7-pfeil" pathLength="1" d="M246 126 C 300 110, 330 110, 372 126" class="zug" />
+          <g class="k7-s"><rect x="390" y="62" width="120" height="120" rx="24" class="rahmen" /><g transform="translate(420 92) scale(2.5)" class="ico"><use href="#i-store" /></g></g>
+          <g class="k7-s"><rect x="530" y="62" width="120" height="120" rx="24" class="rahmen" /><g transform="translate(560 92) scale(2.5)" class="ico"><use href="#i-store" /></g></g>
+          <g class="k7-s"><rect x="670" y="62" width="120" height="120" rx="24" class="rahmen" /><g transform="translate(700 92) scale(2.5)" class="ico"><use href="#i-store" /></g></g>
+          <text id="k7-andere" x="590" y="226" text-anchor="middle" class="lab" style="font-size:30px">andere Shops</text>
+          <text id="k7-hand" x="590" y="282" text-anchor="middle" class="hand gruen" style="font-size:46px">besonders spannend</text>
+        </svg>
+      </section>
+
+      <!-- K8 Unsichere Produkte: "Denn das gilt einfach nicht nur für Periodenunterwäsche, sondern tatsächlich auch für alle anderen
+           Produkte, bei denen Kunden einfach sich unsicher sind." Denn 47,20 (Karte) / Periodenunterwäsche 48,55 / alle 51,12 (weitere
+           Produkte, nur Beispiele ohne Marken) / Kunden 52,35 / unsicher 53,26 (Fragezeichen wackeln) -->
+      <section id="k8" class="karte clip" data-start="47.13" data-duration="6.72" data-track-index="1">
+        <div class="kicker">Nicht nur Periodenunterwäsche</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k8-p0" class="k8-p"><rect x="24" y="30" width="140" height="140" rx="24" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><use href="#slip" x="44" y="40" width="100" height="100" style="color:#0b0c0e" /><g class="k8-q" transform="translate(146 44)"><circle r="20" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text y="10" text-anchor="middle" class="lab" style="font-size:26px">?</text></g></g>
+          <g class="k8-p k8-n"><rect x="184" y="30" width="140" height="140" rx="24" class="rahmen" /><g transform="translate(218 64) scale(3)" class="ico"><use href="#i-bed" /></g><g class="k8-q" transform="translate(306 44)"><circle r="20" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text y="10" text-anchor="middle" class="lab" style="font-size:26px">?</text></g></g>
+          <g class="k8-p k8-n"><rect x="344" y="30" width="140" height="140" rx="24" class="rahmen" /><g transform="translate(378 64) scale(3)" class="ico"><use href="#i-foot" /></g><g class="k8-q" transform="translate(466 44)"><circle r="20" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text y="10" text-anchor="middle" class="lab" style="font-size:26px">?</text></g></g>
+          <g class="k8-p k8-n"><rect x="504" y="30" width="140" height="140" rx="24" class="rahmen" /><g transform="translate(538 64) scale(3)" class="ico"><use href="#i-baby" /></g><g class="k8-q" transform="translate(626 44)"><circle r="20" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text y="10" text-anchor="middle" class="lab" style="font-size:26px">?</text></g></g>
+          <g class="k8-p k8-n"><rect x="664" y="30" width="140" height="140" rx="24" class="rahmen" /><g transform="translate(698 64) scale(3)" class="ico"><use href="#i-laptop" /></g><g class="k8-q" transform="translate(786 44)"><circle r="20" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text y="10" text-anchor="middle" class="lab" style="font-size:26px">?</text></g></g>
+          <text id="k8-l0" x="24" y="206" class="klein" style="font-size:22px;fill:#0b0c0e">Periodenunterwäsche</text>
+          <text id="k8-alle" x="494" y="206" text-anchor="middle" class="lab" style="font-size:30px">alle anderen Produkte</text>
+          <text id="k8-hand" x="410" y="272" text-anchor="middle" class="hand" style="font-size:48px">wo Kunden unsicher sind</text>
+        </svg>
+      </section>
+
+      <!-- T1 Tipp 1 · 10 Fragen: "Deswegen mein erster Praxistipp, sammle tatsächlich mal die 10 häufigsten Fragen aus Support,
+           Kommentaren und auch Retourengründen." Deswegen 53,95 (Karte, Leiste, Ziffer) / 10 56,70 (Liste "Top 10", zählt hoch) /
+           Support 58,42 / Kommentaren 58,96 / Retourengründen 59,91 (Quellen fließen in die Liste) -->
+      <section id="t1" class="karte clip" data-start="53.88" data-duration="7.47" data-track-index="1">
+        <div class="leiste">
+          <div class="stufe aktiv"><span class="nr">1</span>10 Fragen</div>
+          <div class="stufe"><span class="nr">2</span>Antwort am Kaufpunkt</div>
+          <div class="stufe"><span class="nr">3</span>Fakten prüfen</div>
+        </div>
+        <div class="ziffer"><span class="verlauf">1</span></div>
+        <svg class="buehne" viewBox="0 0 820 290" style="top:60px">
+          <g id="t1-liste">
+            <rect x="150" y="14" width="250" height="262" rx="22" fill="#fff" stroke="url(#gv)" stroke-width="3" />
+            <text x="176" y="62" class="lab" style="font-size:30px">Top <tspan id="t1-n" class="gtext">10</tspan> Fragen</text>
+            <g id="t1-zeilen" stroke-linecap="round" stroke-width="8">
+              <g class="t1-z"><circle cx="186" cy="96" r="9" fill="url(#gvd)" /><path d="M206 96 H370" stroke="#cbd5e1" /></g>
+              <g class="t1-z"><circle cx="186" cy="130" r="9" fill="url(#gvd)" /><path d="M206 130 H350" stroke="#cbd5e1" /></g>
+              <g class="t1-z"><circle cx="186" cy="164" r="9" fill="url(#gvd)" /><path d="M206 164 H366" stroke="#cbd5e1" /></g>
+              <g class="t1-z"><circle cx="186" cy="198" r="9" fill="url(#gvd)" /><path d="M206 198 H336" stroke="#cbd5e1" /></g>
+              <g class="t1-z"><circle cx="186" cy="232" r="9" fill="url(#gvd)" /><path d="M206 232 H360" stroke="#cbd5e1" /></g>
+            </g>
+          </g>
+          <g id="t1-q1"><rect x="560" y="10" width="236" height="74" rx="20" class="rahmen" /><g transform="translate(576 25) scale(1.8)" class="ico"><use href="#i-headset" /></g><text x="628" y="58" class="lab" style="font-size:28px">Support</text></g>
+          <g id="t1-q2"><rect x="560" y="102" width="236" height="74" rx="20" class="rahmen" /><g transform="translate(576 117) scale(1.8)" class="ico"><use href="#i-msg" /></g><text x="628" y="150" class="lab" style="font-size:28px">Kommentare</text></g>
+          <g id="t1-q3"><rect x="560" y="194" width="236" height="74" rx="20" class="rahmen" /><g transform="translate(576 209) scale(1.8)" class="ico"><use href="#i-undo" /></g><text x="628" y="232" class="lab" style="font-size:24px">Retouren-</text><text x="628" y="258" class="lab" style="font-size:24px">gründe</text></g>
+          <path id="t1-p1" pathLength="1" d="M552 47 C 480 47, 470 90, 412 110" class="zug" style="stroke-width:5" />
+          <path id="t1-p2" pathLength="1" d="M552 139 L 412 145" class="zug" style="stroke-width:5" />
+          <path id="t1-p3" pathLength="1" d="M552 231 C 480 231, 470 200, 412 180" class="zug" style="stroke-width:5" />
+        </svg>
+      </section>
+
+      <!-- T2 Tipp 2 · Antwort am Kaufpunkt: "Zweitens, beantworte einfach mal diese Fragen dort, wo tatsächlich Kunden auch
+           entscheiden. Auf Produktseiten, in Größentabellen, kurze Videos oder einfach in den klaren FAQs." Zweitens 61,42 (Karte) /
+           beantworte 62,05 (Antwort-Blase) / entscheiden 65,42 (Zeiger tippt "In den Warenkorb") / Produktseiten 66,74 /
+           Größentabellen 67,83 / Videos 69,20 (kurze 68,86) / FAQs 71,58 -->
+      <section id="t2" class="karte clip" data-start="61.35" data-duration="10.8" data-track-index="1">
+        <div class="leiste">
+          <div class="stufe fertig"><span class="nr">✓</span>10 Fragen</div>
+          <div class="stufe aktiv"><span class="nr">2</span>Antwort am Kaufpunkt</div>
+          <div class="stufe"><span class="nr">3</span>Fakten prüfen</div>
+        </div>
+        <div class="ziffer"><span class="verlauf">2</span></div>
+        <svg class="buehne" viewBox="0 0 820 290" style="top:60px">
+          <g id="t2-handy">
+            <rect x="150" y="6" width="180" height="276" rx="28" fill="#fff" stroke="#0b0c0e" stroke-width="3.5" />
+            <rect x="168" y="30" width="144" height="96" rx="14" fill="url(#gvl)" />
+            <use href="#slip" x="200" y="34" width="80" height="80" style="color:#0b0c0e" />
+            <path d="M172 146 H300 M172 168 H270" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" />
+            <rect id="t2-knopf" x="168" y="196" width="144" height="46" rx="12" fill="#0b0c0e" />
+            <text x="240" y="226" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#fff;letter-spacing:0.04em">IN DEN KORB</text>
+          </g>
+          <g id="t2-antwort"><rect x="166" y="-10" width="150" height="50" rx="18" fill="url(#gvd)" /><text x="241" y="24" text-anchor="middle" class="lab" style="font-size:26px">Antwort</text></g>
+          <g id="t2-fragen" class="lab"><g class="t2-q"><circle cx="372" cy="70" r="24" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text x="372" y="80" text-anchor="middle" style="font-size:28px">?</text></g><g class="t2-q"><circle cx="430" cy="118" r="20" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text x="430" y="127" text-anchor="middle" style="font-size:24px">?</text></g><g class="t2-q"><circle cx="380" cy="160" r="22" fill="#fff" stroke="url(#gv)" stroke-width="3" /><text x="380" y="169" text-anchor="middle" style="font-size:26px">?</text></g></g>
+          <g id="t2-zeiger" opacity="0"><g transform="translate(250 196) scale(2.4)"><use href="#zeigerform" style="fill:#0b0c0e;stroke:#fff;stroke-width:1.2" /></g></g>
+          <circle id="t2-tap" cx="262" cy="214" r="18" fill="none" stroke="#31adec" stroke-width="4" opacity="0" />
+          <g id="t2-a" class="t2-k"><rect x="372" y="20" width="204" height="118" rx="20" class="rahmen" /><g transform="translate(392 36) scale(1.8)" class="ico"><use href="#i-file" /></g><text x="392" y="118" class="lab" style="font-size:26px">Produktseite</text><use class="t2-ok" href="#haken" x="556" y="34" opacity="0" /></g>
+          <g id="t2-b" class="t2-k"><rect x="592" y="20" width="204" height="118" rx="20" class="rahmen" /><g transform="translate(612 36) scale(1.8)" class="ico"><use href="#i-ruler" /></g><text x="612" y="118" class="lab" style="font-size:26px">Größentabelle</text><use class="t2-ok" href="#haken" x="776" y="34" opacity="0" /></g>
+          <g id="t2-c" class="t2-k"><rect x="372" y="152" width="204" height="118" rx="20" class="rahmen" /><g transform="translate(392 168) scale(1.8)" class="ico"><use href="#i-play" /></g><text x="392" y="250" class="lab" style="font-size:26px">kurzes Video</text><use class="t2-ok" href="#haken" x="556" y="166" opacity="0" /></g>
+          <g id="t2-d" class="t2-k"><rect x="592" y="152" width="204" height="118" rx="20" class="rahmen" /><g transform="translate(612 168) scale(1.8)" class="ico"><use href="#i-msgq" /></g><text x="612" y="250" class="lab" style="font-size:26px">klare FAQ</text><use class="t2-ok" href="#haken" x="776" y="166" opacity="0" /></g>
+          <text id="t2-hand" x="586" y="250" text-anchor="middle" class="hand gruen" style="font-size:50px">wo Kunden entscheiden</text>
+        </svg>
+      </section>
+
+      <!-- T3 Tipp 3 · Fakten prüfen: "Und drittens sei einfach mal bei den Aussagen sehr präzise, denn du brauchst einfach keine
+           übertriebenen Versprechen, sondern tatsächlich nachvollziehbare Antworten." drittens 72,34 (Karte) / präzise 75,12 (Ziel) /
+           übertriebenen 77,16 (lautes Versprechen) / Versprechen 77,93 (durchgestrichen) / nachvollziehbare 79,38 (Antwort mit Haken) -->
+      <section id="t3" class="karte clip" data-start="72.17" data-duration="8.63" data-track-index="1">
+        <div class="leiste">
+          <div class="stufe fertig"><span class="nr">✓</span>10 Fragen</div>
+          <div class="stufe fertig"><span class="nr">✓</span>Antwort am Kaufpunkt</div>
+          <div class="stufe aktiv"><span class="nr">3</span>Fakten prüfen</div>
+        </div>
+        <div class="ziffer"><span class="verlauf">3</span></div>
+        <svg class="buehne" viewBox="0 0 820 290" style="top:60px">
+          <g id="t3-ziel">
+            <g transform="translate(164 34) scale(4.4)" class="ico"><use href="#i-target" /></g>
+            <text id="t3-praezise" x="217" y="182" text-anchor="middle" class="lab" style="font-size:30px">präzise</text>
+          </g>
+          <g id="t3-aussagen"><g transform="translate(190 50) scale(2.2)" class="ico grau"><use href="#i-msg" /></g><text x="217" y="182" text-anchor="middle" class="lab grau" style="font-size:28px">Aussagen</text></g>
+          <g id="t3-laut">
+            <g transform="translate(300 30)"><path d="M0 18 a18 18 0 0 1 18 -18 H 230 a18 18 0 0 1 18 18 V 76 a18 18 0 0 1 -18 18 H 60 L 30 116 L 34 94 H 18 a18 18 0 0 1 -18 -18 Z" fill="#fff" stroke="#9aa3af" stroke-width="3" /></g>
+            <g transform="translate(318 46) scale(2.2)" class="ico grau"><use href="#i-mega" /></g>
+            <text x="452" y="92" text-anchor="middle" class="lab" style="font-size:40px;fill:#6b7280">„!!!“</text>
+          </g>
+          <path id="t3-durch" pathLength="1" d="M292 112 C 400 90, 480 70, 560 40" class="grauzug" />
+          <text id="t3-ueber" x="424" y="170" text-anchor="middle" class="klein" style="font-size:24px">übertriebene Versprechen</text>
+          <g id="t3-antwort">
+            <rect x="590" y="20" width="206" height="200" rx="22" fill="#fff" stroke="url(#gv)" stroke-width="3.5" />
+            <g transform="translate(606 34) scale(1.6)" class="ico"><use href="#i-search" /></g>
+            <path d="M650 50 H776 M610 96 H776 M610 128 H756 M610 160 H740" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" />
+            <use id="t3-ok" href="#haken" x="776" y="34" opacity="0" />
+          </g>
+          <text id="t3-hand" x="560" y="270" text-anchor="middle" class="hand gruen" style="font-size:50px">nachvollziehbare Antworten</text>
+        </svg>
+      </section>
+
+      <!-- K9 KI-FAQ: "Und KI kann dir natürlich auch dabei super helfen, einfach die häufigsten Fragen zu clustern und auch eben
+           FAQ-Entwürfe daraus zu schreiben." KI 80,99 (KI-Kachel) / häufigsten 83,52 (Fragen verstreut) / clustern 84,64 (drei
+           Gruppen) / FAQ-Entwürfe 86,20 (Entwurf schreibt sich, Plakette "KI-Entwurf") -->
+      <section id="k9" class="karte clip" data-start="80.85" data-duration="6.9" data-track-index="1">
+        <div class="kicker">KI hilft beim Sortieren</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k9-ki">
+            <rect x="24" y="60" width="130" height="130" rx="28" fill="url(#gvd)" />
+            <g transform="translate(53 89) scale(3)" class="ico"><use href="#i-sparkles" /></g>
+            <text x="89" y="234" text-anchor="middle" class="lab" style="font-size:30px">KI</text>
+          </g>
+          <text id="k9-hand" x="330" y="140" text-anchor="middle" class="hand gruen" style="font-size:50px">super Helfer</text>
+          <g id="k9-punkte">
+            <!-- je Punkt: Start verstreut (x, y), Ziel in einer von drei Gruppen (data-x, data-y) -->
+            <circle class="k9-d" cx="200" cy="40" r="11" data-x="236" data-y="70" />
+            <circle class="k9-d" cx="300" cy="230" r="11" data-x="270" data-y="96" />
+            <circle class="k9-d" cx="250" cy="150" r="11" data-x="232" data-y="112" />
+            <circle class="k9-d" cx="390" cy="60" r="11" data-x="378" data-y="168" />
+            <circle class="k9-d" cx="210" cy="250" r="11" data-x="410" data-y="148" />
+            <circle class="k9-d" cx="360" cy="140" r="11" data-x="396" data-y="196" />
+            <circle class="k9-d" cx="440" cy="250" r="11" data-x="250" data-y="210" />
+            <circle class="k9-d" cx="300" cy="80" r="11" data-x="288" data-y="236" />
+            <circle class="k9-d" cx="430" cy="170" r="11" data-x="242" data-y="246" />
+          </g>
+          <g id="k9-gruppen" fill="none" stroke="url(#gv)" stroke-width="3" stroke-dasharray="6 7">
+            <circle cx="248" cy="92" r="44" /><circle cx="394" cy="172" r="44" /><circle cx="262" cy="232" r="40" />
+          </g>
+          <g id="k9-glab" class="klein" style="font-size:23px;fill:#0b0c0e">
+            <text x="306" y="56">Pflege</text><text x="446" y="132">Größe</text><text x="312" y="260">Gefühl</text>
+          </g>
+          <text id="k9-fragen" x="320" y="286" text-anchor="middle" class="klein" style="font-size:22px">häufigste Fragen</text>
+          <path id="k9-pfeil" pathLength="1" d="M478 140 L 536 140" class="zug" />
+          <g id="k9-doc">
+            <rect x="548" y="20" width="248" height="250" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <text x="570" y="62" class="lab" style="font-size:26px">FAQ-Entwurf</text>
+            <g id="k9-zeilen" stroke-linecap="round" stroke-width="8" fill="none">
+              <path class="k9-z" pathLength="1" d="M572 96 H770" stroke="#0b0c0e" /><path class="k9-z" pathLength="1" d="M572 124 H740" stroke="#cbd5e1" />
+              <path class="k9-z" pathLength="1" d="M572 164 H760" stroke="#0b0c0e" /><path class="k9-z" pathLength="1" d="M572 192 H720" stroke="#cbd5e1" />
+              <path class="k9-z" pathLength="1" d="M572 232 H750" stroke="#0b0c0e" />
+            </g>
+          </g>
+          <g id="k9-badge"><rect x="640" y="-6" width="150" height="38" rx="12" fill="#0b0c0e" /><text x="715" y="20" text-anchor="middle" style="font-size:18px;font-weight:800;fill:#fff;letter-spacing:0.1em">KI-ENTWURF</text></g>
+        </svg>
+      </section>
+
+      <!-- K10 Fachlich prüfen: "Aber gerade bei sensiblen Produkt- und Gesundheitsfragen müssen dann tatsächlich die Antworten
+           fachlich geprüft werden." Aber 87,81 (Karte, KI-Entwurf) / sensiblen 88,44 (Schild "sensibel") / Gesundheitsfragen 89,60
+           (Herz mit Puls, "Gesundheitsfrage") / fachlich 92,50 (Fachperson prüft mit Lupe) / geprüft 92,94 (Stempel) -->
+      <section id="k10" class="karte clip" data-start="87.75" data-duration="5.85" data-track-index="1">
+        <div class="kicker">Vor dem Veröffentlichen</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k10-doc">
+            <rect x="24" y="20" width="248" height="250" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <text x="46" y="62" class="lab" style="font-size:26px">FAQ-Entwurf</text>
+            <path d="M48 96 H246 M48 124 H216 M48 164 H236 M48 192 H196 M48 232 H226" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" />
+            <g><rect x="116" y="-6" width="150" height="38" rx="12" fill="#0b0c0e" /><text x="191" y="20" text-anchor="middle" style="font-size:18px;font-weight:800;fill:#fff;letter-spacing:0.1em">KI-ENTWURF</text></g>
+          </g>
+          <g id="k10-sens">
+            <rect x="296" y="30" width="240" height="96" rx="22" fill="#fff" stroke="#9aa3af" stroke-width="2.5" />
+            <g transform="translate(312 54) scale(2)" class="ico"><use href="#i-shield" /></g>
+            <text x="366" y="88" class="lab" style="font-size:28px">sensibel</text>
+          </g>
+          <g id="k10-ges">
+            <rect x="296" y="146" width="240" height="96" rx="22" fill="#fff" stroke="#9aa3af" stroke-width="2.5" />
+            <g transform="translate(312 170) scale(2)" class="ico"><use href="#i-pulse" /></g>
+            <text x="364" y="190" class="lab" style="font-size:24px">Gesundheits-</text><text x="364" y="220" class="lab" style="font-size:24px">frage</text>
+          </g>
+          <g id="k10-offen"><rect x="58" y="130" width="184" height="40" rx="12" fill="#f2f3f5" stroke="#9aa3af" stroke-width="2" stroke-dasharray="6 5" /><text x="150" y="157" text-anchor="middle" class="klein" style="font-size:21px">noch ungeprüft</text></g>
+          <path id="k10-pfeil" pathLength="1" d="M544 140 L 588 140" class="zug" />
+          <g id="k10-fach">
+            <rect x="600" y="20" width="196" height="196" rx="26" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <g transform="translate(650 54) scale(4)" class="ico"><use href="#i-usercheck" /></g>
+            <text x="698" y="196" text-anchor="middle" class="lab" style="font-size:26px">Fachperson</text>
+          </g>
+          <g id="k10-stempel" transform="rotate(-6 160 150)">
+            <rect x="28" y="112" width="264" height="74" rx="14" fill="rgba(255,255,255,0.94)" stroke="url(#gv)" stroke-width="5" />
+            <text x="160" y="158" text-anchor="middle" class="lab gtext" style="font-size:21px;letter-spacing:0.02em">FACHLICH GEPRÜFT</text>
+          </g>
+          <text id="k10-hand" x="698" y="270" text-anchor="middle" class="hand gruen" style="font-size:44px">erst prüfen</text>
+        </svg>
+      </section>
+
+      <!-- K11 Das Learning: "Aber das wichtigste Learning, was ich jetzt für mich aus dem Onlineshop von ooia mitnehmen würde, ist
+           deshalb, dass Aufklärung tatsächlich selbst zu einem starken Teil deiner Markenstrategie verwendet werden kann." Aber 93,67
+           (Karte, Glühbirne, "Das wichtigste Learning") / ooia 96,61 (Logo) / Aufklärung 98,41 (Haus der Markenstrategie, Säule
+           Aufklärung schiebt sich hinein) / starken 100,63 (Säule wird die stärkste) / Markenstrategie 101,63 (Dach leuchtet) -->
+      <section id="k11" class="karte clip" data-start="93.60" data-duration="9.7" data-track-index="1">
+        <div class="kicker" id="k11-kick">Das wichtigste Learning</div>
+        <div id="k11-a">
+          <svg class="buehne" viewBox="0 0 820 290">
+            <g transform="translate(40 30)"><circle cx="90" cy="100" r="90" fill="url(#gvl)" /><g transform="translate(36 46) scale(4.5)" class="ico"><use href="#i-bulb" /></g></g>
+            <text x="250" y="110" style="font-family:'Instrument Serif',serif;font-size:76px;fill:#0b0c0e">Mein Learning</text>
+            <text x="252" y="176" class="klein" style="font-size:28px">aus dem Onlineshop von</text>
+            <g id="k11-logo"><rect x="252" y="196" width="190" height="80" rx="16" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><image href="assets/ooia-logo.svg" x="292" y="203" width="110" height="60" /></g>
+          </svg>
+        </div>
+        <svg class="buehne" viewBox="0 0 820 290" id="k11-b" opacity="0">
+          <path id="k11-dach" d="M150 74 L 410 6 L 670 74 Z" fill="#fff" stroke="#0b0c0e" stroke-width="3.5" stroke-linejoin="round" />
+          <text id="k11-dachtext" x="410" y="62" text-anchor="middle" class="lab" style="font-size:26px">Markenstrategie</text>
+          <g id="k11-s1"><rect x="176" y="90" width="120" height="150" rx="12" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><text x="236" y="174" text-anchor="middle" class="lab grau" style="font-size:24px">Produkt</text></g>
+          <g id="k11-s2"><rect x="316" y="90" width="120" height="150" rx="12" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><text x="376" y="174" text-anchor="middle" class="lab grau" style="font-size:24px">Design</text></g>
+          <g id="k11-s3"><rect x="456" y="90" width="190" height="150" rx="12" fill="url(#gvd)" /><text x="551" y="174" text-anchor="middle" class="lab" style="font-size:28px">Aufklärung</text></g>
+          <path d="M130 252 H690" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" />
+          <text id="k11-hand" x="760" y="160" text-anchor="middle" class="hand gruen" style="font-size:42px">stark</text>
+          <path id="k11-zug" pathLength="1" d="M736 176 C 712 196, 690 200, 660 196" class="zug" style="stroke-width:5" />
+        </svg>
+      </section>
+
+      <!-- K12 Folgen (CTA), groß und mittig, Plus wie bei TikTok: Und 103,37 (Karte) / wichtiger 104,87 (leiser Ring-Hinweis) /
+           das 105,82 (Zeiger fährt hin) / Plus 106,02 (Plus drückt ein, dreht sich, wird zum Haken); bleibt bis zum Ende (107,1) -->
+      <section id="k12" class="folgekarte clip" data-start="103.30" data-duration="3.8" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
+        <div id="fring"></div>
+        <svg id="fplus" viewBox="-32 -32 64 64">
+          <g id="fp-plus"><circle r="28" fill="url(#gvd)" stroke="#fff" stroke-width="4" /><path d="M-12 0 H12 M0 -12 V12" stroke="#fff" stroke-width="5.5" stroke-linecap="round" /></g>
+          <g id="fp-haken" opacity="0" transform="rotate(180)"><circle r="28" fill="#fff" stroke="#e5e7eb" stroke-width="3" /><path id="fp-hpfad" pathLength="1" d="M-12 1 L-3 10 L13 -8" fill="none" stroke="url(#gvd)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </svg>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><use href="#zeigerform" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker (keine leere Karte: der erste Inhalt kommt mit), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const l = document.querySelector(id + " .leiste");
+        if (l) tl.fromTo(l, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const z = document.querySelector(id + " .ziffer");
+        if (z) tl.fromTo(z, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, an + 0.06);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const weg = (sel, t, d = 0.2) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      const da = (sel, t, d = 0.25) => tl.to(sel, { opacity: 1, duration: d, ease: "power2.out" }, t);
+      const grau = (sel, t) => tl.to(sel, { opacity: 0.35, duration: 0.3, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5, ease = "power2.out") {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, t);
+      }
+      const ZUEGE = "#k1-strich, #k2-strich, #k3-pfeil, #k5-klammer, #k6-weg, #k6-weg2, #k7-pfeil, #t1-p1, #t1-p2, #t1-p3, #t3-durch, #k9-pfeil, .k9-z, #k10-pfeil, #k11-zug, #fp-hpfad";
+      gsap.set(ZUEGE, { strokeDasharray: 1, strokeDashoffset: 1 });
+      gsap.set(ZUEGE.replace(", #fp-hpfad", ""), { opacity: 0 });
+      gsap.set(".zeiger", { transformOrigin: "9px 9px" });
+
+      // K1 Das Beispiel: Logo mit der Karte, "genau das", Produkt auf "Periodenunterwäschen"
+      karte("#k1", 6.30, 9.15);
+      tl.fromTo("#k1 .logofeld", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 6.34);
+      ein("#k1-genau", 7.01);
+      zeichne("#k1-strich", 7.12, 0.4);
+      pop("#k1-prod", 7.85, 0.35);
+
+      // K2 Die Gründerinnen: Foto mit der Karte, Namen auf ihren Wörtern
+      karte("#k2", 9.18, 12.5);
+      tl.fromTo("#k2 .foto, #k2 .fotoquelle", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 9.22);
+      ein("#k2-a", 9.75);
+      ein("#k2-b", 10.93);
+      zeichne("#k2-strich", 11.9, 0.45);
+
+      // K3 Kundin, Produkt, sehr viele Fragen
+      karte("#k3", 16.95, 21.45);
+      tl.fromTo("#k3-prod", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 16.99);
+      pop("#k3-kundin", 17.19);
+      zeichne("#k3-pfeil", 18.97, 0.4);
+      tl.fromTo(".k3-q", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.09 }, 19.86);
+      ein("#k3-hand", 20.31);
+
+      // K4 vier Fragen, je auf ihrem "Wie"; die aktuelle bekommt den Verlaufsrand, die vorigen werden ruhiger
+      karte("#k4", 21.54, 27.97);
+      const k4 = [21.56, 23.01, 24.27, 25.47];
+      k4.forEach((t, i) => {
+        const id = "#k4-" + (i + 1);
+        tl.fromTo(id, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, t);
+        tl.to(id + " .k4-r", { attr: { stroke: "url(#gv)", "stroke-width": 4 }, duration: 0.01 }, t);
+        if (i) {
+          const vor = "#k4-" + i;
+          tl.to(vor + " .k4-r", { attr: { stroke: "#d1d5db", "stroke-width": 2.5 }, duration: 0.01 }, t);
+          tl.to(vor, { opacity: 0.55, duration: 0.25 }, t);
+        }
+      });
+      tl.to("#k4-1, #k4-2, #k4-3", { opacity: 1, duration: 0.3 }, 27.2);
+
+      // K5 Markenauftritt: Balken, "nicht nur Verkauf", Erklärung, Aufklärung, Klammer "großer Teil"
+      karte("#k5", 28.05, 36.0);
+      tl.fromTo("#k5-shop", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 28.09);
+      ein("#k5-balken", 30.07);
+      ein("#k5-titel", 30.07);
+      ein("#k5-nicht", 31.21, 0.25);
+      pop("#k5-v", 31.55);
+      grau("#k5-v, #k5-nicht", 32.4);
+      pop("#k5-e", 32.95);
+      pop("#k5-a", 34.67);
+      zeichne("#k5-klammer", 34.85, 0.4);
+      ein("#k5-hand", 34.95, 0.25);
+
+      // K6 Infos zugänglich, Menschen, Kaufentscheidung
+      karte("#k6", 39.98, 43.75);
+      tl.fromTo("#k6-infos", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 40.02);
+      pop("#k6-lock", 40.77);
+      zeichne("#k6-weg", 40.85, 0.5);
+      pop("#k6-mensch", 41.80);
+      zeichne("#k6-weg2", 42.55, 0.15);
+      pop("#k6-kauf", 42.60);
+      badge("#k6-ok", 42.95);
+      ein("#k6-hand", 42.70, 0.25);
+
+      // K7 ooia → andere Shops, besonders spannend
+      karte("#k7", 43.80, 47.15);
+      tl.fromTo("#k7-ooia", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 43.84);
+      zeichne("#k7-pfeil", 45.2, 0.3);
+      tl.fromTo(".k7-s", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.28, ease: "power2.out", stagger: 0.08 }, 45.36);
+      ein("#k7-andere", 45.40);
+      ein("#k7-hand", 46.19);
+
+      // K8 nicht nur Periodenunterwäsche, alle anderen Produkte, wo Kunden unsicher sind
+      karte("#k8", 47.13, 53.85);
+      gsap.set(".k8-q", { opacity: 0 });
+      gsap.set("#k8-l0", { opacity: 0 });
+      tl.fromTo("#k8-p0", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 47.17);
+      tl.to("#k8-p0 > rect", { attr: { stroke: "url(#gv)", "stroke-width": 4 }, duration: 0.01 }, 48.48);
+      tl.fromTo("#k8-p0", { scale: 1 }, { scale: 1.05, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out", transformOrigin: "50% 50%", immediateRender: false }, 48.48);
+      ein("#k8-l0", 48.48);
+      tl.fromTo(".k8-n", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.28, ease: "power3.out", stagger: 0.1 }, 51.05);
+      ein("#k8-alle", 51.10);
+      tl.to(".k8-q", { opacity: 1, duration: 0.2, stagger: 0.06 }, 52.28);
+      tl.to(".k8-q", { rotation: 12, duration: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut", transformOrigin: "50% 50%" }, 53.19);
+      ein("#k8-hand", 53.19, 0.25);
+
+      // T1 Tipp 1 · 10 Fragen: Liste "Top 10", Quellen Support, Kommentare, Retourengründe fließen hinein
+      karte("#t1", 53.88, 61.35);
+      gsap.set("#t1-liste, #t1-q1, #t1-q2, #t1-q3, .t1-z", { opacity: 0 });
+      tl.fromTo("#t1-liste", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 54.89);
+      const zehn = { v: 1 };
+      const n1 = document.getElementById("t1-n");
+      tl.fromTo(zehn, { v: 1 }, { v: 10, duration: 0.5, ease: "power2.out", onUpdate: () => { n1.textContent = String(Math.round(zehn.v)); } }, 56.13);
+      tl.set(zehn, { v: 10, onComplete: () => { n1.textContent = "10"; } }, 56.63);
+      tl.fromTo(".t1-z", { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.22, ease: "power2.out", stagger: 0.08 }, 56.89);
+      pop("#t1-q1", 58.35); zeichne("#t1-p1", 58.45, 0.35);
+      pop("#t1-q2", 58.89); zeichne("#t1-p2", 58.99, 0.35);
+      pop("#t1-q3", 59.84); zeichne("#t1-p3", 59.94, 0.35);
+
+      // T2 Tipp 2 · Antwort am Kaufpunkt: Handy mit Produktseite, Antwort, Zeiger tippt auf den Kaufknopf, vier Orte mit Haken
+      karte("#t2", 61.35, 72.15);
+      gsap.set("#t2-handy, #t2-antwort, .t2-k, #t2-hand", { opacity: 0 });
+      tl.fromTo("#t2-handy", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 61.45);
+      pop("#t2-antwort", 61.98);
+      gsap.set(".t2-q", { opacity: 0 });
+      tl.fromTo(".t2-q", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.1 }, 63.07);
+      ein("#t2-hand", 63.45, 0.3);
+      tl.to(".t2-q", { x: -60, opacity: 0, duration: 0.4, ease: "power2.in", stagger: 0.05 }, 65.0);
+      tl.fromTo("#t2-zeiger", { opacity: 0, x: 60, y: 30 }, { opacity: 1, x: 0, y: 0, duration: 0.45, ease: "power2.out" }, 64.85);
+      tl.fromTo("#t2-tap", { opacity: 0.9, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 0, scale: 1.8, duration: 0.5, ease: "power2.out", immediateRender: false }, 65.35);
+      tl.to("#t2-knopf", { attr: { fill: "#00b877" }, duration: 0.15 }, 65.35);
+      weg("#t2-hand, #t2-antwort", 66.3, 0.25);
+      weg("#t2-zeiger", 66.4, 0.2);
+      const t2 = [["#t2-a", 66.67], ["#t2-b", 67.76], ["#t2-c", 68.79], ["#t2-d", 71.51]];
+      t2.forEach(([id, t]) => { pop(id, t); badge(id + " .t2-ok", t + 0.25); });
+
+      // T3 Tipp 3 · Fakten prüfen: präzise, übertriebenes Versprechen durchgestrichen, nachvollziehbare Antwort mit Haken
+      karte("#t3", 72.17, 80.80);
+      gsap.set("#t3-ziel, #t3-laut, #t3-ueber, #t3-antwort, #t3-hand, #t3-aussagen", { opacity: 0 });
+      pop("#t3-aussagen", 74.25);
+      weg("#t3-aussagen", 74.95, 0.15);
+      pop("#t3-ziel", 75.05);
+      tl.fromTo("#t3-ziel", { rotation: -8, transformOrigin: "50% 50%" }, { rotation: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, 75.05);
+      pop("#t3-laut", 77.09);
+      ein("#t3-ueber", 77.12);
+      zeichne("#t3-durch", 77.86, 0.3);
+      grau("#t3-laut, #t3-ueber", 78.1);
+      pop("#t3-antwort", 79.31);
+      badge("#t3-ok", 79.6);
+      ein("#t3-hand", 79.35, 0.25);
+
+      // K9 KI-FAQ: KI, verstreute Fragen, drei Gruppen, FAQ-Entwurf schreibt sich
+      karte("#k9", 80.85, 87.75);
+      gsap.set("#k9-punkte, #k9-gruppen, #k9-glab, #k9-fragen, #k9-doc, #k9-badge", { opacity: 0 });
+      gsap.set(".k9-d", { attr: { fill: "#9aa3af" } });
+      tl.fromTo("#k9-ki", { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 80.92);
+      gsap.set("#k9-hand", { opacity: 0 });
+      ein("#k9-hand", 82.39, 0.3);
+      tl.fromTo("#k9-ki", { scale: 1 }, { scale: 1.06, duration: 0.2, yoyo: true, repeat: 1, ease: "power2.out", transformOrigin: "50% 50%", immediateRender: false }, 82.39);
+      weg("#k9-hand", 83.3, 0.2);
+      tl.set("#k9-punkte", { opacity: 1 }, 83.45);
+      tl.fromTo(".k9-d", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.05 }, 83.45);
+      ein("#k9-fragen", 83.5);
+      document.querySelectorAll(".k9-d").forEach((d, i) => {
+        tl.to(d, { attr: { cx: +d.dataset.x, cy: +d.dataset.y, fill: "#31adec" }, duration: 0.6, ease: "power2.inOut" }, 84.57 + i * 0.02);
+      });
+      weg("#k9-fragen", 84.57, 0.2);
+      da("#k9-gruppen", 85.0, 0.3);
+      da("#k9-glab", 85.1, 0.3);
+      zeichne("#k9-pfeil", 86.0, 0.25);
+      tl.fromTo("#k9-doc", { opacity: 0, x: 12 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 86.13);
+      tl.set(".k9-z", { opacity: 1 }, 86.25);
+      tl.fromTo(".k9-z", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.3, ease: "power1.inOut", stagger: 0.18 }, 86.25);
+      badge("#k9-badge", 86.5);
+
+      // K10 sensibel, Gesundheitsfrage, Fachperson prüft, Stempel "fachlich geprüft"
+      karte("#k10", 87.75, 93.60);
+      gsap.set("#k10-sens, #k10-ges, #k10-fach, #k10-stempel, #k10-hand, #k10-offen", { opacity: 0 });
+      pop("#k10-offen", 91.85);
+      weg("#k10-offen", 92.85, 0.12);
+      tl.fromTo("#k10-doc", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 87.79);
+      pop("#k10-sens", 88.37);
+      pop("#k10-ges", 89.53);
+      zeichne("#k10-pfeil", 92.3, 0.2);
+      pop("#k10-fach", 92.43);
+      tl.fromTo("#k10-stempel", { opacity: 0, scale: 1.25, transformOrigin: "160px 150px" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power3.out" }, 92.87);
+      ein("#k10-hand", 92.95, 0.25);
+
+      // K11 Learning: Glühbirne und Titel, ooia-Logo; dann Haus der Markenstrategie, Säule Aufklärung schiebt sich hinein, wird stark
+      karte("#k11", 93.60, 103.30);
+      gsap.set("#k11-logo", { opacity: 0 });
+      tl.fromTo("#k11-a", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 93.64);
+      pop("#k11-logo", 96.54);
+      weg("#k11-a", 98.0, 0.2);
+      tl.set("#k11-b", { opacity: 1 }, 98.2);
+      gsap.set("#k11-s3, #k11-hand", { opacity: 0 });
+      tl.fromTo("#k11-dach, #k11-dachtext, #k11-s1, #k11-s2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.04 }, 98.2);
+      tl.fromTo("#k11-s3", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 98.34);
+      tl.to("#k11-s1, #k11-s2", { opacity: 0.5, duration: 0.3 }, 100.56);
+      tl.fromTo("#k11-s3", { scaleY: 1 }, { scaleY: 1.06, duration: 0.25, yoyo: true, repeat: 1, ease: "power2.out", transformOrigin: "50% 100%", immediateRender: false }, 100.56);
+      ein("#k11-hand", 100.56, 0.25);
+      zeichne("#k11-zug", 100.7, 0.35);
+      tl.to("#k11-dach", { attr: { fill: "#e3faf1", stroke: "url(#gv)" }, duration: 0.3 }, 101.56);
+      tl.to("#k11-dachtext", { attr: { fill: "url(#gv)" }, duration: 0.01 }, 101.56);
+
+      // K12 Folgen wie bei TikTok: Karte auf "Und", leiser Ring auf "wichtiger", Zeiger auf "das", auf "Plus" drückt das Plus ein
+      // (1 → 0,8), dreht sich um 180°, wird zum weißen Kreis mit gezeichnetem Haken im Verlauf, springt kurz über und gibt einen
+      // Ring-Puls nach außen; der Haken bleibt bis zum Schluss
+      const TAP = 105.95;
+      tl.fromTo("#k12", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 103.30);
+      gsap.set("#fplus", { transformOrigin: "50% 50%" });
+      tl.fromTo("#fring", { opacity: 0.6, scale: 1 }, { opacity: 0, scale: 1.6, duration: 0.6, ease: "power2.out", immediateRender: false }, 104.80);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 220, y: 214 }, { opacity: 1, x: 200, y: 206, duration: 0.15, ease: "power2.out" }, 105.30);
+      tl.to("#fzeiger", { x: 112, y: 170, duration: 0.45, ease: "power2.inOut" }, 105.45);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, TAP - 0.02);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, TAP + 0.06);
+      tl.to("#fplus", { scale: 0.8, duration: 0.08, ease: "power2.in" }, TAP);
+      tl.to("#fplus", { rotation: 180, duration: 0.3, ease: "power2.inOut" }, TAP);
+      tl.set("#fp-plus", { opacity: 0 }, TAP + 0.15);
+      tl.set("#fp-haken", { opacity: 1 }, TAP + 0.15);
+      tl.to("#fp-hpfad", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, TAP + 0.16);
+      tl.fromTo("#fplus", { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "back.out(4)", immediateRender: false }, TAP + 0.12);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.6, ease: "power2.out", immediateRender: false }, TAP + 0.16);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, TAP + 0.15);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, TAP + 0.15);
+      tl.to("#fzeiger", { x: 150, y: 210, duration: 0.2, ease: "power2.out" }, TAP + 0.25);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.2, ease: "power2.in" }, TAP + 0.45);
+      tl.set({}, {}, 107.1);
+
+      tl.seek(0);
+      window.__timelines["ooia-skizzen"] = tl;
+    </script>
+  </body>
+</html>

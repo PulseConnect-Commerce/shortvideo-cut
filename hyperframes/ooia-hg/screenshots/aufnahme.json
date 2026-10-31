@@ -1,0 +1,2342 @@
+{
+ "ziele": {
+  "home": {
+   "url": "https://ooia.de/",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     53,
+     32,
+     "IMG",
+     "ooia ooshi GmbH"
+    ],
+    [
+     53,
+     32,
+     "IMG",
+     ""
+    ],
+    [
+     37,
+     540,
+     "IMG",
+     ""
+    ],
+    [
+     37,
+     540,
+     "IMG",
+     ""
+    ],
+    [
+     314,
+     44,
+     "A",
+     ""
+    ],
+    [
+     657,
+     49,
+     "H1",
+     "PERIODENUNTERWÄSCHE UND MEHR"
+    ],
+    [
+     1227,
+     25,
+     "BUTTON",
+     "BESTSELLER"
+    ],
+    [
+     1227,
+     25,
+     "BUTTON",
+     "NEUHEITEN"
+    ],
+    [
+     1288,
+     318,
+     "IMG",
+     "Modell trägt Periodenunterwäsche Slip Seamless Ultimate in schwarz mit"
+    ],
+    [
+     1288,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless Extra Strong in Schwarz – nahtlose "
+    ],
+    [
+     1288,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     1288,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster in Schwarz – Periodenunterwäsche."
+    ],
+    [
+     1288,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche String Seamless in Schwarz - nah"
+    ],
+    [
+     1288,
+     318,
+     "IMG",
+     "Modell trägt nahtlosen ooia Periodenunterwäsche Slip Seamless Lace Ext"
+    ],
+    [
+     1288,
+     318,
+     "IMG",
+     "Modell trägt ooia Moms Still-BH in Schwarz – Still-BH ersetzt Stillein"
+    ],
+    [
+     1288,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless in Schwarz – nahtlose Periodenunter"
+    ],
+    [
+     1796,
+     368,
+     "A",
+     "MOVE FREELY\n\nDiskreter Schutz bei leichter Blasenschwäche.\n\nSHOP NOW"
+    ],
+    [
+     1796,
+     368,
+     "IMG",
+     "Zwei Models präsentieren ooia Inkontinenz Unterwäsche in schwarz und b"
+    ],
+    [
+     2000,
+     44,
+     "BUTTON",
+     "SHOP NOW"
+    ],
+    [
+     2172,
+     368,
+     "A",
+     "HÄLT BIS ZU 10 TAMPONS\n\nAuslaufsichere Styles, die dir wirklich Sicher"
+    ],
+    [
+     2172,
+     368,
+     "IMG",
+     "Model präsentiert saugstärkste ooia Periodenunterwäsche in sportlichem"
+    ],
+    [
+     2387,
+     44,
+     "BUTTON",
+     "SHOP NOW"
+    ],
+    [
+     2580,
+     252,
+     "A",
+     "PERIODE"
+    ],
+    [
+     2580,
+     184,
+     "IMG",
+     "Freisteller Hipster Seamless schwarz"
+    ],
+    [
+     2788,
+     44,
+     "BUTTON",
+     "PERIODE"
+    ],
+    [
+     2580,
+     252,
+     "A",
+     "EVERYDAY"
+    ],
+    [
+     2580,
+     184,
+     "IMG",
+     "Freisteller frontal Everyday Seamless Lace Soft Yellow"
+    ],
+    [
+     2788,
+     44,
+     "BUTTON",
+     "EVERYDAY"
+    ],
+    [
+     2880,
+     252,
+     "A",
+     "BRA"
+    ],
+    [
+     2880,
+     184,
+     "IMG",
+     "Freisteller frontal Bralette Soft Yellow"
+    ],
+    [
+     3088,
+     44,
+     "BUTTON",
+     "BRA"
+    ],
+    [
+     2880,
+     252,
+     "A",
+     "MOMS"
+    ],
+    [
+     2880,
+     184,
+     "IMG",
+     "Freisteller frontal Still BH muted mauve"
+    ],
+    [
+     3088,
+     44,
+     "BUTTON",
+     "MOMS"
+    ],
+    [
+     3181,
+     252,
+     "A",
+     "TEENS"
+    ],
+    [
+     3181,
+     184,
+     "IMG",
+     "Freisteller frontal Teens Hipster schwarz"
+    ],
+    [
+     3389,
+     44,
+     "BUTTON",
+     "TEENS"
+    ],
+    [
+     3509,
+     47,
+     "H2",
+     "SCHLAF RUHIG. FÜHL DICH SICHER."
+    ],
+    [
+     3677,
+     392,
+     "IMG",
+     "Zwei Models präsentieren ooia Shorty für die Nacht. Liegend auf Bett."
+    ],
+    [
+     4093,
+     44,
+     "BUTTON",
+     "PRODUKTE ANZEIGEN"
+    ],
+    [
+     4177,
+     309,
+     "IMG",
+     "Frontalansicht Gründerinnen Kati Ernst und Kristine Zeller."
+    ],
+    [
+     4177,
+     309,
+     "IMG",
+     "Frau hält Schild \"Who made your ooias\". Sitzend und frontal."
+    ],
+    [
+     4177,
+     307,
+     "IMG",
+     "Zwei Models posieren in ooia Periodenunterwäsche in beige und schwarz."
+    ],
+    [
+     4696,
+     589,
+     "IMG",
+     "Model präsentiert ooia Periodenunterwäsche in Leo. Stehend und frontal"
+    ],
+    [
+     5021,
+     44,
+     "A",
+     "SHOP NOW"
+    ],
+    [
+     5327,
+     70,
+     "H2",
+     "WIR SIND OOIA, MARKTFÜHRERINNEN FÜR PERIODENUNTERWÄSCHE"
+    ],
+    [
+     5876,
+     47,
+     "H2",
+     "WARUM IST OOIA DIE BESTE PERIODENUNTERWÄSCHE?"
+    ],
+    [
+     6094,
+     44,
+     "H3",
+     "DEUTSCHLANDS MEISTGELIEBTE PERIODENUNTERWÄSCHE"
+    ],
+    [
+     6842,
+     66,
+     "H3",
+     "HAUTFREUNDLICH, SCHADSTOFFGEPRÜFT UND FÜR DEINEN KÖRPER GEMACHT"
+    ],
+    [
+     7102,
+     44,
+     "H3",
+     "NACHHALTIG UND FAIR PRODUZIERT"
+    ],
+    [
+     7362,
+     93,
+     "H2",
+     "WELCHE PERIODENUNTERWÄSCHE PASST ZU DIR? UNSERE PRODUKTE IM VERGLEICH"
+    ],
+    [
+     7712,
+     22,
+     "H3",
+     "PERIODENUNTERWÄSCHE"
+    ],
+    [
+     7904,
+     44,
+     "H3",
+     "PERIODENUNTERWÄSCHE FÜR TEENAGER"
+    ],
+    [
+     8096,
+     44,
+     "H3",
+     "PERIODEN-BEACHWEAR & PERIODEN-BIKINIS"
+    ],
+    [
+     8288,
+     22,
+     "H3",
+     "EVERYDAY UNTERWÄSCHE"
+    ],
+    [
+     8457,
+     22,
+     "H3",
+     "ABSORBIERENDE STILL-BHS"
+    ],
+    [
+     8604,
+     22,
+     "H3",
+     "WOCHENBETT-UNTERWÄSCHE"
+    ],
+    [
+     8797,
+     44,
+     "H3",
+     "INKONTINENZUNTERWÄSCHE BEI BLASENSCHWÄCHE"
+    ],
+    [
+     9011,
+     93,
+     "H2",
+     "JETZT DIE PASSENDE PERIODENUNTERWÄSCHE FINDEN"
+    ],
+    [
+     9129,
+     44,
+     "A",
+     "ALLE OOIA PRODUKTE"
+    ],
+    [
+     9549,
+     44,
+     "BUTTON",
+     "ABONNIEREN"
+    ]
+   ],
+   "hoehe": 10601,
+   "titel": "ooia Periodenunterwäsche | Die meistgeliebte Menstruationsunterwäsche"
+  },
+  "technologie": {
+   "url": "https://ooia.de/pages/technologie",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     53,
+     32,
+     "IMG",
+     "ooia ooshi GmbH"
+    ],
+    [
+     53,
+     32,
+     "IMG",
+     ""
+    ],
+    [
+     37,
+     367,
+     "IMG",
+     "ooia Periodenunterwäsche wird in Detailaufnahme präsentiert."
+    ],
+    [
+     165,
+     49,
+     "H1",
+     "WIE FUNKTIONIERT PERIODENUNTERWÄSCHE?"
+    ],
+    [
+     598,
+     70,
+     "H2",
+     "WIE IST PERIODENUNTERWÄSCHE AUFGEBAUT?"
+    ],
+    [
+     863,
+     367,
+     "IMG",
+     ""
+    ],
+    [
+     863,
+     367,
+     "VIDEO",
+     ""
+    ],
+    [
+     1270,
+     47,
+     "H2",
+     "AUFBAU OOIA PERIODENUNTERWÄSCHE"
+    ],
+    [
+     1357,
+     194,
+     "IMG",
+     ""
+    ],
+    [
+     2004,
+     47,
+     "H2",
+     "WIE BEWERTEN KUND*INNEN OOIA?"
+    ],
+    [
+     2504,
+     70,
+     "H2",
+     "WAS OOIA PERIODENUNTERWÄSCHE SONST NOCH KANN"
+    ],
+    [
+     2922,
+     53,
+     "A",
+     "KAUFE JETZT DEINE OOIAS"
+    ],
+    [
+     3031,
+     111,
+     "IMG",
+     ""
+    ],
+    [
+     3031,
+     111,
+     "IMG",
+     ""
+    ],
+    [
+     3175,
+     44,
+     "H3",
+     "OOIAS HAUTVERTRÄGLICHKEIT IST ZERTIFIZIERT!"
+    ],
+    [
+     3523,
+     23,
+     "H2",
+     "FINDE JETZT DEINE OOIA"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt Periodenunterwäsche Slip Seamless Ultimate in schwarz mit"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless Extra Strong in Schwarz – nahtlose "
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster in Schwarz – Periodenunterwäsche."
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche String Seamless in Schwarz - nah"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt nahtlosen ooia Periodenunterwäsche Slip Seamless Lace Ext"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Moms Still-BH in Schwarz – Still-BH ersetzt Stillein"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless in Schwarz – nahtlose Periodenunter"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Hipster Comfy Cotton in schwarz "
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Seamless in Schwarz – nahtlose Periodenunterwäs"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Extra Strong in Schwarz – Periodenunterwäsche m"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Moms Still-BH in Beige – Still-BH ersetzt Stilleinla"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Model posiert lächelnd im ooia Periodenunterwäsche Brazilian Seamless "
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Basic Extra Strong in Schwarz – Periodenunterwä"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Everyday Hipster Seamless Lace in Schwarz, nahlos vo"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt nahtlose ooia Periodenunterwäsche Hipster Seamless Extra "
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "String Seamless Set"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Highwaist Seamless Cheeky in Schwarz – nahtloser Sli"
+    ],
+    [
+     3582,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Seamless Lace Extra Strong "
+    ],
+    [
+     4086,
+     44,
+     "A",
+     "ENTDECKE MEHR"
+    ],
+    [
+     4506,
+     44,
+     "BUTTON",
+     "ABONNIEREN"
+    ]
+   ],
+   "hoehe": 5558,
+   "titel": "So funktioniert ooia Periodenunterwäsche | Technologie"
+  },
+  "wasist": {
+   "url": "https://ooia.de/blogs/periode/was-ist-periodenunterwaesche",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     53,
+     32,
+     "IMG",
+     "ooia ooshi GmbH"
+    ],
+    [
+     53,
+     32,
+     "IMG",
+     ""
+    ],
+    [
+     37,
+     579,
+     "IMG",
+     "Zwei Models tragen nahtlose ooia Periodenunterwäsche in Rosa und Schwa"
+    ],
+    [
+     301,
+     49,
+     "H1",
+     "WAS IST PERIODENUNTERWÄSCHE?"
+    ],
+    [
+     813,
+     432,
+     "IMG",
+     "Grafik des Aufbaus der Membran der Periodenunterwäsche von ooia"
+    ],
+    [
+     1269,
+     70,
+     "H2",
+     "WIE FUNKTIONIERT MENSTRUATIONS-UNTERWÄSCHE?"
+    ],
+    [
+     1737,
+     392,
+     "IMG",
+     "Icon das die Nachhaltigkeit der Periodenunterwäsche anzeigt mit Blätte"
+    ],
+    [
+     2149,
+     58,
+     "H3",
+     "Ist Periodenunterwäsche nachhaltig?"
+    ],
+    [
+     2386,
+     392,
+     "IMG",
+     "Icon zur Sicherheit mit Wappen"
+    ],
+    [
+     2798,
+     87,
+     "H3",
+     "Schützt Menstruationsunterwäsche wirklich sicher?"
+    ],
+    [
+     3155,
+     392,
+     "IMG",
+     "ooia Icon Komfort der Periodenunterwäsche"
+    ],
+    [
+     3567,
+     58,
+     "H3",
+     "Wie fühlt sich Periodenunterwäsche an?"
+    ],
+    [
+     3895,
+     70,
+     "H2",
+     "WIE WASCHE ICH MEINE MENSTRUATIONSUNTERWÄSCHE RICHTIG?"
+    ],
+    [
+     4655,
+     70,
+     "H2",
+     "WIE MERKE ICH, DASS MEINE PERIODENUNTERWÄSCHE VOLL IST?"
+    ],
+    [
+     4920,
+     540,
+     "IMG",
+     "Drei Models tragen verschiedene ooia Periodenslips in schwarz"
+    ],
+    [
+     5484,
+     70,
+     "H2",
+     "WIE VIELE PERIODENUNTERHOSEN BRAUCHE ICH?"
+    ],
+    [
+     5996,
+     44,
+     "A",
+     "JETZT PERIODEN-SETS SHOPPEN"
+    ],
+    [
+     6105,
+     70,
+     "H2",
+     "WELCHE IST DIE BESTE PERIODENUNTERWÄSCHE FÜR MICH?"
+    ],
+    [
+     6733,
+     70,
+     "H2",
+     "DIE PERIODENUNTERWÄSCHE MIT DEN BESTEN BEWERTUNGEN"
+    ],
+    [
+     7039,
+     23,
+     "H2",
+     "HÄUFIG GESTELLTE FRAGEN"
+    ],
+    [
+     8079,
+     44,
+     "BUTTON",
+     "ABONNIEREN"
+    ]
+   ],
+   "hoehe": 9131,
+   "titel": "Was ist Periodenunterwäsche? - ooia ooshi GmbH"
+  },
+  "pflege": {
+   "url": "https://ooia.de/pages/pflege",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     53,
+     32,
+     "IMG",
+     "ooia ooshi GmbH"
+    ],
+    [
+     53,
+     32,
+     "IMG",
+     ""
+    ],
+    [
+     37,
+     367,
+     "IMG",
+     "Detailaufname bunte Stoffe."
+    ],
+    [
+     177,
+     24,
+     "H1",
+     "PFLEGE"
+    ],
+    [
+     444,
+     70,
+     "H2",
+     "WIE WASCHE ICH MEINE PERIODENUNTERWÄSCHE & ANDERE OOIA PRODUKTE?"
+    ],
+    [
+     1003,
+     432,
+     "IMG",
+     "ooia Waschbeutel"
+    ],
+    [
+     1459,
+     23,
+     "H2",
+     "WASCHGANG UND TEMPERATUR"
+    ],
+    [
+     1763,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     2219,
+     23,
+     "H2",
+     "DAS RICHTIGE WASCHMITTEL"
+    ],
+    [
+     2514,
+     66,
+     "BUTTON",
+     "KAUFE DEIN OOIA CARE WASCHKONZENTRAT"
+    ],
+    [
+     2643,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     3099,
+     23,
+     "H2",
+     "NUR IM WÄSCHENETZ"
+    ],
+    [
+     3363,
+     44,
+     "BUTTON",
+     "NOCH KEIN WÄSCHENETZ?"
+    ],
+    [
+     3472,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     3928,
+     23,
+     "H2",
+     "OOIAS RICHTIG TROCKNEN"
+    ],
+    [
+     4187,
+     70,
+     "H2",
+     "WIE LANGE HÄLT PERIODENUNTERWÄSCHE BEI OPTIMALER PFLEGE?"
+    ],
+    [
+     4601,
+     23,
+     "H2",
+     "FINDE JETZT DEINE OOIA"
+    ],
+    [
+     4660,
+     318,
+     "IMG",
+     "Modell trägt Periodenunterwäsche Slip Seamless Ultimate in schwarz mit"
+    ],
+    [
+     4660,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless Extra Strong in Schwarz – nahtlose "
+    ],
+    [
+     4660,
+     318,
+     "IMG",
+     "Modell trägt nahtlosen ooia Periodenunterwäsche Slip Seamless Lace Ext"
+    ],
+    [
+     4660,
+     318,
+     "IMG",
+     "Modell trägt ooia Moms Still-BH in Schwarz – Still-BH ersetzt Stillein"
+    ],
+    [
+     4660,
+     318,
+     "IMG",
+     "Hipster Comfy Cotton Extra Strong muted mauve"
+    ],
+    [
+     4660,
+     318,
+     "IMG",
+     "String Comfy Cotton midnight"
+    ],
+    [
+     4660,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless in Schwarz – nahtlose Periodenunter"
+    ],
+    [
+     4660,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Extra Strong in Schwarz – Periodenunterwäsche m"
+    ],
+    [
+     5164,
+     44,
+     "A",
+     "ENTDECKE MEHR"
+    ],
+    [
+     5584,
+     44,
+     "BUTTON",
+     "ABONNIEREN"
+    ]
+   ],
+   "hoehe": 6636,
+   "titel": "ooia Pflegehinweise | So wäscht und pflegst du deine ooia richtig"
+  },
+  "berater": {
+   "url": "https://ooia.de/pages/berater",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     53,
+     32,
+     "IMG",
+     "ooia ooshi GmbH"
+    ],
+    [
+     53,
+     32,
+     "IMG",
+     ""
+    ],
+    [
+     37,
+     432,
+     "IMG",
+     "Model präsentiert ooia Periodenunterwäsche und misst ihren Umfang."
+    ],
+    [
+     197,
+     49,
+     "H1",
+     "DU HAST FRAGEN ZU OOIA PRODUKTEN?"
+    ],
+    [
+     509,
+     70,
+     "H2",
+     "WAS IST MEINE GRÖSSE BEI OOIA PERIODENUNTERWÄSCHE?"
+    ],
+    [
+     921,
+     44,
+     "A",
+     "KAUFE JETZT DEINE OOIAS"
+    ],
+    [
+     1005,
+     392,
+     "IMG",
+     ""
+    ],
+    [
+     1407,
+     392,
+     "IMG",
+     ""
+    ],
+    [
+     1880,
+     47,
+     "H2",
+     "WAS IST MEINE GRÖSSE BEI OOIA OBERTEILEN?"
+    ],
+    [
+     2315,
+     44,
+     "A",
+     "KAUFE JETZT DEINE OOIAS"
+    ],
+    [
+     2399,
+     392,
+     "IMG",
+     ""
+    ],
+    [
+     2791,
+     392,
+     "IMG",
+     ""
+    ],
+    [
+     3264,
+     47,
+     "H2",
+     "WIE BENUTZE ICH OOIA PERIODENUNTERWÄSCHE?"
+    ],
+    [
+     3733,
+     70,
+     "H2",
+     "WOHER ERKENNE ICH DIE SAUGSTÄRKE DER OOIA PRODUKTE?"
+    ],
+    [
+     4163,
+     44,
+     "A",
+     "KAUFE JETZT DEINE OOIAS"
+    ],
+    [
+     4248,
+     287,
+     "IMG",
+     ""
+    ],
+    [
+     4559,
+     47,
+     "H2",
+     "WIE ERSTELLE ICH MEIN OOIA PERIODEN-SET?"
+    ],
+    [
+     5296,
+     44,
+     "A",
+     "STELLE DEIN OOIA SET ZUSAMMEN"
+    ],
+    [
+     5365,
+     432,
+     "IMG",
+     "ooia Periodenunterwäsche wird in Detailaufnahme präsentiert."
+    ],
+    [
+     5821,
+     47,
+     "H2",
+     "WIE FUNKTIONIEREN OOIA PRODUKTE ÜBERHAUPT?"
+    ],
+    [
+     5994,
+     23,
+     "H2",
+     "HÄUFIG GESTELLTE FRAGEN"
+    ],
+    [
+     6645,
+     47,
+     "H2",
+     "UNSERE KUND*INNEN LIEBEN UNS!"
+    ],
+    [
+     6873,
+     23,
+     "H2",
+     "ALLE PRODUKTE"
+    ],
+    [
+     6932,
+     318,
+     "IMG",
+     "Modell trägt Periodenunterwäsche Slip Seamless Ultimate in schwarz mit"
+    ],
+    [
+     6932,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless Extra Strong in Schwarz – nahtlose "
+    ],
+    [
+     6932,
+     318,
+     "IMG",
+     "Modell trägt nahtlosen ooia Periodenunterwäsche Slip Seamless Lace Ext"
+    ],
+    [
+     6932,
+     318,
+     "IMG",
+     "Modell trägt ooia Moms Still-BH in Schwarz – Still-BH ersetzt Stillein"
+    ],
+    [
+     6932,
+     318,
+     "IMG",
+     "Hipster Comfy Cotton Extra Strong muted mauve"
+    ],
+    [
+     6932,
+     318,
+     "IMG",
+     "String Comfy Cotton midnight"
+    ],
+    [
+     6932,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless in Schwarz – nahtlose Periodenunter"
+    ],
+    [
+     6932,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Extra Strong in Schwarz – Periodenunterwäsche m"
+    ],
+    [
+     7436,
+     44,
+     "A",
+     "ENTDECKE MEHR"
+    ],
+    [
+     7857,
+     44,
+     "BUTTON",
+     "ABONNIEREN"
+    ]
+   ],
+   "hoehe": 8909,
+   "titel": "ooia Ratgeber | Größentabelle und das perfekte ooia-Set"
+  },
+  "produkt": {
+   "url": "https://ooia.de/products/slip-comfy-cotton-extra-strong-schwarz",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     53,
+     32,
+     "IMG",
+     "ooia ooshi GmbH"
+    ],
+    [
+     53,
+     32,
+     "IMG",
+     ""
+    ],
+    [
+     37,
+     540,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     37,
+     539,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     37,
+     540,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     37,
+     540,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     37,
+     540,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     37,
+     540,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     37,
+     540,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     37,
+     250,
+     "IMG",
+     "OekoTex 100 Zertifizierung"
+    ],
+    [
+     637,
+     44,
+     "H1",
+     "SLIP COMFY COTTON EXTRA STRONG SCHWARZ"
+    ],
+    [
+     1096,
+     23,
+     "BUTTON",
+     "Größentabelle"
+    ],
+    [
+     1477,
+     44,
+     "BUTTON",
+     "IN DEN WARENKORB"
+    ],
+    [
+     2610,
+     47,
+     "H2",
+     "DAS KÖNNTE DIR AUCH GEFALLEN"
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche String Comfy Cotton in grau aus "
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Extra Strong in Schwarz – Periodenunterwäsche m"
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "ooia wetbag im Leo Print"
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Basic Extra Strong in Schwarz – Periodenunterwä"
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche String Comfy Cotton in schwarz a"
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip in Schwarz – Periodenslip mit breitem Spitzenbu"
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "Modell trägt Periodenunterwäsche Slip Seamless Ultimate in schwarz mit"
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "Modell trägt nahtlosen ooia Periodenunterwäsche Slip Seamless Lace Ext"
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Hipster Comfy Cotton in schwarz "
+    ],
+    [
+     2693,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Seamless in Schwarz – nahtlose Periodenunterwäs"
+    ],
+    [
+     3201,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     3201,
+     432,
+     "VIDEO",
+     ""
+    ],
+    [
+     3709,
+     47,
+     "H2",
+     "TECHNOLOGIE MIT DEN BESTEN BEWERTUNGEN"
+    ],
+    [
+     3967,
+     261,
+     "IMG",
+     ""
+    ],
+    [
+     4249,
+     58,
+     "H3",
+     "Tragen. Waschen. Wiederverwenden."
+    ],
+    [
+     4638,
+     264,
+     "IMG",
+     "Produktionsmitarbeiterin blickt in die Kamera und hältSchild hoch mit "
+    ],
+    [
+     4921,
+     29,
+     "H3",
+     "Faire Produktion."
+    ],
+    [
+     5259,
+     261,
+     "IMG",
+     ""
+    ],
+    [
+     5540,
+     58,
+     "H3",
+     "Von Frauen für Frauen: Ein Herzensprojekt."
+    ],
+    [
+     5952,
+     48,
+     "H2",
+     "Slip Comfy Cotton Extra Strong schwarz Bewertungen"
+    ],
+    [
+     6804,
+     23,
+     "H2",
+     "NOCH FRAGEN?"
+    ],
+    [
+     7538,
+     44,
+     "BUTTON",
+     "ABONNIEREN"
+    ]
+   ],
+   "hoehe": 8590,
+   "titel": "Slip Comfy Cotton Extra Strong schwarz | Periodenunterwäsche aus Berlin"
+  },
+  "magazin": {
+   "url": "https://ooia.de/blogs/news/magazin",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     53,
+     32,
+     "IMG",
+     "ooia ooshi GmbH"
+    ],
+    [
+     53,
+     32,
+     "IMG",
+     ""
+    ],
+    [
+     177,
+     432,
+     "IMG",
+     "Model trägt nahtlose Periodenunterwäsche mit Leoparden-Muster und eine"
+    ],
+    [
+     2635,
+     432,
+     "IMG",
+     "Model trägt Spitzenunterwäsche in rosa von ooia, welche Slipeinlagen e"
+    ],
+    [
+     3452,
+     432,
+     "IMG",
+     "Model trägt Perioden-Capri-Bikini in Schwarz mit weißen Akzenten von o"
+    ],
+    [
+     4317,
+     432,
+     "IMG",
+     "Model trägt einen Still-BH in Schwarz von ooia und eine Shorty für sta"
+    ],
+    [
+     5505,
+     432,
+     "IMG",
+     "Model trägt Schulbücher und hat dabei schwarze Periodenunterwäsche für"
+    ],
+    [
+     6300,
+     432,
+     "IMG",
+     "Eine schwangere Frau und eine ältere Frau tragen beide Unterwäsche für"
+    ],
+    [
+     7494,
+     44,
+     "BUTTON",
+     "ABONNIEREN"
+    ]
+   ],
+   "hoehe": 8546,
+   "titel": "ooia Magazin | Alles über Periodenunterwäsche"
+  },
+  "mission": {
+   "url": "https://ooia.de/pages/mission-werte",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     53,
+     32,
+     "IMG",
+     "ooia ooshi GmbH"
+    ],
+    [
+     53,
+     32,
+     "IMG",
+     ""
+    ],
+    [
+     37,
+     367,
+     "IMG",
+     "Zwei Models präsentieren ooia Periodenunterwäsche in unterschiedlichen"
+    ],
+    [
+     188,
+     24,
+     "H1",
+     "MISSION UND WERTE"
+    ],
+    [
+     445,
+     23,
+     "H2",
+     "DAFÜR STEHT OOIA"
+    ],
+    [
+     725,
+     432,
+     "IMG",
+     "Model präsentiert ooia Periodenunterwäsche."
+    ],
+    [
+     1181,
+     23,
+     "H2",
+     "WIR EMPOWERN FRAUEN*"
+    ],
+    [
+     1654,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     2110,
+     23,
+     "H2",
+     "WIR VERTRAUEN"
+    ],
+    [
+     2421,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     2877,
+     23,
+     "H2",
+     "WIR LIEBEN DIVERSITÄT"
+    ],
+    [
+     3257,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     3713,
+     23,
+     "H2",
+     "WIR GARANTIEREN QUALITÄT"
+    ],
+    [
+     4117,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     4573,
+     23,
+     "H2",
+     "WIR SCHÜTZEN DIE UMWELT"
+    ],
+    [
+     4885,
+     23,
+     "H2",
+     "JETZT OOIAS ENTDECKEN"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt Periodenunterwäsche Slip Seamless Ultimate in schwarz mit"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless Extra Strong in Schwarz – nahtlose "
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt nahtlosen ooia Periodenunterwäsche Slip Seamless Lace Ext"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Moms Still-BH in Schwarz – Still-BH ersetzt Stillein"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Hipster Comfy Cotton Extra Strong muted mauve"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "String Comfy Cotton midnight"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless in Schwarz – nahtlose Periodenunter"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Extra Strong in Schwarz – Periodenunterwäsche m"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Model trägt ooia Periodenunterwäsche Hipster Seamless Lace in muted ma"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Slip Seamless Ultimate cocoa"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "String Comfy Cotton muted mauve"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Slip Comfy Cotton Extra Strong muted mauve"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Slip Comfy Cotton Extra Strong midnight"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Everyday String Lace schwarz"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt Periodenunterwäsche Hipster Seamless Limited Edition in L"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Hipster Comfy Cotton Extra Strong midnight"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Everyday String Lace lilac"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "2 Stück ooia everyday Slip Seamless in Schwarz – nahtlose Unterwäsche,"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche String Comfy Cotton in grau aus "
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt Periodenunterwäsche String Seamless Limited Edition in Le"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster in Schwarz – Periodenunterwäsche."
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche String Comfy Cotton in schwarz a"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Highwaist Comfy Lace in Schwarz – Periodenunterwäsch"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Model posiert lächelnd im ooia Periodenunterwäsche Brazilian Seamless "
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Slip Seamless Ultimate beige"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Hipster Seamless Extra Strong Leo"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Perioden Highwaist Seamless Cheeky in Beige – nahtlo"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Hipster Seamless Lace Periodenun"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Slip Basic Extra Strong in Schwarz – Periodenunterwä"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "ooia Everyday String Lace in allen erhältlichen Farben geordnet auf sc"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Everyday String Lace bold blue"
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt nahtlose ooia Periodenunterwäsche Hipster Seamless Extra "
+    ],
+    [
+     4944,
+     318,
+     "IMG",
+     "Modell trägt ooia Moms Still-BH in Beige – Still-BH ersetzt Stilleinla"
+    ],
+    [
+     5449,
+     44,
+     "A",
+     "ENTDECKE MEHR"
+    ],
+    [
+     5869,
+     44,
+     "BUTTON",
+     "ABONNIEREN"
+    ]
+   ],
+   "hoehe": 6921,
+   "titel": "Mission & Werte von ooia"
+  },
+  "story": {
+   "url": "https://ooia.de/pages/story",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     53,
+     32,
+     "IMG",
+     "ooia ooshi GmbH"
+    ],
+    [
+     53,
+     32,
+     "IMG",
+     ""
+    ],
+    [
+     37,
+     367,
+     "IMG",
+     "Drei Frauen mit unterschiedlichen Körperformen tragen bequeme, nahtlos"
+    ],
+    [
+     169,
+     24,
+     "H1",
+     "DIE OOIA STORY"
+    ],
+    [
+     444,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     1347,
+     773,
+     "IMG",
+     "Vier ooia Periodenpantys werden nebeneinander liegend präsentiert."
+    ],
+    [
+     1425,
+     70,
+     "H2",
+     "OOIA PERIODENUNTERWÄSCHE- VON DER IDEE ZUR INNOVATION"
+    ],
+    [
+     1997,
+     44,
+     "A",
+     "KAUFE JETZT DEINE OOIAS"
+    ],
+    [
+     1347,
+     773,
+     "IMG",
+     ""
+    ],
+    [
+     1536,
+     70,
+     "H2",
+     ""
+    ],
+    [
+     1886,
+     44,
+     "A",
+     ""
+    ],
+    [
+     1347,
+     773,
+     "IMG",
+     ""
+    ],
+    [
+     1529,
+     70,
+     "H2",
+     ""
+    ],
+    [
+     1893,
+     44,
+     "A",
+     ""
+    ],
+    [
+     2198,
+     47,
+     "H2",
+     "LERNE DIE OOIA GRÜNDERINNEN KENNEN"
+    ],
+    [
+     2285,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     2741,
+     23,
+     "H2",
+     "HI, ITS ME, KATI"
+    ],
+    [
+     3476,
+     432,
+     "IMG",
+     ""
+    ],
+    [
+     3932,
+     23,
+     "H2",
+     "HI, ITS ME, KRISTINE"
+    ],
+    [
+     4593,
+     23,
+     "H2",
+     "HI, WE´RE THE OOIA TEAM"
+    ],
+    [
+     4921,
+     47,
+     "H2",
+     "ENTDECKE DIE OOIA BESTSELLER"
+    ],
+    [
+     5003,
+     318,
+     "IMG",
+     "Modell trägt Periodenunterwäsche Slip Seamless Ultimate in schwarz mit"
+    ],
+    [
+     5003,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless Extra Strong in Schwarz – nahtlose "
+    ],
+    [
+     5003,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche Slip Comfy Cotton in schwarz aus"
+    ],
+    [
+     5003,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster in Schwarz – Periodenunterwäsche."
+    ],
+    [
+     5003,
+     318,
+     "IMG",
+     "Modell trägt ooia Periodenunterwäsche String Seamless in Schwarz - nah"
+    ],
+    [
+     5003,
+     318,
+     "IMG",
+     "Modell trägt nahtlosen ooia Periodenunterwäsche Slip Seamless Lace Ext"
+    ],
+    [
+     5003,
+     318,
+     "IMG",
+     "Modell trägt ooia Moms Still-BH in Schwarz – Still-BH ersetzt Stillein"
+    ],
+    [
+     5003,
+     318,
+     "IMG",
+     "Modell trägt ooia Hipster Seamless in Schwarz – nahtlose Periodenunter"
+    ],
+    [
+     5507,
+     44,
+     "A",
+     "ENTDECKE MEHR"
+    ],
+    [
+     5928,
+     44,
+     "BUTTON",
+     "ABONNIEREN"
+    ]
+   ],
+   "hoehe": 6980,
+   "titel": "Die ooia Story | Blicke hinter die Kulissen"
+  },
+  "hilfe": {
+   "url": "https://ooia.gorgias.help/de-DE",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     0,
+     316,
+     "IMG",
+     ""
+    ],
+    [
+     335,
+     64,
+     "IMG",
+     "Logo"
+    ],
+    [
+     512,
+     32,
+     "H2",
+     "Mehr Informationen erhalten"
+    ],
+    [
+     601,
+     98,
+     "IMG",
+     ""
+    ],
+    [
+     601,
+     98,
+     "IMG",
+     ""
+    ],
+    [
+     781,
+     100,
+     "IMG",
+     ""
+    ],
+    [
+     781,
+     100,
+     "IMG",
+     ""
+    ],
+    [
+     961,
+     100,
+     "IMG",
+     ""
+    ],
+    [
+     961,
+     98,
+     "IMG",
+     ""
+    ],
+    [
+     1188,
+     32,
+     "H2",
+     "Unterstützung erhalten"
+    ],
+    [
+     1584,
+     24,
+     "BUTTON",
+     "Deutsch"
+    ]
+   ],
+   "hoehe": 1634,
+   "titel": "ooia Help Center – Infos zu Bestellung, Produkt, Rückgabe & Pflege"
+  },
+  "shopify": {
+   "url": "https://www.shopify.com/de/blog/ooia-revolutioniert-damenhygiene",
+   "status": 200,
+   "pos": {
+    "Dazu kommt, dass es sich bei uns um ein ": [
+     4553.328125,
+     4618.140625
+    ],
+    "Wir haben eine sehr ausführliche FAQ-Sek": [
+     6298.5625,
+     6340.96875
+    ],
+    "Außerdem betreiben wir einen interaktive": [
+     6410.59375,
+     6497.8125
+    ],
+    "Wir bekommen unglaublich viele Fragen": [
+     6477.8125,
+     6520.21875
+    ]
+   },
+   "kopf": [
+    [
+     -55,
+     36,
+     "IMG",
+     "Shopify"
+    ],
+    [
+     -61,
+     48,
+     "BUTTON",
+     ""
+    ],
+    [
+     15,
+     40,
+     "BUTTON",
+     "BLOG\nMenü"
+    ],
+    [
+     63,
+     64,
+     "BUTTON",
+     ""
+    ],
+    [
+     391,
+     56,
+     "BUTTON",
+     "Kostenlos starten"
+    ],
+    [
+     467,
+     24,
+     "BUTTON",
+     "So funktioniert Shopify"
+    ],
+    [
+     583,
+     202,
+     "H1",
+     "Tabus überwinden: Wie zwei Gründerinnen den deutschen Damenhygiene-Mar"
+    ],
+    [
+     1015,
+     227,
+     "IMG",
+     ""
+    ],
+    [
+     2373,
+     34,
+     "H2",
+     "Selbständigkeit - olé!"
+    ],
+    [
+     2862,
+     60,
+     "BUTTON",
+     "Kostenlos starten"
+    ],
+    [
+     3546,
+     267,
+     "IMG",
+     "Kati und Kristine - Die Gründerin von ooshi"
+    ],
+    [
+     4170,
+     171,
+     "H2",
+     "Was habt ihr euch vom E-Commerce erhofft und warum wolltet ihr die ooi"
+    ],
+    [
+     5524,
+     103,
+     "H2",
+     "In welchem Alter sind die Frauen, die euer Produkt kaufen?"
+    ],
+    [
+     6145,
+     137,
+     "H2",
+     "Wie löst ihr die Herausforderung der Aufklärungsarbeit für die Periode"
+    ],
+    [
+     6739,
+     103,
+     "H2",
+     "Wie wird das Tabu-Thema von euren Kundinnen angenommen?"
+    ],
+    [
+     7509,
+     500,
+     "IMG",
+     "ooshi Hipster beige Sofa Buch sitzend"
+    ],
+    [
+     8110,
+     68,
+     "H2",
+     "Gab es kritische Stimmen und wie begegnet ihr diesen?"
+    ],
+    [
+     9135,
+     137,
+     "H2",
+     "Wie liefen die ersten Schritte beim Aufbau eures Unternehmens und der "
+    ],
+    [
+     10051,
+     190,
+     "IMG",
+     "ooshi membran system"
+    ],
+    [
+     10673,
+     103,
+     "H2",
+     "Befürchtet ihr nicht, dass jemand eure Produktidee kopiert?"
+    ],
+    [
+     11106,
+     103,
+     "H2",
+     "Warum habt ihr euren Onlineshop mit Shopify gebaut?"
+    ],
+    [
+     12194,
+     176,
+     "IMG",
+     "ooshi Onlineshop Screenshot"
+    ],
+    [
+     12751,
+     68,
+     "H2",
+     "Habt ihr Lieblingsapps, die ihr sehr gerne nutzt?"
+    ],
+    [
+     13222,
+     600,
+     "IMG",
+     "ooshi Slip Studio Pulli"
+    ],
+    [
+     13922,
+     103,
+     "H2",
+     "Und wie bist du vorgegangen, als ihr begonnen habt, ooia bekanntzumach"
+    ],
+    [
+     14634,
+     398,
+     "IMG",
+     "Kati und Kristine von ooshi beim Frauen Award"
+    ],
+    [
+     15111,
+     137,
+     "H2",
+     "Habt ihr für eure PR vorhandene Kontakte genutzt oder die Journalisten"
+    ],
+    [
+     15851,
+     137,
+     "H2",
+     "Wie war die Resonanz von euren ehemaligen Arbeitskollegen zur Gründung"
+    ],
+    [
+     16193,
+     34,
+     "H2",
+     "Welche Zukunft blüht ooia?"
+    ],
+    [
+     16685,
+     128,
+     "IMG",
+     "Which method is right for you?"
+    ],
+    [
+     17221,
+     34,
+     "H2",
+     "Beliebte Beiträge"
+    ],
+    [
+     17271,
+     146,
+     "IMG",
+     "aktuelle trends 2020 im online handel"
+    ],
+    [
+     17271,
+     146,
+     "IMG",
+     "Wir zeigen dir, wie du mit passenden Dropshipping-Anbietern zusammenar"
+    ],
+    [
+     17271,
+     146,
+     "IMG",
+     "8 E-Commerce Plattformen im Vergleich"
+    ],
+    [
+     17271,
+     146,
+     "IMG",
+     "10 Ideen, zum Geld in Heimarbeit zu verdienen"
+    ],
+    [
+     17271,
+     146,
+     "IMG",
+     "Verschiedene Symbole, die Dropshipping darstellen sollen, sind nebenei"
+    ],
+    [
+     17271,
+     146,
+     "IMG",
+     "onlineshop vermarkten"
+    ],
+    [
+     17271,
+     146,
+     "IMG",
+     "Auf dem Bild sieht man handgezeichnete Figuren, die eine Tasse und ein"
+    ],
+    [
+     17271,
+     146,
+     "IMG",
+     "Was ist Dropshipping?"
+    ],
+    [
+     17548,
+     44,
+     "BUTTON",
+     ""
+    ],
+    [
+     17548,
+     44,
+     "BUTTON",
+     ""
+    ],
+    [
+     17548,
+     44,
+     "BUTTON",
+     ""
+    ],
+    [
+     17978,
+     68,
+     "H2",
+     "Aktuelle Neuigkeiten von Shopify erfahren"
+    ],
+    [
+     18202,
+     44,
+     "BUTTON",
+     "Abonnieren"
+    ],
+    [
+     17622,
+     316,
+     "IMG",
+     "Abonnement-Banner"
+    ],
+    [
+     18402,
+     81,
+     "H2",
+     "Mit Shopify überall verkaufen"
+    ],
+    [
+     18919,
+     24,
+     "H2",
+     "Shopify"
+    ],
+    [
+     19335,
+     24,
+     "H2",
+     "Support"
+    ],
+    [
+     19663,
+     24,
+     "H2",
+     "Entwicklung"
+    ],
+    [
+     19911,
+     24,
+     "H2",
+     "Produkte"
+    ],
+    [
+     18919,
+     24,
+     "H2",
+     "Lösungen"
+    ],
+    [
+     20292,
+     50,
+     "BUTTON",
+     "Deutschland | Deutsch"
+    ]
+   ],
+   "hoehe": 20647,
+   "titel": "Tabus überwinden: Shopify-Händlerinnen von ooia machen es - Shopify Deutschland"
+  }
+ },
+ "datum": "2026-10-31T03:06:55.557Z",
+ "viewport": "432x768 @2.5, iPhone-UA"
+}
