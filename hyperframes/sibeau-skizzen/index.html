@@ -324,7 +324,7 @@
 
       <!-- T1 Learning 1 · Gespräche: "Und mein erstes Learning daraus ist tatsächlich: Rede bitte zunächst einmal mit potenziellen
            Kunden, bevor du viel Geld in irgendwelche Ware und auch aufwendige Shopdesigns investierst." Und 62,44 (Karte, Leiste,
-           Ziffer) / Rede 64,56 (Gespräch, Sprechblasen) / Kunden 66,58 ("potenzielle Kunden", Haken) / Geld 67,98 / Ware 68,68 /
+           Ziffer) / Learning 63,14 ("Mein erstes Learning") / Rede 64,56 (Gespräch, Sprechblasen) / Kunden 66,58 ("potenzielle Kunden", Haken) / Geld 67,98 / Ware 68,68 /
            Shopdesigns 69,80 (Kacheln) / investierst 70,44 (Kacheln grau, Uhr "erst danach") -->
       <section id="t1" class="karte clip" data-start="62.37" data-duration="8.53" data-track-index="1">
         <div class="leiste">
@@ -334,6 +334,7 @@
         </div>
         <div class="ziffer"><span class="verlauf">1</span></div>
         <svg class="buehne" viewBox="0 0 820 290" style="top:58px" data-layout-allow-overflow>
+          <text id="t1-titel" x="470" y="150" text-anchor="middle" class="serif" style="font-size:64px">Mein erstes Learning</text>
           <g id="t1-gespraech">
             <circle cx="200" cy="130" r="44" fill="url(#gvl)" /><g transform="translate(176 106) scale(2)" class="ico"><use href="#i-user" /></g>
             <circle cx="350" cy="130" r="44" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(326 106) scale(2)" class="ico"><use href="#i-user" /></g>
@@ -353,7 +354,7 @@
       </section>
 
       <!-- T2 Learning 2 · Probleme: "Zweitens, frag nicht einfach nur, ob Menschen dein Produkt schön finden. Frag tatsächlich nach
-           Problemen, bisheriger Lösungen und danach, was ihnen wirklich fehlt." Zweitens 70,97 (Karte) / Menschen 72,61 (Person) /
+           Problemen, bisheriger Lösungen und danach, was ihnen wirklich fehlt." Zweitens 70,97 (Karte) / frag 71,53 (Person) /
            schön 73,61 (Frage "Schön?" mit Herz) / Frag 74,51 (durchgestrichen) / Problemen 75,41 / bisheriger 76,03 / was 77,88
            (die drei besseren Fragen) / fehlt 78,79 (Haken) -->
       <section id="t2" class="karte clip" data-start="70.90" data-duration="8.70" data-track-index="1">
@@ -654,6 +655,8 @@
       // T1 Gespräche zuerst: zwei Menschen reden, potenzielle Kunden (Haken), Geld / Ware / Shopdesign warten ("erst danach")
       karte("#t1", 62.37, 70.90);
       gsap.set("#t1-gespraech, .t1-sb, #t1-kunden, #t1-ok, .t1-k, #t1-uhr, #t1-hand", { opacity: 0 });
+      ein("#t1-titel", 63.07, 0.3);
+      weg("#t1-titel", 64.3, 0.15);
       tl.set("#t1-gespraech", { opacity: 1 }, 64.49);
       tl.fromTo("#t1-gespraech circle, #t1-gespraech > g:not(.t1-sb)", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out", stagger: 0.06 }, 64.49);
       tl.fromTo(".t1-sb", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.35 }, 64.75);
@@ -669,7 +672,7 @@
       // T2 Besser fragen: Mensch, "Schön?" wird durchgestrichen, drei bessere Fragen mit Haken
       karte("#t2", 70.90, 79.60);
       gsap.set("#t2-mensch, #t2-schoen, .t2-q, .t2-ok, #t2-hand", { opacity: 0 });
-      pop("#t2-mensch", 72.54);
+      pop("#t2-mensch", 71.46);
       tl.fromTo("#t2-schoen", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 73.54);
       zeichne("#t2-strich", 74.44, 0.35);
       grau("#t2-schoen", 74.6, 0.45);

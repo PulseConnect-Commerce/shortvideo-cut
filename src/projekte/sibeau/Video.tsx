@@ -48,8 +48,9 @@ const BILD = { scale: 1.62, hoch: 814, x: 44 };
 /** Augenhöhe im Bild: Ursprung für das Zoom-in, damit die Augen beim Zoomen auf derselben Höhe bleiben */
 const AUGEN_Y = 663;
 
-/** Sanfter Grade (Regel 5b, freigegebener Look); Helligkeit wird an der ersten Vorschau gemessen (Ziel Gesicht ~0,55-0,57) */
-const GRADE = `${STIL.gradeSanft}`;
+/** Sanfter Grade (Regel 5b, freigegebener Look) plus brightness(0.955): in der ersten Vorschau lag das Gesicht nach Farbe und
+ * Porträt bei 0,586 (gemessen wie npm run pruefen, 24 Zeitpunkte); wie bei M08/M09 im Grade ausgeglichen, Ziel ~0,56 */
+const GRADE = `${STIL.gradeSanft} brightness(0.955)`;
 
 const fs = (s: number) => Math.round(s * C.FPS);
 /** Hook-Titel bis nach "sollen." (5,0-5,3 s), ganz weg bei ~5,27 s; die erste Karte (Kennzahl) kommt auf "Und" (5,37 s) */
