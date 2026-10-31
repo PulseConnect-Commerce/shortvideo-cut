@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=1080, height=1920" />
     <title>M02 · PURELEI – Erklär-Bilder und Kennzahlen</title>
     <script src="assets/gsap.min.js"></script>
-    <!-- Serie M "Marken-Story", M02 · PURELEI. Look wie M06/M07 (hyperframes/five-skizzen, hyperframes/gymshark-skizzen) mit
-         Pauls neueren Regeln: er steht oben (Kopfoberkante ~315), darum stehen Kennzahlen und Erklär-Bilder auf der hellen Karte
-         UNTER Kopf und Pille (x 80-900, y 1140-1490; Instagram-Zone ab 1500); Editorial-Kennzahlen (Instrument Serif, Akzent im
+    <!-- Serie M "Marken-Story", M02 · PURELEI, NEUER M-AUFBAU ab 31.10.2026 (Pauls Vorgabe "oben der Inhalt, unten er",
+         karten-aufbau.md "Marken-Story: oben der Inhalt, unten er", src/lib/buehne.tsx): die Karten stehen auf der Bühne oben,
+         er unten im Kamerafeld (ab y 1000), die Pille an der Naht (y ~1030). Steht im Bildfeld (y 0-640) ein Ausschnitt von
+         purelei.com, liegt die Karte darunter (x 80-900, y 615-965, KARTE_UNTEN); ohne Bild mittig (y 455-805, Klasse "mitte":
+         OMR-Erinnerung, Kennzahl 600.000+, 1 2 3 Learnings; Folgen-Karte y 530-730). Karte weiß auf dem hellen Grund der Bühne.
+         Inhalte und Zeiten wie in der eingeplanten Fassung. Editorial-Kennzahlen (Instrument Serif, Akzent im
          PulseConnect-Verlauf) für "2017" und "600.000+" (Stand 2021, laut Shopify-Beitrag), Erklär-Bilder statt Wortkarten
          (karten-aufbau.md "Visuelle Metaphern"), drei nummerierte Learnings, am Ende die große mittige Folgen-Karte mit dem
          TikTok-Plus (karten-aufbau.md Punkt 7). Das originale PURELEI-Logo (assets/purelei-logo.svg, aus dem Seitenkopf von
-         purelei.com, unverändert) auf "PURELEI". Echte Seiten (purelei.com als Hintergrund, Shopify-Beitrag als "Quelle groß")
+         purelei.com, unverändert) auf "PURELEI". Echte Seiten (purelei.com im Bildfeld der Bühne, Shopify-Beitrag als "Quelle groß")
          laufen in Remotion (src/projekte/purelei/Video.tsx); in den Quellen-Fenstern (13,98-17,5 / 35,46-39,6 / 43,03-46,3 s)
-         blenden diese Karten dort aus.
+         blenden Bühne und Karten dort aus.
          Nur Inhalte aus Take, Skript und Quelle; keine erfundenen Zahlen. Icons Lucide (ISC), Schriften Geist, Instrument Serif,
          Caveat (OFL, lokal). Zeiten = Sekunden im geschnittenen Video (src/projekte/purelei/cut.json, 106,85 s), Teile 2 Frames
          vor ihrem Wort; Liste mit Tönen in src/projekte/purelei/karten.json. -->
@@ -27,10 +30,12 @@
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
 
       .karte {
-        position: absolute; left: 80px; top: 1140px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
-        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        position: absolute; left: 80px; top: 615px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: #ffffff;
         box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
       }
+      /* ohne Bühnenbild darüber: mittig auf der Bühne (src/lib/buehne.tsx KARTE_MITTE) */
+      .karte.mitte { top: 455px; }
       .kicker { position: absolute; z-index: 2; left: 30px; top: 20px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
       .badge { position: absolute; right: 26px; top: 14px; padding: 5px 13px 6px; border-radius: 10px; background: #0b0c0e; color: #fff; font-size: 20px; font-weight: 800; letter-spacing: 0.14em; white-space: nowrap; }
       svg.buehne { position: absolute; left: 0; top: 54px; width: 820px; height: 290px; overflow: visible; }
@@ -64,8 +69,8 @@
 
       /* Folgen (CTA): nur das Folgen-Symbol, groß und waagerecht mittig, Plus wie bei TikTok (Pauls Vorgabe 30.10.,
          karten-aufbau.md Punkt 7, Vorlage hyperframes/varianten-skizzen K12): 560 x 200, Kartenmitte x 540, Avatar 150, Plus 64,
-         "Folgen" 72 px, an der Kartenposition unter Kopf und Pille */
-      .folgekarte { position: absolute; left: 260px; top: 1140px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+         "Folgen" 72 px, mittig auf der Bühne (y 530-730) */
+      .folgekarte { position: absolute; left: 260px; top: 530px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
       .avatar { position: absolute; left: 34px; top: 18px; width: 150px; height: 150px; border-radius: 75px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
       .avatar > svg { width: 84px; height: 84px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
       #fplus { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; overflow: visible; }
@@ -133,7 +138,7 @@
            ihrer Story." Karte auf "Gründerin" 8,79 (Bühne, Sprecherin) / Alisa 9,29 (Name) / OMR 10,61 (Banner) / Speech 11,15
            (Mikro, Schallwellen) / begeistert 12,67 (er im Publikum, Funken, handschriftlich) / Story 13,53. "OMR" ist seine
            Erinnerung (Briefing), nichts dazu erfunden: kein Jahr, keine Bühne mit Namen. -->
-      <section id="k2" class="karte clip" data-start="8.72" data-duration="5.4" data-track-index="1">
+      <section id="k2" class="karte mitte clip" data-start="8.72" data-duration="5.4" data-track-index="1">
         <div class="kicker">Meine Erinnerung</div>
         <svg class="buehne" viewBox="0 0 820 290">
           <g id="k2-buehne">
@@ -281,7 +286,7 @@
            Teaser mit 600.000, Datum 10. Feb. 2021). Karte auf "bereits" 46,37, die Zahl zählt hoch und landet auf "600.000" 47,54 /
            Follower 48,54 / interessante 50,99 / woanders 52,41 (die Zahl tritt zurück, Pfeil zur Seite). Fakten-Grenze: historische
            Zahl, Stand 2021, laut Shopify-Beitrag; keine aktuelle Reichweite. -->
-      <section id="k7" class="karte clip" data-start="46.30" data-duration="6.8" data-track-index="1">
+      <section id="k7" class="karte mitte clip" data-start="46.30" data-duration="6.8" data-track-index="1">
         <div class="kicker">2021 · laut Shopify-Beitrag</div>
         <div class="badge" style="background:#6b7280">Historische Zahl</div>
         <div id="k7-zahl">
@@ -326,7 +331,7 @@
 
       <!-- K9 Drei Learnings: "Und hier tatsächlich sehe ich immer drei ganz wichtige Learnings für Onlineshop-Betreiber."
            drei 64,73 (1 2 3) / Learnings 65,71 / Onlineshop-Betreiber 66,23 -->
-      <section id="k9" class="karte clip" data-start="64.66" data-duration="2.85" data-track-index="1">
+      <section id="k9" class="karte mitte clip" data-start="64.66" data-duration="2.85" data-track-index="1">
         <div class="kicker">Für Onlineshop-Betreiber</div>
         <svg class="buehne" viewBox="0 0 820 290">
           <g class="k9-n"><circle cx="120" cy="120" r="74" fill="#fff" stroke="url(#gv)" stroke-width="4" /><text x="120" y="160" text-anchor="middle" class="serifz gtext" style="font-size:112px">1</text></g>

@@ -1,34 +1,37 @@
-Hintergründe, Quellen und Logo für M02 · PURELEI (alle am 31.10.2026 mit Playwright/Chromium ohne Login in der
-Handy-Ansicht 432 css-px, 2,5-fach = 1080 px breit, aufgenommen; Cookie-Hinweise und schwebende Knöpfe ausgeblendet, sonst
-nichts verändert). Aufnahme: hyperframes/purelei-hg/aufnahme.cjs (Überschriften, Bilder und Markierungen mit css-y in
-hyperframes/purelei-hg/screenshots/aufnahme.json; die Bilder der ganzen Seiten lagen wegen des knappen Speichers nur in
-/dev/shm), gestaltet mit hyperframes/purelei-hg/gestalte.py (oben die Kopfleiste der Seite mit dem PURELEI-Logo, darunter ein
-Abschnitt der Seite, leicht weichgezeichnet und leicht abgedunkelt, nach unten etwas mehr; nichts dazugemalt).
+Bühnenbilder, Quellen und Logo für M02 · PURELEI. Neuer M-Aufbau ab 31.10.2026 ("oben der Inhalt, unten er",
+karten-aufbau.md): die Seiten von purelei.com am 31.10.2026 gegen 15:25 Uhr (Europe/Berlin) mit Playwright/Chromium ohne Login
+in der Handy-Ansicht 432 css-px, 2,5-fach = 1080 px breit, NEU aufgenommen (hyperframes/purelei-hg/aufnahme.cjs; Cookie-Hinweise
+und schwebende Knöpfe ausgeblendet, sonst nichts verändert; css-y der Überschriften und Bilder in
+hyperframes/purelei-hg/screenshots/aufnahme.json; die Bilder der ganzen Seiten lagen wegen des knappen Speichers nur in /dev/shm).
+Zugeschnitten mit hyperframes/purelei-hg/buehne.cjs auf 1080 x 640 (bei Text-Abschnitten oben mit der Seitenfarbe aufgefüllt),
+scharf, nicht abgedunkelt, nicht weichgezeichnet, nichts dazugemalt. Die früheren Hintergründe hinter ihm (hg-*.png, abgedunkelt,
+in den Take gerechnet) werden nicht mehr verwendet und sind entfernt.
 
-Hintergründe hinter ihm (Video.tsx HG, in den Take gerechnet mit npm run portrait --hintergrund):
-- hg-lei.png: "Über die LEI", Kopfbild "Deine LEI mit bedeutungsvollen Charms" (Hand mit Charm-Armreif)
+Bühnenbilder (Video.tsx BILDER, im Bildfeld der Bühne oben, y 0-640):
+- b-lei.jpg: "Über die LEI", Kopfbild (Hände mit Charm-Armreif) https://purelei.com/pages/ueber-die-lei
+- b-sand.jpg: "Über PURELEI", Bild "PURELEI" in den Sand geschrieben https://purelei.com/pages/about-us
+- b-hawaii.jpg: "Über die LEI", Abschnitt "Inspiriert von Hawaii / Die Bedeutung einer Lei", Bild Armreif mit Blüten
   https://purelei.com/pages/ueber-die-lei
-- hg-sand.png: "Über PURELEI" (About), Bild "PURELEI in den Sand geschrieben" (ohne Kopfleiste; oben der Markenname im Sand)
-  https://purelei.com/pages/about-us
-- hg-hawaii.png: "Über die LEI", Bild im Abschnitt "Inspiriert von Hawaii / Die Bedeutung einer Lei" (Blüten und Armreif)
-  https://purelei.com/pages/ueber-die-lei
-- hg-aloha.png: "Über PURELEI", Kopfbild mit "ALOHA! Schön, dass du da bist."
-  https://purelei.com/pages/about-us
-- hg-grid.png: Kollektion "LEI Collection" (Seitenkopf, Kategorien, Produktkacheln)
+- b-aloha.jpg: "Über PURELEI", Kopfbild mit "ALOHA! Schön, dass du da bist." https://purelei.com/pages/about-us
+- b-collection.jpg: Kollektion "LEI Collection", Produktkacheln (LEI Charm Armreif, LEI Charm Kette)
   https://purelei.com/collections/lei-collection
-- hg-kette.png: Produktseite "LEI Charm Kette" (Produktbild)
-  https://purelei.com/products/necklace-lei-charm
-- hg-community.png: Blog "Articles", Beitrag "PURELEI Adventskalender 2026: Mit unserer Community kreiert" (14. September 2026,
+- b-neuheiten.jpg: Startseite, "Shoppe unsere Neuheiten" https://purelei.com/
+- b-community.jpg: Blog "Articles", Beitrag "PURELEI Adventskalender 2026: Mit unserer Community kreiert" (14. September 2026,
   Bild "Created with the Community") https://purelei.com/blogs/articles
-- hg-ketten.png: Kategorie "Ketten" (Produktkacheln) https://purelei.com/collections/ketten
-- hg-markenwelt.png: "Über PURELEI", Abschnitt "Was PURELEI dir bietet" (Ringe und Kette auf Holz)
-  https://purelei.com/pages/about-us
-- hg-goetze.png: Kollektion "Festive Collection by Ann-Kathrin Götze" (Seitenkopf, Einleitung, Produktkacheln)
+- b-ketten.jpg: Kategorie "Ketten" (Seitenkopf, Überschrift, Text) https://purelei.com/collections/ketten
+- b-werte.jpg: "Über PURELEI", "LIVE ALOHA / LIVE PURE / LIVE CONNECTED / LIVE AUTHENTIC" https://purelei.com/pages/about-us
+- b-markenwelt.jpg: "Über PURELEI", Abschnitt "Was PURELEI dir bietet" (Ringe und Kette auf Holz) https://purelei.com/pages/about-us
+- b-lookgrid.jpg: "Über die LEI", "Entdecke die LEI Collection" (Produktbilder) https://purelei.com/pages/ueber-die-lei
+- b-goetze.jpg: Kollektion "Festive Collection by Ann-Kathrin Götze" (Seitenkopf, Überschrift, Einleitung)
   https://purelei.com/collections/festive-collection
-- hg-karo.png: "PURELEI Schmuck Adventskalender von karokauer" ("Karos Favoriten-Adventskalender", Adventskalender x @karokauer)
-  https://purelei.com/pages/karokauer
-- hg-club.png: "Mahina Club", Abschnitt "Das erwartet Dich" (Schmuck-Abo; "inspiriert von unserer Community und besondere
-  Creator-Kooperationen") https://purelei.com/pages/mahina-club
+- b-karo.jpg: "PURELEI Schmuck Adventskalender von karokauer", "Karos Favoriten-Adventskalender" https://purelei.com/pages/karokauer
+- b-clubpreis.jpg: Produktseite "LEI Charm Kette", Kasten "PURELEI Club Preis" ("Werde jetzt kostenlos Club Member und spare bis zu
+  10 % - exklusiv in der App", App Store / Google Play) https://purelei.com/products/necklace-lei-charm
+- b-club.jpg: "Mahina Club" (Schmuck-Abo), "Jetzt noch persönlicher / Exklusive Designs treffen auf Deine persönliche Auswahl"
+  https://purelei.com/pages/mahina-club
+- b-ohrringe.jpg: Startseite, Bild "Neu: LEI Charm Ohrringe" (Ohrring am Ohr) https://purelei.com/
+- b-bedeutung.jpg: "Über die LEI", "Inspiriert von Hawaii / Die Bedeutung einer Lei" (Text)
+  https://purelei.com/pages/ueber-die-lei
 
 Quelle groß (Video.tsx QUELLEN, nur zugeschnitten mit hyperframes/purelei-hg/quelle.py, die Sätze grün markiert):
 - Shopify-Blog "Von Hawaii nach Mannheim: Wie PURELEI Social Commerce und Influencer-Marketing erfolgreich umsetzt", von

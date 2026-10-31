@@ -119,6 +119,29 @@ wird, das man sehen soll. Sein Kopf steht nie vor etwas, das man lesen oder anse
 - Prüfen: Standbilder etwa alle 3 s ansehen. Nichts auf der Bühne darf von ihm, der Pille oder der Bubble verdeckt sein.
 - Vorlage: M02 `src/projekte/purelei` (Umbau ab 31.10.2026). Bereits eingeplante M-Folgen im alten Aufbau werden
   nachgezogen und ihre Videos in Metricool getauscht.
+- **Baustein `src/lib/buehne.tsx`** (Vorlage für M09 ooia, M06 FIVE, M08 Huel, M10 SI BEAU, M07 Gymshark, M01 SNOCKS):
+  `Buehne` (heller Grund `GRUND`, Bildfeld y 0-640 mit `BILDER: BuehnenBild[]` = `{ von, bis, bild, fokusY? }`, weich
+  überblendet, 3 % Heranfahren, unten 80 px Verlauf; darüber als `children` Hook-Titel und `skizzen.webm`, `sicht` blendet
+  alles aus), `KameraUnten` (er im Feld unter `NAHT` 1000; `p` aus `quelleZustand` morpht das Feld in
+  `BUBBLE_UNTEN_LINKS` x 80-410 / y 1090-1490, Ausschnitt `AUSSCHNITT_KAMERA`), `kameraBild({ scale, kopfX, kopfOben,
+  augenY }, zoom)` (Transform für `<Takes transformOrigin="0 0">`: Augen waagrecht mittig, Kopfoberkante bei `KOPF_OBEN`
+  1090, ruhiges Zoom-in um die Augen), `PILLE_NAHT` (540/1030) und `PILLE_NEBEN_BUBBLE` (665/1290, Breite 440) für
+  `quellePille(q.p, PILLE_NAHT, PILLE_NEBEN_BUBBLE)`. Aus `quelle-gross.tsx` nur `QuelleGross`, `quelleZustand`,
+  `kartenSicht`, `quellePille` (deren Standardwerte nicht ändern; `QuelleBubble` unten rechts nicht mehr nehmen).
+- **Ablauf je Folge:** (1) Take sauber ohne Hintergründe (`npm run portrait -- <projekt>` ohne `--hintergrund`); (2) im
+  Take Augen, Kopfoberkante und Hüftlinie messen, `BILD = { scale, kopfX, kopfOben, augenY }`: scale so, dass die Breite
+  gefüllt ist (`scale ≥ 540 / (1080 − kopfX)`, bei kopfX 565 also ≥ 1,05), und prüfen, dass die Unterkante
+  `(1920 − (1090 − kopfOben·scale)) / scale` im Take über der Hüftlinie liegt (M02: 1348 gegen ≥ 1730);
+  (3) Seiten der Marke neu aufnehmen (`hyperframes/purelei-hg/aufnahme.cjs` kopieren, ganze Seiten nach `/dev/shm`) und je
+  Bild einen scharfen Ausschnitt 1080 x 640 schneiden (`hyperframes/purelei-hg/buehne.cjs`: Seite, Seiten-px, `oben` =
+  Auffüllen mit der Seitenfarbe, damit Überschriften unter y 280 rutschen; Bildmotive dürfen bis oben gehen); (4) je Karte
+  entscheiden: mit Bild (Karte an `KARTE_UNTEN` 615, das Bild steht über der ganzen Karte) oder ohne (Klasse `mitte`,
+  `KARTE_MITTE` 455; OMR-/Erinnerungs-Karten, große Kennzahl, Learnings-Einstieg, Folgen-Karte y 530-730); in HyperFrames
+  `.karte { top: 615px; background: #fff }`, `.karte.mitte { top: 455px }`; (5) Hook-Titel auf der Bühne unter dem
+  Hook-Bild (`translate(-50px, 430px) scale(0.9)`); (6) Quellen: Fokus-Bänder und Herkunftszeile über y ~1080 (über der
+  Bubble), sonst `zoom`/`y` des Fensters anpassen (M02 600k: zoom 0,8, y 270).
+- **Maße M02** (zum Vergleich): Kopfoberkante 1083-1090, Augen ~1320, Kinn ~1560; Pille 995-1066; Karte unten 615-965;
+  Bildfeld 0-640 (Lesbares 280-560); Bubble 80-410 / 1090-1490, Pille daneben 445-885 / ~1255-1325.
 
 ## Marken-Shops als Hintergrund (seine Vorgabe 2026-10-25; Lage ab 2026-10-31: auf der Bühne oben, nicht hinter ihm)
 
