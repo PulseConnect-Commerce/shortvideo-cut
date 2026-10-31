@@ -55,11 +55,11 @@ const HOOK_ENDE = fs(4.8);
 export const HG: [string, number, number][] = [
   ["hg-lei", 1.6, 7.8], // Hook: "Über die LEI", Hand mit Charm-Armreif (große Schmuckaufnahme)
   ["hg-sand", 10.4, 13.37], // "PURELEI ist dafür ... ein super Beispiel." (Über uns: PURELEI in den Sand geschrieben)
-  ["hg-hawaii", 29.385, 33.785], // "Lebensgefühl ... Onlineshop und die Marke." (Über die LEI: Blüten und Armreif, Abschnitt Hawaii)
+  ["hg-hawaii", 28.885, 33.785], // ab dem Ausgang der Quelle (17,0 s): "Lebensgefühl ... Onlineshop und die Marke." (Über die LEI: Blüten und Armreif, Abschnitt Hawaii)
   ["hg-aloha", 33.785, 37.685], // "Aloha, Lifestyle ..." (Über uns: "ALOHA! Schön, dass du da bist.")
   ["hg-grid", 37.685, 44.385], // "2017 ... nicht einfach nur Schmuckbilder gepostet" (LEI Collection, Produktkacheln)
   ["hg-kette", 44.385, 47.9], // "... gehofft, dass jemand diese bestellt," (Produktseite LEI Charm Kette)
-  ["hg-community", 58.495, 62.5], // "Menschen eingebunden, die zur Markenwelt passen." (Blog: "Mit unserer Community kreiert")
+  ["hg-community", 57.995, 62.5], // ab dem Ausgang der Quelle (39,1 s): "Menschen eingebunden, die zur Markenwelt passen." (Blog: "Mit unserer Community kreiert")
   ["hg-ketten", 101.545, 106.145], // "bei Schmuck ... Produktkategorie" (Kategorie Ketten)
   ["hg-markenwelt", 120.455, 125.255], // Learning 1 "Markenwelt ... ohne Logo erkennbar" (Über uns: Ringe und Kette auf Holz)
   ["hg-goetze", 130.055, 134.855], // Learning 2 "Creator" (Festive Collection by Ann-Kathrin Götze)
