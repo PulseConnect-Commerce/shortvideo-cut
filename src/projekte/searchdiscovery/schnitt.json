@@ -1,0 +1,123 @@
+{
+ "projekt": "searchdiscovery",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 4.8,
+   "text": "Deine Kunden finden einfach im Shop nicht das richtige Produkt, obwohl du es auf Lager hast, dann hast du leider echt ein großes Problem."
+  },
+  {
+   "take": "t1",
+   "ab": 22.5,
+   "text": "Ich würde nämlich beim Shopify-Shop mit vielen Produkten einfach nicht sofort eine zusätzliche App für Filter kaufen. Schau dir erst einmal hier Search and Discovery an. Vermutlich kennst du die App schon."
+  },
+  {
+   "take": "t1",
+   "ab": 43.9,
+   "text": "Die App von Shopify kann nämlich ziemlich viel. Vor allem aber, wenn du deine Produktdaten wirklich sauber gepflegt hast. Dann ist sie nämlich Gold wert."
+  },
+  {
+   "take": "t1",
+   "ab": 55.0,
+   "text": "Ein Beispiel hier. Du verkaufst zum Beispiel Sneaker in mehreren Farben und in Größen. Ein Besucher möchte zum Beispiel schwarze Schuhe in Größe 43 sehen. Mit passenden Filtern kann er tatsächlich genau die richtige Auswahl treffen, statt sich einfach nur durch 50 Produkte durchzuklicken."
+  },
+  {
+   "take": "t1",
+   "ab": 107.9,
+   "text": "Aber jetzt wird es halt echt interessant, denn in manchen Shops heißen einfach schwarze Produkte im Backend zum Beispiel Black oder Onyx oder Midnight. Für den Kunden ist das natürlich einfach nur Schwarz. Also er kann jetzt meistens auf dem Bildschirm nicht unbedingt den Unterschied erkennen. In Search und Discovery in der App kannst du aber solche Unterschiede tatsächlich mit Filterwerten in einer Gruppe zusammenfassen,"
+  },
+  {
+   "take": "t1",
+   "ab": 135.7,
+   "text": "damit dann einfach im Shop zum Beispiel ein verständlicher Wert angezeigt wird. Ich würde zum Beispiel außerdem bei meinen wichtigsten Suchbegriffen erstmal überhaupt schauen, was zunächst einmal tatsächlich passiert. Wenn Kunden nämlich immer wieder einen Begriff benutzen, den du aber im Sortiment einfach anders benennst,"
+  },
+  {
+   "take": "t1",
+   "ab": 157.0,
+   "text": "können tatsächlich passende Suchsynonyme durchaus helfen. Und bei Produktempfehlungen würde ich einfach nicht wahllos ähnliche Bestseller unter jedem Produkt hängen."
+  },
+  {
+   "take": "t1",
+   "ab": 175.2,
+   "text": "Bei einer Kaffeemaschine zum Beispiel kann kompatible Filter oder passende Bohnen nachvollziehbarer als irgendein Gerät sein."
+  },
+  {
+   "take": "t1",
+   "ab": 186.7,
+   "text": "Aber mein Tipp hier ist, öffne einfach mal deine meistgesuchte Kollektion auf deinem Smartphone und versuch einmal selbst tatsächlich mit zwei Filtern ein ganz bestimmtes Produkt zu finden. Wenn du das tatsächlich nicht hinbekommst, dann solltest du das definitiv optimieren."
+  },
+  {
+   "take": "t1",
+   "ab": 202.4,
+   "text": "Dann teste aber einfach mal drei typische Suchbegriffe deiner Kunden,"
+  },
+  {
+   "take": "t1",
+   "ab": 208.3,
+   "text": "einschließlich einem umgangssprachlichen Begriff."
+  },
+  {
+   "take": "t1",
+   "ab": 225.9,
+   "text": "Und wenn das dann tatsächlich immer noch nicht klappt, würde ich zunächst einmal Produktdaten, Filter und die Suche optimieren, bevor du hier irgendwie Geld für irgendeine sinnlose App ausgibst.",
+   "bis": 234.5
+  },
+  {
+   "take": "t1",
+   "ab": 243.9,
+   "text": "Ganz wichtig hier zu erwähnen ist tatsächlich, dass die Filter wirklich zu deinem Theme und deiner jeweiligen Shop-Konfiguration passen müssen."
+  },
+  {
+   "take": "t1",
+   "ab": 260.3,
+   "text": "Daher bitte unbedingt in einem echten Storefront antesten. Wenn du weitere sichere Tipps von mir haben möchtest, dann folg mir hier gerne, denn ich erkläre hier dir gerne weitere wichtige Shopify-Apps."
+  },
+  {
+   "take": "t1",
+   "ab": 301.0,
+   "text": "Aber eine ganz wichtige Erkenntnis aus diesem Video wirst du haben, wenn du das Plus wegdrückst."
+  }
+ ],
+ "korrekturen": [
+  [
+   "t1",
+   29.53,
+   "and",
+   "&"
+  ],
+  [
+   "t1",
+   123.16,
+   "und",
+   "&"
+  ],
+  [
+   "t1",
+   186.84,
+   "aber",
+   "Aber"
+  ],
+  [
+   "t1",
+   301.1,
+   "aber",
+   "Aber"
+  ],
+  [
+   "t1",
+   303.7,
+   "haben",
+   "haben,"
+  ]
+ ],
+ "ende": {
+  "bis": 305.72
+ }
+}

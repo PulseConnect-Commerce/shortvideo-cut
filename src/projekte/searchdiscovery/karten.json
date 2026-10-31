@@ -1,0 +1,582 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern', Vorlage hyperframes/varianten-skizzen) und Quelle-groß-Fenster (q1-q7, in Video.tsx QUELLEN) für S08 · Search & Discovery. Sekunden im geschnittenen Video (cut.json, 134,20 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, klick (0,12) auf jeder Quelle und jedem Tippen des Zeigers, pop (0,10) nur auf '50' und dem Folgen-Plus, success (0,10) auf 'Gold wert', der Gruppe 'Schwarz' und der abgehakten Checkliste. Gebaut in hyperframes/searchdiscovery-skizzen/index.html. Sneaker, Kaffeemaschine, Shop-Ansichten und Suchbegriffe sind gezeichnete Beispiele (BEISPIEL/SCHEMA), keine Shopify-Oberfläche.",
+ "karten": [
+  {
+   "id": "k1",
+   "wort": "Shopify-Shop",
+   "text": "Originales Shopify-Logo, viele Produkte (auf 'vielen'), + App (auf 'zusätzliche'), für Filter, ✕ und handschriftlich 'nicht sofort kaufen' auf 'kaufen'",
+   "start": 7.17,
+   "ende": 12.0,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 7.17,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 8.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 9.74,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 11.07,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Schau (dir erst einmal)",
+   "text": "Quelle groß: Shopify App Store, Eintrag 'Shopify Search & Discovery' (Symbol, Name, Preisgestaltung Kostenlos, Entwickler Shopify)",
+   "start": 12.02,
+   "ende": 15.8,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 12.02,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "Die (App von Shopify)",
+   "text": "Quelle groß: Shopify Help Center 'Storefront-Suche', markiert: Filter erstellen, Produkte in Suchergebnissen hervorheben, verwandte Produkte empfehlen",
+   "start": 15.8,
+   "ende": 18.27,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 15.8,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Vor (allem aber)",
+   "text": "BEISPIEL Produktdaten: Sneaker, Farbe Schwarz / Größe 43 / Typ Sneaker auf 'Produktdaten', Haken auf 'sauber gepflegt', Medaille und 'Gold wert' auf 'Gold'",
+   "start": 18.27,
+   "ende": 22.62,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 18.27,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 20.26,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 22.12,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Beispiel",
+   "text": "BEISPIEL Sneaker-Shop: 50 Sneaker (auf 'Sneaker'), Farben auf 'Farben', Größen 40-45 auf 'Größen', Besucher, 'Schwarz' und 'Größe 43' auf ihren Wörtern",
+   "start": 22.62,
+   "ende": 30.95,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 22.62,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.43,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 26.0,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 27.05,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 29.45,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "wort": "Mit (passenden Filtern)",
+   "text": "Quelle groß: offizieller App-Screenshot aus dem App Store, 'Add Filters' / Product options (Color, Size)",
+   "start": 30.95,
+   "ende": 34.36,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 30.95,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "treffen / statt",
+   "text": "BEISPIEL: Filter Schwarz + Größe 43 = die richtige Auswahl, statt 50 Produkte (auf '50'), durchgestrichen auf 'durchzuklicken'",
+   "start": 34.36,
+   "ende": 37.2,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 34.36,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 35.75,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 36.56,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Aber (jetzt wird es)",
+   "text": "Glühbirne 'jetzt wird's interessant', drei schwarze Sneaker, 'Backend', Werte Black / Onyx / Midnight auf ihren Wörtern",
+   "start": 37.2,
+   "ende": 46.05,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 37.2,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 40.61,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 43.12,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 44.13,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 45.01,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Für (den Kunden)",
+   "text": "BEISPIEL Kunde denkt 'Schwarz', Filter im Shop zeigt Black / Onyx / Midnight, '?' auf 'Unterschied'",
+   "start": 46.05,
+   "ende": 51.95,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 46.05,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 47.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 50.58,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q4",
+   "wort": "In (Search & Discovery)",
+   "text": "Quelle groß: Shopify Help Center 'Filter mit Shopify Search & Discovery hinzufügen', Abschnitt 'Filterwerte gruppieren' (Onyx, Ebony, Midnight → Schwarz)",
+   "start": 51.95,
+   "ende": 55.4,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 51.95,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Filterwerten",
+   "text": "SCHEMA Filterwerte gruppieren: Black / Onyx / Midnight, Rahmen auf 'Gruppe', 'Schwarz' auf 'zusammenfassen', im Shop ein Wert 'Schwarz' auf 'Shop', Haken auf 'verständlicher'",
+   "start": 55.4,
+   "ende": 60.87,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 55.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.73,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 57.08,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 59.25,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Ich (würde zum Beispiel)",
+   "text": "BEISPIEL Suchfeld, drei Suchbegriffe auf 'Suchbegriffen', Auge auf 'schauen', 'Was passiert?' auf 'passiert'",
+   "start": 60.87,
+   "ende": 67.93,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 60.87,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 63.09,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 64.21,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 66.71,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "Wenn (Kunden)",
+   "text": "BEISPIEL Kunde sagt 'Turnschuhe' (auf 'Begriff'), im Sortiment 'Sneaker' (auf 'Sortiment'), '≠' auf 'anders'",
+   "start": 67.93,
+   "ende": 72.34,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 67.93,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 69.31,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 70.73,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 71.53,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q5",
+   "wort": "können (tatsächlich passende Suchsynonyme)",
+   "text": "Quelle groß: offizieller App-Screenshot 'Create synonym group' (Jumpsuit, Onesie, Romper, Playsuit)",
+   "start": 72.34,
+   "ende": 75.0,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 72.34,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "q6",
+   "wort": "Und (bei Produktempfehlungen)",
+   "text": "Quelle groß: offizieller App-Screenshot 'Add complementary products'",
+   "start": 75.0,
+   "ende": 77.47,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 75.0,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "ähnliche (Bestseller)",
+   "text": "BEISPIEL wahllose Bestseller ✕ auf 'hängen', dann Kaffeemaschine (auf 'Kaffeemaschine') mit Filter ✓ und Bohnen ✓ auf ihren Wörtern, 'irgendein Gerät' ✕ auf 'Gerät'",
+   "start": 77.47,
+   "ende": 85.92,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 77.47,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 77.82,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 79.06,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 81.93,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 83.01,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 85.29,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "aber (mein Tipp)",
+   "text": "Tipp am Handy: Kollektion (auf 'Kollektion'), Zeiger setzt zwei Filter auf 'zwei Filtern', ein Produkt auf 'Produkt', 'Klappt nicht?' und 'optimieren' auf ihren Wörtern",
+   "start": 85.92,
+   "ende": 98.41,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 85.92,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 88.28,
+     "volume": 0.1
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 91.89,
+     "volume": 0.12
+    },
+    {
+     "datei": "klick.mp3",
+     "at": 92.18,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 93.83,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 96.02,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 97.89,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Dann (teste)",
+   "text": "BEISPIEL drei Suchbegriffe tippen sich: Sneaker (auf 'drei'), Turnschuhe (auf 'Suchbegriffe'), Treter (auf 'umgangssprachlichen')",
+   "start": 98.41,
+   "ende": 104.0,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 98.41,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 99.93,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 100.78,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 102.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k13",
+   "wort": "Und (wenn das dann)",
+   "text": "zuerst Produktdaten / Filter / Suche auf ihren Wörtern, Haken auf 'optimieren', Geld für neue App ✕ auf 'ausgibst'",
+   "start": 104.0,
+   "ende": 112.61,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 104.0,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 106.71,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 107.41,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 108.27,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 108.55,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 112.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q7",
+   "wort": "Ganz (wichtig)",
+   "text": "Quelle groß: Shopify Help Center 'Filter ... hinzufügen' / Anforderungen: 'Wenn dein Theme keine Filter unterstützt, ... nicht angezeigt.'",
+   "start": 112.61,
+   "ende": 116.09,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 112.61,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k14",
+   "wort": "Theme",
+   "text": "Filter + Theme + Shop-Konfiguration (auf 'Shop-Konfiguration') müssen passen (auf 'passen')",
+   "start": 116.09,
+   "ende": 119.37,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 116.09,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 117.45,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 118.67,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k15",
+   "wort": "Daher (bitte unbedingt)",
+   "text": "Checkliste zum Speichern (Briefing): Mobile Filter testen / Drei Suchbegriffe prüfen / Relevante Ergänzungen auswählen, abgehakt auf 'echten Storefront antesten', 'im echten Shop'",
+   "start": 119.37,
+   "ende": 129.55,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 119.37,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 121.19,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 121.57,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 121.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k16",
+   "wort": "aber (eine ganz wichtige Erkenntnis)",
+   "text": "Folgen-Karte groß und mittig, Ring auf 'Erkenntnis', Zeiger auf 'wenn', Plus wird auf 'Plus' zum Haken",
+   "start": 129.55,
+   "ende": 134.2,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 129.55,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 133.11,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

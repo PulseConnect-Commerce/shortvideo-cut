@@ -1,0 +1,99 @@
+{
+ "ziele": {
+  "storefront": {
+   "url": "https://help.shopify.com/de/manual/online-store/storefront-search",
+   "status": 200,
+   "titel": "Shopify Help Center | Storefront-Suche",
+   "pos": {
+    "Die Shopify Search & Discovery-App gibt dir mehr Kontrolle darüber, wie Kund:innen deine Produkte online entdecken.": [
+     1544,
+     57
+    ],
+    "Erstelle benutzerdefinierte Filter, mit denen Kund:innen ihre Such- und Kollektionsseiten nach mehreren Kategorien anpassen können, um relevantere Ergebnisse anzuzeigen.": [
+     1662,
+     77
+    ],
+    "Hebe bestimmte Produkte in den Suchergebnissen hervor.": [
+     1749,
+     37
+    ],
+    "Empfiehl auf Produktseiten verwandte Produkte, um die automatisch generierten Empfehlungen zu ergänzen.": [
+     1843,
+     57
+    ]
+   },
+   "ank": {
+    "Storefront-Suche": [
+     157,
+     40
+    ],
+    "Shopify Search & Discovery-App": [
+     1218,
+     64
+    ],
+    "Hinweis": [
+     1410,
+     24
+    ]
+   },
+   "hoehe": 6400
+  },
+  "filter": {
+   "url": "https://help.shopify.com/de/manual/online-store/storefront-search/search-and-discovery-filters",
+   "status": 200,
+   "titel": "Shopify Help Center | Filter mit Shopify Search & Discovery hinzufügen",
+   "pos": {
+    "Wenn dein Theme keine Filter unterstützt, kannst du zwar trotzdem Filter in der Shopify Search & Discovery App erstellen, sie werden deinen Kund:innen aber nicht angezeigt.": [
+     1013,
+     77
+    ],
+    "Du kannst mehrere Filterwerte gruppieren, um sie der Kundschaft als einen einzigen Filterwert anzuzeigen.": [
+     6011,
+     37
+    ],
+    "Angenommen, du hast ein Produkt mit der Option Farbe, die die Werte Onyx, Ebony und Midnight umfasst.": [
+     6051,
+     58
+    ],
+    "Du kannst diese Werte unter einem einzigen Filter mit dem Namen Schwarz gruppieren.": [
+     6092,
+     37
+    ]
+   },
+   "ank": {
+    "Filter mit Shopify Search & Discovery hinzufügen": [
+     157,
+     80
+    ],
+    "Anforderungen": [
+     839,
+     32
+    ],
+    "Filterwerte gruppieren": [
+     5974,
+     24
+    ]
+   },
+   "hoehe": 6400
+  },
+  "appstore": {
+   "url": "https://apps.shopify.com/search-and-discovery?locale=de",
+   "status": 200,
+   "titel": "Deine Storefront-Suche und Einkaufserfahrung anpassen | Shopify App Store",
+   "pos": {},
+   "ank": {
+    "Shopify Search & Discovery": [
+     100,
+     23
+    ],
+    "Hilf Kunden bei ihrer Produktsuche": [
+     534,
+     70
+    ]
+   },
+   "hoehe": 6400
+  }
+ },
+ "datum": "2026-10-31T05:45:46.769Z",
+ "viewport": "412x732 @2.62"
+}

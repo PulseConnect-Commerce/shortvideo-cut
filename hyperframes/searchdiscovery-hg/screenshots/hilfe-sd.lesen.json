@@ -1,0 +1,53 @@
+{
+ "url": "https://help.shopify.com/de/manual/online-store/storefront-search",
+ "status": 200,
+ "datum": "2026-10-31T05:42:25.175Z",
+ "titel": "Shopify Help Center | Storefront-Suche",
+ "text": "Hilfe\nKostenlos starten\nEinloggen\nInhalt\nHome\nOnlineshop\nStorefront-Suche\n\nWenn Kund:innen in deinem Onlineshop suchen, basieren die angezeigten Ergebnisse auf einer KI-gestützten Suchinfrastruktur:\n\nGrundlegende Suchfunktionen stehen standardmäßig allen Shopify-Händler:innen zur Verfügung, die einen Onlineshop haben. Dazu gehören die vorausschauende Suche und die Tippfehlertoleranz, bei denen Tippfehler automatisch mit Wörtern abgeglichen werden, die der Falschschreibung stark ähneln.\nDie Shopify Search & Discovery-App enthält Einstellungen und Funktionen, mit denen du das Sucherlebnis deines Shops weiter anpassen sowie Produktsuchfilter und Produktempfehlungen einrichten kannst.\nAuf dieser Seite\nOnlineshop-Suche\nShopify Search & Discovery-App\nBenutzerdefinierte Storefronts und Headless-Suche\nOnlineshop-Suche\n\nDein Onlineshop verfügt über eine integrierte, KI-gestützte Suchfunktion, die über eine Suchleiste oder ein Suchfeld auf deiner Website bedient wird.\n\nKund:innen können einen Suchbegriff eingeben, um Produkte in deinem Shop zu finden. Abhängig von den Einstellungen für Suchergebnistypen deines Shops können die Ergebnisse auch Seiten und Blog-Beiträge umfassen.\n\nMehr lesen\nSuchverhalten in deinem Onlineshop\nVorausschauende Suche\nAuffindbarkeit verwalten\nShopify Search & Discovery-App\nShopify Search & Discovery\nInstalliere Shopify Search & Discovery aus dem Shopify App Store.\nHinweis\n\nFür die Nutzung dieser Funktion muss Shopify Network Intelligence in deinen Datenschutzeinstellungen aktiviert sein. Mehr Informationen über Shopify Network Intelligence.\n\nDie Shopify Search & Discovery-App gibt dir mehr Kontrolle darüber, wie Kund:innen deine Produkte online entdecken. Du kannst die App verwenden, um Produktsuchergebnisse und Produktempfehlungen in deinem Onlineshop auf folgende Weisen anzupassen:\n\nErstelle benutzerdefinierte Filter, mit denen Kund:innen ihre Such- und Kollektionsseiten nach mehreren Kategorien anpassen können, um relevantere Ergebnisse anzuzeigen.\nHebe bestimmte Produkte in den Suchergebnissen hervor.\nPasse die Ergebnistypen in der Suche und der vorausschauenden Suche an.\nEmpfiehl auf Produktseiten verwandte Produkte, um die automatisch generierten Empfehlungen zu ergänzen.\n\nUm bestimmte Funktionen von Shopify Search & Discovery nutzen zu können, benötigen deine Mitarbeiter:innen die folgenden Mitarbeiterberechtigungen:\n\nProdukte: Erforderlich für die Bearbeitung von Produktempfehlungen, Produktboosts und Filtern.\nOnlineshop-Suche und Navigation: Erforderlich zum Bearbeiten von Filtern.\nBerichte: Erforderlich zum Anzeigen von Analysen.\nMehr lesen\nFilter mit Search & Discovery hinzufügen\nSuche mit Search & Discovery anpassen\nProduktempfehlungen mit Search & Discovery anpassen\nBerichte und Analysen von Shopify Search & Discovery\nBenutzerdefinierte Storefronts und Headless-Suche\n\nWenn du eine benutzerdefinierte Storefront oder ein Headless-Commerce-Erlebnis erstellst, kannst du die Funktionen der Shopify Search & Discovery-App mit der Storefront API verwenden. Dadurch kannst du dieselben Suchfunktionen, die in Shopify-Themes verfügbar sind, in deiner benutzerdefinierten Storefront implementieren.\n\nDie Storefront API bietet Suchanfragen und vorausschauende Suchanfragen, die Folgendes unterstützen:\n\nSuchfunktionalität in natürlicher Sprache\nIn der Search & Discovery-App konfigurierte Produktboosts\nBenutzerdefinierte Filter für Produktverfügbarkeit, Preis und Produktattribute\nDropdown-Benutzeroberflächen für die vorausschauende Suche\n\nUm die Suchleistung in benutzerdefinierten Storefronts zu optimieren, richte das Such-Tracking ein, damit die Suchinfrastruktur von Shopify aus den Interaktionen von Kund:innen lernen und die Ergebnisse verbessern kann.\n\nWeitere Informationen zur Implementierung der Suche in benutzerdefinierten Storefronts findest du in der Entwicklerdokumentation zu Suche und Auffindbarkeit.\n\nFeedback hinterlassen\nTeam kontaktieren",
+ "hs": [
+  "H1: Storefront-Suche",
+  "H2: Auf dieser Seite",
+  "H2: Onlineshop-Suche",
+  "H3: Mehr lesen",
+  "H2: Shopify Search & Discovery-App",
+  "H3: Mehr lesen",
+  "H2: Benutzerdefinierte Storefronts und Headless-Suche"
+ ],
+ "imgs": [
+  {
+   "tag": "IMG",
+   "src": "https://cdn.shopify.com/app-store/listing_images/6bac79c21731e1e8e59b127c6213010a/icon/CM_yj4Kah4ADEAE=.png",
+   "alt": "Symbol der Shopify Search & Discovery-App",
+   "w": 1200,
+   "h": 1200
+  },
+  {
+   "tag": "IFRAME",
+   "src": "",
+   "alt": "",
+   "w": 0,
+   "h": 0
+  }
+ ],
+ "icons": [],
+ "links": [
+  "Einloggen -> https://help.shopify.com/de/user/login?returnTo=%2Fde%2Fmanual%2Fonline-store%2Fstorefront-search",
+  "Suchfunktionen -> https://help.shopify.com/de/manual/online-store/storefront-search#online-store-search",
+  "Shopify Search & Discovery-App -> https://help.shopify.com/de/manual/online-store/storefront-search#search-and-discovery",
+  "Onlineshop-Suche -> https://help.shopify.com/de/manual/online-store/storefront-search#online-store-search",
+  "Shopify Search & Discovery-App -> https://help.shopify.com/de/manual/online-store/storefront-search#search-and-discovery",
+  "Benutzerdefinierte Storefronts und Headless-Suche -> https://help.shopify.com/de/manual/online-store/storefront-search#custom-storefronts-and-headless-search",
+  "Einstellungen für Suchergebnistypen -> https://help.shopify.com/de/manual/online-store/storefront-search/search-and-discovery-modify-search#search-result-types",
+  "Suchverhalten in deinem Onlineshop -> https://help.shopify.com/de/manual/online-store/storefront-search/search-behavior",
+  "Vorausschauende Suche -> https://help.shopify.com/de/manual/online-store/storefront-search/predictive-search",
+  "Auffindbarkeit verwalten -> https://help.shopify.com/de/manual/online-store/storefront-search/managing-searchability",
+  "Shopify Search & Discovery -> https://apps.shopify.com/search-and-discovery",
+  "Shopify Search & Discovery -> https://apps.shopify.com/search-and-discovery",
+  "Filter mit Search & Discovery hinzufügen -> https://help.shopify.com/de/manual/online-store/storefront-search/search-and-discovery-filters",
+  "Suche mit Search & Discovery anpassen -> https://help.shopify.com/de/manual/online-store/storefront-search/search-and-discovery-modify-search",
+  "Produktempfehlungen mit Search & Discovery anpassen -> https://help.shopify.com/de/manual/online-store/storefront-search/search-and-discovery-recommendations",
+  "Berichte und Analysen von Shopify Search & Discovery -> https://help.shopify.com/de/manual/online-store/storefront-search/search-and-discovery-analytics",
+  "Such-Tracking -> https://shopify.dev/docs/custom-storefronts/building-with-the-storefront-api/search-discovery/search-tracking",
+  "Entwicklerdokumentation zu Suche und Auffindbarkeit -> https://shopify.dev/docs/custom-storefronts/building-with-the-storefront-api/search-discovery"
+ ]
+}
