@@ -1,0 +1,1302 @@
+{
+ "ziele": {
+  "home": {
+   "url": "https://de.huel.com/",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     56,
+     56,
+     "BUTTON",
+     ""
+    ],
+    [
+     76,
+     86,
+     "H1",
+     "Der Shortcut für deine Ernährung"
+    ],
+    [
+     310,
+     40,
+     "A",
+     "Alle Produkte"
+    ],
+    [
+     310,
+     40,
+     "A",
+     "Shop Bestsellers"
+    ],
+    [
+     350,
+     339,
+     "A",
+     ""
+    ],
+    [
+     350,
+     339,
+     "IMG",
+     "Huel Products in a grid"
+    ],
+    [
+     721,
+     76,
+     "H2",
+     "Ernährung für deine Ziele"
+    ],
+    [
+     829,
+     188,
+     "A",
+     "Gesünder ernähren"
+    ],
+    [
+     830,
+     186,
+     "IMG",
+     "Gesünder ernähren"
+    ],
+    [
+     829,
+     188,
+     "A",
+     "Gewichtskontrolle"
+    ],
+    [
+     830,
+     186,
+     "IMG",
+     "Gewichtskontrolle"
+    ],
+    [
+     1025,
+     188,
+     "A",
+     "Mehr Protein"
+    ],
+    [
+     1026,
+     186,
+     "IMG",
+     "Mehr Protein"
+    ],
+    [
+     1025,
+     188,
+     "A",
+     "Zeit sparen"
+    ],
+    [
+     1026,
+     186,
+     "IMG",
+     "Zeit sparen"
+    ],
+    [
+     1277,
+     76,
+     "H2",
+     "Ernährung auf deine Art"
+    ],
+    [
+     1385,
+     66,
+     "A",
+     "Huel Bestseller"
+    ],
+    [
+     1394,
+     48,
+     "IMG",
+     "Huel Bestseller"
+    ],
+    [
+     1459,
+     66,
+     "A",
+     "Pulvermahlzeiten"
+    ],
+    [
+     1468,
+     48,
+     "IMG",
+     "Pulvermahlzeiten"
+    ],
+    [
+     1533,
+     66,
+     "A",
+     "Supergreens Pulver"
+    ],
+    [
+     1542,
+     48,
+     "IMG",
+     "Supergreens Pulver"
+    ],
+    [
+     1607,
+     66,
+     "A",
+     "Trinkmahlzeiten"
+    ],
+    [
+     1616,
+     48,
+     "IMG",
+     "Trinkmahlzeiten"
+    ],
+    [
+     1681,
+     66,
+     "A",
+     "Herzhafte Mahlzeiten"
+    ],
+    [
+     1690,
+     48,
+     "IMG",
+     "Herzhafte Mahlzeiten"
+    ],
+    [
+     1755,
+     66,
+     "A",
+     "Snacks"
+    ],
+    [
+     1764,
+     48,
+     "IMG",
+     "Snacks"
+    ],
+    [
+     1885,
+     76,
+     "H2",
+     "Die Vorteile von Huel"
+    ],
+    [
+     2723,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     2747,
+     25,
+     "H3",
+     "Auch in deiner Nähe erhältlich!"
+    ],
+    [
+     3184,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     3208,
+     25,
+     "H3",
+     "Huel+ Treueprogramm"
+    ],
+    [
+     3645,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     3669,
+     50,
+     "H3",
+     "Schalte exklusive Prämien für dich und deine Freunde frei"
+    ],
+    [
+     4155,
+     76,
+     "H2",
+     "Expertise, auf die du vertrauen kannst"
+    ],
+    [
+     4495,
+     276,
+     "IMG",
+     "Image of a Huel Ready-to-drink caffè latte flavour bottle"
+    ],
+    [
+     4538,
+     233,
+     "IMG",
+     "Key Huel macronutrient callouts including low sugar and low fat"
+    ],
+    [
+     4527,
+     244,
+     "IMG",
+     "an image of various Huel nutritionists"
+    ],
+    [
+     4518,
+     254,
+     "IMG",
+     "Scattered green garden peas on a transparent background"
+    ],
+    [
+     4538,
+     233,
+     "IMG",
+     "Image containing a number of raw Huel ingredients including coconut, p"
+    ],
+    [
+     4908,
+     152,
+     "H2",
+     "Von Top-Performern & Ernährungsexperten empfohlen"
+    ],
+    [
+     5172,
+     683,
+     "IMG",
+     ""
+    ],
+    [
+     5172,
+     683,
+     "IMG",
+     "Foto von Kristen Holmes"
+    ],
+    [
+     5172,
+     683,
+     "IMG",
+     ""
+    ],
+    [
+     5172,
+     683,
+     "IMG",
+     "Gary neville holding Black Edition Ready-to-drink"
+    ],
+    [
+     5990,
+     38,
+     "H2",
+     "Huel Bestseller"
+    ],
+    [
+     6087,
+     40,
+     "A",
+     "Jetzt testen"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Black Edition"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Black Edition"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Black Edition Ready-to-drink"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Black Edition Ready-to-drink"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Hot & Savoury Beutel"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Hot & Savoury Beutel"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Daily Greens"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Daily Greens"
+    ],
+    [
+     6842,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     6866,
+     25,
+     "H3",
+     "GRATIS T-Shirt im Wert von 25 €"
+    ],
+    [
+     7208,
+     56,
+     "A",
+     "Alle Produkte"
+    ],
+    [
+     7304,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     7328,
+     25,
+     "H3",
+     "Geschmacksgarantie"
+    ],
+    [
+     7669,
+     56,
+     "A",
+     "Jetzt testen"
+    ],
+    [
+     7837,
+     67,
+     "H2",
+     "Exklusiven 10 €-Gutschein sichern"
+    ],
+    [
+     8031,
+     40,
+     "BUTTON",
+     "Jetzt anmelden"
+    ],
+    [
+     8255,
+     208,
+     "IMG",
+     ""
+    ],
+    [
+     8335,
+     102,
+     "IMG",
+     "BCorp logo"
+    ],
+    [
+     8453,
+     67,
+     "H2",
+     "Planet First: Pflanzliche Ernährung, die was bewegt."
+    ],
+    [
+     8677,
+     56,
+     "H3",
+     "Produkte"
+    ],
+    [
+     8677,
+     56,
+     "BUTTON",
+     "Produkte"
+    ],
+    [
+     8750,
+     56,
+     "H3",
+     "Über Uns"
+    ],
+    [
+     8750,
+     56,
+     "BUTTON",
+     "Über Uns"
+    ],
+    [
+     8823,
+     56,
+     "H3",
+     "Hilfe"
+    ],
+    [
+     8823,
+     56,
+     "BUTTON",
+     "Hilfe"
+    ],
+    [
+     8908,
+     32,
+     "BUTTON",
+     "Einstellungen anpassen"
+    ]
+   ],
+   "hoehe": 9563,
+   "titel": "Huel DE"
+  },
+  "laender": {
+   "url": "https://de.huel.com/",
+   "status": 200,
+   "pos": {},
+   "kopf": [
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "GRATIS EXPRESSVERSAND AB 50 €"
+    ],
+    [
+     16,
+     24,
+     "A",
+     "REGELMÄSSIG BESTELLEN & 10 % SPAREN"
+    ],
+    [
+     56,
+     56,
+     "BUTTON",
+     ""
+    ],
+    [
+     76,
+     86,
+     "H1",
+     "Der Shortcut für deine Ernährung"
+    ],
+    [
+     310,
+     40,
+     "A",
+     "Alle Produkte"
+    ],
+    [
+     310,
+     40,
+     "A",
+     "Shop Bestsellers"
+    ],
+    [
+     350,
+     339,
+     "A",
+     ""
+    ],
+    [
+     350,
+     339,
+     "IMG",
+     "Huel Products in a grid"
+    ],
+    [
+     721,
+     76,
+     "H2",
+     "Ernährung für deine Ziele"
+    ],
+    [
+     829,
+     188,
+     "A",
+     "Gesünder ernähren"
+    ],
+    [
+     830,
+     186,
+     "IMG",
+     "Gesünder ernähren"
+    ],
+    [
+     829,
+     188,
+     "A",
+     "Gewichtskontrolle"
+    ],
+    [
+     830,
+     186,
+     "IMG",
+     "Gewichtskontrolle"
+    ],
+    [
+     1025,
+     188,
+     "A",
+     "Mehr Protein"
+    ],
+    [
+     1026,
+     186,
+     "IMG",
+     "Mehr Protein"
+    ],
+    [
+     1025,
+     188,
+     "A",
+     "Zeit sparen"
+    ],
+    [
+     1026,
+     186,
+     "IMG",
+     "Zeit sparen"
+    ],
+    [
+     1277,
+     76,
+     "H2",
+     "Ernährung auf deine Art"
+    ],
+    [
+     1385,
+     66,
+     "A",
+     "Huel Bestseller"
+    ],
+    [
+     1394,
+     48,
+     "IMG",
+     "Huel Bestseller"
+    ],
+    [
+     1459,
+     66,
+     "A",
+     "Pulvermahlzeiten"
+    ],
+    [
+     1468,
+     48,
+     "IMG",
+     "Pulvermahlzeiten"
+    ],
+    [
+     1533,
+     66,
+     "A",
+     "Supergreens Pulver"
+    ],
+    [
+     1542,
+     48,
+     "IMG",
+     "Supergreens Pulver"
+    ],
+    [
+     1607,
+     66,
+     "A",
+     "Trinkmahlzeiten"
+    ],
+    [
+     1616,
+     48,
+     "IMG",
+     "Trinkmahlzeiten"
+    ],
+    [
+     1681,
+     66,
+     "A",
+     "Herzhafte Mahlzeiten"
+    ],
+    [
+     1690,
+     48,
+     "IMG",
+     "Herzhafte Mahlzeiten"
+    ],
+    [
+     1755,
+     66,
+     "A",
+     "Snacks"
+    ],
+    [
+     1764,
+     48,
+     "IMG",
+     "Snacks"
+    ],
+    [
+     1885,
+     76,
+     "H2",
+     "Die Vorteile von Huel"
+    ],
+    [
+     2723,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     2747,
+     25,
+     "H3",
+     "Auch in deiner Nähe erhältlich!"
+    ],
+    [
+     3184,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     3208,
+     25,
+     "H3",
+     "Huel+ Treueprogramm"
+    ],
+    [
+     3645,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     3669,
+     50,
+     "H3",
+     "Schalte exklusive Prämien für dich und deine Freunde frei"
+    ],
+    [
+     4155,
+     76,
+     "H2",
+     "Expertise, auf die du vertrauen kannst"
+    ],
+    [
+     4495,
+     276,
+     "IMG",
+     "Image of a Huel Ready-to-drink caffè latte flavour bottle"
+    ],
+    [
+     4538,
+     233,
+     "IMG",
+     "Key Huel macronutrient callouts including low sugar and low fat"
+    ],
+    [
+     4527,
+     244,
+     "IMG",
+     "an image of various Huel nutritionists"
+    ],
+    [
+     4518,
+     254,
+     "IMG",
+     "Scattered green garden peas on a transparent background"
+    ],
+    [
+     4538,
+     233,
+     "IMG",
+     "Image containing a number of raw Huel ingredients including coconut, p"
+    ],
+    [
+     4908,
+     152,
+     "H2",
+     "Von Top-Performern & Ernährungsexperten empfohlen"
+    ],
+    [
+     5172,
+     683,
+     "IMG",
+     ""
+    ],
+    [
+     5172,
+     683,
+     "IMG",
+     "Foto von Kristen Holmes"
+    ],
+    [
+     5172,
+     683,
+     "IMG",
+     ""
+    ],
+    [
+     5172,
+     683,
+     "IMG",
+     "Gary neville holding Black Edition Ready-to-drink"
+    ],
+    [
+     5990,
+     38,
+     "H2",
+     "Huel Bestseller"
+    ],
+    [
+     6087,
+     40,
+     "A",
+     "Jetzt testen"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Black Edition"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Black Edition"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Black Edition Ready-to-drink"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Black Edition Ready-to-drink"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Hot & Savoury Beutel"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Hot & Savoury Beutel"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Daily Greens"
+    ],
+    [
+     6159,
+     304,
+     "IMG",
+     "Daily Greens"
+    ],
+    [
+     6842,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     6866,
+     25,
+     "H3",
+     "GRATIS T-Shirt im Wert von 25 €"
+    ],
+    [
+     7208,
+     56,
+     "A",
+     "Alle Produkte"
+    ],
+    [
+     7304,
+     445,
+     "IMG",
+     ""
+    ],
+    [
+     7328,
+     25,
+     "H3",
+     "Geschmacksgarantie"
+    ],
+    [
+     7669,
+     56,
+     "A",
+     "Jetzt testen"
+    ],
+    [
+     7837,
+     67,
+     "H2",
+     "Exklusiven 10 €-Gutschein sichern"
+    ],
+    [
+     8031,
+     40,
+     "BUTTON",
+     "Jetzt anmelden"
+    ],
+    [
+     8255,
+     208,
+     "IMG",
+     ""
+    ],
+    [
+     8335,
+     102,
+     "IMG",
+     "BCorp logo"
+    ],
+    [
+     8453,
+     67,
+     "H2",
+     "Planet First: Pflanzliche Ernährung, die was bewegt."
+    ],
+    [
+     8677,
+     56,
+     "H3",
+     "Produkte"
+    ],
+    [
+     8677,
+     56,
+     "BUTTON",
+     "Produkte"
+    ],
+    [
+     8750,
+     56,
+     "H3",
+     "Über Uns"
+    ],
+    [
+     8750,
+     56,
+     "BUTTON",
+     "Über Uns"
+    ],
+    [
+     8823,
+     56,
+     "H3",
+     "Hilfe"
+    ],
+    [
+     8823,
+     56,
+     "BUTTON",
+     "Hilfe"
+    ],
+    [
+     8908,
+     32,
+     "BUTTON",
+     "Einstellungen anpassen"
+    ]
+   ],
+   "hoehe": 9563,
+   "titel": "Huel DE"
+  },
+  "shopify": {
+   "url": "https://www.shopify.com/de/case-studies/huel",
+   "status": 200,
+   "pos": {
+    "With the new Shopify Plus Admin, Huel on": [
+     315,
+     439.625
+    ],
+    "An ability to onboard new staff 9x faste": [
+     1279.453125,
+     1331.453125
+    ],
+    "Functionality to quickly assign, and una": [
+     1367.453125,
+     1447.453125
+    ],
+    "with nine global online stores and 120 s": [
+     1167.453125,
+     1211.453125
+    ],
+    "Huel used the new Shopify Plus Admin, wh": [
+     2780.140625,
+     2872.140625
+    ]
+   },
+   "kopf": [
+    [
+     18,
+     36,
+     "IMG",
+     "Shopify"
+    ],
+    [
+     12,
+     48,
+     "BUTTON",
+     ""
+    ],
+    [
+     217,
+     60,
+     "IMG",
+     "Huel"
+    ],
+    [
+     317,
+     121,
+     "H1",
+     "With the new Shopify Plus Admin, Huel onboards staff 9X faster"
+    ],
+    [
+     478,
+     243,
+     "IMG",
+     "Huel berry flavour meals in the form of popsicles."
+    ],
+    [
+     1601,
+     40,
+     "H2",
+     "Challenge"
+    ],
+    [
+     1810,
+     283,
+     "IMG",
+     "Two Heul ready-to-drink complete meals"
+    ],
+    [
+     2730,
+     40,
+     "H2",
+     "Solutions"
+    ],
+    [
+     3058,
+     302,
+     "IMG",
+     "Ready to drink meals in Huel branded shakers"
+    ],
+    [
+     3851,
+     40,
+     "H2",
+     "Results"
+    ],
+    [
+     4131,
+     225,
+     "IMG",
+     "6 flavours of Huel nutrition bars"
+    ],
+    [
+     6257,
+     26,
+     "BUTTON",
+     "Deutschland | Deutsch"
+    ]
+   ],
+   "hoehe": 6635,
+   "titel": "With the new Shopify Plus Admin, Huel onboards staff 9X faster - Shopify Deutschland"
+  }
+ },
+ "datum": "2026-10-31T09:05:51.238Z",
+ "viewport": "432x768 @2.5, iPhone-UA"
+}

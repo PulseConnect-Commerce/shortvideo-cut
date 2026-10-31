@@ -1,0 +1,96 @@
+{
+ "projekt": "huel",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 1.5,
+   "text": "Eine E-Commerce-Marke hat laut einer Shopify-Studie die Einarbeitung neuer Teammitglieder um das sagenhafte Neunfache beschleunigt."
+  },
+  {
+   "take": "t1",
+   "ab": 27.0,
+   "text": "Und die Marke nennt sich Huel. Die hast du bestimmt schon auch einmal gehört. Das sind unkomplizierte Mahlzeiten für Menschen, die einfach wenig Zeit haben."
+  },
+  {
+   "take": "t1",
+   "ab": 39.9,
+   "text": "Aber die spannende Geschichte spielt tatsächlich diesmal hinter dem Online-Shop."
+  },
+  {
+   "take": "t1",
+   "ab": 49.9,
+   "text": "Denn sobald eine Marke international verkauft, entstehen einfach ganz andere Herausforderungen."
+  },
+  {
+   "take": "t1",
+   "ab": 97.5,
+   "text": "denn du hast verschiedene Märkte, mehrere Shopzugänge und Mitarbeiter, die einfach schnell mit den richtigen Berechtigungen loslegen müssen. Laut einer Shopify-Plus-Fallstudie hat aber Huel die Verwaltung dieser Zugänge tatsächlich stark vereinfacht. und das Onboarding neuer Mitarbeitender wurde dadurch einfach um neunmal schneller. Das ist tatsächlich eine historische Fallstudienangabe und keine Garantie, dass das natürlich bei jedem Online-Shop genauso klappt."
+  },
+  {
+   "take": "t1",
+   "ab": 170.5,
+   "text": "Aber was ich als E-Commerce-Experte hier besonders interessant finde, ist, dass viele immer nur bei Wachstum über Ads sprechen oder auch über Produkte und Umsatzrekorde."
+  },
+  {
+   "take": "t1",
+   "ab": 183.7,
+   "text": "Aber oft entscheiden einfach dann die Prozesse im Hintergrund darüber, wie gut tatsächlich wirklich jemand skalieren kann. Mein erster Tipp daher, dokumentiere einfach wichtige Aufgaben, bevor immer nur eine Person im Team weiß, wie hier immer alles funktioniert."
+  },
+  {
+   "take": "t1",
+   "ab": 202.2,
+   "text": "Zweitens, vergib einfach mal Zugriffsrechte bewusst, denn nicht jeder Mitarbeiter braucht immer Zugriff auf alle Bereiche und auch alle Kundendaten."
+  },
+  {
+   "take": "t1",
+   "ab": 220.3,
+   "text": "Und drittens, schau einfach mal, welche Aufgaben tatsächlich immer wiederholt manuell gemacht werden und ob du sie eventuell über Bordmittel oder sinnvolle Automatisierungen vereinfachen kannst. KI kann natürlich bei der Dokumentation und den Routinefragen enorm helfen."
+  },
+  {
+   "take": "t1",
+   "ab": 246.5,
+   "text": "Aber besonders sensible Berechtigungen würde ich tatsächlich nicht einfach nur ungeprüft eine Automatisierung überlassen."
+  },
+  {
+   "take": "t1",
+   "ab": 287.0,
+   "text": "Aber mein wichtigstes Learning aus dieser E-Commerce-Marke Huel ist tatsächlich dabei, dass die Skalierung einfach viel, viel früher beginnt. meistens eben im Backoffice und nicht erst in dem nächsten Werbekonto."
+  },
+  {
+   "take": "t1",
+   "ab": 298.2,
+   "text": "Wenn du weitere solcher spannender E-Commerce-Marken sehen willst, dann drücke gerne das Plus weg. Und wir sehen uns dann bei der nächsten Markenvorstellung.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 305.6
+ },
+ "korrekturen": [
+  [
+   "t1",
+   97.69,
+   "denn",
+   "Denn"
+  ],
+  [
+   "t1",
+   110.39,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   293.49,
+   "beginnt.",
+   "beginnt,"
+  ]
+ ]
+}
