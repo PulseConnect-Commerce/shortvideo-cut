@@ -96,7 +96,31 @@ genau auf dem gesprochenen Wort dazu oder ändert seinen Zustand. So erklärt di
   für Ticks.
 - Eine Karte erklärt einen Gedanken: höchstens 4–5 Elemente. Danach kommt eine neue Karte.
 
-## Marken-Shops als Hintergrund (seine Vorgabe 2026-10-25)
+## Marken-Story: oben der Inhalt, unten er (seine Vorgabe 2026-10-31, M02 PURELEI; geht allem darunter vor)
+
+Er: "Ich finde in dem M02 Video verdecke ich sehr oft den Text oder die Bilder mit meinem Kopf. Bitte versuche mich
+häufiger klein unten links oder unten mittig zu setzen oder sogar einfach nur den gesamten unteren Bereich für meine
+Kamera und den oberen Bereich für den Content zu nutzen."
+
+Gilt für **jede M-Folge** und für jede Stelle in anderen Videos, an der ein Marken-Screenshot oder ein Bild gezeigt
+wird, das man sehen soll. Sein Kopf steht nie vor etwas, das man lesen oder ansehen soll.
+
+- **Bühne oben (y 0 bis ~1000):** alles, was man sehen oder lesen soll: Marken-Screenshots **scharf** (nicht
+  abgedunkelt, nicht weichgezeichnet), Quellen, Kennzahlen, Erklär-Karten, Produkt- und Gründerfotos, Hook-Titel,
+  am Ende die Folgen-Karte. Lesbares zwischen y 280 und ~980, x 80 bis 900. Bildwechsel nach Inhalt etwa alle 4–7 s.
+  Die Bühne ist nie leer: zwischen den Screenshots ein ruhiger Grund mit Karte.
+- **Kamera unten (y ~1000 bis 1920):** er über die volle Breite, Kopf und Oberkörper, Kopfoberkante etwa bei y 1080
+  bis 1120, nie etwas unter der Hüfte. Hinter ihm sein weichgezeichnetes Zimmer: Porträt **ohne** `--hintergrund`,
+  Marken-Hintergründe werden nicht mehr in den Take gerechnet. Zwischen Bühne und Kamera eine klare Kante oder ein
+  kurzer Verlauf.
+- **Pill-Untertitel an der Naht** (Mitte etwa bei y 1030), über seinem Kopf, nie über dem Gesicht.
+- **Klein unten links oder unten mittig:** braucht eine Seite die ganze Höhe (lange Quelle mit markierten Sätzen), dann
+  schrumpft er in eine Bubble **unten links oder unten mittig** (nicht mehr unten rechts) und die Seite steht groß.
+- Prüfen: Standbilder etwa alle 3 s ansehen. Nichts auf der Bühne darf von ihm, der Pille oder der Bubble verdeckt sein.
+- Vorlage: M02 `src/projekte/purelei` (Umbau ab 31.10.2026). Bereits eingeplante M-Folgen im alten Aufbau werden
+  nachgezogen und ihre Videos in Metricool getauscht.
+
+## Marken-Shops als Hintergrund (seine Vorgabe 2026-10-25; Lage ab 2026-10-31: auf der Bühne oben, nicht hinter ihm)
 
 Er: "Ich finde wir nutzen derzeit für die Markenstories sowie die Short Videos, bei denen es um bekannte Marken geht, viel zu wenige Ausschnitte aus den eigentlichen Shops der Marken oder Ausschnitte aus deren Websites/Shops als Screenshot für den Hintergrund".
 
