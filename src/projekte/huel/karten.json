@@ -1,0 +1,393 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern'), die drei Händler-Learnings als Checkliste (Dokumentation / Rechte / Automation), Kennzahl 9× mit Einordnung, Quellenzeile im Hook und Folgen-Karte aus hyperframes/huel-skizzen/index.html, Quelle-groß-Fenster (q1; in Video.tsx QUELLEN) für M08 · Huel. Sekunden im geschnittenen Video (cut.json, 110,1 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,10-0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, klick (0,12) auf der Quelle, pop (0,10) nur auf '9×' und dem Folgen-Plus, success (0,10) nur auf 'Backoffice', wusch-gross (0,12, Extra-Effekt) auf dem Beginn der Learnings.",
+ "karten": [
+  {
+   "id": "hook",
+   "wort": "(Remotion) Eine E-Commerce-Marke ...",
+   "text": "Hook-Titel HUEL / 9× SCHNELLER IM ONBOARDING (Design verlauf, Kartenposition), 0-7,2 s; Quellenzeile 'QUELLE Shopify-Fallstudie · Stand 2020' auf 'Shopify-Studie' (1,75 s); Hintergrund Startseite de.huel.com (Produkte, Kategorien)",
+   "start": 0,
+   "ende": 7.2,
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 1.75,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "wort": "Und (die Marke nennt sich Huel)",
+   "text": "Die Marke: originales Huel-Logo (Seitenkopf de.huel.com), 'Human + Fuel' auf 'Huel' (Name laut Fallstudie und 'Über uns'), Beutel/Flasche/Schale auf 'unkomplizierte Mahlzeiten', Person auf 'Menschen', Uhr und 'wenig Zeit' auf 'wenig Zeit'",
+   "start": 7.25,
+   "ende": 14.37,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 7.25,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 10.93,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Aber (die spannende Geschichte)",
+   "text": "Hinter dem Shop: Schaufenster des Online-Shops, Waren auf 'Geschichte', Pfeil auf 'diesmal', der Bereich dahinter (Zahnräder, Team, Pakete) schiebt sich auf 'hinter' heraus, 'hinter dem Shop'",
+   "start": 14.37,
+   "ende": 18.36,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 14.37,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 17.43,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Denn (sobald eine Marke international verkauft)",
+   "text": "International: Marke mit Globus, drei Länder-Shops (DE, UK, US) auf 'international', Wege auf 'verkauft', Warnzeichen und 'ganz andere Herausforderungen'",
+   "start": 18.36,
+   "ende": 22.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 18.36,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 21.29,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Denn (du hast verschiedene Märkte)",
+   "text": "Märkte, Zugänge, Mitarbeitende (Bildplan: Mehrmärkte-/Mitarbeiter-Zugriffs-Grafik): Shops auf 'Märkte', Schlösser auf 'Shopzugänge', Team auf 'Mitarbeiter', Wege auf 'schnell', Schlüssel und 'richtige Rechte' auf 'Berechtigungen', Haken auf 'loslegen'",
+   "start": 22.6,
+   "ende": 28.5,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 22.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.35,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 25.85,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 27.12,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Laut (einer Shopify-Plus-Fallstudie)",
+   "text": "Quelle groß (Remotion): Shopify-Fallstudie, Überschrift 'With the new Shopify Plus Admin, Huel onboards staff 9X faster' und die Punkte 'An ability to onboard new staff 9x faster' / 'Functionality to quickly assign, and unassign, new staff roles across its global workforce' markiert; Herkunftszeile 'QUELLE Shopify-Fallstudie · Stand 2020'",
+   "start": 28.5,
+   "ende": 34.4,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 28.5,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "Und (das Onboarding neuer Mitarbeitender) / neunmal",
+   "text": "Kennzahl: Onboarding neuer Mitarbeitender, Balken 'vorher', '9×' zählt hoch und landet auf 'neunmal', Balken 'jetzt' schrumpft auf ein Neuntel, Blitz und 'schneller'; Zeile 'laut Shopify-Fallstudie · Stand 2020'",
+   "start": 34.4,
+   "ende": 39.58,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 34.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 37.69,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "Das (ist tatsächlich eine historische Fallstudienangabe)",
+   "text": "Einordnung: Kalender 2020 und 'historische Angabe' auf 'historische', Stempel 'KEINE GARANTIE' auf 'Garantie', vier Shops (einer mit Haken, drei mit Fragezeichen) auf 'jedem Online-Shop', 'bei jedem Shop?'",
+   "start": 39.58,
+   "ende": 46.05,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 39.58,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 43.07,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 44.38,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Aber (was ich als E-Commerce-Experte)",
+   "text": "Bei Wachstum reden viele über: Glühbirne und 'besonders interessant', Sprechblasen auf 'viele', Kacheln Ads / Produkte / Umsatzrekorde je auf ihrem Wort",
+   "start": 46.05,
+   "ende": 54.67,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 46.05,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 49.56,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 51.67,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 53.73,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Aber (oft entscheiden ... die Prozesse im Hintergrund)",
+   "text": "Eisberg: Spitze (Ads, Produkte, Umsatz) über der Wasserlinie, der große Teil 'Prozesse' darunter auf 'Prozesse', 'im Hintergrund', Pfeil 'skalieren' auf 'skalieren'",
+   "start": 54.67,
+   "ende": 60.44,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 54.67,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 55.88,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 59.41,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "t1",
+   "wort": "Mein (erster Tipp) / dokumentiere",
+   "text": "Learning 1 · Dokumentation (Leiste Dokumentation / Rechte / Automation): Dokument 'Abläufe' auf 'dokumentiere', Punkte mit Haken auf 'Aufgaben', eine Person mit Glühbirne auf 'eine Person', Team mit Fragezeichen auf 'Team', Dokument geht an alle auf 'funktioniert'",
+   "start": 60.44,
+   "ende": 67.46,
+   "sfx": [
+    {
+     "datei": "wusch-gross.mp3",
+     "at": 60.44,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 61.73,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 65.24,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "wort": "Zweitens / Zugriffsrechte",
+   "text": "Learning 2 · Rechte: Schlüssel 'Zugriffsrechte', Tabelle Team × Bereiche und 'bewusst' auf 'bewusst', Haken und Kreuze auf 'nicht jeder', Bereiche auf 'Bereiche', Kundendaten mit Schloss auf 'Kundendaten'",
+   "start": 67.46,
+   "ende": 74.34,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 67.46,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 69.29,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 70.29,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "wort": "drittens / Aufgaben / manuell / Automatisierungen",
+   "text": "Learning 3 · Automation: Aufgabe, Kreis und Zähler ×1-×5 auf 'wiederholt', Zeiger klickt auf 'manuell', Werkzeug 'Bordmittel', Zahnrad 'Automatisierung' übernimmt (Haken), 'einfacher' auf 'vereinfachen'",
+   "start": 74.34,
+   "ende": 83.62,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 74.34,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 77.04,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 80.58,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 81.94,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "KI",
+   "text": "KI kann helfen: KI-Kachel, Dokument schreibt sich auf 'Dokumentation', Routinefragen bekommen Haken, 'enorm hilfreich' auf 'enorm'",
+   "start": 83.62,
+   "ende": 87.39,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 83.62,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 84.7,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 86.3,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Aber (besonders sensible Berechtigungen)",
+   "text": "Besonders sensibel: Schild mit Schlüssel 'sensible Berechtigungen', Automatisierung auf 'nicht', Weg endet am Kreuz auf 'ungeprüft', Mensch prüft auf 'Automatisierung' und Stempel 'ERST PRÜFEN' (91,45 s), vor 'überlassen'",
+   "start": 87.39,
+   "ende": 92.4,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 87.39,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 89.91,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 91.45,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "Aber (mein wichtigstes Learning) / Huel / Skalierung / Backoffice / Werbekonto",
+   "text": "Das wichtigste Learning: Glühbirne, 'Mein Learning', Huel-Logo auf 'Huel'; Zeitstrahl 'Skalierung beginnt …' mit Backoffice und Werbekonto, Startflagge rückt auf 'viel früher' vom Werbekonto nach vorn, Backoffice leuchtet auf 'Backoffice', Werbekonto wird grau 'nicht erst hier'",
+   "start": 92.4,
+   "ende": 102.82,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 92.4,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 94.86,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 96.74,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 98.32,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 100.2,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Wenn / Plus",
+   "text": "Folgen-Karte groß und mittig (560 × 200, Mitte x 540), Plus wie bei TikTok, getippt auf 'Plus' (106,71 s), Haken bleibt bis zum Schluss (110,1 s)",
+   "start": 102.82,
+   "ende": 110.075,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 102.82,
+     "volume": 0.1
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 106.71,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

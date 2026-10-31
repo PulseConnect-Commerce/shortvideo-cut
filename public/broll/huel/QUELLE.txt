@@ -1,0 +1,47 @@
+Hintergründe, Quelle und Logo für M08 · Huel (alle am 31.10.2026 mit Playwright/Chromium ohne Login in der Handy-Ansicht
+432 css-px, 2,5-fach = 1080 px breit, aufgenommen; Cookie-Hinweis bestätigt, schwebende Knöpfe und Popups ausgeblendet, sonst
+nichts verändert). de.huel.com ist die deutsche Seite von Huel; sie leitet nach Standort auf huel.com (USA) um, darum mit dem
+Cookie huel_locale=de-DE aufgerufen (dasselbe, was die Länderauswahl der Seite setzt); die Standort-Leiste, die nur Besucher aus
+dem Ausland sehen, ist ausgeblendet. Aufnahme: hyperframes/huel-hg/aufnahme.cjs (Überschriften, Bilder und Markierungen mit css-y
+in hyperframes/huel-hg/screenshots/aufnahme.json; die Bilder der ganzen Seiten lagen wegen des knappen Speichers nur in /dev/shm),
+gestaltet mit hyperframes/huel-hg/gestalte.py (Abschnitte derselben Seite untereinander, meist oben die Kopfleiste von
+de.huel.com mit dem Huel-Logo, leicht weichgezeichnet und leicht abgedunkelt, nach unten etwas mehr; nichts dazugemalt).
+Keine Abschnitte mit Gesundheits- oder Wirkversprechen, keine Prominenten-Fotos.
+
+Hintergründe hinter ihm (Video.tsx HG, in den Take gerechnet mit npm run portrait --hintergrund):
+- hg-produkte.png: Startseite, Produktbild (Beutel, Flaschen) und "Ernährung auf deine Art" (Kategorien Huel Bestseller,
+  Pulvermahlzeiten, Supergreens Pulver, Trinkmahlzeiten, Herzhafte Mahlzeiten, Snacks)  https://de.huel.com/
+- hg-bestseller.png: Startseite, "Huel Bestseller – Entdecke unsere beliebtesten Produkte" mit Black Edition  https://de.huel.com/
+- hg-sortiment.png: "Alle Produkte – Entdecke unser gesamtes Sortiment", erste Reihe (Black Edition, Lite Ready-to-drink)
+  https://de.huel.com/collections/other-huel-products
+- hg-teams.png: Karriereseite "Our Workspaces": Kacheln "London, UK" (Büro), "Milton Keynes Factory, UK", "Global HQ, Tring, UK"
+  (ohne Personen)  https://careers.huel.com/locations
+- hg-laender.png: Länderauswahl "Alle Läden" (Europa) im Seitenfuß von de.huel.com (Knopf "DE"), nichts ausgewählt
+  https://de.huel.com/
+- hg-standorte.png: Karriereseite "Our Workspaces": Karte der Standorte, Kacheln "New York City, USA", "Germany", "London, UK"
+  https://careers.huel.com/locations
+- hg-recruiting.png: Karriereseite "Current Vacancies": Stellen "Amazon Marketplace Manager" und "Key Account Manager LEH -
+  Germany" mit ihren Produktfotos (ohne Gesichter)  https://careers.huel.com/jobs
+- hg-neu.png: "Alle Produkte", Reihe mit "NEU" (Black Edition Ramen, Lite Ramen) und "Bestseller Bundle"
+  https://de.huel.com/collections/other-huel-products
+- hg-logistik.png: Karriereseite "Our Teams": Kacheln "Logistics", "Manufacturing", "Product Supply"
+  https://careers.huel.com/departments
+- hg-marke.png: "Über Huel", Produktbild (Beutel, Flaschen), darunter "Bestseller Bundle" aus "Alle Produkte"
+  https://de.huel.com/pages/ueber-uns  https://de.huel.com/collections/other-huel-products
+- hg-backoffice.png: Karriereseite "Our Workspaces" (Kopf: Büro mit Huel-Logo und Bank "@huel", ohne Personen)
+  https://careers.huel.com/locations
+Die Kopfleiste (Menü, Huel-Logo, Konto, Warenkorb) ist auf allen Seiten von de.huel.com gleich; sie stammt aus der Aufnahme von
+"Alle Produkte". careers.huel.com ist im Seitenfuß von de.huel.com als "Karriere" verlinkt (englischsprachig, eine deutsche
+Karriereseite gibt es nicht).
+
+Quelle groß (Video.tsx QUELLEN, zugeschnitten mit hyperframes/huel-hg/quelle.py):
+- quelle-fallstudie.jpg: Shopify-Fallstudie aus dem Briefing, "With the new Shopify Plus Admin, Huel onboards staff 9X faster"
+  (Überschrift markiert) | Liste "Huel has enjoyed:" mit "An ability to onboard new staff 9x faster" und "Functionality to
+  quickly assign, and unassign, new staff roles across its global workforce" (markiert); dünne Linie = ausgelassene Stelle
+  (Titelbild, Branche, Einleitung)  https://www.shopify.com/de/case-studies/huel
+  Die Seite nennt kein Veröffentlichungsdatum; "Stand 2020" aus dem Text der Fallstudie: gegründet 2015, "Five years on",
+  "turned over £10 million in March 2020 alone".
+
+Logo:
+- huel-logo.svg: Huel-Logo aus dem Seitenkopf von de.huel.com (https://de.huel.com/sprites/brand.svg, Symbol "huel-logo"),
+  unverändert, in der Farbe des Seitenkopfs (rgb 12,12,13 auf Weiß)

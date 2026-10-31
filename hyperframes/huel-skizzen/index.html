@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>M08 · Huel – Erklär-Bilder, Learnings und Folgen-Karte</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- Serie M "Marken-Story", M08 · Huel. Vorlage hyperframes/ooia-skizzen (M09) und hyperframes/purelei-skizzen (M02) mit
+         Pauls Regeln: er steht oben (Kopfoberkante ~320), darum stehen die Erklär-Bilder auf der hellen Karte UNTER Kopf und Pille
+         (x 80-900, y 1158-1494; Instagram-Zone ab 1500); Erklär-Bilder statt Wortkarten (karten-aufbau.md "Visuelle Metaphern"),
+         die drei Händler-Learnings als Checkliste "Dokumentation" / "Rechte" / "Automation" (Bildplan im Briefing) oben in den
+         Tipp-Karten, die Kennzahl "9×" nur so, wie die Shopify-Fallstudie sie belegt (Team-Onboarding, Stand 2020, keine
+         Garantie), am Ende die große mittige Folgen-Karte mit dem TikTok-Plus (karten-aufbau.md Punkt 7), getippt auf "Plus".
+         Das originale Huel-Logo (assets/huel-logo.svg, de.huel.com/sprites/brand.svg#huel-logo aus dem Seitenkopf, unverändert,
+         Farbe wie dort). Echte Seiten (de.huel.com und careers.huel.com als Hintergrund, Shopify-Fallstudie als "Quelle groß")
+         laufen in Remotion (src/projekte/huel/Video.tsx); im Quellen-Fenster (28,5-34,4 s) blenden diese Karten dort aus.
+         Keine Gesundheits- oder Wirkversprechen zu Ernährung; nur Inhalte aus Take, Skript und Quelle, keine erfundenen Zahlen.
+         Icons Lucide (ISC), Schriften Geist, Instrument Serif, Caveat (OFL, lokal). Zeiten = Sekunden im geschnittenen Video
+         (src/projekte/huel/cut.json, 110,1 s), Teile 2 Frames vor ihrem Wort; Liste mit Tönen in src/projekte/huel/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1158px; width: 820px; height: 336px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; z-index: 2; left: 30px; top: 18px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 46px; width: 820px; height: 290px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 30px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #9aa3af; }
+      .klein { font-size: 24px; font-weight: 700; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #2a9ed8; }
+      .hand.gruen { fill: #00b877; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.grau { stroke: #9aa3af; }
+      .ico.weiss { stroke: #ffffff; }
+      .gtext { fill: url(#gv); }
+      .zug { fill: none; stroke: url(#gvu); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .grauzug { fill: none; stroke: #9aa3af; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 0.04em; }
+
+      /* Quellenzeile unter dem Hook-Titel (Briefing 0-6 s: "Huel + '9× schneller' mit Quellhinweis") */
+      #hookq { position: absolute; left: 0; top: 1418px; width: 980px; display: flex; justify-content: center; opacity: 0; }
+      #hookq span { white-space: nowrap; background: rgba(10, 12, 14, 0.86); color: #ffffff; border-radius: 14px; padding: 8px 18px 9px;
+        font-size: 30px; font-weight: 600; letter-spacing: 0.01em; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); }
+      #hookq b { color: #00e090; font-weight: 700; }
+
+      /* Logo-Feld: das originale Logo aus dem Seitenkopf von de.huel.com, unverändert (dunkel auf Weiß wie dort) */
+      .logofeld { position: absolute; left: 34px; top: 68px; width: 320px; height: 160px; border-radius: 26px; background: #ffffff; border: 2px solid #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .logofeld img { width: 220px; height: auto; display: block; }
+
+      /* Checkliste der drei Learnings (oben in den Tipp-Karten): erledigt grau mit Haken, aktiv mit Verlaufsrand */
+      .leiste { position: absolute; z-index: 2; left: 26px; top: 14px; display: flex; gap: 10px; }
+      .stufe { position: relative; display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px 0 6px; border-radius: 21px; background: #ffffff; border: 2.5px solid #d1d5db; font-size: 22px; font-weight: 800; color: #9aa3af; white-space: nowrap; }
+      .stufe .nr { width: 30px; height: 30px; border-radius: 15px; background: #e5e7eb; color: #6b7280; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+      .stufe.aktiv { border-color: transparent; color: #0b0c0e; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(90deg, #00d088, #31adec) border-box; }
+      .stufe.aktiv .nr { background: linear-gradient(135deg, #00e090, #31adec); color: #0b0c0e; }
+      .stufe.fertig { color: #6b7280; }
+      .stufe.fertig .nr { background: #0b0c0e; color: #ffffff; }
+      .ziffer { position: absolute; left: 18px; top: 70px; width: 120px; text-align: center; font-family: "Instrument Serif", serif; font-size: 210px; line-height: 1; }
+
+      /* Kennzahl */
+      .zahl { position: absolute; left: 20px; top: 60px; width: 270px; text-align: center; font-family: "Instrument Serif", serif; font-size: 200px; line-height: 1; opacity: 0; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, groß und waagerecht mittig, Plus wie bei TikTok (Pauls Vorgabe 30.10.,
+         karten-aufbau.md Punkt 7, Vorlage hyperframes/ooia-skizzen K12): 560 x 200, Kartenmitte x 540, Avatar 150, Plus 64,
+         "Folgen" 72 px, an der Kartenposition unter Kopf und Pille */
+      .folgekarte { position: absolute; left: 260px; top: 1158px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+      .avatar { position: absolute; left: 34px; top: 18px; width: 150px; height: 150px; border-radius: 75px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 84px; height: 84px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      #fplus { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; overflow: visible; }
+      #fring { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #31adec; opacity: 0; }
+      .ftext { position: absolute; left: 224px; top: 56px; font-size: 72px; line-height: 88px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 56px; height: 56px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 56px; height: 56px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="huel-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="110.075">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvu" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="820" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3faf1" /><stop offset="1" stop-color="#e2f2fc" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24 x 24 -->
+          <g id="i-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="i-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></g>
+          <g id="i-usercheck"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><polyline points="16 11 18 13 22 9" /></g>
+          <g id="i-msg"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></g>
+          <g id="i-msgq"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></g>
+          <g id="i-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /><path d="m7.5 4.27 9 5.15" /></g>
+          <g id="i-mega"><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></g>
+          <g id="i-file"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></g>
+          <g id="i-sparkles"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></g>
+          <g id="i-shield"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /></g>
+          <g id="i-bulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
+          <g id="i-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></g>
+          <g id="i-uhr"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></g>
+          <g id="i-globus"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></g>
+          <g id="i-kalender"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></g>
+          <g id="i-trend"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></g>
+          <g id="i-repeat"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" /></g>
+          <g id="i-wrench"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></g>
+          <g id="i-clipboard"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /></g>
+          <g id="i-key"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" /><circle cx="16.5" cy="7.5" r=".5" /></g>
+          <g id="i-gear"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" /></g>
+          <g id="i-warn"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></g>
+          <g id="i-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></g>
+          <!-- Zustände -->
+          <g id="kreuz"><circle r="20" fill="#9aa3af" /><path d="M-7 -7 L7 7 M7 -7 L-7 7" stroke="#fff" stroke-width="4" stroke-linecap="round" /></g>
+          <g id="haken"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 L-2 6 L9 -6" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="frage"><circle r="20" fill="#fff" stroke="#9aa3af" stroke-width="2.5" /><text y="9" text-anchor="middle" style="font-size:26px;font-weight:800;fill:#6b7280">?</text></g>
+          <g id="zeigerform"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+          <!-- eigene schlichte Linienzeichnungen (kein Nachbau der Huel-Verpackung, keine Marke): Beutel, Flasche, Schale, 100 x 100 -->
+          <symbol id="beutel" viewBox="0 0 100 100"><path d="M24 14 H76 L80 88 a4 4 0 0 1 -4 4 H24 a4 4 0 0 1 -4 -4 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" /><path d="M24 26 H76" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.5" /></symbol>
+          <symbol id="flasche" viewBox="0 0 100 100"><path d="M40 6 H60 V20 C 70 26, 72 32, 72 40 V88 a6 6 0 0 1 -6 6 H34 a6 6 0 0 1 -6 -6 V40 C 28 32, 30 26, 40 20 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" /><path d="M30 50 H70 M30 74 H70" fill="none" stroke="currentColor" stroke-width="3" opacity="0.5" /></symbol>
+          <symbol id="schale" viewBox="0 0 100 100"><path d="M12 46 H88 C 88 70, 72 86, 50 86 C 28 86, 12 70, 12 46 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" /><path d="M36 36 C 32 28, 40 24, 36 16 M52 36 C 48 28, 56 24, 52 16 M68 36 C 64 28, 72 24, 68 16" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.6" /></symbol>
+          <!-- Laden-Kachel mit Ländercode, 200 x 70 -->
+          <symbol id="laden" viewBox="0 0 200 70" overflow="visible"><rect x="0" y="0" width="200" height="70" rx="18" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(16 17) scale(1.5)" fill="none" stroke="#0b0c0e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-store" /></g></symbol>
+        </defs>
+      </svg>
+
+      <!-- K0 Quellenzeile unter dem Hook-Titel: auf "Shopify-Studie" (1,82) bis zum Ende des Hooks (~7,0) -->
+      <div id="hookq" class="clip" data-start="0" data-duration="7.3" data-track-index="2"><span><b>QUELLE</b>&nbsp; Shopify-Fallstudie · Stand 2020</span></div>
+
+      <!-- K1 Die Marke: "Und die Marke nennt sich Huel. Die hast du bestimmt schon auch einmal gehört. Das sind unkomplizierte
+           Mahlzeiten für Menschen, die einfach wenig Zeit haben." Und 7,32 (Karte, originales Logo) / Huel 8,22 ("Human + Fuel",
+           so erklärt die Fallstudie und die Seite "Über uns" den Namen) / unkomplizierte 11,00 (Beutel, Flasche, Schale) /
+           Mahlzeiten 11,66 / Menschen 12,32 (Person) / wenig 13,54 (Uhr, "wenig Zeit") -->
+      <section id="k1" class="karte clip" data-start="7.25" data-duration="7.12" data-track-index="1">
+        <div class="kicker">Die Marke</div>
+        <div class="logofeld"><img src="assets/huel-logo.svg" alt="Huel" /></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <text id="k1-name" x="194" y="252" text-anchor="middle" class="hand gruen" style="font-size:46px">Human + Fuel</text>
+          <g id="k1-p1"><rect x="392" y="10" width="124" height="136" rx="22" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><use href="#beutel" x="404" y="20" width="100" height="110" style="color:#0b0c0e" /></g>
+          <g id="k1-p2"><rect x="530" y="10" width="124" height="136" rx="22" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><use href="#flasche" x="542" y="22" width="100" height="110" style="color:#0b0c0e" /></g>
+          <g id="k1-p3"><rect x="668" y="10" width="124" height="136" rx="22" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><use href="#schale" x="680" y="22" width="100" height="110" style="color:#0b0c0e" /></g>
+          <text id="k1-mahl" x="592" y="186" text-anchor="middle" class="lab" style="font-size:32px">unkomplizierte Mahlzeiten</text>
+          <g id="k1-mensch"><circle cx="420" cy="244" r="32" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(402 226) scale(1.5)" class="ico"><use href="#i-user" /></g></g>
+          <g id="k1-uhr"><circle cx="500" cy="244" r="32" fill="url(#gvd)" /><g transform="translate(482 226) scale(1.5)" class="ico"><use href="#i-uhr" /></g></g>
+          <text id="k1-zeit" x="664" y="262" text-anchor="middle" class="hand gruen" style="font-size:50px">wenig Zeit</text>
+        </svg>
+      </section>
+
+      <!-- K2 Hinter dem Shop: "Aber die spannende Geschichte spielt tatsächlich diesmal hinter dem Online-Shop." Aber 14,44 (Karte,
+           Schaufenster des Shops) / Geschichte 15,30 (Produkte im Shop) / diesmal 16,64 (Pfeil) / hinter 17,50 (dahinter schiebt sich
+           der Bereich hinter dem Shop heraus: Zahnräder, Team, Pakete) / Online-Shop 17,94 (Beschriftung) -->
+      <section id="k2" class="karte clip" data-start="14.37" data-duration="3.99" data-track-index="1">
+        <div class="kicker">Die spannende Geschichte</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k2-hinten">
+            <rect x="420" y="18" width="370" height="214" rx="22" fill="#e9eef3" stroke="#9aa3af" stroke-width="2.5" stroke-dasharray="10 8" />
+            <g transform="translate(446 44) scale(3)" class="ico"><use href="#i-gear" /></g>
+            <g transform="translate(530 96) scale(2.2)" class="ico"><use href="#i-gear" /></g>
+            <g transform="translate(610 44) scale(3)" class="ico"><use href="#i-users" /></g>
+            <g transform="translate(700 120) scale(2.4)" class="ico"><use href="#i-package" /></g>
+            <text x="605" y="214" text-anchor="middle" class="klein" style="font-size:24px">dahinter</text>
+          </g>
+          <g id="k2-shop">
+            <rect x="60" y="18" width="330" height="214" rx="22" fill="#fff" stroke="#0b0c0e" stroke-width="3" />
+            <path d="M60 58 H390" stroke="#d1d5db" stroke-width="2.5" />
+            <circle cx="86" cy="38" r="7" fill="#d1d5db" /><circle cx="108" cy="38" r="7" fill="#d1d5db" /><circle cx="130" cy="38" r="7" fill="#d1d5db" />
+            <g id="k2-waren">
+              <rect x="84" y="78" width="88" height="96" rx="12" fill="url(#gvl)" /><use href="#beutel" x="96" y="86" width="64" height="80" style="color:#0b0c0e" />
+              <rect x="182" y="78" width="88" height="96" rx="12" fill="url(#gvl)" /><use href="#flasche" x="194" y="86" width="64" height="80" style="color:#0b0c0e" />
+              <rect x="280" y="78" width="88" height="96" rx="12" fill="url(#gvl)" /><use href="#schale" x="292" y="90" width="64" height="76" style="color:#0b0c0e" />
+              <rect x="84" y="186" width="284" height="30" rx="10" fill="#0b0c0e" />
+            </g>
+          </g>
+          <text id="k2-lab" x="225" y="276" text-anchor="middle" class="lab" style="font-size:30px">Online-Shop</text>
+          <text id="k2-hand" x="605" y="272" text-anchor="middle" class="hand gruen" style="font-size:48px">hinter dem Shop</text>
+          <path id="k2-pfeil" pathLength="1" d="M392 64 C 420 40, 446 40, 472 58" class="zug" style="stroke-width:5" />
+        </svg>
+      </section>
+
+      <!-- K3 International: "Denn sobald eine Marke international verkauft, entstehen einfach ganz andere Herausforderungen." Denn 18,42
+           (Karte, Marke mit Globus) / international 19,40 (drei Länder-Shops) / verkauft 20,08 (Wege zu den Shops) / ganz 21,36
+           (Warnzeichen) / Herausforderungen 21,92 (Schrift) -->
+      <section id="k3" class="karte clip" data-start="18.36" data-duration="4.24" data-track-index="1">
+        <div class="kicker">Sobald eine Marke international verkauft</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k3-marke">
+            <circle cx="130" cy="120" r="88" fill="url(#gvl)" />
+            <g transform="translate(70 60) scale(5)" class="ico" style="stroke-width:1.6"><use href="#i-globus" /></g>
+          </g>
+          <path id="k3-w1" pathLength="1" d="M222 100 C 300 60, 360 40, 440 40" class="zug" style="stroke-width:5" />
+          <path id="k3-w2" pathLength="1" d="M222 122 L 440 122" class="zug" style="stroke-width:5" />
+          <path id="k3-w3" pathLength="1" d="M222 144 C 300 184, 360 204, 440 204" class="zug" style="stroke-width:5" />
+          <g id="k3-s1" class="k3-s"><use href="#laden" x="450" y="6" width="200" height="70" /><text x="560" y="52" class="lab" style="font-size:30px">DE</text><use class="k3-w" href="#i-warn" x="0" y="0" transform="translate(668 18) scale(1.9)" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" /></g>
+          <g id="k3-s2" class="k3-s"><use href="#laden" x="450" y="88" width="200" height="70" /><text x="560" y="134" class="lab" style="font-size:30px">UK</text><use class="k3-w" href="#i-warn" x="0" y="0" transform="translate(668 100) scale(1.9)" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" /></g>
+          <g id="k3-s3" class="k3-s"><use href="#laden" x="450" y="170" width="200" height="70" /><text x="560" y="216" class="lab" style="font-size:30px">US</text><use class="k3-w" href="#i-warn" x="0" y="0" transform="translate(668 182) scale(1.9)" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" /></g>
+          <text id="k3-hand" x="410" y="284" text-anchor="middle" class="hand gruen" style="font-size:44px">ganz andere Herausforderungen</text>
+        </svg>
+      </section>
+
+      <!-- K4 Märkte, Zugänge, Mitarbeitende (Bildplan: Mehrmärkte-/Mitarbeiter-Zugriffs-Grafik): "Denn du hast verschiedene Märkte,
+           mehrere Shopzugänge und Mitarbeiter, die einfach schnell mit den richtigen Berechtigungen loslegen müssen." Denn 22,67
+           (Karte) / Märkte 23,53 (drei Shops) / Shopzugänge 24,42 (Schloss je Shop) / Mitarbeiter 25,25 (drei Personen) /
+           schnell 26,19 (Wege) / Berechtigungen 27,19 (Schlüssel) / loslegen 27,80 (Haken) -->
+      <section id="k4" class="karte clip" data-start="22.60" data-duration="5.85" data-track-index="1">
+        <div class="kicker">Märkte, Zugänge, Mitarbeitende</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k4-team">
+            <g class="k4-p"><circle cx="90" cy="46" r="34" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(72 28) scale(1.5)" class="ico"><use href="#i-user" /></g><use class="k4-ok" href="#haken" x="124" y="24" opacity="0" /></g>
+            <g class="k4-p"><circle cx="90" cy="134" r="34" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(72 116) scale(1.5)" class="ico"><use href="#i-user" /></g><use class="k4-ok" href="#haken" x="124" y="112" opacity="0" /></g>
+            <g class="k4-p"><circle cx="90" cy="222" r="34" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(72 204) scale(1.5)" class="ico"><use href="#i-user" /></g><use class="k4-ok" href="#haken" x="124" y="200" opacity="0" /></g>
+          </g>
+          <text id="k4-tlab" x="90" y="284" text-anchor="middle" class="klein" style="font-size:24px">Team</text>
+          <path class="k4-w zug" pathLength="1" d="M150 46 C 300 46, 380 46, 560 46" style="stroke-width:5" />
+          <path class="k4-w zug" pathLength="1" d="M150 134 C 300 134, 380 134, 560 134" style="stroke-width:5" />
+          <path class="k4-w zug" pathLength="1" d="M150 222 C 300 222, 380 222, 560 222" style="stroke-width:5" />
+          <g class="k4-k"><circle cx="356" cy="46" r="24" fill="#fff" stroke="url(#gv)" stroke-width="3" /><g transform="translate(344 34)" class="ico"><use href="#i-key" /></g></g>
+          <g class="k4-k"><circle cx="356" cy="134" r="24" fill="#fff" stroke="url(#gv)" stroke-width="3" /><g transform="translate(344 122)" class="ico"><use href="#i-key" /></g></g>
+          <g class="k4-k"><circle cx="356" cy="222" r="24" fill="#fff" stroke="url(#gv)" stroke-width="3" /><g transform="translate(344 210)" class="ico"><use href="#i-key" /></g></g>
+          <text id="k4-hand" x="356" y="284" text-anchor="middle" class="hand gruen" style="font-size:40px">richtige Rechte</text>
+          <g class="k4-m"><use href="#laden" x="570" y="11" width="200" height="70" /><text x="680" y="57" class="lab" style="font-size:30px">DE</text><g class="k4-l" transform="translate(782 30) scale(1.3)"><use href="#i-lock" class="ico" /></g></g>
+          <g class="k4-m"><use href="#laden" x="570" y="99" width="200" height="70" /><text x="680" y="145" class="lab" style="font-size:30px">UK</text><g class="k4-l" transform="translate(782 118) scale(1.3)"><use href="#i-lock" class="ico" /></g></g>
+          <g class="k4-m"><use href="#laden" x="570" y="187" width="200" height="70" /><text x="680" y="233" class="lab" style="font-size:30px">US</text><g class="k4-l" transform="translate(782 206) scale(1.3)"><use href="#i-lock" class="ico" /></g></g>
+          <text id="k4-mlab" x="670" y="284" text-anchor="middle" class="klein" style="font-size:24px">Märkte</text>
+        </svg>
+      </section>
+
+      <!-- K5 Kennzahl (Briefing: 9x nur Team-Onboarding laut historischer Shopify-Fallstudie): "Und das Onboarding neuer
+           Mitarbeitender wurde dadurch einfach um neunmal schneller." Und 34,47 (Karte, neue Person, Balken "vorher") / neunmal
+           37,76 ("9×" zählt hoch, Balken schrumpft auf ein Neuntel) / schneller 38,33 (Blitz). Quelle mit Jahr in der Karte -->
+      <section id="k5" class="karte clip" data-start="34.40" data-duration="5.18" data-track-index="1">
+        <div class="kicker">Onboarding neuer Mitarbeitender</div>
+        <div class="zahl" id="k5-zahl"><span class="verlauf"><span id="k5-n">1</span>×</span></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k5-person"><circle cx="150" cy="118" r="80" fill="url(#gvl)" /><g transform="translate(102 70) scale(4)" class="ico"><use href="#i-usercheck" /></g></g>
+          <text x="330" y="44" class="klein" style="font-size:26px">Zeit pro Onboarding</text>
+          <text x="330" y="100" class="lab grau" style="font-size:28px">vorher</text>
+          <rect id="k5-alt" x="460" y="74" width="330" height="36" rx="18" fill="#cbd5e1" />
+          <text id="k5-neutext" x="330" y="168" class="lab" style="font-size:28px">jetzt</text>
+          <rect id="k5-neu" x="460" y="142" width="330" height="36" rx="18" fill="url(#gv)" />
+          <g id="k5-blitz"><g transform="translate(520 132) scale(2.2)" class="ico"><use href="#i-zap" /></g></g>
+          <text id="k5-hand" x="640" y="176" class="hand gruen" style="font-size:50px">schneller</text>
+          <text id="k5-q" x="330" y="262" class="klein" style="font-size:26px">laut Shopify-Fallstudie · Stand 2020</text>
+        </svg>
+      </section>
+
+      <!-- K6 Einordnung: "Das ist tatsächlich eine historische Fallstudienangabe und keine Garantie, dass das natürlich bei jedem
+           Online-Shop genauso klappt." Das 39,64 (Karte) / historische 40,68 (Kalender 2020) / Garantie 43,14 (Stempel) / jedem 44,45
+           (drei Shops) / genauso 45,24 (Fragezeichen) -->
+      <section id="k6" class="karte clip" data-start="39.58" data-duration="6.47" data-track-index="1">
+        <div class="kicker">Einordnung</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k6-kal">
+            <rect x="40" y="16" width="190" height="190" rx="26" fill="#fff" stroke="#0b0c0e" stroke-width="3" />
+            <rect x="40" y="16" width="190" height="52" rx="26" fill="url(#gvd)" /><rect x="40" y="44" width="190" height="24" fill="url(#gvd)" />
+            <text x="135" y="162" text-anchor="middle" style="font-family:'Instrument Serif',serif;font-size:84px;fill:#0b0c0e">2020</text>
+          </g>
+          <text id="k6-hist" x="150" y="250" text-anchor="middle" class="lab" style="font-size:26px">historische Angabe</text>
+          <g id="k6-stempel" transform="translate(400 120) rotate(-8)">
+            <rect x="-150" y="-50" width="300" height="100" rx="16" fill="none" stroke="#0b0c0e" stroke-width="5" />
+            <text x="0" y="-6" text-anchor="middle" style="font-size:34px;font-weight:900;letter-spacing:0.06em;fill:#0b0c0e">KEINE</text>
+            <text x="0" y="34" text-anchor="middle" style="font-size:34px;font-weight:900;letter-spacing:0.06em;fill:#0b0c0e">GARANTIE</text>
+          </g>
+          <g id="k6-shops">
+            <g class="k6-s"><rect x="590" y="12" width="84" height="76" rx="16" class="rahmen" /><g transform="translate(614 32) scale(1.5)" class="ico"><use href="#i-store" /></g><use href="#haken" x="676" y="16" /></g>
+            <g class="k6-s"><rect x="700" y="12" width="84" height="76" rx="16" class="rahmen" /><g transform="translate(724 32) scale(1.5)" class="ico"><use href="#i-store" /></g><use class="k6-q" href="#frage" x="786" y="16" /></g>
+            <g class="k6-s"><rect x="590" y="110" width="84" height="76" rx="16" class="rahmen" /><g transform="translate(614 130) scale(1.5)" class="ico"><use href="#i-store" /></g><use class="k6-q" href="#frage" x="676" y="114" /></g>
+            <g class="k6-s"><rect x="700" y="110" width="84" height="76" rx="16" class="rahmen" /><g transform="translate(724 130) scale(1.5)" class="ico"><use href="#i-store" /></g><use class="k6-q" href="#frage" x="786" y="114" /></g>
+          </g>
+          <text id="k6-hand" x="688" y="250" text-anchor="middle" class="hand gruen" style="font-size:46px">bei jedem Shop?</text>
+        </svg>
+      </section>
+
+      <!-- K7 Worüber viele reden: "Aber was ich als E-Commerce-Experte hier besonders interessant finde, ist, dass viele immer nur bei
+           Wachstum über Ads sprechen oder auch über Produkte und Umsatzrekorde." Aber 46,12 (Karte, Glühbirne) / interessant 48,36
+           (Schrift) / viele 49,63 (drei Sprechblasen) / Wachstum 50,95 (Titel) / Ads 51,74 / Produkte 52,95 / Umsatzrekorde 53,80 -->
+      <section id="k7" class="karte clip" data-start="46.05" data-duration="8.62" data-track-index="1">
+        <div class="kicker">Bei Wachstum reden viele über</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k7-a">
+            <circle cx="140" cy="130" r="92" fill="url(#gvl)" />
+            <g transform="translate(86 76) scale(4.5)" class="ico"><use href="#i-bulb" /></g>
+            <text id="k7-int" x="520" y="150" text-anchor="middle" class="hand gruen" style="font-size:66px">besonders interessant</text>
+          </g>
+          <g id="k7-b">
+            <g id="k7-viele">
+              <g transform="translate(20 20) scale(3)" class="ico grau"><use href="#i-msg" /></g>
+              <g transform="translate(70 100) scale(3)" class="ico grau"><use href="#i-msg" /></g>
+              <g transform="translate(20 180) scale(3)" class="ico grau"><use href="#i-msg" /></g>
+            </g>
+            <g class="k7-t" id="k7-t1"><rect x="160" y="40" width="190" height="190" rx="26" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(211 70) scale(3.7)" class="ico"><use href="#i-mega" /></g><text x="255" y="206" text-anchor="middle" class="lab" style="font-size:34px">Ads</text></g>
+            <g class="k7-t" id="k7-t2"><rect x="370" y="40" width="190" height="190" rx="26" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(421 70) scale(3.7)" class="ico"><use href="#i-package" /></g><text x="465" y="206" text-anchor="middle" class="lab" style="font-size:30px">Produkte</text></g>
+            <g class="k7-t" id="k7-t3"><rect x="580" y="40" width="210" height="190" rx="26" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(641 70) scale(3.7)" class="ico"><use href="#i-trend" /></g><text x="685" y="206" text-anchor="middle" class="lab" style="font-size:26px">Umsatzrekorde</text></g>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K8 Eisberg: "Aber oft entscheiden einfach dann die Prozesse im Hintergrund darüber, wie gut tatsächlich wirklich jemand
+           skalieren kann." Aber 54,74 (Karte, Spitze mit Ads/Produkte/Umsatz über der Wasserlinie) / Prozesse 55,95 (der große Teil
+           darunter) / Hintergrund 56,68 (Schrift) / skalieren 59,48 (Pfeil nach oben) -->
+      <section id="k8" class="karte clip" data-start="54.67" data-duration="5.77" data-track-index="1">
+        <div class="kicker">Was wirklich entscheidet</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <rect x="0" y="92" width="820" height="210" fill="#e2f2fc" opacity="0.7" />
+          <path d="M0 92 H820" stroke="#31adec" stroke-width="3" stroke-dasharray="14 10" />
+          <g id="k8-spitze">
+            <path d="M250 92 L 300 22 L 340 46 L 380 6 L 430 60 L 470 92 Z" fill="#fff" stroke="#0b0c0e" stroke-width="3" stroke-linejoin="round" />
+            <g transform="translate(290 50) scale(1.3)" class="ico"><use href="#i-mega" /></g>
+            <g transform="translate(352 34) scale(1.3)" class="ico"><use href="#i-package" /></g>
+            <g transform="translate(410 60) scale(1.1)" class="ico"><use href="#i-trend" /></g>
+          </g>
+          <g id="k8-koerper">
+            <path d="M250 92 L 470 92 L 560 150 L 590 230 L 520 284 L 220 284 L 150 220 L 180 140 Z" fill="url(#gvl)" stroke="url(#gv)" stroke-width="4" stroke-linejoin="round" />
+            <g id="k8-zahn" transform="translate(236 150) scale(3)" class="ico"><use href="#i-gear" /></g>
+            <text x="440" y="214" text-anchor="middle" class="lab" style="font-size:40px">Prozesse</text>
+          </g>
+          <text id="k8-hand" x="440" y="266" text-anchor="middle" class="hand gruen" style="font-size:40px">im Hintergrund</text>
+          <g id="k8-skal">
+            <path id="k8-pfeil" pathLength="1" d="M700 270 L 700 70" class="zug" style="stroke-width:8" />
+            <path id="k8-spitzepf" d="M676 96 L 700 64 L 724 96" fill="none" stroke="#31adec" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+            <text x="700" y="40" text-anchor="middle" class="lab" style="font-size:28px">skalieren</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- T1 Learning 1 · Dokumentation: "Mein erster Tipp daher, dokumentiere einfach wichtige Aufgaben, bevor immer nur eine
+           Person im Team weiß, wie hier immer alles funktioniert." Mein 60,51 (Karte, Leiste, Ziffer) / dokumentiere 61,80 (Dokument
+           zeichnet sich) / Aufgaben 63,25 (Punkte mit Haken) / Person 64,88 (eine Person weiß alles) / Team 65,31 (die anderen mit
+           Fragezeichen) / funktioniert 66,88 (Dokument geht an alle, Haken) -->
+      <section id="t1" class="karte clip" data-start="60.44" data-duration="7.02" data-track-index="1">
+        <div class="leiste">
+          <div class="stufe aktiv"><span class="nr">1</span>Dokumentation</div>
+          <div class="stufe"><span class="nr">2</span>Rechte</div>
+          <div class="stufe"><span class="nr">3</span>Automation</div>
+        </div>
+        <div class="ziffer"><span class="verlauf">1</span></div>
+        <svg class="buehne" viewBox="0 0 820 290" style="top:58px">
+          <g id="t1-doc">
+            <rect x="150" y="10" width="200" height="250" rx="22" fill="#fff" stroke="url(#gv)" stroke-width="3.5" />
+            <g transform="translate(168 24) scale(1.6)" class="ico"><use href="#i-file" /></g>
+            <text x="214" y="58" class="lab" style="font-size:26px">Abläufe</text>
+            <g class="t1-z"><use href="#haken" x="184" y="104" transform="translate(184 104) scale(0.6) translate(-184 -104)" /><path d="M204 104 H326" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" /></g>
+            <g class="t1-z"><use href="#haken" x="184" y="148" transform="translate(184 148) scale(0.6) translate(-184 -148)" /><path d="M204 148 H310" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" /></g>
+            <g class="t1-z"><use href="#haken" x="184" y="192" transform="translate(184 192) scale(0.6) translate(-184 -192)" /><path d="M204 192 H322" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" /></g>
+            <g class="t1-z"><use href="#haken" x="184" y="236" transform="translate(184 236) scale(0.6) translate(-184 -236)" /><path d="M204 236 H300" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" /></g>
+          </g>
+          <g id="t1-einer">
+            <circle cx="480" cy="92" r="44" fill="url(#gvd)" /><g transform="translate(456 68) scale(2)" class="ico"><use href="#i-user" /></g>
+            <g transform="translate(462 4) scale(1.5)" class="ico"><use href="#i-bulb" /></g>
+            <text x="480" y="170" text-anchor="middle" class="klein" style="font-size:24px">nur eine Person</text>
+          </g>
+          <g id="t1-team">
+            <g class="t1-p"><circle cx="620" cy="70" r="34" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(602 52) scale(1.5)" class="ico grau"><use href="#i-user" /></g><use class="t1-q" href="#frage" x="654" y="44" /><use class="t1-ok" href="#haken" x="654" y="44" opacity="0" /></g>
+            <g class="t1-p"><circle cx="720" cy="140" r="34" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(702 122) scale(1.5)" class="ico grau"><use href="#i-user" /></g><use class="t1-q" href="#frage" x="754" y="114" /><use class="t1-ok" href="#haken" x="754" y="114" opacity="0" /></g>
+            <g class="t1-p"><circle cx="620" cy="210" r="34" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(602 192) scale(1.5)" class="ico grau"><use href="#i-user" /></g><use class="t1-q" href="#frage" x="654" y="184" /><use class="t1-ok" href="#haken" x="654" y="184" opacity="0" /></g>
+          </g>
+          <path class="t1-w zug" pathLength="1" d="M352 80 C 450 30, 520 40, 584 66" style="stroke-width:5" />
+          <path class="t1-w zug" pathLength="1" d="M352 176 C 430 236, 600 214, 686 152" style="stroke-width:5" />
+          <path class="t1-w zug" pathLength="1" d="M352 200 C 450 240, 520 230, 584 212" style="stroke-width:5" />
+          <text id="t1-hand" x="560" y="280" text-anchor="middle" class="hand gruen" style="font-size:44px">dokumentieren</text>
+        </svg>
+      </section>
+
+      <!-- T2 Learning 2 · Rechte: "Zweitens, vergib einfach mal Zugriffsrechte bewusst, denn nicht jeder Mitarbeiter braucht immer
+           Zugriff auf alle Bereiche und auch alle Kundendaten." Zweitens 67,53 (Karte) / Zugriffsrechte 68,71 (Schlüssel) / bewusst
+           69,36 (Tabelle Team × Bereiche) / nicht 70,36 (Haken und Kreuze) / Bereiche 72,71 / Kundendaten 73,72 (Schloss) -->
+      <section id="t2" class="karte clip" data-start="67.46" data-duration="6.88" data-track-index="1">
+        <div class="leiste">
+          <div class="stufe fertig"><span class="nr">✓</span>Dokumentation</div>
+          <div class="stufe aktiv"><span class="nr">2</span>Rechte</div>
+          <div class="stufe"><span class="nr">3</span>Automation</div>
+        </div>
+        <div class="ziffer"><span class="verlauf">2</span></div>
+        <svg class="buehne" viewBox="0 0 820 290" style="top:58px">
+          <g id="t2-key">
+            <circle cx="214" cy="104" r="64" fill="url(#gvd)" />
+            <g transform="translate(178 68) scale(3)" class="ico"><use href="#i-key" /></g>
+            <text x="214" y="206" text-anchor="middle" class="lab" style="font-size:26px">Zugriffsrechte</text>
+          </g>
+          <text id="t2-hand" x="214" y="260" text-anchor="middle" class="hand gruen" style="font-size:46px">bewusst</text>
+          <g id="t2-tab">
+            <g class="t2-kopf" id="t2-h1"><rect x="440" y="0" width="100" height="58" rx="14" class="rahmen" /><g transform="translate(472 11) scale(1.5)" class="ico"><use href="#i-store" /></g></g>
+            <g class="t2-kopf" id="t2-h2"><rect x="556" y="0" width="100" height="58" rx="14" class="rahmen" /><g transform="translate(588 11) scale(1.5)" class="ico"><use href="#i-package" /></g></g>
+            <g class="t2-kopf" id="t2-h3"><rect x="672" y="0" width="130" height="58" rx="14" class="rahmen" /><g transform="translate(719 11) scale(1.5)" class="ico"><use href="#i-users" /></g></g>
+            <g transform="translate(366 76) scale(1.5)" class="ico grau"><use href="#i-user" /></g>
+            <g transform="translate(366 140) scale(1.5)" class="ico grau"><use href="#i-user" /></g>
+            <g transform="translate(366 204) scale(1.5)" class="ico grau"><use href="#i-user" /></g>
+            <use class="t2-c" href="#haken" x="490" y="94" /><use class="t2-c" href="#haken" x="606" y="94" /><use class="t2-c" href="#kreuz" x="737" y="94" />
+            <use class="t2-c" href="#haken" x="490" y="158" /><use class="t2-c" href="#kreuz" x="606" y="158" /><use class="t2-c" href="#kreuz" x="737" y="158" />
+            <use class="t2-c" href="#kreuz" x="490" y="222" /><use class="t2-c" href="#haken" x="606" y="222" /><use class="t2-c" href="#haken" x="737" y="222" />
+            <text id="t2-kd" x="737" y="272" text-anchor="middle" class="lab" style="font-size:24px">Kundendaten</text>
+            <g id="t2-lock"><circle cx="796" cy="8" r="22" fill="#0b0c0e" /><g transform="translate(784 -4)" class="ico weiss"><use href="#i-lock" /></g></g>
+          </g>
+        </svg>
+      </section>
+
+      <!-- T3 Learning 3 · Automation: "Und drittens, schau einfach mal, welche Aufgaben tatsächlich immer wiederholt manuell gemacht
+           werden und ob du sie eventuell über Bordmittel oder sinnvolle Automatisierungen vereinfachen kannst." drittens 74,53
+           (Karte) / Aufgaben 76,03 (Aufgabe) / wiederholt 77,11 (Kreis und Zähler) / manuell 77,59 (Zeiger klickt immer wieder) /
+           Bordmittel 80,65 (Werkzeug) / Automatisierungen 82,01 (Zahnrad übernimmt, Haken) / vereinfachen 82,85 (Schrift) -->
+      <section id="t3" class="karte clip" data-start="74.34" data-duration="9.28" data-track-index="1">
+        <div class="leiste">
+          <div class="stufe fertig"><span class="nr">✓</span>Dokumentation</div>
+          <div class="stufe fertig"><span class="nr">✓</span>Rechte</div>
+          <div class="stufe aktiv"><span class="nr">3</span>Automation</div>
+        </div>
+        <div class="ziffer"><span class="verlauf">3</span></div>
+        <svg class="buehne" viewBox="0 0 820 290" style="top:58px">
+          <g id="t3-aufgabe">
+            <rect x="160" y="30" width="190" height="170" rx="22" fill="#fff" stroke="#0b0c0e" stroke-width="3" />
+            <g transform="translate(180 48) scale(1.6)" class="ico"><use href="#i-clipboard" /></g>
+            <text x="230" y="78" class="lab" style="font-size:26px">Aufgabe</text>
+            <path d="M184 118 H326 M184 150 H300" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" />
+            <use id="t3-ok" href="#haken" x="350" y="34" opacity="0" />
+          </g>
+          <g id="t3-kreis"><g transform="translate(206 206) scale(2.2)" class="ico grau"><use href="#i-repeat" /></g><text id="t3-n" x="270" y="250" class="lab" style="font-size:34px;fill:#6b7280">×1</text></g>
+          <g id="t3-zeiger" opacity="0"><g transform="translate(300 150) scale(2.4)"><use href="#zeigerform" style="fill:#0b0c0e;stroke:#fff;stroke-width:1.2" /></g></g>
+          <text id="t3-manuell" x="230" y="20" text-anchor="middle" class="klein" style="font-size:24px">manuell</text>
+          <g id="t3-bord"><rect x="430" y="30" width="160" height="170" rx="22" class="rahmen" /><g transform="translate(474 56) scale(3)" class="ico"><use href="#i-wrench" /></g><text x="510" y="178" text-anchor="middle" class="lab" style="font-size:26px">Bordmittel</text></g>
+          <g id="t3-auto"><rect x="610" y="30" width="190" height="170" rx="22" fill="url(#gvd)" /><g id="t3-zahn" transform="translate(669 50) scale(3)" class="ico"><use href="#i-gear" /></g><text x="705" y="178" text-anchor="middle" class="lab" style="font-size:22px">Automatisierung</text></g>
+          <text id="t3-hand" x="615" y="262" text-anchor="middle" class="hand gruen" style="font-size:52px">einfacher</text>
+        </svg>
+      </section>
+
+      <!-- K9 KI: "KI kann natürlich bei der Dokumentation und den Routinefragen enorm helfen." KI 83,69 (Karte, KI-Kachel) /
+           Dokumentation 84,77 (Dokument schreibt sich) / Routinefragen 85,88 (Fragen, dann Haken) / enorm 86,67 (Schrift) -->
+      <section id="k9" class="karte clip" data-start="83.62" data-duration="3.77" data-track-index="1">
+        <div class="kicker">KI kann helfen</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k9-ki"><rect x="30" y="50" width="150" height="150" rx="30" fill="url(#gvd)" /><g transform="translate(69 89) scale(3.1)" class="ico"><use href="#i-sparkles" /></g><text x="105" y="240" text-anchor="middle" class="lab" style="font-size:30px">KI</text></g>
+          <path id="k9-p1" pathLength="1" d="M190 110 C 230 90, 260 90, 290 100" class="zug" style="stroke-width:5" />
+          <g id="k9-doc">
+            <rect x="300" y="20" width="200" height="220" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(318 34) scale(1.6)" class="ico"><use href="#i-file" /></g>
+            <text x="400" y="216" text-anchor="middle" class="lab" style="font-size:24px">Dokumentation</text>
+            <path class="k9-z" pathLength="1" d="M322 100 H476" stroke="#9aa3af" stroke-width="8" stroke-linecap="round" fill="none" />
+            <path class="k9-z" pathLength="1" d="M322 132 H460" stroke="#9aa3af" stroke-width="8" stroke-linecap="round" fill="none" />
+            <path class="k9-z" pathLength="1" d="M322 164 H440" stroke="#9aa3af" stroke-width="8" stroke-linecap="round" fill="none" />
+          </g>
+          <g id="k9-fragen">
+            <g class="k9-f"><rect x="540" y="20" width="250" height="64" rx="20" class="rahmen" /><g transform="translate(556 34) scale(1.5)" class="ico"><use href="#i-msgq" /></g><path d="M604 52 H730" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" /><use class="k9-ok" href="#haken" x="770" y="28" opacity="0" /></g>
+            <g class="k9-f"><rect x="540" y="98" width="250" height="64" rx="20" class="rahmen" /><g transform="translate(556 112) scale(1.5)" class="ico"><use href="#i-msgq" /></g><path d="M604 130 H710" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" /><use class="k9-ok" href="#haken" x="770" y="106" opacity="0" /></g>
+            <text x="665" y="200" text-anchor="middle" class="lab" style="font-size:26px">Routinefragen</text>
+          </g>
+          <text id="k9-hand" x="560" y="270" text-anchor="middle" class="hand gruen" style="font-size:48px">enorm hilfreich</text>
+        </svg>
+      </section>
+
+      <!-- K10 Sensible Berechtigungen: "Aber besonders sensible Berechtigungen würde ich tatsächlich nicht einfach nur ungeprüft
+           eine Automatisierung überlassen." Aber 87,46 (Karte, Schild mit Schlüssel) / Berechtigungen 88,54 (Beschriftung) / nicht
+           89,98 (Zahnrad "Automatisierung") / ungeprüft 90,56 (Weg, endet am Kreuz) / Automatisierung 91,28 (Mensch prüft) /
+           Stempel "ERST PRÜFEN" 91,45, vor "überlassen" 91,98, damit er vor dem Kartenwechsel steht -->
+      <section id="k10" class="karte clip" data-start="87.39" data-duration="5.01" data-track-index="1">
+        <div class="kicker">Besonders sensibel</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k10-auto"><rect x="30" y="40" width="170" height="160" rx="26" class="rahmen" /><g transform="translate(79 64) scale(3)" class="ico grau"><use href="#i-gear" /></g><text x="115" y="234" text-anchor="middle" class="lab" style="font-size:24px">Automatisierung</text></g>
+          <path id="k10-weg" pathLength="1" d="M210 120 L 380 120" class="grauzug" style="stroke-width:6;stroke-dasharray:1" />
+          <use id="k10-x" href="#kreuz" x="400" y="120" />
+          <g id="k10-mensch"><circle cx="430" cy="120" r="54" fill="url(#gvd)" /><g transform="translate(400 90) scale(2.5)" class="ico"><use href="#i-usercheck" /></g></g>
+          <g id="k10-schild">
+            <g transform="translate(580 20) scale(8)" class="ico" style="stroke-width:1.1"><use href="#i-shield" /></g>
+            <g transform="translate(652 92) scale(2)" class="ico"><use href="#i-key" /></g>
+            <text x="676" y="226" text-anchor="middle" class="lab" style="font-size:24px">sensible</text><text x="676" y="254" text-anchor="middle" class="lab" style="font-size:24px">Berechtigungen</text>
+          </g>
+          <g id="k10-stempel" transform="translate(430 258) rotate(-6)">
+            <rect x="-110" y="-30" width="220" height="56" rx="12" fill="#fff" stroke="#00b877" stroke-width="4" />
+            <text x="0" y="10" text-anchor="middle" style="font-size:28px;font-weight:900;letter-spacing:0.06em;fill:#00b877">ERST PRÜFEN</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K11 Learning: "Aber mein wichtigstes Learning aus dieser E-Commerce-Marke Huel ist tatsächlich dabei, dass die Skalierung
+           einfach viel, viel früher beginnt, meistens eben im Backoffice und nicht erst in dem nächsten Werbekonto." Aber 92,47
+           (Karte, Glühbirne, "Mein Learning") / Huel 94,93 (Logo) / Skalierung 96,81 (Zeitstrahl mit Werbekonto und Backoffice,
+           Startflagge beim Werbekonto) / früher 98,39 (Flagge rückt nach vorn) / Backoffice 100,27 (leuchtet, Schlusszeile) /
+           Werbekonto 102,27 (wird grau) -->
+      <section id="k11" class="karte clip" data-start="92.40" data-duration="10.42" data-track-index="1">
+        <div class="kicker">Das wichtigste Learning</div>
+        <div id="k11-a">
+          <svg class="buehne" viewBox="0 0 820 290">
+            <g transform="translate(40 30)"><circle cx="90" cy="100" r="90" fill="url(#gvl)" /><g transform="translate(36 46) scale(4.5)" class="ico"><use href="#i-bulb" /></g></g>
+            <text x="250" y="110" style="font-family:'Instrument Serif',serif;font-size:76px;fill:#0b0c0e">Mein Learning</text>
+            <text x="252" y="176" class="klein" style="font-size:28px">aus der E-Commerce-Marke</text>
+            <g id="k11-logo"><rect x="252" y="196" width="220" height="80" rx="16" fill="#fff" stroke="#e5e7eb" stroke-width="2" /><image href="assets/huel-logo.svg" x="290" y="208" width="144" height="56" /></g>
+          </svg>
+        </div>
+        <svg class="buehne" viewBox="0 0 820 290" id="k11-b" opacity="0">
+          <text x="40" y="38" class="lab" style="font-size:34px">Skalierung beginnt …</text>
+          <path d="M60 150 H780" stroke="#cbd5e1" stroke-width="10" stroke-linecap="round" />
+          <path id="k11-bahn" pathLength="1" d="M200 150 H780" stroke="url(#gvu)" stroke-width="10" stroke-linecap="round" fill="none" />
+          <g id="k11-bo"><circle cx="200" cy="150" r="44" fill="#fff" stroke="#d1d5db" stroke-width="3" /><g transform="translate(176 126) scale(2)" class="ico"><use href="#i-gear" /></g><text x="200" y="232" text-anchor="middle" class="lab" style="font-size:30px">Backoffice</text></g>
+          <g id="k11-wk"><circle cx="640" cy="150" r="44" fill="#fff" stroke="#d1d5db" stroke-width="3" /><g transform="translate(616 126) scale(2)" class="ico"><use href="#i-mega" /></g><text x="640" y="232" text-anchor="middle" class="lab" style="font-size:30px">Werbekonto</text></g>
+          <g id="k11-flagge"><path d="M0 0 V -54" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" /><path d="M0 -54 L 44 -42 L 0 -30 Z" fill="url(#gvd)" /></g>
+          <text id="k11-hand" x="420" y="110" text-anchor="middle" class="hand gruen" style="font-size:48px">viel früher</text>
+          <text id="k11-spaeter" x="640" y="276" text-anchor="middle" class="klein" style="font-size:24px">nicht erst hier</text>
+        </svg>
+      </section>
+
+      <!-- K12 Folgen (CTA), groß und mittig, Plus wie bei TikTok: "Wenn du weitere solcher spannender E-Commerce-Marken sehen willst,
+           dann drücke gerne das Plus weg." Wenn 102,88 (Karte) / Marken 104,32 (leiser Ring-Hinweis) / drücke 106,10 (Zeiger fährt
+           hin) / Plus 106,78 (Plus drückt ein, dreht sich, wird zum Haken); bleibt bis zum Ende (110,1, "Und wir sehen uns dann bei
+           der nächsten Markenvorstellung.") -->
+      <section id="k12" class="folgekarte clip" data-start="102.82" data-duration="7.255" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
+        <div id="fring"></div>
+        <svg id="fplus" viewBox="-32 -32 64 64">
+          <g id="fp-plus"><circle r="28" fill="url(#gvd)" stroke="#fff" stroke-width="4" /><path d="M-12 0 H12 M0 -12 V12" stroke="#fff" stroke-width="5.5" stroke-linecap="round" /></g>
+          <g id="fp-haken" opacity="0" transform="rotate(180)"><circle r="28" fill="#fff" stroke="#e5e7eb" stroke-width="3" /><path id="fp-hpfad" pathLength="1" d="M-12 1 L-3 10 L13 -8" fill="none" stroke="url(#gvd)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </svg>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><use href="#zeigerform" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker (keine leere Karte: der erste Inhalt kommt mit), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const l = document.querySelector(id + " .leiste");
+        if (l) tl.fromTo(l, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const z = document.querySelector(id + " .ziffer");
+        if (z) tl.fromTo(z, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, an + 0.06);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const weg = (sel, t, d = 0.2) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      const da = (sel, t, d = 0.25) => tl.to(sel, { opacity: 1, duration: d, ease: "power2.out" }, t);
+      const grau = (sel, t, o = 0.35) => tl.to(sel, { opacity: o, duration: 0.3, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5, ease = "power2.out") {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, t);
+      }
+      const ZUEGE = "#k2-pfeil, #k3-w1, #k3-w2, #k3-w3, .k4-w, #k8-pfeil, .t1-w, #k9-p1, .k9-z, #k10-weg, #k11-bahn, #fp-hpfad";
+      gsap.set(ZUEGE, { strokeDasharray: 1, strokeDashoffset: 1 });
+      gsap.set(ZUEGE.replace(", #fp-hpfad", ""), { opacity: 0 });
+      gsap.set(".zeiger", { transformOrigin: "9px 9px" });
+
+      // K0 Quellenzeile unter dem Hook-Titel: auf "Shopify-Studie", weg mit dem Hook
+      tl.fromTo("#hookq", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 1.75);
+      tl.to("#hookq", { opacity: 0, y: -6, duration: 0.2, ease: "power2.in" }, 6.95);
+
+      // K1 Die Marke: Logo mit der Karte, "Human + Fuel", Mahlzeiten, Mensch, wenig Zeit
+      karte("#k1", 7.25, 14.37);
+      gsap.set("#k1-name, #k1-p1, #k1-p2, #k1-p3, #k1-mahl, #k1-mensch, #k1-uhr, #k1-zeit", { opacity: 0 });
+      tl.fromTo("#k1 .logofeld", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 7.29);
+      ein("#k1-name", 8.15);
+      tl.fromTo("#k1 .logofeld", { scale: 1 }, { scale: 1.04, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.out", transformOrigin: "50% 50%", immediateRender: false }, 8.15);
+      pop("#k1-p1", 10.93); pop("#k1-p2", 11.05); pop("#k1-p3", 11.17);
+      ein("#k1-mahl", 11.59);
+      pop("#k1-mensch", 12.25);
+      pop("#k1-uhr", 13.47);
+      tl.fromTo("#k1-uhr", { rotation: -30, svgOrigin: "500 244" }, { rotation: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, 13.47);
+      ein("#k1-zeit", 13.79, 0.25);
+
+      // K2 Hinter dem Shop: Schaufenster, Waren, Pfeil, dahinter schiebt sich der Bereich hinter dem Shop heraus
+      karte("#k2", 14.37, 18.36);
+      gsap.set("#k2-waren, #k2-hand, #k2-lab", { opacity: 0 });
+      gsap.set("#k2-hinten", { opacity: 0, x: -340 });
+      tl.fromTo("#k2-shop", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 14.41);
+      ein("#k2-lab", 14.5);
+      tl.fromTo("#k2-waren", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 15.23);
+      zeichne("#k2-pfeil", 16.57, 0.45);
+      tl.to("#k2-hinten", { opacity: 1, x: 0, duration: 0.55, ease: "power3.out" }, 17.43);
+      ein("#k2-hand", 17.87, 0.25);
+
+      // K3 International: Marke mit Globus, drei Länder-Shops, Wege, Warnzeichen
+      karte("#k3", 18.36, 22.60);
+      gsap.set(".k3-s, .k3-w, #k3-hand", { opacity: 0 });
+      tl.fromTo("#k3-marke", { opacity: 0, scale: 0.9, svgOrigin: "130 120" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 18.40);
+      tl.to("#k3-marke g", { rotation: 20, duration: 3.6, ease: "none", svgOrigin: "130 120" }, 18.7);
+      tl.fromTo(".k3-s", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out", stagger: 0.1 }, 19.33);
+      zeichne("#k3-w1", 20.01, 0.35); zeichne("#k3-w2", 20.08, 0.35); zeichne("#k3-w3", 20.15, 0.35);
+      tl.fromTo(".k3-w", { opacity: 0 }, { opacity: 1, duration: 0.2, stagger: 0.1 }, 21.29);
+      ein("#k3-hand", 21.85, 0.25);
+
+      // K4 Märkte, Zugänge, Mitarbeitende: Shops, Schlösser, Team, Wege, Schlüssel, Haken
+      karte("#k4", 22.60, 28.50);
+      gsap.set(".k4-m, .k4-l, .k4-p, .k4-k, #k4-hand, #k4-mlab, #k4-tlab", { opacity: 0 });
+      tl.fromTo(".k4-m", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out", stagger: 0.08 }, 22.65);
+      ein("#k4-mlab", 23.46);
+      tl.fromTo(".k4-m", { scale: 1 }, { scale: 1.04, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out", transformOrigin: "50% 50%", immediateRender: false }, 23.46);
+      tl.fromTo(".k4-l", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.08 }, 24.35);
+      tl.fromTo(".k4-p", { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out", stagger: 0.08 }, 25.18);
+      ein("#k4-tlab", 25.3);
+      document.querySelectorAll(".k4-w").forEach((w, i) => zeichne(w, 26.12 + i * 0.07, 0.4));
+      tl.fromTo(".k4-k", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.08 }, 27.12);
+      ein("#k4-hand", 27.15, 0.25);
+      tl.to(".k4-l", { opacity: 0.25, duration: 0.25 }, 27.73);
+      tl.fromTo(".k4-ok", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.07 }, 27.73);
+
+      // K5 Kennzahl: Person, Balken vorher; "9×" zählt hoch auf "neunmal", Balken schrumpft auf ein Neuntel; Blitz und Schrift
+      karte("#k5", 34.40, 39.58);
+      gsap.set("#k5-neu, #k5-neutext, #k5-blitz, #k5-hand", { opacity: 0 });
+      tl.fromTo("#k5-person", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 34.44);
+      tl.fromTo("#k5-alt", { attr: { width: 0 } }, { attr: { width: 330 }, duration: 0.6, ease: "power2.out" }, 34.75);
+      weg("#k5-person", 37.12, 0.2);
+      const n = { v: 1 };
+      const nEl = document.getElementById("k5-n");
+      tl.set("#k5-zahl", { opacity: 1 }, 37.19);
+      tl.fromTo(n, { v: 1 }, { v: 9, duration: 0.5, ease: "power2.out", onUpdate: () => { nEl.textContent = String(Math.round(n.v)); } }, 37.19);
+      tl.set(n, { v: 9, onComplete: () => { nEl.textContent = "9"; } }, 37.69);
+      tl.fromTo("#k5-zahl", { scale: 0.9, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.35, ease: "power2.out", immediateRender: false }, 37.19);
+      da("#k5-neu, #k5-neutext", 37.69, 0.15);
+      tl.fromTo("#k5-neu", { attr: { width: 330 } }, { attr: { width: 37 }, duration: 0.5, ease: "power3.inOut" }, 37.69);
+      pop("#k5-blitz", 38.26, 0.25);
+      ein("#k5-hand", 38.30, 0.25);
+
+      // K6 Einordnung: Kalender 2020, Stempel "keine Garantie", Shops mit Fragezeichen
+      karte("#k6", 39.58, 46.05);
+      gsap.set("#k6-hist, #k6-stempel, .k6-s, #k6-hand", { opacity: 0 });
+      tl.fromTo("#k6-kal", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 39.62);
+      ein("#k6-hist", 40.61);
+      tl.fromTo("#k6-kal", { scale: 1 }, { scale: 1.04, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out", svgOrigin: "135 111", immediateRender: false }, 40.61);
+      tl.fromTo("#k6-stempel", { opacity: 0, scale: 1.3, svgOrigin: "400 120" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power3.out" }, 43.07);
+      tl.fromTo(".k6-s", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.07 }, 44.38);
+      tl.fromTo(".k6-q", { rotation: 0 }, { rotation: 12, duration: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut", transformOrigin: "50% 50%", immediateRender: false }, 45.17);
+      ein("#k6-hand", 45.17, 0.25);
+
+      // K7 Was ich interessant finde; worüber viele bei Wachstum reden: Ads, Produkte, Umsatzrekorde
+      karte("#k7", 46.05, 54.67);
+      gsap.set("#k7-int, #k7-b, .k7-t", { opacity: 0 });
+      tl.fromTo("#k7-a", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 46.09);
+      ein("#k7-int", 48.29, 0.3);
+      weg("#k7-a", 49.40, 0.2);
+      da("#k7-b", 49.56, 0.01);
+      tl.fromTo("#k7-viele > g", { opacity: 0, scale: 0.7, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.08 }, 49.56);
+      pop("#k7-t1", 51.67);
+      pop("#k7-t2", 52.88);
+      pop("#k7-t3", 53.73);
+
+      // K8 Eisberg: Spitze über der Wasserlinie, der große Teil Prozesse darunter, Pfeil skalieren
+      karte("#k8", 54.67, 60.44);
+      gsap.set("#k8-koerper, #k8-hand, #k8-skal", { opacity: 0 });
+      tl.fromTo("#k8-spitze", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 54.71);
+      tl.fromTo("#k8-koerper", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 55.88);
+      tl.to("#k8-zahn", { rotation: 90, duration: 4, ease: "none", svgOrigin: "272 186" }, 56.2);
+      ein("#k8-hand", 56.61, 0.25);
+      tl.set("#k8-skal", { opacity: 1 }, 59.41);
+      zeichne("#k8-pfeil", 59.41, 0.4);
+      tl.fromTo("#k8-spitzepf, #k8-skal text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 59.55);
+
+      // T1 Dokumentation: Dokument, Punkte, eine Person weiß alles, Team mit Fragezeichen, dann geht das Dokument an alle
+      karte("#t1", 60.44, 67.46);
+      gsap.set("#t1-doc, .t1-z, #t1-einer, #t1-team, #t1-hand", { opacity: 0 });
+      tl.fromTo("#t1-doc", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 61.73);
+      ein("#t1-hand", 61.9, 0.25);
+      tl.fromTo(".t1-z", { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.22, ease: "power2.out", stagger: 0.1 }, 62.74);
+      weg("#t1-hand", 64.3, 0.2);
+      pop("#t1-einer", 64.56);
+      da("#t1-team", 65.24, 0.01);
+      tl.fromTo(".t1-p", { opacity: 0, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.08 }, 65.24);
+      document.querySelectorAll(".t1-w").forEach((w, i) => zeichne(w, 66.81 + i * 0.07, 0.35));
+      tl.to(".t1-q", { opacity: 0, duration: 0.15, stagger: 0.07 }, 67.0);
+      tl.fromTo(".t1-ok", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.07 }, 67.0);
+
+      // T2 Rechte: Schlüssel, Tabelle, Haken und Kreuze, Bereiche, Kundendaten mit Schloss
+      karte("#t2", 67.46, 74.34);
+      gsap.set("#t2-key, #t2-hand, #t2-tab, .t2-c, #t2-kd, #t2-lock", { opacity: 0 });
+      pop("#t2-key", 68.64);
+      da("#t2-tab", 69.29, 0.01);
+      tl.fromTo(".t2-kopf", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out", stagger: 0.07 }, 69.29);
+      ein("#t2-hand", 69.29, 0.25);
+      tl.fromTo(".t2-c", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.06 }, 70.29);
+      tl.set(".t2-kopf rect", { css: { stroke: "#31adec", strokeWidth: 4 } }, 72.64);
+      tl.set(".t2-kopf rect", { css: { stroke: "#d1d5db", strokeWidth: 2.5 } }, 73.4);
+      tl.set("#t2-h3 rect", { css: { stroke: "#00b877", strokeWidth: 4 } }, 73.65);
+      ein("#t2-kd", 73.65, 0.25);
+      badge("#t2-lock", 73.72);
+
+      // T3 Automation: Aufgabe, Kreis und Zähler, Zeiger klickt manuell, Bordmittel, Automatisierung übernimmt
+      karte("#t3", 74.34, 83.62);
+      gsap.set("#t3-aufgabe, #t3-kreis, #t3-manuell, #t3-bord, #t3-auto, #t3-hand", { opacity: 0 });
+      tl.fromTo("#t3-aufgabe", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 75.96);
+      da("#t3-kreis", 77.04, 0.2);
+      tl.to("#t3-kreis > g", { rotation: 360, duration: 1.6, ease: "none", svgOrigin: "232 232" }, 77.04);
+      const zz = { v: 1 };
+      const zEl = document.getElementById("t3-n");
+      tl.fromTo(zz, { v: 1 }, { v: 5, duration: 1.6, ease: "none", onUpdate: () => { zEl.textContent = "×" + Math.round(zz.v); } }, 77.04);
+      ein("#t3-manuell", 77.52, 0.25);
+      tl.set("#t3-zeiger", { opacity: 1 }, 77.52);
+      tl.fromTo("#t3-zeiger", { y: 0 }, { y: -10, duration: 0.18, yoyo: true, repeat: 7, ease: "power2.inOut" }, 77.52);
+      pop("#t3-bord", 80.58);
+      weg("#t3-zeiger", 81.94, 0.15);
+      pop("#t3-auto", 81.94);
+      tl.to("#t3-zahn", { rotation: 120, duration: 1.6, ease: "power1.inOut", svgOrigin: "705 86" }, 82.0);
+      tl.set("#t3-kreis > g", { css: { stroke: "#00b877" } }, 81.94);
+      badge("#t3-ok", 82.3);
+      ein("#t3-hand", 82.78, 0.25);
+      grau("#t3-manuell", 81.94, 0.35);
+
+      // K9 KI: KI-Kachel, Dokument schreibt sich, Routinefragen bekommen Haken
+      karte("#k9", 83.62, 87.39);
+      gsap.set("#k9-doc, #k9-fragen, #k9-hand", { opacity: 0 });
+      tl.fromTo("#k9-ki", { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 83.66);
+      zeichne("#k9-p1", 84.70, 0.25);
+      tl.fromTo("#k9-doc", { opacity: 0, x: 12 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 84.70);
+      tl.set(".k9-z", { opacity: 1 }, 84.85);
+      tl.fromTo(".k9-z", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.3, ease: "power1.inOut", stagger: 0.18 }, 84.85);
+      tl.fromTo("#k9-fragen", { opacity: 0, x: 12 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 85.81);
+      tl.fromTo(".k9-ok", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.out", stagger: 0.12 }, 86.3);
+      ein("#k9-hand", 86.60, 0.25);
+
+      // K10 Sensible Berechtigungen: Schild, Automatisierung, Weg endet am Kreuz, Mensch prüft, Stempel
+      karte("#k10", 87.39, 92.40);
+      gsap.set("#k10-auto, #k10-x, #k10-mensch, #k10-stempel, #k10-schild text", { opacity: 0 });
+      tl.fromTo("#k10-schild", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 87.43);
+      ein("#k10-schild text", 88.47, 0.25);
+      pop("#k10-auto", 89.91);
+      zeichne("#k10-weg", 90.49, 0.4);
+      badge("#k10-x", 90.75);
+      weg("#k10-x", 91.1, 0.12);
+      pop("#k10-mensch", 91.21);
+      tl.fromTo("#k10-stempel", { opacity: 0, scale: 1.25, svgOrigin: "430 258" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power3.out" }, 91.45);
+
+      // K11 Learning: Glühbirne und Titel, Huel-Logo; dann Zeitstrahl, Startflagge rückt vom Werbekonto nach vorn ins Backoffice
+      karte("#k11", 92.40, 102.82);
+      gsap.set("#k11-logo", { opacity: 0 });
+      tl.fromTo("#k11-a", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 92.44);
+      pop("#k11-logo", 94.86);
+      weg("#k11-a", 96.55, 0.2);
+      tl.set("#k11-b", { opacity: 1 }, 96.74);
+      gsap.set("#k11-hand, #k11-spaeter", { opacity: 0 });
+      gsap.set("#k11-flagge", { x: 640, y: 106 });
+      tl.fromTo("#k11-b > *:not(#k11-hand):not(#k11-spaeter):not(#k11-bahn)", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out", stagger: 0.03 }, 96.74);
+      tl.to("#k11-flagge", { x: 200, duration: 0.7, ease: "power3.inOut" }, 98.32);
+      ein("#k11-hand", 98.40, 0.25);
+      tl.to("#k11-bo circle", { attr: { fill: "#e3faf1", stroke: "url(#gv)", "stroke-width": 5 }, duration: 0.01 }, 100.20);
+      tl.fromTo("#k11-bo", { scale: 1 }, { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.out", svgOrigin: "200 150", immediateRender: false }, 100.20);
+      zeichne("#k11-bahn", 100.30, 0.8, "power2.inOut");
+      grau("#k11-wk", 102.20, 0.45);
+      ein("#k11-spaeter", 102.20, 0.25);
+
+      // K12 Folgen wie bei TikTok: Karte auf "Wenn", leiser Ring auf "Marken", Zeiger auf "drücke", auf "Plus" drückt das Plus
+      // ein (1 → 0,8), dreht sich um 180°, wird zum weißen Kreis mit gezeichnetem Haken im Verlauf, springt kurz über und gibt
+      // einen Ring-Puls nach außen; der Haken bleibt bis zum Schluss
+      const TAP = 106.71;
+      tl.fromTo("#k12", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 102.82);
+      gsap.set("#fplus", { transformOrigin: "50% 50%" });
+      tl.fromTo("#fring", { opacity: 0.6, scale: 1 }, { opacity: 0, scale: 1.6, duration: 0.6, ease: "power2.out", immediateRender: false }, 104.25);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 220, y: 214 }, { opacity: 1, x: 200, y: 206, duration: 0.15, ease: "power2.out" }, 106.03);
+      tl.to("#fzeiger", { x: 112, y: 170, duration: 0.5, ease: "power2.inOut" }, 106.18);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, TAP - 0.02);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, TAP + 0.06);
+      tl.to("#fplus", { scale: 0.8, duration: 0.08, ease: "power2.in" }, TAP);
+      tl.to("#fplus", { rotation: 180, duration: 0.3, ease: "power2.inOut" }, TAP);
+      tl.set("#fp-plus", { opacity: 0 }, TAP + 0.15);
+      tl.set("#fp-haken", { opacity: 1 }, TAP + 0.15);
+      tl.to("#fp-hpfad", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, TAP + 0.16);
+      tl.fromTo("#fplus", { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "back.out(4)", immediateRender: false }, TAP + 0.12);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.6, ease: "power2.out", immediateRender: false }, TAP + 0.16);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, TAP + 0.15);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, TAP + 0.15);
+      tl.to("#fzeiger", { x: 150, y: 210, duration: 0.2, ease: "power2.out" }, TAP + 0.25);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.2, ease: "power2.in" }, TAP + 0.45);
+      tl.set({}, {}, 110.075);
+
+      tl.seek(0);
+      window.__timelines["huel-skizzen"] = tl;
+    </script>
+  </body>
+</html>

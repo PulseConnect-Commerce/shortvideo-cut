@@ -24,13 +24,13 @@ HG = {
     "produkte": [KOPF, ("home", 880, 1700), ("home", 3200, 4300)],          # Startseite: Produkte (Beutel, Flaschen), "Ernährung auf deine Art" (Kategorien)
     "bestseller": [KOPF, ("home", 14900, 16700)],                           # Startseite: "Huel Bestseller", Black Edition
     "sortiment": [("alle", 140, 2250)],                                     # "Alle Produkte – Entdecke unser gesamtes Sortiment", erste Reihe
-    "teams": [("teams", 0, 1920)],                                          # Karriereseite "Our Teams" (Büro)
+    "teams": [("orte", 6150, 6830), ("orte", 7000, 7670), ("orte", 4550, 5230)],  # Karriereseite "Our Workspaces": London (Büro), Milton Keynes Factory, Global HQ (ohne Personen)
     "laender": [("laender", 0, 1920)],                                      # Länderauswahl "Alle Läden" (Europa)
     "standorte": [("orte", 10480, 11290), ("orte", 7940, 8480), ("orte", 8850, 9330), ("orte", 6140, 6840)],  # Karte der Standorte, New York City, Germany, London
-    "recruiting": [("jobs", 19700, 21300), ("jobs", 22150, 22950)],         # Karriereseite: "Our Values", "Your Recruitment Process", "Our Workspaces"
+    "recruiting": [("jobs", 6980, 8060), ("jobs", 5890, 6720)],             # Karriereseite "Current Vacancies": Amazon Marketplace Manager, Key Account Manager LEH - Germany (ohne Gesichter)
     "neu": [KOPF, ("alle", 2200, 3400), ("alle", 9000, 9700)],             # Alle Produkte: Reihe mit "NEU" (Ramen), Bestseller Bundle
     "logistik": [("teams", 12260, 13080), ("teams", 13300, 14020), ("teams", 15540, 16340)],  # Our Teams: Logistics, Manufacturing, Product Supply
-    "backoffice": [("teams", 8230, 8960), ("teams", 9840, 10560), ("teams", 7380, 8120)],     # Our Teams: Data, Engineering, Customer Experience
+    "backoffice": [("orte", 0, 1920)],                                      # Karriereseite "Our Workspaces" (Büro mit Huel-Logo, ohne Personen)
     "marke": [KOPF, ("ueber", 2440, 3060), ("alle", 9000, 10200)],           # Über uns: Produkte, Bestseller Bundle
 }
 
