@@ -1,0 +1,360 @@
+{
+ "hinweis": "Kennzahlen, Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern') und Folgen-Karte aus hyperframes/purelei-skizzen/index.html, Quelle-groß-Fenster (q1-q3, in Video.tsx QUELLEN) für M02 · PURELEI. Sekunden im geschnittenen Video (cut.json, 106,85 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,10-0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,10) auf Zuständen, klick (0,12) auf jeder Quelle, pop (0,10) nur auf '600.000' und dem Folgen-Plus, success (0,10) auf 'zusammenpassen' und 'Kundenbeziehung', kamera (0,10, Extra-Effekt) auf dem Foto-Blitz.",
+ "karten": [
+  {
+   "id": "hook",
+   "wort": "(Remotion) Wie wird eigentlich aus Schmuck ...",
+   "text": "Hook-Titel PURELEI / VOM SCHMUCK ZUR COMMUNITY (Design verlauf, Kartenposition), 0-5,0 s; Hintergrund LEI-Seite (Hand mit Armreif)",
+   "start": 0,
+   "ende": 5.0,
+   "sfx": []
+  },
+  {
+   "id": "k1",
+   "wort": "PURELEI",
+   "text": "Das Beispiel: originales PURELEI-Logo (Seitenkopf purelei.com), Edelstein, handschriftlich 'super Beispiel' auf 'super'",
+   "start": 5.15,
+   "ende": 8.62,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.15,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Gründerin",
+   "text": "Meine Erinnerung: Bühne mit Gründerin, 'Alisa Jahnke' auf Alisa, Banner OMR auf OMR, Mikro mit Wellen auf Speech, er im Publikum, Herz und 'begeistert!' auf begeistert",
+   "start": 8.72,
+   "ende": 14.1,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 8.72,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 10.54,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 12.6,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Denn (die Gründerin ... Hawaii)",
+   "text": "Quelle groß (Remotion): Shopify-Beitrag, 'Nachdem Alisa Maria Jahnke 2013 ein Auslandssemester auf Hawaii absolviert hatte ...' markiert",
+   "start": 13.98,
+   "ende": 17.5,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 13.98,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Lebensgefühl",
+   "text": "Hawaii-Lebensgefühl: Palme 'Hawaii', Blumenkette zieht sich durch (zieht), Onlineshop, Marke",
+   "start": 18.42,
+   "ende": 22.0,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 18.42,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 20.55,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 21.32,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Aloha",
+   "text": "Die Markenwelt: Aloha, Lifestyle, Look (wiedererkennbar) auf ihren Wörtern",
+   "start": 22.3,
+   "ende": 25.85,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 22.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 24.46,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "2017",
+   "text": "Kennzahl 2017 (laut Shopify-Beitrag: live gegangen) mit Fahne auf 'gestartet'; dann 'Nur posten und hoffen?': Schmuckbild-Post, posten, hoffen (Sanduhr), Bestellung ? , grau durchgestrichen 'nicht einfach nur'",
+   "start": 26.02,
+   "ende": 35.62,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 26.02,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 27.91,
+     "volume": 0.1
+    },
+    {
+     "datei": "whoosh.mp3",
+     "at": 31.1,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "sondern",
+   "text": "Quelle groß (Remotion): Shopify-Beitrag, 'Wir haben von Anfang an sehr viel Wert auf Influencer-Marketing gelegt ...' markiert",
+   "start": 35.46,
+   "ende": 39.6,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 35.46,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "dabei / Menschen",
+   "text": "Community: Kreis Markenwelt, Menschen kommen dazu (Menschen), Haken 'passen'",
+   "start": 39.78,
+   "ende": 43.08,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 39.78,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "wort": "Laut (einem Shopify-Beitrag)",
+   "text": "Quelle groß (Remotion): Shopify-Beitrag, Titel, Teaser '... mehr als 600.000 Menschen auf Instagram folgen.' und '10. Feb. 2021' markiert",
+   "start": 43.03,
+   "ende": 46.3,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 43.03,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "bereits / 600.000",
+   "text": "Editorial-Kennzahl 600.000+ Instagram-Follower, Kicker '2021 · laut Shopify-Beitrag', Badge 'Historische Zahl', Zeile 'Stand 2021, keine aktuelle Zahl'; zählt hoch und landet auf '600.000'; 'der Punkt liegt woanders' und Pfeil auf 'woanders'",
+   "start": 46.3,
+   "ende": 53.1,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 46.3,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 47.47,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 52.34,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Schmuck",
+   "text": "Fünf gleiche Shops mit Kette (=, gleiche Produktkategorie), Kunde, 'warum?', 'deine Marke' hebt sich ab, Haken auf 'entscheiden'",
+   "start": 53.46,
+   "ende": 63.42,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 53.46,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 58.71,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 62.58,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "drei",
+   "text": "1 2 3 Learnings für Onlineshop-Betreiber",
+   "start": 64.66,
+   "ende": 67.55,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 64.66,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "l1",
+   "wort": "Erstens",
+   "text": "Learning 1: Ziffer 1, Tüte füllt sich mit der Markenwelt, Logo-Feld durchgestrichen ('auch ohne Logo'), Haken 'erkennbar'",
+   "start": 67.59,
+   "ende": 72.47,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 67.59,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 71.33,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "l1b",
+   "wort": "Farben",
+   "text": "Learning 1: Farben, Bildsprache, Botschaft rücken zusammen, Haken 'passt zusammen'",
+   "start": 72.43,
+   "ende": 77.18,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 72.43,
+     "volume": 0.12
+    },
+    {
+     "datei": "success.mp3",
+     "at": 76.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "l2",
+   "wort": "Zweitens",
+   "text": "Learning 2: Ziffer 2, Creator, Follower-Balken durchgestrichen (ohne Zahlen), Zielgruppe, Inhalte, Produkt, Haken 'passt'",
+   "start": 77.16,
+   "ende": 86.62,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 77.16,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 81.18,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 84.48,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "l3",
+   "wort": "drittens",
+   "text": "Learning 3: Ziffer 3, Megafon Reichweite, Menschen wandern in den Shop, Kreislauf mit Herz 'langfristig' Kundenbeziehung",
+   "start": 86.75,
+   "ende": 95.83,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 86.75,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 92.51,
+     "volume": 0.1
+    },
+    {
+     "datei": "success.mp3",
+     "at": 94.71,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "Marke",
+   "text": "Was eine Marke ausmacht: schönes Produktfoto (Kamera, Blitz auf 'schön') wird grau 'nicht nur', Menschen um das Produkt, Linien mit Herzen 'damit verbinden'",
+   "start": 96.37,
+   "ende": 103.65,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 96.37,
+     "volume": 0.12
+    },
+    {
+     "datei": "kamera.mp3",
+     "at": 98.96,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Und / Follow",
+   "text": "Folgen-Karte groß und mittig, Ring auf 'Markenstories', Zeiger auf 'lass', Plus wird auf 'Follow' zum Haken, bleibt bis zum Ende",
+   "start": 103.65,
+   "ende": 106.85,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 103.65,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 106.16,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}

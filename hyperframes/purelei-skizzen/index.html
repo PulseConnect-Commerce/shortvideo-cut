@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>M02 · PURELEI – Erklär-Bilder und Kennzahlen</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- Serie M "Marken-Story", M02 · PURELEI. Look wie M06/M07 (hyperframes/five-skizzen, hyperframes/gymshark-skizzen) mit
+         Pauls neueren Regeln: er steht oben (Kopfoberkante ~315), darum stehen Kennzahlen und Erklär-Bilder auf der hellen Karte
+         UNTER Kopf und Pille (x 80-900, y 1140-1490; Instagram-Zone ab 1500); Editorial-Kennzahlen (Instrument Serif, Akzent im
+         PulseConnect-Verlauf) für "2017" und "600.000+" (Stand 2021, laut Shopify-Beitrag), Erklär-Bilder statt Wortkarten
+         (karten-aufbau.md "Visuelle Metaphern"), drei nummerierte Learnings, am Ende die große mittige Folgen-Karte mit dem
+         TikTok-Plus (karten-aufbau.md Punkt 7). Das originale PURELEI-Logo (assets/purelei-logo.svg, aus dem Seitenkopf von
+         purelei.com, unverändert) auf "PURELEI". Echte Seiten (purelei.com als Hintergrund, Shopify-Beitrag als "Quelle groß")
+         laufen in Remotion (src/projekte/purelei/Video.tsx); in den Quellen-Fenstern (13,98-17,5 / 35,46-39,6 / 43,03-46,3 s)
+         blenden diese Karten dort aus.
+         Nur Inhalte aus Take, Skript und Quelle; keine erfundenen Zahlen. Icons Lucide (ISC), Schriften Geist, Instrument Serif,
+         Caveat (OFL, lokal). Zeiten = Sekunden im geschnittenen Video (src/projekte/purelei/cut.json, 106,85 s), Teile 2 Frames
+         vor ihrem Wort; Liste mit Tönen in src/projekte/purelei/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1140px; width: 820px; height: 350px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; z-index: 2; left: 30px; top: 20px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .badge { position: absolute; right: 26px; top: 14px; padding: 5px 13px 6px; border-radius: 10px; background: #0b0c0e; color: #fff; font-size: 20px; font-weight: 800; letter-spacing: 0.14em; white-space: nowrap; }
+      svg.buehne { position: absolute; left: 0; top: 54px; width: 820px; height: 290px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 30px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #9aa3af; }
+      .klein { font-size: 22px; font-weight: 700; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #2a9ed8; }
+      .hand.gruen { fill: #00b877; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.grau { stroke: #9aa3af; }
+      .gtext { fill: url(#gv); }
+      .serifz { font-family: "Instrument Serif", serif; font-weight: 400; }
+      .zug { fill: none; stroke: url(#gv); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .grauzug { fill: none; stroke: #9aa3af; stroke-width: 5; stroke-linecap: round; }
+      .punkte { fill: none; stroke: #cbd5e1; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 2 12; }
+
+      /* Logo-Karte: das originale Logo aus dem Seitenkopf von purelei.com, unverändert, auf Weiß wie dort */
+      .logofeld { position: absolute; left: 40px; top: 92px; width: 440px; height: 200px; border-radius: 26px; background: #ffffff; border: 2px solid #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .logofeld img { width: 340px; height: auto; display: block; }
+
+      /* Editorial-Kennzahl in der Karte (Instrument Serif, Akzent im Verlauf) */
+      .zahl { position: absolute; left: 0; right: 0; text-align: center; font-family: "Instrument Serif", serif; font-weight: 400; line-height: 1; white-space: nowrap; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 0.04em; }
+      .unter { position: absolute; left: 0; right: 0; text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; }
+      .chip { position: absolute; padding: 6px 14px 7px; border-radius: 12px; background: #fff; border: 2px solid #d1d5db; color: #374151; font-size: 22px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+
+      /* Learning-Ziffer links in der Karte */
+      .ziffer { position: absolute; left: 22px; top: 40px; width: 130px; text-align: center; font-family: "Instrument Serif", serif; font-size: 230px; line-height: 1; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, groß und waagerecht mittig, Plus wie bei TikTok (Pauls Vorgabe 30.10.,
+         karten-aufbau.md Punkt 7, Vorlage hyperframes/varianten-skizzen K12): 560 x 200, Kartenmitte x 540, Avatar 150, Plus 64,
+         "Folgen" 72 px, an der Kartenposition unter Kopf und Pille */
+      .folgekarte { position: absolute; left: 260px; top: 1140px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+      .avatar { position: absolute; left: 34px; top: 18px; width: 150px; height: 150px; border-radius: 75px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 84px; height: 84px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      #fplus { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; overflow: visible; }
+      #fring { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #31adec; opacity: 0; }
+      .ftext { position: absolute; left: 224px; top: 56px; font-size: 72px; line-height: 88px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 56px; height: 56px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 56px; height: 56px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="purelei-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="106.85">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3faf1" /><stop offset="1" stop-color="#e2f2fc" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24 x 24 -->
+          <g id="i-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="i-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r="1" /></g>
+          <g id="i-sun"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></g>
+          <g id="i-flower"><circle cx="12" cy="12" r="3" /><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5" /><path d="M12 7.5V9" /><path d="M7.5 12H9" /><path d="M16.5 12H15" /><path d="M12 16.5V15" /><path d="m8 8 1.88 1.88" /><path d="M14.12 9.88 16 8" /><path d="m8 16 1.88-1.88" /><path d="M14.12 14.12 16 16" /></g>
+          <g id="i-palm"><path d="M13 8c0-2.76-2.46-5-5.5-5S2 5.24 2 8h2l1-1 1 1h4" /><path d="M13 7.14A5.82 5.82 0 0 1 16.5 6c3.04 0 5.5 2.24 5.5 5h-3l-1-1-1 1h-3" /><path d="M5.89 9.71c-2.15 2.15-2.3 5.47-.35 7.43l4.24-4.25.7-.7.71-.71 2.12-2.12c-1.95-1.96-5.27-1.8-7.42.35" /><path d="M11 15.5c.5 2.5-.17 4.5-1 6.5h4c2-5.5-.5-12-1-14" /></g>
+          <g id="i-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></g>
+          <g id="i-palette"><circle cx="13.5" cy="6.5" r=".5" /><circle cx="17.5" cy="10.5" r=".5" /><circle cx="8.5" cy="7.5" r=".5" /><circle cx="6.5" cy="12.5" r=".5" /><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" /></g>
+          <g id="i-image"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></g>
+          <g id="i-msg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></g>
+          <g id="i-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></g>
+          <g id="i-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-mega"><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></g>
+          <g id="i-bag"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></g>
+          <g id="i-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></g>
+          <g id="i-camera"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" /><circle cx="12" cy="13" r="3" /></g>
+          <g id="i-target"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+          <g id="i-play"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="m9 8 6 4-6 4Z" /></g>
+          <g id="i-gem"><path d="M6 3h12l4 6-10 13L2 9Z" /><path d="M11 3 8 9l4 13 4-13-3-6" /><path d="M2 9h20" /></g>
+          <g id="i-mic"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /><line x1="12" x2="12" y1="19" y2="22" /></g>
+          <g id="i-hourglass"><path d="M5 22h14" /><path d="M5 2h14" /><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" /><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></g>
+          <g id="i-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" x2="12" y1="3" y2="15" /></g>
+          <g id="i-repeat"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" /></g>
+          <g id="i-handy"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></g>
+          <g id="i-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" /></g>
+          <!-- Zustände -->
+          <g id="kreuz"><circle r="22" fill="#9aa3af" /><path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#fff" stroke-width="4.2" stroke-linecap="round" /></g>
+          <g id="haken"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 L-2 6 L9 -6" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="zeigerform"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+          <!-- Schmuck (eigene Linienzeichnung): Kette mit Anhänger, 100 x 100 -->
+          <symbol id="kette" viewBox="0 0 100 100"><path d="M18 14 Q50 70 82 14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" /><path d="M50 56 l9 12 -9 14 -9 -14 z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" /></symbol>
+        </defs>
+      </svg>
+
+      <!-- K1 Das Beispiel: "PURELEI ist dafür zum Beispiel ein super Beispiel." Karte mit dem originalen Logo auf "PURELEI" 5,22;
+           handschriftlich "super Beispiel" auf "super" 6,72. Bis ~5,0 s steht dort der Hook-Titel (Remotion). -->
+      <section id="k1" class="karte clip" data-start="5.15" data-duration="3.5" data-track-index="1">
+        <div class="kicker">Das Beispiel</div>
+        <div class="logofeld"><img src="assets/purelei-logo.svg" alt="PURELEI" /></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k1-gem"><g transform="translate(538 40) scale(3.2)" class="ico"><use href="#i-gem" /></g></g>
+          <text id="k1-super" x="640" y="232" text-anchor="middle" class="hand gruen" style="font-size:58px">super Beispiel</text>
+          <path id="k1-strich" pathLength="1" d="M520 250 C 580 262, 690 258, 760 246" class="zug" />
+        </svg>
+      </section>
+
+      <!-- K2 OMR: "Ich persönlich habe die Gründerin Alisa Jahnke damals beim OMR im Speech gehört und war wirklich begeistert von
+           ihrer Story." Karte auf "Gründerin" 8,79 (Bühne, Sprecherin) / Alisa 9,29 (Name) / OMR 10,61 (Banner) / Speech 11,15
+           (Mikro, Schallwellen) / begeistert 12,67 (er im Publikum, Funken, handschriftlich) / Story 13,53. "OMR" ist seine
+           Erinnerung (Briefing), nichts dazu erfunden: kein Jahr, keine Bühne mit Namen. -->
+      <section id="k2" class="karte clip" data-start="8.72" data-duration="5.4" data-track-index="1">
+        <div class="kicker">Meine Erinnerung</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k2-buehne">
+            <path d="M40 230 H460" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" />
+            <path d="M70 230 V250 M430 230 V250" stroke="#0b0c0e" stroke-width="4" stroke-linecap="round" />
+            <path id="k2-licht" d="M250 0 L170 226 H330 Z" fill="url(#gvl)" opacity="0.9" />
+            <g transform="translate(206 98) scale(3.6)" class="ico"><use href="#i-user" /></g>
+            <text x="250" y="80" text-anchor="middle" class="klein" style="fill:#0b0c0e;font-size:24px">Gründerin</text>
+          </g>
+          <text id="k2-name" x="250" y="276" text-anchor="middle" class="lab" style="font-size:30px">Alisa Jahnke</text>
+          <g id="k2-omr">
+            <rect x="60" y="14" width="120" height="56" rx="12" fill="#0b0c0e" />
+            <text x="120" y="53" text-anchor="middle" class="lab" style="fill:#fff;font-size:32px;letter-spacing:0.06em">OMR</text>
+          </g>
+          <g id="k2-mic"><g transform="translate(300 150) scale(2.4)" class="ico"><use href="#i-mic" /></g></g>
+          <g id="k2-wellen" fill="none" stroke="url(#gv)" stroke-width="5" stroke-linecap="round">
+            <path class="k2-w" pathLength="1" d="M372 150 q 14 24 0 48" />
+            <path class="k2-w" pathLength="1" d="M392 136 q 26 38 0 76" />
+            <path class="k2-w" pathLength="1" d="M412 122 q 38 52 0 104" />
+          </g>
+          <g id="k2-ich">
+            <circle cx="620" cy="200" r="64" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(584 158) scale(3)" class="ico"><use href="#i-user" /></g>
+            <text x="620" y="290" text-anchor="middle" class="klein" style="font-size:22px">im Publikum: ich</text>
+          </g>
+          <g id="k2-funken"><g transform="translate(682 96) scale(2.2)" class="ico" style="stroke:#00b877"><use href="#i-heart" /></g></g>
+          <text id="k2-begeistert" x="640" y="72" text-anchor="middle" class="hand gruen" style="font-size:54px">begeistert!</text>
+        </svg>
+      </section>
+
+      <!-- K3 Lebensgefühl: "Und genau dieses Lebensgefühl zieht sich tatsächlich durch den gesamten Onlineshop und die Marke."
+           Davor die Quelle (Remotion, 13,98-17,5: Shopify-Beitrag, Auslandssemester auf Hawaii). Lebensgefühl 18,49 (Karte mit
+           Palme/Sonne) / zieht 19,15 (die Blumenkette zeichnet sich durch) / Onlineshop 20,62 / Marke 21,39 -->
+      <section id="k3" class="karte clip" data-start="18.42" data-duration="3.6" data-track-index="1">
+        <div class="kicker">Hawaii-Lebensgefühl</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k3-hawaii">
+            <rect x="24" y="40" width="190" height="190" rx="28" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <g transform="translate(64 66) scale(4.6)" class="ico"><use href="#i-palm" /></g>
+            <text x="119" y="272" text-anchor="middle" class="lab" style="font-size:26px">Hawaii</text>
+          </g>
+          <path id="k3-kette" pathLength="1" d="M214 134 C 300 70, 360 200, 450 134 S 600 70, 690 134 S 770 190, 800 150" class="zug" />
+          <g id="k3-blueten">
+            <g class="k3-b"><g transform="translate(282 86) scale(1.6)"><use href="#i-flower" style="fill:none;stroke:#00b877;stroke-width:2" /></g></g>
+            <g class="k3-b"><g transform="translate(618 86) scale(1.6)"><use href="#i-flower" style="fill:none;stroke:#2a9ed8;stroke-width:2" /></g></g>
+          </g>
+          <g id="k3-shop">
+            <rect x="370" y="66" width="150" height="150" rx="26" class="rahmen" />
+            <g transform="translate(409 100) scale(3)" class="ico"><use href="#i-store" /></g>
+            <text x="445" y="262" text-anchor="middle" class="lab" style="font-size:26px">Onlineshop</text>
+          </g>
+          <g id="k3-marke">
+            <rect x="610" y="66" width="150" height="150" rx="26" class="rahmen" />
+            <g transform="translate(649 100) scale(3)" class="ico"><use href="#i-tag" /></g>
+            <text x="685" y="262" text-anchor="middle" class="lab" style="font-size:26px">Marke</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K4 Markenwelt: "Aloha, Lifestyle und ein immer wieder erkennbarer Look." Aloha 22,37 / Lifestyle 22,90 / immer wieder
+           23,81 / erkennbarer 24,53 -->
+      <section id="k4" class="karte clip" data-start="22.30" data-duration="3.55" data-track-index="1">
+        <div class="kicker">Die Markenwelt</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k4-a">
+            <rect x="24" y="26" width="240" height="210" rx="28" class="rahmen" />
+            <g transform="translate(108 52) scale(3)" class="ico"><use href="#i-flower" /></g>
+            <text x="144" y="190" text-anchor="middle" class="lab" style="font-size:38px">Aloha</text>
+          </g>
+          <g id="k4-l">
+            <rect x="290" y="26" width="240" height="210" rx="28" class="rahmen" />
+            <g transform="translate(374 52) scale(3)" class="ico"><use href="#i-sun" /></g>
+            <text x="410" y="190" text-anchor="middle" class="lab" style="font-size:38px">Lifestyle</text>
+          </g>
+          <g id="k4-o">
+            <rect x="556" y="26" width="240" height="210" rx="28" fill="#fff" stroke="url(#gv)" stroke-width="3.5" />
+            <g transform="translate(640 52) scale(3)" class="ico"><use href="#i-eye" /></g>
+            <text x="676" y="190" text-anchor="middle" class="lab gtext" style="font-size:38px">Look</text>
+          </g>
+          <g id="k4-wieder"><g transform="translate(744 214) scale(1.5)" class="ico"><use href="#i-repeat" /></g></g>
+          <text id="k4-hand" x="676" y="282" text-anchor="middle" class="hand" style="font-size:40px">wiedererkennbar</text>
+        </svg>
+      </section>
+
+      <!-- K5 Start und "nur posten und hoffen?": "2017 ist PURELEI dann damals gestartet, aber die Marke hat tatsächlich nicht
+           einfach nur Schmuckbilder gepostet und einfach nur darauf gehofft, dass jemand diese bestellt," Kennzahl "2017" auf
+           "2017" 26,09 (laut Shopify-Beitrag: "2017 seid ihr mit PURELEI live gegangen") / gestartet 27,98 (Fahne). Dann auf
+           "Schmuckbilder" 31,17 der Feed mit Schmuckbild / gepostet 31,76 / gehofft 33,53 (Sanduhr) / bestellt 34,81 (Tasche mit ?),
+           alles in Grau und durchgestrichen: "nicht einfach nur". Danach die Quelle (Remotion, 35,46-39,6). -->
+      <section id="k5" class="karte clip" data-start="26.02" data-duration="9.6" data-track-index="1">
+        <div class="kicker" id="k5-kick1">Start · laut Shopify-Beitrag</div>
+        <div class="kicker" id="k5-kick2" style="opacity:0">Nur posten und hoffen?</div>
+        <div id="k5-a">
+          <div class="zahl" style="top:60px;font-size:210px"><span class="verlauf">2017</span></div>
+          <div id="k5-live" class="unter" style="top:268px;font-size:36px">PURELEI geht live</div>
+        </div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k5-flagge"><g transform="translate(640 40) scale(2.6)" class="ico"><use href="#i-flag" /></g></g>
+          <g id="k5-b" opacity="0">
+            <g id="k5-post">
+              <rect x="40" y="20" width="200" height="240" rx="24" class="rahmen" />
+              <rect x="58" y="38" width="164" height="150" rx="14" fill="#f2f3f5" />
+              <use href="#kette" x="90" y="60" width="100" height="100" style="color:#9aa3af" />
+              <rect x="58" y="204" width="110" height="14" rx="7" fill="#e5e7eb" /><rect x="58" y="228" width="70" height="14" rx="7" fill="#e5e7eb" />
+              <text x="140" y="290" text-anchor="middle" class="klein" style="font-size:22px">Schmuckbild</text>
+            </g>
+            <g id="k5-up"><g transform="translate(276 86) scale(2.6)" class="ico grau"><use href="#i-upload" /></g></g>
+            <text id="k5-upt" x="307" y="186" text-anchor="middle" class="klein">posten</text>
+            <g id="k5-sand"><g transform="translate(404 76) scale(3)" class="ico grau"><use href="#i-hourglass" /></g></g>
+            <text id="k5-sandt" x="440" y="186" text-anchor="middle" class="klein">hoffen</text>
+            <g id="k5-tasche">
+              <g transform="translate(556 66) scale(3.4)" class="ico grau"><use href="#i-bag" /></g>
+              <text x="696" y="140" class="lab grau" style="font-size:64px">?</text>
+              <text x="597" y="196" text-anchor="middle" class="klein">Bestellung</text>
+            </g>
+            <path id="k5-durch" pathLength="1" d="M30 128 C 250 118, 520 140, 790 122" class="grauzug" style="stroke:#6b7280;stroke-width:6" />
+            <text id="k5-nicht" x="420" y="262" text-anchor="middle" class="hand" style="font-size:44px">nicht einfach nur</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K6 Menschen eingebunden: "und dabei immer wieder Menschen eingebunden, die einfach zur Markenwelt passen." Davor die
+           Quelle (Remotion, 35,46-39,6: "Wir haben von Anfang an sehr viel Wert auf Influencer-Marketing gelegt"). dabei 39,85
+           (Kreis Markenwelt mit Blüte) / Menschen 40,73 (Menschen kommen dazu) / Markenwelt 42,23 / passen 42,74 (Haken) -->
+      <section id="k6" class="karte clip" data-start="39.78" data-duration="3.3" data-track-index="1">
+        <div class="kicker">Community</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <circle id="k6-kreis" cx="410" cy="140" r="118" fill="url(#gvl)" stroke="url(#gv)" stroke-width="4" />
+          <g id="k6-mitte"><g transform="translate(374 104) scale(3)" class="ico"><use href="#i-flower" /></g></g>
+          <text id="k6-welt" x="410" y="226" text-anchor="middle" class="klein" style="fill:#0b0c0e">Markenwelt</text>
+          <g class="k6-p"><g transform="translate(98 30) scale(2.6)"><use href="#i-user" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round" /></g></g>
+          <g class="k6-p"><g transform="translate(96 160) scale(2.6)"><use href="#i-user" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round" /></g></g>
+          <g class="k6-p"><g transform="translate(660 30) scale(2.6)"><use href="#i-user" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round" /></g></g>
+          <g class="k6-p"><g transform="translate(662 160) scale(2.6)"><use href="#i-user" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round" /></g></g>
+          <g id="k6-pfeile" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12">
+            <path d="M170 62 L292 100" /><path d="M170 196 L292 170" /><path d="M650 62 L528 100" /><path d="M650 196 L528 170" />
+          </g>
+          <use id="k6-ok" href="#haken" x="566" y="250" opacity="0" />
+          <text id="k6-passen" x="596" y="264" class="hand gruen" style="font-size:40px" opacity="0">passen</text>
+        </svg>
+      </section>
+
+      <!-- K7 Kennzahl: "Laut einem Shopify-Beitrag hatte PURELEI 2021 bereits mehr als 600.000 Follower auf Instagram aufgebaut.
+           Für mich liegt hier natürlich der interessante Punkt aber ganz woanders." Davor die Quelle (Remotion, 43,03-46,3, Titel,
+           Teaser mit 600.000, Datum 10. Feb. 2021). Karte auf "bereits" 46,37, die Zahl zählt hoch und landet auf "600.000" 47,54 /
+           Follower 48,54 / interessante 50,99 / woanders 52,41 (die Zahl tritt zurück, Pfeil zur Seite). Fakten-Grenze: historische
+           Zahl, Stand 2021, laut Shopify-Beitrag; keine aktuelle Reichweite. -->
+      <section id="k7" class="karte clip" data-start="46.30" data-duration="6.8" data-track-index="1">
+        <div class="kicker">2021 · laut Shopify-Beitrag</div>
+        <div class="badge" style="background:#6b7280">Historische Zahl</div>
+        <div id="k7-zahl">
+          <div class="zahl" style="top:58px;font-size:170px"><span id="k7-n" class="verlauf">0</span></div>
+          <div id="k7-unter" class="unter" style="top:236px">Instagram-Follower</div>
+          <div id="k7-stand" class="unter" style="top:290px;font-size:24px;font-weight:700;color:#6b7280;letter-spacing:0.04em">STAND 2021, KEINE AKTUELLE ZAHL</div>
+        </div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <path id="k7-pfeil" pathLength="1" d="M560 214 C 640 214, 700 190, 760 150 M736 146 L762 148 L756 172" class="zug" />
+          <text id="k7-hand" x="640" y="118" text-anchor="middle" class="hand" style="font-size:52px" opacity="0">ganz woanders</text>
+        </svg>
+      </section>
+
+      <!-- K8 Gleiche Kategorie, warum deine Marke? "Denn bei Schmuck kannst du nur begrenzt über die reine Produktkategorie
+           unterscheiden. Deshalb muss natürlich ein Kunde erstmal verstehen, warum er überhaupt sich ausgerechnet für deine Marke
+           entscheiden sollte." Schmuck 53,53 (fünf gleiche Shops mit Kette) / begrenzt 54,51 (=) / Produktkategorie 56,03 /
+           Kunde 58,78 (Kunde mit Zeiger) / warum 60,37 (?) / deine Marke 62,06 (eine Kachel hebt sich ab) / entscheiden 62,65 (Haken) -->
+      <section id="k8" class="karte clip" data-start="53.46" data-duration="9.95" data-track-index="1">
+        <div class="kicker">Schmuck in tausenden Shops</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k8-reihe">
+            <g class="k8-s"><rect x="24" y="24" width="132" height="150" rx="20" class="rahmen" /><g transform="translate(66 34) scale(2)" class="ico grau"><use href="#i-store" /></g><use href="#kette" x="55" y="84" width="70" height="70" style="color:#9aa3af" /></g>
+            <g class="k8-s"><rect x="182" y="24" width="132" height="150" rx="20" class="rahmen" /><g transform="translate(224 34) scale(2)" class="ico grau"><use href="#i-store" /></g><use href="#kette" x="213" y="84" width="70" height="70" style="color:#9aa3af" /></g>
+            <g class="k8-s" id="k8-deine"><rect id="k8-deinerahmen" x="340" y="24" width="132" height="150" rx="20" class="rahmen" /><g transform="translate(382 34) scale(2)" class="ico grau"><use href="#i-store" /></g><use id="k8-deinekette" href="#kette" x="371" y="84" width="70" height="70" style="color:#9aa3af" /></g>
+            <g class="k8-s"><rect x="498" y="24" width="132" height="150" rx="20" class="rahmen" /><g transform="translate(540 34) scale(2)" class="ico grau"><use href="#i-store" /></g><use href="#kette" x="529" y="84" width="70" height="70" style="color:#9aa3af" /></g>
+            <g class="k8-s"><rect x="656" y="24" width="132" height="150" rx="20" class="rahmen" /><g transform="translate(698 34) scale(2)" class="ico grau"><use href="#i-store" /></g><use href="#kette" x="687" y="84" width="70" height="70" style="color:#9aa3af" /></g>
+          </g>
+          <g id="k8-gleich" class="lab grau" style="font-size:40px" text-anchor="middle">
+            <text x="169" y="112">=</text><text x="327" y="112">=</text><text x="485" y="112">=</text><text x="643" y="112">=</text>
+          </g>
+          <text id="k8-kat" x="406" y="216" text-anchor="middle" class="lab grau" style="font-size:28px">gleiche Produktkategorie</text>
+          <g id="k8-kunde">
+            <circle cx="110" cy="240" r="40" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(86 216) scale(2)" class="ico"><use href="#i-user" /></g>
+            <text x="166" y="250" class="klein" style="fill:#0b0c0e">Kunde</text>
+          </g>
+          <text id="k8-frage" x="250" y="268" class="lab" style="font-size:44px;fill:#2a9ed8">warum?</text>
+          <text id="k8-hand" x="650" y="270" text-anchor="middle" class="hand gruen" style="font-size:50px">deine Marke</text>
+          <use id="k8-ok" href="#haken" x="472" y="26" opacity="0" />
+        </svg>
+      </section>
+
+      <!-- K9 Drei Learnings: "Und hier tatsächlich sehe ich immer drei ganz wichtige Learnings für Onlineshop-Betreiber."
+           drei 64,73 (1 2 3) / Learnings 65,71 / Onlineshop-Betreiber 66,23 -->
+      <section id="k9" class="karte clip" data-start="64.66" data-duration="2.85" data-track-index="1">
+        <div class="kicker">Für Onlineshop-Betreiber</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g class="k9-n"><circle cx="120" cy="120" r="74" fill="#fff" stroke="url(#gv)" stroke-width="4" /><text x="120" y="160" text-anchor="middle" class="serifz gtext" style="font-size:112px">1</text></g>
+          <g class="k9-n"><circle cx="290" cy="120" r="74" fill="#fff" stroke="url(#gv)" stroke-width="4" /><text x="290" y="160" text-anchor="middle" class="serifz gtext" style="font-size:112px">2</text></g>
+          <g class="k9-n"><circle cx="460" cy="120" r="74" fill="#fff" stroke="url(#gv)" stroke-width="4" /><text x="460" y="160" text-anchor="middle" class="serifz gtext" style="font-size:112px">3</text></g>
+          <text id="k9-titel" x="290" y="264" text-anchor="middle" class="lab" style="font-size:40px">Learnings</text>
+          <g id="k9-shop"><rect x="600" y="46" width="170" height="170" rx="28" class="rahmen" /><g transform="translate(649 95) scale(3)" class="ico"><use href="#i-store" /></g></g>
+        </svg>
+      </section>
+
+      <!-- L1 Learning 1, Teil a: "Erstens, definiere bitte eine Markenwelt, die auch ohne Logo erkennbar ist." Erstens 67,66 (Ziffer,
+           Tüte mit Logo-Feld) / Markenwelt 69,64 (Farbe und Blüten der Marke füllen die Tüte) / ohne Logo 70,84 (Logo-Feld
+           durchgestrichen) / erkennbar 71,40 (Haken) -->
+      <section id="l1" class="karte clip" data-start="67.59" data-duration="4.85" data-track-index="1">
+        <div class="kicker" style="left:170px">Learning 1 · Markenwelt</div>
+        <div class="ziffer"><span class="verlauf">1</span></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="l1-tuete">
+            <path d="M230 70 H420 L436 270 H214 Z" fill="#fff" stroke="#0b0c0e" stroke-width="3.5" stroke-linejoin="round" />
+            <path d="M282 70 V52 a43 43 0 0 1 86 0 V70" fill="none" stroke="#0b0c0e" stroke-width="3.5" stroke-linecap="round" />
+            <g id="l1-muster" opacity="0">
+              <path d="M226 120 H424 L430 196 H220 Z" fill="url(#gvl)" />
+              <g transform="translate(250 128) scale(2.2)"><use href="#i-flower" style="fill:none;stroke:#00b877;stroke-width:2" /></g>
+              <g transform="translate(352 128) scale(2.2)"><use href="#i-sun" style="fill:none;stroke:#2a9ed8;stroke-width:2" /></g>
+            </g>
+            <rect id="l1-logo" x="268" y="208" width="114" height="40" rx="8" fill="#f2f3f5" stroke="#9aa3af" stroke-width="2" stroke-dasharray="6 6" />
+            <text id="l1-logot" x="325" y="236" text-anchor="middle" class="klein" style="font-size:20px">LOGO</text>
+            <path id="l1-strich" pathLength="1" d="M262 250 L388 206" class="grauzug" style="stroke:#6b7280" />
+          </g>
+          <text id="l1-a" x="470" y="110" class="lab" style="font-size:40px">Markenwelt</text>
+          <text id="l1-b" x="470" y="166" class="lab grau" style="font-size:32px">auch ohne Logo</text>
+          <use id="l1-ok" href="#haken" x="490" y="214" opacity="0" />
+          <text id="l1-c" x="524" y="226" class="lab gtext" style="font-size:38px" opacity="0">erkennbar</text>
+        </svg>
+      </section>
+
+      <!-- L1 Teil b: "Farben, Bildsprache und auch Botschaft sollten tatsächlich immer gut zusammenpassen." Farben 72,50 /
+           Bildsprache 72,96 / Botschaft 74,16 / zusammenpassen 75,84 (die drei rücken zusammen, Haken) -->
+      <section id="l1b" class="karte clip" data-start="72.43" data-duration="4.75" data-track-index="1">
+        <div class="kicker" style="left:170px">Learning 1 · Passt zusammen</div>
+        <div class="ziffer"><span class="verlauf">1</span></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <rect id="l1b-klammer" x="170" y="22" width="626" height="204" rx="30" fill="url(#gvl)" stroke="url(#gv)" stroke-width="3.5" opacity="0" />
+          <g id="l1b-f" class="l1b-x"><rect x="190" y="40" width="180" height="168" rx="24" class="rahmen" /><g transform="translate(244 58) scale(3)" class="ico"><use href="#i-palette" /></g><text x="280" y="186" text-anchor="middle" class="lab" style="font-size:28px">Farben</text></g>
+          <g id="l1b-b" class="l1b-x"><rect x="390" y="40" width="180" height="168" rx="24" class="rahmen" /><g transform="translate(444 58) scale(3)" class="ico"><use href="#i-image" /></g><text x="480" y="186" text-anchor="middle" class="lab" style="font-size:28px">Bildsprache</text></g>
+          <g id="l1b-m" class="l1b-x"><rect x="590" y="40" width="180" height="168" rx="24" class="rahmen" /><g transform="translate(644 58) scale(3)" class="ico"><use href="#i-msg" /></g><text x="680" y="186" text-anchor="middle" class="lab" style="font-size:28px">Botschaft</text></g>
+          <use id="l1b-ok" href="#haken" x="300" y="260" opacity="0" />
+          <text id="l1b-hand" x="336" y="276" class="hand gruen" style="font-size:46px" opacity="0">passt zusammen</text>
+        </svg>
+      </section>
+
+      <!-- L2 Learning 2: "Zweitens, such dir einfach mal Creator, die nicht nur nach Followerzahlen aus sind. Entscheidend ist
+           natürlich, ob ihre Zielgruppe und ihre Inhalte auch tatsächlich zu deinem Produkt passen." Zweitens 77,23 (Ziffer) /
+           Creator 79,07 / Followerzahlen 80,57 (Balken) / aus sind 81,25 (durchgestrichen) / Zielgruppe 83,55 / Inhalte 84,55 /
+           Produkt 86,03 / passen 86,31 (Verbindung, Haken). Ohne Zahlen (keine Followerzahl genannt). -->
+      <section id="l2" class="karte clip" data-start="77.16" data-duration="9.45" data-track-index="1">
+        <div class="kicker" style="left:170px">Learning 2 · Creator</div>
+        <div class="ziffer"><span class="verlauf">2</span></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="l2-creator">
+            <circle cx="236" cy="96" r="58" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(206 66) scale(2.5)" class="ico"><use href="#i-user" /></g>
+            <text x="236" y="186" text-anchor="middle" class="lab" style="font-size:28px">Creator</text>
+          </g>
+          <g id="l2-follower">
+            <text x="326" y="58" class="klein">Follower</text>
+            <rect x="326" y="70" width="440" height="26" rx="13" fill="#e5e7eb" />
+            <rect id="l2-balken" x="326" y="70" width="440" height="26" rx="13" fill="#9aa3af" />
+            <path id="l2-durch" pathLength="1" d="M318 112 L780 46" class="grauzug" style="stroke:#6b7280;stroke-width:6" />
+          </g>
+          <g id="l2-ziel"><rect x="326" y="128" width="200" height="64" rx="18" fill="#fff" stroke="url(#gv)" stroke-width="3" /><g transform="translate(340 142) scale(1.5)" class="ico"><use href="#i-target" /></g><text x="384" y="170" class="lab" style="font-size:26px">Zielgruppe</text></g>
+          <g id="l2-inhalt"><rect x="546" y="128" width="200" height="64" rx="18" fill="#fff" stroke="url(#gv)" stroke-width="3" /><g transform="translate(560 142) scale(1.5)" class="ico"><use href="#i-play" /></g><text x="604" y="170" class="lab" style="font-size:26px">Inhalte</text></g>
+          <path id="l2-link" pathLength="1" d="M536 196 C 536 236, 560 250, 600 250" class="zug" />
+          <g id="l2-produkt"><rect x="606" y="214" width="190" height="66" rx="18" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><use href="#kette" x="614" y="220" width="54" height="54" style="color:#0b0c0e" /><text x="672" y="258" class="lab" style="font-size:26px">Produkt</text></g>
+          <use id="l2-ok" href="#haken" x="236" y="252" opacity="0" />
+          <text id="l2-passt" x="272" y="266" class="hand gruen" style="font-size:46px" opacity="0">passt</text>
+        </svg>
+      </section>
+
+      <!-- L3 Learning 3: "Und drittens, bau einfach nicht nur Reichweite auf. Überleg dir ganz genau, wie du diese Menschen in den
+           Shop holst und eine langfristige Kundenbeziehung aufbaust." drittens 86,82 (Ziffer) / Reichweite 88,64 (Megafon mit
+           Punkten) / Menschen 91,88 (Punkte wandern) / Shop 92,58 (Tasche) / langfristige 94,04 / Kundenbeziehung 94,78 (Kreislauf
+           mit Herz) -->
+      <section id="l3" class="karte clip" data-start="86.75" data-duration="9.08" data-track-index="1">
+        <div class="kicker" style="left:170px">Learning 3 · Mehr als Reichweite</div>
+        <div class="ziffer"><span class="verlauf">3</span></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="l3-mega">
+            <g transform="translate(176 52) scale(3.6)" class="ico"><use href="#i-mega" /></g>
+            <text x="219" y="190" text-anchor="middle" class="lab" style="font-size:28px">Reichweite</text>
+          </g>
+          <g id="l3-punkte" fill="#9aa3af">
+            <circle class="l3-p" cx="290" cy="70" r="9" /><circle class="l3-p" cx="306" cy="104" r="9" /><circle class="l3-p" cx="292" cy="138" r="9" />
+            <circle class="l3-p" cx="326" cy="84" r="9" /><circle class="l3-p" cx="324" cy="124" r="9" />
+          </g>
+          <path id="l3-weg" pathLength="1" d="M346 104 L 462 104" class="zug" />
+          <g id="l3-shop">
+            <rect x="472" y="34" width="140" height="140" rx="26" class="rahmen" />
+            <g transform="translate(506 66) scale(3)" class="ico"><use href="#i-bag" /></g>
+            <text x="542" y="212" text-anchor="middle" class="lab" style="font-size:28px">Shop</text>
+          </g>
+          <g id="l3-kreis">
+            <path id="l3-loop" pathLength="1" d="M700 40 a 64 64 0 1 1 -1 0" fill="none" stroke="url(#gv)" stroke-width="6" stroke-linecap="round" />
+            <path d="M688 30 L702 40 L688 52" fill="none" stroke="#31adec" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" id="l3-spitze" opacity="0" />
+            <g id="l3-herz"><g transform="translate(676 80) scale(2)" class="ico" style="stroke:#00b877"><use href="#i-heart" /></g></g>
+          </g>
+          <path id="l3-weg2" pathLength="1" d="M616 104 L 630 104" class="zug" />
+          <text id="l3-hand" x="700" y="226" text-anchor="middle" class="hand gruen" style="font-size:44px" opacity="0">langfristig</text>
+          <text id="l3-bez" x="700" y="270" text-anchor="middle" class="lab" style="font-size:24px" opacity="0">Kundenbeziehung</text>
+        </svg>
+      </section>
+
+      <!-- K11 Was eine Marke ausmacht: "Denn eine Marke entsteht tatsächlich nicht nur dabei, dass du Produkte schön fotografierst,
+           sondern dass auch tatsächlich Menschen etwas ganz Bestimmtes damit verbinden." Marke 96,44 (Karte) / Produkte 98,51
+           (Kamera, Produktfoto) / schön 99,03 (Blitz) / sondern 100,02 (Foto wird grau: nicht nur) / Menschen 101,35 (Menschen um
+           das Produkt) / verbinden 103,28 (Linien mit Herzen, handschriftlich) -->
+      <section id="k11" class="karte clip" data-start="96.37" data-duration="7.25" data-track-index="1">
+        <div class="kicker">Was eine Marke ausmacht</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k11-foto">
+            <rect x="30" y="20" width="220" height="200" rx="24" class="rahmen" />
+            <rect x="48" y="38" width="184" height="128" rx="14" fill="#f2f3f5" />
+            <use href="#kette" x="95" y="48" width="90" height="90" style="color:#0b0c0e" id="k11-kette" />
+            <g id="k11-cam"><g transform="translate(110 168) scale(2.5)" class="ico"><use href="#i-camera" /></g></g>
+            <text x="140" y="262" text-anchor="middle" class="klein" style="fill:#0b0c0e" id="k11-ft">schönes Produktfoto</text>
+          </g>
+          <circle id="k11-blitz" cx="140" cy="100" r="96" fill="#ffffff" opacity="0" />
+          <text id="k11-nur" x="140" y="124" text-anchor="middle" class="hand" style="font-size:52px" opacity="0">nicht nur</text>
+          <g id="k11-mitte">
+            <circle cx="560" cy="130" r="64" fill="url(#gvl)" stroke="url(#gv)" stroke-width="4" />
+            <use href="#kette" x="522" y="92" width="76" height="76" style="color:#0b0c0e" />
+          </g>
+          <g class="k11-m"><g transform="translate(384 26) scale(2.4)"><use href="#i-user" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round" /></g></g>
+          <g class="k11-m"><g transform="translate(384 168) scale(2.4)"><use href="#i-user" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round" /></g></g>
+          <g class="k11-m"><g transform="translate(708 26) scale(2.4)"><use href="#i-user" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round" /></g></g>
+          <g class="k11-m"><g transform="translate(708 168) scale(2.4)"><use href="#i-user" style="fill:none;stroke:#0b0c0e;stroke-width:2;stroke-linecap:round" /></g></g>
+          <g id="k11-linien" fill="none" stroke="url(#gv)" stroke-width="4" stroke-linecap="round">
+            <path class="k11-l" pathLength="1" d="M446 66 L506 98" /><path class="k11-l" pathLength="1" d="M446 206 L506 166" />
+            <path class="k11-l" pathLength="1" d="M704 66 L616 98" /><path class="k11-l" pathLength="1" d="M704 206 L616 166" />
+          </g>
+          <g id="k11-herzen" class="ico" style="stroke:#00b877">
+            <g transform="translate(462 66) scale(1.3)"><use href="#i-heart" /></g><g transform="translate(462 168) scale(1.3)"><use href="#i-heart" /></g>
+            <g transform="translate(628 66) scale(1.3)"><use href="#i-heart" /></g><g transform="translate(628 168) scale(1.3)"><use href="#i-heart" /></g>
+          </g>
+          <text id="k11-hand" x="560" y="286" text-anchor="middle" class="hand gruen" style="font-size:48px" opacity="0">damit verbinden</text>
+        </svg>
+      </section>
+
+      <!-- K12 Folgen (CTA), groß und mittig, Plus wie bei TikTok: Und 103,72 (Karte) / Markenstories 104,69 (leiser Ring-Hinweis) /
+           lass 105,63 (Zeiger) / Follow 106,23 (Plus drückt ein, dreht sich, wird zum Haken); bleibt bis zum Ende (106,85) -->
+      <section id="k12" class="folgekarte clip" data-start="103.65" data-duration="3.2" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
+        <div id="fring"></div>
+        <svg id="fplus" viewBox="-32 -32 64 64">
+          <g id="fp-plus"><circle r="28" fill="url(#gvd)" stroke="#fff" stroke-width="4" /><path d="M-12 0 H12 M0 -12 V12" stroke="#fff" stroke-width="5.5" stroke-linecap="round" /></g>
+          <g id="fp-haken" opacity="0" transform="rotate(180)"><circle r="28" fill="#fff" stroke="#e5e7eb" stroke-width="3" /><path id="fp-hpfad" pathLength="1" d="M-12 1 L-3 10 L13 -8" fill="none" stroke="url(#gvd)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </svg>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><use href="#zeigerform" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker (keine leere Karte: der erste Inhalt kommt mit), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        const k = document.querySelector(id + " .kicker");
+        if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        const b = document.querySelector(id + " .badge");
+        if (b) tl.fromTo(b, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, an + 0.06);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const weg = (sel, t, d = 0.2) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      const da = (sel, t, d = 0.25) => tl.to(sel, { opacity: 1, duration: d, ease: "power2.out" }, t);
+      const grau = (sel, t) => tl.to(sel, { opacity: 0.35, duration: 0.3, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5, ease = "power2.out") {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, t);
+      }
+      gsap.set("#k1-strich, .k2-w, #k3-kette, #k5-durch, #k7-pfeil, #l1-strich, #l2-durch, #l2-link, #l3-weg, #l3-weg2, #l3-loop, .k11-l, #fp-hpfad", { strokeDasharray: 1, strokeDashoffset: 1 });
+      gsap.set("#k1-strich, .k2-w, #k3-kette, #k5-durch, #k7-pfeil, #l1-strich, #l2-durch, #l2-link, #l3-weg, #l3-weg2, #l3-loop, .k11-l", { opacity: 0 });
+      gsap.set(".zeiger", { transformOrigin: "9px 9px" });
+
+      // K1 Das Beispiel: Logo kommt mit der Karte, "super Beispiel" auf "super"
+      karte("#k1", 5.15, 8.62);
+      tl.fromTo("#k1 .logofeld", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 5.19);
+      pop("#k1-gem", 5.3, 0.35);
+      ein("#k1-super", 6.65);
+      zeichne("#k1-strich", 6.8, 0.45);
+
+      // K2 Bühne mit der Gründerin, OMR-Banner, Mikro mit Wellen, er im Publikum begeistert
+      karte("#k2", 8.72, 14.1);
+      ein("#k2-buehne", 8.76, 0.35);
+      ein("#k2-name", 9.22);
+      pop("#k2-omr", 10.54);
+      pop("#k2-mic", 11.08, 0.25);
+      tl.set(".k2-w", { opacity: 1 }, 11.12);
+      tl.fromTo(".k2-w", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.35, ease: "power2.out", stagger: 0.1 }, 11.12);
+      pop("#k2-ich", 12.0, 0.3);
+      pop("#k2-funken", 12.6, 0.3);
+      ein("#k2-begeistert", 12.62);
+
+      // K3 Hawaii-Lebensgefühl zieht sich durch Onlineshop und Marke
+      karte("#k3", 18.42, 22.0);
+      tl.fromTo("#k3-hawaii", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 18.46);
+      zeichne("#k3-kette", 19.08, 1.4, "power1.inOut");
+      tl.fromTo(".k3-b", { opacity: 0, scale: 0.8, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out", stagger: 0.6 }, 19.4);
+      pop("#k3-shop", 20.55);
+      pop("#k3-marke", 21.32);
+
+      // K4 Aloha, Lifestyle, wiedererkennbarer Look
+      karte("#k4", 22.30, 25.85);
+      tl.fromTo("#k4-a", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 22.33);
+      pop("#k4-l", 22.83);
+      pop("#k4-wieder", 23.74, 0.3);
+      pop("#k4-o", 24.46);
+      ein("#k4-hand", 24.6);
+
+      // K5 2017 als Kennzahl, dann "nur posten und hoffen?" grau und durchgestrichen
+      karte("#k5", 26.02, 35.62);
+      tl.fromTo("#k5-a .zahl", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 26.05);
+      ein("#k5-live", 27.91);
+      pop("#k5-flagge", 27.91, 0.3);
+      weg("#k5-a, #k5-flagge, #k5-kick1", 30.85, 0.22);
+      da("#k5-b", 31.06, 0.01);
+      da("#k5-kick2", 31.06, 0.25);
+      tl.fromTo("#k5-post", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 31.10);
+      pop("#k5-up", 31.69); ein("#k5-upt", 31.72);
+      pop("#k5-sand", 33.46); ein("#k5-sandt", 33.49);
+      pop("#k5-tasche", 34.74);
+      zeichne("#k5-durch", 35.0, 0.35);
+      ein("#k5-nicht", 35.05, 0.25);
+
+      // K6 Menschen kommen in die Markenwelt, passen
+      karte("#k6", 39.78, 43.08);
+      tl.fromTo("#k6-kreis, #k6-mitte", { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 39.82);
+      tl.fromTo(".k6-p", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.28, ease: "power2.out", stagger: 0.1 }, 40.66);
+      ein("#k6-pfeile", 40.9);
+      ein("#k6-welt", 42.16);
+      badge("#k6-ok", 42.67);
+      ein("#k6-passen", 42.7, 0.25);
+
+      // K7 600.000+ Instagram-Follower (2021, historisch), zählt hoch und landet auf "600.000"; dann "woanders"
+      karte("#k7", 46.30, 53.1);
+      const zaehler = { v: 0 };
+      const n7 = document.getElementById("k7-n");
+      const schreib = () => { n7.textContent = Math.round(zaehler.v / 1000).toLocaleString("de-DE") + (zaehler.v >= 600000 ? ".000+" : ".000"); };
+      tl.fromTo(zaehler, { v: 0 }, { v: 600000, duration: 1.1, ease: "power2.out", onUpdate: schreib }, 46.37);
+      tl.set(zaehler, { v: 600000, onComplete: schreib }, 47.47);
+      tl.fromTo("#k7-n", { scale: 1 }, { scale: 1.04, duration: 0.12, yoyo: true, repeat: 1, ease: "power2.out", transformOrigin: "50% 60%" }, 47.47);
+      ein("#k7-unter", 48.47);
+      ein("#k7-stand", 48.6);
+      tl.to("#k7-zahl", { opacity: 0.3, x: -60, duration: 0.5, ease: "power2.inOut" }, 50.92);
+      zeichne("#k7-pfeil", 52.34, 0.45);
+      ein("#k7-hand", 52.38);
+
+      // K8 Gleiche Kategorie: fünf gleiche Shops; Kunde fragt warum; deine Marke hebt sich ab
+      karte("#k8", 53.46, 63.42);
+      tl.fromTo(".k8-s", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.28, ease: "power3.out", stagger: 0.08 }, 53.48);
+      tl.fromTo("#k8-gleich text", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out", stagger: 0.07 }, 54.44);
+      ein("#k8-kat", 55.96);
+      weg("#k8-kat", 58.5, 0.2);
+      pop("#k8-kunde", 58.71);
+      ein("#k8-frage", 60.30);
+      tl.to("#k8-deine", { y: -12, duration: 0.35, ease: "power2.out" }, 61.99);
+      tl.to("#k8-deinerahmen", { attr: { stroke: "url(#gv)", "stroke-width": 4 }, duration: 0.01 }, 61.99);
+      tl.to("#k8-deinekette", { color: "#0b0c0e", duration: 0.25 }, 61.99);
+      grau(".k8-s:not(#k8-deine), #k8-gleich", 61.99);
+      ein("#k8-hand", 62.02);
+      badge("#k8-ok", 62.58);
+
+      // K9 Drei Learnings für Onlineshop-Betreiber
+      karte("#k9", 64.66, 67.55);
+      tl.fromTo(".k9-n", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out", stagger: 0.12 }, 64.68);
+      ein("#k9-titel", 65.64);
+      pop("#k9-shop", 66.16);
+
+      // L1a Markenwelt, auch ohne Logo erkennbar
+      karte("#l1", 67.59, 72.47);
+      tl.fromTo("#l1 .ziffer", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 67.62);
+      tl.fromTo("#l1-tuete", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 67.7);
+      ein("#l1-a", 69.57);
+      da("#l1-muster", 69.6, 0.35);
+      ein("#l1-b", 70.77);
+      zeichne("#l1-strich", 71.0, 0.3);
+      tl.to("#l1-logo, #l1-logot", { opacity: 0.35, duration: 0.3 }, 71.1);
+      badge("#l1-ok", 71.33);
+      ein("#l1-c", 71.35, 0.25);
+
+      // L1b Farben, Bildsprache, Botschaft passen zusammen
+      karte("#l1b", 72.43, 77.18);
+      tl.fromTo("#l1b .ziffer", { opacity: 0.0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 72.45);
+      tl.fromTo("#l1b-f", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 72.46);
+      pop("#l1b-b", 72.89);
+      pop("#l1b-m", 74.09);
+      tl.to("#l1b-f", { x: 12, duration: 0.4, ease: "power2.inOut" }, 75.77);
+      tl.to("#l1b-m", { x: -12, duration: 0.4, ease: "power2.inOut" }, 75.77);
+      da("#l1b-klammer", 75.8, 0.3);
+      badge("#l1b-ok", 76.0);
+      ein("#l1b-hand", 76.02, 0.25);
+
+      // L2 Creator nicht nur nach Followerzahl, sondern nach Zielgruppe und Inhalten, die zum Produkt passen
+      karte("#l2", 77.16, 86.62);
+      tl.fromTo("#l2 .ziffer", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 77.19);
+      gsap.set("#l2-creator, #l2-follower, #l2-ziel, #l2-inhalt, #l2-produkt", { opacity: 0 });
+      ein("#l2-creator", 79.0);
+      da("#l2-follower", 80.5, 0.2);
+      tl.fromTo("#l2-balken", { attr: { width: 26 } }, { attr: { width: 440 }, duration: 0.6, ease: "power2.out" }, 80.5);
+      zeichne("#l2-durch", 81.18, 0.3);
+      grau("#l2-follower text, #l2-follower rect", 81.4);
+      pop("#l2-ziel", 83.48);
+      pop("#l2-inhalt", 84.48);
+      pop("#l2-produkt", 85.96);
+      zeichne("#l2-link", 86.05, 0.25);
+      badge("#l2-ok", 86.24);
+      ein("#l2-passt", 86.26, 0.2);
+
+      // L3 Reichweite → Menschen in den Shop → langfristige Kundenbeziehung
+      karte("#l3", 86.75, 95.83);
+      tl.fromTo("#l3 .ziffer", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 86.78);
+      gsap.set("#l3-mega, #l3-punkte, #l3-shop, #l3-kreis", { opacity: 0 });
+      pop("#l3-mega", 88.57);
+      tl.set("#l3-punkte", { opacity: 1 }, 88.62);
+      tl.fromTo(".l3-p", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out", stagger: 0.06 }, 88.62);
+      zeichne("#l3-weg", 91.81, 0.45);
+      tl.to(".l3-p", { x: 150, opacity: 0, duration: 0.6, ease: "power2.in", stagger: 0.05 }, 91.85);
+      pop("#l3-shop", 92.51);
+      da("#l3-kreis", 93.97, 0.01);
+      zeichne("#l3-weg2", 93.97, 0.15);
+      zeichne("#l3-loop", 93.97, 0.8, "power1.inOut");
+      da("#l3-spitze", 94.7, 0.15);
+      ein("#l3-hand", 94.0);
+      ein("#l3-bez", 94.71);
+
+      // K11 Schönes Produktfoto reicht nicht: Menschen verbinden etwas damit
+      karte("#k11", 96.37, 103.65);
+      tl.fromTo("#k11-foto", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 96.4);
+      gsap.set("#k11-mitte, .k11-m, #k11-herzen", { opacity: 0 });
+      pop("#k11-cam", 98.44, 0.25);
+      tl.fromTo("#k11-blitz", { opacity: 0 }, { opacity: 0.85, duration: 0.08, ease: "none", yoyo: true, repeat: 1 }, 98.96);
+      grau("#k11-foto", 99.95);
+      ein("#k11-nur", 99.98, 0.25);
+      pop("#k11-mitte", 101.0);
+      tl.fromTo(".k11-m", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.28, ease: "power2.out", stagger: 0.08 }, 101.28);
+      tl.set(".k11-l", { opacity: 1 }, 103.21);
+      tl.fromTo(".k11-l", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.3, ease: "power2.out", stagger: 0.04 }, 103.21);
+      da("#k11-herzen", 103.3, 0.2);
+      ein("#k11-hand", 103.21, 0.25);
+
+      // K12 Folgen wie bei TikTok: Karte auf "Und", leiser Ring auf "Markenstories", Zeiger auf "lass", auf "Follow" drückt das Plus
+      // ein (1 → 0,8), dreht sich um 180°, wird zum weißen Kreis mit gezeichnetem Haken im Verlauf, springt kurz über und gibt
+      // einen Ring-Puls nach außen; der Haken bleibt bis zum Schluss
+      const TAP = 106.16;
+      tl.fromTo("#k12", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 103.65);
+      gsap.set("#fplus", { transformOrigin: "50% 50%" });
+      tl.fromTo("#fring", { opacity: 0.6, scale: 1 }, { opacity: 0, scale: 1.6, duration: 0.6, ease: "power2.out", immediateRender: false }, 104.62);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 220, y: 214 }, { opacity: 1, x: 200, y: 206, duration: 0.15, ease: "power2.out" }, 105.56);
+      tl.to("#fzeiger", { x: 112, y: 170, duration: 0.45, ease: "power2.inOut" }, 105.68);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, TAP - 0.02);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, TAP + 0.06);
+      tl.to("#fplus", { scale: 0.8, duration: 0.08, ease: "power2.in" }, TAP);
+      tl.to("#fplus", { rotation: 180, duration: 0.3, ease: "power2.inOut" }, TAP);
+      tl.set("#fp-plus", { opacity: 0 }, TAP + 0.15);
+      tl.set("#fp-haken", { opacity: 1 }, TAP + 0.15);
+      tl.to("#fp-hpfad", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, TAP + 0.16);
+      tl.fromTo("#fplus", { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "back.out(4)", immediateRender: false }, TAP + 0.12);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.6, ease: "power2.out", immediateRender: false }, TAP + 0.16);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, TAP + 0.15);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, TAP + 0.15);
+      tl.to("#fzeiger", { x: 150, y: 210, duration: 0.2, ease: "power2.out" }, TAP + 0.25);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.2, ease: "power2.in" }, TAP + 0.45);
+      tl.set({}, {}, 106.85);
+
+      tl.seek(0);
+      window.__timelines["purelei-skizzen"] = tl;
+    </script>
+  </body>
+</html>

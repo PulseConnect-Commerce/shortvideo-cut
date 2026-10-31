@@ -1,0 +1,54 @@
+Hintergründe, Quellen und Logo für M02 · PURELEI (alle am 31.10.2026 mit Playwright/Chromium ohne Login in der
+Handy-Ansicht 432 css-px, 2,5-fach = 1080 px breit, aufgenommen; Cookie-Hinweise und schwebende Knöpfe ausgeblendet, sonst
+nichts verändert). Aufnahme: hyperframes/purelei-hg/aufnahme.cjs (Überschriften, Bilder und Markierungen mit css-y in
+hyperframes/purelei-hg/screenshots/aufnahme.json; die Bilder der ganzen Seiten lagen wegen des knappen Speichers nur in
+/dev/shm), gestaltet mit hyperframes/purelei-hg/gestalte.py (oben die Kopfleiste der Seite mit dem PURELEI-Logo, darunter ein
+Abschnitt der Seite, leicht weichgezeichnet und leicht abgedunkelt, nach unten etwas mehr; nichts dazugemalt).
+
+Hintergründe hinter ihm (Video.tsx HG, in den Take gerechnet mit npm run portrait --hintergrund):
+- hg-lei.png: "Über die LEI", Kopfbild "Deine LEI mit bedeutungsvollen Charms" (Hand mit Charm-Armreif)
+  https://purelei.com/pages/ueber-die-lei
+- hg-sand.png: "Über PURELEI" (About), Bild "PURELEI in den Sand geschrieben" (ohne Kopfleiste; oben der Markenname im Sand)
+  https://purelei.com/pages/about-us
+- hg-hawaii.png: "Über die LEI", Bild im Abschnitt "Inspiriert von Hawaii / Die Bedeutung einer Lei" (Blüten und Armreif)
+  https://purelei.com/pages/ueber-die-lei
+- hg-aloha.png: "Über PURELEI", Kopfbild mit "ALOHA! Schön, dass du da bist."
+  https://purelei.com/pages/about-us
+- hg-grid.png: Kollektion "LEI Collection" (Seitenkopf, Kategorien, Produktkacheln)
+  https://purelei.com/collections/lei-collection
+- hg-kette.png: Produktseite "LEI Charm Kette" (Produktbild)
+  https://purelei.com/products/necklace-lei-charm
+- hg-community.png: Blog "Articles", Beitrag "PURELEI Adventskalender 2026: Mit unserer Community kreiert" (14. September 2026,
+  Bild "Created with the Community") https://purelei.com/blogs/articles
+- hg-ketten.png: Kategorie "Ketten" (Produktkacheln) https://purelei.com/collections/ketten
+- hg-markenwelt.png: "Über PURELEI", Abschnitt "Was PURELEI dir bietet" (Ringe und Kette auf Holz)
+  https://purelei.com/pages/about-us
+- hg-goetze.png: Kollektion "Festive Collection by Ann-Kathrin Götze" (Seitenkopf, Einleitung, Produktkacheln)
+  https://purelei.com/collections/festive-collection
+- hg-karo.png: "PURELEI Schmuck Adventskalender von karokauer" ("Karos Favoriten-Adventskalender", Adventskalender x @karokauer)
+  https://purelei.com/pages/karokauer
+- hg-club.png: "Mahina Club", Abschnitt "Das erwartet Dich" (Schmuck-Abo; "inspiriert von unserer Community und besondere
+  Creator-Kooperationen") https://purelei.com/pages/mahina-club
+
+Quelle groß (Video.tsx QUELLEN, nur zugeschnitten mit hyperframes/purelei-hg/quelle.py, die Sätze grün markiert):
+- Shopify-Blog "Von Hawaii nach Mannheim: Wie PURELEI Social Commerce und Influencer-Marketing erfolgreich umsetzt", von
+  Caroline Dohrmann, 10. Feb. 2021 (Quelle im Briefing) https://www.shopify.com/de/blog/influencer-marketing-purelei
+  - quelle-600k.jpg: Titel und Teaser "Aus einem Auslandssemester auf Hawaii wurde ein Schmuck-Unternehmen, dem mittlerweile mehr
+    als 600.000 Menschen auf Instagram folgen." (markiert), darunter die Zeile "von Caroline Dohrmann · 10. Feb. 2021" (Datum
+    markiert); zwei Ausschnitte derselben Seite untereinander, dazwischen eine dünne Linie
+  - quelle-hawaii.jpg: "Wie Schmuck Aloha versprüht" / "Nachdem Alisa Maria Jahnke 2013 ein Auslandssemester auf Hawaii
+    absolviert hatte, wollte die paradiesische Insel sie nicht mehr loslassen." (markiert) ... "des 2017 gegründeten Mannheimer
+    Start-ups PURELEI"
+  - quelle-influencer.jpg: Frage "Ihr habt in kurzer Zeit eine starke Marke aufgebaut. Was waren für euch die wichtigsten Punkte
+    im Thema Brand-Marketing?" / "Wir haben von Anfang an sehr viel Wert auf Influencer-Marketing gelegt, was für die Marke
+    PURELEI tatsächlich super gut funktioniert hat." (markiert)
+  Weitere Belege daraus: "2017 seid ihr mit PURELEI live gegangen. Jetzt habt ihr eine Community aus über 600.000 Followern."
+  (Kennzahl 2017 und 600.000+, Stand Februar 2021).
+
+Logo:
+- purelei-logo.svg: das PURELEI-Logo aus dem Seitenkopf von purelei.com (Sprite layout.svg#logo-purelei, Farbe wie dort
+  rgb(39,39,39), auf Weiß wie dort), unverändert; Sprite gesichert in hyperframes/purelei-hg/screenshots/purelei-layout.svg
+
+Hinweis: purelei.com nennt auf "Über PURELEI" 2016 als Jahr der Gründung ("Gründung von PURELEI durch Alisa, Freddy und
+Etienne"); der Shopify-Beitrag nennt 2017 als Start ("2017 seid ihr mit PURELEI live gegangen", "des 2017 gegründeten ...
+Start-ups"). Im Video steht 2017 als Start laut Shopify-Beitrag, so wie er es sagt.
