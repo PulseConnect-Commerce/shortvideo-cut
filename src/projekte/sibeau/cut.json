@@ -1,0 +1,2149 @@
+{
+ "projekt": "sibeau",
+ "fps": 30,
+ "sprache": "de",
+ "keeps": [
+  {
+   "src": "sibeau/t1",
+   "from": 238.175,
+   "to": 279.155,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "sibeau/t1",
+   "from": 285.045,
+   "to": 288.715,
+   "nach": 0.035,
+   "vor": 0.09
+  },
+  {
+   "src": "sibeau/t1",
+   "from": 293.655,
+   "to": 311.415,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "sibeau/t1",
+   "from": 314.605,
+   "to": 323.125,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "sibeau/t1",
+   "from": 330.965,
+   "to": 347.925,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "sibeau/t1",
+   "from": 352.295,
+   "to": 362.425,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "sibeau/t1",
+   "from": 388.505,
+   "to": 395.685,
+   "nach": 0.09,
+   "vor": 0.09
+  },
+  {
+   "src": "sibeau/t1",
+   "from": 396.405,
+   "to": 403.85,
+   "nach": 0.09,
+   "vor": 0.09
+  }
+ ],
+ "words": [
+  {
+   "text": "Diese",
+   "src": "sibeau/t1",
+   "start": 238.2,
+   "end": 238.4
+  },
+  {
+   "text": "Shopify-Marke",
+   "src": "sibeau/t1",
+   "start": 238.54,
+   "end": 239.36
+  },
+  {
+   "text": "hat",
+   "src": "sibeau/t1",
+   "start": 239.46,
+   "end": 239.56
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 239.62,
+   "end": 240.08
+  },
+  {
+   "text": "erst",
+   "src": "sibeau/t1",
+   "start": 240.18,
+   "end": 240.32
+  },
+  {
+   "text": "rund",
+   "src": "sibeau/t1",
+   "start": 240.4,
+   "end": 240.54
+  },
+  {
+   "text": "500",
+   "src": "sibeau/t1",
+   "start": 240.68,
+   "end": 241.14
+  },
+  {
+   "text": "Frauen",
+   "src": "sibeau/t1",
+   "start": 241.2,
+   "end": 241.44
+  },
+  {
+   "text": "gefragt,",
+   "src": "sibeau/t1",
+   "start": 241.5,
+   "end": 241.84
+  },
+  {
+   "text": "was",
+   "src": "sibeau/t1",
+   "start": 242.2,
+   "end": 242.34
+  },
+  {
+   "text": "sie",
+   "src": "sibeau/t1",
+   "start": 242.4,
+   "end": 242.48
+  },
+  {
+   "text": "überhaupt",
+   "src": "sibeau/t1",
+   "start": 242.5,
+   "end": 242.78
+  },
+  {
+   "text": "kaufen",
+   "src": "sibeau/t1",
+   "start": 242.82,
+   "end": 243.12
+  },
+  {
+   "text": "sollen.",
+   "src": "sibeau/t1",
+   "start": 243.18,
+   "end": 243.46
+  },
+  {
+   "text": "Und",
+   "src": "sibeau/t1",
+   "start": 243.62,
+   "end": 243.8
+  },
+  {
+   "text": "erst",
+   "src": "sibeau/t1",
+   "start": 244.4,
+   "end": 244.56
+  },
+  {
+   "text": "danach",
+   "src": "sibeau/t1",
+   "start": 244.6,
+   "end": 245.02
+  },
+  {
+   "text": "haben",
+   "src": "sibeau/t1",
+   "start": 245.24,
+   "end": 245.42
+  },
+  {
+   "text": "sie",
+   "src": "sibeau/t1",
+   "start": 245.44,
+   "end": 245.52
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 245.56,
+   "end": 245.98
+  },
+  {
+   "text": "angefangen,",
+   "src": "sibeau/t1",
+   "start": 246.02,
+   "end": 246.4
+  },
+  {
+   "text": "die",
+   "src": "sibeau/t1",
+   "start": 246.44,
+   "end": 246.5
+  },
+  {
+   "text": "Produkte",
+   "src": "sibeau/t1",
+   "start": 246.54,
+   "end": 246.88
+  },
+  {
+   "text": "dazu",
+   "src": "sibeau/t1",
+   "start": 246.94,
+   "end": 247.12
+  },
+  {
+   "text": "zu",
+   "src": "sibeau/t1",
+   "start": 247.2,
+   "end": 247.26
+  },
+  {
+   "text": "entwickeln.",
+   "src": "sibeau/t1",
+   "start": 247.3,
+   "end": 247.66
+  },
+  {
+   "text": "Die",
+   "src": "sibeau/t1",
+   "start": 248.38,
+   "end": 248.46
+  },
+  {
+   "text": "Marke",
+   "src": "sibeau/t1",
+   "start": 248.5,
+   "end": 248.78
+  },
+  {
+   "text": "nennt",
+   "src": "sibeau/t1",
+   "start": 248.88,
+   "end": 249.08
+  },
+  {
+   "text": "sich",
+   "src": "sibeau/t1",
+   "start": 249.18,
+   "end": 249.32
+  },
+  {
+   "text": "SI",
+   "src": "sibeau/t1",
+   "start": 249.5,
+   "end": 249.6
+  },
+  {
+   "text": "BEAU.",
+   "src": "sibeau/t1",
+   "start": 249.68,
+   "end": 249.84
+  },
+  {
+   "text": "Vielleicht",
+   "src": "sibeau/t1",
+   "start": 250.18,
+   "end": 250.46
+  },
+  {
+   "text": "hast",
+   "src": "sibeau/t1",
+   "start": 250.5,
+   "end": 250.6
+  },
+  {
+   "text": "du",
+   "src": "sibeau/t1",
+   "start": 250.62,
+   "end": 250.68
+  },
+  {
+   "text": "sie",
+   "src": "sibeau/t1",
+   "start": 250.74,
+   "end": 250.82
+  },
+  {
+   "text": "ja",
+   "src": "sibeau/t1",
+   "start": 250.84,
+   "end": 250.88
+  },
+  {
+   "text": "schon",
+   "src": "sibeau/t1",
+   "start": 250.94,
+   "end": 251.06
+  },
+  {
+   "text": "einmal",
+   "src": "sibeau/t1",
+   "start": 251.1,
+   "end": 251.26
+  },
+  {
+   "text": "gehört.",
+   "src": "sibeau/t1",
+   "start": 251.28,
+   "end": 251.54
+  },
+  {
+   "text": "Die",
+   "src": "sibeau/t1",
+   "start": 252.04,
+   "end": 252.12
+  },
+  {
+   "text": "Gründerinnen",
+   "src": "sibeau/t1",
+   "start": 252.16,
+   "end": 252.6
+  },
+  {
+   "text": "wollten",
+   "src": "sibeau/t1",
+   "start": 252.64,
+   "end": 252.94
+  },
+  {
+   "text": "hier",
+   "src": "sibeau/t1",
+   "start": 252.98,
+   "end": 253.1
+  },
+  {
+   "text": "Businesskleidung",
+   "src": "sibeau/t1",
+   "start": 253.2,
+   "end": 253.92
+  },
+  {
+   "text": "für",
+   "src": "sibeau/t1",
+   "start": 254.0,
+   "end": 254.1
+  },
+  {
+   "text": "Frauen",
+   "src": "sibeau/t1",
+   "start": 254.2,
+   "end": 254.48
+  },
+  {
+   "text": "machen,",
+   "src": "sibeau/t1",
+   "start": 254.52,
+   "end": 254.76
+  },
+  {
+   "text": "die",
+   "src": "sibeau/t1",
+   "start": 255.16,
+   "end": 255.24
+  },
+  {
+   "text": "professionell",
+   "src": "sibeau/t1",
+   "start": 255.28,
+   "end": 255.88
+  },
+  {
+   "text": "aussieht",
+   "src": "sibeau/t1",
+   "start": 255.96,
+   "end": 256.28
+  },
+  {
+   "text": "und",
+   "src": "sibeau/t1",
+   "start": 256.36,
+   "end": 256.42
+  },
+  {
+   "text": "trotzdem",
+   "src": "sibeau/t1",
+   "start": 256.48,
+   "end": 256.94
+  },
+  {
+   "text": "aber",
+   "src": "sibeau/t1",
+   "start": 257.0,
+   "end": 257.14
+  },
+  {
+   "text": "bequem",
+   "src": "sibeau/t1",
+   "start": 257.2,
+   "end": 257.48
+  },
+  {
+   "text": "ist.",
+   "src": "sibeau/t1",
+   "start": 257.56,
+   "end": 258.16
+  },
+  {
+   "text": "Statt",
+   "src": "sibeau/t1",
+   "start": 258.71,
+   "end": 258.91
+  },
+  {
+   "text": "aber",
+   "src": "sibeau/t1",
+   "start": 258.95,
+   "end": 259.05
+  },
+  {
+   "text": "jetzt",
+   "src": "sibeau/t1",
+   "start": 259.11,
+   "end": 259.27
+  },
+  {
+   "text": "hinzugehen",
+   "src": "sibeau/t1",
+   "start": 259.31,
+   "end": 259.85
+  },
+  {
+   "text": "und",
+   "src": "sibeau/t1",
+   "start": 259.91,
+   "end": 259.97
+  },
+  {
+   "text": "einfach",
+   "src": "sibeau/t1",
+   "start": 260.05,
+   "end": 260.29
+  },
+  {
+   "text": "eine",
+   "src": "sibeau/t1",
+   "start": 260.33,
+   "end": 260.45
+  },
+  {
+   "text": "Kollektion",
+   "src": "sibeau/t1",
+   "start": 260.51,
+   "end": 261.01
+  },
+  {
+   "text": "nach",
+   "src": "sibeau/t1",
+   "start": 261.05,
+   "end": 261.13
+  },
+  {
+   "text": "ihrem",
+   "src": "sibeau/t1",
+   "start": 261.21,
+   "end": 261.39
+  },
+  {
+   "text": "eigenen",
+   "src": "sibeau/t1",
+   "start": 261.53,
+   "end": 261.85
+  },
+  {
+   "text": "Geschmack",
+   "src": "sibeau/t1",
+   "start": 261.91,
+   "end": 262.19
+  },
+  {
+   "text": "zu",
+   "src": "sibeau/t1",
+   "start": 262.23,
+   "end": 262.31
+  },
+  {
+   "text": "entwerfen,",
+   "src": "sibeau/t1",
+   "start": 262.35,
+   "end": 262.75
+  },
+  {
+   "text": "haben",
+   "src": "sibeau/t1",
+   "start": 263.21,
+   "end": 263.45
+  },
+  {
+   "text": "die",
+   "src": "sibeau/t1",
+   "start": 263.51,
+   "end": 263.59
+  },
+  {
+   "text": "einfach",
+   "src": "sibeau/t1",
+   "start": 263.65,
+   "end": 263.89
+  },
+  {
+   "text": "ihre",
+   "src": "sibeau/t1",
+   "start": 263.99,
+   "end": 264.11
+  },
+  {
+   "text": "Zielgruppe",
+   "src": "sibeau/t1",
+   "start": 264.25,
+   "end": 264.61
+  },
+  {
+   "text": "früh",
+   "src": "sibeau/t1",
+   "start": 264.67,
+   "end": 264.79
+  },
+  {
+   "text": "mit",
+   "src": "sibeau/t1",
+   "start": 264.85,
+   "end": 264.95
+  },
+  {
+   "text": "eingebunden.",
+   "src": "sibeau/t1",
+   "start": 264.99,
+   "end": 265.43
+  },
+  {
+   "text": "Hört",
+   "src": "sibeau/t1",
+   "start": 266.36,
+   "end": 266.5
+  },
+  {
+   "text": "sich",
+   "src": "sibeau/t1",
+   "start": 266.52,
+   "end": 266.68
+  },
+  {
+   "text": "eigentlich",
+   "src": "sibeau/t1",
+   "start": 266.72,
+   "end": 266.98
+  },
+  {
+   "text": "logisch",
+   "src": "sibeau/t1",
+   "start": 267.04,
+   "end": 267.32
+  },
+  {
+   "text": "an,",
+   "src": "sibeau/t1",
+   "start": 267.38,
+   "end": 267.46
+  },
+  {
+   "text": "oder?",
+   "src": "sibeau/t1",
+   "start": 267.52,
+   "end": 267.66
+  },
+  {
+   "text": "Laut",
+   "src": "sibeau/t1",
+   "start": 268.67,
+   "end": 268.79
+  },
+  {
+   "text": "einem",
+   "src": "sibeau/t1",
+   "start": 268.87,
+   "end": 269.03
+  },
+  {
+   "text": "historischen",
+   "src": "sibeau/t1",
+   "start": 269.05,
+   "end": 269.55
+  },
+  {
+   "text": "Shopify-Interview",
+   "src": "sibeau/t1",
+   "start": 269.63,
+   "end": 270.35
+  },
+  {
+   "text": "gab",
+   "src": "sibeau/t1",
+   "start": 270.41,
+   "end": 270.55
+  },
+  {
+   "text": "es",
+   "src": "sibeau/t1",
+   "start": 270.65,
+   "end": 270.73
+  },
+  {
+   "text": "hierzu",
+   "src": "sibeau/t1",
+   "start": 270.83,
+   "end": 271.13
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 271.23,
+   "end": 271.65
+  },
+  {
+   "text": "eine",
+   "src": "sibeau/t1",
+   "start": 271.71,
+   "end": 271.83
+  },
+  {
+   "text": "digitale",
+   "src": "sibeau/t1",
+   "start": 271.91,
+   "end": 272.33
+  },
+  {
+   "text": "Fokusgruppe",
+   "src": "sibeau/t1",
+   "start": 272.41,
+   "end": 272.97
+  },
+  {
+   "text": "mit",
+   "src": "sibeau/t1",
+   "start": 273.31,
+   "end": 273.41
+  },
+  {
+   "text": "ungefähr",
+   "src": "sibeau/t1",
+   "start": 273.51,
+   "end": 273.93
+  },
+  {
+   "text": "500",
+   "src": "sibeau/t1",
+   "start": 274.07,
+   "end": 274.47
+  },
+  {
+   "text": "Frauen.",
+   "src": "sibeau/t1",
+   "start": 274.51,
+   "end": 274.75
+  },
+  {
+   "text": "Und",
+   "src": "sibeau/t1",
+   "start": 275.53,
+   "end": 275.59
+  },
+  {
+   "text": "diese",
+   "src": "sibeau/t1",
+   "start": 275.63,
+   "end": 275.81
+  },
+  {
+   "text": "Frauen",
+   "src": "sibeau/t1",
+   "start": 275.89,
+   "end": 276.15
+  },
+  {
+   "text": "konnten",
+   "src": "sibeau/t1",
+   "start": 276.23,
+   "end": 276.45
+  },
+  {
+   "text": "dann",
+   "src": "sibeau/t1",
+   "start": 276.49,
+   "end": 276.59
+  },
+  {
+   "text": "eben",
+   "src": "sibeau/t1",
+   "start": 276.63,
+   "end": 276.73
+  },
+  {
+   "text": "unter",
+   "src": "sibeau/t1",
+   "start": 276.77,
+   "end": 276.91
+  },
+  {
+   "text": "anderem",
+   "src": "sibeau/t1",
+   "start": 277.01,
+   "end": 277.35
+  },
+  {
+   "text": "bei",
+   "src": "sibeau/t1",
+   "start": 277.41,
+   "end": 277.49
+  },
+  {
+   "text": "Schnitten",
+   "src": "sibeau/t1",
+   "start": 277.57,
+   "end": 277.95
+  },
+  {
+   "text": "und",
+   "src": "sibeau/t1",
+   "start": 278.05,
+   "end": 278.13
+  },
+  {
+   "text": "auch",
+   "src": "sibeau/t1",
+   "start": 278.17,
+   "end": 278.27
+  },
+  {
+   "text": "Farben",
+   "src": "sibeau/t1",
+   "start": 278.33,
+   "end": 278.65
+  },
+  {
+   "text": "mitreden.",
+   "src": "sibeau/t1",
+   "start": 278.71,
+   "end": 279.05
+  },
+  {
+   "text": "Und",
+   "src": "sibeau/t1",
+   "start": 285.08,
+   "end": 285.14
+  },
+  {
+   "text": "die",
+   "src": "sibeau/t1",
+   "start": 285.18,
+   "end": 285.24
+  },
+  {
+   "text": "Marke",
+   "src": "sibeau/t1",
+   "start": 285.28,
+   "end": 285.52
+  },
+  {
+   "text": "nutzte",
+   "src": "sibeau/t1",
+   "start": 285.64,
+   "end": 285.94
+  },
+  {
+   "text": "hier",
+   "src": "sibeau/t1",
+   "start": 286.0,
+   "end": 286.1
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 286.14,
+   "end": 286.56
+  },
+  {
+   "text": "ihre",
+   "src": "sibeau/t1",
+   "start": 286.62,
+   "end": 286.74
+  },
+  {
+   "text": "eigene",
+   "src": "sibeau/t1",
+   "start": 286.86,
+   "end": 287.1
+  },
+  {
+   "text": "Shopify-Seite",
+   "src": "sibeau/t1",
+   "start": 287.16,
+   "end": 287.82
+  },
+  {
+   "text": "bereits",
+   "src": "sibeau/t1",
+   "start": 287.88,
+   "end": 288.16
+  },
+  {
+   "text": "dafür,",
+   "src": "sibeau/t1",
+   "start": 288.2,
+   "end": 288.46
+  },
+  {
+   "text": "um",
+   "src": "sibeau/t1",
+   "start": 293.72,
+   "end": 293.76
+  },
+  {
+   "text": "vor",
+   "src": "sibeau/t1",
+   "start": 293.88,
+   "end": 294.0
+  },
+  {
+   "text": "dem",
+   "src": "sibeau/t1",
+   "start": 294.06,
+   "end": 294.16
+  },
+  {
+   "text": "eigentlichen",
+   "src": "sibeau/t1",
+   "start": 294.24,
+   "end": 294.64
+  },
+  {
+   "text": "Launch",
+   "src": "sibeau/t1",
+   "start": 294.7,
+   "end": 294.96
+  },
+  {
+   "text": "dann",
+   "src": "sibeau/t1",
+   "start": 295.04,
+   "end": 295.2
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 295.36,
+   "end": 295.8
+  },
+  {
+   "text": "die",
+   "src": "sibeau/t1",
+   "start": 295.86,
+   "end": 295.94
+  },
+  {
+   "text": "Interesse",
+   "src": "sibeau/t1",
+   "start": 295.98,
+   "end": 296.4
+  },
+  {
+   "text": "zu",
+   "src": "sibeau/t1",
+   "start": 296.48,
+   "end": 296.56
+  },
+  {
+   "text": "sammeln.",
+   "src": "sibeau/t1",
+   "start": 296.62,
+   "end": 296.88
+  },
+  {
+   "text": "Das",
+   "src": "sibeau/t1",
+   "start": 297.46,
+   "end": 297.6
+  },
+  {
+   "text": "ist",
+   "src": "sibeau/t1",
+   "start": 297.64,
+   "end": 297.74
+  },
+  {
+   "text": "ziemlich",
+   "src": "sibeau/t1",
+   "start": 297.82,
+   "end": 298.08
+  },
+  {
+   "text": "spannend,",
+   "src": "sibeau/t1",
+   "start": 298.12,
+   "end": 298.44
+  },
+  {
+   "text": "denn",
+   "src": "sibeau/t1",
+   "start": 298.48,
+   "end": 298.6
+  },
+  {
+   "text": "viele",
+   "src": "sibeau/t1",
+   "start": 298.74,
+   "end": 298.94
+  },
+  {
+   "text": "Shops",
+   "src": "sibeau/t1",
+   "start": 299.0,
+   "end": 299.22
+  },
+  {
+   "text": "machen",
+   "src": "sibeau/t1",
+   "start": 299.3,
+   "end": 299.52
+  },
+  {
+   "text": "leider",
+   "src": "sibeau/t1",
+   "start": 299.56,
+   "end": 299.78
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 299.84,
+   "end": 300.28
+  },
+  {
+   "text": "genau",
+   "src": "sibeau/t1",
+   "start": 300.36,
+   "end": 300.68
+  },
+  {
+   "text": "das",
+   "src": "sibeau/t1",
+   "start": 300.74,
+   "end": 300.86
+  },
+  {
+   "text": "Gegenteil.",
+   "src": "sibeau/t1",
+   "start": 301.08,
+   "end": 301.5
+  },
+  {
+   "text": "Erst",
+   "src": "sibeau/t1",
+   "start": 302.5,
+   "end": 302.68
+  },
+  {
+   "text": "werden",
+   "src": "sibeau/t1",
+   "start": 302.74,
+   "end": 302.88
+  },
+  {
+   "text": "Produkte",
+   "src": "sibeau/t1",
+   "start": 302.92,
+   "end": 303.26
+  },
+  {
+   "text": "eingekauft,",
+   "src": "sibeau/t1",
+   "start": 303.4,
+   "end": 304.0
+  },
+  {
+   "text": "Fotos",
+   "src": "sibeau/t1",
+   "start": 304.1,
+   "end": 304.44
+  },
+  {
+   "text": "gemacht,",
+   "src": "sibeau/t1",
+   "start": 304.5,
+   "end": 304.88
+  },
+  {
+   "text": "es",
+   "src": "sibeau/t1",
+   "start": 304.96,
+   "end": 305.02
+  },
+  {
+   "text": "werden",
+   "src": "sibeau/t1",
+   "start": 305.08,
+   "end": 305.26
+  },
+  {
+   "text": "Anzeigen",
+   "src": "sibeau/t1",
+   "start": 305.34,
+   "end": 305.7
+  },
+  {
+   "text": "geschaltet",
+   "src": "sibeau/t1",
+   "start": 305.74,
+   "end": 306.16
+  },
+  {
+   "text": "und",
+   "src": "sibeau/t1",
+   "start": 306.52,
+   "end": 306.6
+  },
+  {
+   "text": "erst",
+   "src": "sibeau/t1",
+   "start": 306.66,
+   "end": 306.82
+  },
+  {
+   "text": "dann",
+   "src": "sibeau/t1",
+   "start": 306.88,
+   "end": 307.08
+  },
+  {
+   "text": "merkt",
+   "src": "sibeau/t1",
+   "start": 307.14,
+   "end": 307.34
+  },
+  {
+   "text": "man,",
+   "src": "sibeau/t1",
+   "start": 307.4,
+   "end": 307.54
+  },
+  {
+   "text": "oh",
+   "src": "sibeau/t1",
+   "start": 307.76,
+   "end": 307.84
+  },
+  {
+   "text": "Mist,",
+   "src": "sibeau/t1",
+   "start": 307.9,
+   "end": 308.16
+  },
+  {
+   "text": "das",
+   "src": "sibeau/t1",
+   "start": 308.64,
+   "end": 308.78
+  },
+  {
+   "text": "Angebot",
+   "src": "sibeau/t1",
+   "start": 308.88,
+   "end": 309.22
+  },
+  {
+   "text": "ist",
+   "src": "sibeau/t1",
+   "start": 309.34,
+   "end": 309.44
+  },
+  {
+   "text": "vielleicht",
+   "src": "sibeau/t1",
+   "start": 309.52,
+   "end": 309.8
+  },
+  {
+   "text": "doch",
+   "src": "sibeau/t1",
+   "start": 309.86,
+   "end": 309.98
+  },
+  {
+   "text": "an",
+   "src": "sibeau/t1",
+   "start": 310.06,
+   "end": 310.12
+  },
+  {
+   "text": "der",
+   "src": "sibeau/t1",
+   "start": 310.16,
+   "end": 310.24
+  },
+  {
+   "text": "Zielgruppe",
+   "src": "sibeau/t1",
+   "start": 310.32,
+   "end": 310.66
+  },
+  {
+   "text": "vorbeigegangen.",
+   "src": "sibeau/t1",
+   "start": 310.74,
+   "end": 311.32
+  },
+  {
+   "text": "Und",
+   "src": "sibeau/t1",
+   "start": 314.64,
+   "end": 314.72
+  },
+  {
+   "text": "mein",
+   "src": "sibeau/t1",
+   "start": 314.8,
+   "end": 314.96
+  },
+  {
+   "text": "erstes",
+   "src": "sibeau/t1",
+   "start": 315.02,
+   "end": 315.26
+  },
+  {
+   "text": "Learning",
+   "src": "sibeau/t1",
+   "start": 315.34,
+   "end": 315.6
+  },
+  {
+   "text": "daraus",
+   "src": "sibeau/t1",
+   "start": 315.66,
+   "end": 315.94
+  },
+  {
+   "text": "ist",
+   "src": "sibeau/t1",
+   "start": 316.02,
+   "end": 316.1
+  },
+  {
+   "text": "tatsächlich:",
+   "src": "sibeau/t1",
+   "start": 316.14,
+   "end": 316.6
+  },
+  {
+   "text": "Rede",
+   "src": "sibeau/t1",
+   "start": 316.76,
+   "end": 317.0
+  },
+  {
+   "text": "bitte",
+   "src": "sibeau/t1",
+   "start": 317.08,
+   "end": 317.28
+  },
+  {
+   "text": "zunächst",
+   "src": "sibeau/t1",
+   "start": 317.48,
+   "end": 317.78
+  },
+  {
+   "text": "einmal",
+   "src": "sibeau/t1",
+   "start": 317.82,
+   "end": 318.0
+  },
+  {
+   "text": "mit",
+   "src": "sibeau/t1",
+   "start": 318.04,
+   "end": 318.12
+  },
+  {
+   "text": "potenziellen",
+   "src": "sibeau/t1",
+   "start": 318.2,
+   "end": 318.72
+  },
+  {
+   "text": "Kunden,",
+   "src": "sibeau/t1",
+   "start": 318.78,
+   "end": 319.06
+  },
+  {
+   "text": "bevor",
+   "src": "sibeau/t1",
+   "start": 319.42,
+   "end": 319.7
+  },
+  {
+   "text": "du",
+   "src": "sibeau/t1",
+   "start": 319.74,
+   "end": 319.8
+  },
+  {
+   "text": "viel",
+   "src": "sibeau/t1",
+   "start": 319.94,
+   "end": 320.1
+  },
+  {
+   "text": "Geld",
+   "src": "sibeau/t1",
+   "start": 320.18,
+   "end": 320.36
+  },
+  {
+   "text": "in",
+   "src": "sibeau/t1",
+   "start": 320.4,
+   "end": 320.44
+  },
+  {
+   "text": "irgendwelche",
+   "src": "sibeau/t1",
+   "start": 320.46,
+   "end": 320.78
+  },
+  {
+   "text": "Ware",
+   "src": "sibeau/t1",
+   "start": 320.88,
+   "end": 321.18
+  },
+  {
+   "text": "und",
+   "src": "sibeau/t1",
+   "start": 321.24,
+   "end": 321.3
+  },
+  {
+   "text": "auch",
+   "src": "sibeau/t1",
+   "start": 321.36,
+   "end": 321.46
+  },
+  {
+   "text": "aufwendige",
+   "src": "sibeau/t1",
+   "start": 321.52,
+   "end": 321.92
+  },
+  {
+   "text": "Shopdesigns",
+   "src": "sibeau/t1",
+   "start": 322.0,
+   "end": 322.58
+  },
+  {
+   "text": "investierst.",
+   "src": "sibeau/t1",
+   "start": 322.64,
+   "end": 323.08
+  },
+  {
+   "text": "Zweitens,",
+   "src": "sibeau/t1",
+   "start": 331.01,
+   "end": 331.49
+  },
+  {
+   "text": "frag",
+   "src": "sibeau/t1",
+   "start": 331.57,
+   "end": 331.75
+  },
+  {
+   "text": "nicht",
+   "src": "sibeau/t1",
+   "start": 331.87,
+   "end": 331.99
+  },
+  {
+   "text": "einfach",
+   "src": "sibeau/t1",
+   "start": 332.05,
+   "end": 332.31
+  },
+  {
+   "text": "nur,",
+   "src": "sibeau/t1",
+   "start": 332.37,
+   "end": 332.45
+  },
+  {
+   "text": "ob",
+   "src": "sibeau/t1",
+   "start": 332.49,
+   "end": 332.55
+  },
+  {
+   "text": "Menschen",
+   "src": "sibeau/t1",
+   "start": 332.65,
+   "end": 333.01
+  },
+  {
+   "text": "dein",
+   "src": "sibeau/t1",
+   "start": 333.07,
+   "end": 333.19
+  },
+  {
+   "text": "Produkt",
+   "src": "sibeau/t1",
+   "start": 333.25,
+   "end": 333.61
+  },
+  {
+   "text": "schön",
+   "src": "sibeau/t1",
+   "start": 333.65,
+   "end": 333.83
+  },
+  {
+   "text": "finden.",
+   "src": "sibeau/t1",
+   "start": 333.91,
+   "end": 334.15
+  },
+  {
+   "text": "Frag",
+   "src": "sibeau/t1",
+   "start": 334.55,
+   "end": 334.73
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 334.81,
+   "end": 335.23
+  },
+  {
+   "text": "nach",
+   "src": "sibeau/t1",
+   "start": 335.27,
+   "end": 335.37
+  },
+  {
+   "text": "Problemen,",
+   "src": "sibeau/t1",
+   "start": 335.45,
+   "end": 336.01
+  },
+  {
+   "text": "bisheriger",
+   "src": "sibeau/t1",
+   "start": 336.07,
+   "end": 336.51
+  },
+  {
+   "text": "Lösungen",
+   "src": "sibeau/t1",
+   "start": 336.57,
+   "end": 336.97
+  },
+  {
+   "text": "und",
+   "src": "sibeau/t1",
+   "start": 337.37,
+   "end": 337.45
+  },
+  {
+   "text": "danach,",
+   "src": "sibeau/t1",
+   "start": 337.49,
+   "end": 337.79
+  },
+  {
+   "text": "was",
+   "src": "sibeau/t1",
+   "start": 337.91,
+   "end": 338.07
+  },
+  {
+   "text": "ihnen",
+   "src": "sibeau/t1",
+   "start": 338.17,
+   "end": 338.37
+  },
+  {
+   "text": "wirklich",
+   "src": "sibeau/t1",
+   "start": 338.45,
+   "end": 338.77
+  },
+  {
+   "text": "fehlt.",
+   "src": "sibeau/t1",
+   "start": 338.83,
+   "end": 339.07
+  },
+  {
+   "text": "Und",
+   "src": "sibeau/t1",
+   "start": 339.71,
+   "end": 339.79
+  },
+  {
+   "text": "drittens,",
+   "src": "sibeau/t1",
+   "start": 339.85,
+   "end": 340.25
+  },
+  {
+   "text": "teste",
+   "src": "sibeau/t1",
+   "start": 340.63,
+   "end": 340.93
+  },
+  {
+   "text": "mal",
+   "src": "sibeau/t1",
+   "start": 340.99,
+   "end": 341.13
+  },
+  {
+   "text": "die",
+   "src": "sibeau/t1",
+   "start": 341.17,
+   "end": 341.25
+  },
+  {
+   "text": "Nachfrage",
+   "src": "sibeau/t1",
+   "start": 341.29,
+   "end": 341.77
+  },
+  {
+   "text": "mit",
+   "src": "sibeau/t1",
+   "start": 341.83,
+   "end": 341.91
+  },
+  {
+   "text": "einer",
+   "src": "sibeau/t1",
+   "start": 341.97,
+   "end": 342.13
+  },
+  {
+   "text": "Landingpage,",
+   "src": "sibeau/t1",
+   "start": 342.21,
+   "end": 342.87
+  },
+  {
+   "text": "einer",
+   "src": "sibeau/t1",
+   "start": 343.01,
+   "end": 343.17
+  },
+  {
+   "text": "Warteliste",
+   "src": "sibeau/t1",
+   "start": 343.23,
+   "end": 343.79
+  },
+  {
+   "text": "oder",
+   "src": "sibeau/t1",
+   "start": 344.01,
+   "end": 344.15
+  },
+  {
+   "text": "einer",
+   "src": "sibeau/t1",
+   "start": 344.21,
+   "end": 344.37
+  },
+  {
+   "text": "kleinen",
+   "src": "sibeau/t1",
+   "start": 344.47,
+   "end": 344.77
+  },
+  {
+   "text": "Produktauswahl,",
+   "src": "sibeau/t1",
+   "start": 344.81,
+   "end": 345.45
+  },
+  {
+   "text": "bevor",
+   "src": "sibeau/t1",
+   "start": 345.77,
+   "end": 346.05
+  },
+  {
+   "text": "du",
+   "src": "sibeau/t1",
+   "start": 346.09,
+   "end": 346.13
+  },
+  {
+   "text": "überhaupt",
+   "src": "sibeau/t1",
+   "start": 346.19,
+   "end": 346.47
+  },
+  {
+   "text": "das",
+   "src": "sibeau/t1",
+   "start": 346.51,
+   "end": 346.59
+  },
+  {
+   "text": "ganze",
+   "src": "sibeau/t1",
+   "start": 346.63,
+   "end": 346.85
+  },
+  {
+   "text": "Sortiment",
+   "src": "sibeau/t1",
+   "start": 346.91,
+   "end": 347.39
+  },
+  {
+   "text": "aufbaust.",
+   "src": "sibeau/t1",
+   "start": 347.45,
+   "end": 347.83
+  },
+  {
+   "text": "KI",
+   "src": "sibeau/t1",
+   "start": 352.31,
+   "end": 352.49
+  },
+  {
+   "text": "kann",
+   "src": "sibeau/t1",
+   "start": 352.61,
+   "end": 352.75
+  },
+  {
+   "text": "dir",
+   "src": "sibeau/t1",
+   "start": 352.77,
+   "end": 352.83
+  },
+  {
+   "text": "heutzutage",
+   "src": "sibeau/t1",
+   "start": 352.89,
+   "end": 353.39
+  },
+  {
+   "text": "super",
+   "src": "sibeau/t1",
+   "start": 353.51,
+   "end": 353.75
+  },
+  {
+   "text": "dabei",
+   "src": "sibeau/t1",
+   "start": 353.79,
+   "end": 353.97
+  },
+  {
+   "text": "helfen,",
+   "src": "sibeau/t1",
+   "start": 353.99,
+   "end": 354.27
+  },
+  {
+   "text": "Fragen",
+   "src": "sibeau/t1",
+   "start": 354.37,
+   "end": 354.69
+  },
+  {
+   "text": "zu",
+   "src": "sibeau/t1",
+   "start": 354.75,
+   "end": 354.81
+  },
+  {
+   "text": "formulieren",
+   "src": "sibeau/t1",
+   "start": 354.87,
+   "end": 355.35
+  },
+  {
+   "text": "und",
+   "src": "sibeau/t1",
+   "start": 355.61,
+   "end": 355.69
+  },
+  {
+   "text": "auch",
+   "src": "sibeau/t1",
+   "start": 355.73,
+   "end": 355.83
+  },
+  {
+   "text": "Antworten",
+   "src": "sibeau/t1",
+   "start": 355.97,
+   "end": 356.39
+  },
+  {
+   "text": "auszuwerten.",
+   "src": "sibeau/t1",
+   "start": 356.43,
+   "end": 356.95
+  },
+  {
+   "text": "Aber",
+   "src": "sibeau/t1",
+   "start": 357.57,
+   "end": 357.73
+  },
+  {
+   "text": "das",
+   "src": "sibeau/t1",
+   "start": 357.77,
+   "end": 357.89
+  },
+  {
+   "text": "ersetzt",
+   "src": "sibeau/t1",
+   "start": 357.93,
+   "end": 358.25
+  },
+  {
+   "text": "leider",
+   "src": "sibeau/t1",
+   "start": 358.29,
+   "end": 358.49
+  },
+  {
+   "text": "immer",
+   "src": "sibeau/t1",
+   "start": 358.57,
+   "end": 358.71
+  },
+  {
+   "text": "noch",
+   "src": "sibeau/t1",
+   "start": 358.77,
+   "end": 358.87
+  },
+  {
+   "text": "keine",
+   "src": "sibeau/t1",
+   "start": 358.91,
+   "end": 359.09
+  },
+  {
+   "text": "echten",
+   "src": "sibeau/t1",
+   "start": 359.19,
+   "end": 359.45
+  },
+  {
+   "text": "Gespräche",
+   "src": "sibeau/t1",
+   "start": 359.49,
+   "end": 359.97
+  },
+  {
+   "text": "mit",
+   "src": "sibeau/t1",
+   "start": 360.03,
+   "end": 360.13
+  },
+  {
+   "text": "Menschen,",
+   "src": "sibeau/t1",
+   "start": 360.19,
+   "end": 360.55
+  },
+  {
+   "text": "die",
+   "src": "sibeau/t1",
+   "start": 360.69,
+   "end": 360.77
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 360.85,
+   "end": 361.29
+  },
+  {
+   "text": "am",
+   "src": "sibeau/t1",
+   "start": 361.31,
+   "end": 361.35
+  },
+  {
+   "text": "Ende",
+   "src": "sibeau/t1",
+   "start": 361.41,
+   "end": 361.55
+  },
+  {
+   "text": "bei",
+   "src": "sibeau/t1",
+   "start": 361.61,
+   "end": 361.69
+  },
+  {
+   "text": "dir",
+   "src": "sibeau/t1",
+   "start": 361.73,
+   "end": 361.81
+  },
+  {
+   "text": "kaufen",
+   "src": "sibeau/t1",
+   "start": 361.85,
+   "end": 362.11
+  },
+  {
+   "text": "sollen.",
+   "src": "sibeau/t1",
+   "start": 362.17,
+   "end": 362.35
+  },
+  {
+   "text": "Das",
+   "src": "sibeau/t1",
+   "start": 388.69,
+   "end": 388.83
+  },
+  {
+   "text": "war",
+   "src": "sibeau/t1",
+   "start": 388.87,
+   "end": 388.95
+  },
+  {
+   "text": "für",
+   "src": "sibeau/t1",
+   "start": 389.01,
+   "end": 389.09
+  },
+  {
+   "text": "mich",
+   "src": "sibeau/t1",
+   "start": 389.15,
+   "end": 389.29
+  },
+  {
+   "text": "auch",
+   "src": "sibeau/t1",
+   "start": 389.39,
+   "end": 389.53
+  },
+  {
+   "text": "hier",
+   "src": "sibeau/t1",
+   "start": 389.59,
+   "end": 389.71
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 389.77,
+   "end": 390.19
+  },
+  {
+   "text": "die",
+   "src": "sibeau/t1",
+   "start": 390.23,
+   "end": 390.31
+  },
+  {
+   "text": "wichtigste",
+   "src": "sibeau/t1",
+   "start": 390.37,
+   "end": 390.71
+  },
+  {
+   "text": "Erkenntnis:",
+   "src": "sibeau/t1",
+   "start": 390.75,
+   "end": 391.15
+  },
+  {
+   "text": "man",
+   "src": "sibeau/t1",
+   "start": 391.57,
+   "end": 391.69
+  },
+  {
+   "text": "sollte",
+   "src": "sibeau/t1",
+   "start": 391.73,
+   "end": 391.95
+  },
+  {
+   "text": "erst",
+   "src": "sibeau/t1",
+   "start": 392.15,
+   "end": 392.35
+  },
+  {
+   "text": "verstehen,",
+   "src": "sibeau/t1",
+   "start": 392.41,
+   "end": 392.85
+  },
+  {
+   "text": "dann",
+   "src": "sibeau/t1",
+   "start": 393.19,
+   "end": 393.37
+  },
+  {
+   "text": "tatsächlich",
+   "src": "sibeau/t1",
+   "start": 393.43,
+   "end": 393.83
+  },
+  {
+   "text": "entwickeln",
+   "src": "sibeau/t1",
+   "start": 393.87,
+   "end": 394.27
+  },
+  {
+   "text": "und",
+   "src": "sibeau/t1",
+   "start": 394.43,
+   "end": 394.51
+  },
+  {
+   "text": "erst",
+   "src": "sibeau/t1",
+   "start": 394.57,
+   "end": 394.73
+  },
+  {
+   "text": "danach",
+   "src": "sibeau/t1",
+   "start": 394.77,
+   "end": 395.11
+  },
+  {
+   "text": "skalieren.",
+   "src": "sibeau/t1",
+   "start": 395.19,
+   "end": 395.61
+  },
+  {
+   "text": "Und",
+   "src": "sibeau/t1",
+   "start": 396.47,
+   "end": 396.53
+  },
+  {
+   "text": "wenn",
+   "src": "sibeau/t1",
+   "start": 396.55,
+   "end": 396.67
+  },
+  {
+   "text": "du",
+   "src": "sibeau/t1",
+   "start": 396.69,
+   "end": 396.73
+  },
+  {
+   "text": "weitere",
+   "src": "sibeau/t1",
+   "start": 396.77,
+   "end": 397.07
+  },
+  {
+   "text": "solcher",
+   "src": "sibeau/t1",
+   "start": 397.15,
+   "end": 397.39
+  },
+  {
+   "text": "E-Commerce-Stories",
+   "src": "sibeau/t1",
+   "start": 397.49,
+   "end": 398.17
+  },
+  {
+   "text": "von",
+   "src": "sibeau/t1",
+   "start": 398.21,
+   "end": 398.31
+  },
+  {
+   "text": "mir",
+   "src": "sibeau/t1",
+   "start": 398.33,
+   "end": 398.41
+  },
+  {
+   "text": "in",
+   "src": "sibeau/t1",
+   "start": 398.45,
+   "end": 398.49
+  },
+  {
+   "text": "Zukunft",
+   "src": "sibeau/t1",
+   "start": 398.53,
+   "end": 398.89
+  },
+  {
+   "text": "haben",
+   "src": "sibeau/t1",
+   "start": 398.93,
+   "end": 399.13
+  },
+  {
+   "text": "möchtest,",
+   "src": "sibeau/t1",
+   "start": 399.17,
+   "end": 399.49
+  },
+  {
+   "text": "dann",
+   "src": "sibeau/t1",
+   "start": 399.55,
+   "end": 399.71
+  },
+  {
+   "text": "drücke",
+   "src": "sibeau/t1",
+   "start": 399.99,
+   "end": 400.19
+  },
+  {
+   "text": "gerne",
+   "src": "sibeau/t1",
+   "start": 400.27,
+   "end": 400.45
+  },
+  {
+   "text": "das",
+   "src": "sibeau/t1",
+   "start": 400.47,
+   "end": 400.55
+  },
+  {
+   "text": "Plus",
+   "src": "sibeau/t1",
+   "start": 400.61,
+   "end": 400.77
+  },
+  {
+   "text": "weg",
+   "src": "sibeau/t1",
+   "start": 400.83,
+   "end": 400.95
+  },
+  {
+   "text": "und",
+   "src": "sibeau/t1",
+   "start": 401.03,
+   "end": 401.11
+  },
+  {
+   "text": "ich",
+   "src": "sibeau/t1",
+   "start": 401.15,
+   "end": 401.23
+  },
+  {
+   "text": "werde",
+   "src": "sibeau/t1",
+   "start": 401.27,
+   "end": 401.43
+  },
+  {
+   "text": "dir",
+   "src": "sibeau/t1",
+   "start": 401.49,
+   "end": 401.59
+  },
+  {
+   "text": "weitere",
+   "src": "sibeau/t1",
+   "start": 401.65,
+   "end": 402.01
+  },
+  {
+   "text": "E-Commerce-Marken",
+   "src": "sibeau/t1",
+   "start": 402.19,
+   "end": 402.91
+  },
+  {
+   "text": "vorstellen.",
+   "src": "sibeau/t1",
+   "start": 403.03,
+   "end": 403.45
+  }
+ ],
+ "pages": [
+  2,
+  3,
+  2,
+  2,
+  3,
+  2,
+  1,
+  4,
+  2,
+  3,
+  2,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  1,
+  3,
+  2,
+  3,
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  2,
+  3,
+  2,
+  1,
+  3,
+  2,
+  3,
+  2,
+  1,
+  2,
+  2,
+  3,
+  3,
+  2,
+  4,
+  2,
+  4,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  1,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  2,
+  3,
+  3,
+  1,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  4,
+  3,
+  3,
+  1,
+  1,
+  1,
+  4,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  4,
+  3,
+  2,
+  2,
+  2,
+  3,
+  2,
+  2,
+  4,
+  3,
+  3,
+  3,
+  1,
+  3,
+  3,
+  3,
+  2,
+  3,
+  3,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  3,
+  2,
+  4,
+  1,
+  1,
+  4,
+  2,
+  3,
+  3,
+  3,
+  2,
+  1,
+  1
+ ]
+}

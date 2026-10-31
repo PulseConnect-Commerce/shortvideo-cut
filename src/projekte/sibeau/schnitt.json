@@ -1,0 +1,142 @@
+{
+ "projekt": "sibeau",
+ "sprache": "de",
+ "fps": 30,
+ "pausen": {
+  "min_gap": 1.0,
+  "pre": 0.06,
+  "post": 0.1
+ },
+ "saetze": [
+  {
+   "take": "t1",
+   "ab": 238.0,
+   "text": "Diese Shopify-Marke hat tatsächlich erst rund 500 Frauen gefragt, was sie überhaupt kaufen sollen. Und erst danach haben sie tatsächlich angefangen, die Produkte dazu zu entwickeln. Die Marke nennt sich SI BEAU. Vielleicht hast du sie ja schon einmal gehört. Die Gründerinnen wollten hier Businesskleidung für Frauen machen, die professionell aussieht und trotzdem aber bequem ist. Statt aber jetzt hinzugehen und einfach eine Kollektion nach ihrem eigenen Geschmack zu entwerfen, haben die einfach ihre Zielgruppe früh mit eingebunden. Hört sich eigentlich logisch an, oder? Laut einem historischen Shopify-Interview gab es hierzu tatsächlich eine digitale Fokusgruppe mit ungefähr 500 Frauen. Und diese Frauen konnten dann eben unter anderem bei Schnitten und auch Farben mitreden."
+  },
+  {
+   "take": "t1",
+   "ab": 285.0,
+   "text": "und die Marke nutzte hier tatsächlich ihre eigene Shopify-Seite bereits dafür,"
+  },
+  {
+   "take": "t1",
+   "ab": 293.6,
+   "text": "Um vor dem eigentlichen Launch dann tatsächlich die Interesse zu sammeln. Das ist ziemlich spannend, denn viele Shops machen leider tatsächlich genau das Gegenteil. Erst werden Produkte eingekauft, Fotos gemacht, es werden Anzeigen geschaltet und erst dann merkt man, oh Mist, das Angebot ist vielleicht doch an der Zielgruppe vorbeigegangen."
+  },
+  {
+   "take": "t1",
+   "ab": 314.5,
+   "text": "und mein erstes Learning daraus ist tatsächlich rede bitte zunächst einmal mit potenziellen Kunden, bevor du viel Geld in irgendwelche Ware und auch aufwendige Shopdesigns investierst."
+  },
+  {
+   "take": "t1",
+   "ab": 330.9,
+   "text": "Zweitens frag nicht einfach nur, ob Menschen dein Produkt schön finden. Frag tatsächlich nach Problemen bisheriger Lösungen und danach was ihnen wirklich fehlt. Und drittens Teste mal die Nachfrage mit einer Landingpage, einer Warteliste oder einer kleinen Produktauswahl, bevor du überhaupt das ganze Sortiment aufbaust."
+  },
+  {
+   "take": "t1",
+   "ab": 352.2,
+   "text": "KI kann dir heutzutage super dabei helfen, Fragen zu formulieren und auch Antworten auszuwerten. Aber das ersetzt leider immer noch keine echten Gespräche mit Menschen, die tatsächlich am Ende bei dir kaufen sollen."
+  },
+  {
+   "take": "t1",
+   "ab": 388.4,
+   "text": "und das war für mich auch hier tatsächlich die wichtigste Erkenntnis. Man sollte erst verstehen, dann tatsächlich entwickeln und erst danach skalieren."
+  },
+  {
+   "take": "t1",
+   "ab": 396.3,
+   "text": "Und wenn du weitere solcher E-Commerce-Stories von mir in Zukunft haben möchtest, dann drücke gerne das Plus weg und ich werde dir weitere E-Commerce-Marken vorstellen.",
+   "ganz": true
+  }
+ ],
+ "ende": {
+  "bis": 403.85
+ },
+ "korrekturen": [
+  [
+   "t1",
+   285.08,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   314.64,
+   "und",
+   "Und"
+  ],
+  [
+   "t1",
+   316.14,
+   "tatsächlich",
+   "tatsächlich:"
+  ],
+  [
+   "t1",
+   316.76,
+   "rede",
+   "Rede"
+  ],
+  [
+   "t1",
+   331.01,
+   "Zweitens",
+   "Zweitens,"
+  ],
+  [
+   "t1",
+   335.45,
+   "Problemen",
+   "Problemen,"
+  ],
+  [
+   "t1",
+   337.49,
+   "danach",
+   "danach,"
+  ],
+  [
+   "t1",
+   339.85,
+   "drittens",
+   "drittens,"
+  ],
+  [
+   "t1",
+   340.63,
+   "Teste",
+   "teste"
+  ],
+  [
+   "t1",
+   388.57,
+   "und",
+   ""
+  ],
+  [
+   "t1",
+   388.69,
+   "das",
+   "Das"
+  ],
+  [
+   "t1",
+   390.75,
+   "Erkenntnis.",
+   "Erkenntnis:"
+  ],
+  [
+   "t1",
+   391.57,
+   "Man",
+   "man"
+  ],
+  [
+   "t1",
+   293.72,
+   "Um",
+   "um"
+  ]
+ ]
+}

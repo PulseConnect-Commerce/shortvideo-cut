@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>M10 · SI BEAU – Erklär-Bilder, Learnings und Folgen-Karte</title>
+    <script src="assets/gsap.min.js"></script>
+    <!-- Serie M "Marken-Story", M10 · SI BEAU. Vorlage hyperframes/huel-skizzen (M08), hyperframes/ooia-skizzen (M09) und
+         hyperframes/purelei-skizzen (M02) mit Pauls Regeln: er steht oben (Kopfoberkante ~320), darum stehen die Erklär-Bilder auf der
+         hellen Karte UNTER Kopf und Pille (x 80-900, y 1158-1494; Instagram-Zone ab 1500); Erklär-Bilder statt Wortkarten
+         (karten-aufbau.md "Visuelle Metaphern"), die Kennzahl "≈500" nur so, wie der Shopify-Beitrag aus dem Briefing sie belegt
+         (digitale Fokusgruppe aus etwa 500 Frauen, Interview vom 6. Jan. 2020), Fragebogen, Farben/Schnitte und Vorlaunch-Seite als
+         gekennzeichnete Schemata (Bildplan 25-48 s: "keine falschen Originalaufnahmen"), die drei Händler-Learnings als Leiste
+         "Gespräche" / "Probleme" / "Testen" mit eigener Beispiel-Landingpage und KI-Fragen-Bild (Bildplan), am Ende die große
+         mittige Folgen-Karte mit dem TikTok-Plus (karten-aufbau.md Punkt 7), getippt auf "Plus".
+         Kein Logo: die offiziellen Seiten von SI BEAU sind nicht mehr erreichbar (si-beau.com ohne Verbindung, sibeau-women.com
+         abgelaufen), ein originales Logo aus offizieller Quelle gab es nicht; der Name steht darum nur als Text (kein Nachbau).
+         Echte Markenfotos (Hintergründe) und der Shopify-Beitrag ("Quelle groß") laufen in Remotion (src/projekte/sibeau/Video.tsx);
+         in den Quellen-Fenstern (30,4-36,4 s und 41,0-45,0 s) blenden diese Karten dort aus. Keine Aussagen über heutige Größe oder
+         Erfolg der Marke, keine erfundenen Zahlen. Icons Lucide (ISC), Kleider-Umrisse eigene schlichte Linien, Schriften Geist,
+         Instrument Serif, Caveat (OFL, lokal). Zeiten = Sekunden im geschnittenen Video (src/projekte/sibeau/cut.json, 112,645 s),
+         Teile 2 Frames vor ihrem Wort; Liste mit Tönen in src/projekte/sibeau/karten.json. -->
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Caveat"; src: url("assets/Caveat-latin.woff2") format("woff2"); font-weight: 400 700; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+      @font-face { font-family: "Instrument Serif"; src: url("assets/InstrumentSerif-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Geist", sans-serif; color: #0b0c0e; }
+
+      .karte {
+        position: absolute; left: 80px; top: 1158px; width: 820px; height: 336px; opacity: 0; isolation: isolate; overflow: hidden;
+        border-radius: 32px; background: rgba(242, 243, 245, 0.97);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .kicker { position: absolute; z-index: 2; left: 30px; top: 18px; font-size: 23px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; white-space: nowrap; }
+      .schema { position: absolute; z-index: 2; right: 26px; top: 16px; font-size: 20px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa3af; border: 2px solid #d1d5db; border-radius: 10px; padding: 2px 10px; }
+      svg.buehne { position: absolute; left: 0; top: 46px; width: 820px; height: 290px; overflow: visible; }
+      svg text { font-family: "Geist", sans-serif; }
+      .lab { font-size: 30px; font-weight: 800; fill: #0b0c0e; letter-spacing: -0.01em; }
+      .lab.grau { fill: #9aa3af; }
+      .klein { font-size: 24px; font-weight: 700; fill: #6b7280; }
+      .hand { font-family: "Caveat", cursive; font-weight: 700; fill: #2a9ed8; }
+      .hand.gruen { fill: #00b877; }
+      .serif { font-family: "Instrument Serif", serif; fill: #0b0c0e; }
+      .rahmen { fill: #fff; stroke: #d1d5db; stroke-width: 2.5; }
+      .ico { fill: none; stroke: #0b0c0e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .ico.grau { stroke: #9aa3af; }
+      .ico.weiss { stroke: #ffffff; }
+      .linie { fill: none; stroke: #0b0c0e; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .zug { fill: none; stroke: url(#gvu); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .grauzug { fill: none; stroke: #9aa3af; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .verlauf { background: linear-gradient(90deg, #00d088 0%, #31adec 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 0.04em; }
+
+      /* Quellenzeile unter dem Hook-Titel (Bildplan 0-6 s: "500 FRAUEN VOR DEM START", historische Quellenmarkierung) */
+      #hookq { position: absolute; left: 0; top: 1418px; width: 980px; display: flex; justify-content: center; opacity: 0; }
+      #hookq span { white-space: nowrap; background: rgba(10, 12, 14, 0.86); color: #ffffff; border-radius: 14px; padding: 8px 18px 9px;
+        font-size: 30px; font-weight: 600; letter-spacing: 0.01em; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); }
+      #hookq b { color: #00e090; font-weight: 700; }
+
+      /* Leiste der drei Learnings (oben in den Tipp-Karten): erledigt mit Haken, aktiv mit Verlaufsrand */
+      .leiste { position: absolute; z-index: 2; left: 26px; top: 14px; display: flex; gap: 10px; }
+      .stufe { position: relative; display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px 0 6px; border-radius: 21px; background: #ffffff; border: 2.5px solid #d1d5db; font-size: 22px; font-weight: 800; color: #9aa3af; white-space: nowrap; }
+      .stufe .nr { width: 30px; height: 30px; border-radius: 15px; background: #e5e7eb; color: #6b7280; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+      .stufe.aktiv { border-color: transparent; color: #0b0c0e; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(90deg, #00d088, #31adec) border-box; }
+      .stufe.aktiv .nr { background: linear-gradient(135deg, #00e090, #31adec); color: #0b0c0e; }
+      .stufe.fertig { color: #6b7280; }
+      .stufe.fertig .nr { background: #0b0c0e; color: #ffffff; }
+      .ziffer { position: absolute; left: 18px; top: 70px; width: 120px; text-align: center; font-family: "Instrument Serif", serif; font-size: 210px; line-height: 1; }
+
+      /* Kennzahl */
+      .zahl { position: absolute; left: 10px; top: 66px; width: 320px; text-align: center; font-family: "Instrument Serif", serif; font-size: 150px; line-height: 1; }
+
+      /* Folgen (CTA): nur das Folgen-Symbol, groß und waagerecht mittig, Plus wie bei TikTok (Pauls Vorgabe 30.10.,
+         karten-aufbau.md Punkt 7, Vorlage hyperframes/huel-skizzen K12): 560 x 200, Kartenmitte x 540, Avatar 150, Plus 64,
+         "Folgen" 72 px, an der Kartenposition unter Kopf und Pille */
+      .folgekarte { position: absolute; left: 260px; top: 1158px; width: 560px; height: 200px; border-radius: 44px; background: rgba(255, 255, 255, 0.97); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.08); opacity: 0; }
+      .avatar { position: absolute; left: 34px; top: 18px; width: 150px; height: 150px; border-radius: 75px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+      .avatar > svg { width: 84px; height: 84px; fill: none; stroke: #6b7280; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      #fplus { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; overflow: visible; }
+      #fring { position: absolute; left: 77px; top: 136px; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #31adec; opacity: 0; }
+      .ftext { position: absolute; left: 224px; top: 56px; font-size: 72px; line-height: 88px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
+      .ftext span { display: inline-block; }
+      .zeiger { position: absolute; left: 0; top: 0; width: 56px; height: 56px; opacity: 0; z-index: 3; }
+      .zeiger svg { width: 56px; height: 56px; fill: #0b0c0e; stroke: #fff; stroke-width: 1.4; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="sibeau-skizzen" data-width="1080" data-height="1920" data-start="0" data-duration="112.645">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e090" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvu" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="820" y2="0"><stop offset="0" stop-color="#00d088" /><stop offset="1" stop-color="#31adec" /></linearGradient>
+          <linearGradient id="gvl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3faf1" /><stop offset="1" stop-color="#e2f2fc" /></linearGradient>
+          <!-- Lucide-Icons (ISC), 24 x 24 -->
+          <g id="i-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></g>
+          <g id="i-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></g>
+          <g id="i-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></g>
+          <g id="i-msg"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></g>
+          <g id="i-msgq"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></g>
+          <g id="i-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /><path d="m7.5 4.27 9 5.15" /></g>
+          <g id="i-mega"><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></g>
+          <g id="i-file"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /></g>
+          <g id="i-sparkles"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></g>
+          <g id="i-bulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></g>
+          <g id="i-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></g>
+          <g id="i-uhr"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></g>
+          <g id="i-trend"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></g>
+          <g id="i-shirt"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" /></g>
+          <g id="i-briefcase"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /><rect width="20" height="14" x="2" y="6" rx="2" /></g>
+          <g id="i-feather"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z" /><path d="M16 8 2 22" /><path d="M17.5 15H9" /></g>
+          <g id="i-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /><path d="m15 5 4 4" /></g>
+          <g id="i-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></g>
+          <g id="i-camera"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" /><circle cx="12" cy="13" r="3" /></g>
+          <g id="i-banknote"><rect width="20" height="12" x="2" y="6" rx="2" /><circle cx="12" cy="12" r="2" /><path d="M6 12h.01M18 12h.01" /></g>
+          <g id="i-layout"><rect width="18" height="7" x="3" y="3" rx="1" /><rect width="9" height="7" x="3" y="14" rx="1" /><rect width="5" height="7" x="16" y="14" rx="1" /></g>
+          <g id="i-flask"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /><path d="M6.453 15h11.094" /><path d="M8.5 2h7" /></g>
+          <g id="i-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></g>
+          <g id="i-bag"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></g>
+          <g id="i-mail"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></g>
+          <g id="i-target"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></g>
+          <!-- Zustände -->
+          <g id="kreuz"><circle r="20" fill="#9aa3af" /><path d="M-7 -7 L7 7 M7 -7 L-7 7" stroke="#fff" stroke-width="4" stroke-linecap="round" /></g>
+          <g id="haken"><circle r="20" fill="url(#gvd)" /><path d="M-8 0 L-2 6 L9 -6" fill="none" stroke="#0b0c0e" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+          <g id="zeigerform"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" /></g>
+          <!-- eigene schlichte Kleider-Umrisse (Schema, keine Nachbildung bestimmter SI-BEAU-Teile), 100 x 100 -->
+          <symbol id="blazer" viewBox="0 0 100 100"><path d="M34 10 L50 16 L66 10 L84 22 L80 92 H20 L16 22 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" /><path d="M34 10 L44 46 L50 58 L56 46 L66 10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" /><path d="M50 58 V92" stroke="currentColor" stroke-width="3" /><circle cx="50" cy="70" r="2.6" fill="currentColor" /></symbol>
+          <symbol id="kleid" viewBox="0 0 100 100"><path d="M38 8 H62 L60 28 L66 34 L80 92 H20 L34 34 L40 28 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" /><path d="M36 36 H64" stroke="currentColor" stroke-width="3" /></symbol>
+          <symbol id="hose" viewBox="0 0 100 100"><path d="M28 8 H72 L78 92 H56 L50 38 L44 92 H22 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" /><path d="M28 18 H72" stroke="currentColor" stroke-width="3" /></symbol>
+        </defs>
+      </svg>
+
+      <!-- K0 Quellenzeile unter dem Hook-Titel: auf "Shopify-Marke" (0,36) bis zum Ende des Hooks (~5,3) -->
+      <div id="hookq" class="clip" data-start="0" data-duration="5.4" data-track-index="2"><span><b>QUELLE</b>&nbsp; Shopify-Interview · Jan. 2020</span></div>
+
+      <!-- K1 Kennzahl und Ablauf: "Und erst danach haben sie tatsächlich angefangen, die Produkte dazu zu entwickeln."
+           Und 5,44 (Karte: "≈500" / "Frauen gefragt" / Quelle, Kachel "Fragen" mit Haken) / danach 6,42 ("erst danach") /
+           angefangen 7,84 (Pfeil) / Produkte 8,36 (Kachel "Produkte") / entwickeln 9,12 ("entwickelt", Funkeln) -->
+      <section id="k1" class="karte clip" data-start="5.37" data-duration="4.76" data-track-index="1">
+        <div class="kicker">Erst fragen, dann entwickeln</div>
+        <div class="zahl" id="k1-zahl"><span class="verlauf">≈500</span></div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <text x="170" y="226" text-anchor="middle" class="lab" style="font-size:32px">Frauen gefragt</text>
+          <text x="180" y="264" text-anchor="middle" class="klein" style="font-size:20px">laut Shopify-Interview · Jan. 2020</text>
+          <g id="k1-a"><rect x="356" y="44" width="170" height="160" rx="24" class="rahmen" /><g transform="translate(405 74) scale(3)" class="ico"><use href="#i-msgq" /></g><text x="441" y="186" text-anchor="middle" class="lab" style="font-size:28px">Fragen</text><use id="k1-ok" href="#haken" x="522" y="196" /></g>
+          <text id="k1-hand" x="600" y="30" text-anchor="middle" class="hand gruen" style="font-size:42px">erst danach</text>
+          <path id="k1-pfeil" pathLength="1" d="M546 124 C 566 104, 590 104, 608 124 M596 112 L608 124 L594 132" class="zug" style="stroke-width:5" />
+          <g id="k1-b"><rect x="620" y="44" width="170" height="160" rx="24" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><g transform="translate(669 70) scale(3)" class="ico"><use href="#i-shirt" /></g><text x="705" y="186" text-anchor="middle" class="lab" style="font-size:28px">Produkte</text></g>
+          <text id="k1-ent" x="705" y="248" text-anchor="middle" class="hand gruen" style="font-size:44px">entwickelt</text>
+          <g id="k1-funk"><g transform="translate(772 22) scale(1.5)" class="ico"><use href="#i-sparkles" /></g></g>
+        </svg>
+      </section>
+
+      <!-- K2 Die Marke: "Die Marke nennt sich SI BEAU. Vielleicht hast du sie ja schon einmal gehört." Die 10,20 (Karte mit
+           Platzhalter "?") / SI 11,32 (Name als Text, kein Logo; Unterzeile aus dem Shopify-Beitrag 2020) / gehört 13,10 (Schrift) -->
+      <section id="k2" class="karte clip" data-start="10.13" data-duration="3.66" data-track-index="1">
+        <div class="kicker">Die Marke</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k2-platz" data-layout-allow-overlap><rect x="34" y="34" width="330" height="180" rx="26" fill="#fff" stroke="#9aa3af" stroke-width="3" stroke-dasharray="12 10" /><text x="199" y="160" text-anchor="middle" style="font-size:110px;font-weight:800;fill:#9aa3af">?</text></g>
+          <g id="k2-name">
+            <text x="34" y="150" class="serif" style="font-size:136px;letter-spacing:0.02em">SI BEAU</text>
+            <text x="38" y="208" class="lab" style="font-size:30px">Business-Mode für Frauen · Berlin</text>
+            <text x="38" y="246" class="klein" style="font-size:22px">so im Shopify-Beitrag vom Januar 2020</text>
+          </g>
+          <g id="k2-kleider" style="color:#0b0c0e">
+            <use href="#blazer" x="560" y="10" width="80" height="80" /><use href="#kleid" x="640" y="10" width="80" height="80" /><use href="#hose" x="720" y="10" width="80" height="80" />
+          </g>
+          <text id="k2-hand" x="640" y="272" text-anchor="middle" class="hand gruen" style="font-size:48px" transform="rotate(-4 640 272)">schon mal gehört?</text>
+        </svg>
+      </section>
+
+      <!-- K3 Die Idee: "Die Gründerinnen wollten hier Businesskleidung für Frauen machen, die professionell aussieht und trotzdem
+           aber bequem ist." Die 13,86 (Karte) / Businesskleidung 15,02 (Blazer) / Frauen 16,02 / professionell 17,10 (Waagschale
+           links, Aktentasche) / trotzdem 18,31 ("und trotzdem") / bequem 19,02 (Waagschale rechts, Feder; die Waage kommt ins
+           Gleichgewicht) -->
+      <section id="k3" class="karte clip" data-start="13.79" data-duration="6.67" data-track-index="1">
+        <div class="kicker">Die Idee der Gründerinnen</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k3-jacke"><rect x="30" y="20" width="200" height="190" rx="26" class="rahmen" /><use href="#blazer" x="55" y="30" width="150" height="150" style="color:#0b0c0e" /></g>
+          <text id="k3-bk" x="130" y="246" text-anchor="middle" class="lab" style="font-size:26px">Businesskleidung</text>
+          <text id="k3-ff" x="130" y="278" text-anchor="middle" class="klein" style="font-size:22px">für Frauen</text>
+          <g transform="translate(30 0)">
+          <g id="k3-waage">
+            <path d="M520 70 V 236 M470 240 H570" class="linie" />
+            <circle cx="520" cy="66" r="9" fill="#0b0c0e" />
+            <g id="k3-balken"><path d="M340 70 H700" class="linie" style="stroke-width:5" /></g>
+            <g id="k3-links"><path d="M340 70 L300 150 M340 70 L380 150" stroke="#9aa3af" stroke-width="2.5" fill="none" /><path d="M286 150 H394 C 394 176, 372 186, 340 186 C 308 186, 286 176, 286 150 Z" fill="#fff" stroke="#0b0c0e" stroke-width="3" /></g>
+            <g id="k3-rechts"><path d="M700 70 L660 150 M700 70 L740 150" stroke="#9aa3af" stroke-width="2.5" fill="none" /><path d="M646 150 H754 C 754 176, 732 186, 700 186 C 668 186, 646 176, 646 150 Z" fill="#fff" stroke="#0b0c0e" stroke-width="3" /></g>
+          </g>
+          <g id="k3-prof"><g transform="translate(316 104) scale(2)" class="ico"><use href="#i-briefcase" /></g><text x="340" y="226" text-anchor="middle" class="lab" style="font-size:26px">professionell</text></g>
+          <g id="k3-bequem"><g transform="translate(676 104) scale(2)" class="ico"><use href="#i-feather" /></g><text x="700" y="226" text-anchor="middle" class="lab" style="font-size:26px">bequem</text></g>
+          <text id="k3-hand" x="520" y="30" text-anchor="middle" class="hand gruen" style="font-size:42px">und trotzdem</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- K4 Statt eigener Geschmack: "Statt aber jetzt hinzugehen und einfach eine Kollektion nach ihrem eigenen Geschmack zu
+           entwerfen, haben die einfach ihre Zielgruppe früh mit eingebunden. Hört sich eigentlich logisch an, oder?" Statt 20,53
+           (Karte, Skizzenblock mit Stift) / Kollektion 22,33 (Kleider-Umrisse) / Geschmack 23,74 (Gedankenblase mit Herz) /
+           entwerfen 24,18 (Stift zeichnet) / haben 25,03 (Pfeil) / Zielgruppe 26,07 (links grau mit Kreuz, rechts die Zielgruppe mit
+           Sprechblasen) / früh 26,50 ("früh eingebunden") / Hört 28,19 und logisch 28,87 ("logisch, oder?") -->
+      <section id="k4" class="karte clip" data-start="20.46" data-duration="9.87" data-track-index="1">
+        <div class="kicker">Statt nach eigenem Geschmack</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k4-a">
+            <rect x="30" y="30" width="250" height="190" rx="22" class="rahmen" />
+            <path d="M30 70 H280" stroke="#e5e7eb" stroke-width="2" />
+            <g id="k4-kleider" style="color:#0b0c0e"><use href="#blazer" x="44" y="88" width="76" height="76" /><use href="#kleid" x="117" y="88" width="76" height="76" /><use href="#hose" x="190" y="88" width="76" height="76" /></g>
+            <g id="k4-stift"><g transform="translate(224 34) scale(1.5)" class="ico"><use href="#i-pencil" /></g></g>
+            <text x="155" y="58" text-anchor="middle" class="klein" style="font-size:22px">Kollektion</text>
+            <text x="155" y="206" text-anchor="middle" class="klein" style="font-size:20px">nach eigenem Geschmack</text>
+            <g id="k4-blase"><circle cx="318" cy="56" r="40" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><circle cx="286" cy="104" r="8" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(300 38) scale(1.5)" class="ico"><use href="#i-heart" /></g></g>
+          </g>
+          <use id="k4-x" href="#kreuz" x="155" y="126" />
+          <path id="k4-pfeil" pathLength="1" d="M372 150 C 410 130, 440 130, 470 146 M456 134 L470 146 L454 154" class="zug" style="stroke-width:5" />
+          <g id="k4-b">
+            <rect x="490" y="30" width="300" height="190" rx="22" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" />
+            <g transform="translate(590 74) scale(4.2)" class="ico"><use href="#i-users" /></g>
+            <text x="640" y="206" text-anchor="middle" class="lab" style="font-size:28px">Zielgruppe</text>
+            <g class="k4-sb"><circle cx="530" cy="70" r="22" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(518 58)" class="ico" style="stroke-width:2.2"><use href="#i-msg" /></g></g>
+            <g class="k4-sb"><circle cx="750" cy="64" r="22" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(738 52)" class="ico" style="stroke-width:2.2"><use href="#i-msgq" /></g></g>
+            <g class="k4-sb"><circle cx="760" cy="140" r="22" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(748 128)" class="ico" style="stroke-width:2.2"><use href="#i-msg" /></g></g>
+          </g>
+          <text id="k4-frueh" x="640" y="270" text-anchor="middle" class="hand gruen" style="font-size:44px">früh eingebunden</text>
+          <text id="k4-logisch" x="300" y="272" text-anchor="middle" class="hand" style="font-size:46px" transform="rotate(-3 300 272)">logisch, oder?</text>
+        </svg>
+      </section>
+
+      <!-- K5 Mitreden: "Und diese Frauen konnten dann eben unter anderem bei Schnitten und auch Farben mitreden." Karte 36,42 (nach
+           der Quelle, Fokusgruppe "≈500") / Frauen 37,71 (Fragebogen, Schema) / Schnitten 39,39 (Kleider-Umrisse, Haken) / Farben
+           40,15 (Farbfelder, Haken) / mitreden 40,53 (Sprechblase, Schrift) -->
+      <section id="k5" class="karte clip" data-start="36.42" data-duration="4.56" data-track-index="1">
+        <div class="kicker">Die Fokusgruppe redet mit</div>
+        <div class="schema">Schema</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k5-gruppe"><circle cx="120" cy="110" r="84" fill="url(#gvl)" /><g transform="translate(70 62) scale(4.2)" class="ico"><use href="#i-users" /></g><text x="120" y="230" text-anchor="middle" class="lab" style="font-size:30px">≈500 Frauen</text></g>
+          <g id="k5-bogen">
+            <rect x="240" y="6" width="560" height="270" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(262 22) scale(1.3)" class="ico"><use href="#i-file" /></g>
+            <text x="300" y="46" class="klein" style="font-size:22px">Fragebogen</text>
+            <text x="262" y="122" class="lab" style="font-size:26px">Schnitt</text>
+            <text x="262" y="226" class="lab" style="font-size:26px">Farbe</text>
+          </g>
+          <g id="k5-schnitte" style="color:#0b0c0e">
+            <rect x="400" y="64" width="96" height="96" rx="16" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2" /><use href="#blazer" x="408" y="70" width="80" height="80" />
+            <rect id="k5-wahl" x="516" y="64" width="96" height="96" rx="16" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2" /><use href="#kleid" x="524" y="70" width="80" height="80" />
+            <rect x="632" y="64" width="96" height="96" rx="16" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2" /><use href="#hose" x="640" y="70" width="80" height="80" />
+          </g>
+          <use id="k5-ok1" href="#haken" x="610" y="68" />
+          <g id="k5-farben">
+            <circle cx="430" cy="216" r="28" fill="#111827" /><circle cx="510" cy="216" r="28" fill="#b4232c" /><circle cx="590" cy="216" r="28" fill="#1e3a5f" /><circle cx="670" cy="216" r="28" fill="#d6b48c" />
+          </g>
+          <use id="k5-ok2" href="#haken" x="530" y="190" />
+          <text id="k5-hand" x="120" y="278" text-anchor="middle" class="hand gruen" style="font-size:40px">mitreden</text>
+        </svg>
+      </section>
+
+      <!-- K6 Vor dem Launch (Schema einer Vorlaunch-Seite, keine Originalaufnahme): "um vor dem eigentlichen Launch dann tatsächlich
+           die Interesse zu sammeln." Karte 45,00 (nach der Quelle; Handy mit Seite "Bald da" und E-Mail-Feld, Zeitstrahl) /
+           Launch 45,69 (Rakete) / Interesse 46,97 (Menschen kommen dazu) / sammeln 47,61 (Schrift) -->
+      <section id="k6" class="karte clip" data-start="45.0" data-duration="3.38" data-track-index="1">
+        <div class="kicker">Vor dem eigentlichen Launch</div>
+        <div class="schema">Schema</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k6-handy">
+            <rect x="40" y="6" width="170" height="270" rx="26" fill="#fff" stroke="#0b0c0e" stroke-width="3.5" />
+            <rect x="96" y="16" width="58" height="8" rx="4" fill="#d1d5db" />
+            <text x="125" y="84" text-anchor="middle" class="lab" style="font-size:26px">Bald da</text>
+            <path d="M66 108 H184 M76 128 H174" stroke="#cbd5e1" stroke-width="7" stroke-linecap="round" />
+            <rect x="60" y="156" width="130" height="38" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2" /><g transform="translate(68 163) scale(1)" class="ico grau"><use href="#i-mail" /></g>
+            <rect id="k6-knopf" x="60" y="204" width="130" height="38" rx="12" fill="#e5e7eb" />
+            <text x="125" y="230" text-anchor="middle" style="font-size:18px;font-weight:800;fill:#0b0c0e">Eintragen</text>
+          </g>
+          <path d="M240 236 H700" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 14" />
+          <text x="250" y="276" class="klein" style="font-size:22px">vorher</text>
+          <g id="k6-launch"><circle cx="720" cy="150" r="58" fill="url(#gvd)" /><g transform="translate(690 120) scale(2.5)" class="ico"><use href="#i-rocket" /></g><text x="720" y="250" text-anchor="middle" class="lab" style="font-size:28px">Launch</text></g>
+          <g id="k6-leute">
+            <g class="k6-p"><circle cx="300" cy="150" r="26" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(288 138)" class="ico"><use href="#i-user" /></g></g>
+            <g class="k6-p"><circle cx="370" cy="120" r="26" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(358 108)" class="ico"><use href="#i-user" /></g></g>
+            <g class="k6-p"><circle cx="440" cy="160" r="26" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(428 148)" class="ico"><use href="#i-user" /></g></g>
+            <g class="k6-p"><circle cx="510" cy="118" r="26" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(498 106)" class="ico"><use href="#i-user" /></g></g>
+            <g class="k6-p"><circle cx="580" cy="156" r="26" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(568 144)" class="ico"><use href="#i-user" /></g></g>
+          </g>
+          <text id="k6-hand" x="440" y="62" text-anchor="middle" class="hand gruen" style="font-size:50px">Interesse sammeln</text>
+        </svg>
+      </section>
+
+      <!-- K7 Andersherum: "Das ist ziemlich spannend, denn viele Shops machen leider tatsächlich genau das Gegenteil." Das 48,45
+           (Karte: Reihenfolge "Fragen" → "Produkte" mit Haken, wie bei SI BEAU) / Shops 49,99 (Laden "viele Shops") / Gegenteil
+           52,07 (die Kacheln tauschen die Plätze, "Fragen" wird grau; "genau andersherum") -->
+      <section id="k7" class="karte clip" data-start="48.38" data-duration="5.04" data-track-index="1">
+        <div class="kicker">Viele Shops</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k7-laden"><rect x="30" y="40" width="170" height="160" rx="24" class="rahmen" /><g transform="translate(79 70) scale(3)" class="ico"><use href="#i-store" /></g><text x="115" y="234" text-anchor="middle" class="lab" style="font-size:26px">viele Shops</text></g>
+          <g id="k7-f"><rect x="270" y="40" width="200" height="160" rx="24" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><g transform="translate(334 64) scale(3)" class="ico"><use href="#i-msgq" /></g><text x="370" y="180" text-anchor="middle" class="lab" style="font-size:28px">Fragen</text></g>
+          <g id="k7-p"><rect x="580" y="40" width="200" height="160" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(644 64) scale(3)" class="ico"><use href="#i-shirt" /></g><text x="680" y="180" text-anchor="middle" class="lab" style="font-size:28px">Produkte</text></g>
+          <path id="k7-pfeil" d="M490 120 H 560 M548 108 L560 120 L548 132" class="zug" style="stroke-width:5" />
+          <text id="k7-sb" x="525" y="250" text-anchor="middle" class="klein" style="font-size:22px">so bei SI BEAU</text>
+          <text id="k7-hand" x="525" y="262" text-anchor="middle" class="hand" style="font-size:48px">genau andersherum</text>
+        </svg>
+      </section>
+
+      <!-- K8 So läuft es oft: "Erst werden Produkte eingekauft, Fotos gemacht, es werden Anzeigen geschaltet und erst dann merkt
+           man, oh Mist, das Angebot ist vielleicht doch an der Zielgruppe vorbeigegangen." Erst 53,49 (Karte) / Produkte 53,91
+           (Ware) / Fotos 55,09 / Anzeigen 56,33 / merkt 58,13 (Zielscheibe) / Mist 58,89 ("oh Mist") / Angebot 59,87 (Pfeil fliegt)
+           / Zielgruppe 61,31 (Beschriftung) / vorbeigegangen 61,73 (Pfeil vorbei, Kreuz) -->
+      <section id="k8" class="karte clip" data-start="53.42" data-duration="8.95" data-track-index="1">
+        <div class="kicker">So läuft es oft</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k8-t1"><rect x="20" y="30" width="140" height="140" rx="22" class="rahmen" /><g transform="translate(56 54) scale(2.8)" class="ico"><use href="#i-package" /></g><text x="90" y="206" text-anchor="middle" class="lab" style="font-size:24px">eingekauft</text></g>
+          <path id="k8-p1" pathLength="1" d="M168 100 H190" class="zug" style="stroke-width:5" />
+          <g id="k8-t2"><rect x="198" y="30" width="140" height="140" rx="22" class="rahmen" /><g transform="translate(234 54) scale(2.8)" class="ico"><use href="#i-camera" /></g><text x="268" y="206" text-anchor="middle" class="lab" style="font-size:24px">Fotos</text></g>
+          <path id="k8-p2" pathLength="1" d="M346 100 H368" class="zug" style="stroke-width:5" />
+          <g id="k8-t3"><rect x="376" y="30" width="140" height="140" rx="22" class="rahmen" /><g transform="translate(412 54) scale(2.8)" class="ico"><use href="#i-mega" /></g><text x="446" y="206" text-anchor="middle" class="lab" style="font-size:24px">Anzeigen</text></g>
+          <g id="k8-ziel"><g transform="translate(600 30) scale(6.6)" style="fill:none;stroke:#0b0c0e;stroke-width:1.4"><use href="#i-target" /></g><circle cx="679" cy="109" r="10" fill="url(#gvd)" /></g>
+          <text id="k8-zg" x="679" y="226" text-anchor="middle" class="lab" style="font-size:26px">Zielgruppe</text>
+          <g id="k8-dart"><path d="M-40 0 H 4 M-8 -10 L4 0 L-8 10" fill="none" stroke="#0b0c0e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path d="M-40 0 L-52 -10 M-40 0 L-52 10" stroke="#9aa3af" stroke-width="4" stroke-linecap="round" /></g>
+          <use id="k8-x" href="#kreuz" x="790" y="24" />
+          <text id="k8-hand" x="260" y="268" text-anchor="middle" class="hand" style="font-size:52px" transform="rotate(-3 260 268)">oh Mist</text>
+        </svg>
+      </section>
+
+      <!-- T1 Learning 1 · Gespräche: "Und mein erstes Learning daraus ist tatsächlich: Rede bitte zunächst einmal mit potenziellen
+           Kunden, bevor du viel Geld in irgendwelche Ware und auch aufwendige Shopdesigns investierst." Und 62,44 (Karte, Leiste,
+           Ziffer) / Rede 64,56 (Gespräch, Sprechblasen) / Kunden 66,58 ("potenzielle Kunden", Haken) / Geld 67,98 / Ware 68,68 /
+           Shopdesigns 69,80 (Kacheln) / investierst 70,44 (Kacheln grau, Uhr "erst danach") -->
+      <section id="t1" class="karte clip" data-start="62.37" data-duration="8.53" data-track-index="1">
+        <div class="leiste">
+          <div class="stufe aktiv"><span class="nr">1</span>Gespräche</div>
+          <div class="stufe"><span class="nr">2</span>Probleme</div>
+          <div class="stufe"><span class="nr">3</span>Testen</div>
+        </div>
+        <div class="ziffer"><span class="verlauf">1</span></div>
+        <svg class="buehne" viewBox="0 0 820 290" style="top:58px" data-layout-allow-overflow>
+          <g id="t1-gespraech">
+            <circle cx="200" cy="130" r="44" fill="url(#gvl)" /><g transform="translate(176 106) scale(2)" class="ico"><use href="#i-user" /></g>
+            <circle cx="350" cy="130" r="44" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(326 106) scale(2)" class="ico"><use href="#i-user" /></g>
+            <g class="t1-sb"><rect x="166" y="22" width="86" height="54" rx="18" fill="#fff" stroke="#0b0c0e" stroke-width="2.5" /><path d="M190 76 L196 90 L208 76" fill="#fff" stroke="#0b0c0e" stroke-width="2.5" stroke-linejoin="round" /><path d="M184 44 H234 M184 58 H220" stroke="#9aa3af" stroke-width="5" stroke-linecap="round" /></g>
+            <g class="t1-sb"><rect x="300" y="22" width="86" height="54" rx="18" fill="url(#gvl)" stroke="#0b0c0e" stroke-width="2.5" /><path d="M350 76 L344 90 L332 76" fill="#e3faf1" stroke="#0b0c0e" stroke-width="2.5" stroke-linejoin="round" /><path d="M318 44 H368 M318 58 H354" stroke="#9aa3af" stroke-width="5" stroke-linecap="round" /></g>
+          </g>
+          <text id="t1-kunden" x="275" y="214" text-anchor="middle" class="lab" style="font-size:26px">potenzielle Kunden</text>
+          <use id="t1-ok" href="#haken" x="394" y="122" />
+          <g id="t1-inv">
+            <g class="t1-k" id="t1-geld"><rect x="460" y="40" width="104" height="104" rx="18" class="rahmen" /><g transform="translate(488 68) scale(2)" class="ico"><use href="#i-banknote" /></g><text x="512" y="174" text-anchor="middle" class="klein" style="font-size:22px">Geld</text></g>
+            <g class="t1-k" id="t1-ware"><rect x="580" y="40" width="104" height="104" rx="18" class="rahmen" /><g transform="translate(608 68) scale(2)" class="ico"><use href="#i-package" /></g><text x="632" y="174" text-anchor="middle" class="klein" style="font-size:22px">Ware</text></g>
+            <g class="t1-k" id="t1-design"><rect x="700" y="40" width="104" height="104" rx="18" class="rahmen" /><g transform="translate(728 68) scale(2)" class="ico"><use href="#i-layout" /></g><text x="752" y="174" text-anchor="middle" class="klein" style="font-size:22px">Shopdesign</text></g>
+          </g>
+          <g id="t1-uhr"><circle cx="632" cy="222" r="24" fill="#0b0c0e" /><g transform="translate(620 210)" class="ico weiss"><use href="#i-uhr" /></g></g>
+          <text id="t1-hand" x="632" y="16" text-anchor="middle" class="hand gruen" style="font-size:40px">erst danach</text>
+        </svg>
+      </section>
+
+      <!-- T2 Learning 2 · Probleme: "Zweitens, frag nicht einfach nur, ob Menschen dein Produkt schön finden. Frag tatsächlich nach
+           Problemen, bisheriger Lösungen und danach, was ihnen wirklich fehlt." Zweitens 70,97 (Karte) / Menschen 72,61 (Person) /
+           schön 73,61 (Frage "Schön?" mit Herz) / Frag 74,51 (durchgestrichen) / Problemen 75,41 / bisheriger 76,03 / was 77,88
+           (die drei besseren Fragen) / fehlt 78,79 (Haken) -->
+      <section id="t2" class="karte clip" data-start="70.90" data-duration="8.70" data-track-index="1">
+        <div class="leiste">
+          <div class="stufe fertig"><span class="nr">✓</span>Gespräche</div>
+          <div class="stufe aktiv"><span class="nr">2</span>Probleme</div>
+          <div class="stufe"><span class="nr">3</span>Testen</div>
+        </div>
+        <div class="ziffer"><span class="verlauf">2</span></div>
+        <svg class="buehne" viewBox="0 0 820 290" style="top:58px" data-layout-allow-overflow>
+          <g id="t2-mensch"><circle cx="210" cy="140" r="46" fill="url(#gvl)" /><g transform="translate(185 115) scale(2.1)" class="ico"><use href="#i-user" /></g><text x="210" y="222" text-anchor="middle" class="klein" style="font-size:22px">Menschen</text></g>
+          <g id="t2-schoen">
+            <rect x="268" y="40" width="160" height="64" rx="20" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <g transform="translate(282 58) scale(1.2)" class="ico"><use href="#i-heart" /></g>
+            <text x="318" y="83" class="lab" style="font-size:26px">Schön?</text>
+          </g>
+          <path id="t2-strich" pathLength="1" d="M262 74 L434 70" stroke="#6b7280" stroke-width="5" stroke-linecap="round" fill="none" />
+          <g class="t2-q" id="t2-q1"><rect x="470" y="6" width="330" height="64" rx="20" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(486 22) scale(1.35)" class="ico"><use href="#i-msgq" /></g><text x="530" y="48" class="lab" style="font-size:26px">Welches Problem?</text></g>
+          <g class="t2-q" id="t2-q2"><rect x="470" y="86" width="330" height="64" rx="20" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(486 102) scale(1.35)" class="ico"><use href="#i-msgq" /></g><text x="530" y="128" class="lab" style="font-size:26px">Bisherige Lösung?</text></g>
+          <g class="t2-q" id="t2-q3"><rect x="470" y="166" width="330" height="64" rx="20" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2.5" /><g transform="translate(486 182) scale(1.35)" class="ico"><use href="#i-msgq" /></g><text x="530" y="208" class="lab" style="font-size:26px">Was fehlt dir?</text></g>
+          <use class="t2-ok" href="#haken" x="790" y="12" /><use class="t2-ok" href="#haken" x="790" y="92" /><use class="t2-ok" href="#haken" x="790" y="172" />
+          <text id="t2-hand" x="635" y="262" text-anchor="middle" class="hand gruen" style="font-size:40px">besser fragen</text>
+        </svg>
+      </section>
+
+      <!-- T3 Learning 3 · Testen (eigene Beispiel-Landingpage, kein Original): "Und drittens, teste mal die Nachfrage mit einer
+           Landingpage, einer Warteliste oder einer kleinen Produktauswahl, bevor du überhaupt das ganze Sortiment aufbaust."
+           drittens 79,81 (Karte) / teste 80,59 ("Nachfrage testen") / Landingpage 82,17 (Beispielseite) / Warteliste 83,19 (Knopf
+           "Warteliste", Menschen) / kleinen 84,44 (drei Produkte) / Sortiment 86,88 (ganzes Regal grau, "später") -->
+      <section id="t3" class="karte clip" data-start="79.60" data-duration="8.23" data-track-index="1">
+        <div class="leiste">
+          <div class="stufe fertig"><span class="nr">✓</span>Gespräche</div>
+          <div class="stufe fertig"><span class="nr">✓</span>Probleme</div>
+          <div class="stufe aktiv"><span class="nr">3</span>Testen</div>
+        </div>
+        <div class="ziffer"><span class="verlauf">3</span></div>
+        <svg class="buehne" viewBox="0 0 820 290" style="top:58px" data-layout-allow-overflow>
+          <g id="t3-seite">
+            <rect x="160" y="0" width="190" height="226" rx="24" fill="#fff" stroke="#0b0c0e" stroke-width="3" />
+            <text x="255" y="30" text-anchor="middle" style="font-size:16px;font-weight:800;letter-spacing:0.12em;fill:#9aa3af">BEISPIEL</text>
+            <text x="255" y="64" text-anchor="middle" class="lab" style="font-size:24px">Bald verfügbar</text>
+            <path d="M188 86 H322 M200 102 H310" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round" />
+            <rect x="180" y="120" width="150" height="38" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2" /><text x="194" y="145" style="font-size:16px;font-weight:600;fill:#9aa3af">deine@mail.de</text>
+            <rect id="t3-knopf" x="180" y="168" width="150" height="40" rx="12" fill="#e5e7eb" />
+            <text x="255" y="194" text-anchor="middle" style="font-size:18px;font-weight:800;fill:#0b0c0e">Warteliste</text>
+          </g>
+          <text id="t3-lp" x="255" y="258" text-anchor="middle" class="klein" style="font-size:20px">Landingpage</text>
+          <g id="t3-leute"><g class="t3-p"><circle cx="384" cy="196" r="20" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(374 186) scale(0.85)" class="ico"><use href="#i-user" /></g></g><g class="t3-p"><circle cx="384" cy="148" r="20" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(374 138) scale(0.85)" class="ico"><use href="#i-user" /></g></g><g class="t3-p"><circle cx="384" cy="100" r="20" fill="#fff" stroke="#d1d5db" stroke-width="2" /><g transform="translate(374 90) scale(0.85)" class="ico"><use href="#i-user" /></g></g></g>
+          <g id="t3-klein" style="color:#0b0c0e">
+            <rect x="430" y="96" width="74" height="84" rx="14" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><use href="#blazer" x="436" y="104" width="62" height="62" />
+            <rect x="512" y="96" width="74" height="84" rx="14" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><use href="#kleid" x="518" y="104" width="62" height="62" />
+            <rect x="594" y="96" width="74" height="84" rx="14" fill="url(#gvl)" stroke="#bfe9da" stroke-width="2" /><use href="#hose" x="600" y="104" width="62" height="62" />
+            <text x="549" y="212" text-anchor="middle" class="klein" style="font-size:20px">kleine Auswahl</text>
+          </g>
+          <g id="t3-regal">
+            <rect x="690" y="40" width="114" height="156" rx="14" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <path d="M690 92 H804 M690 144 H804" stroke="#d1d5db" stroke-width="2.5" />
+            <g fill="#cbd5e1"><rect x="700" y="50" width="22" height="36" rx="4" /><rect x="728" y="50" width="22" height="36" rx="4" /><rect x="756" y="50" width="22" height="36" rx="4" /><rect x="700" y="102" width="22" height="36" rx="4" /><rect x="728" y="102" width="22" height="36" rx="4" /><rect x="756" y="102" width="22" height="36" rx="4" /><rect x="784" y="102" width="14" height="36" rx="4" /><rect x="700" y="154" width="22" height="36" rx="4" /><rect x="728" y="154" width="22" height="36" rx="4" /><rect x="756" y="154" width="22" height="36" rx="4" /></g>
+            <text x="747" y="224" text-anchor="middle" class="klein" style="font-size:20px">ganzes</text>
+            <text x="747" y="248" text-anchor="middle" class="klein" style="font-size:20px">Sortiment</text>
+          </g>
+          <g id="t3-lock"><circle cx="796" cy="44" r="22" fill="#0b0c0e" /><g transform="translate(784 32)" class="ico weiss"><use href="#i-lock" /></g></g>
+          <text id="t3-hand" x="530" y="40" text-anchor="middle" class="hand gruen" style="font-size:44px">Nachfrage testen</text>
+        </svg>
+      </section>
+
+      <!-- K9 KI: "KI kann dir heutzutage super dabei helfen, Fragen zu formulieren und auch Antworten auszuwerten." KI 87,90
+           (Karte, KI-Kachel) / Fragen 89,96 (Fragen schreiben sich) / formulieren 90,46 / Antworten 91,56 (Balken wachsen) /
+           auszuwerten 92,02 (Schrift) -->
+      <section id="k9" class="karte clip" data-start="87.83" data-duration="5.26" data-track-index="1">
+        <div class="kicker">KI kann helfen</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k9-ki"><rect x="30" y="50" width="150" height="150" rx="30" fill="url(#gvd)" /><g transform="translate(69 89) scale(3.1)" class="ico"><use href="#i-sparkles" /></g><text x="105" y="240" text-anchor="middle" class="lab" style="font-size:30px">KI</text></g>
+          <path id="k9-p1" pathLength="1" d="M192 110 C 222 92, 250 92, 274 104" class="zug" style="stroke-width:5" />
+          <g id="k9-fragen">
+            <rect x="290" y="20" width="230" height="220" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <text x="405" y="226" text-anchor="middle" class="lab" style="font-size:26px">Fragen</text>
+            <g class="k9-f"><g transform="translate(306 40) scale(1.2)" class="ico"><use href="#i-msgq" /></g><path pathLength="1" class="k9-z" d="M346 54 H500" stroke="#9aa3af" stroke-width="8" stroke-linecap="round" fill="none" /></g>
+            <g class="k9-f"><g transform="translate(306 92) scale(1.2)" class="ico"><use href="#i-msgq" /></g><path pathLength="1" class="k9-z" d="M346 106 H480" stroke="#9aa3af" stroke-width="8" stroke-linecap="round" fill="none" /></g>
+            <g class="k9-f"><g transform="translate(306 144) scale(1.2)" class="ico"><use href="#i-msgq" /></g><path pathLength="1" class="k9-z" d="M346 158 H490" stroke="#9aa3af" stroke-width="8" stroke-linecap="round" fill="none" /></g>
+          </g>
+          <g id="k9-antw">
+            <rect x="550" y="20" width="240" height="220" rx="22" fill="#fff" stroke="#d1d5db" stroke-width="2.5" />
+            <path d="M574 180 H770" stroke="#d1d5db" stroke-width="3" />
+            <rect class="k9-b" x="590" y="80" width="38" height="100" rx="8" fill="#cbd5e1" />
+            <rect class="k9-b" x="644" y="50" width="38" height="130" rx="8" fill="url(#gvd)" />
+            <rect class="k9-b" x="698" y="120" width="38" height="60" rx="8" fill="#cbd5e1" />
+            <text x="670" y="226" text-anchor="middle" class="lab" style="font-size:26px">Antworten</text>
+          </g>
+          <text id="k9-hand" x="670" y="10" text-anchor="middle" class="hand gruen" style="font-size:40px">auswerten</text>
+        </svg>
+      </section>
+
+      <!-- K10 Echte Gespräche: "Aber das ersetzt leider immer noch keine echten Gespräche mit Menschen, die tatsächlich am Ende bei
+           dir kaufen sollen." Aber 93,16 (Karte, KI-Kachel) / ersetzt 93,52 ("≠") / echten 94,78 (Schrift) / Gespräche 95,08 (zwei
+           Menschen mit Sprechblasen) / Menschen 95,78 / kaufen 97,44 (Einkaufstasche, Weg) -->
+      <section id="k10" class="karte clip" data-start="93.09" data-duration="5.04" data-track-index="1">
+        <div class="kicker">Aber</div>
+        <svg class="buehne" viewBox="0 0 820 290">
+          <g id="k10-ki"><rect x="30" y="60" width="130" height="130" rx="26" fill="url(#gvd)" /><g transform="translate(62 92) scale(2.7)" class="ico"><use href="#i-sparkles" /></g><text x="95" y="226" text-anchor="middle" class="lab" style="font-size:28px">KI</text></g>
+          <text id="k10-ne" x="214" y="150" text-anchor="middle" style="font-size:80px;font-weight:800;fill:#0b0c0e">≠</text>
+          <g id="k10-leute">
+            <circle cx="320" cy="150" r="46" fill="url(#gvl)" /><g transform="translate(295 125) scale(2.1)" class="ico"><use href="#i-user" /></g>
+            <circle cx="470" cy="150" r="46" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(445 125) scale(2.1)" class="ico"><use href="#i-user" /></g>
+            <g class="k10-sb"><rect x="282" y="36" width="80" height="50" rx="16" fill="#fff" stroke="#0b0c0e" stroke-width="2.5" /><path d="M300 56 H344 M300 70 H330" stroke="#9aa3af" stroke-width="5" stroke-linecap="round" /></g>
+            <g class="k10-sb"><rect x="430" y="36" width="80" height="50" rx="16" fill="url(#gvl)" stroke="#0b0c0e" stroke-width="2.5" /><path d="M448 56 H492 M448 70 H478" stroke="#9aa3af" stroke-width="5" stroke-linecap="round" /></g>
+            <text x="395" y="234" text-anchor="middle" class="lab" style="font-size:26px">Menschen</text>
+          </g>
+          <path id="k10-weg" pathLength="1" d="M530 150 H 640 M626 136 L640 150 L626 164" class="zug" style="stroke-width:5" />
+          <g id="k10-tasche"><rect x="660" y="66" width="140" height="140" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(694 100) scale(3)" class="ico"><use href="#i-bag" /></g><text x="730" y="240" text-anchor="middle" class="lab" style="font-size:26px">kaufen</text></g>
+          <text id="k10-hand" x="395" y="24" text-anchor="middle" class="hand gruen" style="font-size:44px">echte Gespräche</text>
+        </svg>
+      </section>
+
+      <!-- K11 Erkenntnis: "Das war für mich auch hier tatsächlich die wichtigste Erkenntnis: man sollte erst verstehen, dann
+           tatsächlich entwickeln und erst danach skalieren." Das 98,20 (Karte, Glühbirne, "Die wichtigste Erkenntnis") / verstehen
+           101,93 (Stufe 1) / entwickeln 103,38 (Stufe 2) / skalieren 104,70 (Stufe 3) -->
+      <section id="k11" class="karte clip" data-start="98.13" data-duration="7.07" data-track-index="1">
+        <div class="kicker">Die wichtigste Erkenntnis</div>
+        <div id="k11-a">
+          <svg class="buehne" viewBox="0 0 820 290">
+            <g transform="translate(40 30)"><circle cx="90" cy="100" r="90" fill="url(#gvl)" /><g transform="translate(36 46) scale(4.5)" class="ico"><use href="#i-bulb" /></g></g>
+            <text x="250" y="120" class="serif" style="font-size:76px">Erst verstehen.</text>
+            <text x="252" y="186" class="klein" style="font-size:28px">Meine wichtigste Erkenntnis</text>
+          </svg>
+        </div>
+        <svg class="buehne" viewBox="0 0 820 290" id="k11-b" opacity="0">
+          <g class="k11-s" id="k11-s1"><rect class="k11-r" x="30" y="40" width="210" height="170" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(105 64) scale(2.5)" class="ico"><use href="#i-bulb" /></g><text x="135" y="176" text-anchor="middle" class="lab" style="font-size:28px">Verstehen</text><text x="135" y="250" text-anchor="middle" class="klein" style="font-size:22px">1 · erst</text></g>
+          <path id="k11-p1" pathLength="1" d="M250 124 H 296 M284 112 L296 124 L284 136" class="zug" style="stroke-width:5" />
+          <g class="k11-s" id="k11-s2"><rect class="k11-r" x="305" y="40" width="210" height="170" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(380 64) scale(2.5)" class="ico"><use href="#i-shirt" /></g><text x="410" y="176" text-anchor="middle" class="lab" style="font-size:28px">Entwickeln</text><text x="410" y="250" text-anchor="middle" class="klein" style="font-size:22px">2 · dann</text></g>
+          <path id="k11-p2" pathLength="1" d="M525 124 H 571 M559 112 L571 124 L559 136" class="zug" style="stroke-width:5" />
+          <g class="k11-s" id="k11-s3"><rect class="k11-r" x="580" y="40" width="210" height="170" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2.5" /><g transform="translate(655 64) scale(2.5)" class="ico"><use href="#i-trend" /></g><text x="685" y="176" text-anchor="middle" class="lab" style="font-size:28px">Skalieren</text><text x="685" y="250" text-anchor="middle" class="klein" style="font-size:22px">3 · erst danach</text></g>
+        </svg>
+      </section>
+
+      <!-- K12 Folgen (CTA), groß und mittig, Plus wie bei TikTok: "Und wenn du weitere solcher E-Commerce-Stories von mir in Zukunft
+           haben möchtest, dann drücke gerne das Plus weg und ich werde dir weitere E-Commerce-Marken vorstellen." Und 105,27
+           (Karte) / E-Commerce-Stories 106,29 (leiser Ring-Hinweis) / drücke 108,79 (Zeiger fährt hin) / Plus 109,41 (Plus drückt
+           ein, dreht sich, wird zum Haken); bleibt bis zum Ende (112,645) -->
+      <section id="k12" class="folgekarte clip" data-start="105.20" data-duration="7.445" data-track-index="1">
+        <div class="avatar"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
+        <div id="fring"></div>
+        <svg id="fplus" viewBox="-32 -32 64 64">
+          <g id="fp-plus"><circle r="28" fill="url(#gvd)" stroke="#fff" stroke-width="4" /><path d="M-12 0 H12 M0 -12 V12" stroke="#fff" stroke-width="5.5" stroke-linecap="round" /></g>
+          <g id="fp-haken" opacity="0" transform="rotate(180)"><circle r="28" fill="#fff" stroke="#e5e7eb" stroke-width="3" /><path id="fp-hpfad" pathLength="1" d="M-12 1 L-3 10 L13 -8" fill="none" stroke="url(#gvd)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></g>
+        </svg>
+        <div class="ftext"><span id="ft1">Folgen</span><span id="ft2" class="verlauf" style="position:absolute;left:0;top:0;opacity:0">Folgen</span></div>
+        <div class="zeiger" id="fzeiger"><svg viewBox="0 0 24 24"><use href="#zeigerform" /></svg></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Karte rein mit Kicker (keine leere Karte: der erste Inhalt kommt mit), raus weich mit Blur und Fade
+      function karte(id, an, aus) {
+        tl.fromTo(id, { opacity: 0, y: 24, scale: 0.98, filter: "blur(0px)" }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, an);
+        for (const s of [".kicker", ".leiste", ".schema"]) {
+          const k = document.querySelector(id + " " + s);
+          if (k) tl.fromTo(k, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, an + 0.04);
+        }
+        const z = document.querySelector(id + " .ziffer");
+        if (z) tl.fromTo(z, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, an + 0.06);
+        if (aus) tl.to(id, { opacity: 0, filter: "blur(8px)", y: -6, duration: 0.3, ease: "power2.in" }, aus - 0.3);
+      }
+      const ein = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: d, ease: "power3.out" }, t);
+      const pop = (sel, t, d = 0.3) => tl.fromTo(sel, { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: d, ease: "power2.out" }, t);
+      const badge = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+      const weg = (sel, t, d = 0.2) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      const da = (sel, t, d = 0.25) => tl.to(sel, { opacity: 1, duration: d, ease: "power2.out" }, t);
+      const grau = (sel, t, o = 0.35) => tl.to(sel, { opacity: o, duration: 0.3, ease: "power2.out" }, t);
+      function zeichne(sel, t, d = 0.5, ease = "power2.out") {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, t);
+      }
+      const ZUEGE = "#k1-pfeil, #k4-pfeil, #k8-p1, #k8-p2, #t2-strich, #k9-p1, .k9-z, #k10-weg, #k11-p1, #k11-p2, #fp-hpfad";
+      gsap.set(ZUEGE, { strokeDasharray: 1, strokeDashoffset: 1 });
+      gsap.set(ZUEGE.replace(", #fp-hpfad", ""), { opacity: 0 });
+      gsap.set(".zeiger", { transformOrigin: "9px 9px" });
+
+      // K0 Quellenzeile unter dem Hook-Titel: auf "Shopify-Marke", weg mit dem Hook
+      tl.fromTo("#hookq", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 0.29);
+      tl.to("#hookq", { opacity: 0, y: -6, duration: 0.2, ease: "power2.in" }, 5.12);
+
+      // K1 Kennzahl ≈500 und Ablauf: Fragen (Haken) → erst danach → Produkte → entwickelt
+      karte("#k1", 5.37, 10.13);
+      gsap.set("#k1-ok, #k1-hand, #k1-b, #k1-ent, #k1-funk", { opacity: 0 });
+      tl.fromTo("#k1-zahl", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 5.41);
+      tl.fromTo("#k1-a", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 5.45);
+      badge("#k1-ok", 5.75);
+      ein("#k1-hand", 6.35, 0.25);
+      zeichne("#k1-pfeil", 7.77, 0.4);
+      pop("#k1-b", 8.29);
+      ein("#k1-ent", 9.05, 0.25);
+      tl.fromTo("#k1-funk", { opacity: 0, scale: 0.6, svgOrigin: "790 40" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 9.05);
+      tl.to("#k1-funk", { rotation: 20, duration: 0.8, ease: "power1.out", svgOrigin: "790 40" }, 9.2);
+
+      // K2 Die Marke: Platzhalter "?" löst sich auf "SI" in den Namen auf (Text, kein Logo), Kleider-Umrisse, Schrift auf "gehört"
+      karte("#k2", 10.13, 13.79);
+      gsap.set("#k2-name, #k2-kleider, #k2-hand", { opacity: 0 });
+      tl.fromTo("#k2-platz", { opacity: 0, scale: 0.94, svgOrigin: "199 124" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 10.17);
+      tl.fromTo("#k2-platz text", { rotation: -6, svgOrigin: "199 124" }, { rotation: 6, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut", immediateRender: false }, 10.6);
+      weg("#k2-platz", 11.25, 0.15);
+      tl.fromTo("#k2-name", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 11.27);
+      tl.fromTo("#k2-kleider use", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.08 }, 11.6);
+      tl.set("#k2-kleider", { opacity: 1 }, 11.6);
+      ein("#k2-hand", 13.03, 0.25);
+
+      // K3 Die Idee: Blazer, Waage kippt mit "professionell", kommt mit "bequem" ins Gleichgewicht
+      karte("#k3", 13.79, 20.46);
+      gsap.set("#k3-jacke, #k3-bk, #k3-ff, #k3-prof, #k3-bequem, #k3-hand, #k3-rechts", { opacity: 0 });
+      tl.fromTo("#k3-waage", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 13.83);
+      gsap.set("#k3-balken", { rotation: 0, svgOrigin: "550 70" });
+      pop("#k3-jacke", 14.95);
+      ein("#k3-bk", 15.0, 0.25);
+      ein("#k3-ff", 15.95, 0.25);
+      // professionell: linke Schale bekommt Gewicht, der Balken kippt nach links (rechte Schale hängt noch leer)
+      ein("#k3-prof", 17.03, 0.3);
+      da("#k3-rechts", 17.03, 0.2);
+      tl.to("#k3-balken", { rotation: -8, duration: 0.45, ease: "power2.inOut", svgOrigin: "550 70" }, 17.1);
+      tl.to("#k3-links, #k3-prof", { y: 25, duration: 0.45, ease: "power2.inOut" }, 17.1);
+      tl.to("#k3-rechts", { y: -25, duration: 0.45, ease: "power2.inOut" }, 17.1);
+      ein("#k3-hand", 18.24, 0.25);
+      // bequem: rechte Schale bekommt Gewicht, Gleichgewicht
+      tl.fromTo("#k3-bequem", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" }, 18.95);
+      tl.set("#k3-bequem", { y: -25 }, 18.95);
+      tl.to("#k3-balken", { rotation: 0, duration: 0.5, ease: "power2.inOut", svgOrigin: "550 70" }, 19.0);
+      tl.to("#k3-links, #k3-prof, #k3-rechts, #k3-bequem", { y: 0, duration: 0.5, ease: "power2.inOut" }, 19.0);
+
+      // K4 Statt eigener Geschmack: Skizzenblock, Kollektion, Herz-Blase, Stift; dann Kreuz, Pfeil, Zielgruppe mit Sprechblasen
+      karte("#k4", 20.46, 30.33);
+      gsap.set("#k4-kleider use, #k4-blase, #k4-x, #k4-b, .k4-sb, #k4-frueh, #k4-logisch", { opacity: 0 });
+      tl.fromTo("#k4-a", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 20.50);
+      tl.fromTo("#k4-kleider use", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.1 }, 22.26);
+      pop("#k4-blase", 23.67);
+      tl.fromTo("#k4-stift", { x: 0, y: 0 }, { x: -150, y: 40, duration: 0.8, ease: "power1.inOut", immediateRender: false }, 24.11);
+      tl.to("#k4-stift", { x: 0, y: 0, duration: 0.4, ease: "power2.inOut" }, 24.95);
+      zeichne("#k4-pfeil", 24.96, 0.45);
+      grau("#k4-a", 26.0, 0.4);
+      badge("#k4-x", 26.0);
+      tl.fromTo("#k4-b", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 26.0);
+      tl.fromTo(".k4-sb", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.12 }, 26.3);
+      ein("#k4-frueh", 26.43, 0.25);
+      ein("#k4-logisch", 28.80, 0.25);
+
+      // K5 Mitreden: Gruppe, Fragebogen, Haken bei Schnitt und Farbe, Schrift "mitreden"
+      karte("#k5", 36.42, 40.98);
+      gsap.set("#k5-bogen, #k5-schnitte, #k5-farben, #k5-ok1, #k5-ok2, #k5-hand", { opacity: 0 });
+      tl.fromTo("#k5-gruppe", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 36.46);
+      tl.fromTo("#k5-bogen", { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 37.64);
+      tl.fromTo("#k5-schnitte", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 39.32);
+      badge("#k5-ok1", 39.62);
+      tl.to("#k5-wahl", { attr: { stroke: "#00b877", "stroke-width": 4 }, duration: 0.01 }, 39.62);
+      tl.fromTo("#k5-farben circle", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.06 }, 40.08);
+      tl.set("#k5-farben", { opacity: 1 }, 40.08);
+      badge("#k5-ok2", 40.40);
+      ein("#k5-hand", 40.46, 0.25);
+
+      // K6 Vor dem Launch (Schema): Handy mit Seite, Rakete "Launch", Menschen kommen zur Seite, "Interesse sammeln"
+      karte("#k6", 45.0, 48.38);
+      gsap.set("#k6-launch, .k6-p, #k6-hand", { opacity: 0 });
+      tl.fromTo("#k6-handy", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 45.04);
+      pop("#k6-launch", 45.62);
+      tl.fromTo(".k6-p", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out", stagger: 0.1 }, 46.90);
+      tl.to(".k6-p", { x: -20, duration: 0.6, ease: "power2.inOut", stagger: 0.05 }, 47.4);
+      tl.to("#k6-knopf", { attr: { fill: "url(#gvd)" }, duration: 0.01 }, 47.2);
+      ein("#k6-hand", 47.54, 0.25);
+
+      // K7 Andersherum: Reihenfolge wie bei SI BEAU, viele Shops, auf "Gegenteil" tauschen die Kacheln die Plätze
+      karte("#k7", 48.38, 53.42);
+      gsap.set("#k7-laden, #k7-hand", { opacity: 0 });
+      tl.fromTo("#k7-f, #k7-pfeil, #k7-p, #k7-sb", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out", stagger: 0.06 }, 48.42);
+      pop("#k7-laden", 49.92);
+      weg("#k7-sb", 51.8, 0.2);
+      tl.to("#k7-f", { x: 310, duration: 0.6, ease: "power3.inOut" }, 52.0);
+      tl.to("#k7-p", { x: -310, duration: 0.6, ease: "power3.inOut" }, 52.0);
+      grau("#k7-f", 52.3, 0.4);
+      ein("#k7-hand", 52.2, 0.25);
+
+      // K8 So läuft es oft: Ware, Fotos, Anzeigen; Zielscheibe; der Pfeil fliegt vorbei
+      karte("#k8", 53.42, 62.37);
+      gsap.set("#k8-t1, #k8-t2, #k8-t3, #k8-ziel, #k8-zg, #k8-dart, #k8-x, #k8-hand", { opacity: 0 });
+      pop("#k8-t1", 53.84);
+      zeichne("#k8-p1", 54.9, 0.2);
+      pop("#k8-t2", 55.02);
+      zeichne("#k8-p2", 56.15, 0.2);
+      pop("#k8-t3", 56.26);
+      tl.fromTo("#k8-ziel", { opacity: 0, scale: 0.85, svgOrigin: "679 109" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 58.06);
+      ein("#k8-hand", 58.82, 0.25);
+      gsap.set("#k8-dart", { x: 520, y: 34, rotation: -6, svgOrigin: "0 0" });
+      tl.set("#k8-dart", { opacity: 1 }, 59.80);
+      tl.to("#k8-dart", { x: 812, y: 4, duration: 1.7, ease: "power1.inOut" }, 59.80);
+      ein("#k8-zg", 61.24, 0.25);
+      badge("#k8-x", 61.66);
+      tl.to("#k8-dart", { opacity: 0, duration: 0.2 }, 61.66);
+
+      // T1 Gespräche zuerst: zwei Menschen reden, potenzielle Kunden (Haken), Geld / Ware / Shopdesign warten ("erst danach")
+      karte("#t1", 62.37, 70.90);
+      gsap.set("#t1-gespraech, .t1-sb, #t1-kunden, #t1-ok, .t1-k, #t1-uhr, #t1-hand", { opacity: 0 });
+      tl.set("#t1-gespraech", { opacity: 1 }, 64.49);
+      tl.fromTo("#t1-gespraech circle, #t1-gespraech > g:not(.t1-sb)", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out", stagger: 0.06 }, 64.49);
+      tl.fromTo(".t1-sb", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.35 }, 64.75);
+      ein("#t1-kunden", 66.51, 0.25);
+      badge("#t1-ok", 66.75);
+      pop("#t1-geld", 67.91);
+      pop("#t1-ware", 68.61);
+      pop("#t1-design", 69.73);
+      grau(".t1-k", 70.37, 0.45);
+      badge("#t1-uhr", 70.37);
+      ein("#t1-hand", 70.40, 0.25);
+
+      // T2 Besser fragen: Mensch, "Schön?" wird durchgestrichen, drei bessere Fragen mit Haken
+      karte("#t2", 70.90, 79.60);
+      gsap.set("#t2-mensch, #t2-schoen, .t2-q, .t2-ok, #t2-hand", { opacity: 0 });
+      pop("#t2-mensch", 72.54);
+      tl.fromTo("#t2-schoen", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 73.54);
+      zeichne("#t2-strich", 74.44, 0.35);
+      grau("#t2-schoen", 74.6, 0.45);
+      tl.fromTo("#t2-q1", { opacity: 0, x: 14 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 75.34);
+      tl.fromTo("#t2-q2", { opacity: 0, x: 14 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 75.96);
+      tl.fromTo("#t2-q3", { opacity: 0, x: 14 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 77.81);
+      tl.fromTo(".t2-ok", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.out", stagger: 0.1 }, 78.72);
+      ein("#t2-hand", 78.85, 0.25);
+
+      // T3 Nachfrage testen (eigene Beispiel-Landingpage): Seite, Warteliste mit Menschen, kleine Auswahl, Regal wartet
+      karte("#t3", 79.60, 87.83);
+      gsap.set("#t3-seite, #t3-lp, .t3-p, #t3-klein, #t3-regal, #t3-lock, #t3-hand", { opacity: 0 });
+      ein("#t3-hand", 80.52, 0.3);
+      tl.fromTo("#t3-seite", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 82.10);
+      ein("#t3-lp", 82.2, 0.25);
+      tl.to("#t3-knopf", { attr: { fill: "url(#gvd)" }, duration: 0.01 }, 83.12);
+      tl.fromTo("#t3-knopf", { scale: 1 }, { scale: 1.05, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out", svgOrigin: "255 188", immediateRender: false }, 83.12);
+      tl.fromTo(".t3-p", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.out", stagger: 0.12 }, 83.3);
+      tl.fromTo("#t3-klein", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 84.37);
+      tl.fromTo("#t3-regal", { opacity: 0, x: 12 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 86.40);
+      grau("#t3-regal", 86.81, 0.4);
+      badge("#t3-lock", 86.81);
+
+      // K9 KI: Kachel, Fragen schreiben sich, Balken der Antworten wachsen
+      karte("#k9", 87.83, 93.09);
+      gsap.set("#k9-fragen, #k9-antw, #k9-hand", { opacity: 0 });
+      tl.fromTo("#k9-ki", { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 87.87);
+      zeichne("#k9-p1", 89.89, 0.25);
+      tl.fromTo("#k9-fragen", { opacity: 0, x: 12 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 89.89);
+      tl.set(".k9-z", { opacity: 1 }, 90.39);
+      tl.fromTo(".k9-z", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.3, ease: "power1.inOut", stagger: 0.18 }, 90.39);
+      tl.fromTo("#k9-antw", { opacity: 0, x: 12 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 91.49);
+      tl.fromTo(".k9-b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.45, ease: "power2.out", stagger: 0.1 }, 91.6);
+      ein("#k9-hand", 91.95, 0.25);
+
+      // K10 Echte Gespräche: KI ≠ Menschen im Gespräch, Weg zum Kauf
+      karte("#k10", 93.09, 98.13);
+      gsap.set("#k10-ne, #k10-leute, .k10-sb, #k10-tasche, #k10-hand", { opacity: 0 });
+      tl.fromTo("#k10-ki", { opacity: 0, scale: 0.9, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out" }, 93.13);
+      pop("#k10-ne", 93.45);
+      grau("#k10-ki", 93.6, 0.45);
+      ein("#k10-hand", 94.71, 0.25);
+      tl.fromTo("#k10-leute", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 95.01);
+      tl.fromTo(".k10-sb", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.3 }, 95.2);
+      zeichne("#k10-weg", 97.2, 0.3);
+      pop("#k10-tasche", 97.37);
+
+      // K11 Erkenntnis: Glühbirne und "Erst verstehen."; dann die drei Stufen, jede auf ihrem Wort
+      karte("#k11", 98.13, 105.20);
+      tl.fromTo("#k11-a", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 98.17);
+      weg("#k11-a", 101.55, 0.2);
+      tl.set("#k11-b", { opacity: 1 }, 101.75);
+      gsap.set(".k11-s", { opacity: 0 });
+      function stufe(n, t) {
+        tl.fromTo("#k11-s" + n, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, t);
+        tl.to("#k11-s" + n + " .k11-r", { attr: { fill: "url(#gvl)", stroke: "#00b877", "stroke-width": 4 }, duration: 0.01 }, t);
+        if (n > 1) tl.to("#k11-s" + (n - 1) + " .k11-r", { attr: { stroke: "#d1d5db", "stroke-width": 2.5 }, duration: 0.01 }, t);
+      }
+      stufe(1, 101.86);
+      zeichne("#k11-p1", 102.9, 0.3);
+      stufe(2, 103.31);
+      zeichne("#k11-p2", 104.2, 0.3);
+      stufe(3, 104.63);
+
+      // K12 Folgen wie bei TikTok: Karte auf "Und", leiser Ring auf "E-Commerce-Stories", Zeiger auf "drücke", auf "Plus" drückt das
+      // Plus ein (1 → 0,8), dreht sich um 180°, wird zum weißen Kreis mit gezeichnetem Haken im Verlauf, springt kurz über und gibt
+      // einen Ring-Puls nach außen; der Haken bleibt bis zum Schluss
+      const TAP = 109.34;
+      tl.fromTo("#k12", { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 105.20);
+      gsap.set("#fplus", { transformOrigin: "50% 50%" });
+      tl.fromTo("#fring", { opacity: 0.6, scale: 1 }, { opacity: 0, scale: 1.6, duration: 0.6, ease: "power2.out", immediateRender: false }, 106.22);
+      tl.fromTo("#fzeiger", { opacity: 0, x: 220, y: 214 }, { opacity: 1, x: 200, y: 206, duration: 0.15, ease: "power2.out" }, 108.72);
+      tl.to("#fzeiger", { x: 112, y: 170, duration: 0.42, ease: "power2.inOut" }, 108.88);
+      tl.to("#fzeiger", { scale: 0.85, duration: 0.08, ease: "power2.in" }, TAP - 0.02);
+      tl.to("#fzeiger", { scale: 1, duration: 0.15, ease: "power2.out" }, TAP + 0.06);
+      tl.to("#fplus", { scale: 0.8, duration: 0.08, ease: "power2.in" }, TAP);
+      tl.to("#fplus", { rotation: 180, duration: 0.3, ease: "power2.inOut" }, TAP);
+      tl.set("#fp-plus", { opacity: 0 }, TAP + 0.15);
+      tl.set("#fp-haken", { opacity: 1 }, TAP + 0.15);
+      tl.to("#fp-hpfad", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, TAP + 0.16);
+      tl.fromTo("#fplus", { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "back.out(4)", immediateRender: false }, TAP + 0.12);
+      tl.fromTo("#fring", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.6, ease: "power2.out", immediateRender: false }, TAP + 0.16);
+      tl.to("#ft2", { opacity: 1, duration: 0.2 }, TAP + 0.15);
+      tl.to("#ft1", { opacity: 0, duration: 0.2 }, TAP + 0.15);
+      tl.to("#fzeiger", { x: 150, y: 210, duration: 0.2, ease: "power2.out" }, TAP + 0.25);
+      tl.to("#fzeiger", { opacity: 0, duration: 0.2, ease: "power2.in" }, TAP + 0.45);
+      tl.set({}, {}, 112.645);
+
+      tl.seek(0);
+      window.__timelines["sibeau-skizzen"] = tl;
+    </script>
+  </body>
+</html>

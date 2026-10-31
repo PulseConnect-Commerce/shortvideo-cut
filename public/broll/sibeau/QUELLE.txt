@@ -1,0 +1,33 @@
+Hintergründe und Quelle für M10 · SI BEAU (am 31.10.2026 geladen bzw. mit Playwright/Chromium ohne Login in der Handy-Ansicht
+432 css-px, 2,5-fach = 1080 px breit, aufgenommen; Cookie-Hinweis bestätigt, schwebende Leisten ausgeblendet, sonst nichts verändert).
+
+Offizielle Seiten von SI BEAU: am 31.10.2026 nicht erreichbar. si-beau.com (Domain der Marke, letzte Archiv-Aufnahme laut
+archive.org vom 23.12.2021) baut keine Verbindung auf; sibeau-women.com (die Adresse auf der Seite der Kultur- und Kreativpiloten)
+ist abgelaufen und von GoDaddy geparkt; das Webarchiv (web.archive.org) ist aus dieser Sitzung nicht erreichbar. Darum keine
+Shop-Screenshots und kein originales Logo, sondern die echten Markenfotos aus den beiden öffentlichen Quellen:
+
+Hintergründe hinter ihm (Video.tsx HG, in den Take gerechnet mit npm run portrait --hintergrund; gestaltet mit
+hyperframes/sibeau-hg/gestalte.py: nur vergrößert/verkleinert, verschoben und so beschnitten, dass kein Gesicht im Bild ist; der
+einfarbige Studiohintergrund am Rand fortgesetzt; leicht weichgezeichnet und abgedunkelt; oben links klein der Bildnachweis):
+- hg-produkt.png: Pressefoto "Produkt" der Kultur- und Kreativpiloten (Titelträger 2019, "Fotomaterial zum Download",
+  © Uwe Duettmann): dunkler Anzug/Jumpsuit, gestreifter Stuhl, ohne Gesicht
+  https://kultur-kreativpiloten.de/titeltraeger-in/si-beau/  (Datei sibeau_uweduettmann_12_re.jpg)
+- hg-detail.png: dasselbe Pressefoto, unterer Teil (Hosenbein, Schuh, Stuhl)
+- hg-kollektion.png: Titelbild im Shopify-Beitrag (zwei Jumpsuits, schwarz und rot), ab Schulter beschnitten
+  https://cdn.shopify.com/s/files/1/1789/7273/files/si-beau-shopify.jpg (im Beitrag unten: "Bilder von Uwe Duettmann")
+- hg-blazer.png: Bild "Stilsicher und authentisch auftreten mit SI BEAU Mode" im Shopify-Beitrag (Anzug Debeauvoir), ab Schulter
+  https://cdn.shopify.com/s/files/1/1789/7273/files/Debeauvoir_Blazer1.jpg
+- hg-studio.png: Bild "Mutige Frauen - die SI BEAU Gründerinnen" im Shopify-Beitrag (Studio mit orangem Hintergrund, Anzüge,
+  Dampfglätter), ab Schulter beschnitten, ohne Gesichter  https://cdn.shopify.com/s/files/1/1789/7273/files/Team_3.jpg
+
+Quelle groß (Video.tsx QUELLEN), Quelle aus dem Briefing, zugeschnitten mit hyperframes/sibeau-hg/quelle.py:
+- quelle-kopf.jpg: Kopf des Beitrags "Ausgezeichnet mit dem Kultur- und Kreativpilotenpreis der Bundesregierung: Die
+  Erfolgsgeschichte der SI BEAU-Gründerinnen", "von Inara Muradowa, 6. Jan. 2020 • 10 Min. Lesezeit" (Unterzeile ausgelassen)
+- quelle-fokusgruppe.jpg: Interview-Abschnitt "Frauen verstehen, was Frauen wollen" mit den markierten Sätzen "Die digitale
+  Fokusgruppe aus etwa 500 Frauen entstand kurz nach der Gründung.", "Unsere Shopify-Seite haben wir während dieser Zeit als
+  Landingpage genutzt, um weitere Interessentinnen zu sammeln." und "Auf diese Weise haben wir entschieden, wie unsere Kollektion
+  aufgebaut sein soll, welche Kleidungsstücke sie enthalten und in welchen Farben sie verfügbar sein werden."
+  https://www.shopify.com/de/blog/kultur-und-kreativpilotenpreis-si-beau
+
+Aufnahme: hyperframes/sibeau-hg/aufnahme.cjs (Überschriften, Bilder und Markierungen mit css-y in
+hyperframes/sibeau-hg/screenshots/aufnahme.json; die Bilder der ganzen Seiten lagen wegen des knappen Speichers nur in /dev/shm).

@@ -1,0 +1,347 @@
+{
+ "hinweis": "Erklär-Bilder (karten-aufbau.md 'Visuelle Metaphern'), Kennzahl ≈500 mit Quelle und Jahr, Schemata (Fragebogen, Farben/Schnitte, Vorlaunch-Seite), die drei Händler-Learnings als Leiste (Gespräche / Probleme / Testen) mit eigener Beispiel-Landingpage, KI-Karte, Quellenzeile im Hook und Folgen-Karte aus hyperframes/sibeau-skizzen/index.html, Quelle-groß-Fenster (q1, q2; in Video.tsx QUELLEN) für M10 · SI BEAU. Sekunden im geschnittenen Video (cut.json, 112,645 s), schon als Cues (2 Frames vor dem Wort). sfx: whoosh (0,12) nur beim Kartenwechsel (Abstand >= 1,5 s), tick (0,08-0,10) auf Zuständen, klick (0,12) auf den Quellen, pop (0,10) nur auf 'Produkte' und dem Folgen-Plus, success (0,10) nur auf 'entwickeln' (Stufe 2 der Erkenntnis), als Extra-Effekt wusch-gross (0,12) auf dem Beginn der Learnings.",
+ "karten": [
+  {
+   "id": "hook",
+   "wort": "(Remotion) Diese Shopify-Marke hat tatsächlich erst rund 500 Frauen gefragt ...",
+   "text": "Hook-Titel SI BEAU / 500 FRAUEN VOR DEM START (Design verlauf, Kartenposition), 0-5,3 s; Quellenzeile 'QUELLE Shopify-Interview · Jan. 2020' auf 'Shopify-Marke' (0,36 s); Hintergrund Pressefoto 'Produkt'",
+   "start": 0,
+   "ende": 5.3,
+   "sfx": [
+    {
+     "datei": "tick.mp3",
+     "at": 0.29,
+     "volume": 0.08
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "wort": "Und (erst danach haben sie tatsächlich angefangen, die Produkte dazu zu entwickeln)",
+   "text": "Kennzahl '≈500' / 'Frauen gefragt' / 'laut Shopify-Interview · Jan. 2020', Kachel 'Fragen' mit Haken; 'erst danach' auf 'danach', Pfeil auf 'angefangen', Kachel 'Produkte' auf 'Produkte', 'entwickelt' auf 'entwickeln'; Hintergrund Studio",
+   "start": 5.37,
+   "ende": 10.13,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 5.37,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 8.29,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "wort": "Die (Marke nennt sich SI BEAU)",
+   "text": "Die Marke: Platzhalter '?' löst sich auf 'SI' in den Namen SI BEAU (Text, kein Logo) auf, Unterzeile 'Business-Mode für Frauen · Berlin' (Shopify-Beitrag 2020), Kleider-Umrisse, 'schon mal gehört?' auf 'gehört'; Hintergrund Anzug Debeauvoir",
+   "start": 10.13,
+   "ende": 13.79,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 10.13,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 11.25,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "wort": "Die (Gründerinnen wollten hier Businesskleidung ...)",
+   "text": "Die Idee: Blazer auf 'Businesskleidung', 'für Frauen', Waage kippt mit 'professionell' (Aktentasche), 'und trotzdem', mit 'bequem' (Feder) im Gleichgewicht; Hintergrund Pressefoto (Hosenbein, Stuhl)",
+   "start": 13.79,
+   "ende": 20.46,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 13.79,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 17.03,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 18.95,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "wort": "Statt (aber jetzt hinzugehen ...)",
+   "text": "Statt eigener Geschmack: Skizzenblock 'Kollektion nach eigenem Geschmack', Kleider auf 'Kollektion', Herz-Blase auf 'Geschmack', Stift auf 'entwerfen', Pfeil auf 'haben', auf 'Zielgruppe' links grau mit Kreuz und rechts die Zielgruppe mit Sprechblasen, 'früh eingebunden' auf 'früh', 'logisch, oder?' auf 'logisch'",
+   "start": 20.46,
+   "ende": 30.33,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 20.46,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 26.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q1",
+   "wort": "Laut (einem historischen Shopify-Interview ...)",
+   "text": "Quelle groß: Überschrift und Datum des Shopify-Beitrags (30,4-33,45 s), dann die markierte Stelle 'Die digitale Fokusgruppe aus etwa 500 Frauen entstand kurz nach der Gründung.' (33,45-36,4 s); er als Bubble unten rechts",
+   "start": 30.4,
+   "ende": 36.4,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 30.4,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "wort": "(nach der Quelle) Und diese Frauen konnten ... bei Schnitten und auch Farben mitreden",
+   "text": "Fokusgruppe '≈500 Frauen', Fragebogen (Schema) auf 'Frauen', Kleider-Umrisse und Haken auf 'Schnitten', Farbfelder und Haken auf 'Farben', 'mitreden'; Hintergrund Titelbild (Jumpsuits schwarz und rot)",
+   "start": 36.42,
+   "ende": 40.98,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 36.42,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 39.62,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "wort": "Und (die Marke nutzte hier tatsächlich ihre eigene Shopify-Seite ...)",
+   "text": "Quelle groß: markierte Stelle 'Unsere Shopify-Seite haben wir während dieser Zeit als Landingpage genutzt, um weitere Interessentinnen zu sammeln.'; er als Bubble (der Schnitt bei 44,65 s liegt im Fenster)",
+   "start": 41.0,
+   "ende": 45.0,
+   "sfx": [
+    {
+     "datei": "klick.mp3",
+     "at": 41.0,
+     "volume": 0.12
+    }
+   ]
+  },
+  {
+   "id": "k6",
+   "wort": "(nach der Quelle) um vor dem eigentlichen Launch ... die Interesse zu sammeln",
+   "text": "Vorlaunch-Seite (Schema): Handy mit 'Bald da' und E-Mail-Feld, Rakete auf 'Launch', Menschen kommen auf 'Interesse', 'Interesse sammeln' auf 'sammeln'",
+   "start": 45.0,
+   "ende": 48.38,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 45.0,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 46.9,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k7",
+   "wort": "Das (ist ziemlich spannend, denn viele Shops ...)",
+   "text": "Reihenfolge wie bei SI BEAU 'Fragen' → 'Produkte', Laden 'viele Shops' auf 'Shops', auf 'Gegenteil' tauschen die Kacheln die Plätze, 'genau andersherum'",
+   "start": 48.38,
+   "ende": 53.42,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 48.38,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 52.0,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k8",
+   "wort": "Erst (werden Produkte eingekauft ...)",
+   "text": "So läuft es oft: Ware auf 'Produkte', Fotos, Anzeigen; Zielscheibe auf 'merkt', 'oh Mist', Pfeil fliegt auf 'Angebot', 'Zielgruppe', auf 'vorbeigegangen' vorbei mit Kreuz",
+   "start": 53.42,
+   "ende": 62.37,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 53.42,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 56.26,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 58.06,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "t1",
+   "wort": "Und (mein erstes Learning daraus ist tatsächlich: Rede ...)",
+   "text": "Learning 1 · Gespräche: Leiste und Ziffer, zwei Menschen reden auf 'Rede', 'potenzielle Kunden' mit Haken, Geld / Ware / Shopdesign auf ihren Wörtern, auf 'investierst' grau mit Uhr, 'erst danach'",
+   "start": 62.37,
+   "ende": 70.9,
+   "sfx": [
+    {
+     "datei": "wusch-gross.mp3",
+     "at": 62.37,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 66.75,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "wort": "Zweitens (frag nicht einfach nur ...)",
+   "text": "Learning 2 · Probleme: Mensch, 'Schön?' auf 'schön', durchgestrichen auf 'Frag', 'Welches Problem?', 'Bisherige Lösung?', 'Was fehlt dir?' auf ihren Wörtern, Haken auf 'fehlt', 'besser fragen'",
+   "start": 70.9,
+   "ende": 79.6,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 70.9,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 74.44,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "wort": "Und drittens (teste mal die Nachfrage ...)",
+   "text": "Learning 3 · Testen: 'Nachfrage testen' auf 'teste', eigene Beispiel-Landingpage auf 'Landingpage', Knopf 'Warteliste' und Menschen auf 'Warteliste', drei Produkte auf 'kleinen', ganzes Sortiment grau mit Schloss auf 'Sortiment'",
+   "start": 79.6,
+   "ende": 87.83,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 79.6,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 83.12,
+     "volume": 0.1
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 86.81,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k9",
+   "wort": "KI (kann dir heutzutage super dabei helfen ...)",
+   "text": "KI-Kachel, Fragen schreiben sich auf 'Fragen'/'formulieren', Balken der Antworten auf 'Antworten', 'auswerten'",
+   "start": 87.83,
+   "ende": 93.09,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 87.83,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 91.49,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k10",
+   "wort": "Aber (das ersetzt leider immer noch keine echten Gespräche ...)",
+   "text": "KI ≠ auf 'ersetzt', 'echte Gespräche', zwei Menschen mit Sprechblasen auf 'Gespräche', Weg zur Einkaufstasche auf 'kaufen'",
+   "start": 93.09,
+   "ende": 98.13,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 93.09,
+     "volume": 0.12
+    },
+    {
+     "datei": "tick.mp3",
+     "at": 95.01,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k11",
+   "wort": "Das (war für mich auch hier tatsächlich die wichtigste Erkenntnis ...)",
+   "text": "Erkenntnis: Glühbirne 'Erst verstehen.'; dann die drei Stufen Verstehen / Entwickeln / Skalieren auf ihren Wörtern; Hintergrund Pressefoto 'Produkt'",
+   "start": 98.13,
+   "ende": 105.2,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 98.13,
+     "volume": 0.12
+    },
+    {
+     "datei": "success.mp3",
+     "at": 103.31,
+     "volume": 0.1
+    }
+   ]
+  },
+  {
+   "id": "k12",
+   "wort": "Und (wenn du weitere solcher E-Commerce-Stories ...)",
+   "text": "Folgen-Karte groß und mittig, Ring-Hinweis auf 'E-Commerce-Stories', Zeiger auf 'drücke', Plus wie bei TikTok auf 'Plus' (109,34 s), Haken bleibt bis zum Ende",
+   "start": 105.2,
+   "ende": 112.645,
+   "sfx": [
+    {
+     "datei": "whoosh.mp3",
+     "at": 105.2,
+     "volume": 0.12
+    },
+    {
+     "datei": "pop.mp3",
+     "at": 109.34,
+     "volume": 0.1
+    }
+   ]
+  }
+ ]
+}
